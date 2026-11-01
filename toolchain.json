@@ -1,0 +1,20 @@
+{
+  "pythonReference": "3.12.8",
+  "pythonSupported": [
+    "3.12",
+    "3.13",
+    "3.14",
+    "3.15"
+  ],
+  "runtime": "static HTTP",
+  "buildDependencies": [],
+  "vendored": [
+    {
+      "name": "KaTeX",
+      "license": "MIT",
+      "licenseFile": "vendor/LICENSE-katex.txt",
+      "versionEvidence": "vendor/katex.min.js header"
+    }
+  ],
+  "historicalAuthoring": "External private toolchain; not yet fully locked/reproducible"
+}
