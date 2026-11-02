@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-01",
+  "asOf": "2026-11-02",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -2611,28 +2611,40 @@
       "requirement": "Rename only the GitHub repository to Luisa now, keeping repository identity/history, current local master folder and public Cloudflare address. Reconcile remote URLs, provider integration and documentation.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "verified",
       "acceptance": [
         "Rename only the GitHub repository to Luisa now, keeping repository identity/history, current local master folder and public Cloudflare address. Reconcile remote URLs, provider integration and documentation.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "docs/agentic/foundation-evidence.json",
+          "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        }
+      ]
     },
     {
       "id": "OPS-004",
       "requirement": "Automatic future production publishing is authorised once relevant checks, review and live verification pass. Never equate push, CI success or generated files alone with publication.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "verified",
       "acceptance": [
         "Automatic future production publishing is authorised once relevant checks, review and live verification pass. Never equate push, CI success or generated files alone with publication.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "docs/agentic/foundation-evidence.json",
+          "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        }
+      ]
     },
     {
       "id": "OPS-005",
@@ -2667,112 +2679,160 @@
       "requirement": "Separate build, release and run; deploy one verified static artifact to each target. Use environment configuration, declared tools, loopback local serving, deterministic manifests and recoverable releases.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "partially_checked",
       "acceptance": [
         "Separate build, release and run; deploy one verified static artifact to each target. Use environment configuration, declared tools, loopback local serving, deterministic manifests and recoverable releases.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "docs/agentic/foundation-evidence.json",
+          "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        }
+      ]
     },
     {
       "id": "DEV-001",
       "requirement": "Store a single authoritative versioned requirement register with stable IDs, scope, acceptance criteria, evidence and separate implementation/verification status. Generate summaries; never hand-edit duplicate standards.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "verified",
       "acceptance": [
         "Store a single authoritative versioned requirement register with stable IDs, scope, acceptance criteria, evidence and separate implementation/verification status. Generate summaries; never hand-edit duplicate standards.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "docs/agentic/foundation-evidence.json",
+          "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        }
+      ]
     },
     {
       "id": "DEV-002",
       "requirement": "Provide a short cross-agent entry guide, current handoff, architecture, decisions, roadmap, targeted work briefs and explicit stop/resume instructions usable by Codex, ChatGPT, Claude and others.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "verified",
       "acceptance": [
         "Provide a short cross-agent entry guide, current handoff, architecture, decisions, roadmap, targeted work briefs and explicit stop/resume instructions usable by Codex, ChatGPT, Claude and others.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "docs/agentic/foundation-evidence.json",
+          "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        }
+      ]
     },
     {
       "id": "DEV-003",
       "requirement": "Adapt the supplied Davide Agentic DevOps Playbook: bounded issue/branch/PR work, evidence gates, review proportional to risk, resource control, private state and truthful checkpoints.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "verified",
       "acceptance": [
         "Adapt the supplied Davide Agentic DevOps Playbook: bounded issue/branch/PR work, evidence gates, review proportional to risk, resource control, private state and truthful checkpoints.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "docs/agentic/foundation-evidence.json",
+          "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        }
+      ]
     },
     {
       "id": "DEV-004",
       "requirement": "Use focused reads, small briefs, scripts for repeatable work and representative trials before bulk work. Default sequential work; delegation only when authorised, with fresh concise context and isolated branches.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "partially_checked",
       "acceptance": [
         "Use focused reads, small briefs, scripts for repeatable work and representative trials before bulk work. Default sequential work; delegation only when authorised, with fresh concise context and isolated branches.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "docs/agentic/foundation-evidence.json",
+          "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        }
+      ]
     },
     {
       "id": "DEV-005",
       "requirement": "Track provider/model, task, elapsed time, artifacts, check/rework counts and measured usage. Record unavailable fields as null. Account allowance deltas are approximate and cannot be attributed exactly to one task or converted across providers.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "verified",
       "acceptance": [
         "Track provider/model, task, elapsed time, artifacts, check/rework counts and measured usage. Record unavailable fields as null. Account allowance deltas are approximate and cannot be attributed exactly to one task or converted across providers.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "docs/agentic/foundation-evidence.json",
+          "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        }
+      ]
     },
     {
       "id": "DEV-006",
       "requirement": "Never bypass permission refusals, force-push production, weaken failing checks, expose secrets or silently declare blocked controls complete. Preserve owner work and stop with a precise checkpoint on real blockers.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "partially_checked",
       "acceptance": [
         "Never bypass permission refusals, force-push production, weaken failing checks, expose secrets or silently declare blocked controls complete. Preserve owner work and stop with a precise checkpoint on real blockers.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "docs/agentic/foundation-evidence.json",
+          "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        }
+      ]
     },
     {
       "id": "DEV-007",
       "requirement": "Maintain reproducible build/test/scan checks, pinned CI actions, least privilege, dependency/license inventory, acceptance evidence and explicit remaining owner setup actions.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "partially_checked",
       "acceptance": [
         "Maintain reproducible build/test/scan checks, pinned CI actions, least privilege, dependency/license inventory, acceptance evidence and explicit remaining owner setup actions.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "docs/agentic/foundation-evidence.json",
+          "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        }
+      ]
     },
     {
       "id": "FB-P1-002",

@@ -6,7 +6,7 @@ Owner authorised GitHub-only rename, twelve-factor static delivery tooling, Davi
 
 ## Foundation record
 - Repository: https://github.com/vyr66mbzmh-debug/Luisa ; same history and repository ID, local origin updated.
-- Foundation issue #1, roadmap issue #2, delivery PR #3. Inspect PR/main and live build-manifest.json for current merge/deployment state rather than trusting a stale chat.
+- Foundation PR #3 merged; production manifest verified revision 358d1be, version 0.24, clean. Issue #1 closed; roadmap #2 tracks future scope. A small evidence-record PR follows; inspect current main/live manifest for its exact revision.
 - Canonical register: docs/requirements/register.json (156 requirements); generated REQUIREMENTS.md beside it. Historical assertions are not fresh acceptance.
 - Main protection: PR, build/test/scan, up-to-date branches, linear history and no bypass; squash merge only. Secret Protection and push protection enabled.
 - Cloudflare production: python3 scripts/luisa.py gate, output dist, PYTHON_VERSION=3.12.8. Renamed-repository previews succeeded. Verify each merged revision online.
