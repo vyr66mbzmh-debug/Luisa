@@ -1,0 +1,2 @@
+# Implementer brief rules
+Assigned issue only, isolated worktree, exact base SHA. Read AGENTS.md and relevant requirement IDs. Lead owns catalogue integration, dependency manifests/locks and workflows. No push/PR/merge by delegated implementers. Never bypass a refused command or weaken tests. Keep original materials read-only. Use targeted checks then gate. Report branch/SHA, output paths, checks, unresolved risks and dependencies in <=25 lines. Keep evidence private when it contains owner/source details.

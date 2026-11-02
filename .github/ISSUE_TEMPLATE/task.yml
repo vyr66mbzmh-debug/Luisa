@@ -1,0 +1,26 @@
+name: Bounded development task
+description: One requirement-backed unit of Luisa work
+title: "[Task] "
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal and scope
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirement IDs and acceptance checklist
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Checks and required visual/source/print evidence
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies, risks and release boundaries
