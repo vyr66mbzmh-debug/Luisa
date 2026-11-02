@@ -37,6 +37,13 @@ class SubpathAcceptance(unittest.TestCase):
                     count += 1
         self.assertGreater(count, 100)
 
+    def test_textbook_return_links_keep_prefix_OPS_002(self):
+        source = (ROOT / 'textbook-view.js').read_text()
+        for name in ('skillURL', 'bookURL'):
+            body = re.search(r'function ' + name + r'\([^)]*\)\{([^\n]+)', source).group(1)
+            prefix = re.search(r"return '([^']*)'\+hash", body).group(1)
+            self.assertEqual(urlsplit(urljoin('https://example.test/AL/textbook-view.html', prefix + '#course=test')).path, '/AL/')
+
     def test_generated_lesson_return_links_keep_prefix_OPS_002(self):
         for name in ('lesson-viewer.js', 'lesson-source-viewer.js'):
             source = (ROOT / name).read_text()
