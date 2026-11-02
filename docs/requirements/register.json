@@ -2594,17 +2594,24 @@
     },
     {
       "id": "OPS-002",
-      "requirement": "Keep ADA as a backup of the checked website in the agreed public target; retain local navigable copy and Cloudflare production. ADA overwrite requires the applicable current deployment scope.",
+      "requirement": "Every newly published website version must also be copied to ADA from the same checked artifact. Retain local navigable copy and Cloudflare production. Use the existing web server and deployment prefix; verify relative assets, explicit HTML navigation, lesson JSON and PDFs online. No Python server or SSH forwarding is required.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "partially_checked",
       "acceptance": [
-        "Keep ADA as a backup of the checked website in the agreed public target; retain local navigable copy and Cloudflare production. ADA overwrite requires the applicable current deployment scope.",
-        "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
+        "ADA live manifest matches the current release revision/version.",
+        "Logo, CSS, skill/textbook libraries, teaching links, lesson JSON, booklet and chapter PDF work below the configured non-root prefix.",
+        "Deployment instructions are in HANDOFF.md and DEVOPS.md; private connection details stay outside Git."
       ],
-      "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "origin": "owner-conversation-2026-11-02-ADA-release",
+      "evidence": [
+        {
+          "date": "2026-11-02",
+          "reference": "tests/test_subpath.py",
+          "scope": "Relative static-entry and generated library links checked beneath /AL/; live per-release verification remains mandatory."
+        }
+      ]
     },
     {
       "id": "OPS-003",

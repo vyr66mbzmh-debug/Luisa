@@ -14,6 +14,9 @@ Owner authorised GitHub-only rename, twelve-factor static delivery tooling, Davi
 - Local gate and CI passed: 156 requirements, 110 catalogue destinations, 9 tooling tests, 6155 packaged public files. This is infrastructure evidence, not renewed content acceptance.
 - No new chapter work, schedules, paid services or credentials in this setup.
 
+## ADA is a required release target
+Every new published website version must also be copied to ADA from the same checked static artifact. Use the established web server; no Python server or SSH tunnel. Keep internal SSH/target details in private WORKSPACE.json. Verify the configured URL prefix, logo, CSS, libraries, teaching slides and PDFs live; record both hosts' revision/version before declaring release complete. See docs/DEVOPS.md.
+
 ## Start next session
 1. Inspect git status, git worktree list, open PRs and remote main. Preserve unfinished owner work; do not force reset.
 2. Read assigned issue and relevant requirement IDs only. docs/handoff/START-HERE.md has the new-chat prompt.

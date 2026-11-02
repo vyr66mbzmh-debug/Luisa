@@ -22,3 +22,10 @@ GitHub rename must retain repository ID; update local origin and references. Clo
 Public runtime needs no credentials. Mail and ADA are separate private adapters; credential creation/expansion remains an owner step. Do not put SSH endpoints, mailbox passwords or local owner paths into public docs.
 
 CI uses Python 3.12.8, pinned action commit SHAs, read-only contents permission, timeouts and concurrency cancellation. Current pattern scan is not a replacement for GitHub full-history secret scanning; the latter is a separate setup item. Requirements evidence must not be inferred from CI coverage.
+
+## Required ADA copy after every website release
+After each checked production release, copy the same dist artifact to ADA's established public directory through the existing private SSH adapter. Credentials, host, target and browser URL live in private WORKSPACE.json. Files there are served automatically: do not run a Python HTTP server, expose port 8000 or request SSH forwarding.
+
+Use document-relative asset/navigation URLs and explicit .html page destinations. Never assume deployment at /. Catalogue JSON/PDF links must also stay within the deployment prefix. Test with a plain static server under a non-root prefix before release. The SW cache revision must change when cached runtime files change.
+
+Stage the complete artifact outside public, verify every manifest hash on ADA, then replace the public tree using the established deployment scope. Do not copy source books, development docs, Git metadata or usage/credentials into public. Verify the live manifest matches the released Git revision and check logo/CSS, skill and textbook views, teaching chapter navigation, a lesson JSON and booklet/textbook PDFs. Report an ADA failure as an incomplete release even if Cloudflare succeeds.
