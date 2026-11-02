@@ -19,14 +19,24 @@
   },
   "limitations": [
     "Original source/maths/visual/interaction/print acceptance not re-audited in infrastructure task.",
-    "Cloudflare authentication required.",
-    "Mac locked: UI merge/protections and board setup pending.",
-    "Historical chapter authoring environment remains external."
+    "Historical chapter authoring environment remains external.",
+    "Production deployment verification follows foundation merge."
   ],
   "cloudflare": {
     "head": "68e5166a88c1be6ec2019f04785bc27cae8d5c2b",
     "result": "success",
     "scope": "Preview deployment confirms renamed repository integration, not production merge or gated-dist dashboard configuration.",
     "preview": "https://182cb78a.fmq-6d9.pages.dev"
-  }
+  },
+  "updatedAt": "2026-11-02",
+  "providerControls": {
+    "main": "PR, build/test/scan, up-to-date, linear history, no bypass; force/deletion disabled",
+    "cloudflareBuildCommand": "python3 scripts/luisa.py gate",
+    "cloudflareOutput": "dist",
+    "python": "3.12.8",
+    "secretProtection": "GitHub settings enabled; push protection on"
+  },
+  "project": "https://github.com/users/vyr66mbzmh-debug/projects/1",
+  "roadmapIssue": 2,
+  "pullRequest": 3
 }

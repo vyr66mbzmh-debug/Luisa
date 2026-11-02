@@ -1,5 +1,7 @@
 # Roadmap
 
+GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/issues/2) · [development project](https://github.com/users/vyr66mbzmh-debug/projects/1) (owner access).
+
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
 ## Foundation

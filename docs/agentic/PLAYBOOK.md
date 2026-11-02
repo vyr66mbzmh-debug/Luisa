@@ -13,7 +13,7 @@ Source SHA256: `de956802126e7183caef29f99df5995cad9416f6607d36555923afe930895f59
 | Memory control | resource_guard.py serial heavy slot, capped future browser workers |
 | Private state/handoff | LUISA_STATE_DIR, HANDOFF.md under 80 lines |
 | Usage efficiency | focused reads, no forks, provider-independent usage log |
-| Board/roadmap | current repo roadmap plus GitHub setup status; do not invent remote board completion |
+| Board/roadmap | GitHub project #1 and roadmap issue #2; Status/Priority/PR/Wave fields, built-in item workflows; no new project token |
 | Permission refusals/privacy | AGENTS.md; no bypass, no credentials or owner files in Git |
 | Restart watchdog | deliberately not installed; owner has not requested a resume schedule |
 | Linux earlyoom/swap | not applicable to this Mac static workload; no machine changes |

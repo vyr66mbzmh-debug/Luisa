@@ -1,33 +1,32 @@
 # Luisa handoff
-Updated: 2026-11-01. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
+Updated: 2026-11-02. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
 
-## Current task
-Owner authorised GitHub-only rename, twelve-factor static delivery tooling, Davide playbook adaptation, consolidated requirements and cross-provider handoff. Future publishing automatic after checks. Public URL remains https://fmq-6d9.pages.dev/ . Product version stays 0.24 during this infrastructure-only setup.
+## Current scope
+Owner authorised GitHub-only rename, twelve-factor static delivery tooling, Davide playbook adaptation, consolidated requirements and cross-provider handoff. Future publishing automatic after checks. Public URL remains https://fmq-6d9.pages.dev/ . Product version stays 0.24 for this infrastructure-only setup. Stop after setup; the next content task needs owner scope.
 
-## State
-- Existing GitHub repository renamed to https://github.com/vyr66mbzmh-debug/Luisa ; local origin updated, history retained.
-- Foundation branch: chore/agentic-devops-foundation; commit 68e5166 is pushed; GitHub build/test/scan passed (run 41359635498). Not merged to main.
-- Canonical register: docs/requirements/register.json (156 requirements). Generated table beside it. Imported assertions retain historical scope and need revalidation.
-- Do not use older LESSON_REQUIREMENTS or V10–V13 maintenance policy as current authority.
-- Cloudflare preview for 68e5166 succeeded: https://182cb78a.fmq-6d9.pages.dev . Rename integration works; production/gated-dist settings remain pending.
-- No product chapter development or new schedules are part of this setup.
+## Foundation record
+- Repository: https://github.com/vyr66mbzmh-debug/Luisa ; same history and repository ID, local origin updated.
+- Foundation issue #1, roadmap issue #2, delivery PR #3. Inspect PR/main and live build-manifest.json for current merge/deployment state rather than trusting a stale chat.
+- Canonical register: docs/requirements/register.json (156 requirements); generated REQUIREMENTS.md beside it. Historical assertions are not fresh acceptance.
+- Main protection: PR, build/test/scan, up-to-date branches, linear history and no bypass; squash merge only. Secret Protection and push protection enabled.
+- Cloudflare production: python3 scripts/luisa.py gate, output dist, PYTHON_VERSION=3.12.8. Renamed-repository previews succeeded. Verify each merged revision online.
+- Development project: https://github.com/users/vyr66mbzmh-debug/projects/1 (owner access); Status/Priority/PR/Wave fields. Built-in project workflows, no new token.
+- Local gate and CI passed: 156 requirements, 110 catalogue destinations, 9 tooling tests, 6155 packaged public files. This is infrastructure evidence, not renewed content acceptance.
+- No new chapter work, schedules, paid services or credentials in this setup.
 
-## Next exact actions (refresh after landing)
-1. Inspect `git status --short` and `git worktree list`; preserve owner work.
-2. Local gate passed (156 requirements, 110 destinations, 9 tooling tests, 6155 public files); CI also passed. Re-run after changes.
-3. After owner unlocks Mac: open foundation PR against main, review latest docs, require build/test/scan, then squash merge. Complete Cloudflare sign-in and configure gate command + dist; verify deployment manifest.
-4. Update this handoff and docs/OWNER-ACTIONS.md with real results. GitHub connector is read-only, shell has no GitHub credential; signed-in Chrome/Desktop were used. Do not bypass access.
+## Start next session
+1. Inspect git status, git worktree list, open PRs and remote main. Preserve unfinished owner work; do not force reset.
+2. Read assigned issue and relevant requirement IDs only. docs/handoff/START-HERE.md has the new-chat prompt.
+3. Use one issue/branch/PR, targeted checks, then full gate and risk review. Verify live manifest and actual changed links after automatic deployment.
+4. Record usage with scripts/usage.py, update evidence and this handoff. GitHub CLI is absent on the original machine; signed-in UI was used, while connector is read-only. Do not widen access silently.
 
-## Relevant files
-- docs/handoff/START-HERE.md: prompt/links for a fresh agent.
+## Relevant files and inputs
 - docs/ARCHITECTURE.md, docs/TWELVE-FACTOR.md, docs/DEVOPS.md.
-- docs/requirements/register.json: select relevant IDs, not whole history.
-- docs/ROADMAP.md: remaining chapter availability and deferred features.
-- docs/ACCEPTANCE.md: source/maths/visual/interaction/print proof.
-- scripts/usage.py: private provider/model/task observations; no invented exact Codex cost.
-- Private LUISA_STATE_DIR/WORKSPACE.json: machine paths and authoring/mail location.
+- docs/ROADMAP.md: remaining availability and deferred features; docs/ACCEPTANCE.md: source/maths/visual/interaction/print evidence.
+- docs/OWNER-ACTIONS.md: verified controls and remaining portability boundaries.
+- Private LUISA_STATE_DIR/WORKSPACE.json: original machine paths, authoring/mail locations; usage.jsonl is private.
+- OneDrive can dehydrate both assets and Git blobs. Use a temporary clone outside OneDrive for full validation if needed; preserve the canonical master and uncommitted overlays.
 
 ## Baseline and boundaries
-Last known live product is Luisa 0.24. Legacy Maths question completion: 3423/3423 (100%); sections 132/132, separate from expanded indexes and teaching progress. Full fresh acceptance is not inferred from those totals.
-The public Git clone serves existing outputs; original decks/books and historical authoring toolchain are private external inputs. New content requires targeted source access.
-At task completion stop and wait for owner scope. Future work uses one bounded issue/branch/PR; publish only after required gates and risk review. New features enter deferred scope unless explicitly activated.
+Legacy Maths questions: 3423/3423 (100%); sections 132/132, separate from expanded indexes and teaching progress. Full fresh acceptance is not inferred from those totals.
+The public clone serves existing outputs. Original decks/books and historical authoring toolchain are private external inputs; new content needs targeted source access. Full chapter-authoring portability remains a follow-up.

@@ -6,12 +6,12 @@ Do not mark any provider setting complete until verified in that provider.
 | GitHub repository rename | Verified | Existing repository is now Luisa; history retained. |
 | Public Cloudflare hostname | Retained | Existing fmq-6d9.pages.dev remains authorised. |
 | GitHub local remote | Updated | origin points to the renamed repository. |
-| GitHub build/test/scan | Verified on foundation branch | GitHub run 41359635498 passed; main protections still pending. |
-| Main protections | Pending verification | Require PRs, build/test/scan and linear history; no bypass to hide a failed gate. |
+| GitHub build/test/scan | Verified on foundation branch | build/test/scan passed on 68e5166 and 389ee96; production verification follows merge. |
+| Main protections | Verified 2026-11-02 | main rule created: PR required, build/test/scan, up-to-date branch, linear history, bypass disabled; force pushes/deletion disabled. |
 | Cloudflare renamed integration | Verified on preview | Cloudflare check successfully deployed commit 68e5166 from renamed repository. |
-| Cloudflare gate build / dist output | Blocked by owner sign-in | Complete existing Apple/Cloudflare authentication; configure gate command and dist output, then verify production. |
-| Full-history secret scanning/push protection | Pending verification | Enable supported GitHub controls. Local pattern scan has a narrower scope. |
-| GitHub Project and roadmap issue | Pending setup | Repo roadmap exists; reflect real issue state, not manually invented completion. |
+| Cloudflare gate build / dist output | Configured 2026-11-02 | Command python3 scripts/luisa.py gate; output dist; Python 3.12.8 configured. Verify final deployment manifest after merge. |
+| Secret Protection / push protection | Verified enabled 2026-11-02 | GitHub security settings show Secret Protection enabled and push protection on. Local pattern scan has a narrower scope. |
+| GitHub Project and roadmap issue | Created 2026-11-02 | Luisa development project #1, roadmap issue #2 and foundation PR #3. Status, Priority, PR and Wave fields; built-in item workflows; no new token required. |
 | GitHub CLI / integrations | CLI absent locally | Signed-in GitHub UI currently has owner access; connector is read-only. No credential widening is silently performed. |
 | Private usage log | Implemented | Outside repository; exact task token usage remains unavailable unless provider reports it. |
 | Source authoring dependencies | Follow-up | Private historical build toolchain must be inventoried/pinned before claiming full authoring portability. |
