@@ -4,8 +4,8 @@ const $=id=>document.getElementById(id);let catalogue,state={},pool=[],selected=
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function options(id,items,value){$(id).replaceChildren(...items.map(x=>{const o=document.createElement('option');o.value=x.id;o.textContent=x.title;return o;}));$(id).value=value;}
 function hash(s){return '#'+new URLSearchParams(Object.entries(s).filter(([,v])=>v!==undefined&&v!==null&&v!==''));}
-function skillURL(r){const sk=catalogue.skills[r.skill];return '/'+hash({course:sk.course,book:sk.book,topic:sk.topic,skill:r.skill,question:r.question});}
-function bookURL(b){return '/'+hash({course:b.course,book:b.id});}
+function skillURL(r){const sk=catalogue.skills[r.skill];return './'+hash({course:sk.course,book:sk.book,topic:sk.topic,skill:r.skill,question:r.question});}
+function bookURL(b){return './'+hash({course:b.course,book:b.id});}
 function renderMath(root){for(const node of root.querySelectorAll('[data-math]'))katex.render(node.dataset.math,node,{displayMode:node.dataset.display==='true',throwOnError:true,strict:'error',macros:{...mathMacros}});}
 function matches(r,b,ch,sub){return r.targets.some(t=>t.book===b&&t.chapter===ch&&(!sub||t.subtopics.includes(sub)));}
 function renderResource(r){const a=document.createElement('a');a.className='resource-link';a.textContent=r.title;if(r.url&&r.access==='available'){a.href=r.url;}else{a.setAttribute('aria-disabled','true');a.title='Not yet uploaded';}return a;}
