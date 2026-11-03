@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-02",
+  "asOf": "2026-11-03",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -2965,6 +2965,27 @@
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
       ],
       "origin": "owner-conversation-through-2026-11-01",
+      "evidence": []
+    },
+    {
+      "id": "PWA-001",
+      "requirement": "Luisa must be installable as a Progressive Web App across Apple, Windows and Android systems, explicitly including the iiyama smartboard, with reliable, clearly indicated offline use of downloaded learning resources.",
+      "scope": "mandatory future-release work across all courses; record only now, do not change or deploy v0.24",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "acceptance": [
+        "Provide platform-appropriate installation instructions and correct standalone branding for Apple systems (iPhone/iOS, iPad/iPadOS and Mac/macOS), Windows PCs/tablets and Android phones/tablets, explicitly including the owner’s iiyama smartboard.",
+        "Document a supported OS/browser/device compatibility matrix for Apple, Windows and Android systems. Confirm the actual iiyama model, operating system, browser and storage capability before choosing the installation method. Record unsupported or restricted configurations and an owner-approved alternative; do not claim universal compatibility without evidence.",
+        "Allow users to download clearly selected chapters/resources for offline use, including relevant questions, worked solutions, teaching slides, diagrams, fonts, student booklets and available textbook chapter PDFs; identify anything not available offline.",
+        "Show download progress, completion/readiness, errors and offline availability; do not claim a resource is ready until all of its required files are stored successfully.",
+        "After downloading, disconnect all network access, fully close and reopen the installed app, and verify navigation, question/solution rendering, slide reveals and downloaded PDFs on representative Apple, Windows and Android devices, including an iPhone, an iPad, a Mac, a Windows device, an Android device and the actual iiyama smartboard. Test board touch controls and classroom display use as well as offline startup.",
+        "Handle interrupted downloads, insufficient or evicted storage, retry and removal of downloaded content with honest status and recovery guidance.",
+        "When online again, update downloaded content safely and consistently; avoid mixed/stale versions and retain a usable offline copy if an update fails.",
+        "Verify the Cloudflare root deployment and ADA /AL/ deployment, including prefix-safe navigation and offline startup; record actual device/OS, build revision and acceptance evidence.",
+        "This instruction authorises requirements/backlog documentation only. Keep the live product at v0.24 and defer implementation/publication until a future authorised release."
+      ],
+      "origin": "Owner reaffirmed original mandatory progressive/offline requirement on 2026-11-03; previously omitted from the consolidated register. Owner subsequently expanded mandatory device scope to all Apple, Windows and Android systems and explicitly the iiyama smartboard.",
       "evidence": []
     }
   ]

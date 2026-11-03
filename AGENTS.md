@@ -16,6 +16,8 @@ Read HANDOFF.md, docs/agentic/LEAD-RULES.md and the assigned issue only. Consult
 - Checked means source, maths, visual, interaction and print acceptance with evidence. Never replace these with a successful render. Invalidate affected approvals after edits.
 - Reuse questions across skill/chapter views; preserve edition-specific references. Do not publicly label practice by its upstream question-bank provider.
 
+- Future mandatory PWA-001: installable across Apple, Windows and Android systems, explicitly including the iiyama smartboard, explicit offline downloads/readiness and real-device offline acceptance. Existing caching is not proof of compliance; implementation is deferred.
+
 ## Workflow and efficiency
 One bounded issue, branch and PR at a time by default. New independent work is backlog, not silent scope expansion. Lead owns shared catalogues, CI, dependency manifests and integration. Delegated implementers never publish; use isolated worktrees and fresh briefs only when authorised. No context forks or duplicate agents. One heavy job at a time; cap test/browser workers.
 Run `python3 scripts/luisa.py gate` before landing; review according to risk. Never skip or loosen failures. Automatic publication after green checks is owner-authorised; every new release must also be copied to ADA from the same checked artifact and both deployments verified. Never call a push a live release. See docs/DEVOPS.md.
