@@ -171,16 +171,16 @@ window.LUISA_TEACHING = {
       {
         "number": 10,
         "title": "Numerical methods",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v026-lesson-viewer.html?book=pure-year-2&chapter=10&slide=1",
+        "booklet": "resources/pure-year-2/v12/booklets/chapter-10.pdf",
+        "pdf": "resources/pure-year-2/v12/textbook/chapter-10.pdf"
       },
       {
         "number": 11,
         "title": "Integration",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v026-lesson-viewer.html?book=pure-year-2&chapter=11&slide=1",
+        "booklet": "resources/pure-year-2/v12/booklets/chapter-11.pdf",
+        "pdf": "resources/pure-year-2/v12/textbook/chapter-11.pdf"
       },
       {
         "number": 12,
@@ -314,23 +314,23 @@ window.LUISA_TEACHING = {
       {
         "number": 6,
         "title": "Projectiles",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v026-lesson-viewer.html?book=maths-applied-year-2&chapter=6&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-2/booklets/chapter-06.pdf",
+        "pdf": "resources/teaching/v003/applied-year-2/textbook/chapter-06.pdf"
       },
       {
         "number": 7,
         "title": "Applications of forces",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v026-lesson-viewer.html?book=maths-applied-year-2&chapter=7&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-2/booklets/chapter-07.pdf",
+        "pdf": "resources/teaching/v003/applied-year-2/textbook/chapter-07.pdf"
       },
       {
         "number": 8,
         "title": "Further kinematics",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v026-lesson-viewer.html?book=maths-applied-year-2&chapter=8&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-2/booklets/chapter-08.pdf",
+        "pdf": "resources/teaching/v003/applied-year-2/textbook/chapter-08.pdf"
       }
     ]
   },
@@ -354,9 +354,9 @@ window.LUISA_TEACHING = {
       {
         "number": 3,
         "title": "Series",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v026-lesson-viewer.html?book=further-core-pure-1&chapter=3&slide=1",
+        "booklet": "resources/teaching/v003/core-pure-1/booklets/chapter-03.pdf",
+        "pdf": "resources/teaching/v003/core-pure-1/textbook/chapter-03.pdf"
       },
       {
         "number": 4,
@@ -368,9 +368,9 @@ window.LUISA_TEACHING = {
       {
         "number": 5,
         "title": "Volumes of revolution",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v026-lesson-viewer.html?book=further-core-pure-1&chapter=5&slide=1",
+        "booklet": "resources/teaching/v003/core-pure-1/booklets/chapter-05.pdf",
+        "pdf": "resources/teaching/v003/core-pure-1/textbook/chapter-05.pdf"
       },
       {
         "number": 6,
@@ -443,23 +443,23 @@ window.LUISA_TEACHING = {
       {
         "number": 6,
         "title": "Hyperbolic functions",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v026-lesson-viewer.html?book=further-core-pure-2&chapter=6&slide=1",
+        "booklet": "resources/teaching/v003/core-pure-2/booklets/chapter-06.pdf",
+        "pdf": "resources/teaching/v003/core-pure-2/textbook/chapter-06.pdf"
       },
       {
         "number": 7,
         "title": "Methods in differential equations",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v026-lesson-viewer.html?book=further-core-pure-2&chapter=7&slide=1",
+        "booklet": "resources/teaching/v003/core-pure-2/booklets/chapter-07.pdf",
+        "pdf": "resources/teaching/v003/core-pure-2/textbook/chapter-07.pdf"
       },
       {
         "number": 8,
         "title": "Modelling with differential equations",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v026-lesson-viewer.html?book=further-core-pure-2&chapter=8&slide=1",
+        "booklet": "resources/teaching/v003/core-pure-2/booklets/chapter-08.pdf",
+        "pdf": "resources/teaching/v003/core-pure-2/textbook/chapter-08.pdf"
       }
     ]
   }

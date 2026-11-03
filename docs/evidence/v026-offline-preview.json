@@ -1,5 +1,5 @@
 {
-  "status": "Draft preview only; not release acceptance",
+  "status": "v0.26 local acceptance; publication pending",
   "date": "2026-11-03",
   "requirements": [
     "PWA-001",
@@ -79,25 +79,560 @@
       "noReadyPack": true
     }
   ],
-  "independentReview": "Four material findings fixed and independently rechecked; bounded preview approval only.",
-  "realDeviceTests": "Not yet performed; desktop browser tests do not establish physical-device acceptance.",
+  "independentReview": "Offline bulk control and integration independently reviewed; findings resolved. Worker lifecycle evidence recorded separately. Final lifecycle regression now also opens old resources offline before retry and asserts replacement worker identity.",
+  "realDeviceTests": {
+    "device": "iPad Pro12.9-inch fifth generation",
+    "os": "iPadOS27.2 (owner reported)",
+    "result": "Owner explicitly confirmed chapter12 Vectors worked perfectly offline. This supersedes the earlier failed attempt.",
+    "scope": "Previously published preview; final download-all build not physically re-tested."
+  },
   "pending": [
-    "Interrupted worker/download and replacement lifecycle regression",
-    "Actual owner iPad cold installed-app launch disconnected",
-    "Other required platform/device evidence",
-    "Eleven chapter delivery and acceptance",
-    "Final Cloudflare and ADA release verification"
+    "Other required physical platform/device evidence",
+    "Final Cloudflare and ADA verification"
   ],
   "existingUnavailableSlidePacks": [
     "maths-pure-year-1:10",
     "maths-pure-year-1:12"
   ],
   "files": {
-    "sw.js": "84b31a30cd8c3355bc9f1d6c78634ebf49d00d7c5ab7f0ec864bd5e34412ee69",
-    "offline.js": "baa5f9353dff1a5ef0192181d15bb1153c7b782fa2f223e52c3dd6ee72b83410",
-    "offline.html": "65d12333c53788fccd61b4c6387dfc02fae1da6ab8c4aab4ffbb5866777c7a40",
+    "sw.js": "986c7994112023596a330c0c0cd19e77e16f153004b6690cd3b729432dd6c8a4",
+    "offline.js": "17b679fd0ed068c8a66eed77bd712e62b97b2f3279f1cdf55e8131fbe6083782",
+    "offline.html": "adc6178e0d726477040954b964f7da0017ebabebaa9c5e81e5059298136e7d2e",
     "offline.css": "310b5ff00c37e5ebe2acdb873fd0668a96e8df39e614f5b36bdefcff6bd004ba",
     "offline-register.js": "260b6d63329cbee61638bfe9ed4ea89434531555e1417eb42dfffe0940ea0e42",
-    "scripts/offline_manifest.py": "f5b0f1b93e5217fbbcf347c742b8d6ef90f237eceeaf0c8f0e816be705a10658"
-  }
+    "scripts/offline_manifest.py": "1c9a4b126a617717798084c21c5e9377cfc82cf2e20aa064989a364f515c7b86"
+  },
+  "downloadAllUI": {
+    "allBooksDespiteFilter": true,
+    "busyButtonDisabled": true,
+    "failureRetry": true,
+    "successReady": true,
+    "missingResourcesDisclosed": true,
+    "noHorizontalOverflow": [
+      390,
+      1024,
+      1366
+    ],
+    "scope": "UI with mocked worker; existing atomic download implementation unchanged"
+  },
+  "downloadAllWorker": [
+    {
+      "prefix": "/",
+      "oldCatalogueChapters": 2,
+      "newCatalogueChapters": 3,
+      "allThreeReady": true,
+      "offlineReopen": true,
+      "allThreeOfflineResources": true
+    },
+    {
+      "prefix": "/AL",
+      "oldCatalogueChapters": 2,
+      "newCatalogueChapters": 3,
+      "allThreeReady": true,
+      "offlineReopen": true,
+      "allThreeOfflineResources": true
+    }
+  ],
+  "interruptedWorker": [
+    {
+      "prefix": "/",
+      "terminatedDuringUpdate": true,
+      "previousTwoPacksReady": true,
+      "previousTwoOpenedOffline": true,
+      "replacementWorker": true,
+      "replacementIdentityAsserted": true,
+      "retryAllThreeReady": true,
+      "allThreeOffline": true
+    },
+    {
+      "prefix": "/AL",
+      "terminatedDuringUpdate": true,
+      "previousTwoPacksReady": true,
+      "previousTwoOpenedOffline": true,
+      "replacementWorker": true,
+      "replacementIdentityAsserted": true,
+      "retryAllThreeReady": true,
+      "allThreeOffline": true
+    }
+  ],
+  "finalLibraryDownloadAll": [
+    {
+      "prefix": "/",
+      "packsReady": 62,
+      "offlineManagerReopen": true,
+      "requestedChaptersOffline": 11,
+      "resources": [
+        {
+          "pack": "maths-pure-year-2:10",
+          "type": "booklet",
+          "status": 200,
+          "size": 1751235,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:10",
+          "type": "pdf",
+          "status": 200,
+          "size": 3127186,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:10",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "maths-pure-year-2:11",
+          "type": "booklet",
+          "status": 200,
+          "size": 1686337,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:11",
+          "type": "pdf",
+          "status": 200,
+          "size": 6025547,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:11",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "maths-pure-year-2:12",
+          "type": "booklet",
+          "status": 200,
+          "size": 338840,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:12",
+          "type": "pdf",
+          "status": 200,
+          "size": 2228466,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:12",
+          "type": "slides",
+          "status": 200,
+          "size": 2013,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "maths-mechanics-year-2:6",
+          "type": "booklet",
+          "status": 200,
+          "size": 391660,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:6",
+          "type": "pdf",
+          "status": 200,
+          "size": 3586264,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:6",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "maths-mechanics-year-2:7",
+          "type": "booklet",
+          "status": 200,
+          "size": 919913,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:7",
+          "type": "pdf",
+          "status": 200,
+          "size": 5323054,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:7",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "maths-mechanics-year-2:8",
+          "type": "booklet",
+          "status": 200,
+          "size": 498423,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:8",
+          "type": "pdf",
+          "status": 200,
+          "size": 3833350,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:8",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "pure-core-1:3",
+          "type": "booklet",
+          "status": 200,
+          "size": 284710,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-1:3",
+          "type": "pdf",
+          "status": 200,
+          "size": 1239389,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-1:3",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "pure-core-1:5",
+          "type": "booklet",
+          "status": 200,
+          "size": 1306986,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-1:5",
+          "type": "pdf",
+          "status": 200,
+          "size": 2461277,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-1:5",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "pure-core-2:6",
+          "type": "booklet",
+          "status": 200,
+          "size": 1321096,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:6",
+          "type": "pdf",
+          "status": 200,
+          "size": 3258235,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:6",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "pure-core-2:7",
+          "type": "booklet",
+          "status": 200,
+          "size": 925449,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:7",
+          "type": "pdf",
+          "status": 200,
+          "size": 3274887,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:7",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "pure-core-2:8",
+          "type": "booklet",
+          "status": 200,
+          "size": 839144,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:8",
+          "type": "pdf",
+          "status": 200,
+          "size": 4352627,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:8",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        }
+      ]
+    },
+    {
+      "prefix": "/AL",
+      "packsReady": 62,
+      "offlineManagerReopen": true,
+      "requestedChaptersOffline": 11,
+      "resources": [
+        {
+          "pack": "maths-pure-year-2:10",
+          "type": "booklet",
+          "status": 200,
+          "size": 1751235,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:10",
+          "type": "pdf",
+          "status": 200,
+          "size": 3127186,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:10",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "maths-pure-year-2:11",
+          "type": "booklet",
+          "status": 200,
+          "size": 1686337,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:11",
+          "type": "pdf",
+          "status": 200,
+          "size": 6025547,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:11",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "maths-pure-year-2:12",
+          "type": "booklet",
+          "status": 200,
+          "size": 338840,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:12",
+          "type": "pdf",
+          "status": 200,
+          "size": 2228466,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-pure-year-2:12",
+          "type": "slides",
+          "status": 200,
+          "size": 2013,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "maths-mechanics-year-2:6",
+          "type": "booklet",
+          "status": 200,
+          "size": 391660,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:6",
+          "type": "pdf",
+          "status": 200,
+          "size": 3586264,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:6",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "maths-mechanics-year-2:7",
+          "type": "booklet",
+          "status": 200,
+          "size": 919913,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:7",
+          "type": "pdf",
+          "status": 200,
+          "size": 5323054,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:7",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "maths-mechanics-year-2:8",
+          "type": "booklet",
+          "status": 200,
+          "size": 498423,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:8",
+          "type": "pdf",
+          "status": 200,
+          "size": 3833350,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "maths-mechanics-year-2:8",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "pure-core-1:3",
+          "type": "booklet",
+          "status": 200,
+          "size": 284710,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-1:3",
+          "type": "pdf",
+          "status": 200,
+          "size": 1239389,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-1:3",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "pure-core-1:5",
+          "type": "booklet",
+          "status": 200,
+          "size": 1306986,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-1:5",
+          "type": "pdf",
+          "status": 200,
+          "size": 2461277,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-1:5",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "pure-core-2:6",
+          "type": "booklet",
+          "status": 200,
+          "size": 1321096,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:6",
+          "type": "pdf",
+          "status": 200,
+          "size": 3258235,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:6",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "pure-core-2:7",
+          "type": "booklet",
+          "status": 200,
+          "size": 925449,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:7",
+          "type": "pdf",
+          "status": 200,
+          "size": 3274887,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:7",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        },
+        {
+          "pack": "pure-core-2:8",
+          "type": "booklet",
+          "status": 200,
+          "size": 839144,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:8",
+          "type": "pdf",
+          "status": 200,
+          "size": 4352627,
+          "signature": "%PDF-"
+        },
+        {
+          "pack": "pure-core-2:8",
+          "type": "slides",
+          "status": 200,
+          "size": 2011,
+          "signature": "<!doc"
+        }
+      ]
+    }
+  ]
 }

@@ -9,7 +9,7 @@ function request(type,args={},onProgress){return new Promise(async(resolve,rejec
  channel.port1.onmessage=e=>{resetTimer();if(e.data.type==='progress'){onProgress?.(e.data);return;}clearTimeout(timer);channel.port1.close();if(e.data.type==='error')reject(Error(e.data.message));else resolve(e.data);};worker.postMessage({type,...args},[channel.port2]);
  }catch(e){reject(e);}
 });}
-function state(value){busy=value;for(const id of ['download','refresh','book'])$(id).disabled=value;document.querySelectorAll('input,button.remove').forEach(e=>e.disabled=value);$('download').disabled=value||!selected.size;}
+function state(value){busy=value;for(const id of ['download','download-all','refresh','book'])$(id).disabled=value;document.querySelectorAll('input,button.remove').forEach(e=>e.disabled=value);$('download').disabled=value||!selected.size;$('download-all').disabled=value||!catalogue?.packs.length;}
 function render(){
  if(!catalogue)return;const filter=$('book').value;const nodes=[];
  for(const p of catalogue.packs.filter(p=>!filter||p.bookId===filter)){
@@ -23,24 +23,32 @@ function render(){
   if(saved){const remove=document.createElement('button');remove.className='remove';remove.textContent='Remove download';remove.disabled=busy;remove.onclick=async()=>{state(true);try{snapshot=await request('remove',{id:p.id});selected.delete(p.id);render();$('status').textContent='Removed from your downloads. Files used by open lessons are retained until those windows close.';}catch(e){$('error').textContent=e.message;}finally{state(false);}};nav.append(remove);}card.append(nav);nodes.push(card);
  }$('chapters').replaceChildren(...nodes);state(busy);
 }
+function catalogueControls(){
+  const allFiles=[...new Set([...catalogue.shared,...catalogue.packs.flatMap(p=>p.files)])];
+  const missing=catalogue.packs.filter(p=>p.unavailable.length).length;
+  $('all-summary').textContent='Download all includes '+catalogue.packs.length+' chapters across all books (estimated download size: '+mb(allFiles.reduce((n,p)=>n+catalogue.files[p].bytes,0))+'). Includes available slides, booklets, textbooks and practice resources. '+(missing?missing+' chapters have unavailable resources listed below. ':'')+'Extra free space is needed to keep existing downloads during replacement. This downloads the available learning library; it cannot include unpublished or unavailable resources.';
+  const prior=$('book').value;$('book').replaceChildren(new Option('All books',''),...[...new Map(catalogue.packs.map(p=>[p.bookId,p.book])).entries()].map(([id,title])=>new Option(title,id)));$('book').value=prior;
+}
 async function load(online=false){
  $('error').textContent='';state(true);
  try{
   snapshot=await request('status');
   if(online)catalogue=(await request('catalogue')).catalogue;
   else{const r=await fetch('offline-catalogue.json');if(!r.ok)throw Error('Connect to the internet to prepare downloads.');catalogue=await r.json();}
-  const prior=$('book').value;$('book').replaceChildren(new Option('All books',''),...[...new Map(catalogue.packs.map(p=>[p.bookId,p.book])).entries()].map(([id,title])=>new Option(title,id)));$('book').value=prior;
+  catalogueControls();
   render();$('status').textContent=snapshot.error||'Choose chapters below. Downloaded chapters remain available without a connection.';
   const estimate=await navigator.storage?.estimate?.();$('storage').textContent=estimate?.quota?'Storage used by this site: '+mb(estimate.usage||0)+'. Estimated space available: '+mb(estimate.quota-(estimate.usage||0))+'.':'';
  }catch(e){$('error').textContent=e.message;}finally{state(false);}
 }
 $('book').onchange=render;$('refresh').onclick=()=>load(true);
-$('download').onclick=async()=>{
+async function downloadSelected(all=false){
  state(true);$('error').textContent='';$('progress').hidden=false;$('progress').value=0;$('status').textContent='Downloading and checking files. Keep Luisa open…';
- try{await navigator.storage?.persist?.();const result=await request('download',{ids:[...selected]},p=>{$('progress').max=p.total;$('progress').value=p.done;$('status').textContent='Downloaded and checked '+mb(p.done)+' of '+mb(p.total)+'. Keep Luisa open…';});snapshot=result.status;newGeneration=result.generation;selected.clear();render();$('status').textContent='Download complete. Open the checked downloads below, then test with Wi-Fi and mobile data off.';$('open-new').hidden=false;}
+ try{await navigator.storage?.persist?.();const result=await request('download',{ids:[...selected],all},p=>{$('progress').max=p.total;$('progress').value=p.done;$('status').textContent='Downloaded and checked '+mb(p.done)+' of '+mb(p.total)+'. Keep Luisa open…';});snapshot=result.status;if(result.catalogue){catalogue=result.catalogue;catalogueControls();}newGeneration=result.generation;selected.clear();render();$('status').textContent='Download complete. Open the checked downloads below, then test with Wi-Fi and mobile data off.';$('open-new').hidden=false;}
  catch(e){$('error').textContent=e.message;$('status').textContent='Download incomplete. Previous complete downloads are unchanged.';snapshot=await request('status').catch(()=>snapshot);render();}
  finally{$('progress').hidden=true;state(false);}
-};
+}
+$('download').onclick=()=>downloadSelected();
+$('download-all').onclick=()=>{if(busy||!catalogue)return;selected.clear();for(const p of catalogue.packs)selected.add(p.id);render();downloadSelected(true);};
 $('open-new').onclick=()=>{location.href='offline.html?offlineRelease='+encodeURIComponent(newGeneration);};
 function connection(){$('connection').textContent=navigator.onLine?'Connection detected. Offline readiness is shown separately for each chapter.':'No connection detected. Use chapters marked Ready offline.';}
 window.addEventListener('online',connection);window.addEventListener('offline',connection);connection();

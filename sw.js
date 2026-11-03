@@ -16,8 +16,8 @@ async function catalog(){const r=await network('offline-catalogue.json');const d
 async function available(gen){if(!gen)return false;const names=new Set(await caches.keys());return names.has(gen.shell)&&Object.values(gen.packs).every(p=>names.has(p.cache));}
 async function verifyFiles(cacheName,files){if(!(await caches.keys()).includes(cacheName))return false;const c=await caches.open(cacheName);for(const path of files)if(!await c.match(safePath(path)))return false;return true;}
 async function status(){const active=await read('active');if(!active)return {active:null,packs:[],error:null};const shellOK=await verifyFiles(active.shell,active.shared);const packs=[];for(const [id,p]of Object.entries(active.packs))packs.push({id,title:p.title,ready:shellOK&&await verifyFiles(p.cache,p.files)});return {active,packs,error:shellOK?null:'Some saved files are missing. Reconnect and download again.'};}
-async function download(ids,send){
- const d=await catalog(),old=await read('active');const selected=new Set([...Object.keys(old?.packs||{}),...ids]);
+async function download(ids,send,all=false){
+ const d=await catalog(),old=await read('active');const selected=new Set([...Object.keys(old?.packs||{}),...(all?d.packs.map(p=>p.id):ids)]);
  const packs=[...selected].map(id=>{const p=d.packs.find(p=>p.id===id);if(!p)throw Error('A previously downloaded chapter is no longer available. The previous copy has been kept.');return p;});
  const files=[...new Set([...d.shared,...packs.flatMap(p=>p.files)])];
  for(const path of files){safePath(path);if(!d.files[path]||!Number.isSafeInteger(d.files[path].bytes)||!/^[a-f0-9]{64}$/.test(d.files[path].sha256))throw Error('Invalid file inventory');}
@@ -43,7 +43,7 @@ async function download(ids,send){
   await write('generation/'+stamp,gen);
   await write('active',gen);
   committed=true;
-  send({type:'complete',generation:stamp,status:await status()});
+  send({type:'complete',generation:stamp,status:await status(),catalogue:d});
  }catch(e){if(!committed)for(const name of staged)await caches.delete(name);throw e;}
 }
 async function remove(id){const old=await read('active');if(!old?.packs[id])return;const packs={...old.packs};delete packs[id];const gen={...old,id:old.id+'-remove-'+crypto.randomUUID(),packs};await write('generation/'+gen.id,gen);await write('active',gen);await cleanup();}
@@ -66,7 +66,7 @@ self.addEventListener('message',e=>{
   try{switch(e.data?.type){
    case 'status':send({type:'status',...await status()});break;
    case 'catalogue':send({type:'catalogue',catalogue:await catalog()});break;
-   case 'download':if(!Array.isArray(e.data.ids)||!e.data.ids.length)throw Error('Choose a chapter.');await download(e.data.ids,send);break;
+   case 'download':if(e.data.all!==true&&(!Array.isArray(e.data.ids)||!e.data.ids.length))throw Error('Choose a chapter.');await download(e.data.ids||[],send,e.data.all===true);break;
    case 'remove':await remove(e.data.id);send({type:'status',...await status()});break;
    case 'cleanup':await cleanup();send({type:'status',...await status()});break;
    default:throw Error('Unknown offline request');
@@ -99,7 +99,7 @@ async function recovery(){
 function repairMessage(message){return new Response('<!doctype html><meta name="viewport" content="width=device-width"><title>Luisa · Repair downloads</title><h1>Saved files need repair</h1><p>'+message+'</p><p>Existing complete downloads are kept.</p><a href="'+new URL('offline.html?repair=1',SCOPE).href+'">Repair downloads while online</a>',{status:503,headers:{'Content-Type':'text/html; charset=utf-8'}});}
 async function respond(e){
  const u=new URL(e.request.url),active=await read('active');let gen=active;
- if(e.request.mode==='navigate'&&u.pathname===new URL('offline.html',SCOPE).pathname&&u.searchParams.get('repair')==='1'){
+ if(e.request.mode==='navigate'&&canonical(u.href)===safePath('offline.html')&&u.searchParams.get('repair')==='1'){
   try{gen=await recovery();if(e.resultingClientId)await write('client/'+e.resultingClientId,gen.id);return(await caches.open(gen.shell)).match(safePath('offline.html'));}
   catch(error){return repairMessage('Reconnect, then retry the repair.');}
  }

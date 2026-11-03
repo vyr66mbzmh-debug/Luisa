@@ -87,7 +87,7 @@ def generate(root, entries, version):
                 viewer=urlsplit(tc['slides']).path
                 if viewer=='lesson-viewer.html' or viewer=='pure1-native-viewer.html':
                     base='resources/pure-year-1/v11/';assetbase='resources/pure-year-1/native/'
-                elif viewer=='pure2-lesson-viewer.html' or (viewer=='v025-lesson-viewer.html' and tk=='maths-pure-year-2'):
+                elif viewer=='pure2-lesson-viewer.html' or (viewer in {'v025-lesson-viewer.html','v026-lesson-viewer.html'} and tk=='maths-pure-year-2'):
                     base=assetbase='resources/pure-year-2/v12/'
                 else:
                     base=assetbase='resources/teaching/v003/'+BOOK_BASES[tk]+'/'

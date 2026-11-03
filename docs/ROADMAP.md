@@ -15,8 +15,8 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - 6. Trigonometric functions — v0.25 published and verified on Cloudflare and ADA
 - 7. Trigonometry and modelling — v0.25 published and verified on Cloudflare and ADA
 - 9. Differentiation
-- 10. Numerical methods
-- 11. Integration
+- 10. Numerical methods — v0.26 locally accepted; publication pending
+- 11. Integration — v0.26 locally accepted; publication pending
 
 ### Statistics and Mechanics Year 1/AS
 - 1. Data collection
@@ -32,23 +32,23 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - 2. Conditional probability
 - 3. The normal distribution
 - 4. Moments
-- 6. Projectiles
-- 7. Applications of forces
-- 8. Further kinematics
+- 6. Projectiles — v0.26 locally accepted; publication pending
+- 7. Applications of forces — v0.26 locally accepted; publication pending
+- 8. Further kinematics — v0.26 locally accepted; publication pending
 
 ### Further Maths Core Pure 1
 - 1. Complex numbers — v0.25 published and verified on Cloudflare and ADA
-- 3. Series
+- 3. Series — v0.26 locally accepted; publication pending
 - 4. Roots of polynomials — v0.25 published and verified on Cloudflare and ADA
-- 5. Volumes of revolution
+- 5. Volumes of revolution — v0.26 locally accepted; publication pending
 
 ### Further Maths Core Pure 2
-- 6. Hyperbolic functions
-- 7. Methods in differential equations
-- 8. Modelling with differential equations
+- 6. Hyperbolic functions — v0.26 locally accepted; publication pending
+- 7. Methods in differential equations — v0.26 locally accepted; publication pending
+- 8. Modelling with differential equations — v0.26 locally accepted; publication pending
 
 ## Cross-cutting follow-ups
-- **PWA-001 (v0.26, in progress):** Apple, Windows and Android installation and reliable offline learning, explicitly including the iiyama smartboard, with resource downloads, readiness indicators, safe updates and real-device airplane-mode tests. The owner explicitly superseded the documentation-only deferral and authorised implementation in v0.26. Desktop offline/recovery checks are recorded; real-device and release acceptance remain pending.
+- **PWA-001 (v0.26, implemented; partially checked):** Apple, Windows and Android installation and reliable offline learning, explicitly including the iiyama smartboard, with resource downloads, readiness indicators, safe updates and real-device airplane-mode tests. The owner explicitly superseded the documentation-only deferral and authorised implementation in v0.26. Desktop bulk-download/offline/recovery checks pass; owner confirms Vectors offline on iPad. Other physical devices are unverified; release verification remains pending.
 - Reconcile duplicated teaching/textbook catalogues and release metadata with exact artifact evidence.
 - Port and pin private historical chapter-authoring toolchain; avoid absolute machine paths in future scripts.
 - Finish chapter/subtopic individual-question mapping review; coverage counters are not equivalent to reviewed mappings.
