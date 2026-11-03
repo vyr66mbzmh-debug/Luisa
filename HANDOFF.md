@@ -2,12 +2,20 @@
 Updated: 2026-11-03. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
 
 ## Current scope
-Owner authorised GitHub-only rename, twelve-factor static delivery tooling, Davide playbook adaptation, consolidated requirements and cross-provider handoff. Future publishing automatic after checks. Public URL remains https://fmq-6d9.pages.dev/ . Product version stays 0.24 for this infrastructure-only setup. Stop after setup; the next content task needs owner scope.
+Issue #10: owner authorised v0.25 conversion of Pure Year 2 chapters 6 and 7 and Core Pure 1 chapters 1 and 4, with teaching slides, two-up student booklets and linked textbook chapters. Publication to Cloudflare and ADA is explicitly authorised after acceptance and repository checks. Chapter delivery is locally complete on task/10-v025-four-chapters; preserve this branch and its assets. No v0.25 release has been published.
+
+All four chapters are agent accepted: Pure Year 2 chapters 6/7 have 46/53 slides and 23/27 booklet pages; Core Pure 1 chapters 1/4 have 41/48 slides and 21/24 booklet pages. All 188 source slides and 95 booklet pages received source/maths/visual/print review, with independent review and resolved findings. Three viewport sizes, each individual answer/cover, actual Space ordering and Reset were checked. All 88 extracted textbook pages match the original printed content. Both libraries and viewer resource links work below a non-root prefix; the library return preserves the chosen chapter. See docs/evidence/v025-chapters.json. Owner acceptance is not claimed.
+
+The four original decks and both textbooks are readable after OneDrive restoration. Private authoring inputs, scripts, per-slide/page evidence and usage remain in the OneDrive materials build folder. The local gate passed 157 requirements, 122 catalogue destinations and 13 tooling tests; final head verification and remote build/test/scan must still precede landing. Existing authenticated GitHub desktop access is needed to publish the branch; no credentials were created or expanded. Neither Cloudflare nor ADA has received v0.25 yet. ADA's established public directory is reachable. Complete the PR/check/squash process, verify Cloudflare, then copy the same checked artifact to ADA and verify both. Private checkpoint records exact continuation steps.
+
+PWA-001 remains deferred. PR #9 was merged externally by the owner before this branch; it only adds requirements documentation. This task does not implement PWA features.
+
+Usage counters are available for this chat, including cached input. Earlier activities interleaved conversion, checking and shared implementation, so an exact retrospective phase breakdown must not be invented. Private usage evidence records the available boundaries.
 
 ## Foundation record
 - Repository: https://github.com/vyr66mbzmh-debug/Luisa ; same history and repository ID, local origin updated.
 - Foundation PR #3 merged; production manifest verified revision 358d1be, version 0.24, clean. Issue #1 closed; roadmap #2 tracks future scope. A small evidence-record PR follows; inspect current main/live manifest for its exact revision.
-- Canonical register: docs/requirements/register.json (156 requirements); generated REQUIREMENTS.md beside it. Historical assertions are not fresh acceptance.
+- Canonical register: docs/requirements/register.json (157 requirements); generated REQUIREMENTS.md beside it. Historical assertions are not fresh acceptance.
 - Main protection: PR, build/test/scan, up-to-date branches, linear history and no bypass; squash merge only. Secret Protection and push protection enabled.
 - Cloudflare production: python3 scripts/luisa.py gate, output dist, PYTHON_VERSION=3.12.8. Renamed-repository previews succeeded. Verify each merged revision online.
 - Development project: https://github.com/users/vyr66mbzmh-debug/projects/1 (owner access); Status/Priority/PR/Wave fields. Built-in project workflows, no new token.
@@ -18,7 +26,7 @@ Owner authorised GitHub-only rename, twelve-factor static delivery tooling, Davi
 Every new published website version must also be copied to ADA from the same checked static artifact. Use the established web server; no Python server or SSH tunnel. Keep internal SSH/target details in private WORKSPACE.json. Verify the configured URL prefix, logo, CSS, libraries, teaching slides and PDFs live; record both hosts' revision/version before declaring release complete. See docs/DEVOPS.md.
 
 ## New mandatory requirement, deferred
-PWA-001 restores the owner’s original installable/offline app requirement, now explicitly covering Apple (iOS/iPadOS/macOS), Windows and Android systems, including the actual iiyama smartboard. See register.json for acceptance criteria and ROADMAP.md for future work. Status planned / not_checked; existing manifest/service-worker caching does not establish acceptance. Owner explicitly prohibited changes to live v0.24 or another publication for this documentation task. Keep this documentation PR unmerged until an authorised future change can include it without a production deployment.
+PWA-001 restores the owner’s original installable/offline app requirement, now explicitly covering Apple (iOS/iPadOS/macOS), Windows and Android systems, including the actual iiyama smartboard. See register.json for acceptance criteria and ROADMAP.md for future work. Status planned / not_checked; existing manifest/service-worker caching does not establish acceptance. Owner explicitly prohibited changes to live v0.24 or another publication for this documentation task. PR #9 was merged externally before this task; its implementation remains deferred.
 
 ## Start next session
 1. Inspect git status, git worktree list, open PRs and remote main. Preserve unfinished owner work; do not force reset.

@@ -10,3 +10,7 @@ For every changed chapter:
 6. Record artifact/source hashes, date, reviewer, viewports/pages, result and issues. Changed shared code invalidates dependent approvals.
 
 Automatic checks do not count as final source/visual/interaction/print acceptance. User review remains distinct from agent acceptance. Do not bulk upgrade historic status rows.
+
+## v0.25 bounded chapter acceptance
+
+See [four-chapter evidence](evidence/v025-chapters.json): 188 teaching slides, 95 booklet pages and 88 extracted textbook pages. All four chapters received source/mathematics, visual, independent reveal/reset and print checks. Detailed private per-slide/page evidence includes resolved review findings. Library links were checked below a non-root prefix. This does not change historical chapter acceptance or certify PWA-001. Live release verification is separate.

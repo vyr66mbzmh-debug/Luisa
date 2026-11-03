@@ -143,16 +143,16 @@ window.LUISA_TEACHING = {
       {
         "number": 6,
         "title": "Trigonometric functions",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v025-lesson-viewer.html?book=pure-year-2&chapter=6&slide=1",
+        "booklet": "resources/pure-year-2/v12/booklets/chapter-06.pdf",
+        "pdf": "resources/pure-year-2/v12/textbook/chapter-06.pdf"
       },
       {
         "number": 7,
         "title": "Trigonometry and modelling",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v025-lesson-viewer.html?book=pure-year-2&chapter=7&slide=1",
+        "booklet": "resources/pure-year-2/v12/booklets/chapter-07.pdf",
+        "pdf": "resources/pure-year-2/v12/textbook/chapter-07.pdf"
       },
       {
         "number": 8,
@@ -340,9 +340,9 @@ window.LUISA_TEACHING = {
       {
         "number": 1,
         "title": "Complex numbers",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v025-lesson-viewer.html?book=further-core-pure-1&chapter=1&slide=1",
+        "booklet": "resources/teaching/v003/core-pure-1/booklets/chapter-01.pdf",
+        "pdf": "resources/teaching/v003/core-pure-1/textbook/chapter-01.pdf"
       },
       {
         "number": 2,
@@ -361,9 +361,9 @@ window.LUISA_TEACHING = {
       {
         "number": 4,
         "title": "Roots of polynomials",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v025-lesson-viewer.html?book=further-core-pure-1&chapter=4&slide=1",
+        "booklet": "resources/teaching/v003/core-pure-1/booklets/chapter-04.pdf",
+        "pdf": "resources/teaching/v003/core-pure-1/textbook/chapter-04.pdf"
       },
       {
         "number": 5,
