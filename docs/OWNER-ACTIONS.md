@@ -20,3 +20,6 @@ Do not mark any provider setting complete until verified in that provider.
 | Restart watchdog / hourly reports | Not enabled by design | New explicit authorisation needed. |
 
 Secrets and private denylist phrases, if desired, must be entered by the owner through GitHub settings, never pasted into prompts or committed. This setup does not require an LLM key or any new deployment credential.
+
+| v0.27 installed-app navigation | Automated checks pass; physical iPad follow-up | Update saved downloads, then test slides → PDF → Back and library return. Earlier Vectors acceptance does not establish this new reader’s physical-device acceptance. |
+| v0.27 publication | Authorised, pending verification | Both Cloudflare and ADA required; ADA connection restored. |

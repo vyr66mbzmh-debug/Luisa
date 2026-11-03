@@ -14,7 +14,7 @@ Product chapter backlog is derived from current catalogue availability, not old 
 ### Pure Mathematics Year 2
 - 6. Trigonometric functions — v0.25 published and verified on Cloudflare and ADA
 - 7. Trigonometry and modelling — v0.25 published and verified on Cloudflare and ADA
-- 9. Differentiation
+- 9. Differentiation — v0.27 agent accepted:102 panels from96 replacement originals,51-page booklet,42-page textbook; publication pending
 - 10. Numerical methods — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 - 11. Integration — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 
@@ -57,3 +57,5 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - Keep old MARS branding superseded; future scope belongs in the requirement register, not silent development.
 
 - Existing dependency defects discovered during offline inventory: Pure Year 1 chapters 10 and 12 reference missing diagram assets. Their slides are explicitly excluded from offline packs; other available resources are identified. Do not claim complete offline slide availability for these chapters until repaired and rechecked.
+
+- **PWA-002 (v0.27):** Installed-app Back controls and local PDF reader implemented; automated online/offline root/AL checks pass. Physical iPad verification remains separate.

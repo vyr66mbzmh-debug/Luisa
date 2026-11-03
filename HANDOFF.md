@@ -1,7 +1,10 @@
 # Luisa handoff
 Updated: 2026-11-03. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
 
-## Active v0.26 scope
+## Active v0.27 scope
+Issue #15; branch task/15-v027-differentiation-navigation. Owner explicitly authorised publication to Cloudflare and ADA, resuming ADA for v0.27 only. Replace all previous Pure Year 2 chapter 9 variants with the newly supplied 96-slide Differentiation deck. Deliver slides, matching student booklet and textbook chapter; correct chapter title and overlapping-variant backlog counts. Implement PWA-002 visible return navigation for all linked learning resources in the installed iPad app, including offline and /AL/. All96 originals converted to102 teaching panels and51 booklet pages;42 textbook pages match originals. Chapter acceptance and automated standalone/offline/root/AL navigation checks recorded in docs/evidence/v027-acceptance.json. Gate passes159 requirements,155 catalogue destinations and16 tests. No v0.27 publication claimed yet; exact-head remote checks and dual-host deployment remain. Preserve the two local v0.26 evidence commits. Private checkpoint and usage: materials/build/output/v027.
+
+## Completed v0.26 scope
 Issue #13; PR #14 squash-merged as272f74c127a749a4127e8925d162664818d4ce42. Current follow-up branch task/13-v026-release-evidence. Owner authorised checked publication; on 2026-11-03 explicitly paused ADA work and skipped its v0.26 copy because ADA is down. Retry ADA with v0.27. All11 requested chapters are locally agent accepted: Pure Year2 10/11/12, Mechanics Year2 6/7/8, Core Pure1 3/5, Core Pure2 6/7/8. Total571 displayed slides,289 booklet pages,260 textbook pages. See docs/evidence/v026-chapters.json. Cloudflare production v0.26 verified:6644 manifest entries match and437 actual resources hash-checked. ADA v0.26 is skipped by explicit owner instruction; no ADA deployment is claimed. See docs/evidence/v026-release.json.
 
 Owner approved splitting Integration original82 into7 readable panels, with matching board/booklet numbering.110 originals become116 displayed slides. Vectors22-slide recheck restores intermediate steps and diagrams. All chapter-specific source/math/visual/interaction/print and both-library checks pass; private detailed evidence and source usage stay in OneDrive materials/build/output/v026.

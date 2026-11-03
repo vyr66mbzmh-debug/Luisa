@@ -88,7 +88,7 @@ async function recovery(){
  mutating=true;let shell,committed=false;
  try{
   const d=await catalog(),id='repair-'+crypto.randomUUID();shell=PREFIX+id;
-  const files=['offline.html','offline.js','offline.css','manifest.webmanifest','assets/luisa/icon-192.png','assets/luisa/icon-512.png'];
+  const files=['offline.html','offline.js','offline.css','app-navigation.js','manifest.webmanifest','assets/luisa/icon-192.png','assets/luisa/icon-512.png'];
   const c=await caches.open(shell);
   for(const path of files){const r=await network(path),bytes=await r.arrayBuffer();if(!d.files[path]||bytes.byteLength!==d.files[path].bytes||await hash(bytes)!==d.files[path].sha256)throw Error('The app changed during repair. Reconnect and retry.');const headers=new Headers(r.headers);headers.delete('content-encoding');headers.set('Content-Length',String(bytes.byteLength));await c.put(safePath(path),new Response(bytes,{headers}));}
   await c.put(safePath('offline-catalogue.json'),new Response(JSON.stringify(d),{headers:{'Content-Type':'application/json'}}));
