@@ -1009,7 +1009,13 @@
         "checked": "□",
         "notes": "V11.1 published and its 12 changed files verified live; V10/V11 remain recoverable. V12 is a separate, unreleased preview."
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "date": "2026-11-03",
+          "reference": "docs/evidence/v025-release.json",
+          "scope": "v0.25 release revision eb8cbb4: both live hosts verified against the same checked artifact; prior ADA recovery copy rehashed."
+        }
+      ],
       "supersedesText": "Increment public version once per release; keep changelog, recoverable Git tag and local release source snapshot.",
       "decision": "Latest release policy supersedes historic FMQ numbering."
     },
@@ -1029,7 +1035,13 @@
         "checked": "□",
         "notes": "Recorded commits: V10 7b195112…; V11 fcaf5708…. Recovery not re-tested in this document task."
       },
-      "evidence": [],
+      "evidence": [
+        {
+          "date": "2026-11-03",
+          "reference": "docs/evidence/v025-release.json",
+          "scope": "v0.25 release revision eb8cbb4: both live hosts verified against the same checked artifact; prior ADA recovery copy rehashed."
+        }
+      ],
       "supersedesText": "Preserve V10 and V11 and verify rollback before releasing V12.",
       "decision": "Historical V10/V11/V12 names are provenance, not active version authority."
     },
@@ -1126,6 +1138,11 @@
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
           "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+        },
+        {
+          "date": "2026-11-03",
+          "reference": "docs/evidence/v025-release.json",
+          "scope": "v0.25 release revision eb8cbb4: both live hosts verified against the same checked artifact; prior ADA recovery copy rehashed."
         }
       ]
     },
@@ -2874,6 +2891,11 @@
           "date": "2026-11-02",
           "reference": "tests/test_subpath.py",
           "scope": "Relative static-entry and generated library links checked beneath /AL/; live per-release verification remains mandatory."
+        },
+        {
+          "date": "2026-11-03",
+          "reference": "docs/evidence/v025-release.json",
+          "scope": "v0.25 release revision eb8cbb4: both live hosts verified against the same checked artifact; prior ADA recovery copy rehashed."
         }
       ]
     },
@@ -2914,6 +2936,11 @@
           "date": "2026-11-02",
           "reference": "docs/agentic/foundation-evidence.json",
           "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        },
+        {
+          "date": "2026-11-03",
+          "reference": "docs/evidence/v025-release.json",
+          "scope": "v0.25 release revision eb8cbb4: both live hosts verified against the same checked artifact; prior ADA recovery copy rehashed."
         }
       ]
     },
@@ -2962,6 +2989,11 @@
           "date": "2026-11-02",
           "reference": "docs/agentic/foundation-evidence.json",
           "scope": "Foundation tooling and provider controls only; no renewed teaching-content acceptance."
+        },
+        {
+          "date": "2026-11-03",
+          "reference": "docs/evidence/v025-release.json",
+          "scope": "v0.25 release revision eb8cbb4: both live hosts verified against the same checked artifact; prior ADA recovery copy rehashed."
         }
       ]
     },

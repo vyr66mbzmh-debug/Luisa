@@ -1,0 +1,55 @@
+{
+  "release": "0.25",
+  "verifiedAt": "2026-11-03T07:43:57.497477+00:00",
+  "releaseRevision": "eb8cbb43fa6e822f9b93797f29061213f732159e",
+  "pullRequest": "https://github.com/vyr66mbzmh-debug/Luisa/pull/11",
+  "checkedHead": "d1001245f3836fc53afc2bbde89689facca99bfd",
+  "requiredChecks": {
+    "build": "success",
+    "test": "success",
+    "scan": "success"
+  },
+  "localGate": {
+    "requirements": 158,
+    "catalogueDestinations": 122,
+    "toolingTests": 13,
+    "publicFiles": 6235
+  },
+  "deployments": [
+    {
+      "url": "https://fmq-6d9.pages.dev/",
+      "version": "0.25",
+      "revision": "eb8cbb43fa6e822f9b93797f29061213f732159e",
+      "dirty": false,
+      "manifestFiles": 6235,
+      "manifestMatchesCheckedArtifact": true,
+      "fetchedResources": 96,
+      "resourceHashesMatch": true,
+      "browserVerifiedChapters": 4,
+      "browserVerifiedResources": 12,
+      "libraryReturnPreservesChapter": true
+    },
+    {
+      "url": "https://adazmq.marlboroughcollege.org/AL/",
+      "version": "0.25",
+      "revision": "eb8cbb43fa6e822f9b93797f29061213f732159e",
+      "dirty": false,
+      "manifestFiles": 6235,
+      "manifestMatchesCheckedArtifact": true,
+      "fetchedResources": 96,
+      "resourceHashesMatch": true,
+      "browserVerifiedChapters": 4,
+      "browserVerifiedResources": 12,
+      "libraryReturnPreservesChapter": true
+    }
+  ],
+  "recovery": {
+    "cloudflarePriorRevision": "6bacb0f8587bd2ee1686a70e6d8c5d085bf35c42",
+    "adaPriorRevision": "1b72b0834e19052038a4feb66532199a9470286a",
+    "adaPriorFilesVerified": 6155,
+    "adaRecoveryCopyVerified": true
+  },
+  "contentAcceptance": "docs/evidence/v025-chapters.json",
+  "scope": "Four requested chapters and isolated player/library integration. Historical chapter acceptance unchanged. PWA-001 deferred.",
+  "keepAwake": "OPS-008 temporary assertions verified during active publication; no persistent lock/password setting changed."
+}
