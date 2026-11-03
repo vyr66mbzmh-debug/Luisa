@@ -18,7 +18,7 @@ Owner authorised GitHub-only rename, twelve-factor static delivery tooling, Davi
 Every new published website version must also be copied to ADA from the same checked static artifact. Use the established web server; no Python server or SSH tunnel. Keep internal SSH/target details in private WORKSPACE.json. Verify the configured URL prefix, logo, CSS, libraries, teaching slides and PDFs live; record both hosts' revision/version before declaring release complete. See docs/DEVOPS.md.
 
 ## New mandatory requirement, deferred
-PWA-001 restores the owner’s original installable/offline app requirement. See register.json for acceptance criteria and ROADMAP.md for future work. Status planned / not_checked; existing manifest/service-worker caching does not establish acceptance. Owner explicitly prohibited changes to live v0.24 or another publication for this documentation task. Keep this documentation PR unmerged until an authorised future change can include it without a production deployment.
+PWA-001 restores the owner’s original installable/offline app requirement, now explicitly covering Apple (iOS/iPadOS/macOS), Windows and Android systems, including the actual iiyama smartboard. See register.json for acceptance criteria and ROADMAP.md for future work. Status planned / not_checked; existing manifest/service-worker caching does not establish acceptance. Owner explicitly prohibited changes to live v0.24 or another publication for this documentation task. Keep this documentation PR unmerged until an authorised future change can include it without a production deployment.
 
 ## Start next session
 1. Inspect git status, git worktree list, open PRs and remote main. Preserve unfinished owner work; do not force reset.
