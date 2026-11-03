@@ -48,10 +48,12 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - 8. Modelling with differential equations
 
 ## Cross-cutting follow-ups
-- **PWA-001 (mandatory, planned):** Apple, Windows and Android installation and reliable offline learning, explicitly including the iiyama smartboard, with resource downloads, readiness indicators, safe updates and real-device airplane-mode tests. Owner requested documentation only; do not implement or publish a new release yet.
+- **PWA-001 (v0.26, in progress):** Apple, Windows and Android installation and reliable offline learning, explicitly including the iiyama smartboard, with resource downloads, readiness indicators, safe updates and real-device airplane-mode tests. The owner explicitly superseded the documentation-only deferral and authorised implementation in v0.26. Desktop offline/recovery checks are recorded; real-device and release acceptance remain pending.
 - Reconcile duplicated teaching/textbook catalogues and release metadata with exact artifact evidence.
 - Port and pin private historical chapter-authoring toolchain; avoid absolute machine paths in future scripts.
 - Finish chapter/subtopic individual-question mapping review; coverage counters are not equivalent to reviewed mappings.
 - Complete remaining source/visual/interaction/print acceptance; legacy statuses are not automatically revalidated.
 - Deferred: accepted old-layout space improvements, teacher handouts with red answers, future home page/course navigation and new provider resources.
 - Keep old MARS branding superseded; future scope belongs in the requirement register, not silent development.
+
+- Existing dependency defects discovered during offline inventory: Pure Year 1 chapters 10 and 12 reference missing diagram assets. Their slides are explicitly excluded from offline packs; other available resources are identified. Do not claim complete offline slide availability for these chapters until repaired and rechecked.

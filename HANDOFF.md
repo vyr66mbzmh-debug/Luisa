@@ -1,7 +1,10 @@
 # Luisa handoff
 Updated: 2026-11-03. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
 
-## Current scope
+## Active v0.26 scope
+Issue #13: Pure Year 2 chapters 10/11/12, Mechanics Year 2 chapters 6/7/8, Core Pure 1 chapters 3/5 and Core Pure 2 chapters 6/7/8, with slides, student booklets and textbook links. Recheck accepted existing material rather than replacing it blindly. Owner explicitly authorised offline iPad support in v0.26, superseding PWA-001 deferral, and publication to Cloudflare and ADA after acceptance and checks. No v0.26 chapter content is yet accepted or published. Draft offline implementation has passing root and /AL/ cold browser restart, immediate-new-pack navigation, PDF range and fault-injection recovery checks. Independent review approved a draft preview only. Actual iPad and other device acceptance, interrupted-worker testing, all eleven chapter checks and the final release remain pending. Existing P1 chapters10/12 have unavailable slide dependencies and are labelled accordingly; no silent completeness claim. Branch task/13-v026-chapters-offline; private checkpoint and phase usage in OneDrive build/output/v026.
+
+## Completed v0.25 scope
 Issue #10: owner authorised v0.25 conversion of Pure Year 2 chapters 6 and 7 and Core Pure 1 chapters 1 and 4, with teaching slides, two-up student booklets and linked textbook chapters. Publication to Cloudflare and ADA is explicitly authorised after acceptance and repository checks. PR #11 was squash-merged. v0.25 is live on Cloudflare and ADA at checked release revision eb8cbb43fa6e822f9b93797f29061213f732159e. Both manifests and 96 fetched resources per host match the same 6,235-file artifact. See docs/evidence/v025-release.json. This documentation follow-up records that verified release; inspect the live manifest for any later documentation-only revision.
 
 All four chapters are agent accepted: Pure Year 2 chapters 6/7 have 46/53 slides and 23/27 booklet pages; Core Pure 1 chapters 1/4 have 41/48 slides and 21/24 booklet pages. All 188 source slides and 95 booklet pages received source/maths/visual/print review, with independent review and resolved findings. Three viewport sizes, each individual answer/cover, actual Space ordering and Reset were checked. All 88 extracted textbook pages match the original printed content. Both libraries and viewer resource links work below a non-root prefix; the library return preserves the chosen chapter. See docs/evidence/v025-chapters.json. Owner acceptance is not claimed.
@@ -10,7 +13,7 @@ The four original decks and both textbooks are readable after OneDrive restorati
 
 OPS-008 records the owner-reaffirmed requirement to keep the Mac awake during active work with bounded temporary assertions, verified and released when work stops. Do not let idle locking interrupt development; do not bypass a manual lock or change persistent password/security settings.
 
-PWA-001 remains deferred. PR #9 was merged externally by the owner before this branch; it only adds requirements documentation. This task does not implement PWA features.
+PR #9 was merged externally by the owner before v0.25; it only added requirements documentation. Its deferral is now superseded by the explicit v0.26 owner instruction.
 
 Usage counters are available for this chat, including cached input. Earlier activities interleaved conversion, checking and shared implementation, so an exact retrospective phase breakdown must not be invented. Private usage evidence records the available boundaries.
 
@@ -27,8 +30,8 @@ Usage counters are available for this chat, including cached input. Earlier acti
 ## ADA is a required release target
 Every new published website version must also be copied to ADA from the same checked static artifact. Use the established web server; no Python server or SSH tunnel. Keep internal SSH/target details in private WORKSPACE.json. Verify the configured URL prefix, logo, CSS, libraries, teaching slides and PDFs live; record both hosts' revision/version before declaring release complete. See docs/DEVOPS.md.
 
-## New mandatory requirement, deferred
-PWA-001 restores the owner’s original installable/offline app requirement, now explicitly covering Apple (iOS/iPadOS/macOS), Windows and Android systems, including the actual iiyama smartboard. See register.json for acceptance criteria and ROADMAP.md for future work. Status planned / not_checked; existing manifest/service-worker caching does not establish acceptance. Owner explicitly prohibited changes to live v0.24 or another publication for this documentation task. PR #9 was merged externally before this task; its implementation remains deferred.
+## PWA requirement history (superseded deferral)
+PWA-001 restores the owner’s original installable/offline app requirement, now explicitly covering Apple (iOS/iPadOS/macOS), Windows and Android systems, including the actual iiyama smartboard. See register.json for acceptance criteria and ROADMAP.md for future work. Status planned / not_checked; existing manifest/service-worker caching does not establish acceptance. Owner explicitly prohibited changes to live v0.24 or another publication for this documentation task. PR #9 was merged externally before this task; its implementation is now authorised for v0.26.
 
 ## Start next session
 1. Inspect git status, git worktree list, open PRs and remote main. Preserve unfinished owner work; do not force reset.

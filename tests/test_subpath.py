@@ -38,7 +38,9 @@ class SubpathAcceptance(unittest.TestCase):
         self.assertGreater(count, 100)
 
     def test_release_cache_fetches_fresh_assets_OPS_002(self):
-        self.assertIn('new Request(url,{cache:"reload"})', (ROOT / 'sw.js').read_text())
+        source = (ROOT / 'sw.js').read_text()
+        self.assertIn("cache:'no-store'", source)
+        self.assertIn("hash(bytes)!==d.files[path].sha256", source)
 
     def test_textbook_return_links_keep_prefix_OPS_002(self):
         source = (ROOT / 'textbook-view.js').read_text()

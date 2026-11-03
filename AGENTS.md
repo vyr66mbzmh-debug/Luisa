@@ -16,7 +16,7 @@ Read HANDOFF.md, docs/agentic/LEAD-RULES.md and the assigned issue only. Consult
 - Checked means source, maths, visual, interaction and print acceptance with evidence. Never replace these with a successful render. Invalidate affected approvals after edits.
 - Reuse questions across skill/chapter views; preserve edition-specific references. Do not publicly label practice by its upstream question-bank provider.
 
-- Future mandatory PWA-001: installable across Apple, Windows and Android systems, explicitly including the iiyama smartboard, explicit offline downloads/readiness and real-device offline acceptance. Existing caching is not proof of compliance; implementation is deferred.
+- Owner-authorised v0.26 PWA-001: installable across Apple, Windows and Android systems, explicitly including the iiyama smartboard, explicit offline downloads/readiness and real-device offline acceptance. Existing caching is not proof of compliance. The owner explicitly authorised implementation and checked publication in v0.26 on 2026-11-03, superseding the previous deferral.
 
 ## Workflow and efficiency
 On Mac, keep the machine awake during active authorised work with temporary bounded idle-system/display-sleep and user-active assertions; verify them and release job-owned assertions when work stops. Do not change persistent lock/password settings or bypass a manual lock. See OPS-008.

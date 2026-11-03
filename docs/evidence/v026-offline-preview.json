@@ -1,0 +1,103 @@
+{
+  "status": "Draft preview only; not release acceptance",
+  "date": "2026-11-03",
+  "requirements": [
+    "PWA-001",
+    "OPS-002"
+  ],
+  "browserChecks": [
+    {
+      "prefix": "/",
+      "coldBrowserRestart": true,
+      "newPackOpenedImmediately": true,
+      "offlineSlides": true,
+      "offlineLibrary": true,
+      "pdf": {
+        "status": 200,
+        "signature": "%PDF-",
+        "range": 206,
+        "contentRange": "bytes 0-9/318356",
+        "rangeBytes": 10
+      },
+      "images": []
+    },
+    {
+      "prefix": "/AL",
+      "coldBrowserRestart": true,
+      "newPackOpenedImmediately": true,
+      "offlineSlides": true,
+      "offlineLibrary": true,
+      "pdf": {
+        "status": 200,
+        "signature": "%PDF-",
+        "range": 206,
+        "contentRange": "bytes 0-9/318356",
+        "rangeBytes": 10
+      },
+      "images": []
+    }
+  ],
+  "recoveryChecks": [
+    {
+      "case": "error",
+      "oldReady": true,
+      "error": "Could not download resources/teaching/v003/pure-year-2/booklets/chapter-12.pdf (503)"
+    },
+    {
+      "case": "corrupt",
+      "oldReady": true,
+      "error": "The release changed or a file was incomplete. Retry when online. Previous downloads are unchanged."
+    },
+    {
+      "case": "successful-update",
+      "newReady": true,
+      "oldSessionPinned": true
+    },
+    {
+      "case": "insufficient-storage",
+      "previousReady": true,
+      "error": "Storage is full. Free space and retry. Your previous downloads have been kept."
+    },
+    {
+      "case": "eviction",
+      "notReady": true
+    },
+    {
+      "case": "retry",
+      "ready": true
+    },
+    {
+      "case": "manager-repair-offline.html",
+      "ready": true
+    },
+    {
+      "case": "manager-repair-offline.js",
+      "ready": true
+    },
+    {
+      "case": "remove",
+      "noReadyPack": true
+    }
+  ],
+  "independentReview": "Four material findings fixed and independently rechecked; bounded preview approval only.",
+  "realDeviceTests": "Not yet performed; desktop browser tests do not establish physical-device acceptance.",
+  "pending": [
+    "Interrupted worker/download and replacement lifecycle regression",
+    "Actual owner iPad cold installed-app launch disconnected",
+    "Other required platform/device evidence",
+    "Eleven chapter delivery and acceptance",
+    "Final Cloudflare and ADA release verification"
+  ],
+  "existingUnavailableSlidePacks": [
+    "maths-pure-year-1:10",
+    "maths-pure-year-1:12"
+  ],
+  "files": {
+    "sw.js": "84b31a30cd8c3355bc9f1d6c78634ebf49d00d7c5ab7f0ec864bd5e34412ee69",
+    "offline.js": "baa5f9353dff1a5ef0192181d15bb1153c7b782fa2f223e52c3dd6ee72b83410",
+    "offline.html": "65d12333c53788fccd61b4c6387dfc02fae1da6ab8c4aab4ffbb5866777c7a40",
+    "offline.css": "310b5ff00c37e5ebe2acdb873fd0668a96e8df39e614f5b36bdefcff6bd004ba",
+    "offline-register.js": "260b6d63329cbee61638bfe9ed4ea89434531555e1417eb42dfffe0940ea0e42",
+    "scripts/offline_manifest.py": "f5b0f1b93e5217fbbcf347c742b8d6ef90f237eceeaf0c8f0e816be705a10658"
+  }
+}
