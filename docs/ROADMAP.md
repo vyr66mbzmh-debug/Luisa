@@ -12,8 +12,8 @@ Product chapter backlog is derived from current catalogue availability, not old 
 ## Delivery backlog (confirm owner priority before starting)
 
 ### Pure Mathematics Year 2
-- 6. Trigonometric functions
-- 7. Trigonometry and modelling
+- 6. Trigonometric functions — v0.25 agent accepted; publication pending
+- 7. Trigonometry and modelling — v0.25 agent accepted; publication pending
 - 9. Differentiation
 - 10. Numerical methods
 - 11. Integration
@@ -37,9 +37,9 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - 8. Further kinematics
 
 ### Further Maths Core Pure 1
-- 1. Complex numbers
+- 1. Complex numbers — v0.25 agent accepted; publication pending
 - 3. Series
-- 4. Roots of polynomials
+- 4. Roots of polynomials — v0.25 agent accepted; publication pending
 - 5. Volumes of revolution
 
 ### Further Maths Core Pure 2
