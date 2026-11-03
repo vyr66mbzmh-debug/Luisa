@@ -2,7 +2,7 @@
   "version": "0.26",
   "revision": "272f74c127a749a4127e8925d162664818d4ce42",
   "pullRequest": 14,
-  "status": "Cloudflare verified; ADA transfer blocked by network access",
+  "status": "Cloudflare verified; ADA v0.26 skipped by owner",
   "cloudflare": {
     "checkedAt": "2026-11-03T15:37:27.392657+00:00",
     "baseUrl": "https://fmq-6d9.pages.dev/",
@@ -2637,8 +2637,10 @@
     ]
   },
   "ada": {
-    "status": "not_copied",
-    "reason": "Existing transfer endpoint timed out on repeated attempts; website connection also failed. No ADA publication claimed."
+    "status": "skipped_by_owner",
+    "reason": "Owner confirms ADA is down and explicitly pauses ADA work, skipping this version and retrying in v0.27.",
+    "instructionDate": "2026-11-03",
+    "deployed": false
   },
   "localGate": {
     "requirements": 158,
@@ -2659,7 +2661,7 @@
     "zipSha256": "4b1b601d8d265e137d813f22ae386fa3bc9905eed4cec3be4f6d7419fea13893",
     "bytes": 808636349
   },
-  "updated": "2026-11-03T15:38:02.400296+00:00",
+  "updated": "2026-11-03T16:02:05.033466+00:00",
   "productionOfflineBrowser": {
     "chapter": "Pure Year2 chapter12 Vectors",
     "slides": true,

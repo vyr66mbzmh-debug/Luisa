@@ -15,8 +15,8 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - 6. Trigonometric functions — v0.25 published and verified on Cloudflare and ADA
 - 7. Trigonometry and modelling — v0.25 published and verified on Cloudflare and ADA
 - 9. Differentiation
-- 10. Numerical methods — v0.26 verified on Cloudflare; ADA copy pending network access
-- 11. Integration — v0.26 verified on Cloudflare; ADA copy pending network access
+- 10. Numerical methods — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
+- 11. Integration — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 
 ### Statistics and Mechanics Year 1/AS
 - 1. Data collection
@@ -32,20 +32,20 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - 2. Conditional probability
 - 3. The normal distribution
 - 4. Moments
-- 6. Projectiles — v0.26 verified on Cloudflare; ADA copy pending network access
-- 7. Applications of forces — v0.26 verified on Cloudflare; ADA copy pending network access
-- 8. Further kinematics — v0.26 verified on Cloudflare; ADA copy pending network access
+- 6. Projectiles — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
+- 7. Applications of forces — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
+- 8. Further kinematics — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 
 ### Further Maths Core Pure 1
 - 1. Complex numbers — v0.25 published and verified on Cloudflare and ADA
-- 3. Series — v0.26 verified on Cloudflare; ADA copy pending network access
+- 3. Series — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 - 4. Roots of polynomials — v0.25 published and verified on Cloudflare and ADA
-- 5. Volumes of revolution — v0.26 verified on Cloudflare; ADA copy pending network access
+- 5. Volumes of revolution — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 
 ### Further Maths Core Pure 2
-- 6. Hyperbolic functions — v0.26 verified on Cloudflare; ADA copy pending network access
-- 7. Methods in differential equations — v0.26 verified on Cloudflare; ADA copy pending network access
-- 8. Modelling with differential equations — v0.26 verified on Cloudflare; ADA copy pending network access
+- 6. Hyperbolic functions — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
+- 7. Methods in differential equations — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
+- 8. Modelling with differential equations — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 
 ## Cross-cutting follow-ups
 - **PWA-001 (v0.26, implemented; partially checked):** Apple, Windows and Android installation and reliable offline learning, explicitly including the iiyama smartboard, with resource downloads, readiness indicators, safe updates and real-device airplane-mode tests. The owner explicitly superseded the documentation-only deferral and authorised implementation in v0.26. Desktop bulk-download/offline/recovery checks pass; owner confirms Vectors offline on iPad. Other physical devices are unverified; release verification remains pending.
