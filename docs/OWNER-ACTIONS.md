@@ -19,7 +19,8 @@ Do not mark any provider setting complete until verified in that provider.
 | Source authoring dependencies | Follow-up | Private historical build toolchain must be inventoried/pinned before claiming full authoring portability. |
 | Restart watchdog / hourly reports | Not enabled by design | New explicit authorisation needed. |
 
-Secrets and private denylist phrases, if desired, must be entered by the owner through GitHub settings, never pasted into prompts or committed. This setup does not require an LLM key or any new deployment credential.
-
 | v0.27 installed-app navigation | Automated checks pass; physical iPad follow-up | Update saved downloads, then test slides → PDF → Back and library return. Earlier Vectors acceptance does not establish this new reader’s physical-device acceptance. |
-| v0.27 publication | Authorised, pending verification | Both Cloudflare and ADA required; ADA connection restored. |
+| v0.27 publication | Verified on both hosts | Same checked v0.27 artifact and live offline browser flow verified; see docs/evidence/v027-release.json. |
+| ADA retention | Latest release only | Superseded Luisa versions and archives removed by owner instruction; recovery remains outside ADA. |
+
+Secrets and private denylist phrases, if desired, must be entered by the owner through GitHub settings, never pasted into prompts or committed. This setup does not require an LLM key or any new deployment credential.
