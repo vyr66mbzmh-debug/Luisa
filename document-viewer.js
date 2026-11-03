@@ -1,11 +1,11 @@
-import * as pdfjs from './vendor/pdfjs/pdf.min.mjs';
+import * as pdfjs from './vendor/pdfjs/pdf.min.js';
 const $=id=>document.getElementById(id),base=new URL('./',location.href),params=new URLSearchParams(location.search);
 function local(value,pdf=false){try{const u=new URL(value,base);if(u.origin!==base.origin||!u.pathname.startsWith(base.pathname)||u.username||u.password||!['http:','https:'].includes(u.protocol)||(pdf&&!u.pathname.toLowerCase().endsWith('.pdf')))return null;return u;}catch{return null;}}
 const target=local(params.get('file')||'',true),back=local(params.get('return')||'./');
 $('return').href=back?.href||base.href;
 $('return').onclick=e=>{if(window.parent!==window){e.preventDefault();window.parent.postMessage({type:'luisa-close-document'},base.origin);}};
 $('title').textContent=params.get('title')||'Document';document.title=$('title').textContent+' · Luisa';
-pdfjs.GlobalWorkerOptions.workerSrc=new URL('vendor/pdfjs/pdf.worker.min.mjs',base).href;
+pdfjs.GlobalWorkerOptions.workerSrc=new URL('vendor/pdfjs/pdf.worker.min.js',base).href;
 let pdf,pageNumber=1,zoom=1,requested=0,renderTask=null,chain=Promise.resolve();
 function requestRender(){const revision=++requested;if(renderTask)renderTask.cancel();chain=chain.catch(()=>{}).then(()=>render(revision));}
 async function render(revision){if(!pdf||revision!==requested)return;try{const p=await pdf.getPage(pageNumber);if(revision!==requested)return;const initial=p.getViewport({scale:1}),width=Math.max(280,document.documentElement.clientWidth-28),scale=width/initial.width*zoom,viewport=p.getViewport({scale});const canvas=$('canvas'),ratio=Math.min(window.devicePixelRatio||1,2,Math.sqrt(8000000/(viewport.width*viewport.height)));canvas.width=Math.ceil(viewport.width*ratio);canvas.height=Math.ceil(viewport.height*ratio);canvas.style.width=viewport.width+'px';canvas.style.height=viewport.height+'px';renderTask=p.render({canvasContext:canvas.getContext('2d'),viewport,transform:[ratio,0,0,ratio,0,0]});await renderTask.promise;if(revision!==requested)return;renderTask=null;$('status').textContent='';$('page').value=pageNumber;$('previous').disabled=pageNumber<=1;$('next').disabled=pageNumber>=pdf.numPages;$('canvas').setAttribute('aria-label','Page '+pageNumber+' of '+pdf.numPages);const text=await p.getTextContent();if(revision===requested){$('text').textContent=text.items.map(x=>x.str+(x.hasEOL?'\n':' ')).join('');$('accessible').hidden=false;}}catch(e){if(e.name!=='RenderingCancelledException'){$('status').textContent='This page could not be displayed. Use Back to return and try again.';console.error(e);}}}
