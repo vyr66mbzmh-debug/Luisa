@@ -3251,6 +3251,27 @@
       ],
       "origin": "Owner reaffirmed original mandatory progressive/offline requirement on 2026-11-03; previously omitted from the consolidated register. Owner subsequently expanded mandatory device scope to all Apple, Windows and Android systems and explicitly the iiyama smartboard.",
       "evidence": []
+    },
+    {
+      "id": "OPS-008",
+      "requirement": "Keep the Mac awake during authorised active development and publication so idle sleep or idle locking does not interrupt the job. Use a temporary, bounded keep-awake assertion and release it when work stops.",
+      "scope": "Mac-based development and publication sessions",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified",
+      "acceptance": [
+        "Start temporary idle-system/display-sleep prevention and user-active assertions for the active job; verify they are present.",
+        "Do not disable password protection, bypass a manual lock, or change persistent security settings. If the Mac is already locked, request the owner to unlock it.",
+        "Renew bounded assertions if active work outlasts them, and release job-owned assertions at completion, explicit pause or genuine blocker."
+      ],
+      "origin": "Owner reaffirmed the keep-awake development requirement in this chat on 2026-11-03.",
+      "evidence": [
+        {
+          "date": "2026-11-03",
+          "reference": "AGENTS.md",
+          "scope": "Temporary system/display/user-active assertions started and verified with the operating-system power assertion report during v0.25 publication."
+        }
+      ]
     }
   ]
 }
