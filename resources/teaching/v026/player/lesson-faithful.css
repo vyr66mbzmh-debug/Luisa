@@ -1,0 +1,40 @@
+@font-face{font-family:Lesson;src:url('../../../../vendor/fonts/KaTeX_Main-Regular.woff2')}@font-face{font-family:Lesson;src:url('../../../../vendor/fonts/KaTeX_Main-Bold.woff2');font-weight:700}@font-face{font-family:Lesson;src:url('../../../../vendor/fonts/KaTeX_Main-Italic.woff2');font-style:italic}
+*{box-sizing:border-box}html,body{height:100%;margin:0}body{font-family:Lesson,serif;background:#fff;color:#111;display:flex;flex-direction:column}header{background:#183957;color:white;padding:10px 18px;flex:none;box-shadow:0 2px 7px #0002}.heading{display:grid;grid-template-columns:130px 1fr 70px;align-items:center;gap:12px}.heading a{color:#fff;font:14px system-ui}.heading h1{text-align:center;margin:2px 0 10px;font-size:clamp(25px,2.8vw,48px);line-height:1.1;font-weight:400}.heading h1.extension{color:#ff7878}#slide-number{text-align:right;font:24px Lesson}.main-controls{display:flex;gap:8px;align-items:center}button,select,summary{font:15px system-ui;min-height:46px;border:1px solid #ffffff60;border-radius:6px;padding:9px 13px;background:#ffffff16;color:white;cursor:pointer}button:disabled{opacity:.32;cursor:default}button.primary{background:white;color:#183957;min-width:90px;font-weight:600;margin-left:auto}select{max-width:38vw}select option{color:#142f49;background:white}.resources{position:relative}.resources>div{position:absolute;right:0;top:50px;width:260px;background:white;color:#183957;padding:15px;z-index:999;box-shadow:0 5px 24px #0003;border-radius:8px}.resources a{display:block;color:#183957;padding:12px 3px}.resources select{color:#183957;max-width:100%}#status:empty{display:none}#status{margin:6px 20px;font:13px system-ui}#slide-region{flex:1;min-height:0;display:flex;align-items:flex-start;justify-content:center;padding:24px 8px 8px;overflow:hidden}#slide-frame{position:relative;flex:none}#slide-content{transform-origin:top left}.source-slide{position:relative;overflow:hidden}.lesson-canvas,.lesson-shape{font-family:Lesson,serif}.lesson-paragraph{overflow:visible}.lesson-paragraph>.katex{font-size:1em}.lesson-text{font-family:Lesson,serif}.lesson-image-tex{color:#111}.lesson-image-prose{display:block}.lesson-image-block{display:block}.lesson-text svg{overflow:visible}.lesson-drawing{position:absolute;inset:0;overflow:visible}.lesson-answer-cover{cursor:pointer;z-index:20}.lesson-answer-cover:focus-visible{outline:3px solid #e4ac25}.is-hidden{visibility:hidden!important;pointer-events:none}.answer-tick{position:absolute;right:2px;top:2px;border-radius:50%;width:26px;height:26px;min-height:0;padding:0;font:bold 20px system-ui;color:#145ca0;background:#fff;border:1px solid #d5e0eb;z-index:50}.answer-blue,.answer-blue *{color:#125ca0!important}.chapter-cover{width:1280px;height:720px;display:flex;align-items:center;justify-content:center;background:#183957;color:#ffe369;text-align:center;padding:80px}.chapter-cover h2{font-size:64px;line-height:1.3;font-weight:400}.lesson-image-tex .katex{font-size:1em}.lesson-tex-table{max-width:100%}footer{display:none}@media(max-width:700px){header{padding:6px 9px}.heading{grid-template-columns:70px 1fr 35px}.heading a{font-size:11px}.heading h1{font-size:23px}.main-controls{gap:4px;flex-wrap:wrap}button,select,summary{padding:7px;min-height:42px;font-size:13px}#slide-select{max-width:47vw}#fullscreen{display:none}}
+
+.answer-concealed{visibility:hidden!important;pointer-events:none!important}.lesson-owned-answer{overflow:hidden}.lesson-image-block{margin:.3em 0}.lesson-image-prose>span+span{margin-top:.18em}.lesson-paragraph{line-height:1.3!important}.lesson-owned-answer .lesson-image-prose{padding-right:20px}.lesson-image-prose strong{font-weight:700}
+/* Flow rows grow with their text; concealment never removes their layout space. */
+#slide-region.flow-mode{display:block;overflow:auto;padding:24px 28px}
+.lesson-flow{width:100%;font-size:28px;line-height:1.45}
+.flow-row{position:relative;display:grid;grid-template-columns:1.7em minmax(0,1fr);column-gap:.3em;margin-bottom:1.2em;padding:.4em .6em}
+.flow-row:not(:has(.flow-label)) .flow-body{grid-column:1 / -1}
+.flow-answer{min-height:4.5em;margin-top:1.2em}
+.flow-theory{background:#eef3f8;border:1px solid #c8d4e0}
+.lesson-flow .flow-label>.lesson-shape,.lesson-flow .flow-body>.lesson-shape{position:relative!important;transform:none!important;width:100%!important;height:auto!important;overflow:visible!important}
+.lesson-flow .lesson-image-tex{position:relative!important;inset:auto!important;font-size:inherit!important;line-height:inherit!important}
+.lesson-flow .flow-body{min-width:0;overflow-x:auto;padding-right:1.3em}
+.lesson-flow .flow-row>.lesson-answer-cover{position:absolute!important;transform:none!important;inset:0!important;width:100%!important;height:100%!important;border:1.5px solid #6383a4;background:#d6e5f5}
+.lesson-flow .flow-row>.lesson-answer-cover .lesson-drawing{display:none}
+.lesson-flow .lesson-answer-cover .lesson-image-tex{display:none}
+.lesson-flow .lesson-owned-answer .lesson-image-prose{padding-right:0}
+@media(max-width:700px){#slide-region.flow-mode{padding:12px 8px}.lesson-flow{font-size:22px}.flow-row{padding:.3em;grid-template-columns:1.3em minmax(0,1fr)}}
+
+/* Every chapter opener fills the board background, regardless of source ratio. */
+#slide-region.title-mode{background:#183957;align-items:center}
+
+/* Rebuilt teaching pages retain readable type and use vertical space. */
+#slide-region.readable-mode{overflow:hidden;justify-content:center;padding:12px 16px 24px}
+.readable-mode .lesson-owned-answer .lesson-image-prose{padding-right:0}
+
+.source-slide.title-page{background:#183957}
+/* Answer identifiers must contrast with pale covers. */
+.readable-mode .lesson-answer-cover .lesson-text,
+.readable-mode .lesson-answer-cover .lesson-text *{color:#173b60!important}
+
+[data-resource-link] *{color:#1760a6!important;text-decoration:underline!important;cursor:pointer}
+
+.lesson-answer-cover .lesson-text,.lesson-answer-cover .lesson-text *{color:#173b60!important}
+
+/* Display mathematics uses full-size fractions and a shared left alignment. */
+.lesson-image-block>.katex-display{margin:.25em 0;text-align:left}.lesson-image-block>.katex-display>.katex{text-align:left}
+
+[data-equation-question] .katex-display>.katex{text-align:right}

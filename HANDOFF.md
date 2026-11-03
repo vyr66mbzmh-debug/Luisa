@@ -1,7 +1,16 @@
 # Luisa handoff
 Updated: 2026-11-03. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
 
-## Current scope
+## Active v0.26 scope
+Issue #13; branch task/13-v026-chapters-offline; draft PR #14. Owner authorises checked publication to Cloudflare and the same artifact to ADA. All11 requested chapters are locally agent accepted: Pure Year2 10/11/12, Mechanics Year2 6/7/8, Core Pure1 3/5, Core Pure2 6/7/8. Total571 displayed slides,289 booklet pages,260 textbook pages. See docs/evidence/v026-chapters.json. No production v0.26 publication yet.
+
+Owner approved splitting Integration original82 into7 readable panels, with matching board/booklet numbering.110 originals become116 displayed slides. Vectors22-slide recheck restores intermediate steps and diagrams. All chapter-specific source/math/visual/interaction/print and both-library checks pass; private detailed evidence and source usage stay in OneDrive materials/build/output/v026.
+
+PWA-001 deferral is explicitly superseded. Owner confirms Vectors works offline on iPad Pro12.9 fifth generation, reported iPadOS27.2. One-action Download all implemented; filter/busy/failure/retry, stale-catalogue and root/AL offline checks pass. Root/AL worker termination, replacement identity, old offline resources and retry pass. Final real-library Download all saves62 packs at both prefixes and all11 requested chapter resources open offline. Testing evidence is recorded in docs/evidence/v026-offline-preview.json. Physical testing of other platforms and the final bulk-download build remains unclaimed. Existing Pure1 chapters10/12 missing dependencies remain explicitly unavailable.
+
+Next: finish release metadata/gate, review exact head, push and wait for build/test/scan; squash, verify Cloudflare, copy identical checked artifact to ADA and verify. Preserve private checkpoint and usage boundaries. No automatic schedules.
+
+## Completed v0.25 scope
 Issue #10: owner authorised v0.25 conversion of Pure Year 2 chapters 6 and 7 and Core Pure 1 chapters 1 and 4, with teaching slides, two-up student booklets and linked textbook chapters. Publication to Cloudflare and ADA is explicitly authorised after acceptance and repository checks. PR #11 was squash-merged. v0.25 is live on Cloudflare and ADA at checked release revision eb8cbb43fa6e822f9b93797f29061213f732159e. Both manifests and 96 fetched resources per host match the same 6,235-file artifact. See docs/evidence/v025-release.json. This documentation follow-up records that verified release; inspect the live manifest for any later documentation-only revision.
 
 All four chapters are agent accepted: Pure Year 2 chapters 6/7 have 46/53 slides and 23/27 booklet pages; Core Pure 1 chapters 1/4 have 41/48 slides and 21/24 booklet pages. All 188 source slides and 95 booklet pages received source/maths/visual/print review, with independent review and resolved findings. Three viewport sizes, each individual answer/cover, actual Space ordering and Reset were checked. All 88 extracted textbook pages match the original printed content. Both libraries and viewer resource links work below a non-root prefix; the library return preserves the chosen chapter. See docs/evidence/v025-chapters.json. Owner acceptance is not claimed.
@@ -10,7 +19,7 @@ The four original decks and both textbooks are readable after OneDrive restorati
 
 OPS-008 records the owner-reaffirmed requirement to keep the Mac awake during active work with bounded temporary assertions, verified and released when work stops. Do not let idle locking interrupt development; do not bypass a manual lock or change persistent password/security settings.
 
-PWA-001 remains deferred. PR #9 was merged externally by the owner before this branch; it only adds requirements documentation. This task does not implement PWA features.
+PR #9 was merged externally by the owner before v0.25; it only added requirements documentation. Its deferral is now superseded by the explicit v0.26 owner instruction.
 
 Usage counters are available for this chat, including cached input. Earlier activities interleaved conversion, checking and shared implementation, so an exact retrospective phase breakdown must not be invented. Private usage evidence records the available boundaries.
 
@@ -27,8 +36,8 @@ Usage counters are available for this chat, including cached input. Earlier acti
 ## ADA is a required release target
 Every new published website version must also be copied to ADA from the same checked static artifact. Use the established web server; no Python server or SSH tunnel. Keep internal SSH/target details in private WORKSPACE.json. Verify the configured URL prefix, logo, CSS, libraries, teaching slides and PDFs live; record both hosts' revision/version before declaring release complete. See docs/DEVOPS.md.
 
-## New mandatory requirement, deferred
-PWA-001 restores the owner’s original installable/offline app requirement, now explicitly covering Apple (iOS/iPadOS/macOS), Windows and Android systems, including the actual iiyama smartboard. See register.json for acceptance criteria and ROADMAP.md for future work. Status planned / not_checked; existing manifest/service-worker caching does not establish acceptance. Owner explicitly prohibited changes to live v0.24 or another publication for this documentation task. PR #9 was merged externally before this task; its implementation remains deferred.
+## PWA requirement history (superseded deferral)
+PWA-001 restores the owner’s original installable/offline app requirement, now explicitly covering Apple (iOS/iPadOS/macOS), Windows and Android systems, including the actual iiyama smartboard. See register.json for acceptance criteria and ROADMAP.md for future work. Implementation and partial verification are recorded under PWA-001; other physical devices remain unverified. Owner explicitly prohibited changes to live v0.24 or another publication for this documentation task. PR #9 was merged externally before this task; its implementation is now authorised for v0.26.
 
 ## Start next session
 1. Inspect git status, git worktree list, open PRs and remote main. Preserve unfinished owner work; do not force reset.

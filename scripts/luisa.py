@@ -187,6 +187,8 @@ def build(root=ROOT, output=None):
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(content)
         entries[name] = {'sha256': hashlib.sha256(content).hexdigest(), 'bytes': len(content)}
+    from offline_manifest import generate
+    generate(output, entries, json.loads((root / 'release.json').read_text())['version'])
     revision = subprocess.check_output(['git', '-C', str(root), 'rev-parse', 'HEAD'], text=True).strip()
     dirty = bool(subprocess.check_output(['git', '-C', str(root), 'status', '--porcelain'], text=True).strip())
     manifest = {'schemaVersion': 1, 'revision': revision, 'dirty': dirty, 'version': json.loads((root / 'release.json').read_text())['version'], 'files': entries}
