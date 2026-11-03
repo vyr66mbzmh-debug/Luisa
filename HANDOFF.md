@@ -1,5 +1,5 @@
 # Luisa handoff
-Updated: 2026-11-02. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
+Updated: 2026-11-03. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
 
 ## Current scope
 Owner authorised GitHub-only rename, twelve-factor static delivery tooling, Davide playbook adaptation, consolidated requirements and cross-provider handoff. Future publishing automatic after checks. Public URL remains https://fmq-6d9.pages.dev/ . Product version stays 0.24 for this infrastructure-only setup. Stop after setup; the next content task needs owner scope.
@@ -16,6 +16,9 @@ Owner authorised GitHub-only rename, twelve-factor static delivery tooling, Davi
 
 ## ADA is a required release target
 Every new published website version must also be copied to ADA from the same checked static artifact. Use the established web server; no Python server or SSH tunnel. Keep internal SSH/target details in private WORKSPACE.json. Verify the configured URL prefix, logo, CSS, libraries, teaching slides and PDFs live; record both hosts' revision/version before declaring release complete. See docs/DEVOPS.md.
+
+## New mandatory requirement, deferred
+PWA-001 restores the owner’s original installable/offline app requirement. See register.json for acceptance criteria and ROADMAP.md for future work. Status planned / not_checked; existing manifest/service-worker caching does not establish acceptance. Owner explicitly prohibited changes to live v0.24 or another publication for this documentation task. Keep this documentation PR unmerged until an authorised future change can include it without a production deployment.
 
 ## Start next session
 1. Inspect git status, git worktree list, open PRs and remote main. Preserve unfinished owner work; do not force reset.

@@ -48,6 +48,7 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - 8. Modelling with differential equations
 
 ## Cross-cutting follow-ups
+- **PWA-001 (mandatory, planned):** iPhone/iPad installation and reliable offline learning, with resource downloads, readiness indicators, safe updates and real-device airplane-mode tests. Owner requested documentation only; do not implement or publish a new release yet.
 - Reconcile duplicated teaching/textbook catalogues and release metadata with exact artifact evidence.
 - Port and pin private historical chapter-authoring toolchain; avoid absolute machine paths in future scripts.
 - Finish chapter/subtopic individual-question mapping review; coverage counters are not equivalent to reviewed mappings.
