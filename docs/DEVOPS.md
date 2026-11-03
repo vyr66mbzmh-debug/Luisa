@@ -29,3 +29,8 @@ After each checked production release, copy the same dist artifact to ADA's esta
 Use document-relative asset/navigation URLs and explicit .html page destinations. Never assume deployment at /. Catalogue JSON/PDF links must also stay within the deployment prefix. Test with a plain static server under a non-root prefix before release. The SW cache revision must change when cached runtime files change.
 
 Stage the complete artifact outside public, verify every manifest hash on ADA, then replace the public tree using the established deployment scope. Do not copy source books, development docs, Git metadata or usage/credentials into public. Verify the live manifest matches the released Git revision and check logo/CSS, skill and textbook views, teaching chapter navigation, a lesson JSON and booklet/textbook PDFs. Report an ADA failure as an incomplete release even if Cloudflare succeeds.
+
+## ADA retention (owner instruction 2026-11-03)
+Keep only the latest verified Luisa release on ADA. Do not retain historical Luisa releases, source/deployment ZIPs or completed staging folders there. Recovery artifacts remain outside ADA (Cloudflare and the local OneDrive backup). Check disk capacity before staging; reuse identical files from the current deployment where possible. Verify the staged artifact and activate by directory switch rather than duplicating the complete release. After live verification, remove superseded Luisa directories and temporary staging artifacts, preserving unrelated server files.
+
+PDF reader modules use .js filenames because ADA serves .mjs as application/octet-stream. Verify the live module Content-Type as well as its hash; local browser testing alone cannot establish host MIME compatibility.

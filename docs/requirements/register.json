@@ -2875,7 +2875,7 @@
     },
     {
       "id": "OPS-002",
-      "requirement": "Every newly published website version must also be copied to ADA from the same checked artifact. Retain local navigable copy and Cloudflare production. Use the existing web server and deployment prefix; verify relative assets, explicit HTML navigation, lesson JSON and PDFs online. No Python server or SSH forwarding is required.",
+      "requirement": "Every newly published website version must also be copied to ADA from the same checked artifact. Retain local navigable copy and Cloudflare production. Use the existing web server and deployment prefix; verify relative assets, explicit HTML navigation, lesson JSON and PDFs online. No Python server or SSH forwarding is required. Owner instruction 2026-11-03: ADA retains only the latest verified Luisa release; remove superseded release copies, source/deployment archives and completed staging folders. Recovery artifacts remain outside ADA, including Cloudflare.",
       "scope": "current",
       "priority": "P1",
       "implementation": "implemented",
@@ -2883,7 +2883,8 @@
       "acceptance": [
         "ADA live manifest matches the current release revision/version.",
         "Logo, CSS, skill/textbook libraries, teaching links, lesson JSON, booklet and chapter PDF work below the configured non-root prefix.",
-        "Deployment instructions are in HANDOFF.md and DEVOPS.md; private connection details stay outside Git."
+        "Deployment instructions are in HANDOFF.md and DEVOPS.md; private connection details stay outside Git.",
+        "After successful activation and verification, ADA contains only the latest Luisa deployment, with no historical Luisa release or source archives; unrelated server files remain untouched."
       ],
       "origin": "owner-conversation-2026-11-02-ADA-release",
       "evidence": [
