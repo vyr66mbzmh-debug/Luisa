@@ -1,0 +1,2672 @@
+{
+  "version": "0.26",
+  "revision": "272f74c127a749a4127e8925d162664818d4ce42",
+  "pullRequest": 14,
+  "status": "Cloudflare verified; ADA transfer blocked by network access",
+  "cloudflare": {
+    "checkedAt": "2026-11-03T15:37:27.392657+00:00",
+    "baseUrl": "https://fmq-6d9.pages.dev/",
+    "version": "0.26",
+    "revision": "272f74c127a749a4127e8925d162664818d4ce42",
+    "dirty": false,
+    "manifestMatchesCompleteCheckedArtifact": true,
+    "manifestFileCount": 6644,
+    "actualFetchedResources": [
+      {
+        "path": "app.js",
+        "sha256": "c2db96c11b0d65e9550e87087bf1dadb1f257f5f62b698f6c08a7a7f4b579cb7",
+        "bytes": 11821,
+        "result": "pass"
+      },
+      {
+        "path": "assets/luisa/icon-192.png",
+        "sha256": "765ffe1872d570d52bf488ef8092953a225add0f50a171c31b489cdbbdd81193",
+        "bytes": 14357,
+        "result": "pass"
+      },
+      {
+        "path": "assets/luisa/icon-512.png",
+        "sha256": "013fdb858988038f04eae328df9acc7f50a9512ff753cefd0a6feae81c6ae75f",
+        "bytes": 104753,
+        "result": "pass"
+      },
+      {
+        "path": "assets/luisa/logo.png",
+        "sha256": "bc4e00b2c910f8e8b0dd6c58cf24ce6ea0d2efbb4c69f7eb202499b0624e62ef",
+        "bytes": 1104512,
+        "result": "pass"
+      },
+      {
+        "path": "development-progress.html",
+        "sha256": "7b4ef950f739e65f9b82892077c06811d07c32573f8d6b069846d7d2b2f910d1",
+        "bytes": 30696,
+        "result": "pass"
+      },
+      {
+        "path": "index.html",
+        "sha256": "d142d58562d11a77a70c5bb0fbbe2bc4cc214f150c98fba653a4ba59144eb1b0",
+        "bytes": 13318,
+        "result": "pass"
+      },
+      {
+        "path": "lesson-viewer.html",
+        "sha256": "3e5985ad56a344416d69eba2747318043780857488869b7b4b8e894b033ddb39",
+        "bytes": 1684,
+        "result": "pass"
+      },
+      {
+        "path": "library-entry.js",
+        "sha256": "c26b97ad2d3c30038e8f7680f85d2999c2eff74942d004409f02f182a7d93f3d",
+        "bytes": 482,
+        "result": "pass"
+      },
+      {
+        "path": "luisa.css",
+        "sha256": "a1590ef52ecf179325be67c44f955f7d90304aaa64c6933a0579a57d539ca677",
+        "bytes": 1351,
+        "result": "pass"
+      },
+      {
+        "path": "manifest.webmanifest",
+        "sha256": "31267e815195cf85a849d98fdc95c011ac88f91a2f23fbda72646205aaf5fc2d",
+        "bytes": 627,
+        "result": "pass"
+      },
+      {
+        "path": "offline-register.js",
+        "sha256": "260b6d63329cbee61638bfe9ed4ea89434531555e1417eb42dfffe0940ea0e42",
+        "bytes": 269,
+        "result": "pass"
+      },
+      {
+        "path": "offline.css",
+        "sha256": "310b5ff00c37e5ebe2acdb873fd0668a96e8df39e614f5b36bdefcff6bd004ba",
+        "bytes": 1324,
+        "result": "pass"
+      },
+      {
+        "path": "offline.html",
+        "sha256": "adc6178e0d726477040954b964f7da0017ebabebaa9c5e81e5059298136e7d2e",
+        "bytes": 2826,
+        "result": "pass"
+      },
+      {
+        "path": "offline.js",
+        "sha256": "17b679fd0ed068c8a66eed77bd712e62b97b2f3279f1cdf55e8131fbe6083782",
+        "bytes": 8159,
+        "result": "pass"
+      },
+      {
+        "path": "p1-native-lesson-faithful.css",
+        "sha256": "c0df99419d3a1ac951388ed79da43753069d1e4ca01d80cd5a9fa31f419bed9b",
+        "bytes": 6226,
+        "result": "pass"
+      },
+      {
+        "path": "pure1-native-viewer.html",
+        "sha256": "723f177cbd988be17472b45e49de68a4a156003291be2473061dedb5ad4a36ae",
+        "bytes": 1850,
+        "result": "pass"
+      },
+      {
+        "path": "pure2-lesson-viewer.html",
+        "sha256": "497062dc3bc5e16802a88a40530639f7adfcb64f7b5d3052652d333912f41ca5",
+        "bytes": 2023,
+        "result": "pass"
+      },
+      {
+        "path": "release-report-0.26.html",
+        "sha256": "1da19e11b1cf1be6f4dd2fd8b8ff36dd2c17f7aaa5567fc8943943c07a87b188",
+        "bytes": 1433,
+        "result": "pass"
+      },
+      {
+        "path": "release.json",
+        "sha256": "e662459647cba4594f907884c9a913bbab79624c1c7fd8185d13093c54bc8b3f",
+        "bytes": 251,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/0c0e1dc9bd10edc3dd8b.png",
+        "sha256": "0c0e1dc9bd10edc3dd8b8d38a6c870e48666b9538b253136a571945dee34eb4f",
+        "bytes": 103202,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-cob-explain-0.svg",
+        "sha256": "c614f1ba8dbb004c6498456e61a100101b644606e80143511922511208441249",
+        "bytes": 29246,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-cob-explain-1.svg",
+        "sha256": "0173b07a4ab72e68fb7c34e0d8d3a915c15809ba02ee40e924a6073a2c662c5c",
+        "bytes": 29432,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-cob-explain-2.svg",
+        "sha256": "c352dda6d6dcd1f0575bccd989ad89fa902ceb1d86d303abd31b30d672434800",
+        "bytes": 29817,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-cob-explain-3.svg",
+        "sha256": "49903319fb46805c1ad47dd6046539453d6d649a71992a03a11549a57b2fd093",
+        "bytes": 30004,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-cob-explain-4.svg",
+        "sha256": "9cc50b590f631532cbb009855ecc4e89b9740121e6f8b7733e4d11957db8b44a",
+        "bytes": 30391,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-cob-explain-5.svg",
+        "sha256": "d79b9427d14de185cb3ae8c5d47c9b2a0d21d50eee4197b8a310e854e15f8ef3",
+        "bytes": 30578,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-cob-explain-6.svg",
+        "sha256": "d27792d5337c03e4b1a500a83c139e0977813265fccf0c5eb56e7044fe6f21c3",
+        "bytes": 30966,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-cob-explain-7.svg",
+        "sha256": "f78b973cbe1d5a73ef8765b62cfc605b2f679c0c576c825e8ed9656d5cdc0188",
+        "bytes": 31153,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-cobweb.svg",
+        "sha256": "68e95ace3bafba9d84adada469610dbfc4db92bf49e56ef4fb3f0337a9b29f6b",
+        "bytes": 29009,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-divergent.svg",
+        "sha256": "790128cced4da4f99a4abd51c4971704ceeffaeb6bcb7de79d39cbf7a2c36c65",
+        "bytes": 21374,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-ex10b-3bd.svg",
+        "sha256": "c27bca7beff588fbb708df51b7e87f34221fc1d9de4c28303a23524bd7b3f5e8",
+        "bytes": 31096,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-ex10b-3e.svg",
+        "sha256": "9cd8a99aea11aac09bf9d84bd377c7271374412452924884d72ed3bda1899e18",
+        "bytes": 24477,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-ex10c3.svg",
+        "sha256": "41060b3b2015c20967a1fd36226f4d1ad79beab48653cfecf6739ff79ed1b260",
+        "bytes": 17896,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-1-answer.svg",
+        "sha256": "52b420c6d48a5f5c72069f8300f78e201d27406343129e555fc97a791b0991a7",
+        "bytes": 11913,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-1-step-1.svg",
+        "sha256": "10d8cf10a2a494ac4a732d483d432b2f725ca7af1e73273339d3a4b582fd58ea",
+        "bytes": 10101,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-1-step-2.svg",
+        "sha256": "7cac8b6b197f743a6d74ed6c03017a6cc699bbaf564d98838e88f9ddd661df3d",
+        "bytes": 10234,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-1-step-3.svg",
+        "sha256": "7cac8b6b197f743a6d74ed6c03017a6cc699bbaf564d98838e88f9ddd661df3d",
+        "bytes": 10234,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-1-step-4.svg",
+        "sha256": "7cac8b6b197f743a6d74ed6c03017a6cc699bbaf564d98838e88f9ddd661df3d",
+        "bytes": 10234,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-1-step-5.svg",
+        "sha256": "7cac8b6b197f743a6d74ed6c03017a6cc699bbaf564d98838e88f9ddd661df3d",
+        "bytes": 10234,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-2-answer.svg",
+        "sha256": "a3d08dedb7836f26c37b7579d74279c7529e33ade2abd07aabb6e56b345d29c3",
+        "bytes": 9221,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-2-step-1.svg",
+        "sha256": "692b4f8b48c257fec4eb63bd33196100b4cb31a755c5a2239f962cb40b31322e",
+        "bytes": 8548,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-2-step-2.svg",
+        "sha256": "692b4f8b48c257fec4eb63bd33196100b4cb31a755c5a2239f962cb40b31322e",
+        "bytes": 8548,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-2-step-3.svg",
+        "sha256": "692b4f8b48c257fec4eb63bd33196100b4cb31a755c5a2239f962cb40b31322e",
+        "bytes": 8548,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-2-step-4.svg",
+        "sha256": "692b4f8b48c257fec4eb63bd33196100b4cb31a755c5a2239f962cb40b31322e",
+        "bytes": 8548,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-2-step-5.svg",
+        "sha256": "692b4f8b48c257fec4eb63bd33196100b4cb31a755c5a2239f962cb40b31322e",
+        "bytes": 8548,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-3-answer.svg",
+        "sha256": "66fb2b23a629f8bac90c562b93d2028ad71958e1387d2edde57347e74dca7109",
+        "bytes": 12164,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-3-step-1.svg",
+        "sha256": "82974f55555ad7860c8dd00a17f434827bdec5808da8d11287e161ac58463750",
+        "bytes": 9802,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-3-step-2.svg",
+        "sha256": "82974f55555ad7860c8dd00a17f434827bdec5808da8d11287e161ac58463750",
+        "bytes": 9802,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-3-step-3.svg",
+        "sha256": "82974f55555ad7860c8dd00a17f434827bdec5808da8d11287e161ac58463750",
+        "bytes": 9802,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-3-step-4.svg",
+        "sha256": "82974f55555ad7860c8dd00a17f434827bdec5808da8d11287e161ac58463750",
+        "bytes": 9802,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-3-step-5.svg",
+        "sha256": "82974f55555ad7860c8dd00a17f434827bdec5808da8d11287e161ac58463750",
+        "bytes": 9802,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-4-answer.svg",
+        "sha256": "3cce7b9ac8112ae213c6a496133042cfcc9f07c80f825d3f9906bdd6263e5716",
+        "bytes": 10855,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-4-step-1.svg",
+        "sha256": "6efd66d465b4ae157397a7e12177f8ee5fc86ecda59f7c895ece112d7584e583",
+        "bytes": 8512,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-4-step-2.svg",
+        "sha256": "6efd66d465b4ae157397a7e12177f8ee5fc86ecda59f7c895ece112d7584e583",
+        "bytes": 8512,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-4-step-3.svg",
+        "sha256": "6efd66d465b4ae157397a7e12177f8ee5fc86ecda59f7c895ece112d7584e583",
+        "bytes": 8512,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-4-step-4.svg",
+        "sha256": "6efd66d465b4ae157397a7e12177f8ee5fc86ecda59f7c895ece112d7584e583",
+        "bytes": 8512,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-fixed-4-step-5.svg",
+        "sha256": "6efd66d465b4ae157397a7e12177f8ee5fc86ecda59f7c895ece112d7584e583",
+        "bytes": 8512,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-log-reciprocal.svg",
+        "sha256": "6f5ba3b5f01761800cb2b66bc299da9f70e6ed5ef7a451aa5bba9985144cd1df",
+        "bytes": 34008,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-49.svg",
+        "sha256": "ad342429f8c5490bb1d2719dbe1f52a3875facbe8fce22ca38a77cd3bc6e9c5a",
+        "bytes": 24932,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-50.svg",
+        "sha256": "a2ddef232bd18223addf561b5ccc64b73cd73bd1e5c687aaf93f0bc504df47ec",
+        "bytes": 18006,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-51.svg",
+        "sha256": "18e51fcd632a6081d6aa6e1c04222d3affdd592dde4937f2c53a57caf949292e",
+        "bytes": 18398,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-52.svg",
+        "sha256": "2977e2dd7b34f748be9abeed160a10f9194b1529757cd9b0d121b42591f5ad40",
+        "bytes": 18989,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-53.svg",
+        "sha256": "f1472442e5ab85d84f2b51e6900e9a6bdfd3a45c53bfcbad9affcc9474097c0b",
+        "bytes": 19395,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-54.svg",
+        "sha256": "f51ef61031b6f747dcbb08558e169f5f6903d1d01405a6d01d889963a10257ff",
+        "bytes": 19830,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-55.svg",
+        "sha256": "92a0ad2c4476c02f6ec8fc2506e700a69ac9084da18fead2c60d5b4a9170fd8c",
+        "bytes": 19846,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-56.svg",
+        "sha256": "cfcf48aba1b5c742fcaeb4d8d92776f78e3aeadc7a6b2ca15802405a965350a8",
+        "bytes": 19858,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-57.svg",
+        "sha256": "04a850b4707b43f23c0c30e9af3e445b53b4f9cfb6c464d5cf5cdb0b76a12b0e",
+        "bytes": 19861,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-0.svg",
+        "sha256": "8556565c8edcadd4fd5fe80b149caaa019c0bef69c4af820c6c022774f2e50e8",
+        "bytes": 6617,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-1.svg",
+        "sha256": "58103821cccc1e03a0b68cf9881b02a531a996465a48c30dae560d300a46b295",
+        "bytes": 6761,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-10.svg",
+        "sha256": "89e588deb44570e9d0060e025b76edb20d1721ed43355a69f1b3c25c70336128",
+        "bytes": 7245,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-11.svg",
+        "sha256": "3a1d63e9d8dc135cc8c7a914bf747f632e317c671cb8a22ee7910f0b7ebc9913",
+        "bytes": 7351,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-12.svg",
+        "sha256": "9f173be7f20ea5f804f25290760bac5d9e41532d744bded9c58fbd5805f2d8a3",
+        "bytes": 7418,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-13.svg",
+        "sha256": "78e0afd2cf9446e6315f5d45905741921e7607530f3c66d4d94191c12a7d05cb",
+        "bytes": 7193,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-14.svg",
+        "sha256": "4db31e6e4e88c57b20abdcb76017f2e7173b7e9592fd4eb3c5a709e0c7a82d80",
+        "bytes": 7389,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-15.svg",
+        "sha256": "bb3403d23d43cdaa38e990fb9f7448266b5f57134103818114a5a9e71756547d",
+        "bytes": 7493,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-16.svg",
+        "sha256": "9a491010a9e7bd203a683aeecd02df092752ea4122ccbc3f4237a57efdcc50e8",
+        "bytes": 7561,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-17.svg",
+        "sha256": "73f537634c699102e8c6f73e6028db10a6c6e8eec76f1fa0265f0d18300db75c",
+        "bytes": 7337,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-2.svg",
+        "sha256": "9a55c1a2e9b4f60f218024ae732f044728b03ac47aef1f8bbf2f4ffaa0c015b2",
+        "bytes": 6957,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-3.svg",
+        "sha256": "0044124e9280dd3b79801aec50257db39962a6121e08b2a7980aba2c9f71a9e8",
+        "bytes": 7063,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-4.svg",
+        "sha256": "a8109fcae04b7c8551123dcb74dc11785e6daa7d471b7dbda5e34d88ba62ec5e",
+        "bytes": 7130,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-5.svg",
+        "sha256": "cb3b0a097e8b68f0a17dbd159e729d610669ec3678ff2bfc3a19d1df7f4fcdc5",
+        "bytes": 6905,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-6.svg",
+        "sha256": "cae92fa404c1b91c15db866cd4b9b1f38d71402f65831900bd4e246e298593c2",
+        "bytes": 7101,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-7.svg",
+        "sha256": "6dad55933318c2ca32b9adc203bfb5d6b19c6e512f325d1f174acfb943fd1874",
+        "bytes": 7205,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-8.svg",
+        "sha256": "afbacffa8ccc0ab03af917580fed581ccf5ba9ef357115ebb16c51631ed3dcb6",
+        "bytes": 7271,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-demo-9.svg",
+        "sha256": "cf1e2b4bca370decea5f086352242ed87d229625635eed4075f3bc1cada4ed59",
+        "bytes": 7049,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-derive-58.svg",
+        "sha256": "5e955d51d3debade004ee25f144b79e1894b20207b27d5cd8e1b395ead0670e4",
+        "bytes": 17986,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-derive-59.svg",
+        "sha256": "4fc577d9f38a6883e0eac37bdd61031de7befbb2fda61e39672722cd19530f6d",
+        "bytes": 18079,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-derive-60.svg",
+        "sha256": "9689bcd0babb55c59d66723b4ee3e08d156de8637285b9e6b6dded36e9f35612",
+        "bytes": 18163,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-derive-61.svg",
+        "sha256": "9689bcd0babb55c59d66723b4ee3e08d156de8637285b9e6b6dded36e9f35612",
+        "bytes": 18163,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-derive-62.svg",
+        "sha256": "9689bcd0babb55c59d66723b4ee3e08d156de8637285b9e6b6dded36e9f35612",
+        "bytes": 18163,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-derive-63.svg",
+        "sha256": "9689bcd0babb55c59d66723b4ee3e08d156de8637285b9e6b6dded36e9f35612",
+        "bytes": 18163,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-derive-64.svg",
+        "sha256": "9689bcd0babb55c59d66723b4ee3e08d156de8637285b9e6b6dded36e9f35612",
+        "bytes": 18163,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-divergence.svg",
+        "sha256": "f6b907390e7a33691f71d5f0115d4f8110dd5fe9c0f89186dd506fb3171d37a1",
+        "bytes": 19645,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-formula.svg",
+        "sha256": "fc6c10dddc1df09072a502a5735794c348900e5cb78ac14734b2a8b1198abf48",
+        "bytes": 18406,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-full.svg",
+        "sha256": "caaacea8c534aa41fc008d5ae6f5465d2a01279ffa48c0bb1d662992daaea8ca",
+        "bytes": 17133,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-process.svg",
+        "sha256": "2977e2dd7b34f748be9abeed160a10f9194b1529757cd9b0d121b42591f5ad40",
+        "bytes": 18989,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-newton-stationary.svg",
+        "sha256": "f6707a0af6c8ca8017b8dcda4bb463b74da91eed8c5e6b4ab531c90abbd29d28",
+        "bytes": 34543,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-overview.svg",
+        "sha256": "5709d0f0d091d5471400471eeb03fddcae37509e21d66efe6610481bdf2ac55d",
+        "bytes": 30480,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-practice-staircase.svg",
+        "sha256": "1cbe7e2abf159a667a6e409d7df22946036180d6f4314cbdd6595bcce3d3435e",
+        "bytes": 30767,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-process-stage-0.svg",
+        "sha256": "63f455ac34153c45d485fc7951dcaae2d9fa937aa19f5f90da686f533d69a6f1",
+        "bytes": 18266,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-process-stage-1.svg",
+        "sha256": "bb18d95825686f6552516dd5acc12b95140298ebac8100e329d01ebb6fc71e82",
+        "bytes": 18658,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-process-stage-2.svg",
+        "sha256": "9f318e5a48585658cebc46044b9318ab5d4d9a40347e5e57dfd076aee997a7a3",
+        "bytes": 19249,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-reciprocal.svg",
+        "sha256": "e71b7f68911145d271ee1eb0f64a7b6377dbbb0d2824c0980652f0a87ceed707",
+        "bytes": 15442,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-sign-change.svg",
+        "sha256": "8b0f9b70c7ab21daafd00af6307419768a2b601d68a3a3f2e5b7ebf40f476b1f",
+        "bytes": 18211,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-16-0.svg",
+        "sha256": "f7b2e052f372ffc092f955511cfe23af3aca2250571c71063ccbf289122aedb2",
+        "bytes": 29125,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-16-1.svg",
+        "sha256": "ec9088e10b608c46f45349140c2b51bad0f661c5a0dc804aa8b87c12e47ba817",
+        "bytes": 29302,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-16-2.svg",
+        "sha256": "d14ace037138aeb7fe14bd3f85b1c2462fe13f0afbaedb9fe1d5c198b2aca541",
+        "bytes": 29653,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-16-3.svg",
+        "sha256": "f1aa122711ffc70c244e88806df8ed5fa33bd0fe8697906823121e9ebeb787ed",
+        "bytes": 30883,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-17-0.svg",
+        "sha256": "c614f1ba8dbb004c6498456e61a100101b644606e80143511922511208441249",
+        "bytes": 29246,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-17-1.svg",
+        "sha256": "0173b07a4ab72e68fb7c34e0d8d3a915c15809ba02ee40e924a6073a2c662c5c",
+        "bytes": 29432,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-17-2.svg",
+        "sha256": "c352dda6d6dcd1f0575bccd989ad89fa902ceb1d86d303abd31b30d672434800",
+        "bytes": 29817,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-17-3.svg",
+        "sha256": "49903319fb46805c1ad47dd6046539453d6d649a71992a03a11549a57b2fd093",
+        "bytes": 30004,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-17-4.svg",
+        "sha256": "9cc50b590f631532cbb009855ecc4e89b9740121e6f8b7733e4d11957db8b44a",
+        "bytes": 30391,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-17-5.svg",
+        "sha256": "f5871fa341a3b4f49fe6447ccd2e849d0546a13de5a36973a73d85d31c26653f",
+        "bytes": 31079,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-18-0.svg",
+        "sha256": "6f4cc50883fbc6666fa90b538b24036a8d1508cb65f2679bfbac1bda46dfc6ae",
+        "bytes": 29339,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-18-1.svg",
+        "sha256": "24659080c3b6d55bf6d5970adf15f944dc758936d9856534d72c5bdd569d3605",
+        "bytes": 29526,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-18-2.svg",
+        "sha256": "d2f056d28e848975b18e5f88354f629d040134113bd383680f82f69ae13c7bde",
+        "bytes": 29909,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-18-3.svg",
+        "sha256": "bf9246616d6ebee258a970f3ab3417d8a231f32894451f586fa28fa25012d667",
+        "bytes": 30093,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staged-18-4.svg",
+        "sha256": "12b31baafffee6ca34f23ce6b49a93096eccba287ea6a05aead4f48df8fc1f52",
+        "bytes": 30249,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-stair-explain-0.svg",
+        "sha256": "fad3dbcf62fe9bf36d9b195746bc09deeae0e56b74d7d65fe53c860950bb0bd5",
+        "bytes": 28959,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-stair-explain-1.svg",
+        "sha256": "b4b78da4bcd4180b8ce72bbcb0e58a912b360392c6b2e7285047cbdd2ab9f418",
+        "bytes": 29041,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-stair-explain-2.svg",
+        "sha256": "ec9088e10b608c46f45349140c2b51bad0f661c5a0dc804aa8b87c12e47ba817",
+        "bytes": 29302,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-stair-explain-3.svg",
+        "sha256": "d14ace037138aeb7fe14bd3f85b1c2462fe13f0afbaedb9fe1d5c198b2aca541",
+        "bytes": 29653,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-stair-explain-4.svg",
+        "sha256": "dc6d63ba7533b4c386c670157c1d1cad27ce633869ca65b59d03d1a375f95000",
+        "bytes": 30537,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-stair-explain-5.svg",
+        "sha256": "f1aa122711ffc70c244e88806df8ed5fa33bd0fe8697906823121e9ebeb787ed",
+        "bytes": 30883,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-staircase.svg",
+        "sha256": "335fae588881184ef1854cbaa39c4e24d99aa32b9711f3ee321781be569fd09c",
+        "bytes": 31228,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-two-roots.svg",
+        "sha256": "8d770bab550e382ec7c6f283a29db2fa641fd89f202cc7595964379e2434f711",
+        "bytes": 17986,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c10-full-x-cos.svg",
+        "sha256": "fb4e62e290dc202c3458eff962d592eefa9d25a193247d0f5bac2b4d22ce0cd4",
+        "bytes": 16587,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area61.svg",
+        "sha256": "59621091325eaa7aaf1430625382cbf41ccdc0ef0c10d07eeaf6e7cf60841838",
+        "bytes": 47309,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area63.svg",
+        "sha256": "a3d0792e443f2af18dc890eab1c2079ac24e0516cf04261d672126e699086090",
+        "bytes": 47392,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area64.svg",
+        "sha256": "da8b321f2f9f399de840fa520fc866232b510b102c2a13976ba78e33a22837c1",
+        "bytes": 43030,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area65.svg",
+        "sha256": "8c318ae7259dea40b185cd73fb9f1596497155bbd8f3974c492b5886f94dc588",
+        "bytes": 47023,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area66.svg",
+        "sha256": "4eb9d81ecc3a3fbe03ada0f85d6059be55de9b6f88be9348828929b6b8e5ad50",
+        "bytes": 47370,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area67.svg",
+        "sha256": "4decd9382f794874c5f2b3cf33ce84b8e4e5db55dbac3c3f293ff243430f231d",
+        "bytes": 47733,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area68.svg",
+        "sha256": "ad3df2d6c20a8c1cbc68a791fefaf5a32f93bdcc0e10f9d3cdefe9297fbf2916",
+        "bytes": 47788,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area73.svg",
+        "sha256": "4c58596e4e4dc92f92da259f0ab7687113522017ba03c4c327a4fbdf7f66dfa2",
+        "bytes": 45913,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area74.svg",
+        "sha256": "ace6af0c59c079b18304bb8130bd48943f18c0f2e2855eea0cac72fec81721ff",
+        "bytes": 47274,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area75.svg",
+        "sha256": "5e1248a6774dc7579bfefd0d945525362167d805304f8922e57a911b9fcf695a",
+        "bytes": 43190,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area76.svg",
+        "sha256": "d29d69e1e3e52d5ab26c06ec55883794fa637ca3c42377964f31462fe66315c0",
+        "bytes": 47398,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area77.svg",
+        "sha256": "e5ba4522264132b2475a84c9b98533f239742af172575afdc658e209639f4642",
+        "bytes": 46913,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area80.svg",
+        "sha256": "2294afee3937cc34fddcf71ea45085e876d1d68edc6da137547e79d159e8fac2",
+        "bytes": 47341,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-area81.svg",
+        "sha256": "39d6f3cbac31d97637b3a4df754c236cdc74d763ace35471d0dd7587c4c5c90c",
+        "bytes": 46445,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-between-general.svg",
+        "sha256": "a39cecfbd83251eb03cdc083b64fc944c3dbe25083bcceedde236d850ad6bec5",
+        "bytes": 47529,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-between-trig.svg",
+        "sha256": "42d6f4826927225961c732625f5e838b3e21c4af8ac08ecd3b0041e95bbf8b3e",
+        "bytes": 44806,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-ex82-q2.svg",
+        "sha256": "73eecaa2b7d473b08b61d022ab47254f38d31e13e6ede2871b205b19b29e90e2",
+        "bytes": 11256,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-ex82-q3.svg",
+        "sha256": "5e5f74d53df84b3658d278f83ce5f04499043a9d1aa9fc538aea80484b41e113",
+        "bytes": 11889,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-ex82-q4.svg",
+        "sha256": "e3719b99949bf202b19c6bfb7e2fb24d1595918365b64352efde524f79431d2b",
+        "bytes": 11243,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-ex82-q5.svg",
+        "sha256": "1faa9f1b06f2f2a95a0e26db8b7ad2259a7fd98a235be7637abb7b7b0b771983",
+        "bytes": 11377,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-ex82-q6.svg",
+        "sha256": "174a021cd03cf35cbbb2bf32581a1f9b34cbf7338719fa949f4d61e3b711c942",
+        "bytes": 11718,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-ex82-q7.svg",
+        "sha256": "4d3b762c5d5a096b3d22428a935776e1ca30dbfa7f5be0a3eded96fb5d9eff5e",
+        "bytes": 11154,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-solution-family93.svg",
+        "sha256": "1b2b7afc000cf155195e4d107f0dc5269471fb855369e1bbc216573ecf597c9f",
+        "bytes": 51877,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-solution-family94.svg",
+        "sha256": "267d531fb5df1c181dc16672ba411e2fc001f8248ff1bf2ce4e13ebf199ab550",
+        "bytes": 1649,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-substitution-area.svg",
+        "sha256": "fca6feb872953bf4d51928b614a5d7494553b7c89324225036135550449538a8",
+        "bytes": 6038,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-tank97.svg",
+        "sha256": "d75066cf3e47b84289ac9e07b7385fe676e1385df260942c228f613b810f8bb8",
+        "bytes": 1311,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/assets/v026-pure-y2-c11-full-trapeziums69.svg",
+        "sha256": "fcd402697660a3c001fe8ba3d32c9291194a63d4ec351d8c018d100ae0fba71a",
+        "bytes": 4620,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/booklets/chapter-10.pdf",
+        "sha256": "49723d0a4aacad1604a544b0116b13378cceaff5697706491bf8a50c37018012",
+        "bytes": 1751235,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/booklets/chapter-11.pdf",
+        "sha256": "0329b60313482d2f49359aca9e4e7bbbf5decbda1f4c21b3b239b68a4bebe05c",
+        "bytes": 1686337,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/chapter-10.json",
+        "sha256": "5035945188108f93d2241225e5978a2f1a5f3f9d240390cefbba9ba093ca99f6",
+        "bytes": 226788,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/chapter-11.json",
+        "sha256": "6629dfc4aab6343a58833b90627cc59f61eff360e7b0d809bc8d49ae22103f0c",
+        "bytes": 379130,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/index.json",
+        "sha256": "5c899d4d638a3665066afe91a921b00a5315b01bbe876b86c8226990a13278e8",
+        "bytes": 604,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/textbook/chapter-10.pdf",
+        "sha256": "edf3bf2091e2c9830732602df32f4710a1c2d7969703f91cd097b6dd1f40af68",
+        "bytes": 3127186,
+        "result": "pass"
+      },
+      {
+        "path": "resources/pure-year-2/v12/textbook/chapter-11.pdf",
+        "sha256": "829865a7eea2e585ef8b3fb27621a72da9712f55d87fdfb4252bbaea673b7056",
+        "bytes": 6025547,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-ABC17.svg",
+        "sha256": "1f32e80118ea2518f2c9ecbec5c91a619e1341ba548102ad98c2a9850068036c",
+        "bytes": 1656,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-P20.svg",
+        "sha256": "ff14f071f378a02e530cacb874e69e4b0c2aecc738d87d9c53b94c796aa8ff46",
+        "bytes": 1081,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-aboveground11.svg",
+        "sha256": "7fdd284df84234d58e51362ed3c17632fdf09b64f35b301a89ab7bae193503d7",
+        "bytes": 1161,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-basket21.svg",
+        "sha256": "5de258502d03aaae30f2bb1c645cc1e92f564abd3c73aaef3dc21f99ebc107ae",
+        "bytes": 1129,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-cliff13.svg",
+        "sha256": "32516b2d7b2cf50053a29c59fd041c0d4e0971ce2a4fb85d526df72f2368e523",
+        "bytes": 1567,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-components10.svg",
+        "sha256": "cea2422cc75aeb9ecbd82b3ecf09ce5409dac41c43fcdd3283b05b9b3922c06c",
+        "bytes": 1378,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-components9.svg",
+        "sha256": "f7211dde75170ce173c4466771a1ad28538272e9f28ffc661c19aed16f9fefb7",
+        "bytes": 1175,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-downward18.svg",
+        "sha256": "379e4786e58bcd84767c479f59553cb0ac72fe2f67b7f8d09420fa296add22cc",
+        "bytes": 1350,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-example3.svg",
+        "sha256": "0a97bd9d308bbd78b03fbc06be783e1abc01677ffaa79a9d953c51d4140b9bfd",
+        "bytes": 1650,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-example4.svg",
+        "sha256": "abaf70224b5553604e5631a6f84d3f78f3a7b198f8778b9c8031940d8befcbdb",
+        "bytes": 1651,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-example5.svg",
+        "sha256": "989bf71de89a9b213aa9c79dc2260c1254be9319d63ffc441b4ce0ccb12d8f4f",
+        "bytes": 1649,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-exercise5.svg",
+        "sha256": "f8baf020ec5a45277a94dc470553b0f572fa5d5b26681252fd84346bd54461f7",
+        "bytes": 1457,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-exercise6.svg",
+        "sha256": "c571a1007c235f89663f666c53e680630ad447bd800b0ed3d8c999780b6118b9",
+        "bytes": 1650,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-exercise7-forces.svg",
+        "sha256": "01cc2d03fe14ef048128747201b44026765d761568fc5c2475ce12c392f3b466",
+        "bytes": 1267,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-exercise7.svg",
+        "sha256": "8ee3b7c4b72b6b675e603d9c0f23be0251e4d5de56f11572aa53dac344415943",
+        "bytes": 1456,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-general27.svg",
+        "sha256": "61eb72046a8e63995cea91c02065d0db104b0d2da8781b1c585c3d1104e86cc4",
+        "bytes": 1260,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-overview-horizontal.svg",
+        "sha256": "cacc8fba6d6d3a797fa799724648a9fb1a041257c2eaa74b68f5b44970174765",
+        "bytes": 1648,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-overview-oblique.svg",
+        "sha256": "433b8d7de35b3edd3f07918a4943eac950a6ac2a301ba65333a532f3c1c7f445",
+        "bytes": 1264,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-pier27.svg",
+        "sha256": "0bf5fbf093c971b3f6738f586adb232794d0fe4e8215ed3ffe1626042fe0b9aa",
+        "bytes": 1215,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-range196.svg",
+        "sha256": "0b44c7d4ea107a173faff6fb492728537557be1a31254bbb178747ce6071abef",
+        "bytes": 1370,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-rangeheight29.svg",
+        "sha256": "f862da50c355d63a396daa46ebc9f7f15fb453ac7f36ff06fe6f30c478e0304d",
+        "bytes": 1676,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-trajectory-animation.svg",
+        "sha256": "c598e464b2322da8a5da8bcffe74f8fcf3588959ff727e6d943a229f5ee75d1c",
+        "bytes": 755,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-triangle345.svg",
+        "sha256": "3d4f5a68f99909f8b2b7f1863b72457588c7e01155a3303ca5cb1368659f7469",
+        "bytes": 677,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-two-trajectories.svg",
+        "sha256": "949450ac042961b9a2944c372aeea265083123387a2e1db50715a48d3f1ee866",
+        "bytes": 24507,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-vector14.svg",
+        "sha256": "a8840eb622e73cf9e96ca04c9d7af84ebe541a98553be27fd5326de5c4d04774",
+        "bytes": 1306,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-volleyball28.svg",
+        "sha256": "3cc5a41a1875d34ea74448c17f313b19e11a65f4f410937584e194b82f3d2e08",
+        "bytes": 1213,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-wall16.svg",
+        "sha256": "577802b0512f6bb25f0a6074b7513d6d392b6ced9a2c8303608b9c9b1cdb027f",
+        "bytes": 998,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c06-full-window15.svg",
+        "sha256": "8a114fa05c0c3314df363bdc92c452aa95d9a7203a43e877d44b6c1dd03ff4a1",
+        "bytes": 954,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-bead10-forces.svg",
+        "sha256": "01f9b1a5fd04a4ac899d914c23457e11b08825d8d0ab225422d3a8b32b7cc6d5",
+        "bytes": 1771,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-bead10.svg",
+        "sha256": "58f3d2c492a10c41a6fb064a881f97aeab4e2fa8e6d1e4c5f3208ce539326034",
+        "bytes": 1239,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-bead13-forces.svg",
+        "sha256": "00a3617c56b5e4bee31075d22a16efdb613b509052c0ff3a59d3331be2473600",
+        "bytes": 2334,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-bead13.svg",
+        "sha256": "9781d30007093b6beda96d399db6260cac4aa967d6977cec93ded7ef19c30dea",
+        "bytes": 1279,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-bead14-forces.svg",
+        "sha256": "68bff66f0b1fc2bd69ef6e3fac4592cafaa4cc889a0402e015ed1a810ff03302",
+        "bytes": 2221,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-bead14.svg",
+        "sha256": "5d6f0addcb8ecb342954b287d2fcca2b21ded76119fe577a976b491fdb1823dc",
+        "bytes": 1407,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-bench43-forces.svg",
+        "sha256": "4ce7feac42b6c99657339b2f235c149d1b1a7a45351ffa7fad2f9c9dc8b1511a",
+        "bytes": 2952,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-bench43.svg",
+        "sha256": "937456f0a9f4ccde6c73469e4264d45a48cbcb1532c2fb23d0bb76ce35b8e2f3",
+        "bytes": 897,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-block20-forces.svg",
+        "sha256": "da405714b4471c4ad4064fd1582e7391a02559525ae433dc3783a1debe7462a4",
+        "bytes": 2851,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-block20.svg",
+        "sha256": "4caf573fe3cca63acf4ddc3e4876c83d1c9219a999b2bcce919f2430022cf603",
+        "bytes": 2163,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-box21-forces.svg",
+        "sha256": "9b0302622fc2c443c5527299e01607ba19ff7adea17e7a66e67537154a204e16",
+        "bytes": 3023,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-box21.svg",
+        "sha256": "0f0e0ee3a24f05b6919a387d95967adfa3a3d93d85fbc1f6d27ea8dd5e3809a4",
+        "bytes": 2281,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-box22-max.svg",
+        "sha256": "15309534227aeb77b13d1ff51026221aecaa071a9a689f32aa68f2cd1018f156",
+        "bytes": 3159,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-box22-min.svg",
+        "sha256": "50632c73925a896c19f56cbc918aba58294117d2be0f2919301ee2aa4f905d9c",
+        "bytes": 3158,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-box22.svg",
+        "sha256": "9195bfd85fa3f794da77651d2284a021a6934b6a2ecb2e8aec0426a7ee9b9b31",
+        "bytes": 2111,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-box23-forces.svg",
+        "sha256": "ab2483357cff90c19827cd26f4c49b89ef3ade13aa432a3bfce9a018fedaff06",
+        "bytes": 3154,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-box23.svg",
+        "sha256": "ba512c23c0009382e61047b313d08a71ed29595d071e8db535e3df6a61f2cf45",
+        "bytes": 2113,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-box24.svg",
+        "sha256": "0c814d03c27a74f869ac5087979e916e6512267706d8d9fcb9e840139d90b6ee",
+        "bytes": 2699,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-connected37-forces.svg",
+        "sha256": "9f10a4eaab5e2ea689f6c86d72daddc30fc22c10d7e233862503133e3e3c8c3c",
+        "bytes": 4598,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-connected37.svg",
+        "sha256": "bdb06f980a0e1dd6aa8a190e85e53c49dd4920c1537d77a62353aba79cbb8e62",
+        "bytes": 1288,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-connected38-forces.svg",
+        "sha256": "fad0d7a08965d338702da04c3ec249f4f1bf0d5b2b536442152c5e800dcef6fa",
+        "bytes": 4374,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-connected38.svg",
+        "sha256": "e835d1ddc6216084147be6e7d23e96e5a1daa3479b525ab4e9a67c88211b47a4",
+        "bytes": 1366,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-connected39-forces.svg",
+        "sha256": "849242bd0813fb482ef45079562304809bd56405f053d044e1e8e9de4e35a0cf",
+        "bytes": 4008,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-connected39.svg",
+        "sha256": "f6f774867e2d375e33cefb60936386226523950b8e8247a7d5c73afd86334dc9",
+        "bytes": 1366,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-connected40-forces.svg",
+        "sha256": "d0b4c505d86dbde68469d8938b6dfabdc16fa2d345abea492256d53c05ef161e",
+        "bytes": 4012,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-connected41-forces.svg",
+        "sha256": "33deb820a2f6c82e1bcbf129acb451e158d480f81a55a2a2d2a242c4575c287d",
+        "bytes": 3927,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-connected41.svg",
+        "sha256": "00dba5bbfeee70ff5d9a86ca1f4c01bc37a951553268fbd520b62fe2fb40267f",
+        "bytes": 1617,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-double42-forces.svg",
+        "sha256": "c7463d43d331e169cf5a9dca701bd52f7d435a952d1d0d65060088c017c1d9c8",
+        "bytes": 3692,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-double42.svg",
+        "sha256": "c0dd6619e425217a072012ff71362d56b31536160332b68ea4bf2def575b6a7b",
+        "bytes": 1317,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-forces3.svg",
+        "sha256": "620fe11f032b7beb2990472919cbe3a4ff2cd363933f977890b243fe64663098",
+        "bytes": 1570,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-forces4-labels1.svg",
+        "sha256": "bf9db00540143f82addb704929355cfe841d522642784759e139451e7907a887",
+        "bytes": 3105,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-forces4-labels2.svg",
+        "sha256": "083d0462e87fa29b2ecf3f08d990d38ce22198bb1cf5b532d0dfdb734f527c3a",
+        "bytes": 3176,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-forces4-labels3.svg",
+        "sha256": "3a9489bcb4f14809940b764617c622035bfdf8f566c3cbfdf37070cde087fdd9",
+        "bytes": 3250,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-forces4-labels4.svg",
+        "sha256": "9802edcd6ea08f9bfadbdc82829d23047d9f6ce88937278b2831ee85d30518d4",
+        "bytes": 3324,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-forces4.svg",
+        "sha256": "edd59705a7e492cfa02df4b435163251c56761da49aac0e045c0a4a4ce539dd1",
+        "bytes": 3033,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-forces5.svg",
+        "sha256": "e432bee7049d01e59ab1c7b5abe12eab32df50913a233d70a45194e4a7518d7c",
+        "bytes": 1877,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-friction18a.svg",
+        "sha256": "89cefe1fc51201c5f6a84606987127ea0e15127471bfa9210c1857b8a466a075",
+        "bytes": 3556,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-friction18b.svg",
+        "sha256": "0929b4070d500494f8c947bf5ba8cf1c98c8b5ca5a1e69498ce07ba79f127ac0",
+        "bytes": 4563,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-ladder26.svg",
+        "sha256": "1926094bf4ccf953ad99672f4555a4c0e28c10e74cbc395dcdc7a7661e4d3791",
+        "bytes": 2604,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-ladder27.svg",
+        "sha256": "4af15b108945cd69262ad7cce3c79cf5ec2657ea25b521d46e8cda2896e28947",
+        "bytes": 2782,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-ladder28.svg",
+        "sha256": "0e7f52040bcaf87e2a9aeeb32be7f7063b506ba3b8a9d4bd5a1dca9d93757f24",
+        "bytes": 2763,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-ladder29.svg",
+        "sha256": "10cf2deb4775808e2892a99d4076a673571ad505c5d0f587ecd68c058a5ee5b1",
+        "bytes": 2069,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-lami-extended.svg",
+        "sha256": "178017918ee46e3aa3b88c6c7dd332b30e3b37f90ce86ac5a6027f4091feb61e",
+        "bytes": 2038,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-lami-question.svg",
+        "sha256": "7e1213d0d7fee9b771fb0f63a5e961ca8c4bfd38fa7739de8698f2a1f0487745",
+        "bytes": 1544,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-lami-triangle.svg",
+        "sha256": "db6746b716b351fc3bb833a05e7332b92f14e5136ecb4775ca3a1c1f99f7ea15",
+        "bytes": 1320,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-motion31.svg",
+        "sha256": "423fe0defe9cb3e3a79a12c854f9f213494ffd6dd0f0f059a306cf640b84f7ca",
+        "bytes": 3698,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-motion34-down.svg",
+        "sha256": "d142a687e84fde112ceca47b5c549f5bb051f73fdf3e0b8f6d412e71f019618d",
+        "bytes": 3142,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-motion34-up.svg",
+        "sha256": "5574079399a173b8c65321e1b7a0b8deb95db1c9ca7a0788e8e3e2973d82333f",
+        "bytes": 3535,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-overview-connected.svg",
+        "sha256": "7cf3fa58a13a437e487fb49de7cb8dc67120d16b514fd01ab70242edb223957a",
+        "bytes": 1203,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-overview-equilibrium.svg",
+        "sha256": "8cf8652e163702b5dfe113931d7d37af3d3d2342b973dcef07130de63c8c0dc4",
+        "bytes": 1491,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-overview-slope.svg",
+        "sha256": "ef0100a9ab721741383f35e496cc63d4f828b95996e44ac740b169e22647d74f",
+        "bytes": 1100,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-overview-string.svg",
+        "sha256": "2dd97542645dae3f81cf6c732d1a1b4656db0b258894de733bdfb54616c6fcaf",
+        "bytes": 1081,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-parcel19-forces.svg",
+        "sha256": "38a7d2f23d9a565b28bf685ce43526af45c15ba390e8527e3cfdab5df0809829",
+        "bytes": 2854,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-parcel19.svg",
+        "sha256": "20689534291c288f91fcb93320ae8019c65fbc8efc0a4e3bf802f8c3d6d72deb",
+        "bytes": 2160,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-parcel33.svg",
+        "sha256": "232fc70441c63dae186657c24558e5d6d8901d2b5f5c213a8bfc3f526447653b",
+        "bytes": 3099,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-particle15-forces.svg",
+        "sha256": "bedb6f8c7d30fa718aacd485151f9f3b1caad4ef6d614d967f3caa252b9834ce",
+        "bytes": 1637,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-particle15.svg",
+        "sha256": "938644bba361d423d2b495000694bb86ab3044c3f9087fdc27bafffa96d3722a",
+        "bytes": 1037,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-particle35.svg",
+        "sha256": "f9e7583c0f996fc7e3434bba58f9e8a5ce214bd927040475432dac47e9715a2a",
+        "bytes": 3113,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-particle36.svg",
+        "sha256": "b1ff83f99c0a1faa6378b25b971d702338ca2f7b5559abea6a2a7f977d7cfdef",
+        "bytes": 3417,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-pegs30-forces.svg",
+        "sha256": "9dd0057f3b46cd4e2d07954e1fb589efa123143d957f9ae80b55bca0adee9bc9",
+        "bytes": 3081,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-pegs30.svg",
+        "sha256": "5b60f9c7cd95663223868c3983063d957c1ed4a8d11ff90c0f225021b49ff853",
+        "bytes": 1297,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-plane17-forces.svg",
+        "sha256": "ff40469d5af61d09445cbdb8a566a39ad18569d3cd8dec135592e3d553d703b0",
+        "bytes": 3178,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-plane17.svg",
+        "sha256": "449da5183b81ce1f600826227cc8fefec331340c4c6a7c5ed4896dcbca2a7e69",
+        "bytes": 2499,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-pulley11-forces.svg",
+        "sha256": "f488ed3f4d9b738fa417fc39b74f881b827b137e2fd4b5a9de1e0ed1a1a6525b",
+        "bytes": 3817,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-pulley16-forces.svg",
+        "sha256": "98adc12868b0bcb6c4b343b7a8ac8effb859807e8beb9e090fb6566e9e948400",
+        "bytes": 2601,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-pulley16.svg",
+        "sha256": "b44b59db57e0314e179269701b49f4eb35b138816a58f89defdc3b1bc74b67e0",
+        "bytes": 1138,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-pulley38-forces.svg",
+        "sha256": "8252588cabb84978522aa1e8ffeaf73b78153801604cfcbc968acdf4034ea999",
+        "bytes": 1024,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-pulley40-triangle.svg",
+        "sha256": "0bc21e0addc0f68c31be33b8d120d0e447beaac32bd970b4ee317cb9a8e1912b",
+        "bytes": 1291,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-question6a.svg",
+        "sha256": "45a589982248240cdeefdcfda30bfb23960eb35b5afe91e959a43b05e67116e2",
+        "bytes": 1372,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-question6b.svg",
+        "sha256": "5bf445bd9a43a21b4096fcc93bd82c9b84fe419ad5d1946fd852322f8b0fe668",
+        "bytes": 1619,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-question7a.svg",
+        "sha256": "9e4072426e2dfbdc28e7873637a151c8a1783f90e8016d8ce2b127f3bf27a093",
+        "bytes": 2529,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-question7b.svg",
+        "sha256": "8d8bd3565bfed0cf43bbf7d8d890d165dda7378e37fa58b020f6f7a1b1447111",
+        "bytes": 2717,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-question8c.svg",
+        "sha256": "c707e5b967b2545d5ca0411866862e91895b6f98a1f0df1afe3107db4e332918",
+        "bytes": 2857,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-question8d.svg",
+        "sha256": "2682269ff9bc99e9b97de32aa0e0e4c1a2c47405e51d8f0f3ec2d983534248b1",
+        "bytes": 2994,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-question8e.svg",
+        "sha256": "016f8fc5ec09d83870f57212b0ab1d37c5355f263d0071e8506cf1bf61573091",
+        "bytes": 2463,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-rod25.svg",
+        "sha256": "b06729db5fcd2a71791cfb8f55180cf674de90a0b99e8b8a2bfc245e0881d5ec",
+        "bytes": 2984,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-strings12.svg",
+        "sha256": "4774843dc722da66290feb012c108d3943ff92a0c2b1a9f387ac3e7f734d563a",
+        "bytes": 935,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-triangle31.svg",
+        "sha256": "5732933cfad230a84fb096131846fa4459154bafe37afaecd9533e7558144393",
+        "bytes": 881,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-triangle6a.svg",
+        "sha256": "3caafeaa58d0d98d2e3f4d0e1e75c2cacd1c468d44960bf5f7bad69e49bb6c4a",
+        "bytes": 1354,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c07-full-triangle6b.svg",
+        "sha256": "e5e9be16d2475ba02a5068cb5de0c5330709c0384f9d109ccde1fe14eff8429f",
+        "bytes": 1200,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c08-full-ball12.svg",
+        "sha256": "fd88912d9f3bae0b22296204d3c7d67ca7c6b2a2a655a7233888d36f49e88ddd",
+        "bytes": 2443,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c08-full-ball13.svg",
+        "sha256": "92de0c0d59c33f8a118700d824688c55771abb8f2116190b390372b90b5c26fe",
+        "bytes": 2556,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c08-full-bearing5.svg",
+        "sha256": "648aab53a6a82bf4ff06552bb9dccdb3dcf6c221cda4d5c1cb846560e83d0274",
+        "bytes": 932,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c08-full-cliff14.svg",
+        "sha256": "44cb8bbf261c58ebe15377c37b99f22205ebdb46e393288e4d4dccdc6b08f38f",
+        "bytes": 3305,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c08-full-direction32.svg",
+        "sha256": "cf363da6074e97e8b04f528051b63f27e5b3fe164dbe6a53348ade575cca642c",
+        "bytes": 1029,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c08-full-motion3-0.svg",
+        "sha256": "eccf9dc940b440d2bebd0906544e2c229c813de25e04aa3af764a9efce314f80",
+        "bytes": 637,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c08-full-motion3-1.svg",
+        "sha256": "2a0a361d65b557dc000f556f3a6de265b52f1cb50821b61c7f545f03e7acde15",
+        "bytes": 1561,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c08-full-motion3-2.svg",
+        "sha256": "97624c05967a9a3bbac3446504e7d9aa7d0becb21d57e840a35714a6f19a5c60",
+        "bytes": 2466,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/assets/v026-mech-y2-c08-full-north-east6.svg",
+        "sha256": "74907cca22a2ac42a316546c9a15737521f6b7a6197c778d289fdc3501566974",
+        "bytes": 806,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/booklets/chapter-06.pdf",
+        "sha256": "ad2cb68e0732eaaebecd17818e99bfda88437abde7e08ca28565bc76f95187d4",
+        "bytes": 391660,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/booklets/chapter-07.pdf",
+        "sha256": "7721287b5c7c47549ccce664df704fad835f9a441947881c0b6065651fc02d14",
+        "bytes": 919913,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/booklets/chapter-08.pdf",
+        "sha256": "31f0fcd4a48aab5799ffca62578b99727f84cd65752ee5c8f4a9bbc73c4cea50",
+        "bytes": 498423,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/chapter-06.json",
+        "sha256": "742524d33dfc6358a8590a67f464f8439362cffbc95e33bac916020df02c5635",
+        "bytes": 92963,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/chapter-07.json",
+        "sha256": "e11f23e8250ddad163956307b4b270f7811ae384d83d3731cdd32d124088c688",
+        "bytes": 160713,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/chapter-08.json",
+        "sha256": "fc10e412cf5decf6b815adfadbf9b8cf4ac0366ed3a538c217c5dcfda350c5db",
+        "bytes": 131417,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/index.json",
+        "sha256": "5e0a23f06896b372ac3a839ac75916dfe4485e78d94587f2a9eaac07299cf41c",
+        "bytes": 382,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/textbook/chapter-06.pdf",
+        "sha256": "6355200421d98e8f782964a4639c8e797aba91271933764751179c6a14a66966",
+        "bytes": 3586264,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/textbook/chapter-07.pdf",
+        "sha256": "2fcf228768ed61e4f1fa11cb5b14b5a91313b49f3afbd183a4be37437cb82c17",
+        "bytes": 5323054,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/applied-year-2/textbook/chapter-08.pdf",
+        "sha256": "f68ab5491b29e475ff39087a60903b7faafc18a7b308c8fc01ef8b4c7724342c",
+        "bytes": 3833350,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/987befd2dbfda076d7b8.png",
+        "sha256": "987befd2dbfda076d7b810109d167d8d1ade09b8db1b8997d8029b0d150b74d8",
+        "bytes": 219260,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c03-full-triangular.svg",
+        "sha256": "fe98f0302aaf0a5d7eeeb22fa4ecbf0e75c86d6c5dadefa240625f3c9f20eb2c",
+        "bytes": 668,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-cone-reminder.svg",
+        "sha256": "bba1459b243462612ffb45cd0e4d0c43e88fbf80495589d435b79dd0a1053ab6",
+        "bytes": 639,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-cylinder-reminder.svg",
+        "sha256": "fba951fd4429b4f0a09155c6b82190226b0361a9bd07645d8193883db1f6d983",
+        "bytes": 707,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-cylinder13.svg",
+        "sha256": "77b882507ea7551f1c2cca3eff4054d1e97b9e6ddc38bcfafd97428ff0e65156",
+        "bytes": 9503,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-ellipse43.svg",
+        "sha256": "75f078430260e15614e4384a9caaeec1b6b0b6bdad7ed12d6827883c770ad6e6",
+        "bytes": 15068,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-mixer-bowl.svg",
+        "sha256": "c10eeae20b09b8f54c99987da63c7119f21528c99040e8dc8ccf3ec9f4179937",
+        "bytes": 369,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-mixer45.svg",
+        "sha256": "de115cb5df42c22512d8206757861e8a0ab0b0eef9c2ec3e8d6475b6f8dc7539",
+        "bytes": 15441,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-parabola5.svg",
+        "sha256": "2f51c9306879586911c6f4dad1aa4e9c7f7b39780cc551f513ba724df3a363cd",
+        "bytes": 8987,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-pen40.svg",
+        "sha256": "1e62c131c6727cfebc3091962337e0aab8dfdc4784fe1d65feb71274dbe62e1d",
+        "bytes": 8945,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region10.svg",
+        "sha256": "8251d49f45dab36c7e17c063c41f6449d36dafe142894d74d6cc4056cba09d39",
+        "bytes": 8721,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region11.svg",
+        "sha256": "3a5fb0fccdbcda4b834dc00d3d5860b63c31b65b45c5fcdc0b50ca6f725bb21b",
+        "bytes": 12686,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region12.svg",
+        "sha256": "e9b884973b1da7f06f823f4323a466afe393aee938a1c78e43fbee7b0c403056",
+        "bytes": 9275,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region15.svg",
+        "sha256": "7d388165916b568e803f4880b6b5900735258003aed037432d17f112a48cda6b",
+        "bytes": 15372,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region18.svg",
+        "sha256": "ed7e81873b4eda380b3f44683a5fc3617b4a20d01fb3d222c8803c694be51783",
+        "bytes": 15871,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region19.svg",
+        "sha256": "9f9a3469f50ce29712ded1d97faed79b8373b58379d8058168f324433ceeecea",
+        "bytes": 15401,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region20.svg",
+        "sha256": "c2bfe74b0829fa4d01182ef110160efbf7ba5302c032848cf0aa7d8a90478c72",
+        "bytes": 14081,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region21-complete.svg",
+        "sha256": "f9d309354855c4f4dd2c0987ba16784960b06fb40b90a8dbdca3346836d4dbf2",
+        "bytes": 10124,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region21.svg",
+        "sha256": "88f3b56d15ef1690a2a75659c790676a0f0ba62a0d723d79a0c273e9eb331943",
+        "bytes": 11676,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region22.svg",
+        "sha256": "0bfdb1249d9c3125bc917d7a7dbf24fa93e4f7a14ae0492ebfc1d5116789615b",
+        "bytes": 15702,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region23.svg",
+        "sha256": "3990e622c52c17b3484696d0bdd40d3f01b5b46581819566cfc590f991d9b2a8",
+        "bytes": 23486,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region24.svg",
+        "sha256": "a9214e240c377da998a00bee0f6b84b52a1ecf4714ccb6931e3de97ca549adb2",
+        "bytes": 25529,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region27.svg",
+        "sha256": "c589688f50099618ec0819e15d71352d4d1ad97e1933423dea822f495c723834",
+        "bytes": 9884,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region28.svg",
+        "sha256": "b19f9b78ec0c803a677724e483a67093a43bc83e5f696a6c874bf3a7ac10e14a",
+        "bytes": 14865,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region29.svg",
+        "sha256": "a6d281c664293d478e61279fd0c113c9155def8009877d845d02c9e3c5853ee0",
+        "bytes": 14907,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region30.svg",
+        "sha256": "86b8b8b80e105966a84e20a03c03116b4109d15e85fccd0cc16cb9a9cb66c6df",
+        "bytes": 9163,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region31-0.svg",
+        "sha256": "c2f9fd87408a5a60ea6d485a04332a63472cca487eafd6fb793ee27a18b93200",
+        "bytes": 14197,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region31-1.svg",
+        "sha256": "cea589cec9dcf9b2c12dc5ffcbc5a300b9df8dd9ab129d6303ba25d2ac25873a",
+        "bytes": 14406,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region31.svg",
+        "sha256": "6fb6b4b3a483b1b3f9466337876fbadcde4faac65662e67e56ee8cb3921bdcf4",
+        "bytes": 9349,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region32.svg",
+        "sha256": "c9faaaf1ecf6123a1135b71490f59ab394af2c4d48e1518d9ef85c1e1688a119",
+        "bytes": 14755,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region33.svg",
+        "sha256": "d4839b02b497f843efc65bad3d73176ffbb08fe13bedda430fb5cd8fdbaca12c",
+        "bytes": 21593,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region34.svg",
+        "sha256": "25f3f83e515b6beeea1162955b4eee88bbf52fbe624102f7b7fdc3ef641aea69",
+        "bytes": 14597,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region35.svg",
+        "sha256": "aa606a7f66330db85b2d0841901883cea9ba873996e88f889ceeb8395155862f",
+        "bytes": 14935,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region36-complete.svg",
+        "sha256": "0bbc8900a1f4e0a115099e8dede6427b4af906ea5348415be9dd1df228262484",
+        "bytes": 26112,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region36.svg",
+        "sha256": "3d58a5366222d47d394b99446c2b017445c6f97073d418b9b8469770ec95857b",
+        "bytes": 15094,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region37.svg",
+        "sha256": "80fb9d84c322df3d3a84522b78bc0ffea2ec45570641c38f38e1ce9335f21a04",
+        "bytes": 14404,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region38.svg",
+        "sha256": "ada64764723803472cb8cbda5230c1fd2b5c1e8a05fa630b68ecd4721dabde3c",
+        "bytes": 12232,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region6.svg",
+        "sha256": "8a9175f36acb23cd837b47de056d0dc8634a3eedfef26f03958bdb0275aa576e",
+        "bytes": 8472,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region8a.svg",
+        "sha256": "7031f58acca6b2ec78b311dd2a037cb41af257204d0f6417c57abdc414808548",
+        "bytes": 8979,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region8b.svg",
+        "sha256": "befde1c01acfb055ea4bf95c363802c39194fc64d51fdb6eb6266a4c20afd772",
+        "bytes": 9517,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region9a.svg",
+        "sha256": "296ac1563e2026ef7dade5922b057f8f9fa96a3bdef5a3df6e71c03c1ac865a4",
+        "bytes": 9073,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-region9b.svg",
+        "sha256": "036a34ec23559d45a6ed312b4bfaa7a3103ce7dd24a5904875a681ced98d3a09",
+        "bytes": 8882,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-rugby42.svg",
+        "sha256": "d4ace90f328a4d66176e6d754401a6a65bde235c991dec86c70736901491d471",
+        "bytes": 24538,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-solid-0.svg",
+        "sha256": "f1d51b4b056a23ccff95822740f7aa5ffc7f6c99b9a75a7dec81147f4d90f367",
+        "bytes": 3768,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-solid-1.svg",
+        "sha256": "ec7f2ca2d691d0ef0dc8e81d8a718e257ed4389415ee474250ca8e382eb42471",
+        "bytes": 5404,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-solid-2.svg",
+        "sha256": "ec536cf0cca5386ef8ad28ee1eb289677adaf017c0ee7b2b356feb5a2938518f",
+        "bytes": 5797,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-split27-0.svg",
+        "sha256": "1b1e8e254d2296e945ed25babe806f91b28a7f9bdab298fe373ab8825c4dac1c",
+        "bytes": 9389,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-split27-1.svg",
+        "sha256": "01396ea785fe7bf93218962c7b003b8a1385eb54fe85abbd02a053b968fb1441",
+        "bytes": 9676,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-strips.svg",
+        "sha256": "92be89f9d39079cbf7d54c180b68a2bd85adb45a4b731a88e50c59b478e9fb03",
+        "bytes": 4803,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-subtract26-solid.svg",
+        "sha256": "264bc09dcb6e99fc857848879d4f3b51baed1d61c4e2c8cc211374850d1c9716",
+        "bytes": 31701,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-subtract26.svg",
+        "sha256": "7d33d93fc1c96923364a1e6e9f340a46b08b36985178870621e87825b6ed9873",
+        "bytes": 13866,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-tent41.svg",
+        "sha256": "58364978bf6729b6e19f58979531c0ba58a8029caa44d150c2fac4bdcbb18fca",
+        "bytes": 9483,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-timer44.svg",
+        "sha256": "84f4a99691f3a85b09e47cfd61c8f0ae14921cd1f8b1722e6dbc0a98a6cc4e7f",
+        "bytes": 24701,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-top47.svg",
+        "sha256": "3236942fee6679259b4cff05b0d4333259813e7da5a76d03d252128bde6d8834",
+        "bytes": 24707,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-triangle25.svg",
+        "sha256": "d1a72bb0b973d6ef2464f4af5cf59c741c9ddb627f72618dfa34b6792da5c3d1",
+        "bytes": 850,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-vase46.svg",
+        "sha256": "624aeb49bcc96328e75dc52ca2d51054ef1c5471d14f22825ff81d49d4ca8b9b",
+        "bytes": 25015,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/assets/v026-core-pure-1-c05-full-y-discs.svg",
+        "sha256": "8dfc29a10837e281323c2563c5fcdcde65eb7730950bd99095bc6f2b8c743a40",
+        "bytes": 5400,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/booklets/chapter-03.pdf",
+        "sha256": "46c8c93529e30b06386fd1a45f8a55ab828f4d1d1c926c58abcc42926e68e79b",
+        "bytes": 284710,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/booklets/chapter-05.pdf",
+        "sha256": "d487c594c2afaf3d692ec5e1a8a0c18f58415e8a3e77708dc3f5107c2e404781",
+        "bytes": 1306986,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/chapter-03.json",
+        "sha256": "78b9189867b78c99d4ac7d512446976713b50e5f506fdc17aff86b5834d6a1fd",
+        "bytes": 45669,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/chapter-05.json",
+        "sha256": "c72e6a91ef83fdd95553c88d89d7eefb05bba81201da5e24faa1d3211787edfe",
+        "bytes": 117327,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/index.json",
+        "sha256": "4bbefa4eb9e4a2bd5cb58d49cd2fd87055ecc90daddf5a5526ffccc298014bbe",
+        "bytes": 580,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/textbook/chapter-03.pdf",
+        "sha256": "a475b23175674f41c4e403307ab6a91df9fca8aea81053a643106abdf089726a",
+        "bytes": 1239389,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/textbook/chapter-05.pdf",
+        "sha256": "61a5a7c3cd2f87946e48b780bc74f7ae6fb040bb2978d9f0f1c676abbfbf6e53",
+        "bytes": 2461277,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-arcosh-principal.svg",
+        "sha256": "a1ce6f871f5f0d3c091e82f2f16639b40ef39ad7b90470c7c6e10bd3360c3500",
+        "bytes": 13227,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-catenary-forces.svg",
+        "sha256": "77fc601fb66d27f34e8bed5b06386e3339d27ce5cecd6daf35bcc321fb7dc991",
+        "bytes": 18191,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-catenary.svg",
+        "sha256": "8e5ba0b89356ef0465578561f8b1b9b9da74cec3d4067cea430aaca86e03e659",
+        "bytes": 17312,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-circle.svg",
+        "sha256": "039ecb7d293074b36007804d7a45082851283d6eb00a8abd2edd71fb0d361999",
+        "bytes": 888,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-conic-sections.svg",
+        "sha256": "27ec4a325a2f41a4e5429d473ff3e0f3e946bf708461701d27ce70e90e02ef3f",
+        "bytes": 1103,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-cosh-exp1.svg",
+        "sha256": "55d0963a56f7cb06acb762334a776fb5464aa0a713aea72a2edeae33ae6fa1d2",
+        "bytes": 26488,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-cosh-exp2.svg",
+        "sha256": "94ab016ff1ceafa942f76fd41f74522e9d2afb693e066e5533698d530cb09e9a",
+        "bytes": 26494,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-cosh-inverse.svg",
+        "sha256": "b42113199432ec7c5373f358721c510f31778330d464bbf05ac314cdd7ab120f",
+        "bytes": 36318,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-cosh-sketch.svg",
+        "sha256": "88623990f901f4687f5742eca99be189a46ed67c23369f15ccd7436a491920c8",
+        "bytes": 13376,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-exam-curves.svg",
+        "sha256": "490f1a48a6d5c39412f5b7d5300e70eca54cf6e7f65f50d4239813d7589325ed",
+        "bytes": 50188,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-sech-answer.svg",
+        "sha256": "f6996c2993b87f86f7001e8d2f20b217e281c1acf1c589518795017c1c0d47d8",
+        "bytes": 17638,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-sech-given.svg",
+        "sha256": "2b1286fcda469e5d0827f591187d1fc521bc40e86ee6674e00f0f73ed310b322",
+        "bytes": 13513,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-sinh-exp1.svg",
+        "sha256": "55d0963a56f7cb06acb762334a776fb5464aa0a713aea72a2edeae33ae6fa1d2",
+        "bytes": 26488,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-sinh-exp2.svg",
+        "sha256": "94ab016ff1ceafa942f76fd41f74522e9d2afb693e066e5533698d530cb09e9a",
+        "bytes": 26494,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-sinh-inverse-stage1.svg",
+        "sha256": "cd1670b6db71c163323c2132bba2447b9fb8df1c2c7ec3ab9047e80d8b51b99f",
+        "bytes": 27390,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-sinh-inverse-stage2.svg",
+        "sha256": "38c3773f186fd55796bd509195ffa7543f9aa5c649f7ddf888917dd5ccd01179",
+        "bytes": 44236,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-sinh-reflection-0.svg",
+        "sha256": "82b40df45e748001b68f1ef68faef85869038415b5e1988ad0ad37b9c7c6b39c",
+        "bytes": 17265,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-sinh-reflection-1.svg",
+        "sha256": "65e3e16b41dfeb63d11b323e31248f68d30577e35e93e6f204c7c8d96252fa8a",
+        "bytes": 27538,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-sinh-reflection-2.svg",
+        "sha256": "635ffdafe1f9226347795f46ab61da546370f629c6759a7dccbce1cb3c815711",
+        "bytes": 44519,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-sinh-sketch.svg",
+        "sha256": "0f3d4a17f049bd9921a1828818e0598df28255a419137bf341ce55bb16e54d46",
+        "bytes": 12237,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-0-0.svg",
+        "sha256": "2048faaf4928eff4594a87b2cc8ad0d82b01b57f47748314f0df124799667d0b",
+        "bytes": 11107,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-0-1.svg",
+        "sha256": "5febb64ed0eb92a770b27cbd6239740503d6af9b4431759ea9837d27cd570283",
+        "bytes": 16586,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-1-0.svg",
+        "sha256": "d2003e61cd890f3dc2fe6df9c932bec23ce3ed4eb9df8c2ecd54e9bc7093c2a1",
+        "bytes": 5500,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-1-1.svg",
+        "sha256": "95f04ab144441a5d6a6af936b041397e0a252e15ecf5249befee116bce020998",
+        "bytes": 5426,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-2-0.svg",
+        "sha256": "fc8b8d1a0dc86f52815fe03a9b20fd35298f21392fafd929bee52242955e923a",
+        "bytes": 16662,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-2-1.svg",
+        "sha256": "53615a33db62cec8b8b8ce8af327535c46667a9987d6b88427557bb96467eb57",
+        "bytes": 7016,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-3-0.svg",
+        "sha256": "88475744c8e480be59ba8f1b4818b6b2b56f9906c1560df4b7fce053ce5d8383",
+        "bytes": 8425,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-3-1.svg",
+        "sha256": "d345d9517cb47da804f6d7a8727c1c68da282b5653697542bee2215eb687ebe6",
+        "bytes": 3212,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-4-0.svg",
+        "sha256": "4e58fac686b5ff77e738030d2566d16508b810a9e691a2ef2aa42d39d375f4e1",
+        "bytes": 14007,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-4-1.svg",
+        "sha256": "881a8ec3593a609ca3fbde452c5e1e60804d2b4bb843497b925bd07deba3ebc8",
+        "bytes": 15467,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-5-0.svg",
+        "sha256": "3e3ac53849a08cc7ccaafe84464197faf314f48590b5c7ee3a589368e2271d36",
+        "bytes": 14373,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-summary-5-1.svg",
+        "sha256": "0eb6be3ce98ec6f9329702302eab79136a46815f3378b81f758ff50a9d73e5ad",
+        "bytes": 10268,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-tanh.svg",
+        "sha256": "1e157f044445f341dbeb2b2bc7c03edb83da52ec3b84bc541aac5989ec4674c0",
+        "bytes": 49846,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-unit-hyperbola-labelled.svg",
+        "sha256": "a8c20521f97b4f8943fe6e4b83d8cf0a8f29e21e75e6528a809c27b1b0deb2e0",
+        "bytes": 7587,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c06-full-unit-hyperbola.svg",
+        "sha256": "ad303ff738f54f71f0dedbc650205c6270dc2da8d36e53806fefa43993b285a7",
+        "bytes": 23322,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c07-full-circle-family.svg",
+        "sha256": "48693f9f3753ae28be981aa0fe580633446061e6e3bcee54530af78985cb582e",
+        "bytes": 704,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c07-full-force-directions.svg",
+        "sha256": "bd513380438a6396b44d0d5585053fa38fed2b0ced991ca3c8bf7f6df48b3935",
+        "bytes": 978,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c07-full-growing-oscillation.svg",
+        "sha256": "4311c860c5f822c88e1f796d1d186ccbfbeb570ac94b00ffeac9a61a099eb07d",
+        "bytes": 18109,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c08-full-bears.svg",
+        "sha256": "9e966835f19ff361098a87889d4d3efadac7ba1de376c3e39255a4a3982f416d",
+        "bytes": 1257,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c08-full-critical.svg",
+        "sha256": "c2fc26a4092a68832715a314447db7a7ef571865b474a688556ee94f2cd6b4b9",
+        "bytes": 17274,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c08-full-fish.svg",
+        "sha256": "8c3d7c3b9c3b9d8ac38858153a08022cbb7765f5d373a18db11041f0013dddfc",
+        "bytes": 1261,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c08-full-force-diagram.svg",
+        "sha256": "266ba8f826922106a617a81f560a11a9b7ec538eeec649677117e0ffe9cdfb1b",
+        "bytes": 984,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c08-full-heavy.svg",
+        "sha256": "9ab9d39e383619443f5b6fc5133b1883db00d37164656c37c9a6ece400d0c534",
+        "bytes": 17258,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c08-full-light.svg",
+        "sha256": "6eb25e6cf600d43a7f06f8565bdb079c16cc5d3be1f23175a227b6f0a8b32ba0",
+        "bytes": 17169,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c08-full-overview-damping.svg",
+        "sha256": "a3e6309e26f8dbd21cb6763034c1ac20e00f61cc44c22ae92cc2b6013d5ffebc",
+        "bytes": 16833,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c08-full-shm-wave.svg",
+        "sha256": "7e4804e829a2fab69cf2a11de1ba73d91b5384466d4fcb76757b9fca76177826",
+        "bytes": 17622,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c08-full-spring-print.svg",
+        "sha256": "af102d25aeb18ae13bb01d3a9b084929c7419157c9af190b9cd6eccc9003ef7f",
+        "bytes": 866,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-core-pure-2-c08-full-spring.svg",
+        "sha256": "dc50b33eba58af93d12aeac6720d0fc36e64c46ad8fee8b69b07575e95e6df65",
+        "bytes": 1485,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-cp2c6-chain.png",
+        "sha256": "aa19ac391bb82af10aa7d7fa880f1db0e69a47b86b31da6dfcf7ae990ce79c92",
+        "bytes": 206812,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-cp2c7-suspension.png",
+        "sha256": "ed7c88dec6dbff094c2ea105114e7645b32ede20190d5db178dd22ee5cd4a99f",
+        "bytes": 270354,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/assets/v026-cp2c8-suspension.png",
+        "sha256": "ed7c88dec6dbff094c2ea105114e7645b32ede20190d5db178dd22ee5cd4a99f",
+        "bytes": 270354,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/booklets/chapter-06.pdf",
+        "sha256": "132e29f93e02875a9936c51da1de60ee96857d8e0c518741f459ce3fab2d20a0",
+        "bytes": 1321096,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/booklets/chapter-07.pdf",
+        "sha256": "4a12a75203b3169d13c72df8147a87d2ed5331247c2fa18870eecd71eae54583",
+        "bytes": 925449,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/booklets/chapter-08.pdf",
+        "sha256": "964ccda90507ea345917057fb0ff13c499cad513b8754050a7b671513f2311c7",
+        "bytes": 839144,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/chapter-06.json",
+        "sha256": "1056d058d657e4bfb5522b1f12ff2de9b03b333de5b338e2b5ebfc35fc564061",
+        "bytes": 161314,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/chapter-07.json",
+        "sha256": "13ab99294dbcb686d49eefc3d6e383bf8d2393f96875e7f3d24359466eb7e0bb",
+        "bytes": 110580,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/chapter-08.json",
+        "sha256": "4c564618c3e2e3b377b4e27573b4c962712640a0319d516985325aa81bd6badd",
+        "bytes": 66148,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/index.json",
+        "sha256": "e0a5e73ec69b7becbb66f57fbb45c270f3845770d8e7b2065c47d6900a764350",
+        "bytes": 623,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/textbook/chapter-06.pdf",
+        "sha256": "5ada87b591b3eeaef06ec4e45beedff7382a643a0ff57fdc5d8f3c09afae9778",
+        "bytes": 3258235,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/textbook/chapter-07.pdf",
+        "sha256": "fb3484c44e376178c04dcccc687d639edbd422491b09db3fa6646c5522ee06bf",
+        "bytes": 3274887,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-2/textbook/chapter-08.pdf",
+        "sha256": "4de2559e05053490d5af87a15338a110e34ad9a44ce1f3778ce787af4bc42eea",
+        "bytes": 4352627,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/player/lesson-source-viewer.js",
+        "sha256": "42c071b9e4c2fcf8e6f8a784c56034f513d434e36b855235f861d669398c47d3",
+        "bytes": 15156,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/pure-year-2/assets/v026-pure-y2-c12-full-noncoplanar.svg",
+        "sha256": "5387e82881c1744bfa3431ba653ed6b1359fb27cdf7dd0c9c653aab6ce737b58",
+        "bytes": 1512,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/pure-year-2/assets/v026-pure-y2-c12-full-points-PQ.svg",
+        "sha256": "7eb51d970e03db00a04c4e451313161e60664b7c6f7d2c3a0ef2416f7d96ca47",
+        "bytes": 898,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/pure-year-2/assets/v026-vectors-cube.svg",
+        "sha256": "ae81b4d65ca0cc2f4c126bcf08317399874758af76928fd0762a534f31b8b7a0",
+        "bytes": 956,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/pure-year-2/booklets/chapter-12.pdf",
+        "sha256": "2e5a8a4b553cdbb7a9b6271cadc21e7486ba19568f079e4895ac6a3a83461c12",
+        "bytes": 338840,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v003/pure-year-2/chapter-12.json",
+        "sha256": "e41bf6b32784995a7eb189d42e6ecb0267dd5bb9e9dbed002ba77e06ebf04dfe",
+        "bytes": 75933,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v026/player/lesson-faithful-renderer.js",
+        "sha256": "213d9be816720ff95c1b7813aa4c5919df27a0d13214d0faec5ca22c6a222e5e",
+        "bytes": 2705,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v026/player/lesson-faithful.css",
+        "sha256": "f054eaeba58eba6b157be587c265c890146be5db8f2bb278c55968ff591fa817",
+        "bytes": 6262,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v026/player/lesson-fit.js",
+        "sha256": "c509c7d0ebaa4d422e76434e81dfd6413644f6b19edf6540fbae659c1e445a4f",
+        "bytes": 1464,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v026/player/lesson-flow.js",
+        "sha256": "1dbc1b5154da0598edc11e6f82a4c2f6247c88216fedccaad1604ff4bda88732",
+        "bytes": 765,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v026/player/lesson-renderer.js",
+        "sha256": "14013e0de918482873fd9e4eff3193f6b97055362320dbb9b9ca511f08e4df99",
+        "bytes": 13508,
+        "result": "pass"
+      },
+      {
+        "path": "resources/teaching/v026/player/lesson-source-viewer.js",
+        "sha256": "3d411d9de68cad01a1f0a99f171af513c71420bbe75881146db6e29d07cd5c63",
+        "bytes": 15293,
+        "result": "pass"
+      },
+      {
+        "path": "sw.js",
+        "sha256": "986c7994112023596a330c0c0cd19e77e16f153004b6690cd3b729432dd6c8a4",
+        "bytes": 13122,
+        "result": "pass"
+      },
+      {
+        "path": "teaching-catalogue.js",
+        "sha256": "75784793830f592fb3ae8253eb76d7bdc93ad743a9503e2a7d7bdc14e4f63151",
+        "bytes": 17788,
+        "result": "pass"
+      },
+      {
+        "path": "teaching-chapters.html",
+        "sha256": "6aee43a1a2caf1c63e9991b62657b7ba6bd5d7a58017acfcd4d60472d06ebb67",
+        "bytes": 2220,
+        "result": "pass"
+      },
+      {
+        "path": "teaching-lesson-viewer.html",
+        "sha256": "63a81d1d42015157d232b47eb7cd28b0f8234f8f563d6abfb4517209f2549e33",
+        "bytes": 2013,
+        "result": "pass"
+      },
+      {
+        "path": "textbook-catalogue.json",
+        "sha256": "d42fac5b8a5c7b9b42b0ada090e41280d697d9ffe6c41b57fcf0328de734b8f3",
+        "bytes": 1359999,
+        "result": "pass"
+      },
+      {
+        "path": "textbook-view.html",
+        "sha256": "500f61d5af653dfe3b5c6927e0dfe9eda1bfa08ac856ab1773f4bdfd3180376d",
+        "bytes": 3682,
+        "result": "pass"
+      },
+      {
+        "path": "textbook-view.js",
+        "sha256": "1cb0da28fa11f4d3c26b9e8a4552ef7bea7b8643ea46a1f5c57f3536960d89af",
+        "bytes": 10564,
+        "result": "pass"
+      },
+      {
+        "path": "v025-lesson-viewer.html",
+        "sha256": "36dc6db0768e57172fe2a020f3120dba97e2ea1ec570c48b3067eff7f3553ecc",
+        "bytes": 2011,
+        "result": "pass"
+      },
+      {
+        "path": "v026-lesson-viewer.html",
+        "sha256": "ec7fdafc74dd4c0e5208fff3fc6ef49ebf7844378ffb1bd7e0ed860673f3c041",
+        "bytes": 2011,
+        "result": "pass"
+      },
+      {
+        "path": "version-history.html",
+        "sha256": "0876b6ca040030339b7b9d818352f2e65a861c1c0be35f9c4d88d643de89124a",
+        "bytes": 18821,
+        "result": "pass"
+      },
+      {
+        "path": "version-history.json",
+        "sha256": "329886fa4d99fe15fcee9000365bbf993458d4a8b10fe69da5d59096cd19b2b0",
+        "bytes": 18640,
+        "result": "pass"
+      }
+    ]
+  },
+  "ada": {
+    "status": "not_copied",
+    "reason": "Existing transfer endpoint timed out on repeated attempts; website connection also failed. No ADA publication claimed."
+  },
+  "localGate": {
+    "requirements": 158,
+    "catalogueDestinations": 152,
+    "tests": 16,
+    "packagedFiles": 6644,
+    "cleanMergedRevision": true
+  },
+  "remoteHeadChecks": {
+    "revision": "59fcdb6f7eb740ed0a38e47f2f88e733b64993c4",
+    "build": "pass",
+    "test": "pass",
+    "scan": "pass",
+    "preview": "pass"
+  },
+  "offlineFinalLibrary": "62 packs downloaded at root and /AL; all11 requested chapters opened offline. Cold browser restart and PDF byte ranges passed on merged local artifact.",
+  "recoveryArtifact": {
+    "zipSha256": "4b1b601d8d265e137d813f22ae386fa3bc9905eed4cec3be4f6d7419fea13893",
+    "bytes": 808636349
+  },
+  "updated": "2026-11-03T15:38:02.400296+00:00",
+  "productionOfflineBrowser": {
+    "chapter": "Pure Year2 chapter12 Vectors",
+    "slides": true,
+    "bookletPdf": true,
+    "textbookPdf": true,
+    "offlineLibraryLinks": true,
+    "failedRequests": [],
+    "scope": "Desktop Chromium against live production; not a new physical iPad test."
+  }
+}
