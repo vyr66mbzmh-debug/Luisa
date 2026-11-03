@@ -1,0 +1,70 @@
+{
+  "version": "0.27",
+  "date": "2026-11-03",
+  "chapter": {
+    "title": "Pure Year 2 \u2014 Differentiation",
+    "chapter": 9,
+    "originalSlides": 96,
+    "slides": 102,
+    "bookletPages": 51,
+    "textbookPages": 42,
+    "source": "Owner-supplied replacement deck; previous variants superseded.",
+    "sourceSha256": "c9f2d47f4d7b0dfa5c9d53760b009bf68f483a04146ccbbfc2564aee7f3e0e20",
+    "sourceAndMathematics": "All96 originals reviewed; native mathematics independently reviewed. Source-fidelity review findings resolved. Detailed corrections remain private.",
+    "visual": "All102 revealed slides and51 booklet page layouts visually inspected. Native diagrams, labels, hanging indents and source references reviewed.",
+    "interaction": "306 viewport checks; every cover clicked, ordered Next and actual Space concealment/reveal states, completion and Reset pass.",
+    "print": "51 A4 pages; two teaching panels per page, matching board numbers. All panel layouts reviewed; actualPDF samples2,19,29,51 checked. Supplied theory retained, concealed solution text omitted. Luisa footer added and finalPDF checked.",
+    "textbook": "All42 pages pixel-identical to supplied printed231\u2013272; correct chapter boundaries.",
+    "integration": "Both catalogues contain the three resources; textbook library root/AL links checked; offline pack closure and reader tested.",
+    "status": "agent_accepted",
+    "ownerAcceptance": "Not claimed",
+    "artifactSha256": {
+      "resources/pure-year-2/v12/chapter-09.json": "9c468d4fe9f5959d7b51d1e56f49ac4f19c17ff1421846a66688b982a4339eae",
+      "resources/pure-year-2/v12/booklets/chapter-09.pdf": "ed7ad86b32b4ce76eeb57a68969c57d964364c420c7b59a7e6ffe690ddab0eb4",
+      "resources/pure-year-2/v12/textbook/chapter-09.pdf": "790b014a832ae79b23c5d96b7d3cda075782b5cb41dd68412b83a353481732d1"
+    }
+  },
+  "navigation": {
+    "requirement": "PWA-002",
+    "implementation": "Local PDF reader with visible Back/page/zoom controls in installed-app mode; normal browser behaviour retained. Lesson return matches book/chapter context.",
+    "automated": [
+      {
+        "prefix": "/",
+        "offlineManagerPDFs": true,
+        "offlineLessonPDFs": true,
+        "exactRevealStatePreserved": true,
+        "lessonReturnsToOrigin": true,
+        "reloadOffline": true,
+        "fractionalPage": true
+      },
+      {
+        "prefix": "/AL/",
+        "offlineManagerPDFs": true,
+        "offlineLessonPDFs": true,
+        "exactRevealStatePreserved": true,
+        "lessonReturnsToOrigin": true,
+        "reloadOffline": true,
+        "fractionalPage": true
+      },
+      {
+        "prefix": "/",
+        "normalBrowserUnchanged": true,
+        "missingPDFBackAndEscape": true,
+        "externalRejected": true,
+        "differentChapterFallback": true,
+        "textbookLibraryLinks": true
+      },
+      {
+        "prefix": "/AL/",
+        "normalBrowserUnchanged": true,
+        "missingPDFBackAndEscape": true,
+        "externalRejected": true,
+        "differentChapterFallback": true,
+        "textbookLibraryLinks": true
+      }
+    ],
+    "review": "Separate routing review; focus isolation/Escape, fractional page input, offline-manager helper loading, reader-origin overwrite and stale chapter context fixed.",
+    "physicalIPadAcceptance": "Not claimed for v0.27; earlier v0.26 owner confirmation is separate."
+  },
+  "release": "Publication pending exact-head checks and host verification."
+}

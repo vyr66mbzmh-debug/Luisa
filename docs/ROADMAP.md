@@ -14,9 +14,9 @@ Product chapter backlog is derived from current catalogue availability, not old 
 ### Pure Mathematics Year 2
 - 6. Trigonometric functions — v0.25 published and verified on Cloudflare and ADA
 - 7. Trigonometry and modelling — v0.25 published and verified on Cloudflare and ADA
-- 9. Differentiation
-- 10. Numerical methods — v0.26 locally accepted; publication pending
-- 11. Integration — v0.26 locally accepted; publication pending
+- 9. Differentiation — v0.27 agent accepted:102 panels from96 replacement originals,51-page booklet,42-page textbook; publication pending
+- 10. Numerical methods — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
+- 11. Integration — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 
 ### Statistics and Mechanics Year 1/AS
 - 1. Data collection
@@ -32,20 +32,20 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - 2. Conditional probability
 - 3. The normal distribution
 - 4. Moments
-- 6. Projectiles — v0.26 locally accepted; publication pending
-- 7. Applications of forces — v0.26 locally accepted; publication pending
-- 8. Further kinematics — v0.26 locally accepted; publication pending
+- 6. Projectiles — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
+- 7. Applications of forces — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
+- 8. Further kinematics — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 
 ### Further Maths Core Pure 1
 - 1. Complex numbers — v0.25 published and verified on Cloudflare and ADA
-- 3. Series — v0.26 locally accepted; publication pending
+- 3. Series — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 - 4. Roots of polynomials — v0.25 published and verified on Cloudflare and ADA
-- 5. Volumes of revolution — v0.26 locally accepted; publication pending
+- 5. Volumes of revolution — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 
 ### Further Maths Core Pure 2
-- 6. Hyperbolic functions — v0.26 locally accepted; publication pending
-- 7. Methods in differential equations — v0.26 locally accepted; publication pending
-- 8. Modelling with differential equations — v0.26 locally accepted; publication pending
+- 6. Hyperbolic functions — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
+- 7. Methods in differential equations — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
+- 8. Modelling with differential equations — v0.26 verified on Cloudflare; ADA v0.26 skipped by owner; retry in v0.27
 
 ## Cross-cutting follow-ups
 - **PWA-001 (v0.26, implemented; partially checked):** Apple, Windows and Android installation and reliable offline learning, explicitly including the iiyama smartboard, with resource downloads, readiness indicators, safe updates and real-device airplane-mode tests. The owner explicitly superseded the documentation-only deferral and authorised implementation in v0.26. Desktop bulk-download/offline/recovery checks pass; owner confirms Vectors offline on iPad. Other physical devices are unverified; release verification remains pending.
@@ -57,3 +57,5 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - Keep old MARS branding superseded; future scope belongs in the requirement register, not silent development.
 
 - Existing dependency defects discovered during offline inventory: Pure Year 1 chapters 10 and 12 reference missing diagram assets. Their slides are explicitly excluded from offline packs; other available resources are identified. Do not claim complete offline slide availability for these chapters until repaired and rechecked.
+
+- **PWA-002 (v0.27):** Installed-app Back controls and local PDF reader implemented; automated online/offline root/AL checks pass. Physical iPad verification remains separate.

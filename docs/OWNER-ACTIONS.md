@@ -14,8 +14,12 @@ Do not mark any provider setting complete until verified in that provider.
 | GitHub Project and roadmap issue | Created 2026-11-02 | Luisa development project #1, roadmap issue #2 and foundation PR #3. Status, Priority, PR and Wave fields; built-in item workflows; no new token required. |
 | GitHub CLI / integrations | CLI absent locally | Signed-in GitHub UI currently has owner access; connector is read-only. No credential widening is silently performed. |
 | v0.25 dual-host publication | Verified 2026-11-03 | PR #11; eb8cbb4 served by Cloudflare and ADA, identical 6,235-file manifests and 96 fetched resources per host. See docs/evidence/v025-release.json. |
+| v0.26 publication | Cloudflare verified; ADA skipped by owner | Owner confirms ADA is down. ADA work paused; retry with v0.27. No v0.26 ADA copy required. |
 | Private usage log | Implemented | Outside repository; exact task token usage remains unavailable unless provider reports it. |
 | Source authoring dependencies | Follow-up | Private historical build toolchain must be inventoried/pinned before claiming full authoring portability. |
 | Restart watchdog / hourly reports | Not enabled by design | New explicit authorisation needed. |
 
 Secrets and private denylist phrases, if desired, must be entered by the owner through GitHub settings, never pasted into prompts or committed. This setup does not require an LLM key or any new deployment credential.
+
+| v0.27 installed-app navigation | Automated checks pass; physical iPad follow-up | Update saved downloads, then test slides → PDF → Back and library return. Earlier Vectors acceptance does not establish this new reader’s physical-device acceptance. |
+| v0.27 publication | Authorised, pending verification | Both Cloudflare and ADA required; ADA connection restored. |

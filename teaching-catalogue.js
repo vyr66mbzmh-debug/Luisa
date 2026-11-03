@@ -164,9 +164,9 @@ window.LUISA_TEACHING = {
       {
         "number": 9,
         "title": "Differentiation",
-        "slides": null,
-        "booklet": null,
-        "pdf": null
+        "slides": "v027-lesson-viewer.html?book=pure-year-2&chapter=9&slide=1",
+        "booklet": "resources/pure-year-2/v12/booklets/chapter-09.pdf",
+        "pdf": "resources/pure-year-2/v12/textbook/chapter-09.pdf"
       },
       {
         "number": 10,

@@ -3306,6 +3306,29 @@
           "scope": "Temporary system/display/user-active assertions started and verified with the operating-system power assertion report during v0.25 publication."
         }
       ]
+    },
+    {
+      "id": "PWA-002",
+      "requirement": "Provide visible in-app return navigation from teaching slides and every linked learning document, including textbook chapters, topic/question booklets and student lesson booklets, without closing and relaunching the installed app.",
+      "scope": "Owner-authorised v0.27; installed iPad app and all learning-resource entry points, online and downloaded offline, at root and /AL/.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_verified",
+      "acceptance": [
+        "A visible return control remains available while reading every supported linked document in standalone mode.",
+        "Return restores the originating library/chapter or teaching slide context; direct entry has a safe library fallback.",
+        "Downloaded documents and return navigation work with network disconnected.",
+        "Browser navigation and PDF opening remain usable; root and /AL/ destinations are prefix-safe.",
+        "Record browser automation separately from physical iPad acceptance."
+      ],
+      "origin": "Owner request 2026-11-03 for v0.27: installed iPad app opens documents but traps user without a back button.",
+      "evidence": [
+        {
+          "date": "2026-11-03",
+          "reference": "docs/evidence/v027-acceptance.json",
+          "scope": "Automated standalone/offline/root/AL return navigation, PDF errors, page input and browser regression pass. Physical iPad acceptance remains unclaimed."
+        }
+      ]
     }
   ]
 }

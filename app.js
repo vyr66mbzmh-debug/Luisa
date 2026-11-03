@@ -7,7 +7,7 @@ function renderMath(root){for(const node of root.querySelectorAll('[data-math]')
 async function loadSkill(skill){if(contentCache.has(skill.id)){skill.questions=contentCache.get(skill.id);return;}let questions=window.FMQ_CONTENT?.[skill.id];if(!questions){const response=await fetch(new URL('content/'+encodeURIComponent(skill.id)+'.json',document.baseURI));if(!response.ok)throw Error('Unable to load '+skill.code+' ('+response.status+')');questions=await response.json();}if(questions.length!==skill.questions.length||questions.some(q=>!q.question||(!q.reference&&!q.steps?.length)))throw Error('Incomplete skill '+skill.code);contentCache.set(skill.id,questions);skill.questions=questions;}
 const key=s=>[s.course,s.book,s.topic,s.skill].join('/');
 const isEdexcelOnly=(courseId=current?.course)=>courseId!=='maths-a-level'&&Boolean($('edexcel-only').checked);
-function openPrintout(path){if(!path)return;const link=document.createElement('a');link.href=path;link.target='_blank';link.rel='noopener';link.click();}
+function openPrintout(path){if(!path)return;if(window.LUISA_NAVIGATION?.openDocument(path,'Question booklet'))return;const link=document.createElement('a');link.href=path;link.target='_blank';link.rel='noopener';link.click();}
 function printPath(kind){const r=resolve(current);if(r.course.id==='maths-a-level')return kind==='topic'?r.topic.printoutPath:r.skill.printoutPath;if(kind==='topic')return `printouts/${r.book.id}/${r.topic.id}/${r.book.id==='pure-core-1'&&r.topic.id==='polar-curves'?'topic_v03.pdf':'topic_v02.pdf'}`;return `printouts/${r.book.id}/${r.topic.id}/skills/${r.skill.id}_${r.skill.code==='1.28'?'v03':'v02'}.pdf`;}
 function resolve(s={}){
  const course=library.courses.find(x=>x.id===s.course)||library.courses[0];
