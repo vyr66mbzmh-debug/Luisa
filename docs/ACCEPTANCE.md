@@ -14,3 +14,5 @@ Automatic checks do not count as final source/visual/interaction/print acceptanc
 ## v0.25 bounded chapter acceptance
 
 See [four-chapter evidence](evidence/v025-chapters.json): 188 teaching slides, 95 booklet pages and 88 extracted textbook pages. All four chapters received source/mathematics, visual, independent reveal/reset and print checks. Detailed private per-slide/page evidence includes resolved review findings. Library links were checked below a non-root prefix. This does not change historical chapter acceptance or certify PWA-001. Live release verification is separate.
+
+Release verification: [Cloudflare and ADA evidence](evidence/v025-release.json), including identical complete manifests, actual resource hashes and a verified prior ADA recovery copy.
