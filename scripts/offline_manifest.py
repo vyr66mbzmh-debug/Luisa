@@ -69,6 +69,24 @@ def generate(root, entries, version):
                 if dependency not in names:names.add(dependency);pending.append(dependency)
         return names
     shared=close_assets(shared)
+    # Use the same print destinations as the skill library, including Edexcel-only topics.
+    library_path=root/'data.js'
+    library=json.loads(library_path.read_text().split('=',1)[1].strip().rstrip(';')) if library_path.exists() else {'courses':[]}
+    print_by_skill={}
+    for course in library['courses']:
+        for book in course['books']:
+            for topic in book['topics']:
+                for skill in topic['skills']:
+                    if course['id']=='maths-a-level':
+                        urls=[topic.get('printoutPath'),skill.get('printoutPath')]
+                    else:
+                        urls=[topic.get('edexcelPrintoutPath'),f"printouts/{book['id']}/{topic['id']}/skills/{skill['id']}_{'v03' if skill['code']=='1.28' else 'v02'}.pdf"]
+                    paths=set()
+                    for url in filter(None,urls):
+                        path=local(url)
+                        if not path:raise ValueError('Offline print PDF missing: '+url)
+                        paths.add(path)
+                    print_by_skill[skill['id']]=paths
     packs=[];warnings=[]
     for book in catalogue['books']:
         tk=BOOK_ALIASES.get(book['id'],book['id'])
@@ -76,13 +94,17 @@ def generate(root, entries, version):
             number=int(ch['id'])
             tc=next((c for c in teaching.get(tk,{}).get('chapters',[]) if c['number']==number),{})
             files=set(); unavailable=[]; links={}
-            for kind in ['slides','booklet','pdf']:
+            for kind in ['slides','booklet','pdf','practice']:
                 url=tc.get(kind) or next((r.get('url') for r in ch['resources'] if r['type']==kind and r['access']=='available'),None)
                 if url:
                     path=local(url)
                     if not path:raise ValueError('Offline resource missing: '+url)
                     files.add(path);links[kind]=url
-                else:unavailable.append({'slides':'Teaching slides','booklet':'Student booklet','pdf':'Textbook chapter'}[kind])
+                elif kind != 'practice':unavailable.append({'slides':'Teaching slides','booklet':'Student booklet','pdf':'Textbook chapter'}[kind])
+            for resource in ch['resources']:
+                if resource.get('access')=='available' and resource.get('url'):
+                    path=local(resource['url'])
+                    if path:files.add(path)
             if tc.get('slides'):
                 viewer=urlsplit(tc['slides']).path
                 if viewer=='lesson-viewer.html' or viewer=='pure1-native-viewer.html':
@@ -108,10 +130,23 @@ def generate(root, entries, version):
             for skill in {q['skill'] for q in practice}:
                 name='content/'+skill+'.json'
                 if name not in entries:raise ValueError('Offline practice missing: '+name)
-                files.add(name);files.update(refs(json.loads((root/name).read_text()),('',)))
+                files.add(name);files.update(refs(json.loads((root/name).read_text()),('',)));files.update(print_by_skill.get(skill,set()))
             if not practice:unavailable.append('Mapped practice questions (not yet available)')
             if not files:continue
             packs.append({'id':book['id']+':'+ch['id'],'book':book['title'],'chapter':ch['id'],'title':ch['title'],'course':book['course'],'bookId':book['id'],'links':links,'unavailable':unavailable,'practiceEntries':len(practice),'files':sorted(close_assets(files)-shared)})
+    # Non-Edexcel/unmapped skill practice remains accessible from the skill library.
+    mapped_skills={q['skill'] for q in catalogue['questions'] if q.get('targets')}
+    for course in library['courses']:
+        for book in course['books']:
+            extra=[skill for topic in book['topics'] for skill in topic['skills'] if skill['id'] not in mapped_skills]
+            files=set()
+            for skill in extra:
+                name='content/'+skill['id']+'.json'
+                if name not in entries:raise ValueError('Offline skill missing: '+name)
+                files.add(name);files.update(refs(json.loads((root/name).read_text()),('',)))
+                files.update(print_by_skill.get(skill['id'],set()))
+            if files:
+                packs.append({'id':book['id']+':additional-skills','book':book['title'],'chapter':'Additional','title':'Skill practice','skill':extra[0]['id'],'topic':next(t['id'] for t in book['topics'] if extra[0] in t['skills']),'course':course['id'],'bookId':book['id'],'links':{},'unavailable':[],'practiceEntries':sum(len(s['questions']) for s in extra),'files':sorted(close_assets(files)-shared)})
     used=shared|set().union(*(set(p['files']) for p in packs))
     inventory={k:entries[k] for k in sorted(used)}
     revision=hashlib.sha256(json.dumps(inventory,sort_keys=True,separators=(',',':')).encode()).hexdigest()

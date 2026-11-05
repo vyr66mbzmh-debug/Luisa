@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-03",
+  "asOf": "2026-11-05",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -2847,17 +2847,24 @@
     },
     {
       "id": "FR-024",
-      "requirement": "Release reports and authorised emails use HTML progress tables, full textbook + chapter + title, working chapter links and report link; include report body. No hourly reports unless explicitly requested again.",
+      "requirement": "Every published Luisa release requires an owner email report through the configured Luisa Reports SMTP sender. This is standing owner authorisation for every agent/provider and does not need to be repeated in each chat. Include the report body, HTML progress table and verified resource/report links; never silently omit email. No hourly or interim reports unless requested.",
       "scope": "current",
       "priority": "P1",
       "implementation": "not_assessed",
       "verification": "not_checked",
       "acceptance": [
-        "Release reports and authorised emails use HTML progress tables, full textbook + chapter + title, working chapter links and report link; include report body. No hourly reports unless explicitly requested again.",
-        "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
+        "After verifying publication on the required hosts, send one final report using the existing private mailSender adapter and configured sender/recipient in private state. Use subject Luisa v<actual version> report. Do not require Apple Mail, an unlocked desktop, or credentials pasted into chat.",
+        "Include the full report body in HTML plus a plain-text alternative, not just a report link. Identify each delivered chapter by full textbook name, chapter number and title, with verified teaching-slide and booklet links and slide/booklet-page counts.",
+        "Include an HTML progress table matching development-progress: Slides uploaded, Slides checked, Booklet uploaded, Booklet checked, with count/total and percentage; light green at 100%, amber in progress, red not started. Omit Slides sourced. Course order: Pure 1, Pure 2, Mechanics 1, Mechanics 2, Statistics 1, Statistics 2; Core Pure 1 and 2 separately.",
+        "Include the live release-report and development-progress links, deployment/version verification, remaining work or limitations, honest available usage measurements, and legacy questions completed /3423, percentage and sections /132 separately from expanded indexes.",
+        "Check links against the live release, including lesson JSON rather than HTML fallback responses, before sending. Never claim checked content without acceptance evidence.",
+        "Record version, timestamp, send outcome and any error privately. SMTP acceptance is not proof of inbox delivery. If sending fails or private adapter/credentials are unavailable, preserve the prepared report and flag notification pending in handoff and final response; never claim email sent or all release tasks complete. Avoid duplicate sends by checking prior send evidence.",
+        "This standing instruction applies to ChatGPT, Claude and all other agents/new chats. An explicit owner instruction to defer or suppress a particular email overrides it. No automatic hourly/interim emails or new schedules."
       ],
-      "origin": "owner-conversation-through-2026-11-01",
-      "evidence": []
+      "origin": "owner-conversation-through-2026-11-01; reaffirmed 2026-11-05 mandatory cross-agent release email",
+      "evidence": [
+        "2026-11-05: requirement and cross-agent handoff clarified; prior releases email delivery not reverified."
+      ]
     },
     {
       "id": "OPS-001",
@@ -2897,6 +2904,11 @@
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-release.json",
           "scope": "v0.25 release revision eb8cbb4: both live hosts verified against the same checked artifact; prior ADA recovery copy rehashed."
+        },
+        {
+          "date": "2026-11-03",
+          "reference": "docs/evidence/v027-release.json",
+          "scope": "Both live manifests and changed resources match; live standalone/offline PDF return passes on both hosts. ADA latest-only retention verified. Physical iPad acceptance remains separate."
         }
       ]
     },
@@ -3328,6 +3340,34 @@
           "date": "2026-11-03",
           "reference": "docs/evidence/v027-acceptance.json",
           "scope": "Automated standalone/offline/root/AL return navigation, PDF errors, page input and browser regression pass. Physical iPad acceptance remains unclaimed."
+        },
+        {
+          "date": "2026-11-03",
+          "reference": "docs/evidence/v027-release.json",
+          "scope": "Both live manifests and changed resources match; live standalone/offline PDF return passes on both hosts. ADA latest-only retention verified. Physical iPad acceptance remains separate."
+        }
+      ]
+    },
+    {
+      "id": "LIB-028",
+      "requirement": "v0.28 library controls, practice chapters and complete offline documents.",
+      "scope": "Both libraries; Maths and Further Maths A level",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_verified",
+      "origin": "owner v0.28 instructions and practice PDF clarification",
+      "acceptance": [
+        "Remove Presentation mode and the separate Full screen control in the question library; Question Full Screen and Solution Full Screen enter the respective focused fullscreen view; Offline is the final header control.",
+        "Further Maths Print topic includes only Edexcel-tagged skills.",
+        "For all six Maths books use the existing chapter-organised Pearson practice booklet PDFs as Practice Chapter in skill view; retain Book chapter for Further Maths.",
+        "Textbook view retains Teaching slides, Book chapter and Student handout; add Practice Chapter for Maths only.",
+        "All available linked chapter PDFs, student/practice booklets and skill/topic print PDFs are included in offline downloads. Regress Moments, Statistics and offline Print topic/Print skill under root and ADA prefixes.",
+        "Publish v0.28 to Cloudflare and ADA, update requirements/handoff and send the mandatory full HTML release email."
+      ],
+      "evidence": [
+        {
+          "reference": "docs/evidence/v028-acceptance.json",
+          "scope": "Root and /AL/ standalone offline browser tests and PDF fidelity pass; physical iPad remains untested; publication/email verification recorded separately."
         }
       ]
     }

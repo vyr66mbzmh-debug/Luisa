@@ -1,0 +1,31 @@
+{
+  "version": "0.28",
+  "issue": 18,
+  "resources": {
+    "practiceChapterPDFs": 45,
+    "restoredTextbookChapters": 11
+  },
+  "browser": [
+    {
+      "prefix": "/",
+      "fullscreen": true,
+      "offlineMomentsAndStatistics": true,
+      "offlinePracticePDFs": true,
+      "offlineTopicAndSkillPrint": true
+    },
+    {
+      "prefix": "/AL/",
+      "fullscreen": true,
+      "offlineMomentsAndStatistics": true,
+      "offlinePracticePDFs": true,
+      "offlineTopicAndSkillPrint": true
+    }
+  ],
+  "pdfFidelity": {
+    "textbookPagesPixelIdentical": 196,
+    "printPagesPixelIdentical": 1419
+  },
+  "visual": "Textbook first/last page montage inspected; correct chapter starts and summary ends. Existing practice PDFs copied byte-for-byte.",
+  "independentReview": "Additional skill pack destination corrected to its first included skill; fullscreen exit restores split view.",
+  "physicalIPad": "Not tested; standalone Chromium emulation only."
+}

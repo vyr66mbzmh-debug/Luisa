@@ -8,7 +8,7 @@ async function loadSkill(skill){if(contentCache.has(skill.id)){skill.questions=c
 const key=s=>[s.course,s.book,s.topic,s.skill].join('/');
 const isEdexcelOnly=(courseId=current?.course)=>courseId!=='maths-a-level'&&Boolean($('edexcel-only').checked);
 function openPrintout(path){if(!path)return;if(window.LUISA_NAVIGATION?.openDocument(path,'Question booklet'))return;const link=document.createElement('a');link.href=path;link.target='_blank';link.rel='noopener';link.click();}
-function printPath(kind){const r=resolve(current);if(r.course.id==='maths-a-level')return kind==='topic'?r.topic.printoutPath:r.skill.printoutPath;if(kind==='topic')return `printouts/${r.book.id}/${r.topic.id}/${r.book.id==='pure-core-1'&&r.topic.id==='polar-curves'?'topic_v03.pdf':'topic_v02.pdf'}`;return `printouts/${r.book.id}/${r.topic.id}/skills/${r.skill.id}_${r.skill.code==='1.28'?'v03':'v02'}.pdf`;}
+function printPath(kind){const r=resolve(current);if(r.course.id==='maths-a-level')return kind==='topic'?r.topic.printoutPath:r.skill.printoutPath;if(kind==='topic')return r.topic.edexcelPrintoutPath;return `printouts/${r.book.id}/${r.topic.id}/skills/${r.skill.id}_${r.skill.code==='1.28'?'v03':'v02'}.pdf`;}
 function resolve(s={}){
  const course=library.courses.find(x=>x.id===s.course)||library.courses[0];
  const book=course.books.find(x=>x.id===s.book)||course.books[0];
@@ -32,7 +32,7 @@ async function navigate(s,record=true){
  const textbookLink=document.getElementById('textbook-view-link');if(textbookLink)textbookLink.href='textbook-view.html#'+new URLSearchParams({course:next.course,book:next.book,fromSkill:next.skill,fromQuestion:String(next.question)});
  $('breadcrumbs').textContent=[r.course.title,r.book.title,r.topic.title].join(' › ');
  $('skilltitle').textContent=`${r.skill.code} ${r.skill.title}`;
- $('print-topic').disabled=r.course.id==='maths-a-level'&&!r.topic.printoutPath;$('print-skill').disabled=r.course.id==='maths-a-level'&&!r.skill.printoutPath;
+ $('print-topic').disabled=!printPath('topic');$('print-skill').disabled=r.course.id==='maths-a-level'&&!r.skill.printoutPath;
  $('print-topic').setAttribute('aria-label',`Print ${r.topic.title} topic`);$('print-skill').setAttribute('aria-label',`Print ${r.skill.title} skill`);
  const selected=r.skill.questions[next.question-1];$('qtitle').textContent=!r.skill.available?'Awaiting conversion':selected?.reference?'Reference tables':selected?.supplementary?`Additional worked solution ${selected.number}`:`Question ${next.question} of ${r.skill.questionCount}`;
  $('focus-question-number').textContent=$('qtitle').textContent;
@@ -93,12 +93,19 @@ $('full').onclick=()=>{mode='full';stage=(resolve(current).skill.questions[curre
 $('hide').onclick=()=>{mode='hidden';stage=0;renderSolution();};
 $('backstep').onclick=()=>{mode='progress';stage=Math.max(0,stage-1);renderSolution();};
 $('reset').onclick=()=>{mode='progress';stage=0;renderSolution();};
-$('view-split').onclick=()=>setView('split');
-$('view-question').onclick=()=>setView('question');
-$('view-solution').onclick=()=>setView('solution');
+$('view-split').onclick=()=>{setView('split');if(document.fullscreenElement)document.exitFullscreen();};
+document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)setView('split');});
+$('view-question').onclick=()=>enterFocusedFullscreen('question');
+$('view-solution').onclick=()=>enterFocusedFullscreen('solution');
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&view!=='split')setView('split');});
-$('present').onclick=()=>{$('present').setAttribute('aria-pressed',String(document.body.classList.toggle('present')));};
-$('fullscreen').onclick=()=>{if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.();};
 window.addEventListener('hashchange',()=>navigate(Object.fromEntries(new URLSearchParams(location.hash.slice(1)))));
 $('library-status').textContent=library.availableSkillCount+' of '+library.totalSkillCount+' skills available · '+library.questionCount+' questions';navigate(Object.fromEntries(new URLSearchParams(location.hash.slice(1))),false);
 if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('sw.js').catch(()=>{});
+
+async function enterFocusedFullscreen(next){
+ setView(next);
+ // iPhone browsers without Fullscreen API still show the focused question/solution.
+ if(!document.fullscreenElement && document.documentElement.requestFullscreen){
+  try{await document.documentElement.requestFullscreen();}catch(error){console.info('Fullscreen unavailable; focused view remains active.');}
+ }
+}
