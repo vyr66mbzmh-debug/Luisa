@@ -1,5 +1,8 @@
 # Luisa handoff
-Updated: 2026-11-03. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
+Updated: 2026-11-05. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
+
+## Mandatory release email — all future agents
+FR-024 is a standing owner requirement, reaffirmed 2026-11-05. Every published release must end with the full HTML report emailed using the existing private SMTP adapter, unless explicitly deferred by the owner. Do not interpret a new chat as removal of authorisation. Read docs/handoff/RELEASE-EMAIL.md for the command, content, checks and failure handling. The private WORKSPACE.json mailSender resolves the configured account; no Apple Mail or unlocked desktop is required. Public v0.27 is unchanged by this documentation task. Delivery for v0.25–v0.27 has not been verified here; do not infer sent status from publication.
 
 ## Completed v0.27 scope
 Issue #15; PRs #16 and #17 squash-merged. Final checked release a9f0365e0893fda9d8185b8bca686c23d9e1a976 is live on Cloudflare and ADA. Both6867-entry manifests and241 fetched resources per host match the same artifact. All96 replacement Pure Year2 chapter9 originals are delivered as102 teaching panels,51 matching booklet pages and42 textbook pages. Title is Differentiation; overlapping old variants are superseded. Source/maths/visual/interaction/print acceptance: docs/evidence/v027-acceptance.json. Release: docs/evidence/v027-release.json.
