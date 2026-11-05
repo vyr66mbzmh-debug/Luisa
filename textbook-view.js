@@ -20,8 +20,8 @@ function render(){
  state={course:book.course,book:book.id,chapter:chapter.id,subtopic:sub};if(input.fromSkill){state.fromSkill=input.fromSkill;state.fromQuestion=input.fromQuestion;}
  options('course',catalogue.courses,book.course);options('book',catalogue.books.filter(b=>b.course===book.course),book.id);options('chapter',book.chapters.map(c=>({id:c.id,title:`${c.id}. ${c.title}`})),chapter.id);options('subtopic',[{id:'',title:'Whole chapter'},...chapter.subtopics.map(s=>({id:s.id,title:`${s.id} ${s.title}`}))],sub);
  $('breadcrumbs').textContent=[catalogue.courses.find(c=>c.id===book.course).title,book.title].join(' › ');$('chapter-title').textContent=`Chapter ${chapter.id}: ${chapter.title}`;
- $('resources').replaceChildren(...chapter.resources.filter(r=>['slides','pdf','booklet'].includes(r.type)).map(renderResource));
- $('additional-resources').replaceChildren(...chapter.resources.filter(r=>!['slides','pdf','booklet'].includes(r.type)&&(!sub||!r.subtopics?.length||r.subtopics.includes(sub))).map(renderResource));
+ $('resources').replaceChildren(...chapter.resources.filter(r=>['slides','pdf','booklet','practice'].includes(r.type)).map(renderResource));
+ $('additional-resources').replaceChildren(...chapter.resources.filter(r=>!['slides','pdf','booklet','practice'].includes(r.type)&&(!sub||!r.subtopics?.length||r.subtopics.includes(sub))).map(renderResource));
  const all=catalogue.questions.filter(r=>matches(r,book.id,chapter.id,''));pool=all.filter(r=>matches(r,book.id,chapter.id,sub));
  const reviewed=all.filter(r=>r.mapping==='question-reviewed').length;
  $('coverage').textContent=all.length ? `${all.length} practice entries · ${reviewed} individually mapped`+(all.length>reviewed?` · ${all.length-reviewed} grouped by skill, awaiting individual review.`:". Further mapping is in progress.") : "Practice mapping is pending. Chapter resources are listed below as they become available.";

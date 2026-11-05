@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-03",
+  "asOf": "2026-11-05",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -3345,6 +3345,29 @@
           "date": "2026-11-03",
           "reference": "docs/evidence/v027-release.json",
           "scope": "Both live manifests and changed resources match; live standalone/offline PDF return passes on both hosts. ADA latest-only retention verified. Physical iPad acceptance remains separate."
+        }
+      ]
+    },
+    {
+      "id": "LIB-028",
+      "requirement": "v0.28 library controls, practice chapters and complete offline documents.",
+      "scope": "Both libraries; Maths and Further Maths A level",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_verified",
+      "origin": "owner v0.28 instructions and practice PDF clarification",
+      "acceptance": [
+        "Remove Presentation mode and the separate Full screen control in the question library; Question Full Screen and Solution Full Screen enter the respective focused fullscreen view; Offline is the final header control.",
+        "Further Maths Print topic includes only Edexcel-tagged skills.",
+        "For all six Maths books use the existing chapter-organised Pearson practice booklet PDFs as Practice Chapter in skill view; retain Book chapter for Further Maths.",
+        "Textbook view retains Teaching slides, Book chapter and Student handout; add Practice Chapter for Maths only.",
+        "All available linked chapter PDFs, student/practice booklets and skill/topic print PDFs are included in offline downloads. Regress Moments, Statistics and offline Print topic/Print skill under root and ADA prefixes.",
+        "Publish v0.28 to Cloudflare and ADA, update requirements/handoff and send the mandatory full HTML release email."
+      ],
+      "evidence": [
+        {
+          "reference": "docs/evidence/v028-acceptance.json",
+          "scope": "Root and /AL/ standalone offline browser tests and PDF fidelity pass; physical iPad remains untested; publication/email verification recorded separately."
         }
       ]
     }

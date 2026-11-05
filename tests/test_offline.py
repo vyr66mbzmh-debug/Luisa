@@ -37,6 +37,21 @@ class OfflineInventory(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'Unresolved nested offline dependency'):
                 offline.generate(root,entries,'0.26')
 
+    def test_print_and_practice_PDFs_required_LIB_028(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);entries=self.fixture(root)
+            def put(name,data):
+                p=root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(data)
+                entries[name]={'sha256':hashlib.sha256(data.encode()).hexdigest(),'bytes':len(data)}
+            put('data.js','window.FMQ_LIBRARY='+json.dumps({'courses':[{'id':'maths-a-level','books':[{'id':'test','title':'Test','topics':[{'printoutPath':'topic.pdf','skills':[{'id':'test','printoutPath':'skill.pdf','questions':[1]}]}]}]}]})+';')
+            for name in ['topic.pdf','skill.pdf','practice.pdf']:put(name,'%PDF-fixture')
+            cat=json.loads((root/'textbook-catalogue.json').read_text());cat['books'][0]['chapters'][0]['resources']=[{'type':'practice','access':'available','url':'practice.pdf'}]
+            put('textbook-catalogue.json',json.dumps(cat))
+            result=offline.generate(root,entries,'0.28')
+            self.assertTrue({'topic.pdf','skill.pdf','practice.pdf'}<=set(result['packs'][0]['files']))
+            del entries['skill.pdf']
+            with self.assertRaisesRegex(ValueError,'Offline print PDF missing'):offline.generate(root,entries,'0.28')
+
     def test_inventory_revision_changes_with_actual_bytes_PWA_001(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);entries=self.fixture(root);first=offline.generate(root,entries,'0.26')
