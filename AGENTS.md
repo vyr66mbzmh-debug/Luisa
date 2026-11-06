@@ -10,7 +10,7 @@ Read HANDOFF.md, docs/agentic/LEAD-RULES.md and the assigned issue only. Consult
 - Luisa branding; public version increases by .01 for product releases; all version badges link to development progress.
 - White slide background to viewport edges; whole slide fits without scrolling, clipping, overlap, tiny text or distorted diagrams. Consistent readable fonts; hanging indents for every numbered/bulleted item and subpart.
 - Preserve every supplied teaching step, explanation, hint and meaningful diagram/arrow. Native LaTeX except explicit owner image exceptions.
-- Independent, fully concealed answers with correct numbered pale-blue covers. No purple badges, stray question marks or obstructing ticks. Natural click/Space teaching order; rewrite before result; Reset correct.
+- Independent, fully concealed answers with pale-blue covers showing the source prompt or ? if blank. Use the actual exercise identifier when requested. No purple badges or obstructing ticks. Natural click/Space teaching order; rewrite before result; Reset correct.
 - Student booklet: two original slides per A4 page; same titles/numbers; preserve supplied theory; omit only concealed answers and allocate useful handwriting space. New content must use available panel area from creation. Deferred improvement to accepted older layouts is separate from defects.
 - Chapter delivery includes checked slides, student booklet AND correct textbook chapter PDF, connected in both libraries and verified online.
 - Checked means source, maths, visual, interaction and print acceptance with evidence. Never replace these with a successful render. Invalidate affected approvals after edits.

@@ -1,5 +1,8 @@
 # Luisa handoff
 
+## v0.30 in development
+Track STA-030, SLD-030, WEB-030 and PUB-030. Slide 55 uses original covers 1, 4, 2, 3, each labelled ?. Include the outstanding Statistics chapters for both years. Acceptance and publication are pending.
+
 ## v0.29 release handoff
 Statistics Year 1 Chapter 2 uses the replacement 90-slide source and a 45-page student booklet. Slide 68 requires separate Midpoints, Mean and Standard deviation controls. Maintain these in both outputs. See docs/evidence/v029-acceptance.json.
 Every release must name implemented requirement IDs on Development progress, link to the chronological version log and include direct links to affected practice booklets alongside the teaching resources. Publish and verify Cloudflare and ADA, finish the recovery archive and handoff, then send the full HTML Luisa Report as the final release action. Only the private SMTP outcome record follows sending. Physical iPad confirmation is with the owner.

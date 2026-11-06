@@ -113,7 +113,7 @@ def render_requirements(root=ROOT):
     for r in data['requirements']:
         def cell(v):
             return (v if isinstance(v, str) else json.dumps(v, ensure_ascii=False)).replace('|', '\\|').replace('\n', ' ')
-        lines.append('| ' + ' | '.join(cell(r[k]) for k in ('id', 'requirement', 'scope', 'implementation', 'verification')) + ' |')
+        lines.append('| ' + ' | '.join((f"<a name='req-{r[k].lower()}'></a>" if k == 'id' else '') + cell(r[k]) for k in ('id', 'requirement', 'scope', 'implementation', 'verification')) + ' |')
     return '\n'.join(lines) + '\n'
 
 
