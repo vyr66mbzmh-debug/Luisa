@@ -1,5 +1,9 @@
 # Luisa handoff
 
+## v0.33 chapter reports
+Statistics acceptance covers both years (470 slides, 10 booklets, 236 printed pages). The artifact fingerprints and review scope are in docs/evidence/v033-statistics.json. After editing any signed deck or booklet, review the changed material before renewing its acceptance.
+Run `python3 scripts/report_chapters.py development-progress.html release-report-0.33.html` after any chapter update, using the new report filename for subsequent releases. Link every available resource independently of final acceptance. Student booklet, source textbook and practice chapter are distinct resources. Render checks alone do not qualify a chapter for final acceptance.
+
 ## v0.31 teaching navigation
 Implement WEB-031 and SLD-031 in every future teaching player and chapter listing. All seven current players load lesson-touch.js against the slide region and delegate gestures to the existing controls. Standard Maths practice PDFs use the teaching catalogue practice field. Physical smartboard and iPad checks remain with the owner.
 
