@@ -1,5 +1,8 @@
 # Luisa handoff
 
+## v0.31 teaching navigation
+Implement WEB-031 and SLD-031 in every future teaching player and chapter listing. All seven current players load lesson-touch.js against the slide region and delegate gestures to the existing controls. Standard Maths practice PDFs use the teaching catalogue practice field. Physical smartboard and iPad checks remain with the owner.
+
 ## v0.30 Statistics release
 Track STA-030, SLD-030, WEB-030 and PUB-030. Slide 55 uses original covers 1, 4, 2, 3, each labelled ?. Include the outstanding Statistics chapters for both years. All ten Statistics chapters have slides and two-up booklets. Source-matched cover labels and explicit exercise overrides take precedence. Full visual and print acceptance for the newly uploaded chapters remains outstanding. See the release report and private v030 browser/print evidence. Verify both hosts and recovery archive before the final email.
 

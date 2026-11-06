@@ -172,3 +172,5 @@ Historical assertions are not current verification. See README.md in this folder
 | <a name='req-sta-030'></a>STA-030 | Repair Statistics Year 1 Chapter 2 against the source and the owner’s slide-by-slide corrections. | v0.30 and subsequent applicable releases | not_assessed | not_checked |
 | <a name='req-web-030'></a>WEB-030 | Show practice chapter links and availability on development progress and add CG100 alongside Offline. | v0.30 and subsequent applicable releases | not_assessed | not_checked |
 | <a name='req-pub-030'></a>PUB-030 | Publish the remaining Statistics chapters for both years. | v0.30 and subsequent applicable releases | not_assessed | not_checked |
+| <a name='req-web-031'></a>WEB-031 | Show Practice chapter as the fourth resource for each standard Maths teaching chapter and space the version and Offline downloads links apart. | v0.31 and subsequent releases | implemented | partially_verified |
+| <a name='req-sld-031'></a>SLD-031 | Support touch slide navigation and answer reveals across all teaching presentations. | v0.31 and subsequent releases | implemented | partially_verified |
