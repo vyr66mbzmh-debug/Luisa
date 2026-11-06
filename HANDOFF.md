@@ -1,4 +1,8 @@
 # Luisa handoff
+
+## v0.29 release handoff
+Statistics Year 1 Chapter 2 uses the replacement 90-slide source and a 45-page student booklet. Slide 68 requires separate Midpoints, Mean and Standard deviation controls. Maintain these in both outputs. See docs/evidence/v029-acceptance.json.
+Every release must name implemented requirement IDs on Development progress, link to the chronological version log and include direct links to affected practice booklets alongside the teaching resources. Publish and verify Cloudflare and ADA, finish the recovery archive and handoff, then send the full HTML Luisa Report as the final release action. Only the private SMTP outcome record follows sending. Physical iPad confirmation is with the owner.
 Updated: 2026-11-05. Read AGENTS.md and docs/agentic/LEAD-RULES.md first.
 
 ## Completed v0.28 — issue #18 / PR #19
