@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-05",
+  "asOf": "2026-11-06",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -3374,6 +3374,38 @@
           "reference": "docs/evidence/v028-release.json",
           "scope": "Both hosts published and hash verified. SMTP final report accepted. Physical iPad acceptance remains unverified."
         }
+      ]
+    },
+    {
+      "id": "STA-029",
+      "requirement": "Statistics Year 1 Chapter 2 uses the replacement Measures of Location and Spread source.",
+      "scope": "release 0.29 and subsequent applicable releases",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Match source digest. Verify native mathematics, calculator photos, screen crops, diagrams and individual source animations.",
+        "Verify two-up student booklet, both libraries, offline files and live chapter links."
+      ],
+      "origin": "owner instructions 2026-11-06",
+      "evidence": [
+        "docs/evidence/v029-acceptance.json"
+      ]
+    },
+    {
+      "id": "REL-029",
+      "requirement": "Each release records implemented requirements on Development progress and links to a chronological version log.",
+      "scope": "release 0.29 and subsequent applicable releases",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Version log lists changes and links affected practice chapters alongside slides, textbook and student handout.",
+        "Finish publication, verification, archives, records and handoff before the final Luisa Report email."
+      ],
+      "origin": "owner instructions 2026-11-06",
+      "evidence": [
+        "docs/evidence/v029-acceptance.json"
       ]
     }
   ]

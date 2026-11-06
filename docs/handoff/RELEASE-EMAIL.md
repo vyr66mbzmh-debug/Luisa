@@ -1,5 +1,9 @@
 # Mandatory release email (FR-024)
 
+## v0.29 release handoff
+Statistics Year 1 Chapter 2 uses the replacement 90-slide source and a 45-page student booklet. Slide 68 requires separate Midpoints, Mean and Standard deviation controls. Maintain these in both outputs. See docs/evidence/v029-acceptance.json.
+Every release must name implemented requirement IDs on Development progress, link to the chronological version log and include direct links to affected practice booklets alongside the teaching resources. Publish and verify Cloudflare and ADA, finish the recovery archive and handoff, then send the full HTML Luisa Report as the final release action. Only the private SMTP outcome record follows sending. Physical iPad confirmation is with the owner.
+
 The owner has given standing authorisation: after every published Luisa release, email the final report to the configured owner recipient using the configured Luisa Reports sender. This survives agent, provider and chat changes. Only an explicit owner instruction to defer/suppress that report overrides it. Do not create hourly schedules or send interim emails by default.
 
 ## Private adapter, portable instructions

@@ -231,8 +231,8 @@ window.LUISA_TEACHING={
       {
         "number": 2,
         "title": "Measures of location and spread",
-        "slides": null,
-        "booklet": null,
+        "slides": "teaching-lesson-viewer.html?book=maths-applied-year-1&chapter=2&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-1/booklets/chapter-02.pdf",
         "pdf": "resources/teaching/v003/applied-year-1/textbook/chapter-02.pdf",
         "practice": "resources/practice/applied-year-1/chapter-02.pdf"
       },
