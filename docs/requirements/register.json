@@ -3544,6 +3544,20 @@
       ],
       "origin": "Owner v0.32 feedback",
       "evidence": []
+    },
+    {
+      "id": "PUB-033",
+      "requirement": "Build all chapter resource links from the teaching catalogue and sum progress from the displayed chapter rows.",
+      "scope": "All release reports, email and development progress",
+      "priority": "P1",
+      "implementation": "not_assessed",
+      "verification": "not_checked",
+      "acceptance": [
+        "Compare every chapter link against its catalogue URL, including practice PDFs for standard Maths. Validate chapter and total counts independently.",
+        "Count Statistics slides and booklets as checked only with source, visual, interaction and print evidence."
+      ],
+      "origin": "Owner v0.33 feedback",
+      "evidence": []
     }
   ]
 }
