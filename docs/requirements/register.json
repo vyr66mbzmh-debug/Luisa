@@ -3462,6 +3462,36 @@
       ],
       "origin": "owner v0.30 corrections and clarification",
       "evidence": []
+    },
+    {
+      "id": "WEB-031",
+      "requirement": "Show Practice chapter as the fourth resource for each standard Maths teaching chapter and space the version and Offline downloads links apart.",
+      "scope": "v0.31 and subsequent releases",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_verified",
+      "acceptance": [
+        "Use the catalogue PDF and disable unavailable practice chapters. Omit the control in Core Pure 1 and 2."
+      ],
+      "origin": "Owner v0.31 collection",
+      "evidence": [
+        "release-report-0.31.html"
+      ]
+    },
+    {
+      "id": "SLD-031",
+      "requirement": "Support touch slide navigation and answer reveals across all teaching presentations.",
+      "scope": "v0.31 and subsequent releases",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_verified",
+      "acceptance": [
+        "Swipe left for next slide and right for previous. Tap a cover for its own reveal. Tap slide background for one animation. Preserve buttons, keyboard, zoom and native interactions."
+      ],
+      "origin": "Owner v0.31 collection",
+      "evidence": [
+        "release-report-0.31.html"
+      ]
     }
   ]
 }
