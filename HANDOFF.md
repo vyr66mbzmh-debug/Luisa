@@ -1,6 +1,7 @@
 # Luisa handoff
 
 ## v0.33 chapter reports
+Statistics acceptance covers both years (470 slides, 10 booklets, 236 printed pages). The artifact fingerprints and review scope are in docs/evidence/v033-statistics.json. After editing any signed deck or booklet, review the changed material before renewing its acceptance.
 Run `python3 scripts/report_chapters.py development-progress.html release-report-0.33.html` after any chapter update, using the new report filename for subsequent releases. Link every available resource independently of final acceptance. Student booklet, source textbook and practice chapter are distinct resources. Render checks alone do not qualify a chapter for final acceptance.
 
 ## v0.31 teaching navigation
