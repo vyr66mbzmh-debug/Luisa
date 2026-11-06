@@ -1,8 +1,15 @@
 /* Source-aligned board and student layout. Animation visibility never decides print content. */
 (function(root){'use strict';const R=typeof module!=='undefined'?require('./lesson-renderer.js'):root.FMQ_SLIDE_RENDERER;const esc=R.escape;
 function flat(xs){return xs.flatMap(s=>[s,...flat(s.children||[])]);}
+function closedLabel(shape, deck) {
+ if (deck.sourceCoverLabels) return shape.coverLabel || '?';
+ const prompt = (shape.text?.paragraphs || []).map(p => p.parts.map(r => r.text ?? r.tex ?? '').join('')).join(' ').trim();
+ if (prompt) return prompt;
+ const label = shape.coverLabel || '';
+ return label && !/^\d+\??$/.test(label) ? label : '?';
+}
 function prepare(slide,deck){let copy=JSON.parse(JSON.stringify(slide));copy.shapes=copy.shapes.filter(s=>!copy.headerShapes.includes(s.id));
- function style(shapes){for(const s of shapes){delete s.printFallback;delete s.webStage;const t=s.text;if(t){for(const p of t.paragraphs){delete p.webStage;for(const r of p.parts)delete r.fontFamily;}if(s.cover){s.fill='#d6e5f5';s.line={color:'#6383a4',width:1.5};s.text={...t,anchor:'ctr',paragraphs:[{align:'ctr',fontSize:32,color:'#173b60',parts:[{type:'text',text:copy.maintenanceAnswers?s.coverLabel:'?',fontSize:32}]}]};}}
+ function style(shapes){for(const s of shapes){delete s.printFallback;delete s.webStage;const label=s.cover?closedLabel(s,deck):'';const t=s.text;if(t){for(const p of t.paragraphs){delete p.webStage;for(const r of p.parts)delete r.fontFamily;}if(s.cover){s.fill='#d6e5f5';s.line={color:'#6383a4',width:1.5};s.text={...t,anchor:'ctr',paragraphs:[{align:'ctr',fontSize:32,color:'#173b60',parts:[{type:'text',text:label,fontSize:32}]}]};}}
  if(s.children)style(s.children);}}
  style(copy.shapes);return copy;}
 function bounds(slide,deck){const shapes=slide.shapes.filter(s=>!slide.headerShapes.includes(s.id)&&s.box.x>=0&&s.box.y>=55&&s.box.x<deck.width&&s.box.y<deck.height&&s.box.w<deck.width);

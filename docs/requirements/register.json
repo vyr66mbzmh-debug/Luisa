@@ -3407,6 +3407,61 @@
       "evidence": [
         "docs/evidence/v029-acceptance.json"
       ]
+    },
+    {
+      "id": "SLD-030",
+      "requirement": "Reproduce authored reveal prompts. Use a question mark for a blank cover.",
+      "scope": "v0.30 and subsequent applicable releases",
+      "priority": "P1",
+      "implementation": "not_assessed",
+      "verification": "not_checked",
+      "acceptance": [
+        "Apply to existing and future presentations. Use actual exercise identifiers when requested. Never generate a number from the position in the reveal sequence."
+      ],
+      "origin": "owner v0.30 corrections and clarification",
+      "evidence": []
+    },
+    {
+      "id": "STA-030",
+      "requirement": "Repair Statistics Year 1 Chapter 2 against the source and the owner’s slide-by-slide corrections.",
+      "scope": "v0.30 and subsequent applicable releases",
+      "priority": "P1",
+      "implementation": "not_assessed",
+      "verification": "not_checked",
+      "acceptance": [
+        "Transcribe all exercises in LaTeX, retaining their original identifiers. Use readable native tables, consistent text and presentation colours, and preserve calculator graphics.",
+        "Slide 28 uses original order 2,4,8,3,5,9,1,6,7 labelled 1–9. Slide 35 uses 1,2,3,5,6,4. Slide 55 uses 1,4,2,3 with four question marks and a close-fitting fourth cover. Slide 73 uses 1,3,4 then sigma with source labels.",
+        "Verify linked animation states on 31,36,41,67. Inspect boxed questions on 68 and 72 and all individual layout and exercise corrections. Regenerate and inspect the booklet."
+      ],
+      "origin": "owner v0.30 corrections and clarification",
+      "evidence": []
+    },
+    {
+      "id": "WEB-030",
+      "requirement": "Show practice chapter links and availability on development progress and add CG100 alongside Offline.",
+      "scope": "v0.30 and subsequent applicable releases",
+      "priority": "P1",
+      "implementation": "not_assessed",
+      "verification": "not_checked",
+      "acceptance": [
+        "Use six standard Maths tables only, add chapter and total percentages, remove obsolete footer, link requirement IDs to the register.",
+        "Open the calculator on click, requesting one quarter of the available display width and full available height."
+      ],
+      "origin": "owner v0.30 corrections and clarification",
+      "evidence": []
+    },
+    {
+      "id": "PUB-030",
+      "requirement": "Publish the remaining Statistics chapters for both years.",
+      "scope": "v0.30 and subsequent applicable releases",
+      "priority": "P1",
+      "implementation": "not_assessed",
+      "verification": "not_checked",
+      "acceptance": [
+        "Year 1 chapters 1 and 3–7 and Year 2 chapters 1–3. Check the decks, matching two-per-page student booklets, chapter links and offline resources before release."
+      ],
+      "origin": "owner v0.30 corrections and clarification",
+      "evidence": []
     }
   ]
 }

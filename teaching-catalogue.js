@@ -223,8 +223,8 @@ window.LUISA_TEACHING={
       {
         "number": 1,
         "title": "Data collection",
-        "slides": null,
-        "booklet": null,
+        "slides": "teaching-lesson-viewer.html?book=maths-applied-year-1&chapter=1&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-1/booklets/chapter-01.pdf",
         "pdf": "resources/teaching/v003/applied-year-1/textbook/chapter-01.pdf",
         "practice": "resources/practice/applied-year-1/chapter-01.pdf"
       },
@@ -239,40 +239,40 @@ window.LUISA_TEACHING={
       {
         "number": 3,
         "title": "Representations of data",
-        "slides": null,
-        "booklet": null,
+        "slides": "teaching-lesson-viewer.html?book=maths-applied-year-1&chapter=3&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-1/booklets/chapter-03.pdf",
         "pdf": "resources/teaching/v003/applied-year-1/textbook/chapter-03.pdf",
         "practice": "resources/practice/applied-year-1/chapter-03.pdf"
       },
       {
         "number": 4,
         "title": "Correlation",
-        "slides": null,
-        "booklet": null,
+        "slides": "teaching-lesson-viewer.html?book=maths-applied-year-1&chapter=4&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-1/booklets/chapter-04.pdf",
         "pdf": "resources/teaching/v003/applied-year-1/textbook/chapter-04.pdf",
         "practice": "resources/practice/applied-year-1/chapter-04.pdf"
       },
       {
         "number": 5,
         "title": "Probability",
-        "slides": null,
-        "booklet": null,
+        "slides": "teaching-lesson-viewer.html?book=maths-applied-year-1&chapter=5&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-1/booklets/chapter-05.pdf",
         "pdf": "resources/teaching/v003/applied-year-1/textbook/chapter-05.pdf",
         "practice": "resources/practice/applied-year-1/chapter-05.pdf"
       },
       {
         "number": 6,
         "title": "Statistical distributions",
-        "slides": null,
-        "booklet": null,
+        "slides": "teaching-lesson-viewer.html?book=maths-applied-year-1&chapter=6&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-1/booklets/chapter-06.pdf",
         "pdf": "resources/teaching/v003/applied-year-1/textbook/chapter-06.pdf",
         "practice": "resources/practice/applied-year-1/chapter-06.pdf"
       },
       {
         "number": 7,
         "title": "Hypothesis testing",
-        "slides": null,
-        "booklet": null,
+        "slides": "teaching-lesson-viewer.html?book=maths-applied-year-1&chapter=7&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-1/booklets/chapter-07.pdf",
         "pdf": "resources/teaching/v003/applied-year-1/textbook/chapter-07.pdf",
         "practice": "resources/practice/applied-year-1/chapter-07.pdf"
       },
@@ -316,24 +316,24 @@ window.LUISA_TEACHING={
       {
         "number": 1,
         "title": "Regression, correlation and hypothesis testing",
-        "slides": null,
-        "booklet": null,
+        "slides": "teaching-lesson-viewer.html?book=maths-applied-year-2&chapter=1&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-2/booklets/chapter-01.pdf",
         "pdf": "resources/teaching/v003/applied-year-2/textbook/chapter-01.pdf",
         "practice": "resources/practice/applied-year-2/chapter-01.pdf"
       },
       {
         "number": 2,
         "title": "Conditional probability",
-        "slides": null,
-        "booklet": null,
+        "slides": "teaching-lesson-viewer.html?book=maths-applied-year-2&chapter=2&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-2/booklets/chapter-02.pdf",
         "pdf": "resources/teaching/v003/applied-year-2/textbook/chapter-02.pdf",
         "practice": "resources/practice/applied-year-2/chapter-02.pdf"
       },
       {
         "number": 3,
         "title": "The normal distribution",
-        "slides": null,
-        "booklet": null,
+        "slides": "teaching-lesson-viewer.html?book=maths-applied-year-2&chapter=3&slide=1",
+        "booklet": "resources/teaching/v003/applied-year-2/booklets/chapter-03.pdf",
         "pdf": "resources/teaching/v003/applied-year-2/textbook/chapter-03.pdf",
         "practice": "resources/practice/applied-year-2/chapter-03.pdf"
       },
