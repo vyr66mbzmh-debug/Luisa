@@ -1,7 +1,7 @@
 # Luisa handoff
 
-## v0.30 in development
-Track STA-030, SLD-030, WEB-030 and PUB-030. Slide 55 uses original covers 1, 4, 2, 3, each labelled ?. Include the outstanding Statistics chapters for both years. Acceptance and publication are pending.
+## v0.30 Statistics release
+Track STA-030, SLD-030, WEB-030 and PUB-030. Slide 55 uses original covers 1, 4, 2, 3, each labelled ?. Include the outstanding Statistics chapters for both years. All ten Statistics chapters have slides and two-up booklets. Source-matched cover labels and explicit exercise overrides take precedence. Full visual and print acceptance for the newly uploaded chapters remains outstanding. See the release report and private v030 browser/print evidence. Verify both hosts and recovery archive before the final email.
 
 ## v0.29 release handoff
 Statistics Year 1 Chapter 2 uses the replacement 90-slide source and a 45-page student booklet. Slide 68 requires separate Midpoints, Mean and Standard deviation controls. Maintain these in both outputs. See docs/evidence/v029-acceptance.json.
