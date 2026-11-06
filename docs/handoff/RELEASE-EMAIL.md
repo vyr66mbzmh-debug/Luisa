@@ -32,3 +32,5 @@ These variables mean the existing private adapter, the actual published version,
 Verify the release on required hosts before reporting it live. Check private send records for this version to avoid duplicate notifications. Record timestamp, version, recipient configuration reference, adapter exit status and SMTP outcome privately. Successful SMTP submission means the server accepted the message; it does not prove inbox receipt. Do not label a report delivered unless receipt is independently confirmed.
 
 If sending fails, save both report files and the non-secret error, mark notification pending in HANDOFF/checkpoint and tell the owner. Publication can be successful while notification remains incomplete. Never silently omit this step or claim the report was sent. No historic catch-up emails are implied by a documentation-only task.
+
+The owner wants the Luisa Report only. Suppress the separate Cloudflare deployment notification for this site. Preserve other account alerts.

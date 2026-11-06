@@ -3492,6 +3492,58 @@
       "evidence": [
         "release-report-0.31.html"
       ]
+    },
+    {
+      "id": "STA-032",
+      "requirement": "Conceal each Location and Spread answer independently and reserve the matching writing space in the booklet.",
+      "scope": "v0.32 onwards",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "not_checked",
+      "acceptance": [
+        "Slide 26 reveals the median rule and both examples together. Slide 28 reveals nine individual answers. Verify each Statistics chapter against its source, teaching sequence and print layout before recording acceptance."
+      ],
+      "origin": "Owner v0.32 feedback",
+      "evidence": []
+    },
+    {
+      "id": "WEB-032",
+      "requirement": "Show available slides, booklet, textbook and applicable practice chapter links in the chapter column of Development progress.",
+      "scope": "v0.32 onwards",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "not_checked",
+      "acceptance": [
+        "Check chapter destinations on both hosts. Core Pure omits practice chapters."
+      ],
+      "origin": "Owner v0.32 feedback",
+      "evidence": []
+    },
+    {
+      "id": "SLD-032",
+      "requirement": "Support horizontal mouse drags wherever touch swipes navigate teaching slides.",
+      "scope": "v0.32 onwards",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "not_checked",
+      "acceptance": [
+        "Drag left to advance and right to return. A drag must not also reveal an answer."
+      ],
+      "origin": "Owner v0.32 feedback",
+      "evidence": []
+    },
+    {
+      "id": "OPS-032",
+      "requirement": "Keep the final Luisa Report and suppress the separate Cloudflare release email.",
+      "scope": "v0.32 onwards",
+      "priority": "P1",
+      "implementation": "not_assessed",
+      "verification": "not_checked",
+      "acceptance": [
+        "Disable the identified deployment email only. Verify both deployments before sending the Luisa Report."
+      ],
+      "origin": "Owner v0.32 feedback",
+      "evidence": []
     }
   ]
 }
