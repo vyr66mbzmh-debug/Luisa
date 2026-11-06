@@ -78,3 +78,6 @@ PWA-001 restores the owner’s original installable/offline app requirement, now
 ## Baseline and boundaries
 Legacy Maths questions: 3423/3423 (100%); sections 132/132, separate from expanded indexes and teaching progress. Full fresh acceptance is not inferred from those totals.
 The public clone serves existing outputs. Original decks/books and historical authoring toolchain are private external inputs; new content needs targeted source access. Full chapter-authoring portability remains a follow-up.
+
+### v0.32
+Use each chapter’s catalogue resources for the first column of development progress. Keep mouse drag and touch swipe navigation consistent. Check slide 26’s grouped median-rule reveal and slide 28’s nine independent answer positions against the printed student booklet. Only mark Statistics chapters checked after full source, interaction, visual and print acceptance. Keep the final Luisa Report and disable the separate Cloudflare deployment email only.

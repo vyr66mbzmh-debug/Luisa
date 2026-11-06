@@ -174,3 +174,7 @@ Historical assertions are not current verification. See README.md in this folder
 | <a name='req-pub-030'></a>PUB-030 | Publish the remaining Statistics chapters for both years. | v0.30 and subsequent applicable releases | not_assessed | not_checked |
 | <a name='req-web-031'></a>WEB-031 | Show Practice chapter as the fourth resource for each standard Maths teaching chapter and space the version and Offline downloads links apart. | v0.31 and subsequent releases | implemented | partially_verified |
 | <a name='req-sld-031'></a>SLD-031 | Support touch slide navigation and answer reveals across all teaching presentations. | v0.31 and subsequent releases | implemented | partially_verified |
+| <a name='req-sta-032'></a>STA-032 | Conceal each Location and Spread answer independently and reserve the matching writing space in the booklet. | v0.32 onwards | implemented | not_checked |
+| <a name='req-web-032'></a>WEB-032 | Show available slides, booklet, textbook and applicable practice chapter links in the chapter column of Development progress. | v0.32 onwards | implemented | not_checked |
+| <a name='req-sld-032'></a>SLD-032 | Support horizontal mouse drags wherever touch swipes navigate teaching slides. | v0.32 onwards | implemented | not_checked |
+| <a name='req-ops-032'></a>OPS-032 | Keep the final Luisa Report and suppress the separate Cloudflare release email. | v0.32 onwards | not_assessed | not_checked |
