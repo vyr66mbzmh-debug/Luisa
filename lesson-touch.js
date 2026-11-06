@@ -17,7 +17,7 @@
     const first = start;
     start = null;
     const last = event.changedTouches[0];
-    if (!first || event.touches.length || first.identifier !== last.identifier || !event.cancelable) return;
+    if (!first || event.touches.length || first.identifier !== last.identifier) return;
     const dx = last.clientX - first.clientX;
     const dy = last.clientY - first.clientY;
     let action;
@@ -28,7 +28,7 @@
     } else {
       return;
     }
-    event.preventDefault(); // Suppress the extra click generated after a handled touch.
+    if (event.cancelable) event.preventDefault(); // Suppress the extra click generated after a handled touch.
     document.getElementById(action).click();
   }, { passive: false });
 })();
