@@ -3419,7 +3419,8 @@
       "implementation": "not_assessed",
       "verification": "not_checked",
       "acceptance": [
-        "Apply to existing and future presentations. Use actual exercise identifiers when requested. Never generate a number from the position in the reveal sequence."
+        "Apply to existing and future presentations. Use actual exercise identifiers when requested. Never generate a number from the position in the reveal sequence.",
+        "From v0.34 UI-034 supersedes the blank-cover question-mark fallback on slides and in booklets; retain authored prompts."
       ],
       "origin": "owner v0.30 corrections and clarification",
       "evidence": []
@@ -3656,16 +3657,17 @@
     },
     {
       "id": "UI-034",
-      "requirement": "Trial a subtle button appearance for interactive pale-blue answer covers.",
-      "scope": "v0.34 visual experiment on Statistics Year 1 Chapter 2 slide 84 for owner review",
+      "requirement": "Use the approved subtle pale-blue button appearance for every interactive answer cover across all teaching slides. Keep authored comments and hints. Omit standalone question-mark placeholders on slides and in student booklets.",
+      "scope": "v0.34; every existing and future teaching presentation and corresponding student booklet",
       "priority": "P2",
       "implementation": "planned",
       "verification": "not_checked",
       "acceptance": [
-        "Try a fine inset highlight and a gentle pressed state inside the full rectangular cell. Keep the source prompt or question mark centred, retain exact cell coverage, and preserve the printed writing space.",
-        "Review the trial before applying the appearance across other presentations."
+        "Use the approved slide 84 preview: light upper edge, slightly darker lower edge and gentle pressed feedback. A cell cover fills its cell exactly. Apply the same appearance to covers outside tables.",
+        "An unlabelled cover or a cover labelled only with ? appears blank. Retain meaningful authored prompts, their punctuation and explicitly requested question identifiers. Give visually blank buttons an accessible name.",
+        "Print flat writing areas with a thin light border, white interior and any meaningful hint. Omit standalone question marks and screen button effects. Check a table cell and a free-standing cover on screen, after reveal and Reset, and in the two-up booklet."
       ],
-      "origin": "Owner feedback on Quickfire questions slide 84",
+      "origin": "Owner approved the slide 84 button preview for website-wide use",
       "evidence": []
     }
   ]
