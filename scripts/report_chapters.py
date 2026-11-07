@@ -14,7 +14,26 @@ RESOURCES = [('slides', 'Slides'), ('booklet', 'Booklet'), ('pdf', 'Textbook'),
              ('practice', 'Practice chapter')]
 
 
-def rebuild(match, catalogue, acceptance=None):
+def release_counts(cells, record, chapter):
+    booklet = ROOT / unquote(urlsplit(chapter['booklet']).path)
+    deck = booklet.parent.parent / booklet.with_suffix('.json').name
+    for path, key in [(deck,'deckSha256'),(booklet,'bookletSha256')]:
+        if hashlib.sha256(path.read_bytes()).hexdigest() != record[key]:
+            raise ValueError(f'Review out of date: {path}')
+    total = len(json.loads(deck.read_text())['slides'])
+    if total != record['slides'] or record['pages'] != (total+1)//2:
+        raise ValueError(f'Chapter count mismatch: {deck}')
+    columns = re.findall(r'<td.*?</td>', cells, flags=re.S)
+    for i, (done, target) in enumerate([(total,total),(record['slidesChecked'],total),
+                                        (1,1),(record['bookletChecked'],1)],1):
+        if not 0 <= done <= target:
+            raise ValueError(f'Invalid checked count: {deck}')
+        state = 'complete' if done == target else 'progress' if done else 'not-started'
+        columns[i] = f'<td class="status-{state}">{done}/{target} ({done/target:.1%})</td>'
+    return ''.join(columns)
+
+
+def rebuild(match, catalogue, acceptance=None, release=None):
     name, table = match.groups()
     course, year = name.rsplit(' ', 1)
     if course not in BOOKS:
@@ -37,6 +56,9 @@ def rebuild(match, catalogue, acceptance=None):
                                '<span class="chapter-links">' + ' · '.join(links) + '</span>', cells)
             if n != 1:
                 raise ValueError(f'Missing chapter cell: {name} {num[1]}')
+            if release is not None:
+                key = f'{BOOKS[course]}-{year}-{num[1]}'
+                cells = release_counts(cells, release[key], chapter)
             if course == 'Statistics' and acceptance:
                 record = acceptance[f'{year}-{num[1]}']
                 base = ROOT / f'resources/teaching/v003/applied-year-{year}'
@@ -69,5 +91,8 @@ if __name__ == '__main__':
         acceptance = None
         if '<title>Luisa v0.33 chapter progress</title>' in content:
             acceptance = json.loads((ROOT/'docs/evidence/v033-statistics.json').read_text())['chapters']
+        release = None
+        if '<title>Luisa v0.34' in content:
+            release = json.loads((ROOT/'docs/evidence/v034-acceptance.json').read_text())['chapters']
         path.write_text(re.sub(r'<h2>([^<]+)</h2><table>(.*?)</table>',
-                               lambda m: rebuild(m,catalogue,acceptance), content, flags=re.S))
+                               lambda m: rebuild(m,catalogue,acceptance,release), content, flags=re.S))
