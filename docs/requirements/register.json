@@ -3864,6 +3864,21 @@
       ],
       "origin": "Owner feedback on original Hypothesis Testing slide 22",
       "evidence": []
+    },
+    {
+      "id": "STA-034-C7-S34",
+      "requirement": "On Statistics Year 1 Chapter 7 original slide 34, Example, transcribe the dice-test question and worked answers as selectable text with native LaTeX maths. Label the answer buttons (i), (ii), (iii) and reveal them in that order.",
+      "scope": "v0.34; Statistics Year 1 Chapter 7 original slide 34",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "acceptance": [
+        "Check the wording against the source, preserving the 5% significance level, 20 throws and one observed six. Use parenthesised lowercase Roman numerals inside each button.",
+        "Verify Next, Space and background advance reveal (i) the hypotheses, (ii) the p-value, then (iii) the conclusion. Repeat after Reset and confirm each direct click reveals only its matching answer.",
+        "The student booklet uses the same typeset exercise and three matching labelled writing spaces in order."
+      ],
+      "origin": "Owner feedback on Hypothesis Testing original slide 34",
+      "evidence": []
     }
   ]
 }
