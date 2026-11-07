@@ -2647,7 +2647,8 @@
       "verification": "not_checked",
       "acceptance": [
         "Conceal complete answers structurally, including brackets, factors and powers. Where appropriate start after the first equals sign; no answer or question may leak or be covered accidentally.",
-        "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
+        "Record affected output and verification evidence; invalidate acceptance when dependent inputs change.",
+        "Across teaching slides, inspect the closed and reset states after layout and resizing: conceal every character of each answer, including its first letter. Regression example: the inline answer “census” on Statistics Year 1 Chapter 1 original slide 6."
       ],
       "origin": "owner-conversation-through-2026-11-01",
       "evidence": []
@@ -3650,7 +3651,8 @@
         "On Statistics Year 1 Chapter 2 slide 41, keep Listed data on the left and Grouped data on the right. Align the heading bars and text baselines; use the same gap between each heading and its table.",
         "Preserve the existing trigger for revealing the grouped-data panel. When it appears, both headings and table tops align without shifting the listed-data panel. Check the corresponding two-up booklet panel.",
         "On Statistics Year 1 Chapter 2 slide 44, align corresponding answer rows below the two tables, use consistent gaps within each column, and keep each prompt readable. Check the initial, individually revealed and reset states: no answer fragment may show before its own reveal, and adjacent covers must not overlap. Check the matching answer areas in the two-up booklet.",
-        "Across all presentations, make the cover and its clickable area follow all four inside edges of the answer cell as the table resizes. Preserve grid lines, conceal the whole answer and leave neighbouring cells unobstructed. Verify the closed, revealed and reset states on Statistics Year 1 Chapter 2 slide 84; the student booklet keeps the blank answer cell and its borders."
+        "Across all presentations, make the cover and its clickable area follow all four inside edges of the answer cell as the table resizes. Preserve grid lines, conceal the whole answer and leave neighbouring cells unobstructed. Verify the closed, revealed and reset states on Statistics Year 1 Chapter 2 slide 84; the student booklet keeps the blank answer cell and its borders.",
+        "Check Statistics Year 1 Chapter 1 original slide 6: the four Census/Sample advantage/disadvantage covers fill their respective body cells exactly; table headings, row labels and grid lines stay visible."
       ],
       "origin": "Owner feedback on the slide 41 quartiles comparison",
       "evidence": []
@@ -3695,6 +3697,20 @@
         "Identify the slide by its original position before removal of original slide 2. Check that the rain-cloud icon is absent in the presentation and printed booklet and the rest of the slide content is preserved."
       ],
       "origin": "Owner feedback on Statistics Year 1 Chapter 1 original slide 3",
+      "evidence": []
+    },
+    {
+      "id": "STA-034-C1-S06",
+      "requirement": "Open original slide 6, “Populations vs Samples”, directly in its ready-to-answer state, with the question text, table and closed reveal buttons visible immediately.",
+      "scope": "v0.34; Statistics Year 1 Chapter 1 original slide 6 only",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "acceptance": [
+        "Remove the introductory animation. On entry and Reset, keep the answer buttons independently operable. Verify the inline census answer and four table cells against FR-009 and LAY-034B, and button labels against UI-034.",
+        "Check the matching student booklet panel for flat, light-bordered writing areas with the concealed answers omitted and row and column labels legible."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 1 original slide 6",
       "evidence": []
     }
   ]
