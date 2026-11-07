@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-06",
+  "asOf": "2026-11-07",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -3557,6 +3557,20 @@
         "Count Statistics slides and booklets as checked only with source, visual, interaction and print evidence."
       ],
       "origin": "Owner v0.33 feedback",
+      "evidence": []
+    },
+    {
+      "id": "SLD-034",
+      "requirement": "Support a horizontal Apple Magic Mouse swipe over the teaching slide to navigate without holding a mouse button.",
+      "scope": "Planned for v0.34 across all teaching players",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "acceptance": [
+        "Match touch navigation: swipe left advances one slide and swipe right returns one slide. Momentum from one swipe must not skip slides or trigger a reveal.",
+        "Preserve vertical scrolling, zoom, answer clicks, keyboard, mouse drag and touch navigation. Check first and last slide boundaries and verify with a physical Magic Mouse on macOS, including Chrome and Safari."
+      ],
+      "origin": "Owner request 2026-11-07",
       "evidence": []
     }
   ]

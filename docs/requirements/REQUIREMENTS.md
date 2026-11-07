@@ -179,3 +179,4 @@ Historical assertions are not current verification. See README.md in this folder
 | <a name='req-sld-032'></a>SLD-032 | Support horizontal mouse drags wherever touch swipes navigate teaching slides. | v0.32 onwards | implemented | not_checked |
 | <a name='req-ops-032'></a>OPS-032 | Keep the final Luisa Report and suppress the separate Cloudflare release email. | v0.32 onwards | not_assessed | not_checked |
 | <a name='req-pub-033'></a>PUB-033 | Build all chapter resource links from the teaching catalogue and sum progress from the displayed chapter rows. | All release reports, email and development progress | not_assessed | not_checked |
+| <a name='req-sld-034'></a>SLD-034 | Support a horizontal Apple Magic Mouse swipe over the teaching slide to navigate without holding a mouse button. | Planned for v0.34 across all teaching players | planned | not_checked |
