@@ -3640,7 +3640,7 @@
     },
     {
       "id": "LAY-034B",
-      "requirement": "In side-by-side comparisons, align the two headings horizontally below the shared introduction and start the corresponding tables or content blocks at the same height. Across all layouts, align related answer boxes with their prompts and use consistent spacing between successive boxes. Size each cover to conceal its entire answer as required by FR-009.",
+      "requirement": "In side-by-side comparisons, align the two headings horizontally below the shared introduction and start the corresponding tables or content blocks at the same height. Across all layouts, align related answer boxes with their prompts and use consistent spacing between successive boxes. Size each cover to conceal its entire answer as required by FR-009. A table-cell answer cover fills its own cell edge to edge.",
       "scope": "Website-wide across existing and future teaching slides and corresponding student booklets; planned for v0.34",
       "priority": "P1",
       "implementation": "planned",
@@ -3648,9 +3648,24 @@
       "acceptance": [
         "On Statistics Year 1 Chapter 2 slide 41, keep Listed data on the left and Grouped data on the right. Align the heading bars and text baselines; use the same gap between each heading and its table.",
         "Preserve the existing trigger for revealing the grouped-data panel. When it appears, both headings and table tops align without shifting the listed-data panel. Check the corresponding two-up booklet panel.",
-        "On Statistics Year 1 Chapter 2 slide 44, align corresponding answer rows below the two tables, use consistent gaps within each column, and keep each prompt readable. Check the initial, individually revealed and reset states: no answer fragment may show before its own reveal, and adjacent covers must not overlap. Check the matching answer areas in the two-up booklet."
+        "On Statistics Year 1 Chapter 2 slide 44, align corresponding answer rows below the two tables, use consistent gaps within each column, and keep each prompt readable. Check the initial, individually revealed and reset states: no answer fragment may show before its own reveal, and adjacent covers must not overlap. Check the matching answer areas in the two-up booklet.",
+        "Across all presentations, make the cover and its clickable area follow all four inside edges of the answer cell as the table resizes. Preserve grid lines, conceal the whole answer and leave neighbouring cells unobstructed. Verify the closed, revealed and reset states on Statistics Year 1 Chapter 2 slide 84; the student booklet keeps the blank answer cell and its borders."
       ],
       "origin": "Owner feedback on the slide 41 quartiles comparison",
+      "evidence": []
+    },
+    {
+      "id": "UI-034",
+      "requirement": "Trial a subtle button appearance for interactive pale-blue answer covers.",
+      "scope": "v0.34 visual experiment on Statistics Year 1 Chapter 2 slide 84 for owner review",
+      "priority": "P2",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "acceptance": [
+        "Try a fine inset highlight and a gentle pressed state inside the full rectangular cell. Keep the source prompt or question mark centred, retain exact cell coverage, and preserve the printed writing space.",
+        "Review the trial before applying the appearance across other presentations."
+      ],
+      "origin": "Owner feedback on Quickfire questions slide 84",
       "evidence": []
     }
   ]
