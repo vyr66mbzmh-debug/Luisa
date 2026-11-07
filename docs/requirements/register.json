@@ -3669,6 +3669,20 @@
       ],
       "origin": "Owner approved the slide 84 button preview for website-wide use",
       "evidence": []
+    },
+    {
+      "id": "STA-034-C1-S02",
+      "requirement": "Remove the original slide 2, “CONTENTS OF CHAPTER 1”, from the Statistics Year 1 Data Collection presentation and its student booklet.",
+      "scope": "v0.34; Statistics Year 1 Chapter 1 only",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "acceptance": [
+        "Slide navigation and the slide selector omit this contents slide. Advancing from the opening slide goes directly to the next retained slide.",
+        "Regenerate the two-up student booklet without a blank placeholder and verify that its slide titles and numbering match the presentation."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 1 original slide 2",
+      "evidence": []
     }
   ]
 }
