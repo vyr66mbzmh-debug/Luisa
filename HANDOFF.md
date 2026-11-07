@@ -1,5 +1,15 @@
 # Luisa handoff
 
+## v0.34 teaching release
+
+Start with docs/evidence/v034-acceptance.json. It records the 62 deck and booklet fingerprints, all 94 named original slide references, and the mapping after removing six Statistics course maps and the final Probability extension. The catalogue contains 2,947 slides and 1,489 A4 booklet pages. Statistics accounts for 463 slides and 234 pages.
+
+All live teaching implementations share lesson-controls.js and lesson-touch.js. Source answer elements have explicit owners. Exercise identifiers, source animation targets and meaningful print-only captions survive separate screen and booklet rendering. Private v034 authoring and review outputs are in the established materials build directories. Booklet generation uses the same origin as the slide viewer so the printed mathematics uses the supplied fonts.
+
+Validate the chapter report with python3 scripts/report_chapters.py development-progress.html release-report-0.34.html. The page counts and accepted hashes come from the release evidence. Run python3 scripts/luisa.py gate and require the three current-head CI checks before landing. Verify the production manifests, chapter resources, navigation and the saved v0.33 to v0.34 transition on both hosts. The private v034 release directory holds host verification, recovery and final SMTP submission records. Physical Magic Mouse Chrome/Safari and iPad confirmation remain open.
+
+Legacy Maths questions are 3,423 / 3,423 (100%), with 132 / 132 sections.
+
 ## v0.33 chapter reports
 Statistics acceptance covers both years (470 slides, 10 booklets, 236 printed pages). The artifact fingerprints and review scope are in docs/evidence/v033-statistics.json. After editing any signed deck or booklet, review the changed material before renewing its acceptance.
 Run `python3 scripts/report_chapters.py development-progress.html release-report-0.33.html` after any chapter update, using the new report filename for subsequent releases. Link every available resource independently of final acceptance. Student booklet, source textbook and practice chapter are distinct resources. Render checks alone do not qualify a chapter for final acceptance.

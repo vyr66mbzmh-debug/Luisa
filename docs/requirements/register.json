@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-06",
+  "asOf": "2026-11-07",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -173,7 +173,15 @@
       "implementation": "historical_record",
       "verification": "needs_revalidation",
       "acceptance": [
-        "Demonstrate this requirement on the affected output; attach source, visual, interaction and print evidence as applicable."
+        "Demonstrate this requirement on the affected output; attach source, visual, interaction and print evidence as applicable.",
+        "For v0.34 check all presentations and corresponding student booklets for a consistent readable base size across prompts, cover labels, working and explanations. On Statistics Year 1 Chapter 2 slide 61 compare the introductory text, example, numbered steps, closed covers and revealed working; preserve normal mathematical scaling for powers, subscripts and fractions.",
+        "On Statistics Year 1 Chapter 3 original slide 23, use regular weight for the visible word “data” in both corresponding “For … data” bullets, in the presentation and matching booklet.",
+        "Across all presentations and student booklets, comparable table entries use the same readable base font size, including values added by a reveal. On Statistics Year 1 Chapter 3 original slide 30, compare 14 (7–8 minutes) and 5 (16–20 minutes) with 6, 21, 45 and 9 in the Number of motorists column. Check the revealed values on screen and the supplied entries in the two-up booklet; concealed student answers retain their writing spaces.",
+        "Across teaching slides, use the same font and readable base size for comparable button labels regardless of button height. On Statistics Year 1 Chapter 3 original slide 35, check a, b(i) and b(ii) at matching size, retaining the nested identifiers and omitting placeholder question marks.",
+        "Statistics Year 2 Chapter 2, original slide 18 (Examples): Use the prompt base size for question numbers 1 and 2 and subpart labels a, b and c. Keep table entries and Venn region counts legible at normal slide and two-up booklet sizes.",
+        "Statistics Year 2 Chapter 2, original slide 20 (Check your understanding): Use a consistent readable base size for the part labels, prompts and button text.",
+        "Statistics Year 2 Chapter 2, original slide 40 (Probability Trees): Enlarge the right-hand questions and worked answers to the common readable body size. Reflow the working as needed so fractions remain legible and the tree stays clear; verify the screen layout and the two-up booklet.",
+        "Statistics Year 2 Chapter 3 (Normal distribution). On original slides 14, 15 and 19 use a consistent readable base size for question text, answer text and button labels, and check the corresponding booklet panels at two-up print size."
       ],
       "origin": "legacy-register:L01",
       "legacyAssertion": {
@@ -505,13 +513,15 @@
     },
     {
       "id": "L15",
-      "requirement": "Rename Bro tip, Fro tip, Bro Note and Fro Fun Fact to Tip, retaining the advice; remove unwanted decorative faces.",
+      "requirement": "Rename Bro tip, Fro tip, Bro Note and Fro Fun Fact to Tip, retaining the advice; remove unwanted decorative faces. Replace Fro-animation labels and their click-to-start wording with Animation. Use the approved button style for animation controls.",
       "scope": "all relevant existing and future content",
       "priority": "P1",
       "implementation": "historical_record",
       "verification": "needs_revalidation",
       "acceptance": [
-        "Demonstrate this requirement on the affected output; attach source, visual, interaction and print evidence as applicable."
+        "Demonstrate this requirement on the affected output; attach source, visual, interaction and print evidence as applicable.",
+        "Check all existing and future presentations and corresponding printed labels, including variations in capitalisation, hyphens, spacing and line breaks. Use Tip for the advice label and preserve the advice. On Statistics Year 1 Chapter 3 original slide 21, replace the entire “Click to Start Fro-animation” label with “Animation”. Verify that clicking or tapping the pale-blue button plays the original graph animation.",
+        "Across all presentations, use Animation for a generic animation-start control, including “Click to Start animation” without a Fro prefix. Keep the descriptive label Sketch on sketch controls. Apply UI-034 to both. Example: Statistics Year 1 Chapter 3 original slide 22."
       ],
       "origin": "legacy-register:L15",
       "legacyAssertion": {
@@ -2610,7 +2620,20 @@
       "verification": "not_checked",
       "acceptance": [
         "Use native LaTeX for questions, formulas, exercises and solutions. Only explicit slide-specific owner image exceptions are permitted; keep diagrams proportionate.",
-        "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
+        "Record affected output and verification evidence; invalidate acceptance when dependent inputs change.",
+        "For v0.34 check all teaching presentations, including maths inside closed blue answer-cover prompts, revealed content and prompts retained in printed booklets. Render source notation as maths, preserving the prompt and question mark. On Statistics Year 1 Chapter 2 slide 61 check the x with an overbar, sigma squared and sigma; no raw commands, grouping braces or exponent syntax should be visible.",
+        "Check mathematical notation in presentation titles, slide selectors and mixed prose-and-maths cover prompts across all decks, including corresponding printed headings and retained prompts. Statistics Year 1 Chapter 2 slide 72 is a regression example: display σ² in the title and selector, and render the middle closed cover as “∑x and ∑x²?” with a superscript 2 and the source question mark.",
+        "Audit textbook exercise prompts and solutions across all teaching presentations and corresponding student booklets, including prose-only exercises. Transcribe wording as selectable native text and typeset any mathematics in LaTeX. Check against the source for completeness, numbering and subpart indentation. Keep images for exercises only where the owner explicitly approved that specific exception. Regression example: Statistics Year 1 Chapter 1 original slide 7, Exercise 1A, textbook page 3, question 1 on a school census. Verify both parts (a) and (b) independently with their matching answers and blank student writing areas.",
+        "Review every exercise in every chapter, both online and in the corresponding student booklet. Statistics Year 1 Chapter 1 original pages 8, 9, 16, 17, 18 and 21 are additional examples, not an exhaustive list.",
+        "Statistics Year 1 Chapter 3 original slide 35, Exercise 3D question 6: transcribe the scanned exercise as selectable prose and native LaTeX mathematics, and reconstruct its frequency table with visible cell borders. Check wording, class intervals, frequencies, units, marks and subparts a, b(i), b(ii) against the source. Verify the corresponding student booklet has the same typeset exercise and correctly labelled writing spaces. Apply the transcription rule to every exercise in every deck.",
+        "Statistics Year 1 Chapter 7 original slide 25, Exercise 7B, questions 5 and 6: replace both scanned prompts with selectable wording and native LaTeX mathematics in the presentation and student booklet. Verify the distributions, hypotheses (including < versus ≠), significance levels, tail probability, numbering, subparts and marks against the source. Include every exercise slide across all courses in the transcription audit.",
+        "Statistics Year 2 Chapter 1, original slide 24: transcribe every exercise and worked solution as selectable text with rendered LaTeX maths. Verify the slide and corresponding student booklet; this applies to exercises across the site.",
+        "Statistics Year 2 Chapter 2, original slide 4, Combining events/sets: typeset the first row label as A^{\\prime}, with the complement prime raised at the upper right of A, on both the slide and its booklet panel.",
+        "Statistics Year 2 Chapter 2, original slide 5, Some fundamentals: typeset the first two row headings as A \\cap B^{\\prime} and (A \\cup B)^{\\prime} on the slide and matching booklet panel. Raise the prime on B alone in row one and on the entire parenthesised union in row two.",
+        "Statistics Year 2 Chapter 2, original slide 18 (Examples): Render the complements of B and F with a raised prime on the event letter in the two-way table and conditional probabilities. Apply the same notation in the Venn exercise and student booklet.",
+        "Statistics Year 2 Chapter 2, original slide 20 (Check your understanding): Verify raised complement primes in the given probability and in the conditional probability in part c on both the slide and student booklet.",
+        "Statistics Year 2 Chapter 2, original slide 33 (Test Your Understanding): Transcribe the scanned Edexcel S1 question 9 and its worked answers as selectable text with rendered LaTeX. Preserve all four parts, given probabilities, marks and Venn diagram. Check the student booklet uses the same typeset question.",
+        "Statistics Year 2 Chapter 2, original slide 42 (Testing Your Understanding): Transcribe the scanned Edexcel S1 Jan 2006 Q4 exercise and worked solutions as selectable text with rendered LaTeX, including branch probabilities. Keep the tree diagram proportionate and preserve the marks (3, 2, 2). Use matching question text and writing space in the student booklet."
       ],
       "origin": "owner-conversation-through-2026-11-01",
       "evidence": [
@@ -2644,7 +2667,35 @@
       "verification": "not_checked",
       "acceptance": [
         "Conceal complete answers structurally, including brackets, factors and powers. Where appropriate start after the first equals sign; no answer or question may leak or be covered accidentally.",
-        "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
+        "Record affected output and verification evidence; invalidate acceptance when dependent inputs change.",
+        "Across teaching slides, inspect the closed and reset states after layout and resizing: conceal every character of each answer, including its first letter. Regression example: the inline answer “census” on Statistics Year 1 Chapter 1 original slide 6.",
+        "On Statistics Year 1 Chapter 1 original slide 36, verify that the bottom of answer b is entirely concealed on entry, after revealing neighbouring answers, and after Reset at supported viewport sizes. Apply the same check across presentations.",
+        "Audit every teaching slide containing answer reveals at the supported viewport sizes. Confirm each closed answer is fully concealed on entry, after other parts open, and after Reset. On Statistics Year 1 Chapter 3 original slide 8 the entire conclusion identifying the 105-year-old as an outlier must stay hidden until a is pressed, including when b is opened first. Record failures and recheck fixes before marking this requirement verified.",
+        "Statistics Year 1 Chapter 3 original slide 22: keep separate blank inline buttons over 3 (ages 15 to under 20) and 0.5 (ages 20 to under 50). Check the entire numbers, including the decimal point, are hidden on entry and Reset; revealing one leaves the other concealed. Neighbouring words, table data and graph axes remain readable. Verify the student booklet leaves the two answer positions blank.",
+        "Statistics Year 1 Chapter 3 original slide 23, Bar Charts vs Histograms: in the explanatory bullets, independently conceal the entire words discrete and height on the bar-chart side and continuous and area on the histogram side. Verify all four are hidden on entry and Reset and pressing one reveals only its own word. Keep surrounding prose and chart axis labels visible. Leave the four corresponding spaces blank in the student booklet.",
+        "Statistics Year 1 Chapter 3 original slide 26: verify that the right edge of the upper answer button conceals the entire digit 4 and the rest of the answer on entry and after Reset, at supported viewport sizes.",
+        "Statistics Year 1 Chapter 4 original slide 5, Recap of correlation: check every answer word in the four scatter-plot captions, including weak, strong, positive and negative. Each blank button must conceal its entire word, including descenders and end letters, on entry, after neighbouring words are revealed, and after Reset. Keep the supplied word “correlation” and the strength/type guidance visible. Verify each button reveals only its own word and each corresponding booklet answer is blank.",
+        "Statistics Year 1 Chapter 4 original slide 6, Important correlation concepts: under Important Point 1, verify that the upper two buttons fully conceal the answers to a and b, including the black text currently visible at their left edges. Keep both question prompts readable. Test on entry, when either answer is opened independently, and after Reset.",
+        "On Statistics Year 1 Chapter 5 original slide 13, verify each of the three right-hand answer buttons conceals its complete fraction, including numerator, bar and denominator. Each reveals only its matching probability; check on entry, after revealing either neighbouring answer and after Reset.",
+        "Statistics Year 1 Chapter 5 original slide 18, Mutually Exclusive Events: verify each source-intended answer span in the definition and both probability rules, plus the Venn diagram, is completely concealed until its own reveal. In particular check the exposed zero and the sum P(A) + P(B) beside the misplaced covers. Keep the supplied prompts and first equals signs readable where they introduce an answer. Check each individual reveal, Reset and matching blank areas in the student booklet.",
+        "Statistics Year 1 Chapter 5 original slide 19: check every answer cover against its intended answer. Keep each complete answer concealed on entry, after other reveals and after Reset, with its prompt visible.",
+        "Statistics Year 1 Chapter 6 original slide 5, Probability Distributions vs Probability Functions: keep the “Advantages of functional form” heading visible and fully conceal its answer, including the letter visible beyond the right edge. Check on entry, after revealing the separate table-form answer, and after Reset.",
+        "On Statistics Year 1 Chapter 6 original slide 16, verify that a conceals the complete model including B(8, 0.1), b the complete calculation including its final digits, and c the entire written explanation. Keep the questions and supplied theory visible. Test on entry, after individual reveals in any order and after Reset.",
+        "Statistics Year 1 Chapter 7 original slide 10, Further Example: fully conceal the test statistic, both hypotheses and the rejection condition behind their respective buttons, including the black text visible just above the middle button. Verify on entry, after revealing any other part, and after Reset.",
+        "Statistics Year 1 Chapter 7 original slide 20, Actual Significance Level: keep P(X ≥ 7) and the first equals sign visible. Conceal all working and the result to its right, including the final digit 2 visible beyond the button edge. Verify on entry and after Reset while the supplied binomial table remains readable.",
+        "Statistics Year 2 Chapter 1, original slide 23, Hypothesis testing for correlation: on load and after Reset, keep the H₀, H₁ and Sample size prompts visible while fully hiding their answers (including the final digit of 10). Check all five covers independently: revealing one must leave every other unrevealed answer fully hidden.",
+        "Statistics Year 2 Chapter 1, original slide 24: verify each complete answer stays hidden on load, after Reset and while other parts are revealed. Keep the question and part labels readable.",
+        "Statistics Year 2 Chapter 2, original slide 10 (Examples): completely conceal the independence explanation, the Venn diagram solution and the final probability working until their respective reveals. Check the exposed text at the left edge of the right-hand cover on load, after Reset and while the other parts are revealed.",
+        "Statistics Year 2 Chapter 2, original slide 18 (Examples): In the lower Venn exercise, align each button to its own worked answer, leaving the conditional probability prompt and method heading readable. Fully conceal all working and results, including the exposed final fraction in part c. Verify each reveal independently and after Reset.",
+        "Statistics Year 2 Chapter 2, original slide 20 (Check your understanding): Align the equals signs and give each of a, b and c its own aligned, evenly spaced answer button labelled with its part letter. Keep the prompts visible and hide the entire result until revealed, including the trailing 7 in a and the fraction 24/35 in c. Verify on load, after Reset and between reveals. Preserve the separate Venn diagram reveal.",
+        "Statistics Year 2 Chapter 2, original slide 31 (Example, Edexcel S1 question 6): All five answers must stay fully hidden until their own reveal, including the black fragments visible along the left edge. Verify on load, after Reset and between reveals.",
+        "Statistics Year 2 Chapter 2, original slide 32 (Further Examples): Give each of the three left-hand answers a separate aligned row and button. Each closed button conceals its complete working without overlapping another answer. Check all edges, especially the edge beside the column divider, on load, after Reset and between reveals.",
+        "Statistics Year 2 Chapter 2, original slide 33 (Test Your Understanding): Fit each cover to its own complete answer, including the full Venn diagram in a and every line of the working leaking to the left of d. Keep all prompts and adjacent parts clear. Verify concealment after Reset and between individual reveals.",
+        "Statistics Year 2 Chapter 2, original slide 34 (SUPER IMPORTANT TIPS): the upper button must conceal the whole answer including its trailing ellipsis. In the lower answer, align the initial P of P(A | B) directly beneath the initial P of P(A ∩ B). One button must cover both complete equation lines while leaving the prompt visible. Verify on load, after Reset and when only the upper answer is revealed.",
+        "Statistics Year 2 Chapter 2, original slide 40 (Probability Trees): Keep both subquestion prompts visible. Fully conceal the currently exposed part a calculation, through its final 7/20, and all of the part b working until each respective reveal. Check initial and Reset states.",
+        "Statistics Year 2 Chapter 2, original slide 42 (Testing Your Understanding): Each button fully conceals only its own answer, including every branch and label of the tree for a. After Reset, verify Next and Space reveal a, b, c in order, keeping later answers hidden.",
+        "Statistics Year 2 Chapter 3, original slide 5 (Normal Distribution Q & A): align the four Q1–Q4 answer buttons to a common left edge beneath their respective prompts. Size each to conceal its entire answer, including text currently visible above the Q2 button. Keep prompts and the graph clear. Verify on load, after Reset and between individual reveals.",
+        "Statistics Year 2 Chapter 3 (Normal distribution). On original slides 14, 15 and 19, check that each closed button fully conceals its answer text and working, with the prompt visible before and between reveals."
       ],
       "origin": "owner-conversation-through-2026-11-01",
       "evidence": []
@@ -2672,7 +2723,21 @@
       "verification": "not_checked",
       "acceptance": [
         "Reveal in pedagogical order: question then parts then intermediate rewrite then result, with Method 1 before Method 2 and ordinary questions before challenge/extension. Click and keyboard order agree; Reset restores initial state.",
-        "Record affected output and verification evidence; invalidate acceptance when dependent inputs change."
+        "Record affected output and verification evidence; invalidate acceptance when dependent inputs change.",
+        "Statistics Year 2 Chapter 1, original slide 11, Exercise 1A question 5: from Reset, the first Next or Space reveals only part a; the second reveals part b. Apply this part-order check across all presentations.",
+        "Statistics Year 2 Chapter 2, original slide 32 (Further Examples): After Reset, successive Next or Space actions reveal the left example a, b, c first, then the right example a, b, c, d. Check all seven steps and keep each unrevealed answer hidden.",
+        "Statistics Year 2 Chapter 2, reported example with mixed a) and B) question labels (slide number unspecified): After Reset, Next or Space reveals only a on the first advance and b on the second. Verify the sequence for both controls.",
+        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 49, Examples. Align each of the eight Continuous answer buttons with the matching Discrete expression. Each button must fit its own row, fully conceal its expression including brackets and inequality signs, and never overlap an adjacent button or the continuity-correction note. From entry and after Reset, reveal each row independently and check that all other covered answers stay hidden, especially the final row P(X = 3). Check corresponding blank cells in the student booklet.",
+        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 58, Roll of a fair die: sample size 1. Reveal the possible samples first and the probability distribution table second. One button must cover both rows of all six data columns edge to edge, leaving only the first column of row labels visible until the second reveal.",
+        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 61, Roll of a fair die: sample size 3. Reveal the probability distribution table first, then the expected value E(Z̄), then the variance V(Z̄). One button must cover both rows of all data columns edge to edge, leaving only the first column of row labels visible before the table reveal.",
+        "Statistics Year 2, Chapter 3, original slide 62, Pattern relating to the sample size. Label the bottom-right table buttons Mean, Variance and Standard deviation. Each button covers its column’s three answer cells, leaving the headings and sample sizes visible. Next and Space reveal these columns in that left-to-right order.",
+        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 54, Exercise 3F. Label each reveal button with its corresponding question or part. For questions 2, 3 and 4, use a, b and c within each row. Use 5 and 6 for the two standalone questions. Reveal in printed question and part order. Apply the same labelling rule wherever applicable across all presentations.",
+        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 29, Test Your Understanding. Label each answer button with its question and part. Next or Space reveals 1(a), 1(b), 2(a), 2(b), 3(a), 3(b), one complete answer per action from entry or Reset. Use consistent readable sizes for corresponding labels, prompts and worked mathematics across the three questions. Reflow the long equations in question 2 over multiple lines and verify legibility in the two-up student booklet.",
+        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 28, Further Examples. Put a, b, c and d inside the four answer buttons. Next or Space reveals one complete solution at a time in that order, including after Reset. Keep every line of unrevealed working concealed, including fractions, brackets and final values. Give the shaded normal curve and its axis labels their own space clear of all text, buttons and working in every reveal state. Check the corresponding student booklet panel for clear graph placement and blank labelled working areas.",
+        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 27, Examples. Put lowercase a inside the upper-left button and b inside the upper-right button. From entry or Reset, successive Next or Space actions reveal a first, b second and the separate blood-pressure answer at the bottom third.",
+        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 21. On entry and after Reset, successive Next or Space actions reveal one answer at a time in order: a, b, c, d.",
+        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 10. Label the left answer button a and the right button b. From entry or Reset, the first Next or Space reveals only a and the second reveals b.",
+        "Statistics Year 2 Chapter 3 (Normal distribution). On original slide 19, Next and Space advance from a on the left to b on the upper right, then c on the lower right."
       ],
       "origin": "owner-conversation-through-2026-11-01",
       "evidence": []
@@ -3416,7 +3481,8 @@
       "implementation": "not_assessed",
       "verification": "not_checked",
       "acceptance": [
-        "Apply to existing and future presentations. Use actual exercise identifiers when requested. Never generate a number from the position in the reveal sequence."
+        "Apply to existing and future presentations. Use actual exercise identifiers when requested. Never generate a number from the position in the reveal sequence.",
+        "From v0.34 UI-034 supersedes the blank-cover question-mark fallback on slides and in booklets; retain authored prompts."
       ],
       "origin": "owner v0.30 corrections and clarification",
       "evidence": []
@@ -3558,6 +3624,530 @@
       ],
       "origin": "Owner v0.33 feedback",
       "evidence": []
+    },
+    {
+      "id": "SLD-034",
+      "requirement": "Support a horizontal Apple Magic Mouse swipe over the teaching slide to navigate without holding a mouse button.",
+      "scope": "v0.34 across all teaching players",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Match touch navigation: swipe left advances one slide and swipe right returns one slide. Momentum from one swipe must not skip slides or trigger a reveal.",
+        "Preserve vertical scrolling, zoom, answer clicks, keyboard, mouse drag and touch navigation. Check first and last slide boundaries and verify with a physical Magic Mouse on macOS, including Chrome and Safari."
+      ],
+      "origin": "Owner request 2026-11-07",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "SLD-034B",
+      "requirement": "A single primary mouse click anywhere on the non-interactive slide surface advances one teaching step, matching a background tap on the iPad.",
+      "scope": "v0.34 across all teaching players",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Use the same reveal sequence as the Next animation button. When all steps are complete, keep the current slide displayed.",
+        "Clicking an answer cover reveals only its own answer. Controls, links, text selections and horizontal drags must not also advance a step.",
+        "On Statistics Year 1 Chapter 2 slide 31, verify successive background clicks against Next, direct clicks on the median cover and its linked reveal, and Reset."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 2 slide 31",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "LAY-034",
+      "requirement": "Place exercise questions at the top of each exercise panel across every course, book and chapter. Use the available space below for answers on teaching slides and for handwritten working in student booklets.",
+      "scope": "Website-wide across every course, book and chapter; existing and future teaching slides and student booklets; v0.34",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Check existing and future exercise panels throughout the website and their generated booklets for unnecessary space above the question and cramped answer areas.",
+        "On Statistics Year 1 Chapter 2 page 10, place question 7, its table and the instruction at the top, then give the remaining usable panel space to the answer.",
+        "Where a single answer needs the remaining space, extend its answer box down to the normal panel margin. Check Statistics Year 1 Chapter 2 panel 16 (youth choir mean age) in the two-up booklet.",
+        "For every booklet panel with several answer boxes, distribute the available space across the boxes according to the handwritten working each prompt needs. Extend the final row to the normal bottom margin. At two slides per A4 page, check that students can write below each printed prompt. Use Statistics Year 1 Chapter 2 panel 30 (Linear Interpolation) as an example: enlarge both rows of three boxes while keeping their prompts, column relationships, graph and table legible."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 2 booklet panels 9–11",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "BKT-034",
+      "requirement": "Remove stray horizontal rules below answer areas wherever they occur across the website’s teaching slides and student booklets.",
+      "scope": "Website-wide across every course, book and chapter; existing and future teaching slides and student booklets; v0.34",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Check all courses and chapters on screen and in print. Distinguish stray rules from intentional table, answer-area and panel borders.",
+        "Check Statistics Year 1 Chapter 2 panels 9 and 10 for the stray dotted rule below the answer areas. Preserve intended table borders and the panel boundary.",
+        "Check panel 16 and equivalent layouts across books: the separate notes area with a dotted top border must not divide unused handwriting space beneath the answer box.",
+        "On panel 30 and similar multi-box panels, remove the dotted notes divider below the grid and use that space inside the answer boxes. Preserve meaningful lines within the interpolation diagram."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 2 booklet panels 9–11",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "TBL-034",
+      "requirement": "Render every converted data table across the website and in its student booklets with a visible outer border, internal row and column borders, and aligned labels and values.",
+      "scope": "Website-wide across every course, book and chapter; existing and future teaching slides and student booklets; v0.34",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Apply the same table style to existing and future conversions in every course, book and chapter. Verify readability on screen and at booklet print size.",
+        "Use the number-of-children and frequency table on Statistics Year 1 Chapter 2 page 11 as the style reference.",
+        "On page 10 question 7, align the Eggs row (1, 2, 3) with its frequency row (7, p, 2) in a bordered two-row table. Verify both the online view and the printed booklet."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 2 booklet panels 9–11",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "LAY-034B",
+      "requirement": "In side-by-side comparisons, align the two headings horizontally below the shared introduction and start the corresponding tables or content blocks at the same height. Across all layouts, align related answer boxes with their prompts and use consistent spacing between successive boxes. Size each cover to conceal its entire answer as required by FR-009. A table-cell answer cover fills its own cell edge to edge.",
+      "scope": "Website-wide across existing and future teaching slides and corresponding student booklets; v0.34",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "On Statistics Year 1 Chapter 2 slide 41, keep Listed data on the left and Grouped data on the right. Align the heading bars and text baselines; use the same gap between each heading and its table.",
+        "Preserve the existing trigger for revealing the grouped-data panel. When it appears, both headings and table tops align without shifting the listed-data panel. Check the corresponding two-up booklet panel.",
+        "On Statistics Year 1 Chapter 2 slide 44, align corresponding answer rows below the two tables, use consistent gaps within each column, and keep each prompt readable. Check the initial, individually revealed and reset states: no answer fragment may show before its own reveal, and adjacent covers must not overlap. Check the matching answer areas in the two-up booklet.",
+        "Across all presentations, make the cover and its clickable area follow all four inside edges of the answer cell as the table resizes. Preserve grid lines, conceal the whole answer and leave neighbouring cells unobstructed. Verify the closed, revealed and reset states on Statistics Year 1 Chapter 2 slide 84; the student booklet keeps the blank answer cell and its borders.",
+        "Check Statistics Year 1 Chapter 1 original slide 6: the four Census/Sample advantage/disadvantage covers fill their respective body cells exactly; table headings, row labels and grid lines stay visible.",
+        "Across all presentations, stacked answer buttons in one column share left and right edges and have equal clear vertical gaps between consecutive buttons. Allow each button enough height for its full answer. Check original Statistics Year 1 Chapter 1 slides 35 and 36, including the a–c stack on slide 35, and align the corresponding writing areas in the booklet.",
+        "Across teaching slides, align stacked prompt-and-button pairs to shared left and right column edges, with consistent spacing between pairs. On Statistics Year 1 Chapter 3 original slide 27, check the two marking prompts beside the histogram and their answer buttons at supported viewport sizes. Each button sits directly under its own prompt; use the same alignment for the corresponding booklet writing areas.",
+        "Statistics Year 1 Chapter 3 original slide 29, SKILL #2: Gaps!: align all three frequency-density buttons and the final frequency button to the four inside edges of their individual table cells. Check that the first frequency-density calculation is entirely concealed, including above the button. Align the histogram cover to its intended plot region while preserving the axes and adjacent bars. Check at supported screen sizes and verify matching blank areas in the student booklet.",
+        "Statistics Year 1 Chapter 5 original slide 13, Example involving frequencies: space the three probability answer rows to the right of the Venn diagram farther apart. Align their buttons to common column edges with equal visible gaps. Centre the matching lowercase label a, b or c inside each button as required by UI-034. Use matching labelled writing areas in the student booklet.",
+        "Statistics Year 1 Chapter 5 original slide 26, Tree Diagrams: align the top edges of the two side-by-side counter-probability buttons. Centre plain lowercase a and b inside them, respectively for same colour and different colours. Each button fully conceals its own worked answer, including every fraction and any answer-side label, until individually revealed. Keep the prompts and hint readable, and use matching labelled writing areas in the booklet. The separate fifth-shot question below is outside this a/b pair.",
+        "Statistics Year 1 Chapter 6 original slide 6 (three coins): fit each button exactly to the inside edges of its own answer cell: the tall Underlying Sample Space cell on the left and the separate Distribution as a Table and Distribution as a Function cells on the right. Check all four edges at supported viewport sizes, preserve headers and shared grid lines, and keep each answer concealed until its own button is pressed. Verify the corresponding booklet has flat blank cells with matching borders.",
+        "On that binomial example (Statistics Year 1 Chapter 6 original slide 16), stack the three subquestion buttons with common left and right edges and equal vertical gaps. Each may use the height its working needs.",
+        "Across all presentations, verify that each subquestion button and its revealed working occupy their own row without overlapping another answer in any reveal state. Regression example: Statistics Year 1 Chapter 6 original slide 17, Further Examples. Label the upper buttons a (P(X=2)), b (P(X=9)), c (P(X≤1)); align their left and right edges and leave equal clear gaps. Each must fully conceal only its own working per FR-009. Test each independently, after adjacent answers open and after Reset. Keep the separate exam question below distinct, and match the three labelled rows in the booklet.",
+        "Statistics Year 1 Chapter 7 original slide 43, Two-Tailed Tests: give both lower-right explanatory callouts dedicated space clear of the worked solution. Keep the comparison 0.104 > 0.025 and the complete restaurant conclusion readable. Preserve both annotations, with arrows pointing to their respective lines without crossing text. Check the fully revealed slide at supported viewport sizes and the corresponding two-up booklet panel."
+      ],
+      "origin": "Owner feedback on the slide 41 quartiles comparison",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "UI-034",
+      "requirement": "Use the approved subtle pale-blue button appearance for every interactive answer cover across all teaching slides. Keep authored comments and hints. Omit standalone question-mark placeholders on slides and in student booklets. Across all presentations, use the same pale-blue button treatment for Animation and Sketch controls; each stays visible in position when pressed and runs its assigned animation.",
+      "scope": "v0.34; every existing and future teaching presentation and corresponding student booklet",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Use the approved slide 84 preview: light upper edge, slightly darker lower edge and gentle pressed feedback. A cell cover fills its cell exactly. Apply the same appearance to covers outside tables.",
+        "An unlabelled cover or a cover labelled only with ? appears blank. Retain meaningful authored prompts, their punctuation and explicitly requested question identifiers. Give visually blank buttons an accessible name.",
+        "Print flat writing areas with a thin light border, white interior and any meaningful hint. Omit standalone question marks and screen button effects. Check a table cell and a free-standing cover on screen, after reveal and Reset, and in the two-up booklet.",
+        "For Statistics Year 1 Chapter 3 original slide 4, Box Plot recap, give all seven Sketch controls the approved subtle button appearance and retain their Sketch labels. On click or tap each stays visible in its original position and runs only its existing assigned animation. Verify the minimum, lower quartile, median, upper quartile, maximum, IQR and range triggers, including after Reset; preserve their existing sequence and slide layout.",
+        "Audit every teaching deck and corresponding booklet for letter-only subpart prompts. Normalise source variants such as “? a”, “a?”, “? b” and “b?” to the actual lowercase part letter (a, b, etc.) in its matching button or writing area. Preserve meaningful authored prompts and genuine question punctuation. Check Statistics Year 1 Chapter 3 original slide 8.",
+        "Statistics Year 1 Chapter 3 original slide 33, Forming a frequency polygon: replace the orange “Click to Sketch” control with a pale-blue Sketch button using the shared Animation button style. Verify that clicking or tapping it plays the existing frequency-polygon animation and that the button stays visible in place.",
+        "Across all presentations, each answer button for a labelled subquestion displays the corresponding identifier inside the button. On Statistics Year 1 Chapter 6 original slide 16, The Binomial Distribution, centre plain lowercase a, b and c in the three buttons. Use matching labels in the booklet writing areas.",
+        "On Statistics Year 1 Chapter 7 original slide 10, display plain lowercase a, b and c centred inside the three independent buttons, respectively for the test statistic, hypotheses and rejection condition. Use matching labelled writing areas in the student booklet.",
+        "On the same Exercise 7B slide, keep question 5 as a separate single answer. For question 6, move the answer-side labels a and b inside their respective buttons, centred in lowercase: a reveals the critical region and b the actual significance level. Keep the subpart letters in the question and provide matching labelled booklet writing areas. Check equivalent subpart buttons across all decks.",
+        "Statistics Year 1 Chapter 7, original slide 44 (Edexcel S2 Jan 2006 Q7a): centre (a)(i) inside the upper answer button and (ii) inside the lower answer button. Remove the separate labels beside the buttons and replace both question-mark placeholders.",
+        "Statistics Year 2 Chapter 2, original slide 4: each of the six reveal buttons fills its own answer cell to all four edges, keeps grid lines and adjacent content visible, and conceals its complete answer. The corresponding booklet uses flat, lightly bordered answer cells.",
+        "Statistics Year 2 Chapter 2, original slide 10: label the three answer buttons a (independence), b (Venn diagram) and c (probability), inside their respective buttons without question marks. Sequential reveals follow a, b, c.",
+        "Statistics Year 2 Chapter 2, original slide 31 (Example, Edexcel S1 question 6): Centre the lower-case labels a, b, c, d and e inside their respective answer buttons, with no question-mark placeholders or duplicate letters beside the buttons. Match the order of the five question parts.",
+        "Statistics Year 2 Chapter 2, original slide 33 (Test Your Understanding): Put a, b, c and d inside the four respective answer buttons in question order, replacing the question marks and the separate labels beside the covers.",
+        "Statistics Year 2 Chapter 2, original slide 40 (Probability Trees): Label the independent answer buttons a and b inside the buttons. Remove the separate lower-right black callout, its cover and its reveal step from the slide, and omit the callout and corresponding box from the booklet. Retain the note beneath the tree diagram on the left.",
+        "Statistics Year 2 Chapter 2, reported example with mixed a) and B) question labels (slide number unspecified): Use a) and b) in the question, with the same font, size and weight, and put lowercase a and b inside the corresponding answer buttons.",
+        "Statistics Year 2 Chapter 2, original slide 42 (Testing Your Understanding): Use lowercase a, b, c inside aligned, evenly spaced buttons and matching question labels: a for the tree diagram, b for the probability the second ball is red, c for the probability both are red given that the second is red. Remove duplicate labels beside the buttons and question-mark placeholders.",
+        "Statistics Year 2 Chapter 3 (Normal distribution). Original slides 14 and 15: put the corresponding printed question number inside each answer button. Original slide 19: label the left button a, the upper-right button b and the lower-right button c."
+      ],
+      "origin": "Owner approved the slide 84 button preview for website-wide use",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C1-S02",
+      "requirement": "Remove the original slide 2, “CONTENTS OF CHAPTER 1”, from the Statistics Year 1 Data Collection presentation and its student booklet.",
+      "scope": "v0.34; Statistics Year 1 Chapter 1 only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Slide navigation and the slide selector omit this contents slide. Advancing from the opening slide goes directly to the next retained slide.",
+        "Regenerate the two-up student booklet without a blank placeholder and verify that its slide titles and numbering match the presentation."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 1 original slide 2",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C1-S03",
+      "requirement": "Remove the pictured rain-cloud icon from original slide 3 of Statistics Year 1 Chapter 1, Data Collection, and its corresponding student booklet panel.",
+      "scope": "v0.34; Statistics Year 1 Chapter 1 original slide 3 only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Identify the slide by its original position before removal of original slide 2. Check that the rain-cloud icon is absent in the presentation and printed booklet and the rest of the slide content is preserved."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 1 original slide 3",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C1-S06",
+      "requirement": "Open original slide 6, “Populations vs Samples”, directly in its ready-to-answer state, with the question text, table and closed reveal buttons visible immediately.",
+      "scope": "v0.34; Statistics Year 1 Chapter 1 original slide 6 only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Remove the introductory animation. On entry and Reset, keep the answer buttons independently operable. Verify the inline census answer and four table cells against FR-009 and LAY-034B, and button labels against UI-034.",
+        "Check the matching student booklet panel for flat, light-bordered writing areas with the concealed answers omitted and row and column labels legible."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 1 original slide 6",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C1-S21",
+      "requirement": "On Statistics Year 1 Chapter 1 original page 21, label the four independent answer buttons a, b, c and d in question order.",
+      "scope": "v0.34; Statistics Year 1 Chapter 1 original page 21",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Each closed button shows only its single lowercase letter and fully covers the corresponding answer, including the answer-side parenthesised label. Keep all question-side subpart labels visible. Verify each reveal and Reset.",
+        "In the two-up booklet, match the four writing areas to the same letters and omit the solutions."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 1 exercises and original page 21",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-OVERVIEWS",
+      "requirement": "Omit all chapter overview slides of the kind shown, including equivalent contents slides, from every Statistics Year 1 and Year 2 teaching presentation and student booklet.",
+      "scope": "v0.34; all Statistics chapters in both years",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Review every Statistics chapter and identify overview slides by their content as well as title, regardless of slide position. Include the pictured Year 1 Chapter 3 Overview and the Year 1 Chapter 1 contents slide recorded in STA-034-C1-S02.",
+        "Verify that the slide selector and previous/next navigation go directly between retained slides. Regenerate each affected two-up booklet without a blank placeholder; its slide titles and numbers must match the presentation.",
+        "Specifically remove Statistics Year 1 Chapter 4 (Correlation) original slide 3, “Statistics Year 1 Overview”, from the presentation, slide selector and student booklet. Verify navigation goes directly from original slide 2 to original slide 4 and that the booklet closes the gap.",
+        "Remove Statistics Year 1 Chapter 5 (Probability) original slide 2, “Overall Plan”, from the teaching presentation, slide selector and corresponding student booklet. Verify that navigation proceeds directly from the opening slide to original slide 3 and that the booklet closes the gap.",
+        "Check every chapter for the repeated Statistics course map pictured in Year 1 Chapter 6 (Statistical Distributions), original slide 2, “Overall Plan”. Remove every occurrence from teaching presentations, slide selectors and student booklets, irrespective of title, position or which chapter is highlighted. Verify that subsequent slides and booklet panels follow without a gap.",
+        "Remove Statistics Year 1 Chapter 7 (Hypothesis Testing) original slide 3, “Overall Plan”, from the teaching presentation, slide selector and student booklet. Verify that original slides 2 and 4 become consecutive and that the two-up booklet has no placeholder for the removed panel."
+      ],
+      "origin": "Owner feedback on repeated Statistics chapter overviews",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C3-S26",
+      "requirement": "Reveal the two worked answers on original slide 26 in reading order, from top to bottom.",
+      "scope": "v0.34; Statistics Year 1 Chapter 3 original slide 26 only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Starting with both answers hidden, Next, Space or background advance reveals the upper area-to-frequency scaling step first. The following advance reveals the lower car-count calculation. Repeat after Reset.",
+        "Each button can still reveal its own complete working independently. Keep the same step order in the student booklet."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 3 original slide 26",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C5-S20",
+      "requirement": "On Statistics Year 1 Probability original slide 20, split the first answer cover into three independent buttons labelled a, b and c.",
+      "scope": "v0.34; Statistics Year 1 Chapter 5 original slide 20",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Match each button to its own complete answer and reveal only that answer when pressed. Keep all question prompts visible. Check individual reveals in any order and the a, b, c sequence with Next or Space.",
+        "Replace the first shared answer area with three matching labelled writing spaces in the student booklet."
+      ],
+      "origin": "Owner feedback on original Probability slides 19 and 20",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C5-S30",
+      "requirement": "Remove original slide 30, “Extension”, from the Statistics Year 1 Chapter 5 Probability presentation and its student booklet.",
+      "scope": "v0.34; Statistics Year 1 Chapter 5 original slide 30 only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Verify the slide selector and navigation end at the last retained slide. Regenerate the two-up booklet and check its final panel matches the presentation with no placeholder for the removed slide."
+      ],
+      "origin": "Owner feedback on Probability original slide 30",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C6-S23",
+      "requirement": "On original slide 23, Cumulative Probabilities, reveal the two sets of worked examples from top to bottom before starting Quickfire Questions.",
+      "scope": "v0.34; Statistics Year 1 Chapter 6 original slide 23",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Starting with all answers concealed, steps 1–3 reveal P(X ≤ 7), P(X < 6), P(X ≥ 15). Steps 4–6 reveal P(X = 6), P(X > 20), P(6 < X ≤ 10), respectively. The first Quickfire answer follows step 6.",
+        "Verify Next, Space and background advance follow this sequence from initial load and after Reset."
+      ],
+      "origin": "Owner feedback on Statistical Distributions original slide 23",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C7-S09",
+      "requirement": "On Statistics Year 1 Chapter 7 original slide 9, Null Hypothesis and Alternative Hypothesis, reveal the bottom black explanation of one-tailed and two-tailed tests as the final step.",
+      "scope": "v0.34; Statistics Year 1 Chapter 7 original slide 9",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Keep the bottom explanation hidden on entry and throughout the earlier steps. Show the entire explanation together on the final advance, after both hypothesis callouts. Check the sequence again after Reset.",
+        "Retain the complete explanation as supplied theory in the student booklet."
+      ],
+      "origin": "Owner feedback on original Hypothesis Testing slide 9",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C7-S22",
+      "requirement": "On Statistics Year 1 Chapter 7 original slide 22, Test Your Understanding, centre lowercase a and b inside their respective answer buttons and reveal a before b.",
+      "scope": "v0.34; Statistics Year 1 Chapter 7 original slide 22",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Replace the question marks and external answer labels with a inside the upper button for the critical region and b inside the lower button for the actual significance level. Keep the question-side subpart labels visible.",
+        "From initial load and after Reset, Next, Space and background advance reveal the answer to a first while b remains covered, then b. Direct selection of either button reveals only its own answer. Match the booklet writing areas to a and b in that order."
+      ],
+      "origin": "Owner feedback on original Hypothesis Testing slide 22",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-C7-S34",
+      "requirement": "On Statistics Year 1 Chapter 7 original slide 34, Example, transcribe the dice-test question and worked answers as selectable text with native LaTeX maths. Label the answer buttons (i), (ii), (iii) and reveal them in that order.",
+      "scope": "v0.34; Statistics Year 1 Chapter 7 original slide 34",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Check the wording against the source, preserving the 5% significance level, 20 throws and one observed six. Use parenthesised lowercase Roman numerals inside each button.",
+        "Verify Next, Space and background advance reveal (i) the hypotheses, (ii) the p-value, then (iii) the conclusion. Repeat after Reset and confirm each direct click reveals only its matching answer.",
+        "The student booklet uses the same typeset exercise and three matching labelled writing spaces in order."
+      ],
+      "origin": "Owner feedback on Hypothesis Testing original slide 34",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-Y2-C3-S67",
+      "requirement": "Reveal the seven answers on slide 67 in reading order, top to bottom and left to right within a row.",
+      "scope": "Statistics Year 2, Chapter 3, Normal Distribution, slide 67 (Method 1 using a p-value)",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Starting from reset, successive advances reveal the distribution of X, H₀, H₁, the distribution of the sample mean, the standardisation calculation, the bottom-left z-score and finally the bottom-right p-value.",
+        "Use the button labels (i), (ii), (iii) in that order. Confirm which three buttons are intended; slide 67 has seven reveals."
+      ],
+      "origin": "User feedback for Luisa v0.34",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-Y2-C3-S79",
+      "requirement": "Reformat Statistics Year 2 Chapter 3 slide 79, Textbook Examples, so each reveal covers its entire answer and the annotations have their own space.",
+      "scope": "Statistics Year 2 Chapter 3 slide 79 and corresponding student booklet panel",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Keep the question above the worked solution. Align the reveals in reading order for the hypotheses, individual carton distribution, sample mean distribution, calculation and conclusion.",
+        "Each closed button hides its complete answer while keeping the prompt visible. Check every reveal state for overlap between equations, explanatory notes and buttons.",
+        "Keep the distinction between X and the sample mean readable in a separate note. Check the slide fits the screen and the matching booklet panel leaves space for working."
+      ],
+      "origin": "User feedback for Luisa v0.34",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-Y2-C3-S80",
+      "requirement": "Rework slide 80, Finding the critical region, so the example and each step of its solution have distinct, readable space.",
+      "scope": "Statistics Year 2, Chapter 3, original slide 80 and its student booklet panel",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Keep the question and parts (a) and (b) visible at the top. Use aligned, separately revealable steps for the hypotheses, individual bolt distribution, sample mean distribution, two-tailed cutoff and critical region. Reveal the interpretation of the observed mean of 0.587 cm last.",
+        "Each button conceals its entire answer. Equations, explanatory notes, arrows and the reference table occupy separate space throughout the reveal sequence. The slide fits on screen without scrolling.",
+        "The matching booklet preserves the question and provides writing space for each step."
+      ],
+      "origin": "User feedback for Luisa v0.34",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-Y2-C3-S85",
+      "requirement": "Retypeset slide 85, Conditional Probabilities, in LaTeX and reposition the explanatory callout so the full conditional probability and its working are visible.",
+      "scope": "Statistics Year 2, Chapter 3, slide 85 and corresponding student booklet",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Typeset the question, working, callout and graph labels. Preserve the normal curve, shaded tail, exam reference, part (c) and its three marks.",
+        "Keep the reference above the question and the callout clear of the working at every reveal. The complete calculation must be legible, including the conditional bar and the result 0.35/0.65 = 7/13.",
+        "Check the slide fits the screen without scrolling and the matching booklet leaves working space without exposing the answer."
+      ],
+      "origin": "User feedback for Luisa v0.34",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-Y2-C3-S86",
+      "requirement": "Label the two reveal buttons on Statistics Year 2 Chapter 3 slide 86 with lowercase a and b inside the buttons.",
+      "scope": "Statistics Year 2, Normal Distribution, slide 86 and corresponding booklet",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "acceptance": [
+        "Top button displays a and bottom button displays b, with no question marks or duplicate exterior labels.",
+        "Use matching local part labels in the exercise and booklet while retaining the source citation to Edexcel S1 January 2013 Q4(a),(c).",
+        "Sequential reveal opens a before b."
+      ],
+      "origin": "User feedback for Luisa v0.34",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
+    },
+    {
+      "id": "STA-034-CASES",
+      "requirement": "Verify the named Statistics teaching and booklet changes using the original v0.33 slide references and titles.",
+      "scope": "All ten Statistics chapters, Years 1 and 2",
+      "priority": "P1",
+      "origin": "v0.34 development handoff",
+      "acceptance": [
+        "1-1: original slides 2, 3, 6, 7, 8, 9, 16, 17, 18, 21, 35, 36",
+        "1-2: original slides 9, 10, 16, 30, 31, 41, 44, 61, 72, 84",
+        "1-3: original slides 2, 4, 8, 21, 22, 23, 26, 27, 29, 30, 33, 35",
+        "1-4: original slides 3, 5, 6",
+        "1-5: original slides 2, 13, 18, 19, 20, 26, 30",
+        "1-6: original slides 2, 5, 6, 16, 17, 23",
+        "1-7: original slides 3, 9, 10, 20, 22, 25, 34, 43, 44",
+        "2-1: original slides 11, 23, 24",
+        "2-2: original slides 4, 5, 10, 18, 20, 31, 32, 33, 34, 40, 41, 42",
+        "2-3: original slides 5, 10, 14, 15, 19, 21, 27, 28, 29, 49, 54, 58, 61, 62, 67, 76, 79, 80, 85, 86"
+      ],
+      "implementation": "implemented",
+      "verification": "verified_local",
+      "evidence": [
+        {
+          "file": "docs/evidence/v034-acceptance.json",
+          "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
+        }
+      ]
     }
   ]
 }
