@@ -2612,7 +2612,8 @@
       "acceptance": [
         "Use native LaTeX for questions, formulas, exercises and solutions. Only explicit slide-specific owner image exceptions are permitted; keep diagrams proportionate.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change.",
-        "For v0.34 check all teaching presentations, including maths inside closed blue answer-cover prompts, revealed content and prompts retained in printed booklets. Render source notation as maths, preserving the prompt and question mark. On Statistics Year 1 Chapter 2 slide 61 check the x with an overbar, sigma squared and sigma; no raw commands, grouping braces or exponent syntax should be visible."
+        "For v0.34 check all teaching presentations, including maths inside closed blue answer-cover prompts, revealed content and prompts retained in printed booklets. Render source notation as maths, preserving the prompt and question mark. On Statistics Year 1 Chapter 2 slide 61 check the x with an overbar, sigma squared and sigma; no raw commands, grouping braces or exponent syntax should be visible.",
+        "Check mathematical notation in presentation titles, slide selectors and mixed prose-and-maths cover prompts across all decks, including corresponding printed headings and retained prompts. Statistics Year 1 Chapter 2 slide 72 is a regression example: display σ² in the title and selector, and render the middle closed cover as “∑x and ∑x²?” with a superscript 2 and the source question mark."
       ],
       "origin": "owner-conversation-through-2026-11-01",
       "evidence": [
