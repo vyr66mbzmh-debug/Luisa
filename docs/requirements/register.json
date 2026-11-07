@@ -513,7 +513,8 @@
       "verification": "needs_revalidation",
       "acceptance": [
         "Demonstrate this requirement on the affected output; attach source, visual, interaction and print evidence as applicable.",
-        "Check all existing and future presentations and corresponding printed labels, including variations in capitalisation, hyphens, spacing and line breaks. Use Tip for the advice label and preserve the advice. On Statistics Year 1 Chapter 3 original slide 21, replace the entire “Click to Start Fro-animation” label with “Animation”. Verify that clicking or tapping the pale-blue button plays the original graph animation."
+        "Check all existing and future presentations and corresponding printed labels, including variations in capitalisation, hyphens, spacing and line breaks. Use Tip for the advice label and preserve the advice. On Statistics Year 1 Chapter 3 original slide 21, replace the entire “Click to Start Fro-animation” label with “Animation”. Verify that clicking or tapping the pale-blue button plays the original graph animation.",
+        "Across all presentations, use Animation for a generic animation-start control, including “Click to Start animation” without a Fro prefix. Keep the descriptive label Sketch on sketch controls. Apply UI-034 to both. Example: Statistics Year 1 Chapter 3 original slide 22."
       ],
       "origin": "legacy-register:L15",
       "legacyAssertion": {
@@ -2653,7 +2654,8 @@
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change.",
         "Across teaching slides, inspect the closed and reset states after layout and resizing: conceal every character of each answer, including its first letter. Regression example: the inline answer “census” on Statistics Year 1 Chapter 1 original slide 6.",
         "On Statistics Year 1 Chapter 1 original slide 36, verify that the bottom of answer b is entirely concealed on entry, after revealing neighbouring answers, and after Reset at supported viewport sizes. Apply the same check across presentations.",
-        "Audit every teaching slide containing answer reveals at the supported viewport sizes. Confirm each closed answer is fully concealed on entry, after other parts open, and after Reset. On Statistics Year 1 Chapter 3 original slide 8 the entire conclusion identifying the 105-year-old as an outlier must stay hidden until a is pressed, including when b is opened first. Record failures and recheck fixes before marking this requirement verified."
+        "Audit every teaching slide containing answer reveals at the supported viewport sizes. Confirm each closed answer is fully concealed on entry, after other parts open, and after Reset. On Statistics Year 1 Chapter 3 original slide 8 the entire conclusion identifying the 105-year-old as an outlier must stay hidden until a is pressed, including when b is opened first. Record failures and recheck fixes before marking this requirement verified.",
+        "Statistics Year 1 Chapter 3 original slide 22: keep separate blank inline buttons over 3 (ages 15 to under 20) and 0.5 (ages 20 to under 50). Check the entire numbers, including the decimal point, are hidden on entry and Reset; revealing one leaves the other concealed. Neighbouring words, table data and graph axes remain readable. Verify the student booklet leaves the two answer positions blank."
       ],
       "origin": "owner-conversation-through-2026-11-01",
       "evidence": []
@@ -3665,7 +3667,7 @@
     },
     {
       "id": "UI-034",
-      "requirement": "Use the approved subtle pale-blue button appearance for every interactive answer cover across all teaching slides. Keep authored comments and hints. Omit standalone question-mark placeholders on slides and in student booklets.",
+      "requirement": "Use the approved subtle pale-blue button appearance for every interactive answer cover across all teaching slides. Keep authored comments and hints. Omit standalone question-mark placeholders on slides and in student booklets. Across all presentations, use the same pale-blue button treatment for Animation and Sketch controls; each stays visible in position when pressed and runs its assigned animation.",
       "scope": "v0.34; every existing and future teaching presentation and corresponding student booklet",
       "priority": "P2",
       "implementation": "planned",
