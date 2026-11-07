@@ -3848,6 +3848,20 @@
       ],
       "origin": "Owner feedback on original Hypothesis Testing slide 9",
       "evidence": []
+    },
+    {
+      "id": "STA-034-C7-S22",
+      "requirement": "On Statistics Year 1 Chapter 7 original slide 22, Test Your Understanding, centre lowercase a and b inside their respective answer buttons and reveal a before b.",
+      "scope": "v0.34; Statistics Year 1 Chapter 7 original slide 22",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "acceptance": [
+        "Replace the question marks and external answer labels with a inside the upper button for the critical region and b inside the lower button for the actual significance level. Keep the question-side subpart labels visible.",
+        "From initial load and after Reset, Next, Space and background advance reveal the answer to a first while b remains covered, then b. Direct selection of either button reveals only its own answer. Match the booklet writing areas to a and b in that order."
+      ],
+      "origin": "Owner feedback on original Hypothesis Testing slide 22",
+      "evidence": []
     }
   ]
 }
