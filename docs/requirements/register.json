@@ -174,7 +174,8 @@
       "verification": "needs_revalidation",
       "acceptance": [
         "Demonstrate this requirement on the affected output; attach source, visual, interaction and print evidence as applicable.",
-        "For v0.34 check all presentations and corresponding student booklets for a consistent readable base size across prompts, cover labels, working and explanations. On Statistics Year 1 Chapter 2 slide 61 compare the introductory text, example, numbered steps, closed covers and revealed working; preserve normal mathematical scaling for powers, subscripts and fractions."
+        "For v0.34 check all presentations and corresponding student booklets for a consistent readable base size across prompts, cover labels, working and explanations. On Statistics Year 1 Chapter 2 slide 61 compare the introductory text, example, numbered steps, closed covers and revealed working; preserve normal mathematical scaling for powers, subscripts and fractions.",
+        "On Statistics Year 1 Chapter 3 original slide 23, use regular weight for the visible word “data” in both corresponding “For … data” bullets, in the presentation and matching booklet."
       ],
       "origin": "legacy-register:L01",
       "legacyAssertion": {
@@ -2655,7 +2656,8 @@
         "Across teaching slides, inspect the closed and reset states after layout and resizing: conceal every character of each answer, including its first letter. Regression example: the inline answer “census” on Statistics Year 1 Chapter 1 original slide 6.",
         "On Statistics Year 1 Chapter 1 original slide 36, verify that the bottom of answer b is entirely concealed on entry, after revealing neighbouring answers, and after Reset at supported viewport sizes. Apply the same check across presentations.",
         "Audit every teaching slide containing answer reveals at the supported viewport sizes. Confirm each closed answer is fully concealed on entry, after other parts open, and after Reset. On Statistics Year 1 Chapter 3 original slide 8 the entire conclusion identifying the 105-year-old as an outlier must stay hidden until a is pressed, including when b is opened first. Record failures and recheck fixes before marking this requirement verified.",
-        "Statistics Year 1 Chapter 3 original slide 22: keep separate blank inline buttons over 3 (ages 15 to under 20) and 0.5 (ages 20 to under 50). Check the entire numbers, including the decimal point, are hidden on entry and Reset; revealing one leaves the other concealed. Neighbouring words, table data and graph axes remain readable. Verify the student booklet leaves the two answer positions blank."
+        "Statistics Year 1 Chapter 3 original slide 22: keep separate blank inline buttons over 3 (ages 15 to under 20) and 0.5 (ages 20 to under 50). Check the entire numbers, including the decimal point, are hidden on entry and Reset; revealing one leaves the other concealed. Neighbouring words, table data and graph axes remain readable. Verify the student booklet leaves the two answer positions blank.",
+        "Statistics Year 1 Chapter 3 original slide 23, Bar Charts vs Histograms: in the explanatory bullets, independently conceal the entire words discrete and height on the bar-chart side and continuous and area on the histogram side. Verify all four are hidden on entry and Reset and pressing one reveals only its own word. Keep surrounding prose and chart axis labels visible. Leave the four corresponding spaces blank in the student booklet."
       ],
       "origin": "owner-conversation-through-2026-11-01",
       "evidence": []
