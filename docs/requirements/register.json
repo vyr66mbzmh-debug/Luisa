@@ -3572,6 +3572,21 @@
       ],
       "origin": "Owner request 2026-11-07",
       "evidence": []
+    },
+    {
+      "id": "SLD-034B",
+      "requirement": "A single primary mouse click anywhere on the non-interactive slide surface advances one teaching step, matching a background tap on the iPad.",
+      "scope": "Planned for v0.34 across all teaching players",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "acceptance": [
+        "Use the same reveal sequence as the Next animation button. When all steps are complete, keep the current slide displayed.",
+        "Clicking an answer cover reveals only its own answer. Controls, links, text selections and horizontal drags must not also advance a step.",
+        "On Statistics Year 1 Chapter 2 slide 31, verify successive background clicks against Next, direct clicks on the median cover and its linked reveal, and Reset."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 2 slide 31",
+      "evidence": []
     }
   ]
 }
