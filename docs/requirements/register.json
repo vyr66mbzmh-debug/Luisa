@@ -3637,14 +3637,15 @@
     },
     {
       "id": "LAY-034B",
-      "requirement": "In side-by-side comparisons, align the two headings horizontally below the shared introduction and start the corresponding tables or content blocks at the same height.",
+      "requirement": "In side-by-side comparisons, align the two headings horizontally below the shared introduction and start the corresponding tables or content blocks at the same height. Across all layouts, align related answer boxes with their prompts and use consistent spacing between successive boxes. Size each cover to conceal its entire answer as required by FR-009.",
       "scope": "Website-wide across existing and future teaching slides and corresponding student booklets; planned for v0.34",
       "priority": "P1",
       "implementation": "planned",
       "verification": "not_checked",
       "acceptance": [
         "On Statistics Year 1 Chapter 2 slide 41, keep Listed data on the left and Grouped data on the right. Align the heading bars and text baselines; use the same gap between each heading and its table.",
-        "Preserve the existing trigger for revealing the grouped-data panel. When it appears, both headings and table tops align without shifting the listed-data panel. Check the corresponding two-up booklet panel."
+        "Preserve the existing trigger for revealing the grouped-data panel. When it appears, both headings and table tops align without shifting the listed-data panel. Check the corresponding two-up booklet panel.",
+        "On Statistics Year 1 Chapter 2 slide 44, align corresponding answer rows below the two tables, use consistent gaps within each column, and keep each prompt readable. Check the initial, individually revealed and reset states: no answer fragment may show before its own reveal, and adjacent covers must not overlap. Check the matching answer areas in the two-up booklet."
       ],
       "origin": "Owner feedback on the slide 41 quartiles comparison",
       "evidence": []
