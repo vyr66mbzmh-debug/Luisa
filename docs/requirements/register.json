@@ -2657,7 +2657,8 @@
         "On Statistics Year 1 Chapter 1 original slide 36, verify that the bottom of answer b is entirely concealed on entry, after revealing neighbouring answers, and after Reset at supported viewport sizes. Apply the same check across presentations.",
         "Audit every teaching slide containing answer reveals at the supported viewport sizes. Confirm each closed answer is fully concealed on entry, after other parts open, and after Reset. On Statistics Year 1 Chapter 3 original slide 8 the entire conclusion identifying the 105-year-old as an outlier must stay hidden until a is pressed, including when b is opened first. Record failures and recheck fixes before marking this requirement verified.",
         "Statistics Year 1 Chapter 3 original slide 22: keep separate blank inline buttons over 3 (ages 15 to under 20) and 0.5 (ages 20 to under 50). Check the entire numbers, including the decimal point, are hidden on entry and Reset; revealing one leaves the other concealed. Neighbouring words, table data and graph axes remain readable. Verify the student booklet leaves the two answer positions blank.",
-        "Statistics Year 1 Chapter 3 original slide 23, Bar Charts vs Histograms: in the explanatory bullets, independently conceal the entire words discrete and height on the bar-chart side and continuous and area on the histogram side. Verify all four are hidden on entry and Reset and pressing one reveals only its own word. Keep surrounding prose and chart axis labels visible. Leave the four corresponding spaces blank in the student booklet."
+        "Statistics Year 1 Chapter 3 original slide 23, Bar Charts vs Histograms: in the explanatory bullets, independently conceal the entire words discrete and height on the bar-chart side and continuous and area on the histogram side. Verify all four are hidden on entry and Reset and pressing one reveals only its own word. Keep surrounding prose and chart axis labels visible. Leave the four corresponding spaces blank in the student booklet.",
+        "Statistics Year 1 Chapter 3 original slide 26: verify that the right edge of the upper answer button conceals the entire digit 4 and the rest of the answer on entry and after Reset, at supported viewport sizes."
       ],
       "origin": "owner-conversation-through-2026-11-01",
       "evidence": []
@@ -3751,6 +3752,20 @@
         "Verify that the slide selector and previous/next navigation go directly between retained slides. Regenerate each affected two-up booklet without a blank placeholder; its slide titles and numbers must match the presentation."
       ],
       "origin": "Owner feedback on repeated Statistics chapter overviews",
+      "evidence": []
+    },
+    {
+      "id": "STA-034-C3-S26",
+      "requirement": "Reveal the two worked answers on original slide 26 in reading order, from top to bottom.",
+      "scope": "v0.34; Statistics Year 1 Chapter 3 original slide 26 only",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "acceptance": [
+        "Starting with both answers hidden, Next, Space or background advance reveals the upper area-to-frequency scaling step first. The following advance reveals the lower car-count calculation. Repeat after Reset.",
+        "Each button can still reveal its own complete working independently. Keep the same step order in the student booklet."
+      ],
+      "origin": "Owner feedback on Statistics Year 1 Chapter 3 original slide 26",
       "evidence": []
     }
   ]
