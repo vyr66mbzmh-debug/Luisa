@@ -1,3 +1,17 @@
+# v0.36 student-only release scope
+
+Owner stopped all solution work on 8 November 2026 and will resume it with a different model. Publish the 62 approved student booklets only. Student title colours and 36pt bold white Georgia titles passed independent review. All 1,489 student pages retain their previous teaching content. The student owner copies and 62 PDF-backed LaTeX reproductions are complete.
+
+BKT-036-SOLUTIONS and the solution portion of BKT-036-ORIGINALS remain deferred. Private solution PDFs and LaTeX files are unfinished drafts with known layout defects. Never report them accepted or publish them. The private SOLUTIONS-STOPPED-CHECKPOINT.json records the exact authoring state and known defects. Retain the requested solution preferences as requirements for the later model; they do not block this owner-authorised student-only release.
+
+# Approved v0.36 cover and paired booklet workflow
+
+BKT-036-COVER, BKT-036-SOLUTIONS and BKT-036-ORIGINALS apply to every future slide or booklet change. Keep the approved coloured first panel with white bold Georgia chapter title (nominal 36pt). Use #5A3838 for Statistics/Mechanics, #2E6B9E for Pure and #0E8A5A for Core Pure. Later panels keep their blue headers and white teaching areas.
+
+Every chapter requires the public student PDF and a matching private solution booklet. Preserve the student layout and add supplied revealed answers in red plus red Solution before each header number. Preserve all stages of the supplied working. Maintain the eight-book handout structures and _Latex original folders for both versions. Owner chose compilable PDF-backed LaTeX wrappers as the lowest-token reproduction format. These require their bundled PDF assets. Private solutions and LaTeX sources stay outside the website and release artifacts. The approved title panels remain title-only; the introductory note controls on Mechanics Year 1 Chapters 10 and 11 remain in the interactive slides.
+
+After any slide change, compare source fingerprints, regenerate all affected student/solution PDFs, reproduce their LaTeX sources, refresh owner copies and recheck content, rendering, answers, page counts and links before acceptance. The private authoring entry point uses student.cjs and covers.py for the student version, solutions.cjs for per-field private working, red-text.py for red native text, fit-fields.py for fitting visible PDF ink into the exact student field rectangles, and merge-solutions.py for private PDFs. latex.py creates and compiles the reproduction originals. Run the accepted scripts directly; do not rebuild them from historical helper templates. Source/output fingerprints and verification records live in the configured private materials build directory. The owner corrected the new release version to v0.36. Release evidence is docs/evidence/v036-booklets.json.
+
 All release and development reports must start with a visible Luisa website link, per owner instruction 2026-11-08. Use a relative ./ link so both hosts stay within their deployment prefix.
 
 # v0.35 booklet standard
