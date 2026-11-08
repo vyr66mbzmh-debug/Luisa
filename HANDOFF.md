@@ -1,3 +1,9 @@
+All release and development reports must start with a visible Luisa website link, per owner instruction 2026-11-08. Use a relative ./ link so both hosts stay within their deployment prefix.
+
+# v0.35 booklet standard
+
+BKT-035 applies to all current and future student booklets. Use descriptive BookYear_ChNN_Chapter_Title.pdf filenames, no Luisa in panel headers, and a Data Collection style first title panel. Its banner names Subject Year N Chapter N - Topic. Later panels preserve their layout and teaching content. Keep the eight book folders of matching owner copies current. Evidence is docs/evidence/v035-booklets.json.
+
 # Luisa handoff
 
 ## v0.34 teaching release

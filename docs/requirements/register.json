@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-07",
+  "asOf": "2026-11-08",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -15,8 +15,8 @@
       ],
       "origin": "legacy-register:C01",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Current work is mainly Pure Year 1. Future-course compliance is not measured."
       },
       "evidence": []
@@ -33,8 +33,8 @@
       ],
       "origin": "legacy-register:C02",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Full current source-to-output reconciliation remains open; specifically retain Chapter 8 slide 17 updates."
       },
       "evidence": []
@@ -51,8 +51,8 @@
       ],
       "origin": "legacy-register:C03",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Rebuilds exist, but some condensed derivations and omitted source diagrams require fidelity review."
       },
       "evidence": []
@@ -69,8 +69,8 @@
       ],
       "origin": "legacy-register:C04",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "No library-wide final notation audit."
       },
       "evidence": []
@@ -87,8 +87,8 @@
       ],
       "origin": "legacy-register:C05",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Specific corrections made, including vectors. Whole-library checking is incomplete."
       },
       "evidence": []
@@ -105,8 +105,8 @@
       ],
       "origin": "legacy-register:C06",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Shared cleanup and rewritten examples exist; final whole-library review remains open."
       },
       "evidence": []
@@ -123,8 +123,8 @@
       ],
       "origin": "legacy-register:C07",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Panels rebuilt selectively. All source relationships have not been accepted."
       },
       "evidence": []
@@ -141,8 +141,8 @@
       ],
       "origin": "legacy-register:C08",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Trig answers added; differentiation slide 67 now opens the verified four-page Exercise 12J solutions. Whole-library answer completeness remains open."
       },
       "evidence": []
@@ -159,8 +159,8 @@
       ],
       "origin": "legacy-register:C09",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Implemented selectively, including vectors; global verification NM."
       },
       "evidence": []
@@ -175,8 +175,8 @@
       "acceptance": [
         "Demonstrate this requirement on the affected output; attach source, visual, interaction and print evidence as applicable.",
         "For v0.34 check all presentations and corresponding student booklets for a consistent readable base size across prompts, cover labels, working and explanations. On Statistics Year 1 Chapter 2 slide 61 compare the introductory text, example, numbered steps, closed covers and revealed working; preserve normal mathematical scaling for powers, subscripts and fractions.",
-        "On Statistics Year 1 Chapter 3 original slide 23, use regular weight for the visible word “data” in both corresponding “For … data” bullets, in the presentation and matching booklet.",
-        "Across all presentations and student booklets, comparable table entries use the same readable base font size, including values added by a reveal. On Statistics Year 1 Chapter 3 original slide 30, compare 14 (7–8 minutes) and 5 (16–20 minutes) with 6, 21, 45 and 9 in the Number of motorists column. Check the revealed values on screen and the supplied entries in the two-up booklet; concealed student answers retain their writing spaces.",
+        "On Statistics Year 1 Chapter 3 original slide 23, use regular weight for the visible word \u201cdata\u201d in both corresponding \u201cFor \u2026 data\u201d bullets, in the presentation and matching booklet.",
+        "Across all presentations and student booklets, comparable table entries use the same readable base font size, including values added by a reveal. On Statistics Year 1 Chapter 3 original slide 30, compare 14 (7\u20138 minutes) and 5 (16\u201320 minutes) with 6, 21, 45 and 9 in the Number of motorists column. Check the revealed values on screen and the supplied entries in the two-up booklet; concealed student answers retain their writing spaces.",
         "Across teaching slides, use the same font and readable base size for comparable button labels regardless of button height. On Statistics Year 1 Chapter 3 original slide 35, check a, b(i) and b(ii) at matching size, retaining the nested identifiers and omitting placeholder question marks.",
         "Statistics Year 2 Chapter 2, original slide 18 (Examples): Use the prompt base size for question numbers 1 and 2 and subpart labels a, b and c. Keep table entries and Venn region counts legible at normal slide and two-up booklet sizes.",
         "Statistics Year 2 Chapter 2, original slide 20 (Check your understanding): Use a consistent readable base size for the part labels, prompts and button text.",
@@ -185,15 +185,15 @@
       ],
       "origin": "legacy-register:L01",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vectors: 40/40 meet the measured minimum. Latest library check still flags 258/634 slides at laptop size and 142/634 at larger size; typography/source acceptance remains open."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -209,15 +209,15 @@
       ],
       "origin": "legacy-register:L02",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "1,268/1,268 measured screen cases fit without scrolling. Dense modelling/set/inequality slides additionally rebuilt and checked; internal layout and source acceptance remain open elsewhere."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -233,15 +233,15 @@
       ],
       "origin": "legacy-register:L03",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vector review complete; integration slide 6 visually and functionally checked at both sizes."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -257,15 +257,15 @@
       ],
       "origin": "legacy-register:L04",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Separate vector label/body columns implemented. Global application is not verified."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -281,15 +281,15 @@
       ],
       "origin": "legacy-register:L05",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vector scope rebuilt. Shared migration exists but not all nonvector slides finally checked."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -305,21 +305,21 @@
       ],
       "origin": "legacy-register:L06",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Vector visible labels now use full stops; stable internal IDs remain unchanged. Whole-library punctuation review remains open."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
     {
       "id": "L07",
-      "requirement": "Keep complete question–answer groups together; preserve independent columns/tables and remove unexplained gaps.",
+      "requirement": "Keep complete question\u2013answer groups together; preserve independent columns/tables and remove unexplained gaps.",
       "scope": "all relevant existing and future content",
       "priority": "P1",
       "implementation": "historical_record",
@@ -329,15 +329,15 @@
       ],
       "origin": "legacy-register:L07",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vectors reflowed into complete question/answer groups with no scrolling. Continuation panels removed; final source-fidelity review remains open."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -353,15 +353,15 @@
       ],
       "origin": "legacy-register:L08",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vector structural intersections: 0. This is not a full-library rendered-gap certification."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -377,15 +377,15 @@
       ],
       "origin": "legacy-register:L09",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vector diagrams corrected/retained proportionally; differentiation slide 22 redrawn proportionally and visually checked."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -401,15 +401,15 @@
       ],
       "origin": "legacy-register:L10",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Shared layout changes made. Vectors checked; global final check pending."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -425,15 +425,15 @@
       ],
       "origin": "legacy-register:L11",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Shared styling exists. All chapter/title variants not currently signed off."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ],
       "supersedesText": "Use large centred titles in blue banners; blue/yellow title pages and red Extension, STEP, MAT and AEA titles.",
@@ -451,15 +451,15 @@
       ],
       "origin": "legacy-register:L12",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Implementation exists; current all-slide title/number parity audit pending."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -475,15 +475,15 @@
       ],
       "origin": "legacy-register:L13",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Shared math rendering changed; subject-specific emphasis still needs full review."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -499,15 +499,15 @@
       ],
       "origin": "legacy-register:L14",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Targeted and shared fixes exist; latest all-slide verification pending."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -520,20 +520,20 @@
       "verification": "needs_revalidation",
       "acceptance": [
         "Demonstrate this requirement on the affected output; attach source, visual, interaction and print evidence as applicable.",
-        "Check all existing and future presentations and corresponding printed labels, including variations in capitalisation, hyphens, spacing and line breaks. Use Tip for the advice label and preserve the advice. On Statistics Year 1 Chapter 3 original slide 21, replace the entire “Click to Start Fro-animation” label with “Animation”. Verify that clicking or tapping the pale-blue button plays the original graph animation.",
-        "Across all presentations, use Animation for a generic animation-start control, including “Click to Start animation” without a Fro prefix. Keep the descriptive label Sketch on sketch controls. Apply UI-034 to both. Example: Statistics Year 1 Chapter 3 original slide 22."
+        "Check all existing and future presentations and corresponding printed labels, including variations in capitalisation, hyphens, spacing and line breaks. Use Tip for the advice label and preserve the advice. On Statistics Year 1 Chapter 3 original slide 21, replace the entire \u201cClick to Start Fro-animation\u201d label with \u201cAnimation\u201d. Verify that clicking or tapping the pale-blue button plays the original graph animation.",
+        "Across all presentations, use Animation for a generic animation-start control, including \u201cClick to Start animation\u201d without a Fro prefix. Keep the descriptive label Sketch on sketch controls. Apply UI-034 to both. Example: Statistics Year 1 Chapter 3 original slide 22."
       ],
       "origin": "legacy-register:L15",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Cleanup implemented; full current visual verification NM."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -549,8 +549,8 @@
       ],
       "origin": "legacy-register:N01",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Recorded routing implementation; final navigation acceptance remains pending."
       },
       "evidence": []
@@ -567,18 +567,18 @@
       ],
       "origin": "legacy-register:N02",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Implementation recorded; current return/selection test pending."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ],
-      "supersedesText": "FMQ library link returns to site root preserving the user’s selection.",
+      "supersedesText": "FMQ library link returns to site root preserving the user\u2019s selection.",
       "decision": "Luisa supersedes FMQ and MARS."
     },
     {
@@ -593,15 +593,15 @@
       ],
       "origin": "legacy-register:N03",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "All 634 slides pass no-scroll tests at both sizes: 1,268/1,268 cases (100%). The 40 vector slides also pass minimum-font and clipping checks; typography elsewhere remains open."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -617,15 +617,15 @@
       ],
       "origin": "legacy-register:A01",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vector hidden/reveal checks pass. Historical whole-library ownership checks need final revalidation."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -641,15 +641,15 @@
       ],
       "origin": "legacy-register:A02",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vectors: 99/99 source covers mapped, plus 3 extension answers; 204/204 independent reveal cases pass. Source-cover parity in other chapters remains open."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -665,15 +665,15 @@
       ],
       "origin": "legacy-register:A03",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vector covers labelled without question marks. Nonvector repair scripts still contain question-mark labels."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -689,15 +689,15 @@
       ],
       "origin": "legacy-register:A04",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "□ Partial",
+        "implemented": "\u2713",
+        "checked": "\u25a1 Partial",
         "notes": "Ticks removed from shared viewer. Confirmed across vector tests; entire-library final visual confirmation remains open."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -713,15 +713,15 @@
       ],
       "origin": "legacy-register:A05",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vector and reported nonvector sequences checked. Added mixed trigger/answer order so graph emphasis precedes region answers; full-library source sequence review remains open."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -737,15 +737,15 @@
       ],
       "origin": "legacy-register:A06",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vectors: 80 viewport cases pass. Earlier global functional pass is historical."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -761,8 +761,8 @@
       ],
       "origin": "legacy-register:A07",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Verified log motion, ten set-notation entrances, inequality graph-emphasis trigger and endpoint-note entrance. Real clicks and Reset pass; full-library source timing parity remains open."
       },
       "evidence": []
@@ -779,8 +779,8 @@
       ],
       "origin": "legacy-register:A08",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Earlier targeted work recorded; current source timing parity not finally signed off."
       },
       "evidence": []
@@ -797,15 +797,15 @@
       ],
       "origin": "legacy-register:A09",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Explicit theory/answer flags exist. Full board/print source parity remains pending."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -821,15 +821,15 @@
       ],
       "origin": "legacy-register:A10",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vector functional checks pass. Full latest-library identifier/parity audit not recorded."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -845,15 +845,15 @@
       ],
       "origin": "legacy-register:B01",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Separation is recorded; no current regression verification of original printouts."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -869,15 +869,15 @@
       ],
       "origin": "legacy-register:B02",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "14/14 chapter PDFs generated (100%). UI and current content parity not finally checked."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -893,15 +893,15 @@
       ],
       "origin": "legacy-register:B03",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Vector PDF now has 40 original panels on exactly 20 A4 pages. Chapters 5 and 6 also regenerated. Full title, number and content acceptance remains separate."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -917,15 +917,15 @@
       ],
       "origin": "legacy-register:B04",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Omission rules exist, but full source-content parity remains open."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -941,15 +941,15 @@
       ],
       "origin": "legacy-register:B05",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Current 20-page vector PDF has no concealed-answer text. Supplied theory remains. Writing-space and final source/visual checks remain separate."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -965,15 +965,15 @@
       ],
       "origin": "legacy-register:B06",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Current 319/319 PDF pages pass page-count, banner-width and margin checks. Vector booklet is 20 pages; visual/source acceptance remains separate."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -989,15 +989,15 @@
       ],
       "origin": "legacy-register:B07",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vector booklet inspected; current all-booklet acceptance pending."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ],
       "supersedesText": "Fill the whole title-slide frame with its background; retain individual blue headers, no skill-code/pair numbering.",
@@ -1015,8 +1015,8 @@
       ],
       "origin": "legacy-register:R01",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "V11.1 published and its 12 changed files verified live; V10/V11 remain recoverable. V12 is a separate, unreleased preview."
       },
       "evidence": [
@@ -1041,9 +1041,9 @@
       ],
       "origin": "legacy-register:R02",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
-        "notes": "Recorded commits: V10 7b195112…; V11 fcaf5708…. Recovery not re-tested in this document task."
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
+        "notes": "Recorded commits: V10 7b195112\u2026; V11 fcaf5708\u2026. Recovery not re-tested in this document task."
       },
       "evidence": [
         {
@@ -1067,15 +1067,15 @@
       ],
       "origin": "legacy-register:Q01",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "First pass 634/634 (100%) is historical. Full current acceptance remains 0/634 recorded."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -1091,15 +1091,15 @@
       ],
       "origin": "legacy-register:Q02",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "40/40 vector slides tested at both sizes, plus bounded batches of other repairs. Current per-slide records include font, clipping, independent answers and actual Next order. Final source approval remains separate."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -1115,15 +1115,15 @@
       ],
       "origin": "legacy-register:Q03",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vector booklet rebuilt to 20 pages and re-rendered after changes. Current source/visual acceptance is pending; historical 32-page checks are superseded."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -1139,15 +1139,15 @@
       ],
       "origin": "legacy-register:Q04",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Progress records exist but are inconsistent: vector completion added separately while global finalApproved remains 0."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         },
         {
           "date": "2026-11-03",
@@ -1168,15 +1168,15 @@
       ],
       "origin": "legacy-register:Q05",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Question library 100%. Previous reports did not consistently give all slide/booklet denominators."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -1192,15 +1192,15 @@
       ],
       "origin": "legacy-register:Q06",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Active development resumed after the execution gap was acknowledged. No automatic resume schedule created; the hourly reporting schedule was explicitly requested."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -1216,15 +1216,15 @@
       ],
       "origin": "legacy-register:Q07",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Synced sources and original teaching files remain read-only. Changes are confined to code, the V12 preview, records and requirements outputs."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -1240,21 +1240,21 @@
       ],
       "origin": "legacy-register:Q08",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Examples repaired and vectors rebuilt. Global compliance remains unverified; future imports not assessed."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
     {
       "id": "S01",
-      "requirement": "Trigonometry 54–55: add accessible answers for the sine translation and rock-pool questions.",
+      "requirement": "Trigonometry 54\u201355: add accessible answers for the sine translation and rock-pool questions.",
       "scope": "all relevant existing and future content",
       "priority": "P1",
       "implementation": "historical_record",
@@ -1264,8 +1264,8 @@
       ],
       "origin": "legacy-register:S01",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "V11.1: 2/2 selected repairs visually and functionally checked, published and verified live (100%). V12 overall acceptance remains separate."
       },
       "evidence": []
@@ -1282,8 +1282,8 @@
       ],
       "origin": "legacy-register:S02",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Both slides visually checked: purple badges removed, question labels retained and correctly numbered blue covers. Punctuation corrected; reveal order passes both sizes."
       },
       "evidence": []
@@ -1300,9 +1300,9 @@
       ],
       "origin": "legacy-register:S03",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
-        "notes": "Five independent a–e covers verified at both sizes. Readable layout and native decay graph rebuilt; both source hints retained and visually checked."
+        "implemented": "\u2713",
+        "checked": "\u2713",
+        "notes": "Five independent a\u2013e covers verified at both sizes. Readable layout and native decay graph rebuilt; both source hints retained and visually checked."
       },
       "evidence": []
     },
@@ -1318,8 +1318,8 @@
       ],
       "origin": "legacy-register:S04",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Readable two-column working and proportional native comparison graph rebuilt. All four answers and actual Next order pass both sizes; visually checked."
       },
       "evidence": []
@@ -1336,8 +1336,8 @@
       ],
       "origin": "legacy-register:S05",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Real button-triggered power movement restored with both method entrances. Actual running motion, final exponent, Next and Reset during motion pass at both sizes."
       },
       "evidence": []
@@ -1354,8 +1354,8 @@
       ],
       "origin": "legacy-register:S06",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "All seven answers pass both sizes. Actual Next reveals each middle rewrite before its result; short right-hand equations stay on one line. Visually checked."
       },
       "evidence": []
@@ -1372,8 +1372,8 @@
       ],
       "origin": "legacy-register:S07",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Top, middle, bottom covers labelled 1., 2., 3. Actual Next follows that order at both sizes; current hidden/revealed layouts checked."
       },
       "evidence": []
@@ -1390,8 +1390,8 @@
       ],
       "origin": "legacy-register:S08",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Question, independent strategy and complete calculation occupy separate regions. Both sizes pass no-scroll, font, clipping and Next checks; visually checked."
       },
       "evidence": []
@@ -1408,15 +1408,15 @@
       ],
       "origin": "legacy-register:S09",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Question continuations align with their body after separate a./b. labels. Working has aligned lines; both sizes pass. This verifies the reported indentation scope only."
       },
       "evidence": []
     },
     {
       "id": "S10",
-      "requirement": "Slides 3–4: readable consistent fonts and complete coordinates/equations; ticks must not cover them.",
+      "requirement": "Slides 3\u20134: readable consistent fonts and complete coordinates/equations; ticks must not cover them.",
       "scope": "all relevant existing and future content",
       "priority": "P1",
       "implementation": "historical_record",
@@ -1426,8 +1426,8 @@
       ],
       "origin": "legacy-register:S10",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "2/2 rebuilt; both sizes pass fonts, clipping, no-scroll and Next order. All 13 answers and two source teaching entrances retained; visually checked."
       },
       "evidence": []
@@ -1444,8 +1444,8 @@
       ],
       "origin": "legacy-register:S11",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Four teaching stages retained; both sizes pass 20px body minimum, no-scroll, cover separation and reveal order. Current layout visually checked."
       },
       "evidence": []
@@ -1462,8 +1462,8 @@
       ],
       "origin": "legacy-register:S12",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Proportional native graphs, readable labels and complete quadratic working restored. Both sizes pass; current screen visually checked."
       },
       "evidence": []
@@ -1480,9 +1480,9 @@
       ],
       "origin": "legacy-register:S13",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
-        "notes": "Method 1 → method 2 → question 2 verified at both sizes. Working/typography rebuilt and visually checked."
+        "implemented": "\u2713",
+        "checked": "\u2713",
+        "notes": "Method 1 \u2192 method 2 \u2192 question 2 verified at both sizes. Working/typography rebuilt and visually checked."
       },
       "evidence": []
     },
@@ -1498,8 +1498,8 @@
       ],
       "origin": "legacy-register:S14",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "All nine original cells restored. Both sizes pass; current screen/print layouts visually checked."
       },
       "evidence": []
@@ -1516,8 +1516,8 @@
       ],
       "origin": "legacy-register:S15",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Complete working visually checked. Both sizes pass fonts, clipping, no-scroll, answer independence and Next order."
       },
       "evidence": []
@@ -1534,8 +1534,8 @@
       ],
       "origin": "legacy-register:S16",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Source long division, substitutions and classifications restored beside an undistorted sketch. Both sizes pass; visually checked."
       },
       "evidence": []
@@ -1552,9 +1552,9 @@
       ],
       "origin": "legacy-register:S17",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
-        "notes": "Four-page PDF recovered from solution-bank pages 425–428. Slide/Resources links, HTTP/file match, new-tab click and navigation clearing passed."
+        "implemented": "\u2713",
+        "checked": "\u2713",
+        "notes": "Four-page PDF recovered from solution-bank pages 425\u2013428. Slide/Resources links, HTTP/file match, new-tab click and navigation clearing passed."
       },
       "evidence": []
     },
@@ -1570,8 +1570,8 @@
       ],
       "origin": "legacy-register:S18",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Both removed with original callout shape 31. DOM checks passed at both sizes; current screen visually checked. This tick covers the requested removal only."
       },
       "evidence": []
@@ -1588,8 +1588,8 @@
       ],
       "origin": "legacy-register:S19",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "2/2 screen/print layouts visually checked; both sizes pass. Cuboid figure/source y restored; full working retained. Wire-frame page 281 verified."
       },
       "evidence": []
@@ -1606,9 +1606,9 @@
       ],
       "origin": "legacy-register:S20",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
-        "notes": "Actual Next order a → b → c → question 2 passed at both sizes; independent answers and Reset checked."
+        "implemented": "\u2713",
+        "checked": "\u2713",
+        "notes": "Actual Next order a \u2192 b \u2192 c \u2192 question 2 passed at both sizes; independent answers and Reset checked."
       },
       "evidence": []
     },
@@ -1624,8 +1624,8 @@
       ],
       "origin": "legacy-register:S21",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Consistent readable type, complete deduction/identity working and source integer notation checked visually; both sizes pass."
       },
       "evidence": []
@@ -1642,8 +1642,8 @@
       ],
       "origin": "legacy-register:S22",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "Both unwanted lines absent in current rendered slide; visually checked at laptop size and automatic layout checks pass at both sizes."
       },
       "evidence": []
@@ -1660,8 +1660,8 @@
       ],
       "origin": "legacy-register:V01",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "40/40 rebuilt and visually reviewed (100% recorded). This is layout/function completion, not blanket fidelity approval."
       },
       "evidence": []
@@ -1678,8 +1678,8 @@
       ],
       "origin": "legacy-register:V02",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "1/1 included in completed vector review (100%)."
       },
       "evidence": []
@@ -1696,8 +1696,8 @@
       ],
       "origin": "legacy-register:V03",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "1/1 rebuilt with native text/grid and reviewed (100%)."
       },
       "evidence": []
@@ -1714,8 +1714,8 @@
       ],
       "origin": "legacy-register:V04",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "1/1 layout repaired (100%). Intermediate source expansion steps restored; final complete source reconciliation remains under C03."
       },
       "evidence": []
@@ -1732,8 +1732,8 @@
       ],
       "origin": "legacy-register:V05",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "1/1 reviewed with all four answer groups; fresh browser proof saved (100%)."
       },
       "evidence": []
@@ -1750,8 +1750,8 @@
       ],
       "origin": "legacy-register:V06",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "✓",
+        "implemented": "\u2713",
+        "checked": "\u2713",
         "notes": "80/80 screen-fit cases and 204/204 independent reveal cases pass. All 99 original covers mapped, plus 3 added extension answers; 15 theory stages pass Next/Reset checks."
       },
       "evidence": []
@@ -1768,8 +1768,8 @@
       ],
       "origin": "legacy-register:V07",
       "legacyAssertion": {
-        "implemented": "✓",
-        "checked": "□ Partial",
+        "implemented": "\u2713",
+        "checked": "\u25a1 Partial",
         "notes": "20-page PDF rebuilt with 40 original panels. Strict panel/page count and answer removal pass; current final source/visual acceptance remains pending."
       },
       "evidence": []
@@ -1786,15 +1786,15 @@
       ],
       "origin": "legacy-register:CV01",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1",
         "notes": "Requirement recorded. Existing shared standard applies; no new-content implementation or acceptance claimed."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -1810,15 +1810,15 @@
       ],
       "origin": "legacy-register:CV02",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "50/50 supplied new decks inventoried (100%); 8/8 local book/solution PDFs verified readable. Exact edition/content reconciliation remains pending."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -1834,8 +1834,8 @@
       ],
       "origin": "legacy-register:CV03",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Pure 1: 14 chapters, 90 subchapters and 97 exercises checked against source headings. Five further books: 48 chapters / 239 subchapters remain draft."
       },
       "evidence": []
@@ -1852,8 +1852,8 @@
       ],
       "origin": "legacy-register:CV04",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Working V12 chapter view for all 14 Pure 1 chapters. Switching back preserves the TLMaths selection and question. Other books remain open."
       },
       "evidence": []
@@ -1870,8 +1870,8 @@
       ],
       "origin": "legacy-register:CV05",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Pure 1: 97 exercises mapped to 90 subchapters; 14 mixed exercises stay at chapter level. Source headings/solutions checked. Individual textbook-question mapping remains open."
       },
       "evidence": []
@@ -1888,8 +1888,8 @@
       ],
       "origin": "legacy-register:CV06",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Pilot reuses 22 existing practice IDs and routes without changing question data. Source textbook exercises are distinguished from related FMQ practice; wider mappings remain open."
       },
       "evidence": []
@@ -1906,15 +1906,15 @@
       ],
       "origin": "legacy-register:CV07",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "All 14 Pure 1 chapters/booklets, 111 solution PDFs and 95 explicit class-exercise links staged; 436 resource routes pass. Vectors has six theory entry points and 22 related practice routes. Wider theory mapping remains open."
       },
       "evidence": [
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -1930,8 +1930,8 @@
       ],
       "origin": "legacy-register:CV08",
       "legacyAssertion": {
-        "implemented": "□ Partial",
-        "checked": "□ Partial",
+        "implemented": "\u25a1 Partial",
+        "checked": "\u25a1 Partial",
         "notes": "Vectors exercise ownership, 22 related practice links and both-view navigation checked. Individual textbook-question reconciliation is still open; additional Pure 1 rollout covers source exercise/resource metadata only."
       },
       "evidence": []
@@ -2010,7 +2010,7 @@
     },
     {
       "id": "P2-C1-S4-002",
-      "requirement": "Move the “How to structure/word proof” box higher, with its top aligned with “Prove that there is no greatest odd integer.”",
+      "requirement": "Move the \u201cHow to structure/word proof\u201d box higher, with its top aligned with \u201cProve that there is no greatest odd integer.\u201d",
       "scope": "Pure Year 2 Chapter 1: 4",
       "priority": "P1",
       "implementation": "historical_record",
@@ -2024,7 +2024,7 @@
         "slide": 4,
         "title": "1: Proof By Contradiction",
         "reportedAt": "2026-10-25T18:40:27.076407+00:00",
-        "requestedOutcome": "Move the “How to structure/word proof” box higher, with its top aligned with “Prove that there is no greatest odd integer.”",
+        "requestedOutcome": "Move the \u201cHow to structure/word proof\u201d box higher, with its top aligned with \u201cProve that there is no greatest odd integer.\u201d",
         "status": "Implemented and agent checked; published in 12-pilot-1.1; user review pending",
         "scope": "V12 correction queue; feedback collection only."
       },
@@ -2077,17 +2077,17 @@
       "id": "P2-C1-S6-001",
       "requirement": {
         "Assumption": [
-          "Assume there exists a number n such that n² is even, but n is not even."
+          "Assume there exists a number n such that n\u00b2 is even, but n is not even."
         ],
         "Show contradiction": [
           "n is odd therefore n = 2k + 1 for some integer k.",
-          "n² = (2k + 1)² = 4k² + 4k + 1",
-          "= 2(2k² + 2k) + 1",
+          "n\u00b2 = (2k + 1)\u00b2 = 4k\u00b2 + 4k + 1",
+          "= 2(2k\u00b2 + 2k) + 1",
           "which is odd.",
-          "This contradicts the assumption that n² is even."
+          "This contradicts the assumption that n\u00b2 is even."
         ],
         "Conclusion": [
-          "Therefore if n² is even then n must be even."
+          "Therefore if n\u00b2 is even then n must be even."
         ]
       },
       "scope": "Pure Year 2 Chapter 1: 6",
@@ -2101,22 +2101,22 @@
       "detail": {
         "id": "P2-C1-S6-001",
         "slide": 6,
-        "title": "More Examples — even square proof",
+        "title": "More Examples \u2014 even square proof",
         "reportedAt": "2026-10-25T18:47:58.477001+00:00",
         "issue": "The three proof-stage covers conceal the wrong content, as on slide4.",
         "requestedCovers": {
           "Assumption": [
-            "Assume there exists a number n such that n² is even, but n is not even."
+            "Assume there exists a number n such that n\u00b2 is even, but n is not even."
           ],
           "Show contradiction": [
             "n is odd therefore n = 2k + 1 for some integer k.",
-            "n² = (2k + 1)² = 4k² + 4k + 1",
-            "= 2(2k² + 2k) + 1",
+            "n\u00b2 = (2k + 1)\u00b2 = 4k\u00b2 + 4k + 1",
+            "= 2(2k\u00b2 + 2k) + 1",
             "which is odd.",
-            "This contradicts the assumption that n² is even."
+            "This contradicts the assumption that n\u00b2 is even."
           ],
           "Conclusion": [
-            "Therefore if n² is even then n must be even."
+            "Therefore if n\u00b2 is even then n must be even."
           ]
         },
         "evidence": "[private-image-reference]",
@@ -2128,7 +2128,7 @@
     {
       "id": "P2-C1-SQRT2-002",
       "requirement": [
-        "The Assumption cover must conceal only “Assume that √2 is a rational number.”",
+        "The Assumption cover must conceal only \u201cAssume that \u221a2 is a rational number.\u201d",
         "The second cover must begin immediately after that sentence.",
         "The third cover is correct and should be retained."
       ],
@@ -2144,14 +2144,14 @@
         "id": "P2-C1-SQRT2-002",
         "userSlideReference": 6,
         "sourcePilotSlide": 7,
-        "title": "More Examples — irrationality of √2",
+        "title": "More Examples \u2014 irrationality of \u221a2",
         "reportedAt": "2026-10-25T18:49:10.859775+00:00",
         "requestedOutcome": [
-          "The Assumption cover must conceal only “Assume that √2 is a rational number.”",
+          "The Assumption cover must conceal only \u201cAssume that \u221a2 is a rational number.\u201d",
           "The second cover must begin immediately after that sentence.",
           "The third cover is correct and should be retained."
         ],
-        "referenceNote": "User called this slide6; the √2 proof was slide7 in the published pilot. Match by mathematical content when implementing; do not overwrite the separate even-square proof feedback.",
+        "referenceNote": "User called this slide6; the \u221a2 proof was slide7 in the published pilot. Match by mathematical content when implementing; do not overwrite the separate even-square proof feedback.",
         "status": "Implemented and agent checked; published in 12-pilot-1.1; user review pending",
         "scope": "V12 correction queue; feedback collection only."
       },
@@ -2179,7 +2179,7 @@
       "detail": {
         "id": "P2-C1-S8-001",
         "slide": 8,
-        "title": "More Examples — infinitely many primes",
+        "title": "More Examples \u2014 infinitely many primes",
         "reportedAt": "2026-10-25T18:50:50.034734+00:00",
         "requestedCovers": {
           "Assumption": [
@@ -2381,7 +2381,7 @@
         "requestedOutcome": "Page21 adds no value: provide a direct hyperlink to Exercise1C in the Pure2 textbook.",
         "userTextbookReference": "in chapter8",
         "referenceVerification": "Verify the intended slide and textbook destination before implementing: the published pilot has an Exercise1C reference on slide24, referring to textbook page8 in Chapter1. User wording says page21 and chapter8; retain both references without silently substituting.",
-        "relatedFeedback": "P2-C1-S20-21-001; reconcile this later instruction with the earlier request for answers on slides20–21.",
+        "relatedFeedback": "P2-C1-S20-21-001; reconcile this later instruction with the earlier request for answers on slides20\u201321.",
         "status": "Implemented and agent checked; published in 12-pilot-1.1; user review pending",
         "scope": "Feedback collection only.",
         "clarification": "User confirmed: direct Exercise 1C link on slide 24, textbook page 8 Chapter 1; retain slide 21 exercise and worked solution."
@@ -2405,7 +2405,7 @@
         "title": "Test Your Understanding",
         "reportedAt": "2026-10-25T19:00:21.727577+00:00",
         "requestedOutcome": "Convert the question and complete worked solution to LaTeX/native text, preserving the3-mark allocation and applying existing layout, typography and answer-reveal requirements.",
-        "questionReference": "Express (5x+3)/((2x−3)(x+2)) in partial fractions.",
+        "questionReference": "Express (5x+3)/((2x\u22123)(x+2)) in partial fractions.",
         "evidence": "[private-image-reference]",
         "status": "Implemented and agent checked; published in 12-pilot-1.1; user review pending",
         "scope": "Existing V12 LaTeX requirement; feedback collection only."
@@ -2450,7 +2450,7 @@
     },
     {
       "id": "P2-C1-LATEX-003",
-      "requirement": "Convert every exercise question and complete worked solution on slides39–42 to LaTeX/native text, applying all existing typography, layout, screen-fit, booklet and answer-reveal requirements.",
+      "requirement": "Convert every exercise question and complete worked solution on slides39\u201342 to LaTeX/native text, applying all existing typography, layout, screen-fit, booklet and answer-reveal requirements.",
       "scope": "Pure Year 2 Chapter 1: [39, 40, 41, 42]",
       "priority": "P1",
       "implementation": "historical_record",
@@ -2469,7 +2469,7 @@
         ],
         "reportedAt": "2026-10-25T19:02:27.100639+00:00",
         "userDescription": "All the exercises1G, page39 to42.",
-        "requestedOutcome": "Convert every exercise question and complete worked solution on slides39–42 to LaTeX/native text, applying all existing typography, layout, screen-fit, booklet and answer-reveal requirements.",
+        "requestedOutcome": "Convert every exercise question and complete worked solution on slides39\u201342 to LaTeX/native text, applying all existing typography, layout, screen-fit, booklet and answer-reveal requirements.",
         "status": "Implemented and agent checked; published in 12-pilot-1.1; user review pending",
         "scope": "Existing V12 requirement; feedback collection only."
       },
@@ -2622,11 +2622,11 @@
         "Use native LaTeX for questions, formulas, exercises and solutions. Only explicit slide-specific owner image exceptions are permitted; keep diagrams proportionate.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change.",
         "For v0.34 check all teaching presentations, including maths inside closed blue answer-cover prompts, revealed content and prompts retained in printed booklets. Render source notation as maths, preserving the prompt and question mark. On Statistics Year 1 Chapter 2 slide 61 check the x with an overbar, sigma squared and sigma; no raw commands, grouping braces or exponent syntax should be visible.",
-        "Check mathematical notation in presentation titles, slide selectors and mixed prose-and-maths cover prompts across all decks, including corresponding printed headings and retained prompts. Statistics Year 1 Chapter 2 slide 72 is a regression example: display σ² in the title and selector, and render the middle closed cover as “∑x and ∑x²?” with a superscript 2 and the source question mark.",
+        "Check mathematical notation in presentation titles, slide selectors and mixed prose-and-maths cover prompts across all decks, including corresponding printed headings and retained prompts. Statistics Year 1 Chapter 2 slide 72 is a regression example: display \u03c3\u00b2 in the title and selector, and render the middle closed cover as \u201c\u2211x and \u2211x\u00b2?\u201d with a superscript 2 and the source question mark.",
         "Audit textbook exercise prompts and solutions across all teaching presentations and corresponding student booklets, including prose-only exercises. Transcribe wording as selectable native text and typeset any mathematics in LaTeX. Check against the source for completeness, numbering and subpart indentation. Keep images for exercises only where the owner explicitly approved that specific exception. Regression example: Statistics Year 1 Chapter 1 original slide 7, Exercise 1A, textbook page 3, question 1 on a school census. Verify both parts (a) and (b) independently with their matching answers and blank student writing areas.",
         "Review every exercise in every chapter, both online and in the corresponding student booklet. Statistics Year 1 Chapter 1 original pages 8, 9, 16, 17, 18 and 21 are additional examples, not an exhaustive list.",
         "Statistics Year 1 Chapter 3 original slide 35, Exercise 3D question 6: transcribe the scanned exercise as selectable prose and native LaTeX mathematics, and reconstruct its frequency table with visible cell borders. Check wording, class intervals, frequencies, units, marks and subparts a, b(i), b(ii) against the source. Verify the corresponding student booklet has the same typeset exercise and correctly labelled writing spaces. Apply the transcription rule to every exercise in every deck.",
-        "Statistics Year 1 Chapter 7 original slide 25, Exercise 7B, questions 5 and 6: replace both scanned prompts with selectable wording and native LaTeX mathematics in the presentation and student booklet. Verify the distributions, hypotheses (including < versus ≠), significance levels, tail probability, numbering, subparts and marks against the source. Include every exercise slide across all courses in the transcription audit.",
+        "Statistics Year 1 Chapter 7 original slide 25, Exercise 7B, questions 5 and 6: replace both scanned prompts with selectable wording and native LaTeX mathematics in the presentation and student booklet. Verify the distributions, hypotheses (including < versus \u2260), significance levels, tail probability, numbering, subparts and marks against the source. Include every exercise slide across all courses in the transcription audit.",
         "Statistics Year 2 Chapter 1, original slide 24: transcribe every exercise and worked solution as selectable text with rendered LaTeX maths. Verify the slide and corresponding student booklet; this applies to exercises across the site.",
         "Statistics Year 2 Chapter 2, original slide 4, Combining events/sets: typeset the first row label as A^{\\prime}, with the complement prime raised at the upper right of A, on both the slide and its booklet panel.",
         "Statistics Year 2 Chapter 2, original slide 5, Some fundamentals: typeset the first two row headings as A \\cap B^{\\prime} and (A \\cup B)^{\\prime} on the slide and matching booklet panel. Raise the prime on B alone in row one and on the entire parenthesised union in row two.",
@@ -2640,7 +2640,7 @@
         {
           "date": "2026-11-03",
           "reference": "docs/evidence/v025-chapters.json",
-          "scope": "Agent acceptance of Pure Year 2 chapters 6–7 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
+          "scope": "Agent acceptance of Pure Year 2 chapters 6\u20137 and Core Pure 1 chapters 1 and 4 only; does not upgrade historical/global status."
         }
       ]
     },
@@ -2668,22 +2668,22 @@
       "acceptance": [
         "Conceal complete answers structurally, including brackets, factors and powers. Where appropriate start after the first equals sign; no answer or question may leak or be covered accidentally.",
         "Record affected output and verification evidence; invalidate acceptance when dependent inputs change.",
-        "Across teaching slides, inspect the closed and reset states after layout and resizing: conceal every character of each answer, including its first letter. Regression example: the inline answer “census” on Statistics Year 1 Chapter 1 original slide 6.",
+        "Across teaching slides, inspect the closed and reset states after layout and resizing: conceal every character of each answer, including its first letter. Regression example: the inline answer \u201ccensus\u201d on Statistics Year 1 Chapter 1 original slide 6.",
         "On Statistics Year 1 Chapter 1 original slide 36, verify that the bottom of answer b is entirely concealed on entry, after revealing neighbouring answers, and after Reset at supported viewport sizes. Apply the same check across presentations.",
         "Audit every teaching slide containing answer reveals at the supported viewport sizes. Confirm each closed answer is fully concealed on entry, after other parts open, and after Reset. On Statistics Year 1 Chapter 3 original slide 8 the entire conclusion identifying the 105-year-old as an outlier must stay hidden until a is pressed, including when b is opened first. Record failures and recheck fixes before marking this requirement verified.",
         "Statistics Year 1 Chapter 3 original slide 22: keep separate blank inline buttons over 3 (ages 15 to under 20) and 0.5 (ages 20 to under 50). Check the entire numbers, including the decimal point, are hidden on entry and Reset; revealing one leaves the other concealed. Neighbouring words, table data and graph axes remain readable. Verify the student booklet leaves the two answer positions blank.",
         "Statistics Year 1 Chapter 3 original slide 23, Bar Charts vs Histograms: in the explanatory bullets, independently conceal the entire words discrete and height on the bar-chart side and continuous and area on the histogram side. Verify all four are hidden on entry and Reset and pressing one reveals only its own word. Keep surrounding prose and chart axis labels visible. Leave the four corresponding spaces blank in the student booklet.",
         "Statistics Year 1 Chapter 3 original slide 26: verify that the right edge of the upper answer button conceals the entire digit 4 and the rest of the answer on entry and after Reset, at supported viewport sizes.",
-        "Statistics Year 1 Chapter 4 original slide 5, Recap of correlation: check every answer word in the four scatter-plot captions, including weak, strong, positive and negative. Each blank button must conceal its entire word, including descenders and end letters, on entry, after neighbouring words are revealed, and after Reset. Keep the supplied word “correlation” and the strength/type guidance visible. Verify each button reveals only its own word and each corresponding booklet answer is blank.",
+        "Statistics Year 1 Chapter 4 original slide 5, Recap of correlation: check every answer word in the four scatter-plot captions, including weak, strong, positive and negative. Each blank button must conceal its entire word, including descenders and end letters, on entry, after neighbouring words are revealed, and after Reset. Keep the supplied word \u201ccorrelation\u201d and the strength/type guidance visible. Verify each button reveals only its own word and each corresponding booklet answer is blank.",
         "Statistics Year 1 Chapter 4 original slide 6, Important correlation concepts: under Important Point 1, verify that the upper two buttons fully conceal the answers to a and b, including the black text currently visible at their left edges. Keep both question prompts readable. Test on entry, when either answer is opened independently, and after Reset.",
         "On Statistics Year 1 Chapter 5 original slide 13, verify each of the three right-hand answer buttons conceals its complete fraction, including numerator, bar and denominator. Each reveals only its matching probability; check on entry, after revealing either neighbouring answer and after Reset.",
         "Statistics Year 1 Chapter 5 original slide 18, Mutually Exclusive Events: verify each source-intended answer span in the definition and both probability rules, plus the Venn diagram, is completely concealed until its own reveal. In particular check the exposed zero and the sum P(A) + P(B) beside the misplaced covers. Keep the supplied prompts and first equals signs readable where they introduce an answer. Check each individual reveal, Reset and matching blank areas in the student booklet.",
         "Statistics Year 1 Chapter 5 original slide 19: check every answer cover against its intended answer. Keep each complete answer concealed on entry, after other reveals and after Reset, with its prompt visible.",
-        "Statistics Year 1 Chapter 6 original slide 5, Probability Distributions vs Probability Functions: keep the “Advantages of functional form” heading visible and fully conceal its answer, including the letter visible beyond the right edge. Check on entry, after revealing the separate table-form answer, and after Reset.",
+        "Statistics Year 1 Chapter 6 original slide 5, Probability Distributions vs Probability Functions: keep the \u201cAdvantages of functional form\u201d heading visible and fully conceal its answer, including the letter visible beyond the right edge. Check on entry, after revealing the separate table-form answer, and after Reset.",
         "On Statistics Year 1 Chapter 6 original slide 16, verify that a conceals the complete model including B(8, 0.1), b the complete calculation including its final digits, and c the entire written explanation. Keep the questions and supplied theory visible. Test on entry, after individual reveals in any order and after Reset.",
         "Statistics Year 1 Chapter 7 original slide 10, Further Example: fully conceal the test statistic, both hypotheses and the rejection condition behind their respective buttons, including the black text visible just above the middle button. Verify on entry, after revealing any other part, and after Reset.",
-        "Statistics Year 1 Chapter 7 original slide 20, Actual Significance Level: keep P(X ≥ 7) and the first equals sign visible. Conceal all working and the result to its right, including the final digit 2 visible beyond the button edge. Verify on entry and after Reset while the supplied binomial table remains readable.",
-        "Statistics Year 2 Chapter 1, original slide 23, Hypothesis testing for correlation: on load and after Reset, keep the H₀, H₁ and Sample size prompts visible while fully hiding their answers (including the final digit of 10). Check all five covers independently: revealing one must leave every other unrevealed answer fully hidden.",
+        "Statistics Year 1 Chapter 7 original slide 20, Actual Significance Level: keep P(X \u2265 7) and the first equals sign visible. Conceal all working and the result to its right, including the final digit 2 visible beyond the button edge. Verify on entry and after Reset while the supplied binomial table remains readable.",
+        "Statistics Year 2 Chapter 1, original slide 23, Hypothesis testing for correlation: on load and after Reset, keep the H\u2080, H\u2081 and Sample size prompts visible while fully hiding their answers (including the final digit of 10). Check all five covers independently: revealing one must leave every other unrevealed answer fully hidden.",
         "Statistics Year 2 Chapter 1, original slide 24: verify each complete answer stays hidden on load, after Reset and while other parts are revealed. Keep the question and part labels readable.",
         "Statistics Year 2 Chapter 2, original slide 10 (Examples): completely conceal the independence explanation, the Venn diagram solution and the final probability working until their respective reveals. Check the exposed text at the left edge of the right-hand cover on load, after Reset and while the other parts are revealed.",
         "Statistics Year 2 Chapter 2, original slide 18 (Examples): In the lower Venn exercise, align each button to its own worked answer, leaving the conditional probability prompt and method heading readable. Fully conceal all working and results, including the exposed final fraction in part c. Verify each reveal independently and after Reset.",
@@ -2691,10 +2691,10 @@
         "Statistics Year 2 Chapter 2, original slide 31 (Example, Edexcel S1 question 6): All five answers must stay fully hidden until their own reveal, including the black fragments visible along the left edge. Verify on load, after Reset and between reveals.",
         "Statistics Year 2 Chapter 2, original slide 32 (Further Examples): Give each of the three left-hand answers a separate aligned row and button. Each closed button conceals its complete working without overlapping another answer. Check all edges, especially the edge beside the column divider, on load, after Reset and between reveals.",
         "Statistics Year 2 Chapter 2, original slide 33 (Test Your Understanding): Fit each cover to its own complete answer, including the full Venn diagram in a and every line of the working leaking to the left of d. Keep all prompts and adjacent parts clear. Verify concealment after Reset and between individual reveals.",
-        "Statistics Year 2 Chapter 2, original slide 34 (SUPER IMPORTANT TIPS): the upper button must conceal the whole answer including its trailing ellipsis. In the lower answer, align the initial P of P(A | B) directly beneath the initial P of P(A ∩ B). One button must cover both complete equation lines while leaving the prompt visible. Verify on load, after Reset and when only the upper answer is revealed.",
+        "Statistics Year 2 Chapter 2, original slide 34 (SUPER IMPORTANT TIPS): the upper button must conceal the whole answer including its trailing ellipsis. In the lower answer, align the initial P of P(A | B) directly beneath the initial P of P(A \u2229 B). One button must cover both complete equation lines while leaving the prompt visible. Verify on load, after Reset and when only the upper answer is revealed.",
         "Statistics Year 2 Chapter 2, original slide 40 (Probability Trees): Keep both subquestion prompts visible. Fully conceal the currently exposed part a calculation, through its final 7/20, and all of the part b working until each respective reveal. Check initial and Reset states.",
         "Statistics Year 2 Chapter 2, original slide 42 (Testing Your Understanding): Each button fully conceals only its own answer, including every branch and label of the tree for a. After Reset, verify Next and Space reveal a, b, c in order, keeping later answers hidden.",
-        "Statistics Year 2 Chapter 3, original slide 5 (Normal Distribution Q & A): align the four Q1–Q4 answer buttons to a common left edge beneath their respective prompts. Size each to conceal its entire answer, including text currently visible above the Q2 button. Keep prompts and the graph clear. Verify on load, after Reset and between individual reveals.",
+        "Statistics Year 2 Chapter 3, original slide 5 (Normal Distribution Q & A): align the four Q1\u2013Q4 answer buttons to a common left edge beneath their respective prompts. Size each to conceal its entire answer, including text currently visible above the Q2 button. Keep prompts and the graph clear. Verify on load, after Reset and between individual reveals.",
         "Statistics Year 2 Chapter 3 (Normal distribution). On original slides 14, 15 and 19, check that each closed button fully conceals its answer text and working, with the prompt visible before and between reveals."
       ],
       "origin": "owner-conversation-through-2026-11-01",
@@ -2729,8 +2729,8 @@
         "Statistics Year 2 Chapter 2, reported example with mixed a) and B) question labels (slide number unspecified): After Reset, Next or Space reveals only a on the first advance and b on the second. Verify the sequence for both controls.",
         "Statistics Year 2 Chapter 3 (Normal distribution), original slide 49, Examples. Align each of the eight Continuous answer buttons with the matching Discrete expression. Each button must fit its own row, fully conceal its expression including brackets and inequality signs, and never overlap an adjacent button or the continuity-correction note. From entry and after Reset, reveal each row independently and check that all other covered answers stay hidden, especially the final row P(X = 3). Check corresponding blank cells in the student booklet.",
         "Statistics Year 2 Chapter 3 (Normal distribution), original slide 58, Roll of a fair die: sample size 1. Reveal the possible samples first and the probability distribution table second. One button must cover both rows of all six data columns edge to edge, leaving only the first column of row labels visible until the second reveal.",
-        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 61, Roll of a fair die: sample size 3. Reveal the probability distribution table first, then the expected value E(Z̄), then the variance V(Z̄). One button must cover both rows of all data columns edge to edge, leaving only the first column of row labels visible before the table reveal.",
-        "Statistics Year 2, Chapter 3, original slide 62, Pattern relating to the sample size. Label the bottom-right table buttons Mean, Variance and Standard deviation. Each button covers its column’s three answer cells, leaving the headings and sample sizes visible. Next and Space reveal these columns in that left-to-right order.",
+        "Statistics Year 2 Chapter 3 (Normal distribution), original slide 61, Roll of a fair die: sample size 3. Reveal the probability distribution table first, then the expected value E(Z\u0304), then the variance V(Z\u0304). One button must cover both rows of all data columns edge to edge, leaving only the first column of row labels visible before the table reveal.",
+        "Statistics Year 2, Chapter 3, original slide 62, Pattern relating to the sample size. Label the bottom-right table buttons Mean, Variance and Standard deviation. Each button covers its column\u2019s three answer cells, leaving the headings and sample sizes visible. Next and Space reveal these columns in that left-to-right order.",
         "Statistics Year 2 Chapter 3 (Normal distribution), original slide 54, Exercise 3F. Label each reveal button with its corresponding question or part. For questions 2, 3 and 4, use a, b and c within each row. Use 5 and 6 for the two standalone questions. Reveal in printed question and part order. Apply the same labelling rule wherever applicable across all presentations.",
         "Statistics Year 2 Chapter 3 (Normal distribution), original slide 29, Test Your Understanding. Label each answer button with its question and part. Next or Space reveals 1(a), 1(b), 2(a), 2(b), 3(a), 3(b), one complete answer per action from entry or Reset. Use consistent readable sizes for corresponding labels, prompts and worked mathematics across the three questions. Reflow the long equations in question 2 over multiple lines and verify legibility in the two-up student booklet.",
         "Statistics Year 2 Chapter 3 (Normal distribution), original slide 28, Further Examples. Put a, b, c and d inside the four answer buttons. Next or Space reveals one complete solution at a time in that order, including after Reset. Keep every line of unrevealed working concealed, including fractions, brackets and final values. Give the shaded normal curve and its axis labels their own space clear of all text, buttons and working in every reveal state. Check the corresponding student booklet panel for clear graph placement and blank labelled working areas.",
@@ -3349,7 +3349,7 @@
       "implementation": "implemented",
       "verification": "partially_checked",
       "acceptance": [
-        "Provide platform-appropriate installation instructions and correct standalone branding for Apple systems (iPhone/iOS, iPad/iPadOS and Mac/macOS), Windows PCs/tablets and Android phones/tablets, explicitly including the owner’s iiyama smartboard.",
+        "Provide platform-appropriate installation instructions and correct standalone branding for Apple systems (iPhone/iOS, iPad/iPadOS and Mac/macOS), Windows PCs/tablets and Android phones/tablets, explicitly including the owner\u2019s iiyama smartboard.",
         "Document a supported OS/browser/device compatibility matrix for Apple, Windows and Android systems. Confirm the actual iiyama model, operating system, browser and storage capability before choosing the installation method. Record unsupported or restricted configurations and an owner-approved alternative; do not claim universal compatibility without evidence.",
         "Allow users to download clearly selected chapters/resources for offline use, including relevant questions, worked solutions, teaching slides, diagrams, fonts, student booklets and available textbook chapter PDFs; identify anything not available offline.",
         "Show download progress, completion/readiness, errors and offline availability; do not claim a resource is ready until all of its required files are stored successfully.",
@@ -3361,7 +3361,7 @@
       ],
       "origin": "Owner reaffirmed original mandatory progressive/offline requirement on 2026-11-03; previously omitted from the consolidated register. Owner subsequently expanded mandatory device scope to all Apple, Windows and Android systems and explicitly the iiyama smartboard. On 2026-11-03 the owner explicitly requested correction in v26, including offline iPad use, alongside eleven named chapters; this supersedes the earlier deferral.",
       "evidence": [
-        "docs/evidence/v026-offline-preview.json — browser offline, bulk-download, recovery and owner-reported iPad Vectors evidence; other physical devices unverified."
+        "docs/evidence/v026-offline-preview.json \u2014 browser offline, bulk-download, recovery and owner-reported iPad Vectors evidence; other physical devices unverified."
       ]
     },
     {
@@ -3489,14 +3489,14 @@
     },
     {
       "id": "STA-030",
-      "requirement": "Repair Statistics Year 1 Chapter 2 against the source and the owner’s slide-by-slide corrections.",
+      "requirement": "Repair Statistics Year 1 Chapter 2 against the source and the owner\u2019s slide-by-slide corrections.",
       "scope": "v0.30 and subsequent applicable releases",
       "priority": "P1",
       "implementation": "not_assessed",
       "verification": "not_checked",
       "acceptance": [
         "Transcribe all exercises in LaTeX, retaining their original identifiers. Use readable native tables, consistent text and presentation colours, and preserve calculator graphics.",
-        "Slide 28 uses original order 2,4,8,3,5,9,1,6,7 labelled 1–9. Slide 35 uses 1,2,3,5,6,4. Slide 55 uses 1,4,2,3 with four question marks and a close-fitting fourth cover. Slide 73 uses 1,3,4 then sigma with source labels.",
+        "Slide 28 uses original order 2,4,8,3,5,9,1,6,7 labelled 1\u20139. Slide 35 uses 1,2,3,5,6,4. Slide 55 uses 1,4,2,3 with four question marks and a close-fitting fourth cover. Slide 73 uses 1,3,4 then sigma with source labels.",
         "Verify linked animation states on 31,36,41,67. Inspect boxed questions on 68 and 72 and all individual layout and exercise corrections. Regenerate and inspect the booklet."
       ],
       "origin": "owner v0.30 corrections and clarification",
@@ -3524,7 +3524,7 @@
       "implementation": "not_assessed",
       "verification": "not_checked",
       "acceptance": [
-        "Year 1 chapters 1 and 3–7 and Year 2 chapters 1–3. Check the decks, matching two-per-page student booklets, chapter links and offline resources before release."
+        "Year 1 chapters 1 and 3\u20137 and Year 2 chapters 1\u20133. Check the decks, matching two-per-page student booklets, chapter links and offline resources before release."
       ],
       "origin": "owner v0.30 corrections and clarification",
       "evidence": []
@@ -3677,7 +3677,7 @@
         "Where a single answer needs the remaining space, extend its answer box down to the normal panel margin. Check Statistics Year 1 Chapter 2 panel 16 (youth choir mean age) in the two-up booklet.",
         "For every booklet panel with several answer boxes, distribute the available space across the boxes according to the handwritten working each prompt needs. Extend the final row to the normal bottom margin. At two slides per A4 page, check that students can write below each printed prompt. Use Statistics Year 1 Chapter 2 panel 30 (Linear Interpolation) as an example: enlarge both rows of three boxes while keeping their prompts, column relationships, graph and table legible."
       ],
-      "origin": "Owner feedback on Statistics Year 1 Chapter 2 booklet panels 9–11",
+      "origin": "Owner feedback on Statistics Year 1 Chapter 2 booklet panels 9\u201311",
       "evidence": [
         {
           "file": "docs/evidence/v034-acceptance.json",
@@ -3687,7 +3687,7 @@
     },
     {
       "id": "BKT-034",
-      "requirement": "Remove stray horizontal rules below answer areas wherever they occur across the website’s teaching slides and student booklets.",
+      "requirement": "Remove stray horizontal rules below answer areas wherever they occur across the website\u2019s teaching slides and student booklets.",
       "scope": "Website-wide across every course, book and chapter; existing and future teaching slides and student booklets; v0.34",
       "priority": "P1",
       "implementation": "implemented",
@@ -3698,7 +3698,7 @@
         "Check panel 16 and equivalent layouts across books: the separate notes area with a dotted top border must not divide unused handwriting space beneath the answer box.",
         "On panel 30 and similar multi-box panels, remove the dotted notes divider below the grid and use that space inside the answer boxes. Preserve meaningful lines within the interpolation diagram."
       ],
-      "origin": "Owner feedback on Statistics Year 1 Chapter 2 booklet panels 9–11",
+      "origin": "Owner feedback on Statistics Year 1 Chapter 2 booklet panels 9\u201311",
       "evidence": [
         {
           "file": "docs/evidence/v034-acceptance.json",
@@ -3718,7 +3718,7 @@
         "Use the number-of-children and frequency table on Statistics Year 1 Chapter 2 page 11 as the style reference.",
         "On page 10 question 7, align the Eggs row (1, 2, 3) with its frequency row (7, p, 2) in a bordered two-row table. Verify both the online view and the printed booklet."
       ],
-      "origin": "Owner feedback on Statistics Year 1 Chapter 2 booklet panels 9–11",
+      "origin": "Owner feedback on Statistics Year 1 Chapter 2 booklet panels 9\u201311",
       "evidence": [
         {
           "file": "docs/evidence/v034-acceptance.json",
@@ -3739,14 +3739,14 @@
         "On Statistics Year 1 Chapter 2 slide 44, align corresponding answer rows below the two tables, use consistent gaps within each column, and keep each prompt readable. Check the initial, individually revealed and reset states: no answer fragment may show before its own reveal, and adjacent covers must not overlap. Check the matching answer areas in the two-up booklet.",
         "Across all presentations, make the cover and its clickable area follow all four inside edges of the answer cell as the table resizes. Preserve grid lines, conceal the whole answer and leave neighbouring cells unobstructed. Verify the closed, revealed and reset states on Statistics Year 1 Chapter 2 slide 84; the student booklet keeps the blank answer cell and its borders.",
         "Check Statistics Year 1 Chapter 1 original slide 6: the four Census/Sample advantage/disadvantage covers fill their respective body cells exactly; table headings, row labels and grid lines stay visible.",
-        "Across all presentations, stacked answer buttons in one column share left and right edges and have equal clear vertical gaps between consecutive buttons. Allow each button enough height for its full answer. Check original Statistics Year 1 Chapter 1 slides 35 and 36, including the a–c stack on slide 35, and align the corresponding writing areas in the booklet.",
+        "Across all presentations, stacked answer buttons in one column share left and right edges and have equal clear vertical gaps between consecutive buttons. Allow each button enough height for its full answer. Check original Statistics Year 1 Chapter 1 slides 35 and 36, including the a\u2013c stack on slide 35, and align the corresponding writing areas in the booklet.",
         "Across teaching slides, align stacked prompt-and-button pairs to shared left and right column edges, with consistent spacing between pairs. On Statistics Year 1 Chapter 3 original slide 27, check the two marking prompts beside the histogram and their answer buttons at supported viewport sizes. Each button sits directly under its own prompt; use the same alignment for the corresponding booklet writing areas.",
         "Statistics Year 1 Chapter 3 original slide 29, SKILL #2: Gaps!: align all three frequency-density buttons and the final frequency button to the four inside edges of their individual table cells. Check that the first frequency-density calculation is entirely concealed, including above the button. Align the histogram cover to its intended plot region while preserving the axes and adjacent bars. Check at supported screen sizes and verify matching blank areas in the student booklet.",
         "Statistics Year 1 Chapter 5 original slide 13, Example involving frequencies: space the three probability answer rows to the right of the Venn diagram farther apart. Align their buttons to common column edges with equal visible gaps. Centre the matching lowercase label a, b or c inside each button as required by UI-034. Use matching labelled writing areas in the student booklet.",
         "Statistics Year 1 Chapter 5 original slide 26, Tree Diagrams: align the top edges of the two side-by-side counter-probability buttons. Centre plain lowercase a and b inside them, respectively for same colour and different colours. Each button fully conceals its own worked answer, including every fraction and any answer-side label, until individually revealed. Keep the prompts and hint readable, and use matching labelled writing areas in the booklet. The separate fifth-shot question below is outside this a/b pair.",
         "Statistics Year 1 Chapter 6 original slide 6 (three coins): fit each button exactly to the inside edges of its own answer cell: the tall Underlying Sample Space cell on the left and the separate Distribution as a Table and Distribution as a Function cells on the right. Check all four edges at supported viewport sizes, preserve headers and shared grid lines, and keep each answer concealed until its own button is pressed. Verify the corresponding booklet has flat blank cells with matching borders.",
         "On that binomial example (Statistics Year 1 Chapter 6 original slide 16), stack the three subquestion buttons with common left and right edges and equal vertical gaps. Each may use the height its working needs.",
-        "Across all presentations, verify that each subquestion button and its revealed working occupy their own row without overlapping another answer in any reveal state. Regression example: Statistics Year 1 Chapter 6 original slide 17, Further Examples. Label the upper buttons a (P(X=2)), b (P(X=9)), c (P(X≤1)); align their left and right edges and leave equal clear gaps. Each must fully conceal only its own working per FR-009. Test each independently, after adjacent answers open and after Reset. Keep the separate exam question below distinct, and match the three labelled rows in the booklet.",
+        "Across all presentations, verify that each subquestion button and its revealed working occupy their own row without overlapping another answer in any reveal state. Regression example: Statistics Year 1 Chapter 6 original slide 17, Further Examples. Label the upper buttons a (P(X=2)), b (P(X=9)), c (P(X\u22641)); align their left and right edges and leave equal clear gaps. Each must fully conceal only its own working per FR-009. Test each independently, after adjacent answers open and after Reset. Keep the separate exam question below distinct, and match the three labelled rows in the booklet.",
         "Statistics Year 1 Chapter 7 original slide 43, Two-Tailed Tests: give both lower-right explanatory callouts dedicated space clear of the worked solution. Keep the comparison 0.104 > 0.025 and the complete restaurant conclusion readable. Preserve both annotations, with arrows pointing to their respective lines without crossing text. Check the fully revealed slide at supported viewport sizes and the corresponding two-up booklet panel."
       ],
       "origin": "Owner feedback on the slide 41 quartiles comparison",
@@ -3769,8 +3769,8 @@
         "An unlabelled cover or a cover labelled only with ? appears blank. Retain meaningful authored prompts, their punctuation and explicitly requested question identifiers. Give visually blank buttons an accessible name.",
         "Print flat writing areas with a thin light border, white interior and any meaningful hint. Omit standalone question marks and screen button effects. Check a table cell and a free-standing cover on screen, after reveal and Reset, and in the two-up booklet.",
         "For Statistics Year 1 Chapter 3 original slide 4, Box Plot recap, give all seven Sketch controls the approved subtle button appearance and retain their Sketch labels. On click or tap each stays visible in its original position and runs only its existing assigned animation. Verify the minimum, lower quartile, median, upper quartile, maximum, IQR and range triggers, including after Reset; preserve their existing sequence and slide layout.",
-        "Audit every teaching deck and corresponding booklet for letter-only subpart prompts. Normalise source variants such as “? a”, “a?”, “? b” and “b?” to the actual lowercase part letter (a, b, etc.) in its matching button or writing area. Preserve meaningful authored prompts and genuine question punctuation. Check Statistics Year 1 Chapter 3 original slide 8.",
-        "Statistics Year 1 Chapter 3 original slide 33, Forming a frequency polygon: replace the orange “Click to Sketch” control with a pale-blue Sketch button using the shared Animation button style. Verify that clicking or tapping it plays the existing frequency-polygon animation and that the button stays visible in place.",
+        "Audit every teaching deck and corresponding booklet for letter-only subpart prompts. Normalise source variants such as \u201c? a\u201d, \u201ca?\u201d, \u201c? b\u201d and \u201cb?\u201d to the actual lowercase part letter (a, b, etc.) in its matching button or writing area. Preserve meaningful authored prompts and genuine question punctuation. Check Statistics Year 1 Chapter 3 original slide 8.",
+        "Statistics Year 1 Chapter 3 original slide 33, Forming a frequency polygon: replace the orange \u201cClick to Sketch\u201d control with a pale-blue Sketch button using the shared Animation button style. Verify that clicking or tapping it plays the existing frequency-polygon animation and that the button stays visible in place.",
         "Across all presentations, each answer button for a labelled subquestion displays the corresponding identifier inside the button. On Statistics Year 1 Chapter 6 original slide 16, The Binomial Distribution, centre plain lowercase a, b and c in the three buttons. Use matching labels in the booklet writing areas.",
         "On Statistics Year 1 Chapter 7 original slide 10, display plain lowercase a, b and c centred inside the three independent buttons, respectively for the test statistic, hypotheses and rejection condition. Use matching labelled writing areas in the student booklet.",
         "On the same Exercise 7B slide, keep question 5 as a separate single answer. For question 6, move the answer-side labels a and b inside their respective buttons, centred in lowercase: a reveals the critical region and b the actual significance level. Keep the subpart letters in the question and provide matching labelled booklet writing areas. Check equivalent subpart buttons across all decks.",
@@ -3794,7 +3794,7 @@
     },
     {
       "id": "STA-034-C1-S02",
-      "requirement": "Remove the original slide 2, “CONTENTS OF CHAPTER 1”, from the Statistics Year 1 Data Collection presentation and its student booklet.",
+      "requirement": "Remove the original slide 2, \u201cCONTENTS OF CHAPTER 1\u201d, from the Statistics Year 1 Data Collection presentation and its student booklet.",
       "scope": "v0.34; Statistics Year 1 Chapter 1 only",
       "priority": "P1",
       "implementation": "implemented",
@@ -3831,7 +3831,7 @@
     },
     {
       "id": "STA-034-C1-S06",
-      "requirement": "Open original slide 6, “Populations vs Samples”, directly in its ready-to-answer state, with the question text, table and closed reveal buttons visible immediately.",
+      "requirement": "Open original slide 6, \u201cPopulations vs Samples\u201d, directly in its ready-to-answer state, with the question text, table and closed reveal buttons visible immediately.",
       "scope": "v0.34; Statistics Year 1 Chapter 1 original slide 6 only",
       "priority": "P1",
       "implementation": "implemented",
@@ -3877,10 +3877,10 @@
       "acceptance": [
         "Review every Statistics chapter and identify overview slides by their content as well as title, regardless of slide position. Include the pictured Year 1 Chapter 3 Overview and the Year 1 Chapter 1 contents slide recorded in STA-034-C1-S02.",
         "Verify that the slide selector and previous/next navigation go directly between retained slides. Regenerate each affected two-up booklet without a blank placeholder; its slide titles and numbers must match the presentation.",
-        "Specifically remove Statistics Year 1 Chapter 4 (Correlation) original slide 3, “Statistics Year 1 Overview”, from the presentation, slide selector and student booklet. Verify navigation goes directly from original slide 2 to original slide 4 and that the booklet closes the gap.",
-        "Remove Statistics Year 1 Chapter 5 (Probability) original slide 2, “Overall Plan”, from the teaching presentation, slide selector and corresponding student booklet. Verify that navigation proceeds directly from the opening slide to original slide 3 and that the booklet closes the gap.",
-        "Check every chapter for the repeated Statistics course map pictured in Year 1 Chapter 6 (Statistical Distributions), original slide 2, “Overall Plan”. Remove every occurrence from teaching presentations, slide selectors and student booklets, irrespective of title, position or which chapter is highlighted. Verify that subsequent slides and booklet panels follow without a gap.",
-        "Remove Statistics Year 1 Chapter 7 (Hypothesis Testing) original slide 3, “Overall Plan”, from the teaching presentation, slide selector and student booklet. Verify that original slides 2 and 4 become consecutive and that the two-up booklet has no placeholder for the removed panel."
+        "Specifically remove Statistics Year 1 Chapter 4 (Correlation) original slide 3, \u201cStatistics Year 1 Overview\u201d, from the presentation, slide selector and student booklet. Verify navigation goes directly from original slide 2 to original slide 4 and that the booklet closes the gap.",
+        "Remove Statistics Year 1 Chapter 5 (Probability) original slide 2, \u201cOverall Plan\u201d, from the teaching presentation, slide selector and corresponding student booklet. Verify that navigation proceeds directly from the opening slide to original slide 3 and that the booklet closes the gap.",
+        "Check every chapter for the repeated Statistics course map pictured in Year 1 Chapter 6 (Statistical Distributions), original slide 2, \u201cOverall Plan\u201d. Remove every occurrence from teaching presentations, slide selectors and student booklets, irrespective of title, position or which chapter is highlighted. Verify that subsequent slides and booklet panels follow without a gap.",
+        "Remove Statistics Year 1 Chapter 7 (Hypothesis Testing) original slide 3, \u201cOverall Plan\u201d, from the teaching presentation, slide selector and student booklet. Verify that original slides 2 and 4 become consecutive and that the two-up booklet has no placeholder for the removed panel."
       ],
       "origin": "Owner feedback on repeated Statistics chapter overviews",
       "evidence": [
@@ -3930,7 +3930,7 @@
     },
     {
       "id": "STA-034-C5-S30",
-      "requirement": "Remove original slide 30, “Extension”, from the Statistics Year 1 Chapter 5 Probability presentation and its student booklet.",
+      "requirement": "Remove original slide 30, \u201cExtension\u201d, from the Statistics Year 1 Chapter 5 Probability presentation and its student booklet.",
       "scope": "v0.34; Statistics Year 1 Chapter 5 original slide 30 only",
       "priority": "P1",
       "implementation": "implemented",
@@ -3954,7 +3954,7 @@
       "implementation": "implemented",
       "verification": "verified_local",
       "acceptance": [
-        "Starting with all answers concealed, steps 1–3 reveal P(X ≤ 7), P(X < 6), P(X ≥ 15). Steps 4–6 reveal P(X = 6), P(X > 20), P(6 < X ≤ 10), respectively. The first Quickfire answer follows step 6.",
+        "Starting with all answers concealed, steps 1\u20133 reveal P(X \u2264 7), P(X < 6), P(X \u2265 15). Steps 4\u20136 reveal P(X = 6), P(X > 20), P(6 < X \u2264 10), respectively. The first Quickfire answer follows step 6.",
         "Verify Next, Space and background advance follow this sequence from initial load and after Reset."
       ],
       "origin": "Owner feedback on Statistical Distributions original slide 23",
@@ -4031,7 +4031,7 @@
       "implementation": "implemented",
       "verification": "verified_local",
       "acceptance": [
-        "Starting from reset, successive advances reveal the distribution of X, H₀, H₁, the distribution of the sample mean, the standardisation calculation, the bottom-left z-score and finally the bottom-right p-value.",
+        "Starting from reset, successive advances reveal the distribution of X, H\u2080, H\u2081, the distribution of the sample mean, the standardisation calculation, the bottom-left z-score and finally the bottom-right p-value.",
         "Use the button labels (i), (ii), (iii) in that order. Confirm which three buttons are intended; slide 67 has seven reveals."
       ],
       "origin": "User feedback for Luisa v0.34",
@@ -4147,6 +4147,24 @@
           "file": "docs/evidence/v034-acceptance.json",
           "scope": "Desktop Chromium, tablet viewport, actual printed PDFs and source checks. Physical Magic Mouse and iPad checks remain outstanding."
         }
+      ]
+    },
+    {
+      "id": "BKT-035",
+      "requirement": "Student booklets have no Luisa text in panel headers. The first title panel uses the Data Collection format with a centred chapter title and a banner naming Subject Year N Chapter N - Topic. Later panels retain their layout and teaching content. Use descriptive BookYear_ChNN_Chapter_Title.pdf filenames and maintain owner copies in eight book folders. Apply this standard to future booklet changes. All future release and development reports must put a link to the Luisa website at the top.",
+      "scope": "all current and future student chapter booklets",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "acceptance": [
+        "All 62 chapter PDFs have descriptive filenames and consistent title panels.",
+        "Headers omit Luisa throughout. Later teaching content and page counts are preserved.",
+        "Both library and teaching-player links use descriptive filenames.",
+        "Owner copies match published PDF hashes."
+      ],
+      "origin": "owner instruction 2026-11-08",
+      "evidence": [
+        "docs/evidence/v035-booklets.json"
       ]
     }
   ]

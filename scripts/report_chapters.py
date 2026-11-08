@@ -16,7 +16,7 @@ RESOURCES = [('slides', 'Slides'), ('booklet', 'Booklet'), ('pdf', 'Textbook'),
 
 def release_counts(cells, record, chapter):
     booklet = ROOT / unquote(urlsplit(chapter['booklet']).path)
-    deck = booklet.parent.parent / booklet.with_suffix('.json').name
+    deck = booklet.parent.parent / f"chapter-{chapter['number']:02}.json"
     for path, key in [(deck,'deckSha256'),(booklet,'bookletSha256')]:
         if hashlib.sha256(path.read_bytes()).hexdigest() != record[key]:
             raise ValueError(f'Review out of date: {path}')
@@ -92,7 +92,9 @@ if __name__ == '__main__':
         if '<title>Luisa v0.33 chapter progress</title>' in content:
             acceptance = json.loads((ROOT/'docs/evidence/v033-statistics.json').read_text())['chapters']
         release = None
-        if '<title>Luisa v0.34' in content:
+        if '<title>Luisa v0.35' in content:
+            release = json.loads((ROOT/'docs/evidence/v035-acceptance.json').read_text())['chapters']
+        elif '<title>Luisa v0.34' in content:
             release = json.loads((ROOT/'docs/evidence/v034-acceptance.json').read_text())['chapters']
         path.write_text(re.sub(r'<h2>([^<]+)</h2><table>(.*?)</table>',
                                lambda m: rebuild(m,catalogue,acceptance,release), content, flags=re.S))
