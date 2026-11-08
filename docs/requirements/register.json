@@ -4166,6 +4166,55 @@
       "evidence": [
         "docs/evidence/v035-booklets.json"
       ]
+    },
+    {
+      "id": "BKT-036-COVER",
+      "requirement": "All current and future student and private solution title panels use subject colours: Mechanics/Statistics #5A3838, Pure #2E6B9E, Core Pure #0E8A5A. Chapter title is white bold Georgia, nominal 36pt with fitting for long titles. Apply approved sample design to the title panel only. Retain existing blue banners and white teaching panels thereafter. Owner corrected this update to v0.36.",
+      "scope": "all 62 current chapter booklets and future chapters",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "acceptance": [
+        "Render and inspect all title panels and preserve subsequent student panels.",
+        "Copy all student PDFs to the existing eight-book owner folders and publish on both hosts."
+      ],
+      "origin": "owner approval 2026-11-08",
+      "evidence": [
+        "docs/evidence/v036-booklets.json"
+      ]
+    },
+    {
+      "id": "BKT-036-SOLUTIONS",
+      "requirement": "Maintain a second, private booklet for every teaching chapter. Preserve the student booklet layout, chapter/page/slide order, questions and diagrams, fill concealed answer areas with the supplied revealed solutions in red text, and place red Solution immediately before each slide number while keeping the rest of its blue banner title white. Keep the eight-book folder structure in the private solution handout collection. Never publish these solution PDFs or their LaTeX originals. Supplied raster diagrams retain their original colours. Fit complete answer ink into the actual student PDF writing rectangles without clipping or obscuring question text; cap magnification to a readable size consistent with the student panel. On 8 November 2026 the owner stopped solution work and deferred completion to a different model. This release publishes student booklets only.",
+      "scope": "all current and future chapter slides and booklets",
+      "priority": "P1",
+      "implementation": "in_progress",
+      "verification": "owner_deferred",
+      "acceptance": [
+        "Every revealed answer is mapped to a printed answer area and remains readable.",
+        "Verify all solution booklets and private copies; confirm public artifacts exclude them."
+      ],
+      "origin": "owner instruction 2026-11-08",
+      "evidence": [
+        "docs/evidence/v036-booklets.json"
+      ]
+    },
+    {
+      "id": "BKT-036-ORIGINALS",
+      "requirement": "Maintain _Latex original collections beside the student and solution handout collections, preserving the same eight-book structure. Owner selected the lowest-token option: compilable LaTeX wrappers with local PDF assets reproducing each finished booklet exactly. Any changed teaching slide requires refreshing its student PDF, private solution PDF, both LaTeX reproductions and their owner copies, then renewed verification before chapter acceptance. The 62 student reproductions are complete; solution reproductions remain drafts while solution work is deferred.",
+      "scope": "all current and future booklet updates",
+      "priority": "P1",
+      "implementation": "partial",
+      "verification": "student_agent_checked_solutions_deferred",
+      "acceptance": [
+        "Compile all LaTeX wrappers and verify page counts/layout against their source PDFs.",
+        "Record slide source/output fingerprints; refresh all affected outputs after each change.",
+        "Keep reproduction sources and private solutions outside the public build."
+      ],
+      "origin": "owner clarification 2026-11-08",
+      "evidence": [
+        "docs/evidence/v036-booklets.json"
+      ]
     }
   ]
 }
