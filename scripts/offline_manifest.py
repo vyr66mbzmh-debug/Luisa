@@ -124,7 +124,10 @@ def generate(root, entries, version):
                 else:
                     files.add(chapter);files.update(assets)
                 # Include the viewer's textbook even if an older library catalogue omitted it.
-                for extra in [base+f'textbook/chapter-{number:02}.pdf',base+f'booklets/chapter-{number:02}.pdf']:
+                extras = [base+f'textbook/chapter-{number:02}.pdf']
+                if 'booklet' not in links:
+                    extras.append(base+f'booklets/chapter-{number:02}.pdf')
+                for extra in extras:
                     if extra in entries:files.add(extra)
             practice=[q for q in catalogue['questions'] if any(t['book']==book['id'] and t['chapter']==ch['id'] for t in q['targets'])]
             for skill in {q['skill'] for q in practice}:
