@@ -99,7 +99,18 @@
     return url.href;
   }
 
-  const api = {prepare,setTitle,bookletUrl};
+  function setChapterDocuments(value) {
+    const booklet = bookletUrl(value);
+    document.getElementById('booklet-chapter').href = booklet;
+    const link = document.getElementById('chapter-solutions');
+    const chapter = Object.values(root.LUISA_TEACHING).flatMap(book => book.chapters)
+      .find(item => new URL(item.booklet, document.baseURI).href === booklet);
+    link.hidden = !chapter?.solutions;
+    if (chapter?.solutions) link.href = chapter.solutions;
+    else link.removeAttribute('href');
+  }
+
+  const api = {prepare,setTitle,bookletUrl,setChapterDocuments};
   if (typeof module !== 'undefined') module.exports = api;
   root.LUISA_CONTROLS = api;
 })(typeof window === 'undefined' ? globalThis : window);

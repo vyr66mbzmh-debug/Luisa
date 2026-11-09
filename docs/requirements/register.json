@@ -4253,8 +4253,8 @@
       "requirement": "Load all 62 verified solution booklet PDFs into Luisa and expose a distinct Solutions action in every teaching chapter, each relevant chapter/topic under View by textbook, and the matching Development progress chapter row. Use one canonical solution resource per chapter and shared catalogue mappings, retaining student Booklet, Textbook and Practice resources as distinct actions. Never attach a solution to an unrelated topic or silently substitute a student PDF.",
       "scope": "all eight books, 62 teaching chapters and their mapped textbook topics",
       "priority": "P1",
-      "implementation": "not_started",
-      "verification": "pending",
+      "implementation": "implemented",
+      "verification": "local_pdf_hashes_verified_host_checks_pending",
       "acceptance": [
         "Validate 62 canonical solution PDF destinations and all three access surfaces; use topic/chapter associations rather than filename guessing.",
         "Use deployment-prefix-safe relative URLs, correct PDF MIME/body, in-app document navigation and return-to-origin behaviour.",
@@ -4264,7 +4264,8 @@
       ],
       "origin": "owner instruction 2026-11-09: solutions in Luisa",
       "evidence": [
-        "docs/handoff/V036-SOLUTIONS-INTEGRATION.md"
+        "docs/handoff/V036-SOLUTIONS-INTEGRATION.md",
+        "docs/evidence/v037-solutions.json"
       ]
     }
   ]

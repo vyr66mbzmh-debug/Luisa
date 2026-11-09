@@ -1,4 +1,5 @@
 'use strict';
+// v0.37 includes chapter solution PDFs.
 // Offline generations are immutable. One metadata write commits a complete download.
 const SCOPE=self.registration.scope;
 const PREFIX='luisa-offline-v1-'+encodeURIComponent(new URL(SCOPE).pathname)+'-';

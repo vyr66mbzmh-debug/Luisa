@@ -1,3 +1,7 @@
+## v0.37 chapter solutions
+
+The owner selected v0.37 for the solutions release. All 62 chapter PDFs match the repaired acceptance hashes across 1,496 pages. Teaching chapters, player controls, textbook topics, Development progress and offline chapter downloads use the corresponding solution resources. Both live deployments and physical-device checks require separate evidence.
+
 # Current handoff
 
 ## Next task: v0.36 solutions integration

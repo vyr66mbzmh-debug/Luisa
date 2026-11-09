@@ -94,13 +94,13 @@ def generate(root, entries, version):
             number=int(ch['id'])
             tc=next((c for c in teaching.get(tk,{}).get('chapters',[]) if c['number']==number),{})
             files=set(); unavailable=[]; links={}
-            for kind in ['slides','booklet','pdf','practice']:
+            for kind in ['slides','booklet','solutions','pdf','practice']:
                 url=tc.get(kind) or next((r.get('url') for r in ch['resources'] if r['type']==kind and r['access']=='available'),None)
                 if url:
                     path=local(url)
                     if not path:raise ValueError('Offline resource missing: '+url)
                     files.add(path);links[kind]=url
-                elif kind != 'practice':unavailable.append({'slides':'Teaching slides','booklet':'Student booklet','pdf':'Textbook chapter'}[kind])
+                elif kind != 'practice':unavailable.append({'slides':'Teaching slides','booklet':'Student booklet','solutions':'Solutions','pdf':'Textbook chapter'}[kind])
             for resource in ch['resources']:
                 if resource.get('access')=='available' and resource.get('url'):
                     path=local(resource['url'])
