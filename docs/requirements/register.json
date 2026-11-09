@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-08",
+  "asOf": "2026-11-09",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -4164,7 +4164,8 @@
       ],
       "origin": "owner instruction 2026-11-08",
       "evidence": [
-        "docs/evidence/v035-booklets.json"
+        "docs/evidence/v035-booklets.json",
+        "docs/handoff/BOOKLET-STANDARD.md"
       ]
     },
     {
@@ -4176,16 +4177,18 @@
       "verification": "agent_checked",
       "acceptance": [
         "Render and inspect all title panels and preserve subsequent student panels.",
-        "Copy all student PDFs to the existing eight-book owner folders and publish on both hosts."
+        "Copy all student PDFs to the existing eight-book owner folders and publish on both hosts.",
+        "The first coloured panel is the upper title panel of the first A4 page; the remaining teaching panels retain their accepted white background and #183957 banners."
       ],
       "origin": "owner approval 2026-11-08",
       "evidence": [
-        "docs/evidence/v036-booklets.json"
+        "docs/evidence/v036-booklets.json",
+        "docs/handoff/BOOKLET-STANDARD.md"
       ]
     },
     {
       "id": "BKT-036-SOLUTIONS",
-      "requirement": "Maintain a second, private booklet for every teaching chapter. Preserve the student booklet layout, chapter/page/slide order, questions and diagrams, fill concealed answer areas with the supplied revealed solutions in red text, and place red Solution immediately before each slide number while keeping the rest of its blue banner title white. Keep the eight-book folder structure in the private solution handout collection. Never publish these solution PDFs or their LaTeX originals. Supplied raster diagrams retain their original colours. Fit complete answer ink into the actual student PDF writing rectangles without clipping or obscuring question text; cap magnification to a readable size consistent with the student panel. On 8 November 2026 the owner stopped solution work and deferred completion to a different model. This release publishes student booklets only.",
+      "requirement": "Maintain a second, private booklet for every teaching chapter. Preserve the student booklet layout, chapter/page/slide order, questions and diagrams, fill concealed answer areas with the supplied revealed solutions in red text, and place red Solution immediately before each slide number while keeping the rest of its blue banner title white. Keep the eight-book folder structure in the private solution handout collection. Never publish these solution PDFs or their LaTeX originals. Supplied raster diagrams retain their original colours. Fit complete answer ink into the actual student PDF writing rectangles without clipping or obscuring question text; cap magnification to a readable size consistent with the student panel. On 8 November 2026 the owner stopped solution work and deferred completion to a different model. This release publishes student booklets only. On 9 November the owner requested a continuation brief for Astra with medium reasoning. Complete the private outputs under that next task and retain truthful unfinished statuses until verified.",
       "scope": "all current and future chapter slides and booklets",
       "priority": "P1",
       "implementation": "in_progress",
@@ -4196,7 +4199,9 @@
       ],
       "origin": "owner instruction 2026-11-08",
       "evidence": [
-        "docs/evidence/v036-booklets.json"
+        "docs/evidence/v036-booklets.json",
+        "docs/handoff/BOOKLET-STANDARD.md",
+        "docs/handoff/SOLUTIONS-NEXT-AGENT.md"
       ]
     },
     {
@@ -4209,11 +4214,33 @@
       "acceptance": [
         "Compile all LaTeX wrappers and verify page counts/layout against their source PDFs.",
         "Record slide source/output fingerprints; refresh all affected outputs after each change.",
-        "Keep reproduction sources and private solutions outside the public build."
+        "Keep reproduction sources and private solutions outside the public build.",
+        "Install verified current PDF/LaTeX/asset bundles at the documented eight-book paths and apply BKT-036-RETENTION after replacement."
       ],
       "origin": "owner clarification 2026-11-08",
       "evidence": [
-        "docs/evidence/v036-booklets.json"
+        "docs/evidence/v036-booklets.json",
+        "docs/handoff/BOOKLET-STANDARD.md"
+      ]
+    },
+    {
+      "id": "BKT-036-RETENTION",
+      "requirement": "Maintain latest-only generated booklet delivery collections. After verifying each replacement chapter PDF and LaTeX reproduction bundle, install the current canonical files and selectively delete superseded variants, temporary copies and obsolete reproduction assets for that chapter and requested collection. Preserve chapters outside the replacement set, required current reproduction assets and catalogue aliases, original PowerPoints/textbooks/reference materials and unrelated owner files. Apply the same selective rule to job-owned intermediate documents after acceptance. Follow the existing release-recovery retention policy.",
+      "scope": "all current and future generated student and private solution PDF/LaTeX handout collections",
+      "priority": "P1",
+      "implementation": "documented",
+      "verification": "required_on_replacement",
+      "acceptance": [
+        "Identify replacement files by exact course/year/chapter identity and an explicit manifest.",
+        "Verify PDF rendering/content, LaTeX compilation, installed hashes and references before removing superseded documents.",
+        "Keep one canonical current output and its required current reproduction assets for each replaced chapter.",
+        "Preserve all unselected chapters and read-only source references; update chapter acceptance truthfully."
+      ],
+      "origin": "owner instruction 2026-11-09",
+      "evidence": [
+        "docs/handoff/BOOKLET-STANDARD.md",
+        "docs/handoff/SOLUTIONS-NEXT-AGENT.md",
+        "HANDOFF.md"
       ]
     }
   ]
