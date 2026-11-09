@@ -135,7 +135,7 @@ def check(root=ROOT):
     destinations = []
     for book in catalogue(root).values():
         for chapter in book['chapters']:
-            for kind in ('slides', 'booklet', 'pdf'):
+            for kind in ('slides', 'booklet', 'solutions', 'pdf'):
                 if chapter.get(kind):
                     destinations.append(chapter[kind])
     for book in json.loads((root / 'textbook-catalogue.json').read_text())['books']:

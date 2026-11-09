@@ -10,7 +10,7 @@ from urllib.parse import urlsplit, unquote
 ROOT = Path(__file__).resolve().parents[1]
 BOOKS = {'Pure': 'maths-pure-year', 'Core Pure': 'further-core-pure',
          'Statistics': 'maths-applied-year', 'Mechanics': 'maths-applied-year'}
-RESOURCES = [('slides', 'Slides'), ('booklet', 'Booklet'), ('pdf', 'Textbook'),
+RESOURCES = [('slides', 'Slides'), ('booklet', 'Booklet'), ('solutions', 'Solutions'), ('pdf', 'Textbook'),
              ('practice', 'Practice chapter')]
 
 
@@ -92,7 +92,7 @@ if __name__ == '__main__':
         if '<title>Luisa v0.33 chapter progress</title>' in content:
             acceptance = json.loads((ROOT/'docs/evidence/v033-statistics.json').read_text())['chapters']
         release = None
-        if '<title>Luisa v0.36' in content:
+        if any(f'<title>Luisa v{v}' in content for v in ('0.36', '0.37')):
             release = json.loads((ROOT/'docs/evidence/v036-acceptance.json').read_text())['chapters']
         elif '<title>Luisa v0.35' in content:
             release = json.loads((ROOT/'docs/evidence/v035-acceptance.json').read_text())['chapters']
