@@ -49,7 +49,7 @@ Resolve the following paths from the `website` repository root. Its parent is th
 
 LaTeX originals are compilable PDF-backed reproduction documents with bundled PDF assets. The owner selected this format for token efficiency. Compile from each book's LaTeX folder and verify the resulting pages against the finished booklet. Content edits belong in the teaching source, followed by regeneration of the PDF and its reproduction bundle.
 
-Keep solution PDFs, LaTeX sources, reproduction assets, intermediate documents and machine-specific state in the private workspace. Public releases contain the student booklets and their catalogue links.
+Owner update, 9 November 2026: verified solution PDFs are now authorised for Luisa alongside student PDFs, with Solutions links in teaching chapters, relevant textbook topics and Development progress. Keep LaTeX sources, reproduction assets, original sources, intermediate documents and machine-specific state private. This supersedes earlier private-only instructions for solution PDFs.
 
 ## Latest-only replacement and selective deletion
 
@@ -72,3 +72,8 @@ Any changed slide or dependent teaching asset requires refreshed affected studen
 For scoped work, preserve prior fingerprint entries for unselected chapters. A changed unselected chapter requires a stale/needs-regeneration status. Acceptance must continue to refer to the source and output that were actually checked.
 
 Every release and development report starts with a visible Luisa website link. Website links use `./` so both the root deployment and ADA's `/AL/` deployment resolve correctly. Publication and final release email follow [the release workflow](../DEVOPS.md) and [FR-024](RELEASE-EMAIL.md).
+
+
+## Mandatory change propagation and PDF compatibility
+
+Every slide or dependent teaching-asset edit must update its student booklet AND solution booklet, both LaTeX wrappers/assets, owner copies and published PDF copies before renewing acceptance. Compare complete content, placement and diagrams, compile both reproductions, and test Apple Quartz/macOS Preview plus an independent PDF renderer. Per-text q/Q graphics-state wrappers caused glyph collapse in Quartz despite passing MuPDF; apply red colour in the source export or restore fill colour explicitly without wrapping each text operation in q/Q. The next integration task is specified in [V036-SOLUTIONS-INTEGRATION.md](V036-SOLUTIONS-INTEGRATION.md).

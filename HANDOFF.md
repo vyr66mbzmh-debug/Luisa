@@ -1,5 +1,10 @@
 # Current handoff
 
+## Next task: v0.36 solutions integration
+
+Read [V036-SOLUTIONS-INTEGRATION.md](docs/handoff/V036-SOLUTIONS-INTEGRATION.md). The owner now authorises verified solution PDFs in teaching chapters, relevant View by textbook topics and Development progress. This supersedes earlier private-only instructions for solution PDFs; LaTeX originals and source/audit materials remain private. Every slide change must refresh both student and solution booklets and their reproduction bundles. All 62 local solution bundles are complete and repaired for Apple Quartz; website integration is pending. v0.36 already exists, so follow the handoff version/cache instructions rather than treating it as a fresh unpublished release.
+
+
 Updated 9 November 2026. Read AGENTS.md and docs/agentic/LEAD-RULES.md, then the task-specific documents below.
 
 ## Booklet requirements and next solution task
