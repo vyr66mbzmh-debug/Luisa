@@ -4191,8 +4191,8 @@
       "requirement": "Maintain a matching solution booklet for every teaching chapter, preserving the accepted student composition, questions, diagrams and slide order. Print complete revealed working in red and red Solution immediately before each white slide number on its navy banner; preserve approved covers and original raster diagram colours/crops/aspect ratios. Every slide or dependent teaching-asset change must refresh the affected student PDF and solution PDF, both PDF-backed LaTeX reproduction bundles, owner copies and published copies before renewed chapter acceptance. On 9 November 2026 the owner authorised verified solution PDFs to be loaded into Luisa: expose them in teaching chapters, the relevant topic in View by textbook, and Development progress. This supersedes the earlier prohibition on publishing solution PDFs; LaTeX originals, authoring/source materials and private verification state remain private.",
       "scope": "all current and future chapter slides and booklets",
       "priority": "P1",
-      "implementation": "partial",
-      "verification": "local_booklets_checked_integration_pending",
+      "implementation": "implemented",
+      "verification": "both_hosts_and_browser_verified",
       "acceptance": [
         "Regenerate both affected booklet PDFs and both LaTeX/asset bundles after every slide or dependent-asset edit; update owner and published copies together.",
         "Verify complete working, readability, answer association, diagrams, banners and student-content preservation; invalidate old acceptance when source hashes change.",
@@ -4205,7 +4205,8 @@
         "docs/evidence/v036-booklets.json",
         "docs/handoff/BOOKLET-STANDARD.md",
         "docs/handoff/SOLUTIONS-NEXT-AGENT.md",
-        "docs/handoff/V036-SOLUTIONS-INTEGRATION.md"
+        "docs/handoff/V036-SOLUTIONS-INTEGRATION.md",
+        "docs/evidence/v037-release.json"
       ]
     },
     {
@@ -4254,7 +4255,7 @@
       "scope": "all eight books, 62 teaching chapters and their mapped textbook topics",
       "priority": "P1",
       "implementation": "implemented",
-      "verification": "local_pdf_hashes_verified_host_checks_pending",
+      "verification": "both_hosts_and_browser_verified",
       "acceptance": [
         "Validate 62 canonical solution PDF destinations and all three access surfaces; use topic/chapter associations rather than filename guessing.",
         "Use deployment-prefix-safe relative URLs, correct PDF MIME/body, in-app document navigation and return-to-origin behaviour.",
@@ -4265,7 +4266,8 @@
       "origin": "owner instruction 2026-11-09: solutions in Luisa",
       "evidence": [
         "docs/handoff/V036-SOLUTIONS-INTEGRATION.md",
-        "docs/evidence/v037-solutions.json"
+        "docs/evidence/v037-solutions.json",
+        "docs/evidence/v037-release.json"
       ]
     }
   ]

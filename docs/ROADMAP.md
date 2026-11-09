@@ -59,3 +59,5 @@ Product chapter backlog is derived from current catalogue availability, not old 
 - Existing dependency defects discovered during offline inventory: Pure Year 1 chapters 10 and 12 reference missing diagram assets. Their slides are explicitly excluded from offline packs; other available resources are identified. Do not claim complete offline slide availability for these chapters until repaired and rechecked.
 
 - **PWA-002 (v0.27):** Installed-app Back controls and local PDF reader implemented; automated online/offline root/AL checks pass. Physical iPad verification remains separate.
+
+v0.37 delivered 62 solutions in the teaching chapters, textbook topics, Development progress and offline packs. See docs/evidence/v037-release.json.
