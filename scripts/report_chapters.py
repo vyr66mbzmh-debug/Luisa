@@ -92,7 +92,7 @@ if __name__ == '__main__':
         if '<title>Luisa v0.33 chapter progress</title>' in content:
             acceptance = json.loads((ROOT/'docs/evidence/v033-statistics.json').read_text())['chapters']
         release = None
-        if any(f'<title>Luisa v{v}' in content for v in ('0.36', '0.37')):
+        if any(f'<title>Luisa v{v}' in content for v in ('0.36', '0.37', '0.38')):
             release = json.loads((ROOT/'docs/evidence/v036-acceptance.json').read_text())['chapters']
         elif '<title>Luisa v0.35' in content:
             release = json.loads((ROOT/'docs/evidence/v035-acceptance.json').read_text())['chapters']
