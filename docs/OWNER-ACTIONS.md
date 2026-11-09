@@ -12,7 +12,7 @@ Do not mark any provider setting complete until verified in that provider.
 | Cloudflare gate build / dist output | Configured 2026-11-02 | Command python3 scripts/luisa.py gate; output dist; Python 3.12.8 configured. Live production manifest verified revision 358d1be, version 0.24, clean. |
 | Secret Protection / push protection | Verified enabled 2026-11-02 | GitHub security settings show Secret Protection enabled and push protection on. Local pattern scan has a narrower scope. |
 | GitHub Project and roadmap issue | Created 2026-11-02 | Luisa development project #1, roadmap issue #2 and foundation PR #3. Status, Priority, PR and Wave fields; built-in item workflows; no new token required. |
-| GitHub CLI / integrations | CLI absent locally | Signed-in GitHub UI currently has owner access; connector is read-only. No credential widening is silently performed. |
+| GitHub CLI / integrations | CLI absent locally | Signed-in GitHub UI currently has owner access; connector can publish Luisa branches and pull requests. No credential widening is silently performed. |
 | v0.25 dual-host publication | Verified 2026-11-03 | PR #11; eb8cbb4 served by Cloudflare and ADA, identical 6,235-file manifests and 96 fetched resources per host. See docs/evidence/v025-release.json. |
 | v0.26 publication | Cloudflare verified; ADA skipped by owner | Owner confirms ADA is down. ADA work paused; retry with v0.27. No v0.26 ADA copy required. |
 | Private usage log | Implemented | Outside repository; exact task token usage remains unavailable unless provider reports it. |
@@ -24,3 +24,5 @@ Do not mark any provider setting complete until verified in that provider.
 | ADA retention | Latest release only | Superseded Luisa versions and archives removed by owner instruction; recovery remains outside ADA. |
 
 Secrets and private denylist phrases, if desired, must be entered by the owner through GitHub settings, never pasted into prompts or committed. This setup does not require an LLM key or any new deployment credential.
+
+The v0.37 solutions release passed both host checks. Physical iPad and smartboard checks remain with the owner.
