@@ -1,18 +1,31 @@
-# v0.36 student-only release scope
+# Current handoff
 
-Owner stopped all solution work on 8 November 2026 and will resume it with a different model. Publish the 62 approved student booklets only. Student title colours and 36pt bold white Georgia titles passed independent review. All 1,489 student pages retain their previous teaching content. The student owner copies and 62 PDF-backed LaTeX reproductions are complete.
+Updated 9 November 2026. Read AGENTS.md and docs/agentic/LEAD-RULES.md, then the task-specific documents below.
 
-BKT-036-SOLUTIONS and the solution portion of BKT-036-ORIGINALS remain deferred. Private solution PDFs and LaTeX files are unfinished drafts with known layout defects. Never report them accepted or publish them. The private SOLUTIONS-STOPPED-CHECKPOINT.json records the exact authoring state and known defects. Retain the requested solution preferences as requirements for the later model; they do not block this owner-authorised student-only release.
+## Booklet requirements and next solution task
 
-# Approved v0.36 cover and paired booklet workflow
+- [BOOKLET-STANDARD.md](docs/handoff/BOOKLET-STANDARD.md) is the consolidated design, filename, document-location and selective replacement specification. Apply BKT-035, BKT-036-COVER, BKT-036-SOLUTIONS, BKT-036-ORIGINALS and BKT-036-RETENTION from the canonical requirement register.
+- [SOLUTIONS-NEXT-AGENT.md](docs/handoff/SOLUTIONS-NEXT-AGENT.md) is the continuation brief requested for Astra with medium reasoning. It records prototype failures, regression cases and acceptance checks.
+- The private workspace map resolves machine-specific paths. Final student copies are in `../Students Handout/`; private solution copies belong in `../Student Handout Solutions/`. Each collection has `_Latex original/<Book>/` reproduction bundles and the same eight book folders.
+- The owner requires selective latest-only replacement. After a replacement chapter bundle is verified, install it at its canonical paths and delete that chapter's superseded generated PDF/LaTeX variants and obsolete assets. Preserve other chapters, original source materials and required current aliases/assets. The standard defines the full scope.
 
-BKT-036-COVER, BKT-036-SOLUTIONS and BKT-036-ORIGINALS apply to every future slide or booklet change. Keep the approved coloured first panel with white bold Georgia chapter title (nominal 36pt). Use #5A3838 for Statistics/Mechanics, #2E6B9E for Pure and #0E8A5A for Core Pure. Later panels keep their blue headers and white teaching areas.
+## Verified student baseline
 
-Every chapter requires the public student PDF and a matching private solution booklet. Preserve the student layout and add supplied revealed answers in red plus red Solution before each header number. Preserve all stages of the supplied working. Maintain the eight-book handout structures and _Latex original folders for both versions. Owner chose compilable PDF-backed LaTeX wrappers as the lowest-token reproduction format. These require their bundled PDF assets. Private solutions and LaTeX sources stay outside the website and release artifacts. The approved title panels remain title-only; the introductory note controls on Mechanics Year 1 Chapters 10 and 11 remain in the interactive slides.
+Luisa v0.36 student booklets were published on Cloudflare and ADA at `41d724dcdfa2acbe21b8b5f622bf2488de16d773`. Both live manifests matched all 7,811 files and 326 fetched resources per host. Saved v0.35 downloads updated to v0.36 and reopened offline. The recovery archive was verified, ADA's prior release removed after verification, and the final HTML Luisa Report was accepted by SMTP on 8 November 2026 at 22:01 UTC.
 
-After any slide change, compare source fingerprints, regenerate all affected student/solution PDFs, reproduce their LaTeX sources, refresh owner copies and recheck content, rendering, answers, page counts and links before acceptance. The private authoring entry point uses student.cjs and covers.py for the student version, solutions.cjs for per-field private working, red-text.py for red native text, fit-fields.py for fitting visible PDF ink into the exact student field rectangles, and merge-solutions.py for private PDFs. latex.py creates and compiles the reproduction originals. Run the accepted scripts directly; do not rebuild them from historical helper templates. Source/output fingerprints and verification records live in the configured private materials build directory. The owner corrected the new release version to v0.36. Release evidence is docs/evidence/v036-booklets.json.
+All 62 student booklets, 2,947 teaching panels and 1,489 A4 pages are the reference set. The coloured first panels were independently checked with white 36pt Georgia Bold titles. Later teaching content and owner copies were verified. The 62 student PDF-backed LaTeX reproduction originals compiled successfully. Evidence is docs/evidence/v036-booklets.json and docs/evidence/v036-acceptance.json. Physical print/device checks remain with the owner.
 
-All release and development reports must start with a visible Luisa website link, per owner instruction 2026-11-08. Use a relative ./ link so both hosts stay within their deployment prefix.
+## Private solution status
+
+The owner stopped solution work on 8 November and requested completion with another model. Existing private solution PDFs and their LaTeX sources remain unfinished drafts with known defects. Their counts and successful renders do not establish acceptance. The next agent can resume under the owner's solution-completion instruction using the dedicated brief.
+
+The private stop record is `../materials/build/output/v035-final/SOLUTIONS-STOPPED-CHECKPOINT.json`. Candidate authoring scripts live in `../materials/build/scripts/v035-final/`. They require inspection and correction. The latest per-field prototype stopped on Statistics Year 1 Chapter 2 slide 37 because hidden black text beneath an opaque student cover was misclassified as a caption. Explicit ownership also missed geometrically masked working. The brief records these issues and the PDF containment trial.
+
+Keep source/output fingerprints tied to the material actually checked. For scoped regeneration, preserve unselected entries and mark changed unselected chapters stale. Resume from verified source and per-chapter evidence before replacing private drafts.
+
+All release and development reports begin with a visible Luisa website link. Use `./` on website pages to preserve the ADA prefix.
+
+Legacy Maths questions are 3,423 / 3,423 (100%), with 132 / 132 sections.
 
 # v0.35 booklet standard
 
