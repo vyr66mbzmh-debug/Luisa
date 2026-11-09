@@ -13,7 +13,7 @@ from offline_manifest import BOOK_ALIASES
 class ChapterSolutions(unittest.TestCase):
     def test_chapters_use_accepted_solution_pdfs(self):
         teaching = catalogue()
-        evidence = json.loads((ROOT / 'docs/evidence/v037-solutions.json').read_text())
+        evidence = json.loads((ROOT / 'docs/evidence/v038-solutions.json').read_text())
         textbook = json.loads((ROOT / 'textbook-catalogue.json').read_text())
         progress = (ROOT / 'development-progress.html').read_text()
         seen = set()

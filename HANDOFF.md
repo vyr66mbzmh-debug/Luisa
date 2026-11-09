@@ -1,3 +1,7 @@
+## v0.38 solution covers
+
+Every chapter solution booklet has a red Solutions subtitle beneath its cover title. The 62 updated PDF fingerprints are in docs/evidence/v038-solutions.json. The owner collection and its PDF-backed LaTeX assets use these same files.
+
 ## v0.37 chapter solutions
 
 The owner selected v0.37 for the solutions release. All 62 chapter PDFs match the repaired acceptance hashes across 1,496 pages. Teaching chapters, player controls, textbook topics, Development progress and offline chapter downloads use the corresponding solution resources. Both live deployments and all 62 solution hashes were verified. The release evidence is in docs/evidence/v037-release.json. Physical-device checks remain with the owner.

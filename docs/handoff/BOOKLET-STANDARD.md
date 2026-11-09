@@ -19,7 +19,7 @@ Fill the entire title panel, including its integrated top banner, with the colou
 | Core Pure Year 1 | CorePure1 | Pure Core 1 | #0E8A5A, RGB(14, 138, 90) |
 | Core Pure Year 2 | CorePure2 | Pure Core 2 | #0E8A5A, RGB(14, 138, 90) |
 
-The white title-panel banner names the subject, year, chapter number and topic. For example, `Statistics Year 1 Chapter 1 - Data Collection`. The cover composition has no standalone slide-number marker. Keep the title-only design, including on the private solution cover.
+The white title-panel banner names the subject, year, chapter number and topic. For example, `Statistics Year 1 Chapter 1 - Data Collection`. The cover composition has no standalone slide-number marker. On solution booklets, centre the red subtitle “Solutions” beneath the chapter title. Student covers retain the title-only design.
 
 ## Teaching-panel banners and content
 
