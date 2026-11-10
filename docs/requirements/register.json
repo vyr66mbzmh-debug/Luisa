@@ -2912,10 +2912,10 @@
     },
     {
       "id": "FR-024",
-      "requirement": "Every published Luisa release requires an owner email report through the configured Luisa Reports SMTP sender. This is standing owner authorisation for every agent/provider and does not need to be repeated in each chat. Include the report body, HTML progress table and verified resource/report links; never silently omit email. No hourly or interim reports unless requested.",
+      "requirement": "Every published Luisa release requires an owner email report through the configured Luisa Reports SMTP sender. This is standing owner authorisation for every agent/provider and does not need to be repeated in each chat. Include the report body, HTML progress table and verified resource/report links; never silently omit email. No hourly or interim reports unless requested. For every new version, update the GitHub requirements, review and revise HANDOFF.md as needed, and append a version-tagged agent handoff to the Luisa Report.",
       "scope": "current",
       "priority": "P1",
-      "implementation": "not_assessed",
+      "implementation": "documented",
       "verification": "not_checked",
       "acceptance": [
         "After verifying publication on the required hosts, send one final report using the existing private mailSender adapter and configured sender/recipient in private state. Use subject Luisa v<actual version> report. Do not require Apple Mail, an unlocked desktop, or credentials pasted into chat.",
@@ -2924,11 +2924,14 @@
         "Include the live release-report and development-progress links, deployment/version verification, remaining work or limitations, honest available usage measurements, and legacy questions completed /3423, percentage and sections /132 separately from expanded indexes.",
         "Check links against the live release, including lesson JSON rather than HTML fallback responses, before sending. Never claim checked content without acceptance evidence.",
         "Record version, timestamp, send outcome and any error privately. SMTP acceptance is not proof of inbox delivery. If sending fails or private adapter/credentials are unavailable, preserve the prepared report and flag notification pending in handoff and final response; never claim email sent or all release tasks complete. Avoid duplicate sends by checking prior send evidence.",
-        "This standing instruction applies to ChatGPT, Claude and all other agents/new chats. An explicit owner instruction to defer or suppress a particular email overrides it. No automatic hourly/interim emails or new schedules."
+        "This standing instruction applies to ChatGPT, Claude and all other agents/new chats. An explicit owner instruction to defer or suppress a particular email overrides it. No automatic hourly/interim emails or new schedules.",
+        "Land the current requirements and evidence on GitHub, regenerate REQUIREMENTS.md and review HANDOFF.md for changes to the baseline, instructions or next work.",
+        "End the HTML and plain-text report with [LUISA-HANDOFF v<version>], the production revision, release state, evidence, open work, next authorised action, and commit-pinned links to the handoff and requirements. A new agent must be able to continue without prior chat history."
       ],
-      "origin": "owner-conversation-through-2026-11-01; reaffirmed 2026-11-05 mandatory cross-agent release email",
+      "origin": "owner-conversation-through-2026-11-01; reaffirmed 2026-11-05 mandatory cross-agent release email; owner instruction 2026-11-10 on release handoffs",
       "evidence": [
-        "2026-11-05: requirement and cross-agent handoff clarified; prior releases email delivery not reverified."
+        "2026-11-05: requirement and cross-agent handoff clarified; prior releases email delivery not reverified.",
+        "docs/handoff/RELEASE-EMAIL.md"
       ]
     },
     {
