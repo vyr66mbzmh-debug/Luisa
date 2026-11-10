@@ -1,5 +1,13 @@
 # Mandatory release email (FR-024)
 
+## Versioned agent handoff
+
+For each new version, update the applicable requirements, release status and evidence in GitHub's `docs/requirements/register.json`, regenerate `REQUIREMENTS.md` with `python3 scripts/luisa.py requirements`, and land the changes. Review `HANDOFF.md`; update it whenever the release changes the baseline, remaining work, next action, or instructions.
+
+End **both** report bodies with the visible heading `[LUISA-HANDOFF v<version>]`. Include the deployed revision, completed work and evidence, open work and its next authorised action (or say that the next owner assignment is pending). Include absolute links to the repository, handoff and requirements at the **merged documentation commit**, as well as the release report. Distinguish the production revision from a later documentation revision. The recipient can copy this section directly into a new agent chat.
+
+Before sending, check that the heading matches the release, the links resolve, and both bodies end with the same instructions. The release agent runs the configured sender. For an owner-requested amended resend, preserve the original receipt and record the amended submission separately.
+
 ## v0.29 release handoff
 Statistics Year 1 Chapter 2 uses the replacement 90-slide source and a 45-page student booklet. Slide 68 requires separate Midpoints, Mean and Standard deviation controls. Maintain these in both outputs. See docs/evidence/v029-acceptance.json.
 Every release must name implemented requirement IDs on Development progress, link to the chronological version log and include direct links to affected practice booklets alongside the teaching resources. Publish and verify Cloudflare and ADA, finish the recovery archive and handoff, then send the full HTML Luisa Report as the final release action. Only the private SMTP outcome record follows sending. Physical iPad confirmation is with the owner.

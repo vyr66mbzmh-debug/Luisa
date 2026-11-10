@@ -1,3 +1,15 @@
+# Current Luisa handoff
+
+<!-- LUISA-REPORT-HANDOFF v0.38 -->
+**Luisa v0.38 is live on Cloudflare and ADA.** Production revision `414c59161dead0f4b858e7168b5e136e25c90f85` adds a red Solutions subtitle to each of the 62 solution covers. Both hosts served the accepted PDF hashes. All 62 LaTeX bundles compiled, and comparisons across 1,496 pages found changes only in the cover subtitles. Implementation is complete. Physical-device checks remain with the owner.
+
+**Next agent:** Start from the latest `main` in `vyr66mbzmh-debug/Luisa`. Inspect the working tree and open issues, then read `AGENTS.md`, this handoff, `docs/agentic/LEAD-RULES.md` and the relevant IDs in `docs/requirements/register.json`. Pick up the next owner-assigned task. The earlier booklet-generation and integration briefs below are historical.
+
+For a slide change, refresh its student and solution PDFs together, compile both reproduction bundles, and follow `docs/handoff/BOOKLET-STANDARD.md`. For a release, update the GitHub requirements and evidence, refresh this handoff when the continuation instructions change, run `python3 scripts/luisa.py gate`, and verify the published revision and changed resources on both hosts. Follow `docs/handoff/RELEASE-EMAIL.md` to send the full Luisa Report with the tagged handoff at the end. The release agent runs the configured sender and records the SMTP result privately.
+<!-- END LUISA-REPORT-HANDOFF -->
+
+## Historical release notes
+
 ## v0.38 solution covers
 
 Every chapter solution booklet has a red Solutions subtitle beneath its cover title. The 62 updated PDF fingerprints are in docs/evidence/v038-solutions.json. The owner collection and its PDF-backed LaTeX assets use these same files.
@@ -6,9 +18,7 @@ Every chapter solution booklet has a red Solutions subtitle beneath its cover ti
 
 The owner selected v0.37 for the solutions release. All 62 chapter PDFs match the repaired acceptance hashes across 1,496 pages. Teaching chapters, player controls, textbook topics, Development progress and offline chapter downloads use the corresponding solution resources. Both live deployments and all 62 solution hashes were verified. The release evidence is in docs/evidence/v037-release.json. Physical-device checks remain with the owner.
 
-# Current handoff
-
-## Next task: v0.36 solutions integration
+## Historical v0.36 integration assignment
 
 Read [V036-SOLUTIONS-INTEGRATION.md](docs/handoff/V036-SOLUTIONS-INTEGRATION.md). The owner now authorises verified solution PDFs in teaching chapters, relevant View by textbook topics and Development progress. This supersedes earlier private-only instructions for solution PDFs; LaTeX originals and source/audit materials remain private. Every slide change must refresh both student and solution booklets and their reproduction bundles. All 62 local solution bundles are complete and repaired for Apple Quartz; website integration is pending. v0.36 already exists, so follow the handoff version/cache instructions rather than treating it as a fresh unpublished release.
 
@@ -28,7 +38,7 @@ Luisa v0.36 student booklets were published on Cloudflare and ADA at `41d724dcdf
 
 All 62 student booklets, 2,947 teaching panels and 1,489 A4 pages are the reference set. The coloured first panels were independently checked with white 36pt Georgia Bold titles. Later teaching content and owner copies were verified. The 62 student PDF-backed LaTeX reproduction originals compiled successfully. Evidence is docs/evidence/v036-booklets.json and docs/evidence/v036-acceptance.json. Physical print/device checks remain with the owner.
 
-## Private solution status
+## Historical private solution status
 
 The owner stopped solution work on 8 November and requested completion with another model. Existing private solution PDFs and their LaTeX sources remain unfinished drafts with known defects. Their counts and successful renders do not establish acceptance. The next agent can resume under the owner's solution-completion instruction using the dedicated brief.
 
