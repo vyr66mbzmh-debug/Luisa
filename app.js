@@ -7,8 +7,8 @@ function renderMath(root){for(const node of root.querySelectorAll('[data-math]')
 async function loadSkill(skill){if(contentCache.has(skill.id)){skill.questions=contentCache.get(skill.id);return;}let questions=window.FMQ_CONTENT?.[skill.id];if(!questions){const response=await fetch(new URL('content/'+encodeURIComponent(skill.id)+'.json',document.baseURI));if(!response.ok)throw Error('Unable to load '+skill.code+' ('+response.status+')');questions=await response.json();}if(questions.length!==skill.questions.length||questions.some(q=>!q.question||(!q.reference&&!q.steps?.length)))throw Error('Incomplete skill '+skill.code);contentCache.set(skill.id,questions);skill.questions=questions;}
 const key=s=>[s.course,s.book,s.topic,s.skill].join('/');
 const isEdexcelOnly=(courseId=current?.course)=>courseId!=='maths-a-level'&&Boolean($('edexcel-only').checked);
-function openPrintout(path){if(!path)return;if(window.LUISA_NAVIGATION?.openDocument(path,'Question booklet'))return;const link=document.createElement('a');link.href=path;link.target='_blank';link.rel='noopener';link.click();}
-function printPath(kind){const r=resolve(current);if(r.course.id==='maths-a-level')return kind==='topic'?r.topic.printoutPath:r.skill.printoutPath;if(kind==='topic')return r.topic.edexcelPrintoutPath;return `printouts/${r.book.id}/${r.topic.id}/skills/${r.skill.id}_${r.skill.code==='1.28'?'v03':'v02'}.pdf`;}
+function openPrintout(path,title='Question booklet'){if(!path)return;if(window.LUISA_NAVIGATION?.openDocument(path,title))return;const link=document.createElement('a');link.href=path;link.target='_blank';link.rel='noopener';link.click();}
+function printPath(kind){const r=resolve(current);if(kind==='solutions')return r.skill.solutionsResource;if(r.course.id==='maths-a-level')return kind==='topic'?r.topic.printoutPath:r.skill.printoutPath;if(kind==='topic')return r.topic.edexcelPrintoutPath;return `printouts/${r.book.id}/${r.topic.id}/skills/${r.skill.id}_${r.skill.code==='1.28'?'v03':'v02'}.pdf`;}
 function resolve(s={}){
  const course=library.courses.find(x=>x.id===s.course)||library.courses[0];
  const book=course.books.find(x=>x.id===s.book)||course.books[0];
@@ -32,7 +32,7 @@ async function navigate(s,record=true){
  const textbookLink=document.getElementById('textbook-view-link');if(textbookLink)textbookLink.href='textbook-view.html#'+new URLSearchParams({course:next.course,book:next.book,fromSkill:next.skill,fromQuestion:String(next.question)});
  $('breadcrumbs').textContent=[r.course.title,r.book.title,r.topic.title].join(' › ');
  $('skilltitle').textContent=`${r.skill.code} ${r.skill.title}`;
- $('print-topic').disabled=!printPath('topic');$('print-skill').disabled=r.course.id==='maths-a-level'&&!r.skill.printoutPath;
+ $('print-topic').disabled=!printPath('topic');$('print-skill').disabled=r.course.id==='maths-a-level'&&!r.skill.printoutPath;$('skill-solutions').disabled=!printPath('solutions');
  $('print-topic').setAttribute('aria-label',`Print ${r.topic.title} topic`);$('print-skill').setAttribute('aria-label',`Print ${r.skill.title} skill`);
  const selected=r.skill.questions[next.question-1];$('qtitle').textContent=!r.skill.available?'Awaiting conversion':selected?.reference?'Reference tables':selected?.supplementary?`Additional worked solution ${selected.number}`:`Question ${next.question} of ${r.skill.questionCount}`;
  $('focus-question-number').textContent=$('qtitle').textContent;
@@ -72,6 +72,7 @@ function renderSolution(){
 $('edexcel-only').onchange=()=>navigate({...current});
 $('print-topic').onclick=()=>openPrintout(printPath('topic'));
 $('print-skill').onclick=()=>openPrintout(printPath('skill'));
+$('skill-solutions').onclick=()=>openPrintout(printPath('solutions'),'Skill solutions');
 $('course').onchange=()=>navigate({course:$('course').value});
 $('book').onchange=()=>navigate({course:current.course,book:$('book').value});
 $('topic').onchange=()=>navigate({course:current.course,book:current.book,topic:$('topic').value});
