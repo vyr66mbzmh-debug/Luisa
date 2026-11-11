@@ -78,9 +78,9 @@ def generate(root, entries, version):
             for topic in book['topics']:
                 for skill in topic['skills']:
                     if course['id']=='maths-a-level':
-                        urls=[topic.get('printoutPath'),skill.get('printoutPath'),skill.get('solutionsResource')]
+                        urls=[topic.get('printoutPath'),skill.get('printoutPath')]
                     else:
-                        urls=[topic.get('edexcelPrintoutPath'),f"printouts/{book['id']}/{topic['id']}/skills/{skill['id']}_{'v03' if skill['code']=='1.28' else 'v02'}.pdf",skill.get('solutionsResource')]
+                        urls=[topic.get('edexcelPrintoutPath'),f"printouts/{book['id']}/{topic['id']}/skills/{skill['id']}_{'v03' if skill['code']=='1.28' else 'v02'}.pdf"]
                     paths=set()
                     for url in filter(None,urls):
                         path=local(url)
