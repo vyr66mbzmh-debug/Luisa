@@ -2916,7 +2916,7 @@
       "scope": "current",
       "priority": "P1",
       "implementation": "documented",
-      "verification": "not_checked",
+      "verification": "documented",
       "acceptance": [
         "After verifying publication on the required hosts, send one final report using the existing private mailSender adapter and configured sender/recipient in private state. Use subject Luisa v<actual version> report. Do not require Apple Mail, an unlocked desktop, or credentials pasted into chat.",
         "Include the full report body in HTML plus a plain-text alternative, not just a report link. Identify each delivered chapter by full textbook name, chapter number and title, with verified teaching-slide and booklet links and slide/booklet-page counts.",
@@ -2940,16 +2940,19 @@
       "scope": "all 269 active skill entries in standard and Further Maths",
       "priority": "P1",
       "implementation": "implemented",
-      "verification": "local_gate_passed",
+      "verification": "both_hosts_and_browser_verified",
       "acceptance": [
         "Every active skill has one distinct solutionsResource pointing to the PDF paired with its exact LaTeX solution source in the approved Latex files tree.",
         "No upstream/backup_originals PDFs are copied into the website.",
         "A Skill solutions action opens the matching PDF with prefix-safe navigation.",
-        "Offline skill downloads include the matching solution PDF."
+        "Offline skill downloads include the matching solution PDF.",
+        "Production revision 9584cbf3ec282db65bee515c5bd11bf348d5a207 is present in the live build manifest on Cloudflare and ADA.",
+        "All 269 live solution PDFs return application/pdf and match the approved source PDF byte counts and SHA-256 fingerprints on both hosts."
       ],
       "origin": "owner instruction 2026-11-11",
       "evidence": [
-        "skill-solutions-source-manifest.json"
+        "skill-solutions-source-manifest.json",
+        "docs/evidence/v039-release.json"
       ]
     },
     {

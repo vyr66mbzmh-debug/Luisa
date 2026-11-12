@@ -1,0 +1,68 @@
+{
+  "version": "0.39",
+  "productionRevision": "9584cbf3ec282db65bee515c5bd11bf348d5a207",
+  "productionMergedAt": "2026-11-11T23:46:10Z",
+  "verifiedAt": "2026-11-11T23:57:17Z",
+  "requirements": [
+    "FR-024",
+    "FR-025",
+    "OPS-002"
+  ],
+  "artifact": {
+    "version": "0.39",
+    "revision": "9584cbf3ec282db65bee515c5bd11bf348d5a207",
+    "dirty": false,
+    "manifestSha256": "cccd00cabec8f847974f11301cac5150ca007d2cc076b8efb581625050da0429",
+    "manifestFiles": 8145,
+    "manifestPayloadBytes": 1717041631
+  },
+  "sourceManifest": {
+    "path": "skill-solutions-source-manifest.json",
+    "sha256": "6eba3d70350dfe2e081e1b8bb8ea71c7c4ba75c842f499db143181616f51952c",
+    "solutionPDFs": 269,
+    "standardMaths": 132,
+    "furtherMaths": 137,
+    "sourcePDFsMatchedExactly": 269,
+    "latexPairsMatchedExactly": 269,
+    "upstreamBackupOriginalsUsed": 0
+  },
+  "hosts": [
+    {
+      "name": "Cloudflare Pages",
+      "url": "https://fmq-6d9.pages.dev/",
+      "version": "0.39",
+      "manifestRevision": "9584cbf3ec282db65bee515c5bd11bf348d5a207",
+      "manifestSha256": "cccd00cabec8f847974f11301cac5150ca007d2cc076b8efb581625050da0429",
+      "manifestFiles": 8145,
+      "manifestDirty": false,
+      "skillSolutions": {
+        "fetched": 269,
+        "pdfContentType": 269,
+        "bytesAndSha256MatchSourceManifest": 269
+      }
+    },
+    {
+      "name": "ADA",
+      "url": "https://adazmq.marlboroughcollege.org/AL/",
+      "version": "0.39",
+      "manifestRevision": "9584cbf3ec282db65bee515c5bd11bf348d5a207",
+      "manifestSha256": "cccd00cabec8f847974f11301cac5150ca007d2cc076b8efb581625050da0429",
+      "manifestFiles": 8145,
+      "manifestDirty": false,
+      "skillSolutions": {
+        "fetched": 269,
+        "pdfContentType": 269,
+        "bytesAndSha256MatchSourceManifest": 269
+      }
+    }
+  ],
+  "checks": [
+    "Local python3 scripts/luisa.py gate passed at production revision.",
+    "Cloudflare and ADA build-manifest.json SHA-256 values exactly match the checked local artifact.",
+    "All 269 skill PDFs returned HTTP 200 with application/pdf and matched byte counts and SHA-256 values from skill-solutions-source-manifest.json on each host.",
+    "Cloudflare live interface displayed the Skill solutions action beside Print topic and Print skill for a selected skill.",
+    "ADA current release manifest verified on the server before activation; staged complete artifact matched every build-manifest hash; previous ADA v0.38 tree removed after live verification.",
+    "Owner physical smartboard checks remain pending."
+  ],
+  "physicalDeviceChecks": "Owner-side smartboard confirmation pending"
+}
