@@ -119,6 +119,7 @@ def create_app(overrides: dict | None = None) -> Flask:
         DATABASE_PATH=os.environ.get('LUISA_STUDENT_DATABASE', ''),
         ADMIN_PASSWORD_HASH=os.environ.get('LUISA_ADMIN_PASSWORD_HASH', ''),
         TEACHER_SETUP=os.environ.get('LUISA_TEACHER_SETUP') == '1',
+        PUBLIC_ORIGIN=os.environ.get('LUISA_PUBLIC_ORIGIN', 'https://adazmq.marlboroughcollege.org'),
         ADMIN_AUTH_MODE=os.environ.get('LUISA_ADMIN_AUTH_MODE', 'totp'),
         ADMIN_TOTP_SECRET=os.environ.get('LUISA_ADMIN_TOTP_SECRET', ''),
         SCHOOL_YEAR=os.environ.get('LUISA_SCHOOL_YEAR', '2026-27'),
@@ -629,7 +630,7 @@ def create_app(overrides: dict | None = None) -> Flask:
                 WHERE school_number=?""", (_PH.hash(password), row['school_number']))
             slips.append((row, password))
         if slips:
-            page = render_template_string(SLIPS_PAGE, slips=slips, link=url_for('login', _external=True))
+            page = render_template_string(SLIPS_PAGE, slips=slips, link=app.config['PUBLIC_ORIGIN'].rstrip('/') + url_for('login'))
             conn.commit()
             return page
         conn.rollback()

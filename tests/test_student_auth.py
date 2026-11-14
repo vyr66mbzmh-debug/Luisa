@@ -144,6 +144,8 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.post_form(self.admin, '/admin/roster', {'numbers': '09999', 'class_code': 'B'})
         slips = self.post_form(self.admin, '/admin/slips', {'class_code': 'A'})
         sheet = slips.get_data(as_text=True)
+        self.assertIn('https://adazmq.marlboroughcollege.org/login', sheet)
+        self.assertNotIn('https://ada.test/login', sheet)
         self.assertNotIn('09999', sheet)
         passwords = re.findall(r'<code>([^<]+)</code>', sheet)
         self.assertEqual(len(set(passwords)), 2)
