@@ -388,6 +388,13 @@ def check_artifact(directory, profile, root=ROOT):
     if manifest.get('edition') != profile:
         raise ValueError(f'Expected {profile} artifact, got {manifest.get("edition")}')
     files = set(manifest.get('files', {}))
+    library = json.loads((directory / 'data.js').read_text().split('=', 1)[1].strip().rstrip(';'))
+    downloads = library['printDownloads']
+    if not downloads or len(downloads) != len(set(downloads.values())):
+        raise ValueError('Missing or ambiguous named print downloads')
+    for source, alias in downloads.items():
+        if source not in files or alias not in files or manifest['files'][source] != manifest['files'][alias]:
+            raise ValueError('Named PDF differs from its original: ' + alias)
     if profile == 'student':
         restricted_urls, restricted_hashes = student_restricted_pdfs(root)
         forbidden_names = [n for n in files if n in restricted_urls]
@@ -403,6 +410,9 @@ def check_artifact(directory, profile, root=ROOT):
             path = directory / name
             if path.suffix.lower() in {'.html', '.json', '.js'}:
                 text = path.read_text(errors='ignore')
+                if path.suffix == '.html' and (text.count('class="luisa-signout"') != 1 or
+                        re.search(r'''href=["'][^"']*development-progress\.html''', text, re.I)):
+                    raise ValueError('Student navigation is missing sign-out or exposes the development report: ' + name)
                 if re.search(r'(?:fmq-6d9\.pages\.dev|adazmq\.marlboroughcollege\.org|github\.com/vyr66mbzmh-debug/Luisa|classpad\.net/note/)', text, re.I):
                     raise ValueError('Student artifact contains a direct owner/CG100 link: ' + name)
                 if re.search(r'href=["\'][^"\']*offline\.html', text, re.I):
