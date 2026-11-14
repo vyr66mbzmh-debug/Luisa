@@ -781,7 +781,7 @@ def create_app(overrides: dict | None = None) -> Flask:
     def course_page(target):
         page = target.read_text(encoding='utf-8')
         identity = g.luisa_session['school_number'] or g.luisa_session['staff_username']
-        return page.replace('<!--luisa-account-name-->', escape(identity) + ' · ')
+        return page.replace('<!--luisa-account-name-->', escape(identity))
 
     @app.get('/<path:asset>')
     def private_asset(asset: str):

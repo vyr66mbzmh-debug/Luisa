@@ -307,7 +307,18 @@ def student_content(name, content, restricted_urls, restricted_hashes, root, *, 
                 text = re.sub(r'(<html\b[^>]*)(>)', r'\1 data-luisa-edition="student"\2', text, count=1, flags=re.I)
                 text = re.sub(r"""<a\b[^>]*href=["'][^"']*development-progress\.html(?:[?#][^"']*)?["'][^>]*>.*?</a>""", '', text, flags=re.I|re.S)
             logout = '../' * (len(path.parts) - 1) + 'logout'
-            account_link = f'<a class="luisa-signout" target="_top" href="{logout}" style="color:inherit;white-space:nowrap;margin-left:auto"><!--luisa-account-name-->Sign out</a>'
+            # Keep the displayed identity outside the icon's accessible name.
+            account_link = (
+                '<span style="display:inline-flex;align-items:center;gap:8px;margin-inline-start:auto">'
+                '<span class="luisa-account"><!--luisa-account-name--></span>'
+                f'<a class="luisa-signout" href="{logout}" target="_top" aria-label="Sign out" title="Sign out" '
+                'style="display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;'
+                'width:37px;height:35px;padding:0;background:#102b43;color:#f0d6a1;'
+                'border:1px solid #b69a65;border-radius:6px">'
+                '<svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true" fill="none" '
+                'stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+                '<path d="M10 4H5v16h5m-1-8h12m-4-4 4 4-4 4"/></svg></a></span>'
+            )
             if '<!--edition-account-->' in text:
                 text = text.replace('<!--edition-account-->', account_link, 1)
             elif '</header>' in text:
