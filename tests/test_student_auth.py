@@ -184,7 +184,32 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(self.student_login(login, new).location, '/')
         self.assertEqual(self.client.get('/admin', base_url='https://ada.test').status_code, 403)
         self.assertEqual(self.client.get('/', base_url='https://ada.test').status_code, 200)
+        second = self.app.test_client()
+        def attempt(address):
+            return self.post_form(second, '/login', {'email': address, 'password': new})
+        self.assertEqual(attempt(login + '@marlboroughcollege.org.evil').status_code, 401)
+        self.assertEqual(attempt(login.upper() + '@MARLBOROUGHCOLLEGE.ORG').location, '/')
+        for device in (self.client, second):
+            self.assertEqual(device.get('/', base_url='https://ada.test').status_code, 200)
+        admin = self.admin.get('/admin', base_url='https://ada.test').get_data(as_text=True)
+        self.assertIn('<h2>Staff accounts</h2>', admin)
+        self.assertIn('<td>' + login + '</td>', admin)
         self.assertIsNone(self.database_account(login))
+
+    def test_latest_success_replaces_only_prior_pupil_session(self):
+        number, password = '02340', 'Eight-or-more'
+        self.add(number)
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('UPDATE accounts SET password_hash=? WHERE school_number=?', (PasswordHasher().hash(password), number))
+        second = self.app.test_client()
+        def enter(device, secret):
+            return self.post_form(device, '/login', {'email': number + '@marlboroughcollege.org', 'password': secret})
+        self.assertEqual(enter(self.client, password).location, '/')
+        self.assertEqual(enter(second, 'incorrect').status_code, 401)
+        self.assertEqual(self.client.get('/', base_url='https://ada.test').status_code, 200)
+        self.assertEqual(enter(second, password).location, '/')
+        self.assertEqual(self.client.get('/', base_url='https://ada.test').location, '/login')
+        self.assertEqual(second.get('/', base_url='https://ada.test').status_code, 200)
 
     def test_roster_leading_zero_duplicates_and_mfa_admin(self):
         self.add('02340\n23401')

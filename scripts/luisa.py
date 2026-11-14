@@ -217,7 +217,6 @@ def student_content(name, content, restricted_urls, restricted_hashes, root):
         return (json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n').encode()
     if path.name == 'teaching-chapters.html':
         text = content.decode('utf-8').replace(",['Book chapter','pdf']", '')
-        text = text.replace('All textbook chapters are listed below.', 'Luisa teaching and practice chapters are listed below.')
         content = text.encode('utf-8')
     if path.name == 'textbook-view.js':
         text = content.decode('utf-8').replace('Available teaching slides, book chapters and handouts remain accessible above.', 'Available teaching slides and handouts remain accessible above.')
@@ -225,7 +224,6 @@ def student_content(name, content, restricted_urls, restricted_hashes, root):
     if path.name == 'index.html':
         text = content.decode('utf-8')
         text = re.sub(r'<a\b(?=[^>]*id=["\']book-chapter["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
-        text = text.replace('</nav><a href="./teaching-chapters.html"', '</nav><a style="color:inherit" href="logout">Sign out</a><a href="./teaching-chapters.html"')
         content = text.encode('utf-8')
     if path.name == 'lesson-resources.js':
         text = content.decode('utf-8')
@@ -303,8 +301,19 @@ def student_content(name, content, restricted_urls, restricted_hashes, root):
                 return match.group(0)
             text = re.sub(r'<a\b[^>]*>.*?</a\s*>', remove_restricted_anchor, text, flags=re.I|re.S)
             text = re.sub(r'(<html\b[^>]*)(>)', r'\1 data-luisa-edition="student"\2', text, count=1, flags=re.I)
-            if path.name in {'index.html', 'textbook-view.html', 'teaching-chapters.html'}:
-                text = text.replace('v0.39</a>', 'v0.40</a>')
+            text = re.sub(r"""<a\b[^>]*href=["'][^"']*development-progress\.html(?:[?#][^"']*)?["'][^>]*>.*?</a>""", '', text, flags=re.I|re.S)
+            logout = '../' * (len(path.parts) - 1) + 'logout'
+            account_link = f'<a class="luisa-signout" target="_top" href="{logout}" style="color:inherit;white-space:nowrap;margin-left:auto"><!--luisa-account-name-->Sign out</a>'
+            if '</header>' in text:
+                end = text.index('</header>')
+                if path == Path('index.html'):
+                    end = text.rindex('</div>', 0, end)
+                text = text[:end] + account_link + text[end:]
+            else:
+                nav = '<nav style="text-align:right;padding:.5rem 1rem">' + account_link + '</nav>'
+                text, count = re.subn(r'<body\b[^>]*>', lambda m: m[0] + nav, text, count=1, flags=re.I)
+                if not count:
+                    text = text.replace('</head>', '</head>' + nav, 1) if '</head>' in text else nav + text
         if path.name == 'app.js':
             registration = "if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('sw.js').catch(()=>{});"
             cleanup = """if ('serviceWorker' in navigator && location.protocol !== 'file:') {
@@ -356,6 +365,8 @@ def build(root=ROOT, output=None, profile='owner'):
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(content)
         entries[name] = {'sha256': hashlib.sha256(content).hexdigest(), 'bytes': len(content)}
+    from print_downloads import prepare_print_downloads
+    prepare_print_downloads(output, entries)
     if profile == 'owner':
         from offline_manifest import generate
         generate(output, entries, json.loads((root / 'release.json').read_text())['version'])

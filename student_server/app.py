@@ -3,6 +3,7 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta, timezone
 from functools import wraps
+from html import escape
 from hashlib import sha256
 import hmac
 import json
@@ -28,15 +29,20 @@ _SIGN_IN = re.compile(r"[0-9]{5}@marlboroughcollege\.org\Z", re.ASCII | re.IGNOR
 _UTC = timezone.utc
 _UK = ZoneInfo('Europe/London')
 
+PDF_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>{{ title }}</title><style>body{margin:0;height:100dvh;display:flex;flex-direction:column;font:16px system-ui}
+nav{display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;background:#183957}a{color:white}
+iframe{width:100%;border:0;flex:1}</style><nav><a href="{{ file }}?download=1" download>Download PDF</a>
+<a href="{{ url_for('confirm_logout') }}" target=_top>Sign out</a></nav><iframe src="{{ file }}?inline=1" title="{{ title }}"></iframe></html>"""
 LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Luisa sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>School email or staff username<input name=email type=text autocomplete=username required maxlength=64></label><label>Luisa password<input name=password type=password autocomplete=current-password required maxlength=1024></label><button>Sign in</button></form><p><a href="{{ url_for('admin_login') }}">Admin sign in</a></p></html>"""
 ADMIN_LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa administration sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Teacher sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>Username<input name=username value=admin autocomplete=username required></label><label>Teacher password<input name=password type=password autocomplete=current-password required maxlength=1024></label>{% if config.ADMIN_AUTH_MODE == "totp" %}<label>Authenticator code<input name=totp inputmode=numeric autocomplete=one-time-code required pattern='[0-9]{6}'></label>{% endif %}<button>Sign in</button></form></html>"""
-CHANGE_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Change Luisa password</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Choose a new Luisa password</h1><p>Change your temporary password before opening course content.</p>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>New password<input name=password type=password autocomplete=new-password required minlength=8 maxlength=1024></label><label>Repeat new password<input name=confirm type=password autocomplete=new-password required minlength=8 maxlength=1024></label><button>Save password</button></form></html>"""
+CHANGE_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Change Luisa password</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><p style="text-align:right"><a href="{{ url_for('confirm_logout') }}">Sign out</a></p><h1>Choose a new Luisa password</h1><p>Change your temporary password before opening course content.</p>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>New password<input name=password type=password autocomplete=new-password required minlength=8 maxlength=1024></label><label>Repeat new password<input name=confirm type=password autocomplete=new-password required minlength=8 maxlength=1024></label><button>Save password</button></form></html>"""
 TEACHER_PASSWORD_PAGE = """<!doctype html><html lang=en><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><title>Change teacher password · Luisa</title>
 <style>body{font:17px/1.5 system-ui;color:#183957;max-width:32rem;margin:6vh auto;padding:1.5rem}
 label,input,button{display:block}input,button{box-sizing:border-box;width:100%;padding:.7rem;font:inherit}
 label{margin:1rem 0}button{background:#183957;color:white;border:0;border-radius:.3rem}[role=alert]{color:#8b2020}</style>
-<a href="{{ url_for('admin_home') }}">Back to student accounts</a><h1>Change teacher password</h1>
+<a href="{{ url_for('admin_home') }}">Back to student accounts</a> · <a href="{{ url_for('confirm_logout') }}">Sign out</a><h1>Change teacher password</h1>
 {% if error %}<p role=alert>{{ error }}</p>{% endif %}
 <form method=post><input type=hidden name=_csrf value='{{ csrf }}'>
 <label>Current teacher password<input name=current type=password autocomplete=current-password required maxlength=1024></label>
@@ -48,12 +54,12 @@ SLIPS_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=view
 <title>Luisa password slips</title><style>@page{size:A4;margin:12mm}body{font:16px/1.45 system-ui;color:#183957}
 main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}article{border:1px dashed #778;padding:5mm;break-inside:avoid;overflow-wrap:anywhere}
 h2,p{margin:.4em 0}code{font-size:1.1em}nav{margin:1em}button{font:inherit}@media print{nav{display:none}main{display:block}article{display:inline-block;vertical-align:top;width:49%;box-sizing:border-box}}</style>
-<nav><button onclick="window.print()">Print slips</button> <a href="{{ url_for('admin_home') }}">Back to student accounts</a></nav>
+<nav><button onclick="window.print()">Print slips</button> <a href="{{ url_for('admin_home') }}">Back to student accounts</a> · <a href="{{ url_for('confirm_logout') }}">Sign out</a></nav>
 <main>{% for row, password in slips %}<article><h2>Luisa · {{ row.school_number }}</h2><p>{{ link }}</p>
 <p>School email<br>{{ row.school_number }}@marlboroughcollege.org</p><p>First password<br><code>{{ password }}</code></p>
 <p>Sign in once, then choose your own Luisa password.</p></article>{% endfor %}</main></html>"""
 
-ADMIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa account administration</title><style>body{font:16px/1.5 system-ui;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#183957}table{border-collapse:collapse;width:100%;margin:1.5rem 0}td,th{border:1px solid #ccd5df;padding:.5rem;text-align:left}button,input,textarea{font:inherit;padding:.45rem;margin:.2rem}form{display:inline}section{padding:1rem;border:1px solid #ccd5df;margin:1rem 0}.notice{background:#edf5fb;padding:.8rem}.secret{font:1.15rem monospace;overflow-wrap:anywhere}small{color:#526575}</style><h1>Luisa student accounts</h1><p><a href='{{ url_for("teacher_password") }}'>Change teacher password</a> · <a href='{{ url_for("logout") }}' onclick="event.preventDefault();document.getElementById('logout').submit()">Sign out</a><form id=logout method=post action='{{ url_for("logout") }}'><input type=hidden name=_csrf value='{{ csrf }}'></form></p>{% if notice %}<p class=notice role=status>{{ notice }}</p>{% endif %}{% if temp_password %}<section><b>Give this temporary password to pupil {{ temp_school_number }} privately. It works until the first successful sign-in or until you replace it.</b><p class=secret>{{ temp_password }}</p></section>{% endif %}<section><h2>Class password slips</h2><form method=post action='{{ url_for("issue_slips") }}'><input type=hidden name=_csrf value='{{ csrf }}'><label>Class <select name=class_code><option value="">All classes</option>{% for code in classes %}<option>{{ code }}</option>{% endfor %}</select></label><button>Create printable slips</button></form><p>Creates one slip for each active pupil who has never been issued a password. Print the sheet before closing it. To replace a lost slip, issue a new password on the pupil’s row.</p></section><section><h2>Add school numbers</h2><form method=post action='{{ url_for("add_roster") }}'><input type=hidden name=_csrf value='{{ csrf }}'><label>Class (optional) <input name=class_code maxlength=12></label><label>One per line; leading zeroes are preserved<br><textarea name=numbers rows=5 cols=24 required></textarea></label><button>Add roster entries</button></form></section><table><thead><tr><th>Class</th><th>School number</th><th>Cohort</th><th>Access</th><th>Latest successful sign-in</th><th>Account controls</th></tr></thead><tbody>{% for row in rows %}<tr><td>{{ row.class_code }}</td><td>{{ row.number }}</td><td>{{ row.cohort }}</td><td>{{ 'Active' if row.active else 'Suspended' }}{% if row.force_change %} · password change required{% endif %}</td><td>{{ row.last_sign_in }}</td><td><form method=post action='{{ url_for("account_action") }}'><input type=hidden name=_csrf value='{{ csrf }}'><input type=hidden name=school_number value='{{ row.number }}'><select name=action><option value=reset>Issue temporary password</option><option value=force>Force password change</option><option value=suspend>Suspend</option><option value=reactivate>Reactivate</option><option value=revoke>Revoke sessions</option></select><label>Optional temporary password <input name=chosen_password type=password minlength=8 maxlength=128 autocomplete=off></label><button>Apply</button></form></td></tr>{% endfor %}</tbody></table><p><small>Only the latest successful student sign-in is displayed. UK local time. Student names and dates of birth are not collected.</small></p></html>"""
+ADMIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa account administration</title><style>body{font:16px/1.5 system-ui;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#183957}table{border-collapse:collapse;width:100%;margin:1.5rem 0}td,th{border:1px solid #ccd5df;padding:.5rem;text-align:left}button,input,textarea{font:inherit;padding:.45rem;margin:.2rem}form{display:inline}section{padding:1rem;border:1px solid #ccd5df;margin:1rem 0}.notice{background:#edf5fb;padding:.8rem}.secret{font:1.15rem monospace;overflow-wrap:anywhere}small{color:#526575}</style><h1>Luisa student accounts</h1><p><a href='{{ url_for("teacher_password") }}'>Change teacher password</a> · <a href='{{ url_for("logout") }}' onclick="event.preventDefault();document.getElementById('logout').submit()">Sign out</a><form id=logout method=post action='{{ url_for("logout") }}'><input type=hidden name=_csrf value='{{ csrf }}'></form></p>{% if notice %}<p class=notice role=status>{{ notice }}</p>{% endif %}{% if temp_password %}<section><b>Give this temporary password to pupil {{ temp_school_number }} privately. It works until the first successful sign-in or until you replace it.</b><p class=secret>{{ temp_password }}</p></section>{% endif %}<section><h2>Staff accounts</h2><table><tr><th>Username</th><th>Access</th></tr>{% for member in staff %}<tr><td>{{ member.username }}</td><td>{{ 'Active' if member.active else 'Suspended' }}</td></tr>{% endfor %}</table></section><section><h2>Class password slips</h2><form method=post action='{{ url_for("issue_slips") }}'><input type=hidden name=_csrf value='{{ csrf }}'><label>Class <select name=class_code><option value="">All classes</option>{% for code in classes %}<option>{{ code }}</option>{% endfor %}</select></label><button>Create printable slips</button></form><p>Creates one slip for each active pupil who has never been issued a password. Print the sheet before closing it. To replace a lost slip, issue a new password on the pupil’s row.</p></section><section><h2>Add school numbers</h2><form method=post action='{{ url_for("add_roster") }}'><input type=hidden name=_csrf value='{{ csrf }}'><label>Class (optional) <input name=class_code maxlength=12></label><label>One per line; leading zeroes are preserved<br><textarea name=numbers rows=5 cols=24 required></textarea></label><button>Add roster entries</button></form></section><table><thead><tr><th>Class</th><th>School number</th><th>Cohort</th><th>Access</th><th>Latest successful sign-in</th><th>Account controls</th></tr></thead><tbody>{% for row in rows %}<tr><td>{{ row.class_code }}</td><td>{{ row.number }}</td><td>{{ row.cohort }}</td><td>{{ 'Active' if row.active else 'Suspended' }}{% if row.force_change %} · password change required{% endif %}</td><td>{{ row.last_sign_in }}</td><td><form method=post action='{{ url_for("account_action") }}'><input type=hidden name=_csrf value='{{ csrf }}'><input type=hidden name=school_number value='{{ row.number }}'><select name=action><option value=reset>Issue temporary password</option><option value=force>Force password change</option><option value=suspend>Suspend</option><option value=reactivate>Reactivate</option><option value=revoke>Revoke sessions</option></select><label>Optional temporary password <input name=chosen_password type=password minlength=8 maxlength=128 autocomplete=off></label><button>Apply</button></form></td></tr>{% endfor %}</tbody></table><p><small>Only the latest successful student sign-in is displayed. UK local time. Student names and dates of birth are not collected.</small></p></html>"""
 
 
 class LoginLimiter:
@@ -246,6 +252,11 @@ def create_app(overrides: dict | None = None) -> Flask:
             if 'temporary_available' not in columns:
                 conn.execute('ALTER TABLE accounts ADD COLUMN temporary_available INTEGER NOT NULL DEFAULT 0')
                 conn.execute('UPDATE accounts SET temporary_available=1 WHERE temporary_expires_utc IS NOT NULL')
+            conn.execute("""DELETE FROM sessions WHERE role='student' AND rowid IN (
+                SELECT id FROM (SELECT rowid AS id, ROW_NUMBER() OVER (
+                    PARTITION BY school_number ORDER BY created_utc DESC, rowid DESC) AS n FROM sessions WHERE role='student')
+                WHERE n>1)""")
+            conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS single_pupil_session ON sessions(school_number) WHERE role='student'")
             conn.execute('INSERT OR IGNORE INTO teacher_credential VALUES(1, ?)', (app.config['ADMIN_PASSWORD_HASH'],))
             conn.commit()
             conn.execute('PRAGMA journal_mode=WAL')
@@ -266,6 +277,8 @@ def create_app(overrides: dict | None = None) -> Flask:
         print('Private Luisa account database initialized.')
 
     def new_session(role: str, identity: str | None = None, must_change: bool = False):
+        if role == 'student':
+            db().execute("DELETE FROM sessions WHERE school_number=? AND role='student'", (identity,))
         token = secrets.token_urlsafe(32)
         csrf = secrets.token_urlsafe(32)
         created = utc_now()
@@ -327,11 +340,11 @@ def create_app(overrides: dict | None = None) -> Flask:
                 return redirect(url_for('admin_login'))
             return redirect(url_for('login'))
         if (app.config['TEACHER_SETUP'] and g.luisa_session and g.luisa_session['role'] == 'admin'
-                and endpoint not in {'teacher_password', 'logout'} and teacher_hash() == app.config['ADMIN_PASSWORD_HASH']):
+                and endpoint not in {'teacher_password', 'confirm_logout', 'logout'} and teacher_hash() == app.config['ADMIN_PASSWORD_HASH']):
             return redirect(url_for('teacher_password'))
         if endpoint in {'change_password', 'change_password_post'} and g.luisa_session and g.luisa_session['role'] in {'student', 'staff'}:
             return None
-        if g.luisa_session and g.luisa_session['role'] in {'student', 'staff'} and g.luisa_session['must_change'] and endpoint not in {'change_password', 'change_password_post', 'logout'}:
+        if g.luisa_session and g.luisa_session['role'] in {'student', 'staff'} and g.luisa_session['must_change'] and endpoint not in {'change_password', 'change_password_post', 'confirm_logout', 'logout'}:
             return redirect(url_for('change_password'))
         return None
 
@@ -392,11 +405,13 @@ def create_app(overrides: dict | None = None) -> Flask:
             abort(400)
         email = request.form.get('email', '')
         password = request.form.get('password', '')
-        key = email_key(email.casefold(), rate_key)
+        username = email.lower().removesuffix('@marlboroughcollege.org')
+        is_staff = email.isascii() and re.fullmatch(r'[a-z][a-z0-9._-]{0,31}', username) and username != 'admin'
+        key = email_key(username if is_staff else email.casefold(), rate_key)
         if not limiter.allowed(key):
             return render_login(LOGIN_PAGE, 'Sign-in failed. Check your details or contact your teacher.'), 429
-        if re.fullmatch(r'[a-z][a-z0-9._-]{0,31}', email, re.ASCII) and email != 'admin':
-            return staff_login(email, password, key)
+        if is_staff:
+            return staff_login(username, password, key)
         school_number = email[:5] if _SIGN_IN.fullmatch(email) else ''
         account = db().execute('SELECT * FROM accounts WHERE school_number=? AND active=1', (school_number,)).fetchone() if school_number else None
         temp_is_valid = bool(account and account['temporary_hash'] and account['temporary_available'] and (not account['temporary_expires_utc'] or account['temporary_expires_utc'] > utc_text()))
@@ -605,7 +620,8 @@ def create_app(overrides: dict | None = None) -> Flask:
                 sign_in = value.strftime('%d %B %Y, %H:%M %Z')
             rows.append({'class_code': account['class_code'], 'number': account['school_number'], 'cohort': mapping.get(account['school_number'][:2], '—'),
                          'active': bool(account['active']), 'force_change': bool(account['force_change']), 'last_sign_in': sign_in})
-        return render_template_string(ADMIN_PAGE, rows=rows, csrf=base_context(), notice=notice,
+        staff = db().execute('SELECT username,active FROM staff_accounts ORDER BY username').fetchall()
+        return render_template_string(ADMIN_PAGE, staff=staff, rows=rows, csrf=base_context(), notice=notice,
                                       temp_password=temp_password, temp_school_number=temp_school_number,
                                       classes=sorted({row['class_code'] for row in rows if row['class_code']})), status
 
@@ -741,9 +757,12 @@ def create_app(overrides: dict | None = None) -> Flask:
     def index():
         if not g.luisa_session or g.luisa_session['role'] not in {'student', 'staff'} or g.luisa_session['must_change']:
             return redirect(url_for('login'))
-        page = (build_dir / 'index.html').read_text(encoding='utf-8')
-        page = page.replace('href="logout">Sign out', 'href="logout">' + (g.luisa_session['school_number'] or g.luisa_session['staff_username']) + ' · Sign out', 1)
-        return page
+        return course_page(build_dir / 'index.html')
+
+    def course_page(target):
+        page = target.read_text(encoding='utf-8')
+        identity = g.luisa_session['school_number'] or g.luisa_session['staff_username']
+        return page.replace('<!--luisa-account-name-->', escape(identity) + ' · ')
 
     @app.get('/<path:asset>')
     def private_asset(asset: str):
@@ -756,7 +775,12 @@ def create_app(overrides: dict | None = None) -> Flask:
         target = (build_dir / asset).resolve()
         if not target.is_relative_to(build_dir) or not target.is_file():
             abort(404)
-        return send_from_directory(str(build_dir), asset, conditional=False, etag=False, max_age=0)
+        if target.suffix.lower() == '.html':
+            return course_page(target)
+        if target.suffix.lower() == '.pdf' and request.headers.get('Sec-Fetch-Dest') == 'document' and 'download' not in request.args:
+            return render_template_string(PDF_PAGE, title=target.stem, file=url_for('private_asset', asset=asset))
+        return send_from_directory(str(build_dir), asset, conditional=False, etag=False, max_age=0,
+                                   as_attachment=target.suffix.lower() == '.pdf' and 'download' in request.args)
 
     return app
 

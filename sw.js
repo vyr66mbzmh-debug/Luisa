@@ -1,5 +1,5 @@
 'use strict';
-// v0.39 adds TeX-paired skill solution PDFs.
+// v0.40 uses descriptive print filenames in chapter packs.
 // Offline generations are immutable. One metadata write commits a complete download.
 const SCOPE=self.registration.scope;
 const PREFIX='luisa-offline-v1-'+encodeURIComponent(new URL(SCOPE).pathname)+'-';

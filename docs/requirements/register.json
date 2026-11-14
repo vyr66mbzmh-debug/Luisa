@@ -4330,7 +4330,8 @@
         "Batch additions preserve existing password, status and session state for duplicate accounts; do not store names, surnames or dates of birth.",
         "Consume new temporary passwords on first successful login with no time limit before use. Reject consumed, revoked and expired legacy credentials.",
         "Admin reset invalidates existing sessions and all previously issued temporary credentials; suspension blocks authentication and direct content access.",
-        "Use HTTPS, secure session cookies, login rate limits and server-side authorization on all protected routes."
+        "Use HTTPS, secure session cookies, login rate limits and server-side authorization on all protected routes.",
+        "A successful pupil sign-in replaces the previous session. Staff can sign in on multiple devices using a case-insensitive acronym or full college email. List staff in private administration. Keep real staff identifiers outside Git and send no staff emails."
       ],
       "origin": "Luisa owner handoff 2026-11-13",
       "evidence": [
@@ -4384,6 +4385,40 @@
         "docs/DEVOPS.md",
         "HANDOFF.md",
         "14 November ADA private runtime, fictional-account and SQLite restore checks; public pilot and external retention checks pending"
+      ]
+    },
+    {
+      "id": "PRINT-040",
+      "scope": "Both published editions",
+      "requirement": "Name toolbar PDFs by course, book and topic, with the skill code and SOLUTIONS where applicable. Remove FMQ from running print headers.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Preserve the per-page skill identifier and the rest of every question and solution.",
+        "Preserve existing resource addresses and offline owner downloads."
+      ],
+      "origin": "Owner request, 14 November 2026",
+      "evidence": [
+        "GitHub issue #48",
+        "HANDOFF.md"
+      ]
+    },
+    {
+      "id": "NAV-040",
+      "scope": "Both editions for Teaching chapters; signed-in ADA navigation",
+      "requirement": "Remove the Teaching chapters introductory subtitle on both hosts. On ADA omit version badges and development links and place sign-out last in the toolbar and on every signed-in page.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Nested lessons, direct documents, admin and forced password change screens support logout.",
+        "Owner edition keeps development and offline navigation."
+      ],
+      "origin": "Owner request, 14 November 2026",
+      "evidence": [
+        "GitHub issue #48",
+        "HANDOFF.md"
       ]
     }
   ]

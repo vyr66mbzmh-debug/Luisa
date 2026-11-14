@@ -85,7 +85,7 @@ def generate(root, entries, version):
                     for url in filter(None,urls):
                         path=local(url)
                         if not path:raise ValueError('Offline print PDF missing: '+url)
-                        paths.add(path)
+                        paths.add(library.get('printDownloads', {}).get(path, path))
                     print_by_skill[skill['id']]=paths
     packs=[];warnings=[]
     for book in catalogue['books']:
