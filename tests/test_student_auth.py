@@ -123,7 +123,7 @@ class StudentAuthAcceptance(unittest.TestCase):
             page = client.get('/admin/login', base_url='https://ada.test')
             return self.post_form(client, '/admin/login', {'password': password}, page)
         self.assertEqual(login(client, self.teacher_password).status_code, 302)
-        new = 'x' * 9
+        new = 'x' * 8
         form = {'current': self.teacher_password, 'password': new, 'confirm': new}
         short = new[:-1]
         self.assertEqual(self.post_form(client, '/admin/password', dict(form, password=short, confirm=short)).status_code, 400)
@@ -178,7 +178,8 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(self.student_login(login, temp).location, '/change-password')
         self.assertEqual(self.client.get('/content/questions.json', base_url='https://ada.test').location, '/change-password')
         self.assertEqual(self.student_login(login, temp).status_code, 401)
-        new = 'Teacher practice password!'
+        new = 'abcdefgh'
+        self.assertEqual(self.change_password(self.client, new[:-1]).status_code, 400)
         self.assertEqual(self.change_password(self.client, new).location, '/')
         self.assertEqual(self.student_login(login, new).location, '/')
         self.assertEqual(self.client.get('/admin', base_url='https://ada.test').status_code, 403)
