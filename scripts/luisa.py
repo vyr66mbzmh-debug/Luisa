@@ -225,6 +225,7 @@ def student_content(name, content, restricted_urls, restricted_hashes, root):
     if path.name == 'index.html':
         text = content.decode('utf-8')
         text = re.sub(r'<a\b(?=[^>]*id=["\']book-chapter["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
+        text = text.replace('</nav><a href="./teaching-chapters.html"', '</nav><a style="color:inherit" href="logout">Sign out</a><a href="./teaching-chapters.html"')
         content = text.encode('utf-8')
     if path.name == 'lesson-resources.js':
         text = content.decode('utf-8')
@@ -276,7 +277,7 @@ def student_content(name, content, restricted_urls, restricted_hashes, root):
     if path.name == 'sw.js':
         # One-time migration worker: remove old Luisa offline packs then unregister itself.
         return ("self.addEventListener('install',e=>e.waitUntil(self.skipWaiting()));\n"
-                "self.addEventListener('activate',e=>e.waitUntil((async()=>{for(const k of await caches.keys())if(k.startsWith('luisa-offline-v1-'))await caches.delete(k);await self.clients.claim();await self.registration.unregister();})()));\n").encode()
+                "self.addEventListener('activate',e=>e.waitUntil((async()=>{for(const k of await caches.keys())if(k.startsWith('luisa-offline-v1-'+encodeURIComponent(new URL(self.registration.scope).pathname)+'-'))await caches.delete(k);await self.clients.claim();await self.registration.unregister();})()));\n").encode()
     if path.suffix in {'.html', '.js', '.json', '.webmanifest'}:
         try:
             text = content.decode('utf-8')
@@ -305,7 +306,19 @@ def student_content(name, content, restricted_urls, restricted_hashes, root):
             if path.name in {'index.html', 'textbook-view.html', 'teaching-chapters.html'}:
                 text = text.replace('v0.39</a>', 'v0.40</a>')
         if path.name == 'app.js':
-            text = text.replace("if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('sw.js').catch(()=>{});", "if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>{const u=new URL(r.active?.scriptURL||r.installing?.scriptURL||r.waiting?.scriptURL);if(u.origin===location.origin&&u.pathname.endsWith('/sw.js'))r.unregister();})).catch(()=>{});\nif('serviceWorker' in navigator&&location.protocol!=='file:')caches.keys().then(ks=>ks.filter(k=>k.startsWith('luisa-offline-v1-')).forEach(k=>caches.delete(k))).catch(()=>{});")
+            registration = "if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('sw.js').catch(()=>{});"
+            cleanup = """if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  const scope = new URL('./', location.href);
+  const cachePrefix = 'luisa-offline-v1-' + encodeURIComponent(scope.pathname) + '-';
+  navigator.serviceWorker.getRegistrations().then(registrations => {
+    for (const registration of registrations) {
+      const worker = registration.active || registration.waiting || registration.installing;
+      if (registration.scope === scope.href && worker?.scriptURL === new URL('sw.js', scope).href) registration.unregister();
+    }
+  }).catch(() => {});
+  caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith(cachePrefix)).map(key => caches.delete(key)))).catch(() => {});
+}"""
+            text = text.replace(registration, cleanup)
         if path.name == 'manifest.webmanifest':
             return b'{}\n'
         return text.encode('utf-8')

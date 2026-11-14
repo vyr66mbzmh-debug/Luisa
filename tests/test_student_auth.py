@@ -143,6 +143,7 @@ class StudentAuthAcceptance(unittest.TestCase):
         response = self.student_login('02340@MarlboroughCollege.org', temp_password)
         self.assertEqual(response.status_code, 302)
         self.assertIn('/change-password', response.location)
+        self.assertEqual(self.change_password(self.client, temp_password).status_code, 400)
         sign_in_before_password_change = self.database_account('02340')['last_sign_in_utc']
         self.assertIsNotNone(sign_in_before_password_change)
         pending = self.client.get('/content/questions.json', base_url='https://ada.test')

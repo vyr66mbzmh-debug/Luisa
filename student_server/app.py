@@ -123,7 +123,9 @@ def create_app(overrides: dict | None = None) -> Flask:
     build_manifest = build_dir / 'build-manifest.json'
     if not build_manifest.is_file():
         raise RuntimeError('Student artifact is missing build-manifest.json')
-    if json.loads(build_manifest.read_text()).get('edition') != 'student':
+    manifest = json.loads(build_manifest.read_text())
+    asset_paths = frozenset(manifest.get('files', {}))
+    if manifest.get('edition') != 'student':
         raise RuntimeError('Refusing to serve a non-student artifact')
 
     app.logger.disabled = True
@@ -269,10 +271,11 @@ def create_app(overrides: dict | None = None) -> Flask:
         response.headers['Pragma'] = 'no-cache'
         response.headers['Expires'] = '0'
         response.headers['X-Content-Type-Options'] = 'nosniff'
-        response.headers['X-Frame-Options'] = 'DENY'
+        embedded = request.endpoint == 'private_asset'
+        response.headers['X-Frame-Options'] = 'SAMEORIGIN' if embedded else 'DENY'
         response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
         response.headers['Strict-Transport-Security'] = 'max-age=31536000'
-        response.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        response.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors " + ("'self'" if embedded else "'none'")
         token = request.cookies.get(app.config['SESSION_COOKIE'])
         if token and getattr(g, 'luisa_session', None) and g.luisa_session.get('session_hash') == digest_session(token):
             response.set_cookie(app.config['SESSION_COOKIE'], token, max_age=app.config['SESSION_SECONDS'],
@@ -319,7 +322,7 @@ def create_app(overrides: dict | None = None) -> Flask:
             abort(400)
         email = request.form.get('email', '')
         password = request.form.get('password', '')
-        key = email_key(email, rate_key)
+        key = email_key(email.casefold(), rate_key)
         if not limiter.allowed(key):
             return render_login(LOGIN_PAGE, 'Sign-in failed. Check your details or contact your teacher.'), 429
         school_number = email[:5] if _SIGN_IN.fullmatch(email) else ''
@@ -338,8 +341,9 @@ def create_app(overrides: dict | None = None) -> Flask:
         if not ok:
             limiter.failed(key)
             return render_login(LOGIN_PAGE, 'Sign-in failed. Check your details or contact your teacher.'), 401
+        db().execute('BEGIN IMMEDIATE')
         if using_temporary:
-            consumed = db().execute('UPDATE accounts SET temporary_hash=NULL,temporary_expires_utc=NULL,force_change=1,last_sign_in_utc=? WHERE school_number=? AND active=1 AND temporary_hash=? AND temporary_expires_utc>?',
+            consumed = db().execute('UPDATE accounts SET temporary_expires_utc=NULL,force_change=1,last_sign_in_utc=? WHERE school_number=? AND active=1 AND temporary_hash=? AND temporary_expires_utc>?',
                                     (utc_text(), school_number, account['temporary_hash'], utc_text()))
             if consumed.rowcount != 1:
                 limiter.failed(key)
@@ -359,6 +363,7 @@ def create_app(overrides: dict | None = None) -> Flask:
                 return render_login(LOGIN_PAGE, 'Sign-in failed. Check your details or contact your teacher.'), 401
         limiter.succeeded(key)
         token = new_session('student', school_number, needs_change)
+        db().execute('COMMIT')
         g.luisa_session = {'must_change': int(needs_change)}
         response = redirect(url_for('change_password') if needs_change else url_for('index'))
         response.set_cookie(app.config['SESSION_COOKIE'], token, max_age=app.config['SESSION_SECONDS'], secure=True,
@@ -391,12 +396,21 @@ def create_app(overrides: dict | None = None) -> Flask:
                             httponly=True, samesite='Lax', path=app.config['SESSION_COOKIE_PATH'])
         return response
 
+    @app.get('/logout')
+    def confirm_logout():
+        return render_template_string(
+            """<!doctype html><meta name=viewport content="width=device-width"><title>Luisa sign out</title>
+            <main><h1>Sign out of Luisa</h1><form method=post>
+            <input type=hidden name=_csrf value="{{ csrf }}"><button>Sign out</button></form></main>""",
+            csrf=base_context())
+
     @app.post('/logout')
     def logout():
         require_csrf()
         token = request.cookies.get(app.config['SESSION_COOKIE'], '')
         if token:
             db().execute('DELETE FROM sessions WHERE session_hash=?', (digest_session(token),))
+        g.luisa_session = None
         response = redirect(url_for('login'))
         response.delete_cookie(app.config['SESSION_COOKIE'], path=app.config['SESSION_COOKIE_PATH'], secure=True, httponly=True, samesite='Lax')
         return response
@@ -419,12 +433,22 @@ def create_app(overrides: dict | None = None) -> Flask:
         number = g.luisa_session['school_number']
         if password in {number, number + '@marlboroughcollege.org'}:
             return render_template_string(CHANGE_PAGE, csrf=base_context(), error='Choose a password independent of your school number and email.'), 400
+        old = db().execute('SELECT password_hash,temporary_hash FROM accounts WHERE school_number=? AND active=1', (number,)).fetchone()
+        if old is None:
+            abort(403)
+        if any(password_ok(value, password) for value in old if value):
+            return render_template_string(CHANGE_PAGE, csrf=base_context(), error='Choose a different Luisa password.'), 400
         new_hash = _PH.hash(password)
+        db().execute('BEGIN IMMEDIATE')
+        if not db().execute('SELECT 1 FROM sessions WHERE session_hash=? AND must_change=1', (g.luisa_session['session_hash'],)).fetchone():
+            db().execute('ROLLBACK')
+            abort(403)
         changed = db().execute('UPDATE accounts SET password_hash=?,force_change=0,temporary_hash=NULL,temporary_expires_utc=NULL WHERE school_number=? AND active=1', (new_hash, number))
         if changed.rowcount != 1:
             abort(403)
         db().execute('DELETE FROM sessions WHERE school_number=?', (number,))
         token = new_session('student', number, False)
+        db().execute('COMMIT')
         g.luisa_session = {'must_change': 0}
         response = redirect(url_for('index'))
         response.set_cookie(app.config['SESSION_COOKIE'], token, max_age=app.config['SESSION_SECONDS'], secure=True,
@@ -563,7 +587,7 @@ def create_app(overrides: dict | None = None) -> Flask:
     def private_asset(asset: str):
         if not g.luisa_session or g.luisa_session['role'] != 'student' or g.luisa_session['must_change']:
             return redirect(url_for('login'))
-        if asset not in json.loads(build_manifest.read_text()).get('files', {}):
+        if asset not in asset_paths:
             abort(404)
         target = (build_dir / asset).resolve()
         if not target.is_relative_to(build_dir) or not target.is_file():
