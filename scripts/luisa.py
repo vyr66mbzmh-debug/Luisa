@@ -193,6 +193,8 @@ def student_restricted_pdfs(root):
     return urls, hashes
 
 
+LIBRARY_PAGES = {'index.html', 'textbook-view.html', 'teaching-chapters.html'}
+
 TEACHING_VIEWERS = {
     'lesson-viewer.html',
     'pure1-native-viewer.html',
@@ -319,13 +321,15 @@ def student_content(name, content, restricted_urls, restricted_hashes, root, *, 
                 text = re.sub(r"""<a\b[^>]*href=["'][^"']*development-progress\.html(?:[?#][^"']*)?["'][^>]*>.*?</a>""", '', text, flags=re.I|re.S)
             if name not in TEACHING_VIEWERS:
                 logout = '../' * (len(path.parts) - 1) + 'logout'
-                # Keep the displayed identity outside the icon's accessible name.
+                teacher_toolbar = staff and name in LIBRARY_PAGES
+                identity = '' if teacher_toolbar else '<span class="luisa-account"><!--luisa-account-name--></span>'
+                signout = 'Sign out __LUISA_TEACHER_ACRONYM__' if teacher_toolbar else 'Sign out'
                 account_link = (
                     '<span style="display:inline-flex;align-items:center;gap:8px;margin-inline-start:auto">'
-                    '<span class="luisa-account"><!--luisa-account-name--></span>'
+                    f'{identity}'
                     f'<form action="{logout}" method="post" target="_top" style="display:inline-flex;margin:0">'
                     '<input type="hidden" name="_csrf" value="__LUISA_SESSION_CSRF__">'
-                    '<button type="submit" class="luisa-signout" aria-label="Sign out" title="Sign out" '
+                    f'<button type="submit" class="luisa-signout" aria-label="{signout}" title="{signout}" '
                     'style="display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;'
                     'width:37px;height:35px;padding:0;cursor:pointer;background:#102b43;color:#f0d6a1;'
                     'border:1px solid #b69a65;border-radius:6px">'
@@ -378,11 +382,18 @@ def build(root=ROOT, output=None, profile='owner'):
     (output / '.luisa-build').write_text('Generated static artifact; safe to rebuild.\n')
     entries = {}
     restricted_urls, restricted_hashes = student_restricted_pdfs(root) if profile == 'student' else (set(), set())
+    version = json.loads((root / 'release.json').read_text())['version']
     # Validate filesystem symlinks, but retrieve unchanged bytes from the Git object store.
     list(public_files(root))
     for name, content in source_files(root):
         if not is_public(name):
             continue
+        if name in LIBRARY_PAGES:
+            # Keep standalone source pages usable and stamp both labels from release metadata.
+            content, count = re.subn(rb'(class="version" href="./development-progress.html" aria-label="Development progress, version )[^"]+(">v)[^<]+',
+                                     lambda match: match[1] + version.encode() + match[2] + version.encode(), content)
+            if count != 1:
+                raise ValueError('Missing or ambiguous library version link: ' + name)
         if profile != 'owner':
             path = Path(name)
             if name in restricted_urls or (path.suffix.lower() == '.pdf' and hashlib.sha256(content).hexdigest() in restricted_hashes):
@@ -398,7 +409,7 @@ def build(root=ROOT, output=None, profile='owner'):
     prepare_print_downloads(output, entries)
     if profile == 'owner':
         from offline_manifest import generate
-        generate(output, entries, json.loads((root / 'release.json').read_text())['version'])
+        generate(output, entries, version)
     revision = subprocess.check_output(['git', '-C', str(root), 'rev-parse', 'HEAD'], text=True).strip()
     dirty = bool(subprocess.check_output(['git', '-C', str(root), 'status', '--porcelain'], text=True).strip())
     release_file = output / 'release.json'
