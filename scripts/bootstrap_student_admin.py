@@ -23,10 +23,10 @@ def main():
     source_root = Path(__file__).resolve().parents[1]
     if destination.is_relative_to(source_root):
         parser.error('The environment file must be outside the source repository and public build tree.')
-    password = getpass('Choose the teacher admin password (minimum 16 characters): ')
+    password = getpass('Choose the teacher admin password (minimum 9 characters): ')
     confirmation = getpass('Repeat the teacher admin password: ')
-    if len(password) < 16 or len(password) > 1024 or password != confirmation:
-        parser.error('Passwords must match and be 16 to 1024 characters.')
+    if len(password) < 9 or len(password) > 1024 or password != confirmation:
+        parser.error('Passwords must match and be 9 to 1024 characters.')
     password_hash = PasswordHasher().hash(password)
     values = {
         'LUISA_ADMIN_PASSWORD_HASH': password_hash,

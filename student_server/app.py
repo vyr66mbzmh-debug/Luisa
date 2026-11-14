@@ -40,7 +40,7 @@ label{margin:1rem 0}button{background:#183957;color:white;border:0;border-radius
 {% if error %}<p role=alert>{{ error }}</p>{% endif %}
 <form method=post><input type=hidden name=_csrf value='{{ csrf }}'>
 <label>Current teacher password<input name=current type=password autocomplete=current-password required maxlength=1024></label>
-<label>New teacher password (at least 16 characters)<input name=password type=password autocomplete=new-password required minlength=16 maxlength=1024></label>
+<label>New teacher password (at least 9 characters)<input name=password type=password autocomplete=new-password required minlength=9 maxlength=1024></label>
 <label>Repeat new password<input name=confirm type=password autocomplete=new-password required maxlength=1024></label>
 <button>Save password</button></form></html>"""
 
@@ -575,8 +575,8 @@ def create_app(overrides: dict | None = None) -> Flask:
         verified_hash = teacher_hash()
         if len(current) > 1024 or not password_ok(verified_hash, current):
             return form('The current teacher password is incorrect.', 400)
-        if not 16 <= len(new) <= 1024 or new != request.form.get('confirm'):
-            return form('Enter the same new password twice, using at least 16 characters.', 400)
+        if not 9 <= len(new) <= 1024 or new != request.form.get('confirm'):
+            return form('Enter the same new password twice, using at least 9 characters.', 400)
         if new == current:
             return form('Choose a different teacher password.', 400)
         replacement = _PH.hash(new)
