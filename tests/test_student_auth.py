@@ -211,6 +211,37 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(pupil.get('/' + chapter + '?role=staff', base_url=host).status_code, 404)
         self.assertEqual(anon.get('/' + chapter, base_url=host).location, '/login')
 
+    def test_private_preview_uses_only_its_bare_username_and_pupil_rights(self):
+        self.add('00001')
+        first = 'Private-first-secret'
+        alias = 'test_example'
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('INSERT INTO pupil_preview_logins VALUES(?,?)', ('00001', alias))
+        slips = self.post_form(self.admin, '/admin/slips', {})
+        self.assertNotIn('<article>', slips.text)
+        self.action('00001', 'reset', chosen_password=first)
+        for identifier in (alias, 'test_unknown'):
+            response = self.student_login(identifier, 'incorrect password')
+            self.assertEqual(response.status_code, 401)
+            self.assertIn('Check your details or contact your teacher.', response.text)
+        for invalid in ('00001@marlboroughcollege.org', alias+'@marlboroughcollege.org', alias+'@other.test'):
+            self.assertEqual(self.student_login(invalid, first).status_code, 401)
+        self.assertEqual(self.student_login(alias, first).location, '/change-password')
+        self.assertEqual(self.client.get('/', base_url='https://ada.test').location, '/change-password')
+        self.assertEqual(self.student_login(alias, first).status_code, 401)
+        password = 'Preview-new-password'
+        self.assertEqual(self.change_password(self.client, password).location, '/')
+        (self.build/'index.html').write_text('<!--luisa-account-name-->')
+        self.assertEqual(self.client.get('/', base_url='https://ada.test').text, alias)
+        second = self.app.test_client()
+        self.assertEqual(self.post_form(second, '/login', {'email':alias, 'password':password}).location, '/')
+        self.assertEqual(self.client.get('/', base_url='https://ada.test').location, '/login')
+        self.assertEqual(second.get('/admin', base_url='https://ada.test').status_code, 403)
+        self.assertEqual(second.get('/staff-chapter.pdf', base_url='https://ada.test').status_code, 404)
+        self.action('00001', 'suspend')
+        self.assertEqual(second.get('/', base_url='https://ada.test').location, '/login')
+        self.assertEqual(self.student_login(alias, password).status_code, 401)
+
     def test_staff_content_login_is_independent_of_pupils_and_admin(self):
         login = 'sample.teacher'
         temp = 'One-use-test-secret!'
