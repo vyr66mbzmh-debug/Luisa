@@ -65,8 +65,6 @@ class StudentAuthAcceptance(unittest.TestCase):
 
     def post_form(self, client, path, values, csrf_response=None):
         values = dict(values)
-        if path == "/admin/login":
-            values.setdefault("username", "admin")
         if csrf_response is None:
             page = '/admin' if path.startswith('/admin/') else ('/change-password' if path in {'/change-password', '/logout'} else '/login')
             csrf_response = client.get(page, base_url='https://ada.test')
@@ -103,11 +101,11 @@ class StudentAuthAcceptance(unittest.TestCase):
         page = client.get('/change-password', base_url='https://ada.test')
         return self.post_form(client, '/change-password', {'password': password, 'confirm': password}, page)
 
-    def test_single_teacher_can_sign_in_with_only_the_password(self):
+    def test_admin_can_sign_in_with_only_the_password(self):
         config = dict(self.app.config, ADMIN_AUTH_MODE='password', ADMIN_TOTP_SECRET='')
         client = create_app(config).test_client()
         page = client.get('/admin/login', base_url='https://ada.test')
-        self.assertNotIn('name=totp', page.get_data(as_text=True))
+        self.assertEqual(re.findall(r'<input\b[^>]*\bname=([^ >]+)', page.text), ['_csrf', 'password'])
         failed = self.post_form(client, '/admin/login', {'password': 'incorrect'}, page)
         self.assertEqual(failed.status_code, 401)
         self.assertEqual(client.get('/admin', base_url='https://ada.test').status_code, 302)
