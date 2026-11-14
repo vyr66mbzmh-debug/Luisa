@@ -1,6 +1,8 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.46 -->
+<!-- LUISA-REPORT-HANDOFF v0.47 -->
+**Release 0.47, issue #70.** Teaching slides display the booklet page title and a compact current-page / total selector. The logo returns to Teaching Resources, where ADA users can sign out. The CG100 calculator on Cloudflare and ADA teacher slides opens in a separate window requesting one quarter of the available screen width and its full height. Check chapter navigation, resource menus, page numbers, and the role-specific calculator in the three build profiles.
+
 **Release 0.46, issue #68.** All teaching slides use a single-line banner with the linked Luisa logo, slide selector, chapter title and current page number before the gold reveal icon, reset, full screen and resources. Check chapter navigation, resource menus, page numbers, and the authenticated account controls in the three build profiles.
 
 **Private ADA directory, issue #64.** Apply init-db before switching the gateway. It creates separate student and teacher first-name tables. Populate them privately and preserve authentication state. The administrator can edit first names via Manage and sort both directories. Logo and sign-out match ADA's course toolbar. Admin login selects the administrator on the server. The live password-only form asks for the password only (issue #66). Copy a temporary password on its issue screen for private delivery. For a previously issued password, use a verified original private invitation or issue a replacement. Both course editions remain v0.45.

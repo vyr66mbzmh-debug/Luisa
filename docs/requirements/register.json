@@ -4587,6 +4587,23 @@
       "evidence": [
         "GitHub issue #68"
       ]
+    },
+    {
+      "id": "SLD-047",
+      "scope": "All teaching presentations on both hosts",
+      "requirement": "Teaching slides display the booklet page title and a compact current-page / total selector. The logo returns to Teaching Resources, where ADA users can sign out. The CG100 calculator on Cloudflare and ADA teacher slides opens in a separate window requesting one quarter of the available screen width and its full height.",
+      "acceptance": [
+        "Use the source page title in the banner. Show current / total in the closed selector, numbered page titles in the menu, and the separate current page number immediately before Reveal.",
+        "Return to the same edition’s Teaching Resources. Omit the username and sign-out on ADA slides only. The ADA student artifact must omit the calculator.",
+        "Open CG100 from the far-right icon, preserving the slide and requesting a separate quarter-width, full-height window."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner-approved option A, issue #70. Supersedes the chapter heading and logo destination in SLD-046 and the sign-out requirement on slide pages.",
+      "evidence": [
+        "GitHub issue #70"
+      ]
     }
   ]
 }

@@ -193,6 +193,17 @@ def student_restricted_pdfs(root):
     return urls, hashes
 
 
+TEACHING_VIEWERS = {
+    'lesson-viewer.html',
+    'pure1-native-viewer.html',
+    'pure2-lesson-viewer.html',
+    'teaching-lesson-viewer.html',
+    'v025-lesson-viewer.html',
+    'v026-lesson-viewer.html',
+    'v027-lesson-viewer.html',
+}
+
+
 def student_content(name, content, restricted_urls, restricted_hashes, root, *, staff=False):
     """Apply student-only interface and catalogue changes to a copied source blob."""
     path = Path(name)
@@ -306,31 +317,32 @@ def student_content(name, content, restricted_urls, restricted_hashes, root, *, 
                 text = re.sub(r'<a\b[^>]*>.*?</a\s*>', remove_restricted_anchor, text, flags=re.I|re.S)
                 text = re.sub(r'(<html\b[^>]*)(>)', r'\1 data-luisa-edition="student"\2', text, count=1, flags=re.I)
                 text = re.sub(r"""<a\b[^>]*href=["'][^"']*development-progress\.html(?:[?#][^"']*)?["'][^>]*>.*?</a>""", '', text, flags=re.I|re.S)
-            logout = '../' * (len(path.parts) - 1) + 'logout'
-            # Keep the displayed identity outside the icon's accessible name.
-            account_link = (
-                '<span style="display:inline-flex;align-items:center;gap:8px;margin-inline-start:auto">'
-                '<span class="luisa-account"><!--luisa-account-name--></span>'
-                f'<form action="{logout}" method="post" target="_top" style="display:inline-flex;margin:0">'
-                '<input type="hidden" name="_csrf" value="__LUISA_SESSION_CSRF__">'
-                '<button type="submit" class="luisa-signout" aria-label="Sign out" title="Sign out" '
-                'style="display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;'
-                'width:37px;height:35px;padding:0;cursor:pointer;background:#102b43;color:#f0d6a1;'
-                'border:1px solid #b69a65;border-radius:6px">'
-                '<svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true" fill="none" '
-                'stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
-                '<path d="M10 4H5v16h5m-1-8h12m-4-4 4 4-4 4"/></svg></button></form></span>'
-            )
-            if '<!--edition-account-->' in text:
-                text = text.replace('<!--edition-account-->', account_link, 1)
-            elif '</header>' in text:
-                end = text.index('</header>')
-                text = text[:end] + account_link + text[end:]
-            else:
-                nav = '<nav style="text-align:right;padding:.5rem 1rem">' + account_link + '</nav>'
-                text, count = re.subn(r'<body\b[^>]*>', lambda m: m[0] + nav, text, count=1, flags=re.I)
-                if not count:
-                    text = text.replace('</head>', '</head>' + nav, 1) if '</head>' in text else nav + text
+            if name not in TEACHING_VIEWERS:
+                logout = '../' * (len(path.parts) - 1) + 'logout'
+                # Keep the displayed identity outside the icon's accessible name.
+                account_link = (
+                    '<span style="display:inline-flex;align-items:center;gap:8px;margin-inline-start:auto">'
+                    '<span class="luisa-account"><!--luisa-account-name--></span>'
+                    f'<form action="{logout}" method="post" target="_top" style="display:inline-flex;margin:0">'
+                    '<input type="hidden" name="_csrf" value="__LUISA_SESSION_CSRF__">'
+                    '<button type="submit" class="luisa-signout" aria-label="Sign out" title="Sign out" '
+                    'style="display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;'
+                    'width:37px;height:35px;padding:0;cursor:pointer;background:#102b43;color:#f0d6a1;'
+                    'border:1px solid #b69a65;border-radius:6px">'
+                    '<svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true" fill="none" '
+                    'stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+                    '<path d="M10 4H5v16h5m-1-8h12m-4-4 4 4-4 4"/></svg></button></form></span>'
+                )
+                if '<!--edition-account-->' in text:
+                    text = text.replace('<!--edition-account-->', account_link, 1)
+                elif '</header>' in text:
+                    end = text.index('</header>')
+                    text = text[:end] + account_link + text[end:]
+                else:
+                    nav = '<nav style="text-align:right;padding:.5rem 1rem">' + account_link + '</nav>'
+                    text, count = re.subn(r'<body\b[^>]*>', lambda m: m[0] + nav, text, count=1, flags=re.I)
+                    if not count:
+                        text = text.replace('</head>', '</head>' + nav, 1) if '</head>' in text else nav + text
         if path.name == 'app.js':
             registration = "if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('sw.js').catch(()=>{});"
             cleanup = """if ('serviceWorker' in navigator && location.protocol !== 'file:') {
@@ -405,6 +417,12 @@ def check_artifact(directory, profile, root=ROOT):
     if manifest.get('edition') != profile:
         raise ValueError(f'Expected {profile} artifact, got {manifest.get("edition")}')
     files = set(manifest.get('files', {}))
+    for name in TEACHING_VIEWERS:
+        page = (directory / name).read_text()
+        if ('id="library" href="teaching-chapters.html"' not in page or
+                'class="luisa-signout"' in page or 'class="luisa-account"' in page or
+                ('id="slide-calculator"' in page) != (profile != 'student')):
+            raise ValueError('Incorrect teaching slide toolbar for ' + profile + ': ' + name)
     library = json.loads((directory / 'data.js').read_text().split('=', 1)[1].strip().rstrip(';'))
     downloads = library['printDownloads']
     if not downloads or len(downloads) != len(set(downloads.values())):
@@ -436,7 +454,7 @@ def check_artifact(directory, profile, root=ROOT):
             path = directory / name
             if path.suffix.lower() in {'.html', '.json', '.js'}:
                 text = path.read_text(errors='ignore')
-                if path.suffix == '.html' and (text.count('class="luisa-signout"') != 1 or
+                if path.suffix == '.html' and (text.count('class="luisa-signout"') != int(name not in TEACHING_VIEWERS) or
                         re.search(r'''href=["'][^"']*development-progress\.html''', text, re.I)):
                     raise ValueError('Student navigation is missing sign-out or exposes the development report: ' + name)
                 if re.search(r'(?:fmq-6d9\.pages\.dev|adazmq\.marlboroughcollege\.org|github\.com/vyr66mbzmh-debug/Luisa|classpad\.net/note/)', text, re.I):
