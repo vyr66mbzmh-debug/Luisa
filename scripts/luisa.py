@@ -301,6 +301,8 @@ def student_content(name, content, restricted_urls, restricted_hashes, root, *, 
                 owner_url = json.loads((root / 'release.json').read_text())['publicBaseUrl'].rstrip('/')
                 text = text.replace('href="offline.html"', f'href="{owner_url}/offline.html" target="_blank" rel="noopener noreferrer"')
             else:
+                # The full owner handoff includes historical release and deployment routes.
+                text = re.sub(r'<section id="release-handoff">.*?</section>', '', text, flags=re.S)
                 text = re.sub(r'<a\b(?=[^>]*href=["\'][^"\']*offline\.html[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
                 text = re.sub(r'<a\b(?=[^>]*href=["\']https://(?:fmq-6d9\.pages\.dev|adazmq\.marlboroughcollege\.org)[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
                 text = re.sub(r'<a\b(?=[^>]*href=["\']https://github\.com/vyr66mbzmh-debug/Luisa[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
@@ -428,6 +430,10 @@ def check_artifact(directory, profile, root=ROOT):
     if manifest.get('edition') != profile:
         raise ValueError(f'Expected {profile} artifact, got {manifest.get("edition")}')
     files = set(manifest.get('files', {}))
+    for name in LIBRARY_PAGES | TEACHING_VIEWERS:
+        page = (directory / name).read_text()
+        if page.count('href="https://www.geogebra.org/classic?lang=en"') != 1:
+            raise ValueError('Missing GeoGebra Classic navigation: ' + name)
     for name in TEACHING_VIEWERS:
         page = (directory / name).read_text()
         if ('id="library" href="teaching-chapters.html"' not in page or

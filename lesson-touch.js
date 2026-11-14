@@ -20,12 +20,13 @@
   };
   region.addEventListener('click', returnFocus, true);
   region.addEventListener('keydown', event => {
-    if (event.key === 'Enter' || event.key === ' ') returnFocus(event);
+    // Native buttons dispatch click after their keyboard activation; keep focus until then.
+    if (!event.target.closest('button') && (event.key === 'Enter' || event.key === ' ')) returnFocus(event);
   }, true);
   for (const id of ['previous', 'next', 'next-step', 'reset']) {
     document.getElementById(id)?.addEventListener('click', () => region.focus({preventScroll:true}));
   }
-  const controls = 'button, a, input, select, textarea, summary, [role="button"], [contenteditable="true"]';
+  const controls = 'td:has([data-slot]), [data-slot], button, a, input, select, textarea, summary, [role="button"], [contenteditable="true"]';
   let start;
   let mouseStart;
   const onControl = event => Boolean(event.target.closest(controls));
