@@ -4370,9 +4370,9 @@
       "scope": "ADA hosting/runtime, private persistence, recovery, deployment boundary and pilot gate",
       "priority": "P1",
       "implementation": "planned",
-      "verification": "not_checked",
+      "verification": "partially_checked",
       "acceptance": [
-        "ADA manager confirms managed app process/reverse-proxy configuration and deployment method; all student assets pass through server-side authorization.",
+        "Verify the managed app process, external HTTPS routing and deployment method. All student assets pass through server-side authorization.",
         "Rostering, credential/session state and secrets are stored outside the public tree in a durable path, with backup and tested recovery across deploy/rollback.",
         "Record current Nginx/proxy access log format and retention; flag fields and retention outside application control.",
         "Pilot with fictional accounts covers authentication, admin controls, direct routes, backup recovery, cache/service-worker migration and all retained routes.",
@@ -4383,7 +4383,7 @@
         "GitHub issue #48",
         "docs/DEVOPS.md",
         "HANDOFF.md",
-        "ADA manager capability request pending"
+        "14 November ADA private runtime, fictional-account and SQLite restore checks; public pilot and external retention checks pending"
       ]
     }
   ]
