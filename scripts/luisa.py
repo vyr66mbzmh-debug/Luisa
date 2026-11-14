@@ -233,7 +233,6 @@ def student_content(name, content, restricted_urls, restricted_hashes, root):
     if path.name == 'release.json':
         data = json.loads(content)
         data['edition'] = 'student'
-        data['version'] = '0.40'
         data['publicBaseUrl'] = ''
         data.pop('repository', None)
         data['note'] = 'Online student edition; content requires authenticated server delivery.'
@@ -304,10 +303,10 @@ def student_content(name, content, restricted_urls, restricted_hashes, root):
             text = re.sub(r"""<a\b[^>]*href=["'][^"']*development-progress\.html(?:[?#][^"']*)?["'][^>]*>.*?</a>""", '', text, flags=re.I|re.S)
             logout = '../' * (len(path.parts) - 1) + 'logout'
             account_link = f'<a class="luisa-signout" target="_top" href="{logout}" style="color:inherit;white-space:nowrap;margin-left:auto"><!--luisa-account-name-->Sign out</a>'
-            if '</header>' in text:
+            if '<!--edition-account-->' in text:
+                text = text.replace('<!--edition-account-->', account_link, 1)
+            elif '</header>' in text:
                 end = text.index('</header>')
-                if path == Path('index.html'):
-                    end = text.rindex('</div>', 0, end)
                 text = text[:end] + account_link + text[end:]
             else:
                 nav = '<nav style="text-align:right;padding:.5rem 1rem">' + account_link + '</nav>'
@@ -404,7 +403,7 @@ def check_artifact(directory, profile, root=ROOT):
         if any(Path(n).name == 'offline.html' or Path(n).name.startswith('offline') or Path(n).name == 'manifest.webmanifest' for n in files):
             raise ValueError('Student artifact contains offline pack files')
         student_release = json.loads((directory / 'release.json').read_text())
-        if student_release.get('edition') != 'student' or student_release.get('version') != '0.40' or student_release.get('publicBaseUrl') or 'repository' in student_release:
+        if student_release.get('edition') != 'student' or student_release.get('version') != json.loads((root / 'release.json').read_text())['version'] or student_release.get('publicBaseUrl') or 'repository' in student_release:
             raise ValueError('Student release metadata exposes an owner edition route or incorrect profile version')
         for name in files:
             path = directory / name
