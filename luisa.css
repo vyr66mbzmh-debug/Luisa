@@ -26,3 +26,29 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
   outline: 2px solid #325f86;
   outline-offset: -2px;
 }
+
+.library-header.top {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding: 12px 22px;
+  color: white;
+}
+.library-header .brand { align-self: flex-start; font-weight: 800; }
+.library-toolbar, .library-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.library-toolbar { justify-content: space-between; }
+.library-actions { margin-inline-start: auto; justify-content: flex-end; }
+.library-actions .view-controls { width: auto; justify-content: flex-end; }
+.library-actions > a { color: white; }
+.library-actions .version { margin: 0; color: #d2e1eb; font: 600 14px system-ui; padding: 8px 0 8px 8px; }
+@media (max-width: 760px) {
+  .library-header.top { padding: 10px 14px; }
+  .library-header .view-tabs a { padding: 8px 10px; }
+  .library-header .brand-tagline { display: none; }
+}

@@ -4421,6 +4421,28 @@
         "GitHub issue #48",
         "HANDOFF.md"
       ]
+    },
+    {
+      "id": "NAV-041",
+      "scope": "Both editions, three library views",
+      "requirement": "By skill, By textbook and Teaching Resources share the same navigation. The Cloudflare version link and ADA sign-out sit at the right.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Show the three left-aligned links in that order on every view and identify the current page.",
+        "On By skill align Split view, Question Full Screen and Solution Full Screen to the right. Preserve the textbook selection and return links.",
+        "Use the same top-left logo on Teaching Resources, rename its heading and remove the Luisa question library link. Preserve its URL and teaching resources.",
+        "On each page place the Cloudflare version link or ADA sign-out last on the right. Retain the owner edition tools.",
+        "Verify both host layouts at desktop and phone widths. Record requirements and release handoff in GitHub."
+      ],
+      "origin": "Owner request, 14 November 2026, issue #50",
+      "evidence": [
+        "GitHub issue #50",
+        "luisa.css",
+        "scripts/luisa.py",
+        "HANDOFF.md"
+      ]
     }
   ]
 }
