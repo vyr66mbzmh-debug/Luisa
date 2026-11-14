@@ -1,6 +1,8 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.45 -->
+<!-- LUISA-REPORT-HANDOFF v0.46 -->
+**Release 0.46, issue #68.** All teaching slides use a single-line banner with the linked Luisa logo, slide selector, chapter title and current page number before the gold reveal icon, reset, full screen and resources. Check chapter navigation, resource menus, page numbers, and the authenticated account controls in the three build profiles.
+
 **Private ADA directory, issue #64.** Apply init-db before switching the gateway. It creates separate student and teacher first-name tables. Populate them privately and preserve authentication state. The administrator can edit first names via Manage and sort both directories. Logo and sign-out match ADA's course toolbar. Admin login selects the administrator on the server. The live password-only form asks for the password only (issue #66). Copy a temporary password on its issue screen for private delivery. For a previously issued password, use a verified original private invitation or issue a replacement. Both course editions remain v0.45.
 
 **Private ADA admin update, issue #62.** Students and Teachers have separate directories. Manage on a row applies to that account only. Teacher resets, forced changes, suspension and session revocation cover every device for the selected teacher. Deploy the reviewed gateway package against the existing private database and environment. No schema migration or account provisioning is required. Keep both course manifests at their existing release. Verify database continuity and the gateway revision separately. The owner-specified class correction was applied in private storage.

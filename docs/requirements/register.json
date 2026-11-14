@@ -4571,6 +4571,22 @@
         "tests/test_student_auth.py",
         "GitHub issue #66"
       ]
+    },
+    {
+      "id": "SLD-046",
+      "scope": "All teaching slide viewers on both hosts",
+      "requirement": "All teaching slides use a single-line banner with the linked Luisa logo, slide selector, chapter title and current page number before the gold reveal icon, reset, full screen and resources.",
+      "acceptance": [
+        "Use the approved quiet icon style with a divider after the separately visible page number. Keep the controls accessible and on one row.",
+        "The logo returns to the local library. Chapter and slide changes update the chapter title, selector and page number. Retain reveal, reset, full screen, resources and edition-specific access."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner-approved design B, issue #68",
+      "evidence": [
+        "GitHub issue #68"
+      ]
     }
   ]
 }

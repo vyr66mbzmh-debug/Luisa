@@ -204,7 +204,7 @@ def student_content(name, content, restricted_urls, restricted_hashes, root, *, 
                 for book in data.values():
                     for chapter in book['chapters']:
                         chapter.pop('pdf', None)
-                text = 'const LUISA_TEACHING=' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';\n'
+                text = 'window.LUISA_TEACHING=' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';\n'
             else:
                 # Remove source PDF destinations from the toolbar mapping while preserving skill/chapter mappings.
                 text = re.sub(r"pdf\s*:\s*(['\"])[^'\"]+\1\s*,?", '', text)
