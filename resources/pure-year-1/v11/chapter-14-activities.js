@@ -15,6 +15,7 @@ window.LuisaChapter14 = (() => {
   function mount(container,slide,changed) {
     if(slide.chapter!==14 || !pages.has(slide.sourceSlide))return null;
     const n=slide.sourceSlide, shapes=slide.shapes;
+    const activityImage='resources/pure-year-1/native/'+(slide.activityImage||'');
     const root=document.createElement('section');root.className='ch14';container.replaceChildren(root);
     const copy=id=>{
       const shape=shapes.find(s=>s.id==='native-'+id);
@@ -34,7 +35,11 @@ window.LuisaChapter14 = (() => {
     let serial=0;
     function cover(contents,label='',after=()=>{}) {
       const id='r'+(++serial);
-      action(id,()=>{const slot=q('[data-slot="'+id+'"]');slot.classList.add('open');after();});
+      action(id,()=>{const slot=q('[data-slot="'+id+'"]');slot.classList.add('open');
+        const control=slot.querySelector('button');
+        control.tabIndex=-1;
+        if(slot.closest('td'))control.setAttribute('aria-label',slot.querySelector('.working').textContent);
+        after();});
       return `<div class="slot" data-slot="${id}"><div class="working">${contents}</div><button type="button" class="cover" data-action="${id}" aria-label="${label||'Reveal answer '+serial}">${label}</button></div>`;
     }
     function stage(id,html) {
@@ -62,7 +67,7 @@ window.LuisaChapter14 = (() => {
     function compare() {
       const specs=[[['1.5^x',x=>1.5**x],['2^x',x=>2**x],['3^x',x=>3**x]],[['2^x',x=>2**x],['2^{-x}',x=>2**(-x)]]];
       function draw(j) {
-        const curves=specs[j].flatMap(([,fn],i)=>q('[data-action="curve'+j+i+'"]').getAttribute('aria-pressed')==='true'?[{fn,colour:colours[i]}]:[]);
+        const curves=specs[j].flatMap(([,fn],i)=>q('[data-action="curve'+j+i+'"]').getAttribute('aria-pressed')==='true'?[{fn,colour:colours[i],dash:[null,"9 4","2 4"][i]}]:[]);
         q('#graph'+j).innerHTML=plot({x:[-3,3],y:[-1,12],ticksX:[-3,-2,-1,0,1,2,3],ticksY:[0,3,6,9,12],label:'Exponential comparison '+(j+1),curves});
       }
       const panels=specs.map((group,j)=>{
@@ -70,15 +75,20 @@ window.LuisaChapter14 = (() => {
           const id='curve'+j+i;action(id,()=>{q('[data-action="'+id+'"]').setAttribute('aria-pressed','true');draw(j);});
           return '<button type="button" class="choice" style="color:'+colours[i]+'" aria-pressed="false" data-action="'+id+'">'+math(label)+'</button>';
         }).join('');
-        return '<div class="stack"><h2>'+copy(j?4:1)+'</h2><div class="controls">'+controls+'</div><div id="graph'+j+'"></div>'+ (j?cover(copy(5),'Relationship'):note(copy(2)))+'</div>';
+        const legend=group.map(([label],i)=>'<span><b style="color:'+colours[i]+'">'+['━','┄','···'][i]+'</b> '+math('y='+label)+'</span>').join('　');
+        return '<div class="stack"><h2>'+copy(j?4:1)+'</h2><div class="controls">'+controls+'</div><div id="graph'+j+'"></div><div class="print-only">'+legend+'</div>'+ (j?cover(copy(5),'Relationship'):note(copy(2)))+'</div>';
       });root.innerHTML='<div class="cols">'+panels.join('')+'</div>';draw(0);draw(1);
     }
     function specialBase() {
       const rows=[['1','0'],['1.5','0.41(1.5^x)'],['2','0.69(2^x)'],['2.5','0.92(2.5^x)'],['3','1.10(3^x)'],['3.5','1.25(3.5^x)']];
       const url='https://www.geogebra.org/classic/bajx8km2?embed';
+      const diagram=navigator.onLine ? '<div class="frame-viewport"><iframe class="frame" title="GeoGebra: gradient of an exponential" allowfullscreen referrerpolicy="no-referrer" src="'+url+'"></iframe></div>' :
+        '<img class="frame" src="'+activityImage+'" alt="Static view of the exponential gradient diagram">';
       root.innerHTML=note(copy(1))+'<div class="cols compact"><div class="stack"><table><tr><th>'+math('y')+'</th><th>'+math('dy/dx')+' (approx.)</th></tr>'+
         rows.map(([a,r])=>'<tr>'+values([math(a+'^x'),math(r)])+'</tr>').join('')+'</table>'+note(copy(3))+cover(copy(4),'Special base')+'</div>'+
-        '<div class="stack"><iframe class="frame" title="GeoGebra: gradient of an exponential" allowfullscreen referrerpolicy="no-referrer" src="'+url+'"></iframe><a class="frame-link" href="'+url+'" target="_blank" rel="noopener noreferrer">Open the GeoGebra diagram</a></div></div>';
+        '<div class="stack">'+diagram+'<a class="frame-link" href="'+url+'" target="_blank" rel="noopener noreferrer">Open the GeoGebra diagram</a></div></div>';
+      const viewport=q('.frame-viewport');
+      if(viewport)viewport.style.setProperty('--diagram-scale',viewport.clientWidth/2150);
     }
     function balance(){
       root.innerHTML='<h2>'+copy(1)+'</h2>'+note(copy(2))+copy(3)+'<table><tr><th>n</th>'+values(['1','2','12','365','10000'])+
@@ -93,7 +103,7 @@ window.LuisaChapter14 = (() => {
       const laws=[['\\log_a(uv)','\\log_a u+\\log_a v'],['\\log_a(u/v)','\\log_a u-\\log_a v'],['\\log_a(u^k)','k\\log_a u'],['\\log_a u','\\dfrac{\\log_b u}{\\log_b a}']];
       const derivation=['What power of '+math('a')+' gives '+math('u')+'?',math('x=\\log_a u\\quad\\Longleftrightarrow\\quad a^x=u'),math('\\log_b(a^x)=\\log_b u\\quad\\Longrightarrow\\quad x\\log_b a=\\log_b u'),math('x=\\dfrac{\\log_b u}{\\log_b a}=\\log_a u')];
       const proof=i=>{proofStarted=true;q('.proof').innerHTML=derivation[i];};
-      root.innerHTML=note(copy(2))+laws.map(([a,b],i)=>'<div class="law"><span>'+math(a+' =')+'</span>'+cover(math(b),'',()=>{if(i===3)proof(0);})+'</div>').join('')+
+      root.innerHTML=note('For '+math('u,v>0')+' and bases '+math('a,b>0')+' with '+math('a,b\\ne1')+':')+laws.map(([a,b],i)=>'<div class="law"><span>'+math(a+' =')+'</span>'+cover(math(b),'',()=>{if(i===3)proof(0);})+'</div>').join('')+
         note(copy(8))+'<div class="proof" aria-live="polite"></div>';
       for(let i=1;i<4;i++)action('proof'+i,()=>proof(i));
       root.dataset.proof=derivation.join('<br>');
@@ -126,7 +136,7 @@ window.LuisaChapter14 = (() => {
       q('#year').onclick=()=>perform('year'+(year+2));q('#transform').onclick=()=>perform('transform');draw();
     }
     function earthquake(){
-      root.innerHTML='<h2>The Richter scale</h2><div class="cols"><div class="stack"><img class="ch-photo" alt="Original Richter-scale chart showing relative wave amplitudes" src="resources/pure-year-1/native/assets/42b8420288f119c3a2c5.jpeg"></div><div class="stack"><p>At the same recording distance, how much larger is the recorded wave amplitude for magnitude 5 than for magnitude 4?</p><p>Magnitude 4 · 1 unit</p><div class="amplitude reference"></div>'+
+      root.innerHTML='<h2>The Richter scale</h2><div class="cols"><div class="stack"><img class="ch-photo" alt="Original Richter-scale chart showing relative wave amplitudes" src="'+activityImage+'"></div><div class="stack"><p>At the same recording distance, how much larger is the recorded wave amplitude for magnitude 5 than for magnitude 4?</p><p>Magnitude 4 · 1 unit</p><div class="amplitude reference"></div>'+
         stage('magnitude','<p>Magnitude 5 · 10 units</p><div class="amplitude bigger"></div>')+'</div></div>'+
         stage('scale',eq('\\Delta M=\\log_{10}(10/1)=1')+'A tenfold increase in measured wave amplitude gives one extra magnitude unit. Energy is a different quantity.');
     }

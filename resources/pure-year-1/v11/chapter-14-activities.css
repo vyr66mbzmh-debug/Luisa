@@ -22,6 +22,8 @@
 .ch14 th {background:#f2f5f6;font-weight:600;}
 .ch14 td .slot {position:static;min-height:0;padding:0;border:0;}
 .ch14 td .cover {border-radius:0;border:0;}
+/* Keep the revealed cell as a full-size touch target so browsers do not retarget its neighbour. */
+.ch14 td .slot.open .cover {display:block;opacity:0;cursor:default;}
 .ch14 .vertical-table {max-width:840px;align-self:center;}
 .ch14 .ch-plot {width:100%;height:100%;max-height:355px;display:block;}
 .ch14 .ch-plot text {font:16px system-ui,sans-serif;fill:#243c50;}
@@ -49,6 +51,9 @@
 .ch14 .amplitude {height:22px;background:#30739a;transition:width .65s ease-out;}
 .ch14 .amplitude.reference{width:10%;background:#59768b;}
 .ch14 .frame {aspect-ratio:4/3;width:100%;border:1px solid #e4e4e4;border-radius:4px;}
+.ch14 .frame-viewport {position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;border:1px solid #e4e4e4;border-radius:4px;}
+/* The material stores its coordinate origin in a desktop-sized drawing area. */
+.ch14 .frame-viewport .frame {position:absolute;inset:0;width:2150px;height:1612px;max-width:none;border:0;transform:scale(var(--diagram-scale));transform-origin:top left;}
 .ch14 .frame-link {font:20px system-ui,sans-serif;}
 .ch14 .stage {animation:ch-stage .35s ease-out both;}
 @keyframes ch-stage {from{opacity:.1;transform:translateY(7px)}to{opacity:1;transform:none}}
