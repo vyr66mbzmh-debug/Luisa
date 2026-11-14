@@ -1,6 +1,8 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.41 -->
+<!-- LUISA-REPORT-HANDOFF v0.42 -->
+**Release 0.42.** The three library pages use one compact row. The logo is at the left, followed directly by By skill, By textbook and Teaching Resources. The separate wordmark and tagline have been removed. Actions occupy the right side. On narrower screens the toolbar scrolls horizontally beside the logo. Offline downloads and Sign out use shared 14px link styles across views. Verify horizontal access and typography on each edition. Issue #52 records NAV-042 and its release evidence.
+
 **Release 0.41.** The three library views share left-aligned By skill, By textbook and Teaching Resources links in that order. Each page has the same top-left logo. The By skill display controls align right; Cloudflare places the development version link last and ADA places account sign-out there. The teaching catalogue retains its established URL. Verify the three entry points in both edition manifests and at phone and desktop widths. Issue #50 records the requirements and live release evidence.
 
 **Release 0.40.** Cloudflare serves the owner library with textbook chapters, development navigation and offline packs. ADA serves the protected student edition at the main college address under /AL/. Build and verify each manifest independently with scripts/luisa.py build and check-artifact using the owner or student profile. Both editions now omit the Teaching chapters introduction and provide named topic, skill and solution print downloads. Running headers preserve the printed skill identifiers in Further and Standard Maths. Where a combined topic page covers several skills, the header identifies its first question. The original print URLs continue to work.
