@@ -1,6 +1,8 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.47 -->
+<!-- LUISA-REPORT-HANDOFF v0.48 -->
+**Release 0.48, issue #72.** The three library pages show the calculator, cloud download and quiet version link on Cloudflare and for ADA teachers. The ADA teacher exit button identifies the signed-in teacher in its tooltip and accessible name. Pupils see their identifier and the generic exit button. The version is stamped from release metadata at build time. Teaching Resources subject-colour treatments await owner selection.
+
 **Release 0.47, issue #70.** Teaching slides display the booklet page title and a compact current-page / total selector. The logo returns to Teaching Resources, where ADA users can sign out. The CG100 calculator on Cloudflare and ADA teacher slides opens in a separate window requesting one quarter of the available screen width and its full height. Check chapter navigation, resource menus, page numbers, and the role-specific calculator in the three build profiles.
 
 **Release 0.46, issue #68.** All teaching slides use a single-line banner with the linked Luisa logo, slide selector, chapter title and current page number before the gold reveal icon, reset, full screen and resources. Check chapter navigation, resource menus, page numbers, and the authenticated account controls in the three build profiles.

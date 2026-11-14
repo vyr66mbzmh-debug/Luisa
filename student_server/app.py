@@ -966,6 +966,8 @@ def create_app(overrides: dict | None = None) -> Flask:
             preview = db().execute('SELECT username FROM pupil_preview_logins WHERE school_number=?', (identity,)).fetchone()
             if preview:
                 identity = preview['username']
+        if g.luisa_session['role'] == 'staff':
+            page = page.replace('__LUISA_TEACHER_ACRONYM__', escape(identity.upper()))
         page = page.replace('<!--luisa-account-name-->', escape(identity))
         return watch_pupil_session(page.replace('__LUISA_SESSION_CSRF__', escape(base_context())))
 

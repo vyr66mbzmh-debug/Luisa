@@ -4604,6 +4604,23 @@
       "evidence": [
         "GitHub issue #70"
       ]
+    },
+    {
+      "id": "NAV-048",
+      "scope": "By skill, By textbook and Teaching Resources",
+      "requirement": "The three library pages show the calculator, cloud download and quiet version link on Cloudflare and for ADA teachers. The ADA teacher exit button identifies the signed-in teacher in its tooltip and accessible name. Pupils see their identifier and the generic exit button.",
+      "acceptance": [
+        "Calculator uses the slide symbol and quarter-width, full-height window. Offline downloads uses a cloud with a downward arrow and retains the edition-specific destination.",
+        "Version is quiet text after a divider, uses the release metadata and opens Development progress.",
+        "On ADA teacher library pages show the exit icon with Sign out plus the uppercase authenticated acronym as its tooltip and accessible name. Pupils retain their identifier and generic sign-out."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner-approved Quiet Text, issue #72",
+      "evidence": [
+        "GitHub issue #72"
+      ]
     }
   ]
 }

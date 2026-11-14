@@ -58,7 +58,21 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
   color: white;
   font: 600 14px/1.25 system-ui, sans-serif;
 }
-.library-actions .version { margin: 0; padding: 8px 0 8px 8px; color: #d2e1eb; }
+.library-actions a.version {
+  display: inline-flex; align-items: center; margin: 0; padding: 0 6px 0 0;
+  min-height: 44px; color: #dfeaf0; font-weight: 500; font-variant-numeric: tabular-nums;
+  text-decoration: none;
+}
+.library-actions .version::before {
+  content: ""; height: 19px; border-left: 1px solid #8da1b0; margin-right: 11px;
+}
+.library-actions .version:hover { text-decoration: underline; text-underline-offset: 3px; }
+.library-actions .library-tool { display: inline-grid; place-items: center; box-sizing: border-box; width: 44px; height: 44px; }
+.library-actions .library-tool:hover { background: #ffffff20; border-radius: 5px; }
+.library-actions .library-tool svg {
+  width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.75;
+  stroke-linecap: round; stroke-linejoin: round;
+}
 .library-toolbar :focus-visible { outline-offset: -3px; }
 @media (max-width: 760px) {
   .library-header.top { padding: 3px 8px; gap: 6px; }
