@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-09",
+  "asOf": "2026-11-13",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -4293,6 +4293,133 @@
         "docs/handoff/V036-SOLUTIONS-INTEGRATION.md",
         "docs/evidence/v037-solutions.json",
         "docs/evidence/v037-release.json"
+      ]
+    },
+    {
+      "id": "ED-040",
+      "requirement": "Maintain a shared Luisa source with explicit owner and student build profiles. Cloudflare continues to receive the owner's current edition and access arrangements; ADA receives the student edition. Record the approved host difference in build configuration, deployment checks and handoff, and verify each host against its own intended manifest.",
+      "scope": "owner and student website artifacts and their deployments",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Default owner build preserves the current Cloudflare product and manifest.",
+        "Student profile retains all non-restricted teaching, practice, print and solution content, including By textbook exercise navigation.",
+        "Student profile removes the offline facility, textbook chapter documents, CG100, aliases/embedded copies, and direct links from the student interface to omitted resources.",
+        "Keep textbook extracts distinct from Luisa teaching and practice resources where chapter titles overlap.",
+        "Build output and deployment checks verify Cloudflare against the owner manifest and ADA against the student manifest; do not require cross-host manifest equality."
+      ],
+      "origin": "Luisa owner handoff 2026-11-13; replaces earlier school sign-in proposal",
+      "evidence": [
+        "GitHub issue #48",
+        "scripts/luisa.py owner/student profiles and artifact checks",
+        ".github/workflows/quality.yml",
+        "docs/DEVOPS.md",
+        "HANDOFF.md"
+      ]
+    },
+    {
+      "id": "AUTH-040",
+      "requirement": "Luisa manages student accounts from a private teacher admin page using an owner-supplied roster of five-ASCII-digit school numbers. Derive sign-in email by appending @marlboroughcollege.org; require the full valid address and an active roster entry. Preserve leading zeroes; adding single or batched entries must not reset existing accounts. Use Luisa credentials independently of school passwords. Teacher-issued temporary passwords are unique, valid until first successful use or replacement and replaced before content access. Store password hashes with salts using a maintained authentication library. Admin can force password change, reset credentials (revoking sessions and prior temporary credentials), suspend/reactivate accounts and revoke sessions. Store only class and school number as pupil identifiers. Never send pupils system emails. The teacher can print individual first-use password slips in one batch by class or for all classes. Staff may use privately provisioned usernames to access course content. Staff content accounts grant no roster administration access. The sole teacher signs in as admin with a private teacher password of at least 8 characters and can change it from the admin page. No authenticator or six-digit code is required on ADA.",
+      "scope": "student roster, authentication, teacher account controls and teacher password sign-in",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Reject unlisted addresses, invalid formats, lookalike domains and non-ASCII digits; an address or school number alone never activates an account or sets a password.",
+        "Batch additions preserve existing password, status and session state for duplicate accounts; do not store names, surnames or dates of birth.",
+        "Consume new temporary passwords on first successful login with no time limit before use. Reject consumed, revoked and expired legacy credentials.",
+        "Admin reset invalidates existing sessions and all previously issued temporary credentials; suspension blocks authentication and direct content access.",
+        "Use HTTPS, secure session cookies, login rate limits and server-side authorization on all protected routes.",
+        "A successful pupil sign-in replaces the previous session. Staff can sign in on multiple devices using a case-insensitive acronym or full college email. List staff in private administration. Keep real staff identifiers outside Git and send no staff emails."
+      ],
+      "origin": "Luisa owner handoff 2026-11-13",
+      "evidence": [
+        "GitHub issue #48",
+        "student_server/app.py",
+        "scripts/bootstrap_student_admin.py",
+        "tests/test_student_auth.py"
+      ]
+    },
+    {
+      "id": "SEC-040",
+      "requirement": "Protect the complete student edition on ADA at the server: HTML, PDFs, JSON, images and JavaScript bundles containing questions. No static-JavaScript password gate. Disable student service-worker registration and offline packs; inspect and migrate previously provisioned ADA workers/caches while acknowledging prior downloads can persist. Keep last sign-in as the sole student activity measure: one UTC successful-authentication timestamp per account, shown in UK local time or Never signed in. Failed attempts, page visits and session renewals do not update it. Exclude login history, IP records, counts, skills tracking and usage analytics from application state. Review and flag proxy/host retention outside application control.",
+      "scope": "ADA student content delivery, session/cache boundaries, offline migration and student privacy",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Direct unauthenticated requests for every private file type and admin endpoint are denied; authorized requests serve the retained content.",
+        "Use private no-store response headers for authenticated content and auth/admin responses.",
+        "Student artifact contains no offline packs or service-worker registration; online migration removes prior ADA service-worker control and cache packs where the browser permits.",
+        "Only a successful login changes the account's UTC timestamp; failed attempts leave it intact and the next success replaces it.",
+        "Display 23 as Lower Sixth and 22 as Upper Sixth for the current school year; keep cohort mapping school-year-specific.",
+        "Document known infrastructure logging separately from application state. Record unverified upstream retention as unknown. Manager confirmation of that policy is not a prerequisite for the fictional pilot."
+      ],
+      "origin": "Luisa owner handoff 2026-11-13",
+      "evidence": [
+        "GitHub issue #48",
+        "scripts/luisa.py student profile and check-artifact",
+        "student_server/app.py",
+        "student_server/wsgi.py",
+        "tests/test_student_auth.py"
+      ]
+    },
+    {
+      "id": "OPS-040",
+      "requirement": "Before student rollout, ADA must provide a server-side runtime/gateway and private durable storage outside the public tree. Authentication and account state survive site deployment and rollback. Verify recovery from backup and review host/proxy log retention. Keep the existing Cloudflare owner deployment independently accessible with its current features/access arrangements. Import the real roster only after a fictional-pupil pilot and verified admin workflow.",
+      "scope": "ADA hosting/runtime, private persistence, recovery, deployment boundary and pilot gate",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Verify the managed app process, external HTTPS routing and deployment method. All student assets pass through server-side authorization.",
+        "Rostering, credential/session state and secrets are stored outside the public tree in a durable path, with backup and tested recovery across deploy/rollback.",
+        "Record current Nginx/proxy access log format and retention; flag fields and retention outside application control.",
+        "Pilot with fictional accounts covers authentication, admin controls, direct routes, backup recovery, cache/service-worker migration and all retained routes.",
+        "Do not import the private owner roster until the pilot login and verified admin workflow are supplied to the owner."
+      ],
+      "origin": "Luisa owner handoff 2026-11-13; ADA runtime path selected through college IT",
+      "evidence": [
+        "GitHub issue #48",
+        "docs/DEVOPS.md",
+        "HANDOFF.md",
+        "14 November ADA private runtime, fictional-account and SQLite restore checks; public pilot and external retention checks pending"
+      ]
+    },
+    {
+      "id": "PRINT-040",
+      "scope": "Both published editions",
+      "requirement": "Name toolbar PDFs by course, book and topic, with the skill code and SOLUTIONS where applicable. Remove FMQ from running print headers.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Preserve the per-page skill identifier and the rest of every question and solution.",
+        "Preserve existing resource addresses and offline owner downloads.",
+        "Standard Maths and Further Maths show the skill identifier in the running header. On combined topic pages use the first question’s skill, including reference-table pages."
+      ],
+      "origin": "Owner request, 14 November 2026",
+      "evidence": [
+        "GitHub issue #48",
+        "HANDOFF.md"
+      ]
+    },
+    {
+      "id": "NAV-040",
+      "scope": "Both editions for Teaching chapters; signed-in ADA navigation",
+      "requirement": "Remove the Teaching chapters introductory subtitle on both hosts. On ADA omit version badges and development links and place sign-out last in the toolbar and on every signed-in page.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Nested lessons, direct documents, admin and forced password change screens support logout.",
+        "Owner edition keeps development and offline navigation."
+      ],
+      "origin": "Owner request, 14 November 2026",
+      "evidence": [
+        "GitHub issue #48",
+        "HANDOFF.md"
       ]
     }
   ]

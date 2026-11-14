@@ -2,6 +2,7 @@ import * as pdfjs from './vendor/pdfjs/pdf.min.js';
 const $=id=>document.getElementById(id),base=new URL('./',location.href),params=new URLSearchParams(location.search);
 function local(value,pdf=false){try{const u=new URL(value,base);if(u.origin!==base.origin||!u.pathname.startsWith(base.pathname)||u.username||u.password||!['http:','https:'].includes(u.protocol)||(pdf&&!u.pathname.toLowerCase().endsWith('.pdf')))return null;return u;}catch{return null;}}
 const target=local(params.get('file')||'',true),back=local(params.get('return')||'./');
+if(target){$('save').href=target.href;$('save').download=decodeURIComponent(target.pathname.split('/').pop());$('save').hidden=false;}
 $('return').href=back?.href||base.href;
 $('return').onclick=e=>{if(window.parent!==window){e.preventDefault();window.parent.postMessage({type:'luisa-close-document'},base.origin);}};
 $('title').textContent=params.get('title')||'Document';document.title=$('title').textContent+' · Luisa';
