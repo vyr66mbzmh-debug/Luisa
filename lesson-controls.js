@@ -92,7 +92,7 @@
     setTitle(heading, chapterTitle);
     heading.title = chapterTitle;
     document.getElementById('slide-number').textContent = slide.sourceSlide;
-    document.getElementById('compact-slide').textContent = 'Slide ' + slide.sourceSlide;
+    document.getElementById('compact-slide').textContent = slide.sourceSlide;
     document.getElementById('slide-select').title = slide.title;
   }
 

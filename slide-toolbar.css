@@ -49,6 +49,7 @@
     position: absolute; inset: 0; pointer-events: none;
     display: flex; align-items: center; justify-content: center; color: white; font: 13px system-ui;
   }
+  #compact-slide::before { content: 'Slide'; margin-right: 2px; }
   #compact-slide::after { content: '▾'; margin-left: 3px; }
   .slide-toolbar #slide-select { appearance: none; }
 }
@@ -66,3 +67,28 @@
 }
 
 html[data-luisa-edition="student"] .slide-toolbar #book-pdf { display: none; }
+
+/* Leave space for both the chapter and the signed-in account on tablets. */
+.slide-toolbar .luisa-account {
+  max-width: 9ch; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+}
+@media (max-width: 1000px) {
+  .slide-toolbar .luisa-account { display: none; }
+  .slide-toolbar #slide-select { max-width: 21vw; }
+}
+@media (max-width: 420px) {
+  .slide-toolbar { gap: 1px; padding-inline: 2px; }
+  .slide-toolbar .luisa-logo { width: 34px; height: 28px; }
+  .slide-toolbar .slide-icon { width: 24px; }
+  .slide-toolbar #slide-select { width: 45px; }
+  #compact-slide { font-size: 11px; }
+  #compact-slide::after { margin-left: 1px; }
+  .slide-toolbar #slide-number { font-size: 15px; }
+  .slide-toolbar h1 { font-size: 14px; }
+  .slide-toolbar .luisa-signout { width: 28px !important; min-width: 0; }
+}
+@media (max-width: 350px) {
+  .slide-toolbar .luisa-logo { width: 29px; }
+  .slide-toolbar #slide-select { width: 32px; }
+  #compact-slide::before { content: none; }
+}
