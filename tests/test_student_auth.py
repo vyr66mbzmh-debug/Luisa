@@ -168,6 +168,23 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.post_form(client, '/admin/password', form, client.get('/admin/password', base_url='https://ada.test'))
         self.assertEqual(client.get('/admin', base_url='https://ada.test').status_code, 200)
 
+    def test_staff_content_login_is_independent_of_pupils_and_admin(self):
+        login = 'sample.teacher'
+        temp = 'One-use-test-secret!'
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('INSERT INTO staff_accounts(username,temporary_hash,temporary_available) VALUES(?,?,1)',
+                         (login, PasswordHasher().hash(temp)))
+        self.assertEqual(self.student_login('unknown.teacher', temp).status_code, 401)
+        self.assertEqual(self.student_login(login, temp).location, '/change-password')
+        self.assertEqual(self.client.get('/content/questions.json', base_url='https://ada.test').location, '/change-password')
+        self.assertEqual(self.student_login(login, temp).status_code, 401)
+        new = 'Teacher practice password!'
+        self.assertEqual(self.change_password(self.client, new).location, '/')
+        self.assertEqual(self.student_login(login, new).location, '/')
+        self.assertEqual(self.client.get('/admin', base_url='https://ada.test').status_code, 403)
+        self.assertEqual(self.client.get('/', base_url='https://ada.test').status_code, 200)
+        self.assertIsNone(self.database_account(login))
+
     def test_roster_leading_zero_duplicates_and_mfa_admin(self):
         self.add('02340\n23401')
         invalid_batch = self.add('02401\nAlice Example')

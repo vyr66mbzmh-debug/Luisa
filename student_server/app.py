@@ -28,7 +28,7 @@ _SIGN_IN = re.compile(r"[0-9]{5}@marlboroughcollege\.org\Z", re.ASCII | re.IGNOR
 _UTC = timezone.utc
 _UK = ZoneInfo('Europe/London')
 
-LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Luisa pupil sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>School email<input name=email type=email autocomplete=username required maxlength=64></label><label>Luisa password<input name=password type=password autocomplete=current-password required maxlength=1024></label><button>Sign in</button></form><p><a href="{{ url_for('admin_login') }}">Teacher sign in</a></p></html>"""
+LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Luisa sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>School email or staff username<input name=email type=text autocomplete=username required maxlength=64></label><label>Luisa password<input name=password type=password autocomplete=current-password required maxlength=1024></label><button>Sign in</button></form><p><a href="{{ url_for('admin_login') }}">Admin sign in</a></p></html>"""
 ADMIN_LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa administration sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Teacher sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>Username<input name=username value=admin autocomplete=username required></label><label>Teacher password<input name=password type=password autocomplete=current-password required maxlength=1024></label>{% if config.ADMIN_AUTH_MODE == "totp" %}<label>Authenticator code<input name=totp inputmode=numeric autocomplete=one-time-code required pattern='[0-9]{6}'></label>{% endif %}<button>Sign in</button></form></html>"""
 CHANGE_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Change Luisa password</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Choose a new Luisa password</h1><p>Change your temporary password before opening course content.</p>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>New password<input name=password type=password autocomplete=new-password required minlength=12 maxlength=1024></label><label>Repeat new password<input name=confirm type=password autocomplete=new-password required minlength=12 maxlength=1024></label><button>Save password</button></form></html>"""
 TEACHER_PASSWORD_PAGE = """<!doctype html><html lang=en><meta charset=utf-8>
@@ -206,6 +206,14 @@ def create_app(overrides: dict | None = None) -> Flask:
                     created_utc TEXT NOT NULL,
                     expires_utc TEXT NOT NULL
                 );
+                CREATE TABLE IF NOT EXISTS staff_accounts (
+                    username TEXT PRIMARY KEY,
+                    password_hash TEXT,
+                    temporary_hash TEXT,
+                    temporary_available INTEGER NOT NULL DEFAULT 0,
+                    active INTEGER NOT NULL DEFAULT 1,
+                    force_change INTEGER NOT NULL DEFAULT 1
+                );
                 CREATE TABLE IF NOT EXISTS teacher_credential (
                     singleton INTEGER PRIMARY KEY CHECK(singleton=1),
                     password_hash TEXT NOT NULL
@@ -217,6 +225,21 @@ def create_app(overrides: dict | None = None) -> Flask:
                 INSERT OR IGNORE INTO admin_mfa_state(singleton,last_accepted_step) VALUES(1,-1);
             ''')
             conn.execute('BEGIN IMMEDIATE')
+            if 'staff_username' not in {row['name'] for row in conn.execute('PRAGMA table_info(sessions)')}:
+                conn.execute('ALTER TABLE sessions RENAME TO old_sessions')
+                conn.execute("""CREATE TABLE sessions (
+                    session_hash TEXT PRIMARY KEY,
+                    school_number TEXT REFERENCES accounts(school_number) ON DELETE CASCADE,
+                    role TEXT NOT NULL CHECK(role IN ('student','staff','admin')),
+                    must_change INTEGER NOT NULL DEFAULT 0 CHECK(must_change IN (0,1)),
+                    csrf_token TEXT NOT NULL, created_utc TEXT NOT NULL, expires_utc TEXT NOT NULL,
+                    staff_username TEXT REFERENCES staff_accounts(username) ON DELETE CASCADE,
+                    CHECK ((role='staff')=(staff_username IS NOT NULL)),
+                    CHECK ((role='student')=(school_number IS NOT NULL))
+                )""")
+                conn.execute("""INSERT INTO sessions(session_hash,school_number,role,must_change,csrf_token,created_utc,expires_utc)
+                    SELECT session_hash,school_number,role,must_change,csrf_token,created_utc,expires_utc FROM old_sessions""")
+                conn.execute('DROP TABLE old_sessions')
             columns = {row['name'] for row in conn.execute('PRAGMA table_info(accounts)')}
             if 'class_code' not in columns:
                 conn.execute("ALTER TABLE accounts ADD COLUMN class_code TEXT NOT NULL DEFAULT ''")
@@ -242,13 +265,13 @@ def create_app(overrides: dict | None = None) -> Flask:
         init_db()
         print('Private Luisa account database initialized.')
 
-    def new_session(role: str, school_number: str | None = None, must_change: bool = False):
+    def new_session(role: str, identity: str | None = None, must_change: bool = False):
         token = secrets.token_urlsafe(32)
         csrf = secrets.token_urlsafe(32)
         created = utc_now()
         expiry = utc_text(created + timedelta(seconds=app.config['SESSION_SECONDS']))
-        db().execute('INSERT INTO sessions(session_hash,school_number,role,must_change,csrf_token,created_utc,expires_utc) VALUES(?,?,?,?,?,?,?)',
-                     (digest_session(token), school_number, role, int(must_change), csrf, utc_text(created), expiry))
+        db().execute('INSERT INTO sessions(session_hash,school_number,role,must_change,csrf_token,created_utc,expires_utc,staff_username) VALUES(?,?,?,?,?,?,?,?)',
+                     (digest_session(token), identity if role == 'student' else None, role, int(must_change), csrf, utc_text(created), expiry, identity if role == 'staff' else None))
         return token
 
     def establish(token: str):
@@ -282,8 +305,11 @@ def create_app(overrides: dict | None = None) -> Flask:
             if not row:
                 db().execute('DELETE FROM sessions WHERE session_hash=?', (session_hash,))
             if row:
-                if row['role'] == 'student':
-                    account = db().execute('SELECT active,force_change FROM accounts WHERE school_number=?', (row['school_number'],)).fetchone()
+                if row['role'] in {'student', 'staff'}:
+                    if row['role'] == 'staff':
+                        account = db().execute('SELECT active,force_change FROM staff_accounts WHERE username=?', (row['staff_username'],)).fetchone()
+                    else:
+                        account = db().execute('SELECT active,force_change FROM accounts WHERE school_number=?', (row['school_number'],)).fetchone()
                     if not account or not account['active']:
                         db().execute('DELETE FROM sessions WHERE session_hash=?', (row['session_hash'],))
                         row = None
@@ -303,9 +329,9 @@ def create_app(overrides: dict | None = None) -> Flask:
         if (app.config['TEACHER_SETUP'] and g.luisa_session and g.luisa_session['role'] == 'admin'
                 and endpoint not in {'teacher_password', 'logout'} and teacher_hash() == app.config['ADMIN_PASSWORD_HASH']):
             return redirect(url_for('teacher_password'))
-        if endpoint in {'change_password', 'change_password_post'} and g.luisa_session and g.luisa_session['role'] == 'student':
+        if endpoint in {'change_password', 'change_password_post'} and g.luisa_session and g.luisa_session['role'] in {'student', 'staff'}:
             return None
-        if g.luisa_session and g.luisa_session['role'] == 'student' and g.luisa_session['must_change'] and endpoint not in {'change_password', 'change_password_post', 'logout'}:
+        if g.luisa_session and g.luisa_session['role'] in {'student', 'staff'} and g.luisa_session['must_change'] and endpoint not in {'change_password', 'change_password_post', 'logout'}:
             return redirect(url_for('change_password'))
         return None
 
@@ -369,6 +395,8 @@ def create_app(overrides: dict | None = None) -> Flask:
         key = email_key(email.casefold(), rate_key)
         if not limiter.allowed(key):
             return render_login(LOGIN_PAGE, 'Sign-in failed. Check your details or contact your teacher.'), 429
+        if re.fullmatch(r'[a-z][a-z0-9._-]{0,31}', email, re.ASCII) and email != 'admin':
+            return staff_login(email, password, key)
         school_number = email[:5] if _SIGN_IN.fullmatch(email) else ''
         account = db().execute('SELECT * FROM accounts WHERE school_number=? AND active=1', (school_number,)).fetchone() if school_number else None
         temp_is_valid = bool(account and account['temporary_hash'] and account['temporary_available'] and (not account['temporary_expires_utc'] or account['temporary_expires_utc'] > utc_text()))
@@ -413,6 +441,28 @@ def create_app(overrides: dict | None = None) -> Flask:
         response.set_cookie(app.config['SESSION_COOKIE'], token, max_age=app.config['SESSION_SECONDS'], secure=True,
                             httponly=True, samesite='Lax', path=app.config['SESSION_COOKIE_PATH'])
         return response
+
+    def staff_login(username, password, key):
+        account = db().execute('SELECT * FROM staff_accounts WHERE username=? AND active=1', (username,)).fetchone()
+        first = bool(account and account['temporary_available'])
+        encoded = (account['temporary_hash'] if first else account['password_hash']) if account else None
+        if len(password) <= 1024 and password_ok(encoded or _DUMMY_PASSWORD_HASH, password) and encoded:
+            db().execute('BEGIN IMMEDIATE')
+            if first:
+                valid = db().execute("""UPDATE staff_accounts SET temporary_available=0 WHERE username=? AND active=1
+                    AND temporary_available=1 AND temporary_hash=?""", (username, encoded)).rowcount
+            else:
+                valid = db().execute("SELECT 1 FROM staff_accounts WHERE username=? AND active=1 AND password_hash=?",
+                                     (username, encoded)).fetchone()
+            if valid:
+                token = new_session('staff', username, first)
+                db().commit()
+                limiter.succeeded(key)
+                g.luisa_session = {'must_change': first}
+                return establish(token)
+            db().rollback()
+        limiter.failed(key)
+        return render_login(LOGIN_PAGE, 'Sign-in failed. Check your details.'), 401
 
     def teacher_hash():
         return db().execute('SELECT password_hash FROM teacher_credential WHERE singleton=1').fetchone()[0]
@@ -471,23 +521,25 @@ def create_app(overrides: dict | None = None) -> Flask:
 
     @app.get('/change-password')
     def change_password():
-        if not g.luisa_session or g.luisa_session['role'] != 'student':
+        if not g.luisa_session or g.luisa_session['role'] not in {'student', 'staff'}:
             return redirect(url_for('login'))
         return render_template_string(CHANGE_PAGE, csrf=base_context(), error=None)
 
     @app.post('/change-password')
     def change_password_post():
         require_csrf()
-        if not g.luisa_session or g.luisa_session['role'] != 'student' or not g.luisa_session['must_change']:
+        if not g.luisa_session or g.luisa_session['role'] not in {'student', 'staff'} or not g.luisa_session['must_change']:
             abort(403)
         password = request.form.get('password', '')
         confirm = request.form.get('confirm', '')
         if len(password) < 12 or len(password) > 1024 or password != confirm:
             return render_template_string(CHANGE_PAGE, csrf=base_context(), error='Use at least 12 characters and enter the same password twice.'), 400
-        number = g.luisa_session['school_number']
+        is_staff = g.luisa_session['role'] == 'staff'
+        table, column, session_column = ('staff_accounts', 'username', 'staff_username') if is_staff else ('accounts', 'school_number', 'school_number')
+        number = g.luisa_session[session_column]
         if password in {number, number + '@marlboroughcollege.org'}:
             return render_template_string(CHANGE_PAGE, csrf=base_context(), error='Choose a password independent of your school number and email.'), 400
-        old = db().execute('SELECT password_hash,temporary_hash FROM accounts WHERE school_number=? AND active=1', (number,)).fetchone()
+        old = db().execute(f'SELECT password_hash,temporary_hash FROM {table} WHERE {column}=? AND active=1', (number,)).fetchone()
         if old is None:
             abort(403)
         if any(password_ok(value, password) for value in old if value):
@@ -497,11 +549,11 @@ def create_app(overrides: dict | None = None) -> Flask:
         if not db().execute('SELECT 1 FROM sessions WHERE session_hash=? AND must_change=1', (g.luisa_session['session_hash'],)).fetchone():
             db().execute('ROLLBACK')
             abort(403)
-        changed = db().execute('UPDATE accounts SET password_hash=?,force_change=0,temporary_hash=NULL,temporary_expires_utc=NULL WHERE school_number=? AND active=1', (new_hash, number))
+        changed = db().execute(f'UPDATE {table} SET password_hash=?,force_change=0,temporary_hash=NULL,temporary_available=0 WHERE {column}=? AND active=1', (new_hash, number))
         if changed.rowcount != 1:
             abort(403)
-        db().execute('DELETE FROM sessions WHERE school_number=?', (number,))
-        token = new_session('student', number, False)
+        db().execute(f'DELETE FROM sessions WHERE {session_column}=?', (number,))
+        token = new_session(g.luisa_session['role'], number, False)
         db().execute('COMMIT')
         g.luisa_session = {'must_change': 0}
         response = redirect(url_for('index'))
@@ -687,15 +739,15 @@ def create_app(overrides: dict | None = None) -> Flask:
 
     @app.get('/')
     def index():
-        if not g.luisa_session or g.luisa_session['role'] != 'student' or g.luisa_session['must_change']:
+        if not g.luisa_session or g.luisa_session['role'] not in {'student', 'staff'} or g.luisa_session['must_change']:
             return redirect(url_for('login'))
         page = (build_dir / 'index.html').read_text(encoding='utf-8')
-        page = page.replace('href="logout">Sign out', 'href="logout">' + g.luisa_session['school_number'] + ' · Sign out', 1)
+        page = page.replace('href="logout">Sign out', 'href="logout">' + (g.luisa_session['school_number'] or g.luisa_session['staff_username']) + ' · Sign out', 1)
         return page
 
     @app.get('/<path:asset>')
     def private_asset(asset: str):
-        if not g.luisa_session or g.luisa_session['role'] != 'student' or g.luisa_session['must_change']:
+        if not g.luisa_session or g.luisa_session['role'] not in {'student', 'staff'} or g.luisa_session['must_change']:
             return redirect(url_for('login'))
         if asset == 'index.html':
             return index()
