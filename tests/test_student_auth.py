@@ -214,10 +214,16 @@ class StudentAuthAcceptance(unittest.TestCase):
     def test_private_preview_uses_only_its_bare_username_and_pupil_rights(self):
         self.add('00001')
         first = 'Private-first-secret'
-        self.action('00001', 'reset', chosen_password=first)
         alias = 'test_example'
         with closing(sqlite3.connect(self.db_path)) as conn, conn:
             conn.execute('INSERT INTO pupil_preview_logins VALUES(?,?)', ('00001', alias))
+        slips = self.post_form(self.admin, '/admin/slips', {})
+        self.assertNotIn('<article>', slips.text)
+        self.action('00001', 'reset', chosen_password=first)
+        for identifier in (alias, 'test_unknown'):
+            response = self.student_login(identifier, 'incorrect password')
+            self.assertEqual(response.status_code, 401)
+            self.assertIn('Check your details or contact your teacher.', response.text)
         for invalid in ('00001@marlboroughcollege.org', alias+'@marlboroughcollege.org', alias+'@other.test'):
             self.assertEqual(self.student_login(invalid, first).status_code, 401)
         self.assertEqual(self.student_login(alias, first).location, '/change-password')

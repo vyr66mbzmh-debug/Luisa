@@ -430,11 +430,13 @@ def create_app(overrides: dict | None = None) -> Flask:
             return render_login(LOGIN_PAGE, 'Sign-in failed. Check your details or contact your teacher.'), 429
         school_number = email[:5] if _SIGN_IN.fullmatch(email) else ''
         if is_staff:
-            preview = db().execute('SELECT school_number FROM pupil_preview_logins WHERE username=?', (username,)).fetchone()
-            if preview is None:
+            if not username.startswith('test_'):
                 return staff_login(username, password, key)
-            # Only the bare alias opens a preview. Fail closed on a staff name collision.
-            if email == username and not db().execute('SELECT 1 FROM staff_accounts WHERE username=?', (username,)).fetchone():
+            preview = db().execute('SELECT school_number FROM pupil_preview_logins WHERE username=?', (username,)).fetchone()
+            staff = db().execute('SELECT 1 FROM staff_accounts WHERE username=?', (username,)).fetchone()
+            if staff and preview is None:
+                return staff_login(username, password, key)
+            if preview and not staff and email == username:
                 school_number = preview['school_number']
         elif school_number and db().execute('SELECT 1 FROM pupil_preview_logins WHERE school_number=?', (school_number,)).fetchone():
             school_number = ''
@@ -721,6 +723,7 @@ def create_app(overrides: dict | None = None) -> Flask:
         conn.execute('BEGIN IMMEDIATE')
         rows = conn.execute("""SELECT school_number FROM accounts
             WHERE active=1 AND password_hash IS NULL AND temporary_hash IS NULL AND force_change=0
+            AND school_number NOT IN (SELECT school_number FROM pupil_preview_logins)
             AND last_sign_in_utc IS NULL AND (?='' OR class_code=?) ORDER BY class_code,school_number""", (code, code)).fetchall()
         slips = []
         for row in rows:
