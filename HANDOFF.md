@@ -1,6 +1,8 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.44 -->
+<!-- LUISA-REPORT-HANDOFF v0.45 -->
+**Release 0.45, issue #60.** The private admin page creates teachers by acronym and displays a generated first password for manual delivery. Add the nullable staff timestamp via init-db before restarting. Record only successful authentication. Existing teacher sign-ins before this release have no historical timestamps. The pupil mail merge still awaits owner approval.
+
 **Release 0.44 amendment, issue #58.** ADA logout controls POST with the session token and return directly to sign-in. A successful pupil login invalidates the earlier session immediately. Visible pupil pages check for displacement every ten seconds and when restored or refocused. These checks do not renew a session or record activity. Teachers retain independent device sessions. The owner requested v0.44 on both hosts for this amendment. Verify both live manifests by revision.
 
 **Release 0.44, issue #56.** The private pupil_preview_logins table maps a fictional pupil username to a dedicated five-digit roster row. Apply init-db before activation. Provision both rows in one transaction outside the repository. Reserve a distinct username and unused synthetic number. Real pupils use their school email, staff use their usual credentials and the preview uses the bare alias. Store merge greetings and destinations privately outside ADA. The real pupil mailing awaits explicit owner approval.

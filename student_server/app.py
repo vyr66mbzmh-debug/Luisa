@@ -84,7 +84,18 @@ h2,p{margin:.4em 0}code{font-size:1.1em}nav{margin:1em}button{font:inherit}@medi
 <p>School email<br>{{ row.school_number }}@marlboroughcollege.org</p><p>First password<br><code>{{ password }}</code></p>
 <p>Sign in once, then choose your own Luisa password.</p></article>{% endfor %}</main></html>"""
 
-ADMIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa account administration</title><style>body{font:16px/1.5 system-ui;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#183957}table{border-collapse:collapse;width:100%;margin:1.5rem 0}td,th{border:1px solid #ccd5df;padding:.5rem;text-align:left}button,input,textarea{font:inherit;padding:.45rem;margin:.2rem}form{display:inline}section{padding:1rem;border:1px solid #ccd5df;margin:1rem 0}.notice{background:#edf5fb;padding:.8rem}.secret{font:1.15rem monospace;overflow-wrap:anywhere}small{color:#526575}</style><h1>Luisa student accounts</h1><p><a href='{{ url_for("teacher_password") }}'>Change teacher password</a> · """ + SIGN_OUT_FORM + """</p>{% if notice %}<p class=notice role=status>{{ notice }}</p>{% endif %}{% if temp_password %}<section><b>Give this temporary password to pupil {{ temp_school_number }} privately. It works until the first successful sign-in or until you replace it.</b><p class=secret>{{ temp_password }}</p></section>{% endif %}<section><h2>Staff accounts</h2><table><tr><th>Username</th><th>Access</th></tr>{% for member in staff %}<tr><td>{{ member.username }}</td><td>{{ 'Active' if member.active else 'Suspended' }}</td></tr>{% endfor %}</table></section><section><h2>Class password slips</h2><form method=post action='{{ url_for("issue_slips") }}'><input type=hidden name=_csrf value='{{ csrf }}'><label>Class <select name=class_code><option value="">All classes</option>{% for code in classes %}<option>{{ code }}</option>{% endfor %}</select></label><button>Create printable slips</button></form><p>Creates one slip for each active pupil who has never been issued a password. Print the sheet before closing it. To replace a lost slip, issue a new password on the pupil’s row.</p></section><section><h2>Add school numbers</h2><form method=post action='{{ url_for("add_roster") }}'><input type=hidden name=_csrf value='{{ csrf }}'><label>Class (optional) <input name=class_code maxlength=12></label><label>One per line; leading zeroes are preserved<br><textarea name=numbers rows=5 cols=24 required></textarea></label><button>Add roster entries</button></form></section><table><thead><tr><th>Class</th><th>School number</th><th>Cohort</th><th>Access</th><th>Latest successful sign-in</th><th>Account controls</th></tr></thead><tbody>{% for row in rows %}<tr><td>{{ row.class_code }}</td><td>{{ row.label }}</td><td>{{ row.cohort }}</td><td>{{ 'Active' if row.active else 'Suspended' }}{% if row.force_change %} · password change required{% endif %}</td><td>{{ row.last_sign_in }}</td><td><form method=post action='{{ url_for("account_action") }}'><input type=hidden name=_csrf value='{{ csrf }}'><input type=hidden name=school_number value='{{ row.number }}'><select name=action><option value=reset>Issue temporary password</option><option value=force>Force password change</option><option value=suspend>Suspend</option><option value=reactivate>Reactivate</option><option value=revoke>Revoke sessions</option></select><label>Optional temporary password <input name=chosen_password type=password minlength=8 maxlength=128 autocomplete=off></label><button>Apply</button></form></td></tr>{% endfor %}</tbody></table><p><small>Only the latest successful student sign-in is displayed. UK local time. Student names and dates of birth are not collected.</small></p></html>"""
+STAFF_ADMIN_SECTION = """<h2>Staff accounts</h2>
+<form action="{{ url_for('add_teacher') }}" method="post">
+<input type=hidden name=_csrf value="{{ csrf }}">
+<label>Teacher acronym <input name=acronym required maxlength=32 autocomplete="off"></label>
+<button>Add teacher</button></form>
+{% if teacher_password %}<p role=status>Give this first password to <strong>{{ new_teacher }}</strong> privately.
+It works once and is shown only here.</p><p><code>{{ teacher_password }}</code></p>{% endif %}
+<table><thead><tr><th>Username</th><th>Access</th><th>Latest successful sign-in (UK)</th></tr></thead>
+<tbody>{% for member in staff %}<tr><td>{{ member.username }}</td>
+<td>{{ 'Active' if member.active else 'Suspended' }}</td><td>{{ member.last_sign_in }}</td></tr>{% endfor %}</tbody></table>"""
+
+ADMIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa account administration</title><style>body{font:16px/1.5 system-ui;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#183957}table{border-collapse:collapse;width:100%;margin:1.5rem 0}td,th{border:1px solid #ccd5df;padding:.5rem;text-align:left}button,input,textarea{font:inherit;padding:.45rem;margin:.2rem}form{display:inline}section{padding:1rem;border:1px solid #ccd5df;margin:1rem 0}.notice{background:#edf5fb;padding:.8rem}.secret{font:1.15rem monospace;overflow-wrap:anywhere}small{color:#526575}</style><h1>Luisa student accounts</h1><p><a href='{{ url_for("teacher_password") }}'>Change teacher password</a> · """ + SIGN_OUT_FORM + """</p>{% if notice %}<p class=notice role=status>{{ notice }}</p>{% endif %}{% if temp_password %}<section><b>Give this temporary password to pupil {{ temp_school_number }} privately. It works until the first successful sign-in or until you replace it.</b><p class=secret>{{ temp_password }}</p></section>{% endif %}<section>""" + STAFF_ADMIN_SECTION + """</section><section><h2>Class password slips</h2><form method=post action='{{ url_for("issue_slips") }}'><input type=hidden name=_csrf value='{{ csrf }}'><label>Class <select name=class_code><option value="">All classes</option>{% for code in classes %}<option>{{ code }}</option>{% endfor %}</select></label><button>Create printable slips</button></form><p>Creates one slip for each active pupil who has never been issued a password. Print the sheet before closing it. To replace a lost slip, issue a new password on the pupil’s row.</p></section><section><h2>Add school numbers</h2><form method=post action='{{ url_for("add_roster") }}'><input type=hidden name=_csrf value='{{ csrf }}'><label>Class (optional) <input name=class_code maxlength=12></label><label>One per line; leading zeroes are preserved<br><textarea name=numbers rows=5 cols=24 required></textarea></label><button>Add roster entries</button></form></section><table><thead><tr><th>Class</th><th>School number</th><th>Cohort</th><th>Access</th><th>Latest successful sign-in</th><th>Account controls</th></tr></thead><tbody>{% for row in rows %}<tr><td>{{ row.class_code }}</td><td>{{ row.label }}</td><td>{{ row.cohort }}</td><td>{{ 'Active' if row.active else 'Suspended' }}{% if row.force_change %} · password change required{% endif %}</td><td>{{ row.last_sign_in }}</td><td><form method=post action='{{ url_for("account_action") }}'><input type=hidden name=_csrf value='{{ csrf }}'><input type=hidden name=school_number value='{{ row.number }}'><select name=action><option value=reset>Issue temporary password</option><option value=force>Force password change</option><option value=suspend>Suspend</option><option value=reactivate>Reactivate</option><option value=revoke>Revoke sessions</option></select><label>Optional temporary password <input name=chosen_password type=password minlength=8 maxlength=128 autocomplete=off></label><button>Apply</button></form></td></tr>{% endfor %}</tbody></table><p><small>Only the latest successful student sign-in is displayed. UK local time. Student names and dates of birth are not collected.</small></p></html>"""
 
 
 class LoginLimiter:
@@ -289,6 +300,9 @@ def create_app(overrides: dict | None = None) -> Flask:
                 conn.execute("""INSERT INTO sessions(session_hash,school_number,role,must_change,csrf_token,created_utc,expires_utc)
                     SELECT session_hash,school_number,role,must_change,csrf_token,created_utc,expires_utc FROM old_sessions""")
                 conn.execute('DROP TABLE old_sessions')
+            staff_columns = {row['name'] for row in conn.execute('PRAGMA table_info(staff_accounts)')}
+            if 'last_sign_in_utc' not in staff_columns:
+                conn.execute('ALTER TABLE staff_accounts ADD COLUMN last_sign_in_utc TEXT')
             columns = {row['name'] for row in conn.execute('PRAGMA table_info(accounts)')}
             if 'class_code' not in columns:
                 conn.execute("ALTER TABLE accounts ADD COLUMN class_code TEXT NOT NULL DEFAULT ''")
@@ -525,6 +539,7 @@ def create_app(overrides: dict | None = None) -> Flask:
                 valid = db().execute("SELECT 1 FROM staff_accounts WHERE username=? AND active=1 AND password_hash=?",
                                      (username, encoded)).fetchone()
             if valid:
+                db().execute('UPDATE staff_accounts SET last_sign_in_utc=? WHERE username=?', (utc_text(), username))
                 token = new_session('staff', username, first)
                 db().commit()
                 limiter.succeeded(key)
@@ -675,26 +690,50 @@ def create_app(overrides: dict | None = None) -> Flask:
             raise
         return candidate
 
-    def render_admin(notice=None, temp_password=None, temp_school_number=None, status=200):
+    def uk_sign_in(stamp, missing='Never signed in'):
+        if not stamp:
+            return missing
+        return datetime.fromisoformat(stamp.replace('Z', '+00:00')).astimezone(_UK).strftime('%d %B %Y, %H:%M %Z')
+
+    def render_admin(notice=None, temp_password=None, temp_school_number=None, status=200,
+                     new_teacher=None, teacher_password=None):
         rows = []
         labels = {'2026-27': {'23': 'Lower Sixth', '22': 'Upper Sixth'}}
         mapping = labels.get(app.config['SCHOOL_YEAR'], {})
         for account in db().execute('SELECT accounts.*, pupil_preview_logins.username AS preview FROM accounts LEFT JOIN pupil_preview_logins USING(school_number) ORDER BY class_code,school_number'):
-            sign_in = 'Never signed in'
-            if account['last_sign_in_utc']:
-                value = datetime.fromisoformat(account['last_sign_in_utc'].replace('Z', '+00:00')).astimezone(_UK)
-                sign_in = value.strftime('%d %B %Y, %H:%M %Z')
+            sign_in = uk_sign_in(account['last_sign_in_utc'])
             rows.append({'class_code': account['class_code'], 'number': account['school_number'], 'label': account['preview'] or account['school_number'], 'cohort': mapping.get(account['school_number'][:2], '—'),
                          'active': bool(account['active']), 'force_change': bool(account['force_change']), 'last_sign_in': sign_in})
-        staff = db().execute('SELECT username,active FROM staff_accounts ORDER BY username').fetchall()
+        staff = []
+        for member in db().execute("""SELECT username, active, last_sign_in_utc, temporary_available
+                                      FROM staff_accounts ORDER BY username"""):
+            missing = 'Awaiting first sign-in' if member['temporary_available'] else 'No sign-in recorded'
+            staff.append(dict(username=member['username'], active=member['active'],
+                              last_sign_in=uk_sign_in(member['last_sign_in_utc'], missing)))
         return render_template_string(ADMIN_PAGE, staff=staff, rows=rows, csrf=base_context(), notice=notice,
                                       temp_password=temp_password, temp_school_number=temp_school_number,
+                                      new_teacher=new_teacher, teacher_password=teacher_password,
                                       classes=sorted({row['class_code'] for row in rows if row['class_code']})), status
 
     @app.get('/admin')
     @admin_only
     def admin_home():
         return render_admin('Teacher password changed.' if request.args.get('password_changed') == '1' else None)
+
+    @app.post('/admin/teachers')
+    @admin_only
+    def add_teacher():
+        require_csrf()
+        acronym = request.form.get('acronym', '').strip()
+        if not re.fullmatch(r'[A-Za-z]{1,32}', acronym) or acronym.lower() == 'admin':
+            return render_admin('Enter a teacher acronym using letters only. The admin username is reserved.', status=400)
+        username = acronym.lower()
+        password = secrets.token_urlsafe(15)
+        result = db().execute("""INSERT INTO staff_accounts(username, temporary_hash, temporary_available, force_change)
+                                 VALUES(?,?,1,1) ON CONFLICT(username) DO NOTHING""", (username, _PH.hash(password)))
+        if not result.rowcount:
+            return render_admin('This teacher already has an account.', status=409)
+        return render_admin(new_teacher=username, teacher_password=password)
 
     @app.route('/admin/password', methods=['GET', 'POST'])
     @admin_only
