@@ -1,6 +1,8 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.43 -->
+<!-- LUISA-REPORT-HANDOFF v0.44 -->
+**Release 0.44, issue #56.** The private pupil_preview_logins table maps a fictional pupil username to a dedicated five-digit roster row. Apply init-db before activation. Provision both rows in one transaction outside the repository. Reserve a distinct username and unused synthetic number. Real pupils use their school email, staff use their usual credentials and the preview uses the bare alias. Store merge greetings and destinations privately outside ADA. The real pupil mailing awaits explicit owner approval.
+
 **Release 0.43, issue #54.** Staff and pupils authenticate through the same ADA gateway. Deploy a private staff and pupil artifact from the same revision. Staff see the 62 original licensed textbook chapters in By skill, By textbook, Teaching Resources and lessons. Their Offline link opens the Cloudflare offline facility in a new tab. The three Cloudflare and ADA teacher pages share Offline, CG100 and the current version controls. ADA uses the owner-selected compact exit icon with keyboard focus, an accessible name and tooltip. The username appears separately. Verify a direct chapter URL as staff, pupil and guest, and verify all three edition manifests.
 
 **Release 0.42.** The three library pages use one compact row. The logo is at the left, followed directly by By skill, By textbook and Teaching Resources. The separate wordmark and tagline have been removed. Actions occupy the right side. On narrower screens the toolbar scrolls horizontally beside the logo. Offline downloads and Sign out use shared 14px link styles across views. Verify horizontal access and typography on each edition. Issue #52 records NAV-042 and its release evidence.

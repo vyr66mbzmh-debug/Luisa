@@ -4481,6 +4481,23 @@
         "GitHub issue #54",
         "student_server/app.py"
       ]
+    },
+    {
+      "id": "MAIL-044",
+      "scope": "Private ADA authentication and owner mail-merge previews",
+      "requirement": "Allow an owner-controlled fictional pupil sign-in separate from staff access.",
+      "acceptance": [
+        "Use a privately provisioned bare username for the test pupil, with ordinary pupil privileges, first-password and session rules.",
+        "Use the owner mailbox for a personalised pupil preview. Keep the delivery address and greeting outside ADA. Send the real pupil batch only after owner approval."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner instruction, 14 November 2026, issue #56",
+      "evidence": [
+        "GitHub issue #56",
+        "tests/test_student_auth.py"
+      ]
     }
   ]
 }
