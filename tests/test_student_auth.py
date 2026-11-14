@@ -199,7 +199,7 @@ class StudentAuthAcceptance(unittest.TestCase):
         for device, identity in ((staff, 'sample.teacher'), (pupil, '02340@marlboroughcollege.org')):
             self.assertEqual(self.post_form(device, '/login', {'email': identity, 'password': password}).location, '/')
         self.assertEqual(staff.get('/', base_url=host).get_data(as_text=True), 'staff library')
-        self.assertEqual(pupil.get('/', base_url=host).get_data(as_text=True), 'student library')
+        self.assertTrue(pupil.get('/', base_url=host).text.startswith('student library'))
         for device, allowed in ((staff, True), (pupil, False)):
             response = device.get('/' + catalogue, base_url=host)
             self.assertEqual('chapter' in response.get_json(), allowed)
@@ -232,7 +232,7 @@ class StudentAuthAcceptance(unittest.TestCase):
         password = 'Preview-new-password'
         self.assertEqual(self.change_password(self.client, password).location, '/')
         (self.build/'index.html').write_text('<!--luisa-account-name-->')
-        self.assertEqual(self.client.get('/', base_url='https://ada.test').text, alias)
+        self.assertTrue(self.client.get('/', base_url='https://ada.test').text.startswith(alias))
         second = self.app.test_client()
         self.assertEqual(self.post_form(second, '/login', {'email':alias, 'password':password}).location, '/')
         self.assertEqual(self.client.get('/', base_url='https://ada.test').location, '/login')
@@ -377,6 +377,33 @@ class StudentAuthAcceptance(unittest.TestCase):
         logged_out = self.client.post('/logout', data={'_csrf': self.csrf(page)}, base_url='https://ada.test')
         self.assertEqual(logged_out.status_code, 302)
         self.assertEqual(self.client.get('/content/questions.json', base_url='https://ada.test').status_code, 302)
+
+    def test_session_status_does_not_renew_activity_and_logout_requires_its_token(self):
+        host = 'https://ada.test'
+        self.add('02341')
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('UPDATE accounts SET password_hash=? WHERE school_number=?',
+                         (PasswordHasher().hash('My-pupil-password'), '02341'))
+        login = {'email': '02341@marlboroughcollege.org', 'password': 'My-pupil-password'}
+        self.post_form(self.client, '/login', login)
+        with closing(sqlite3.connect(self.db_path)) as conn:
+            def snapshot():
+                return conn.execute("""SELECT sessions.expires_utc, accounts.last_sign_in_utc
+                    FROM sessions JOIN accounts USING(school_number) WHERE school_number='02341'""").fetchone()
+            before = snapshot()
+            check = self.client.get('/session-status', base_url=host)
+            self.assertEqual(check.status_code, 204)
+            self.assertNotIn('Set-Cookie', check.headers)
+            self.assertEqual(snapshot(), before)
+        second = self.app.test_client()
+        self.post_form(second, '/login', login)
+        self.assertEqual(self.client.get('/session-status', base_url=host).status_code, 401)
+        self.assertEqual(second.post('/logout', base_url=host).status_code, 400)
+        with second.get('/resources/printouts/sample.pdf', headers={'Sec-Fetch-Dest':'document'}, base_url=host) as pdf:
+            token = re.search(r'name="_csrf" value="([^"]+)"', pdf.text)[1]
+            self.assertIn('action="/logout"', pdf.text)
+        self.assertEqual(second.post('/logout', data={'_csrf':token}, base_url=host).location, '/login')
+        self.assertEqual(second.get('/session-status', base_url=host).status_code, 401)
 
     def test_expiry_reset_suspension_force_change_and_reactivation(self):
         self.add('23401')
