@@ -113,6 +113,28 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(signed_in.status_code, 302)
         self.assertEqual(client.get('/admin', base_url='https://ada.test').status_code, 200)
 
+    def test_teacher_password_change_persists_and_revokes_other_admin_sessions(self):
+        config = dict(self.app.config, ADMIN_AUTH_MODE='password')
+        app = create_app(config)
+        client = app.test_client()
+        def login(client, password):
+            page = client.get('/admin/login', base_url='https://ada.test')
+            return self.post_form(client, '/admin/login', {'password': password}, page)
+        self.assertEqual(login(client, self.teacher_password).status_code, 302)
+        new = 'My separately chosen teacher passphrase'
+        form = {'current': self.teacher_password, 'password': new, 'confirm': new}
+        self.assertEqual(self.post_form(client, '/admin/password', dict(form, current='invalid')).status_code, 400)
+        self.assertEqual(self.post_form(client, '/admin/password', dict(form, confirm='different')).status_code, 400)
+        self.assertEqual(client.post('/admin/password', data=form, base_url='https://ada.test').status_code, 400)
+        self.assertEqual(self.post_form(client, '/admin/password', form).status_code, 302)
+        self.assertEqual(client.get('/admin', base_url='https://ada.test').status_code, 200)
+        self.assertEqual(self.admin.get('/admin', base_url='https://ada.test').status_code, 302)
+        restarted = create_app(config)
+        restarted.extensions['luisa_init_db']()
+        fresh = restarted.test_client()
+        self.assertEqual(login(fresh, self.teacher_password).status_code, 401)
+        self.assertEqual(login(fresh, new).status_code, 302)
+
     def test_roster_leading_zero_duplicates_and_mfa_admin(self):
         self.add('02340\n23401')
         invalid_batch = self.add('02401\nAlice Example')
