@@ -4559,7 +4559,7 @@
       "acceptance": [
         "Only the administrator can view or edit directory first names. Store them separately from credentials. Omit surnames and keep real identities out of source and builds.",
         "Sort by identifier, first name, class/cohort (students), access and actual sign-in time in both directions on desktop and mobile.",
-        "Use the existing ADA logo and exit icon. Label the admin login clearly and fix its username to admin.",
+        "Use the existing ADA logo and exit icon. Select the admin account on the server. In password-only mode show only the password entry and Sign in button. Omit the username field entirely.",
         "Offer copying at issue time and private manual delivery. Keep only salted password hashes in ADA. Preserve existing credentials, sessions and last sign-ins."
       ],
       "priority": "P1",
@@ -4568,7 +4568,8 @@
       "origin": "Owner request, issue #64",
       "evidence": [
         "GitHub issue #64",
-        "tests/test_student_auth.py"
+        "tests/test_student_auth.py",
+        "GitHub issue #66"
       ]
     }
   ]
