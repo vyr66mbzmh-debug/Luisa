@@ -2,6 +2,13 @@
 (() => {
   const region = document.getElementById('slide-region');
   if (!region) return;
+  document.getElementById('slide-calculator')?.addEventListener('click', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const width = Math.round(screen.availWidth / 4);
+    window.open(event.currentTarget.href, '_blank',
+      `popup,noopener,noreferrer,width=${width},height=${screen.availHeight},top=${screen.availTop || 0}`);
+  });
   region.style.touchAction = 'pan-y pinch-zoom';
   region.tabIndex = -1;
   // Once a slide control fires, Space should continue the teaching sequence.

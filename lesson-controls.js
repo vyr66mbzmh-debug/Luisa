@@ -87,12 +87,12 @@
     }
   }
 
-  function updateToolbar(chapterTitle, slide) {
+  function updateToolbar(slide, total) {
     const heading = document.getElementById('lesson-title');
-    setTitle(heading, chapterTitle);
-    heading.title = chapterTitle;
+    setTitle(heading, slide.title);
+    heading.title = slide.title;
     document.getElementById('slide-number').textContent = slide.sourceSlide;
-    document.getElementById('compact-slide').textContent = slide.sourceSlide;
+    document.getElementById('compact-slide').textContent = `${slide.sourceSlide} / ${total}`;
     document.getElementById('slide-select').title = slide.title;
   }
 
