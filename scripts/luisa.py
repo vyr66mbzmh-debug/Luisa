@@ -311,13 +311,15 @@ def student_content(name, content, restricted_urls, restricted_hashes, root, *, 
             account_link = (
                 '<span style="display:inline-flex;align-items:center;gap:8px;margin-inline-start:auto">'
                 '<span class="luisa-account"><!--luisa-account-name--></span>'
-                f'<a class="luisa-signout" href="{logout}" target="_top" aria-label="Sign out" title="Sign out" '
+                f'<form action="{logout}" method="post" target="_top" style="display:inline-flex;margin:0">'
+                '<input type="hidden" name="_csrf" value="__LUISA_SESSION_CSRF__">'
+                '<button type="submit" class="luisa-signout" aria-label="Sign out" title="Sign out" '
                 'style="display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;'
-                'width:37px;height:35px;padding:0;background:#102b43;color:#f0d6a1;'
+                'width:37px;height:35px;padding:0;cursor:pointer;background:#102b43;color:#f0d6a1;'
                 'border:1px solid #b69a65;border-radius:6px">'
                 '<svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true" fill="none" '
                 'stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
-                '<path d="M10 4H5v16h5m-1-8h12m-4-4 4 4-4 4"/></svg></a></span>'
+                '<path d="M10 4H5v16h5m-1-8h12m-4-4 4 4-4 4"/></svg></button></form></span>'
             )
             if '<!--edition-account-->' in text:
                 text = text.replace('<!--edition-account-->', account_link, 1)

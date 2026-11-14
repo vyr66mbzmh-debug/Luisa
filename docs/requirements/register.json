@@ -4498,6 +4498,24 @@
         "GitHub issue #56",
         "tests/test_student_auth.py"
       ]
+    },
+    {
+      "id": "SES-044",
+      "scope": "ADA authentication and both host release manifests",
+      "requirement": "Pupils and teachers sign out of ADA in one click. A new pupil sign-in replaces the previous device session. Teachers can use several devices at once.",
+      "acceptance": [
+        "An accessible sign-out button submits a CSRF-protected POST and returns to sign-in directly from course pages, PDFs and password forms.",
+        "Test two devices. The displaced pupil session loses access immediately and an open page returns to sign-in on its next status check. Active teacher sessions are independent.",
+        "Status checks do not extend idle expiry or record student activity. Release the same reviewed revision as v0.44 on both hosts."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner instruction, 14 November 2026, issue #58",
+      "evidence": [
+        "GitHub issue #58",
+        "tests/test_student_auth.py"
+      ]
     }
   ]
 }
