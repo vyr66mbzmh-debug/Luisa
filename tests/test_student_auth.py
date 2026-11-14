@@ -65,6 +65,8 @@ class StudentAuthAcceptance(unittest.TestCase):
 
     def post_form(self, client, path, values, csrf_response=None):
         values = dict(values)
+        if path == "/admin/login":
+            values.setdefault("username", "admin")
         if csrf_response is None:
             page = '/admin' if path.startswith('/admin/') else ('/change-password' if path in {'/change-password', '/logout'} else '/login')
             csrf_response = client.get(page, base_url='https://ada.test')
@@ -134,6 +136,33 @@ class StudentAuthAcceptance(unittest.TestCase):
         fresh = restarted.test_client()
         self.assertEqual(login(fresh, self.teacher_password).status_code, 401)
         self.assertEqual(login(fresh, new).status_code, 302)
+
+    def test_print_class_slips_once_and_consume_at_first_login(self):
+        self.post_form(self.admin, '/admin/roster', {'numbers': '02340 02341', 'class_code': 'A'})
+        self.post_form(self.admin, '/admin/roster', {'numbers': '09999', 'class_code': 'B'})
+        slips = self.post_form(self.admin, '/admin/slips', {'class_code': 'A'})
+        sheet = slips.get_data(as_text=True)
+        self.assertNotIn('09999', sheet)
+        passwords = re.findall(r'<code>([^<]+)</code>', sheet)
+        self.assertEqual(len(set(passwords)), 2)
+        self.assertIn('no-store', slips.headers['Cache-Control'])
+        again = self.post_form(self.admin, '/admin/slips', {'class_code': 'A'})
+        self.assertNotIn('<code>', again.get_data(as_text=True))
+        self.assertIsNone(self.database_account('02340')['temporary_expires_utc'])
+        self.assertEqual(self.student_login('02340@marlboroughcollege.org', passwords[0]).status_code, 302)
+        self.assertEqual(self.student_login('02340@marlboroughcollege.org', passwords[0]).status_code, 401)
+        self.assertEqual(self.post_form(self.admin, '/admin/slips', {}).get_data(as_text=True).count('<article>'), 1)
+
+    def test_admin_setup_requires_bootstrap_and_own_password(self):
+        app = create_app(dict(self.app.config, ADMIN_AUTH_MODE='password', TEACHER_SETUP=True))
+        client = app.test_client()
+        page = client.get('/admin/login', base_url='https://ada.test')
+        login = self.post_form(client, '/admin/login', {'password': self.teacher_password}, page)
+        self.assertTrue(login.location.endswith('/admin/password'))
+        self.assertTrue(client.get('/admin', base_url='https://ada.test').location.endswith('/admin/password'))
+        form = {'current': self.teacher_password, 'password': 'Private replacement phrase!', 'confirm': 'Private replacement phrase!'}
+        self.post_form(client, '/admin/password', form, client.get('/admin/password', base_url='https://ada.test'))
+        self.assertEqual(client.get('/admin', base_url='https://ada.test').status_code, 200)
 
     def test_roster_leading_zero_duplicates_and_mfa_admin(self):
         self.add('02340\n23401')
@@ -306,7 +335,7 @@ class StudentAuthAcceptance(unittest.TestCase):
         restored_admin = restored_app.test_client()
         page = restored_admin.get('/admin/login', base_url='https://ada.test')
         future_step = time.time() + 60
-        values = {'password': self.teacher_password, 'totp': pyotp.TOTP(self.totp_secret).at(future_step), '_csrf': self.csrf(page)}
+        values = {'username': 'admin', 'password': self.teacher_password, 'totp': pyotp.TOTP(self.totp_secret).at(future_step), '_csrf': self.csrf(page)}
         with patch('student_server.app.time.time', return_value=future_step):
             restored_response = restored_admin.post('/admin/login', data=values, base_url='https://ada.test')
         self.assertEqual(restored_response.status_code, 302)
