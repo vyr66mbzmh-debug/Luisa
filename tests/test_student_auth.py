@@ -274,6 +274,55 @@ class StudentAuthAcceptance(unittest.TestCase):
             self.assertNotEqual(stamp(), '2026-01-01T00:00:00Z')
             self.assertNotIn(secret, self.admin.get('/admin', base_url=host).text)
 
+    def test_manage_teacher_preserves_other_accounts_and_enforces_controls(self):
+        host = 'https://ada.test'
+        path = '/admin/teachers/account'
+        username = 'example'
+        password = 'Existing teacher pass'
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            for name in (username, 'colleague'):
+                conn.execute('INSERT INTO staff_accounts(username,password_hash,force_change) VALUES(?,?,0)',
+                             (name, PasswordHasher().hash(password)))
+        def manage(action, **extra):
+            return self.post_form(self.admin, path, dict(username=username, action=action, **extra))
+        def signin(device, name=username, secret=password):
+            return self.post_form(device, '/login', dict(email=name, password=secret))
+        colleague = self.app.test_client()
+        self.assertEqual(signin(colleague, 'colleague').location, '/')
+        self.assertEqual(signin(self.client).location, '/')
+        self.assertEqual(self.client.post(path, base_url=host).status_code, 403)
+        self.assertEqual(self.admin.post(path, base_url=host).status_code, 400)
+        self.assertEqual(self.post_form(self.admin, path, dict(username='admin', action='reset')).status_code, 404)
+        second = self.app.test_client()
+        self.assertEqual(signin(second).location, '/')
+        with closing(sqlite3.connect(self.db_path)) as conn:
+            def stamp():
+                return conn.execute('SELECT last_sign_in_utc FROM staff_accounts WHERE username=?', (username,)).fetchone()[0]
+            before = stamp()
+            self.assertEqual(manage('revoke').status_code, 200)
+            for device in (second, self.client):
+                self.assertEqual(device.get('/', base_url=host).location, '/login')
+            self.assertEqual(manage('suspend').status_code, 200)
+            self.assertEqual(signin(second).status_code, 401)
+            self.assertEqual(manage('reset').status_code, 400)
+            self.assertEqual(manage('reactivate').status_code, 200)
+            self.assertEqual(before, stamp())
+        self.assertEqual(manage('force').status_code, 200)
+        self.assertEqual(signin(second).location, '/change-password')
+        self.assertEqual(second.get('/', base_url=host).location, '/change-password')
+        self.assertEqual(self.change_password(second, 'New teacher pass').location, '/')
+        first = re.search(r'<code>([^<]+)</code>', manage('reset').text)[1]
+        self.assertEqual(second.get('/', base_url=host).location, '/login')
+        self.assertEqual(manage('reset', chosen_password=first).status_code, 400)
+        replacement = 'Private first pass'
+        self.assertEqual(manage('reset', chosen_password=replacement).status_code, 200)
+        self.assertEqual(signin(second, secret=first).status_code, 401)
+        self.assertEqual(signin(second, secret='New teacher pass').status_code, 401)
+        self.assertEqual(signin(second, secret=replacement).location, '/change-password')
+        self.assertEqual(signin(self.client, secret=replacement).status_code, 401)
+        self.assertEqual(colleague.get('/', base_url=host).status_code, 200)
+        self.assertNotIn(replacement, self.admin.get('/admin?role=teachers', base_url=host).text)
+
     def test_staff_content_login_is_independent_of_pupils_and_admin(self):
         login = 'sample.teacher'
         temp = 'One-use-test-secret!'
@@ -297,9 +346,9 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(attempt(login.upper() + '@MARLBOROUGHCOLLEGE.ORG').location, '/')
         for device in (self.client, second):
             self.assertEqual(device.get('/', base_url='https://ada.test').status_code, 200)
-        admin = self.admin.get('/admin', base_url='https://ada.test').get_data(as_text=True)
-        self.assertIn('<h2>Staff accounts</h2>', admin)
-        self.assertIn('<td>' + login + '</td>', admin)
+        admin = self.admin.get('/admin?role=teachers', base_url='https://ada.test').get_data(as_text=True)
+        self.assertIn('<h2>Teacher accounts</h2>', admin)
+        self.assertIn('Manage ' + login, admin)
         self.assertIsNone(self.database_account(login))
 
     def test_latest_success_replaces_only_prior_pupil_session(self):

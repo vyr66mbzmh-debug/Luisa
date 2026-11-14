@@ -4533,6 +4533,24 @@
         "GitHub issue #60",
         "tests/test_student_auth.py"
       ]
+    },
+    {
+      "id": "ADM-062",
+      "scope": "Private ADA account administration",
+      "requirement": "Provide distinct student and teacher directories with administrator-only account controls for both roles. Preserve existing login information on deployment.",
+      "acceptance": [
+        "Correct the requested class privately without changing credentials, sessions, account status or timestamps.",
+        "In either directory the administrator can issue a one-use password, require a password change, revoke sessions, suspend and reactivate access. Keep adding accounts and printing student slips available.",
+        "Protect role actions with administrator authorisation and CSRF. Preserve normal student and teacher device policies and keep real account data outside source control."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner request, issue #62",
+      "evidence": [
+        "GitHub issue #62",
+        "tests/test_student_auth.py"
+      ]
     }
   ]
 }
