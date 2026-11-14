@@ -4443,6 +4443,26 @@
         "scripts/luisa.py",
         "HANDOFF.md"
       ]
+    },
+    {
+      "id": "NAV-042",
+      "scope": "All three library headers on ADA and Cloudflare",
+      "requirement": "All three library views have a slimmer banner with the navigation beside the logo. Banner links use consistent type on both editions.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "acceptance": [
+        "Position By skill, By textbook and Teaching Resources directly to the right of the logo on a single compact row with every other banner control.",
+        "Remove the separate LUISA wordmark and Learning · Understanding · Intelligence · Strategy · Aesthetics tagline from these headers.",
+        "Use matching font sizes for Offline downloads across Cloudflare pages and for Sign out across ADA pages.",
+        "Keep all actions accessible on narrow screens, with the version link or account sign-out last."
+      ],
+      "origin": "Owner request, 14 November 2026, issue #52",
+      "evidence": [
+        "GitHub issue #52",
+        "luisa.css",
+        "HANDOFF.md"
+      ]
     }
   ]
 }
