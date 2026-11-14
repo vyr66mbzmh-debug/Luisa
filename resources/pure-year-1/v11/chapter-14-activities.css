@@ -1,0 +1,63 @@
+#slide-content:has(.ch14) { background:white; }
+.ch14, .ch14 * { box-sizing:border-box; }
+.ch14 { width:1200px;height:660px;background:#fff;color:#142c43;padding:20px 36px;display:flex;flex-direction:column;justify-content:center;gap:13px;font:26px/1.35 Georgia,serif; }
+.ch14 h2,.ch14 h3,.ch14 p,.ch14 figure {margin:0;}
+.ch14 h2,.ch14 h3 {font:600 27px/1.2 system-ui,sans-serif;color:#183957;}
+.ch14 .cols,.ch14 .row {display:flex;align-items:stretch;gap:26px;}
+.ch14 .cols>*,.ch14 .row>* {flex:1;min-width:0;}
+.ch14 .stack{display:flex;flex-direction:column;gap:10px;justify-content:center;}
+.ch14 .equation{text-align:center;margin:7px 0;}
+.ch14 .answers {display:grid;grid-template-columns:1fr 1fr;align-items:stretch;gap:22px;}
+.ch14 .panel {display:flex;flex-direction:column;gap:7px;justify-content:center;min-width:0;}
+.ch14 .slot {position:relative;display:grid;align-content:center;min-height:90px;padding:10px 12px;text-align:center;border:1px solid transparent;}
+.ch14 .slot .working {visibility:hidden;}
+.ch14 .slot.open .working {visibility:visible;}
+.ch14 button {font:600 23px/1.2 system-ui,sans-serif;color:#193952;cursor:pointer;}
+.ch14 button:focus-visible {outline:3px solid #a07834;outline-offset:-3px;}
+.ch14 .cover {position:absolute;inset:0;width:100%;height:100%;border:1px solid #aec6d6;border-radius:6px;background:#e0edf6;box-shadow:inset 0 1px 1px #fff9;padding:4px 8px;}
+.ch14 .cover:hover {background:#d2e5f2;}
+.ch14 .slot.open .cover {display:none;}
+.ch14 table {border-collapse:collapse;width:100%;table-layout:fixed;text-align:center;}
+.ch14 td,.ch14 th {border:2px solid #8299a8;padding:6px;position:relative;height:50px;}
+.ch14 th {background:#f2f5f6;font-weight:600;}
+.ch14 td .slot {position:static;min-height:0;padding:0;border:0;}
+.ch14 td .cover {border-radius:0;border:0;}
+.ch14 .vertical-table {max-width:840px;align-self:center;}
+.ch14 .ch-plot {width:100%;height:100%;max-height:355px;display:block;}
+.ch14 .ch-plot text {font:16px system-ui,sans-serif;fill:#243c50;}
+.ch14 .grid {stroke:#dce3e8;stroke-width:1;}
+.ch14 .axis {stroke:#334b60;stroke-width:1.6;}
+.ch14 .guide {stroke:#946028;stroke-width:2;stroke-dasharray:5 4;}
+.ch14 .curve {fill:none;stroke-width:3;}
+.ch14 .dot {stroke:white;stroke-width:1.5;}
+.ch14 .draw {stroke-dasharray:1;animation:ch-draw .68s ease-out both;}
+.ch14 .land {animation:ch-land .24s ease-out both;}
+@keyframes ch-draw {from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes ch-land {from{transform:translateY(-13px);opacity:.2}to{transform:translateY(0);opacity:1}}
+.ch14 .controls {display:flex;gap:9px;justify-content:center;align-items:center;}
+.ch14 .choice {background:white;border:1.5px solid #a5bac8;padding:8px 14px;border-radius:6px;}
+.ch14 .choice[aria-pressed=true] {background:#edf3f7;border-color:currentColor;}
+.ch14 .choice:disabled{opacity:.6;cursor:default;}
+.ch14 .ghost {visibility:hidden;}
+.ch14 .proof {border-left:3px solid #ba9557;padding:7px 18px;min-height:66px;}
+.ch14 .law {display:grid;grid-template-columns:46% 50%;gap:12px;align-items:center;}
+.ch14 .law>span {text-align:right;}
+.ch14 .law .slot {min-height:56px;padding:0 6px;}
+.ch14 .compact {font-size:23px;}
+.ch14 .compact .slot{min-height:65px;}
+.ch14 .ch-photo {width:100%;max-height:265px;object-fit:contain;}
+.ch14 .amplitude {height:22px;background:#30739a;transition:width .65s ease-out;}
+.ch14 .amplitude.reference{width:10%;background:#59768b;}
+.ch14 .frame {aspect-ratio:4/3;width:100%;border:1px solid #e4e4e4;border-radius:4px;}
+.ch14 .frame-link {font:20px system-ui,sans-serif;}
+.ch14 .stage {animation:ch-stage .35s ease-out both;}
+@keyframes ch-stage {from{opacity:.1;transform:translateY(7px)}to{opacity:1;transform:none}}
+.ch14 .print-only{display:none;}
+@media(prefers-reduced-motion:reduce){.ch14 *{animation-duration:.001s!important;transition-duration:.001s!important;}}
+
+.ch14 .stage .bigger {width:100%;transform-origin:left;animation:ch-grow .7s ease-out both;}
+.ch14 .stage .label-transfer svg text {animation:ch-stage .6s ease-out both;}
+.ch14 .stage .label-transfer .curve {animation-delay:.35s;}
+.ch14 #logplot .ch-plot {overflow:visible;}
+@keyframes ch-grow {from{transform:scaleX(.1)}to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.ch14 .stage .bigger,.ch14 .stage .label-transfer svg text{animation:none}}

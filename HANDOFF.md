@@ -1,6 +1,14 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.48 -->
+<!-- LUISA-REPORT-HANDOFF v0.50 -->
+**Release 0.50 · Issues #74, #75 and #76.** Start from this release for all future edits. The three host profiles share the six subject-coloured book spines and the new GeoGebra link. The protected pupil profile retains its existing access rules. The GeoGebra diagram on Chapter 14 page 8 requires an internet connection; the printed page includes a static view.
+
+**Pure Mathematics Year 1, Chapter 14.** Pages 4 and 27 reveal individual table entries and red coordinates, then draw the curve after the final distinct point. Page 5 provides independent curve selectors for both existing comparisons. Page 8 embeds the specified GeoGebra material. Pages 16 and 21 have fully bordered tables with individual covers. Pages 17, 18, 31, 32 and 33 have matched-height covers; 31 and 33 retain the requested line break and prompts. Page 28 has four independent law covers and a stepped change-of-base derivation. Page 34 restores the two owner-supplied questions verbatim with separate Answer and Proof covers. Page 39 reveals 3a, 3b, 4a, 4b, Extension, Graph. Pages 46–49 demonstrate doubling, the Richter amplitude comparison, log–log coordinates and the two linearised models. Keep the source Richter chart, teacher-paced Reveal/Space and Reset. Propagate the revised teaching into the 27-page student and solution booklets, update the public alias, private owner copies and compiled reproduction assets. Preserve the other panels and the licensed textbook file.
+
+The first table remains on page 4 and the two comparison plots remain with their source prompts on page 5. The original earthquake illustration on page 47 is a Richter chart. Its tenfold comparison is explicitly wave amplitude at comparable distances. Generated booklets each contain 54 source slides in 27 pages. For another revision, regenerate from the Chapter 14 teaching assets and compare both PDF flavours, the alias, owner copies, print wrappers and slide interactions. GitHub #76 holds the numbered requirements and verification evidence. The versioned Luisa Report carries this handoff in full.
+
+**Next action.** Next owner assignment pending.
+
 **Release 0.48, issue #72.** The three library pages show the calculator, cloud download and quiet version link on Cloudflare and for ADA teachers. The ADA teacher exit button identifies the signed-in teacher in its tooltip and accessible name. Pupils see their identifier and the generic exit button. The version is stamped from release metadata at build time. Teaching Resources subject-colour treatments await owner selection.
 
 **Release 0.47, issue #70.** Teaching slides display the booklet page title and a compact current-page / total selector. The logo returns to Teaching Resources, where ADA users can sign out. The CG100 calculator on Cloudflare and ADA teacher slides opens in a separate window requesting one quarter of the available screen width and its full height. Check chapter navigation, resource menus, page numbers, and the role-specific calculator in the three build profiles.

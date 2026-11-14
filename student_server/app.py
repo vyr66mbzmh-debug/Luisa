@@ -413,7 +413,9 @@ def create_app(overrides: dict | None = None) -> Flask:
         response.headers['X-Frame-Options'] = 'SAMEORIGIN' if embedded else 'DENY'
         response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
         response.headers['Strict-Transport-Security'] = 'max-age=31536000'
-        response.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors " + ("'self'" if embedded else "'none'")
+        diagram_viewer = embedded and (request.view_args or {}).get('asset') == 'pure1-native-viewer.html'
+        frame_policy = "frame-src 'self' https://www.geogebra.org; " if diagram_viewer else ""
+        response.headers['Content-Security-Policy'] = frame_policy + "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors " + ("'self'" if embedded else "'none'")
         token = request.cookies.get(app.config['SESSION_COOKIE'])
         if token and getattr(g, 'luisa_session', None) and g.luisa_session.get('session_hash') == digest_session(token):
             response.set_cookie(app.config['SESSION_COOKIE'], token, max_age=app.config['SESSION_SECONDS'],

@@ -4621,6 +4621,55 @@
       "evidence": [
         "GitHub issue #72"
       ]
+    },
+    {
+      "id": "LIB-050-SPINE",
+      "scope": "Luisa 0.50, three host profiles",
+      "requirement": "Book spine subject colours on all six Teaching Resources sections.",
+      "acceptance": [
+        "Pure #2E6B9E; Applied #5A3838; Core Pure #0E8A5A. Apply a 4 px continuous left rule on both hosts."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner v0.50 release instruction and issue #74",
+      "evidence": [
+        "GitHub issue #74"
+      ]
+    },
+    {
+      "id": "LIB-050-GEOGEBRA",
+      "scope": "Luisa 0.50, three host profiles",
+      "requirement": "Soft-gold GeoGebra Classic link on all three main pages and all teaching slide toolbars.",
+      "acceptance": [
+        "Open the English Classic app in a new tab. Place before the calculator where available; for ADA pupils place before identity in the library and after slide Resources. Preserve pupil restrictions."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner v0.50 release instruction and issue #75",
+      "evidence": [
+        "GitHub issue #75"
+      ]
+    },
+    {
+      "id": "P1-050-CH14",
+      "scope": "Luisa 0.50, three host profiles",
+      "requirement": "Pure 1 Chapter 14 slide and booklet revision.",
+      "acceptance": [
+        "Pages 4 and 27 reveal individual table entries and red coordinates, then draw the curve after the final distinct point. Page 5 provides independent curve selectors for both existing comparisons.",
+        "Page 8 embeds the specified GeoGebra material. Pages 16 and 21 have fully bordered tables with individual covers. Pages 17, 18, 31, 32 and 33 have matched-height covers; 31 and 33 retain the requested line break and prompts.",
+        "Page 28 has four independent law covers and a stepped change-of-base derivation. Page 34 restores the two owner-supplied questions verbatim with separate Answer and Proof covers. Page 39 reveals 3a, 3b, 4a, 4b, Extension, Graph.",
+        "Pages 46–49 demonstrate doubling, the Richter amplitude comparison, log–log coordinates and the two linearised models. Keep the source Richter chart, teacher-paced Reveal/Space and Reset.",
+        "Propagate the revised teaching into the 27-page student and solution booklets, update the public alias, private owner copies and compiled reproduction assets. Preserve the other panels and the licensed textbook file."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner v0.50 release instruction and issue #76",
+      "evidence": [
+        "GitHub issue #76"
+      ]
     }
   ]
 }
