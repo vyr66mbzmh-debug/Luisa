@@ -1,7 +1,9 @@
 # Current Luisa handoff
 
 <!-- LUISA-REPORT-HANDOFF v0.45 -->
-**Release 0.45, issue #60.** The private admin page creates teachers by acronym and displays a generated first password for manual delivery. Add the nullable staff timestamp via init-db before restarting. Record only successful authentication. Existing teacher sign-ins before this release have no historical timestamps. The pupil mail merge still awaits owner approval.
+**Private ADA admin update, issue #62.** Students and Teachers have separate directories. Manage on a row applies to that account only. Teacher resets, forced changes, suspension and session revocation cover every device for the selected teacher. Deploy the reviewed gateway package against the existing private database and environment. No schema migration or account provisioning is required. Keep both course manifests at their existing release. Verify database continuity and the gateway revision separately. The owner-specified class correction was applied in private storage.
+
+**Release 0.45, issue #60.** The private admin page creates teachers by acronym and displays a generated first password for manual delivery. Add the nullable staff timestamp via init-db before restarting. Record only successful authentication. Existing teacher sign-ins before this release have no historical timestamps. The authorised pupil mail merge has since been sent.
 
 **Release 0.44 amendment, issue #58.** ADA logout controls POST with the session token and return directly to sign-in. A successful pupil login invalidates the earlier session immediately. Visible pupil pages check for displacement every ten seconds and when restored or refocused. These checks do not renew a session or record activity. Teachers retain independent device sessions. The owner requested v0.44 on both hosts for this amendment. Verify both live manifests by revision.
 

@@ -21,6 +21,8 @@ from argon2.exceptions import InvalidHashError, VerificationError, VerifyMismatc
 from flask import Flask, abort, g, make_response, redirect, render_template_string, request, send_from_directory, url_for
 import pyotp
 
+from .admin_view import ADMIN_PAGE
+
 
 _PH = PasswordHasher()
 _DUMMY_PASSWORD_HASH = _PH.hash(secrets.token_urlsafe(32))
@@ -83,20 +85,6 @@ h2,p{margin:.4em 0}code{font-size:1.1em}nav{margin:1em}button{font:inherit}@medi
 <main>{% for row, password in slips %}<article><h2>Luisa · {{ row.school_number }}</h2><p>{{ link }}</p>
 <p>School email<br>{{ row.school_number }}@marlboroughcollege.org</p><p>First password<br><code>{{ password }}</code></p>
 <p>Sign in once, then choose your own Luisa password.</p></article>{% endfor %}</main></html>"""
-
-STAFF_ADMIN_SECTION = """<h2>Staff accounts</h2>
-<form action="{{ url_for('add_teacher') }}" method="post">
-<input type=hidden name=_csrf value="{{ csrf }}">
-<label>Teacher acronym <input name=acronym required maxlength=32 autocomplete="off"></label>
-<button>Add teacher</button></form>
-{% if teacher_password %}<p role=status>Give this first password to <strong>{{ new_teacher }}</strong> privately.
-It works once and is shown only here.</p><p><code>{{ teacher_password }}</code></p>{% endif %}
-<table><thead><tr><th>Username</th><th>Access</th><th>Latest successful sign-in (UK)</th></tr></thead>
-<tbody>{% for member in staff %}<tr><td>{{ member.username }}</td>
-<td>{{ 'Active' if member.active else 'Suspended' }}</td><td>{{ member.last_sign_in }}</td></tr>{% endfor %}</tbody></table>"""
-
-ADMIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa account administration</title><style>body{font:16px/1.5 system-ui;max-width:1100px;margin:2rem auto;padding:0 1rem;color:#183957}table{border-collapse:collapse;width:100%;margin:1.5rem 0}td,th{border:1px solid #ccd5df;padding:.5rem;text-align:left}button,input,textarea{font:inherit;padding:.45rem;margin:.2rem}form{display:inline}section{padding:1rem;border:1px solid #ccd5df;margin:1rem 0}.notice{background:#edf5fb;padding:.8rem}.secret{font:1.15rem monospace;overflow-wrap:anywhere}small{color:#526575}</style><h1>Luisa student accounts</h1><p><a href='{{ url_for("teacher_password") }}'>Change teacher password</a> · """ + SIGN_OUT_FORM + """</p>{% if notice %}<p class=notice role=status>{{ notice }}</p>{% endif %}{% if temp_password %}<section><b>Give this temporary password to pupil {{ temp_school_number }} privately. It works until the first successful sign-in or until you replace it.</b><p class=secret>{{ temp_password }}</p></section>{% endif %}<section>""" + STAFF_ADMIN_SECTION + """</section><section><h2>Class password slips</h2><form method=post action='{{ url_for("issue_slips") }}'><input type=hidden name=_csrf value='{{ csrf }}'><label>Class <select name=class_code><option value="">All classes</option>{% for code in classes %}<option>{{ code }}</option>{% endfor %}</select></label><button>Create printable slips</button></form><p>Creates one slip for each active pupil who has never been issued a password. Print the sheet before closing it. To replace a lost slip, issue a new password on the pupil’s row.</p></section><section><h2>Add school numbers</h2><form method=post action='{{ url_for("add_roster") }}'><input type=hidden name=_csrf value='{{ csrf }}'><label>Class (optional) <input name=class_code maxlength=12></label><label>One per line; leading zeroes are preserved<br><textarea name=numbers rows=5 cols=24 required></textarea></label><button>Add roster entries</button></form></section><table><thead><tr><th>Class</th><th>School number</th><th>Cohort</th><th>Access</th><th>Latest successful sign-in</th><th>Account controls</th></tr></thead><tbody>{% for row in rows %}<tr><td>{{ row.class_code }}</td><td>{{ row.label }}</td><td>{{ row.cohort }}</td><td>{{ 'Active' if row.active else 'Suspended' }}{% if row.force_change %} · password change required{% endif %}</td><td>{{ row.last_sign_in }}</td><td><form method=post action='{{ url_for("account_action") }}'><input type=hidden name=_csrf value='{{ csrf }}'><input type=hidden name=school_number value='{{ row.number }}'><select name=action><option value=reset>Issue temporary password</option><option value=force>Force password change</option><option value=suspend>Suspend</option><option value=reactivate>Reactivate</option><option value=revoke>Revoke sessions</option></select><label>Optional temporary password <input name=chosen_password type=password minlength=8 maxlength=128 autocomplete=off></label><button>Apply</button></form></td></tr>{% endfor %}</tbody></table><p><small>Only the latest successful student sign-in is displayed. UK local time. Student names and dates of birth are not collected.</small></p></html>"""
-
 
 class LoginLimiter:
     """Short-lived in-process throttle counters keyed by identifier digest, never IP."""
@@ -536,14 +524,15 @@ def create_app(overrides: dict | None = None) -> Flask:
                 valid = db().execute("""UPDATE staff_accounts SET temporary_available=0 WHERE username=? AND active=1
                     AND temporary_available=1 AND temporary_hash=?""", (username, encoded)).rowcount
             else:
-                valid = db().execute("SELECT 1 FROM staff_accounts WHERE username=? AND active=1 AND password_hash=?",
+                valid = db().execute("SELECT force_change FROM staff_accounts WHERE username=? AND active=1 AND password_hash=?",
                                      (username, encoded)).fetchone()
             if valid:
                 db().execute('UPDATE staff_accounts SET last_sign_in_utc=? WHERE username=?', (utc_text(), username))
-                token = new_session('staff', username, first)
+                must_change = first or bool(valid['force_change'])
+                token = new_session('staff', username, must_change)
                 db().commit()
                 limiter.succeeded(key)
-                g.luisa_session = {'must_change': first}
+                g.luisa_session = {'must_change': must_change}
                 return establish(token)
             db().rollback()
         limiter.failed(key)
@@ -665,29 +654,27 @@ def create_app(overrides: dict | None = None) -> Flask:
             return fn(*args, **kwargs)
         return wrapped
 
-    def temporary_password(number: str, chosen: str):
+    # Table and column names are internal constants chosen by the route.
+    def temporary_password(identifier, chosen, table, column, session_column):
         candidate = chosen or secrets.token_urlsafe(18)
-        if len(candidate) < 8 or len(candidate) > 128:
+        if not 8 <= len(candidate) <= 128:
             raise ValueError('Temporary passwords must be 8 to 128 characters.')
-        if candidate in {number, number + '@marlboroughcollege.org'}:
-            raise ValueError('Temporary passwords must be independent of the school number and email.')
-        candidate_hash = _PH.hash(candidate)
-        now = utc_text()
-        db().execute('BEGIN IMMEDIATE')
-        try:
-            db().execute('UPDATE accounts SET temporary_hash=NULL,temporary_expires_utc=NULL WHERE temporary_expires_utc IS NOT NULL AND temporary_expires_utc<=?', (now,))
-            other_hashes = db().execute('SELECT temporary_hash FROM accounts WHERE school_number<>? AND temporary_available=1 AND temporary_hash IS NOT NULL AND (temporary_expires_utc IS NULL OR temporary_expires_utc>?)', (number, now)).fetchall()
-            if any(password_ok(row['temporary_hash'], candidate) for row in other_hashes):
-                raise ValueError('That password is already active for another pupil. Choose or generate another.')
-            updated = db().execute('UPDATE accounts SET password_hash=NULL,force_change=1,temporary_hash=?,temporary_available=1,temporary_expires_utc=NULL WHERE school_number=? AND active=1',
-                         (candidate_hash, number))
-            if updated.rowcount != 1:
-                raise ValueError('Reactivate this account before issuing a password.')
-            db().execute('DELETE FROM sessions WHERE school_number=?', (number,))
-            db().execute('COMMIT')
-        except Exception:
-            db().execute('ROLLBACK')
-            raise
+        if candidate.lower() in {identifier, identifier + '@marlboroughcollege.org'}:
+            raise ValueError('Choose a password independent of the username and email.')
+        current = db().execute(f'SELECT password_hash,temporary_hash FROM {table} WHERE {column}=?',
+                               (identifier,)).fetchone()
+        if chosen:
+            if any(password_ok(value, chosen) for value in current if value):
+                raise ValueError('Choose a different temporary password.')
+            others = db().execute("""SELECT temporary_hash FROM accounts WHERE temporary_available=1
+                AND (temporary_expires_utc IS NULL OR temporary_expires_utc>?)
+                UNION ALL SELECT temporary_hash FROM staff_accounts WHERE temporary_available=1""", (utc_text(),))
+            if any(password_ok(row[0], chosen) for row in others if row[0]):
+                raise ValueError('That password is already in use. Choose or generate another.')
+        expiry = ',temporary_expires_utc=NULL' if table == 'accounts' else ''
+        db().execute(f'UPDATE {table} SET password_hash=NULL,force_change=1,temporary_hash=?,temporary_available=1{expiry} WHERE {column}=?',
+                     (_PH.hash(candidate), identifier))
+        db().execute(f'DELETE FROM sessions WHERE {session_column}=?', (identifier,))
         return candidate
 
     def uk_sign_in(stamp, missing='Never signed in'):
@@ -697,6 +684,7 @@ def create_app(overrides: dict | None = None) -> Flask:
 
     def render_admin(notice=None, temp_password=None, temp_school_number=None, status=200,
                      new_teacher=None, teacher_password=None):
+        teachers = request.endpoint in {'teacher_action', 'add_teacher'} or request.args.get('role') == 'teachers'
         rows = []
         labels = {'2026-27': {'23': 'Lower Sixth', '22': 'Upper Sixth'}}
         mapping = labels.get(app.config['SCHOOL_YEAR'], {})
@@ -705,12 +693,12 @@ def create_app(overrides: dict | None = None) -> Flask:
             rows.append({'class_code': account['class_code'], 'number': account['school_number'], 'label': account['preview'] or account['school_number'], 'cohort': mapping.get(account['school_number'][:2], '—'),
                          'active': bool(account['active']), 'force_change': bool(account['force_change']), 'last_sign_in': sign_in})
         staff = []
-        for member in db().execute("""SELECT username, active, last_sign_in_utc, temporary_available
+        for member in db().execute("""SELECT username, active, force_change, last_sign_in_utc, temporary_available
                                       FROM staff_accounts ORDER BY username"""):
             missing = 'Awaiting first sign-in' if member['temporary_available'] else 'No sign-in recorded'
-            staff.append(dict(username=member['username'], active=member['active'],
+            staff.append(dict(username=member['username'], active=member['active'], force_change=member['force_change'],
                               last_sign_in=uk_sign_in(member['last_sign_in_utc'], missing)))
-        return render_template_string(ADMIN_PAGE, staff=staff, rows=rows, csrf=base_context(), notice=notice,
+        return render_template_string(ADMIN_PAGE, role='teachers' if teachers else 'students', staff=staff, rows=rows, csrf=base_context(), notice=notice,
                                       temp_password=temp_password, temp_school_number=temp_school_number,
                                       new_teacher=new_teacher, teacher_password=teacher_password,
                                       classes=sorted({row['class_code'] for row in rows if row['class_code']})), status
@@ -814,39 +802,59 @@ def create_app(overrides: dict | None = None) -> Flask:
     @admin_only
     def account_action():
         require_csrf()
-        number = request.form.get('school_number', '')
-        action = request.form.get('action', '')
-        if not _SCHOOL_NUMBER.fullmatch(number):
+        identifier = request.form.get('school_number', '')
+        if not _SCHOOL_NUMBER.fullmatch(identifier):
             abort(400)
-        account = db().execute('SELECT * FROM accounts WHERE school_number=?', (number,)).fetchone()
-        if not account:
-            abort(404)
-        if action == 'reset':
-            if not account['active']:
-                return render_admin('Reactivate this account before issuing a temporary password.', status=400)
-            chosen = request.form.get('chosen_password', '')
-            try:
-                temp = temporary_password(number, chosen)
-            except ValueError as error:
-                return render_admin(str(error), status=400)
-            return render_admin('Temporary password issued. It will not be shown again after this response.', temp, number)
-        if action == 'force':
-            db().execute('UPDATE accounts SET force_change=1 WHERE school_number=?', (number,))
-            db().execute('DELETE FROM sessions WHERE school_number=?', (number,))
-            notice = 'Password change required at next sign-in.'
-        elif action == 'suspend':
-            db().execute('UPDATE accounts SET active=0 WHERE school_number=?', (number,))
-            db().execute('DELETE FROM sessions WHERE school_number=?', (number,))
-            notice = 'Access suspended and sessions revoked.'
-        elif action == 'reactivate':
-            db().execute('UPDATE accounts SET active=1 WHERE school_number=?', (number,))
-            notice = 'Access reactivated.'
-        elif action == 'revoke':
-            db().execute('DELETE FROM sessions WHERE school_number=?', (number,))
-            notice = 'Student sessions revoked.'
+        return manage_account(identifier, teacher=False)
+
+    @app.post('/admin/teachers/account')
+    @admin_only
+    def teacher_action():
+        require_csrf()
+        return manage_account(request.form.get('username', ''), teacher=True)
+
+    def manage_account(identifier, teacher):
+        if teacher:
+            table, column, session_column = 'staff_accounts', 'username', 'staff_username'
         else:
+            table, column, session_column = 'accounts', 'school_number', 'school_number'
+        action = request.form.get('action', '')
+        if action not in {'reset', 'force', 'suspend', 'reactivate', 'revoke'}:
             abort(400)
-        return render_admin(notice)
+        conn = db()
+        temp = None
+        try:
+            conn.execute('BEGIN IMMEDIATE')
+            account = conn.execute(f'SELECT active FROM {table} WHERE {column}=?', (identifier,)).fetchone()
+            if account is None:
+                abort(404)
+            if action == 'reset':
+                if not account['active']:
+                    raise ValueError('Reactivate this account before issuing a temporary password.')
+                temp = temporary_password(identifier, request.form.get('chosen_password', ''), table, column, session_column)
+                notice = 'Temporary password issued.'
+            else:
+                if action == 'force':
+                    conn.execute(f'UPDATE {table} SET force_change=1 WHERE {column}=?', (identifier,))
+                    notice = 'Password change required at next sign-in.'
+                elif action in {'suspend', 'reactivate'}:
+                    active = action == 'reactivate'
+                    conn.execute(f'UPDATE {table} SET active=? WHERE {column}=?', (active, identifier))
+                    notice = 'Access reactivated.' if active else 'Access suspended and sessions revoked.'
+                else:
+                    notice = 'Sessions revoked.'
+                if action != 'reactivate':
+                    conn.execute(f'DELETE FROM sessions WHERE {session_column}=?', (identifier,))
+            conn.commit()
+        except ValueError as error:
+            conn.rollback()
+            return render_admin(str(error), status=400)
+        except Exception:
+            conn.rollback()
+            raise
+        if teacher:
+            return render_admin(notice, new_teacher=identifier, teacher_password=temp)
+        return render_admin(notice, temp, identifier)
 
     @app.get('/sw.js')
     def service_worker():
