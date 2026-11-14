@@ -1,6 +1,8 @@
 # Current Luisa handoff
 
 <!-- LUISA-REPORT-HANDOFF v0.42 -->
+**Pending owner selection, issue #54.** Local changes standardise the owner toolbar and add a private ADA staff build with the 62 licensed textbook chapters. Staff Offline opens the existing Cloudflare offline facility. The gateway chooses the content root from the authenticated session role; pupils retain their separate manifest. The live release is still 0.42. Present the three sign-out designs and wait for the owner's selection before release.
+
 **Release 0.42.** The three library pages use one compact row. The logo is at the left, followed directly by By skill, By textbook and Teaching Resources. The separate wordmark and tagline have been removed. Actions occupy the right side. On narrower screens the toolbar scrolls horizontally beside the logo. Offline downloads and Sign out use shared 14px link styles across views. Verify horizontal access and typography on each edition. Issue #52 records NAV-042 and its release evidence.
 
 **Release 0.41.** The three library views share left-aligned By skill, By textbook and Teaching Resources links in that order. Each page has the same top-left logo. The By skill display controls align right; Cloudflare places the development version link last and ADA places account sign-out there. The teaching catalogue retains its established URL. Verify the three entry points in both edition manifests and at phone and desktop widths. Issue #50 records the requirements and live release evidence.

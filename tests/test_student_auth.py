@@ -168,6 +168,49 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.post_form(client, '/admin/password', form, client.get('/admin/password', base_url='https://ada.test'))
         self.assertEqual(client.get('/admin', base_url='https://ada.test').status_code, 200)
 
+    def test_licensed_chapters_are_selected_by_authenticated_role(self):
+        staff_dir = self.root / 'staff-library'
+        staff_dir.mkdir()
+        chapter = 'chapter.pdf'
+        catalogue = 'textbook-catalogue.json'
+        (staff_dir / chapter).write_bytes(b'%PDF-licensed')
+        for directory, edition in ((self.build, 'student'), (staff_dir, 'staff')):
+            body = {'edition': edition}
+            if edition == 'staff':
+                body['chapter'] = chapter
+            (directory / catalogue).write_text(json.dumps(body))
+            (directory / 'index.html').write_text(edition + ' library')
+            files = {'index.html': {}, catalogue: {}}
+            if edition == 'staff':
+                files[chapter] = {}
+            (directory / 'build-manifest.json').write_text(json.dumps({
+                'edition': edition, 'files': files, 'revision': 'sample-release', 'version': '1'
+            }))
+        app = create_app(dict(self.app.config, STAFF_BUILD_DIR=str(staff_dir)))
+        staff, pupil, anon = (app.test_client() for _ in range(3))
+        password = 'Sample-course-password'
+        encoded = PasswordHasher().hash(password)
+        self.add('02340')
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('UPDATE accounts SET password_hash=? WHERE school_number=?', (encoded, '02340'))
+            conn.execute('INSERT INTO staff_accounts(username,password_hash,force_change) VALUES(?,?,0)',
+                         ('sample.teacher', encoded))
+        host = 'https://ada.test'
+        for device, identity in ((staff, 'sample.teacher'), (pupil, '02340@marlboroughcollege.org')):
+            self.assertEqual(self.post_form(device, '/login', {'email': identity, 'password': password}).location, '/')
+        self.assertEqual(staff.get('/', base_url=host).get_data(as_text=True), 'staff library')
+        self.assertEqual(pupil.get('/', base_url=host).get_data(as_text=True), 'student library')
+        for device, allowed in ((staff, True), (pupil, False)):
+            response = device.get('/' + catalogue, base_url=host)
+            self.assertEqual('chapter' in response.get_json(), allowed)
+            self.assertIn('no-store', response.headers['Cache-Control'])
+            response.close()
+        with staff.get('/' + chapter, base_url=host) as response:
+            self.assertEqual(response.get_data(), b'%PDF-licensed')
+            self.assertIn('no-store', response.headers['Cache-Control'])
+        self.assertEqual(pupil.get('/' + chapter + '?role=staff', base_url=host).status_code, 404)
+        self.assertEqual(anon.get('/' + chapter, base_url=host).location, '/login')
+
     def test_staff_content_login_is_independent_of_pupils_and_admin(self):
         login = 'sample.teacher'
         temp = 'One-use-test-secret!'
