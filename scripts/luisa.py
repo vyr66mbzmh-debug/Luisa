@@ -193,51 +193,52 @@ def student_restricted_pdfs(root):
     return urls, hashes
 
 
-def student_content(name, content, restricted_urls, restricted_hashes, root):
+def student_content(name, content, restricted_urls, restricted_hashes, root, *, staff=False):
     """Apply student-only interface and catalogue changes to a copied source blob."""
     path = Path(name)
-    if path.name in {'teaching-catalogue.js', 'lesson-resources-data.js'}:
-        text = content.decode('utf-8')
-        if path.name == 'teaching-catalogue.js':
-            data = json.loads(text.split('=', 1)[1].strip().rstrip(';'))
-            for book in data.values():
+    if not staff:
+        if path.name in {'teaching-catalogue.js', 'lesson-resources-data.js'}:
+            text = content.decode('utf-8')
+            if path.name == 'teaching-catalogue.js':
+                data = json.loads(text.split('=', 1)[1].strip().rstrip(';'))
+                for book in data.values():
+                    for chapter in book['chapters']:
+                        chapter.pop('pdf', None)
+                text = 'const LUISA_TEACHING=' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';\n'
+            else:
+                # Remove source PDF destinations from the toolbar mapping while preserving skill/chapter mappings.
+                text = re.sub(r"pdf\s*:\s*(['\"])[^'\"]+\1\s*,?", '', text)
+                text = re.sub(r"['\"]pdf['\"]\s*:\s*(['\"])[^'\"]+\1\s*,?", '', text)
+            return text.encode('utf-8')
+        if path.name == 'textbook-catalogue.json':
+            data = json.loads(content)
+            for book in data['books']:
                 for chapter in book['chapters']:
-                    chapter.pop('pdf', None)
-            text = 'const LUISA_TEACHING=' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';\n'
-        else:
-            # Remove source PDF destinations from the toolbar mapping while preserving skill/chapter mappings.
-            text = re.sub(r"pdf\s*:\s*(['\"])[^'\"]+\1\s*,?", '', text)
-            text = re.sub(r"['\"]pdf['\"]\s*:\s*(['\"])[^'\"]+\1\s*,?", '', text)
-        return text.encode('utf-8')
-    if path.name == 'textbook-catalogue.json':
-        data = json.loads(content)
-        for book in data['books']:
-            for chapter in book['chapters']:
-                chapter['resources'] = [r for r in chapter.get('resources', []) if r.get('type') != 'pdf']
-        return (json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n').encode()
-    if path.name == 'teaching-chapters.html':
-        text = content.decode('utf-8').replace(",['Book chapter','pdf']", '')
-        content = text.encode('utf-8')
-    if path.name == 'textbook-view.js':
-        text = content.decode('utf-8').replace('Available teaching slides, book chapters and handouts remain accessible above.', 'Available teaching slides and handouts remain accessible above.')
-        content = text.encode('utf-8')
-    if path.name == 'index.html':
-        text = content.decode('utf-8')
-        text = re.sub(r'<a\b(?=[^>]*id=["\']book-chapter["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
-        content = text.encode('utf-8')
-    if path.name == 'lesson-resources.js':
-        text = content.decode('utf-8')
-        text = text.replace("book.onclick=e=>choose(e,bookKey);", "if(book)book.onclick=e=>choose(e,bookKey);")
-        text = text.replace("setLink(book,bookKey);", "if(book)setLink(book,bookKey);")
-        return text.encode('utf-8')
+                    chapter['resources'] = [r for r in chapter.get('resources', []) if r.get('type') != 'pdf']
+            return (json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n').encode()
+        if path.name == 'teaching-chapters.html':
+            text = content.decode('utf-8').replace(",['Book chapter','pdf']", '')
+            content = text.encode('utf-8')
+        if path.name == 'textbook-view.js':
+            text = content.decode('utf-8').replace('Available teaching slides, book chapters and handouts remain accessible above.', 'Available teaching slides and handouts remain accessible above.')
+            content = text.encode('utf-8')
+        if path.name == 'index.html':
+            text = content.decode('utf-8')
+            text = re.sub(r'<a\b(?=[^>]*id=["\']book-chapter["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
+            content = text.encode('utf-8')
+        if path.name == 'lesson-resources.js':
+            text = content.decode('utf-8')
+            text = text.replace("book.onclick=e=>choose(e,bookKey);", "if(book)book.onclick=e=>choose(e,bookKey);")
+            text = text.replace("setLink(book,bookKey);", "if(book)setLink(book,bookKey);")
+            return text.encode('utf-8')
     if path.name == 'release.json':
         data = json.loads(content)
-        data['edition'] = 'student'
+        data['edition'] = 'staff' if staff else 'student'
         data['publicBaseUrl'] = ''
         data.pop('repository', None)
         data['note'] = 'Online student edition; content requires authenticated server delivery.'
         return (json.dumps(data, indent=2) + '\n').encode()
-    if path.suffix == '.json':
+    if not staff and path.suffix == '.json':
         try:
             data = json.loads(content)
         except (UnicodeError, json.JSONDecodeError):
@@ -283,26 +284,41 @@ def student_content(name, content, restricted_urls, restricted_hashes, root):
         if path.suffix == '.html':
             text = re.sub(r'<script\b[^>]*offline-register\.js[^>]*>\s*</script\s*>', '', text, flags=re.I)
             text = re.sub(r'<link\b[^>]*rel=["\']manifest["\'][^>]*>', '', text, flags=re.I)
-            text = re.sub(r'<a\b(?=[^>]*href=["\'][^"\']*offline\.html[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
-            text = re.sub(r'<a\b(?=[^>]*href=["\']https://(?:fmq-6d9\.pages\.dev|adazmq\.marlboroughcollege\.org)[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
-            text = re.sub(r'<a\b(?=[^>]*href=["\']https://github\.com/vyr66mbzmh-debug/Luisa[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
-            text = re.sub(r'<a\b(?=[^>]*href=["\']https://classpad\.net/note/[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
-            def remove_restricted_anchor(match):
-                href = re.search(r'href=["\']([^"\']+)', match.group(0), flags=re.I)
-                if not href:
+            if staff:
+                owner_url = json.loads((root / 'release.json').read_text())['publicBaseUrl'].rstrip('/')
+                text = text.replace('href="offline.html"', f'href="{owner_url}/offline.html" target="_blank" rel="noopener noreferrer"')
+            else:
+                text = re.sub(r'<a\b(?=[^>]*href=["\'][^"\']*offline\.html[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
+                text = re.sub(r'<a\b(?=[^>]*href=["\']https://(?:fmq-6d9\.pages\.dev|adazmq\.marlboroughcollege\.org)[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
+                text = re.sub(r'<a\b(?=[^>]*href=["\']https://github\.com/vyr66mbzmh-debug/Luisa[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
+                text = re.sub(r'<a\b(?=[^>]*href=["\']https://classpad\.net/note/[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
+                def remove_restricted_anchor(match):
+                    href = re.search(r'href=["\']([^"\']+)', match.group(0), flags=re.I)
+                    if not href:
+                        return match.group(0)
+                    value = href.group(1)
+                    url = urllib.parse.urlsplit(value)
+                    target_name = url.path.lstrip('/')
+                    target = root / target_name
+                    if target_name in restricted_urls or (target.is_file() and digest(target) in restricted_hashes):
+                        return ''
                     return match.group(0)
-                value = href.group(1)
-                url = urllib.parse.urlsplit(value)
-                target_name = url.path.lstrip('/')
-                target = root / target_name
-                if target_name in restricted_urls or (target.is_file() and digest(target) in restricted_hashes):
-                    return ''
-                return match.group(0)
-            text = re.sub(r'<a\b[^>]*>.*?</a\s*>', remove_restricted_anchor, text, flags=re.I|re.S)
-            text = re.sub(r'(<html\b[^>]*)(>)', r'\1 data-luisa-edition="student"\2', text, count=1, flags=re.I)
-            text = re.sub(r"""<a\b[^>]*href=["'][^"']*development-progress\.html(?:[?#][^"']*)?["'][^>]*>.*?</a>""", '', text, flags=re.I|re.S)
+                text = re.sub(r'<a\b[^>]*>.*?</a\s*>', remove_restricted_anchor, text, flags=re.I|re.S)
+                text = re.sub(r'(<html\b[^>]*)(>)', r'\1 data-luisa-edition="student"\2', text, count=1, flags=re.I)
+                text = re.sub(r"""<a\b[^>]*href=["'][^"']*development-progress\.html(?:[?#][^"']*)?["'][^>]*>.*?</a>""", '', text, flags=re.I|re.S)
             logout = '../' * (len(path.parts) - 1) + 'logout'
-            account_link = f'<a class="luisa-signout" target="_top" href="{logout}" style="color:inherit;white-space:nowrap;margin-left:auto"><!--luisa-account-name-->Sign out</a>'
+            # Keep the displayed identity outside the icon's accessible name.
+            account_link = (
+                '<span style="display:inline-flex;align-items:center;gap:8px;margin-inline-start:auto">'
+                '<span class="luisa-account"><!--luisa-account-name--></span>'
+                f'<a class="luisa-signout" href="{logout}" target="_top" aria-label="Sign out" title="Sign out" '
+                'style="display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;'
+                'width:37px;height:35px;padding:0;background:#102b43;color:#f0d6a1;'
+                'border:1px solid #b69a65;border-radius:6px">'
+                '<svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true" fill="none" '
+                'stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+                '<path d="M10 4H5v16h5m-1-8h12m-4-4 4 4-4 4"/></svg></a></span>'
+            )
             if '<!--edition-account-->' in text:
                 text = text.replace('<!--edition-account-->', account_link, 1)
             elif '</header>' in text:
@@ -334,9 +350,9 @@ def student_content(name, content, restricted_urls, restricted_hashes, root):
 
 
 def build(root=ROOT, output=None, profile='owner'):
-    if profile not in {'owner', 'student'}:
-        raise ValueError('Build profile must be owner or student')
-    output = Path(output or os.environ.get('LUISA_BUILD_DIR', root / ('dist-student' if profile == 'student' else 'dist'))).resolve()
+    if profile not in {'owner', 'student', 'staff'}:
+        raise ValueError('Unknown Luisa build profile')
+    output = Path(output or os.environ.get('LUISA_BUILD_DIR', root / ('dist' if profile == 'owner' else f'dist-{profile}'))).resolve()
     # Only rebuild a marked dedicated output; never recursively remove an arbitrary path.
     if output == root.resolve() or root.resolve().is_relative_to(output) or output.is_symlink():
         raise ValueError('Unsafe build output')
@@ -353,13 +369,13 @@ def build(root=ROOT, output=None, profile='owner'):
     for name, content in source_files(root):
         if not is_public(name):
             continue
-        if profile == 'student':
+        if profile != 'owner':
             path = Path(name)
             if name in restricted_urls or (path.suffix.lower() == '.pdf' and hashlib.sha256(content).hexdigest() in restricted_hashes):
                 continue
             if path.name == 'offline.html' or path.name.startswith('offline') or path.name == 'manifest.webmanifest':
                 continue
-            content = student_content(name, content, restricted_urls, restricted_hashes, root)
+            content = student_content(name, content, restricted_urls, restricted_hashes, root, staff=profile == 'staff')
         target = output / name
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(content)
@@ -394,6 +410,15 @@ def check_artifact(directory, profile, root=ROOT):
     for source, alias in downloads.items():
         if source not in files or alias not in files or manifest['files'][source] != manifest['files'][alias]:
             raise ValueError('Named PDF differs from its original: ' + alias)
+    if profile == 'staff':
+        chapter_urls, _ = student_restricted_pdfs(root)
+        if not chapter_urls <= files:
+            raise ValueError('ADA staff artifact lacks licensed textbook chapters')
+        for name in ('textbook-catalogue.json', 'teaching-catalogue.js', 'lesson-resources-data.js'):
+            if (directory / name).read_bytes() != (root / name).read_bytes():
+                raise ValueError('Staff chapter catalogue differs from the source: ' + name)
+        if 'offline.html' in files or "navigator.serviceWorker.register(" in (directory / 'app.js').read_text():
+            raise ValueError('ADA staff must use the owner-hosted offline facility')
     if profile == 'student':
         restricted_urls, restricted_hashes = student_restricted_pdfs(root)
         forbidden_names = [n for n in files if n in restricted_urls]
@@ -514,9 +539,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('command', choices=['requirements', 'check', 'build', 'check-artifact', 'test', 'scan', 'gate', 'serve'])
     parser.add_argument('--output')
-    parser.add_argument('--profile', choices=['owner', 'student'], default='owner')
+    parser.add_argument('--profile', choices=['owner', 'student', 'staff'], default='owner')
     parser.add_argument('--directory', default='dist')
-    parser.add_argument('--host-profile', choices=['owner', 'student'])
+    parser.add_argument('--host-profile', choices=['owner', 'student', 'staff'])
     parser.add_argument('--port', type=int, default=int(os.environ.get('PORT', '8778')))
     args = parser.parse_args()
     if args.command == 'requirements':

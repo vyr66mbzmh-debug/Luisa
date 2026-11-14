@@ -4463,6 +4463,24 @@
         "luisa.css",
         "HANDOFF.md"
       ]
+    },
+    {
+      "id": "NAV-043",
+      "scope": "Cloudflare and authenticated ADA staff and pupils",
+      "requirement": "Use identical right-aligned Offline, CG100 and current-version controls on all three Cloudflare and ADA teacher library pages. Keep ADA sign-out last. Permit licensed teachers to open textbook chapters.",
+      "acceptance": [
+        "Staff can open the original chapter PDF from the skill, textbook, teaching resources and lesson interfaces wherever available. A pupil requesting a staff PDF or catalogue receives only the pupil edition or an access denial.",
+        "Open the Cloudflare offline facility for staff without installing an offline worker on ADA. Preserve the pupil experience.",
+        "Owner selected option C. Show the compact exit icon at the far right with a Sign out tooltip and accessible name. Confirm the current account separately."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner instruction, 14 November 2026",
+      "evidence": [
+        "GitHub issue #54",
+        "student_server/app.py"
+      ]
     }
   ]
 }

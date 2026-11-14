@@ -122,6 +122,7 @@ def create_app(overrides: dict | None = None) -> Flask:
     app = Flask(__name__)
     app.config.update(
         STUDENT_BUILD_DIR=os.environ.get('LUISA_STUDENT_BUILD_DIR', ''),
+        STAFF_BUILD_DIR=os.environ.get('LUISA_STAFF_BUILD_DIR', ''),
         DATABASE_PATH=os.environ.get('LUISA_STUDENT_DATABASE', ''),
         ADMIN_PASSWORD_HASH=os.environ.get('LUISA_ADMIN_PASSWORD_HASH', ''),
         TEACHER_SETUP=os.environ.get('LUISA_TEACHER_SETUP') == '1',
@@ -161,6 +162,18 @@ def create_app(overrides: dict | None = None) -> Flask:
     asset_paths = frozenset(manifest.get('files', {}))
     if manifest.get('edition') != 'student':
         raise RuntimeError('Refusing to serve a non-student artifact')
+
+    staff_dir = build_dir
+    staff_paths = asset_paths
+    if app.config['STAFF_BUILD_DIR']:
+        staff_dir = Path(app.config['STAFF_BUILD_DIR']).resolve()
+        staff_manifest = json.loads((staff_dir / 'build-manifest.json').read_text())
+        if (staff_manifest.get('edition') != 'staff' or
+                staff_manifest.get('revision') != manifest.get('revision') or
+                staff_manifest.get('version') != manifest.get('version') or
+                db_path.is_relative_to(staff_dir)):
+            raise RuntimeError('Expected matching private staff and pupil releases')
+        staff_paths = frozenset(staff_manifest['files'])
 
     app.logger.disabled = True
     limiter = LoginLimiter()
@@ -757,12 +770,18 @@ def create_app(overrides: dict | None = None) -> Flask:
     def index():
         if not g.luisa_session or g.luisa_session['role'] not in {'student', 'staff'} or g.luisa_session['must_change']:
             return redirect(url_for('login'))
-        return course_page(build_dir / 'index.html')
+        directory, _ = course_artifact()
+        return course_page(directory / 'index.html')
+
+    def course_artifact():
+        if g.luisa_session['role'] == 'staff':
+            return staff_dir, staff_paths
+        return build_dir, asset_paths
 
     def course_page(target):
         page = target.read_text(encoding='utf-8')
         identity = g.luisa_session['school_number'] or g.luisa_session['staff_username']
-        return page.replace('<!--luisa-account-name-->', escape(identity) + ' · ')
+        return page.replace('<!--luisa-account-name-->', escape(identity))
 
     @app.get('/<path:asset>')
     def private_asset(asset: str):
@@ -770,16 +789,17 @@ def create_app(overrides: dict | None = None) -> Flask:
             return redirect(url_for('login'))
         if asset == 'index.html':
             return index()
-        if asset not in asset_paths:
+        directory, allowed = course_artifact()
+        if asset not in allowed:
             abort(404)
-        target = (build_dir / asset).resolve()
-        if not target.is_relative_to(build_dir) or not target.is_file():
+        target = (directory / asset).resolve()
+        if not target.is_relative_to(directory) or not target.is_file():
             abort(404)
         if target.suffix.lower() == '.html':
             return course_page(target)
         if target.suffix.lower() == '.pdf' and request.headers.get('Sec-Fetch-Dest') == 'document' and 'download' not in request.args:
             return render_template_string(PDF_PAGE, title=target.stem, file=url_for('private_asset', asset=asset))
-        return send_from_directory(str(build_dir), asset, conditional=False, etag=False, max_age=0,
+        return send_from_directory(str(directory), asset, conditional=False, etag=False, max_age=0,
                                    as_attachment=target.suffix.lower() == '.pdf' and 'download' in request.args)
 
     return app
