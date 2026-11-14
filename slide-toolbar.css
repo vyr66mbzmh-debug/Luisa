@@ -32,7 +32,7 @@
 .slide-toolbar :focus-visible { outline: 2px solid #f2ce88; outline-offset: -2px; }
 .slide-picker { position: relative; display: inline-flex; }
 #compact-slide {
-  position: absolute; inset: 0; pointer-events: none;
+  position: absolute; inset: 0; pointer-events: none; white-space: nowrap;
   display: flex; align-items: center; justify-content: center; gap: 3px;
   color: white; font: 14px system-ui; font-variant-numeric: tabular-nums;
 }
@@ -60,7 +60,7 @@
   .slide-toolbar .slide-actions { padding-left: 2px; }
   .slide-toolbar .slide-icon { width: 27px; }
   .slide-toolbar .slide-icon svg { width: 17px; height: 17px; }
-  .slide-toolbar #slide-select { width: 66px; padding-inline: 2px; font-size: 13px; }
+  .slide-toolbar #slide-select { width: 74px; padding-inline: 2px; font-size: 13px; }
   .slide-toolbar #slide-number { font-size: 16px; }
   .slide-toolbar h1 { font-size: 16px; }
 }
@@ -71,7 +71,7 @@ html[data-luisa-edition="student"] .slide-toolbar #book-pdf { display: none; }
   .slide-toolbar { gap: 1px; padding-inline: 2px; }
   .slide-toolbar .luisa-logo { width: 34px; height: 28px; }
   .slide-toolbar .slide-icon { width: 24px; }
-  .slide-toolbar #slide-select { width: 57px; }
+  .slide-toolbar #slide-select { width: 61px; }
   #compact-slide { font-size: 11px; gap: 1px; }
   #compact-slide::after { margin-left: 1px; }
   .slide-toolbar #slide-number { font-size: 15px; }
