@@ -101,6 +101,18 @@ class StudentAuthAcceptance(unittest.TestCase):
         page = client.get('/change-password', base_url='https://ada.test')
         return self.post_form(client, '/change-password', {'password': password, 'confirm': password}, page)
 
+    def test_single_teacher_can_sign_in_with_only_the_password(self):
+        config = dict(self.app.config, ADMIN_AUTH_MODE='password', ADMIN_TOTP_SECRET='')
+        client = create_app(config).test_client()
+        page = client.get('/admin/login', base_url='https://ada.test')
+        self.assertNotIn('name=totp', page.get_data(as_text=True))
+        failed = self.post_form(client, '/admin/login', {'password': 'incorrect'}, page)
+        self.assertEqual(failed.status_code, 401)
+        self.assertEqual(client.get('/admin', base_url='https://ada.test').status_code, 302)
+        signed_in = self.post_form(client, '/admin/login', {'password': self.teacher_password}, failed)
+        self.assertEqual(signed_in.status_code, 302)
+        self.assertEqual(client.get('/admin', base_url='https://ada.test').status_code, 200)
+
     def test_roster_leading_zero_duplicates_and_mfa_admin(self):
         self.add('02340\n23401')
         invalid_batch = self.add('02401\nAlice Example')
