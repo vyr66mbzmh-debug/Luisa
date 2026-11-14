@@ -61,19 +61,19 @@ PDF_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewpo
 nav{display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;background:#183957}a{color:white}
 iframe{width:100%;border:0;flex:1}</style><nav><a href="{{ file }}?download=1" download>Download PDF</a>
 """ + SIGN_OUT_FORM + """</nav><iframe src="{{ file }}?inline=1" title="{{ title }}"></iframe></html>"""
-LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Luisa sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>School email or username<input name=email type=text autocomplete=username required maxlength=64></label><label>Luisa password<input name=password type=password autocomplete=current-password required maxlength=1024></label><button>Sign in</button></form><p><a href="{{ url_for('admin_login') }}">Admin sign in</a></p></html>"""
-ADMIN_LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa administration sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Teacher sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>Username<input name=username value=admin autocomplete=username required></label><label>Teacher password<input name=password type=password autocomplete=current-password required maxlength=1024></label>{% if config.ADMIN_AUTH_MODE == "totp" %}<label>Authenticator code<input name=totp inputmode=numeric autocomplete=one-time-code required pattern='[0-9]{6}'></label>{% endif %}<button>Sign in</button></form></html>"""
+LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Luisa sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>School email or username<input name=email type=text autocomplete=username required maxlength=64></label><label>Luisa password<input name=password type=password autocomplete=current-password required maxlength=1024></label><button>Sign in</button></form><p><a href="{{ url_for('admin_login') }}">Admin login</a></p></html>"""
+ADMIN_LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa admin login</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Admin login</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>Username<input name=username value=admin autocomplete=username readonly></label><label>Admin password<input name=password type=password autocomplete=current-password required maxlength=1024></label>{% if config.ADMIN_AUTH_MODE == "totp" %}<label>Authenticator code<input name=totp inputmode=numeric autocomplete=one-time-code required pattern='[0-9]{6}'></label>{% endif %}<button>Sign in</button></form></html>"""
 CHANGE_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Change Luisa password</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><div style="text-align:right">""" + SIGN_OUT_FORM + """</div><h1>Choose a new Luisa password</h1><p>Change your temporary password before opening course content.</p>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>New password<input name=password type=password autocomplete=new-password required minlength=8 maxlength=1024></label><label>Repeat new password<input name=confirm type=password autocomplete=new-password required minlength=8 maxlength=1024></label><button>Save password</button></form></html>"""
 TEACHER_PASSWORD_PAGE = """<!doctype html><html lang=en><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><title>Change teacher password · Luisa</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><title>Change admin password · Luisa</title>
 <style>body{font:17px/1.5 system-ui;color:#183957;max-width:32rem;margin:6vh auto;padding:1.5rem}
 label,input,button{display:block}input,button{box-sizing:border-box;width:100%;padding:.7rem;font:inherit}
 label{margin:1rem 0}button{background:#183957;color:white;border:0;border-radius:.3rem}[role=alert]{color:#8b2020}</style>
-<a href="{{ url_for('admin_home') }}">Back to student accounts</a> · """ + SIGN_OUT_FORM + """<h1>Change teacher password</h1>
+<a href="{{ url_for('admin_home') }}">Back to account management</a> · """ + SIGN_OUT_FORM + """<h1>Change admin password</h1>
 {% if error %}<p role=alert>{{ error }}</p>{% endif %}
 <form method=post><input type=hidden name=_csrf value='{{ csrf }}'>
-<label>Current teacher password<input name=current type=password autocomplete=current-password required maxlength=1024></label>
-<label>New teacher password (at least 8 characters)<input name=password type=password autocomplete=new-password required minlength=8 maxlength=1024></label>
+<label>Current admin password<input name=current type=password autocomplete=current-password required maxlength=1024></label>
+<label>New admin password (at least 8 characters)<input name=password type=password autocomplete=new-password required minlength=8 maxlength=1024></label>
 <label>Repeat new password<input name=confirm type=password autocomplete=new-password required maxlength=1024></label>
 <button>Save password</button></form></html>"""
 
@@ -81,7 +81,7 @@ SLIPS_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=view
 <title>Luisa password slips</title><style>@page{size:A4;margin:12mm}body{font:16px/1.45 system-ui;color:#183957}
 main{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}article{border:1px dashed #778;padding:5mm;break-inside:avoid;overflow-wrap:anywhere}
 h2,p{margin:.4em 0}code{font-size:1.1em}nav{margin:1em}button{font:inherit}@media print{nav{display:none}main{display:block}article{display:inline-block;vertical-align:top;width:49%;box-sizing:border-box}}</style>
-<nav><button onclick="window.print()">Print slips</button> <a href="{{ url_for('admin_home') }}">Back to student accounts</a> · """ + SIGN_OUT_FORM + """</nav>
+<nav><button onclick="window.print()">Print slips</button> <a href="{{ url_for('admin_home') }}">Back to account management</a> · """ + SIGN_OUT_FORM + """</nav>
 <main>{% for row, password in slips %}<article><h2>Luisa · {{ row.school_number }}</h2><p>{{ link }}</p>
 <p>School email<br>{{ row.school_number }}@marlboroughcollege.org</p><p>First password<br><code>{{ password }}</code></p>
 <p>Sign in once, then choose your own Luisa password.</p></article>{% endfor %}</main></html>"""
@@ -261,6 +261,14 @@ def create_app(overrides: dict | None = None) -> Flask:
                     temporary_available INTEGER NOT NULL DEFAULT 0,
                     active INTEGER NOT NULL DEFAULT 1,
                     force_change INTEGER NOT NULL DEFAULT 1
+                );
+                CREATE TABLE IF NOT EXISTS student_directory (
+                    school_number TEXT PRIMARY KEY REFERENCES accounts(school_number) ON DELETE CASCADE,
+                    first_name TEXT NOT NULL
+                );
+                CREATE TABLE IF NOT EXISTS teacher_directory (
+                    username TEXT PRIMARY KEY REFERENCES staff_accounts(username) ON DELETE CASCADE,
+                    first_name TEXT NOT NULL
                 );
                 CREATE TABLE IF NOT EXISTS teacher_credential (
                     singleton INTEGER PRIMARY KEY CHECK(singleton=1),
@@ -684,21 +692,45 @@ def create_app(overrides: dict | None = None) -> Flask:
 
     def render_admin(notice=None, temp_password=None, temp_school_number=None, status=200,
                      new_teacher=None, teacher_password=None):
-        teachers = request.endpoint in {'teacher_action', 'add_teacher'} or request.args.get('role') == 'teachers'
+        teachers = request.endpoint in {'teacher_action', 'add_teacher'} or request.view_args.get('role') == 'teachers' or request.args.get('role') == 'teachers'
         rows = []
         labels = {'2026-27': {'23': 'Lower Sixth', '22': 'Upper Sixth'}}
         mapping = labels.get(app.config['SCHOOL_YEAR'], {})
-        for account in db().execute('SELECT accounts.*, pupil_preview_logins.username AS preview FROM accounts LEFT JOIN pupil_preview_logins USING(school_number) ORDER BY class_code,school_number'):
+        for account in db().execute('SELECT accounts.*, student_directory.first_name, pupil_preview_logins.username AS preview FROM accounts LEFT JOIN pupil_preview_logins USING(school_number) LEFT JOIN student_directory USING(school_number) ORDER BY school_number'):
             sign_in = uk_sign_in(account['last_sign_in_utc'])
             rows.append({'class_code': account['class_code'], 'number': account['school_number'], 'label': account['preview'] or account['school_number'], 'cohort': mapping.get(account['school_number'][:2], '—'),
-                         'active': bool(account['active']), 'force_change': bool(account['force_change']), 'last_sign_in': sign_in})
+                         'active': bool(account['active']), 'force_change': bool(account['force_change']), 'last_sign_in': sign_in, 'stamp': account['last_sign_in_utc'], 'first_name': account['first_name'] or ''})
         staff = []
-        for member in db().execute("""SELECT username, active, force_change, last_sign_in_utc, temporary_available
-                                      FROM staff_accounts ORDER BY username"""):
+        for member in db().execute("""SELECT username, active, force_change, last_sign_in_utc, temporary_available, first_name
+                                      FROM staff_accounts LEFT JOIN teacher_directory USING(username) ORDER BY username"""):
             missing = 'Awaiting first sign-in' if member['temporary_available'] else 'No sign-in recorded'
             staff.append(dict(username=member['username'], active=member['active'], force_change=member['force_change'],
+                              stamp=member['last_sign_in_utc'], first_name=member['first_name'] or '',
                               last_sign_in=uk_sign_in(member['last_sign_in_utc'], missing)))
-        return render_template_string(ADMIN_PAGE, role='teachers' if teachers else 'students', staff=staff, rows=rows, csrf=base_context(), notice=notice,
+        headers = [('identity', 'Username' if teachers else 'School number'), ('name', 'First name')]
+        if not teachers:
+            headers.append(('class', 'Class / cohort'))
+        headers.extend([('access', 'Access'), ('signin', 'Last successful sign-in')])
+        default = 'identity' if teachers else 'class'
+        sort = request.args.get('sort', default)
+        if sort not in dict(headers):
+            sort = default
+        descending = request.args.get('direction', 'desc' if sort == 'signin' else 'asc') == 'desc'
+        def sort_value(row):
+            if sort == 'identity':
+                return row['username'] if teachers else row['number']
+            if sort == 'name':
+                return row['first_name'].casefold()
+            if sort == 'class':
+                return (row['class_code'], row['cohort'])
+            if sort == 'access':
+                return (not row['active'], bool(row['force_change']))
+            return row['stamp'] or ''
+        directory = staff if teachers else rows
+        directory.sort(key=sort_value, reverse=descending)
+        if sort == 'signin':
+            directory.sort(key=lambda row: not row['stamp'])
+        return render_template_string(ADMIN_PAGE, headers=headers, sort=sort, descending=descending, role='teachers' if teachers else 'students', staff=staff, rows=rows, csrf=base_context(), notice=notice,
                                       temp_password=temp_password, temp_school_number=temp_school_number,
                                       new_teacher=new_teacher, teacher_password=teacher_password,
                                       classes=sorted({row['class_code'] for row in rows if row['class_code']})), status
@@ -706,7 +738,41 @@ def create_app(overrides: dict | None = None) -> Flask:
     @app.get('/admin')
     @admin_only
     def admin_home():
-        return render_admin('Teacher password changed.' if request.args.get('password_changed') == '1' else None)
+        return render_admin('Admin password changed.' if request.args.get('password_changed') == '1' else None)
+
+    @app.get('/admin/logo.png')
+    @admin_only
+    def admin_logo():
+        return send_from_directory(build_dir, 'assets/luisa/logo.png', conditional=False, etag=False)
+
+    def submitted_first_name():
+        value = request.form.get('first_name', '').strip()
+        if len(value) > 80 or any(not ch.isprintable() for ch in value):
+            raise ValueError('Enter a first name of up to 80 characters.')
+        return value
+
+    def save_name(role, identifier, name):
+        table, column = ('teacher_directory', 'username') if role == 'teachers' else ('student_directory', 'school_number')
+        if name:
+            db().execute(f'INSERT INTO {table}({column},first_name) VALUES(?,?) '
+                         f'ON CONFLICT({column}) DO UPDATE SET first_name=excluded.first_name', (identifier, name))
+        else:
+            db().execute(f'DELETE FROM {table} WHERE {column}=?', (identifier,))
+
+    @app.post('/admin/<any(students,teachers):role>/name')
+    @admin_only
+    def edit_name(role):
+        require_csrf()
+        identifier = request.form.get('identifier', '')
+        try:
+            name = submitted_first_name()
+        except ValueError as error:
+            return render_admin(str(error), status=400)
+        table, column = ('staff_accounts', 'username') if role == 'teachers' else ('accounts', 'school_number')
+        if not db().execute(f'SELECT 1 FROM {table} WHERE {column}=?', (identifier,)).fetchone():
+            abort(404)
+        save_name(role, identifier, name)
+        return redirect(url_for('admin_home', role=role, sort=request.args.get('sort'), direction=request.args.get('direction')))
 
     @app.post('/admin/teachers')
     @admin_only
@@ -716,11 +782,19 @@ def create_app(overrides: dict | None = None) -> Flask:
         if not re.fullmatch(r'[A-Za-z]{1,32}', acronym) or acronym.lower() == 'admin':
             return render_admin('Enter a teacher acronym using letters only. The admin username is reserved.', status=400)
         username = acronym.lower()
+        try:
+            name = submitted_first_name()
+        except ValueError as error:
+            return render_admin(str(error), status=400)
         password = secrets.token_urlsafe(15)
+        db().execute('BEGIN IMMEDIATE')
         result = db().execute("""INSERT INTO staff_accounts(username, temporary_hash, temporary_available, force_change)
                                  VALUES(?,?,1,1) ON CONFLICT(username) DO NOTHING""", (username, _PH.hash(password)))
         if not result.rowcount:
+            db().rollback()
             return render_admin('This teacher already has an account.', status=409)
+        save_name('teachers', username, name)
+        db().commit()
         return render_admin(new_teacher=username, teacher_password=password)
 
     @app.route('/admin/password', methods=['GET', 'POST'])
@@ -736,11 +810,11 @@ def create_app(overrides: dict | None = None) -> Flask:
         new = request.form.get('password', '')
         verified_hash = teacher_hash()
         if len(current) > 1024 or not password_ok(verified_hash, current):
-            return form('The current teacher password is incorrect.', 400)
+            return form('The current admin password is incorrect.', 400)
         if not 8 <= len(new) <= 1024 or new != request.form.get('confirm'):
             return form('Enter the same new password twice, using at least 8 characters.', 400)
         if new == current:
-            return form('Choose a different teacher password.', 400)
+            return form('Choose a different admin password.', 400)
         replacement = _PH.hash(new)
         session_hash = g.luisa_session['session_hash']
         db().execute('BEGIN IMMEDIATE')

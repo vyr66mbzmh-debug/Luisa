@@ -274,6 +274,38 @@ class StudentAuthAcceptance(unittest.TestCase):
             self.assertNotEqual(stamp(), '2026-01-01T00:00:00Z')
             self.assertNotIn(secret, self.admin.get('/admin', base_url=host).text)
 
+    def test_directory_names_are_private_and_independent_of_login_state(self):
+        host = 'https://ada.test'
+        self.add('02342 02343')
+        before = dict(self.database_account('02342'))
+        endpoint = '/admin/students/name'
+        fields = {'identifier': '02342', 'first_name': 'Fictional'}
+        self.assertEqual(self.admin.post(endpoint, data=fields, base_url=host).status_code, 400)
+        self.assertEqual(self.client.post(endpoint, data=fields, base_url=host).location, '/admin/login')
+        self.assertEqual(self.post_form(self.admin, endpoint, fields).status_code, 302)
+        self.assertEqual(dict(self.database_account('02342')), before)
+        self.assertIn('Fictional', self.admin.get('/admin', base_url=host).text)
+        self.assertNotIn('Fictional', self.client.get('/login', base_url=host).text)
+        added = self.post_form(self.admin, '/admin/teachers', {'acronym': 'abc', 'first_name': 'Example'})
+        self.assertIn('Copy password', added.text)
+        self.assertIn('Example', added.text)
+        self.assertNotIn('Fictional', added.text)
+        self.assertNotIn('Copy password', self.admin.get('/admin?role=teachers', base_url=host).text)
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute("UPDATE accounts SET last_sign_in_utc='2026-10-01T00:00:00Z' WHERE school_number='02342'")
+            conn.execute("UPDATE accounts SET last_sign_in_utc='2026-01-31T00:00:00Z' WHERE school_number='02343'")
+        def order(direction):
+            page = self.admin.get('/admin?sort=signin&direction='+direction, base_url=host)
+            return re.findall(r'aria-label="Manage (\d+)"', page.text)
+        self.assertEqual(order('desc'), ['02342', '02343'])
+        self.assertEqual(order('asc'), ['02343', '02342'])
+        first = re.search(r'<code>([^<]+)</code>', added.text)[1]
+        self.assertEqual(self.student_login('abc', first).location, '/change-password')
+        self.assertEqual(self.change_password(self.client, 'Example-owned password').location, '/')
+        self.assertEqual(self.client.post(endpoint, data=fields, base_url=host).status_code, 403)
+        self.assertEqual(self.post_form(self.admin, endpoint, dict(fields, first_name='')).status_code, 302)
+        self.assertNotIn('Fictional', self.admin.get('/admin', base_url=host).text)
+
     def test_manage_teacher_preserves_other_accounts_and_enforces_controls(self):
         host = 'https://ada.test'
         path = '/admin/teachers/account'

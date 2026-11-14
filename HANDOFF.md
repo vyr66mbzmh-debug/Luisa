@@ -1,6 +1,8 @@
 # Current Luisa handoff
 
 <!-- LUISA-REPORT-HANDOFF v0.45 -->
+**Private ADA directory, issue #64.** Apply init-db before switching the gateway. It creates separate student and teacher first-name tables. Populate them privately and preserve authentication state. The administrator can edit first names via Manage and sort both directories. Logo and sign-out match ADA's course toolbar. Admin login fixes the username to admin. Copy a temporary password on its issue screen for private delivery. For a previously issued password, use a verified original private invitation or issue a replacement. Both course editions remain v0.45.
+
 **Private ADA admin update, issue #62.** Students and Teachers have separate directories. Manage on a row applies to that account only. Teacher resets, forced changes, suspension and session revocation cover every device for the selected teacher. Deploy the reviewed gateway package against the existing private database and environment. No schema migration or account provisioning is required. Keep both course manifests at their existing release. Verify database continuity and the gateway revision separately. The owner-specified class correction was applied in private storage.
 
 **Release 0.45, issue #60.** The private admin page creates teachers by acronym and displays a generated first password for manual delivery. Add the nullable staff timestamp via init-db before restarting. Record only successful authentication. Existing teacher sign-ins before this release have no historical timestamps. The authorised pupil mail merge has since been sent.
