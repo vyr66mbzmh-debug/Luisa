@@ -242,6 +242,38 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(second.get('/', base_url='https://ada.test').location, '/login')
         self.assertEqual(self.student_login(alias, password).status_code, 401)
 
+    def test_admin_creates_teacher_and_records_only_successful_sign_in(self):
+        host = 'https://ada.test'
+        path = '/admin/teachers'
+        self.assertEqual(self.admin.post(path, data={'acronym':'XY'}, base_url=host).status_code, 400)
+        self.assertEqual(self.client.post(path, base_url=host).location, '/admin/login')
+        for invalid in ('admin', '02340', 'staff@wrong.test', 'test_example'):
+            self.assertEqual(self.post_form(self.admin, path, {'acronym':invalid}).status_code, 400)
+        created = self.post_form(self.admin, path, {'acronym':'XY'})
+        self.assertEqual(created.status_code, 200)
+        secret = re.search(r'<code>([^<]+)</code>', created.text)[1]
+        self.assertIn('Awaiting first sign-in', created.text)
+        duplicate = self.post_form(self.admin, path, {'acronym':'xy'})
+        self.assertEqual(duplicate.status_code, 409)
+        self.assertNotIn(secret, duplicate.text)
+        with closing(sqlite3.connect(self.db_path)) as conn:
+            def stamp():
+                return conn.execute("SELECT last_sign_in_utc FROM staff_accounts WHERE username='xy'").fetchone()[0]
+            self.assertIsNone(stamp())
+            self.assertEqual(self.student_login('XY', secret).location, '/change-password')
+            first = stamp()
+            self.assertTrue(first)
+            self.assertEqual(self.change_password(self.client, 'A-second-secret').location, '/')
+            self.assertEqual(self.client.post(path, base_url=host).status_code, 403)
+            self.assertEqual(self.student_login('xy', secret).status_code, 401)
+            self.client.get('/', base_url=host)
+            self.assertEqual(stamp(), first)
+            conn.execute("UPDATE staff_accounts SET last_sign_in_utc='2026-01-01T00:00:00Z' WHERE username='xy'")
+            conn.commit()
+            self.assertEqual(self.student_login('xy@marlboroughcollege.org', 'A-second-secret').location, '/')
+            self.assertNotEqual(stamp(), '2026-01-01T00:00:00Z')
+            self.assertNotIn(secret, self.admin.get('/admin', base_url=host).text)
+
     def test_staff_content_login_is_independent_of_pupils_and_admin(self):
         login = 'sample.teacher'
         temp = 'One-use-test-secret!'

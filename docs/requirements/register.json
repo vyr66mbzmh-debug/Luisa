@@ -4516,6 +4516,23 @@
         "GitHub issue #58",
         "tests/test_student_auth.py"
       ]
+    },
+    {
+      "id": "ADM-045",
+      "scope": "Private ADA administration",
+      "requirement": "ADA administrators can add teachers by acronym, issue a first password and see each teacher’s latest successful sign-in in UK time.",
+      "acceptance": [
+        "Only the administrator may create a teacher. Validate the acronym, protect the form with CSRF, keep an existing account intact on duplicate submissions and display the generated first password only in the creation response.",
+        "Store a single UTC timestamp on successful teacher login and display it in UK time. Page views, session renewal, failed credentials and changing the first password do not update it. Preserve earlier accounts without inventing their first or last login."
+      ],
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partially_checked",
+      "origin": "Owner request, 14 November 2026, issue #60",
+      "evidence": [
+        "GitHub issue #60",
+        "tests/test_student_auth.py"
+      ]
     }
   ]
 }
