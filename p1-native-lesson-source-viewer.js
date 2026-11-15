@@ -1,7 +1,7 @@
 'use strict';
 (()=>{
 let activity;
-const buildRevision='luisa050';
+const buildRevision='luisa051';
 const $=id=>document.getElementById(id),base='resources/pure-year-1/v11/',assets='resources/pure-year-1/native/',params=new URLSearchParams(location.search),decks=new Map();let index,skill,refs=[],position=0,slide,deck,step=0,counts={},timers=[],running=[],lastPlayed=null;
 const flat=xs=>xs.flatMap(x=>[x,...flat(x.children||[])]),find=id=>$('slide-content').querySelector(`[data-shape="${CSS.escape(id)}"]`);
 function targets(t){const el=find(t.spid);if(!el)return[];const range=t.paragraph_ranges?.[0];if(range){const [a,b]=[Number(range.st),Number(range.end)];return [...el.querySelectorAll('.lesson-paragraph')].filter((_,i)=>i>=a&&i<=b);}return[el];}
@@ -57,7 +57,7 @@ function reset(){for(const id of timers)clearTimeout(id);timers=[];for(const ani
  $('slide-region').classList.toggle('title-mode',!!slide.titlePage);
  $('slide-region').classList.toggle('readable-mode',!!(slide.vectorRebuilt||slide.measuredLayout)&&!slide.titlePage);
  $('slide-region').scrollTop=0;
- activity=LuisaChapter14.mount($('slide-content'),slide,updateStatus);
+ activity=LuisaOverview.mount($('slide-content'),slide,index.chapters.find(c=>Number(c.number)===Number(slide.chapter))?.title || deck.title || slide.title) || LuisaChapter14.mount($('slide-content'),slide,updateStatus);
  if(activity){updateStatus();resize();return;}
  $('slide-content').innerHTML=slide.flowLayout?FMQ_FLOW.render(slide,deck,{assetBase:assets,assetRevision:buildRevision}):FMQ_FAITHFUL.render(slide,deck,{assetBase:assets,assetRevision:buildRevision});for(const el of $('slide-content').querySelectorAll('[data-math]'))katex.render(el.dataset.math,el,{throwOnError:true,strict:'error',trust:false,displayMode:el.classList.contains('lesson-image-block')});
  if(!slide.flowLayout&&!slide.vectorRebuilt&&!slide.measuredLayout)FMQ_FIT($('slide-content'));

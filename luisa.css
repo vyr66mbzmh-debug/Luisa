@@ -83,3 +83,16 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 .library-actions > a { padding-inline: 6px; }
 .library-actions .luisa-account { color: #d2e1eb; font: 500 13px system-ui, sans-serif; }
 .library-actions .luisa-signout:hover { box-shadow: inset 0 0 0 1px #f0d6a1; }
+
+/* Reveal labels follow the native lesson serif used in Pure 1, chapter 14, page 19. */
+#slide-region :is(.lesson-answer-cover,.lesson-animation-control) .lesson-text,
+#slide-region .ch14 :is(.cover,.choice) {
+  font-family: Lesson,KaTeX_Main,Georgia,serif;
+  font-weight: normal;
+}
+#slide-region .ch14 :is(.cover,.choice) { font-size: 26px; }
+#slide-region :is(.lesson-canvas,.lesson-flow,.ch14) :is(table:not(.lesson-tex-table,.katex table) td,table:not(.lesson-tex-table,.katex table) th) {
+  border: 1px solid #8299a8;
+}
+
+#slide-region .lesson-data-table td { border:1px solid #8299a8; }
