@@ -4829,6 +4829,23 @@
         "docs/evidence/v053-cp2.json",
         "GitHub issue #82"
       ]
+    },
+    {
+      "id": "TEACH-054",
+      "requirement": "Consolidate Numerical methods teaching sequences and revise the specified Core Pure 2 teaching diagrams and formula panels.",
+      "scope": "Pure Year 2 Chapter 10 and Core Pure 2 Chapters 6–8, slide player and both booklets on all editions.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified",
+      "origin": "Owner v0.54 instruction, GitHub issue #84",
+      "acceptance": [
+        "Core Pure 2 Hyperbolic Functions 34 align Alternative and Chain Rule at the bottom. Pages 66–67 use the selected light green Formula families booklet panels. Methods in differential equations 2 improve the layout, 4 add a Plot reveal and print Cartesian axes for pupils, 26 preserve explanations and align the three labelled terms/arrows with the approved wheel cutaway. Modelling with differential equations 29 use the Pit-lane panorama Formula One suspension layout preserving content, 43–44 implement From river to survey with bear/fish artwork, clear variable/multiplication notation, LaTeX and explicit continuity.",
+        "Pure Year 2 Numerical methods: four separate animated iterations using pages 20–24, 25–29, 30–34, 35–39, each integrating its own conclusion 40–43. Retain all construction stages; student print omits only green construction and worked print shows all. Page 46 enlarge the film still and support fullscreen playback of the supplied 21 clip iBdjqtR2iK4. Merge 47–48 with GeoGebra dke4pvg4. Animate 49–53 from the right. Compare 54–55 and 56–57 in paired diagrams. Derive Newton–Raphson with diagram synchronised to algebra on 58–64; merge 65–66 with delayed Casio fx-CG100 hint. Merge 67–78 into one sequential worked example and 79–83 into another with smaller matching GeoGebra. Print full worked text in pupil booklets. Page 84 use a self-contained interactive teaching spreadsheet for the cubic with editable starting value, formula inspection, row-by-row Next and printable table/formulas. Preserve relationships to remaining material, exercises, and both booklet variants."
+      ],
+      "evidence": [
+        "docs/evidence/v054-teaching.json",
+        "GitHub issue #84"
+      ]
     }
   ]
 }
