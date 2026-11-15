@@ -42,3 +42,17 @@ test('data-table borders preserve long division and unruled matrices', () => {
   assert.equal(result[1], division);
   assert.equal(result[2], matrix);
 });
+
+test('a source question image presents one structured transcript including its figure description', () => {
+  const renderer = require('../lesson-renderer.js');
+  const markup = renderer.shape({
+    id: 'question', kind: 'pic', box: { x: 0, y: 0, w: 300, h: 180 },
+    asset: 'diagram.webp', alt: 'Question',
+    accessibleTex: String.raw`Calculate \(\frac{2}{3}\) of the labelled length.`,
+    diagramDescription: 'The marked length is 24 cm.',
+  }, {});
+  assert.match(markup, /class="lesson-question-transcript"/);
+  assert.match(markup, /data-math="\\frac\{2\}\{3\}"/);
+  assert.match(markup, /marked length is 24 cm/);
+  assert.match(markup, /<img [^>]*alt=""/);
+});
