@@ -4791,6 +4791,25 @@
         "docs/evidence/v051-teaching.json",
         "docs/evidence/v051-booklets.json"
       ]
+    },
+    {
+      "id": "CP1-052-SERIES",
+      "requirement": "Core Pure 1 Series exam-style exercises and SolutionBank workings.",
+      "scope": "Core Pure 1 chapter 3, exercises 3A and 3B; Cloudflare and ADA",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified",
+      "origin": "Owner v0.52 instruction, GitHub issue #80",
+      "acceptance": [
+        "Include every printed E and E/P question from 3A and 3B, including 3B on printed page 51. Retain the wording, numbers, givens, marks, subparts, meaningful figures and existing teaching.",
+        "Match the supplied SolutionBank derivations and working. Check the algebra and record any transcription or source erratum.",
+        "Use established Luisa type, native mathematical notation and the usual pale-blue independent answer control for each part. Match adjacent heights where practicable. Check individual reveal, keyboard sequence, reset and small screens.",
+        "Reissue the matching two-up student and solution booklets and verify production profiles and offline."
+      ],
+      "evidence": [
+        "docs/evidence/v052-series.json",
+        "GitHub issue #80"
+      ]
     }
   ]
 }
