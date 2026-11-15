@@ -1,3 +1,4 @@
+import json
 import shutil
 import subprocess
 import unittest
@@ -14,3 +15,16 @@ class TeachingLayoutTests(unittest.TestCase):
             cwd=ROOT,
             check=True,
         )
+
+    def test_line_equation_exercises_preserve_the_original_givens(self):
+        chapter = ROOT / "resources" / "pure-year-1"
+        source = json.loads((chapter / "native" / "chapter-05.json").read_text())
+        live = json.loads((chapter / "v11" / "chapter-05.json").read_text())
+        originals = {
+            shape["id"]: shape.get("transcription", {}).get("tex")
+            for shape in source["slides"][26]["shapes"]
+        }
+        prompts = [shape for shape in live["slides"][26]["shapes"] if shape.get("sourceQuestionShape")]
+        self.assertEqual(len(prompts), 2)
+        for prompt in prompts:
+            self.assertEqual(prompt["transcription"]["tex"], originals[prompt["sourceQuestionShape"]])
