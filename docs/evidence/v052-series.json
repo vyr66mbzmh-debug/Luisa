@@ -1,0 +1,75 @@
+{
+  "version": "0.52",
+  "requirement": "CP1-052-SERIES",
+  "deck": "resources/teaching/v003/core-pure-1/chapter-03.json",
+  "deckSha256": "1a2cea6f983d2efe62d9021e0bbe50e7a46a31cd500f8a24aece1e93996d1553",
+  "slides": 31,
+  "retainedSlides": 13,
+  "replacedReferenceSlides": 10,
+  "independentAnswers": 33,
+  "selection": {
+    "3A": [
+      2,
+      3,
+      4,
+      5,
+      9,
+      10,
+      11,
+      12,
+      14
+    ],
+    "3B": [
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      14
+    ]
+  },
+  "questionLocations": {
+    "3A": "printed pages 46–47, slides 10–18",
+    "3B": "printed pages 49–51, slides 22–30"
+  },
+  "solutionSources": {
+    "A": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP1/Ch3/Exercise%203A.pdf",
+      "sha256": "5655fbcd55fc0e8f17d9bb0defee160a3b65664566be741e3bb056b387cfa1c1"
+    },
+    "B": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP1/Ch3/Exercise%203B.pdf",
+      "sha256": "77257e2eec7bda81c97ce9adda8044f3f5188dd0a4e8574fb0ebd27c4be0e782"
+    }
+  },
+  "sourceErrata": [
+    "3A 9(a): the penultimate expansion is 2k² + 2k − 5k. The printed intermediate minus sign is incorrect."
+  ],
+  "checks": [
+    "Compared questions with printed E and E/P markers, including original subparts and marks. The selected source questions and worked answers contain no diagrams.",
+    "Read each SolutionBank derivation. Verified identities with exact direct summation at 24 positive integer inputs and checked finite sums.",
+    "Exercised each independent cover in reverse click order, keyboard order and Reset, at 1440 and 390 pixels. Opened and revealed every slide. No KaTeX errors.",
+    "Re-rendered both 16-page print editions and compared all 32 pages with Apple Quartz, MuPDF and the compiled LaTeX reproduction. Verified student alias and private print copies."
+  ],
+  "booklets": {
+    "student": {
+      "file": "resources/teaching/v003/core-pure-1/booklets/CorePure1_Ch03_Series.pdf",
+      "sha256": "dc974e4fe22d8504e590c23f2d89c1392005c8087f677a3f4cd8c706dd830a51",
+      "pages": 16,
+      "quartzMaxRMSE": 5.104,
+      "latexPages": 16,
+      "privateCopies": 3
+    },
+    "solution": {
+      "file": "resources/solutions/further-core-pure-1/CorePure1_Ch03_Series.pdf",
+      "sha256": "7743cdee690fcca8e66537b3869865be22f5fab3b752155dff5e0becfa3bbf74",
+      "pages": 16,
+      "quartzMaxRMSE": 5.125,
+      "latexPages": 16,
+      "privateCopies": 3
+    }
+  }
+}
