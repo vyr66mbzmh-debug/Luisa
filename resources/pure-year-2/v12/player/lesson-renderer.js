@@ -23,7 +23,8 @@ function imageContent(tex,o){
    for(let row of body.split('\\\\')){let rules=[];row=row.replace(/\\cline\{(\d+)-(\d+)\}/g,(_,a,b)=>{rules.push([Number(a),Number(b)]);return '';});let col=1,cells=[];
     for(const cell of row.split('&')){const m=cell.match(/^\\multicolumn(?:\{(\d+)\}|(\d+))(?:\{([lcr])\}|([lcr]))\{([\s\S]*)\}$/),span=m?Number(m[1]||m[2]):1,value=m?m[5]:cell;const top=rules.some(([a,b])=>col>=a&&col<=b);cells.push(`<td colspan="${span}" style="padding:1px 5px;text-align:right;${specification.includes('|')&&col===1?'border-right:1px solid currentColor;':''}${top?'border-top:1px solid currentColor;':''}"><span data-math="${esc(value)}">${o.math?o.math(value):''}</span></td>`);col+=span;}
     rows.push('<tr>'+cells.join('')+'</tr>');}
-   return '<table class="lesson-tex-table" style="border-collapse:collapse;border-spacing:0">'+rows.join('')+'</table>';
+   const dataTable = /^[lcr]\|[lcr]+$/.test(specification) && body.split('&')[0].trim();
+   return '<table class="lesson-tex-table'+(dataTable?' lesson-data-table':'')+'" style="border-collapse:collapse;border-spacing:0">'+rows.join('')+'</table>';
   }
  }
 

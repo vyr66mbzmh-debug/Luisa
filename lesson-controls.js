@@ -41,7 +41,7 @@
   // with one labelled first column may safely acquire rules around every cell.
   function ruleDataTables(tex) {
     return tex.replace(/\\begin\{array\}\{([lcr|]+)\}([\s\S]*?)\\end\{array\}/g, (original, spec, body) => {
-      if (!/^[lcr]\|[lcr]+$/.test(spec) || /\\(?:multicolumn|cline|begin)\b/.test(body)) return original;
+      if (!/^[lcr]\|[lcr]+$/.test(spec) || /\\(?:multicolumn|cline|begin)/.test(body)) return original;
       const rows = body.split('\\\\').map(row => row.replace(/\\hline\s*/g, '').trim()).filter(Boolean);
       if (rows.length < 2 || rows.some(row => !row.split('&')[0].trim())) return original;
       const columns = spec.replace('|','').split('').join('|');

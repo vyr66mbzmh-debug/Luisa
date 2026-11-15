@@ -91,6 +91,8 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
   font-weight: normal;
 }
 #slide-region .ch14 :is(.cover,.choice) { font-size: 26px; }
-#slide-region :is(.lesson-canvas,.lesson-flow,.ch14) :is(table:not(.katex table) td,table:not(.katex table) th) {
+#slide-region :is(.lesson-canvas,.lesson-flow,.ch14) :is(table:not(.lesson-tex-table,.katex table) td,table:not(.lesson-tex-table,.katex table) th) {
   border: 1px solid #8299a8;
 }
+
+#slide-region .lesson-data-table td { border:1px solid #8299a8; }
