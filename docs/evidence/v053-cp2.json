@@ -1,0 +1,357 @@
+{
+  "version": "0.53",
+  "requirement": "CP2-053-EXERCISES",
+  "chapters": [
+    {
+      "chapter": 6,
+      "title": "Hyperbolic functions",
+      "deck": "resources/teaching/v003/core-pure-2/chapter-06.json",
+      "deckSha256": "0a7c7a54b716e8f73585d0fa46a113cad82cecd94047ead76d3c5ac6468a9347",
+      "alias": "resources/teaching/v003/core-pure-2/booklets/chapter-06.pdf",
+      "slides": 80,
+      "previousSlides": 65,
+      "retainedSlides": 41,
+      "replacedReferenceSlides": 24,
+      "questions": 30,
+      "independentAnswers": 43,
+      "selection": {
+        "6A": [
+          9
+        ],
+        "6B": [
+          3,
+          7
+        ],
+        "6C": [
+          6,
+          7,
+          9
+        ],
+        "6D": [
+          2,
+          3,
+          4,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "6E": [
+          10,
+          16,
+          17,
+          18,
+          19,
+          20,
+          24,
+          25,
+          26,
+          27
+        ]
+      },
+      "slideRanges": {
+        "6A": [
+          12,
+          12
+        ],
+        "6B": [
+          18,
+          19
+        ],
+        "6C": [
+          27,
+          32
+        ],
+        "6D": [
+          38,
+          55
+        ],
+        "6E": [
+          69,
+          80
+        ]
+      },
+      "sourceErrata": [
+        "6E16 SolutionBank p6 introduction prints sin u in the differential. Calculations and authored work use dx = 2 sinh u cosh u du.",
+        "6C6b and 6C7 SolutionBank calls ln(u ± sqrt(u²−1)) arcosh u. The positive principal inverse is arcosh u; the equation cosh x = u has two real solutions ±arcosh u. Both exact logarithms retained.",
+        "6C9a the identity uses a = ln 2. 0.693 is rounded and explicitly approximate.",
+        "6D17c retained printed wording “where f is function to be determined.”"
+      ],
+      "booklets": {
+        "student": {
+          "file": "resources/teaching/v003/core-pure-2/booklets/CorePure2_Ch06_Hyperbolic_Functions.pdf",
+          "sha256": "e45bd82257d44597b8acf9404961779b47f3b7e1faf2f0cd83cbdf229d441056",
+          "pages": 40,
+          "quartzMaxRMSE": 5.592,
+          "latexPages": 40,
+          "privateCopies": 3
+        },
+        "solution": {
+          "file": "resources/solutions/further-core-pure-2/CorePure2_Ch06_Hyperbolic_Functions.pdf",
+          "sha256": "5804272cf99f0fb643a19799cf7dd0ca466350de4bbc25d7d910c3bbb756db71",
+          "pages": 40,
+          "quartzMaxRMSE": 5.685,
+          "latexPages": 40,
+          "privateCopies": 3
+        }
+      }
+    },
+    {
+      "chapter": 7,
+      "title": "Methods in differential equations",
+      "deck": "resources/teaching/v003/core-pure-2/chapter-07.json",
+      "deckSha256": "8a1be69d44fce291605911ecfb5e66472a80bcc8e0121fcb80c87f1a79f001a5",
+      "alias": "resources/teaching/v003/core-pure-2/booklets/chapter-07.pdf",
+      "slides": 79,
+      "previousSlides": 51,
+      "retainedSlides": 30,
+      "replacedReferenceSlides": 21,
+      "questions": 29,
+      "independentAnswers": 55,
+      "selection": {
+        "7A": [
+          4,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "7B": [
+          5
+        ],
+        "7C": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "7D": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "slideRanges": {
+        "7A": [
+          12,
+          25
+        ],
+        "7B": [
+          33,
+          34
+        ],
+        "7C": [
+          45,
+          54
+        ],
+        "7D": [
+          57,
+          79
+        ]
+      },
+      "sourceErrata": [
+        "7A 11(b): the final rationalisation multiplies numerator and denominator by cos x.",
+        "7A 12: SolutionBank gives the positive cosh branch. The nonnegative inverse-cosh argument, negative branch and constant solutions are made explicit.",
+        "7A 13(a): the printed working only parameterises positive solutions. C exp(sinh x) also includes the negative and zero solutions.",
+        "7A 15(a): multiplying by sec x must give y sec x tan x, preserving the sec x factor missing from a SolutionBank line.",
+        "7A 16: SolutionBank assumes a ≠ 0. The two degenerate a = 0 cases follow the displayed textbook equation.",
+        "7C 2(b) and 6(a): use homogeneous equations with the coefficients in the textbook. SolutionBank opening lines contain stale coefficients.",
+        "7C 3(b): 2μ − 6λ = 1 with μ = 1/36 gives λ = −17/108. The bank drops this minus sign going from its own intermediate line to its solution.",
+        "7D 1(b): keep A on exp(−2x) and B on exp(−3x) throughout rather than silently exchanging the constants as in the bank. Final result agrees.",
+        "7D 8(a)(i): textbook prints the trial as y = λt³exp(2t) for an equation in x; preserve y in the question then use x in the working.",
+        "7D 12: differentiating μx sin 3x twice contributes +6μ cos 3x, so μ is fixed at zero. The derivative of −x cos(3x)/6 contains +x sin(3x)/2. Final particular solution agrees with SolutionBank.",
+        "7D 13(b): use derivative sign on both sides of the unique stationary time to establish a global maximum."
+      ],
+      "booklets": {
+        "student": {
+          "file": "resources/teaching/v003/core-pure-2/booklets/CorePure2_Ch07_Methods_In_Differential_Equations.pdf",
+          "sha256": "ca240c5b1f89bc33a4ea1a90f30aaf56f1a20ba079b03dc371f154719c72d95f",
+          "pages": 40,
+          "quartzMaxRMSE": 6.765,
+          "latexPages": 40,
+          "privateCopies": 3
+        },
+        "solution": {
+          "file": "resources/solutions/further-core-pure-2/CorePure2_Ch07_Methods_In_Differential_Equations.pdf",
+          "sha256": "4086f69954ba4ccd4e1f284984e27809ec787305d97f0dd6f56406a0f272d21a",
+          "pages": 40,
+          "quartzMaxRMSE": 6.799,
+          "latexPages": 40,
+          "privateCopies": 3
+        }
+      }
+    },
+    {
+      "chapter": 8,
+      "title": "Modelling with differential equations",
+      "deck": "resources/teaching/v003/core-pure-2/chapter-08.json",
+      "deckSha256": "1e37b95be843b6a44db15429c57ac80ac49524eaaeeb2418eb28fc165b6b65a2",
+      "alias": "resources/teaching/v003/core-pure-2/booklets/chapter-08.pdf",
+      "slides": 55,
+      "previousSlides": 35,
+      "retainedSlides": 16,
+      "replacedReferenceSlides": 19,
+      "questions": 23,
+      "independentAnswers": 65,
+      "selection": {
+        "8A": [
+          5,
+          6,
+          7
+        ],
+        "8B": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "8C": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "8D": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "slideRanges": {
+        "8A": [
+          5,
+          10
+        ],
+        "8B": [
+          14,
+          28
+        ],
+        "8C": [
+          35,
+          42
+        ],
+        "8D": [
+          46,
+          55
+        ]
+      },
+      "sourceErrata": [
+        "8A 5(c): at four seconds the model gives 1.33 × 10⁷ m/s to three significant figures.",
+        "8A 7(b): the integration constant is negative. The volume after four hours is 9.34 cm³.",
+        "8B 2(a): use the printed initial displacement of 5 m in the working. 8B 6(b) and 7(a) use the initial conditions stated for the differential equation.",
+        "8C 8(c): signed displacement is −34.55 m. The distance requested is 34.55 m."
+      ],
+      "booklets": {
+        "student": {
+          "file": "resources/teaching/v003/core-pure-2/booklets/CorePure2_Ch08_Modelling_With_Differential_Equations.pdf",
+          "sha256": "c8262a3ab420e730fedaeacca5ab7c92c62d4cec1bc2edd0ad689d79a735be36",
+          "pages": 28,
+          "quartzMaxRMSE": 6.573,
+          "latexPages": 28,
+          "privateCopies": 3
+        },
+        "solution": {
+          "file": "resources/solutions/further-core-pure-2/CorePure2_Ch08_Modelling_With_Differential_Equations.pdf",
+          "sha256": "992e998146da0d6a31d759c1fd8bba0b3ef8b90a2a660a29321a4c12f4d9e228",
+          "pages": 28,
+          "quartzMaxRMSE": 6.72,
+          "latexPages": 28,
+          "privateCopies": 3
+        }
+      }
+    }
+  ],
+  "solutionSources": {
+    "6A": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch6/Exercise%206A.pdf",
+      "sha256": "00dd73c26ff177ad6c117506e9cae858e6eeaded88508116442d5124b1952898"
+    },
+    "6B": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch6/Exercise%206B.pdf",
+      "sha256": "d643243f3f7cf5c8443d9e76a595c6e16d4ff4b971d67fc7cbdb0e922b3db0e8"
+    },
+    "6C": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch6/Exercise%206C.pdf",
+      "sha256": "ff449c5631560142bada7066854e9c3e13155d53141cff2669b5f7172a04c9db"
+    },
+    "6D": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch6/Exercise%206D.pdf",
+      "sha256": "dc1a3baabae4dfef329d9261b1230b3022effa1ba127aef6270e81008f580f2e"
+    },
+    "6E": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch6/Exercise%206E.pdf",
+      "sha256": "bee44945a6fc590c407b329576f3cf445b9645de3d8356e20f84367594ef6139"
+    },
+    "7A": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch7/Exercise%207A.pdf",
+      "sha256": "fd39c399cb043e9a11e6048f34a8d54d38ac4a824b4202086711e1255a4ff4bd"
+    },
+    "7B": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch7/Exercise%207B.pdf",
+      "sha256": "4cc731e51c6091e131818aa25a84173b1c60fa927df3037ff21ea22e9deaeaf9"
+    },
+    "7C": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch7/Exercise%207C.pdf",
+      "sha256": "8ed8ea29a8686c30979d06ab3b444f5b03b56a9cf6d6dbdc43ba62dc6300d9ff"
+    },
+    "7D": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch7/Exercise%207D.pdf",
+      "sha256": "831c1747fa5f79faecb7cded6aae29663ff547868e619e783d4b3b92d9359497"
+    },
+    "8A": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch8/Exercise%208A.pdf",
+      "sha256": "97d5b89c78eeeeb572224eed13ed3f85cb674a8c3c6b71ed70bdb465d0f080ac"
+    },
+    "8B": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch8/Exercise%208B.pdf",
+      "sha256": "eec76d7bb87cd3146a4de8263b1c051e073a29b311585a4d77d598967e7da688"
+    },
+    "8C": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch8/Exercise%208C.pdf",
+      "sha256": "c81a82cd3cdad58ca686d746ac71272664db458330a99b16444e1567b9a95254"
+    },
+    "8D": {
+      "url": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/CP2/Ch8/Exercise%208D.pdf",
+      "sha256": "9da7cf3fe7716a15aa59c7658de4a9a8619ae4aa9457e94171625f15c94be1cd"
+    }
+  },
+  "checks": [
+    "Checked printed exam markers, question numbers, subparts and mark allocations against the source chapters and matched the working to the thirteen supplied SolutionBank sections.",
+    "The two sketch answers have blank student axes and completed worked diagrams. The supplied shaded region in 6E 26 is part of the question in both editions.",
+    "Tested individual reveal, reverse reveal order, keyboard progression and reset at desktop and phone widths.",
+    "Compared each issued print page using MuPDF and Quartz, reproduced all six PDFs from the LaTeX wrappers and checked the saved copies.",
+    "Downloaded all three owner offline chapter packs, disconnected the browser, opened all new exercise panels and diagrams, and matched all six PDF hashes."
+  ]
+}
