@@ -37,15 +37,64 @@
     }
   }
 
+  // PowerPoint arrays also represent matrices and polynomial division. A table
+  // with one labelled first column may safely acquire rules around every cell.
+  function ruleDataTables(tex) {
+    return tex.replace(/\\begin\{array\}\{([lcr|]+)\}([\s\S]*?)\\end\{array\}/g, (original, spec, body) => {
+      if (!/^[lcr]\|[lcr]+$/.test(spec) || /\\(?:multicolumn|cline|begin)\b/.test(body)) return original;
+      const rows = body.split('\\\\').map(row => row.replace(/\\hline\s*/g, '').trim()).filter(Boolean);
+      if (rows.length < 2 || rows.some(row => !row.split('&')[0].trim())) return original;
+      const columns = spec.replace('|','').split('').join('|');
+      return '\\begin{array}{|' + columns + '|}\\hline ' + rows.join('\\\\\\hline ') + '\\\\\\hline\\end{array}';
+    });
+  }
+
+  function alignRevealRows(shapes, limit) {
+    const owns = (shape, id) => [].concat(shape.answerFor || []).includes(id) || shape.revealWith === id;
+    const movable = shape => shape.cover && !shape.answerClips && !shape.box.rotation && !shape.box.flipV && !shape.box.flipH;
+    const controls = shapes.filter(movable).sort((a,b) => a.box.y-b.box.y || a.box.x-b.box.x);
+    const used = new Set();
+    const right = r => r.x+r.w, bottom = r => r.y+r.h;
+    const intersects = (a,b) => a.x < right(b)-1 && right(a) > b.x+1 && a.y < bottom(b)-1 && bottom(a) > b.y+1;
+    for (const first of controls) {
+      if (used.has(first)) continue;
+      const row = [first];
+      for (const other of controls) {
+        if (used.has(other) || other === first) continue;
+        const a=first.box,b=other.box;
+        if (Math.abs(a.y-b.y) > Math.min(a.h,b.h)*.55 || Math.min(a.w,b.w)<Math.max(a.w,b.w)*.55) continue;
+        if (row.every(s => right(s.box)<=b.x+1 || right(b)<=s.box.x+1)) row.push(other);
+      }
+      if (row.length<2) continue;
+      const top=Math.max(...row.map(s=>s.box.y)), height=Math.max(...row.map(s=>s.box.h));
+      if (top+height>limit+1) continue;
+      const fits=row.every(control=>{
+        const b=control.box, area={...b,y:top,h:height};
+        return !shapes.some(s=>s!==control && !owns(s,control.id) && !row.includes(s) &&
+          s.box && intersects(s.box,area) && !intersects(s.box,b));
+      });
+      if (!fits) continue;
+      for (const control of row) {
+        const dy=top-control.box.y;
+        for (const shape of shapes) if (owns(shape,control.id) && dy) shape.box.y+=dy;
+        control.box.y=top;
+        control.box.h=height;
+        used.add(control);
+      }
+    }
+  }
+
   function prepare(slide, deck) {
     const copy = JSON.parse(JSON.stringify(slide));
     copy.shapes = copy.shapes.filter(shape => !copy.headerShapes.includes(shape.id));
+    if (!copy.flowLayout) alignRevealRows(copy.shapes, copy.contentHeight || deck.height);
     function visit(shape) {
       delete shape.printFallback;
       delete shape.webStage;
       const paras = shape.text?.paragraphs || [];
       paras.forEach(prepareParagraph);
-      if (shape.transcription?.tex) shape.transcription.tex = teachingNames(shape.transcription.tex);
+      for (const p of paras) for (const part of p.parts) if (part.tex) part.tex=ruleDataTables(part.tex);
+      if (shape.transcription?.tex) shape.transcription.tex = ruleDataTables(teachingNames(shape.transcription.tex));
       const runs = paras.flatMap(p => p.parts);
       const prompt = paras.map(p => p.parts.map(r => r.text ?? r.tex ?? '').join('')).join(' ').trim();
       const trigger = Object.hasOwn(copy.animation?.triggers || {}, shape.id);
@@ -89,7 +138,8 @@
 
   function updateToolbar(slide, total) {
     const heading = document.getElementById('lesson-title');
-    setTitle(heading, slide.title);
+    if (slide.titleTex) root.katex.render(slide.titleTex, heading, {throwOnError:true,trust:false});
+    else setTitle(heading, slide.title);
     heading.title = slide.title;
     document.getElementById('slide-number').textContent = slide.sourceSlide;
     document.getElementById('compact-slide').textContent = `${slide.sourceSlide} / ${total}`;
