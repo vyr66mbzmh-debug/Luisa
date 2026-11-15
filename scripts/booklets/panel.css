@@ -1,0 +1,24 @@
+@page { size: 1200px 805px; margin: 0; }
+html, body.paper, #print-body { width: 1200px!important; height:805px!important; margin:0!important; padding:0!important; background:white!important; display:block!important; overflow:hidden!important; }
+* { -webkit-print-color-adjust:exact; print-color-adjust:exact; animation:none!important; transition:none!important; }
+#print-body { position:relative; }
+#print-body > :first-child { position:absolute!important; margin:0!important; }
+#print-body .luisa-overview { justify-content:center; height:760px; }
+#print-body .ch14 {width:1200px;height:805px;padding:15px 18px;justify-content:center;gap:17px;font-size:28px}
+#print-body .ch14 .slot {border:1.5px solid #97a9b6;border-radius:0;background:white;box-shadow:none;min-height:115px}
+#print-body .ch14 .compact .slot {min-height:80px}
+#print-body .ch14 .law .slot {min-height:70px}
+#print-body .ch14 .pesticide-parts .slot {min-height:90px}
+#print-body .ch14 td .slot {border:0;min-height:0}
+#print-body .ch14 td,#print-body .ch14 th {border:1.5px solid #8197a6}
+#print-body .ch14 .paper-cue {position:absolute;top:4px;left:7px;color:#3f5260;font:17px Georgia,serif}
+#print-body .ch14 .pencil-grid,#print-body .ch14 .paper-geogebra {width:100%;height:auto;display:block}
+#print-body .ch14 .print-only {display:block;text-align:center;font-size:20px}
+#print-body .ch14 .draw {stroke-dasharray:none;stroke-dashoffset:0}
+.solution #print-body .ch14 .working,.solution #print-body .ch14 .proof,.solution #print-body .ch14 .stage,.solution #print-body #relation,.solution #print-body #observation {color:#a61d2c}
+#print-body .ch14.conversion .stage {color:inherit}
+#print-body .ch14[data-panel="31"] .slot,#print-body .ch14[data-panel="32"] .slot,#print-body .ch14[data-panel="33"] .slot{min-height:410px}
+#print-body .ch14[data-panel="34"] .slot{min-height:185px}
+#print-body .ch14[data-panel="17"] .slot{min-height:280px}
+#print-body .ch14[data-panel="16"]>.slot{min-height:215px}
+#print-body .ch14[data-panel="28"] .law .slot{min-height:95px}
