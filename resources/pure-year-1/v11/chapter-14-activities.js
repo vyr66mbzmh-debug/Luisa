@@ -1,6 +1,6 @@
 /* Chapter 14 teaching activities. The booklet export uses these same prompts and final states. */
 window.LuisaChapter14 = (() => {
-  const pages = new Set([4,5,8,16,17,18,21,27,28,31,32,33,34,46,47,48,49]);
+  const pages = new Set([4,5,8,16,17,18,21,22,27,28,31,32,33,34,46,47,48,49]);
   const {plot,colours} = LuisaChapterGraphs;
   const math = tex => katex.renderToString(tex,{throwOnError:true,trust:false,output:'htmlAndMathml'});
   const eq = tex => '<div class="equation">'+math(tex)+'</div>';
@@ -81,18 +81,46 @@ window.LuisaChapter14 = (() => {
     }
     function specialBase() {
       const rows=[['1','0'],['1.5','0.41(1.5^x)'],['2','0.69(2^x)'],['2.5','0.92(2.5^x)'],['3','1.10(3^x)'],['3.5','1.25(3.5^x)']];
-      const url='https://www.geogebra.org/classic/bajx8km2?embed';
+      const url='https://www.geogebra.org/material/iframe/id/bajx8km2/width/1780/height/1410/sdz/true/smb/false/stb/false/sfsb/true';
       const diagram=navigator.onLine ? '<div class="frame-viewport"><iframe class="frame" title="GeoGebra: gradient of an exponential" allowfullscreen referrerpolicy="no-referrer" src="'+url+'"></iframe></div>' :
         '<img class="frame" src="'+activityImage+'" alt="Static view of the exponential gradient diagram">';
-      root.innerHTML=note(copy(1))+'<div class="cols compact"><div class="stack"><table><tr><th>'+math('y')+'</th><th>'+math('dy/dx')+' (approx.)</th></tr>'+
+      root.classList.add('special-base');
+      const diagramLink='<a class="frame-link" href="https://www.geogebra.org/classic/bajx8km2" target="_blank" rel="noopener noreferrer">See it in <img src="assets/luisa/geogebra-gold.png" width="29" height="29" alt=""> GeoGebra</a>';
+      root.innerHTML=note(copy(1))+'<div class="cols compact"><div class="stack"><table><tr><th>'+math('y')+'</th><th>'+math('\\mathrm dy/\\mathrm dx')+' (approx.)</th></tr>'+
         rows.map(([a,r])=>'<tr>'+values([math(a+'^x'),math(r)])+'</tr>').join('')+'</table>'+note(copy(3))+cover(copy(4),'Special base')+'</div>'+
-        '<div class="stack">'+diagram+'<a class="frame-link" href="'+url+'" target="_blank" rel="noopener noreferrer">Open the GeoGebra diagram</a></div></div>';
+        '<div class="stack">'+diagram+diagramLink+'<p class="diagram-key">'+math('f(x)=a^x')+'　'+math("f\\prime(x)=a^x\\ln a")+'</p></div></div>';
       const viewport=q('.frame-viewport');
-      if(viewport)viewport.style.setProperty('--diagram-scale',viewport.clientWidth/2150);
+      if(viewport)viewport.style.setProperty('--diagram-scale',viewport.clientWidth/1780);
     }
     function balance(){
-      root.innerHTML='<h2>'+copy(1)+'</h2>'+note(copy(2))+copy(3)+'<table><tr><th>n</th>'+values(['1','2','12','365','10000'])+
-        '</tr><tr><th>Balance</th>'+values(['2','2.25','2.6130','2.7146','2.7181'].map(y=>cover(y)))+'</tr></table>'+cover(copy(5),'Limit');
+      root.innerHTML='<h2>'+copy(1)+'</h2>'+note(copy(2))+copy(3)+'<table><tr><th>'+math('n')+'</th>'+values(['1','2','12','365','10000'])+
+        '</tr><tr><th>Balance</th>'+values(['2','2.25','2.6130','2.7146','2.7181'].map(y=>cover(y)))+'</tr></table>'+cover(copy(5),'Formal definition of the Euler number');
+    }
+    function conversion(){
+      root.classList.add('conversion');
+      const colour=(name,tex)=>'\\textcolor{'+({base:'#235c87',power:'#96393a',result:'#22684f'})[name]+'}{'+tex+'}';
+      const expForm=colour('base','2')+'^{'+colour('power','3')+'}='+colour('result','8');
+      const logForm='\\log_{'+colour('base','2')+'}'+colour('result','8')+'='+colour('power','3');
+      root.innerHTML='<h2>Which power of 2 gives 8?</h2>'+eq('2^{\\square}=8')+
+        '<div class="conversion-sequence">'+stage('power-form','<h3>Exponential form</h3>'+eq(expForm))+
+        stage('log-form','<h3>Logarithmic form</h3>'+eq(logForm))+'</div>'+
+        stage('correspondence','<p>Both statements use base '+math('2')+'. The power '+math('3')+' in the exponential is the output of the logarithm. Its input is '+math('8')+'.</p>')+
+        stage('general','<h3>For a real logarithm</h3>'+eq('a^x=n\\quad\\Longleftrightarrow\\quad\\log_a n=x')+
+          note(math('a>0,\\quad a\\ne1,\\quad n>0,\\quad x\\in\\mathbb R')+'. Read '+math('\\log_a n')+' as “log base '+math('a')+' of '+math('n')+'”. Raising '+math('a')+' to a power and taking log base '+math('a')+' are inverse operations.'));
+      const correspondence=steps.find(s=>s.id==='log-form'),show=correspondence.run;
+      correspondence.run=()=>{
+        show();
+        // KaTeX sets colour through a style attribute and may serialise it as hex or RGB.
+        const redTerm=panel=>[...panel.querySelectorAll('.katex-html span')].find(el=>el.textContent==='3' && getComputedStyle(el).color==='rgb(150, 57, 58)');
+        const power=redTerm(q('#power-form')),output=redTerm(q('#log-form'));
+        if(!power || !output || matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+        const a=power.getBoundingClientRect(),b=output.getBoundingClientRect(),scale=root.getBoundingClientRect().width/root.offsetWidth;
+        const tracer=document.createElement('span');tracer.className='power-tracer';tracer.innerHTML=math('3');root.append(tracer);
+        const frame=root.getBoundingClientRect();tracer.style.left=(a.x-frame.x)/scale+'px';tracer.style.top=(a.y-frame.y)/scale+'px';
+        const motion=tracer.animate([{transform:'translate(0,0)',opacity:1},{transform:'translate('+(b.x-a.x)/scale+'px,'+(b.y-a.y)/scale+'px)',opacity:.3}],{duration:800,easing:'ease-in-out'});
+        motion.onfinish=()=>tracer.remove();
+      };
+      root.dataset.printSequence='conversion';
     }
     function inverses(){
       const pairs=[['3x','x/3'],['x+3','x-3'],['x^2\\quad(x\\ge0)','\\sqrt{x}'],['x^5','\\sqrt[5]{x}'],['3^x','\\log_3 x']];
@@ -101,21 +129,29 @@ window.LuisaChapter14 = (() => {
     }
     function logs(){
       const laws=[['\\log_a(uv)','\\log_a u+\\log_a v'],['\\log_a(u/v)','\\log_a u-\\log_a v'],['\\log_a(u^k)','k\\log_a u'],['\\log_a u','\\dfrac{\\log_b u}{\\log_b a}']];
-      const derivation=['What power of '+math('a')+' gives '+math('u')+'?',math('x=\\log_a u\\quad\\Longleftrightarrow\\quad a^x=u'),math('\\log_b(a^x)=\\log_b u\\quad\\Longrightarrow\\quad x\\log_b a=\\log_b u'),math('x=\\dfrac{\\log_b u}{\\log_b a}=\\log_a u')];
-      const proof=i=>{proofStarted=true;q('.proof').innerHTML=derivation[i];};
-      root.innerHTML=note('For '+math('u,v>0')+' and bases '+math('a,b>0')+' with '+math('a,b\\ne1')+':')+laws.map(([a,b],i)=>'<div class="law"><span>'+math(a+' =')+'</span>'+cover(math(b),'',()=>{if(i===3)proof(0);})+'</div>').join('')+
-        note(copy(8))+'<div class="proof" aria-live="polite"></div>';
-      for(let i=1;i<4;i++)action('proof'+i,()=>proof(i));
-      root.dataset.proof=derivation.join('<br>');
+      const derivation=[
+        math('2^3=8')+'　The missing power is 3.',
+        math('\\log_{10}8=\\log_{10}(2^3)=3\\log_{10}2'),
+        math('\\dfrac{\\log_{10}8}{\\log_{10}2}=3=\\log_2 8'),
+        math('a^x=u\\;\\Longrightarrow\\;\\log_b u=x\\log_b a')+'<br>'+math('\\log_a u=x=\\dfrac{\\log_b u}{\\log_b a}')
+      ];
+      root.classList.add('log-laws');
+      const proof=i=>{proofStarted=true;q('.proof').innerHTML=derivation.slice(0,i+1).map(line=>'<div>'+line+'</div>').join('');};
+      root.innerHTML=note('For '+math('u,v>0')+' and bases '+math('a,b>0')+' with '+math('a\\ne1')+' and '+math('b\\ne1')+'.')+ '<div class="law-derivation"><div class="law-list">'+laws.map(([a,b],i)=>'<div class="law"><span>'+math(a+' =')+'</span>'+cover(math(b),'',()=>{if(i===3)proof(0);})+'</div>').join('')+
+        note(copy(8))+'</div><div class="proof" aria-live="polite"></div></div>';
+      for(let i=1;i<derivation.length;i++)action('proof'+i,()=>proof(i));
+      root.dataset.proof=derivation.map(line=>'<div>'+line+'</div>').join('');
     }
     function paired(){
       const row=(...pairs)=>'<div class="answers">'+pairs.map(([id,label])=>cover(copy(id),label)).join('')+'</div>';
       if(n===17){root.innerHTML=note(copy(1))+row([2,'Initial size'],[3,'Initial rate'])+note(copy(4));return;}
       if(n===18){
-        root.classList.add('compact');
-        root.innerHTML=note(copy(1))+[[2,3,'a',4,5,'b'],[6,7,'c',8,9,'d–e']].map(([p,a,l,p2,a2,l2])=>
-          '<div class="answers"><p>'+copy(p)+'</p><p>'+copy(p2)+'</p></div>'+row([a,l],[a2,l2])).join('')+
-          cover('<img height="145" src="resources/pure-year-1/native/assets/ch14-18.svg" alt="Exponential decay graph">','Graph');return;
+        root.classList.add('pesticide');
+        root.innerHTML=note(copy(1))+
+          '<div class="pesticide-work"><div class="pesticide-parts">'+[[2,3,'a',4,5,'b'],[6,7,'c',8,9,'d']].map(([p,a,l,p2,a2,l2])=>
+            '<div class="answers"><p>'+copy(p)+'</p><p>'+copy(p2)+'</p></div>'+row([a,l],[a2,l2])).join('')+'</div>'+
+          '<div class="pesticide-graph"><p>e. Sketch the graph of '+math('P')+' against '+math('t')+'.</p>'+
+          cover('<img src="resources/pure-year-1/native/assets/ch14-18.svg" data-blank-src="resources/pure-year-1/native/assets/ch14-18-blank.svg" alt="Pesticide density against time">','Graph')+'</div></div>';return;
       }
       if(n===34){root.innerHTML='<div class="stack compact">'+note(copy(1))+cover(copy(2),'Answer')+'</div><div class="stack compact"><h2>Challenge</h2>'+note(copy(3))+cover(copy(4),'Proof')+'</div>';return;}
       root.innerHTML=note(copy(1))+row([2,n===33?'use law of logs to derive an equation in x..':'1'],[3,n===33?'.. then solve the equation':'2']);
@@ -159,12 +195,15 @@ window.LuisaChapter14 = (() => {
         q('#relation').innerHTML=math('m=\\dfrac{\\log 8}{\\log 2}=3,\\qquad Y=3X+\\log 2')+'　The intercept is '+math('\\log 2')+'.';});
     }
     function models(){
+      root.classList.add('model-comparison');
       const panels=['power','exponential'].map((key,i)=>{
         const X=i?'x':'\\log x',m=i?'\\log b':'n';
-        const frame=plot({x:[-.5,3],y:[-1,4],ticksX:[],ticksY:[],xlabel:i?'x':'log x',ylabel:'log y',label:'Schematic straight line',curves:[{fn:x=>x+.7,colour:colours[i],draw:true}],points:[[0,.7,colours[0]]]});
+        const axes={x:[-.5,3],y:[-1,4],ticksX:[0,1,2],ticksY:[],xlabel:i?'x':'log x',ylabel:'log y',label:'Schematic transformed axes'};
+        const frame=plot({...axes,curves:[{fn:x=>x+.7,colour:colours[i],draw:true}],points:[[0,.7,colours[0]]]});
+        const paperGrid='<template class="print-grid">'+plot(axes)+'</template>';
         return '<div class="stack"><h2>'+(i?'Exponential model':'Power model')+'</h2>'+eq(i?'y=ab^x':'y=ax^n')+
           stage(key+'eq',eq(i?'\\log y=\\log a+x\\log b':'\\log y=\\log a+n\\log x')+eq('\\log y=('+m+')('+X+')+\\log a'))+
-          stage(key+'axes','<div class="label-transfer">'+frame+'</div><p>Gradient '+math(m)+' · Vertical intercept '+math('\\log a')+'</p>')+'</div>';
+          stage(key+'axes','<div class="label-transfer" data-blank-graph>'+frame+paperGrid+'</div><p>Gradient '+math(m)+' · Vertical intercept '+math('\\log a')+'</p>')+'</div>';
       });
       root.innerHTML='<h2>Which axes will give a straight line?</h2><div class="cols compact">'+panels.join('')+'</div><p>Compare with '+math('Y=mX+c')+'. Use the same log base throughout. Power model: '+math('a,x>0')+'. Exponential model: '+math('a,b>0')+'.</p>';
     }
@@ -173,6 +212,7 @@ window.LuisaChapter14 = (() => {
     else if(n===8)specialBase();
     else if(n===16)balance();
     else if(n===21)inverses();
+    else if(n===22)conversion();
     else if(n===28)logs();
     else if(n===46)doubling();
     else if(n===47)earthquake();

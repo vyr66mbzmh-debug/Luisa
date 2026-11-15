@@ -66,3 +66,36 @@
 .ch14 #logplot .ch-plot {overflow:visible;}
 @keyframes ch-grow {from{transform:scaleX(.1)}to{transform:scaleX(1)}}
 @media(prefers-reduced-motion:reduce){.ch14 .stage .bigger,.ch14 .stage .label-transfer svg text{animation:none}}
+
+.ch14.special-base .cols {align-items:flex-start}
+.ch14.special-base {gap:10px;padding:12px 28px}
+.ch14.special-base .cols > :first-child {flex:1}
+.ch14.special-base .frame-viewport {aspect-ratio:1780/1410}
+.ch14.special-base .frame-viewport .frame {width:1780px;height:1410px}
+.ch14.special-base table td,.ch14.special-base table th {height:43px;padding:3px}
+.ch14 .frame-link {display:inline-flex;align-items:center;align-self:flex-start;gap:.35em;color:#735a2c;text-underline-offset:.18em}
+.ch14 .diagram-key {font-size:21px}
+.ch14.conversion {position:relative;text-align:center;gap:18px}
+.ch14 .conversion-sequence {display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.ch14 .conversion-sequence > div {border-block:1px solid #a9b8c1;padding:18px 10px}
+.ch14 .conversion-sequence .equation {font-size:43px}
+.ch14 .power-tracer {position:absolute;color:#96393a;pointer-events:none;z-index:2}
+.ch14.pesticide {padding:14px 21px;gap:18px;font-size:24px}
+.ch14 .pesticide-work {display:grid;grid-template-columns:1.3fr 1fr;gap:26px;align-items:start}
+.ch14 .pesticide-parts,.ch14 .pesticide-graph {display:grid;gap:12px}
+.ch14 .pesticide-parts .answers {gap:13px}
+.ch14 .pesticide-parts .slot {min-height:78px;padding:7px 4px}
+.ch14 .pesticide-parts .working {font-size:20px}
+.ch14 .pesticide-graph .slot {padding:0}
+.ch14 .pesticide-graph img {width:100%;height:auto;display:block}
+.ch14.model-comparison .ch-plot {height:auto}
+.ch14.model-comparison .label-transfer+p {text-align:center;margin-top:-7px}
+.ch14 .tick,.ch14 .axis-arrow {fill:none;stroke:#334b60;stroke-width:1.5}
+.ch14 .ch-plot .axis-name {font:19px Georgia,serif}
+
+.ch14 .law-derivation {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:27px;align-items:center}
+.ch14 .law-list {display:grid;gap:10px}
+.ch14 .law-list .law {grid-template-columns:42% 55%}
+.ch14.log-laws .proof {display:grid;gap:19px;align-content:center;font-size:24px}
+.ch14.log-laws .proof:empty {border-color:transparent}
+.ch14.log-laws .proof > div:last-child {line-height:1.65}
