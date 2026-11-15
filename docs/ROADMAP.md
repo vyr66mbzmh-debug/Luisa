@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Teaching release v0.54
+
+The Numerical Methods animations, eight revised booklets and Core Pure 2 teaching diagrams are tracked in [issue #84](https://github.com/vyr66mbzmh-debug/Luisa/issues/84).
+
 ## Foundation
 - Consolidate requirements, handoff and private usage records.
 - Add deterministic static packaging, tests and build/test/scan workflow.
