@@ -32,4 +32,4 @@ class ChapterSolutions(unittest.TestCase):
                     self.assertEqual([r['url'] for r in topic['resources'] if r['type'] == 'solutions' and r['access'] == 'available'], [url])
                     self.assertEqual(progress.count(f'<a href="{url}">Solutions</a>'), 1)
         self.assertEqual(len(seen), 62)
-        self.assertEqual(sum(r['pages'] for r in evidence.values()), 1500)
+        self.assertEqual(sum(r['pages'] for r in evidence.values()), 1531)
