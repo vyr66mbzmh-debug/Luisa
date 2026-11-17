@@ -41,12 +41,14 @@ tbody tr{padding:12px 16px;border-top:1px solid var(--line)}tbody tr+tr>*{border
 td{display:grid;grid-template-columns:minmax(100px,35%) 1fr;gap:8px;padding:4px 0}td:before{content:attr(data-title);color:var(--quiet);font-size:.85rem}.controls{width:100%}
 }
 @media(max-width:520px){.tools{width:100%;margin:4px 0 0}.bar{padding-block:10px}h1{margin-top:22px}}
-</style></head><body>
+.home-logo{background:transparent;border:0;padding:0;display:flex}.title-tools{display:flex;align-items:baseline;gap:14px}.password-key,.tools .library-tool{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px}.password-key{align-self:center;color:#89672d;border:1px solid #d1bc95;border-radius:8px}.library-tool svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8}</style></head><body>
 {% macro token() %}<input type=hidden name=_csrf value="{{ csrf }}">{% endmacro %}
-<header><div class="bar"><img class="luisa-logo" src="{{ url_for('admin_logo') }}" alt="Luisa golden spiral logo"><span class="context">Administration</span><div class="tools">
-<a href="{{ url_for('teacher_password') }}">Change admin password</a>
-<form method="post" action="{{ url_for('logout') }}">{{ token() }}<button type="submit" class="luisa-signout" aria-label="Sign out" title="Sign out"><svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H5v16h5m-1-8h12m-4-4 4 4-4 4"/></svg></button></form></div></div></header>
-<main><h1>Account management</h1><nav aria-label="Account directories">
+<header><div class="bar"><form method="post" action="{{ url_for('admin_home') }}/logout">{{ token() }}<input type="hidden" name="library" value="1"><button class="home-logo" aria-label="Sign out of admin and open Luisa" title="Sign out of admin and open Luisa"><img class="luisa-logo" src="{{ url_for('admin_logo') }}" alt="Luisa golden spiral logo"></button></form><span class="context">Administration</span><div class="tools">
+<a class="library-tool" href="https://www.geogebra.org/classic?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Open GeoGebra Classic in a new tab" title="Open GeoGebra Classic in a new tab"><img src="{{ url_for('admin_tool_asset', name='geogebra-gold.png') }}" alt="" width="23" height="23"></a>
+<a class="library-tool" aria-label="Open CG100 calculator" title="Open CG100 calculator" href="https://classpad.net/note/#/tools/math" target="_blank" rel="noopener" onclick="window.open(this.href,'_blank','popup,noopener,width='+Math.round(screen.availWidth/4)+',height='+screen.availHeight);return false"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="{{ url_for('admin_tool_asset', name='slide-controls.svg') }}#calculator"/></svg></a>
+<a href="{{ url_for('admin_progress') }}" target="_blank" rel="noopener">v{{ release_version }}</a>
+<form method="post" action="{{ url_for('admin_home') }}/logout">{{ token() }}<button type="submit" class="luisa-signout" aria-label="Sign out" title="Sign out"><svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4H5v16h5m-1-8h12m-4-4 4 4-4 4"/></svg></button></form></div></div></header>
+<main><div class="title-tools"><h1>Account management</h1><a class="password-key" href="{{ url_for('teacher_password') }}" aria-label="Change admin password" title="Change admin password"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14.6 3a5.7 5.7 0 0 0-5.2 8L3 17.4V21h3.6v-2.6h2.6v-2.5l2.6-2.6A5.7 5.7 0 1 0 14.6 3Z"/><circle cx="16.5" cy="7.5" r="1"/></svg></a></div><nav aria-label="Account directories">
 {% for key, count in [('students',rows|length),('teachers',staff|length)] %}
 <a href="{{ url_for('admin_home', role=key) }}"{% if role==key %} aria-current="page"{% endif %}>{{ key|title }} <span class="count">{{ count }}</span></a>{% endfor %}</nav>
 {% if notice %}<p class="notice" role="status">{{ notice }}</p>{% endif %}
@@ -67,7 +69,7 @@ td{display:grid;grid-template-columns:minmax(100px,35%) 1fr;gap:8px;padding:4px 
 <p class="hint">Includes active students who have never been issued a password. Print before closing the sheet.</p><button>Create printable slips</button></form></details>
 {% endif %}</div>
 {% set teachers=role=='teachers' %}{% set title='Teacher' if teachers else 'Student' %}
-<section class="card"><div class="directory-head"><h2>{{ title }} accounts</h2><p class="hint">Sign-in times are shown in UK local time.</p></div>
+<section class="card"><div class="directory-head"><h2>{{ title }} accounts</h2><p class="hint">All times GMT · Sign-ins counted since {{ count_since }}.</p></div>
 <form class="mobile-sort" action="{{ url_for('admin_home') }}" method="get"><input type="hidden" name="role" value="{{ role }}">
 <label>Sort by<select name="sort">{% for key,label in headers %}<option value="{{ key }}"{% if key==sort %} selected{% endif %}>{{ label }}</option>{% endfor %}</select></label>
 <label>Order<select name="direction"><option value="asc"{% if not descending %} selected{% endif %}>Ascending</option><option value="desc"{% if descending %} selected{% endif %}>Descending</option></select></label><button>Sort</button></form>
@@ -79,7 +81,7 @@ td{display:grid;grid-template-columns:minmax(100px,35%) 1fr;gap:8px;padding:4px 
 <td data-title="First name">{{ row.first_name or '—' }}</td>
 {% if not teachers %}<td data-title="Class / cohort"><div>{{ row.class_code or '—' }}<span class="note">{{ row.cohort }}</span></div></td>{% endif %}
 <td data-title="Access"><div><span class="badge{% if not row.active %} off{% endif %}">{{ 'Active' if row.active else 'Suspended' }}</span>{% if row.force_change %}<span class="note">Password change required</span>{% endif %}</div></td>
-<td data-title="Last sign-in">{{ row.last_sign_in }}</td>
+<td data-title="Last sign-in">{{ row.last_sign_in }}<span class="note">{{ row.detail }}</span></td><td data-title="Sign-ins">{{ row.count }}</td>
 <td data-title="Controls"><details class="controls"><summary aria-label="Manage {{ display }}">Manage</summary>
 <form class="name-form" method="post" action="{{ url_for('edit_name', role=role, sort=sort, direction='desc' if descending else 'asc') }}">{{ token() }}
 <input type="hidden" name="identifier" value="{{ identity }}"><label>First name<input name="first_name" maxlength="80" value="{{ row.first_name }}" autocomplete="off"></label><button>Save name</button></form>

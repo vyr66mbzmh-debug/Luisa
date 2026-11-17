@@ -136,13 +136,14 @@
     }
   }
 
-  function updateToolbar(slide, total) {
+  function updateToolbar(slide, total, number = slide.sourceSlide) {
     const heading = document.getElementById('lesson-title');
     if (slide.titleTex) root.katex.render(slide.titleTex, heading, {throwOnError:true,trust:false});
     else setTitle(heading, slide.title);
     heading.title = slide.title;
-    document.getElementById('slide-number').textContent = slide.sourceSlide;
-    document.getElementById('compact-slide').textContent = `${slide.sourceSlide} / ${total}`;
+    root.dispatchEvent(new CustomEvent('luisa-slide', {detail: Number(number)}));
+    document.getElementById('slide-number').textContent = number;
+    document.getElementById('compact-slide').textContent = `${number} / ${total}`;
     document.getElementById('slide-select').title = slide.title;
   }
 

@@ -295,11 +295,13 @@ def student_content(name, content, restricted_urls, restricted_hashes, root, *, 
         except UnicodeError:
             return content
         if path.suffix == '.html':
-            text = re.sub(r'<script\b[^>]*offline-register\.js[^>]*>\s*</script\s*>', '', text, flags=re.I)
+            text = text.replace('<meta name="recent-chapters" content="owner">',
+                                '<meta name="recent-chapters" content="teacher" data-csrf="__LUISA_SESSION_CSRF__">' if staff else '')
+            text = re.sub(r'<script\b[^>]*offline-register\.js[^>]*>\s*</script\s*>', '<script defer src="app-navigation.js"></script>', text, flags=re.I)
             text = re.sub(r'<link\b[^>]*rel=["\']manifest["\'][^>]*>', '', text, flags=re.I)
             if staff:
                 owner_url = json.loads((root / 'release.json').read_text())['publicBaseUrl'].rstrip('/')
-                text = text.replace('href="offline.html"', f'href="{owner_url}/offline.html" target="_blank" rel="noopener noreferrer"')
+                text = text.replace('href="offline.html"', f'href="{owner_url}/offline.html#ada-staff=__LUISA_OFFLINE_LOGOUT__" target="_blank" rel="noopener noreferrer"')
             else:
                 # The full owner handoff includes historical release and deployment routes.
                 text = re.sub(r'<section id="release-handoff">.*?</section>', '', text, flags=re.S)

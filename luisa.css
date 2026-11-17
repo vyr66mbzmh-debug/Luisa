@@ -96,3 +96,14 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 }
 
 #slide-region .lesson-data-table td { border:1px solid #8299a8; }
+
+#recent-chapters {margin:20px 0}
+#recent-chapters h2 {margin:0 0 10px}
+#recent-chapters nav {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+#recent-chapters a {display:flex;flex-direction:column;gap:4px;justify-content:space-between;color:#183957;background:white;border:1px solid #cad2da;border-left:5px solid #456e91;padding:12px 14px;text-decoration:none}
+#recent-chapters a.recent-core {border-left-color:#537657}
+#recent-chapters a.recent-applied {border-left-color:#855c43}
+#recent-chapters a:hover,#recent-chapters a:focus-visible {background:#f4f7fa}
+#recent-chapters strong {font:600 1.15rem/1.2 Georgia,serif}
+@media(max-width:760px){#recent-chapters nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){#recent-chapters nav{grid-template-columns:1fr}}

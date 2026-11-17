@@ -4863,6 +4863,67 @@
         "docs/evidence/v055-forces.json",
         "GitHub issue #86"
       ]
+    },
+    {
+      "id": "BKT-056",
+      "requirement": "Name all solution booklet downloads and number every slide panel.",
+      "scope": "All teaching chapters and both editions.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified",
+      "origin": "Owner v0.56 instruction, GitHub issue #94",
+      "acceptance": [
+        "Remove Luisa from material filenames. Use a space and SOLUTIONS before the .pdf suffix for worked booklets. Number every slide and both matching printed panels."
+      ],
+      "evidence": [
+        "GitHub issue #94",
+        "docs/evidence/v056-booklets.json"
+      ]
+    },
+    {
+      "id": "CLASS-056",
+      "requirement": "Provide a continuous touch PDF viewer and fast return to recent lessons.",
+      "scope": "Both hosts, subject to edition access.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "partial",
+      "origin": "Owner v0.56 instruction, GitHub issue #94",
+      "acceptance": [
+        "Preserve touch-scroll, print, download, PDF internal and external links. Share the library header on Offline. Four distinct recent chapters in the approved book-spine design, newest first, resume on last slide, sync across ADA teacher devices; Cloudflare uses browser storage."
+      ],
+      "evidence": [
+        "GitHub issue #94"
+      ]
+    },
+    {
+      "id": "ADMIN-056",
+      "requirement": "Provide compact account summaries and teacher navigation on the admin page.",
+      "scope": "Private ADA administration.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified",
+      "origin": "Owner v0.56 instruction, GitHub issue #94",
+      "acceptance": [
+        "GMT day/month/year with a two-digit year, 24-hour time; successful sign-in count from migration and latest-session duration, without an event history. Key icon next to Account management. Logo signs out to library. GeoGebra, calculator, current version and sign-out in banner. IP and network collection deferred."
+      ],
+      "evidence": [
+        "GitHub issue #94"
+      ]
+    },
+    {
+      "id": "OPS-056",
+      "requirement": "Retain only five verified website release ZIPs and their checksums.",
+      "scope": "Owner recovery archive.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "verified",
+      "origin": "Owner v0.56 instruction, GitHub issue #94",
+      "acceptance": [
+        "Verify the new ZIP before pruning older website ZIPs; preserve unrelated backups."
+      ],
+      "evidence": [
+        "GitHub issue #94"
+      ]
     }
   ]
 }
