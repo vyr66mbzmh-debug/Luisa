@@ -14,7 +14,6 @@ import secrets
 import sqlite3
 import threading
 import time
-from zoneinfo import ZoneInfo
 
 from argon2 import PasswordHasher
 from argon2.exceptions import InvalidHashError, VerificationError, VerifyMismatchError
@@ -29,10 +28,10 @@ _DUMMY_PASSWORD_HASH = _PH.hash(secrets.token_urlsafe(32))
 _SCHOOL_NUMBER = re.compile(r"[0-9]{5}\Z", re.ASCII)
 _SIGN_IN = re.compile(r"[0-9]{5}@marlboroughcollege\.org\Z", re.ASCII | re.IGNORECASE)
 _UTC = timezone.utc
-_UK = ZoneInfo('Europe/London')
+from . import signin_summary
 
 # Shared by the PDF, password and administration screens.
-SIGN_OUT_FORM = """<form method="post" target="_top" action="{{ url_for('logout') }}" style="display:inline;margin:0">
+SIGN_OUT_FORM = """<form method="post" target="_top" action="{{ (url_for('admin_home') + '/logout') if request.path.startswith('/admin') else url_for('logout') }}" style="display:inline;margin:0">
 <input type="hidden" name="_csrf" value="{{ csrf }}"><button type="submit">Sign out</button></form>"""
 
 # Poll only visible top-level pupil pages. A status read never extends the session.
@@ -310,6 +309,10 @@ def create_app(overrides: dict | None = None) -> Flask:
                     PARTITION BY school_number ORDER BY created_utc DESC, rowid DESC) AS n FROM sessions WHERE role='student')
                 WHERE n>1)""")
             conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS single_pupil_session ON sessions(school_number) WHERE role='student'")
+            conn.execute('''CREATE TABLE IF NOT EXISTS teacher_recents (
+                username TEXT NOT NULL REFERENCES staff_accounts(username) ON DELETE CASCADE,
+                chapter_key TEXT NOT NULL, slide INTEGER NOT NULL, UNIQUE(username,chapter_key))''')
+            signin_summary.migrate(conn, app.config['SESSION_ABSOLUTE_SECONDS'])
             conn.execute('INSERT OR IGNORE INTO teacher_credential VALUES(1, ?)', (app.config['ADMIN_PASSWORD_HASH'],))
             conn.commit()
             conn.execute('PRAGMA journal_mode=WAL')
@@ -364,7 +367,7 @@ def create_app(overrides: dict | None = None) -> Flask:
             return None
         if request.path in {'/login', '/admin/login'} or request.path.endswith('/sw.js') or request.path == '/healthz':
             return None
-        token = request.cookies.get(app.config['SESSION_COOKIE'], '')
+        token = request.cookies.get(session_cookie(), '')
         if token:
             session_hash = digest_session(token)
             now = utc_now()
@@ -420,11 +423,19 @@ def create_app(overrides: dict | None = None) -> Flask:
             'pure2-lesson-viewer.html': "frame-src 'self' https://www.geogebra.org https://www.youtube-nocookie.com; ",
         }.get(asset, '')
         response.headers['Content-Security-Policy'] = frame_policy + "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors " + ("'self'" if embedded else "'none'")
-        token = request.cookies.get(app.config['SESSION_COOKIE'])
+        token = request.cookies.get(session_cookie())
         if token and getattr(g, 'luisa_session', None) and g.luisa_session.get('session_hash') == digest_session(token):
-            response.set_cookie(app.config['SESSION_COOKIE'], token, max_age=app.config['SESSION_SECONDS'],
-                                secure=True, httponly=True, samesite='Lax', path=app.config['SESSION_COOKIE_PATH'])
+            response.set_cookie(session_cookie(), token, max_age=app.config['SESSION_SECONDS'],
+                                secure=True, httponly=True, samesite='Lax', path=admin_path() if session_cookie() == 'luisa_admin_session' else app.config['SESSION_COOKIE_PATH'])
         return response
+
+    def admin_path():
+        return app.config['SESSION_COOKIE_PATH'].rstrip('/') + '/admin'
+
+    def session_cookie():
+        if request.path.startswith('/admin') and request.cookies.get('luisa_admin_session'):
+            return 'luisa_admin_session'
+        return app.config['SESSION_COOKIE']
 
     def base_context():
         session = getattr(g, 'luisa_session', None)
@@ -521,6 +532,7 @@ def create_app(overrides: dict | None = None) -> Flask:
                 return render_login(LOGIN_PAGE, 'Sign-in failed. Check your details or contact your teacher.'), 401
         limiter.succeeded(key)
         token = new_session('student', school_number, needs_change)
+        signin_summary.record(db(), 'accounts', 'school_number', school_number, digest_session(token))
         db().execute('COMMIT')
         g.luisa_session = {'must_change': int(needs_change)}
         response = redirect(url_for('change_password') if needs_change else url_for('index'))
@@ -544,6 +556,7 @@ def create_app(overrides: dict | None = None) -> Flask:
                 db().execute('UPDATE staff_accounts SET last_sign_in_utc=? WHERE username=?', (utc_text(), username))
                 must_change = first or bool(valid['force_change'])
                 token = new_session('staff', username, must_change)
+                signin_summary.record(db(), 'staff_accounts', 'username', username, digest_session(token))
                 db().commit()
                 limiter.succeeded(key)
                 g.luisa_session = {'must_change': must_change}
@@ -578,18 +591,27 @@ def create_app(overrides: dict | None = None) -> Flask:
             limiter.failed(key)
             return render_login(ADMIN_LOGIN_PAGE, 'Sign-in failed.'), 401
         limiter.succeeded(key)
+        # Retire both generations of admin cookies. A separate teaching login survives.
+        legacy = request.cookies.get(app.config['SESSION_COOKIE'], '')
+        retire_legacy = legacy and db().execute(
+            "DELETE FROM sessions WHERE session_hash=? AND role='admin'", (digest_session(legacy),)).rowcount
+        scoped = request.cookies.get('luisa_admin_session', '')
+        if scoped:
+            db().execute("DELETE FROM sessions WHERE session_hash=? AND role='admin'", (digest_session(scoped),))
         token = new_session('admin')
         db().commit()
         g.luisa_session = {'csrf_token': '', 'must_change': 0}
         setup = app.config['TEACHER_SETUP'] and verified_hash == app.config['ADMIN_PASSWORD_HASH']
         response = redirect(url_for('teacher_password' if setup else 'admin_home'))
-        response.set_cookie(app.config['SESSION_COOKIE'], token, max_age=app.config['SESSION_SECONDS'], secure=True,
-                            httponly=True, samesite='Lax', path=app.config['SESSION_COOKIE_PATH'])
+        if retire_legacy:
+            response.delete_cookie(app.config['SESSION_COOKIE'], path=app.config['SESSION_COOKIE_PATH'], secure=True, httponly=True, samesite='Lax')
+        response.set_cookie('luisa_admin_session', token, max_age=app.config['SESSION_SECONDS'], secure=True,
+                            httponly=True, samesite='Lax', path=admin_path())
         return response
 
     @app.get('/session-status')
     def session_status():
-        token = request.cookies.get(app.config['SESSION_COOKIE'], '')
+        token = request.cookies.get(session_cookie(), '')
         if token:
             now = utc_now()
             session = db().execute("""SELECT 1 FROM sessions JOIN accounts USING(school_number)
@@ -601,17 +623,41 @@ def create_app(overrides: dict | None = None) -> Flask:
                 return '', 204
         return '', 401
 
+    @app.post('/admin/logout')
     @app.post('/logout')
     def logout():
         require_csrf()
-        token = request.cookies.get(app.config['SESSION_COOKIE'], '')
+        token = request.cookies.get(session_cookie(), '')
         if token:
             db().execute('DELETE FROM sessions WHERE session_hash=?', (digest_session(token),))
         destination = 'admin_login' if g.luisa_session['role'] == 'admin' else 'login'
+        if request.path == '/admin/logout' and g.luisa_session['role'] == 'admin' and request.form.get('library') == '1':
+            destination = 'index'
         g.luisa_session = None
         response = redirect(url_for(destination))
-        response.delete_cookie(app.config['SESSION_COOKIE'], path=app.config['SESSION_COOKIE_PATH'], secure=True, httponly=True, samesite='Lax')
+        response.delete_cookie(session_cookie(), path=admin_path() if session_cookie() == 'luisa_admin_session' else app.config['SESSION_COOKIE_PATH'], secure=True, httponly=True, samesite='Lax')
         return response
+
+    def offline_logout_ticket():
+        # The downloads site receives authority for exactly this staff session's logout.
+        return hmac.new(base_context().encode(), b'Luisa:staff-offline-logout:v1', sha256).hexdigest()
+
+    @app.route('/staff/offline-logout', methods=['GET', 'POST'])
+    def staff_offline_logout():
+        if g.luisa_session['role'] != 'staff':
+            abort(403)
+        if request.method == 'POST':
+            ticket = request.form.get('ticket', '')
+            if not re.fullmatch(r'[a-f0-9]{64}', ticket) or not hmac.compare_digest(ticket, offline_logout_ticket()):
+                abort(403)
+            return logout()
+        return render_template_string("""<!doctype html><html lang="en"><meta charset="utf-8">
+<title>Sign out · Luisa</title><p id="status">Signing out…</p>
+<form method="post"><input type="hidden" name="_csrf" value="{{ csrf }}"><input type="hidden" name="ticket"></form>
+<script>const ticket=new URLSearchParams(location.hash.slice(1)).get('ada-staff');
+history.replaceState(null,'',location.pathname);
+if(/^[a-f0-9]{64}$/.test(ticket||'')){document.forms[0].elements.ticket.value=ticket;document.forms[0].submit();}
+else document.getElementById('status').textContent='Open Offline downloads from your ADA library to sign out here.';</script></html>""", csrf=base_context())
 
     @app.get('/change-password')
     def change_password():
@@ -653,6 +699,8 @@ def create_app(overrides: dict | None = None) -> Flask:
             abort(403)
         db().execute(f'DELETE FROM sessions WHERE {session_column}=?', (number,))
         token = new_session(g.luisa_session['role'], number, False)
+        db().execute(f'UPDATE {table} SET latest_session=?, session_ended=NULL WHERE {column}=? AND latest_session=?',
+                     (digest_session(token), number, g.luisa_session['session_hash']))
         db().execute('COMMIT')
         g.luisa_session = {'must_change': 0}
         response = redirect(url_for('index'))
@@ -694,29 +742,34 @@ def create_app(overrides: dict | None = None) -> Flask:
     def uk_sign_in(stamp, missing='Never signed in'):
         if not stamp:
             return missing
-        return datetime.fromisoformat(stamp.replace('Z', '+00:00')).astimezone(_UK).strftime('%d %B %Y, %H:%M %Z')
+        t = signin_summary.moment(stamp).astimezone(timezone.utc)
+        return f'{t:%d/%m/%y} {t.hour}:{t:%M}'
 
     def render_admin(notice=None, temp_password=None, temp_school_number=None, status=200,
                      new_teacher=None, teacher_password=None):
         teachers = request.endpoint in {'teacher_action', 'add_teacher'} or request.view_args.get('role') == 'teachers' or request.args.get('role') == 'teachers'
         rows = []
+        sessions = {r['session_hash']: r for r in db().execute('SELECT session_hash,expires_utc,created_utc FROM sessions')}
+        now = utc_now()
+        def extra(row):
+            return dict(count=row['signins'], detail=signin_summary.describe(row, sessions.get(row['latest_session']), app.config['SESSION_ABSOLUTE_SECONDS'], now))
         labels = {'2026-27': {'23': 'Lower Sixth', '22': 'Upper Sixth'}}
         mapping = labels.get(app.config['SCHOOL_YEAR'], {})
         for account in db().execute('SELECT accounts.*, student_directory.first_name, pupil_preview_logins.username AS preview FROM accounts LEFT JOIN pupil_preview_logins USING(school_number) LEFT JOIN student_directory USING(school_number) ORDER BY school_number'):
             sign_in = uk_sign_in(account['last_sign_in_utc'])
-            rows.append({'class_code': account['class_code'], 'number': account['school_number'], 'label': account['preview'] or account['school_number'], 'cohort': mapping.get(account['school_number'][:2], '—'),
+            rows.append({**extra(account), 'class_code': account['class_code'], 'number': account['school_number'], 'label': account['preview'] or account['school_number'], 'cohort': mapping.get(account['school_number'][:2], '—'),
                          'active': bool(account['active']), 'force_change': bool(account['force_change']), 'last_sign_in': sign_in, 'stamp': account['last_sign_in_utc'], 'first_name': account['first_name'] or ''})
         staff = []
-        for member in db().execute("""SELECT username, active, force_change, last_sign_in_utc, temporary_available, first_name
+        for member in db().execute("""SELECT staff_accounts.*, first_name
                                       FROM staff_accounts LEFT JOIN teacher_directory USING(username) ORDER BY username"""):
             missing = 'Awaiting first sign-in' if member['temporary_available'] else 'No sign-in recorded'
-            staff.append(dict(username=member['username'], active=member['active'], force_change=member['force_change'],
+            staff.append(dict(**extra(member), username=member['username'], active=member['active'], force_change=member['force_change'],
                               stamp=member['last_sign_in_utc'], first_name=member['first_name'] or '',
                               last_sign_in=uk_sign_in(member['last_sign_in_utc'], missing)))
         headers = [('identity', 'Username' if teachers else 'School number'), ('name', 'First name')]
         if not teachers:
             headers.append(('class', 'Class / cohort'))
-        headers.extend([('access', 'Access'), ('signin', 'Last successful sign-in')])
+        headers.extend([('access', 'Access'), ('signin', 'Last successful sign-in'), ('count', 'Sign-ins')])
         default = 'identity' if teachers else 'class'
         sort = request.args.get('sort', default)
         if sort not in dict(headers):
@@ -731,12 +784,14 @@ def create_app(overrides: dict | None = None) -> Flask:
                 return (row['class_code'], row['cohort'])
             if sort == 'access':
                 return (not row['active'], bool(row['force_change']))
+            if sort == 'count':
+                return row['count']
             return row['stamp'] or ''
         directory = staff if teachers else rows
         directory.sort(key=sort_value, reverse=descending)
         if sort == 'signin':
             directory.sort(key=lambda row: not row['stamp'])
-        return render_template_string(ADMIN_PAGE, headers=headers, sort=sort, descending=descending, role='teachers' if teachers else 'students', staff=staff, rows=rows, csrf=base_context(), notice=notice,
+        return render_template_string(ADMIN_PAGE, release_version=manifest.get('version'), count_since=db().execute('SELECT started FROM signin_policy').fetchone()[0], headers=headers, sort=sort, descending=descending, role='teachers' if teachers else 'students', staff=staff, rows=rows, csrf=base_context(), notice=notice,
                                       temp_password=temp_password, temp_school_number=temp_school_number,
                                       new_teacher=new_teacher, teacher_password=teacher_password,
                                       classes=sorted({row['class_code'] for row in rows if row['class_code']})), status
@@ -745,6 +800,40 @@ def create_app(overrides: dict | None = None) -> Flask:
     @admin_only
     def admin_home():
         return render_admin('Admin password changed.' if request.args.get('password_changed') == '1' else None)
+
+    @app.get('/admin/tools/<name>')
+    @admin_only
+    def admin_tool_asset(name):
+        if name not in {'slide-controls.svg','geogebra-gold.png'}:
+            abort(404)
+        return send_from_directory(build_dir / 'assets/luisa', name, conditional=False, etag=False)
+
+    @app.route('/recent-chapters', methods=['GET','POST'])
+    def teacher_recents():
+        if not g.luisa_session or g.luisa_session['role'] != 'staff' or g.luisa_session['must_change']:
+            abort(403)
+        username = g.luisa_session['staff_username']
+        if request.method == 'POST':
+            require_csrf()
+            key = request.form.get('key','')
+            slide = request.form.get('slide', type=int)
+            if not re.fullmatch(r'(?:maths-(?:pure|applied)-year-[12]|further-core-pure-[12]):[1-9][0-9]?',key) or not slide or not 1 <= slide <= 2000:
+                abort(400)
+            conn = db()
+            conn.execute('BEGIN IMMEDIATE')
+            conn.execute('DELETE FROM teacher_recents WHERE username=? AND chapter_key=?',(username,key))
+            conn.execute('INSERT INTO teacher_recents VALUES(?,?,?)',(username,key,slide))
+            conn.execute("""DELETE FROM teacher_recents WHERE username=? AND rowid NOT IN
+                (SELECT rowid FROM teacher_recents WHERE username=? ORDER BY rowid DESC LIMIT 4)""",(username,username))
+            conn.commit()
+            return '',204
+        return [dict(key=row['chapter_key'],slide=row['slide']) for row in db().execute(
+            'SELECT chapter_key,slide FROM teacher_recents WHERE username=? ORDER BY rowid DESC LIMIT 4',(username,))]
+
+    @app.get('/admin/progress')
+    @admin_only
+    def admin_progress():
+        return redirect('https://fmq-6d9.pages.dev/development-progress.html')
 
     @app.get('/admin/logo.png')
     @admin_only
@@ -974,6 +1063,7 @@ def create_app(overrides: dict | None = None) -> Flask:
                 identity = preview['username']
         if g.luisa_session['role'] == 'staff':
             page = page.replace('__LUISA_TEACHER_ACRONYM__', escape(identity.upper()))
+            page = page.replace('__LUISA_OFFLINE_LOGOUT__', offline_logout_ticket())
         page = page.replace('<!--luisa-account-name-->', escape(identity))
         return watch_pupil_session(page.replace('__LUISA_SESSION_CSRF__', escape(base_context())))
 

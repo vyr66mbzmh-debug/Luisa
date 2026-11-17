@@ -13,7 +13,7 @@ from offline_manifest import BOOK_ALIASES
 class ChapterSolutions(unittest.TestCase):
     def test_chapters_use_accepted_solution_pdfs(self):
         teaching = catalogue()
-        evidence = json.loads((ROOT / 'docs/evidence/v038-solutions.json').read_text())
+        evidence = json.loads((ROOT / 'docs/evidence/v056-booklets.json').read_text())['chapters']
         textbook = json.loads((ROOT / 'textbook-catalogue.json').read_text())
         progress = (ROOT / 'development-progress.html').read_text()
         seen = set()
@@ -25,11 +25,17 @@ class ChapterSolutions(unittest.TestCase):
                 url = chapter['solutions']
                 record = evidence[f"{key}-{chapter['number']}"]
                 with self.subTest(book=key, chapter=chapter['number']):
+                    self.assertEqual(url, record['solutions']['file'])
+                    self.assertTrue(url.endswith(' SOLUTIONS.pdf'))
                     self.assertNotIn(url, seen)
                     seen.add(url)
                     self.assertNotEqual(url, chapter['booklet'])
-                    self.assertEqual(hashlib.sha256((ROOT / url).read_bytes()).hexdigest(), record['sha256'])
+                    self.assertEqual(hashlib.sha256((ROOT / url).read_bytes()).hexdigest(), record['solutions']['sha256'])
                     self.assertEqual([r['url'] for r in topic['resources'] if r['type'] == 'solutions' and r['access'] == 'available'], [url])
+                    pupil = ROOT / chapter['booklet']
+                    self.assertEqual(hashlib.sha256(pupil.read_bytes()).hexdigest(), record['booklet']['sha256'])
+                    alias = pupil.with_name(f"chapter-{chapter['number']:02}.pdf")
+                    self.assertEqual(hashlib.sha256(alias.read_bytes()).hexdigest(), record['booklet']['sha256'])
                     self.assertEqual(progress.count(f'<a href="{url}">Solutions</a>'), 1)
         self.assertEqual(len(seen), 62)
-        self.assertEqual(sum(r['pages'] for r in evidence.values()), 1507)
+        self.assertEqual(sum(r['solutions']['pages'] for r in evidence.values()), 1507)

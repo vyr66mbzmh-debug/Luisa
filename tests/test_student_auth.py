@@ -8,7 +8,7 @@ import unittest
 from unittest.mock import patch
 from pathlib import Path
 from datetime import datetime
-from zoneinfo import ZoneInfo
+
 
 from argon2 import PasswordHasher
 import pyotp
@@ -381,6 +381,29 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertIn('Manage ' + login, admin)
         self.assertIsNone(self.database_account(login))
 
+    def test_offline_logout_is_limited_to_the_launching_staff_session(self):
+        host = 'https://ada.test'
+        # The admin cookie is scoped to /admin, so this course URL requires its own login.
+        denied = self.admin.get('/staff/offline-logout', base_url=host)
+        self.assertEqual((denied.status_code, denied.location), (302, '/login'))
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('INSERT INTO staff_accounts(username,password_hash,force_change) VALUES(?,?,0)',
+                         ('fixture', PasswordHasher().hash('staff fixture password')))
+        (self.build / 'index.html').write_text('<a href="https://example.test/offline.html#ada-staff=__LUISA_OFFLINE_LOGOUT__">Offline</a>')
+        first, second = self.client, self.app.test_client()
+        for client in (first, second):
+            self.assertEqual(self.post_form(client, '/login', {'email':'fixture', 'password':'staff fixture password'}).location, '/')
+        ticket = re.search(r'#ada-staff=([a-f0-9]{64})', first.get('/', base_url=host).text).group(1)
+        for client, expected, submitted in [(second, 403, ticket), (first, 403, '0'*64), (first, 302, ticket)]:
+            page = client.get('/staff/offline-logout', base_url=host)
+            self.assertEqual(page.status_code, 200)
+            csrf = re.search(r'name="_csrf" value="([^"]+)"', page.text).group(1)
+            self.assertNotEqual(ticket, csrf)
+            result = client.post('/staff/offline-logout', data={'ticket':submitted, '_csrf':csrf}, base_url=host)
+            self.assertEqual(result.status_code, expected)
+        self.assertEqual(first.get('/', base_url=host).location, '/login')
+        self.assertEqual(second.get('/', base_url=host).status_code, 200)
+
     def test_latest_success_replaces_only_prior_pupil_session(self):
         number, password = '02340', 'Eight-or-more'
         self.add(number)
@@ -467,7 +490,8 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(self.database_account('02340')['last_sign_in_utc'], first_sign_in)
         self.assertEqual(self.client.get('/admin', base_url='https://ada.test').status_code, 403)
         shown = self.admin.get('/admin', base_url='https://ada.test').get_data(as_text=True)
-        expected_uk_time = datetime.fromisoformat(first_sign_in.replace('Z', '+00:00')).astimezone(ZoneInfo('Europe/London')).strftime('%d %B %Y, %H:%M %Z')
+        stamp = datetime.fromisoformat(first_sign_in.replace('Z', '+00:00'))
+        expected_uk_time = f'{stamp:%d/%m/%y} {stamp.hour}:{stamp:%M}'
         self.assertIn(expected_uk_time, shown)
         # The consumed temporary credential cannot be replayed.
         failed = self.student_login('02340@marlboroughcollege.org', temp_password)
@@ -631,6 +655,126 @@ class StudentAuthAcceptance(unittest.TestCase):
         expired = self.client.get('/content/questions.json', base_url='https://ada.test')
         self.assertEqual(expired.status_code, 302)
         self.assertEqual(expired.headers['Location'], '/login')
+
+    def test_recent_chapters_resume_across_teacher_sessions_and_are_private(self):
+        host = 'https://ada.test'
+        path = '/recent-chapters'
+        (self.build / 'index.html').write_text("<input type=hidden name=_csrf value='__LUISA_SESSION_CSRF__'>")
+        password = 'Synthetic teaching password'
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            hashed = PasswordHasher().hash(password)
+            conn.executemany('INSERT INTO staff_accounts(username,password_hash,force_change) VALUES(?,?,0)',
+                             [('first', hashed), ('second', hashed)])
+        teacher, second, other_device = (self.app.test_client() for _ in range(3))
+        for client, username in [(teacher, 'first'), (second, 'second'), (other_device, 'first')]:
+            self.assertEqual(self.post_form(client, '/login', {'email': username, 'password': password}).location, '/')
+        def teacher_summary():
+            with closing(sqlite3.connect(self.db_path)) as conn:
+                return conn.execute("SELECT signins, latest_session, session_ended FROM staff_accounts WHERE username='first'").fetchone()
+        latest = teacher_summary()
+        self.assertEqual(latest[0], 2)
+        self.assertIsNone(latest[2])
+        def save(client, chapter, slide):
+            data = {'key': f'maths-pure-year-1:{chapter}', 'slide': slide}
+            return self.post_form(client, path, data, client.get('/', base_url=host))
+        def recent(client):
+            result = client.get(path, base_url=host)
+            self.assertEqual(result.status_code, 200)
+            return [(r['key'], r['slide']) for r in result.json]
+        self.assertEqual(teacher.post(path, data={'key':'maths-pure-year-1:1', 'slide':4}, base_url=host).status_code, 400)
+        for chapter in range(1, 6):
+            self.assertEqual(save(teacher, chapter, chapter + 1).status_code, 204)
+        self.assertEqual(save(other_device, 3, 17).status_code, 204)
+        expected = [(f'maths-pure-year-1:{n}', slide) for n, slide in [(3,17),(5,6),(4,5),(2,3)]]
+        self.assertEqual(recent(teacher), expected)
+        self.assertEqual(recent(second), [])
+        self.assertEqual(save(second, 3, 2).status_code, 204)
+        self.assertEqual(recent(other_device), expected)
+        self.assertEqual(self.post_form(teacher, '/logout', {}, teacher.get('/', base_url=host)).status_code, 302)
+        self.assertEqual(teacher.get(path, base_url=host).location, '/login')
+        self.assertEqual(teacher_summary(), latest)
+        self.assertEqual(self.post_form(teacher, '/login', {'email':'first','password':password}).location, '/')
+        self.assertEqual(recent(teacher), expected)
+        self.assertEqual(teacher_summary()[0], 3)
+        self.assertNotEqual(teacher_summary()[1], latest[1])
+        self.add('02340')
+        self.action('02340', 'reset', chosen_password='Synthetic first pupil password')
+        self.assertEqual(self.student_login('02340@marlboroughcollege.org','Synthetic first pupil password').location, '/change-password')
+        self.assertEqual(self.change_password(self.client,'Synthetic second pupil password').location, '/')
+        self.assertEqual(self.client.get(path, base_url=host).status_code, 403)
+        self.assertEqual(save(self.client, 3, 1).status_code, 403)
+        self.assertEqual(recent(teacher), expected)
+
+    def test_pupil_signin_count_and_duration_survive_password_rotation_logout_and_expiry(self):
+        host = 'https://ada.test'
+        number, email = '02340', '02340@marlboroughcollege.org'
+        self.add(number)
+        self.action(number, 'reset', chosen_password='Synthetic pupil initial password')
+        self.assertEqual(self.student_login(email, 'wrong').status_code, 401)
+        self.assertEqual(self.database_account(number)['signins'], 0)
+        self.assertEqual(self.student_login(email, 'Synthetic pupil initial password').location, '/change-password')
+        first = self.database_account(number)
+        self.assertEqual(first['signins'], 1)
+        self.assertEqual(self.change_password(self.client, 'Synthetic pupil changed password').location, '/')
+        rotated = self.database_account(number)
+        self.assertNotEqual(rotated['latest_session'], first['latest_session'])
+        self.assertEqual(rotated['last_sign_in_utc'], first['last_sign_in_utc'])
+        self.assertEqual(rotated['signins'], 1)
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute("UPDATE accounts SET last_sign_in_utc=strftime('%Y-%m-%dT%H:%M:%SZ','now','-315 seconds') WHERE school_number=?", (number,))
+        def directory():
+            return self.admin.get('/admin', base_url=host).text
+        self.assertIn('5 min · signed in', directory())
+        (self.build / 'index.html').write_text("<input type=hidden name=_csrf value='__LUISA_SESSION_CSRF__'>")
+        self.assertEqual(self.post_form(self.client, '/logout', {}, self.client.get('/', base_url=host)).status_code, 302)
+        self.assertIn('5 min · ended', directory())
+        self.assertEqual(self.student_login(email, 'Synthetic pupil changed password').location, '/')
+        self.assertEqual(self.database_account(number)['signins'], 2)
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute("UPDATE accounts SET last_sign_in_utc=strftime('%Y-%m-%dT%H:%M:%SZ','now','-10 minutes') WHERE school_number=?", (number,))
+            conn.execute("""UPDATE sessions SET created_utc=strftime('%Y-%m-%dT%H:%M:%SZ','now','-10 minutes'),
+                          expires_utc=strftime('%Y-%m-%dT%H:%M:%SZ','now','-165 seconds') WHERE school_number=?""", (number,))
+        self.assertIn('7 min · expired', directory())
+        self.assertEqual(self.client.get('/', base_url=host).location, '/login')
+        self.assertIn('7 min · expired', directory())
+        self.assertEqual(self.database_account(number)['signins'], 2)
+
+    def test_signing_out_of_admin_preserves_the_same_browsers_teaching_session(self):
+        host = 'https://ada.test'
+        app = create_app(dict(self.app.config, ADMIN_AUTH_MODE='password'))
+        client = app.test_client()
+        password = 'Synthetic teaching password'
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('INSERT INTO staff_accounts(username,password_hash,force_change) VALUES(?,?,0)',
+                         ('first', PasswordHasher().hash(password)))
+        self.assertEqual(self.post_form(client, '/login', {'email':'first','password':password}).location, '/')
+        teacher_cookie = client.get_cookie(app.config['SESSION_COOKIE'], domain='ada.test').value
+        form = client.get('/admin/login', base_url=host)
+        self.assertEqual(self.post_form(client, '/admin/login', {'password':self.teacher_password}, form).location, '/admin')
+        page = client.get('/admin', base_url=host)
+        self.assertEqual(page.status_code, 200)
+        self.assertEqual(client.get('/', base_url=host).status_code, 200)
+        self.assertEqual(client.post('/admin/logout', data={'library':'1'}, base_url=host).status_code, 400)
+        self.assertEqual(self.post_form(client, '/admin/logout', {'library':'1'}, page).location, '/')
+        self.assertEqual(client.get('/', base_url=host).status_code, 200)
+        self.assertEqual(client.get_cookie(app.config['SESSION_COOKIE'], domain='ada.test').value, teacher_cookie)
+        self.assertNotEqual(client.get('/admin', base_url=host).status_code, 200)
+
+    def test_new_admin_signin_retires_legacy_cookie_before_logout(self):
+        host = 'https://ada.test'
+        app = create_app(dict(self.app.config, ADMIN_AUTH_MODE='password'))
+        client = app.test_client()
+        legacy = self.admin.get_cookie('luisa_admin_session', domain='ada.test', path='/admin').value
+        client.set_cookie(app.config['SESSION_COOKIE'], legacy, domain='ada.test', path='/')
+        self.assertEqual(client.get('/admin', base_url=host).status_code, 200)
+        form = client.get('/admin/login', base_url=host)
+        self.assertEqual(self.post_form(client, '/admin/login', {'password':self.teacher_password}, form).location, '/admin')
+        self.assertIsNone(client.get_cookie(app.config['SESSION_COOKIE'], domain='ada.test', path='/'))
+        page = client.get('/admin', base_url=host)
+        self.assertEqual(self.post_form(client, '/admin/logout', {'library': '1'}, page).location, '/')
+        self.assertEqual(client.get('/admin', base_url=host).location, '/admin/login')
+        client.set_cookie(app.config['SESSION_COOKIE'], legacy, domain='ada.test', path='/')
+        self.assertEqual(client.get('/admin', base_url=host).location, '/admin/login')
 
     def test_gateway_mounts_below_ada_al_prefix_and_rejects_other_paths(self):
         prefixed_app = create_app({

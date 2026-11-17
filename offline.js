@@ -1,6 +1,24 @@
 'use strict';
 (()=>{
 const $=id=>document.getElementById(id);let catalogue,snapshot,busy=false,newGeneration;
+const incomingTicket=new URLSearchParams(location.hash.slice(1)).get('ada-staff');
+const staffFragment=/^[0-9a-f]{64}$/.test(incomingTicket||'')?'#ada-staff='+incomingTicket:'';
+if(staffFragment){
+  const college='https://adazmq.marlboroughcollege.org/AL/';
+  for(const link of document.querySelectorAll('.view-tabs a, #offline-version')){
+    link.href=new URL(link.getAttribute('href'),college).href;
+  }
+  const signout=$('offline-signout');
+  signout.href=college+'staff/offline-logout'+staffFragment;
+  signout.hidden=false;
+  for(const link of document.querySelectorAll('a[href^="offline.html"]'))link.hash=staffFragment;
+}
+function showVersion(version){
+  if(!version)return;
+  $('offline-version').textContent='v'+version;
+  $('offline-version').setAttribute('aria-label','Development progress, version '+version);
+}
+fetch('release.json').then(response=>response.json()).then(release=>showVersion(release.version)).catch(()=>{});
 function savedURL(url){if(!snapshot?.active)return url;const u=new URL(url,location.href);u.searchParams.set('offlineRelease',snapshot.active.id);return u.href;}
 const selected=new Set();const mb=n=>(n/1048576).toFixed(1)+' MB';
 function request(type,args={},onProgress){return new Promise(async(resolve,reject)=>{
@@ -49,7 +67,7 @@ async function downloadSelected(all=false){
 }
 $('download').onclick=()=>downloadSelected();
 $('download-all').onclick=()=>{if(busy||!catalogue)return;selected.clear();for(const p of catalogue.packs)selected.add(p.id);render();downloadSelected(true);};
-$('open-new').onclick=()=>{location.href='offline.html?offlineRelease='+encodeURIComponent(newGeneration);};
+$('open-new').onclick=()=>{location.href='offline.html?offlineRelease='+encodeURIComponent(newGeneration)+staffFragment;};
 function connection(){$('connection').textContent=navigator.onLine?'Connection detected. Offline readiness is shown separately for each chapter.':'No connection detected. Use chapters marked Ready offline.';}
 window.addEventListener('online',connection);window.addEventListener('offline',connection);connection();
 (async()=>{if(!('serviceWorker'in navigator))throw Error('This browser cannot store Luisa for offline use. Open it in a supported browser.');const registration=await navigator.serviceWorker.register('sw.js');if(registration.waiting)throw Error('An app update is waiting. Close all Luisa windows, then reopen Luisa while connected to finish setup. Existing downloads are kept.');await navigator.serviceWorker.ready;await request('cleanup').catch(()=>{});await load();})().catch(e=>{$('error').textContent=e.message;});
