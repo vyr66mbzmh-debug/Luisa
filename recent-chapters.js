@@ -20,13 +20,14 @@
   }
   function current(slide) {
     const url = new URL(location.href);
-    if (url.pathname.endsWith('/pure1-native-viewer.html')) {
+    const route = path => path.replace(/\.html$/, '');
+    if (route(url.pathname).endsWith('/pure1-native-viewer')) {
       const key = 'maths-pure-year-1:' + url.searchParams.get('chapter');
       if (chapters.has(key)) return {key, slide};
     }
     for (const [key, item] of chapters) {
       const link = new URL(item.chapter.slides, document.baseURI);
-      if (link.pathname === url.pathname && ['book','chapter'].every(k => link.searchParams.get(k) === url.searchParams.get(k))) {
+      if (route(link.pathname) === route(url.pathname) && ['book','chapter'].every(k => link.searchParams.get(k) === url.searchParams.get(k))) {
         return {key,slide};
       }
     }
