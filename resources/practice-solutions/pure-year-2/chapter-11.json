@@ -1314,7 +1314,7 @@
     {
       "id": "practice/maths-a-level/maths-pure-year-2/ch11/11.9/q3",
       "status": "worked",
-      "method": "Use strip width π/8. Integrate twice by parts for the exact area and retain the unrounded trapezium estimate for the error.",
+      "method": "Use strip width π/8. Integrate twice by parts for the exact area, then distinguish the rounded approximation from the unrounded table estimate.",
       "steps": [
         {
           "latex": "y(3\\pi/8)=(3\\pi/8)^2\\cos(3\\pi/8)\\approx0.531",
@@ -1329,11 +1329,11 @@
           "explanation": "Evaluate the antiderivative at the upper limit and subtract its value at the lower limit."
         },
         {
-          "latex": "\\text{error}=\\frac{|1.109\\pi/8-(\\pi^2/4-2)|}{\\pi^2/4-2}\\times100\\%\\approx6.82\\%\\approx6.8\\%",
-          "explanation": ""
+          "latex": "\\text{using }0.436:\\quad\\frac{|0.436-(\\pi^2/4-2)|}{\\pi^2/4-2}\\times100\\%\\approx6.72\\%\\approx6.7\\%;\\quad\\text{using unrounded }T:\\quad\\frac{|1.109\\pi/8-(\\pi^2/4-2)|}{\\pi^2/4-2}\\times100\\%\\approx6.82\\%\\approx6.8\\%",
+          "explanation": "Part (b) requests 0.436 to three significant figures. Using that reported approximation gives 6.7% to one decimal place; retaining the unrounded table estimate instead gives 6.8%."
         }
       ],
-      "solutionHtml": "<p>Use strip width π/8. Integrate twice by parts for the exact area and retain the unrounded trapezium estimate for the error.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;y(3\\pi/8)=(3\\pi/8)^2\\cos(3\\pi/8)\\approx0.531\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;T\\\\&amp;=\\frac{\\pi}{16}[0+2(0.142+0.436+0.531)+0]\\\\&amp;=\\frac{1.109\\pi}8\\approx0.435503\\approx0.436\\quad(3\\text{ s.f.})\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Evaluate the antiderivative at the upper limit and subtract its value at the lower limit.</p><span data-math=\"\\begin{aligned}&amp;\\int x^2\\cos x\\,dx=x^2\\sin x-2\\int x\\sin x\\,dx\\\\&amp;\\int x\\sin x\\,dx=-x\\cos x+\\sin x\\\\&amp;\\int_{0}^{\\frac{\\pi}{2}}\\left(x^{2} \\cos{\\left(x \\right)}\\right)\\,dx\\\\&amp;=\\left[x^{2} \\sin{\\left(x \\right)} + 2 x \\cos{\\left(x \\right)} - 2 \\sin{\\left(x \\right)}\\right]_{0}^{\\frac{\\pi}{2}}\\\\&amp;=-2 + \\frac{\\pi^{2}}{4}-(0)=-2 + \\frac{\\pi^{2}}{4}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\text{error}\\\\&amp;=\\frac{|1.109\\pi/8-(\\pi^2/4-2)|}{\\pi^2/4-2}\\times100\\%\\approx6.82\\%\\approx6.8\\%\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "solutionHtml": "<p>Use strip width π/8. Integrate twice by parts for the exact area, then distinguish the rounded approximation from the unrounded table estimate.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;y(3\\pi/8)=(3\\pi/8)^2\\cos(3\\pi/8)\\approx0.531\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;T\\\\&amp;=\\frac{\\pi}{16}[0+2(0.142+0.436+0.531)+0]\\\\&amp;=\\frac{1.109\\pi}8\\approx0.435503\\approx0.436\\quad(3\\text{ s.f.})\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Evaluate the antiderivative at the upper limit and subtract its value at the lower limit.</p><span data-math=\"\\begin{aligned}&amp;\\int x^2\\cos x\\,dx=x^2\\sin x-2\\int x\\sin x\\,dx\\\\&amp;\\int x\\sin x\\,dx=-x\\cos x+\\sin x\\\\&amp;\\int_{0}^{\\frac{\\pi}{2}}\\left(x^{2} \\cos{\\left(x \\right)}\\right)\\,dx\\\\&amp;=\\left[x^{2} \\sin{\\left(x \\right)} + 2 x \\cos{\\left(x \\right)} - 2 \\sin{\\left(x \\right)}\\right]_{0}^{\\frac{\\pi}{2}}\\\\&amp;=-2 + \\frac{\\pi^{2}}{4}-(0)=-2 + \\frac{\\pi^{2}}{4}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Part (b) requests 0.436 to three significant figures. Using that reported approximation gives 6.7% to one decimal place; retaining the unrounded table estimate instead gives 6.8%.</p><span data-math=\"\\begin{aligned}&amp;\\text{using }0.436:\\\\&amp;\\frac{|0.436-(\\pi^2/4-2)|}{\\pi^2/4-2}\\times100\\%\\approx6.72\\%\\approx6.7\\%\\\\&amp;\\text{using unrounded }T:\\\\&amp;\\frac{|1.109\\pi/8-(\\pi^2/4-2)|}{\\pi^2/4-2}\\times100\\%\\approx6.82\\%\\approx6.8\\%\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
       "answerCheck": "matches"
     },
     {
