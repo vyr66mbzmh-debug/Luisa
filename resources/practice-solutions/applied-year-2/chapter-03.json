@@ -1,0 +1,1257 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 3,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.1/q1",
+      "status": "worked",
+      "method": "A normal model is continuous, symmetric and unimodal; check these features against the context.",
+      "steps": [
+        {
+          "explanation": "<p>Not suitable: family size is a small non-negative integer count, not a continuous approximately symmetric measurement.</p>"
+        },
+        {
+          "explanation": "<p>Usually unsuitable: journey times have a lower bound with occasional long delays, producing right skew.</p>"
+        },
+        {
+          "explanation": "<p>Possibly as an approximation in a tightly controlled experiment with one person, if the measured times are roughly symmetric. Similar times alone do not establish normality; reaction times can be right-skewed.</p>"
+        },
+        {
+          "explanation": "<p>Plausible for comparable earthworms of one breed if lengths cluster symmetrically about a mean. Check the sample for skew or distinct age groups.</p>"
+        }
+      ],
+      "solutionHtml": "<p>A normal model is continuous, symmetric and unimodal; check these features against the context.</p><ol class=\"parts\" type=\"a\"><li><p>Not suitable: family size is a small non-negative integer count, not a continuous approximately symmetric measurement.</p></li><li><p>Usually unsuitable: journey times have a lower bound with occasional long delays, producing right skew.</p></li><li><p>Possibly as an approximation in a tightly controlled experiment with one person, if the measured times are roughly symmetric. Similar times alone do not establish normality; reaction times can be right-skewed.</p></li><li><p>Plausible for comparable earthworms of one breed if lengths cluster symmetrically about a mean. Check the sample for skew or distinct age groups.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.1/q2",
+      "status": "worked",
+      "method": "Draw a symmetric bell curve centred at the mean, with the horizontal scale in steps of one standard deviation.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/47194d7886c5fbda4237.png\" alt=\"ans31-q2: labelled normal distribution\"></figure><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=100,\\quad\\sigma=15;\\qquad\\mu\\pm\\sigma=85,115\"></span><p>The total area is 1; the tails approach the axis without touching it.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Draw a symmetric bell curve centred at the mean, with the horizontal scale in steps of one standard deviation.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/47194d7886c5fbda4237.png\" alt=\"ans31-q2: labelled normal distribution\"></figure><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=100,\\quad\\sigma=15;\\qquad\\mu\\pm\\sigma=85,115\"></span><p>The total area is 1; the tails approach the axis without touching it.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.1/q3",
+      "status": "worked",
+      "method": "Compare the shape with a normal density.",
+      "steps": [
+        {
+          "explanation": "<p>The displayed distribution has two peaks with a dip between them. A single normal distribution has one central peak and cannot represent this bimodality adequately.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Compare the shape with a normal density.</p><p>The displayed distribution has two peaks with a dip between them. A single normal distribution has one central peak and cannot represent this bimodality adequately.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.1/q4",
+      "status": "worked",
+      "method": "Standardise the symmetric intervals.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{6.1-(7)}{0.9}\\approx-1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{7.9-(7)}{0.9}\\approx1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(6.1&lt;X&lt;7.9)=\\Phi(z_2)-\\Phi(z_1)\\approx0.682689\"></span><p>About 68.3% of presses.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{5.2-(7)}{0.9}\\approx-2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{8.8-(7)}{0.9}\\approx2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(5.2&lt;X&lt;8.8)=\\Phi(z_2)-\\Phi(z_1)\\approx0.9545\"></span><p>About 95.4% of presses.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Standardise the symmetric intervals.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{6.1-(7)}{0.9}\\approx-1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{7.9-(7)}{0.9}\\approx1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(6.1&lt;X&lt;7.9)=\\Phi(z_2)-\\Phi(z_1)\\approx0.682689\"></span><p>About 68.3% of presses.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{5.2-(7)}{0.9}\\approx-2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{8.8-(7)}{0.9}\\approx2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(5.2&lt;X&lt;8.8)=\\Phi(z_2)-\\Phi(z_1)\\approx0.9545\"></span><p>About 95.4% of presses.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.1/q5",
+      "status": "worked",
+      "method": "Central95% leaves2.5% in each tail.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P\\left(Z&lt;\\frac{7.4-5}{\\sigma}\\right)=0.975\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{2.4}{\\Phi^{-1}(0.975)}\\approx1.22451\"></span><p>The supplied 1.2 uses the rough “95% within two standard deviations” rule. The exact normal quantile gives 1.22451 kg.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Central 95% leaves 2.5% in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P\\left(Z&lt;\\frac{7.4-5}{\\sigma}\\right)=0.975\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{2.4}{\\Phi^{-1}(0.975)}\\approx1.22451\"></span><p>The supplied 1.2 uses the rough “95% within two standard deviations” rule. The exact normal quantile gives 1.22451 kg.</p>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.1/q6",
+      "status": "worked",
+      "method": "An upper tail of16% gives a cumulative probability of84%.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{34.7-\\mu}{2.2}=\\Phi^{-1}(0.84)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=34.7-2.2\\Phi^{-1}(0.84)\\approx32.5122\\text{ kg}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>An upper tail of 16% gives a cumulative probability of 84%.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{34.7-\\mu}{2.2}=\\Phi^{-1}(0.84)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=34.7-2.2\\Phi^{-1}(0.84)\\approx32.5122\\text{ kg}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.1/q7",
+      "status": "worked",
+      "method": "Convert both upper-tail statements to cumulative probabilities and solve the two standardised equations.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"40.5=\\mu+\\sigma\\Phi^{-1}(0.16),\\quad 45=\\mu+\\sigma\\Phi^{-1}(0.975)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{4.5}{\\Phi^{-1}(0.975)-\\Phi^{-1}(0.16)}\\approx1.52314\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=40.5-1.52314\\Phi^{-1}(0.16)\\approx42.0147\"></span><p>The approximate one- and two-standard-deviation rules give the supplied 42 g and 1.5 g; the quantile calculation above retains the stated probabilities.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Convert both upper-tail statements to cumulative probabilities and solve the two standardised equations.</p><span class=\"equation\" data-display=\"true\" data-math=\"40.5=\\mu+\\sigma\\Phi^{-1}(0.16),\\quad 45=\\mu+\\sigma\\Phi^{-1}(0.975)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{4.5}{\\Phi^{-1}(0.975)-\\Phi^{-1}(0.16)}\\approx1.52314\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=40.5-1.52314\\Phi^{-1}(0.16)\\approx42.0147\"></span><p>The approximate one- and two-standard-deviation rules give the supplied 42 g and 1.5 g; the quantile calculation above retains the stated probabilities.</p>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.1/q8",
+      "status": "worked",
+      "method": "Use symmetry and standardisation.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(T&lt;2.5)=\\Phi\\left(\\frac{2.5-(2.5)}{0.15}\\right)\\approx0.5\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{2.35-(2.5)}{0.15}\\approx-1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{2.5-(2.5)}{0.15}\\approx0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(2.35&lt;T&lt;2.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.341345\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(2.8&lt;T)=1-\\Phi\\left(\\frac{2.8-(2.5)}{0.15}\\right)\\approx0.0227501\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use symmetry and standardisation.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(T&lt;2.5)=\\Phi\\left(\\frac{2.5-(2.5)}{0.15}\\right)\\approx0.5\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{2.35-(2.5)}{0.15}\\approx-1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{2.5-(2.5)}{0.15}\\approx0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(2.35&lt;T&lt;2.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.341345\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(2.8&lt;T)=1-\\Phi\\left(\\frac{2.8-(2.5)}{0.15}\\right)\\approx0.0227501\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.1/q9",
+      "status": "worked",
+      "method": "Count days satisfying each strict inequality, out of31days.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }16/31\\approx0.516129;\\quad\\text{(ii) }20/31\\approx0.645161\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }30/31\\approx0.967742\"></span><p>There are 20 days strictly between 9°C and 14.2°C, not 19 as in the supplied key. The observed 16.8°C is excluded by T&lt;16.8; the supplied probability 1 includes that endpoint.</p>"
+        },
+        {
+          "explanation": "<p>The corresponding normal probabilities are approximately 0.5,0.683 and 0.952. The observed proportions are reasonably close for 31 days, so this is a plausible rough model; three proportions alone do not establish a normal distribution.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Count days satisfying each strict inequality, out of 31 days.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }16/31\\approx0.516129;\\quad\\text{(ii) }20/31\\approx0.645161\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }30/31\\approx0.967742\"></span><p>There are 20 days strictly between 9°C and 14.2°C, not 19 as in the supplied key. The observed 16.8°C is excluded by T&lt;16.8; the supplied probability 1 includes that endpoint.</p></li><li><p>The corresponding normal probabilities are approximately 0.5,0.683 and 0.952. The observed proportions are reasonably close for 31 days, so this is a plausible rough model; three proportions alone do not establish a normal distribution.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q1",
+      "status": "worked",
+      "method": "Use Z=(X−μ)/σ and the standard normal cumulative distribution. The second parameter of N is the variance.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;43)=\\Phi\\left(\\frac{43-(40)}{4}\\right)\\approx0.773373\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(36&lt;X)=1-\\Phi\\left(\\frac{36-(40)}{4}\\right)\\approx0.841345\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(38.6&lt;X)=1-\\Phi\\left(\\frac{38.6-(40)}{4}\\right)\\approx0.636831\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use Z=(X−μ)/σ and the standard normal cumulative distribution. The second parameter of N is the variance.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;43)=\\Phi\\left(\\frac{43-(40)}{4}\\right)\\approx0.773373\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(36&lt;X)=1-\\Phi\\left(\\frac{36-(40)}{4}\\right)\\approx0.841345\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(38.6&lt;X)=1-\\Phi\\left(\\frac{38.6-(40)}{4}\\right)\\approx0.636831\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q2",
+      "status": "worked",
+      "method": "Use Z=(X−μ)/σ and the standard normal cumulative distribution. The second parameter of N is the variance.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(58&lt;X)=1-\\Phi\\left(\\frac{58-(50)}{5}\\right)\\approx0.0547993\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;45)=\\Phi\\left(\\frac{45-(50)}{5}\\right)\\approx0.158655\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{45-(50)}{5}\\approx-1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{57-(50)}{5}\\approx1.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(45&lt;X&lt;57)=\\Phi(z_2)-\\Phi(z_1)\\approx0.760588\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use Z=(X−μ)/σ and the standard normal cumulative distribution. The second parameter of N is the variance.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(58&lt;X)=1-\\Phi\\left(\\frac{58-(50)}{5}\\right)\\approx0.0547993\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;45)=\\Phi\\left(\\frac{45-(50)}{5}\\right)\\approx0.158655\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{45-(50)}{5}\\approx-1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{57-(50)}{5}\\approx1.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(45&lt;X&lt;57)=\\Phi(z_2)-\\Phi(z_1)\\approx0.760588\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q3",
+      "status": "worked",
+      "method": "Use Z=(X−μ)/σ and the standard normal cumulative distribution. The second parameter of N is the variance.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;30)=\\Phi\\left(\\frac{30-(36)}{6}\\right)\\approx0.158655\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{30-(36)}{6}\\approx-1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{40-(36)}{6}\\approx0.666667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(30&lt;Y&lt;40)=\\Phi(z_2)-\\Phi(z_1)\\approx0.588852\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(31.7&lt;Y)=1-\\Phi\\left(\\frac{31.7-(36)}{6}\\right)\\approx0.76321\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use Z=(X−μ)/σ and the standard normal cumulative distribution. The second parameter of N is the variance.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;30)=\\Phi\\left(\\frac{30-(36)}{6}\\right)\\approx0.158655\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{30-(36)}{6}\\approx-1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{40-(36)}{6}\\approx0.666667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(30&lt;Y&lt;40)=\\Phi(z_2)-\\Phi(z_1)\\approx0.588852\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(31.7&lt;Y)=1-\\Phi\\left(\\frac{31.7-(36)}{6}\\right)\\approx0.76321\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q4",
+      "status": "worked",
+      "method": "Use Z=(X−μ)/σ and the standard normal cumulative distribution. The second parameter of N is the variance.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(20&lt;X)=1-\\Phi\\left(\\frac{20-(22)}{2.82843}\\right)\\approx0.76025\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;18)=\\Phi\\left(\\frac{18-(22)}{2.82843}\\right)\\approx0.0786496\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{20.5-(22)}{2.82843}\\approx-0.53033\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{21.8-(22)}{2.82843}\\approx-0.0707107\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(20.5&lt;X&lt;21.8)=\\Phi(z_2)-\\Phi(z_1)\\approx0.173872\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use Z=(X−μ)/σ and the standard normal cumulative distribution. The second parameter of N is the variance.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(20&lt;X)=1-\\Phi\\left(\\frac{20-(22)}{2.82843}\\right)\\approx0.76025\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;18)=\\Phi\\left(\\frac{18-(22)}{2.82843}\\right)\\approx0.0786496\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{20.5-(22)}{2.82843}\\approx-0.53033\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{21.8-(22)}{2.82843}\\approx-0.0707107\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(20.5&lt;X&lt;21.8)=\\Phi(z_2)-\\Phi(z_1)\\approx0.173872\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q5",
+      "status": "worked",
+      "method": "The two events partition all possible values.",
+      "steps": [
+        {
+          "explanation": "<p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(11&lt;M)=1-\\Phi\\left(\\frac{11-(10)}{1.2}\\right)\\approx0.202328\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(M&lt;11)=\\Phi\\left(\\frac{11-(10)}{1.2}\\right)\\approx0.797672\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(M&gt;11)+P(M\\le11)=1\"></span><p>The distribution is continuous, so a single exact value has probability zero.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The two events partition all possible values.</p><ol class=\"parts\" type=\"a\"><li><p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(11&lt;M)=1-\\Phi\\left(\\frac{11-(10)}{1.2}\\right)\\approx0.202328\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(M&lt;11)=\\Phi\\left(\\frac{11-(10)}{1.2}\\right)\\approx0.797672\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(M&gt;11)+P(M\\le11)=1\"></span><p>The distribution is continuous, so a single exact value has probability zero.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q6",
+      "status": "worked",
+      "method": "The standard deviation is the square root of the variance0.5.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(T&lt;4.8)=\\Phi\\left(\\frac{4.8-(5.2)}{0.707107}\\right)\\approx0.285804\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(T&gt;4.8)=1-P(T&lt;4.8)\\approx0.714196\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The standard deviation is the square root of the variance 0.5.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(T&lt;4.8)=\\Phi\\left(\\frac{4.8-(5.2)}{0.707107}\\right)\\approx0.285804\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(T&gt;4.8)=1-P(T&lt;4.8)\\approx0.714196\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q7",
+      "status": "worked",
+      "method": "The regions are disjoint, so add their probabilities.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;58)=\\Phi\\left(\\frac{58-(62)}{5}\\right)\\approx0.211855\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(65&lt;Y)=1-\\Phi\\left(\\frac{65-(62)}{5}\\right)\\approx0.274253\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P=\\Phi(-0.8)+1-\\Phi(0.6)\\approx0.486109\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;60)=\\Phi\\left(\\frac{60-(62)}{5}\\right)\\approx0.344578\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{65-(62)}{5}\\approx0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{70-(62)}{5}\\approx1.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(65&lt;Y&lt;70)=\\Phi(z_2)-\\Phi(z_1)\\approx0.219454\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P=\\Phi(-0.4)+\\Phi(1.6)-\\Phi(0.6)\\approx0.564032\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The regions are disjoint, so add their probabilities.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;58)=\\Phi\\left(\\frac{58-(62)}{5}\\right)\\approx0.211855\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(65&lt;Y)=1-\\Phi\\left(\\frac{65-(62)}{5}\\right)\\approx0.274253\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P=\\Phi(-0.8)+1-\\Phi(0.6)\\approx0.486109\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;60)=\\Phi\\left(\\frac{60-(62)}{5}\\right)\\approx0.344578\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{65-(62)}{5}\\approx0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{70-(62)}{5}\\approx1.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(65&lt;Y&lt;70)=\\Phi(z_2)-\\Phi(z_1)\\approx0.219454\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P=\\Phi(-0.4)+\\Phi(1.6)-\\Phi(0.6)\\approx0.564032\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q8",
+      "status": "worked",
+      "method": "The prompt uses X in part(a); interpret this as the screw length L already defined.",
+      "steps": [
+        {
+          "explanation": "<p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(104&lt;L)=1-\\Phi\\left(\\frac{104-(100)}{2.5}\\right)\\approx0.0547993\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(L&lt;99)=\\Phi\\left(\\frac{99-(100)}{2.5}\\right)\\approx0.344578\"></span>"
+        },
+        {
+          "explanation": "<p>Assume independent screw lengths.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{all five}&gt;99)=[1-\\Phi(-0.4)]^5\\approx0.12095\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The prompt uses X in part(a); interpret this as the screw length L already defined.</p><ol class=\"parts\" type=\"a\"><li><p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(104&lt;L)=1-\\Phi\\left(\\frac{104-(100)}{2.5}\\right)\\approx0.0547993\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(L&lt;99)=\\Phi\\left(\\frac{99-(100)}{2.5}\\right)\\approx0.344578\"></span></li><li><p>Assume independent screw lengths.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{all five}&gt;99)=[1-\\Phi(-0.4)]^5\\approx0.12095\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q9",
+      "status": "worked",
+      "method": "Standardise individual scores, then count low scores with a binomial model.",
+      "steps": [
+        {
+          "explanation": "<p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(90&lt;X)=1-\\Phi\\left(\\frac{90-(80)}{12}\\right)\\approx0.202328\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;65)=\\Phi\\left(\\frac{65-(80)}{12}\\right)\\approx0.10565\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;60)=\\Phi\\left(\\frac{60-(80)}{12}\\right)\\approx0.0477904\"></span><p>Assume independent scores with the same low-score probability. The class retakes if at least 3 of 25 score below 60.</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(25,p),\\quad p\\approx0.0477904\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(3\\le B\\le 25)=\\sum_{k=3}^{25}\\binom{25}{k}p^k(1-p)^{25-k}\\approx0.115009\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Standardise individual scores, then count low scores with a binomial model.</p><ol class=\"parts\" type=\"a\"><li><p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(90&lt;X)=1-\\Phi\\left(\\frac{90-(80)}{12}\\right)\\approx0.202328\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;65)=\\Phi\\left(\\frac{65-(80)}{12}\\right)\\approx0.10565\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;60)=\\Phi\\left(\\frac{60-(80)}{12}\\right)\\approx0.0477904\"></span><p>Assume independent scores with the same low-score probability. The class retakes if at least 3 of 25 score below 60.</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(25,p),\\quad p\\approx0.0477904\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(3\\le B\\le 25)=\\sum_{k=3}^{25}\\binom{25}{k}p^k(1-p)^{25-k}\\approx0.115009\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q10",
+      "status": "worked",
+      "method": "Find the single-jar pass probability, then model the independent sample.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(460&lt;J)=1-\\Phi\\left(\\frac{460-(454)}{5.6}\\right)\\approx0.141988\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{452-(454)}{5.6}\\approx-0.357143\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{458-(454)}{5.6}\\approx0.714286\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(452&lt;J&lt;458)=\\Phi(z_2)-\\Phi(z_1)\\approx0.401982\"></span>"
+        },
+        {
+          "explanation": "<p>Assume independent jars and constant pass probability.</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(18,p),\\quad p\\approx0.401982\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(15\\le B\\le 18)=\\sum_{k=15}^{18}\\binom{18}{k}p^k(1-p)^{18-k}\\approx0.000229329\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Find the single-jar pass probability, then model the independent sample.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(460&lt;J)=1-\\Phi\\left(\\frac{460-(454)}{5.6}\\right)\\approx0.141988\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{452-(454)}{5.6}\\approx-0.357143\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{458-(454)}{5.6}\\approx0.714286\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(452&lt;J&lt;458)=\\Phi(z_2)-\\Phi(z_1)\\approx0.401982\"></span></li><li><p>Assume independent jars and constant pass probability.</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(18,p),\\quad p\\approx0.401982\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(15\\le B\\le 18)=\\sum_{k=15}^{18}\\binom{18}{k}p^k(1-p)^{18-k}\\approx0.000229329\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.2/q11",
+      "status": "worked",
+      "method": "Under the stated independence assumption, multiply the two upper-tail probabilities.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(170&lt;H)=1-\\Phi\\left(\\frac{170-(165)}{4.8}\\right)\\approx0.148783\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(68&lt;W)=1-\\Phi\\left(\\frac{68-(65)}{6.7}\\right)\\approx0.327163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P=[1-\\Phi(5/4.8)][1-\\Phi(3/6.7)]\\approx0.0486763\"></span>"
+        },
+        {
+          "explanation": "<p>Height and weight are generally positively associated, so independence is doubtful. A joint model or data would be needed to assess the combined probability reliably.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Under the stated independence assumption, multiply the two upper-tail probabilities.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(170&lt;H)=1-\\Phi\\left(\\frac{170-(165)}{4.8}\\right)\\approx0.148783\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(68&lt;W)=1-\\Phi\\left(\\frac{68-(65)}{6.7}\\right)\\approx0.327163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P=[1-\\Phi(5/4.8)][1-\\Phi(3/6.7)]\\approx0.0486763\"></span></li><li><p>Height and weight are generally positively associated, so independence is doubtful. A joint model or data would be needed to assess the combined probability reliably.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.3/q1",
+      "status": "worked",
+      "method": "Convert each probability to a left-tail probability, then invert the normal distribution.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=40+3\\Phi^{-1}(0.25)\\approx37.98\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=40+3\\Phi^{-1}(0.75)\\approx42.02\"></span>"
+        },
+        {
+          "explanation": "<p>P(X&lt;a)=0.6.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=40+3\\Phi^{-1}(0.6)\\approx40.76\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Convert each probability to a left-tail probability, then invert the normal distribution.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"a=40+3\\Phi^{-1}(0.25)\\approx37.98\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=40+3\\Phi^{-1}(0.75)\\approx42.02\"></span></li><li><p>P(X&lt;a)=0.6.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=40+3\\Phi^{-1}(0.6)\\approx40.76\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.3/q2",
+      "status": "worked",
+      "method": "Use the cumulative probabilities at the interval endpoints.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=15+2\\Phi^{-1}(0.2)\\approx13.32\"></span>"
+        },
+        {
+          "explanation": "<p>P(X&lt;a)=0.25.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=15+2\\Phi^{-1}(0.25)\\approx13.65\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"F(a)=0.4+F(13)=0.4+\\Phi(-1)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=15+2\\Phi^{-1}(0.558655)\\approx15.30\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"F(a)=F(18)-0.43=\\Phi(1.5)-0.43\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=15+2\\Phi^{-1}(0.503193)\\approx15.02\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the cumulative probabilities at the interval endpoints.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"a=15+2\\Phi^{-1}(0.2)\\approx13.32\"></span></li><li><p>P(X&lt;a)=0.25.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=15+2\\Phi^{-1}(0.25)\\approx13.65\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"F(a)=0.4+F(13)=0.4+\\Phi(-1)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=15+2\\Phi^{-1}(0.558655)\\approx15.30\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"F(a)=F(18)-0.43=\\Phi(1.5)-0.43\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=15+2\\Phi^{-1}(0.503193)\\approx15.02\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.3/q3",
+      "status": "worked",
+      "method": "The variance is15, and the two quantiles lie on opposite sides of25.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=25+3.87298\\Phi^{-1}(0.303)\\approx23.0023\"></span><span class=\"equation\" data-display=\"true\" data-math=\"b=25+3.87298\\Phi^{-1}(0.697)\\approx26.9977\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a\\approx23.00&lt;b\\approx27.00\\Rightarrow P(b&lt;X&lt;a)=0\"></span><p>The supplied 0.394 instead answers P(a&lt;X&lt;b)=1−2(0.303). The interval in the printed question is reversed.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The variance is 15, and the two quantiles lie on opposite sides of 25.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"a=25+3.87298\\Phi^{-1}(0.303)\\approx23.0023\"></span><span class=\"equation\" data-display=\"true\" data-math=\"b=25+3.87298\\Phi^{-1}(0.697)\\approx26.9977\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a\\approx23.00&lt;b\\approx27.00\\Rightarrow P(b&lt;X&lt;a)=0\"></span><p>The supplied 0.394 instead answers P(a&lt;X&lt;b)=1−2(0.303). The interval in the printed question is reversed.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.3/q4",
+      "status": "worked",
+      "method": "The variance is25, so the standard deviation is5.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=80+5\\Phi^{-1}(0.212)\\approx76.0025\"></span><span class=\"equation\" data-display=\"true\" data-math=\"b=80+5\\Phi^{-1}(0.885)\\approx86.0018\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(a&lt;Y&lt;b)=F(b)-F(a)=0.885-0.212=0.673\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The variance is 25, so the standard deviation is 5.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"a=80+5\\Phi^{-1}(0.212)\\approx76.0025\"></span><span class=\"equation\" data-display=\"true\" data-math=\"b=80+5\\Phi^{-1}(0.885)\\approx86.0018\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(a&lt;Y&lt;b)=F(b)-F(a)=0.885-0.212=0.673\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.3/q5",
+      "status": "worked",
+      "method": "One convenient choice is a central interval containing60%.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=100+6\\Phi^{-1}(0.2)\\approx94.9503\"></span><span class=\"equation\" data-display=\"true\" data-math=\"b=100+6\\Phi^{-1}(0.8)\\approx105.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(a&lt;X&lt;b)=0.8-0.2=0.6\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"F(b)=F(a)+0.6\"></span><p>Any finite a with 0&lt;F(a)&lt;0.4 determines a finite b with this property. There are infinitely many such intervals, but not every choice of a is possible.</p>"
+        }
+      ],
+      "solutionHtml": "<p>One convenient choice is a central interval containing 60%.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"a=100+6\\Phi^{-1}(0.2)\\approx94.9503\"></span><span class=\"equation\" data-display=\"true\" data-math=\"b=100+6\\Phi^{-1}(0.8)\\approx105.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(a&lt;X&lt;b)=0.8-0.2=0.6\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"F(b)=F(a)+0.6\"></span><p>Any finite a with 0&lt;F(a)&lt;0.4 determines a finite b with this property. There are infinitely many such intervals, but not every choice of a is possible.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.3/q6",
+      "status": "worked",
+      "method": "Use the required cumulative percentile.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Q_3=25+7\\Phi^{-1}(0.75)\\approx29.7214\"></span><p>km</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"d=25+7\\Phi^{-1}(0.3)\\approx21.3292\"></span><p>km</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Q_2=\\mu=25\\text{ km}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the required cumulative percentile.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"Q_3=25+7\\Phi^{-1}(0.75)\\approx29.7214\"></span><p>km</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"d=25+7\\Phi^{-1}(0.3)\\approx21.3292\"></span><p>km</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Q_2=\\mu=25\\text{ km}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.3/q7",
+      "status": "worked",
+      "method": "Use the60th percentile for the upper-tail probability0.4.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=60+3\\Phi^{-1}(0.6)\\approx60.76\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=3[\\Phi^{-1}(0.75)-\\Phi^{-1}(0.25)]\\approx4.04694\"></span><p>kg</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the 60th percentile for the upper-tail probability 0.4.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"a=60+3\\Phi^{-1}(0.6)\\approx60.76\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=3[\\Phi^{-1}(0.75)-\\Phi^{-1}(0.25)]\\approx4.04694\"></span><p>kg</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.3/q8",
+      "status": "worked",
+      "method": "Interpret Y in part(a) as the defined popcorn weight W.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"b=175+10\\Phi^{-1}(0.85)\\approx185.364\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P_{80}-P_{20}=10[\\Phi^{-1}(0.8)-\\Phi^{-1}(0.2)]\\approx16.8324\"></span><p>g</p>"
+        }
+      ],
+      "solutionHtml": "<p>Interpret Y in part(a) as the defined popcorn weight W.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"b=175+10\\Phi^{-1}(0.85)\\approx185.364\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P_{80}-P_{20}=10[\\Phi^{-1}(0.8)-\\Phi^{-1}(0.2)]\\approx16.8324\"></span><p>g</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.3/q9",
+      "status": "worked",
+      "method": "The required height is the86.21st percentile.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"k=6.4\\Phi^{-1}(1-0.1379)\\approx6.97474\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k=7\\text{ mm to the nearest integer}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The required height is the 86.21st percentile.</p><span class=\"equation\" data-display=\"true\" data-math=\"k=6.4\\Phi^{-1}(1-0.1379)\\approx6.97474\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k=7\\text{ mm to the nearest integer}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.4/q1",
+      "status": "worked",
+      "method": "Use the standard normal cumulative distribution and subtract interval endpoints.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Z&lt;1.88)=\\Phi\\left(\\frac{1.88-(0)}{1}\\right)\\approx0.969946\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(1.25&lt;Z)=1-\\Phi\\left(\\frac{1.25-(0)}{1}\\right)\\approx0.10565\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Z&lt;-0.77)=\\Phi\\left(\\frac{-0.77-(0)}{1}\\right)\\approx0.22065\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{-1.64-(0)}{1}\\approx-1.64\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{0-(0)}{1}\\approx0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(-1.64&lt;Z&lt;0)=\\Phi(z_2)-\\Phi(z_1)\\approx0.449497\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{-2.55-(0)}{1}\\approx-2.55\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{-0.78-(0)}{1}\\approx-0.78\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(-2.55&lt;Z&lt;-0.78)=\\Phi(z_2)-\\Phi(z_1)\\approx0.212309\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{-1.15-(0)}{1}\\approx-1.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{1.15-(0)}{1}\\approx1.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(-1.15&lt;Z&lt;1.15)=\\Phi(z_2)-\\Phi(z_1)\\approx0.749856\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the standard normal cumulative distribution and subtract interval endpoints.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Z&lt;1.88)=\\Phi\\left(\\frac{1.88-(0)}{1}\\right)\\approx0.969946\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(1.25&lt;Z)=1-\\Phi\\left(\\frac{1.25-(0)}{1}\\right)\\approx0.10565\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Z&lt;-0.77)=\\Phi\\left(\\frac{-0.77-(0)}{1}\\right)\\approx0.22065\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{-1.64-(0)}{1}\\approx-1.64\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{0-(0)}{1}\\approx0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(-1.64&lt;Z&lt;0)=\\Phi(z_2)-\\Phi(z_1)\\approx0.449497\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{-2.55-(0)}{1}\\approx-2.55\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{-0.78-(0)}{1}\\approx-0.78\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(-2.55&lt;Z&lt;-0.78)=\\Phi(z_2)-\\Phi(z_1)\\approx0.212309\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{-1.15-(0)}{1}\\approx-1.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{1.15-(0)}{1}\\approx1.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(-1.15&lt;Z&lt;1.15)=\\Phi(z_2)-\\Phi(z_1)\\approx0.749856\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.4/q2",
+      "status": "worked",
+      "method": "Convert each event to P(Z<a); symmetry gives the last cumulative probability0.8.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.9177)\\approx1.38977\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.9649)\\approx1.81062\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.1685)\\approx-0.96011\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.67)\\approx0.439913\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.997)\\approx2.74778\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.8)\\approx0.841621\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Convert each event to P(Z&lt;a); symmetry gives the last cumulative probability 0.8.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.9177)\\approx1.38977\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.9649)\\approx1.81062\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.1685)\\approx-0.96011\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.67)\\approx0.439913\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.997)\\approx2.74778\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=0+1\\Phi^{-1}(0.8)\\approx0.841621\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.4/q3",
+      "status": "worked",
+      "method": "Subtract the mean and divide by the standard deviation.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z=\\frac{1.2-1.4}{0.25}=-0.8\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z=\\frac{0.625-1.4}{0.25}=-3.1\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z=\\frac{0.64-1.4}{0.25}=-3.04\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z=\\frac{1.981-1.4}{0.25}=2.324\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Subtract the mean and divide by the standard deviation.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"z=\\frac{1.2-1.4}{0.25}=-0.8\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z=\\frac{0.625-1.4}{0.25}=-3.1\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z=\\frac{0.64-1.4}{0.25}=-3.04\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z=\\frac{1.981-1.4}{0.25}=2.324\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.4/q4",
+      "status": "worked",
+      "method": "Express the standardised limits in terms of Φ.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;136)=\\Phi((136-124)/10)=\\Phi(1.2)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;140)=1-\\Phi((140-124)/10)=1-\\Phi(1.6)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(120&lt;X&lt;132)=\\Phi(0.8)-\\Phi(-0.4)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\Phi(0.8)+\\Phi(0.4)-1\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Express the standardised limits in terms of Φ.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;136)=\\Phi((136-124)/10)=\\Phi(1.2)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;140)=1-\\Phi((140-124)/10)=1-\\Phi(1.6)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(120&lt;X&lt;132)=\\Phi(0.8)-\\Phi(-0.4)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\Phi(0.8)+\\Phi(0.4)-1\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.4/q5",
+      "status": "worked",
+      "method": "Top5% means a cumulative probability of95%.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z=0+1\\Phi^{-1}(0.95)\\approx1.64485\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=65+7.2\\Phi^{-1}(0.95)\\approx76.8429\"></span><p>The model threshold is approximately 76.84 points; if scores are integers,77 is the first qualifying score.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Top 5% means a cumulative probability of 95%.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"z=0+1\\Phi^{-1}(0.95)\\approx1.64485\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x=65+7.2\\Phi^{-1}(0.95)\\approx76.8429\"></span><p>The model threshold is approximately 76.84 points; if scores are integers,77 is the first qualifying score.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.4/q6",
+      "status": "worked",
+      "method": "The two parts ask for different percentiles.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z=0+1\\Phi^{-1}(0.25)\\approx-0.67449\"></span>"
+        },
+        {
+          "explanation": "<p>The bottom 12.5% requires Φ⁻¹(0.125), not the 25th percentile from part(a).</p><span class=\"equation\" data-display=\"true\" data-math=\"x=177+33\\Phi^{-1}(0.125)\\approx139.038\"></span><p>The maximum price is approximately£139.04. The supplied£155 corresponds to the bottom 25%, which is inconsistent with part(b).</p>"
+        }
+      ],
+      "solutionHtml": "<p>The two parts ask for different percentiles.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"z=0+1\\Phi^{-1}(0.25)\\approx-0.67449\"></span></li><li><p>The bottom 12.5% requires Φ⁻¹(0.125), not the 25th percentile from part(a).</p><span class=\"equation\" data-display=\"true\" data-math=\"x=177+33\\Phi^{-1}(0.125)\\approx139.038\"></span><p>The maximum price is approximately£139.04. The supplied£155 corresponds to the bottom 25%, which is inconsistent with part(b).</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.4/q7",
+      "status": "worked",
+      "method": "Use the20th and80th percentiles.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_{20}=0+1\\Phi^{-1}(0.2)\\approx-0.841621\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_{80}=0+1\\Phi^{-1}(0.8)\\approx0.841621\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"D_{\\min}=20+1.5\\Phi^{-1}(0.2)\\approx18.7376\"></span><span class=\"equation\" data-display=\"true\" data-math=\"D_{\\max}=20+1.5\\Phi^{-1}(0.8)\\approx21.2624\"></span><p>Diameters are in cm.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the 20th and 80th percentiles.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"z_{20}=0+1\\Phi^{-1}(0.2)\\approx-0.841621\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_{80}=0+1\\Phi^{-1}(0.8)\\approx0.841621\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"D_{\\min}=20+1.5\\Phi^{-1}(0.2)\\approx18.7376\"></span><span class=\"equation\" data-display=\"true\" data-math=\"D_{\\max}=20+1.5\\Phi^{-1}(0.8)\\approx21.2624\"></span><p>Diameters are in cm.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q1",
+      "status": "worked",
+      "method": "Rearrange the standardised percentile equation.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{26-\\mu}{4}=\\Phi^{-1}(0.7734)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=26-4\\Phi^{-1}(0.7734)\\approx22.9996\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Rearrange the standardised percentile equation.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{26-\\mu}{4}=\\Phi^{-1}(0.7734)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=26-4\\Phi^{-1}(0.7734)\\approx22.9996\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q2",
+      "status": "worked",
+      "method": "An upper-tail probability0.1151leaves0.8849to the left.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{20-17}{\\sigma}=\\Phi^{-1}(0.8849)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=3/\\Phi^{-1}(0.8849)\\approx2.50033\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>An upper-tail probability 0.1151 leaves 0.8849 to the left.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{20-17}{\\sigma}=\\Phi^{-1}(0.8849)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=3/\\Phi^{-1}(0.8849)\\approx2.50033\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q3",
+      "status": "worked",
+      "method": "Use σ=√30, not30.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\mu=28-\\sqrt{30}\\Phi^{-1}(0.0721)\\approx35.9985\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;40)=\\Phi\\left(\\frac{40-(35.9985)}{5.47723}\\right)\\approx0.767477\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use σ=√30, not 30.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=28-\\sqrt{30}\\Phi^{-1}(0.0721)\\approx35.9985\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;40)=\\Phi\\left(\\frac{40-(35.9985)}{5.47723}\\right)\\approx0.767477\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q4",
+      "status": "worked",
+      "method": "Convert the upper-tail probability before rearranging.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{40-50}{\\sigma}=\\Phi^{-1}(0.3446)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{-10}{\\Phi^{-1}(0.3446)}\\approx25.0037\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{45-(50)}{25.0037}\\approx-0.19997\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{50-(50)}{25.0037}\\approx0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(45&lt;Y&lt;50)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0792482\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Convert the upper-tail probability before rearranging.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{40-50}{\\sigma}=\\Phi^{-1}(0.3446)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{-10}{\\Phi^{-1}(0.3446)}\\approx25.0037\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{45-(50)}{25.0037}\\approx-0.19997\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{50-(50)}{25.0037}\\approx0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(45&lt;Y&lt;50)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0792482\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q5",
+      "status": "worked",
+      "method": "Solve the two standardised percentile equations without rounding intermediate values.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"22=\\mu+\\sigma\\Phi^{-1}(0.813),\\quad 25=\\mu+\\sigma\\Phi^{-1}(0.9401)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{3}{\\Phi^{-1}(0.9401)-\\Phi^{-1}(0.813)}\\approx4.5004\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=22-4.5004\\Phi^{-1}(0.813)\\approx17.9991\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Solve the two standardised percentile equations without rounding intermediate values.</p><span class=\"equation\" data-display=\"true\" data-math=\"22=\\mu+\\sigma\\Phi^{-1}(0.813),\\quad 25=\\mu+\\sigma\\Phi^{-1}(0.9401)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{3}{\\Phi^{-1}(0.9401)-\\Phi^{-1}(0.813)}\\approx4.5004\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=22-4.5004\\Phi^{-1}(0.813)\\approx17.9991\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q6",
+      "status": "worked",
+      "method": "Convert P(Y>11) to P(Y<11)=0.9655.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"5=\\mu+\\sigma\\Phi^{-1}(0.1817),\\quad 11=\\mu+\\sigma\\Phi^{-1}(0.9655)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{6}{\\Phi^{-1}(0.9655)-\\Phi^{-1}(0.1817)}\\approx2.19996\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=5-2.19996\\Phi^{-1}(0.1817)\\approx6.99955\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{4-(6.99955)}{2.19996}\\approx-1.36346\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{8-(6.99955)}{2.19996}\\approx0.454757\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(4&lt;Y&lt;8)=\\Phi(z_2)-\\Phi(z_1)\\approx0.588989\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Convert P(Y&gt;11) to P(Y&lt;11)=0.9655.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"5=\\mu+\\sigma\\Phi^{-1}(0.1817),\\quad 11=\\mu+\\sigma\\Phi^{-1}(0.9655)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{6}{\\Phi^{-1}(0.9655)-\\Phi^{-1}(0.1817)}\\approx2.19996\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=5-2.19996\\Phi^{-1}(0.1817)\\approx6.99955\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{4-(6.99955)}{2.19996}\\approx-1.36346\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{8-(6.99955)}{2.19996}\\approx0.454757\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(4&lt;Y&lt;8)=\\Phi(z_2)-\\Phi(z_1)\\approx0.588989\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q7",
+      "status": "worked",
+      "method": "Use symmetry of the quartiles and their normal quantiles.",
+      "steps": [
+        {
+          "explanation": "<p>Length is continuous; for a comparable population it may cluster approximately symmetrically about one central value. These are reasons to investigate a normal model, not proof: verify the shape using the observed data.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"24.9=\\mu+\\sigma\\Phi^{-1}(0.25),\\quad 26.1=\\mu+\\sigma\\Phi^{-1}(0.75)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{1.2}{\\Phi^{-1}(0.75)-\\Phi^{-1}(0.25)}\\approx0.889561\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=24.9-0.889561\\Phi^{-1}(0.25)\\approx25.5\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{24-(25.5)}{0.889561}\\approx-1.68622\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{25-(25.5)}{0.889561}\\approx-0.562075\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(24&lt;X&lt;25)=\\Phi(z_2)-\\Phi(z_1)\\approx0.241156\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use symmetry of the quartiles and their normal quantiles.</p><ol class=\"parts\" type=\"a\"><li><p>Length is continuous; for a comparable population it may cluster approximately symmetrically about one central value. These are reasons to investigate a normal model, not proof: verify the shape using the observed data.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"24.9=\\mu+\\sigma\\Phi^{-1}(0.25),\\quad 26.1=\\mu+\\sigma\\Phi^{-1}(0.75)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{1.2}{\\Phi^{-1}(0.75)-\\Phi^{-1}(0.25)}\\approx0.889561\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=24.9-0.889561\\Phi^{-1}(0.25)\\approx25.5\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{24-(25.5)}{0.889561}\\approx-1.68622\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{25-(25.5)}{0.889561}\\approx-0.562075\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(24&lt;X&lt;25)=\\Phi(z_2)-\\Phi(z_1)\\approx0.241156\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q8",
+      "status": "worked",
+      "method": "Symmetry splits the remaining25% equally between the two tails.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;5)=0.875\\Rightarrow5/\\sigma=\\Phi^{-1}(0.875)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=5/\\Phi^{-1}(0.875)\\approx4.34651\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Symmetry splits the remaining 25% equally between the two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X&lt;5)=0.875\\Rightarrow5/\\sigma=\\Phi^{-1}(0.875)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=5/\\Phi^{-1}(0.875)\\approx4.34651\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q9",
+      "status": "worked",
+      "method": "The two percentiles determine a and σ simultaneously.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2a=1.45+\\sigma\\Phi^{-1}(0.7),\\quad a=1.45+\\sigma\\Phi^{-1}(0.6)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma[\\Phi^{-1}(0.7)-2\\Phi^{-1}(0.6)]=1.45\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma\\approx81.8917,\\qquad a\\approx22.197\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The two percentiles determine a and σ simultaneously.</p><span class=\"equation\" data-display=\"true\" data-math=\"2a=1.45+\\sigma\\Phi^{-1}(0.7),\\quad a=1.45+\\sigma\\Phi^{-1}(0.6)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma[\\Phi^{-1}(0.7)-2\\Phi^{-1}(0.6)]=1.45\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma\\approx81.8917,\\qquad a\\approx22.197\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q10",
+      "status": "worked",
+      "method": "Passing is the upper39%, so44is the61st percentile.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\mu=44-7.2\\Phi^{-1}(0.61)\\approx41.9889\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{48-(41.9889)}{7.2}\\approx0.834875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{53-(41.9889)}{7.2}\\approx1.52932\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(48&lt;X&lt;53)=\\Phi(z_2)-\\Phi(z_1)\\approx0.138801\"></span>"
+        },
+        {
+          "explanation": "<p>For independent drivers, multiply the three equal upper-tail probabilities.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(50&lt;X)=1-\\Phi\\left(\\frac{50-(41.9889)}{7.2}\\right)\\approx0.132929\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{all three}&gt;50)=[1-\\Phi((50-\\mu)/7.2)]^3\\approx0.00234886\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Passing is the upper 39%, so 44 is the 61st percentile.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=44-7.2\\Phi^{-1}(0.61)\\approx41.9889\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{48-(41.9889)}{7.2}\\approx0.834875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{53-(41.9889)}{7.2}\\approx1.52932\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(48&lt;X&lt;53)=\\Phi(z_2)-\\Phi(z_1)\\approx0.138801\"></span></li><li><p>For independent drivers, multiply the three equal upper-tail probabilities.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(50&lt;X)=1-\\Phi\\left(\\frac{50-(41.9889)}{7.2}\\right)\\approx0.132929\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{all three}&gt;50)=[1-\\Phi((50-\\mu)/7.2)]^3\\approx0.00234886\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q11",
+      "status": "worked",
+      "method": "Use the80th percentile to obtain σ, retaining its unrounded value.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{13-12.5}{\\Phi^{-1}(0.8)}\\approx0.594091\\text{ mm}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{12.4-(12.5)}{0.594091}\\approx-0.168324\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{12.6-(12.5)}{0.594091}\\approx0.168324\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(12.4&lt;D&lt;12.6)=\\Phi(z_2)-\\Phi(z_1)\\approx0.133672\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{12.3-(12.5)}{0.594091}\\approx-0.336648\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{12.7-(12.5)}{0.594091}\\approx0.336648\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(12.3&lt;D&lt;12.7)=\\Phi(z_2)-\\Phi(z_1)\\approx0.263618\"></span><p>Assume independent bolts with constant acceptance probability.</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(10,p),\\quad p\\approx0.263618\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(5\\le B\\le 10)=\\sum_{k=5}^{10}\\binom{10}{k}p^k(1-p)^{10-k}\\approx0.0950492\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the 80th percentile to obtain σ, retaining its unrounded value.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{13-12.5}{\\Phi^{-1}(0.8)}\\approx0.594091\\text{ mm}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{12.4-(12.5)}{0.594091}\\approx-0.168324\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{12.6-(12.5)}{0.594091}\\approx0.168324\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(12.4&lt;D&lt;12.6)=\\Phi(z_2)-\\Phi(z_1)\\approx0.133672\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{12.3-(12.5)}{0.594091}\\approx-0.336648\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{12.7-(12.5)}{0.594091}\\approx0.336648\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(12.3&lt;D&lt;12.7)=\\Phi(z_2)-\\Phi(z_1)\\approx0.263618\"></span><p>Assume independent bolts with constant acceptance probability.</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(10,p),\\quad p\\approx0.263618\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(5\\le B\\le 10)=\\sum_{k=5}^{10}\\binom{10}{k}p^k(1-p)^{10-k}\\approx0.0950492\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.5/q12",
+      "status": "worked",
+      "method": "Convert each tail area into a cumulative percentile.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/de3a72088581b75a4635.png\" alt=\"ans35-q12: labelled normal distribution\"></figure><p>Left of 455 g has area⅓; right of 500 g has area⅕.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"455=\\mu+\\sigma\\Phi^{-1}(0.333333),\\quad 500=\\mu+\\sigma\\Phi^{-1}(0.8)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{45}{\\Phi^{-1}(0.8)-\\Phi^{-1}(0.333333)}\\approx35.3677\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=455-35.3677\\Phi^{-1}(0.333333)\\approx470.234\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P_{90}-P_{10}=\\sigma[\\Phi^{-1}(0.9)-\\Phi^{-1}(0.1)]\\approx90.651\"></span><p>g</p>"
+        }
+      ],
+      "solutionHtml": "<p>Convert each tail area into a cumulative percentile.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/de3a72088581b75a4635.png\" alt=\"ans35-q12: labelled normal distribution\"></figure><p>Left of 455 g has area⅓; right of 500 g has area⅕.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"455=\\mu+\\sigma\\Phi^{-1}(0.333333),\\quad 500=\\mu+\\sigma\\Phi^{-1}(0.8)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{45}{\\Phi^{-1}(0.8)-\\Phi^{-1}(0.333333)}\\approx35.3677\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=455-35.3677\\Phi^{-1}(0.333333)\\approx470.234\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P_{90}-P_{10}=\\sigma[\\Phi^{-1}(0.9)-\\Phi^{-1}(0.1)]\\approx90.651\"></span><p>g</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.6/q1",
+      "status": "worked",
+      "method": "Assess both np and n(1−p), then use μ=np and σ²=np(1−p).",
+      "steps": [
+        {
+          "explanation": "<p>Both expected successes and failures are comfortably above 5, so a continuity-corrected normal approximation is reasonable for central probabilities. Check extreme tails separately.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=225,\\quad n(1-p)=25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=225,\\quad\\sigma=\\sqrt{22.5}\\approx4.74342\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(225,22.5)\"></span><p>The source key rejects this solely because p is not near½. Large expected counts make a normal approximation usable here; p near½ is a sufficient convenience, not a necessary condition.</p>"
+        },
+        {
+          "explanation": "<p>Only 12 trials: although np and n(1−p) are just above 5, this is a borderline rough approximation; use the exact binomial calculation where available.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=5.76,\\quad n(1-p)=6.24\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=5.76,\\quad\\sigma=\\sqrt{2.9952}\\approx1.73066\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(5.76,2.9952)\"></span>"
+        },
+        {
+          "explanation": "<p>Both expected successes and failures are comfortably above 5, so a continuity-corrected normal approximation is reasonable for central probabilities. Check extreme tails separately.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=62.4,\\quad n(1-p)=57.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=62.4,\\quad\\sigma=\\sqrt{29.952}\\approx5.47284\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(62.4,29.952)\"></span>"
+        },
+        {
+          "explanation": "<p>Both expected successes and failures are comfortably above 5, so a continuity-corrected normal approximation is reasonable for central probabilities. Check extreme tails separately.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=189,\\quad n(1-p)=231\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=189,\\quad\\sigma=\\sqrt{103.95}\\approx10.1956\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(189,103.95)\"></span>"
+        },
+        {
+          "explanation": "<p>Both expected successes and failures are comfortably above 5, so a continuity-corrected normal approximation is reasonable for central probabilities. Check extreme tails separately.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=324,\\quad n(1-p)=276\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=324,\\quad\\sigma=\\sqrt{149.04}\\approx12.2082\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(324,149.04)\"></span>"
+        },
+        {
+          "explanation": "<p>Both expected successes and failures are comfortably above 5, so a continuity-corrected normal approximation is reasonable for central probabilities. Check extreme tails separately.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=592,\\quad n(1-p)=208\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=592,\\quad\\sigma=\\sqrt{153.92}\\approx12.4064\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(592,153.92)\"></span><p>The source key rejects this solely because p is not near½. Large expected counts make a normal approximation usable here; p near½ is a sufficient convenience, not a necessary condition.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Assess both np and n(1−p), then use μ=np and σ²=np(1−p).</p><ol class=\"parts\" type=\"a\"><li><p>Both expected successes and failures are comfortably above 5, so a continuity-corrected normal approximation is reasonable for central probabilities. Check extreme tails separately.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=225,\\quad n(1-p)=25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=225,\\quad\\sigma=\\sqrt{22.5}\\approx4.74342\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(225,22.5)\"></span><p>The source key rejects this solely because p is not near½. Large expected counts make a normal approximation usable here; p near½ is a sufficient convenience, not a necessary condition.</p></li><li><p>Only 12 trials: although np and n(1−p) are just above 5, this is a borderline rough approximation; use the exact binomial calculation where available.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=5.76,\\quad n(1-p)=6.24\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=5.76,\\quad\\sigma=\\sqrt{2.9952}\\approx1.73066\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(5.76,2.9952)\"></span></li><li><p>Both expected successes and failures are comfortably above 5, so a continuity-corrected normal approximation is reasonable for central probabilities. Check extreme tails separately.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=62.4,\\quad n(1-p)=57.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=62.4,\\quad\\sigma=\\sqrt{29.952}\\approx5.47284\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(62.4,29.952)\"></span></li><li><p>Both expected successes and failures are comfortably above 5, so a continuity-corrected normal approximation is reasonable for central probabilities. Check extreme tails separately.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=189,\\quad n(1-p)=231\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=189,\\quad\\sigma=\\sqrt{103.95}\\approx10.1956\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(189,103.95)\"></span></li><li><p>Both expected successes and failures are comfortably above 5, so a continuity-corrected normal approximation is reasonable for central probabilities. Check extreme tails separately.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=324,\\quad n(1-p)=276\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=324,\\quad\\sigma=\\sqrt{149.04}\\approx12.2082\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(324,149.04)\"></span></li><li><p>Both expected successes and failures are comfortably above 5, so a continuity-corrected normal approximation is reasonable for central probabilities. Check extreme tails separately.</p><span class=\"equation\" data-display=\"true\" data-math=\"np=592,\\quad n(1-p)=208\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=592,\\quad\\sigma=\\sqrt{153.92}\\approx12.4064\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(592,153.92)\"></span><p>The source key rejects this solely because p is not near½. Large expected counts make a normal approximation usable here; p near½ is a sufficient convenience, not a necessary condition.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.6/q2",
+      "status": "worked",
+      "method": "The expected successes and failures are141and159; a normal approximation is suitable.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(141,74.73),\\quad\\sigma=\\sqrt{74.73}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;140.5)=\\Phi\\left(\\frac{140.5-(141)}{8.64465}\\right)\\approx0.476938\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(141,74.73),\\quad\\sigma=\\sqrt{74.73}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{119.5-(141)}{8.64465}\\approx-2.48709\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{160.5-(141)}{8.64465}\\approx2.25573\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(119.5&lt;Y&lt;160.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.981517\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(141,74.73),\\quad\\sigma=\\sqrt{74.73}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{149.5-(141)}{8.64465}\\approx0.983267\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{150.5-(141)}{8.64465}\\approx1.09895\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(149.5&lt;Y&lt;150.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0268421\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The expected successes and failures are 141 and 159; a normal approximation is suitable.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(141,74.73),\\quad\\sigma=\\sqrt{74.73}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;140.5)=\\Phi\\left(\\frac{140.5-(141)}{8.64465}\\right)\\approx0.476938\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(141,74.73),\\quad\\sigma=\\sqrt{74.73}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{119.5-(141)}{8.64465}\\approx-2.48709\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{160.5-(141)}{8.64465}\\approx2.25573\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(119.5&lt;Y&lt;160.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.981517\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(141,74.73),\\quad\\sigma=\\sqrt{74.73}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{149.5-(141)}{8.64465}\\approx0.983267\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{150.5-(141)}{8.64465}\\approx1.09895\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(149.5&lt;Y&lt;150.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0268421\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.6/q3",
+      "status": "worked",
+      "method": "Use μ=130, σ²=62.4 and include exactly the integers in each event.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(130,62.4),\\quad\\sigma=\\sqrt{62.4}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(120.5&lt;Y)=1-\\Phi\\left(\\frac{120.5-(130)}{7.89937}\\right)\\approx0.88544\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(130,62.4),\\quad\\sigma=\\sqrt{62.4}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{115.5-(130)}{7.89937}\\approx-1.83559\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{149.5-(130)}{7.89937}\\approx2.46855\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(115.5&lt;Y&lt;149.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.960008\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(130,62.4),\\quad\\sigma=\\sqrt{62.4}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{124.5-(130)}{7.89937}\\approx-0.696258\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{125.5-(130)}{7.89937}\\approx-0.569666\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(124.5&lt;Y&lt;125.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0413186\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use μ=130, σ²=62.4 and include exactly the integers in each event.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(130,62.4),\\quad\\sigma=\\sqrt{62.4}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(120.5&lt;Y)=1-\\Phi\\left(\\frac{120.5-(130)}{7.89937}\\right)\\approx0.88544\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(130,62.4),\\quad\\sigma=\\sqrt{62.4}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{115.5-(130)}{7.89937}\\approx-1.83559\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{149.5-(130)}{7.89937}\\approx2.46855\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(115.5&lt;Y&lt;149.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.960008\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(130,62.4),\\quad\\sigma=\\sqrt{62.4}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{124.5-(130)}{7.89937}\\approx-0.696258\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{125.5-(130)}{7.89937}\\approx-0.569666\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(124.5&lt;Y&lt;125.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0413186\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.6/q4",
+      "status": "worked",
+      "method": "An even score has probability½; assume independent throws.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim B(125,0.5),\\quad X&gt;60\\iff X\\ge61\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(62.5,31.25),\\quad\\sigma=\\sqrt{31.25}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(60.5&lt;Y)=1-\\Phi\\left(\\frac{60.5-(62.5)}{5.59017}\\right)\\approx0.639743\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>An even score has probability½; assume independent throws.</p><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim B(125,0.5),\\quad X&gt;60\\iff X\\ge61\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(62.5,31.25),\\quad\\sigma=\\sqrt{31.25}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(60.5&lt;Y)=1-\\Phi\\left(\\frac{60.5-(62.5)}{5.59017}\\right)\\approx0.639743\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.6/q5",
+      "status": "worked",
+      "method": "Use the exact binomial for15trials and the continuity-corrected normal approximation for250.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(15,p),\\quad p\\approx0.56\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(10\\le B\\le 10)=\\binom{15}{10}p^{10}(1-p)^{5}\\approx0.15021\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(140,61.6),\\quad\\sigma=\\sqrt{61.6}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;129.5)=\\Phi\\left(\\frac{129.5-(140)}{7.84857}\\right)\\approx0.0904769\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge q)\\approx P(Y&gt;q-0.5)=0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"q-0.5=140+\\sqrt{61.6}\\Phi^{-1}(0.9)\\Rightarrow q\\approx150.558\"></span><p>The count q must be an integer, so no integer gives probability exactly 0.1. With continuity correction, q=151 is the closest approximate threshold; it is also the smallest integer with tail at most 0.1.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(149.5&lt;X)=1-\\Phi\\left(\\frac{149.5-(140)}{7.84857}\\right)\\approx0.11306\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(150.5&lt;X)=1-\\Phi\\left(\\frac{150.5-(140)}{7.84857}\\right)\\approx0.0904769\"></span><p>These last probabilities correspond to q=150 and q=151 respectively. The supplied 150 omits the continuity correction when finding the quantile.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the exact binomial for 15 trials and the continuity-corrected normal approximation for 250.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(15,p),\\quad p\\approx0.56\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(10\\le B\\le 10)=\\binom{15}{10}p^{10}(1-p)^{5}\\approx0.15021\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(140,61.6),\\quad\\sigma=\\sqrt{61.6}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;129.5)=\\Phi\\left(\\frac{129.5-(140)}{7.84857}\\right)\\approx0.0904769\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge q)\\approx P(Y&gt;q-0.5)=0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"q-0.5=140+\\sqrt{61.6}\\Phi^{-1}(0.9)\\Rightarrow q\\approx150.558\"></span><p>The count q must be an integer, so no integer gives probability exactly 0.1. With continuity correction, q=151 is the closest approximate threshold; it is also the smallest integer with tail at most 0.1.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(149.5&lt;X)=1-\\Phi\\left(\\frac{149.5-(140)}{7.84857}\\right)\\approx0.11306\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(150.5&lt;X)=1-\\Phi\\left(\\frac{150.5-(140)}{7.84857}\\right)\\approx0.0904769\"></span><p>These last probabilities correspond to q=150 and q=151 respectively. The supplied 150 omits the continuity correction when finding the quantile.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.6/q6",
+      "status": "worked",
+      "method": "Compare the exact point probability with the continuity-corrected interval.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(80,p),\\quad p\\approx0.47\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(40\\le B\\le 40)=\\binom{80}{40}p^{40}(1-p)^{40}\\approx0.0769816\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(37.6,19.928),\\quad\\sigma=\\sqrt{19.928}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{39.5-(37.6)}{4.46408}\\approx0.42562\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{40.5-(37.6)}{4.46408}\\approx0.64963\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(39.5&lt;Y&lt;40.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0772269\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\%\\text{ error}=\\frac{|0.0772269-0.0769816|}{0.0769816}\\times100\\approx0.318693\\%\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Compare the exact point probability with the continuity-corrected interval.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(80,p),\\quad p\\approx0.47\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(40\\le B\\le 40)=\\binom{80}{40}p^{40}(1-p)^{40}\\approx0.0769816\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(37.6,19.928),\\quad\\sigma=\\sqrt{19.928}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{39.5-(37.6)}{4.46408}\\approx0.42562\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{40.5-(37.6)}{4.46408}\\approx0.64963\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(39.5&lt;Y&lt;40.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0772269\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\%\\text{ error}=\\frac{|0.0772269-0.0769816|}{0.0769816}\\times100\\approx0.318693\\%\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.6/q7",
+      "status": "worked",
+      "method": "The integer boundary needs a half-unit continuity correction.",
+      "steps": [
+        {
+          "explanation": "<p>The event X≤110 must be approximated by Y&lt;110.5, not Y≤110. The mean and variance were calculated correctly.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(121,54.45),\\quad\\sigma=\\sqrt{54.45}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;110.5)=\\Phi\\left(\\frac{110.5-(121)}{7.37902}\\right)\\approx0.077375\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(121,54.45),\\quad\\sigma=\\sqrt{54.45}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(130.5&lt;Y)=1-\\Phi\\left(\\frac{130.5-(121)}{7.37902}\\right)\\approx0.0989717\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(121,54.45),\\quad\\sigma=\\sqrt{54.45}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{105.5-(121)}{7.37902}\\approx-2.10055\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{119.5-(121)}{7.37902}\\approx-0.203279\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(105.5&lt;Y&lt;119.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.401618\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The integer boundary needs a half-unit continuity correction.</p><ol class=\"parts\" type=\"a\"><li><p>The event X≤110 must be approximated by Y&lt;110.5, not Y≤110. The mean and variance were calculated correctly.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(121,54.45),\\quad\\sigma=\\sqrt{54.45}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;110.5)=\\Phi\\left(\\frac{110.5-(121)}{7.37902}\\right)\\approx0.077375\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(121,54.45),\\quad\\sigma=\\sqrt{54.45}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(130.5&lt;Y)=1-\\Phi\\left(\\frac{130.5-(121)}{7.37902}\\right)\\approx0.0989717\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(121,54.45),\\quad\\sigma=\\sqrt{54.45}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{105.5-(121)}{7.37902}\\approx-2.10055\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{119.5-(121)}{7.37902}\\approx-0.203279\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(105.5&lt;Y&lt;119.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.401618\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.7/q1",
+      "status": "worked",
+      "method": "Use the sample mean and an upper-tailed test for increased distance.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar X=\\frac1{50}\\sum_{i=1}^{50}X_i\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=200,\\quad H_1:\\mu&gt;200\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(200,15^2/50)\\text{ under }H_0\"></span><p>Assume independent measurements and unchanged population variance.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar X&gt;200+\\frac{15}{\\sqrt{50}}\\Phi^{-1}(0.95)\\approx203.489\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the sample mean and an upper-tailed test for increased distance.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X=\\frac1{50}\\sum_{i=1}^{50}X_i\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=200,\\quad H_1:\\mu&gt;200\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(200,15^2/50)\\text{ under }H_0\"></span><p>Assume independent measurements and unchanged population variance.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X&gt;200+\\frac{15}{\\sqrt{50}}\\Phi^{-1}(0.95)\\approx203.489\\text{ m}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.7/q2",
+      "status": "worked",
+      "method": "Use the lower-tail probability of the observed sample mean.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar X&lt;18+\\frac{5.7}{\\sqrt{30}}\\Phi^{-1}(0.1)\\approx16.6663\"></span><p>Equivalently, reject if the lower-tail p-value is below 0.10.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=18,\\quad H_1:\\mu&lt;18\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(18,\\frac{5.7^2}{30}),\\quad z=\\frac{16.6-18}{5.7/\\sqrt{30}}\\approx-1.34528\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p\\text{-value}=\\Phi(z)\\approx0.0892669&lt;0.1\"></span><p>Reject H₀. There is evidence that the population mean is below 18. Assume independent random observations and the stated population standard deviation remains applicable.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the lower-tail probability of the observed sample mean.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X&lt;18+\\frac{5.7}{\\sqrt{30}}\\Phi^{-1}(0.1)\\approx16.6663\"></span><p>Equivalently, reject if the lower-tail p-value is below 0.10.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=18,\\quad H_1:\\mu&lt;18\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(18,\\frac{5.7^2}{30}),\\quad z=\\frac{16.6-18}{5.7/\\sqrt{30}}\\approx-1.34528\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p\\text{-value}=\\Phi(z)\\approx0.0892669&lt;0.1\"></span><p>Reject H₀. There is evidence that the population mean is below 18. Assume independent random observations and the stated population standard deviation remains applicable.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.7/q3",
+      "status": "worked",
+      "method": "Use a one-tailed5% test and the standard error of the sample mean.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=45,\\quad H_1:\\mu&gt;45\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(45,6^2/50),\\quad\\bar X&gt;45+\\frac6{\\sqrt{50}}\\Phi^{-1}(0.95)\\approx46.3957\"></span><p>Assume independent battery lifetimes and unchanged standard deviation.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"50&gt;46.3957\"></span><p>Reject H₀. There is evidence at the 5% level that the new battery has a longer mean life.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use a one-tailed 5% test and the standard error of the sample mean.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=45,\\quad H_1:\\mu&gt;45\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(45,6^2/50),\\quad\\bar X&gt;45+\\frac6{\\sqrt{50}}\\Phi^{-1}(0.95)\\approx46.3957\"></span><p>Assume independent battery lifetimes and unchanged standard deviation.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"50&gt;46.3957\"></span><p>Reject H₀. There is evidence at the 5% level that the new battery has a longer mean life.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.7/q4",
+      "status": "worked",
+      "method": "A two-tailed test splits the significance level equally between the two tails.",
+      "steps": [
+        {
+          "explanation": "<p>A one-tailed alternative specifies an increase or a decrease; a two-tailed alternative allows either direction of change.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(34,1.1^2/25)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X&lt;33.4333\\quad\\text{or}\\quad\\bar X&gt;34.5667\"></span><p>These are the two 0.5% tails. Reject H₀ only when the observed mean falls in this region.</p>"
+        },
+        {
+          "explanation": "<p>33.7 is outside the critical region. Do not reject H₀: there is insufficient evidence that μ differs from 34. This does not prove equality.</p>"
+        }
+      ],
+      "solutionHtml": "<p>A two-tailed test splits the significance level equally between the two tails.</p><ol class=\"parts\" type=\"a\"><li><p>A one-tailed alternative specifies an increase or a decrease; a two-tailed alternative allows either direction of change.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(34,1.1^2/25)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X&lt;33.4333\\quad\\text{or}\\quad\\bar X&gt;34.5667\"></span><p>These are the two 0.5% tails. Reject H₀ only when the observed mean falls in this region.</p></li><li><p>33.7 is outside the critical region. Do not reject H₀: there is insufficient evidence that μ differs from 34. This does not prove equality.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.7/q5",
+      "status": "worked",
+      "method": "A change in either direction requires a two-tailed test.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=200,\\quad H_1:\\mu\\ne200\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(200,\\frac{6^2}{20}),\\quad z=\\frac{201.5-200}{6/\\sqrt{20}}\\approx1.11803\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p\\text{-value}=2[1-\\Phi(|z|)]\\approx0.263552&gt;0.1\"></span><p>Do not reject H₀. There is insufficient evidence of a change in mean bowl diameter. Assume independent random observations and the stated population standard deviation remains applicable.</p>"
+        }
+      ],
+      "solutionHtml": "<p>A change in either direction requires a two-tailed test.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=200,\\quad H_1:\\mu\\ne200\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(200,\\frac{6^2}{20}),\\quad z=\\frac{201.5-200}{6/\\sqrt{20}}\\approx1.11803\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p\\text{-value}=2[1-\\Phi(|z|)]\\approx0.263552&gt;0.1\"></span><p>Do not reject H₀. There is insufficient evidence of a change in mean bowl diameter. Assume independent random observations and the stated population standard deviation remains applicable.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.7/q6",
+      "status": "worked",
+      "method": "The claim of larger masses requires an upper-tailed test.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=5.9,\\quad H_1:\\mu&gt;5.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(5.9,\\frac{0.84^2}{16}),\\quad z=\\frac{6.6-5.9}{0.84/\\sqrt{16}}\\approx3.33333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p\\text{-value}=1-\\Phi(z)\\approx0.00042906&lt;0.01\"></span><p>Reject H₀. There is evidence that captive gentoo penguins have a larger mean mass. Assume independent random observations and the stated population standard deviation remains applicable.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The claim of larger masses requires an upper-tailed test.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=5.9,\\quad H_1:\\mu&gt;5.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(5.9,\\frac{0.84^2}{16}),\\quad z=\\frac{6.6-5.9}{0.84/\\sqrt{16}}\\approx3.33333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p\\text{-value}=1-\\Phi(z)\\approx0.00042906&lt;0.01\"></span><p>Reject H₀. There is evidence that captive gentoo penguins have a larger mean mass. Assume independent random observations and the stated population standard deviation remains applicable.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/3.7/q7",
+      "status": "worked",
+      "method": "The claim specifies a reduction, so the critical region is in the lower tail.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=12,\\quad H_1:\\mu&lt;12\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(12,3.6^2/25)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X&lt;12+\\frac{3.6}{5}\\Phi^{-1}(0.01)\\approx10.325\"></span><p>This is the 1% lower-tail cutoff, about 10.3 minutes. Assume a random independent sample and unchanged standard deviation.</p>"
+        },
+        {
+          "explanation": "<p>12.3 is above the null mean 12, so its lower-tail probability exceeds 0.5 and cannot be below 0.10. Do not reject H₀: there is insufficient evidence of reduced waiting times. This does not demonstrate that no reduction occurred.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The claim specifies a reduction, so the critical region is in the lower tail.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=12,\\quad H_1:\\mu&lt;12\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(12,3.6^2/25)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X&lt;12+\\frac{3.6}{5}\\Phi^{-1}(0.01)\\approx10.325\"></span><p>This is the 1% lower-tail cutoff, about 10.3 minutes. Assume a random independent sample and unchanged standard deviation.</p></li><li><p>12.3 is above the null mean 12, so its lower-tail probability exceeds 0.5 and cannot be below 0.10. Do not reject H₀: there is insufficient evidence of reduced waiting times. This does not demonstrate that no reduction occurred.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/problem-a/qbronze",
+      "status": "worked",
+      "method": "Once in five attempts means an upper-tail area0.2.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/bba9b3ea6b166c8f3c98.png\" alt=\"ans-ps-a-bronze: labelled normal distribution\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{45-40}{\\sigma}=\\Phi^{-1}(0.8)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=5/\\Phi^{-1}(0.8)\\approx5.94\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(42&lt;X)=1-\\Phi\\left(\\frac{42-(40)}{5.94091}\\right)\\approx0.368191\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Once in five attempts means an upper-tail area 0.2.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/bba9b3ea6b166c8f3c98.png\" alt=\"ans-ps-a-bronze: labelled normal distribution\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{45-40}{\\sigma}=\\Phi^{-1}(0.8)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=5/\\Phi^{-1}(0.8)\\approx5.94\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(42&lt;X)=1-\\Phi\\left(\\frac{42-(40)}{5.94091}\\right)\\approx0.368191\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/problem-a/qsilver",
+      "status": "worked",
+      "method": "Use the two known percentiles to determine the model.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"19.5=\\mu+\\sigma\\Phi^{-1}(0.2),\\quad 20.76=\\mu+\\sigma\\Phi^{-1}(0.95)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{1.26}{\\Phi^{-1}(0.95)-\\Phi^{-1}(0.2)}\\approx0.506741\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=19.5-0.506741\\Phi^{-1}(0.2)\\approx19.9265\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{19.75-(19.9265)}{0.506741}\\approx-0.348273\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{20.5-(19.9265)}{0.506741}\\approx1.13177\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(19.75&lt;L&lt;20.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.507317\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the two known percentiles to determine the model.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"19.5=\\mu+\\sigma\\Phi^{-1}(0.2),\\quad 20.76=\\mu+\\sigma\\Phi^{-1}(0.95)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{1.26}{\\Phi^{-1}(0.95)-\\Phi^{-1}(0.2)}\\approx0.506741\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=19.5-0.506741\\Phi^{-1}(0.2)\\approx19.9265\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{19.75-(19.9265)}{0.506741}\\approx-0.348273\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{20.5-(19.9265)}{0.506741}\\approx1.13177\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(19.75&lt;L&lt;20.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.507317\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/problem-a/qgold",
+      "status": "worked",
+      "method": "Read the diagram carefully: no prize below80cm, small80–150cm, large150–180cm, grand above180cm.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"80=\\mu+\\sigma\\Phi^{-1}(0.2),\\quad 150=\\mu+\\sigma\\Phi^{-1}(0.95)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{70}{\\Phi^{-1}(0.95)-\\Phi^{-1}(0.2)}\\approx28.1523\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=80-28.1523\\Phi^{-1}(0.2)\\approx103.694\"></span>"
+        },
+        {
+          "explanation": "<p>Large prizes exclude the grand-prize band.</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{150-(103.694)}{28.1523}\\approx1.64485\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{180-(103.694)}{28.1523}\\approx2.71049\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(150&lt;X&lt;180)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0466408\"></span><span class=\"equation\" data-display=\"true\" data-math=\"E(\\text{large prizes})=300P(150&lt;X&lt;180)\\approx13.9922\"></span><p>About 14 large prizes.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(200&lt;X)=1-\\Phi\\left(\\frac{200-(103.694)}{28.1523}\\right)\\approx0.000312063\"></span><p>The normal model assigns a very small probability above the physical 2 m limit. It cannot be an exact model, but this alone does not rule it out as a useful approximation over typical heights.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Read the diagram carefully: no prize below 80 cm, small 80–150 cm, large 150–180 cm, grand above 180 cm.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"80=\\mu+\\sigma\\Phi^{-1}(0.2),\\quad 150=\\mu+\\sigma\\Phi^{-1}(0.95)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{70}{\\Phi^{-1}(0.95)-\\Phi^{-1}(0.2)}\\approx28.1523\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=80-28.1523\\Phi^{-1}(0.2)\\approx103.694\"></span></li><li><p>Large prizes exclude the grand-prize band.</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{150-(103.694)}{28.1523}\\approx1.64485\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{180-(103.694)}{28.1523}\\approx2.71049\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(150&lt;X&lt;180)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0466408\"></span><span class=\"equation\" data-display=\"true\" data-math=\"E(\\text{large prizes})=300P(150&lt;X&lt;180)\\approx13.9922\"></span><p>About 14 large prizes.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(200&lt;X)=1-\\Phi\\left(\\frac{200-(103.694)}{28.1523}\\right)\\approx0.000312063\"></span><p>The normal model assigns a very small probability above the physical 2 m limit. It cannot be an exact model, but this alone does not rule it out as a useful approximation over typical heights.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/problem-b/qbronze",
+      "status": "worked",
+      "method": "Find the outstanding-score probability, then assume independent applicants.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(65&lt;X)=1-\\Phi\\left(\\frac{65-(50)}{10}\\right)\\approx0.0668072\"></span><p>(i) At least one:</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(8,p),\\quad p\\approx0.0668072\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(1\\le B\\le 8)=\\sum_{k=1}^{8}\\binom{8}{k}p^k(1-p)^{8-k}\\approx0.424863\"></span><p>(ii) Exactly two:</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(8,p),\\quad p\\approx0.0668072\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le B\\le 2)=\\binom{8}{2}p^{2}(1-p)^{6}\\approx0.082534\"></span><p>(iii) Fewer than three:</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(8,p),\\quad p\\approx0.0668072\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le B\\le 2)=\\sum_{k=0}^{2}\\binom{8}{k}p^k(1-p)^{8-k}\\approx0.987063\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;100)=1-\\Phi(5)\\approx2.87\\times10^{-7}\"></span><p>The model is not exact because scores are bounded, but its probability above 100% is negligible. This objection alone does not make it an unsuitable approximation.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Find the outstanding-score probability, then assume independent applicants.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(65&lt;X)=1-\\Phi\\left(\\frac{65-(50)}{10}\\right)\\approx0.0668072\"></span><p>(i) At least one:</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(8,p),\\quad p\\approx0.0668072\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(1\\le B\\le 8)=\\sum_{k=1}^{8}\\binom{8}{k}p^k(1-p)^{8-k}\\approx0.424863\"></span><p>(ii) Exactly two:</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(8,p),\\quad p\\approx0.0668072\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le B\\le 2)=\\binom{8}{2}p^{2}(1-p)^{6}\\approx0.082534\"></span><p>(iii) Fewer than three:</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(8,p),\\quad p\\approx0.0668072\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le B\\le 2)=\\sum_{k=0}^{2}\\binom{8}{k}p^k(1-p)^{8-k}\\approx0.987063\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;100)=1-\\Phi(5)\\approx2.87\\times10^{-7}\"></span><p>The model is not exact because scores are bounded, but its probability above 100% is negligible. This objection alone does not make it an unsuitable approximation.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/problem-b/qsilver",
+      "status": "worked",
+      "method": "The event of scoring over45is a subset of scoring over43.",
+      "steps": [
+        {
+          "explanation": "<p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(43&lt;X)=1-\\Phi\\left(\\frac{43-(38)}{6.4}\\right)\\approx0.217328\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(45&lt;X)=1-\\Phi\\left(\\frac{45-(38)}{6.4}\\right)\\approx0.137032\"></span>"
+        },
+        {
+          "explanation": "<p>Any score above 45 is also above 43, so their intersection is simply X&gt;45.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;45\\mid X&gt;43)=\\frac{P(X&gt;45)}{P(X&gt;43)}\\approx\\frac{0.137032}{0.217328}=0.630533\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The event of scoring over 45 is a subset of scoring over 43.</p><ol class=\"parts\" type=\"a\"><li><p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(43&lt;X)=1-\\Phi\\left(\\frac{43-(38)}{6.4}\\right)\\approx0.217328\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(45&lt;X)=1-\\Phi\\left(\\frac{45-(38)}{6.4}\\right)\\approx0.137032\"></span></li><li><p>Any score above 45 is also above 43, so their intersection is simply X&gt;45.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;45\\mid X&gt;43)=\\frac{P(X&gt;45)}{P(X&gt;43)}\\approx\\frac{0.137032}{0.217328}=0.630533\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/problem-b/qgold",
+      "status": "worked",
+      "method": "Assume independent bulb lifetimes with the stated normal distribution.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(700&lt;X)=1-\\Phi\\left(\\frac{700-(720)}{150}\\right)\\approx0.553035\"></span><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(6,p),\\quad p\\approx0.553035\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(5\\le B\\le 6)=\\sum_{k=5}^{6}\\binom{6}{k}p^k(1-p)^{6-k}\\approx0.167346\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;700\\mid X&gt;400)=\\frac{P(X&gt;700)}{P(X&gt;400)}\\approx0.562284\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{all six survive another300days})=\\left(\\frac{P(X&gt;700)}{P(X&gt;400)}\\right)^6\\approx0.0316034\"></span>"
+        },
+        {
+          "explanation": "<p>Four bulbs are new and need to last 300 days; the two retained bulbs have already survived 400 days.</p><span class=\"equation\" data-display=\"true\" data-math=\"P=[P(X&gt;300)]^4\\left[\\frac{P(X&gt;700)}{P(X&gt;400)}\\right]^2\\approx0.312944\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Assume independent bulb lifetimes with the stated normal distribution.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(700&lt;X)=1-\\Phi\\left(\\frac{700-(720)}{150}\\right)\\approx0.553035\"></span><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(6,p),\\quad p\\approx0.553035\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(5\\le B\\le 6)=\\sum_{k=5}^{6}\\binom{6}{k}p^k(1-p)^{6-k}\\approx0.167346\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;700\\mid X&gt;400)=\\frac{P(X&gt;700)}{P(X&gt;400)}\\approx0.562284\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{all six survive another300days})=\\left(\\frac{P(X&gt;700)}{P(X&gt;400)}\\right)^6\\approx0.0316034\"></span></li><li><p>Four bulbs are new and need to last 300 days; the two retained bulbs have already survived 400 days.</p><span class=\"equation\" data-display=\"true\" data-math=\"P=[P(X&gt;300)]^4\\left[\\frac{P(X&gt;700)}{P(X&gt;400)}\\right]^2\\approx0.312944\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/exam/q3",
+      "status": "worked",
+      "method": "The sample mean has variance σ²/n for an independent random sample.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(\\mu,\\sigma^2/n)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(|\\bar X-\\mu|&lt;1)=0.95\\Rightarrow\\frac{1}{3.2/\\sqrt n}=\\Phi^{-1}(0.975)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"n\\ge[3.2\\Phi^{-1}(0.975)]^2\\approx39.3365\"></span><span class=\"equation\" data-display=\"true\" data-math=\"n_{\\min}=40\"></span><p>The supplied 21 does not provide 95% central coverage; at n=21 the coverage is only about 84.8%.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The sample mean has variance σ²/n for an independent random sample.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(\\mu,\\sigma^2/n)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(|\\bar X-\\mu|&lt;1)=0.95\\Rightarrow\\frac{1}{3.2/\\sqrt n}=\\Phi^{-1}(0.975)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"n\\ge[3.2\\Phi^{-1}(0.975)]^2\\approx39.3365\"></span><span class=\"equation\" data-display=\"true\" data-math=\"n_{\\min}=40\"></span><p>The supplied 21 does not provide 95% central coverage; at n=21 the coverage is only about 84.8%.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/exam/q6",
+      "status": "worked",
+      "method": "Keep the variance and standard deviation distinct.",
+      "steps": [
+        {
+          "explanation": "<p>The expected numbers of successes np and failures n(1−p) should both be sufficiently large, commonly at least 5 and preferably 10. A large n and p reasonably near½ are a familiar sufficient rule.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\sigma^2=62.4,\\quad\\sigma=\\sqrt{62.4},\\quad Y\\sim N(120,62.4)\"></span><p>The student treated the variance as the standard deviation; the continuity correction was correct.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(120,62.4),\\quad\\sigma=\\sqrt{62.4}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;129.5)=\\Phi\\left(\\frac{129.5-(120)}{7.89937}\\right)\\approx0.88544\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Keep the variance and standard deviation distinct.</p><ol class=\"parts\" type=\"a\"><li><p>The expected numbers of successes np and failures n(1−p) should both be sufficiently large, commonly at least 5 and preferably 10. A large n and p reasonably near½ are a familiar sufficient rule.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma^2=62.4,\\quad\\sigma=\\sqrt{62.4},\\quad Y\\sim N(120,62.4)\"></span><p>The student treated the variance as the standard deviation; the continuity correction was correct.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(120,62.4),\\quad\\sigma=\\sqrt{62.4}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;129.5)=\\Phi\\left(\\frac{129.5-(120)}{7.89937}\\right)\\approx0.88544\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/exam/q8",
+      "status": "worked",
+      "method": "Count equally likely ordered die pairs whose maximum is prime.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{success})=\\frac{(2^2-1^2)+(3^2-2^2)+(5^2-4^2)}{36}=\\frac{17}{36}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim B(180,17/36)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"np=85,\\quad n(1-p)=95\"></span><p>Both counts are large, so the normal approximation is suitable.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=85,\\quad\\sigma=\\sqrt{180(17/36)(19/36)}\\approx6.69784\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(85,44.8611),\\quad\\sigma=\\sqrt{44.8611}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{79.5-(85)}{6.69784}\\approx-0.82116\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{80.5-(85)}{6.69784}\\approx-0.671858\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(79.5&lt;Y&lt;80.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0450594\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Count equally likely ordered die pairs whose maximum is prime.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{success})=\\frac{(2^2-1^2)+(3^2-2^2)+(5^2-4^2)}{36}=\\frac{17}{36}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim B(180,17/36)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"np=85,\\quad n(1-p)=95\"></span><p>Both counts are large, so the normal approximation is suitable.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=85,\\quad\\sigma=\\sqrt{180(17/36)(19/36)}\\approx6.69784\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(85,44.8611),\\quad\\sigma=\\sqrt{44.8611}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"z_1=\\frac{79.5-(85)}{6.69784}\\approx-0.82116\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z_2=\\frac{80.5-(85)}{6.69784}\\approx-0.671858\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(79.5&lt;Y&lt;80.5)=\\Phi(z_2)-\\Phi(z_1)\\approx0.0450594\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/exam/q11",
+      "status": "worked",
+      "method": "Use upper-tail normal probabilities and independent selections.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(42&lt;X)=1-\\Phi\\left(\\frac{42-(40)}{2}\\right)\\approx0.158655\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"w=40+2\\Phi^{-1}(0.99)\\approx44.6527\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(41&lt;X)=1-\\Phi\\left(\\frac{41-(40)}{2}\\right)\\approx0.308538\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P=\\binom32p^2(1-p)\\approx0.197472\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;42\\mid X\\ge40)=\\frac{1-\\Phi(1)}{0.5}\\approx0.317311\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use upper-tail normal probabilities and independent selections.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(42&lt;X)=1-\\Phi\\left(\\frac{42-(40)}{2}\\right)\\approx0.158655\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"w=40+2\\Phi^{-1}(0.99)\\approx44.6527\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(41&lt;X)=1-\\Phi\\left(\\frac{41-(40)}{2}\\right)\\approx0.308538\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P=\\binom32p^2(1-p)\\approx0.197472\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;42\\mid X\\ge40)=\\frac{1-\\Phi(1)}{0.5}\\approx0.317311\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/exam/q13",
+      "status": "worked",
+      "method": "Keep the fitted parameters and probabilities unrounded between stages.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"320=\\mu+\\sigma\\Phi^{-1}(0.22),\\quad 334=\\mu+\\sigma\\Phi^{-1}(0.62)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{14}{\\Phi^{-1}(0.62)-\\Phi^{-1}(0.22)}\\approx12.9909\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=320-12.9909\\Phi^{-1}(0.22)\\approx330.032\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(W&lt;325)=\\Phi\\left(\\frac{325-(330.032)}{12.9909}\\right)\\approx0.349263\"></span><p>Assume independent bottle fills. A box passes if at most 2 of its 8 bottles are under 325 ml.</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(8,p),\\quad p\\approx0.349263\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le B\\le 2)=\\sum_{k=0}^{2}\\binom{8}{k}p^k(1-p)^{8-k}\\approx0.429574\"></span>"
+        },
+        {
+          "explanation": "<p>Assume independent boxes. The number meeting quality standards is binomial with 600 trials and the unrounded pass probability from(b).</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(257.744,147.024),\\quad\\sigma=\\sqrt{147.024}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;249.5)=\\Phi\\left(\\frac{249.5-(257.744)}{12.1253}\\right)\\approx0.24828\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Keep the fitted parameters and probabilities unrounded between stages.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"320=\\mu+\\sigma\\Phi^{-1}(0.22),\\quad 334=\\mu+\\sigma\\Phi^{-1}(0.62)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{14}{\\Phi^{-1}(0.62)-\\Phi^{-1}(0.22)}\\approx12.9909\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=320-12.9909\\Phi^{-1}(0.22)\\approx330.032\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(W&lt;325)=\\Phi\\left(\\frac{325-(330.032)}{12.9909}\\right)\\approx0.349263\"></span><p>Assume independent bottle fills. A box passes if at most 2 of its 8 bottles are under 325 ml.</p><span class=\"equation\" data-display=\"true\" data-math=\"B\\sim B(8,p),\\quad p\\approx0.349263\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le B\\le 2)=\\sum_{k=0}^{2}\\binom{8}{k}p^k(1-p)^{8-k}\\approx0.429574\"></span></li><li><p>Assume independent boxes. The number meeting quality standards is binomial with 600 trials and the unrounded pass probability from(b).</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim N(257.744,147.024),\\quad\\sigma=\\sqrt{147.024}\"></span><p>Apply the continuity correction to the integer event:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y&lt;249.5)=\\Phi\\left(\\frac{249.5-(257.744)}{12.1253}\\right)\\approx0.24828\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/exam/q15",
+      "status": "worked",
+      "method": "The upper quartile is12.7+6.2=18.9minutes.",
+      "steps": [
+        {
+          "explanation": "<p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"12.7=\\mu+\\sigma\\Phi^{-1}(0.25),\\quad 18.9=\\mu+\\sigma\\Phi^{-1}(0.75)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{6.2}{\\Phi^{-1}(0.75)-\\Phi^{-1}(0.25)}\\approx4.59607\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=12.7-4.59607\\Phi^{-1}(0.25)\\approx15.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=15.8,\\quad\\sigma=4.60\\text{ minutes (3s.f.)}\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(16&lt;X)=1-\\Phi\\left(\\frac{16-(15.8)}{4.59607}\\right)\\approx0.482645\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;20\\mid X&gt;12)=\\frac{P(X&gt;20)}{P(X&gt;12)}\\approx0.226689\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"z_{45}=\\frac{45-\\mu}{\\sigma}\\approx6.35326\"></span><p>45 minutes is more than six standard deviations above the mean. Such waits have an extremely small probability under this model; two in one day cast serious doubt on its upper-tail fit, unless the number of calls was extraordinarily large. The source says “less than 6”, which reverses the comparison.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The upper quartile is 12.7+6.2=18.9 minutes.</p><ol class=\"parts\" type=\"a\"><li><p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"12.7=\\mu+\\sigma\\Phi^{-1}(0.25),\\quad 18.9=\\mu+\\sigma\\Phi^{-1}(0.75)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\frac{6.2}{\\Phi^{-1}(0.75)-\\Phi^{-1}(0.25)}\\approx4.59607\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=12.7-4.59607\\Phi^{-1}(0.25)\\approx15.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mu=15.8,\\quad\\sigma=4.60\\text{ minutes (3s.f.)}\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(16&lt;X)=1-\\Phi\\left(\\frac{16-(15.8)}{4.59607}\\right)\\approx0.482645\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;20\\mid X&gt;12)=\\frac{P(X&gt;20)}{P(X&gt;12)}\\approx0.226689\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"z_{45}=\\frac{45-\\mu}{\\sigma}\\approx6.35326\"></span><p>45 minutes is more than six standard deviations above the mean. Such waits have an extremely small probability under this model; two in one day cast serious doubt on its upper-tail fit, unless the number of calls was extraordinarily large. The source says “less than 6”, which reverses the comparison.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch3/exam/q19",
+      "status": "worked",
+      "method": "Use normal quartiles, the stated outlier fences and a one-tailed test of the sample mean.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(55&lt;X)=1-\\Phi\\left(\\frac{55-(50)}{8}\\right)\\approx0.265986\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Q_3=50+8\\Phi^{-1}(0.75)\\approx55.3959\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Q_1=100-Q_3\\approx44.6041\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h=Q_1-1.5(Q_3-Q_1)\\approx28.4163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k=Q_3+1.5(Q_3-Q_1)\\approx71.5837\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{outlier})=2\\Phi((h-50)/8)\\approx0.0069766\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=50,\\quad H_1:\\mu&gt;50\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(50,\\frac{8^2}{12}),\\quad z=\\frac{54-50}{8/\\sqrt{12}}\\approx1.73205\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p\\text{-value}=1-\\Phi(z)\\approx0.0416323&lt;0.05\"></span><p>Reject H₀. There is evidence that the mean reading score has increased. Assume independent random observations and the stated population standard deviation remains applicable.</p>"
+        },
+        {
+          "explanation": "<p>The design has no control group, so improvement might reflect maturation, other teaching or test familiarity rather than the extra reading. Statistical evidence of an increase does not isolate its cause.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use normal quartiles, the stated outlier fences and a one-tailed test of the sample mean.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(55&lt;X)=1-\\Phi\\left(\\frac{55-(50)}{8}\\right)\\approx0.265986\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Q_3=50+8\\Phi^{-1}(0.75)\\approx55.3959\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Q_1=100-Q_3\\approx44.6041\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"h=Q_1-1.5(Q_3-Q_1)\\approx28.4163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k=Q_3+1.5(Q_3-Q_1)\\approx71.5837\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{outlier})=2\\Phi((h-50)/8)\\approx0.0069766\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\mu=50,\\quad H_1:\\mu&gt;50\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar X\\sim N(50,\\frac{8^2}{12}),\\quad z=\\frac{54-50}{8/\\sqrt{12}}\\approx1.73205\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p\\text{-value}=1-\\Phi(z)\\approx0.0416323&lt;0.05\"></span><p>Reject H₀. There is evidence that the mean reading score has increased. Assume independent random observations and the stated population standard deviation remains applicable.</p></li><li><p>The design has no control group, so improvement might reflect maturation, other teaching or test familiarity rather than the extra reading. Statistical evidence of an increase does not isolate its cause.</p></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}
