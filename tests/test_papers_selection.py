@@ -53,7 +53,7 @@ class PapersSelection(unittest.TestCase):
         self.page = self.context.new_page()
         self.page.route('**/papers-print.js', lambda route: route.fulfill(content_type='text/javascript', body='window.LUISA_PAPERS_PRINT={create:async rows=>{window.testPaperSnapshot=rows;return {warnings:[]}}};'))
         self.page.goto(self.url)
-        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('6,217')")
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('6,147')")
 
     def tearDown(self):
         self.context.close()
@@ -67,9 +67,9 @@ class PapersSelection(unittest.TestCase):
         return self.page.locator('[data-remove]').evaluate_all('(nodes)=>nodes.map(node=>node.dataset.remove)')
 
     def test_all_actual_questions_reference_exclusion_and_qualified_ids(self):
-        self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '6,217 questions in this pool')
+        self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '6,147 questions in this pool')
         self.page.locator('#papers-course').select_option('maths-a-level')
-        self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '3,423 questions in this pool')
+        self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '3,353 questions in this pool')
         self.assertEqual(self.page.locator('#papers-skills input[value$="/smq-2.48"]').count(), 0)
         self.page.locator('#papers-course').select_option('further-maths-a-level')
         self.page.locator('#papers-skills input[value$="/2.04"]').check()
@@ -85,9 +85,16 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '2,794 questions in this pool')
         self.assertEqual(self.page.locator('#papers-skills input[value$="/1.16"]').count(), 0)
         self.assertEqual(self.page.locator('#papers-topics input[value$="/further-algebra"]').count(), 0)
+        self.page.locator('#papers-course').select_option('maths-a-level')
+        self.assertEqual(self.page.locator('#papers-skills input[value$="/smq-1.59"]').count(), 0)
+        self.page.locator('#papers-skills input[value$="/smq-1.51"]').check()
+        self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '2 questions in this pool')
+        self.generate(2)
+        self.assertEqual({i.rsplit('/', 1)[-1] for i in self.selection_ids()}, {'q1', 'q2'})
         self.page.evaluate("""() => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({
             version:1, selected:[
                 'further-maths-a-level/pure-core-1/further-algebra/1.16/q1',
+                'maths-a-level/maths-statistics-year-1/sampling-and-data/smq-1.51/q3',
                 'further-maths-a-level/pure-core-1/complex-numbers/1.01/q1'
             ]
         }))""")
@@ -97,6 +104,14 @@ class PapersSelection(unittest.TestCase):
         self.page.locator('#papers-print').click()
         self.page.wait_for_function('Boolean(window.testPaperSnapshot)')
         self.assertEqual(self.page.evaluate('testPaperSnapshot.length'), 1)
+
+    def test_catalogue_failure_keeps_generation_disabled(self):
+        self.page.route('**/textbook-catalogue.json', lambda route: route.fulfill(status=503, body='Unavailable'))
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('could not be loaded')")
+        for ident in ['papers-generate', 'papers-browse', 'papers-course', 'papers-book', 'papers-print']:
+            self.assertTrue(self.page.locator('#' + ident).is_disabled())
+        self.assertEqual(self.selection_ids(), [])
 
     def test_random_without_replacement_and_regeneration(self):
         self.generate(12)
@@ -162,7 +177,7 @@ class PapersSelection(unittest.TestCase):
         topics = self.page.locator('#papers-topics input').evaluate_all('(nodes) => nodes.slice(0, 2).map(node => node.value)')
         for topic in topics:
             self.page.locator(f'#papers-topics input[value="{topic}"]').check()
-        expected = self.page.evaluate("""topics => FMQ_LIBRARY.courses.flatMap(c => c.books.flatMap(b => b.topics.filter(t => topics.includes(`${c.id}/${b.id}/${t.id}`)).flatMap(t => t.skills.flatMap(s => s.questions.filter(q => !q.reference))))).length""", topics)
+        expected = self.page.evaluate("""async topics => { const eligible = new Set((await (await fetch('textbook-catalogue.json')).json()).questions.map(q => `${q.skill}/${q.question}`)); return FMQ_LIBRARY.courses.flatMap(c => c.books.flatMap(b => b.topics.filter(t => topics.includes(`${c.id}/${b.id}/${t.id}`)).flatMap(t => t.skills.flatMap(s => s.questions.filter(q => !q.reference && eligible.has(`${s.id}/${q.number}`)))))).length; }""", topics)
         self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), f'{expected:,} questions in this pool')
         self.assertEqual(self.page.locator('#papers-topics input:checked').count(), 2)
         self.generate(12)

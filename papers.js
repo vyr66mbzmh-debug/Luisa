@@ -1,5 +1,5 @@
 'use strict';
-(() => {
+(async () => {
   const $ = id => document.getElementById(id);
   const storageKey = 'luisa-papers-v1';
   const pageSize = 8;
@@ -206,12 +206,18 @@
   }
   try {
     if (!window.FMQ_LIBRARY?.courses?.length) throw new Error('The question library is unavailable. Reload this page to try again.');
+    status('Loading the Edexcel question catalogue…');
+    const response = await fetch(new URL('textbook-catalogue.json', document.baseURI));
+    if (!response.ok) throw new Error('The Edexcel catalogue could not be loaded. Check your connection and reload.');
+    const textbook = await response.json();
+    if (!Array.isArray(textbook.questions) || !textbook.questions.length) throw new Error('The Edexcel catalogue is unavailable. Reload the page to try again.');
+    // Reuse the question-level eligibility already used by By textbook. Some
+    // skills mix eligible and other-board questions, so a skill flag is insufficient.
+    const edexcelIds = new Set(textbook.questions.map(q => `${q.skill}/${q.question}`));
     const ids = new Set();
     for (const course of window.FMQ_LIBRARY.courses) for (const book of course.books) for (const topic of book.topics) for (const skill of topic.skills) {
       if (skill.reference || skill.available === false) continue;
-      // Match the existing library's Edexcel filter; Maths uses its fixed syllabus catalogue.
-      if (course.id !== 'maths-a-level' && skill.edexcel !== true) continue;
-      const eligible = skill.questions.filter(q => !q.reference);
+      const eligible = skill.questions.filter(q => !q.reference && edexcelIds.has(`${skill.id}/${q.number}`));
       if (!eligible.length) continue;
       const key = `${course.id}/${book.id}/${topic.id}/${skill.id}`;
       skills.push({key, courseId: course.id, bookKey: `${course.id}/${book.id}`, topicKey: `${course.id}/${book.id}/${topic.id}`, code: skill.code, title: skill.title, bookTitle: book.title, count: eligible.length});
@@ -277,6 +283,8 @@
       } catch (error) { status(error.message || 'The print preview could not be opened. Allow pop-ups for this site and try again.', true); }
       finally { printing = false; updateControls(); }
     });
+    for (const id of ['papers-course', 'papers-book', 'papers-all-topics', 'papers-all-skills', 'papers-count', 'papers-generate', 'papers-browse']) $(id).disabled = false;
+    updateControls();
     const savedIds = new Set(Array.isArray(saved?.selected) ? saved.selected : []);
     const byId = new Map(catalogue.map(row => [row.id, row]));
     const restored = [...savedIds].map(id => byId.get(id)).filter(Boolean);
