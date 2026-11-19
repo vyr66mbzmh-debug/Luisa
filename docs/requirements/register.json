@@ -4930,8 +4930,8 @@
       "requirement": "Build printable papers from existing Luisa questions.",
       "scope": "Owner Cloudflare and both authenticated ADA roles.",
       "priority": "P1",
-      "implementation": "in_progress",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "checked",
       "origin": "Owner v0.57 instruction; GitHub #97",
       "acceptance": [
         "Add Papers as the fourth common tab. Select topics or individual skills, question count, random generation/regeneration and manual question selection.",
@@ -4940,7 +4940,11 @@
         "Preserve role protections and existing account credentials. No paper activity analytics."
       ],
       "evidence": [
-        "GitHub issue #97"
+        "GitHub issue #97 and PR #98",
+        "tests/test_papers_selection.py: eight browser checks",
+        "tests/papers_print_browser.py: four print checks including all 271 long Edexcel prompts",
+        "docs/evidence/v057-papers-print.json",
+        "Independent selection, host security and print review"
       ]
     },
     {

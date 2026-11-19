@@ -2941,7 +2941,7 @@
     "method": "Exact intersection with textbook-catalogue.json.questions skill/question whitelist, including partially eligible Maths skills.",
     "excludes": 820,
     "selectionTests": {
-      "passed": 7,
+      "passed": 8,
       "command": "LUISA_BROWSER_CHANNEL=chrome python -m unittest discover -s tests -p test_papers_selection.py -v",
       "covers": [
         "eligible counts",
@@ -2950,7 +2950,8 @@
         "random and manual selection",
         "immutable print content",
         "loading and cancellation",
-        "mobile width"
+        "mobile width",
+        "failed catalogue load leaves controls disabled"
       ]
     }
   },
