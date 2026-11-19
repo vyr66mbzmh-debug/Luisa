@@ -805,7 +805,7 @@
       "method": "The formula requires t>0. Find the intercept parameters, then use the vertical side AB as the triangle base. A vertical line meets the curve once at its minimum x.",
       "steps": [
         {
-          "latex": "x=0\\Rightarrow(t-2)(t-5)=0;\\quad A=(0,2\\ln2),\\quad B=(0,5\\ln5);\\quad y=0\\Rightarrow t=1\\Rightarrow C=(4,0);\\quad\\text{area}=\\frac12(5\\ln5-2\\ln2)4=10\\ln5-4\\ln2=\\ln\\frac{9765625}{16};\\quad k=9765625/16",
+          "latex": "x=0\\Rightarrow(t-2)(t-5)=0;\\quad A=(0,5\\ln5),\\quad B=(0,2\\ln2);\\quad y=0\\Rightarrow t=1\\Rightarrow C=(4,0);\\quad\\text{area}=\\frac12(5\\ln5-2\\ln2)4=10\\ln5-4\\ln2=\\ln\\frac{9765625}{16};\\quad k=9765625/16",
           "explanation": ""
         },
         {
@@ -813,7 +813,7 @@
           "explanation": "For a larger k there are two positive parameters; for a smaller k none. The displayed interval t≥0 must exclude t=0, where both the quotient and logarithm are undefined."
         }
       ],
-      "solutionHtml": "<p>The formula requires t&gt;0. Find the intercept parameters, then use the vertical side AB as the triangle base. A vertical line meets the curve once at its minimum x.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;x=0\\\\&amp;\\Rightarrow (t-2)(t-5)=0\\\\&amp;A=(0,2\\ln2),\\quad B=(0,5\\ln5)\\\\&amp;y=0\\\\&amp;\\Rightarrow t=1\\\\&amp;\\Rightarrow C=(4,0)\\\\&amp;\\text{area}\\\\&amp;=\\frac12(5\\ln5-2\\ln2)4\\\\&amp;=10\\ln5-4\\ln2\\\\&amp;=\\ln\\frac{9765625}{16}\\\\&amp;k=9765625/16\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>For a larger k there are two positive parameters; for a smaller k none. The displayed interval t≥0 must exclude t=0, where both the quotient and logarithm are undefined.</p><span data-math=\"\\begin{aligned}&amp;x=t-7+10/t\\ge2\\sqrt{10}-7\\\\&amp;x=k\\\\&amp;\\Rightarrow t^2-(k+7)t+10=0\\\\&amp;\\text{one positive root when }k=2\\sqrt{10}-7\\approx-0.675\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "solutionHtml": "<p>The formula requires t&gt;0. Find the intercept parameters, then use the vertical side AB as the triangle base. A vertical line meets the curve once at its minimum x.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;x=0\\\\&amp;\\Rightarrow (t-2)(t-5)=0\\\\&amp;A=(0,5\\ln5),\\quad B=(0,2\\ln2)\\\\&amp;y=0\\\\&amp;\\Rightarrow t=1\\\\&amp;\\Rightarrow C=(4,0)\\\\&amp;\\text{area}\\\\&amp;=\\frac12(5\\ln5-2\\ln2)4\\\\&amp;=10\\ln5-4\\ln2\\\\&amp;=\\ln\\frac{9765625}{16}\\\\&amp;k=9765625/16\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>For a larger k there are two positive parameters; for a smaller k none. The displayed interval t≥0 must exclude t=0, where both the quotient and logarithm are undefined.</p><span data-math=\"\\begin{aligned}&amp;x=t-7+10/t\\ge2\\sqrt{10}-7\\\\&amp;x=k\\\\&amp;\\Rightarrow t^2-(k+7)t+10=0\\\\&amp;\\text{one positive root when }k=2\\sqrt{10}-7\\approx-0.675\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
       "answerCheck": "domain-qualified"
     },
     {
