@@ -1,0 +1,1249 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-2",
+  "chapter": 7,
+  "sourcePdf": "resources/practice/pure-year-2/chapter-07.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.1/q1",
+      "status": "worked",
+      "method": "Substitute the specified angles, then use complementary-angle and odd/even identities.",
+      "steps": [
+        {
+          "latex": "\\sin((90^\\circ-A)+B)=\\sin(90^\\circ-A)\\cos B+\\cos(90^\\circ-A)\\sin B;\\quad\\cos(A-B)=\\cos A\\cos B+\\sin A\\sin B",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(A-(-B))=\\cos A\\cos(-B)+\\sin A\\sin(-B);\\quad\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Substitute the specified angles, then use complementary-angle and odd/even identities.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\sin((90^\\circ-A)+B)\\\\&amp;=\\sin(90^\\circ-A)\\cos B+\\cos(90^\\circ-A)\\sin B\\\\&amp;\\cos(A-B)=\\cos A\\cos B+\\sin A\\sin B\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos(A-(-B))=\\cos A\\cos(-B)+\\sin A\\sin(-B)\\\\&amp;\\cos(A+B)=\\cos A\\cos B-\\sin A\\sin B\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.1/q2",
+      "status": "worked",
+      "method": "Expand the sum or difference and substitute the exact standard-angle values.",
+      "steps": [
+        {
+          "latex": "\\sin(x-\\pi/3)=\\sin x\\cos(\\pi/3)-\\cos x\\sin(\\pi/3)=\\frac12\\sin x-\\frac{\\sqrt3}2\\cos x;\\quad a=\\frac12,\\ b=-\\frac{\\sqrt3}2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(x-\\pi/6)=\\cos x\\cos(\\pi/6)+\\sin x\\sin(\\pi/6)=\\frac{\\sqrt3}2\\cos x+\\frac12\\sin x;\\quad p=\\frac{\\sqrt3}2,\\ q=\\frac12",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(x+\\pi/3)=\\frac{\\tan x+\\tan(\\pi/3)}{1-\\tan x\\tan(\\pi/3)}=\\frac{\\tan x+\\sqrt3}{1-\\sqrt3\\tan x};\\quad m=\\sqrt3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the sum or difference and substitute the exact standard-angle values.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\sin(x-\\pi/3)\\\\&amp;=\\sin x\\cos(\\pi/3)-\\cos x\\sin(\\pi/3)\\\\&amp;=\\frac12\\sin x-\\frac{\\sqrt3}2\\cos x\\\\&amp;a=\\frac12,\\ b=-\\frac{\\sqrt3}2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos(x-\\pi/6)\\\\&amp;=\\cos x\\cos(\\pi/6)+\\sin x\\sin(\\pi/6)\\\\&amp;=\\frac{\\sqrt3}2\\cos x+\\frac12\\sin x\\\\&amp;p=\\frac{\\sqrt3}2,\\ q=\\frac12\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan(x+\\pi/3)\\\\&amp;=\\frac{\\tan x+\\tan(\\pi/3)}{1-\\tan x\\tan(\\pi/3)}\\\\&amp;=\\frac{\\tan x+\\sqrt3}{1-\\sqrt3\\tan x}\\\\&amp;m=\\sqrt3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.1/q3",
+      "status": "worked",
+      "method": "Match the expression to an addition or subtraction identity, on its original domain.",
+      "steps": [
+        {
+          "latex": "\\frac{\\tan7\\theta-\\tan3\\theta}{1+\\tan7\\theta\\tan3\\theta}=\\tan(7\\theta-3\\theta)=\\tan4\\theta",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos\\left(\\frac{3a+5b}3+\\frac{3a-5b}3\\right)=\\cos2a",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin x\\cos(\\pi/4)-\\cos x\\sin(\\pi/4)=\\sin(x-\\pi/4)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Match the expression to an addition or subtraction identity, on its original domain.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\tan7\\theta-\\tan3\\theta}{1+\\tan7\\theta\\tan3\\theta}\\\\&amp;=\\tan(7\\theta-3\\theta)\\\\&amp;=\\tan4\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos\\left(\\frac{3a+5b}3+\\frac{3a-5b}3\\right)=\\cos2a\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin x\\cos(\\pi/4)-\\cos x\\sin(\\pi/4)=\\sin(x-\\pi/4)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.1/q4",
+      "status": "worked",
+      "method": "Expand both angles and divide numerator and denominator by cos x cos y, where both tangents are defined.",
+      "steps": [
+        {
+          "latex": "\\frac{\\cos(x-y)}{\\sin(x+y)}=\\frac{\\cos x\\cos y+\\sin x\\sin y}{\\sin x\\cos y+\\cos x\\sin y}=\\frac{1+\\tan x\\tan y}{\\tan x+\\tan y}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand both angles and divide numerator and denominator by cos x cos y, where both tangents are defined.</p><span data-math=\"\\begin{aligned}&amp;\\frac{\\cos(x-y)}{\\sin(x+y)}\\\\&amp;=\\frac{\\cos x\\cos y+\\sin x\\sin y}{\\sin x\\cos y+\\cos x\\sin y}\\\\&amp;=\\frac{1+\\tan x\\tan y}{\\tan x+\\tan y}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.1/q5",
+      "status": "worked",
+      "method": "Identify the coefficients as exact sine and cosine values.",
+      "steps": [
+        {
+          "latex": "\\frac12\\cos x-\\frac{\\sqrt3}2\\sin x=\\cos x\\cos(\\pi/3)-\\sin x\\sin(\\pi/3)=\\cos(x+\\pi/3)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{\\sqrt3}2\\sin x-\\frac12\\cos x=\\sin x\\cos(\\pi/6)-\\cos x\\sin(\\pi/6)=\\sin(x-\\pi/6)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Identify the coefficients as exact sine and cosine values.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac12\\cos x-\\frac{\\sqrt3}2\\sin x\\\\&amp;=\\cos x\\cos(\\pi/3)-\\sin x\\sin(\\pi/3)\\\\&amp;=\\cos(x+\\pi/3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sqrt3}2\\sin x-\\frac12\\cos x\\\\&amp;=\\sin x\\cos(\\pi/6)-\\cos x\\sin(\\pi/6)\\\\&amp;=\\sin(x-\\pi/6)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.1/q6",
+      "status": "worked",
+      "method": "Expand the sine. A solution cannot have cos x=0, so division by cos x is valid.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sqrt3}2\\sin x+\\frac12\\cos x=\\cos x;\\quad\\sqrt3\\sin x=\\cos x\\Rightarrow\\tan x=\\frac1{\\sqrt3}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the sine. A solution cannot have cos x=0, so division by cos x is valid.</p><span data-math=\"\\begin{aligned}&amp;\\frac{\\sqrt3}2\\sin x+\\frac12\\cos x=\\cos x\\\\&amp;\\sqrt3\\sin x=\\cos x\\\\&amp;\\Rightarrow \\tan x=\\frac1{\\sqrt3}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.1/q7",
+      "status": "worked",
+      "method": "Expand both sums, then collect sine and cosine coefficients.",
+      "steps": [
+        {
+          "latex": "2\\sin(x+5\\pi/6)+2\\sin(x+10\\pi/6)=2(-\\frac{\\sqrt3}2\\sin x+\\frac12\\cos x)+2(\\frac12\\sin x-\\frac{\\sqrt3}2\\cos x)=(1-\\sqrt3)\\sin x+(1-\\sqrt3)\\cos x",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand both sums, then collect sine and cosine coefficients.</p><span data-math=\"\\begin{aligned}&amp;2\\sin(x+5\\pi/6)+2\\sin(x+10\\pi/6)\\\\&amp;=2(-\\frac{\\sqrt3}2\\sin x+\\frac12\\cos x)+2(\\frac12\\sin x-\\frac{\\sqrt3}2\\cos x)\\\\&amp;=(1-\\sqrt3)\\sin x+(1-\\sqrt3)\\cos x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.2/q1",
+      "status": "worked",
+      "method": "Combine the angles first, then use an exact standard-angle ratio.",
+      "steps": [
+        {
+          "latex": "\\sin(\\pi/12+\\pi/4)=\\sin(\\pi/3)=\\frac{\\sqrt3}2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(96^\\circ-51^\\circ)=\\cos45^\\circ=\\frac{\\sqrt2}2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(\\pi/18+\\pi/9)=\\tan(\\pi/6)=\\frac{\\sqrt3}3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Combine the angles first, then use an exact standard-angle ratio.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\sin(\\pi/12+\\pi/4)=\\sin(\\pi/3)=\\frac{\\sqrt3}2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos(96^\\circ-51^\\circ)=\\cos45^\\circ=\\frac{\\sqrt2}2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan(\\pi/18+\\pi/9)=\\tan(\\pi/6)=\\frac{\\sqrt3}3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.2/q2",
+      "status": "worked",
+      "method": "Split the angle into standard angles and apply the specified addition formula.",
+      "steps": [
+        {
+          "latex": "\\sin135^\\circ=\\sin(90^\\circ+45^\\circ)=1\\cdot\\frac{\\sqrt2}2+0\\cdot\\frac{\\sqrt2}2=\\frac{\\sqrt2}2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos15^\\circ=\\cos(45^\\circ-30^\\circ)=\\frac{\\sqrt2}2\\frac{\\sqrt3}2+\\frac{\\sqrt2}2\\frac12=\\frac{\\sqrt6+\\sqrt2}4",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan75^\\circ=\\frac{1+1/\\sqrt3}{1-1/\\sqrt3}=\\frac{\\sqrt3+1}{\\sqrt3-1}=\\frac{(\\sqrt3+1)^2}{3-1}=2+\\sqrt3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Split the angle into standard angles and apply the specified addition formula.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\sin135^\\circ\\\\&amp;=\\sin(90^\\circ+45^\\circ)\\\\&amp;=1\\cdot\\frac{\\sqrt2}2+0\\cdot\\frac{\\sqrt2}2\\\\&amp;=\\frac{\\sqrt2}2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos15^\\circ\\\\&amp;=\\cos(45^\\circ-30^\\circ)\\\\&amp;=\\frac{\\sqrt2}2\\frac{\\sqrt3}2+\\frac{\\sqrt2}2\\frac12\\\\&amp;=\\frac{\\sqrt6+\\sqrt2}4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan75^\\circ\\\\&amp;=\\frac{1+1/\\sqrt3}{1-1/\\sqrt3}\\\\&amp;=\\frac{\\sqrt3+1}{\\sqrt3-1}\\\\&amp;=\\frac{(\\sqrt3+1)^2}{3-1}\\\\&amp;=2+\\sqrt3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.2/q3",
+      "status": "worked",
+      "method": "Both angles are acute, so sin A=4/5 and cos B=15/17 by Pythagoras.",
+      "steps": [
+        {
+          "latex": "\\cos(A+B)=\\frac35\\frac{15}{17}-\\frac45\\frac8{17}=\\frac{13}{85}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(A-B)=\\frac{4/3-8/15}{1+(4/3)(8/15)}=\\frac{36}{77}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin(A+B)=\\frac45\\frac{15}{17}+\\frac35\\frac8{17}=\\frac{84}{85};\\quad\\operatorname{cosec}(A+B)=\\frac{85}{84}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Both angles are acute, so sin A=4/5 and cos B=15/17 by Pythagoras.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\cos(A+B)\\\\&amp;=\\frac35\\frac{15}{17}-\\frac45\\frac8{17}\\\\&amp;=\\frac{13}{85}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan(A-B)=\\frac{4/3-8/15}{1+(4/3)(8/15)}=\\frac{36}{77}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin(A+B)\\\\&amp;=\\frac45\\frac{15}{17}+\\frac35\\frac8{17}\\\\&amp;=\\frac{84}{85}\\\\&amp;\\operatorname{cosec}(A+B)=\\frac{85}{84}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.2/q4",
+      "status": "worked",
+      "method": "The acute angle with cos A=1/2 is A=π/3. Substitute this angle.",
+      "steps": [
+        {
+          "latex": "\\cos(\\pi/6-A)=\\cos(-\\pi/6)=\\frac{\\sqrt3}2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(\\pi/3+A)=\\tan(2\\pi/3)=-\\sqrt3",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin(\\pi/2-A)=\\sin(\\pi/6)=\\frac12",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The acute angle with cos A=1/2 is A=π/3. Substitute this angle.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\cos(\\pi/6-A)=\\cos(-\\pi/6)=\\frac{\\sqrt3}2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\tan(\\pi/3+A)=\\tan(2\\pi/3)=-\\sqrt3\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\sin(\\pi/2-A)=\\sin(\\pi/6)=\\frac12\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.2/q5",
+      "status": "worked",
+      "method": "A is in quadrant II, so cos A=−7/25. B is reflex with negative cosine, so it is in quadrant III and sin B=−12/13.",
+      "steps": [
+        {
+          "latex": "\\sin(A+B)=\\frac{24}{25}\\frac{-5}{13}+\\frac{-7}{25}\\frac{-12}{13}=-\\frac{36}{325}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(A-B)=\\frac{-24/7-12/5}{1+(-24/7)(12/5)}=\\frac{204}{253}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(A+B)=\\frac{-7}{25}\\frac{-5}{13}-\\frac{24}{25}\\frac{-12}{13}=\\frac{323}{325};\\quad\\sec(A+B)=\\frac{325}{323}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>A is in quadrant II, so cos A=−7/25. B is reflex with negative cosine, so it is in quadrant III and sin B=−12/13.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\sin(A+B)\\\\&amp;=\\frac{24}{25}\\frac{-5}{13}+\\frac{-7}{25}\\frac{-12}{13}\\\\&amp;=-\\frac{36}{325}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan(A-B)\\\\&amp;=\\frac{-24/7-12/5}{1+(-24/7)(12/5)}\\\\&amp;=\\frac{204}{253}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos(A+B)\\\\&amp;=\\frac{-7}{25}\\frac{-5}{13}-\\frac{24}{25}\\frac{-12}{13}\\\\&amp;=\\frac{323}{325}\\\\&amp;\\sec(A+B)=\\frac{325}{323}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.2/q6",
+      "status": "worked",
+      "method": "Apply the tangent difference formula and rationalise the denominator.",
+      "steps": [
+        {
+          "latex": "\\tan(\\pi/4-\\pi/6)=\\frac{\\tan(\\pi/4)-\\tan(\\pi/6)}{1+\\tan(\\pi/4)\\tan(\\pi/6)}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(\\pi/12)=\\frac{1-1/\\sqrt3}{1+1/\\sqrt3}=\\frac{\\sqrt3-1}{\\sqrt3+1}=\\frac{(\\sqrt3-1)^2}{3-1}=2-\\sqrt3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply the tangent difference formula and rationalise the denominator.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\tan(\\pi/4-\\pi/6)\\\\&amp;=\\frac{\\tan(\\pi/4)-\\tan(\\pi/6)}{1+\\tan(\\pi/4)\\tan(\\pi/6)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan(\\pi/12)\\\\&amp;=\\frac{1-1/\\sqrt3}{1+1/\\sqrt3}\\\\&amp;=\\frac{\\sqrt3-1}{\\sqrt3+1}\\\\&amp;=\\frac{(\\sqrt3-1)^2}{3-1}\\\\&amp;=2-\\sqrt3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.2/q7",
+      "status": "worked",
+      "method": "Use 105°=60°+45°, then take the reciprocal and rationalise.",
+      "steps": [
+        {
+          "latex": "\\sin105^\\circ=\\sin60^\\circ\\cos45^\\circ+\\cos60^\\circ\\sin45^\\circ=\\frac{\\sqrt3}2\\frac{\\sqrt2}2+\\frac12\\frac{\\sqrt2}2=\\frac{\\sqrt6+\\sqrt2}4",
+          "explanation": ""
+        },
+        {
+          "latex": "\\operatorname{cosec}105^\\circ=\\frac4{\\sqrt6+\\sqrt2}=\\frac{4(\\sqrt6-\\sqrt2)}{6-2}=\\sqrt6-\\sqrt2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use 105°=60°+45°, then take the reciprocal and rationalise.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\sin105^\\circ\\\\&amp;=\\sin60^\\circ\\cos45^\\circ+\\cos60^\\circ\\sin45^\\circ\\\\&amp;=\\frac{\\sqrt3}2\\frac{\\sqrt2}2+\\frac12\\frac{\\sqrt2}2\\\\&amp;=\\frac{\\sqrt6+\\sqrt2}4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\operatorname{cosec}105^\\circ\\\\&amp;=\\frac4{\\sqrt6+\\sqrt2}\\\\&amp;=\\frac{4(\\sqrt6-\\sqrt2)}{6-2}\\\\&amp;=\\sqrt6-\\sqrt2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.3/q1",
+      "status": "worked",
+      "method": "Recognise the double-angle identity, taking a reciprocal in (c).",
+      "steps": [
+        {
+          "latex": "2\\sin(\\pi/3)\\cos(\\pi/3)=\\sin(2\\pi/3)",
+          "explanation": ""
+        },
+        {
+          "latex": "4\\cos^27^\\circ-2=2(2\\cos^27^\\circ-1)=2\\cos14^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{1-\\tan^213.5^\\circ}{2\\tan13.5^\\circ}=\\frac1{\\tan27^\\circ}=\\cot27^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Recognise the double-angle identity, taking a reciprocal in (c).</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"2\\sin(\\pi/3)\\cos(\\pi/3)=\\sin(2\\pi/3)\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;4\\cos^27^\\circ-2=2(2\\cos^27^\\circ-1)=2\\cos14^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{1-\\tan^213.5^\\circ}{2\\tan13.5^\\circ}\\\\&amp;=\\frac1{\\tan27^\\circ}\\\\&amp;=\\cot27^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.3/q2",
+      "status": "worked",
+      "method": "Use sin 2u=2 sin u cos u and the appropriate squared-function form of cos 2u.",
+      "steps": [
+        {
+          "latex": "6\\sin5\\theta\\cos5\\theta=3\\sin10\\theta",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan\\theta(1+\\cos2\\theta)=\\frac{\\sin\\theta}{\\cos\\theta}2\\cos^2\\theta=\\sin2\\theta",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{\\sin2\\theta}{1-\\cos2\\theta}=\\frac{2\\sin\\theta\\cos\\theta}{2\\sin^2\\theta}=\\cot\\theta",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use sin 2u=2 sin u cos u and the appropriate squared-function form of cos 2u.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"6\\sin5\\theta\\cos5\\theta=3\\sin10\\theta\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan\\theta(1+\\cos2\\theta)\\\\&amp;=\\frac{\\sin\\theta}{\\cos\\theta}2\\cos^2\\theta\\\\&amp;=\\sin2\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin2\\theta}{1-\\cos2\\theta}\\\\&amp;=\\frac{2\\sin\\theta\\cos\\theta}{2\\sin^2\\theta}\\\\&amp;=\\cot\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.3/q3",
+      "status": "worked",
+      "method": "A is obtuse, so cos A=−12/13 and tan A=−5/12.",
+      "steps": [
+        {
+          "latex": "\\tan2A=\\frac{2(-5/12)}{1-25/144}=-\\frac{120}{119}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos2A=1-2(5/13)^2=\\frac{119}{169}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin2A=2\\frac5{13}\\frac{-12}{13}=-\\frac{120}{169};\\quad\\operatorname{cosec}2A=-\\frac{169}{120}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>A is obtuse, so cos A=−12/13 and tan A=−5/12.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\tan2A=\\frac{2(-5/12)}{1-25/144}=-\\frac{120}{119}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\cos2A=1-2(5/13)^2=\\frac{119}{169}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin2A=2\\frac5{13}\\frac{-12}{13}=-\\frac{120}{169}\\\\&amp;\\operatorname{cosec}2A=-\\frac{169}{120}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.3/q4",
+      "status": "worked",
+      "method": "Replace the double angle by a square, then eliminate the trigonometric quantity. Preserve both signs where no quadrant is given.",
+      "steps": [
+        {
+          "latex": "\\sin\\theta=x/5;\\quad y=2-10(1-2\\sin^2\\theta)=2-10+20x^2/25=\\frac45x^2-8;\\quad-5\\le x\\le5",
+          "explanation": ""
+        },
+        {
+          "latex": "x=2\\cos^2\\theta-1\\Rightarrow\\cos^2\\theta=\\frac{x+1}2;\\quad y=\\frac4{\\cos\\theta}=\\pm4\\sqrt{\\frac2{x+1}},\\quad-1<x\\le1",
+          "explanation": "Without a restriction on θ, both branches occur. The endpoint x=−1 is excluded because sec θ is undefined."
+        }
+      ],
+      "solutionHtml": "<p>Replace the double angle by a square, then eliminate the trigonometric quantity. Preserve both signs where no quadrant is given.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\sin\\theta=x/5\\\\&amp;y=2-10(1-2\\sin^2\\theta)=2-10+20x^2/25=\\frac45x^2-8\\\\&amp;-5\\le x\\le5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Without a restriction on θ, both branches occur. The endpoint x=−1 is excluded because sec θ is undefined.</p><span data-math=\"\\begin{aligned}&amp;x=2\\cos^2\\theta-1\\\\&amp;\\Rightarrow \\cos^2\\theta=\\frac{x+1}2\\\\&amp;y\\\\&amp;=\\frac4{\\cos\\theta}\\\\&amp;=\\pm4\\sqrt{\\frac2{x+1}},\\quad-1&lt;x\\le1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.3/q5",
+      "status": "worked",
+      "method": "Factorise the difference of squares and use sin²x+cos²x=1.",
+      "steps": [
+        {
+          "latex": "\\cos^4x-\\sin^4x=(\\cos^2x+\\sin^2x)(\\cos^2x-\\sin^2x)=1\\cdot\\cos2x",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos^4(\\pi/12)-\\sin^4(\\pi/12)=\\cos(\\pi/6)=\\frac{\\sqrt3}2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Factorise the difference of squares and use sin²x+cos²x=1.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\cos^4x-\\sin^4x\\\\&amp;=(\\cos^2x+\\sin^2x)(\\cos^2x-\\sin^2x)\\\\&amp;=1\\cdot\\cos2x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos^4(\\pi/12)-\\sin^4(\\pi/12)\\\\&amp;=\\cos(\\pi/6)\\\\&amp;=\\frac{\\sqrt3}2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.3/q6",
+      "status": "worked",
+      "method": "Substitute sin x=a/2 and cos x=b/2 into the double-angle formulae.",
+      "steps": [
+        {
+          "latex": "c=1-2\\sin^2x=1-2(a/2)^2=1-\\frac{a^2}2",
+          "explanation": ""
+        },
+        {
+          "latex": "d=\\frac{2\\sin x\\cos x}{\\cos^2x-\\sin^2x}=\\frac{2(a/2)(b/2)}{(b/2)^2-(a/2)^2}=\\frac{2ab}{b^2-a^2}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Substitute sin x=a/2 and cos x=b/2 into the double-angle formulae.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"c=1-2\\sin^2x=1-2(a/2)^2=1-\\frac{a^2}2\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;d\\\\&amp;=\\frac{2\\sin x\\cos x}{\\cos^2x-\\sin^2x}\\\\&amp;=\\frac{2(a/2)(b/2)}{(b/2)^2-(a/2)^2}\\\\&amp;=\\frac{2ab}{b^2-a^2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.3/q7",
+      "status": "worked",
+      "method": "Check that the angle interval and cosine can hold simultaneously before using a half-angle identity.",
+      "steps": [
+        {
+          "latex": "\\pi<\\theta<3\\pi/2\\Rightarrow\\cos\\theta<0;\\quad24/25>0",
+          "explanation": "There is no real θ satisfying the supplied conditions, so the requested sine has no value under those conditions. Formally sin²(θ/2)=(1−24/25)/2=1/50 yields √2/10, but this cannot occur when θ/2 lies between π/2 and 3π/4. The incompatible prompt must be clarified."
+        }
+      ],
+      "solutionHtml": "<p>Check that the angle interval and cosine can hold simultaneously before using a half-angle identity.</p><p>There is no real θ satisfying the supplied conditions, so the requested sine has no value under those conditions. Formally sin²(θ/2)=(1−24/25)/2=1/50 yields √2/10, but this cannot occur when θ/2 lies between π/2 and 3π/4. The incompatible prompt must be clarified.</p><span data-math=\"\\begin{aligned}&amp;\\pi&lt;\\theta&lt;3\\pi/2\\\\&amp;\\Rightarrow \\cos\\theta&lt;0\\\\&amp;24/25&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.4/q1",
+      "status": "worked",
+      "method": "Expand the angle sum and solve the resulting single-ratio equation. Include every branch in 0≤x≤2π.",
+      "steps": [
+        {
+          "latex": "\\frac12\\sin x+\\frac{\\sqrt3}2\\cos x+4\\sin x=0\\Rightarrow\\tan x=-\\frac{\\sqrt3}9;\\quad x=-\\tan^{-1}(\\sqrt3/9)+n\\pi\\Rightarrow x\\approx3.0,\\ 6.1",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{\\sqrt3}2\\cos x-\\frac12\\sin x=\\sin x\\Rightarrow\\tan x=\\frac1{\\sqrt3};\\quad x=\\pi/6,\\ 7\\pi/6\\approx0.5,\\ 3.7",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(x+\\pi/4)+\\sin(x+\\pi/4)=\\sqrt2\\cos x;\\quad\\cos x=\\frac1{2\\sqrt2};\\quad x=\\cos^{-1}(1/(2\\sqrt2)),\\ 2\\pi-\\cos^{-1}(1/(2\\sqrt2))\\approx1.2,\\ 5.1",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the angle sum and solve the resulting single-ratio equation. Include every branch in 0≤x≤2π.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac12\\sin x+\\frac{\\sqrt3}2\\cos x+4\\sin x=0\\\\&amp;\\Rightarrow \\tan x=-\\frac{\\sqrt3}9\\\\&amp;x=-\\tan^{-1}(\\sqrt3/9)+n\\pi\\\\&amp;\\Rightarrow x\\approx3.0,\\ 6.1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sqrt3}2\\cos x-\\frac12\\sin x=\\sin x\\\\&amp;\\Rightarrow \\tan x=\\frac1{\\sqrt3}\\\\&amp;x=\\pi/6,\\ 7\\pi/6\\approx0.5,\\ 3.7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos(x+\\pi/4)+\\sin(x+\\pi/4)=\\sqrt2\\cos x\\\\&amp;\\cos x=\\frac1{2\\sqrt2}\\\\&amp;x\\\\&amp;=\\cos^{-1}(1/(2\\sqrt2)),\\ 2\\pi-\\cos^{-1}(1/(2\\sqrt2))\\approx1.2,\\ 5.1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.4/q2",
+      "status": "worked",
+      "method": "Use double-angle identities; factor before dividing to retain zero-sine solutions.",
+      "steps": [
+        {
+          "latex": "2\\cos^2\\theta=7\\cos^2\\theta-1\\Rightarrow\\cos^2\\theta=\\frac15;\\quad\\theta=\\cos^{-1}(1/\\sqrt5),\\ 180^\\circ-\\cos^{-1}(1/\\sqrt5)\\approx63.4^\\circ,\\ 116.6^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "2\\sin\\theta\\cos\\theta=\\frac14\\sin\\theta\\Rightarrow\\sin\\theta(2\\cos\\theta-\\frac14)=0;\\quad\\theta=0^\\circ,\\ 180^\\circ,\\ \\cos^{-1}(1/8)\\approx82.8^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{2\\tan^2\\theta}{1-\\tan^2\\theta}=3\\Rightarrow5\\tan^2\\theta=3;\\quad\\tan\\theta=\\pm\\sqrt{3/5}\\Rightarrow\\theta\\approx37.8^\\circ,\\ 142.2^\\circ",
+          "explanation": "Both answers have defined tan θ and tan 2θ."
+        }
+      ],
+      "solutionHtml": "<p>Use double-angle identities; factor before dividing to retain zero-sine solutions.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2\\cos^2\\theta=7\\cos^2\\theta-1\\\\&amp;\\Rightarrow \\cos^2\\theta=\\frac15\\\\&amp;\\theta\\\\&amp;=\\cos^{-1}(1/\\sqrt5),\\ 180^\\circ-\\cos^{-1}(1/\\sqrt5)\\approx63.4^\\circ,\\ 116.6^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;2\\sin\\theta\\cos\\theta=\\frac14\\sin\\theta\\\\&amp;\\Rightarrow \\sin\\theta(2\\cos\\theta-\\frac14)=0\\\\&amp;\\theta\\\\&amp;=0^\\circ,\\ 180^\\circ,\\ \\cos^{-1}(1/8)\\approx82.8^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Both answers have defined tan θ and tan 2θ.</p><span data-math=\"\\begin{aligned}&amp;\\frac{2\\tan^2\\theta}{1-\\tan^2\\theta}=3\\\\&amp;\\Rightarrow 5\\tan^2\\theta=3\\\\&amp;\\tan\\theta=\\pm\\sqrt{3/5}\\\\&amp;\\Rightarrow \\theta\\approx37.8^\\circ,\\ 142.2^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.4/q3",
+      "status": "worked",
+      "method": "Use the cosine difference identity, then solve the shifted cosine equation.",
+      "steps": [
+        {
+          "latex": "\\cos(x-\\pi/6)=\\cos x\\frac{\\sqrt3}2+\\sin x\\frac12=\\frac12(\\sqrt3\\cos x+\\sin x)",
+          "explanation": ""
+        },
+        {
+          "latex": "2\\cos(x-\\pi/6)=1\\Rightarrow x-\\pi/6=\\pm\\pi/3+2n\\pi;\\quad x=\\pi/2,\\ 11\\pi/6",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the cosine difference identity, then solve the shifted cosine equation.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\cos(x-\\pi/6)\\\\&amp;=\\cos x\\frac{\\sqrt3}2+\\sin x\\frac12\\\\&amp;=\\frac12(\\sqrt3\\cos x+\\sin x)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;2\\cos(x-\\pi/6)=1\\\\&amp;\\Rightarrow x-\\pi/6=\\pm\\pi/3+2n\\pi\\\\&amp;x=\\pi/2,\\ 11\\pi/6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.4/q4",
+      "status": "worked",
+      "method": "Expand sin(x−45°). No solution has cos x=0, so divide by cos x.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sin x-\\cos x}{\\sqrt2}=\\cos x\\Rightarrow\\sin x=(1+\\sqrt2)\\cos x;\\quad\\tan x=1+\\sqrt2,\\ a=1,\\ b=2",
+          "explanation": ""
+        },
+        {
+          "latex": "x=\\tan^{-1}(1+\\sqrt2)+180^\\circ n\\Rightarrow x=67.5^\\circ,\\ 247.5^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand sin(x−45°). No solution has cos x=0, so divide by cos x.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin x-\\cos x}{\\sqrt2}=\\cos x\\\\&amp;\\Rightarrow \\sin x=(1+\\sqrt2)\\cos x\\\\&amp;\\tan x=1+\\sqrt2,\\ a=1,\\ b=2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x=\\tan^{-1}(1+\\sqrt2)+180^\\circ n\\\\&amp;\\Rightarrow x=67.5^\\circ,\\ 247.5^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.4/q5",
+      "status": "worked",
+      "method": "Expand both sides; reduce to a tangent equation and include its two branches in the interval.",
+      "steps": [
+        {
+          "latex": "2\\sin(x-\\pi/6)=\\sqrt3\\sin x-\\cos x;\\quad\\sin(x+\\pi/2)=\\cos x;\\quad\\sqrt3\\sin x-2\\cos x=0",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan x=2/\\sqrt3;\\quad x=\\tan^{-1}(2/\\sqrt3)+n\\pi\\Rightarrow x\\approx-2.28,\\ 0.86",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand both sides; reduce to a tangent equation and include its two branches in the interval.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2\\sin(x-\\pi/6)=\\sqrt3\\sin x-\\cos x\\\\&amp;\\sin(x+\\pi/2)=\\cos x\\\\&amp;\\sqrt3\\sin x-2\\cos x=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan x=2/\\sqrt3\\\\&amp;x=\\tan^{-1}(2/\\sqrt3)+n\\pi\\\\&amp;\\Rightarrow x\\approx-2.28,\\ 0.86\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.4/q6",
+      "status": "worked",
+      "method": "Use the double-angle formula on the original tangent domain and factor the resulting polynomial.",
+      "steps": [
+        {
+          "latex": "\\frac{2\\tan x}{1-\\tan^2x}-\\tan x=0\\Rightarrow2\\tan x-\\tan x(1-\\tan^2x)=0;\\quad\\tan x+\\tan^3x=0",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan x(1+\\tan^2x)=0\\Rightarrow\\tan x=0;\\quad x=0,\\ \\pi,\\ 2\\pi",
+          "explanation": "The factor 1+tan²x is positive for real x; all three retained values have both tangents defined."
+        }
+      ],
+      "solutionHtml": "<p>Use the double-angle formula on the original tangent domain and factor the resulting polynomial.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{2\\tan x}{1-\\tan^2x}-\\tan x=0\\\\&amp;\\Rightarrow 2\\tan x-\\tan x(1-\\tan^2x)=0\\\\&amp;\\tan x+\\tan^3x=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The factor 1+tan²x is positive for real x; all three retained values have both tangents defined.</p><span data-math=\"\\begin{aligned}&amp;\\tan x(1+\\tan^2x)=0\\\\&amp;\\Rightarrow \\tan x=0\\\\&amp;x=0,\\ \\pi,\\ 2\\pi\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.4/q7",
+      "status": "worked",
+      "method": "Rewrite both squares in terms of cosine and factorise.",
+      "steps": [
+        {
+          "latex": "2(1-\\cos^2x)-(2\\cos^2x-1)-\\cos x=0;\\quad4\\cos^2x+\\cos x-3=0,\\ a=4,\\ b=3",
+          "explanation": ""
+        },
+        {
+          "latex": "(4\\cos x-3)(\\cos x+1)=0;\\quad\\cos x=3/4\\text{ or }-1;\\quad x=-\\pi,\\ -\\cos^{-1}(3/4),\\ \\cos^{-1}(3/4),\\ \\pi\\approx-\\pi,\\ -0.72,\\ 0.72,\\ \\pi",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Rewrite both squares in terms of cosine and factorise.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2(1-\\cos^2x)-(2\\cos^2x-1)-\\cos x=0\\\\&amp;4\\cos^2x+\\cos x-3=0,\\ a=4,\\ b=3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;(4\\cos x-3)(\\cos x+1)=0\\\\&amp;\\cos x=3/4\\text{ or }-1\\\\&amp;x\\\\&amp;=-\\pi,\\ -\\cos^{-1}(3/4),\\ \\cos^{-1}(3/4),\\ \\pi\\approx-\\pi,\\ -0.72,\\ 0.72,\\ \\pi\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.4/q8",
+      "status": "worked",
+      "method": "Subtract 1, use cos²x−1=−sin²x and factor. Do not divide away the sine factor.",
+      "steps": [
+        {
+          "latex": "-3\\sin^2x-2\\sin x\\cos x=0\\Rightarrow\\sin x(3\\sin x+2\\cos x)=0;\\quad\\sin x=0\\Rightarrow x=-\\pi,0;\\quad\\tan x=-2/3\\Rightarrow x=-\\tan^{-1}(2/3),\\ \\pi-\\tan^{-1}(2/3);\\quad x=-\\pi,\\ -0.59,\\ 0,\\ 2.55",
+          "explanation": "The right endpoint π is excluded."
+        }
+      ],
+      "solutionHtml": "<p>Subtract 1, use cos²x−1=−sin²x and factor. Do not divide away the sine factor.</p><p>The right endpoint π is excluded.</p><span data-math=\"\\begin{aligned}&amp;-3\\sin^2x-2\\sin x\\cos x=0\\\\&amp;\\Rightarrow \\sin x(3\\sin x+2\\cos x)=0\\\\&amp;\\sin x=0\\\\&amp;\\Rightarrow x=-\\pi,0\\\\&amp;\\tan x=-2/3\\\\&amp;\\Rightarrow x=-\\tan^{-1}(2/3),\\ \\pi-\\tan^{-1}(2/3)\\\\&amp;x=-\\pi,\\ -0.59,\\ 0,\\ 2.55\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.5/q1",
+      "status": "worked",
+      "method": "Expand the requested shifted function and compare coefficients. Squaring and adding gives R².",
+      "steps": [
+        {
+          "latex": "R\\cos\\alpha=20,\\ R\\sin\\alpha=21;\\quad R=\\sqrt{20^2+21^2}=29,\\quad\\tan\\alpha=21/20",
+          "explanation": ""
+        },
+        {
+          "latex": "R\\cos\\alpha=\\sqrt3,\\ R\\sin\\alpha=\\sqrt5;\\quad R=\\sqrt{3+5}=2\\sqrt2,\\quad\\tan\\alpha=\\sqrt{5/3}",
+          "explanation": ""
+        },
+        {
+          "latex": "R\\cos\\alpha=2,\\ R\\sin\\alpha=3;\\quad R=\\sqrt{2^2+3^2}=\\sqrt{13},\\quad\\tan\\alpha=3/2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the requested shifted function and compare coefficients. Squaring and adding gives R².</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=20,\\ R\\sin\\alpha=21\\\\&amp;R=\\sqrt{20^2+21^2}=29,\\quad\\tan\\alpha=21/20\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=\\sqrt3,\\ R\\sin\\alpha=\\sqrt5\\\\&amp;R=\\sqrt{3+5}=2\\sqrt2,\\quad\\tan\\alpha=\\sqrt{5/3}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=2,\\ R\\sin\\alpha=3\\\\&amp;R=\\sqrt{2^2+3^2}=\\sqrt{13},\\quad\\tan\\alpha=3/2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.5/q2",
+      "status": "worked",
+      "method": "Compare coefficients in the specified form. Use the acute inverse tangent for α.",
+      "steps": [
+        {
+          "latex": "R\\cos\\alpha=1,\\ R\\sin\\alpha=2;\\quad R=\\sqrt5,\\quad\\alpha=\\tan^{-1}2\\approx63.4^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "R\\cos\\alpha=12,\\ R\\sin\\alpha=5;\\quad R=\\sqrt{144+25}=13,\\quad\\alpha=\\tan^{-1}(5/12)\\approx22.6^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "R\\cos\\alpha=4,\\ R\\sin\\alpha=2;\\quad R=\\sqrt{16+4}=2\\sqrt5,\\quad\\alpha=\\tan^{-1}(1/2)\\approx26.6^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Compare coefficients in the specified form. Use the acute inverse tangent for α.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=1,\\ R\\sin\\alpha=2\\\\&amp;R=\\sqrt5,\\quad\\alpha=\\tan^{-1}2\\approx63.4^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=12,\\ R\\sin\\alpha=5\\\\&amp;R\\\\&amp;=\\sqrt{144+25}\\\\&amp;=13,\\quad\\alpha\\\\&amp;=\\tan^{-1}(5/12)\\approx22.6^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=4,\\ R\\sin\\alpha=2\\\\&amp;R\\\\&amp;=\\sqrt{16+4}\\\\&amp;=2\\sqrt5,\\quad\\alpha\\\\&amp;=\\tan^{-1}(1/2)\\approx26.6^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.5/q3",
+      "status": "worked",
+      "method": "Compare coefficients to find amplitude and phase. Use the zeros and turning points to draw each complete wave on the stated interval.",
+      "steps": [
+        {
+          "latex": "R\\cos\\alpha=\\sqrt3,\\ R\\sin\\alpha=1\\Rightarrow R=2,\\ \\alpha=\\pi/6;\\quad y=2\\sin(\\theta-\\pi/6);\\quad y(0)=y(2\\pi)=-1;\\quad y=0:\\ \\theta=\\pi/6,7\\pi/6;\\quad\\max(2\\pi/3,2),\\ \\min(5\\pi/3,-2)",
+          "explanation": "(i) The required form is 2 sin(θ−π/6). (ii) The accompanying first graph uses these features."
+        },
+        {
+          "latex": "R\\cos\\alpha=2,\\ R\\sin\\alpha=\\sqrt{12}\\Rightarrow R=4,\\ \\alpha=\\pi/3;\\quad y=4\\cos(\\theta+\\pi/3);\\quad y(0)=y(2\\pi)=2;\\quad y=0:\\ \\theta=\\pi/6,7\\pi/6;\\quad\\min(2\\pi/3,-4),\\ \\max(5\\pi/3,4)",
+          "explanation": "(i) The required form is 4 cos(θ+π/3). (ii) See the second graph."
+        },
+        {
+          "latex": "R\\cos\\alpha=R\\sin\\alpha=2\\Rightarrow R=2\\sqrt2,\\ \\alpha=\\pi/4;\\quad y=2\\sqrt2\\sin(\\theta+\\pi/4);\\quad y(0)=y(2\\pi)=2;\\quad y=0:\\ \\theta=3\\pi/4,7\\pi/4;\\quad\\max(\\pi/4,2\\sqrt2),\\ \\min(5\\pi/4,-2\\sqrt2)",
+          "explanation": "(i) The required form is 2√2 sin(θ+π/4). (ii) See the third graph."
+        }
+      ],
+      "solutionHtml": "<p>Compare coefficients to find amplitude and phase. Use the zeros and turning points to draw each complete wave on the stated interval.</p><ol class=\"parts\" type=\"a\"><li><p>(i) The required form is 2 sin(θ−π/6). (ii) The accompanying first graph uses these features.</p><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=\\sqrt3,\\ R\\sin\\alpha=1\\\\&amp;\\Rightarrow R=2,\\ \\alpha=\\pi/6\\\\&amp;y=2\\sin(\\theta-\\pi/6)\\\\&amp;y(0)=y(2\\pi)=-1\\\\&amp;y=0:\\ \\theta=\\pi/6,7\\pi/6\\\\&amp;\\max(2\\pi/3,2),\\ \\min(5\\pi/3,-2)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) The required form is 4 cos(θ+π/3). (ii) See the second graph.</p><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=2,\\ R\\sin\\alpha=\\sqrt{12}\\\\&amp;\\Rightarrow R=4,\\ \\alpha=\\pi/3\\\\&amp;y=4\\cos(\\theta+\\pi/3)\\\\&amp;y(0)=y(2\\pi)=2\\\\&amp;y=0:\\ \\theta=\\pi/6,7\\pi/6\\\\&amp;\\min(2\\pi/3,-4),\\ \\max(5\\pi/3,4)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) The required form is 2√2 sin(θ+π/4). (ii) See the third graph.</p><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=R\\sin\\alpha=2\\\\&amp;\\Rightarrow R=2\\sqrt2,\\ \\alpha=\\pi/4\\\\&amp;y=2\\sqrt2\\sin(\\theta+\\pi/4)\\\\&amp;y(0)=y(2\\pi)=2\\\\&amp;y=0:\\ \\theta=3\\pi/4,7\\pi/4\\\\&amp;\\max(\\pi/4,2\\sqrt2),\\ \\min(5\\pi/4,-2\\sqrt2)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/64723859032009732e5c.png\" alt=\"Graph for part a\" style=\"max-width:100%;height:auto\"><figcaption>Part (a): graph on the requested interval.</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/939039dc19eb56142256.png\" alt=\"Graph for part b\" style=\"max-width:100%;height:auto\"><figcaption>Part (b): graph on the requested interval.</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/e6f182b63b078a98cff0.png\" alt=\"Graph for part c\" style=\"max-width:100%;height:auto\"><figcaption>Part (c): graph on the requested interval.</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 3
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.5/q4",
+      "status": "worked",
+      "method": "Compare sine and cosine coefficients, then solve both sine branches using the unrounded phase.",
+      "steps": [
+        {
+          "latex": "R\\cos\\alpha=2,\\ R\\sin\\alpha=4;\\quad R=\\sqrt{20}=2\\sqrt5,\\quad\\alpha=\\tan^{-1}2\\approx63.43^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin(\\theta+\\alpha)=3/(2\\sqrt5);\\quad\\beta=\\sin^{-1}(3/(2\\sqrt5));\\quad\\theta=180^\\circ-\\beta-\\alpha,\\ 360^\\circ+\\beta-\\alpha\\approx74.4^\\circ,\\ 338.7^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Compare sine and cosine coefficients, then solve both sine branches using the unrounded phase.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=2,\\ R\\sin\\alpha=4\\\\&amp;R\\\\&amp;=\\sqrt{20}\\\\&amp;=2\\sqrt5,\\quad\\alpha\\\\&amp;=\\tan^{-1}2\\approx63.43^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin(\\theta+\\alpha)=3/(2\\sqrt5)\\\\&amp;\\beta=\\sin^{-1}(3/(2\\sqrt5))\\\\&amp;\\theta\\\\&amp;=180^\\circ-\\beta-\\alpha,\\ 360^\\circ+\\beta-\\alpha\\approx74.4^\\circ,\\ 338.7^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.5/q5",
+      "status": "worked",
+      "method": "Combine the terms with amplitude √13, retain the exact phase during calculation, and enumerate both cosine branches.",
+      "steps": [
+        {
+          "latex": "R\\cos\\alpha=3,\\ R\\sin\\alpha=2;\\quad R=\\sqrt{13},\\ \\alpha=\\tan^{-1}(2/3)\\approx0.588;\\quad3\\cos2\\theta+2\\sin2\\theta=\\sqrt{13}\\cos(2\\theta-\\alpha)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\beta=\\cos^{-1}(1/\\sqrt{13});\\quad2\\theta-\\alpha=\\pm\\beta+2n\\pi;\\quad\\theta=\\frac{\\alpha\\pm\\beta}2+n\\pi\\Rightarrow\\theta\\approx-2.20,\\ -0.35,\\ 0.94,\\ 2.79",
+          "explanation": ""
+        },
+        {
+          "latex": "-\\sqrt{13}\\le\\sqrt{13}\\cos(2\\theta-\\alpha)\\le\\sqrt{13};\\quad k<-\\sqrt{13}\\text{ or }k>\\sqrt{13}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Combine the terms with amplitude √13, retain the exact phase during calculation, and enumerate both cosine branches.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=3,\\ R\\sin\\alpha=2\\\\&amp;R=\\sqrt{13},\\ \\alpha=\\tan^{-1}(2/3)\\approx0.588\\\\&amp;3\\cos2\\theta+2\\sin2\\theta=\\sqrt{13}\\cos(2\\theta-\\alpha)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\beta=\\cos^{-1}(1/\\sqrt{13})\\\\&amp;2\\theta-\\alpha=\\pm\\beta+2n\\pi\\\\&amp;\\theta=\\frac{\\alpha\\pm\\beta}2+n\\pi\\\\&amp;\\Rightarrow \\theta\\approx-2.20,\\ -0.35,\\ 0.94,\\ 2.79\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;-\\sqrt{13}\\le\\sqrt{13}\\cos(2\\theta-\\alpha)\\le\\sqrt{13}\\\\&amp;k&lt;-\\sqrt{13}\\text{ or }k&gt;\\sqrt{13}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.5/q6",
+      "status": "worked",
+      "method": "The denominator remains positive, between 23−17 and 23+17, so its minimum gives the largest reciprocal.",
+      "steps": [
+        {
+          "latex": "R\\cos\\alpha=8,\\ R\\sin\\alpha=15;\\quad R=17,\\ \\alpha=\\tan^{-1}(15/8)\\approx1.08;\\quad8\\sin\\theta-15\\cos\\theta=17\\sin(\\theta-\\alpha)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin(\\theta-\\alpha)=-1;\\quad\\max g=\\frac{10}{23-17}=\\frac53;\\quad\\theta=\\alpha+3\\pi/2\\approx5.79",
+          "explanation": "(i) Maximum 5/3. (ii) It occurs at the stated θ."
+        },
+        {
+          "latex": "\\sin(\\theta-\\alpha)=1;\\quad\\min g=\\frac{10}{23+17}=\\frac14;\\quad\\theta=\\alpha+\\pi/2\\approx2.65",
+          "explanation": "(i) Minimum 1/4. (ii) It occurs at the stated θ."
+        }
+      ],
+      "solutionHtml": "<p>The denominator remains positive, between 23−17 and 23+17, so its minimum gives the largest reciprocal.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=8,\\ R\\sin\\alpha=15\\\\&amp;R=17,\\ \\alpha=\\tan^{-1}(15/8)\\approx1.08\\\\&amp;8\\sin\\theta-15\\cos\\theta=17\\sin(\\theta-\\alpha)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) Maximum 5/3. (ii) It occurs at the stated θ.</p><span data-math=\"\\begin{aligned}&amp;\\sin(\\theta-\\alpha)=-1\\\\&amp;\\max g=\\frac{10}{23-17}=\\frac53\\\\&amp;\\theta=\\alpha+3\\pi/2\\approx5.79\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) Minimum 1/4. (ii) It occurs at the stated θ.</p><span data-math=\"\\begin{aligned}&amp;\\sin(\\theta-\\alpha)=1\\\\&amp;\\min g=\\frac{10}{23+17}=\\frac14\\\\&amp;\\theta=\\alpha+\\pi/2\\approx2.65\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.5/q7",
+      "status": "worked",
+      "method": "Expand and collect terms, then combine the remaining sine and cosine into one sine.",
+      "steps": [
+        {
+          "latex": "2\\sin(x-\\pi/6)-(\\sqrt3-2)\\sin x=\\sqrt3\\sin x-\\cos x-\\sqrt3\\sin x+2\\sin x=2\\sin x-\\cos x",
+          "explanation": ""
+        },
+        {
+          "latex": "2\\sin x-\\cos x=\\sqrt5\\sin(x-\\alpha),\\quad\\alpha=\\tan^{-1}(1/2);\\quad\\beta=\\sin^{-1}(1/(2\\sqrt5));\\quad x=\\alpha+\\beta+2n\\pi\\text{ or }\\alpha+\\pi-\\beta+2n\\pi;\\quad x\\approx-2.90,\\ 0.69,\\ 3.38",
+          "explanation": ""
+        },
+        {
+          "latex": "|2\\sin x-\\cos x|\\le\\sqrt5;\\quad\\max(2\\sin x-\\cos x)^4=(\\sqrt5)^4=25",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand and collect terms, then combine the remaining sine and cosine into one sine.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2\\sin(x-\\pi/6)-(\\sqrt3-2)\\sin x\\\\&amp;=\\sqrt3\\sin x-\\cos x-\\sqrt3\\sin x+2\\sin x\\\\&amp;=2\\sin x-\\cos x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;2\\sin x-\\cos x\\\\&amp;=\\sqrt5\\sin(x-\\alpha),\\quad\\alpha\\\\&amp;=\\tan^{-1}(1/2)\\\\&amp;\\beta=\\sin^{-1}(1/(2\\sqrt5))\\\\&amp;x=\\alpha+\\beta+2n\\pi\\text{ or }\\alpha+\\pi-\\beta+2n\\pi\\\\&amp;x\\approx-2.90,\\ 0.69,\\ 3.38\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|2\\sin x-\\cos x|\\le\\sqrt5\\\\&amp;\\max(2\\sin x-\\cos x)^4=(\\sqrt5)^4=25\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.6/q1",
+      "status": "worked",
+      "method": "Transform the left side using double-angle identities. Each equality is on the common domain where the original ratios are defined.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sin2x-\\tan x}{\\tan x}=\\frac{2\\sin x\\cos x}{\\sin x/\\cos x}-1=2\\cos^2x-1=\\cos2x",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{\\sin6\\theta}{1-\\cos6\\theta}=\\frac{2\\sin3\\theta\\cos3\\theta}{2\\sin^23\\theta}=\\frac{\\cos3\\theta}{\\sin3\\theta}=\\cot3\\theta",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac14\\sec x\\tan2x=\\frac1{4\\cos x}\\frac{2\\sin x\\cos x}{\\cos2x}=\\frac{\\sin x}{2\\cos2x}=\\frac12\\sec2x\\sin x",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Transform the left side using double-angle identities. Each equality is on the common domain where the original ratios are defined.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin2x-\\tan x}{\\tan x}\\\\&amp;=\\frac{2\\sin x\\cos x}{\\sin x/\\cos x}-1\\\\&amp;=2\\cos^2x-1\\\\&amp;=\\cos2x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin6\\theta}{1-\\cos6\\theta}\\\\&amp;=\\frac{2\\sin3\\theta\\cos3\\theta}{2\\sin^23\\theta}\\\\&amp;=\\frac{\\cos3\\theta}{\\sin3\\theta}\\\\&amp;=\\cot3\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac14\\sec x\\tan2x\\\\&amp;=\\frac1{4\\cos x}\\frac{2\\sin x\\cos x}{\\cos2x}\\\\&amp;=\\frac{\\sin x}{2\\cos2x}\\\\&amp;=\\frac12\\sec2x\\sin x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.6/q2",
+      "status": "worked",
+      "method": "Expand the angle sums and differences. For ratios, simplify on their common domain.",
+      "steps": [
+        {
+          "latex": "\\cos(x-30^\\circ)-\\cos(x+30^\\circ)=(\\frac{\\sqrt3}2\\cos x+\\frac12\\sin x)-(\\frac{\\sqrt3}2\\cos x-\\frac12\\sin x)=\\sin x",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{\\sin(a+b)}{\\sin(a-b)}=\\frac{\\sin a\\cos b+\\cos a\\sin b}{\\sin a\\cos b-\\cos a\\sin b}=\\frac{\\cos b/\\sin b+\\cos a/\\sin a}{\\cos b/\\sin b-\\cos a/\\sin a}=\\frac{\\cot b+\\cot a}{\\cot b-\\cot a}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cot(\\pi/4-\\theta)=\\frac{\\cos(\\pi/4-\\theta)}{\\sin(\\pi/4-\\theta)}=\\frac{(\\cos\\theta+\\sin\\theta)/\\sqrt2}{(\\cos\\theta-\\sin\\theta)/\\sqrt2}=\\frac{\\cos\\theta+\\sin\\theta}{\\cos\\theta-\\sin\\theta}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the angle sums and differences. For ratios, simplify on their common domain.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\cos(x-30^\\circ)-\\cos(x+30^\\circ)\\\\&amp;=(\\frac{\\sqrt3}2\\cos x+\\frac12\\sin x)-(\\frac{\\sqrt3}2\\cos x-\\frac12\\sin x)\\\\&amp;=\\sin x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin(a+b)}{\\sin(a-b)}\\\\&amp;=\\frac{\\sin a\\cos b+\\cos a\\sin b}{\\sin a\\cos b-\\cos a\\sin b}\\\\&amp;=\\frac{\\cos b/\\sin b+\\cos a/\\sin a}{\\cos b/\\sin b-\\cos a/\\sin a}\\\\&amp;=\\frac{\\cot b+\\cot a}{\\cot b-\\cot a}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cot(\\pi/4-\\theta)\\\\&amp;=\\frac{\\cos(\\pi/4-\\theta)}{\\sin(\\pi/4-\\theta)}\\\\&amp;=\\frac{(\\cos\\theta+\\sin\\theta)/\\sqrt2}{(\\cos\\theta-\\sin\\theta)/\\sqrt2}\\\\&amp;=\\frac{\\cos\\theta+\\sin\\theta}{\\cos\\theta-\\sin\\theta}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.6/q3",
+      "status": "worked",
+      "method": "Expand the compound angles; use the double-angle identities to eliminate squared sine where needed.",
+      "steps": [
+        {
+          "latex": "2\\sin(3\\theta+\\pi/3)=2\\sin3\\theta\\frac12+2\\cos3\\theta\\frac{\\sqrt3}2=\\sin3\\theta+\\sqrt3\\cos3\\theta",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos3A=\\cos(2A+A)=\\cos2A\\cos A-\\sin2A\\sin A=(2\\cos^2A-1)\\cos A-2\\sin^2A\\cos A=2\\cos^3A-\\cos A-2(1-\\cos^2A)\\cos A=4\\cos^3A-3\\cos A",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cot2x+\\tan x=\\frac{\\cos2x\\cos x+\\sin x\\sin2x}{\\sin2x\\cos x}=\\frac{\\cos(2x-x)}{\\sin2x\\cos x}=\\frac1{\\sin2x}=\\operatorname{cosec}2x",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the compound angles; use the double-angle identities to eliminate squared sine where needed.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2\\sin(3\\theta+\\pi/3)\\\\&amp;=2\\sin3\\theta\\frac12+2\\cos3\\theta\\frac{\\sqrt3}2\\\\&amp;=\\sin3\\theta+\\sqrt3\\cos3\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos3A\\\\&amp;=\\cos(2A+A)\\\\&amp;=\\cos2A\\cos A-\\sin2A\\sin A\\\\&amp;=(2\\cos^2A-1)\\cos A-2\\sin^2A\\cos A\\\\&amp;=2\\cos^3A-\\cos A-2(1-\\cos^2A)\\cos A\\\\&amp;=4\\cos^3A-3\\cos A\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cot2x+\\tan x\\\\&amp;=\\frac{\\cos2x\\cos x+\\sin x\\sin2x}{\\sin2x\\cos x}\\\\&amp;=\\frac{\\cos(2x-x)}{\\sin2x\\cos x}\\\\&amp;=\\frac1{\\sin2x}\\\\&amp;=\\operatorname{cosec}2x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.6/q4",
+      "status": "worked",
+      "method": "Expand the right side using exact values at 30°.",
+      "steps": [
+        {
+          "latex": "2\\cos(x+30^\\circ)=2\\cos x\\frac{\\sqrt3}2-2\\sin x\\frac12=\\sqrt3\\cos x-\\sin x",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the right side using exact values at 30°.</p><span data-math=\"\\begin{aligned}&amp;2\\cos(x+30^\\circ)\\\\&amp;=2\\cos x\\frac{\\sqrt3}2-2\\sin x\\frac12\\\\&amp;=\\sqrt3\\cos x-\\sin x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.6/q5",
+      "status": "worked",
+      "method": "Use the double-angle identities, then set x=π/3.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sin2x}{1+\\cos2x}=\\frac{2\\sin x\\cos x}{2\\cos^2x}=\\tan x",
+          "explanation": "The denominator must be nonzero."
+        },
+        {
+          "latex": "\\frac{\\sin(2\\pi/3)}{1+\\cos(2\\pi/3)}=\\tan(\\pi/3)=\\sqrt3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the double-angle identities, then set x=π/3.</p><ol class=\"parts\" type=\"a\"><li><p>The denominator must be nonzero.</p><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin2x}{1+\\cos2x}\\\\&amp;=\\frac{2\\sin x\\cos x}{2\\cos^2x}\\\\&amp;=\\tan x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin(2\\pi/3)}{1+\\cos(2\\pi/3)}=\\tan(\\pi/3)=\\sqrt3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.6/q6",
+      "status": "worked",
+      "method": "Expand the difference, then replace sin 2θ and cos 2θ.",
+      "steps": [
+        {
+          "latex": "2\\sin(2\\theta-\\pi/4)=\\sqrt2\\sin2\\theta-\\sqrt2\\cos2\\theta=2\\sqrt2\\sin\\theta\\cos\\theta-\\sqrt2(1-2\\sin^2\\theta)=2\\sqrt2\\sin\\theta\\cos\\theta-\\sqrt2+2\\sqrt2\\sin^2\\theta",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the difference, then replace sin 2θ and cos 2θ.</p><span data-math=\"\\begin{aligned}&amp;2\\sin(2\\theta-\\pi/4)\\\\&amp;=\\sqrt2\\sin2\\theta-\\sqrt2\\cos2\\theta\\\\&amp;=2\\sqrt2\\sin\\theta\\cos\\theta-\\sqrt2(1-2\\sin^2\\theta)\\\\&amp;=2\\sqrt2\\sin\\theta\\cos\\theta-\\sqrt2+2\\sqrt2\\sin^2\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.6/q7",
+      "status": "worked",
+      "method": "Factorise the fourth powers, then use the acute angle specified by the tangent.",
+      "steps": [
+        {
+          "latex": "\\cos^4x-\\sin^4x=(\\cos^2x+\\sin^2x)(\\cos^2x-\\sin^2x)=\\cos2x",
+          "explanation": ""
+        },
+        {
+          "latex": "0<x<\\pi/2,\\quad\\tan x=1/\\sqrt3\\Rightarrow x=\\pi/6;\\quad\\cos2x=\\cos(\\pi/3)=\\frac12",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Factorise the fourth powers, then use the acute angle specified by the tangent.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\cos^4x-\\sin^4x\\\\&amp;=(\\cos^2x+\\sin^2x)(\\cos^2x-\\sin^2x)\\\\&amp;=\\cos2x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;0&lt;x&lt;\\pi/2,\\quad\\tan x=1/\\sqrt3\\\\&amp;\\Rightarrow x=\\pi/6\\\\&amp;\\cos2x=\\cos(\\pi/3)=\\frac12\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.7/q1",
+      "status": "worked",
+      "method": "Use the cosine range and its 360° period. Distinguish the sinusoidal model from free-flight motion.",
+      "steps": [
+        {
+          "latex": "h_{\\max}=0.3-0.3(-1)=0.6\\ \\mathrm m",
+          "explanation": ""
+        },
+        {
+          "latex": "240t=180^\\circ\\Rightarrow t=0.75\\ \\mathrm s",
+          "explanation": ""
+        },
+        {
+          "latex": "T=360/240=1.5\\ \\mathrm s;\\quad30/1.5=20\\text{ somersaults}",
+          "explanation": ""
+        },
+        {
+          "latex": "",
+          "explanation": "During each airborne interval, constant gravity gives a parabolic height–time curve, whereas this sinusoid assumes a varying acceleration. It is therefore only an approximate model of the bounce."
+        }
+      ],
+      "solutionHtml": "<p>Use the cosine range and its 360° period. Distinguish the sinusoidal model from free-flight motion.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"h_{\\max}=0.3-0.3(-1)=0.6\\ \\mathrm m\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;240t=180^\\circ\\\\&amp;\\Rightarrow t=0.75\\ \\mathrm s\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;T=360/240=1.5\\ \\mathrm s\\\\&amp;30/1.5=20\\text{ somersaults}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>During each airborne interval, constant gravity gives a parabolic height–time curve, whereas this sinusoid assumes a varying acceleration. It is therefore only an approximate model of the bounce.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.7/q2",
+      "status": "worked",
+      "method": "Substitute the requested time and use the sine range and period.",
+      "steps": [
+        {
+          "latex": "d(3)=40.5+2.5\\sin3\\pi=40.5\\ \\mathrm{cm}",
+          "explanation": ""
+        },
+        {
+          "latex": "d_{\\max}=40.5+2.5=43\\ \\mathrm{cm}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\pi t=\\pi/2+2n\\pi\\Rightarrow t=0.5+2n;\\quad t=0.5,2.5,4.5\\ \\mathrm s",
+          "explanation": ""
+        },
+        {
+          "latex": "d_{\\min}=40.5-2.5=38\\ \\mathrm{cm}<40\\ \\mathrm{cm}",
+          "explanation": "The water is not consistently deep enough for the larger boat."
+        }
+      ],
+      "solutionHtml": "<p>Substitute the requested time and use the sine range and period.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"d(3)=40.5+2.5\\sin3\\pi=40.5\\ \\mathrm{cm}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"d_{\\max}=40.5+2.5=43\\ \\mathrm{cm}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\pi t=\\pi/2+2n\\pi\\\\&amp;\\Rightarrow t=0.5+2n\\\\&amp;t=0.5,2.5,4.5\\ \\mathrm s\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The water is not consistently deep enough for the larger boat.</p><span data-math=\"\\begin{aligned}&amp;d_{\\min}=40.5-2.5=38\\ \\mathrm{cm}&lt;40\\ \\mathrm{cm}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.7/q3",
+      "status": "worked",
+      "method": "Use the sine extremes. For the final part include both branches in 0≤450t≤900°.",
+      "steps": [
+        {
+          "latex": "P_{\\max}=105+25=130\\ \\mathrm{mm\\,Hg}",
+          "explanation": ""
+        },
+        {
+          "latex": "P_{\\min}=105-25=80\\ \\mathrm{mm\\,Hg}",
+          "explanation": ""
+        },
+        {
+          "latex": "P(4)=105+25\\sin1800^\\circ=105\\ \\mathrm{mm\\,Hg}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin(450t)^\\circ=\\frac{110-105}{25}=0.2;\\quad\\beta=\\sin^{-1}(0.2);\\quad t=\\frac{\\beta+360n}{450}\\text{ or }\\frac{180-\\beta+360n}{450};\\quad t\\approx0.03,0.37,0.83,1.17,1.63,1.97\\ \\mathrm s",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the sine extremes. For the final part include both branches in 0≤450t≤900°.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"P_{\\max}=105+25=130\\ \\mathrm{mm\\,Hg}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"P_{\\min}=105-25=80\\ \\mathrm{mm\\,Hg}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;P(4)=105+25\\sin1800^\\circ=105\\ \\mathrm{mm\\,Hg}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin(450t)^\\circ=\\frac{110-105}{25}=0.2\\\\&amp;\\beta=\\sin^{-1}(0.2)\\\\&amp;t\\\\&amp;=\\frac{\\beta+360n}{450}\\text{ or }\\frac{180-\\beta+360n}{450}\\\\&amp;t\\approx0.03,0.37,0.83,1.17,1.63,1.97\\ \\mathrm s\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.7/q4",
+      "status": "worked",
+      "method": "Find the peak and the threshold-crossing times from the sinusoidal model, measuring months from 1 January.",
+      "steps": [
+        {
+          "latex": "\\sin(0.5t+3)=-1\\Rightarrow t=3\\pi-6\\approx3.425;\\quad S_{\\max}=6+3=9\\text{ thousand}",
+          "explanation": "Maximum 9000 average daily sales in April."
+        },
+        {
+          "latex": "S>8.5\\Rightarrow\\sin(0.5t+3)<-5/6;\\quad2(\\pi+\\sin^{-1}(5/6)-3)<t<2(2\\pi-\\sin^{-1}(5/6)-3);\\quad2.254<t<4.596",
+          "explanation": "The interval covers parts of March and May and all of April, so bonuses are paid in March, April and May."
+        },
+        {
+          "latex": "S(12)=6-3\\sin9\\approx4.763644\\text{ thousand}\\approx4760\\text{ toys}",
+          "explanation": "Using t=12 for the end of December."
+        },
+        {
+          "latex": "",
+          "explanation": "The mathematical continuation rises initially, since S′(12)=−1.5 cos 9>0. However, predicting actual sales in 2019 extrapolates beyond the model’s fitted interval, so the claim about real sales is not established."
+        }
+      ],
+      "solutionHtml": "<p>Find the peak and the threshold-crossing times from the sinusoidal model, measuring months from 1 January.</p><ol class=\"parts\" type=\"a\"><li><p>Maximum 9000 average daily sales in April.</p><span data-math=\"\\begin{aligned}&amp;\\sin(0.5t+3)=-1\\\\&amp;\\Rightarrow t=3\\pi-6\\approx3.425\\\\&amp;S_{\\max}=6+3=9\\text{ thousand}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The interval covers parts of March and May and all of April, so bonuses are paid in March, April and May.</p><span data-math=\"\\begin{aligned}&amp;S&gt;8.5\\\\&amp;\\Rightarrow \\sin(0.5t+3)&lt;-5/6\\\\&amp;2(\\pi+\\sin^{-1}(5/6)-3)&lt;t&lt;2(2\\pi-\\sin^{-1}(5/6)-3)\\\\&amp;2.254&lt;t&lt;4.596\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Using t=12 for the end of December.</p><span data-math=\"\\begin{aligned}&amp;S(12)\\\\&amp;=6-3\\sin9\\approx4.763644\\text{ thousand}\\approx4760\\text{ toys}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The mathematical continuation rises initially, since S′(12)=−1.5 cos 9&gt;0. However, predicting actual sales in 2019 extrapolates beyond the model’s fitted interval, so the claim about real sales is not established.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.7/q5",
+      "status": "worked",
+      "method": "Combine the equal coefficients into a cosine with phase 45°. In the water model the minus sign reverses its extrema.",
+      "steps": [
+        {
+          "latex": "R\\cos\\alpha=R\\sin\\alpha=5\\sqrt2/2\\Rightarrow R=5,\\ \\alpha=45^\\circ;\\quad5\\cos(\\theta+45^\\circ)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\min 5\\cos(\\theta+45^\\circ)=-5;\\quad\\theta+45^\\circ=180^\\circ\\Rightarrow\\theta=135^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "h=9-5\\cos(30t+45)^\\circ;\\quad h_{\\max}=14\\ \\mathrm m;\\quad30t+45=180\\Rightarrow t=4.5\\ \\mathrm h",
+          "explanation": "The first maximum occurs at 04:30."
+        },
+        {
+          "latex": "h_{\\min}=9-5=4\\ \\mathrm m;\\quad30t+45=360n\\Rightarrow t=10.5,22.5\\ \\mathrm h",
+          "explanation": "The final minimum in the 24 hours occurs at 22:30."
+        },
+        {
+          "latex": "h=9\\Rightarrow30t+45=90+180n;\\quad t=1.5+6n",
+          "explanation": "(i) At t=1.5 h, the cosine changes positive to negative, so the water rises above 9 m after 01:30. (ii) At t=7.5 h it changes negative to positive, so the water falls below 9 m after 07:30."
+        }
+      ],
+      "solutionHtml": "<p>Combine the equal coefficients into a cosine with phase 45°. In the water model the minus sign reverses its extrema.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=R\\sin\\alpha=5\\sqrt2/2\\\\&amp;\\Rightarrow R=5,\\ \\alpha=45^\\circ\\\\&amp;5\\cos(\\theta+45^\\circ)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\min 5\\cos(\\theta+45^\\circ)=-5\\\\&amp;\\theta+45^\\circ=180^\\circ\\\\&amp;\\Rightarrow \\theta=135^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The first maximum occurs at 04:30.</p><span data-math=\"\\begin{aligned}&amp;h=9-5\\cos(30t+45)^\\circ\\\\&amp;h_{\\max}=14\\ \\mathrm m\\\\&amp;30t+45=180\\\\&amp;\\Rightarrow t=4.5\\ \\mathrm h\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The final minimum in the 24 hours occurs at 22:30.</p><span data-math=\"\\begin{aligned}&amp;h_{\\min}=9-5=4\\ \\mathrm m\\\\&amp;30t+45=360n\\\\&amp;\\Rightarrow t=10.5,22.5\\ \\mathrm h\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) At t=1.5 h, the cosine changes positive to negative, so the water rises above 9 m after 01:30. (ii) At t=7.5 h it changes negative to positive, so the water falls below 9 m after 07:30.</p><span data-math=\"\\begin{aligned}&amp;h=9\\\\&amp;\\Rightarrow 30t+45=90+180n\\\\&amp;t=1.5+6n\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.7/q6",
+      "status": "worked",
+      "method": "Use the amplitude and unrounded phase in the model; round only the final requested quantities.",
+      "steps": [
+        {
+          "latex": "R\\cos\\alpha=0.2,\\ R\\sin\\alpha=0.35;\\quad R=\\sqrt{0.2^2+0.35^2}=\\frac{\\sqrt{65}}{20};\\quad\\alpha=\\tan^{-1}(7/4)\\approx1.1;\\quad R\\cos(x-\\alpha)",
+          "explanation": ""
+        },
+        {
+          "latex": "T(1)=30+0.2\\cos2+0.35\\sin2\\approx30.2350^\\circ\\mathrm C\\approx30.24^\\circ\\mathrm C",
+          "explanation": ""
+        },
+        {
+          "latex": "T_{\\max}-T_{\\min}=2R=\\frac{\\sqrt{65}}{10}\\approx0.8062^\\circ\\mathrm C",
+          "explanation": ""
+        },
+        {
+          "latex": "2m-\\alpha=2n\\pi\\Rightarrow m=\\frac12\\tan^{-1}(7/4)+n\\pi;\\quad m\\approx0.526,3.667,6.809\\ \\mathrm{min}",
+          "explanation": "These are approximately 0.5, 3.7 and 6.8 minutes to 1 decimal place. Retaining the unrounded phase avoids shifting the first time to 0.6."
+        }
+      ],
+      "solutionHtml": "<p>Use the amplitude and unrounded phase in the model; round only the final requested quantities.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=0.2,\\ R\\sin\\alpha=0.35\\\\&amp;R=\\sqrt{0.2^2+0.35^2}=\\frac{\\sqrt{65}}{20}\\\\&amp;\\alpha=\\tan^{-1}(7/4)\\approx1.1\\\\&amp;R\\cos(x-\\alpha)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;T(1)\\\\&amp;=30+0.2\\cos2+0.35\\sin2\\approx30.2350^\\circ\\mathrm C\\approx30.24^\\circ\\mathrm C\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;T_{\\max}-T_{\\min}\\\\&amp;=2R\\\\&amp;=\\frac{\\sqrt{65}}{10}\\approx0.8062^\\circ\\mathrm C\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>These are approximately 0.5, 3.7 and 6.8 minutes to 1 decimal place. Retaining the unrounded phase avoids shifting the first time to 0.6.</p><span data-math=\"\\begin{aligned}&amp;2m-\\alpha=2n\\pi\\\\&amp;\\Rightarrow m=\\frac12\\tan^{-1}(7/4)+n\\pi\\\\&amp;m\\approx0.526,3.667,6.809\\ \\mathrm{min}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/7.7/q7",
+      "status": "worked",
+      "method": "Combine the trigonometric terms, retaining the exact phase for times and the original equation for monetary calculations.",
+      "steps": [
+        {
+          "latex": "R=\\sqrt{132^2+72^2}=12\\sqrt{157};\\quad R\\cos\\alpha=132,\\ R\\sin\\alpha=72;\\quad\\alpha=\\tan^{-1}(6/11)\\approx0.5;\\quad132\\sin x-72\\cos x=R\\sin(x-\\alpha)",
+          "explanation": ""
+        },
+        {
+          "latex": "P_{\\max}=200+12\\sqrt{157}\\approx350.36\\mathrm p;\\quad t=\\frac{\\pi/2+\\alpha}{0.8}\\approx2.588",
+          "explanation": "The first maximum, about 350 p, occurs in March."
+        },
+        {
+          "latex": "P_{\\min}=200-12\\sqrt{157}\\approx49.64\\mathrm p;\\quad t=\\frac{3\\pi/2+\\alpha}{0.8}\\approx6.515",
+          "explanation": "The minimum, about 50 p, occurs in July."
+        },
+        {
+          "latex": "\\sin(0.8t-\\alpha)<-100/(12\\sqrt{157});\\quad t_{\\mathrm{down}}=\\frac{\\pi+\\sin^{-1}(100/(12\\sqrt{157}))+\\alpha}{0.8}\\approx5.461",
+          "explanation": "The downward crossing occurs during June."
+        },
+        {
+          "latex": "P(0)=200-72=128\\mathrm p;\\quad P(12)=200+132\\sin9.6-72\\cos9.6\\approx247.8864\\mathrm p;\\quad\\text{profit}=\\frac{2000}{100}(247.8864-128)\\approx\\pounds2397.73\\approx\\pounds2400\\ (2\\mathrm{\\ s.f.})",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Combine the trigonometric terms, retaining the exact phase for times and the original equation for monetary calculations.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R=\\sqrt{132^2+72^2}=12\\sqrt{157}\\\\&amp;R\\cos\\alpha=132,\\ R\\sin\\alpha=72\\\\&amp;\\alpha=\\tan^{-1}(6/11)\\approx0.5\\\\&amp;132\\sin x-72\\cos x=R\\sin(x-\\alpha)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The first maximum, about 350 p, occurs in March.</p><span data-math=\"\\begin{aligned}&amp;P_{\\max}=200+12\\sqrt{157}\\approx350.36\\mathrm p\\\\&amp;t=\\frac{\\pi/2+\\alpha}{0.8}\\approx2.588\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The minimum, about 50 p, occurs in July.</p><span data-math=\"\\begin{aligned}&amp;P_{\\min}=200-12\\sqrt{157}\\approx49.64\\mathrm p\\\\&amp;t=\\frac{3\\pi/2+\\alpha}{0.8}\\approx6.515\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The downward crossing occurs during June.</p><span data-math=\"\\begin{aligned}&amp;\\sin(0.8t-\\alpha)&lt;-100/(12\\sqrt{157})\\\\&amp;t_{\\mathrm{down}}\\\\&amp;=\\frac{\\pi+\\sin^{-1}(100/(12\\sqrt{157}))+\\alpha}{0.8}\\approx5.461\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;P(0)=200-72=128\\mathrm p\\\\&amp;P(12)=200+132\\sin9.6-72\\cos9.6\\approx247.8864\\mathrm p\\\\&amp;\\text{profit}\\\\&amp;=\\frac{2000}{100}(247.8864-128)\\approx\\pounds2397.73\\approx\\pounds2400\\ (2\\mathrm{\\ s.f.})\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/problem-a/qbronze",
+      "status": "worked",
+      "method": "Read the maximum 120, minimum 80 and one-second period from the graph. The curve starts on its midline rising.",
+      "steps": [
+        {
+          "latex": "a=\\frac{120+80}2=100;\\quad b=\\frac{120-80}2=20",
+          "explanation": ""
+        },
+        {
+          "latex": "T=1\\Rightarrow c=360/T=360;\\quad y=100+20\\sin(360x)^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Read the maximum 120, minimum 80 and one-second period from the graph. The curve starts on its midline rising.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;a=\\frac{120+80}2=100\\\\&amp;b=\\frac{120-80}2=20\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;T=1\\\\&amp;\\Rightarrow c=360/T=360\\\\&amp;y=100+20\\sin(360x)^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/problem-a/qsilver",
+      "status": "worked",
+      "method": "The midline is 12 hours and amplitude 4 hours. Shift the sine so its minimum is at day zero.",
+      "steps": [
+        {
+          "latex": "a=\\frac{16+8}2=12,\\quad b=\\frac{16-8}2=4;\\quad\\sin(-c)^\\circ=-1\\Rightarrow c=90;\\quad y=12+4\\sin(x-90)^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\begin{pmatrix}90\\\\12\\end{pmatrix}",
+          "explanation": "First stretch vertically by factor 4, then translate 90 units right and 12 units up (the displayed translation vector)."
+        },
+        {
+          "latex": "y>14\\Rightarrow\\sin(x-90)^\\circ>1/2;\\quad30^\\circ<x-90^\\circ<150^\\circ\\Rightarrow120<x<240",
+          "explanation": "This is a duration of 120 days, which is the continuous-model interpretation. If only integer day numbers satisfying the strict inequality are counted, days 121–239 give 119 days."
+        }
+      ],
+      "solutionHtml": "<p>The midline is 12 hours and amplitude 4 hours. Shift the sine so its minimum is at day zero.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;a=\\frac{16+8}2=12,\\quad b=\\frac{16-8}2=4\\\\&amp;\\sin(-c)^\\circ=-1\\\\&amp;\\Rightarrow c=90\\\\&amp;y=12+4\\sin(x-90)^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>First stretch vertically by factor 4, then translate 90 units right and 12 units up (the displayed translation vector).</p><span data-math=\"\\begin{pmatrix}90\\\\12\\end{pmatrix}\" data-display=\"true\" class=\"equation\"></span></li><li><p>This is a duration of 120 days, which is the continuous-model interpretation. If only integer day numbers satisfying the strict inequality are counted, days 121–239 give 119 days.</p><span data-math=\"\\begin{aligned}&amp;y&gt;14\\\\&amp;\\Rightarrow \\sin(x-90)^\\circ&gt;1/2\\\\&amp;30^\\circ&lt;x-90^\\circ&lt;150^\\circ\\\\&amp;\\Rightarrow 120&lt;x&lt;240\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/problem-a/qgold",
+      "status": "worked",
+      "method": "Use the midpoint and amplitude of the height range. Four revolutions in 720 s give period 180 s.",
+      "steps": [
+        {
+          "latex": "a=(22+2)/2=12,\\ b=(22-2)/2=10;\\quad c=360/180=2,\\ d=180;\\quad h=12+10\\cos(2t-180)^\\circ",
+          "explanation": "These constants give h(0)=2 and the first maximum at t=90 s. Equivalent choices of phase and amplitude sign also represent the same model."
+        },
+        {
+          "latex": "T=720/5=144\\ \\mathrm s;\\quad c=360/144=5/2;\\quad h=12+10\\cos((5/2)t-180)^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "h>20\\Rightarrow\\cos(ct-180)^\\circ>0.8;\\quad\\text{fraction of each cycle}=\\frac{2\\cos^{-1}(0.8)}{360};\\quad\\text{total time}=720\\frac{2\\cos^{-1}(0.8)}{360}\\approx147.48\\ \\mathrm s",
+          "explanation": "Revathi is correct for the total time over the complete 12-minute ride: both models complete whole cycles and spend the same fraction of each cycle above 20 m."
+        }
+      ],
+      "solutionHtml": "<p>Use the midpoint and amplitude of the height range. Four revolutions in 720 s give period 180 s.</p><ol class=\"parts\" type=\"a\"><li><p>These constants give h(0)=2 and the first maximum at t=90 s. Equivalent choices of phase and amplitude sign also represent the same model.</p><span data-math=\"\\begin{aligned}&amp;a=(22+2)/2=12,\\ b=(22-2)/2=10\\\\&amp;c=360/180=2,\\ d=180\\\\&amp;h=12+10\\cos(2t-180)^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;T=720/5=144\\ \\mathrm s\\\\&amp;c=360/144=5/2\\\\&amp;h=12+10\\cos((5/2)t-180)^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Revathi is correct for the total time over the complete 12-minute ride: both models complete whole cycles and spend the same fraction of each cycle above 20 m.</p><span data-math=\"\\begin{aligned}&amp;h&gt;20\\\\&amp;\\Rightarrow \\cos(ct-180)^\\circ&gt;0.8\\\\&amp;\\text{fraction of each cycle}\\\\&amp;=\\frac{2\\cos^{-1}(0.8)}{360}\\\\&amp;\\text{total time}\\\\&amp;=720\\frac{2\\cos^{-1}(0.8)}{360}\\approx147.48\\ \\mathrm s\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/problem-b/qbronze",
+      "status": "worked",
+      "method": "Use the amplitude–phase form and preserve the original restriction sin 2x≠0.",
+      "steps": [
+        {
+          "latex": "R\\cos\\alpha=12,\\ R\\sin\\alpha=5;\\quad R=13,\\ \\alpha=\\tan^{-1}(5/12)\\approx0.395;\\quad12\\sin2x-5\\cos2x=13\\sin(2x-\\alpha)",
+          "explanation": ""
+        },
+        {
+          "latex": "12-\\frac3{\\sin2x}=\\frac{5\\cos2x}{\\sin2x};\\quad12\\sin2x-5\\cos2x=3;\\quad k=3",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin(2x-\\alpha)=3/13;\\quad\\beta=\\sin^{-1}(3/13);\\quad x=\\frac{\\alpha+\\beta}2+n\\pi\\text{ or }\\frac{\\alpha+\\pi-\\beta}2+n\\pi;\\quad x\\approx0.3,1.7,3.5,4.8",
+          "explanation": "All four unrounded roots satisfy sin 2x≠0."
+        }
+      ],
+      "solutionHtml": "<p>Use the amplitude–phase form and preserve the original restriction sin 2x≠0.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R\\cos\\alpha=12,\\ R\\sin\\alpha=5\\\\&amp;R=13,\\ \\alpha=\\tan^{-1}(5/12)\\approx0.395\\\\&amp;12\\sin2x-5\\cos2x=13\\sin(2x-\\alpha)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;12-\\frac3{\\sin2x}=\\frac{5\\cos2x}{\\sin2x}\\\\&amp;12\\sin2x-5\\cos2x=3\\\\&amp;k=3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>All four unrounded roots satisfy sin 2x≠0.</p><span data-math=\"\\begin{aligned}&amp;\\sin(2x-\\alpha)=3/13\\\\&amp;\\beta=\\sin^{-1}(3/13)\\\\&amp;x\\\\&amp;=\\frac{\\alpha+\\beta}2+n\\pi\\text{ or }\\frac{\\alpha+\\pi-\\beta}2+n\\pi\\\\&amp;x\\approx0.3,1.7,3.5,4.8\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/problem-b/qsilver",
+      "status": "worked",
+      "method": "Replace squared functions and the product by double angles; combine the resulting sine and cosine for the equation and maximum.",
+      "steps": [
+        {
+          "latex": "7\\frac{1+\\cos2x}2-3\\frac{1-\\cos2x}2-4\\sin2x=5\\cos2x-4\\sin2x+2;\\quad a=5,\\ b=4,\\ c=2",
+          "explanation": ""
+        },
+        {
+          "latex": "5\\cos2x-4\\sin2x=2;\\quad\\sqrt{41}\\cos(2x+\\alpha)=2,\\ \\alpha=\\tan^{-1}(4/5);\\quad\\beta=\\cos^{-1}(2/\\sqrt{41});\\quad x=\\frac{-\\alpha\\pm\\beta}2+n\\pi;\\quad x\\approx0.29,2.18,3.43,5.32",
+          "explanation": ""
+        },
+        {
+          "latex": "10\\cos^2x-8\\sin x\\cos x=5(1+\\cos2x)-4\\sin2x=5\\cos2x-4\\sin2x+5;\\quad a=5,\\ b=4,\\ k=5;\\quad\\max=5+\\sqrt{41}",
+          "explanation": "(i) The double-angle form is displayed. (ii) Its sinusoidal amplitude is √(5²+4²)=√41, giving the exact maximum."
+        }
+      ],
+      "solutionHtml": "<p>Replace squared functions and the product by double angles; combine the resulting sine and cosine for the equation and maximum.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;7\\frac{1+\\cos2x}2-3\\frac{1-\\cos2x}2-4\\sin2x\\\\&amp;=5\\cos2x-4\\sin2x+2\\\\&amp;a=5,\\ b=4,\\ c=2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;5\\cos2x-4\\sin2x=2\\\\&amp;\\sqrt{41}\\cos(2x+\\alpha)=2,\\ \\alpha=\\tan^{-1}(4/5)\\\\&amp;\\beta=\\cos^{-1}(2/\\sqrt{41})\\\\&amp;x=\\frac{-\\alpha\\pm\\beta}2+n\\pi\\\\&amp;x\\approx0.29,2.18,3.43,5.32\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) The double-angle form is displayed. (ii) Its sinusoidal amplitude is √(5²+4²)=√41, giving the exact maximum.</p><span data-math=\"\\begin{aligned}&amp;10\\cos^2x-8\\sin x\\cos x\\\\&amp;=5(1+\\cos2x)-4\\sin2x\\\\&amp;=5\\cos2x-4\\sin2x+5\\\\&amp;a=5,\\ b=4,\\ k=5\\\\&amp;\\max=5+\\sqrt{41}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/problem-b/qgold",
+      "status": "worked",
+      "method": "Factor using double angles. For the reciprocal, examine whether the denominator can approach zero rather than simply taking its largest value.",
+      "steps": [
+        {
+          "latex": "\\frac{15}2\\sin4x-4\\cos4x-4\\cos2x-4=15\\sin2x\\cos2x-8\\cos^22x-4\\cos2x=\\cos2x(15\\sin2x-8\\cos2x-4);\\quad a=15,\\ b=8,\\ c=4",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos2x=0\\text{ or }15\\sin2x-8\\cos2x=4;\\quad x=\\pi/4,3\\pi/4\\text{ or }17\\sin(2x-\\alpha)=4,\\ \\alpha=\\tan^{-1}(8/15);\\quad\\beta=\\sin^{-1}(4/17);\\quad x=\\frac{\\alpha+\\beta}2,\\frac{\\alpha+\\pi-\\beta}2,\\frac\\pi4,\\frac{3\\pi}4\\approx0.36,0.79,1.70,2.36",
+          "explanation": ""
+        },
+        {
+          "latex": "D=30\\sin x\\cos x-16\\cos^2x=15\\sin2x-8\\cos2x-8=17\\sin(2x-\\alpha)-8;\\quad-25\\le D\\le9;\\quad D\\to0^+\\Rightarrow\\frac1D\\to+\\infty",
+          "explanation": "There is no finite maximum, even on 0≤x≤π. The denominator takes arbitrarily small positive values, with zero itself excluded. The printed value 1/9 is the minimum of the positive branch, not a maximum."
+        }
+      ],
+      "solutionHtml": "<p>Factor using double angles. For the reciprocal, examine whether the denominator can approach zero rather than simply taking its largest value.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{15}2\\sin4x-4\\cos4x-4\\cos2x-4\\\\&amp;=15\\sin2x\\cos2x-8\\cos^22x-4\\cos2x\\\\&amp;=\\cos2x(15\\sin2x-8\\cos2x-4)\\\\&amp;a=15,\\ b=8,\\ c=4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos2x=0\\text{ or }15\\sin2x-8\\cos2x=4\\\\&amp;x\\\\&amp;=\\pi/4,3\\pi/4\\text{ or }17\\sin(2x-\\alpha)\\\\&amp;=4,\\ \\alpha\\\\&amp;=\\tan^{-1}(8/15)\\\\&amp;\\beta=\\sin^{-1}(4/17)\\\\&amp;x\\\\&amp;=\\frac{\\alpha+\\beta}2,\\frac{\\alpha+\\pi-\\beta}2,\\frac\\pi4,\\frac{3\\pi}4\\approx0.36,0.79,1.70,2.36\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>There is no finite maximum, even on 0≤x≤π. The denominator takes arbitrarily small positive values, with zero itself excluded. The printed value 1/9 is the minimum of the positive branch, not a maximum.</p><span data-math=\"\\begin{aligned}&amp;D\\\\&amp;=30\\sin x\\cos x-16\\cos^2x\\\\&amp;=15\\sin2x-8\\cos2x-8\\\\&amp;=17\\sin(2x-\\alpha)-8\\\\&amp;-25\\le D\\le9\\\\&amp;D\\to0^+\\\\&amp;\\Rightarrow \\frac1D\\to+\\infty\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/exam/q11",
+      "status": "worked",
+      "method": "Expand sin(2x+x), eliminate cosine squares, then factor the equation without losing zero-sine roots.",
+      "steps": [
+        {
+          "latex": "\\sin3x=\\sin2x\\cos x+\\cos2x\\sin x=2\\sin x\\cos^2x+(1-2\\sin^2x)\\sin x=3\\sin x-4\\sin^3x",
+          "explanation": ""
+        },
+        {
+          "latex": "3\\sin x-4\\sin^3x=\\sin x\\Rightarrow2\\sin x(1-2\\sin^2x)=0;\\quad\\sin x=0\\text{ or }\\sin^2x=1/2;\\quad x=0,\\pi/4,3\\pi/4,\\pi",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand sin(2x+x), eliminate cosine squares, then factor the equation without losing zero-sine roots.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\sin3x\\\\&amp;=\\sin2x\\cos x+\\cos2x\\sin x\\\\&amp;=2\\sin x\\cos^2x+(1-2\\sin^2x)\\sin x\\\\&amp;=3\\sin x-4\\sin^3x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;3\\sin x-4\\sin^3x=\\sin x\\\\&amp;\\Rightarrow 2\\sin x(1-2\\sin^2x)=0\\\\&amp;\\sin x=0\\text{ or }\\sin^2x=1/2\\\\&amp;x=0,\\pi/4,3\\pi/4,\\pi\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/exam/q17",
+      "status": "worked",
+      "method": "Multiply numerator and denominator by cos²x and apply the Pythagorean and double-angle identities.",
+      "steps": [
+        {
+          "latex": "\\frac{1+\\tan^2x}{1-\\tan^2x}=\\frac{\\cos^2x+\\sin^2x}{\\cos^2x-\\sin^2x}=\\frac1{\\cos2x}=\\sec2x",
+          "explanation": "The identity holds where the original expression is defined."
+        }
+      ],
+      "solutionHtml": "<p>Multiply numerator and denominator by cos²x and apply the Pythagorean and double-angle identities.</p><p>The identity holds where the original expression is defined.</p><span data-math=\"\\begin{aligned}&amp;\\frac{1+\\tan^2x}{1-\\tan^2x}\\\\&amp;=\\frac{\\cos^2x+\\sin^2x}{\\cos^2x-\\sin^2x}\\\\&amp;=\\frac1{\\cos2x}\\\\&amp;=\\sec2x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/exam/q36",
+      "status": "worked",
+      "method": "Expand the angle sum. Since 0<t<π, sin t is positive, so select the positive square root.",
+      "steps": [
+        {
+          "latex": "y=\\cos t\\cos(\\pi/3)-\\sin t\\sin(\\pi/3)=\\frac12x-\\frac{\\sqrt3}2\\sin t;\\quad\\sin t=\\sqrt{1-\\cos^2t}=\\sqrt{1-x^2};\\quad y=\\frac12x-\\frac{\\sqrt3}2\\sqrt{1-x^2},\\quad-1<x<1;\\quad a=-1,\\ b=1",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the angle sum. Since 0&lt;t&lt;π, sin t is positive, so select the positive square root.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=\\cos t\\cos(\\pi/3)-\\sin t\\sin(\\pi/3)\\\\&amp;=\\frac12x-\\frac{\\sqrt3}2\\sin t\\\\&amp;\\sin t=\\sqrt{1-\\cos^2t}=\\sqrt{1-x^2}\\\\&amp;y=\\frac12x-\\frac{\\sqrt3}2\\sqrt{1-x^2},\\quad-1&lt;x&lt;1\\\\&amp;a=-1,\\ b=1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/exam/q40",
+      "status": "worked",
+      "method": "Use 105°=60°+45°, then rationalise the tangent and its reciprocal.",
+      "steps": [
+        {
+          "latex": "\\tan105^\\circ=\\frac{\\sqrt3+1}{1-\\sqrt3}=\\frac{(\\sqrt3+1)(1+\\sqrt3)}{1-3}=-2-\\sqrt3",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cot105^\\circ=\\frac1{-2-\\sqrt3}=\\frac{-2+\\sqrt3}{4-3}=-2+\\sqrt3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use 105°=60°+45°, then rationalise the tangent and its reciprocal.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\tan105^\\circ\\\\&amp;=\\frac{\\sqrt3+1}{1-\\sqrt3}\\\\&amp;=\\frac{(\\sqrt3+1)(1+\\sqrt3)}{1-3}\\\\&amp;=-2-\\sqrt3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cot105^\\circ\\\\&amp;=\\frac1{-2-\\sqrt3}\\\\&amp;=\\frac{-2+\\sqrt3}{4-3}\\\\&amp;=-2+\\sqrt3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/exam/q50",
+      "status": "worked",
+      "method": "Prove the identity, then factor the full equation before solving its separate factors.",
+      "steps": [
+        {
+          "latex": "\\sin2\\theta-\\tan\\theta=2\\sin\\theta\\cos\\theta-\\frac{\\sin\\theta}{\\cos\\theta}=\\tan\\theta(2\\cos^2\\theta-1)=\\tan\\theta\\cos2\\theta",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan x\\cos2x(\\sec^2x+3-4\\tan x)=0;\\quad\\tan x\\cos2x(\\tan^2x-4\\tan x+4)=0;\\quad\\tan x=0\\text{ or }\\cos2x=0\\text{ or }(\\tan x-2)^2=0;\\quad x=-\\pi/4,0,\\pi/4,\\tan^{-1}2\\approx1.107",
+          "explanation": "The stated open interval excludes the tangent poles; all listed roots are valid."
+        }
+      ],
+      "solutionHtml": "<p>Prove the identity, then factor the full equation before solving its separate factors.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\sin2\\theta-\\tan\\theta\\\\&amp;=2\\sin\\theta\\cos\\theta-\\frac{\\sin\\theta}{\\cos\\theta}\\\\&amp;=\\tan\\theta(2\\cos^2\\theta-1)\\\\&amp;=\\tan\\theta\\cos2\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The stated open interval excludes the tangent poles; all listed roots are valid.</p><span data-math=\"\\begin{aligned}&amp;\\tan x\\cos2x(\\sec^2x+3-4\\tan x)=0\\\\&amp;\\tan x\\cos2x(\\tan^2x-4\\tan x+4)=0\\\\&amp;\\tan x=0\\text{ or }\\cos2x=0\\text{ or }(\\tan x-2)^2=0\\\\&amp;x=-\\pi/4,0,\\pi/4,\\tan^{-1}2\\approx1.107\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/exam/q59",
+      "status": "worked",
+      "method": "Apply the cosine rule at C, then use the cosine double-angle formula twice.",
+      "steps": [
+        {
+          "latex": "\\cos(\\theta/2)=\\frac{7^2+8^2-3^2}{2\\cdot7\\cdot8}=\\frac{104}{112}=\\frac{13}{14}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos\\theta=2(13/14)^2-1=\\frac{71}{98};\\quad\\cos2\\theta=2(71/98)^2-1=\\frac{239}{4802}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply the cosine rule at C, then use the cosine double-angle formula twice.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\cos(\\theta/2)\\\\&amp;=\\frac{7^2+8^2-3^2}{2\\cdot7\\cdot8}\\\\&amp;=\\frac{104}{112}\\\\&amp;=\\frac{13}{14}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos\\theta=2(13/14)^2-1=\\frac{71}{98}\\\\&amp;\\cos2\\theta=2(71/98)^2-1=\\frac{239}{4802}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/exam/q71",
+      "status": "worked",
+      "method": "Compare coefficients for amplitude and phase; square the amplitude for the maximum and enumerate all shifted cosine branches.",
+      "steps": [
+        {
+          "latex": "R=\\sqrt{(3/2)^2+(5/2)^2}=\\frac{\\sqrt{34}}2;\\quad\\alpha=\\tan^{-1}(5/3)\\approx1.03;\\quad R\\cos(\\theta-\\alpha)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\max=\\frac{16}5+R^2=\\frac{16}5+\\frac{34}4=11.7",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(2\\theta-\\alpha)=\\frac4{\\sqrt{34}};\\quad\\beta=\\cos^{-1}(4/\\sqrt{34});\\quad\\theta=\\frac{\\alpha\\pm\\beta}2+n\\pi;\\quad\\theta\\approx-3.03,-2.22,0.11,0.92",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Compare coefficients for amplitude and phase; square the amplitude for the maximum and enumerate all shifted cosine branches.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R=\\sqrt{(3/2)^2+(5/2)^2}=\\frac{\\sqrt{34}}2\\\\&amp;\\alpha=\\tan^{-1}(5/3)\\approx1.03\\\\&amp;R\\cos(\\theta-\\alpha)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\max=\\frac{16}5+R^2=\\frac{16}5+\\frac{34}4=11.7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos(2\\theta-\\alpha)=\\frac4{\\sqrt{34}}\\\\&amp;\\beta=\\cos^{-1}(4/\\sqrt{34})\\\\&amp;\\theta=\\frac{\\alpha\\pm\\beta}2+n\\pi\\\\&amp;\\theta\\approx-3.03,-2.22,0.11,0.92\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch7/exam/q83",
+      "status": "worked",
+      "method": "Keep the exact amplitude and phase when using the model; round the final physical quantities to 1 decimal place.",
+      "steps": [
+        {
+          "latex": "R=\\sqrt{12.5^2+6.5^2}=\\frac{\\sqrt{794}}2;\\quad\\alpha=\\tan^{-1}(6.5/12.5)\\approx0.5;\\quad12.5\\cos x+6.5\\sin x=R\\cos(x-\\alpha)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\max=R\\approx14.1;\\quad x-\\alpha=0\\Rightarrow x=\\alpha\\approx0.5",
+          "explanation": "These are the maximum and its location in 0<x<π."
+        },
+        {
+          "latex": "H=16-R\\cos(1.05t-\\alpha);\\quad H_{\\max}=16+R\\approx30.1\\ \\mathrm m;\\quad1.05t-\\alpha=\\pi\\Rightarrow t=\\frac{\\pi+\\alpha}{1.05}\\approx3.4\\ \\mathrm{min}",
+          "explanation": "The first maximum is at 3.4 minutes using the unrounded phase. Further maxima occur one period apart."
+        },
+        {
+          "latex": "H(4)=16-12.5\\cos4.2-6.5\\sin4.2\\approx27.8\\ \\mathrm m",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(1.05t-\\alpha)=1/R;\\quad\\beta=\\cos^{-1}(1/R);\\quad t=\\frac{\\alpha+\\beta}{1.05},\\frac{\\alpha+2\\pi-\\beta}{1.05}\\approx1.9,5.0\\ \\mathrm{min}",
+          "explanation": ""
+        },
+        {
+          "latex": "T=\\frac{2\\pi}{1.05}\\approx6.0\\ \\mathrm{min}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Keep the exact amplitude and phase when using the model; round the final physical quantities to 1 decimal place.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;R=\\sqrt{12.5^2+6.5^2}=\\frac{\\sqrt{794}}2\\\\&amp;\\alpha=\\tan^{-1}(6.5/12.5)\\approx0.5\\\\&amp;12.5\\cos x+6.5\\sin x=R\\cos(x-\\alpha)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>These are the maximum and its location in 0&lt;x&lt;π.</p><span data-math=\"\\begin{aligned}&amp;\\max=R\\approx14.1\\\\&amp;x-\\alpha=0\\\\&amp;\\Rightarrow x=\\alpha\\approx0.5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The first maximum is at 3.4 minutes using the unrounded phase. Further maxima occur one period apart.</p><span data-math=\"\\begin{aligned}&amp;H=16-R\\cos(1.05t-\\alpha)\\\\&amp;H_{\\max}=16+R\\approx30.1\\ \\mathrm m\\\\&amp;1.05t-\\alpha=\\pi\\\\&amp;\\Rightarrow t=\\frac{\\pi+\\alpha}{1.05}\\approx3.4\\ \\mathrm{min}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;H(4)=16-12.5\\cos4.2-6.5\\sin4.2\\approx27.8\\ \\mathrm m\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos(1.05t-\\alpha)=1/R\\\\&amp;\\beta=\\cos^{-1}(1/R)\\\\&amp;t\\\\&amp;=\\frac{\\alpha+\\beta}{1.05},\\frac{\\alpha+2\\pi-\\beta}{1.05}\\approx1.9,5.0\\ \\mathrm{min}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;T=\\frac{2\\pi}{1.05}\\approx6.0\\ \\mathrm{min}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    }
+  ]
+}
