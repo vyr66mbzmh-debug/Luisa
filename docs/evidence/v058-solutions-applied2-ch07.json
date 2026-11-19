@@ -1,0 +1,51 @@
+{
+  "issue": 99,
+  "release": "0.58",
+  "chapter": "Applied Year 2 Chapter 7 \u2014 Applications of forces",
+  "questions": 58,
+  "workedSolutions": 58,
+  "originalQuestionIdsMatched": 58,
+  "sourceAnswerGraphs": 8,
+  "exactAndRoundingIndependentChecks": 145,
+  "browserQuestionsRendered": 58,
+  "browserHorizontalOverflows": 0,
+  "visualReview": "All 41 source diagrams inspected. Independent checks include signed force/moment balances, contact positivity, both static-friction limits, post-removal normal reactions, and separate ascent/descent accelerations. All paired questions and solutions rendered with strict KaTeX, loaded images and no overflow; one math delimiter corrected and rerendered. Representative hinge direction, post-removal stopping, ladder friction and limiting-force renders inspected. Part counts match. Full Papers print integration remains separate.",
+  "suppliedPromptOrKeyDefects": [
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch7/7.4/q2",
+      "note": "The smooth peg reaction is perpendicular to the rod. Take moments about A before resolving the forces. Using unrounded forces gives \u03bc=0.622 to 3 significant figures; the supplied 0.621 is slightly inaccurate."
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch7/7.4/q7",
+      "note": "Take moments about the hinge, then resolve horizontally and vertically. The diagram places the wall to the right of the beam."
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch7/7.5/q5",
+      "note": "Recalculate the normal reaction after the pulling force is removed. Friction reverses only when the direction of motion reverses."
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch7/7.5/q9",
+      "note": "Find the speed when the rope snaps. Afterwards gravity and friction both decelerate the uphill sled, with the full normal reaction restored."
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch7/problem-a/qsilver",
+      "note": "At the final limiting equilibrium, friction acts uphill and balances the downslope weight component. During ascent it acts downhill."
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch7/problem-a/qgold",
+      "note": "For downhill motion to restart, weight must exceed limiting friction. Use different acceleration magnitudes for ascent and descent. The supplied 6.34 s doubles the ascent time, but the return is slower; the total is 8.08 s."
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch7/exam/q46",
+      "note": "The hanging mass descends and pulls P uphill. Combine the two equations of motion, with uphill friction acting on P."
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch7/exam/q49",
+      "note": "At impending slip, the base moves away from the wall and the top moves down. Floor friction acts towards the wall; wall friction acts upwards. These directions give 0.603l, not the supplied 0.392l."
+    }
+  ],
+  "solutionSha256": "b5a3a5539b2a880c4bbf88091d8052dda09f89f652e978f6f6f8c90767b841e4",
+  "sourcePdf": "resources/practice/applied-year-2/chapter-07.pdf",
+  "sourcePdfSha256": "a8f1a362b49dc97b76138d1218d3da4576f099e4f2ee7da8c1f54d2dc7347319",
+  "independentReview": "pending lead review"
+}
