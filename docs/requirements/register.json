@@ -4924,6 +4924,45 @@
       "evidence": [
         "GitHub issue #94"
       ]
+    },
+    {
+      "id": "PAP-057",
+      "requirement": "Build printable papers from existing Luisa questions.",
+      "scope": "Owner Cloudflare and both authenticated ADA roles.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "checked",
+      "origin": "Owner v0.57 instruction; GitHub #97",
+      "acceptance": [
+        "Add Papers as the fourth common tab. Select topics or individual skills, question count, random generation/regeneration and manual question selection.",
+        "Use only the 6,147 worked questions in the canonical Edexcel textbook catalogue (Maths 3,353; Further Maths 2,794), including question-level exclusions within mixed skills. Exclude reference-only entries. Apply to random selection, browsing and restored selections. Preserve exact questions, diagrams and matching solutions.",
+        "Two questions per A4 page normally, with extra space/pages for long questions while preserving readability and complete content. Include writing space, solutions at the back, consistent paper numbering and Source: Luisa <skill> Q<question> with course/book context and stable internal IDs.",
+        "Preserve role protections and existing account credentials. No paper activity analytics."
+      ],
+      "evidence": [
+        "GitHub issue #97 and PR #98",
+        "tests/test_papers_selection.py: eight browser checks",
+        "tests/papers_print_browser.py: four print checks including all 271 long Edexcel prompts",
+        "docs/evidence/v057-papers-print.json",
+        "Independent selection, host security and print review"
+      ]
+    },
+    {
+      "id": "PAP-058",
+      "requirement": "Extend paper sources to practice booklets and later past papers.",
+      "scope": "Future releases, deferred from v0.57.",
+      "priority": "P2",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "origin": "Owner v0.58 roadmap; GitHub #97",
+      "acceptance": [
+        "Practice Booklet source labels identify chapter, subchapter and original question number, with course/book context.",
+        "Future past-paper metadata includes topic, skill, marks and difficulty. Suggested position-based difficulty uses first five questions as easy, last five as difficult, intervening questions as medium.",
+        "Estimated duration uses six marks per five minutes when genuine marks metadata is available. Extend to further courses including IGCSE."
+      ],
+      "evidence": [
+        "GitHub issue #97"
+      ]
     }
   ]
 }

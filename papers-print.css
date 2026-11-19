@@ -1,0 +1,63 @@
+/* The preview uses physical page sizes so screen measurement matches printing. */
+.print-toolbar {box-sizing:border-box; position:sticky; top:0; z-index:10; display:flex; gap:12px; align-items:center; flex-wrap:wrap; padding:14px 24px; background:#102b43; color:white; font:14px/1.45 system-ui,sans-serif; box-shadow:0 2px 8px #102b4333}
+.print-toolbar strong {font:22px Georgia,serif; white-space:nowrap}
+.print-status {flex:1; min-width:230px; margin:0}
+.print-toolbar button {border:1px solid #b8c7d1; border-radius:5px; padding:11px 15px; color:#102b43; background:white; font:600 14px system-ui,sans-serif; cursor:pointer}
+.print-toolbar button:disabled {opacity:.5; cursor:default}
+.print-toolbar button.secondary {background:transparent; color:white}
+.print-toolbar button:focus-visible {outline:3px solid #dfbc78; outline-offset:3px}
+.print-errors {flex-basis:100%; margin:0; padding-left:1.5em}
+body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
+.print-page,.print-staging {font:11pt/1.35 Georgia,'Times New Roman',serif; color:#102b43}
+.print-page {box-sizing:border-box; width:210mm; height:297mm; padding:10mm 13mm 9mm; margin:8mm auto; background:white; box-shadow:0 2px 12px #102b4326; display:flex; flex-direction:column; gap:4mm; break-after:page; page-break-after:always}
+.print-page:last-child {break-after:auto; page-break-after:auto}
+.page-banner {height:12mm; flex:none; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #9baebe; font:10pt system-ui,sans-serif; color:#102b43}
+.wordmark {font:26pt Georgia,serif; letter-spacing:.055em}
+.page-content {flex:1; min-height:0}
+.questions-page .page-content {display:grid; grid-template-rows:repeat(2,minmax(0,1fr)); gap:7mm}
+.page-footer {height:5mm; flex:none; display:flex; justify-content:space-between; align-items:end; border-top:1px solid #cad3db; padding-top:2mm; font:8pt system-ui,sans-serif}
+.print-question {display:flex; flex-direction:column; min-width:0; min-height:0; box-sizing:border-box; border-bottom:1px solid #cad3db}
+.question-heading {flex:none; margin:0 0 2mm}
+.question-heading h2 {font:700 12pt/1.2 system-ui,sans-serif; margin:0 0 1mm}
+.question-heading .source {font:600 8pt/1.3 system-ui,sans-serif; margin:0}
+.question-heading .context {font:8pt/1.3 system-ui,sans-serif; color:#465b6d; margin:.5mm 0 0}
+.math-content {min-width:0; line-height:1.35; overflow-wrap:break-word}
+.print-question>.math-content {flex:none}
+.print-page p,.print-staging p {margin:0 0 1.6mm}
+.print-page .katex,.print-staging .katex {font-size:1.02em}
+.print-page .katex-display,.print-staging .katex-display {margin:1.8mm 0; text-align:left}
+.print-page .katex-display>.katex,.print-staging .katex-display>.katex {text-align:left}
+.print-page .equation,.print-staging .equation {display:block; max-width:100%; padding:.4mm 0}
+.print-page .inline-math,.print-staging .inline-math {margin-inline:.1em}
+.print-page .parts,.print-staging .parts {list-style-type:lower-alpha; padding-left:1.7em; margin:1.5mm 0}
+.print-page .parts[type=i],.print-staging .parts[type=i] {list-style-type:lower-roman}
+.print-page .parts[type="1"],.print-staging .parts[type="1"] {list-style-type:decimal}
+.print-page li,.print-staging li {padding-left:.25em; margin-bottom:1mm}
+.print-page .part-label,.print-staging .part-label {font-size:1em; margin:2mm 0 1mm}
+.print-page .diagram,.print-staging .diagram {margin:2mm 0; width:100%; max-width:100mm}
+.print-page .diagram img,.print-staging .diagram img {display:block; width:auto; height:auto; max-width:100%; max-height:58mm; object-fit:contain}
+.print-page table,.print-staging table {border-collapse:collapse; max-width:100%; margin:2mm 0}
+.print-page td,.print-page th,.print-staging td,.print-staging th {border:1px solid #aab9c5; padding:1mm 2mm}
+.print-page td p,.print-staging td p {margin:0}
+.working-space {box-sizing:border-box; flex:1; min-height:25mm; margin-top:3mm; border-top:1px solid #e4e8ec; color:#647686; font:7.5pt system-ui,sans-serif}
+.working-space span {display:inline-block; padding-top:1.5mm}
+.print-solution {margin:0 0 5mm; font-size:11pt; line-height:1.35; display:flow-root}
+.print-solution .solution-step {display:flow-root; margin:0 0 1.5mm}
+.print-page .compact {font-size:10pt; line-height:1.25}
+.print-question.compact .diagram img {max-height:48mm}
+.print-question.compact .working-space {min-height:12mm}
+.print-staging {position:absolute; left:-20000px; top:0; width:184mm; visibility:hidden}
+@page {size:A4 portrait; margin:0}
+@media print {
+  html,body:has(.print-pages) {margin:0; padding:0; background:white}
+  .print-toolbar,.print-staging {display:none!important}
+  .print-page {margin:0; box-shadow:none; print-color-adjust:exact; -webkit-print-color-adjust:exact}
+  body.not-ready .print-pages {display:none}
+  body.not-ready::before {display:block; padding:20mm; font:14pt system-ui; content:'This paper is not ready to print. Return to the preview and resolve the listed layout or loading errors.'}
+}
+
+.print-page .parts.columns {columns:2; column-gap:8mm}
+.print-page .parts.columns>li {break-inside:avoid; padding-right:2mm}
+
+.questions-page.extended-page .page-content {display:flex; flex-direction:column; gap:0}
+.extended-question {flex:1; min-height:0}

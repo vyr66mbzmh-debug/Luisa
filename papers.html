@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#11263c">
+<title>Luisa · Papers</title>
+<link rel="icon" href="assets/luisa/logo.png"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="assets/luisa/icon-192.png">
+<link rel="stylesheet" href="vendor/katex.min.css"><link rel="stylesheet" href="papers.css"><link rel="stylesheet" href="luisa.css?v=048">
+<script defer src="offline-register.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#papers-main">Skip to paper builder</a>
+<header class="top library-header">
+<a href="./" aria-label="Luisa question library"><img class="luisa-logo" src="assets/luisa/logo.png" alt="Luisa golden spiral logo"></a>
+<div class="library-toolbar">
+<nav class="view-tabs" aria-label="Library view"><a href="./">By skill</a><a href="./textbook-view.html">By textbook</a><a href="./teaching-chapters.html">Resources</a><a href="./papers.html" aria-current="page">Papers</a></nav>
+<div class="library-actions">
+<a class="library-tool" href="https://www.geogebra.org/classic?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Open GeoGebra Classic in a new tab" title="Open GeoGebra Classic in a new tab"><img src="assets/luisa/geogebra-gold.png" alt="" width="23" height="23"></a>
+<a class="library-tool" aria-label="Open CG100 calculator" title="Open CG100 calculator" href="https://classpad.net/note/#/tools/math" target="_blank" rel="noopener" onclick="window.open(this.href,'_blank','popup,noopener,width='+Math.round(screen.availWidth/4)+',height='+screen.availHeight);return false"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="assets/luisa/slide-controls.svg?v=048#calculator"/></svg></a>
+<a class="library-tool" aria-label="Offline downloads" title="Offline downloads" href="offline.html"><svg aria-hidden="true" viewBox="0 0 24 24"><use href="assets/luisa/slide-controls.svg?v=048#cloud-download"/></svg></a>
+<a class="version" href="./development-progress.html" aria-label="Development progress, version 0.57">v0.57</a>
+<!--edition-account-->
+</div></div>
+</header>
+<main id="papers-main" class="papers-main">
+<div class="page-heading"><h1>Build a paper</h1><p>Choose Edexcel topics and skills, then draw a random set or pick individual questions. Print two questions per A4 page normally, with extra space for longer questions, working space and the matching worked solutions at the back.</p></div>
+<noscript><p class="notice">Enable JavaScript to choose questions and build a paper.</p></noscript>
+<p id="papers-status" class="notice" role="status" aria-live="polite">Loading the question library…</p>
+<div class="builder-grid">
+<aside class="filter-panel panel" aria-labelledby="filter-title">
+<h2 id="filter-title">Choose your question pool</h2>
+<label class="field" for="papers-course">Course<select id="papers-course" disabled><option value="">All courses</option></select></label>
+<label class="field" for="papers-book">Book<select id="papers-book" disabled><option value="">All books</option></select></label>
+<fieldset class="topic-fieldset"><legend>Topics</legend><p class="help">All listed topics are included until you tick specific topics.</p><button id="papers-all-topics" type="button" class="quiet" disabled>Use all listed topics</button><div id="papers-topics" class="topic-list"></div></fieldset>
+<fieldset class="skill-fieldset"><legend>Individual skills</legend><p class="help">All listed skills are included until you tick specific skills.</p><button id="papers-all-skills" type="button" class="quiet" disabled>Use all listed skills</button><div id="papers-skills" class="skill-list"></div></fieldset>
+<p id="papers-pool-count" class="pool-count"></p>
+<p class="help">Changing the pool keeps your current paper. Generate again to replace it, or add more questions manually.</p>
+</aside>
+<div class="builder-content">
+<section class="panel generate-panel" aria-labelledby="generate-title">
+<h2 id="generate-title">Generate a random paper</h2>
+<form id="papers-generate-form"><label class="field count-field" for="papers-count">Number of questions<input id="papers-count" type="number" min="1" step="1" value="10" required aria-describedby="papers-pool-count" disabled></label><button id="papers-generate" class="primary" type="submit" disabled>Generate paper</button><button id="papers-regenerate" type="button" disabled>Regenerate</button><button id="papers-cancel" type="button" hidden>Cancel loading</button></form>
+<p class="help">Each question appears once. Regenerate replaces the current selection using this pool and count.</p>
+</section>
+<section class="panel" aria-labelledby="selection-title"><div class="section-heading"><h2 id="selection-title">Your paper <span id="papers-selected-count" class="count-badge">0</span></h2><div class="button-row"><button id="papers-clear" type="button" disabled>Clear paper</button><button id="papers-print" class="primary" type="button" disabled>Preview &amp; print</button></div></div>
+<p id="papers-selection-note" class="help">Your selection stays in this browser tab for this session.</p><p id="papers-empty">No questions selected. Generate a paper or browse the questions below.</p><ol id="papers-selected" class="selected-list"></ol>
+</section>
+<section class="panel" aria-labelledby="browse-title"><div class="section-heading"><h2 id="browse-title">Pick individual questions</h2><button id="papers-browse" type="button" disabled>Browse questions</button></div><p class="help">Preview the original question before adding it. You can combine questions from different topics and books.</p>
+<div id="papers-browser" hidden><div class="pagination"><button id="papers-previous" type="button">Previous</button><p id="papers-page" role="status"></p><button id="papers-next" type="button">Next</button></div><div id="papers-questions" class="question-list" aria-busy="false"></div></div>
+</section>
+</div></div>
+</main>
+<script src="vendor/katex.min.js"></script><script src="data.js"></script><script src="papers-print.js"></script><script src="papers.js"></script>
+</body>
+</html>

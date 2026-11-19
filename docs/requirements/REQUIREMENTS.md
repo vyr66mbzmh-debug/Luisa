@@ -245,3 +245,5 @@ Historical assertions are not current verification. See README.md in this folder
 | <a name='req-class-056'></a>CLASS-056 | Provide a continuous touch PDF viewer and fast return to recent lessons. | Both hosts, subject to edition access. | implemented | partial |
 | <a name='req-admin-056'></a>ADMIN-056 | Provide compact account summaries and teacher navigation on the admin page. | Private ADA administration. | implemented | verified |
 | <a name='req-ops-056'></a>OPS-056 | Retain only five verified website release ZIPs and their checksums. | Owner recovery archive. | implemented | verified |
+| <a name='req-pap-057'></a>PAP-057 | Build printable papers from existing Luisa questions. | Owner Cloudflare and both authenticated ADA roles. | implemented | checked |
+| <a name='req-pap-058'></a>PAP-058 | Extend paper sources to practice booklets and later past papers. | Future releases, deferred from v0.57. | planned | not_checked |
