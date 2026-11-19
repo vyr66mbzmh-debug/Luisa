@@ -44,7 +44,7 @@
       "method": "First take the square root of the variance.",
       "steps": [
         {
-          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{0.04}=0.2;\\quad1.5+2(0.2)=1.9&lt;2.1\"></span><p>Thus 2.1 m is an outlier.</p>"
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\sigma\\approx\\sqrt{0.04}=0.2;\\quad1.5+2(0.2)=1.9&lt;2.1\"></span><p>Thus 2.1 m is an outlier.</p>"
         },
         {
           "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1.5\\pm2(0.2)\\Rightarrow[1.1,1.9]\\text{ m}\"></span>"
@@ -53,7 +53,7 @@
           "explanation": "<p>Do not remove it merely because it is an outlier: a large adult rattlesnake could genuinely be 2.1 m. Check the measurement and retain it if valid.</p>"
         }
       ],
-      "solutionHtml": "<p>First take the square root of the variance.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{0.04}=0.2;\\quad1.5+2(0.2)=1.9&lt;2.1\"></span><p>Thus 2.1 m is an outlier.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1.5\\pm2(0.2)\\Rightarrow[1.1,1.9]\\text{ m}\"></span></li><li><p>Do not remove it merely because it is an outlier: a large adult rattlesnake could genuinely be 2.1 m. Check the measurement and retain it if valid.</p></li></ol>",
+      "solutionHtml": "<p>First take the square root of the variance.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma\\approx\\sqrt{0.04}=0.2;\\quad1.5+2(0.2)=1.9&lt;2.1\"></span><p>Thus 2.1 m is an outlier.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1.5\\pm2(0.2)\\Rightarrow[1.1,1.9]\\text{ m}\"></span></li><li><p>Do not remove it merely because it is an outlier: a large adult rattlesnake could genuinely be 2.1 m. Check the measurement and retain it if valid.</p></li></ol>",
       "answerCheck": "matches"
     },
     {
@@ -86,10 +86,10 @@
           "explanation": "<p>It might be a recording error or a person outside the intended secondary-school population. Verify that explanation before exclusion; unusual age alone does not prove an error.</p>"
         },
         {
-          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{133}{9}=14.7778\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{1997}{9}-\\left(\\frac{133}{9}\\right)^2}\\approx1.87248\"></span><p>Remaining mean≈14.8 years and standard deviation≈1.87 years.</p>"
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{133}{9}\\approx14.7778\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{1997}{9}-\\left(\\frac{133}{9}\\right)^2}\\approx1.87248\"></span><p>Remaining mean≈14.8 years and standard deviation≈1.87 years.</p>"
         }
       ],
-      "solutionHtml": "<p>Calculate the original summaries, then subtract both the observation and its square if it is removed.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{154}{10}=15.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{2438}{10}-\\left(\\frac{154}{10}\\right)^2}\\approx2.57682\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"15.4+2\\sqrt{243.8-15.4^2}\\approx20.5536&lt;21\"></span><p>21 is an outlier.</p></li><li><p>It might be a recording error or a person outside the intended secondary-school population. Verify that explanation before exclusion; unusual age alone does not prove an error.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{133}{9}=14.7778\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{1997}{9}-\\left(\\frac{133}{9}\\right)^2}\\approx1.87248\"></span><p>Remaining mean≈14.8 years and standard deviation≈1.87 years.</p></li></ol>",
+      "solutionHtml": "<p>Calculate the original summaries, then subtract both the observation and its square if it is removed.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{154}{10}=15.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{2438}{10}-\\left(\\frac{154}{10}\\right)^2}\\approx2.57682\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"15.4+2\\sqrt{243.8-15.4^2}\\approx20.5536&lt;21\"></span><p>21 is an outlier.</p></li><li><p>It might be a recording error or a person outside the intended secondary-school population. Verify that explanation before exclusion; unusual age alone does not prove an error.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{133}{9}\\approx14.7778\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{1997}{9}-\\left(\\frac{133}{9}\\right)^2}\\approx1.87248\"></span><p>Remaining mean≈14.8 years and standard deviation≈1.87 years.</p></li></ol>",
       "answerCheck": "matches"
     },
     {
@@ -98,7 +98,7 @@
       "method": "Apply the two-standard-deviation rule, then distinguish unusual values from confirmed errors.",
       "steps": [
         {
-          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{346.7}{12}=28.8917\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{10335.41}{12}-\\left(\\frac{346.7}{12}\\right)^2}\\approx5.15323\"></span>"
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{346.7}{12}\\approx28.8917\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{10335.41}{12}-\\left(\\frac{346.7}{12}\\right)^2}\\approx5.15323\"></span>"
         },
         {
           "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x\\pm2\\sigma\\approx[18.5852,39.1981]\"></span><p>18.5°C and 42.6°C lie outside these fences.</p>"
@@ -107,10 +107,10 @@
           "explanation": "<p>18.5°C could be a genuine cooler day, so retain it unless the source says otherwise.42.6°C is particularly suspicious as a daily mean and should be checked against the original record. An outlier rule alone does not justify deleting it.</p>"
         },
         {
-          "explanation": "<p>Following the supplied key’s proposed cleaning, assume 42.6°C has been confirmed erroneous and remove only that observation; retain 18.5°C.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{304.1}{11}=27.6455\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{8520.65}{11}-\\left(\\frac{304.1}{11}\\right)^2}\\approx3.21456\"></span><p>If the original record confirms 42.6°C, retain it instead; the question alone cannot establish which recording is wrong.</p>"
+          "explanation": "<p>Following the supplied key’s proposed cleaning, assume 42.6°C has been confirmed erroneous and remove only that observation; retain 18.5°C.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{304.1}{11}\\approx27.6455\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{8520.65}{11}-\\left(\\frac{304.1}{11}\\right)^2}\\approx3.21456\"></span><p>If the original record confirms 42.6°C, retain it instead; the question alone cannot establish which recording is wrong.</p>"
         }
       ],
-      "solutionHtml": "<p>Apply the two-standard-deviation rule, then distinguish unusual values from confirmed errors.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{346.7}{12}=28.8917\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{10335.41}{12}-\\left(\\frac{346.7}{12}\\right)^2}\\approx5.15323\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x\\pm2\\sigma\\approx[18.5852,39.1981]\"></span><p>18.5°C and 42.6°C lie outside these fences.</p></li><li><p>18.5°C could be a genuine cooler day, so retain it unless the source says otherwise.42.6°C is particularly suspicious as a daily mean and should be checked against the original record. An outlier rule alone does not justify deleting it.</p></li><li><p>Following the supplied key’s proposed cleaning, assume 42.6°C has been confirmed erroneous and remove only that observation; retain 18.5°C.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{304.1}{11}=27.6455\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{8520.65}{11}-\\left(\\frac{304.1}{11}\\right)^2}\\approx3.21456\"></span><p>If the original record confirms 42.6°C, retain it instead; the question alone cannot establish which recording is wrong.</p></li></ol>",
+      "solutionHtml": "<p>Apply the two-standard-deviation rule, then distinguish unusual values from confirmed errors.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{346.7}{12}\\approx28.8917\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{10335.41}{12}-\\left(\\frac{346.7}{12}\\right)^2}\\approx5.15323\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x\\pm2\\sigma\\approx[18.5852,39.1981]\"></span><p>18.5°C and 42.6°C lie outside these fences.</p></li><li><p>18.5°C could be a genuine cooler day, so retain it unless the source says otherwise.42.6°C is particularly suspicious as a daily mean and should be checked against the original record. An outlier rule alone does not justify deleting it.</p></li><li><p>Following the supplied key’s proposed cleaning, assume 42.6°C has been confirmed erroneous and remove only that observation; retain 18.5°C.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{304.1}{11}\\approx27.6455\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{8520.65}{11}-\\left(\\frac{304.1}{11}\\right)^2}\\approx3.21456\"></span><p>If the original record confirms 42.6°C, retain it instead; the question alone cannot establish which recording is wrong.</p></li></ol>",
       "answerCheck": "domain-qualified"
     },
     {
@@ -365,13 +365,13 @@
       "method": "Use mean=Σx/n and population standard deviation.",
       "steps": [
         {
-          "explanation": "<p>Year 8:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{94}{15}=6.26667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{610}{15}-\\left(\\frac{94}{15}\\right)^2}\\approx1.18134\"></span><p>Year 10:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{79}{10}=7.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{688}{10}-\\left(\\frac{79}{10}\\right)^2}\\approx2.52784\"></span>"
+          "explanation": "<p>Year 8:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{94}{15}\\approx6.26667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{610}{15}-\\left(\\frac{94}{15}\\right)^2}\\approx1.18134\"></span><p>Year 10:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{79}{10}=7.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{688}{10}-\\left(\\frac{79}{10}\\right)^2}\\approx2.52784\"></span>"
         },
         {
           "explanation": "<p>Year 10 has the higher mean time(7.9 versusabout 6.3 minutes) and the larger standard deviation(about 2.5 versus 1.2 minutes): slower on average and more variable.</p>"
         }
       ],
-      "solutionHtml": "<p>Use mean=Σx/n and population standard deviation.</p><ol class=\"parts\" type=\"a\"><li><p>Year 8:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{94}{15}=6.26667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{610}{15}-\\left(\\frac{94}{15}\\right)^2}\\approx1.18134\"></span><p>Year 10:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{79}{10}=7.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{688}{10}-\\left(\\frac{79}{10}\\right)^2}\\approx2.52784\"></span></li><li><p>Year 10 has the higher mean time(7.9 versusabout 6.3 minutes) and the larger standard deviation(about 2.5 versus 1.2 minutes): slower on average and more variable.</p></li></ol>",
+      "solutionHtml": "<p>Use mean=Σx/n and population standard deviation.</p><ol class=\"parts\" type=\"a\"><li><p>Year 8:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{94}{15}\\approx6.26667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{610}{15}-\\left(\\frac{94}{15}\\right)^2}\\approx1.18134\"></span><p>Year 10:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{79}{10}=7.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{688}{10}-\\left(\\frac{79}{10}\\right)^2}\\approx2.52784\"></span></li><li><p>Year 10 has the higher mean time(7.9 versusabout 6.3 minutes) and the larger standard deviation(about 2.5 versus 1.2 minutes): slower on average and more variable.</p></li></ol>",
       "answerCheck": "matches"
     },
     {

@@ -1,0 +1,75 @@
+{
+  "issue": 99,
+  "release": "0.58",
+  "reviewer": "independent solutions agent",
+  "family": "applied-year-1",
+  "chapters": [
+    {
+      "chapter": 1,
+      "questionsReadAgainstNativePrompts": 39,
+      "nativeInputHintAndAnswerFiguresInspected": 0,
+      "independentChecksRerunOrAdded": 0,
+      "solutionSha256": "6af15f73f0049c6102df5591b4c3d46026ac80b3350b495e92a3d36db7cdc751"
+    },
+    {
+      "chapter": 2,
+      "questionsReadAgainstNativePrompts": 43,
+      "nativeInputHintAndAnswerFiguresInspected": 0,
+      "independentChecksRerunOrAdded": 52,
+      "solutionSha256": "766c0d2007730cd1775014187a94991965680677a4f89cac17c48a910fbc98b5"
+    },
+    {
+      "chapter": 3,
+      "questionsReadAgainstNativePrompts": 37,
+      "nativeInputHintAndAnswerFiguresInspected": 27,
+      "independentChecksRerunOrAdded": 64,
+      "solutionSha256": "19fab779cb2a84a3b9a2342f34711ecf0cb59cfe97f86d281538b1eb1b272b05"
+    },
+    {
+      "chapter": 4,
+      "questionsReadAgainstNativePrompts": 19,
+      "nativeInputHintAndAnswerFiguresInspected": 13,
+      "independentChecksRerunOrAdded": 0,
+      "solutionSha256": "507fe04675bfba1934b41425d0edfbc603161f3850dfee6e49291a8b9c35ea59"
+    },
+    {
+      "chapter": 5,
+      "questionsReadAgainstNativePrompts": 38,
+      "nativeInputHintAndAnswerFiguresInspected": 22,
+      "independentChecksRerunOrAdded": 57,
+      "solutionSha256": "3d588adf12011504712571857ae201157b900eef6dcf508812f9b4b1a5918c0a"
+    },
+    {
+      "chapter": 6,
+      "questionsReadAgainstNativePrompts": 37,
+      "nativeInputHintAndAnswerFiguresInspected": 3,
+      "independentChecksRerunOrAdded": 125,
+      "solutionSha256": "eb3d3f46dd6fb737e956227cf3e42683c6b53a1b9b5634c7def01db78d2c49cb"
+    },
+    {
+      "chapter": 7,
+      "questionsReadAgainstNativePrompts": 37,
+      "nativeInputHintAndAnswerFiguresInspected": 0,
+      "independentChecksRerunOrAdded": 103,
+      "solutionSha256": "1e2d266af4ba885658201086679910df75689a4369d9251f92fa9e7a121cb0f8"
+    }
+  ],
+  "totalQuestionBodiesRead": 250,
+  "checksPassed": 401,
+  "reviewFindingsResolved": [
+    "Rounded means and sums distinguish approximations from exact equality in chapters1\u20133.",
+    "Five closest-tail critical-region calculations now compare the adjacent probability on the other side of the target.",
+    "Rounded chapter7 tail probabilities explicitly use approximation notation; small probability uses mathematical scientific notation."
+  ],
+  "sourceDiscrepanciesReviewed": [
+    "Inconsistent grapefruit summary and histogram/key discrepancies remain explicit.",
+    "Regression source equation incompatible with plot and exact-data reverse-regression exception remain qualified.",
+    "Finite-sample without-replacement probability exception retained."
+  ],
+  "correctionBrowserVerification": {
+    "questionsRendered": 156,
+    "strictMathErrors": 0,
+    "horizontalOverflows": 0
+  },
+  "scope": "Source/work mathematics and figure review; shared original-prompt table parsing and final Papers print integration are separately checked by lead."
+}
