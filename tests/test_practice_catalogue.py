@@ -25,6 +25,13 @@ class SolutionPartLabels(unittest.TestCase):
         self.assertEqual(module.align_solution_parts('<img src="diagram.png">',solution),solution)
 
 class SourceContext(unittest.TestCase):
+    def test_mathematical_title_labels_remain_readable(self):
+        self.assertEqual(module.title_label(r'14.2 $y=e^x$'), '14.2 y=eˣ')
+        self.assertEqual(module.title_label(r'3.5 Finding $\mu$ and $\sigma$'), '3.5 Finding μ and σ')
+        self.assertEqual(module.title_label(r'6.2 Graphs of $\sec x$, $\operatorname{cosec}x$ and $\cot x$'),
+                         '6.2 Graphs of sec x, cosec x and cot x')
+        with self.assertRaises(ValueError):module.title_label(r'$\unsupported{x}$')
+
     def test_reference_uses_only_original_prompt(self):
         key='practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/'
         original={'id':key+'q1','question':'<p>Original model.</p>','steps':['SECRET ANSWER'],

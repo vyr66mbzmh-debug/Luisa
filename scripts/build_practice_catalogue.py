@@ -61,6 +61,21 @@ def align_solution_parts(question, solution):
 
 
 ROOT=Path(__file__).resolve().parents[1]
+
+def title_label(title):
+    """Readable mathematical source labels for text-only navigation/citations.
+
+    Original prompt mathematics is rendered independently and is never changed.
+    Keep this deliberately limited to the source titles in the imported books.
+    """
+    replacements={r'\mathrm{f}':'f', r'\mathrm f':'f',
+                  r'\operatorname{cosec}':'cosec ', r'\mu':'μ', r'\sigma':'σ',
+                  r'\sec':'sec', r'\cot':'cot', r'\cos':'cos', r'\sin':'sin',
+                  r'\pm':' ± ', '^n':'ⁿ', '^x':'ˣ'}
+    for source, target in replacements.items():title=title.replace(source,target)
+    title=title.replace('$','')
+    if '\\' in title:raise ValueError('Unsupported mathematical source title: '+title)
+    return re.sub(r'\s+',' ',title).strip()
 # Entries correspond to the original numbered subsections, in order. Empty
 # entries use the exact native subsection as a separately selectable skill.
 SECTION_SKILLS={
@@ -156,15 +171,16 @@ def build(root=ROOT):
                 # grouping only; mixed exercises keep a distinct review skill.
                 candidates=Counter(existing[q['skill']]['topic'] for q in textbook['questions'] for t in q['targets'] if t['book']==book and str(t['chapter'])==str(number))
                 topic=candidates.most_common(1)[0][0] if candidates else f'practice-topic-ch{number}'
-                extra[sid]=dict(id=sid,courseId=course,bookId=book,topicId=topic,topicTitle=question['chapterTitle'],code=f'Practice {section}' if section[0].isdigit() else f'Chapter {number} review',title=question['subchapterTitle'],bookTitle=books[book]['title'])
+                extra[sid]=dict(id=sid,courseId=course,bookId=book,topicId=topic,topicTitle=question['chapterTitle'],code=f'Practice {section}' if section[0].isdigit() else f'Chapter {number} review',title=title_label(question['subchapterTitle']),bookTitle=books[book]['title'])
                 mapped=[sid]
             solution=by_id[ident]
             if solution.get('status')!='worked' or not solution.get('method') or not solution.get('solutionHtml') or not solution.get('steps'):raise ValueError(f'Incomplete solution: {ident}')
             if solution.get('answerCheck') not in {'matches','domain-qualified','source-discrepancy'}:raise ValueError(f'Unchecked answer: {ident}')
             question['contextHtml']=source_context(question,source_by_id)
+            question['subchapterLabel']=title_label(question['subchapterTitle'])
             question.update(steps=[align_solution_parts(question['question'],solution['solutionHtml'])],solutionStatus='worked',skillIds=mapped)
             fields=('id','courseId','bookId','chapterId','chapterNumber','chapterTitle','subchapterId','subchapterTitle','questionLabel')
-            descriptors.append(dict(**{k:question[k] for k in fields},board='Edexcel',skillIds=mapped,dataPath=path.relative_to(root).as_posix()))
+            descriptors.append(dict(**{k:question[k] for k in fields},subchapterLabel=question['subchapterLabel'],board='Edexcel',skillIds=mapped,dataPath=path.relative_to(root).as_posix()))
             changed.append(question)
         doc['questions']=changed;chapters.append((path,doc))
     if len(chapters)!=45:raise ValueError(f'Expected45 practice booklets, found{len(chapters)}')

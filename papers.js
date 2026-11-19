@@ -24,7 +24,7 @@
     }
   }
   const sourceLabel = row => row.sourceKind === 'practice-booklet'
-    ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
+    ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const contextLabel = row => `${row.courseTitle} · ${row.bookTitle} · ${row.topicTitle}`;
   function persist() {
