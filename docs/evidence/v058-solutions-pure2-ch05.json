@@ -1,7 +1,7 @@
 {
   "issue": 99,
   "release": "0.58",
-  "chapter": "Pure Year 2 Chapter 5 \u2014 Radians",
+  "chapter": "Pure Year 2 Chapter 5 — Radians",
   "questions": 47,
   "workedSolutions": 47,
   "originalQuestionIdsMatched": 47,
@@ -13,7 +13,7 @@
   "suppliedPromptOrKeyDefects": [
     {
       "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.5/q3",
-      "note": "Use radian small-angle expansions. The first printed target has \u03b8 in the wrong position."
+      "note": "Use radian small-angle expansions. The first printed target has θ in the wrong position."
     },
     {
       "id": "practice/maths-a-level/maths-pure-year-2/ch5/problem-a/qsilver",
@@ -21,12 +21,24 @@
     },
     {
       "id": "practice/maths-a-level/maths-pure-year-2/ch5/exam/q25",
-      "note": "The printed denominator contains cos4\u03b8. Its quadratic approximation is 1\u221216\u03b8\u00b2, whereas the requested expression and supplied key correspond to cos2\u03b8."
+      "note": "The printed denominator contains cos4θ. Its quadratic approximation is 1−16θ², whereas the requested expression and supplied key correspond to cos2θ."
     }
   ],
   "solutionSha256": "11cb527d6c4c25a13ffe295aff7202696f1db0453738fe2ac5acb58154d6c5f1",
   "sourcePdf": "resources/practice/pure-year-2/chapter-05.pdf",
   "sourcePdfSha256": "e4079e3fa374e93649e230a8ab41f55c49524f28a707054717332e7f1640b250",
-  "independentReview": "pending lead review",
-  "precisionReview": "Independent reviewer requested preserving trailing significant zeros in displayed approximations; numerical values unchanged."
+  "independentReview": "accepted: all original prompts and authored working independently reviewed; findings corrected",
+  "precisionReview": "Independent reviewer requested preserving trailing significant zeros in displayed approximations; numerical values unchanged.",
+  "independentReviewEvidence": {
+    "reviewer": "practice_solutions",
+    "questionsReviewed": 47,
+    "solutionSha256": "11cb527d6c4c25a13ffe295aff7202696f1db0453738fe2ac5acb58154d6c5f1",
+    "sourceAndMathematicalScope": "Every original question and subpart compared with authored working. Independently assessed calculations, method requirements, domains, cases, rounding and source-discrepancy qualifications. Supplied figures inspected wherever present; independent check scripts rerun separately from authoring.",
+    "sourceAndAnswerFiguresInspected": 27,
+    "independentChecksRerun": 239,
+    "allRerunChecksPassed": true,
+    "findingsResolved": true,
+    "detail": "All 27 original referenced figures inspected. Verified four corrected trailing-zero displays: 0.730, 5.50, 0.270 and 2.40.",
+    "integrationScope": "Acceptance covers source, worked mathematics and figures. Final combined Papers print and browser integration are recorded separately by the lead."
+  }
 }
