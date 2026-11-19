@@ -60,4 +60,23 @@ class OfflineInventory(unittest.TestCase):
             second=offline.generate(root,entries,'0.26')
             self.assertNotEqual(first['revision'],second['revision'])
 
+    def test_practice_booklet_working_and_images_belong_to_chapter_pack(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);entries=self.fixture(root)
+            additions={
+                'practice-catalogue.json':json.dumps({'questions':[{'bookId':'test','chapterNumber':1,'dataPath':'content/practice/test/chapter-01.json'}]}),
+                'content/practice/test/chapter-01.json':json.dumps({'questions':[{'question':'Prompt', 'steps':['<img src="resources/practice-solutions/answer.svg">'], 'hints':['Hint']}]}),
+                'resources/practice-solutions/answer.svg':'<svg xmlns="http://www.w3.org/2000/svg"><image href="detail.svg"/></svg>',
+                'resources/practice-solutions/detail.svg':'<svg xmlns="http://www.w3.org/2000/svg"/>'}
+            for name,data in additions.items():
+                p=root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(data)
+                entries[name]={'sha256':hashlib.sha256(data.encode()).hexdigest(),'bytes':len(data.encode())}
+            result=offline.generate(root,entries,'0.58');pack=result['packs'][0]
+            self.assertEqual(pack['practiceEntries'],2)
+            self.assertIn('practice-catalogue.json',result['shared'])
+            self.assertTrue(set(additions)-{'practice-catalogue.json'} <= set(pack['files']))
+            del entries['resources/practice-solutions/detail.svg']
+            with self.assertRaisesRegex(ValueError,'Unresolved nested offline dependency'):
+                offline.generate(root,entries,'0.58')
+
 if __name__=='__main__':unittest.main()
