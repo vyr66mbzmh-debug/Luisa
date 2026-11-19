@@ -1,0 +1,597 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 3,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q1",
+      "status": "worked",
+      "method": "IQR=65−50=15. The outlier fences are50−1.5(15)=27.5 and65+1.5(15)=87.5.",
+      "steps": [
+        {
+          "explanation": "<p>12%&lt;27.5%, so it is an outlier.</p>"
+        },
+        {
+          "explanation": "<p>71% is between the fences, so it is not an outlier.</p>"
+        },
+        {
+          "explanation": "<p>90%&gt;87.5%, so it is an outlier.</p>"
+        }
+      ],
+      "solutionHtml": "<p>IQR=65−50=15. The outlier fences are 50−1.5(15)=27.5 and 65+1.5(15)=87.5.</p><ol class=\"parts\" type=\"a\"><li><p>12%&lt;27.5%, so it is an outlier.</p></li><li><p>71% is between the fences, so it is not an outlier.</p></li><li><p>90%&gt;87.5%, so it is an outlier.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q2",
+      "status": "worked",
+      "method": "The non-outlier interval is14.5±2(6.2), or[2.1,26.9].",
+      "steps": [
+        {
+          "explanation": "<p>12.5 lies within the interval: not an outlier.</p>"
+        },
+        {
+          "explanation": "<p>27.1&gt;26.9: an outlier.</p>"
+        },
+        {
+          "explanation": "<p>26.9 is exactly on the boundary. The rule says more than two standard deviations, so it is not an outlier.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The non-outlier interval is 14.5±2(6.2), or[2.1,26.9].</p><ol class=\"parts\" type=\"a\"><li><p>12.5 lies within the interval: not an outlier.</p></li><li><p>27.1&gt;26.9: an outlier.</p></li><li><p>26.9 is exactly on the boundary. The rule says more than two standard deviations, so it is not an outlier.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q3",
+      "status": "worked",
+      "method": "First take the square root of the variance.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{0.04}=0.2;\\quad1.5+2(0.2)=1.9&lt;2.1\"></span><p>Thus 2.1 m is an outlier.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1.5\\pm2(0.2)\\Rightarrow[1.1,1.9]\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<p>Do not remove it merely because it is an outlier: a large adult rattlesnake could genuinely be 2.1 m. Check the measurement and retain it if valid.</p>"
+        }
+      ],
+      "solutionHtml": "<p>First take the square root of the variance.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{0.04}=0.2;\\quad1.5+2(0.2)=1.9&lt;2.1\"></span><p>Thus 2.1 m is an outlier.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1.5\\pm2(0.2)\\Rightarrow[1.1,1.9]\\text{ m}\"></span></li><li><p>Do not remove it merely because it is an outlier: a large adult rattlesnake could genuinely be 2.1 m. Check the measurement and retain it if valid.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q4",
+      "status": "worked",
+      "method": "Calculate IQR=46−22=24, and also respect the fact that age cannot be negative.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"22-1.5(24)=-14;\\quad46+1.5(24)=82\"></span><p>The statistical lower fence is−14, but the smallest possible age is 0. The non-outlier ages therefore range from 0 to 82.</p>"
+        },
+        {
+          "explanation": "<p>A person may genuinely live to 103, so a value outside the statistical fence is not necessarily a recording error.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate IQR=46−22=24, and also respect the fact that age cannot be negative.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"22-1.5(24)=-14;\\quad46+1.5(24)=82\"></span><p>The statistical lower fence is−14, but the smallest possible age is 0. The non-outlier ages therefore range from 0 to 82.</p></li><li><p>A person may genuinely live to 103, so a value outside the statistical fence is not necessarily a recording error.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q5",
+      "status": "worked",
+      "method": "Calculate the original summaries, then subtract both the observation and its square if it is removed.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{154}{10}=15.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{2438}{10}-\\left(\\frac{154}{10}\\right)^2}\\approx2.57682\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"15.4+2\\sqrt{243.8-15.4^2}\\approx20.5536&lt;21\"></span><p>21 is an outlier.</p>"
+        },
+        {
+          "explanation": "<p>It might be a recording error or a person outside the intended secondary-school population. Verify that explanation before exclusion; unusual age alone does not prove an error.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{133}{9}=14.7778\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{1997}{9}-\\left(\\frac{133}{9}\\right)^2}\\approx1.87248\"></span><p>Remaining mean≈14.8 years and standard deviation≈1.87 years.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate the original summaries, then subtract both the observation and its square if it is removed.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{154}{10}=15.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{2438}{10}-\\left(\\frac{154}{10}\\right)^2}\\approx2.57682\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"15.4+2\\sqrt{243.8-15.4^2}\\approx20.5536&lt;21\"></span><p>21 is an outlier.</p></li><li><p>It might be a recording error or a person outside the intended secondary-school population. Verify that explanation before exclusion; unusual age alone does not prove an error.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{133}{9}=14.7778\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{1997}{9}-\\left(\\frac{133}{9}\\right)^2}\\approx1.87248\"></span><p>Remaining mean≈14.8 years and standard deviation≈1.87 years.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q6",
+      "status": "worked",
+      "method": "Apply the two-standard-deviation rule, then distinguish unusual values from confirmed errors.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{346.7}{12}=28.8917\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{10335.41}{12}-\\left(\\frac{346.7}{12}\\right)^2}\\approx5.15323\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x\\pm2\\sigma\\approx[18.5852,39.1981]\"></span><p>18.5°C and 42.6°C lie outside these fences.</p>"
+        },
+        {
+          "explanation": "<p>18.5°C could be a genuine cooler day, so retain it unless the source says otherwise.42.6°C is particularly suspicious as a daily mean and should be checked against the original record. An outlier rule alone does not justify deleting it.</p>"
+        },
+        {
+          "explanation": "<p>Following the supplied key’s proposed cleaning, assume 42.6°C has been confirmed erroneous and remove only that observation; retain 18.5°C.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{304.1}{11}=27.6455\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{8520.65}{11}-\\left(\\frac{304.1}{11}\\right)^2}\\approx3.21456\"></span><p>If the original record confirms 42.6°C, retain it instead; the question alone cannot establish which recording is wrong.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Apply the two-standard-deviation rule, then distinguish unusual values from confirmed errors.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{346.7}{12}=28.8917\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{10335.41}{12}-\\left(\\frac{346.7}{12}\\right)^2}\\approx5.15323\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x\\pm2\\sigma\\approx[18.5852,39.1981]\"></span><p>18.5°C and 42.6°C lie outside these fences.</p></li><li><p>18.5°C could be a genuine cooler day, so retain it unless the source says otherwise.42.6°C is particularly suspicious as a daily mean and should be checked against the original record. An outlier rule alone does not justify deleting it.</p></li><li><p>Following the supplied key’s proposed cleaning, assume 42.6°C has been confirmed erroneous and remove only that observation; retain 18.5°C.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{304.1}{11}=27.6455\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{8520.65}{11}-\\left(\\frac{304.1}{11}\\right)^2}\\approx3.21456\"></span><p>If the original record confirms 42.6°C, retain it instead; the question alone cannot establish which recording is wrong.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.2/q1",
+      "status": "worked",
+      "method": "Place the five-number summary on one labelled score axis.",
+      "steps": [
+        {
+          "explanation": "<p>Whiskers at 18 and 52; box edges at 30 and 45; median line at 42. No separate outlier marks are needed.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/d5c50bd36513d0736c93.png\" alt=\"ans32-q1: solution graph\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>Place the five-number summary on one labelled score axis.</p><p>Whiskers at 18 and 52; box edges at 30 and 45; median line at 42. No separate outlier marks are needed.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/d5c50bd36513d0736c93.png\" alt=\"ans32-q1: solution graph\"></figure>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.2/q2",
+      "status": "worked",
+      "method": "Read the median, box edges and whisker endpoints from the common scale.",
+      "steps": [
+        {
+          "explanation": "<p>The median line is at 51 goals.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=66-38=28\\text{ goals}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{Range}=82-25=57\\text{ goals}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Read the median, box edges and whisker endpoints from the common scale.</p><ol class=\"parts\" type=\"a\"><li><p>The median line is at 51 goals.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=66-38=28\\text{ goals}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Range}=82-25=57\\text{ goals}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.2/q3",
+      "status": "worked",
+      "method": "Compare medians for typical mass and box widths for the middle-half spread.",
+      "steps": [
+        {
+          "explanation": "<p>The cross marks an outlier: an unusually large recorded male mass compared with the rest of that sample.</p>"
+        },
+        {
+          "explanation": "<p>Females have the higher median(about 3.4 versus 3.1 g). The boxes have similar widths, so their interquartile spreads are similar.</p>"
+        },
+        {
+          "explanation": "<p>Female is more likely from these plots:3.6 g lies within the female box, whereas all but the single male outlier are below it. This is an inference, not certain identification.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Compare medians for typical mass and box widths for the middle-half spread.</p><ol class=\"parts\" type=\"a\"><li><p>The cross marks an outlier: an unusually large recorded male mass compared with the rest of that sample.</p></li><li><p>Females have the higher median(about 3.4 versus 3.1 g). The boxes have similar widths, so their interquartile spreads are similar.</p></li><li><p>Female is more likely from these plots:3.6 g lies within the female box, whereas all but the single male outlier are below it. This is an inference, not certain identification.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.2/q4",
+      "status": "worked",
+      "method": "There are31 observations; use the middle value and quartiles of the two15-value halves.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Q_1=5,\\quad Q_2=7,\\quad Q_3=9;\\quad\\mathrm{IQR}=4\\text{ knots}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"5-1.5(4)=-1;\\quad9+1.5(4)=15\"></span><p>Values 16 and 19 are outliers.15 lies on the boundary and is not an outlier.</p>"
+        },
+        {
+          "explanation": "<p>Whiskers at 3 and 15; box from 5 to 9, median 7; crosses at 16 and 19.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/7ba6a92a1d922f03cbfb.png\" alt=\"ans32-q4: solution graph\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>There are 31 observations; use the middle value and quartiles of the two 15-value halves.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"Q_1=5,\\quad Q_2=7,\\quad Q_3=9;\\quad\\mathrm{IQR}=4\\text{ knots}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"5-1.5(4)=-1;\\quad9+1.5(4)=15\"></span><p>Values 16 and 19 are outliers.15 lies on the boundary and is not an outlier.</p></li><li><p>Whiskers at 3 and 15; box from 5 to 9, median 7; crosses at 16 and 19.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/7ba6a92a1d922f03cbfb.png\" alt=\"ans32-q4: solution graph\"></figure></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.3/q1",
+      "status": "worked",
+      "method": "Add frequencies successively and plot cumulative frequency at upper class boundaries.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>Height below (cm)</th><th>Cumulative frequency</th></tr></thead><tbody><tr><td>130</td><td>0</td></tr><tr><td>140</td><td>15</td></tr><tr><td>150</td><td>33</td></tr><tr><td>160</td><td>56</td></tr><tr><td>170</td><td>70</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<p>Plot(130,0),(140,15),(150,33),(160,56),(170,70), with labelled axes and an increasing curve.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/1df39f39ea4cb0beb445.png\" alt=\"ans33-q1: solution graph\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>Add frequencies successively and plot cumulative frequency at upper class boundaries.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><thead><tr><th>Height below (cm)</th><th>Cumulative frequency</th></tr></thead><tbody><tr><td>130</td><td>0</td></tr><tr><td>140</td><td>15</td></tr><tr><td>150</td><td>33</td></tr><tr><td>160</td><td>56</td></tr><tr><td>170</td><td>70</td></tr></tbody></table></li><li><p>Plot(130,0),(140,15),(150,33),(160,56),(170,70), with labelled axes and an increasing curve.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/1df39f39ea4cb0beb445.png\" alt=\"ans33-q1: solution graph\"></figure></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.3/q2",
+      "status": "worked",
+      "method": "There are120 apples; read across at cumulative frequencies30,60and90.",
+      "steps": [
+        {
+          "explanation": "<p>At cumulative frequency 60, read the median mass≈90 g.</p>"
+        },
+        {
+          "explanation": "<p>At cumulative frequencies 30 and 90, read approximately 84.6 g and 95.0 g.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}\\approx95.0-84.6=10.4\\text{ g}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>There are 120 apples; read across at cumulative frequencies 30,60 and 90.</p><ol class=\"parts\" type=\"a\"><li><p>At cumulative frequency 60, read the median mass≈90 g.</p></li><li><p>At cumulative frequencies 30 and 90, read approximately 84.6 g and 95.0 g.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}\\approx95.0-84.6=10.4\\text{ g}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.3/q3",
+      "status": "worked",
+      "method": "Read the total from the top of the curve; a qualifying count is a cumulative frequency.",
+      "steps": [
+        {
+          "explanation": "<p>The final cumulative frequency is 200, so 200 runners took part.</p>"
+        },
+        {
+          "explanation": "<p>Half of 200 is 100. Reading across from 100 to the curve and down gives approximately 60.5 minutes.</p>"
+        },
+        {
+          "explanation": "<p>Read upwards from 58 minutes to the curve, then across to the cumulative-frequency axis: approximately 76 runners qualified.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Read the total from the top of the curve; a qualifying count is a cumulative frequency.</p><ol class=\"parts\" type=\"a\"><li><p>The final cumulative frequency is 200, so 200 runners took part.</p></li><li><p>Half of 200 is 100. Reading across from 100 to the curve and down gives approximately 60.5 minutes.</p></li><li><p>Read upwards from 58 minutes to the curve, then across to the cumulative-frequency axis: approximately 76 runners qualified.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.3/q4",
+      "status": "worked",
+      "method": "Read cumulative positions based on61 observations.",
+      "steps": [
+        {
+          "explanation": "<p>61 days, consistent with 31 days in May and 30 in June.</p>"
+        },
+        {
+          "explanation": "<p>Read at cumulative frequencies 15.25,30.5 and 45.75. Median≈13.5°C; the difference between the upper and lower quartile readings is about 4.1°C.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"N(T&gt;15)\\approx61-42=19\\text{ days}\"></span>"
+        },
+        {
+          "explanation": "<p>The plotted endpoints are class boundaries, not necessarily the smallest and largest actual temperatures. Their difference 12°C is therefore only an estimated range, not a known exact range.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Read cumulative positions based on 61 observations.</p><ol class=\"parts\" type=\"a\"><li><p>61 days, consistent with 31 days in May and 30 in June.</p></li><li><p>Read at cumulative frequencies 15.25,30.5 and 45.75. Median≈13.5°C; the difference between the upper and lower quartile readings is about 4.1°C.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"N(T&gt;15)\\approx61-42=19\\text{ days}\"></span></li><li><p>The plotted endpoints are class boundaries, not necessarily the smallest and largest actual temperatures. Their difference 12°C is therefore only an estimated range, not a known exact range.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.3/q5",
+      "status": "worked",
+      "method": "Subtract the cumulative count below102g from that below117g, then divide by the total.",
+      "steps": [
+        {
+          "explanation": "<p>From the graph, read approximately 80 below 102 g and 265 below 117 g, with about 280 potatoes in total.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{265-80}{280}\\times100\\approx66\\%\"></span><p>Small differences are expected from graph readings.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Subtract the cumulative count below 102 g from that below 117 g, then divide by the total.</p><p>From the graph, read approximately 80 below 102 g and 265 below 117 g, with about 280 potatoes in total.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{265-80}{280}\\times100\\approx66\\%\"></span><p>Small differences are expected from graph readings.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q1",
+      "status": "worked",
+      "method": "Frequency density equals frequency divided by class width.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"4.5-4=0.5\\text{ minutes}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac71=7,\\quad\\frac{13}{0.5}=26,\\quad\\frac{19}{0.5}=38,\\quad\\frac{15}{1.5}=10,\\quad\\frac6{1.5}=4\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Frequency density equals frequency divided by class width.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"4.5-4=0.5\\text{ minutes}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac71=7,\\quad\\frac{13}{0.5}=26,\\quad\\frac{19}{0.5}=38,\\quad\\frac{15}{1.5}=10,\\quad\\frac6{1.5}=4\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q2",
+      "status": "worked",
+      "method": "Continuous grouped times with unequal widths should use bar area to represent frequency.",
+      "steps": [
+        {
+          "explanation": "<p>The variable is continuous and the class intervals have different widths; a histogram displays frequencies through areas.</p>"
+        },
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>Interval (min)</th><th>Frequency density</th></tr></thead><tbody><tr><td>0–3</td><td>1</td></tr><tr><td>3–4</td><td>6</td></tr><tr><td>4–4.5</td><td>16</td></tr><tr><td>4.5–5</td><td>14</td></tr><tr><td>5–6</td><td>5</td></tr><tr><td>6–10</td><td>3</td></tr></tbody></table><p>Use these heights above the corresponding class intervals, with no gaps.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/0a999002faf405490854.png\" alt=\"ans34-q2: solution graph\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>Continuous grouped times with unequal widths should use bar area to represent frequency.</p><ol class=\"parts\" type=\"a\"><li><p>The variable is continuous and the class intervals have different widths; a histogram displays frequencies through areas.</p></li><li><table class=\"practice-table\"><thead><tr><th>Interval (min)</th><th>Frequency density</th></tr></thead><tbody><tr><td>0–3</td><td>1</td></tr><tr><td>3–4</td><td>6</td></tr><tr><td>4–4.5</td><td>16</td></tr><tr><td>4.5–5</td><td>14</td></tr><tr><td>5–6</td><td>5</td></tr><tr><td>6–10</td><td>3</td></tr></tbody></table><p>Use these heights above the corresponding class intervals, with no gaps.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/0a999002faf405490854.png\" alt=\"ans34-q2: solution graph\"></figure></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q3",
+      "status": "worked",
+      "method": "Use separate horizontal and vertical drawing scales.",
+      "steps": [
+        {
+          "explanation": "<p>Response time is continuous, and the data is grouped into unequal-width classes.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{New width}=\\frac{8.5-7.5}{6-4}(1)=0.5\\text{ cm}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"d_{4\\text{–}6}=10/2=5,\\quad d_{7.5\\text{–}8.5}=8/1=8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{New height}=2.5\\frac85=4\\text{ cm}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use separate horizontal and vertical drawing scales.</p><ol class=\"parts\" type=\"a\"><li><p>Response time is continuous, and the data is grouped into unequal-width classes.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{New width}=\\frac{8.5-7.5}{6-4}(1)=0.5\\text{ cm}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"d_{4\\text{–}6}=10/2=5,\\quad d_{7.5\\text{–}8.5}=8/1=8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{New height}=2.5\\frac85=4\\text{ cm}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q4",
+      "status": "worked",
+      "method": "Frequency is bar width multiplied by density.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"N_{25\\text{–}35}=10(0.8)=8\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"N_{&gt;45}=10(1.3)+15(0.8)=25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"100\\frac{25}{66}\\approx37.9\\%\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Frequency is bar width multiplied by density.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"N_{25\\text{–}35}=10(0.8)=8\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"N_{&gt;45}=10(1.3)+15(0.8)=25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"100\\frac{25}{66}\\approx37.9\\%\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q5",
+      "status": "worked",
+      "method": "The first bar has plotted height0.9 and width10, but frequency18, so multiply plotted area by2.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"p=2(5)(3)=30;\\qquad q=2(10)(3.5)=70\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{Plotted height}=\\frac{42}{2(5)}=4.2\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The first bar has plotted height 0.9 and width 10, but frequency 18, so multiply plotted area by 2.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"p=2(5)(3)=30;\\qquad q=2(10)(3.5)=70\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Plotted height}=\\frac{42}{2(5)}=4.2\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q6",
+      "status": "worked",
+      "method": "The histogram’s total area represents200 civets; use the area below10kg.",
+      "steps": [
+        {
+          "explanation": "<p>The first class is 8.5–10.5 kg at density 6. The portion from 8.5 to 10 has plotted area 1.5×6=9. The whole plotted area is 100, representing 200 animals.</p><span class=\"equation\" data-display=\"true\" data-math=\"N_{&gt;10}\\approx200-200\\frac9{100}=182\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The histogram’s total area represents 200 civets; use the area below 10 kg.</p><p>The first class is 8.5–10.5 kg at density 6. The portion from 8.5 to 10 has plotted area 1.5×6=9. The whole plotted area is 100, representing 200 animals.</p><span class=\"equation\" data-display=\"true\" data-math=\"N_{&gt;10}\\approx200-200\\frac9{100}=182\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.5/q1",
+      "status": "worked",
+      "method": "Compare location and spread using the supplied summaries.",
+      "steps": [
+        {
+          "explanation": "<p>Hurn has the lower median sunshine(4.1 versus 4.9 hours), so its typical daily total is lower. Its IQR is larger(5.6 versus 4.2 hours), so its middle half varies more.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Compare location and spread using the supplied summaries.</p><p>Hurn has the lower median sunshine(4.1 versus 4.9 hours), so its typical daily total is lower. Its IQR is larger(5.6 versus 4.2 hours), so its middle half varies more.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.5/q2",
+      "status": "worked",
+      "method": "Use mean=Σx/n and population standard deviation.",
+      "steps": [
+        {
+          "explanation": "<p>Year 8:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{94}{15}=6.26667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{610}{15}-\\left(\\frac{94}{15}\\right)^2}\\approx1.18134\"></span><p>Year 10:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{79}{10}=7.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{688}{10}-\\left(\\frac{79}{10}\\right)^2}\\approx2.52784\"></span>"
+        },
+        {
+          "explanation": "<p>Year 10 has the higher mean time(7.9 versusabout 6.3 minutes) and the larger standard deviation(about 2.5 versus 1.2 minutes): slower on average and more variable.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use mean=Σx/n and population standard deviation.</p><ol class=\"parts\" type=\"a\"><li><p>Year 8:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{94}{15}=6.26667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{610}{15}-\\left(\\frac{94}{15}\\right)^2}\\approx1.18134\"></span><p>Year 10:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{79}{10}=7.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{688}{10}-\\left(\\frac{79}{10}\\right)^2}\\approx2.52784\"></span></li><li><p>Year 10 has the higher mean time(7.9 versusabout 6.3 minutes) and the larger standard deviation(about 2.5 versus 1.2 minutes): slower on average and more variable.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.5/q3",
+      "status": "worked",
+      "method": "Consistency concerns spread, not simply a lower median.",
+      "steps": [
+        {
+          "explanation": "<p>Leuchars has a slightly narrower IQR and a smaller non-outlier range, so it is the tentative choice based on mean windspeed. Its two high outliers remain relevant and should not be silently discarded.</p>"
+        },
+        {
+          "explanation": "<p>The gust data favour Camborne: its box and overall range are narrower, indicating less variable gusts. Considering both measures can therefore change the recommendation to Camborne.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Consistency concerns spread, not simply a lower median.</p><ol class=\"parts\" type=\"a\"><li><p>Leuchars has a slightly narrower IQR and a smaller non-outlier range, so it is the tentative choice based on mean windspeed. Its two high outliers remain relevant and should not be silently discarded.</p></li><li><p>The gust data favour Camborne: its box and overall range are narrower, indicating less variable gusts. Considering both measures can therefore change the recommendation to Camborne.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.5/q4",
+      "status": "worked",
+      "method": "For each group of50, read the median at25and quartiles at12.5and37.5.",
+      "steps": [
+        {
+          "explanation": "<p>Male median length is about 78 cm, compared with about 72 cm for females, so males are typically longer. Female IQR is about 15 cm versus 11 cm for males, so female lengths have greater variability in their middle half.</p>"
+        }
+      ],
+      "solutionHtml": "<p>For each group of 50, read the median at 25 and quartiles at 12.5 and 37.5.</p><p>Male median length is about 78 cm, compared with about 72 cm for females, so males are typically longer. Female IQR is about 15 cm versus 11 cm for males, so female lengths have greater variability in their middle half.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.5/q5",
+      "status": "worked",
+      "method": "Use cumulative frequencies at the upper class boundaries, then compare quartiles and upper-tail counts.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>Mass below(g)</th><th>Black cumulative</th><th>Brown cumulative</th></tr></thead><tbody><tr><td>100</td><td>0</td><td>0</td></tr><tr><td>150</td><td>2</td><td>1</td></tr><tr><td>200</td><td>9</td><td>9</td></tr><tr><td>250</td><td>27</td><td>41</td></tr><tr><td>300</td><td>51</td><td>63</td></tr><tr><td>350</td><td>64</td><td>70</td></tr><tr><td>400</td><td>70</td><td>70</td></tr></tbody></table><figure class=\"practice-figure\"><img src=\"content/practice/assets/d822947baed838e6c1a9.png\" alt=\"ans35-q5: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<p>Both groups contain 70 rats. Using linear interpolation:</p><span class=\"equation\" data-display=\"true\" data-math=\"Q_{1,B}=200+\\frac{17.5-9}{18}50\\approx223.61\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_{3,B}=300+\\frac{52.5-51}{13}50\\approx305.77\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}_B\\approx82.16;\\qquad\\mathrm{IQR}_{\\rm brown}\\approx62.86\\text{ g}\"></span><p>Black rats have greater spread.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"N_{\\rm black,&gt;320}\\approx13\\frac{350-320}{50}+6=13.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"N_{\\rm brown,&gt;280}\\approx22\\frac{300-280}{50}+7=15.8\"></span><p>The brown colony has the larger estimated number: about 16 compared with 14.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use cumulative frequencies at the upper class boundaries, then compare quartiles and upper-tail counts.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><thead><tr><th>Mass below(g)</th><th>Black cumulative</th><th>Brown cumulative</th></tr></thead><tbody><tr><td>100</td><td>0</td><td>0</td></tr><tr><td>150</td><td>2</td><td>1</td></tr><tr><td>200</td><td>9</td><td>9</td></tr><tr><td>250</td><td>27</td><td>41</td></tr><tr><td>300</td><td>51</td><td>63</td></tr><tr><td>350</td><td>64</td><td>70</td></tr><tr><td>400</td><td>70</td><td>70</td></tr></tbody></table><figure class=\"practice-figure\"><img src=\"content/practice/assets/d822947baed838e6c1a9.png\" alt=\"ans35-q5: solution graph\"></figure></li><li><p>Both groups contain 70 rats. Using linear interpolation:</p><span class=\"equation\" data-display=\"true\" data-math=\"Q_{1,B}=200+\\frac{17.5-9}{18}50\\approx223.61\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_{3,B}=300+\\frac{52.5-51}{13}50\\approx305.77\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}_B\\approx82.16;\\qquad\\mathrm{IQR}_{\\rm brown}\\approx62.86\\text{ g}\"></span><p>Black rats have greater spread.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"N_{\\rm black,&gt;320}\\approx13\\frac{350-320}{50}+6=13.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"N_{\\rm brown,&gt;280}\\approx22\\frac{300-280}{50}+7=15.8\"></span><p>The brown colony has the larger estimated number: about 16 compared with 14.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-a/qbronze",
+      "status": "worked",
+      "method": "Calculate the standard deviation before applying the fence.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{42}{10}=4.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{216.4}{10}-\\left(\\frac{42}{10}\\right)^2}\\approx2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"4.2+2(2)=8.2&lt;8.3\"></span><p>Thus 8.3 seconds is an outlier.</p>"
+        },
+        {
+          "explanation": "<p>8.3 seconds may be a genuine time for a slower dog. Being outside a statistical fence is not enough to establish a measurement error.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate the standard deviation before applying the fence.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{42}{10}=4.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{216.4}{10}-\\left(\\frac{42}{10}\\right)^2}\\approx2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"4.2+2(2)=8.2&lt;8.3\"></span><p>Thus 8.3 seconds is an outlier.</p></li><li><p>8.3 seconds may be a genuine time for a slower dog. Being outside a statistical fence is not enough to establish a measurement error.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-a/qsilver",
+      "status": "worked",
+      "method": "First check whether the individual values can agree with the given summaries.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{3218}{20}=160.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{530276}{20}-\\left(\\frac{3218}{20}\\right)^2}\\approx24.9998\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar m+2\\sigma\\approx210.9\\text{ g}\"></span><p>If those summaries are used, both 223 g and 845 g lie above the upper fence. However, the data as printed are inconsistent:</p><span class=\"equation\" data-display=\"true\" data-math=\"845^2=714025&gt;\\sum m^2=530276\"></span><p>A single observation’s square cannot exceed the sum of all squares. Check the original 845 g entry and the summary statistics before cleaning or recalculating.223 g could be valid; neither value should be discarded solely because it is an outlier. The supplied advice to remove only 845 g requires confirmation of an error.</p>"
+        }
+      ],
+      "solutionHtml": "<p>First check whether the individual values can agree with the given summaries.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{3218}{20}=160.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{530276}{20}-\\left(\\frac{3218}{20}\\right)^2}\\approx24.9998\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar m+2\\sigma\\approx210.9\\text{ g}\"></span><p>If those summaries are used, both 223 g and 845 g lie above the upper fence. However, the data as printed are inconsistent:</p><span class=\"equation\" data-display=\"true\" data-math=\"845^2=714025&gt;\\sum m^2=530276\"></span><p>A single observation’s square cannot exceed the sum of all squares. Check the original 845 g entry and the summary statistics before cleaning or recalculating.223 g could be valid; neither value should be discarded solely because it is an outlier. The supplied advice to remove only 845 g requires confirmation of an error.</p>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-a/qgold",
+      "status": "worked",
+      "method": "Compare what each rule flags; the choice of fence does not establish whether a value is erroneous.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{351}{9}=39\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{16439}{9}-\\left(\\frac{351}{9}\\right)^2}\\approx17.4801\"></span><span class=\"equation\" data-display=\"true\" data-math=\"A:\\quad\\bar x\\pm2\\sigma\\approx[4.040,73.960]\"></span><p>75 ml is the only observation outside these bounds.</p><span class=\"equation\" data-display=\"true\" data-math=\"B:\\quad Q_1=27,\\ Q_3=51,\\ IQR=24\"></span><span class=\"equation\" data-display=\"true\" data-math=\"[Q_1-1.5IQR,Q_3+1.5IQR]=[-9,87]\"></span><p>Using the supplied quartile convention, B flags no observation and its negative lower fence cannot identify unusually small nonnegative volumes. A is more sensitive for this data and flags 75 for investigation. Neither rule automatically justifies deleting it.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Compare what each rule flags; the choice of fence does not establish whether a value is erroneous.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{351}{9}=39\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{16439}{9}-\\left(\\frac{351}{9}\\right)^2}\\approx17.4801\"></span><span class=\"equation\" data-display=\"true\" data-math=\"A:\\quad\\bar x\\pm2\\sigma\\approx[4.040,73.960]\"></span><p>75 ml is the only observation outside these bounds.</p><span class=\"equation\" data-display=\"true\" data-math=\"B:\\quad Q_1=27,\\ Q_3=51,\\ IQR=24\"></span><span class=\"equation\" data-display=\"true\" data-math=\"[Q_1-1.5IQR,Q_3+1.5IQR]=[-9,87]\"></span><p>Using the supplied quartile convention, B flags no observation and its negative lower fence cannot identify unusually small nonnegative volumes. A is more sensitive for this data and flags 75 for investigation. Neither rule automatically justifies deleting it.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-b/qbronze",
+      "status": "worked",
+      "method": "Use areas of the portions of bars between32and42minutes.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"N=3(21)+5(43)+2(8)=63+215+16=294\\text{ students}\"></span><p>The three pieces cover 32–35,35–40 and 40–42 minutes. The full histogram area is 600, so these plotted areas already give frequencies.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use areas of the portions of bars between 32 and 42 minutes.</p><span class=\"equation\" data-display=\"true\" data-math=\"N=3(21)+5(43)+2(8)=63+215+16=294\\text{ students}\"></span><p>The three pieces cover 32–35,35–40 and 40–42 minutes. The full histogram area is 600, so these plotted areas already give frequencies.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-b/qsilver",
+      "status": "worked",
+      "method": "Read relative heights0.8,7.2,8,0.8 for the four bars; their total area is100.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"N_{25\\text{–}50}=5(0.8)+5(7.2)+5(8)+10(0.8)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"N=4+36+40+8=88\\text{ runners}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Read relative heights 0.8,7.2,8,0.8 for the four bars; their total area is 100.</p><span class=\"equation\" data-display=\"true\" data-math=\"N_{25\\text{–}50}=5(0.8)+5(7.2)+5(8)+10(0.8)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"N=4+36+40+8=88\\text{ runners}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-b/qgold",
+      "status": "worked",
+      "method": "The shown bars represent80swimmers; the missing two bars therefore represent40.",
+      "steps": [
+        {
+          "explanation": "<p>Reading the shown bar areas gives 4 in 20–30,18 in 35–38,24 in 38–40,20 in 45–50 and 14 in 50–60 minutes. Their sum is 80.</p><span class=\"equation\" data-display=\"true\" data-math=\"n_{30\\text{–}35}+n_{40\\text{–}45}=40,\\quad n_{40\\text{–}45}=4n_{30\\text{–}35}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"n_{30\\text{–}35}=8,\\quad n_{40\\text{–}45}=32\"></span><span class=\"equation\" data-display=\"true\" data-math=\"N_{25\\text{–}43}\\approx\\frac12(4)+8+18+24+\\frac35(32)=71.2\"></span><p>Approximately 71 swimmers; small graph-reading variation can give 72.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The shown bars represent 80 swimmers; the missing two bars therefore represent 40.</p><p>Reading the shown bar areas gives 4 in 20–30,18 in 35–38,24 in 38–40,20 in 45–50 and 14 in 50–60 minutes. Their sum is 80.</p><span class=\"equation\" data-display=\"true\" data-math=\"n_{30\\text{–}35}+n_{40\\text{–}45}=40,\\quad n_{40\\text{–}45}=4n_{30\\text{–}35}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"n_{30\\text{–}35}=8,\\quad n_{40\\text{–}45}=32\"></span><span class=\"equation\" data-display=\"true\" data-math=\"N_{25\\text{–}43}\\approx\\frac12(4)+8+18+24+\\frac35(32)=71.2\"></span><p>Approximately 71 swimmers; small graph-reading variation can give 72.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/exam/q11",
+      "status": "worked",
+      "method": "Perth’s winter falls in July and August; use the lower temperature distributions.",
+      "steps": [
+        {
+          "explanation": "<p>B and E have the lowest typical temperatures, so they are the July/August candidates.</p>"
+        },
+        {
+          "explanation": "<p>The crosses represent outliers in those months.</p>"
+        },
+        {
+          "explanation": "<p>20°C lies roughly halfway between C’s upper quartile and maximum. Assuming an even spread within that top quarter, aboutone eighth of 31 days exceeds 20°C:31/8≈4 days. A box plot alone does not determine this count exactly.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Perth’s winter falls in July and August; use the lower temperature distributions.</p><ol class=\"parts\" type=\"a\"><li><p>B and E have the lowest typical temperatures, so they are the July/August candidates.</p></li><li><p>The crosses represent outliers in those months.</p></li><li><p>20°C lies roughly halfway between C’s upper quartile and maximum. Assuming an even spread within that top quarter, aboutone eighth of 31 days exceeds 20°C:31/8≈4 days. A box plot alone does not determine this count exactly.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/exam/q20",
+      "status": "worked",
+      "method": "Use proportional allocation, then interpolate within the grouped windspeed data.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"30\\frac{31}{184}\\approx5.05\\Rightarrow5\\text{ July observations}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Q_2=6+\\frac{15-8}{9}(2)\\approx7.56\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_1=4+\\frac{7.5}{8}(2)=5.875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_3=8+\\frac{22.5-17}{6}(2)\\approx9.8333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}\\approx9.8333-5.875=3.96\\text{ knots}\"></span>"
+        },
+        {
+          "explanation": "<p>From Hurn’s box plot the median is about 7 knots and IQR about 5 knots. Hurn therefore has lower typical daily mean windspeeds but greater variability in the middle half.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use proportional allocation, then interpolate within the grouped windspeed data.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"30\\frac{31}{184}\\approx5.05\\Rightarrow5\\text{ July observations}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"Q_2=6+\\frac{15-8}{9}(2)\\approx7.56\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_1=4+\\frac{7.5}{8}(2)=5.875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_3=8+\\frac{22.5-17}{6}(2)\\approx9.8333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}\\approx9.8333-5.875=3.96\\text{ knots}\"></span></li><li><p>From Hurn’s box plot the median is about 7 knots and IQR about 5 knots. Hurn therefore has lower typical daily mean windspeeds but greater variability in the middle half.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/exam/q22",
+      "status": "worked",
+      "method": "Read the loggerhead cumulative curve at25,50and75, then use the required upper-tail count.",
+      "steps": [
+        {
+          "explanation": "<p>Median≈46 g. Quartiles approximately 43.5 g and 48.5 g give IQR≈5 g.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"N_{&gt;51}\\approx100-89=11\"></span>"
+        },
+        {
+          "explanation": "<p>To select the heaviest 11 of 100 great grey shrikes, estimate the 89 th percentile. The box plot has Q₃=67 g and maximum 70 g; assume observations spread uniformly across that top quarter.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=67+\\frac{89-75}{100-75}(70-67)=68.68\\text{ g}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Read the loggerhead cumulative curve at 25,50 and 75, then use the required upper-tail count.</p><ol class=\"parts\" type=\"a\"><li><p>Median≈46 g. Quartiles approximately 43.5 g and 48.5 g give IQR≈5 g.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"N_{&gt;51}\\approx100-89=11\"></span></li><li><p>To select the heaviest 11 of 100 great grey shrikes, estimate the 89 th percentile. The box plot has Q₃=67 g and maximum 70 g; assume observations spread uniformly across that top quarter.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=67+\\frac{89-75}{100-75}(70-67)=68.68\\text{ g}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/exam/q26",
+      "status": "worked",
+      "method": "Use bar areas, scaled so that the total represents1000athletes.2hours36minutes=2.6hours.",
+      "steps": [
+        {
+          "explanation": "<p>Reading bar heights approximately 14,40,125,150,60,12,2 over intervals 2–2.5,2.5–2.8,2.8–3,3–3.2,3.2–3.5,3.5–4,4–5 gives total area 100. Thus multiply area by 10.</p><span class=\"equation\" data-display=\"true\" data-math=\"N_{&lt;2.6}\\approx10[0.5(14)+0.1(40)]=110\"></span>"
+        },
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>Midpoint(h)</th><th>Estimated frequency</th></tr></thead><tbody><tr><td>2.25</td><td>70</td></tr><tr><td>2.65</td><td>120</td></tr><tr><td>2.9</td><td>250</td></tr><tr><td>3.1</td><td>300</td></tr><tr><td>3.35</td><td>180</td></tr><tr><td>3.75</td><td>60</td></tr><tr><td>4.5</td><td>20</td></tr></tbody></table><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{3048.5}{1000}=3.0485\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{9451.375}{1000}-\\left(\\frac{3048.5}{1000}\\right)^2}\\approx0.397521\"></span><p>The displayed histogram gives approximately 3.05 hours and 0.398 hours. The supplied key’s 3.03 and 0.290 do not agree with these bar readings; estimates depend slightly on reading the graph scale.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use bar areas, scaled so that the total represents 1000 athletes.2 hours 36 minutes=2.6 hours.</p><ol class=\"parts\" type=\"a\"><li><p>Reading bar heights approximately 14,40,125,150,60,12,2 over intervals 2–2.5,2.5–2.8,2.8–3,3–3.2,3.2–3.5,3.5–4,4–5 gives total area 100. Thus multiply area by 10.</p><span class=\"equation\" data-display=\"true\" data-math=\"N_{&lt;2.6}\\approx10[0.5(14)+0.1(40)]=110\"></span></li><li><table class=\"practice-table\"><thead><tr><th>Midpoint(h)</th><th>Estimated frequency</th></tr></thead><tbody><tr><td>2.25</td><td>70</td></tr><tr><td>2.65</td><td>120</td></tr><tr><td>2.9</td><td>250</td></tr><tr><td>3.1</td><td>300</td></tr><tr><td>3.35</td><td>180</td></tr><tr><td>3.75</td><td>60</td></tr><tr><td>4.5</td><td>20</td></tr></tbody></table><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{3048.5}{1000}=3.0485\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{9451.375}{1000}-\\left(\\frac{3048.5}{1000}\\right)^2}\\approx0.397521\"></span><p>The displayed histogram gives approximately 3.05 hours and 0.398 hours. The supplied key’s 3.03 and 0.290 do not agree with these bar readings; estimates depend slightly on reading the graph scale.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/exam/q36",
+      "status": "worked",
+      "method": "Combine the sampling definitions with the plotted distribution and summaries.",
+      "steps": [
+        {
+          "explanation": "<p>Opportunity sampling.</p>"
+        },
+        {
+          "explanation": "<p>Quota sampling: choose categories such as age groups, set category totals adding to 20, and approach available people until each quota is filled.</p>"
+        },
+        {
+          "explanation": "<p>A census of the people attending that Sunday, because every attendee is asked.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=9.5-5=4.5\\text{ km}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{385}{50}=7.7\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{3517}{50}-\\left(\\frac{385}{50}\\right)^2}\\approx3.32415\"></span>"
+        },
+        {
+          "explanation": "<p>Use median and IQR: the plotted distribution is skewed and contains large outliers, which affect the mean and standard deviation more strongly.</p>"
+        },
+        {
+          "explanation": "<p>Both changed values move from below the lower quartile to above the median, but stay below the upper quartile. The lower quartile and median increase; the extremes and upper quartile stay unchanged, consistent with the statement that only two plotted values changed.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Combine the sampling definitions with the plotted distribution and summaries.</p><ol class=\"parts\" type=\"a\"><li><p>Opportunity sampling.</p></li><li><p>Quota sampling: choose categories such as age groups, set category totals adding to 20, and approach available people until each quota is filled.</p></li><li><p>A census of the people attending that Sunday, because every attendee is asked.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=9.5-5=4.5\\text{ km}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{385}{50}=7.7\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{3517}{50}-\\left(\\frac{385}{50}\\right)^2}\\approx3.32415\"></span></li><li><p>Use median and IQR: the plotted distribution is skewed and contains large outliers, which affect the mean and standard deviation more strongly.</p></li><li><p>Both changed values move from below the lower quartile to above the median, but stay below the upper quartile. The lower quartile and median increase; the extremes and upper quartile stay unchanged, consistent with the statement that only two plotted values changed.</p></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}

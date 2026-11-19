@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 4,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.1/q1",
+      "status": "worked",
+      "method": "Look for the direction of the overall pattern, rather than joining the individual points.",
+      "steps": [
+        {
+          "explanation": "<p>Diagram a: positive correlation; y tends to rise as x rises.</p>"
+        },
+        {
+          "explanation": "<p>Diagram b: no clear correlation; there is no consistent rising or falling pattern.</p>"
+        },
+        {
+          "explanation": "<p>Diagram c: negative correlation; y tends to fall as x rises.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Look for the direction of the overall pattern, rather than joining the individual points.</p><ol class=\"parts\" type=\"a\"><li><p>Diagram a: positive correlation; y tends to rise as x rises.</p></li><li><p>Diagram b: no clear correlation; there is no consistent rising or falling pattern.</p></li><li><p>Diagram c: negative correlation; y tends to fall as x rises.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.1/q2",
+      "status": "worked",
+      "method": "Plot each paired(x,y)observation on labelled axes.",
+      "steps": [
+        {
+          "explanation": "<p>Use x horizontally and y vertically. Plot all ten coordinate pairs; do not join them as a time sequence.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/06d8469df54d62112db5.png\" alt=\"ans41-q2: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<p>Negative correlation: larger x values tend to have smaller y values.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Plot each paired(x,y)observation on labelled axes.</p><ol class=\"parts\" type=\"a\"><li><p>Use x horizontally and y vertically. Plot all ten coordinate pairs; do not join them as a time sequence.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/06d8469df54d62112db5.png\" alt=\"ans41-q2: solution graph\"></figure></li><li><p>Negative correlation: larger x values tend to have smaller y values.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.1/q3",
+      "status": "worked",
+      "method": "Use the direction of the point cloud, then interpret the variables.",
+      "steps": [
+        {
+          "explanation": "<p>Positive correlation.</p>"
+        },
+        {
+          "explanation": "<p>Days with higher mean temperature tend to have more total sunshine.</p>"
+        },
+        {
+          "explanation": "<p>July, August or September is plausible, given the relatively warm temperatures and long sunshine totals. This is a plausible identification, not a unique determination from seven points.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the direction of the point cloud, then interpret the variables.</p><ol class=\"parts\" type=\"a\"><li><p>Positive correlation.</p></li><li><p>Days with higher mean temperature tend to have more total sunshine.</p></li><li><p>July, August or September is plausible, given the relatively warm temperatures and long sunshine totals. This is a plausible identification, not a unique determination from seven points.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.1/q4",
+      "status": "worked",
+      "method": "Plot engine size against fuel economy and distinguish association from proof of causation.",
+      "steps": [
+        {
+          "explanation": "<p>Engine size is on the horizontal axis and miles per gallon on the vertical axis. Plot all seven cars.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/f2c4a5bc899fe44cde11.png\" alt=\"ans41-q4: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<p>Strong negative correlation: larger engines tend to achieve fewer miles per gallon.</p>"
+        },
+        {
+          "explanation": "<p>A causal link is plausible because larger engines can consume more fuel, but this observational sample alone does not prove it; vehicle mass, driving and design also affect fuel economy.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Plot engine size against fuel economy and distinguish association from proof of causation.</p><ol class=\"parts\" type=\"a\"><li><p>Engine size is on the horizontal axis and miles per gallon on the vertical axis. Plot all seven cars.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/f2c4a5bc899fe44cde11.png\" alt=\"ans41-q4: solution graph\"></figure></li><li><p>Strong negative correlation: larger engines tend to achieve fewer miles per gallon.</p></li><li><p>A causal link is plausible because larger engines can consume more fuel, but this observational sample alone does not prove it; vehicle mass, driving and design also affect fuel economy.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.1/q5",
+      "status": "worked",
+      "method": "The rising pattern indicates association, which need not be causal.",
+      "steps": [
+        {
+          "explanation": "<p>Positive correlation between attendance and total goals.</p>"
+        },
+        {
+          "explanation": "<p>The diagram alone cannot establish causation. A third factor, such as team strength or the opposition, could affect both attendance and goals. Future goals are not known when spectators decide to attend.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The rising pattern indicates association, which need not be causal.</p><ol class=\"parts\" type=\"a\"><li><p>Positive correlation between attendance and total goals.</p></li><li><p>The diagram alone cannot establish causation. A third factor, such as team strength or the opposition, could affect both attendance and goals. Future goals are not known when spectators decide to attend.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.1/q6",
+      "status": "worked",
+      "method": "Calculate the visibility fence before considering whether the value is genuine.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=3300-2800=500;\\quad Q_1-1.5IQR=2050&gt;1100\"></span>"
+        },
+        {
+          "explanation": "<p>Include it if it is a genuine foggy day. Exclude or correct it only if checking the source establishes a recording error or a reason it is outside the investigation’s scope.</p>"
+        },
+        {
+          "explanation": "<p>Omit the pair(1100,1004); plot the remaining nine pairs. The pair(2800,1007)occurs twice, so those two plotted marks overlap.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/33d1273d5be2f1060aea.png\" alt=\"ans41-q6: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<p>Positive correlation: higher pressure tends to occur with greater visibility in this sample.</p>"
+        },
+        {
+          "explanation": "<p>A causal mechanism is plausible through weather conditions: pressure patterns affect cloud and precipitation, which affect visibility. Correlation alone does not establish that mechanism, and high-pressure fog can also occur.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate the visibility fence before considering whether the value is genuine.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=3300-2800=500;\\quad Q_1-1.5IQR=2050&gt;1100\"></span></li><li><p>Include it if it is a genuine foggy day. Exclude or correct it only if checking the source establishes a recording error or a reason it is outside the investigation’s scope.</p></li><li><p>Omit the pair(1100,1004); plot the remaining nine pairs. The pair(2800,1007)occurs twice, so those two plotted marks overlap.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/33d1273d5be2f1060aea.png\" alt=\"ans41-q6: solution graph\"></figure></li><li><p>Positive correlation: higher pressure tends to occur with greater visibility in this sample.</p></li><li><p>A causal mechanism is plausible through weather conditions: pressure patterns affect cloud and precipitation, which affect visibility. Correlation alone does not establish that mechanism, and high-pressure fog can also occur.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.2/q1",
+      "status": "worked",
+      "method": "Compare the sign of the slope, its steepness and the vertical intercept.",
+      "steps": [
+        {
+          "explanation": "<p>A: slope 0.75 is positive and the intercept is close to zero.</p>"
+        },
+        {
+          "explanation": "<p>C: the slope is negative, approximately−1.05, with intercept near 9.30.</p>"
+        },
+        {
+          "explanation": "<p>B: a shallow positive slope 0.35 and intercept near 4.60.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Compare the sign of the slope, its steepness and the vertical intercept.</p><ol class=\"parts\" type=\"a\"><li><p>A: slope 0.75 is positive and the intercept is close to zero.</p></li><li><p>C: the slope is negative, approximately−1.05, with intercept near 9.30.</p></li><li><p>B: a shallow positive slope 0.35 and intercept near 4.60.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.2/q2",
+      "status": "worked",
+      "method": "The intercept is the prediction at t=0; the gradient is change per hour.",
+      "steps": [
+        {
+          "explanation": "<p>3.56 g is the modelled initial mass of the coin.</p>"
+        },
+        {
+          "explanation": "<p>−0.012 g per hour means the model predicts a decrease of 0.012 g for each additional hour in cola.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The intercept is the prediction at t=0; the gradient is change per hour.</p><ol class=\"parts\" type=\"a\"><li><p>3.56 g is the modelled initial mass of the coin.</p></li><li><p>−0.012 g per hour means the model predicts a decrease of 0.012 g for each additional hour in cola.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.2/q3",
+      "status": "worked",
+      "method": "Remember that y is measured in thousands of pounds.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y=50+20(12)=290\\Rightarrow\\pounds290000\"></span>"
+        },
+        {
+          "explanation": "<p>Each additional office is associated with an estimated£20,000 increase in the value of an office block.</p>"
+        },
+        {
+          "explanation": "<p>The intercept predicts£50,000 at x=0, but a building with no offices may be outside the sampled population or range. It could be a different type of property, so that prediction is not justified by this regression alone.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Remember that y is measured in thousands of pounds.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"y=50+20(12)=290\\Rightarrow\\pounds290000\"></span></li><li><p>Each additional office is associated with an estimated£20,000 increase in the value of an office block.</p></li><li><p>The intercept predicts£50,000 at x=0, but a building with no offices may be outside the sampled population or range. It could be a different type of property, so that prediction is not justified by this regression alone.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.2/q4",
+      "status": "worked",
+      "method": "Interpret the line in its stated prediction direction and recognise the special exact pattern in this table.",
+      "steps": [
+        {
+          "explanation": "<p>3 g is the predicted mass at birth(t=0);4.5 g/day is the predicted daily increase.</p>"
+        },
+        {
+          "explanation": "<p>30 days is outside the observed 1–10 day range. Growth need not remain linear that long, so this is unreliable extrapolation.</p>"
+        },
+        {
+          "explanation": "<p>In general, regression of mass on age is designed to predict mass, and reversing it is not the same as fitting age on mass. However, this particular table lies exactly on x=3+4.5 t, so its inverse gives the same perfect linear fit:</p><span class=\"equation\" data-display=\"true\" data-math=\"t=(32-3)/4.5\\approx6.44\\text{ days}\"></span><p>Thus the supplied blanket objection to inversion has an exception for the exact data printed here; for real noisy observations, use the regression in the required direction.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Interpret the line in its stated prediction direction and recognise the special exact pattern in this table.</p><ol class=\"parts\" type=\"a\"><li><p>3 g is the predicted mass at birth(t=0);4.5 g/day is the predicted daily increase.</p></li><li><p>30 days is outside the observed 1–10 day range. Growth need not remain linear that long, so this is unreliable extrapolation.</p></li><li><p>In general, regression of mass on age is designed to predict mass, and reversing it is not the same as fitting age on mass. However, this particular table lies exactly on x=3+4.5 t, so its inverse gives the same perfect linear fit:</p><span class=\"equation\" data-display=\"true\" data-math=\"t=(32-3)/4.5\\approx6.44\\text{ days}\"></span><p>Thus the supplied blanket objection to inversion has an exception for the exact data printed here; for real noisy observations, use the regression in the required direction.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/4.2/q5",
+      "status": "worked",
+      "method": "Distinguish whether the input lies in the data range from whether the printed equation fits the graph.",
+      "steps": [
+        {
+          "explanation": "<p>24.5°C lies within the observed range, so it is interpolation.28.2°C lies outside, so it is extrapolation and less reliable.</p>"
+        },
+        {
+          "explanation": "<p>A regression of pressure on temperature is intended to predict pressure; estimating temperature from pressure generally requires the opposite regression.</p>"
+        },
+        {
+          "explanation": "<p>The plot shows a clear negative association and suggests a declining linear model could be reasonable. However, the printed line does not fit that plot:</p><span class=\"equation\" data-display=\"true\" data-math=\"1043-1.41(24.5)=1008.455\\text{ hPa}\"></span><p>The displayed observations near 24.5°C are roughly 1028–1036 hPa. The coefficients or diagram must therefore be checked before treating this particular equation as an accurate fit. The original question is retained.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Distinguish whether the input lies in the data range from whether the printed equation fits the graph.</p><ol class=\"parts\" type=\"a\"><li><p>24.5°C lies within the observed range, so it is interpolation.28.2°C lies outside, so it is extrapolation and less reliable.</p></li><li><p>A regression of pressure on temperature is intended to predict pressure; estimating temperature from pressure generally requires the opposite regression.</p></li><li><p>The plot shows a clear negative association and suggests a declining linear model could be reasonable. However, the printed line does not fit that plot:</p><span class=\"equation\" data-display=\"true\" data-math=\"1043-1.41(24.5)=1008.455\\text{ hPa}\"></span><p>The displayed observations near 24.5°C are roughly 1028–1036 hPa. The coefficients or diagram must therefore be checked before treating this particular equation as an accurate fit. The original question is retained.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/problem-a/qbronze",
+      "status": "worked",
+      "method": "Plot minimum temperature horizontally and maximum temperature vertically.",
+      "steps": [
+        {
+          "explanation": "<p>Plot the seven supplied pairs on labelled temperature axes.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/b7bd116ed8fa9f68c764.png\" alt=\"ans-set-bronze: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<p>The points lie close to an increasing straight line, supporting a linear approximation within the observed range.</p>"
+        },
+        {
+          "explanation": "<p>No:12°C exceeds the largest observed minimum 7.2°C. This would extrapolate beyond the data, where the same relationship may not hold.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Plot minimum temperature horizontally and maximum temperature vertically.</p><ol class=\"parts\" type=\"a\"><li><p>Plot the seven supplied pairs on labelled temperature axes.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/b7bd116ed8fa9f68c764.png\" alt=\"ans-set-bronze: solution graph\"></figure></li><li><p>The points lie close to an increasing straight line, supporting a linear approximation within the observed range.</p></li><li><p>No:12°C exceeds the largest observed minimum 7.2°C. This would extrapolate beyond the data, where the same relationship may not hold.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/problem-a/qsilver",
+      "status": "worked",
+      "method": "A straight-line trend supports regression, but an unusual point may still be genuine.",
+      "steps": [
+        {
+          "explanation": "<p>Apart from the circled point, the values follow a strong approximately linear decreasing trend.</p>"
+        },
+        {
+          "explanation": "<p>185 means a predicted value of£185,000 at the town centre(x=0).−10 means a predicted fall of£10,000 for each additional kilometre from the centre.</p>"
+        },
+        {
+          "explanation": "<p>11 km lies beyond the sampled distances, so the prediction would be extrapolation.</p>"
+        },
+        {
+          "explanation": "<p>The circled point could be valid: larger rooms, a better condition or a desirable neighbourhood could make that flat unusually valuable. Check rather than automatically delete it.</p>"
+        }
+      ],
+      "solutionHtml": "<p>A straight-line trend supports regression, but an unusual point may still be genuine.</p><ol class=\"parts\" type=\"a\"><li><p>Apart from the circled point, the values follow a strong approximately linear decreasing trend.</p></li><li><p>185 means a predicted value of£185,000 at the town centre(x=0).−10 means a predicted fall of£10,000 for each additional kilometre from the centre.</p></li><li><p>11 km lies beyond the sampled distances, so the prediction would be extrapolation.</p></li><li><p>The circled point could be valid: larger rooms, a better condition or a desirable neighbourhood could make that flat unusually valuable. Check rather than automatically delete it.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/problem-a/qgold",
+      "status": "worked",
+      "method": "y is measured in units of100Dm, so convert the slope back to visibility units.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"-0.933(100)=-93.3\\text{ Dm per percentage point}\"></span><p>The model predicts a 93.3 Dm decrease for each one-percentage-point increase in maximum relative humidity.</p>"
+        },
+        {
+          "explanation": "<p>90%is within the relevant humidity range, so interpolation is plausible.40%is below the usual range in this UK large-data-set context; using the line there would be extrapolation.</p>"
+        },
+        {
+          "explanation": "<p>A causal link is plausible because high humidity can accompany mist or fog, which reduces visibility; the fitted association alone does not prove causation.</p>"
+        },
+        {
+          "explanation": "<p>This line predicts visibility from humidity. To predict humidity from visibility for noisy observations, fit the regression of humidity on visibility instead.</p>"
+        }
+      ],
+      "solutionHtml": "<p>y is measured in units of 100 Dm, so convert the slope back to visibility units.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"-0.933(100)=-93.3\\text{ Dm per percentage point}\"></span><p>The model predicts a 93.3 Dm decrease for each one-percentage-point increase in maximum relative humidity.</p></li><li><p>90%is within the relevant humidity range, so interpolation is plausible.40%is below the usual range in this UK large-data-set context; using the line there would be extrapolation.</p></li><li><p>A causal link is plausible because high humidity can accompany mist or fog, which reduces visibility; the fitted association alone does not prove causation.</p></li><li><p>This line predicts visibility from humidity. To predict humidity from visibility for noisy observations, fit the regression of humidity on visibility instead.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/exam/q4",
+      "status": "worked",
+      "method": "The coefficients describe the response h for a given catalyst mass x.",
+      "steps": [
+        {
+          "explanation": "<p>30°C is the predicted reaction temperature with no catalyst;2.1°C/g is the predicted rise for each additional gram.</p>"
+        },
+        {
+          "explanation": "<p>100 g is far outside the experimental range 1–30 g, so the extrapolated relationship is not established.</p>"
+        },
+        {
+          "explanation": "<p>The line predicts temperature from catalyst mass. Predicting catalyst mass from temperature generally requires regression of x on h, rather than reversing this regression.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The coefficients describe the response h for a given catalyst mass x.</p><ol class=\"parts\" type=\"a\"><li><p>30°C is the predicted reaction temperature with no catalyst;2.1°C/g is the predicted rise for each additional gram.</p></li><li><p>100 g is far outside the experimental range 1–30 g, so the extrapolated relationship is not established.</p></li><li><p>The line predicts temperature from catalyst mass. Predicting catalyst mass from temperature generally requires regression of x on h, rather than reversing this regression.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/exam/q8",
+      "status": "worked",
+      "method": "Plot the pairs to assess both the direction and shape of the relationship.",
+      "steps": [
+        {
+          "explanation": "<p>Prices generally decrease as age increases, so a fitted gradient should be negative. Her gradient+0.1 has the wrong sign.</p>"
+        },
+        {
+          "explanation": "<p>The scatter diagram suggests a curved decline rather than a uniform straight-line decrease, with an unusually cheap car at 1.4 years. A linear model would not describe that pattern particularly well.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/f8b46021281f43a06f46.png\" alt=\"exam-ans-q8: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<p>The 1.4-year-old car could have accident damage, unusually high mileage or poor condition, making the low price valid.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Plot the pairs to assess both the direction and shape of the relationship.</p><ol class=\"parts\" type=\"a\"><li><p>Prices generally decrease as age increases, so a fitted gradient should be negative. Her gradient+0.1 has the wrong sign.</p></li><li><p>The scatter diagram suggests a curved decline rather than a uniform straight-line decrease, with an unusually cheap car at 1.4 years. A linear model would not describe that pattern particularly well.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/f8b46021281f43a06f46.png\" alt=\"exam-ans-q8: solution graph\"></figure></li><li><p>The 1.4-year-old car could have accident damage, unusually high mileage or poor condition, making the low price valid.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/exam/q12",
+      "status": "worked",
+      "method": "Cloud amount is recorded as a count of eighths of the sky.",
+      "steps": [
+        {
+          "explanation": "<p>One okta is one eighth of the sky covered by cloud. The recorded variable takes integer values 0–8 and is discrete.</p>"
+        },
+        {
+          "explanation": "<p>The plotted relationship appears curved, with visibility falling more sharply at high cloud cover, so a straight line may be unsuitable.</p>"
+        },
+        {
+          "explanation": "<p>Only five days were sampled, and all came from one location in a single month. Increase the sample and broaden the time/location coverage before generalising.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Cloud amount is recorded as a count of eighths of the sky.</p><ol class=\"parts\" type=\"a\"><li><p>One okta is one eighth of the sky covered by cloud. The recorded variable takes integer values 0–8 and is discrete.</p></li><li><p>The plotted relationship appears curved, with visibility falling more sharply at high cloud cover, so a straight line may be unsuitable.</p></li><li><p>Only five days were sampled, and all came from one location in a single month. Increase the sample and broaden the time/location coverage before generalising.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/exam/q19",
+      "status": "worked",
+      "method": "Identify the sampling method and the line’s intended prediction range.",
+      "steps": [
+        {
+          "explanation": "<p>Opportunity sampling: the first ten students encountered.</p>"
+        },
+        {
+          "explanation": "<p>Positive correlation between resting and post-exercise pulse rates.</p>"
+        },
+        {
+          "explanation": "<p>The points lie approximately along a straight line, supporting a linear model over their observed range.</p>"
+        },
+        {
+          "explanation": "<p>Each extra 1 beat/min in resting pulse is associated with a predicted 1.36 beats/min increase in post-exercise pulse.</p>"
+        },
+        {
+          "explanation": "<p>45 beats/min is below the observed resting-pulse range, so that prediction would be extrapolation.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Identify the sampling method and the line’s intended prediction range.</p><ol class=\"parts\" type=\"a\"><li><p>Opportunity sampling: the first ten students encountered.</p></li><li><p>Positive correlation between resting and post-exercise pulse rates.</p></li><li><p>The points lie approximately along a straight line, supporting a linear model over their observed range.</p></li><li><p>Each extra 1 beat/min in resting pulse is associated with a predicted 1.36 beats/min increase in post-exercise pulse.</p></li><li><p>45 beats/min is below the observed resting-pulse range, so that prediction would be extrapolation.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch4/exam/q21",
+      "status": "worked",
+      "method": "An extreme gust should be investigated before removal.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=20-18=2;\\quad Q_3+1.5IQR=23&lt;31\"></span>"
+        },
+        {
+          "explanation": "<p>Exclude or correct it if comparison with the original record confirms a misread or recording error. A genuinely gusty day should not be removed only for being unusual.</p>"
+        },
+        {
+          "explanation": "<p>13.2 knots is the line’s predicted maximum gust when mean windspeed is zero, though that is outside the observed range.0.864 means the predicted maximum gust rises by 0.864 knots for each 1 knot increase in mean windspeed.</p>"
+        },
+        {
+          "explanation": "<p>A physical relationship is plausible: windier conditions tend to raise both mean speed and maximum gust. They are summaries of the same underlying wind conditions, so the regression alone does not prove that one summary directly causes the other.</p>"
+        }
+      ],
+      "solutionHtml": "<p>An extreme gust should be investigated before removal.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=20-18=2;\\quad Q_3+1.5IQR=23&lt;31\"></span></li><li><p>Exclude or correct it if comparison with the original record confirms a misread or recording error. A genuinely gusty day should not be removed only for being unusual.</p></li><li><p>13.2 knots is the line’s predicted maximum gust when mean windspeed is zero, though that is outside the observed range.0.864 means the predicted maximum gust rises by 0.864 knots for each 1 knot increase in mean windspeed.</p></li><li><p>A physical relationship is plausible: windier conditions tend to raise both mean speed and maximum gust. They are summaries of the same underlying wind conditions, so the regression alone does not prove that one summary directly causes the other.</p></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}

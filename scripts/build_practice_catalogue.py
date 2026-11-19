@@ -8,7 +8,56 @@ review skill rather than being indiscriminately included in every narrow skill.
 import argparse
 from collections import Counter
 import json
+from html.parser import HTMLParser
+import re
 from pathlib import Path
+
+class _LetteredParts(HTMLParser):
+    """Read explicit source list values without counting nested roman parts."""
+    def __init__(self, markup):
+        super().__init__(convert_charrefs=False)
+        self.lists=[]
+        self.parts=[]
+        self.offsets=[0]
+        for line in markup.splitlines(keepends=True):
+            self.offsets.append(self.offsets[-1]+len(line))
+        self.feed(markup)
+
+    def handle_starttag(self, tag, attrs):
+        attrs=dict(attrs)
+        if tag in ('ol','ul'):
+            self.lists.append({'lettered':tag=='ol' and attrs.get('type')=='a',
+                               'next':int(attrs.get('start','1'))})
+        elif tag=='li' and len(self.lists)==1 and self.lists[0]['lettered']:
+            current=self.lists[0]
+            value=int(attrs.get('value',current['next']))
+            line,col=self.getpos()
+            self.parts.append((value,self.offsets[line-1]+col,self.get_starttag_text()))
+            current['next']=value+1
+
+    def handle_endtag(self, tag):
+        if tag in ('ol','ul') and self.lists:
+            self.lists.pop()
+
+
+def align_solution_parts(question, solution):
+    """Match source subpart labels, including intentional gaps and continuations.
+
+    Diagrams may contain their own labels; when no equivalent HTML list exists,
+    retain the reviewed authored solution rather than guessing its numbering.
+    """
+    source=_LetteredParts(question).parts
+    target=_LetteredParts(solution).parts
+    if not source or len(source)!=len(target):
+        return solution
+    for (value,_,_),(_,offset,tag) in reversed(list(zip(source,target))):
+        tag=re.sub(r'\svalue\s*=\s*(?:"[^"]*"|\'[^\']*\'|[^\s>]+)','',tag,flags=re.I)
+        replacement=tag[:-1]+f' value="{value}">'
+        # Work right-to-left so preceding source offsets remain unchanged.
+        end=solution.index('>',offset)+1
+        solution=solution[:offset]+replacement+solution[end:]
+    return solution
+
 
 ROOT=Path(__file__).resolve().parents[1]
 # Entries correspond to the original numbered subsections, in order. Empty
@@ -89,7 +138,7 @@ def build(root=ROOT):
             solution=by_id[ident]
             if solution.get('status')!='worked' or not solution.get('method') or not solution.get('solutionHtml') or not solution.get('steps'):raise ValueError(f'Incomplete solution: {ident}')
             if solution.get('answerCheck') not in {'matches','domain-qualified','source-discrepancy'}:raise ValueError(f'Unchecked answer: {ident}')
-            question.update(steps=[solution['solutionHtml']],solutionStatus='worked',skillIds=mapped)
+            question.update(steps=[align_solution_parts(question['question'],solution['solutionHtml'])],solutionStatus='worked',skillIds=mapped)
             fields=('id','courseId','bookId','chapterId','chapterNumber','chapterTitle','subchapterId','subchapterTitle','questionLabel')
             descriptors.append(dict(**{k:question[k] for k in fields},board='Edexcel',skillIds=mapped,dataPath=path.relative_to(root).as_posix()))
             changed.append(question)

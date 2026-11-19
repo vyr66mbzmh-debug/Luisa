@@ -1,0 +1,648 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 6,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.1/q1",
+      "status": "worked",
+      "method": "Discrete outcomes form a countable set; distinguish a genuinely varying measurement from a fixed value.",
+      "steps": [
+        {
+          "explanation": "<p>Yes: X takes one of the six integer values 1–6 at random.</p>"
+        },
+        {
+          "explanation": "<p>No in the usual model: reaction time is continuous, even though recording rounds it to a finite precision.</p>"
+        },
+        {
+          "explanation": "<p>The intended answer is no: H is the fixed 24 hours, with no random variation. Formally a constant can be treated as a degenerate discrete random variable, but it is not a random experiment in this context.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Discrete outcomes form a countable set; distinguish a genuinely varying measurement from a fixed value.</p><ol class=\"parts\" type=\"a\"><li><p>Yes: X takes one of the six integer values 1–6 at random.</p></li><li><p>No in the usual model: reaction time is continuous, even though recording rounds it to a finite precision.</p></li><li><p>The intended answer is no: H is the fixed 24 hours, with no random variation. Formally a constant can be treated as a degenerate discrete random variable, but it is not a random experiment in this context.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.1/q2",
+      "status": "worked",
+      "method": "Each face is equally likely.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>P(X=x)</td><td>1/6</td><td>1/6</td><td>1/6</td><td>1/6</td><td>1/6</td><td>1/6</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X=x)=\\begin{cases}1/6,&amp;x=1,2,3,4,5,6,\\\\0,&amp;\\text{otherwise.}\\end{cases}\"></span>"
+        },
+        {
+          "explanation": "<p>A discrete uniform distribution assigns the same probability to each value in a finite discrete set.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Each face is equally likely.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>P(X=x)</td><td>1/6</td><td>1/6</td><td>1/6</td><td>1/6</td><td>1/6</td><td>1/6</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X=x)=\\begin{cases}1/6,&amp;x=1,2,3,4,5,6,\\\\0,&amp;\\text{otherwise.}\\end{cases}\"></span></li><li><p>A discrete uniform distribution assigns the same probability to each value in a finite discrete set.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.1/q3",
+      "status": "worked",
+      "method": "Probabilities across all possible values sum to1.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(1+2+3)/k=1\\Rightarrow k=6\"></span>"
+        },
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>y</th><th>1</th><th>2</th><th>3</th></tr></thead><tbody><tr><td>P(Y=y)</td><td>1/6</td><td>2/6</td><td>3/6</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(Y&gt;1)=2/6+3/6=5/6;\\quad\\text{(ii) }P(Y&gt;3)=0\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Probabilities across all possible values sum to 1.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"(1+2+3)/k=1\\Rightarrow k=6\"></span></li><li><table class=\"practice-table\"><thead><tr><th>y</th><th>1</th><th>2</th><th>3</th></tr></thead><tbody><tr><td>P(Y=y)</td><td>1/6</td><td>2/6</td><td>3/6</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(Y&gt;1)=2/6+3/6=5/6;\\quad\\text{(ii) }P(Y&gt;3)=0\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.1/q4",
+      "status": "worked",
+      "method": "Include precisely the integer outcomes in each stated interval.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)=0.1+0.15=0.25\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;3)=0.2+0.22+0.21=0.63\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le X&lt;6)=0.15+0.12+0.2+0.22=0.69\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Include precisely the integer outcomes in each stated interval.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)=0.1+0.15=0.25\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;3)=0.2+0.22+0.21=0.63\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le X&lt;6)=0.15+0.12+0.2+0.22=0.69\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.1/q5",
+      "status": "worked",
+      "method": "Normalise the probability function before adding the required outcomes.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"k(1+2+3+4+5)=1\\Rightarrow k=1/15\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;2)=(3+4+5)/15=4/5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Normalise the probability function before adding the required outcomes.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"k(1+2+3+4+5)=1\\Rightarrow k=1/15\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;2)=(3+4+5)/15=4/5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.1/q6",
+      "status": "worked",
+      "method": "Add the four algebraic probabilities.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"5\\alpha+1/6-1/8=1\\Rightarrow5\\alpha=23/24\\Rightarrow\\alpha=23/120\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(1&lt;Y&lt;4)=(\\alpha-1/8)+\\alpha=46/120-15/120=31/120\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Add the four algebraic probabilities.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"5\\alpha+1/6-1/8=1\\Rightarrow5\\alpha=23/24\\Rightarrow\\alpha=23/120\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(1&lt;Y&lt;4)=(\\alpha-1/8)+\\alpha=46/120-15/120=31/120\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.1/q7",
+      "status": "worked",
+      "method": "Count favourable integers out of20; treat separate generated numbers as independent.",
+      "steps": [
+        {
+          "explanation": "<p>Discrete uniform distribution on 1,2,…,20.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P=5/20=1/4;\\quad\\text{(ii) }P=(17-2+1)/20=4/5\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{both below10})=(9/20)^2=81/400\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Count favourable integers out of 20; treat separate generated numbers as independent.</p><ol class=\"parts\" type=\"a\"><li><p>Discrete uniform distribution on 1,2,…,20.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P=5/20=1/4;\\quad\\text{(ii) }P=(17-2+1)/20=4/5\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{both below10})=(9/20)^2=81/400\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.1/q8",
+      "status": "worked",
+      "method": "Symmetry gives equal probabilities for1and4, and for2and3.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(1)=P(4)=0.28;\\quad P(2)=P(3)=(1-0.56)/2=0.22\"></span><table class=\"practice-table\"><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>P(X=x)</td><td>0.28</td><td>0.22</td><td>0.22</td><td>0.28</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<p>For independent rolls, the eligible pairs are(3,4),(4,3),(4,4).</p><span class=\"equation\" data-display=\"true\" data-math=\"P=2(0.22)(0.28)+0.28^2=0.2016\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Symmetry gives equal probabilities for 1 and 4, and for 2 and 3.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(1)=P(4)=0.28;\\quad P(2)=P(3)=(1-0.56)/2=0.22\"></span><table class=\"practice-table\"><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>P(X=x)</td><td>0.28</td><td>0.22</td><td>0.22</td><td>0.28</td></tr></tbody></table></li><li><p>For independent rolls, the eligible pairs are(3,4),(4,3),(4,4).</p><span class=\"equation\" data-display=\"true\" data-math=\"P=2(0.22)(0.28)+0.28^2=0.2016\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.1/q9",
+      "status": "worked",
+      "method": "The spinner has four green and three non-green sectors. Stop at the first green or after the fifth spin.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X=k)=(3/7)^{k-1}(4/7),\\quad k=1,2,3,4\"></span><p>Five spins occur whenever the first four are non-green; the fifth result does not matter.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=5)=(3/7)^4=81/2401\"></span><table class=\"practice-table\"><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>P(X=x)</td><td>4/7</td><td>12/49</td><td>36/343</td><td>108/2401</td><td>81/2401</td></tr></tbody></table>"
+        }
+      ],
+      "solutionHtml": "<p>The spinner has four green and three non-green sectors. Stop at the first green or after the fifth spin.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=k)=(3/7)^{k-1}(4/7),\\quad k=1,2,3,4\"></span><p>Five spins occur whenever the first four are non-green; the fifth result does not matter.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=5)=(3/7)^4=81/2401\"></span><table class=\"practice-table\"><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr></thead><tbody><tr><td>P(X=x)</td><td>4/7</td><td>12/49</td><td>36/343</td><td>108/2401</td><td>81/2401</td></tr></tbody></table>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.2/q1",
+      "status": "worked",
+      "method": "A binomial count needs a fixed number of independent trials, two categories, and constant success probability.",
+      "steps": [
+        {
+          "explanation": "<p>Yes:30 independent tosses, head/tail, and P(head)=0.5.</p>"
+        },
+        {
+          "explanation": "<p>No: the number of rolls is not fixed; a geometric distribution models this waiting time.</p>"
+        },
+        {
+          "explanation": "<p>Generally no: the chance of winning varies with opponent and conditions, and results may not be independent.</p>"
+        },
+        {
+          "explanation": "<p>Yes if the 25 bottles are independently overfilled with the same probability 0.02.</p>"
+        }
+      ],
+      "solutionHtml": "<p>A binomial count needs a fixed number of independent trials, two categories, and constant success probability.</p><ol class=\"parts\" type=\"a\"><li><p>Yes:30 independent tosses, head/tail, and P(head)=0.5.</p></li><li><p>No: the number of rolls is not fixed; a geometric distribution models this waiting time.</p></li><li><p>Generally no: the chance of winning varies with opponent and conditions, and results may not be independent.</p></li><li><p>Yes if the 25 bottles are independently overfilled with the same probability 0.02.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.2/q2",
+      "status": "worked",
+      "method": "Use P(X=r)=nCr p^r(1−p)^(n−r), and add disjoint outcomes.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X=2)=\\binom{6}{2}(0.2)^{2}(1-0.2)^{4}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.24576\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X=4)=\\binom{6}{4}(0.2)^{4}(1-0.2)^{2}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.01536\"></span>"
+        },
+        {
+          "explanation": "<p>X&lt;2 means X=0 or 1.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 1)=\\sum_{r=0}^{1}\\binom{6}r(0.2)^r(1-0.2)^{6-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.65536\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use P(X=r)=nCr p^r(1−p)^(n−r), and add disjoint outcomes.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X=2)=\\binom{6}{2}(0.2)^{2}(1-0.2)^{4}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.24576\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X=4)=\\binom{6}{4}(0.2)^{4}(1-0.2)^{2}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.01536\"></span></li><li><p>X&lt;2 means X=0 or 1.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 1)=\\sum_{r=0}^{1}\\binom{6}r(0.2)^r(1-0.2)^{6-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.65536\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.2/q3",
+      "status": "worked",
+      "method": "Use the binomial probability formula with n=12and p=3/5.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y=6)=\\binom{12}{6}(0.6)^{6}(1-0.6)^{6}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.17657915\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y=10)=\\binom{12}{10}(0.6)^{10}(1-0.6)^{2}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.063852282\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(9\\le Y\\le 12)=\\sum_{r=9}^{12}\\binom{12}r(0.6)^r(1-0.6)^{12-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.22533728\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the binomial probability formula with n=12 and p=3/5.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=6)=\\binom{12}{6}(0.6)^{6}(1-0.6)^{6}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.17657915\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=10)=\\binom{12}{10}(0.6)^{10}(1-0.6)^{2}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.063852282\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(9\\le Y\\le 12)=\\sum_{r=9}^{12}\\binom{12}r(0.6)^r(1-0.6)^{12-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.22533728\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.2/q4",
+      "status": "worked",
+      "method": "Four of the five equal sectors are yellow.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"n=8;\\quad p=4/5=0.8\"></span>"
+        },
+        {
+          "explanation": "<p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=5)=\\binom{8}{5}(0.8)^{5}(1-0.8)^{3}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.14680064\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=3)=\\binom{8}{3}(0.8)^{3}(1-0.8)^{5}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.00917504\"></span><p>(iii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(7\\le X\\le 8)=\\sum_{r=7}^{8}\\binom{8}r(0.8)^r(1-0.8)^{8-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.50331648\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Four of the five equal sectors are yellow.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"n=8;\\quad p=4/5=0.8\"></span></li><li><p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=5)=\\binom{8}{5}(0.8)^{5}(1-0.8)^{3}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.14680064\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=3)=\\binom{8}{3}(0.8)^{3}(1-0.8)^{5}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.00917504\"></span><p>(iii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(7\\le X\\le 8)=\\sum_{r=7}^{8}\\binom{8}r(0.8)^r(1-0.8)^{8-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.50331648\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.2/q5",
+      "status": "worked",
+      "method": "Let X count batteries lasting less than30hours.",
+      "steps": [
+        {
+          "explanation": "<p>Assume independent battery lifetimes and the same short-lifetime probability 0.12 for each battery. The sample size 20 is fixed.</p><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.12)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X=3)=\\binom{20}{3}(0.12)^{3}(1-0.12)^{17}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.2242095\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 2)=\\sum_{r=0}^{2}\\binom{20}r(0.12)^r(1-0.12)^{20-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.56313152\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Let X count batteries lasting less than 30 hours.</p><ol class=\"parts\" type=\"a\"><li><p>Assume independent battery lifetimes and the same short-lifetime probability 0.12 for each battery. The sample size 20 is fixed.</p><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.12)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X=3)=\\binom{20}{3}(0.12)^{3}(1-0.12)^{17}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.2242095\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 2)=\\sum_{r=0}^{2}\\binom{20}r(0.12)^r(1-0.12)^{20-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.56313152\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.2/q6",
+      "status": "worked",
+      "method": "Count independent preferences with constant probability0.8.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.8)\"></span><p>For sampling without replacement from a poll, this is an approximation when the poll is large relative to 50.</p>"
+        },
+        {
+          "explanation": "<p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=40)=\\binom{50}{40}(0.8)^{40}(1-0.8)^{10}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.13981901\"></span><p>(ii) More than 47 means 48,49 or 50.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(48\\le X\\le 50)=\\sum_{r=48}^{50}\\binom{50}r(0.8)^r(1-0.8)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.001285415\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Count independent preferences with constant probability 0.8.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.8)\"></span><p>For sampling without replacement from a poll, this is an approximation when the poll is large relative to 50.</p></li><li><p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=40)=\\binom{50}{40}(0.8)^{40}(1-0.8)^{10}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.13981901\"></span><p>(ii) More than 47 means 48,49 or 50.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(48\\le X\\le 50)=\\sum_{r=48}^{50}\\binom{50}r(0.8)^r(1-0.8)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.001285415\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.2/q7",
+      "status": "worked",
+      "method": "The prime faces are2,3and5. For repeated experiments, use the first binomial probability as the second model’s success probability.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(10,0.5)\"></span><p>Rolls are independent and each has the constant prime probability 3/6.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X=4)=\\binom{10}{4}(0.5)^{4}(1-0.5)^{6}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.20507812\"></span>"
+        },
+        {
+          "explanation": "<p>Let Y count four-prime results in seven independent ten-roll experiments; use the unrounded probability q=210/1024.</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(7,210/1024)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=2)=\\binom{7}{2}(0.20507812)^{2}(1-0.20507812)^{5}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.28033686\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The prime faces are 2,3 and 5. For repeated experiments, use the first binomial probability as the second model’s success probability.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(10,0.5)\"></span><p>Rolls are independent and each has the constant prime probability 3/6.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X=4)=\\binom{10}{4}(0.5)^{4}(1-0.5)^{6}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.20507812\"></span></li><li><p>Let Y count four-prime results in seven independent ten-roll experiments; use the unrounded probability q=210/1024.</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(7,210/1024)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=2)=\\binom{7}{2}(0.20507812)^{2}(1-0.20507812)^{5}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.28033686\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.3/q1",
+      "status": "worked",
+      "method": "Translate the inequalities into inclusive integer endpoints, then sum the binomial masses.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(12,0.3)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 2)=\\sum_{r=0}^{2}\\binom{12}r(0.3)^r(1-0.3)^{12-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.25281535\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 5)=\\sum_{r=0}^{5}\\binom{12}r(0.3)^r(1-0.3)^{12-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.88215126\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(7\\le X\\le 12)=\\sum_{r=7}^{12}\\binom{12}r(0.3)^r(1-0.3)^{12-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.038600843\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Translate the inequalities into inclusive integer endpoints, then sum the binomial masses.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(12,0.3)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 2)=\\sum_{r=0}^{2}\\binom{12}r(0.3)^r(1-0.3)^{12-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.25281535\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 5)=\\sum_{r=0}^{5}\\binom{12}r(0.3)^r(1-0.3)^{12-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.88215126\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(7\\le X\\le 12)=\\sum_{r=7}^{12}\\binom{12}r(0.3)^r(1-0.3)^{12-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.038600843\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.3/q2",
+      "status": "worked",
+      "method": "Translate the inequalities into inclusive integer endpoints, then sum the binomial masses.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(15,0.4)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le Y\\le 7)=\\sum_{r=0}^{7}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.78689682\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(10\\le Y\\le 15)=\\sum_{r=10}^{15}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.033833303\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le Y\\le 6)=\\sum_{r=2}^{6}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.60464112\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Translate the inequalities into inclusive integer endpoints, then sum the binomial masses.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(15,0.4)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le Y\\le 7)=\\sum_{r=0}^{7}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.78689682\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(10\\le Y\\le 15)=\\sum_{r=10}^{15}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.033833303\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le Y\\le 6)=\\sum_{r=2}^{6}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.60464112\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.3/q3",
+      "status": "worked",
+      "method": "Translate the inequalities into inclusive integer endpoints, then sum the binomial masses.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"T\\sim\\mathrm{B}(35,0.61)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le T\\le 24)=\\sum_{r=0}^{24}\\binom{35}r(0.61)^r(1-0.61)^{35-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.86319866\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(28\\le T\\le 35)=\\sum_{r=28}^{35}\\binom{35}r(0.61)^r(1-0.61)^{35-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.01379293\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(15\\le T\\le 29)=\\sum_{r=15}^{29}\\binom{35}r(0.61)^r(1-0.61)^{35-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.98902534\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Translate the inequalities into inclusive integer endpoints, then sum the binomial masses.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"T\\sim\\mathrm{B}(35,0.61)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le T\\le 24)=\\sum_{r=0}^{24}\\binom{35}r(0.61)^r(1-0.61)^{35-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.86319866\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(28\\le T\\le 35)=\\sum_{r=28}^{35}\\binom{35}r(0.61)^r(1-0.61)^{35-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.01379293\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(15\\le T\\le 29)=\\sum_{r=15}^{29}\\binom{35}r(0.61)^r(1-0.61)^{35-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.98902534\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.3/q4",
+      "status": "worked",
+      "method": "Translate the inequalities into inclusive integer endpoints, then sum the binomial masses. One of the four equal spinner sectors is red.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.25)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 9)=\\sum_{r=0}^{9}\\binom{30}r(0.25)^r(1-0.25)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.80340664\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(14\\le X\\le 30)=\\sum_{r=14}^{30}\\binom{30}r(0.25)^r(1-0.25)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.008179192\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(10\\le X\\le 14)=\\sum_{r=10}^{14}\\binom{30}r(0.25)^r(1-0.25)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.19384383\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Translate the inequalities into inclusive integer endpoints, then sum the binomial masses. One of the four equal spinner sectors is red.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.25)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 9)=\\sum_{r=0}^{9}\\binom{30}r(0.25)^r(1-0.25)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.80340664\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(14\\le X\\le 30)=\\sum_{r=14}^{30}\\binom{30}r(0.25)^r(1-0.25)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.008179192\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(10\\le X\\le 14)=\\sum_{r=10}^{14}\\binom{30}r(0.25)^r(1-0.25)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.19384383\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.3/q5",
+      "status": "worked",
+      "method": "Assume independent fruiting with probability0.46, and independent greenhouses for the second stage.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.46)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X=8)=\\binom{25}{8}(0.46)^{8}(1-0.46)^{17}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.061208708\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(13\\le X\\le 25)=\\sum_{r=13}^{25}\\binom{25}r(0.46)^r(1-0.46)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.34286012\"></span>"
+        },
+        {
+          "explanation": "<p>Let Y count qualifying greenhouses. Use the unrounded probability from part b as q.</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(6,q)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le Y\\le 6)=\\sum_{r=4}^{6}\\binom{6}r(0.34286012)^r(1-0.34286012)^{6-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.10981584\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Assume independent fruiting with probability 0.46, and independent greenhouses for the second stage.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.46)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X=8)=\\binom{25}{8}(0.46)^{8}(1-0.46)^{17}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.061208708\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(13\\le X\\le 25)=\\sum_{r=13}^{25}\\binom{25}r(0.46)^r(1-0.46)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.34286012\"></span></li><li><p>Let Y count qualifying greenhouses. Use the unrounded probability from part b as q.</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(6,q)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le Y\\le 6)=\\sum_{r=4}^{6}\\binom{6}r(0.34286012)^r(1-0.34286012)^{6-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.10981584\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.3/q6",
+      "status": "worked",
+      "method": "“At least4” includes the value4.",
+      "steps": [
+        {
+          "explanation": "<p>Annie used X&gt;4 instead of X≥4. She omitted the probability of exactly four sixes.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge4)=1-P(X\\le3)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le X\\le 25)=\\sum_{r=4}^{25}\\binom{25}r(0.16666667)^r(1-0.16666667)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.61843351\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>“At least 4” includes the value 4.</p><ol class=\"parts\" type=\"a\"><li><p>Annie used X&gt;4 instead of X≥4. She omitted the probability of exactly four sixes.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge4)=1-P(X\\le3)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le X\\le 25)=\\sum_{r=4}^{25}\\binom{25}r(0.16666667)^r(1-0.16666667)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.61843351\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.3/q7",
+      "status": "worked",
+      "method": "Check the adjacent integer thresholds to establish the largest or smallest possible value.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(40,0.2)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 4)=\\sum_{r=0}^{4}\\binom{40}r(0.2)^r(1-0.2)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.075914495\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 5)=\\sum_{r=0}^{5}\\binom{40}r(0.2)^r(1-0.2)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.16132882\"></span><p>The first is below 0.09 and the second is not; hence k=4.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(13\\le X\\le 40)=\\sum_{r=13}^{40}\\binom{40}r(0.2)^r(1-0.2)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.043241622\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(12\\le X\\le 40)=\\sum_{r=12}^{40}\\binom{40}r(0.2)^r(1-0.2)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.087505236\"></span><p>P(X&gt;12)&lt;0.05 but P(X&gt;11)≥0.05; hence m=12.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le X\\le 12)=\\sum_{r=4}^{12}\\binom{40}r(0.2)^r(1-0.2)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.92829628\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Check the adjacent integer thresholds to establish the largest or smallest possible value.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(40,0.2)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 4)=\\sum_{r=0}^{4}\\binom{40}r(0.2)^r(1-0.2)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.075914495\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 5)=\\sum_{r=0}^{5}\\binom{40}r(0.2)^r(1-0.2)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.16132882\"></span><p>The first is below 0.09 and the second is not; hence k=4.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(13\\le X\\le 40)=\\sum_{r=13}^{40}\\binom{40}r(0.2)^r(1-0.2)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.043241622\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(12\\le X\\le 40)=\\sum_{r=12}^{40}\\binom{40}r(0.2)^r(1-0.2)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.087505236\"></span><p>P(X&gt;12)&lt;0.05 but P(X&gt;11)≥0.05; hence m=12.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le X\\le 12)=\\sum_{r=4}^{12}\\binom{40}r(0.2)^r(1-0.2)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.92829628\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/6.3/q8",
+      "status": "worked",
+      "method": "Model the count as B(15,0.4), assuming independent levels with constant probability.",
+      "steps": [
+        {
+          "explanation": "<p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=8)=\\binom{15}{8}(0.4)^{8}(1-0.4)^{7}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.11805577\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(11\\le X\\le 15)=\\sum_{r=11}^{15}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0093476608\"></span>"
+        },
+        {
+          "explanation": "<p>She has used P(X&gt;8), omitting X=8. At least 8 means 8 through 15.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(8\\le X\\le 15)=\\sum_{r=8}^{15}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.21310318\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Model the count as B(15,0.4), assuming independent levels with constant probability.</p><ol class=\"parts\" type=\"a\"><li><p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=8)=\\binom{15}{8}(0.4)^{8}(1-0.4)^{7}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.11805577\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(11\\le X\\le 15)=\\sum_{r=11}^{15}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0093476608\"></span></li><li><p>She has used P(X&gt;8), omitting X=8. At least 8 means 8 through 15.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(8\\le X\\le 15)=\\sum_{r=8}^{15}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.21310318\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/problem-a/qbronze",
+      "status": "worked",
+      "method": "Normalise the probability mass function.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(1+2+3+4)/k=1\\Rightarrow k=10\"></span>"
+        },
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>P(X=x)</td><td>1/10</td><td>1/5</td><td>3/10</td><td>2/5</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;2)=(3+4)/10=7/10\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Normalise the probability mass function.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"(1+2+3+4)/k=1\\Rightarrow k=10\"></span></li><li><table class=\"practice-table\"><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>P(X=x)</td><td>1/10</td><td>1/5</td><td>3/10</td><td>2/5</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;2)=(3+4)/10=7/10\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/problem-a/qsilver",
+      "status": "worked",
+      "method": "Total probability gives0.2+2a+0.35+a=1, so a=0.15. Multiply probabilities of independent spins.",
+      "steps": [
+        {
+          "explanation": "<p>Total 4 comes from(1,3),(2,2),(3,1).</p><span class=\"equation\" data-display=\"true\" data-math=\"P=2(0.2)(0.35)+0.3^2=0.23\"></span>"
+        },
+        {
+          "explanation": "<p>Eligible pairs are(2,4),(3,3),(3,4),(4,2),(4,3),(4,4).</p><span class=\"equation\" data-display=\"true\" data-math=\"P=2(0.3)(0.15)+0.35^2+2(0.35)(0.15)+0.15^2=0.34\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Total probability gives 0.2+2 a+0.35+a=1, so a=0.15. Multiply probabilities of independent spins.</p><ol class=\"parts\" type=\"a\"><li><p>Total 4 comes from(1,3),(2,2),(3,1).</p><span class=\"equation\" data-display=\"true\" data-math=\"P=2(0.2)(0.35)+0.3^2=0.23\"></span></li><li><p>Eligible pairs are(2,4),(3,3),(3,4),(4,2),(4,3),(4,4).</p><span class=\"equation\" data-display=\"true\" data-math=\"P=2(0.3)(0.15)+0.35^2+2(0.35)(0.15)+0.15^2=0.34\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/problem-a/qgold",
+      "status": "worked",
+      "method": "Distinguish the number of successes from the waiting time to the first success.",
+      "steps": [
+        {
+          "explanation": "<p>Attempts are independent and each attempt has constant success probability 0.2.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(3\\le X\\le 5)=\\sum_{r=3}^{5}\\binom{5}r(0.2)^r(1-0.2)^{5-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.05792\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y=3)=P(\\text{fail,fail,success})=0.8^2(0.2)=0.128\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\sum_{n=1}^5[0.1+(n-1)k]=0.5+10k=1\\Rightarrow k=0.05\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y=3)=0.1+2(0.05)=0.2\"></span>"
+        },
+        {
+          "explanation": "<p>Karen allows no catch in the first five attempts, with probability 0.8⁵. Ian guarantees a first catch by attempt 5. Karen’s conditional success probability stays 0.2; Ian’s is not constant and reaches 1 on the final possible attempt.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Distinguish the number of successes from the waiting time to the first success.</p><ol class=\"parts\" type=\"a\"><li><p>Attempts are independent and each attempt has constant success probability 0.2.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(3\\le X\\le 5)=\\sum_{r=3}^{5}\\binom{5}r(0.2)^r(1-0.2)^{5-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.05792\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=3)=P(\\text{fail,fail,success})=0.8^2(0.2)=0.128\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\sum_{n=1}^5[0.1+(n-1)k]=0.5+10k=1\\Rightarrow k=0.05\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=3)=0.1+2(0.05)=0.2\"></span></li><li><p>Karen allows no catch in the first five attempts, with probability 0.8⁵. Ian guarantees a first catch by attempt 5. Karen’s conditional success probability stays 0.2; Ian’s is not constant and reaches 1 on the final possible attempt.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/problem-b/qbronze",
+      "status": "worked",
+      "method": "Assume independent tosses with constant heads probability0.64.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(35,0.64)\"></span>"
+        },
+        {
+          "explanation": "<p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le Y\\le 17)=\\sum_{r=0}^{17}\\binom{35}r(0.64)^r(1-0.64)^{35-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.044319281\"></span><p>The supplied 0.0043 is a decimal-place error; the binomial sum is approximately 0.0443.</p><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(5\\le Y\\le 20)=\\sum_{r=5}^{20}\\binom{35}r(0.64)^r(1-0.64)^{35-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.24906071\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Assume independent tosses with constant heads probability 0.64.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(35,0.64)\"></span></li><li><p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le Y\\le 17)=\\sum_{r=0}^{17}\\binom{35}r(0.64)^r(1-0.64)^{35-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.044319281\"></span><p>The supplied 0.0043 is a decimal-place error; the binomial sum is approximately 0.0443.</p><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(5\\le Y\\le 20)=\\sum_{r=5}^{20}\\binom{35}r(0.64)^r(1-0.64)^{35-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.24906071\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/problem-b/qsilver",
+      "status": "worked",
+      "method": "Compare adjacent thresholds, respecting strict inequalities.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 1)=\\sum_{r=0}^{1}\\binom{30}r(0.15)^r(1-0.15)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.048028899\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 2)=\\sum_{r=0}^{2}\\binom{30}r(0.15)^r(1-0.15)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.15140061\"></span><p>P(X&lt;2)&lt;0.05 but P(X&lt;3)≥0.05, so k=2.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(10\\le X\\le 30)=\\sum_{r=10}^{30}\\binom{30}r(0.15)^r(1-0.15)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0096576352\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(9\\le X\\le 30)=\\sum_{r=9}^{30}\\binom{30}r(0.15)^r(1-0.15)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.027778207\"></span><p>P(X&gt;9)&lt;0.01 but P(X&gt;8)≥0.01, so r=9.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le X\\le 9)=\\sum_{r=2}^{9}\\binom{30}r(0.15)^r(1-0.15)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.94231347\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Compare adjacent thresholds, respecting strict inequalities.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 1)=\\sum_{r=0}^{1}\\binom{30}r(0.15)^r(1-0.15)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.048028899\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 2)=\\sum_{r=0}^{2}\\binom{30}r(0.15)^r(1-0.15)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.15140061\"></span><p>P(X&lt;2)&lt;0.05 but P(X&lt;3)≥0.05, so k=2.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(10\\le X\\le 30)=\\sum_{r=10}^{30}\\binom{30}r(0.15)^r(1-0.15)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0096576352\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(9\\le X\\le 30)=\\sum_{r=9}^{30}\\binom{30}r(0.15)^r(1-0.15)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.027778207\"></span><p>P(X&gt;9)&lt;0.01 but P(X&gt;8)≥0.01, so r=9.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le X\\le 9)=\\sum_{r=2}^{9}\\binom{30}r(0.15)^r(1-0.15)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.94231347\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/problem-b/qgold",
+      "status": "worked",
+      "method": "Find the chance q of winning one set, then model the number of winning sets as B(10,q). Assume independent shots and sets.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(15\\le X\\le 25)=\\sum_{r=15}^{25}\\binom{25}r(0.65)^r(1-0.65)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.77116124\"></span><p>Use the unrounded q for the second binomial distribution.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=7)=\\binom{10}{7}(0.77116124)^{7}(1-0.77116124)^{3}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.23323104\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le Y\\le 4)=\\sum_{r=0}^{4}\\binom{10}r(0.77116124)^r(1-0.77116124)^{10-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.012688849\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Find the chance q of winning one set, then model the number of winning sets as B(10,q). Assume independent shots and sets.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(15\\le X\\le 25)=\\sum_{r=15}^{25}\\binom{25}r(0.65)^r(1-0.65)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.77116124\"></span><p>Use the unrounded q for the second binomial distribution.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=7)=\\binom{10}{7}(0.77116124)^{7}(1-0.77116124)^{3}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.23323104\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le Y\\le 4)=\\sum_{r=0}^{4}\\binom{10}r(0.77116124)^r(1-0.77116124)^{10-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.012688849\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/exam/q2",
+      "status": "worked",
+      "method": "Each independent roll has probability1/8of an8.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(10,1/8)\"></span>"
+        },
+        {
+          "explanation": "<p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=1)=\\binom{10}{1}(0.125)^{1}(1-0.125)^{9}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.37582225\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le X\\le 10)=\\sum_{r=2}^{10}\\binom{10}r(0.125)^r(1-0.125)^{10-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.36110217\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Each independent roll has probability 1/8 of an 8.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(10,1/8)\"></span></li><li><p>(i)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X=1)=\\binom{10}{1}(0.125)^{1}(1-0.125)^{9}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.37582225\"></span><p>(ii)</p><span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le X\\le 10)=\\sum_{r=2}^{10}\\binom{10}r(0.125)^r(1-0.125)^{10-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.36110217\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/exam/q9",
+      "status": "worked",
+      "method": "An okta measures an eighth of the sky covered by cloud.",
+      "steps": [
+        {
+          "explanation": "<p>One okta is one eighth of the sky.</p>"
+        },
+        {
+          "explanation": "<p>Discrete uniform distribution on 1,2,…,8.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;6)=P(7)+P(8)=2/8=0.25\"></span>"
+        },
+        {
+          "explanation": "<p>The model excludes zero cloud cover, which is possible. The eight included values also need not occur equally often.</p>"
+        }
+      ],
+      "solutionHtml": "<p>An okta measures an eighth of the sky covered by cloud.</p><ol class=\"parts\" type=\"a\"><li><p>One okta is one eighth of the sky.</p></li><li><p>Discrete uniform distribution on 1,2,…,8.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X&gt;6)=P(7)+P(8)=2/8=0.25\"></span></li><li><p>The model excludes zero cloud cover, which is possible. The eight included values also need not occur equally often.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/exam/q14",
+      "status": "worked",
+      "method": "Independent guesses have success probability1/4.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.25)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(10\\le X\\le 25)=\\sum_{r=10}^{25}\\binom{25}r(0.25)^r(1-0.25)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.071328263\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(11\\le X\\le 25)=\\sum_{r=11}^{25}\\binom{25}r(0.25)^r(1-0.25)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.029669912\"></span><p>This is below 0.05, while the probability for 10 or more in part b is above 0.05. The lowest pass mark is 11.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Independent guesses have success probability 1/4.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.25)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(10\\le X\\le 25)=\\sum_{r=10}^{25}\\binom{25}r(0.25)^r(1-0.25)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.071328263\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(11\\le X\\le 25)=\\sum_{r=11}^{25}\\binom{25}r(0.25)^r(1-0.25)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.029669912\"></span><p>This is below 0.05, while the probability for 10 or more in part b is above 0.05. The lowest pass mark is 11.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/exam/q16",
+      "status": "worked",
+      "method": "Normalise k/x, then list the strictly increasing ordered pairs.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"k(1+1/2+1/3)=1\\Rightarrow k=6/11\"></span><table class=\"practice-table\"><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th></tr></thead><tbody><tr><td>P(X=x)</td><td>6/11</td><td>3/11</td><td>2/11</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P=\\frac6{11}\\frac3{11}+\\frac6{11}\\frac2{11}+\\frac3{11}\\frac2{11}=\\frac{36}{121}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Normalise k/x, then list the strictly increasing ordered pairs.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"k(1+1/2+1/3)=1\\Rightarrow k=6/11\"></span><table class=\"practice-table\"><thead><tr><th>x</th><th>1</th><th>2</th><th>3</th></tr></thead><tbody><tr><td>P(X=x)</td><td>6/11</td><td>3/11</td><td>2/11</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P=\\frac6{11}\\frac3{11}+\\frac6{11}\\frac2{11}+\\frac3{11}\\frac2{11}=\\frac{36}{121}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/exam/q18",
+      "status": "worked",
+      "method": "Use a binomial model for each box, then for the number of qualifying boxes.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(24,0.1)\"></span><p>Cracking events are independent and each egg has the same probability 0.1 of being cracked.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le X\\le 24)=\\sum_{r=2}^{24}\\binom{24}r(0.1)^r(1-0.1)^{24-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.70752304\"></span>"
+        },
+        {
+          "explanation": "<p>Assume independent boxes. Let Y count boxes with at least two cracked eggs; use unrounded q from part b.</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(15,q)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=9)=\\binom{15}{9}(0.70752304)^{9}(1-0.70752304)^{6}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.13919362\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use a binomial model for each box, then for the number of qualifying boxes.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(24,0.1)\"></span><p>Cracking events are independent and each egg has the same probability 0.1 of being cracked.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(2\\le X\\le 24)=\\sum_{r=2}^{24}\\binom{24}r(0.1)^r(1-0.1)^{24-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.70752304\"></span></li><li><p>Assume independent boxes. Let Y count boxes with at least two cracked eggs; use unrounded q from part b.</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(15,q)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=9)=\\binom{15}{9}(0.70752304)^{9}(1-0.70752304)^{6}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.13919362\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/exam/q28",
+      "status": "worked",
+      "method": "The yellow fraction is1−0.58−0.22=0.2.",
+      "steps": [
+        {
+          "explanation": "<p>There are 30 trials and two categories: yellow or not yellow. A large population relative to the sample makes draws approximately independent with almost constant probability 0.2, even without replacement.</p><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.2)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(7\\le X\\le 30)=\\sum_{r=7}^{30}\\binom{30}r(0.2)^r(1-0.2)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.39303008\"></span>"
+        },
+        {
+          "explanation": "<p>Either the first sample qualifies and the second does not, or vice versa. Replacing all disks makes the repeated experiments independent.</p><span class=\"equation\" data-display=\"true\" data-math=\"P=2q(1-q)\\approx0.47711487\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The yellow fraction is 1−0.58−0.22=0.2.</p><ol class=\"parts\" type=\"a\"><li><p>There are 30 trials and two categories: yellow or not yellow. A large population relative to the sample makes draws approximately independent with almost constant probability 0.2, even without replacement.</p><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.2)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(7\\le X\\le 30)=\\sum_{r=7}^{30}\\binom{30}r(0.2)^r(1-0.2)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.39303008\"></span></li><li><p>Either the first sample qualifies and the second does not, or vice versa. Replacing all disks makes the repeated experiments independent.</p><span class=\"equation\" data-display=\"true\" data-math=\"P=2q(1-q)\\approx0.47711487\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch6/exam/q33",
+      "status": "worked",
+      "method": "Use exact probabilities to infer possible sample sizes; distinguish sampling actual students from independent sampling.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a+0.15+2a+0.2+0.1=1\\Rightarrow a=11/60\"></span>"
+        },
+        {
+          "explanation": "<p>The denominator 60 in lowest terms requires a multiple of 60 students. The other probabilities also give integer counts at 60, namely 11,9,22,12,6; hence the minimum is 60.</p>"
+        },
+        {
+          "explanation": "<p>If the two students are distinct and chosen without replacement from the minimum sample of 60:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(2,2)=\\frac9{60}\\frac8{59}=\\frac6{295}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(1,4\\text{ or }2,3\\text{ in either order})\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\frac{2(11)(12)+2(9)(22)}{60(59)}=\\frac{11}{59}\"></span><p>The sample size is not explicitly given as 60. For a general allowed size N, these probabilities are:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{(0.15N)(0.15N-1)}{N(N-1)},\\qquad\\frac{11N}{60(N-1)}\"></span><p>The supplied answers 9/400 and 11/60 assume independent selections, equivalent to replacement or a large-population approximation. They do not give the exact result for two distinct students from a finite sample.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use exact probabilities to infer possible sample sizes; distinguish sampling actual students from independent sampling.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"a+0.15+2a+0.2+0.1=1\\Rightarrow a=11/60\"></span></li><li><p>The denominator 60 in lowest terms requires a multiple of 60 students. The other probabilities also give integer counts at 60, namely 11,9,22,12,6; hence the minimum is 60.</p></li><li><p>If the two students are distinct and chosen without replacement from the minimum sample of 60:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(2,2)=\\frac9{60}\\frac8{59}=\\frac6{295}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(1,4\\text{ or }2,3\\text{ in either order})\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\frac{2(11)(12)+2(9)(22)}{60(59)}=\\frac{11}{59}\"></span><p>The sample size is not explicitly given as 60. For a general allowed size N, these probabilities are:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{(0.15N)(0.15N-1)}{N(N-1)},\\qquad\\frac{11N}{60(N-1)}\"></span><p>The supplied answers 9/400 and 11/60 assume independent selections, equivalent to replacement or a large-population approximation. They do not give the exact result for two distinct students from a finite sample.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    }
+  ]
+}
