@@ -1,0 +1,1048 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-2",
+  "chapter": 5,
+  "sourcePdf": "resources/practice/pure-year-2/chapter-05.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.1/q1",
+      "status": "worked",
+      "method": "Multiply each radian angle by 180/π to express it in degrees.",
+      "steps": [
+        {
+          "latex": "\\frac{5\\pi}6\\frac{180}{\\pi}=150^\\circ",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac\\pi8\\frac{180}{\\pi}=22.5^\\circ",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "4\\pi\\frac{180}{\\pi}=720^\\circ",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "0.34\\frac{180}{\\pi}\\approx19.5^\\circ",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\sqrt2\\frac{180}{\\pi}\\approx81.0^\\circ",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "1.9\\frac{180}{\\pi}\\approx108.9^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Multiply each radian angle by 180/π to express it in degrees.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{5\\pi}6\\frac{180}{\\pi}=150^\\circ\" data-display=\"true\"></span></li><li><span data-math=\"\\frac\\pi8\\frac{180}{\\pi}=22.5^\\circ\" data-display=\"true\"></span></li><li><span data-math=\"4\\pi\\frac{180}{\\pi}=720^\\circ\" data-display=\"true\"></span></li><li><span data-math=\"0.34\\frac{180}{\\pi}\\approx19.5^\\circ\" data-display=\"true\"></span></li><li><span data-math=\"\\sqrt2\\frac{180}{\\pi}\\approx81.0^\\circ\" data-display=\"true\"></span></li><li><span data-math=\"1.9\\frac{180}{\\pi}\\approx108.9^\\circ\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.1/q2",
+      "status": "worked",
+      "method": "Multiply each degree measure by π/180.",
+      "steps": [
+        {
+          "latex": "\\text{(i) }18\\frac\\pi{180}=\\frac\\pi{10};\\text{(ii) }32.5\\frac\\pi{180}=\\frac{13\\pi}{72};\\text{(iii) }320\\frac\\pi{180}=\\frac{16\\pi}9",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{(i) }16\\frac\\pi{180}\\approx0.279;\\text{(ii) }124\\frac\\pi{180}\\approx2.16;\\text{(iii) }260\\frac\\pi{180}\\approx4.54;\\text{all in radians, to 3 s.f.}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Multiply each degree measure by π/180.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\text{(i) }18\\frac\\pi{180}=\\frac\\pi{10}\" data-display=\"true\"></span><span data-math=\"\\text{(ii) }32.5\\frac\\pi{180}=\\frac{13\\pi}{72}\" data-display=\"true\"></span><span data-math=\"\\text{(iii) }320\\frac\\pi{180}=\\frac{16\\pi}9\" data-display=\"true\"></span></li><li><span data-math=\"\\text{(i) }16\\frac\\pi{180}\\approx0.279\" data-display=\"true\"></span><span data-math=\"\\text{(ii) }124\\frac\\pi{180}\\approx2.16\" data-display=\"true\"></span><span data-math=\"\\text{(iii) }260\\frac\\pi{180}\\approx4.54\" data-display=\"true\"></span><span data-math=\"\\text{all in radians, to 3 s.f.}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.1/q3",
+      "status": "worked",
+      "method": "Apply the horizontal transformations and locate zeros, intercepts and asymptotes within the given intervals.",
+      "steps": [
+        {
+          "latex": "\\tan2x=0\\Rightarrow x=0,\\frac\\pi2,\\pi;\\text{asymptotes }x=\\frac\\pi4,\\frac{3\\pi}4",
+          "explanation": "Each tangent branch increases. The axis intersections are (0,0),(π/2,0),(π,0).",
+          "graphs": [
+            "ans51-q3a"
+          ]
+        },
+        {
+          "latex": "\\cos(x+\\pi)=-\\cos x;\\text{zeros }x=\\frac\\pi2,\\frac{3\\pi}2;y(0)=-1",
+          "explanation": "The curve reaches a maximum at (π,1) and ends at (2π,−1).",
+          "graphs": [
+            "ans51-q3b"
+          ]
+        },
+        {
+          "latex": "\\sin(x/2)+1=0\\Rightarrow x=-\\pi;y(0)=1;y(\\pi)=2",
+          "explanation": "This increasing half-wave runs from (−π,0) through (0,1) to (π,2). The supplied graph has a stale curve label omitting +1; its plotted coordinates show the required shifted graph.",
+          "graphs": [
+            "ans51-q3c"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>Apply the horizontal transformations and locate zeros, intercepts and asymptotes within the given intervals.</p><ol type=\"a\" class=\"parts\"><li><p>Each tangent branch increases. The axis intersections are (0,0),(π/2,0),(π,0).</p><span data-math=\"\\tan2x=0\\Rightarrow x=0,\\frac\\pi2,\\pi\" data-display=\"true\"></span><span data-math=\"\\text{asymptotes }x=\\frac\\pi4,\\frac{3\\pi}4\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/a76cd50e84400ed138d4.png\" alt=\"Original question diagram\"></li><li><p>The curve reaches a maximum at (π,1) and ends at (2π,−1).</p><span data-math=\"\\cos(x+\\pi)=-\\cos x\" data-display=\"true\"></span><span data-math=\"\\text{zeros }x=\\frac\\pi2,\\frac{3\\pi}2\" data-display=\"true\"></span><span data-math=\"y(0)=-1\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/0b7eff71c44add20fe7a.png\" alt=\"Original question diagram\"></li><li><p>This increasing half-wave runs from (−π,0) through (0,1) to (π,2). The supplied graph has a stale curve label omitting +1; its plotted coordinates show the required shifted graph.</p><span data-math=\"\\sin(x/2)+1=0\\Rightarrow x=-\\pi\" data-display=\"true\"></span><span data-math=\"y(0)=1\" data-display=\"true\"></span><span data-math=\"y(\\pi)=2\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/f30f0f0844f33a3290f8.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.1/q4",
+      "status": "worked",
+      "method": "Reduce the angle using periodicity and the exact unit-circle values.",
+      "steps": [
+        {
+          "latex": "\\cos(9\\pi/3)=\\cos3\\pi=\\cos\\pi=-1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\tan(-3\\pi/4)=\\tan(\\pi/4)=1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\sin(-11\\pi/6)=\\sin(\\pi/6)=\\frac12",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Reduce the angle using periodicity and the exact unit-circle values.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\cos(9\\pi/3)=\\cos3\\pi=\\cos\\pi=-1\" data-display=\"true\"></span></li><li><span data-math=\"\\tan(-3\\pi/4)=\\tan(\\pi/4)=1\" data-display=\"true\"></span></li><li><span data-math=\"\\sin(-11\\pi/6)=\\sin(\\pi/6)=\\frac12\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.1/q5",
+      "status": "worked",
+      "method": "Use the transformed periods and standard zeros to sketch within the restricted intervals.",
+      "steps": [
+        {
+          "latex": "2\\cos2x=0\\Rightarrow x=-\\frac{7\\pi}4,-\\frac{5\\pi}4,-\\frac{3\\pi}4,-\\frac\\pi4;y(0)=2",
+          "explanation": "Amplitude 2 and period π. Maxima are at −2π,−π,0; minima are at −3π/2,−π/2.",
+          "graphs": [
+            "ans51-q5a"
+          ]
+        },
+        {
+          "latex": "\\sin(x-\\pi/4)=0\\Rightarrow x=-\\frac{3\\pi}4,\\frac\\pi4;y(0)=-\\frac1{\\sqrt2}",
+          "explanation": "Shift the sine graph π/4 to the right. The trough is (−π/4,−1), the peak is (3π/4,1).",
+          "graphs": [
+            "ans51-q5b"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>Use the transformed periods and standard zeros to sketch within the restricted intervals.</p><ol type=\"a\" class=\"parts\"><li><p>Amplitude 2 and period π. Maxima are at −2π,−π,0; minima are at −3π/2,−π/2.</p><span data-math=\"2\\cos2x=0\\Rightarrow x=-\\frac{7\\pi}4,-\\frac{5\\pi}4,-\\frac{3\\pi}4,-\\frac\\pi4\" data-display=\"true\"></span><span data-math=\"y(0)=2\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/60388af79dc5b14cdc0b.png\" alt=\"Original question diagram\"></li><li><p>Shift the sine graph π/4 to the right. The trough is (−π/4,−1), the peak is (3π/4,1).</p><span data-math=\"\\sin(x-\\pi/4)=0\\Rightarrow x=-\\frac{3\\pi}4,\\frac\\pi4\" data-display=\"true\"></span><span data-math=\"y(0)=-\\frac1{\\sqrt2}\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/e2a1c612c3900b5eca78.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.1/q6",
+      "status": "worked",
+      "method": "Use the cosine rule for angle R, then half the product of its adjacent sides times its sine.",
+      "steps": [
+        {
+          "latex": "\\cos R=\\frac{8^2+9^2-12^2}{2(8)(9)}=\\frac1{144};R=\\arccos(\\tfrac1{144})\\approx1.56\\text{ rad}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{area}=\\frac12(8)(9)\\sin R;=36\\sqrt{1-(1/144)^2}\\approx36.0\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the cosine rule for angle R, then half the product of its adjacent sides times its sine.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\cos R=\\frac{8^2+9^2-12^2}{2(8)(9)}=\\frac1{144}\" data-display=\"true\"></span><span data-math=\"R=\\arccos(\\tfrac1{144})\\approx1.56\\text{ rad}\" data-display=\"true\"></span></li><li><span data-math=\"\\text{area}=\\frac12(8)(9)\\sin R\" data-display=\"true\"></span><span data-math=\"=36\\sqrt{1-(1/144)^2}\\approx36.0\\text{ cm}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.1/q7",
+      "status": "worked",
+      "method": "Sine is zero at integer multiples of π; retain roots in 0≤x≤4π.",
+      "steps": [
+        {
+          "latex": "x+\\frac{5\\pi}6=n\\pi;x=n\\pi-\\frac{5\\pi}6,\\quad n=1,2,3,4;\\left(\\frac\\pi6,0\\right),\\left(\\frac{7\\pi}6,0\\right),\\left(\\frac{13\\pi}6,0\\right),\\left(\\frac{19\\pi}6,0\\right)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "x=0\\Rightarrow y=\\sin(5\\pi/6)=\\frac12;\\text{intercept }(0,\\tfrac12)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Sine is zero at integer multiples of π; retain roots in 0≤x≤4π.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"x+\\frac{5\\pi}6=n\\pi\" data-display=\"true\"></span><span data-math=\"x=n\\pi-\\frac{5\\pi}6,\\quad n=1,2,3,4\" data-display=\"true\"></span><span data-math=\"\\left(\\frac\\pi6,0\\right),\\left(\\frac{7\\pi}6,0\\right),\\left(\\frac{13\\pi}6,0\\right),\\left(\\frac{19\\pi}6,0\\right)\" data-display=\"true\"></span></li><li><span data-math=\"x=0\\Rightarrow y=\\sin(5\\pi/6)=\\frac12\" data-display=\"true\"></span><span data-math=\"\\text{intercept }(0,\\tfrac12)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.1/q8",
+      "status": "worked",
+      "method": "Use the included bearing angle in the cosine rule. For the second bearing use east and north displacement from B.",
+      "steps": [
+        {
+          "latex": "BC^2=600^2+800^2-2(600)(800)\\cos(\\pi/9);BC\\approx313\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "E=800\\sin(\\pi/9);N=800\\cos(\\pi/9)-600;\\theta=\\arctan(E/N)\\frac{180}{\\pi}\\approx61.0^\\circ;\\text{bearing }061.0^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the included bearing angle in the cosine rule. For the second bearing use east and north displacement from B.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"BC^2=600^2+800^2-2(600)(800)\\cos(\\pi/9)\" data-display=\"true\"></span><span data-math=\"BC\\approx313\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"E=800\\sin(\\pi/9)\" data-display=\"true\"></span><span data-math=\"N=800\\cos(\\pi/9)-600\" data-display=\"true\"></span><span data-math=\"\\theta=\\arctan(E/N)\\frac{180}{\\pi}\\approx61.0^\\circ\" data-display=\"true\"></span><span data-math=\"\\text{bearing }061.0^\\circ\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.2/q1",
+      "status": "worked",
+      "method": "Use arc length l=rθ with θ in radians.",
+      "steps": [
+        {
+          "latex": "l=18(2.5)=45\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "l=6.5(\\tfrac{2\\pi}3)=\\frac{13\\pi}3\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "l=2.3(0.35)=0.805\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use arc length l=rθ with θ in radians.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"l=18(2.5)=45\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"l=6.5(\\tfrac{2\\pi}3)=\\frac{13\\pi}3\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"l=2.3(0.35)=0.805\\text{ cm}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.2/q2",
+      "status": "worked",
+      "method": "Rearrange l=rθ to r=l/θ.",
+      "steps": [
+        {
+          "latex": "r=\\frac{5\\sqrt3}{\\pi/6}=\\frac{30\\sqrt3}{\\pi}\\approx16.5\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "r=\\frac{20}{1.8}\\approx11.1\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "r=\\frac{9.25}{0.45}\\approx20.6\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rearrange l=rθ to r=l/θ.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"r=\\frac{5\\sqrt3}{\\pi/6}=\\frac{30\\sqrt3}{\\pi}\\approx16.5\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"r=\\frac{20}{1.8}\\approx11.1\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"r=\\frac{9.25}{0.45}\\approx20.6\\text{ cm}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.2/q3",
+      "status": "worked",
+      "method": "Rearrange l=rθ to θ=l/r.",
+      "steps": [
+        {
+          "latex": "\\theta=\\frac{12.1}{3.4}\\approx3.56\\text{ rad}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\theta=\\frac{7.235}{0.92}\\approx7.86\\text{ rad}",
+          "explanation": "This algebraic angular measure exceeds 2π, so it describes more than one revolution; an ordinary single non-repeating circle arc cannot have these measurements.",
+          "graphs": []
+        },
+        {
+          "latex": "\\theta=\\frac{\\sqrt5}{\\sqrt2}=\\sqrt{\\frac52}\\approx1.58\\text{ rad}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rearrange l=rθ to θ=l/r.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\theta=\\frac{12.1}{3.4}\\approx3.56\\text{ rad}\" data-display=\"true\"></span></li><li><p>This algebraic angular measure exceeds 2π, so it describes more than one revolution; an ordinary single non-repeating circle arc cannot have these measurements.</p><span data-math=\"\\theta=\\frac{7.235}{0.92}\\approx7.86\\text{ rad}\" data-display=\"true\"></span></li><li><span data-math=\"\\theta=\\frac{\\sqrt5}{\\sqrt2}=\\sqrt{\\frac52}\\approx1.58\\text{ rad}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.2/q4",
+      "status": "worked",
+      "method": "Find the radius from the given arc; the shared side AC is internal and does not belong to the perimeter.",
+      "steps": [
+        {
+          "latex": "r=\\frac{6.08}{1.52}=4\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "P=AB+BC+\\text{arc }CD+DA;=8.6+7.3+6.08+4=25.98\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the radius from the given arc; the shared side AC is internal and does not belong to the perimeter.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"r=\\frac{6.08}{1.52}=4\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"P=AB+BC+\\text{arc }CD+DA\" data-display=\"true\"></span><span data-math=\"=8.6+7.3+6.08+4=25.98\\text{ cm}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.2/q5",
+      "status": "worked",
+      "method": "The outer arc subtends 7π/9; the right triangle has angle CBD=2π/9.",
+      "steps": [
+        {
+          "latex": "l=8\\cdot\\frac{7\\pi}9=\\frac{56\\pi}9\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\angle CBD=\\pi-\\frac{7\\pi}9=\\frac{2\\pi}9;BC=8\\cos(2\\pi/9),\\quad CD=8\\sin(2\\pi/9);P=8+8\\cos(2\\pi/9)+8\\sin(2\\pi/9)+\\frac{56\\pi}9;\\approx38.8\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The outer arc subtends 7π/9; the right triangle has angle CBD=2π/9.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"l=8\\cdot\\frac{7\\pi}9=\\frac{56\\pi}9\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"\\angle CBD=\\pi-\\frac{7\\pi}9=\\frac{2\\pi}9\" data-display=\"true\"></span><span data-math=\"BC=8\\cos(2\\pi/9),\\quad CD=8\\sin(2\\pi/9)\" data-display=\"true\"></span><span data-math=\"P=8+8\\cos(2\\pi/9)+8\\sin(2\\pi/9)+\\frac{56\\pi}9\" data-display=\"true\"></span><span data-math=\"\\approx38.8\\text{ cm}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.2/q6",
+      "status": "worked",
+      "method": "The diagram labels α as the reflex angle around the major arc. Use the complementary interior angle for the triangle.",
+      "steps": [
+        {
+          "latex": "4\\alpha=\\frac{40\\pi}9;\\alpha=\\frac{10\\pi}9",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\angle YXZ=2\\pi-\\alpha=\\frac{8\\pi}9;\\text{area}=\\frac12(6)(4)\\sin(8\\pi/9)\\approx4.1\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The diagram labels α as the reflex angle around the major arc. Use the complementary interior angle for the triangle.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"4\\alpha=\\frac{40\\pi}9\" data-display=\"true\"></span><span data-math=\"\\alpha=\\frac{10\\pi}9\" data-display=\"true\"></span></li><li><span data-math=\"\\angle YXZ=2\\pi-\\alpha=\\frac{8\\pi}9\" data-display=\"true\"></span><span data-math=\"\\text{area}=\\frac12(6)(4)\\sin(8\\pi/9)\\approx4.1\\text{ cm}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.2/q7",
+      "status": "worked",
+      "method": "Twelve equal arcs make the full circumference and twelve equal central angles make 2π.",
+      "steps": [
+        {
+          "latex": "2\\pi r=12\\cdot\\frac{5\\pi}3=20\\pi;r=10;\\text{diameter}=20\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\theta=\\frac{2\\pi}{12}=\\frac\\pi6",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Twelve equal arcs make the full circumference and twelve equal central angles make 2π.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"2\\pi r=12\\cdot\\frac{5\\pi}3=20\\pi\" data-display=\"true\"></span><span data-math=\"r=10\" data-display=\"true\"></span><span data-math=\"\\text{diameter}=20\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"\\theta=\\frac{2\\pi}{12}=\\frac\\pi6\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.3/q1",
+      "status": "worked",
+      "method": "Use sector area A=r²θ/2, rearranging where needed.",
+      "steps": [
+        {
+          "latex": "A=\\frac12(5^2)(0.45)=5.625\\text{ cm}^2\\approx5.63\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A=\\frac12(7.3^2)(1.2)=31.974\\text{ cm}^2\\approx32.0\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{9\\pi}8=\\frac12r^2\\frac\\pi4;r^2=9;r=3\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\theta=\\frac{2(33.696)}{7.2^2}=1.3\\text{ rad}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use sector area A=r²θ/2, rearranging where needed.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"A=\\frac12(5^2)(0.45)=5.625\\text{ cm}^2\\approx5.63\\text{ cm}^2\" data-display=\"true\"></span></li><li><span data-math=\"A=\\frac12(7.3^2)(1.2)=31.974\\text{ cm}^2\\approx32.0\\text{ cm}^2\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{9\\pi}8=\\frac12r^2\\frac\\pi4\" data-display=\"true\"></span><span data-math=\"r^2=9\" data-display=\"true\"></span><span data-math=\"r=3\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"\\theta=\\frac{2(33.696)}{7.2^2}=1.3\\text{ rad}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.3/q2",
+      "status": "worked",
+      "method": "A minor segment is sector minus isosceles triangle: A=r²(θ−sinθ)/2.",
+      "steps": [
+        {
+          "latex": "A=\\frac{3^2}2(0.7-\\sin0.7)\\approx0.251\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A=\\frac{6^2}2(\\tfrac{2\\pi}3-\\sin(2\\pi/3));=12\\pi-9\\sqrt3\\approx22.1\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cos\\theta=\\frac{5^2+5^2-7^2}{2(5)(5)}=\\frac1{50};\\theta=\\arccos(\\tfrac1{50});A=\\frac{25}2(\\theta-\\sin\\theta)\\approx6.89\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>A minor segment is sector minus isosceles triangle: A=r²(θ−sinθ)/2.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"A=\\frac{3^2}2(0.7-\\sin0.7)\\approx0.251\\text{ cm}^2\" data-display=\"true\"></span></li><li><span data-math=\"A=\\frac{6^2}2(\\tfrac{2\\pi}3-\\sin(2\\pi/3))\" data-display=\"true\"></span><span data-math=\"=12\\pi-9\\sqrt3\\approx22.1\\text{ cm}^2\" data-display=\"true\"></span></li><li><span data-math=\"\\cos\\theta=\\frac{5^2+5^2-7^2}{2(5)(5)}=\\frac1{50}\" data-display=\"true\"></span><span data-math=\"\\theta=\\arccos(\\tfrac1{50})\" data-display=\"true\"></span><span data-math=\"A=\\frac{25}2(\\theta-\\sin\\theta)\\approx6.89\\text{ cm}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.3/q3",
+      "status": "worked",
+      "method": "Read the shaded boundary carefully: use a major sector, a major segment, and a sector respectively.",
+      "steps": [
+        {
+          "latex": "A=\\frac{1.5^2}2(2\\pi-0.3)\\approx6.73\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{minor central angle}=2\\pi-\\frac{5\\pi}4=\\frac{3\\pi}4;A=\\frac{11^2}2[\\tfrac{5\\pi}4+\\sin(3\\pi/4)];\\approx280\\text{ cm}^2\\quad(3\\text{ s.f.})",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{shaded angle}=\\pi-0.6;A=\\frac{8^2}2(\\pi-0.6)\\approx81.3\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Read the shaded boundary carefully: use a major sector, a major segment, and a sector respectively.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"A=\\frac{1.5^2}2(2\\pi-0.3)\\approx6.73\\text{ cm}^2\" data-display=\"true\"></span></li><li><span data-math=\"\\text{minor central angle}=2\\pi-\\frac{5\\pi}4=\\frac{3\\pi}4\" data-display=\"true\"></span><span data-math=\"A=\\frac{11^2}2[\\tfrac{5\\pi}4+\\sin(3\\pi/4)]\" data-display=\"true\"></span><span data-math=\"\\approx280\\text{ cm}^2\\quad(3\\text{ s.f.})\" data-display=\"true\"></span></li><li><span data-math=\"\\text{shaded angle}=\\pi-0.6\" data-display=\"true\"></span><span data-math=\"A=\\frac{8^2}2(\\pi-0.6)\\approx81.3\\text{ cm}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.3/q4",
+      "status": "worked",
+      "method": "Use the chord in the cosine rule, then subtract the triangle from the sector.",
+      "steps": [
+        {
+          "latex": "\\cos\\theta=\\frac{25+25-(5\\sqrt3)^2}{2(5)(5)}=-\\frac12;\\theta=\\frac{2\\pi}3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_{\\rm sector}=\\frac12(5^2)\\frac{2\\pi}3=\\frac{25\\pi}3\\text{ m}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_{\\rm segment}=\\frac{25\\pi}3-\\frac{25}2\\sin(2\\pi/3);=\\frac{25\\pi}3-\\frac{25\\sqrt3}4\\approx15.4\\text{ m}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the chord in the cosine rule, then subtract the triangle from the sector.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\cos\\theta=\\frac{25+25-(5\\sqrt3)^2}{2(5)(5)}=-\\frac12\" data-display=\"true\"></span><span data-math=\"\\theta=\\frac{2\\pi}3\" data-display=\"true\"></span></li><li><span data-math=\"A_{\\rm sector}=\\frac12(5^2)\\frac{2\\pi}3=\\frac{25\\pi}3\\text{ m}^2\" data-display=\"true\"></span></li><li><span data-math=\"A_{\\rm segment}=\\frac{25\\pi}3-\\frac{25}2\\sin(2\\pi/3)\" data-display=\"true\"></span><span data-math=\"=\\frac{25\\pi}3-\\frac{25\\sqrt3}4\\approx15.4\\text{ m}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.3/q5",
+      "status": "worked",
+      "method": "The sector angle is π−0.73. Add the triangle for area, and omit the shared radius BE from the perimeter.",
+      "steps": [
+        {
+          "latex": "A=\\frac12(19)(8)\\sin0.73+\\frac12(8^2)(\\pi-0.73);\\approx128\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "AE=\\sqrt{19^2+8^2-2(19)(8)\\cos0.73};P=19+8+AE+8(\\pi-0.73);\\approx60.4\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The sector angle is π−0.73. Add the triangle for area, and omit the shared radius BE from the perimeter.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"A=\\frac12(19)(8)\\sin0.73+\\frac12(8^2)(\\pi-0.73)\" data-display=\"true\"></span><span data-math=\"\\approx128\\text{ cm}^2\" data-display=\"true\"></span></li><li><span data-math=\"AE=\\sqrt{19^2+8^2-2(19)(8)\\cos0.73}\" data-display=\"true\"></span><span data-math=\"P=19+8+AE+8(\\pi-0.73)\" data-display=\"true\"></span><span data-math=\"\\approx60.4\\text{ cm}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.3/q6",
+      "status": "worked",
+      "method": "Use the known sector area to recover r², then subtract the triangular area.",
+      "steps": [
+        {
+          "latex": "37.8=\\frac12r^2(1.2);r^2=63;r=3\\sqrt7\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=37.8-\\frac{63}2\\sin1.2\\approx8.4\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the known sector area to recover r², then subtract the triangular area.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"37.8=\\frac12r^2(1.2)\" data-display=\"true\"></span><span data-math=\"r^2=63\" data-display=\"true\"></span><span data-math=\"r=3\\sqrt7\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"A_R=37.8-\\frac{63}2\\sin1.2\\approx8.4\\text{ cm}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.3/q7",
+      "status": "worked",
+      "method": "Use the perimeter condition first, then the sector area.",
+      "steps": [
+        {
+          "latex": "2r+r\\theta=6r\\theta;2=5\\theta\\Rightarrow\\theta=\\frac25;12=\\frac12r^2\\frac25;r^2=60;r=2\\sqrt{15}\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_T=\\frac{60}2(\\tfrac25-\\sin(2/5));\\approx0.317\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the perimeter condition first, then the sector area.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"2r+r\\theta=6r\\theta\" data-display=\"true\"></span><span data-math=\"2=5\\theta\\Rightarrow\\theta=\\frac25\" data-display=\"true\"></span><span data-math=\"12=\\frac12r^2\\frac25\" data-display=\"true\"></span><span data-math=\"r^2=60\" data-display=\"true\"></span><span data-math=\"r=2\\sqrt{15}\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"A_T=\\frac{60}2(\\tfrac25-\\sin(2/5))\" data-display=\"true\"></span><span data-math=\"\\approx0.317\\text{ cm}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.4/q1",
+      "status": "worked",
+      "method": "Use the principal inverse-trigonometric value and the other valid quadrants in one full revolution.",
+      "steps": [
+        {
+          "latex": "\\sin\\theta=\\frac12;\\theta=\\frac\\pi6,\\frac{5\\pi}6",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\theta=-\\arctan2+n\\pi;\\theta\\approx2.03,\\ 5.18\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cos\\theta=\\frac35;\\theta=\\arccos(3/5),2\\pi-\\arccos(3/5);\\theta\\approx0.927,\\ 5.36\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\sin\\theta=\\frac1{\\sqrt2};\\theta=\\frac\\pi4,\\frac{3\\pi}4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the principal inverse-trigonometric value and the other valid quadrants in one full revolution.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sin\\theta=\\frac12\" data-display=\"true\"></span><span data-math=\"\\theta=\\frac\\pi6,\\frac{5\\pi}6\" data-display=\"true\"></span></li><li><span data-math=\"\\theta=-\\arctan2+n\\pi\" data-display=\"true\"></span><span data-math=\"\\theta\\approx2.03,\\ 5.18\\text{ radians}\" data-display=\"true\"></span></li><li><span data-math=\"\\cos\\theta=\\frac35\" data-display=\"true\"></span><span data-math=\"\\theta=\\arccos(3/5),2\\pi-\\arccos(3/5)\" data-display=\"true\"></span><span data-math=\"\\theta\\approx0.927,\\ 5.36\\text{ radians}\" data-display=\"true\"></span></li><li><span data-math=\"\\sin\\theta=\\frac1{\\sqrt2}\" data-display=\"true\"></span><span data-math=\"\\theta=\\frac\\pi4,\\frac{3\\pi}4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.4/q2",
+      "status": "worked",
+      "method": "Solve for the trig function, list its periodic solutions and keep every root within the stated interval.",
+      "steps": [
+        {
+          "latex": "\\sin\\theta=\\frac23;\\theta=\\arcsin(2/3),\\pi-\\arcsin(2/3);\\theta\\approx0.73,\\ 2.41\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cos\\theta=-\\frac12;\\theta=-\\frac{2\\pi}3,\\frac{2\\pi}3,\\frac{4\\pi}3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\tan\\theta=\\sqrt2;\\theta=\\arctan\\sqrt2+n\\pi,\\quad n=-2,-1,0;\\theta\\approx-5.33,\\ -2.19,\\ 0.955\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cos2\\theta=\\frac1{\\sqrt2};2\\pi\\le2\\theta\\le6\\pi;2\\theta=\\frac{9\\pi}4,\\frac{15\\pi}4,\\frac{17\\pi}4,\\frac{23\\pi}4;\\theta=\\frac{9\\pi}8,\\frac{15\\pi}8,\\frac{17\\pi}8,\\frac{23\\pi}8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Solve for the trig function, list its periodic solutions and keep every root within the stated interval.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sin\\theta=\\frac23\" data-display=\"true\"></span><span data-math=\"\\theta=\\arcsin(2/3),\\pi-\\arcsin(2/3)\" data-display=\"true\"></span><span data-math=\"\\theta\\approx0.73,\\ 2.41\\text{ radians}\" data-display=\"true\"></span></li><li><span data-math=\"\\cos\\theta=-\\frac12\" data-display=\"true\"></span><span data-math=\"\\theta=-\\frac{2\\pi}3,\\frac{2\\pi}3,\\frac{4\\pi}3\" data-display=\"true\"></span></li><li><span data-math=\"\\tan\\theta=\\sqrt2\" data-display=\"true\"></span><span data-math=\"\\theta=\\arctan\\sqrt2+n\\pi,\\quad n=-2,-1,0\" data-display=\"true\"></span><span data-math=\"\\theta\\approx-5.33,\\ -2.19,\\ 0.955\\text{ radians}\" data-display=\"true\"></span></li><li><span data-math=\"\\cos2\\theta=\\frac1{\\sqrt2}\" data-display=\"true\"></span><span data-math=\"2\\pi\\le2\\theta\\le6\\pi\" data-display=\"true\"></span><span data-math=\"2\\theta=\\frac{9\\pi}4,\\frac{15\\pi}4,\\frac{17\\pi}4,\\frac{23\\pi}4\" data-display=\"true\"></span><span data-math=\"\\theta=\\frac{9\\pi}8,\\frac{15\\pi}8,\\frac{17\\pi}8,\\frac{23\\pi}8\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.4/q3",
+      "status": "worked",
+      "method": "Factor the trig quadratic or use a shifted-angle substitution, retaining all admissible roots.",
+      "steps": [
+        {
+          "latex": "(\\tan\\theta+1)(\\tan\\theta+2)=0;\\tan\\theta=-1\\text{ or }-2;\\theta\\approx2.03,\\ 2.36,\\ 5.18,\\ 5.5\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "3(1-\\cos^2\\theta)-2\\cos\\theta+1=0;3\\cos^2\\theta+2\\cos\\theta-4=0;\\cos\\theta=\\frac{-1\\pm\\sqrt{13}}3;\\frac{-1-\\sqrt{13}}3<-1\\text{ (reject)};\\theta\\approx0.519,\\ 5.76\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\theta+\\frac\\pi4=\\frac\\pi3,\\frac{5\\pi}3;\\theta=\\frac\\pi{12},\\frac{17\\pi}{12};\\theta\\approx0.262,\\ 4.45\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2\\theta+0.6=\\frac\\pi2+2n\\pi;\\theta=\\frac\\pi4-0.3+n\\pi,\\quad n=0,1;\\theta\\approx0.485,\\ 3.63\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor the trig quadratic or use a shifted-angle substitution, retaining all admissible roots.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"(\\tan\\theta+1)(\\tan\\theta+2)=0\" data-display=\"true\"></span><span data-math=\"\\tan\\theta=-1\\text{ or }-2\" data-display=\"true\"></span><span data-math=\"\\theta\\approx2.03,\\ 2.36,\\ 5.18,\\ 5.5\\text{ radians}\" data-display=\"true\"></span></li><li><span data-math=\"3(1-\\cos^2\\theta)-2\\cos\\theta+1=0\" data-display=\"true\"></span><span data-math=\"3\\cos^2\\theta+2\\cos\\theta-4=0\" data-display=\"true\"></span><span data-math=\"\\cos\\theta=\\frac{-1\\pm\\sqrt{13}}3\" data-display=\"true\"></span><span data-math=\"\\frac{-1-\\sqrt{13}}3&lt;-1\\text{ (reject)}\" data-display=\"true\"></span><span data-math=\"\\theta\\approx0.519,\\ 5.76\\text{ radians}\" data-display=\"true\"></span></li><li><span data-math=\"\\theta+\\frac\\pi4=\\frac\\pi3,\\frac{5\\pi}3\" data-display=\"true\"></span><span data-math=\"\\theta=\\frac\\pi{12},\\frac{17\\pi}{12}\" data-display=\"true\"></span><span data-math=\"\\theta\\approx0.262,\\ 4.45\\text{ radians}\" data-display=\"true\"></span></li><li><span data-math=\"2\\theta+0.6=\\frac\\pi2+2n\\pi\" data-display=\"true\"></span><span data-math=\"\\theta=\\frac\\pi4-0.3+n\\pi,\\quad n=0,1\" data-display=\"true\"></span><span data-math=\"\\theta\\approx0.485,\\ 3.63\\text{ radians}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.4/q4",
+      "status": "worked",
+      "method": "Use cosu=cosv ⇒ u=±v+2nπ, and the π-periodicity of tangent.",
+      "steps": [
+        {
+          "latex": "\\theta-\\frac\\pi{18}=\\pm\\frac\\pi{12}+2n\\pi;\\theta=\\frac{5\\pi}{36}\\text{ or }-\\frac\\pi{36}+2n\\pi;0\\le\\theta\\le2\\pi\\Rightarrow\\theta=\\frac{5\\pi}{36},\\frac{71\\pi}{36}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2\\theta=\\arctan0.6+n\\pi;\\theta=\\frac12\\arctan0.6+\\frac{n\\pi}2,\\quad n=0,1,2,3;\\theta\\approx0.27,\\ 1.84,\\ 3.41,\\ 4.98\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use cosu=cosv ⇒ u=±v+2nπ, and the π-periodicity of tangent.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\theta-\\frac\\pi{18}=\\pm\\frac\\pi{12}+2n\\pi\" data-display=\"true\"></span><span data-math=\"\\theta=\\frac{5\\pi}{36}\\text{ or }-\\frac\\pi{36}+2n\\pi\" data-display=\"true\"></span><span data-math=\"0\\le\\theta\\le2\\pi\\Rightarrow\\theta=\\frac{5\\pi}{36},\\frac{71\\pi}{36}\" data-display=\"true\"></span></li><li><span data-math=\"2\\theta=\\arctan0.6+n\\pi\" data-display=\"true\"></span><span data-math=\"\\theta=\\frac12\\arctan0.6+\\frac{n\\pi}2,\\quad n=0,1,2,3\" data-display=\"true\"></span><span data-math=\"\\theta\\approx0.27,\\ 1.84,\\ 3.41,\\ 4.98\\text{ radians}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.4/q5",
+      "status": "worked",
+      "method": "Cosine cannot be zero in the stated equation, so divide by it and use tangent’s period.",
+      "steps": [
+        {
+          "latex": "4\\sin x=3\\cos x;\\tan x=\\frac34",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\tan2x=\\frac34;2x=\\arctan(3/4)+n\\pi;x=\\frac12\\arctan(3/4)+\\frac{n\\pi}2; -\\pi\\le x\\le\\pi\\Rightarrow n=-2,-1,0,1;x\\approx-2.8,-1.2,0.3,1.9\\quad(1\\text{ d.p.})",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Cosine cannot be zero in the stated equation, so divide by it and use tangent’s period.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"4\\sin x=3\\cos x\" data-display=\"true\"></span><span data-math=\"\\tan x=\\frac34\" data-display=\"true\"></span></li><li><span data-math=\"\\tan2x=\\frac34\" data-display=\"true\"></span><span data-math=\"2x=\\arctan(3/4)+n\\pi\" data-display=\"true\"></span><span data-math=\"x=\\frac12\\arctan(3/4)+\\frac{n\\pi}2\" data-display=\"true\"></span><span data-math=\"-\\pi\\le x\\le\\pi\\Rightarrow n=-2,-1,0,1\" data-display=\"true\"></span><span data-math=\"x\\approx-2.8,-1.2,0.3,1.9\\quad(1\\text{ d.p.})\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.4/q6",
+      "status": "worked",
+      "method": "Replace cos²x by 1−sin²x, then factor.",
+      "steps": [
+        {
+          "latex": "2(1-\\sin^2x)+3\\sin x=3;2\\sin^2x-3\\sin x+1=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "(2\\sin x-1)(\\sin x-1)=0;\\sin x=\\frac12\\text{ or }1;x=\\frac\\pi6,\\frac\\pi2,\\frac{5\\pi}6",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Replace cos²x by 1−sin²x, then factor.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"2(1-\\sin^2x)+3\\sin x=3\" data-display=\"true\"></span><span data-math=\"2\\sin^2x-3\\sin x+1=0\" data-display=\"true\"></span></li><li><span data-math=\"(2\\sin x-1)(\\sin x-1)=0\" data-display=\"true\"></span><span data-math=\"\\sin x=\\frac12\\text{ or }1\" data-display=\"true\"></span><span data-math=\"x=\\frac\\pi6,\\frac\\pi2,\\frac{5\\pi}6\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.4/q7",
+      "status": "worked",
+      "method": "Use the full transformed-angle interval. In part (b), the printed x denotes the same angle called θ in the requested interval.",
+      "steps": [
+        {
+          "latex": "\\alpha=\\arcsin0.2;\\frac\\pi4\\le3\\theta+\\frac\\pi4\\le\\frac{19\\pi}4;3\\theta+\\frac\\pi4=\\pi+\\alpha,2\\pi-\\alpha,3\\pi+\\alpha,4\\pi-\\alpha;\\theta\\approx0.853,\\ 1.77,\\ 2.95,\\ 3.86\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "4\\cos^2\\theta=6\\sin\\theta;4(1-\\sin^2\\theta)=6\\sin\\theta;2\\sin^2\\theta+3\\sin\\theta-2=0;(2\\sin\\theta-1)(\\sin\\theta+2)=0;\\sin\\theta=\\frac12;\\theta=\\frac\\pi6,\\frac{5\\pi}6",
+          "explanation": "The value sinθ=−2 is impossible. The original tangent also excludes cosθ=0; neither retained root has zero cosine.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the full transformed-angle interval. In part (b), the printed x denotes the same angle called θ in the requested interval.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\alpha=\\arcsin0.2\" data-display=\"true\"></span><span data-math=\"\\frac\\pi4\\le3\\theta+\\frac\\pi4\\le\\frac{19\\pi}4\" data-display=\"true\"></span><span data-math=\"3\\theta+\\frac\\pi4=\\pi+\\alpha,2\\pi-\\alpha,3\\pi+\\alpha,4\\pi-\\alpha\" data-display=\"true\"></span><span data-math=\"\\theta\\approx0.853,\\ 1.77,\\ 2.95,\\ 3.86\\text{ radians}\" data-display=\"true\"></span></li><li><p>The value sinθ=−2 is impossible. The original tangent also excludes cosθ=0; neither retained root has zero cosine.</p><span data-math=\"4\\cos^2\\theta=6\\sin\\theta\" data-display=\"true\"></span><span data-math=\"4(1-\\sin^2\\theta)=6\\sin\\theta\" data-display=\"true\"></span><span data-math=\"2\\sin^2\\theta+3\\sin\\theta-2=0\" data-display=\"true\"></span><span data-math=\"(2\\sin\\theta-1)(\\sin\\theta+2)=0\" data-display=\"true\"></span><span data-math=\"\\sin\\theta=\\frac12\" data-display=\"true\"></span><span data-math=\"\\theta=\\frac\\pi6,\\frac{5\\pi}6\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.5/q1",
+      "status": "worked",
+      "method": "For small radian angles use sin(kθ)≈kθ and tan(kθ)≈kθ.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sin3\\theta}{\\theta}\\approx\\frac{3\\theta}{\\theta}=3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{\\tan4\\theta}{\\sin2\\theta}\\approx\\frac{4\\theta}{2\\theta}=2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{5\\tan\\theta-\\theta}{\\sin4\\theta}\\approx\\frac{5\\theta-\\theta}{4\\theta}=1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>For small radian angles use sin(kθ)≈kθ and tan(kθ)≈kθ.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{\\sin3\\theta}{\\theta}\\approx\\frac{3\\theta}{\\theta}=3\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{\\tan4\\theta}{\\sin2\\theta}\\approx\\frac{4\\theta}{2\\theta}=2\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{5\\tan\\theta-\\theta}{\\sin4\\theta}\\approx\\frac{5\\theta-\\theta}{4\\theta}=1\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.5/q2",
+      "status": "worked",
+      "method": "Retain the quadratic term cosu≈1−u²/2 whenever the constant terms cancel.",
+      "steps": [
+        {
+          "latex": "\\frac{1-\\cos2\\theta}{\\theta\\sin\\theta}\\approx\\frac{(2\\theta)^2/2}{\\theta^2}=2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{\\cos6\\theta-1}{\\sin3\\theta\\tan\\theta}\\approx\\frac{-(6\\theta)^2/2}{3\\theta^2}=-6",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{\\theta\\tan\\theta}{1-\\cos\\theta}\\approx\\frac{\\theta^2}{\\theta^2/2}=2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Retain the quadratic term cosu≈1−u²/2 whenever the constant terms cancel.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{1-\\cos2\\theta}{\\theta\\sin\\theta}\\approx\\frac{(2\\theta)^2/2}{\\theta^2}=2\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{\\cos6\\theta-1}{\\sin3\\theta\\tan\\theta}\\approx\\frac{-(6\\theta)^2/2}{3\\theta^2}=-6\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{\\theta\\tan\\theta}{1-\\cos\\theta}\\approx\\frac{\\theta^2}{\\theta^2/2}=2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.5/q3",
+      "status": "worked",
+      "method": "Use radian small-angle expansions. The first printed target has θ in the wrong position.",
+      "steps": [
+        {
+          "latex": "\\frac{2\\theta-\\sin3\\theta}{\\theta\\tan4\\theta}\\approx\\frac{2\\theta-3\\theta}{4\\theta^2};=-\\frac1{4\\theta}",
+          "explanation": "This is −1/(4θ), not the printed −θ/4. The supplied worked answer has the correct reciprocal form.",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{\\cos\\theta-1}{\\sin\\theta}\\approx\\frac{-\\theta^2/2}{\\theta}=-\\frac\\theta2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{\\sin\\theta+\\tan\\theta}{1-\\cos2\\theta}\\approx\\frac{2\\theta}{(2\\theta)^2/2}=\\frac1\\theta",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use radian small-angle expansions. The first printed target has θ in the wrong position.</p><ol type=\"a\" class=\"parts\"><li><p>This is −1/(4θ), not the printed −θ/4. The supplied worked answer has the correct reciprocal form.</p><span data-math=\"\\frac{2\\theta-\\sin3\\theta}{\\theta\\tan4\\theta}\\approx\\frac{2\\theta-3\\theta}{4\\theta^2}\" data-display=\"true\"></span><span data-math=\"=-\\frac1{4\\theta}\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{\\cos\\theta-1}{\\sin\\theta}\\approx\\frac{-\\theta^2/2}{\\theta}=-\\frac\\theta2\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{\\sin\\theta+\\tan\\theta}{1-\\cos2\\theta}\\approx\\frac{2\\theta}{(2\\theta)^2/2}=\\frac1\\theta\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.5/q4",
+      "status": "worked",
+      "method": "The numerator and denominator both begin at quadratic order in θ.",
+      "steps": [
+        {
+          "latex": "\\cos2\\theta\\approx1-2\\theta^2;\\sin2\\theta\\approx2\\theta;\\frac{1-\\cos2\\theta}{3\\theta\\sin2\\theta}\\approx\\frac{2\\theta^2}{6\\theta^2}=\\frac13",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The numerator and denominator both begin at quadratic order in θ.</p><span data-math=\"\\cos2\\theta\\approx1-2\\theta^2\" data-display=\"true\"></span><span data-math=\"\\sin2\\theta\\approx2\\theta\" data-display=\"true\"></span><span data-math=\"\\frac{1-\\cos2\\theta}{3\\theta\\sin2\\theta}\\approx\\frac{2\\theta^2}{6\\theta^2}=\\frac13\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.5/q5",
+      "status": "worked",
+      "method": "Substitute the sine, tangent and cosine approximations, then factor the numerator.",
+      "steps": [
+        {
+          "latex": "\\frac{3\\tan\\theta-4\\cos\\theta+5}{\\sin\\theta+1};\\approx\\frac{3\\theta-4(1-\\theta^2/2)+5}{\\theta+1};=\\frac{2\\theta^2+3\\theta+1}{\\theta+1};=\\frac{(2\\theta+1)(\\theta+1)}{\\theta+1}=2\\theta+1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Substitute the sine, tangent and cosine approximations, then factor the numerator.</p><span data-math=\"\\frac{3\\tan\\theta-4\\cos\\theta+5}{\\sin\\theta+1}\" data-display=\"true\"></span><span data-math=\"\\approx\\frac{3\\theta-4(1-\\theta^2/2)+5}{\\theta+1}\" data-display=\"true\"></span><span data-math=\"=\\frac{2\\theta^2+3\\theta+1}{\\theta+1}\" data-display=\"true\"></span><span data-math=\"=\\frac{(2\\theta+1)(\\theta+1)}{\\theta+1}=2\\theta+1\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.5/q6",
+      "status": "worked",
+      "method": "Substitute cosθ≈1−θ²/2 and neglect powers higher than θ²; θ must be in radians.",
+      "steps": [
+        {
+          "latex": "5(1-\\theta^2/2)^2+6(1-\\theta^2/2)+1;=12-8\\theta^2+\\frac54\\theta^4;\\approx12-8\\theta^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "10^\\circ=\\frac\\pi{18}\\text{ rad};12-8(\\tfrac\\pi{18})^2\\approx11.76",
+          "explanation": "Josh is incorrect: he inserted the degree measure 10 into a radian approximation. Converting to π/18 gives 11.76 to 4 significant figures, consistent with the original expression.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Substitute cosθ≈1−θ²/2 and neglect powers higher than θ²; θ must be in radians.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"5(1-\\theta^2/2)^2+6(1-\\theta^2/2)+1\" data-display=\"true\"></span><span data-math=\"=12-8\\theta^2+\\frac54\\theta^4\" data-display=\"true\"></span><span data-math=\"\\approx12-8\\theta^2\" data-display=\"true\"></span></li><li><p>Josh is incorrect: he inserted the degree measure 10 into a radian approximation. Converting to π/18 gives 11.76 to 4 significant figures, consistent with the original expression.</p><span data-math=\"10^\\circ=\\frac\\pi{18}\\text{ rad}\" data-display=\"true\"></span><span data-math=\"12-8(\\tfrac\\pi{18})^2\\approx11.76\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/problem-a/qbronze",
+      "status": "worked",
+      "method": "The triangle is equilateral. Each shaded segment is a 60° sector minus the triangle.",
+      "steps": [
+        {
+          "latex": "\\angle CAB=\\frac\\pi3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_\\triangle=\\frac12(6)(6)\\sin(\\pi/3)=9\\sqrt3\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_{\\rm sector}=\\frac12(6^2)\\frac\\pi3=6\\pi\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_{\\rm shaded}=2(6\\pi-9\\sqrt3);=12\\pi-18\\sqrt3\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The triangle is equilateral. Each shaded segment is a 60° sector minus the triangle.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\angle CAB=\\frac\\pi3\" data-display=\"true\"></span></li><li><span data-math=\"A_\\triangle=\\frac12(6)(6)\\sin(\\pi/3)=9\\sqrt3\\text{ cm}^2\" data-display=\"true\"></span></li><li><span data-math=\"A_{\\rm sector}=\\frac12(6^2)\\frac\\pi3=6\\pi\\text{ cm}^2\" data-display=\"true\"></span></li><li><span data-math=\"A_{\\rm shaded}=2(6\\pi-9\\sqrt3)\" data-display=\"true\"></span><span data-math=\"=12\\pi-18\\sqrt3\\text{ cm}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/problem-a/qsilver",
+      "status": "worked",
+      "method": "The diagonals bisect at right angles. The diagram shades half the lens, while the printed target is the whole lens area.",
+      "steps": [
+        {
+          "latex": "AO=CO=4;AB=8;BO=\\sqrt{8^2-4^2}=4\\sqrt3;DB=8\\sqrt3;A_{\\rm rhombus}=\\frac12(8)(8\\sqrt3)=32\\sqrt3\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cos\\angle OAB=4/8=\\frac12;\\angle DAB=2\\angle OAB=\\frac{2\\pi}3;A_{\\rm sector}=\\frac12(8^2)\\frac{2\\pi}3=\\frac{64\\pi}3\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_{\\rm whole\\ lens}=2A_{\\rm sector}-A_{\\rm rhombus};=\\frac{128\\pi}3-32\\sqrt3=\\frac{128\\pi-96\\sqrt3}3;A_{\\rm shaded}=\\frac12A_{\\rm whole\\ lens};=\\frac{64\\pi-48\\sqrt3}3\\text{ cm}^2",
+          "explanation": "The alternating grey regions occupy half the lens by symmetry, agreeing with the supplied answer. Therefore the stated target is true for the whole shape, but not for the shaded area shown.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The diagonals bisect at right angles. The diagram shades half the lens, while the printed target is the whole lens area.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"AO=CO=4\" data-display=\"true\"></span><span data-math=\"AB=8\" data-display=\"true\"></span><span data-math=\"BO=\\sqrt{8^2-4^2}=4\\sqrt3\" data-display=\"true\"></span><span data-math=\"DB=8\\sqrt3\" data-display=\"true\"></span><span data-math=\"A_{\\rm rhombus}=\\frac12(8)(8\\sqrt3)=32\\sqrt3\\text{ cm}^2\" data-display=\"true\"></span></li><li><span data-math=\"\\cos\\angle OAB=4/8=\\frac12\" data-display=\"true\"></span><span data-math=\"\\angle DAB=2\\angle OAB=\\frac{2\\pi}3\" data-display=\"true\"></span><span data-math=\"A_{\\rm sector}=\\frac12(8^2)\\frac{2\\pi}3=\\frac{64\\pi}3\\text{ cm}^2\" data-display=\"true\"></span></li><li><p>The alternating grey regions occupy half the lens by symmetry, agreeing with the supplied answer. Therefore the stated target is true for the whole shape, but not for the shaded area shown.</p><span data-math=\"A_{\\rm whole\\ lens}=2A_{\\rm sector}-A_{\\rm rhombus}\" data-display=\"true\"></span><span data-math=\"=\\frac{128\\pi}3-32\\sqrt3=\\frac{128\\pi-96\\sqrt3}3\" data-display=\"true\"></span><span data-math=\"A_{\\rm shaded}=\\frac12A_{\\rm whole\\ lens}\" data-display=\"true\"></span><span data-math=\"=\\frac{64\\pi-48\\sqrt3}3\\text{ cm}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/problem-a/qgold",
+      "status": "worked",
+      "method": "The whole lens is the union of two equal sectors; subtract their overlapping rhombus once.",
+      "steps": [
+        {
+          "latex": "AC=x,\\quad AO=\\frac x2,\\quad AB=x;BO=\\sqrt{x^2-(x/2)^2}=\\frac{\\sqrt3}2x;DB=\\sqrt3x;A_{\\rm rhombus}=\\frac12(AC)(DB)=\\frac{\\sqrt3}2x^2;A_{\\rm each\\ sector}=\\frac12x^2\\theta;A_{\\rm lens}=2(\\tfrac12x^2\\theta)-\\frac{\\sqrt3}2x^2;=(\\theta-\\tfrac{\\sqrt3}2)x^2; a=3,\\quad b=2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The whole lens is the union of two equal sectors; subtract their overlapping rhombus once.</p><span data-math=\"AC=x,\\quad AO=\\frac x2,\\quad AB=x\" data-display=\"true\"></span><span data-math=\"BO=\\sqrt{x^2-(x/2)^2}=\\frac{\\sqrt3}2x\" data-display=\"true\"></span><span data-math=\"DB=\\sqrt3x\" data-display=\"true\"></span><span data-math=\"A_{\\rm rhombus}=\\frac12(AC)(DB)=\\frac{\\sqrt3}2x^2\" data-display=\"true\"></span><span data-math=\"A_{\\rm each\\ sector}=\\frac12x^2\\theta\" data-display=\"true\"></span><span data-math=\"A_{\\rm lens}=2(\\tfrac12x^2\\theta)-\\frac{\\sqrt3}2x^2\" data-display=\"true\"></span><span data-math=\"=(\\theta-\\tfrac{\\sqrt3}2)x^2\" data-display=\"true\"></span><span data-math=\"a=3,\\quad b=2\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/problem-b/qbronze",
+      "status": "worked",
+      "method": "Intersect the tangent branches with the two constant-height lines, then verify the factorisation.",
+      "steps": [
+        {
+          "latex": "\\text{vertical asymptotes }x=\\frac\\pi2,\\frac{3\\pi}2;\\text{zeros }x=0,\\pi,2\\pi",
+          "explanation": "Draw the increasing tangent branches and the horizontal lines y=1/3 and y=−3.",
+          "graphs": [
+            "ans-setB-bronze"
+          ]
+        },
+        {
+          "latex": "(3\\tan x-1)(\\tan x+3);=3\\tan^2x+9\\tan x-\\tan x-3;=3\\tan^2x+8\\tan x-3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\tan x=\\frac13\\text{ or }-3;x\\approx0.322,\\ 1.89,\\ 3.46,\\ 5.03\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Intersect the tangent branches with the two constant-height lines, then verify the factorisation.</p><ol type=\"a\" class=\"parts\"><li><p>Draw the increasing tangent branches and the horizontal lines y=1/3 and y=−3.</p><span data-math=\"\\text{vertical asymptotes }x=\\frac\\pi2,\\frac{3\\pi}2\" data-display=\"true\"></span><span data-math=\"\\text{zeros }x=0,\\pi,2\\pi\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/19a71d1689fc8375dc4e.png\" alt=\"Original question diagram\"></li><li><span data-math=\"(3\\tan x-1)(\\tan x+3)\" data-display=\"true\"></span><span data-math=\"=3\\tan^2x+9\\tan x-\\tan x-3\" data-display=\"true\"></span><span data-math=\"=3\\tan^2x+8\\tan x-3\" data-display=\"true\"></span></li><li><span data-math=\"\\tan x=\\frac13\\text{ or }-3\" data-display=\"true\"></span><span data-math=\"x\\approx0.322,\\ 1.89,\\ 3.46,\\ 5.03\\text{ radians}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/problem-b/qsilver",
+      "status": "worked",
+      "method": "Use cos²x=1−sin²x, factor, then keep the roots in −π≤x≤π.",
+      "steps": [
+        {
+          "latex": "3(1-\\sin^2x)=5-5\\sin x;3\\sin^2x-5\\sin x+2=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "(3\\sin x-2)(\\sin x-1)=0;\\sin x=\\frac23\\text{ or }1;x=\\arcsin(2/3),\\frac\\pi2,\\pi-\\arcsin(2/3);x\\approx0.730,\\frac\\pi2,2.41",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use cos²x=1−sin²x, factor, then keep the roots in −π≤x≤π.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"3(1-\\sin^2x)=5-5\\sin x\" data-display=\"true\"></span><span data-math=\"3\\sin^2x-5\\sin x+2=0\" data-display=\"true\"></span></li><li><span data-math=\"(3\\sin x-2)(\\sin x-1)=0\" data-display=\"true\"></span><span data-math=\"\\sin x=\\frac23\\text{ or }1\" data-display=\"true\"></span><span data-math=\"x=\\arcsin(2/3),\\frac\\pi2,\\pi-\\arcsin(2/3)\" data-display=\"true\"></span><span data-math=\"x\\approx0.730,\\frac\\pi2,2.41\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/problem-b/qgold",
+      "status": "worked",
+      "method": "Cosx cannot vanish where tanx is defined. Multiply by cosx and solve the resulting sine quadratic.",
+      "steps": [
+        {
+          "latex": "\\cos^2x=3\\sin x;1-\\sin^2x=3\\sin x;\\sin^2x+3\\sin x-1=0;\\sin x=\\frac{-3\\pm\\sqrt{13}}2;\\frac{-3-\\sqrt{13}}2<-1\\text{ (reject)};\\alpha=\\arcsin\\left(\\frac{-3+\\sqrt{13}}2\\right);x=\\alpha,\\pi-\\alpha,2\\pi+\\alpha,3\\pi-\\alpha;x\\approx0.308,\\ 2.83,\\ 6.59,\\ 9.12\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Cosx cannot vanish where tanx is defined. Multiply by cosx and solve the resulting sine quadratic.</p><span data-math=\"\\cos^2x=3\\sin x\" data-display=\"true\"></span><span data-math=\"1-\\sin^2x=3\\sin x\" data-display=\"true\"></span><span data-math=\"\\sin^2x+3\\sin x-1=0\" data-display=\"true\"></span><span data-math=\"\\sin x=\\frac{-3\\pm\\sqrt{13}}2\" data-display=\"true\"></span><span data-math=\"\\frac{-3-\\sqrt{13}}2&lt;-1\\text{ (reject)}\" data-display=\"true\"></span><span data-math=\"\\alpha=\\arcsin\\left(\\frac{-3+\\sqrt{13}}2\\right)\" data-display=\"true\"></span><span data-math=\"x=\\alpha,\\pi-\\alpha,2\\pi+\\alpha,3\\pi-\\alpha\" data-display=\"true\"></span><span data-math=\"x\\approx0.308,\\ 2.83,\\ 6.59,\\ 9.12\\text{ radians}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/exam/q25",
+      "status": "worked",
+      "method": "The printed denominator contains cos4θ. Its quadratic approximation is 1−16θ², whereas the requested expression and supplied key correspond to cos2θ.",
+      "steps": [
+        {
+          "latex": "1+\\sin2\\theta+\\tan2\\theta\\approx1+4\\theta;2\\cos4\\theta-1\\approx2[1-(4\\theta)^2/2]-1;=1-16\\theta^2=(1+4\\theta)(1-4\\theta);\\frac{1+\\sin2\\theta+\\tan2\\theta}{2\\cos4\\theta-1};\\approx\\frac{1+4\\theta}{1-16\\theta^2}",
+          "explanation": "Thus the stated target with (1+2θ)(1−2θ) cannot be obtained from the printed denominator. With cos2θ instead, that denominator would be 1−4θ².",
+          "graphs": []
+        },
+        {
+          "latex": "\\theta=0.03:\\ P_{\\rm supplied}=\\frac{1.12}{1-4(0.03)^2}\\approx1.12405;P_{\\rm corrected}=\\frac{1.12}{1-16(0.03)^2}\\approx1.13636",
+          "explanation": "The first value uses the requested but inconsistent approximation; the second approximates the actual printed expression.",
+          "graphs": []
+        },
+        {
+          "latex": "E=\\frac{1+\\sin0.06+\\tan0.06}{2\\cos0.12-1}\\approx1.136380360;\\frac{|P_{\\rm supplied}-E|}{|E|}\\,100\\approx1.09\\%;\\frac{|P_{\\rm corrected}-E|}{|E|}\\,100\\approx0.00147\\%",
+          "explanation": "Use the unrounded approximations for these percentage errors. The supplied key evaluates a different denominator, so its error does not apply to the printed expression.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The printed denominator contains cos4θ. Its quadratic approximation is 1−16θ², whereas the requested expression and supplied key correspond to cos2θ.</p><ol type=\"a\" class=\"parts\"><li><p>Thus the stated target with (1+2θ)(1−2θ) cannot be obtained from the printed denominator. With cos2θ instead, that denominator would be 1−4θ².</p><span data-math=\"1+\\sin2\\theta+\\tan2\\theta\\approx1+4\\theta\" data-display=\"true\"></span><span data-math=\"2\\cos4\\theta-1\\approx2[1-(4\\theta)^2/2]-1\" data-display=\"true\"></span><span data-math=\"=1-16\\theta^2=(1+4\\theta)(1-4\\theta)\" data-display=\"true\"></span><span data-math=\"\\frac{1+\\sin2\\theta+\\tan2\\theta}{2\\cos4\\theta-1}\" data-display=\"true\"></span><span data-math=\"\\approx\\frac{1+4\\theta}{1-16\\theta^2}\" data-display=\"true\"></span></li><li><p>The first value uses the requested but inconsistent approximation; the second approximates the actual printed expression.</p><span data-math=\"\\theta=0.03:\\ P_{\\rm supplied}=\\frac{1.12}{1-4(0.03)^2}\\approx1.12405\" data-display=\"true\"></span><span data-math=\"P_{\\rm corrected}=\\frac{1.12}{1-16(0.03)^2}\\approx1.13636\" data-display=\"true\"></span></li><li><p>Use the unrounded approximations for these percentage errors. The supplied key evaluates a different denominator, so its error does not apply to the printed expression.</p><span data-math=\"E=\\frac{1+\\sin0.06+\\tan0.06}{2\\cos0.12-1}\\approx1.136380360\" data-display=\"true\"></span><span data-math=\"\\frac{|P_{\\rm supplied}-E|}{|E|}\\,100\\approx1.09\\%\" data-display=\"true\"></span><span data-math=\"\\frac{|P_{\\rm corrected}-E|}{|E|}\\,100\\approx0.00147\\%\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/exam/q30",
+      "status": "worked",
+      "method": "Find r from the major-sector area. The minor angle is the full turn minus the reflex angle.",
+      "steps": [
+        {
+          "latex": "88.725=\\frac12r^2(4.2);r^2=42.25;r=6.5;\\theta_{\\rm minor}=2\\pi-4.2;l=6.5(2\\pi-4.2)=13\\pi-27.3\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_S=\\frac{6.5^2}2[(2\\pi-4.2)-\\sin(2\\pi-4.2)];\\approx25.6\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find r from the major-sector area. The minor angle is the full turn minus the reflex angle.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"88.725=\\frac12r^2(4.2)\" data-display=\"true\"></span><span data-math=\"r^2=42.25\" data-display=\"true\"></span><span data-math=\"r=6.5\" data-display=\"true\"></span><span data-math=\"\\theta_{\\rm minor}=2\\pi-4.2\" data-display=\"true\"></span><span data-math=\"l=6.5(2\\pi-4.2)=13\\pi-27.3\\text{ cm}\" data-display=\"true\"></span></li><li><span data-math=\"A_S=\\frac{6.5^2}2[(2\\pi-4.2)-\\sin(2\\pi-4.2)]\" data-display=\"true\"></span><span data-math=\"\\approx25.6\\text{ cm}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/exam/q35",
+      "status": "worked",
+      "method": "Check the division and the effect of squaring against the original equation.",
+      "steps": [
+        {
+          "latex": "\\sqrt3\\sin\\theta=\\cos\\theta\\Rightarrow\\tan\\theta=\\frac1{\\sqrt3};\\theta=\\frac\\pi6",
+          "explanation": "Isabella has inverted the ratio: tanθ is sinθ/cosθ, not cosθ/sinθ.",
+          "graphs": []
+        },
+        {
+          "latex": "\\sqrt3\\sin(-\\pi/6)=-\\frac{\\sqrt3}2;\\cos(-\\pi/6)=\\frac{\\sqrt3}2",
+          "explanation": "The two sides have opposite signs, so −π/6 is not a solution. Squaring removes this sign distinction and introduces the extraneous root.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Check the division and the effect of squaring against the original equation.</p><ol type=\"a\" class=\"parts\"><li><p>Isabella has inverted the ratio: tanθ is sinθ/cosθ, not cosθ/sinθ.</p><span data-math=\"\\sqrt3\\sin\\theta=\\cos\\theta\\Rightarrow\\tan\\theta=\\frac1{\\sqrt3}\" data-display=\"true\"></span><span data-math=\"\\theta=\\frac\\pi6\" data-display=\"true\"></span></li><li><p>The two sides have opposite signs, so −π/6 is not a solution. Squaring removes this sign distinction and introduces the extraneous root.</p><span data-math=\"\\sqrt3\\sin(-\\pi/6)=-\\frac{\\sqrt3}2\" data-display=\"true\"></span><span data-math=\"\\cos(-\\pi/6)=\\frac{\\sqrt3}2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/exam/q41",
+      "status": "worked",
+      "method": "Use the isosceles triangle and the equal sectors on either side of it.",
+      "steps": [
+        {
+          "latex": "r=\\frac{11}2;4=2r\\sin(\\theta/2);\\theta=2\\arcsin(4/11)\\approx0.744\\text{ rad}\\quad(3\\text{ d.p.})",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\phi=\\frac{\\pi-\\theta}2;A_{AOCD}=\\frac12r^2\\sin\\theta+\\frac12r^2\\phi;\\approx28.4\\text{ m}^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "P_{COB}=2r+r\\phi;=11+\\frac{11}2\\frac{\\pi-\\theta}2\\approx17.6\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the isosceles triangle and the equal sectors on either side of it.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"r=\\frac{11}2\" data-display=\"true\"></span><span data-math=\"4=2r\\sin(\\theta/2)\" data-display=\"true\"></span><span data-math=\"\\theta=2\\arcsin(4/11)\\approx0.744\\text{ rad}\\quad(3\\text{ d.p.})\" data-display=\"true\"></span></li><li><span data-math=\"\\phi=\\frac{\\pi-\\theta}2\" data-display=\"true\"></span><span data-math=\"A_{AOCD}=\\frac12r^2\\sin\\theta+\\frac12r^2\\phi\" data-display=\"true\"></span><span data-math=\"\\approx28.4\\text{ m}^2\" data-display=\"true\"></span></li><li><span data-math=\"P_{COB}=2r+r\\phi\" data-display=\"true\"></span><span data-math=\"=11+\\frac{11}2\\frac{\\pi-\\theta}2\\approx17.6\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/exam/q44",
+      "status": "worked",
+      "method": "Divide by the known factor, then use the quadratic discriminant to exclude further real roots.",
+      "steps": [
+        {
+          "latex": "f(x)=(x-3)(-2x^2+2x-1)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f(y^2)=(y^2-3)(-2y^4+2y^2-1);-2y^4+2y^2-1=-2(y^2-\\tfrac12)^2-\\tfrac12<0;y^2=3\\Rightarrow y=\\pm\\sqrt3;\\text{exactly two real roots}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2t^3-8t^2+7t-3=(t-3)(2t^2-2t+1);2t^2-2t+1=2(t-\\tfrac12)^2+\\tfrac12>0;\\tan\\theta=3;\\theta=\\arctan3+n\\pi,\\quad n=5,6,7;\\text{three solutions}",
+          "explanation": "The half-open interval spans exactly three tangent periods.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide by the known factor, then use the quadratic discriminant to exclude further real roots.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f(x)=(x-3)(-2x^2+2x-1)\" data-display=\"true\"></span></li><li><span data-math=\"f(y^2)=(y^2-3)(-2y^4+2y^2-1)\" data-display=\"true\"></span><span data-math=\"-2y^4+2y^2-1=-2(y^2-\\tfrac12)^2-\\tfrac12&lt;0\" data-display=\"true\"></span><span data-math=\"y^2=3\\Rightarrow y=\\pm\\sqrt3\" data-display=\"true\"></span><span data-math=\"\\text{exactly two real roots}\" data-display=\"true\"></span></li><li><p>The half-open interval spans exactly three tangent periods.</p><span data-math=\"2t^3-8t^2+7t-3=(t-3)(2t^2-2t+1)\" data-display=\"true\"></span><span data-math=\"2t^2-2t+1=2(t-\\tfrac12)^2+\\tfrac12&gt;0\" data-display=\"true\"></span><span data-math=\"\\tan\\theta=3\" data-display=\"true\"></span><span data-math=\"\\theta=\\arctan3+n\\pi,\\quad n=5,6,7\" data-display=\"true\"></span><span data-math=\"\\text{three solutions}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch5/exam/q46",
+      "status": "worked",
+      "method": "Use the y-intercept to find the amplitude, then solve the shifted sine equations.",
+      "steps": [
+        {
+          "latex": "2\\sqrt3=k\\sin(\\pi/3)=k\\frac{\\sqrt3}2;k=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "x+\\frac\\pi3=\\pi,2\\pi;p=\\frac{2\\pi}3,\\quad q=\\frac{5\\pi}3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "4\\sin(x+\\pi/3)=-1.2;\\sin(x+\\pi/3)=-0.3;\\alpha=\\arcsin0.3;x+\\frac\\pi3=\\pi+\\alpha,2\\pi-\\alpha;x\\approx2.4,\\ 4.93\\text{ radians}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the y-intercept to find the amplitude, then solve the shifted sine equations.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"2\\sqrt3=k\\sin(\\pi/3)=k\\frac{\\sqrt3}2\" data-display=\"true\"></span><span data-math=\"k=4\" data-display=\"true\"></span></li><li><span data-math=\"x+\\frac\\pi3=\\pi,2\\pi\" data-display=\"true\"></span><span data-math=\"p=\\frac{2\\pi}3,\\quad q=\\frac{5\\pi}3\" data-display=\"true\"></span></li><li><span data-math=\"4\\sin(x+\\pi/3)=-1.2\" data-display=\"true\"></span><span data-math=\"\\sin(x+\\pi/3)=-0.3\" data-display=\"true\"></span><span data-math=\"\\alpha=\\arcsin0.3\" data-display=\"true\"></span><span data-math=\"x+\\frac\\pi3=\\pi+\\alpha,2\\pi-\\alpha\" data-display=\"true\"></span><span data-math=\"x\\approx2.4,\\ 4.93\\text{ radians}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}
