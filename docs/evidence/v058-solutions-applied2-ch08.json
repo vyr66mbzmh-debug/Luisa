@@ -1,0 +1,95 @@
+{
+  "issue": 99,
+  "release": "0.58",
+  "chapter": "Applied Year 2 Chapter 8 \u2014 Further kinematics",
+  "questions": 52,
+  "workedSolutions": 52,
+  "originalQuestionIdsMatched": 52,
+  "sourceAnswerGraphs": 0,
+  "originalQuestionDiagramsInspected": 3,
+  "exactAndRoundingIndependentChecks": 189,
+  "browserQuestionsRendered": 52,
+  "browserHorizontalOverflows": 0,
+  "visualReview": "All 52 original prompts and supplied answers compared. All three source diagrams inspected. Every paired question and working rendered with strict KaTeX, loaded images and no horizontal overflow. Part labels agree. Representative distance integral, inconsistent projectile conditions and non-unique parameter renders inspected. Independent checks cover derivatives, initial conditions, exact vector relations, quadrature versus an antiderivative, physical feasibility and requested rounding. Full Papers print integration is separate.",
+  "suppliedPromptOrKeyDefects": [
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q6",
+      "note": "Find the initial velocity component by component. Distance travelled is the integral of speed because the direction changes.",
+      "details": [
+        "Numerical integration gives 81.872591\u2026 m. The supplied 79.5 m is the magnitude of displacement, not the distance travelled."
+      ]
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q5",
+      "note": "The flight ends at the launch height. OB is a distance, so it determines the magnitude of the horizontal velocity.",
+      "details": [
+        "Choosing the positive horizontal direction towards B gives a=24 as in the supplied answer. Without that direction convention, a=\u221224 is also possible."
+      ]
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q8",
+      "note": "The stated same-level flight time and impact speed are inconsistent; no p and q satisfy all the conditions.",
+      "details": [
+        "The supplied p=5, q=46.8 fits the velocity after six seconds but leaves the particle 104.4 m above its launch level, so it has not landed on the stated ground."
+      ]
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.3/q6",
+      "note": "Differentiate the exponential twice. The magnitude of force is nonnegative.",
+      "details": [
+        "The force acts in the negative coordinate direction. The supplied \u22128/e is its signed component, not the requested magnitude."
+      ]
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q6",
+      "note": "Use the stated position formula. It gives r(0)=2i, contradicting the words \u201cinitially at O\u201d; position relative to O and displacement from the actual initial point therefore differ.",
+      "details": [
+        "The supplied answer \u2212i+3j is position relative to O. The displacement from the formula\u2019s actual initial point is \u22123i+3j."
+      ]
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q7",
+      "note": "Use the chain rule for velocity and the product rule for acceleration.",
+      "details": [
+        "Acceleration has units m s\u207b\u00b2; the supplied key prints velocity units here."
+      ]
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.5/q6",
+      "note": "Integrate both velocities and equate both positions at the same time.",
+      "details": [
+        "The supplied key prints velocity units for this displacement; the correct unit is metres."
+      ]
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/problem-a/qsilver",
+      "note": "Use velocity ratios in part (a). In part (b), a lower landing point cannot have a smaller speed under gravity, so the stated data are inconsistent.",
+      "details": [
+        "There is no solution with B below A. If that condition is removed, the descending landing branch gives the supplied 115 m, but B is then 36.25 m above A, contrary to the text and diagram."
+      ]
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/problem-a/qgold",
+      "note": "While both particles remain airborne, their accelerations are identical. Parallel velocities must also point the same way.",
+      "details": [
+        "This requires the cliff to be high enough that neither particle has landed before four seconds."
+      ]
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/problem-b/qsilver",
+      "note": "The velocity formula is undefined at t=0 but its singularity is integrable. Interpret the initial position as the continuous limit as t approaches zero from above.",
+      "details": []
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/exam/q27",
+      "note": "Differentiate, then square the speed equation. The stated conditions admit two values of k, so k=2 is not uniquely implied.",
+      "details": [
+        "Both values satisfy the specified speed. The requested k=2 follows only with an additional condition such as positive horizontal velocity at t=2; the source gives no such condition."
+      ]
+    }
+  ],
+  "solutionSha256": "f48c560a399cafdd17e0cfcb9e2faeadc158261c68f6e7093b2c787892e94bf7",
+  "sourcePdf": "resources/practice/applied-year-2/chapter-08.pdf",
+  "sourcePdfSha256": "7f174cdeb5eb90961a73e69939026b842b910873ad1712da72f41931a256d8e1",
+  "independentReview": "pending lead review"
+}

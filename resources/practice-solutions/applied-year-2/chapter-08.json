@@ -1,0 +1,976 @@
+{
+  "schemaVersion": 1,
+  "family": "applied-year-2",
+  "chapter": 8,
+  "sourcePdf": "resources/practice/applied-year-2/chapter-08.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q1",
+      "status": "worked",
+      "method": "Add velocity multiplied by elapsed time to the initial position.",
+      "steps": [
+        {
+          "latex": "\\mathbf r=(4\\mathbf i+2\\mathbf j)+5(\\mathbf i-3\\mathbf j)=(9\\mathbf i-13\\mathbf j)\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Add velocity multiplied by elapsed time to the initial position.</p><span data-math=\"\\mathbf r=(4\\mathbf i+2\\mathbf j)+5(\\mathbf i-3\\mathbf j)=(9\\mathbf i-13\\mathbf j)\\text{ m}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q2",
+      "status": "worked",
+      "method": "For constant velocity, r=r₀+tv. Due north requires zero east coordinate and positive north coordinate.",
+      "steps": [
+        {
+          "latex": "\\mathbf r(2)=(-6\\mathbf i+\\mathbf j)+2(2\\mathbf i+\\mathbf j)=(-2\\mathbf i+3\\mathbf j)\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-6+2t=0\\Rightarrow t=3\\text{ s};y=1+3=4>0",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>For constant velocity, r=r₀+tv. Due north requires zero east coordinate and positive north coordinate.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf r(2)=(-6\\mathbf i+\\mathbf j)+2(2\\mathbf i+\\mathbf j)=(-2\\mathbf i+3\\mathbf j)\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"-6+2t=0\\Rightarrow t=3\\text{ s}\" data-display=\"true\"></span><span data-math=\"y=1+3=4&gt;0\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q3",
+      "status": "worked",
+      "method": "Use vector displacement ut+at²/2, then its magnitude.",
+      "steps": [
+        {
+          "latex": "\\mathbf s=2(30\\mathbf i+20\\mathbf j)+\\frac{2^2}2(10\\mathbf i+20\\mathbf j)=(80\\mathbf i+80\\mathbf j)\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "|\\mathbf s|=\\sqrt{80^2+80^2}=80\\sqrt2\\approx113\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use vector displacement ut+at²/2, then its magnitude.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf s=2(30\\mathbf i+20\\mathbf j)+\\frac{2^2}2(10\\mathbf i+20\\mathbf j)=(80\\mathbf i+80\\mathbf j)\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"|\\mathbf s|=\\sqrt{80^2+80^2}=80\\sqrt2\\approx113\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q4",
+      "status": "worked",
+      "method": "Find the final velocity; measure bearing clockwise from north.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=(3\\mathbf i-2\\mathbf j)+3(3\\mathbf i+\\mathbf j)=(12\\mathbf i+\\mathbf j)\\text{ m s}^{-1};|\\mathbf v|=\\sqrt{12^2+1^2}=\\sqrt{145}\\text{ m s}^{-1};\\text{bearing}=\\arctan(12/1)\\approx085.2^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the final velocity; measure bearing clockwise from north.</p><span data-math=\"\\mathbf v=(3\\mathbf i-2\\mathbf j)+3(3\\mathbf i+\\mathbf j)=(12\\mathbf i+\\mathbf j)\\text{ m s}^{-1}\" data-display=\"true\"></span><span data-math=\"|\\mathbf v|=\\sqrt{12^2+1^2}=\\sqrt{145}\\text{ m s}^{-1}\" data-display=\"true\"></span><span data-math=\"\\text{bearing}=\\arctan(12/1)\\approx085.2^\\circ\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q5",
+      "status": "worked",
+      "method": "Divide the velocity change by eight seconds.",
+      "steps": [
+        {
+          "latex": "\\mathbf a=\\frac{(4\\mathbf i-5\\mathbf j)-(-8\\mathbf i+3\\mathbf j)}8=(1.5\\mathbf i-\\mathbf j)\\text{ m s}^{-2}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide the velocity change by eight seconds.</p><span data-math=\"\\mathbf a=\\frac{(4\\mathbf i-5\\mathbf j)-(-8\\mathbf i+3\\mathbf j)}8=(1.5\\mathbf i-\\mathbf j)\\text{ m s}^{-2}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q6",
+      "status": "worked",
+      "method": "Find the initial velocity component by component. Distance travelled is the integral of speed because the direction changes.",
+      "steps": [
+        {
+          "latex": "a+3(5)=4,\\quad b+5=-13;a=-11,\\quad b=-18",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v(t)=(3t-11)\\mathbf i+(t-18)\\mathbf j;D=\\int_0^5\\sqrt{(3t-11)^2+(t-18)^2}\\,dt;=\\int_0^5\\sqrt{10t^2-102t+445}\\,dt\\approx81.9\\text{ m};\\Delta\\mathbf r=-17.5\\mathbf i-77.5\\mathbf j;|\\Delta\\mathbf r|\\approx79.5\\text{ m}",
+          "explanation": "Numerical integration gives 81.872591… m. The supplied 79.5 m is the magnitude of displacement, not the distance travelled.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the initial velocity component by component. Distance travelled is the integral of speed because the direction changes.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a+3(5)=4,\\quad b+5=-13\" data-display=\"true\"></span><span data-math=\"a=-11,\\quad b=-18\" data-display=\"true\"></span></li><li><p>Numerical integration gives 81.872591… m. The supplied 79.5 m is the magnitude of displacement, not the distance travelled.</p><span data-math=\"\\mathbf v(t)=(3t-11)\\mathbf i+(t-18)\\mathbf j\" data-display=\"true\"></span><span data-math=\"D=\\int_0^5\\sqrt{(3t-11)^2+(t-18)^2}\\,dt\" data-display=\"true\"></span><span data-math=\"=\\int_0^5\\sqrt{10t^2-102t+445}\\,dt\\approx81.9\\text{ m}\" data-display=\"true\"></span><span data-math=\"\\Delta\\mathbf r=-17.5\\mathbf i-77.5\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\Delta\\mathbf r|\\approx79.5\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q7",
+      "status": "worked",
+      "method": "Add constant velocity times time to the initial position.",
+      "steps": [
+        {
+          "latex": "\\mathbf r=\\binom{1540-220t}{2500-400t}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r(2)=\\binom{1100}{1700};|\\mathbf r(2)|=\\sqrt{1100^2+1700^2}=100\\sqrt{410}\\approx2020\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "1540-220t=0\\Rightarrow t=7\\text{ s};y=2500-400(7)=-300<0\\Rightarrow\\text{due south}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Add constant velocity times time to the initial position.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf r=\\binom{1540-220t}{2500-400t}\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf r(2)=\\binom{1100}{1700}\" data-display=\"true\"></span><span data-math=\"|\\mathbf r(2)|=\\sqrt{1100^2+1700^2}=100\\sqrt{410}\\approx2020\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"1540-220t=0\\Rightarrow t=7\\text{ s}\" data-display=\"true\"></span><span data-math=\"y=2500-400(7)=-300&lt;0\\Rightarrow\\text{due south}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q8",
+      "status": "worked",
+      "method": "Use the magnitude for speed, the velocity difference for acceleration and vector displacement for position.",
+      "steps": [
+        {
+          "latex": "|\\mathbf u|=\\sqrt{2^2+(-5)^2}=\\sqrt{29}\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf a=\\frac15\\binom{14-2}{5-(-5)}=\\binom{2.4}{2}\\text{ m s}^{-2}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r(6)=\\binom{-1}{8}+6\\binom2{-5}+18\\binom{2.4}{2}=\\binom{54.2}{14}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the magnitude for speed, the velocity difference for acceleration and vector displacement for position.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"|\\mathbf u|=\\sqrt{2^2+(-5)^2}=\\sqrt{29}\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf a=\\frac15\\binom{14-2}{5-(-5)}=\\binom{2.4}{2}\\text{ m s}^{-2}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf r(6)=\\binom{-1}{8}+6\\binom2{-5}+18\\binom{2.4}{2}=\\binom{54.2}{14}\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q9",
+      "status": "worked",
+      "method": "A meeting requires both position components to agree at the same nonnegative time.",
+      "steps": [
+        {
+          "latex": "4+1.5t=18-2t\\Rightarrow t=4\\text{ h};-6+2(4)=12-2.5(4)=2;\\text{Both components agree, so they meet.}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r=\\binom{4+1.5(4)}{-6+2(4)}=\\binom{10}{2}\\text{ km}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>A meeting requires both position components to agree at the same nonnegative time.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"4+1.5t=18-2t\\Rightarrow t=4\\text{ h}\" data-display=\"true\"></span><span data-math=\"-6+2(4)=12-2.5(4)=2\" data-display=\"true\"></span><span data-math=\"\\text{Both components agree, so they meet.}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf r=\\binom{4+1.5(4)}{-6+2(4)}=\\binom{10}{2}\\text{ km}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q10",
+      "status": "worked",
+      "method": "Use F=ma until B, then constant velocity after the force is removed.",
+      "steps": [
+        {
+          "latex": "\\mathbf a=\\frac{(14\\mathbf i-2\\mathbf j)-(5\\mathbf i+10\\mathbf j)}3=3\\mathbf i-4\\mathbf j;\\mathbf F=2\\mathbf a=(6\\mathbf i-8\\mathbf j)\\text{ N}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\overrightarrow{AB}=\\frac32[(5\\mathbf i+10\\mathbf j)+(14\\mathbf i-2\\mathbf j)]=28.5\\mathbf i+12\\mathbf j;12-2\\tau=0\\Rightarrow\\tau=6\\text{ s};x=28.5+14(6)=112.5>0",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use F=ma until B, then constant velocity after the force is removed.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf a=\\frac{(14\\mathbf i-2\\mathbf j)-(5\\mathbf i+10\\mathbf j)}3=3\\mathbf i-4\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf F=2\\mathbf a=(6\\mathbf i-8\\mathbf j)\\text{ N}\" data-display=\"true\"></span></li><li><span data-math=\"\\overrightarrow{AB}=\\frac32[(5\\mathbf i+10\\mathbf j)+(14\\mathbf i-2\\mathbf j)]=28.5\\mathbf i+12\\mathbf j\" data-display=\"true\"></span><span data-math=\"12-2\\tau=0\\Rightarrow\\tau=6\\text{ s}\" data-display=\"true\"></span><span data-math=\"x=28.5+14(6)=112.5&gt;0\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q1",
+      "status": "worked",
+      "method": "Only the vertical velocity changes under gravity.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=\\binom{15}{25-9.8t};\\mathbf v(2)=\\binom{15}{5.4}\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "|\\mathbf v(2)|=\\sqrt{15^2+5.4^2}\\approx15.9\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Only the vertical velocity changes under gravity.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=\\binom{15}{25-9.8t}\" data-display=\"true\"></span><span data-math=\"\\mathbf v(2)=\\binom{15}{5.4}\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"|\\mathbf v(2)|=\\sqrt{15^2+5.4^2}\\approx15.9\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q2",
+      "status": "worked",
+      "method": "Use initial velocity and vertical acceleration −g, then add the initial position.",
+      "steps": [
+        {
+          "latex": "\\mathbf s=\\binom{12t}{19t-4.9t^2}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r=\\binom66+\\mathbf s=\\binom{6+12t}{6+19t-4.9t^2}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use initial velocity and vertical acceleration −g, then add the initial position.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf s=\\binom{12t}{19t-4.9t^2}\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf r=\\binom66+\\mathbf s=\\binom{6+12t}{6+19t-4.9t^2}\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q3",
+      "status": "worked",
+      "method": "The ground is y=0; choose the positive root for landing time.",
+      "steps": [
+        {
+          "latex": "\\mathbf r=\\binom{23t}{15+13t-4.9t^2}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{(i) }4.9t^2-13t-15=0;t=\\frac{13+\\sqrt{463}}{9.8}\\approx3.52\\text{ s};\\text{(ii) }OB=23t\\approx81.0\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The ground is y=0; choose the positive root for landing time.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf r=\\binom{23t}{15+13t-4.9t^2}\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\text{(i) }4.9t^2-13t-15=0\" data-display=\"true\"></span><span data-math=\"t=\\frac{13+\\sqrt{463}}{9.8}\\approx3.52\\text{ s}\" data-display=\"true\"></span><span data-math=\"\\text{(ii) }OB=23t\\approx81.0\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q4",
+      "status": "worked",
+      "method": "At maximum height the vertical velocity is zero.",
+      "steps": [
+        {
+          "latex": "0=7^2-2gH;H=\\frac{49}{19.6}=2.5\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>At maximum height the vertical velocity is zero.</p><span data-math=\"0=7^2-2gH\" data-display=\"true\"></span><span data-math=\"H=\\frac{49}{19.6}=2.5\\text{ m}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q5",
+      "status": "worked",
+      "method": "The flight ends at the launch height. OB is a distance, so it determines the magnitude of the horizontal velocity.",
+      "steps": [
+        {
+          "latex": "0=5b-4.9(25)\\Rightarrow b=24.5;|5a|=120\\Rightarrow |a|=24",
+          "explanation": "Choosing the positive horizontal direction towards B gives a=24 as in the supplied answer. Without that direction convention, a=−24 is also possible.",
+          "graphs": []
+        },
+        {
+          "latex": "0=b^2-2gH;H=\\frac{24.5^2}{19.6}=30.625\\approx30.6\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The flight ends at the launch height. OB is a distance, so it determines the magnitude of the horizontal velocity.</p><ol type=\"a\" class=\"parts\"><li><p>Choosing the positive horizontal direction towards B gives a=24 as in the supplied answer. Without that direction convention, a=−24 is also possible.</p><span data-math=\"0=5b-4.9(25)\\Rightarrow b=24.5\" data-display=\"true\"></span><span data-math=\"|5a|=120\\Rightarrow |a|=24\" data-display=\"true\"></span></li><li><span data-math=\"0=b^2-2gH\" data-display=\"true\"></span><span data-math=\"H=\\frac{24.5^2}{19.6}=30.625\\approx30.6\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q6",
+      "status": "worked",
+      "method": "Use the positive sea-level root. AB is the straight-line separation from the launch point, not the trajectory length.",
+      "steps": [
+        {
+          "latex": "0=200+54t-4.9t^2;t=\\frac{54+\\sqrt{6836}}{9.8}\\approx13.9\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "OB=30t;AB=\\sqrt{(30t)^2+200^2}\\approx464\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the positive sea-level root. AB is the straight-line separation from the launch point, not the trajectory length.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"0=200+54t-4.9t^2\" data-display=\"true\"></span><span data-math=\"t=\\frac{54+\\sqrt{6836}}{9.8}\\approx13.9\\text{ s}\" data-display=\"true\"></span></li><li><span data-math=\"OB=30t\" data-display=\"true\"></span><span data-math=\"AB=\\sqrt{(30t)^2+200^2}\\approx464\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q7",
+      "status": "worked",
+      "method": "Landing on top of the platform uses the descending crossing of y=20.",
+      "steps": [
+        {
+          "latex": "20=20t-4.9t^2;t=\\frac{20\\pm\\sqrt8}{9.8};t=\\frac{20+\\sqrt8}{9.8}\\text{ on descent};x=13t\\approx30.3\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "v_y=20-9.8t=-\\sqrt8;|\\mathbf v|=\\sqrt{13^2+8}=\\sqrt{177}\\approx13.3\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Landing on top of the platform uses the descending crossing of y=20.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"20=20t-4.9t^2\" data-display=\"true\"></span><span data-math=\"t=\\frac{20\\pm\\sqrt8}{9.8}\" data-display=\"true\"></span><span data-math=\"t=\\frac{20+\\sqrt8}{9.8}\\text{ on descent}\" data-display=\"true\"></span><span data-math=\"x=13t\\approx30.3\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"v_y=20-9.8t=-\\sqrt8\" data-display=\"true\"></span><span data-math=\"|\\mathbf v|=\\sqrt{13^2+8}=\\sqrt{177}\\approx13.3\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q8",
+      "status": "worked",
+      "method": "The stated same-level flight time and impact speed are inconsistent; no p and q satisfy all the conditions.",
+      "steps": [
+        {
+          "latex": "0=6q-4.9(6^2)\\Rightarrow q=29.4;v_y(6)=q-9.8(6)=-29.4;|\\mathbf v(6)|\\ge29.4>13;\\tan\\alpha=\\frac{12}5,\\quad |\\mathbf v|=13\\Rightarrow |p|=5,\\ v_y=-12;v_y=q-58.8\\Rightarrow q=46.8;y(6)=6(46.8)-4.9(36)=104.4\\text{ m}",
+          "explanation": "The supplied p=5, q=46.8 fits the velocity after six seconds but leaves the particle 104.4 m above its launch level, so it has not landed on the stated ground.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The stated same-level flight time and impact speed are inconsistent; no p and q satisfy all the conditions.</p><p>The supplied p=5, q=46.8 fits the velocity after six seconds but leaves the particle 104.4 m above its launch level, so it has not landed on the stated ground.</p><span data-math=\"0=6q-4.9(6^2)\\Rightarrow q=29.4\" data-display=\"true\"></span><span data-math=\"v_y(6)=q-9.8(6)=-29.4\" data-display=\"true\"></span><span data-math=\"|\\mathbf v(6)|\\ge29.4&gt;13\" data-display=\"true\"></span><span data-math=\"\\tan\\alpha=\\frac{12}5,\\quad |\\mathbf v|=13\\Rightarrow |p|=5,\\ v_y=-12\" data-display=\"true\"></span><span data-math=\"v_y=q-58.8\\Rightarrow q=46.8\" data-display=\"true\"></span><span data-math=\"y(6)=6(46.8)-4.9(36)=104.4\\text{ m}\" data-display=\"true\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.3/q1",
+      "status": "worked",
+      "method": "Differentiate displacement once for velocity and twice for acceleration.",
+      "steps": [
+        {
+          "latex": "v=2\\pi\\cos\\pi t+2t;v(2)=2\\pi+4=2(\\pi+2)\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=-2\\pi^2\\sin\\pi t+2;a(5)=2\\text{ m s}^{-2}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate displacement once for velocity and twice for acceleration.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"v=2\\pi\\cos\\pi t+2t\" data-display=\"true\"></span><span data-math=\"v(2)=2\\pi+4=2(\\pi+2)\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"a=-2\\pi^2\\sin\\pi t+2\" data-display=\"true\"></span><span data-math=\"a(5)=2\\text{ m s}^{-2}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.3/q2",
+      "status": "worked",
+      "method": "Integrate acceleration and use the initial rest and position conditions.",
+      "steps": [
+        {
+          "latex": "v=e^t+\\frac{t^3}3+C;v(0)=0\\Rightarrow C=-1;v=e^t+\\frac{t^3}3-1\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "s=e^t+\\frac{t^4}{12}-t+D;s(0)=0\\Rightarrow D=-1;s(3)=e^3+\\frac{81}{12}-3-1=e^3+\\frac{11}4\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate acceleration and use the initial rest and position conditions.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"v=e^t+\\frac{t^3}3+C\" data-display=\"true\"></span><span data-math=\"v(0)=0\\Rightarrow C=-1\" data-display=\"true\"></span><span data-math=\"v=e^t+\\frac{t^3}3-1\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"s=e^t+\\frac{t^4}{12}-t+D\" data-display=\"true\"></span><span data-math=\"s(0)=0\\Rightarrow D=-1\" data-display=\"true\"></span><span data-math=\"s(3)=e^3+\\frac{81}{12}-3-1=e^3+\\frac{11}4\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.3/q3",
+      "status": "worked",
+      "method": "Differentiate the branch containing the requested time.",
+      "steps": [
+        {
+          "latex": "t=1.5<2:\\ v=2+4^t\\ln4;v(1.5)=2+8\\ln4=2(1+4\\ln4)\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "t=5>2:\\ s=t^2+6t;v=2t+6,\\quad a=2\\text{ m s}^{-2}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the branch containing the requested time.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"t=1.5&lt;2:\\ v=2+4^t\\ln4\" data-display=\"true\"></span><span data-math=\"v(1.5)=2+8\\ln4=2(1+4\\ln4)\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"t=5&gt;2:\\ s=t^2+6t\" data-display=\"true\"></span><span data-math=\"v=2t+6,\\quad a=2\\text{ m s}^{-2}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.3/q4",
+      "status": "worked",
+      "method": "Integrate twice, applying the conditions at t=1 at each stage.",
+      "steps": [
+        {
+          "latex": "v=-\\frac2t-\\frac{\\sin2\\pi t}{2\\pi}+C;0=-2+C\\Rightarrow C=2;s=-2\\ln t+\\frac{\\cos2\\pi t}{4\\pi^2}+2t+D;0=\\frac1{4\\pi^2}+2+D;s=-2\\ln t+\\frac{\\cos2\\pi t}{4\\pi^2}+2t-\\frac1{4\\pi^2}-2\\text{ m},\\quad t\\ge1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate twice, applying the conditions at t=1 at each stage.</p><span data-math=\"v=-\\frac2t-\\frac{\\sin2\\pi t}{2\\pi}+C\" data-display=\"true\"></span><span data-math=\"0=-2+C\\Rightarrow C=2\" data-display=\"true\"></span><span data-math=\"s=-2\\ln t+\\frac{\\cos2\\pi t}{4\\pi^2}+2t+D\" data-display=\"true\"></span><span data-math=\"0=\\frac1{4\\pi^2}+2+D\" data-display=\"true\"></span><span data-math=\"s=-2\\ln t+\\frac{\\cos2\\pi t}{4\\pi^2}+2t-\\frac1{4\\pi^2}-2\\text{ m},\\quad t\\ge1\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.3/q5",
+      "status": "worked",
+      "method": "Differentiate by the product rule; integrate t cos t by parts.",
+      "steps": [
+        {
+          "latex": "a=k(\\cos t-t\\sin t);a(\\pi)=-k=0.5\\Rightarrow k=-\\frac12",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "s=-\\frac12\\int t\\cos t\\,dt=-\\frac12(t\\sin t+\\cos t)+C;s(0)=0\\Rightarrow C=\\frac12;s=-\\frac12t\\sin t-\\frac12\\cos t+\\frac12\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "s(\\pi)=0+\\frac12+\\frac12=1\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate by the product rule; integrate t cos t by parts.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a=k(\\cos t-t\\sin t)\" data-display=\"true\"></span><span data-math=\"a(\\pi)=-k=0.5\\Rightarrow k=-\\frac12\" data-display=\"true\"></span></li><li><span data-math=\"s=-\\frac12\\int t\\cos t\\,dt=-\\frac12(t\\sin t+\\cos t)+C\" data-display=\"true\"></span><span data-math=\"s(0)=0\\Rightarrow C=\\frac12\" data-display=\"true\"></span><span data-math=\"s=-\\frac12t\\sin t-\\frac12\\cos t+\\frac12\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"s(\\pi)=0+\\frac12+\\frac12=1\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.3/q6",
+      "status": "worked",
+      "method": "Differentiate the exponential twice. The magnitude of force is nonnegative.",
+      "steps": [
+        {
+          "latex": "v=ke^{-kt};v(0)=k=2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=-k^2e^{-kt}=-4e^{-2t};ma=-8e^{-2t};F=|ma|=8e^{-2t};F(0.5)=\\frac8e\\text{ N}",
+          "explanation": "The force acts in the negative coordinate direction. The supplied −8/e is its signed component, not the requested magnitude.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the exponential twice. The magnitude of force is nonnegative.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"v=ke^{-kt}\" data-display=\"true\"></span><span data-math=\"v(0)=k=2\" data-display=\"true\"></span></li><li><p>The force acts in the negative coordinate direction. The supplied −8/e is its signed component, not the requested magnitude.</p><span data-math=\"a=-k^2e^{-kt}=-4e^{-2t}\" data-display=\"true\"></span><span data-math=\"ma=-8e^{-2t}\" data-display=\"true\"></span><span data-math=\"F=|ma|=8e^{-2t}\" data-display=\"true\"></span><span data-math=\"F(0.5)=\\frac8e\\text{ N}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.3/q7",
+      "status": "worked",
+      "method": "Differentiate and check the sign of acceleration on the closed interval.",
+      "steps": [
+        {
+          "latex": "v=\\frac12(t^2+15)^{-1/2}(2t)=\\frac t{\\sqrt{t^2+15}}\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=\\frac{(t^2+15)-t^2}{(t^2+15)^{3/2}}=\\frac{15}{(t^2+15)^{3/2}}>0;v\\ge0\\text{ and is increasing};\\text{maximum speed}=v(7)=\\frac7{\\sqrt{64}}=\\frac78\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate and check the sign of acceleration on the closed interval.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"v=\\frac12(t^2+15)^{-1/2}(2t)=\\frac t{\\sqrt{t^2+15}}\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"a=\\frac{(t^2+15)-t^2}{(t^2+15)^{3/2}}=\\frac{15}{(t^2+15)^{3/2}}&gt;0\" data-display=\"true\"></span><span data-math=\"v\\ge0\\text{ and is increasing}\" data-display=\"true\"></span><span data-math=\"\\text{maximum speed}=v(7)=\\frac7{\\sqrt{64}}=\\frac78\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q1",
+      "status": "worked",
+      "method": "Differentiate each position component for t>0; use the velocity components for magnitude and direction.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=6t\\mathbf i-\\frac5{2\\sqrt t}\\mathbf j;\\mathbf v(9)=\\left(54\\mathbf i-\\frac56\\mathbf j\\right)\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v(1)=6\\mathbf i-2.5\\mathbf j;|\\mathbf v|=\\sqrt{36+6.25}=6.5\\text{ m s}^{-1};\\theta=\\arctan(2.5/6)\\approx22.6^\\circ\\text{ below positive }\\mathbf i",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate each position component for t&gt;0; use the velocity components for magnitude and direction.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=6t\\mathbf i-\\frac5{2\\sqrt t}\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v(9)=\\left(54\\mathbf i-\\frac56\\mathbf j\\right)\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v(1)=6\\mathbf i-2.5\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf v|=\\sqrt{36+6.25}=6.5\\text{ m s}^{-1}\" data-display=\"true\"></span><span data-math=\"\\theta=\\arctan(2.5/6)\\approx22.6^\\circ\\text{ below positive }\\mathbf i\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q2",
+      "status": "worked",
+      "method": "Differentiate velocity component by component and identify the acceleration quadrant.",
+      "steps": [
+        {
+          "latex": "\\mathbf a=-\\sin t\\mathbf i-5\\mathbf j;\\mathbf a(\\pi)=-5\\mathbf j\\text{ m s}^{-2}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf a(\\pi/2)=-\\mathbf i-5\\mathbf j;\\theta=90^\\circ+\\arctan(1/5)\\approx101^\\circ\\text{ clockwise from positive }\\mathbf i",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate velocity component by component and identify the acceleration quadrant.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf a=-\\sin t\\mathbf i-5\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf a(\\pi)=-5\\mathbf j\\text{ m s}^{-2}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf a(\\pi/2)=-\\mathbf i-5\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\theta=90^\\circ+\\arctan(1/5)\\approx101^\\circ\\text{ clockwise from positive }\\mathbf i\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q3",
+      "status": "worked",
+      "method": "For distance use position magnitude; for acceleration differentiate twice.",
+      "steps": [
+        {
+          "latex": "\\mathbf r(2)=6\\mathbf i+7\\mathbf j;|\\mathbf r(2)|=\\sqrt{6^2+7^2}=\\sqrt{85}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v=(2t+1)\\mathbf i+3t^2\\mathbf j;\\mathbf a=2\\mathbf i+6t\\mathbf j;\\mathbf a(4)=(2\\mathbf i+24\\mathbf j)\\text{ m s}^{-2}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>For distance use position magnitude; for acceleration differentiate twice.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf r(2)=6\\mathbf i+7\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf r(2)|=\\sqrt{6^2+7^2}=\\sqrt{85}\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v=(2t+1)\\mathbf i+3t^2\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf a=2\\mathbf i+6t\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf a(4)=(2\\mathbf i+24\\mathbf j)\\text{ m s}^{-2}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q4",
+      "status": "worked",
+      "method": "Differentiate each component twice, including both chain-rule factors.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=3e^{3t}\\mathbf i+2\\pi\\cos2\\pi t\\mathbf j;\\mathbf a=9e^{3t}\\mathbf i-4\\pi^2\\sin2\\pi t\\mathbf j;\\mathbf a(2)=9e^6\\mathbf i\\text{ m s}^{-2}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate each component twice, including both chain-rule factors.</p><span data-math=\"\\mathbf v=3e^{3t}\\mathbf i+2\\pi\\cos2\\pi t\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf a=9e^{3t}\\mathbf i-4\\pi^2\\sin2\\pi t\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf a(2)=9e^6\\mathbf i\\text{ m s}^{-2}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q5",
+      "status": "worked",
+      "method": "South-east means x>0 and y=−x. Then evaluate the differentiated position.",
+      "steps": [
+        {
+          "latex": "\\frac3{t+1}=4t;4t^2+4t-3=0;(2t-1)(2t+3)=0;t=\\frac12\\text{ s}\\quad(t\\ge0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v=4\\mathbf i+\\frac3{(t+1)^2}\\mathbf j;\\mathbf v(1/2)=4\\mathbf i+\\frac43\\mathbf j;|\\mathbf v|=\\sqrt{16+16/9}=\\frac{4\\sqrt{10}}3\\approx4.22\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>South-east means x&gt;0 and y=−x. Then evaluate the differentiated position.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac3{t+1}=4t\" data-display=\"true\"></span><span data-math=\"4t^2+4t-3=0\" data-display=\"true\"></span><span data-math=\"(2t-1)(2t+3)=0\" data-display=\"true\"></span><span data-math=\"t=\\frac12\\text{ s}\\quad(t\\ge0)\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v=4\\mathbf i+\\frac3{(t+1)^2}\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v(1/2)=4\\mathbf i+\\frac43\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf v|=\\sqrt{16+16/9}=\\frac{4\\sqrt{10}}3\\approx4.22\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q6",
+      "status": "worked",
+      "method": "Use the stated position formula. It gives r(0)=2i, contradicting the words “initially at O”; position relative to O and displacement from the actual initial point therefore differ.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=-6t\\mathbf i+(4-4t^3)\\mathbf j;\\mathbf v(0)=4\\mathbf j;|\\mathbf v(0)|=4\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "4-4t^3=0\\Rightarrow t=1\\text{ s};v_x(1)=-6\\ne0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r(1)=-\\mathbf i+3\\mathbf j\\text{ m};\\mathbf r(1)-\\mathbf r(0)=-3\\mathbf i+3\\mathbf j\\text{ m}",
+          "explanation": "The supplied answer −i+3j is position relative to O. The displacement from the formula’s actual initial point is −3i+3j.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the stated position formula. It gives r(0)=2i, contradicting the words “initially at O”; position relative to O and displacement from the actual initial point therefore differ.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=-6t\\mathbf i+(4-4t^3)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v(0)=4\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf v(0)|=4\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"4-4t^3=0\\Rightarrow t=1\\text{ s}\" data-display=\"true\"></span><span data-math=\"v_x(1)=-6\\ne0\" data-display=\"true\"></span></li><li><p>The supplied answer −i+3j is position relative to O. The displacement from the formula’s actual initial point is −3i+3j.</p><span data-math=\"\\mathbf r(1)=-\\mathbf i+3\\mathbf j\\text{ m}\" data-display=\"true\"></span><span data-math=\"\\mathbf r(1)-\\mathbf r(0)=-3\\mathbf i+3\\mathbf j\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q7",
+      "status": "worked",
+      "method": "Use the chain rule for velocity and the product rule for acceleration.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=3(4t+2)e^{2t(t+1)}\\mathbf i-e^t\\mathbf j;|\\mathbf v(0.2)|=\\sqrt{(8.4e^{0.48})^2+e^{0.4}}\\approx13.6\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf a=\\{12+3(4t+2)^2\\}e^{2t(t+1)}\\mathbf i-e^t\\mathbf j;\\mathbf a=(48t^2+48t+24)e^{2t(t+1)}\\mathbf i-e^t\\mathbf j\\text{ m s}^{-2}",
+          "explanation": "Acceleration has units m s⁻²; the supplied key prints velocity units here.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the chain rule for velocity and the product rule for acceleration.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=3(4t+2)e^{2t(t+1)}\\mathbf i-e^t\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf v(0.2)|=\\sqrt{(8.4e^{0.48})^2+e^{0.4}}\\approx13.6\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><p>Acceleration has units m s⁻²; the supplied key prints velocity units here.</p><span data-math=\"\\mathbf a=\\{12+3(4t+2)^2\\}e^{2t(t+1)}\\mathbf i-e^t\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf a=(48t^2+48t+24)e^{2t(t+1)}\\mathbf i-e^t\\mathbf j\\text{ m s}^{-2}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q8",
+      "status": "worked",
+      "method": "Differentiate twice, then apply F=ma.",
+      "steps": [
+        {
+          "latex": "\\mathbf r=(5t^2+5t)\\mathbf i+(3-t^2)\\mathbf j;\\mathbf v=(10t+5)\\mathbf i-2t\\mathbf j;\\mathbf a=(10\\mathbf i-2\\mathbf j)\\text{ m s}^{-2}\\text{ is constant}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf F=5\\mathbf a=(50\\mathbf i-10\\mathbf j)\\text{ N};|\\mathbf F|=\\sqrt{50^2+10^2}=10\\sqrt{26}\\text{ N}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate twice, then apply F=ma.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf r=(5t^2+5t)\\mathbf i+(3-t^2)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v=(10t+5)\\mathbf i-2t\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf a=(10\\mathbf i-2\\mathbf j)\\text{ m s}^{-2}\\text{ is constant}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf F=5\\mathbf a=(50\\mathbf i-10\\mathbf j)\\text{ N}\" data-display=\"true\"></span><span data-math=\"|\\mathbf F|=\\sqrt{50^2+10^2}=10\\sqrt{26}\\text{ N}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.5/q1",
+      "status": "worked",
+      "method": "Integrate each acceleration component and use the velocity at t=2.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=(\\tfrac52t^2+C)\\mathbf i+(2t+D)\\mathbf j;10+C=8,\\quad4+D=2;\\mathbf v=(\\tfrac52t^2-2)\\mathbf i+(2t-2)\\mathbf j\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v(3)=20.5\\mathbf i+4\\mathbf j;|\\mathbf v(3)|=\\sqrt{20.5^2+4^2}\\approx20.9\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate each acceleration component and use the velocity at t=2.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=(\\tfrac52t^2+C)\\mathbf i+(2t+D)\\mathbf j\" data-display=\"true\"></span><span data-math=\"10+C=8,\\quad4+D=2\" data-display=\"true\"></span><span data-math=\"\\mathbf v=(\\tfrac52t^2-2)\\mathbf i+(2t-2)\\mathbf j\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v(3)=20.5\\mathbf i+4\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf v(3)|=\\sqrt{20.5^2+4^2}\\approx20.9\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.5/q2",
+      "status": "worked",
+      "method": "Integrate velocity and match the initial position constants.",
+      "steps": [
+        {
+          "latex": "\\mathbf r=(3t+C)\\mathbf i+(-\\tfrac23t^3+D)\\mathbf j;\\mathbf r(0)=-\\mathbf i+3\\mathbf j\\Rightarrow C=-1,\\ D=3;\\mathbf r=(3t-1)\\mathbf i+(3-\\tfrac23t^3)\\mathbf j\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate velocity and match the initial position constants.</p><span data-math=\"\\mathbf r=(3t+C)\\mathbf i+(-\\tfrac23t^3+D)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf r(0)=-\\mathbf i+3\\mathbf j\\Rightarrow C=-1,\\ D=3\" data-display=\"true\"></span><span data-math=\"\\mathbf r=(3t-1)\\mathbf i+(3-\\tfrac23t^3)\\mathbf j\\text{ m}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.5/q3",
+      "status": "worked",
+      "method": "Integrate acceleration using the initial velocity, then integrate again using the initial position.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=(t-3t^2+C)\\mathbf i+(3t+D)\\mathbf j;\\mathbf v(0)=\\mathbf i+2\\mathbf j\\Rightarrow C=1,\\ D=2;\\mathbf r=(\\tfrac12t^2-t^3+t+E)\\mathbf i+(\\tfrac32t^2+2t+F)\\mathbf j;\\mathbf r(0)=4\\mathbf i+\\mathbf j\\Rightarrow E=4,\\ F=1;\\mathbf r=(\\tfrac12t^2-t^3+t+4)\\mathbf i+(\\tfrac32t^2+2t+1)\\mathbf j\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r(3)=-15.5\\mathbf i+20.5\\mathbf j;|\\mathbf r(3)|=\\sqrt{15.5^2+20.5^2}=\\sqrt{660.5}\\approx25.7\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate acceleration using the initial velocity, then integrate again using the initial position.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=(t-3t^2+C)\\mathbf i+(3t+D)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v(0)=\\mathbf i+2\\mathbf j\\Rightarrow C=1,\\ D=2\" data-display=\"true\"></span><span data-math=\"\\mathbf r=(\\tfrac12t^2-t^3+t+E)\\mathbf i+(\\tfrac32t^2+2t+F)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf r(0)=4\\mathbf i+\\mathbf j\\Rightarrow E=4,\\ F=1\" data-display=\"true\"></span><span data-math=\"\\mathbf r=(\\tfrac12t^2-t^3+t+4)\\mathbf i+(\\tfrac32t^2+2t+1)\\mathbf j\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf r(3)=-15.5\\mathbf i+20.5\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf r(3)|=\\sqrt{15.5^2+20.5^2}=\\sqrt{660.5}\\approx25.7\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.5/q4",
+      "status": "worked",
+      "method": "Integrate component by component, applying both zero initial conditions.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=\\frac{\\sin\\pi t}\\pi\\mathbf i-\\frac{2\\cos\\pi t}\\pi\\mathbf j+\\mathbf C;\\mathbf v(0)=0\\Rightarrow\\mathbf C=\\frac2\\pi\\mathbf j;\\mathbf v=\\frac{\\sin\\pi t}\\pi\\mathbf i+\\frac{2(1-\\cos\\pi t)}\\pi\\mathbf j;\\mathbf v(3)=\\frac4\\pi\\mathbf j\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r=-\\frac{\\cos\\pi t}{\\pi^2}\\mathbf i+\\left(\\frac{2t}\\pi-\\frac{2\\sin\\pi t}{\\pi^2}\\right)\\mathbf j+\\mathbf D;\\mathbf r(0)=0\\Rightarrow\\mathbf D=\\frac1{\\pi^2}\\mathbf i;\\mathbf r(4)=\\frac8\\pi\\mathbf j\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate component by component, applying both zero initial conditions.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=\\frac{\\sin\\pi t}\\pi\\mathbf i-\\frac{2\\cos\\pi t}\\pi\\mathbf j+\\mathbf C\" data-display=\"true\"></span><span data-math=\"\\mathbf v(0)=0\\Rightarrow\\mathbf C=\\frac2\\pi\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v=\\frac{\\sin\\pi t}\\pi\\mathbf i+\\frac{2(1-\\cos\\pi t)}\\pi\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v(3)=\\frac4\\pi\\mathbf j\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf r=-\\frac{\\cos\\pi t}{\\pi^2}\\mathbf i+\\left(\\frac{2t}\\pi-\\frac{2\\sin\\pi t}{\\pi^2}\\right)\\mathbf j+\\mathbf D\" data-display=\"true\"></span><span data-math=\"\\mathbf r(0)=0\\Rightarrow\\mathbf D=\\frac1{\\pi^2}\\mathbf i\" data-display=\"true\"></span><span data-math=\"\\mathbf r(4)=\\frac8\\pi\\mathbf j\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.5/q5",
+      "status": "worked",
+      "method": "Integrate acceleration and use the initial velocity; the later velocity points rightwards and downwards.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=(\\tfrac32t^2+C)\\mathbf i+(-2t+D)\\mathbf j;\\mathbf v(0)=2\\mathbf i\\Rightarrow C=2,\\ D=0;\\mathbf v=(\\tfrac32t^2+2)\\mathbf i-2t\\mathbf j\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v(2.4)=10.64\\mathbf i-4.8\\mathbf j;|\\mathbf v|=\\sqrt{10.64^2+4.8^2}\\approx11.7\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v(4.8)=36.56\\mathbf i-9.6\\mathbf j;\\theta=\\arctan(9.6/36.56)\\approx14.7^\\circ\\text{ below positive }\\mathbf i",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate acceleration and use the initial velocity; the later velocity points rightwards and downwards.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=(\\tfrac32t^2+C)\\mathbf i+(-2t+D)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v(0)=2\\mathbf i\\Rightarrow C=2,\\ D=0\" data-display=\"true\"></span><span data-math=\"\\mathbf v=(\\tfrac32t^2+2)\\mathbf i-2t\\mathbf j\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v(2.4)=10.64\\mathbf i-4.8\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf v|=\\sqrt{10.64^2+4.8^2}\\approx11.7\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v(4.8)=36.56\\mathbf i-9.6\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\theta=\\arctan(9.6/36.56)\\approx14.7^\\circ\\text{ below positive }\\mathbf i\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.5/q6",
+      "status": "worked",
+      "method": "Integrate both velocities and equate both positions at the same time.",
+      "steps": [
+        {
+          "latex": "\\mathbf r_P=(2t^2+t+C)\\mathbf i+(-2kt+D)\\mathbf j;\\mathbf r_P(0)=\\mathbf j\\Rightarrow C=0,\\ D=1;\\mathbf r_P=(2t^2+t)\\mathbf i+(1-2kt)\\mathbf j\\text{ m}",
+          "explanation": "The supplied key prints velocity units for this displacement; the correct unit is metres.",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r_Q=5t\\mathbf i+(2-\\tfrac32t^2)\\mathbf j;2t^2+t=5t\\Rightarrow2t(t-2)=0;t=0\\text{ has unequal vertical positions, so }t=2;1-4k=2-6=-4\\Rightarrow k=\\frac54",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r_P(2)=10\\mathbf i-4\\mathbf j\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate both velocities and equate both positions at the same time.</p><ol type=\"a\" class=\"parts\"><li><p>The supplied key prints velocity units for this displacement; the correct unit is metres.</p><span data-math=\"\\mathbf r_P=(2t^2+t+C)\\mathbf i+(-2kt+D)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf r_P(0)=\\mathbf j\\Rightarrow C=0,\\ D=1\" data-display=\"true\"></span><span data-math=\"\\mathbf r_P=(2t^2+t)\\mathbf i+(1-2kt)\\mathbf j\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf r_Q=5t\\mathbf i+(2-\\tfrac32t^2)\\mathbf j\" data-display=\"true\"></span><span data-math=\"2t^2+t=5t\\Rightarrow2t(t-2)=0\" data-display=\"true\"></span><span data-math=\"t=0\\text{ has unequal vertical positions, so }t=2\" data-display=\"true\"></span><span data-math=\"1-4k=2-6=-4\\Rightarrow k=\\frac54\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf r_P(2)=10\\mathbf i-4\\mathbf j\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.5/q7",
+      "status": "worked",
+      "method": "A direction parallel to j requires zero horizontal velocity. Complete the square to show that this cannot occur.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=(\\tfrac32t^2-t+C)\\mathbf i+(e^t+D)\\mathbf j;\\mathbf v(0)=7\\mathbf i-4\\mathbf j\\Rightarrow C=7,\\ D=-5;v_x=\\frac32t^2-t+7=\\frac32(t-\\tfrac13)^2+\\frac{41}6>0;\\text{The particle never moves parallel to }\\mathbf j",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>A direction parallel to j requires zero horizontal velocity. Complete the square to show that this cannot occur.</p><span data-math=\"\\mathbf v=(\\tfrac32t^2-t+C)\\mathbf i+(e^t+D)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v(0)=7\\mathbf i-4\\mathbf j\\Rightarrow C=7,\\ D=-5\" data-display=\"true\"></span><span data-math=\"v_x=\\frac32t^2-t+7=\\frac32(t-\\tfrac13)^2+\\frac{41}6&gt;0\" data-display=\"true\"></span><span data-math=\"\\text{The particle never moves parallel to }\\mathbf j\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/problem-a/qbronze",
+      "status": "worked",
+      "method": "Use horizontal motion to find the flight time, then vertical velocity and displacement with g=10.",
+      "steps": [
+        {
+          "latex": "t=45/15=3\\text{ s};\\mathbf v=15\\mathbf i+(17-10t)\\mathbf j;\\mathbf v(3)=(15\\mathbf i-13\\mathbf j)\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "h_B-h_A=17(3)-5(3^2)=6\\text{ m};\\text{The second building is 6 m higher.}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use horizontal motion to find the flight time, then vertical velocity and displacement with g=10.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"t=45/15=3\\text{ s}\" data-display=\"true\"></span><span data-math=\"\\mathbf v=15\\mathbf i+(17-10t)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v(3)=(15\\mathbf i-13\\mathbf j)\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"h_B-h_A=17(3)-5(3^2)=6\\text{ m}\" data-display=\"true\"></span><span data-math=\"\\text{The second building is 6 m higher.}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/problem-a/qsilver",
+      "status": "worked",
+      "method": "Use velocity ratios in part (a). In part (b), a lower landing point cannot have a smaller speed under gravity, so the stated data are inconsistent.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=20\\mathbf i+(35-10t)\\mathbf j;\\frac{35-10t}{20}=\\frac12\\Rightarrow t=2.5\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u^2=20^2+35^2=1625,\\quad v_B^2=30^2=900;v_B^2=u^2-2g(h_B-h_A);h_B-h_A=\\frac{1625-900}{20}=36.25\\text{ m}>0;20^2+(35-10t)^2=900;35-10t=-10\\sqrt5\\text{ on descent};t=\\frac72+\\sqrt5; x=20t=70+20\\sqrt5\\approx115\\text{ m}",
+          "explanation": "There is no solution with B below A. If that condition is removed, the descending landing branch gives the supplied 115 m, but B is then 36.25 m above A, contrary to the text and diagram.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use velocity ratios in part (a). In part (b), a lower landing point cannot have a smaller speed under gravity, so the stated data are inconsistent.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=20\\mathbf i+(35-10t)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\frac{35-10t}{20}=\\frac12\\Rightarrow t=2.5\\text{ s}\" data-display=\"true\"></span></li><li><p>There is no solution with B below A. If that condition is removed, the descending landing branch gives the supplied 115 m, but B is then 36.25 m above A, contrary to the text and diagram.</p><span data-math=\"u^2=20^2+35^2=1625,\\quad v_B^2=30^2=900\" data-display=\"true\"></span><span data-math=\"v_B^2=u^2-2g(h_B-h_A)\" data-display=\"true\"></span><span data-math=\"h_B-h_A=\\frac{1625-900}{20}=36.25\\text{ m}&gt;0\" data-display=\"true\"></span><span data-math=\"20^2+(35-10t)^2=900\" data-display=\"true\"></span><span data-math=\"35-10t=-10\\sqrt5\\text{ on descent}\" data-display=\"true\"></span><span data-math=\"t=\\frac72+\\sqrt5\" data-display=\"true\"></span><span data-math=\"x=20t=70+20\\sqrt5\\approx115\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/problem-a/qgold",
+      "status": "worked",
+      "method": "While both particles remain airborne, their accelerations are identical. Parallel velocities must also point the same way.",
+      "steps": [
+        {
+          "latex": "\\mathbf v_P=30\\mathbf i+(10-10t)\\mathbf j;\\mathbf v_Q=20\\mathbf i+(20-10t)\\mathbf j;30(20-10t)-20(10-10t)=0;400-100t=0\\Rightarrow t=4\\text{ s};\\mathbf v_P(4)=(30,-30)=\\tfrac32(20,-20)=\\tfrac32\\mathbf v_Q(4)",
+          "explanation": "This requires the cliff to be high enough that neither particle has landed before four seconds.",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r_P-\\mathbf r_Q=t[(30,10)-(20,20)]=(40,-40)\\text{ at }t=4;\\text{separation}=\\sqrt{40^2+(-40)^2}=40\\sqrt2\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>While both particles remain airborne, their accelerations are identical. Parallel velocities must also point the same way.</p><ol type=\"a\" class=\"parts\"><li><p>This requires the cliff to be high enough that neither particle has landed before four seconds.</p><span data-math=\"\\mathbf v_P=30\\mathbf i+(10-10t)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v_Q=20\\mathbf i+(20-10t)\\mathbf j\" data-display=\"true\"></span><span data-math=\"30(20-10t)-20(10-10t)=0\" data-display=\"true\"></span><span data-math=\"400-100t=0\\Rightarrow t=4\\text{ s}\" data-display=\"true\"></span><span data-math=\"\\mathbf v_P(4)=(30,-30)=\\tfrac32(20,-20)=\\tfrac32\\mathbf v_Q(4)\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf r_P-\\mathbf r_Q=t[(30,10)-(20,20)]=(40,-40)\\text{ at }t=4\" data-display=\"true\"></span><span data-math=\"\\text{separation}=\\sqrt{40^2+(-40)^2}=40\\sqrt2\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/problem-b/qbronze",
+      "status": "worked",
+      "method": "Differentiate the position. North-east requires equal positive velocity components.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=8t\\mathbf i+(9t^2-3)\\mathbf j\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v(6)=48\\mathbf i+321\\mathbf j;|\\mathbf v(6)|=\\sqrt{48^2+321^2}=\\sqrt{105345}\\approx325\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "8t=9t^2-3;9t^2-8t-3=0;t=\\frac{4\\pm\\sqrt{43}}9;t=\\frac{4+\\sqrt{43}}9\\text{ s}>0;v_x=v_y>0",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the position. North-east requires equal positive velocity components.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=8t\\mathbf i+(9t^2-3)\\mathbf j\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v(6)=48\\mathbf i+321\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf v(6)|=\\sqrt{48^2+321^2}=\\sqrt{105345}\\approx325\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"8t=9t^2-3\" data-display=\"true\"></span><span data-math=\"9t^2-8t-3=0\" data-display=\"true\"></span><span data-math=\"t=\\frac{4\\pm\\sqrt{43}}9\" data-display=\"true\"></span><span data-math=\"t=\\frac{4+\\sqrt{43}}9\\text{ s}&gt;0\" data-display=\"true\"></span><span data-math=\"v_x=v_y&gt;0\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/problem-b/qsilver",
+      "status": "worked",
+      "method": "The velocity formula is undefined at t=0 but its singularity is integrable. Interpret the initial position as the continuous limit as t approaches zero from above.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{AB}=\\lim_{\\epsilon\\to0^+}\\int_\\epsilon^9[3\\mathbf i+(t^{-1/2}+1)\\mathbf j]dt;=27\\mathbf i+(2\\sqrt9+9)\\mathbf j=27\\mathbf i+15\\mathbf j;AB=\\sqrt{27^2+15^2}=3\\sqrt{106}\\approx30.9\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf r=3t\\mathbf i+(-2+2\\sqrt t+t)\\mathbf j;0=-2+2\\sqrt t+t;z=\\sqrt t\\ge0:\\ z^2+2z-2=0;z=-1+\\sqrt3;t=(\\sqrt3-1)^2=4-2\\sqrt3\\text{ s};x=3t>0",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The velocity formula is undefined at t=0 but its singularity is integrable. Interpret the initial position as the continuous limit as t approaches zero from above.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\overrightarrow{AB}=\\lim_{\\epsilon\\to0^+}\\int_\\epsilon^9[3\\mathbf i+(t^{-1/2}+1)\\mathbf j]dt\" data-display=\"true\"></span><span data-math=\"=27\\mathbf i+(2\\sqrt9+9)\\mathbf j=27\\mathbf i+15\\mathbf j\" data-display=\"true\"></span><span data-math=\"AB=\\sqrt{27^2+15^2}=3\\sqrt{106}\\approx30.9\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf r=3t\\mathbf i+(-2+2\\sqrt t+t)\\mathbf j\" data-display=\"true\"></span><span data-math=\"0=-2+2\\sqrt t+t\" data-display=\"true\"></span><span data-math=\"z=\\sqrt t\\ge0:\\ z^2+2z-2=0\" data-display=\"true\"></span><span data-math=\"z=-1+\\sqrt3\" data-display=\"true\"></span><span data-math=\"t=(\\sqrt3-1)^2=4-2\\sqrt3\\text{ s}\" data-display=\"true\"></span><span data-math=\"x=3t&gt;0\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/problem-b/qgold",
+      "status": "worked",
+      "method": "Differentiate and set the vertical velocity equal to the negative horizontal velocity. Exclude zero velocity because it has no direction.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=-\\pi\\sin\\pi t\\mathbf i+6\\pi\\sin\\pi t\\cos\\pi t\\mathbf j;\\pi\\sin\\pi t(6\\cos\\pi t-1)=0;\\sin\\pi t=0\\Rightarrow\\mathbf v=0\\text{ (exclude)};\\cos\\pi t=\\frac16;t_{\\rm first}=\\frac1\\pi\\arccos\\frac16\\approx0.447\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate and set the vertical velocity equal to the negative horizontal velocity. Exclude zero velocity because it has no direction.</p><span data-math=\"\\mathbf v=-\\pi\\sin\\pi t\\mathbf i+6\\pi\\sin\\pi t\\cos\\pi t\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\pi\\sin\\pi t(6\\cos\\pi t-1)=0\" data-display=\"true\"></span><span data-math=\"\\sin\\pi t=0\\Rightarrow\\mathbf v=0\\text{ (exclude)}\" data-display=\"true\"></span><span data-math=\"\\cos\\pi t=\\frac16\" data-display=\"true\"></span><span data-math=\"t_{\\rm first}=\\frac1\\pi\\arccos\\frac16\\approx0.447\\text{ s}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/exam/q23",
+      "status": "worked",
+      "method": "Equate each position component. Both equalities must hold at the same time.",
+      "steps": [
+        {
+          "latex": "12-t=2+2t\\Rightarrow t=\\frac{10}3;-6+4t=16-2t\\Rightarrow t=\\frac{11}3;\\frac{10}3\\ne\\frac{11}3\\Rightarrow\\text{the hikers do not meet.}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Equate each position component. Both equalities must hold at the same time.</p><span data-math=\"12-t=2+2t\\Rightarrow t=\\frac{10}3\" data-display=\"true\"></span><span data-math=\"-6+4t=16-2t\\Rightarrow t=\\frac{11}3\" data-display=\"true\"></span><span data-math=\"\\frac{10}3\\ne\\frac{11}3\\Rightarrow\\text{the hikers do not meet.}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/exam/q27",
+      "status": "worked",
+      "method": "Differentiate, then square the speed equation. The stated conditions admit two values of k, so k=2 is not uniquely implied.",
+      "steps": [
+        {
+          "latex": "\\mathbf r=(3kt^3+3t)\\mathbf i+(5t^2-2)\\mathbf j;\\mathbf v=(9kt^2+3)\\mathbf i+10t\\mathbf j\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "(36k+3)^2+20^2=(5\\sqrt{241})^2;(36k+3)^2=5625;36k+3=\\pm75;k=2\\text{ or }k=-\\frac{13}6",
+          "explanation": "Both values satisfy the specified speed. The requested k=2 follows only with an additional condition such as positive horizontal velocity at t=2; the source gives no such condition.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate, then square the speed equation. The stated conditions admit two values of k, so k=2 is not uniquely implied.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf r=(3kt^3+3t)\\mathbf i+(5t^2-2)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v=(9kt^2+3)\\mathbf i+10t\\mathbf j\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><p>Both values satisfy the specified speed. The requested k=2 follows only with an additional condition such as positive horizontal velocity at t=2; the source gives no such condition.</p><span data-math=\"(36k+3)^2+20^2=(5\\sqrt{241})^2\" data-display=\"true\"></span><span data-math=\"(36k+3)^2=5625\" data-display=\"true\"></span><span data-math=\"36k+3=\\pm75\" data-display=\"true\"></span><span data-math=\"k=2\\text{ or }k=-\\frac{13}6\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/exam/q30",
+      "status": "worked",
+      "method": "Integrate acceleration and use the initial velocity to find the constant.",
+      "steps": [
+        {
+          "latex": "v=\\int\\frac23e^{-2t/5}\\,dt=-\\frac53e^{-2t/5}+C;v(0)=1\\Rightarrow C=\\frac83;v=\\frac{8-5e^{-2t/5}}3\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "v(3)=\\frac{8-5e^{-6/5}}3\\approx2.16\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate acceleration and use the initial velocity to find the constant.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"v=\\int\\frac23e^{-2t/5}\\,dt=-\\frac53e^{-2t/5}+C\" data-display=\"true\"></span><span data-math=\"v(0)=1\\Rightarrow C=\\frac83\" data-display=\"true\"></span><span data-math=\"v=\\frac{8-5e^{-2t/5}}3\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"v(3)=\\frac{8-5e^{-6/5}}3\\approx2.16\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/exam/q33",
+      "status": "worked",
+      "method": "Use a=F/m and displacement ut+at²/2.",
+      "steps": [
+        {
+          "latex": "\\mathbf a=\\frac{6\\mathbf i+2\\mathbf j}4=\\frac32\\mathbf i+\\frac12\\mathbf j;\\Delta\\mathbf r=(-3\\mathbf i+8\\mathbf j)-(4\\mathbf i-2\\mathbf j)=-7\\mathbf i+10\\mathbf j;6\\mathbf u+18\\mathbf a=-7\\mathbf i+10\\mathbf j;6\\mathbf u=-34\\mathbf i+\\mathbf j;\\mathbf u=\\left(-\\frac{17}3\\mathbf i+\\frac16\\mathbf j\\right)\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use a=F/m and displacement ut+at²/2.</p><span data-math=\"\\mathbf a=\\frac{6\\mathbf i+2\\mathbf j}4=\\frac32\\mathbf i+\\frac12\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\Delta\\mathbf r=(-3\\mathbf i+8\\mathbf j)-(4\\mathbf i-2\\mathbf j)=-7\\mathbf i+10\\mathbf j\" data-display=\"true\"></span><span data-math=\"6\\mathbf u+18\\mathbf a=-7\\mathbf i+10\\mathbf j\" data-display=\"true\"></span><span data-math=\"6\\mathbf u=-34\\mathbf i+\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf u=\\left(-\\frac{17}3\\mathbf i+\\frac16\\mathbf j\\right)\\text{ m s}^{-1}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/exam/q39",
+      "status": "worked",
+      "method": "Use vertical motion for height and flight time; horizontal velocity remains 23 m s⁻¹.",
+      "steps": [
+        {
+          "latex": "0=18^2-2(9.8)H;H=\\frac{324}{19.6}=\\frac{810}{49}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "0=18T-4.9T^2;T=\\frac{180}{49}\\text{ s};R=23T=\\frac{4140}{49}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v=23\\mathbf i+(18-9.8t)\\mathbf j;\\frac{18-9.8t}{23}=-\\frac12;t=\\frac{29.5}{9.8}=\\frac{295}{98}\\approx3.01\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use vertical motion for height and flight time; horizontal velocity remains 23 m s⁻¹.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"0=18^2-2(9.8)H\" data-display=\"true\"></span><span data-math=\"H=\\frac{324}{19.6}=\\frac{810}{49}\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"0=18T-4.9T^2\" data-display=\"true\"></span><span data-math=\"T=\\frac{180}{49}\\text{ s}\" data-display=\"true\"></span><span data-math=\"R=23T=\\frac{4140}{49}\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v=23\\mathbf i+(18-9.8t)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\frac{18-9.8t}{23}=-\\frac12\" data-display=\"true\"></span><span data-math=\"t=\\frac{29.5}{9.8}=\\frac{295}{98}\\approx3.01\\text{ s}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/exam/q44",
+      "status": "worked",
+      "method": "Integrate acceleration using the initial velocity, then use magnitude or equal components.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=(\\tfrac32t^2+6t+C)\\mathbf i+(t^2-2t+D)\\mathbf j;\\mathbf v(0)=-2\\mathbf i+3\\mathbf j\\Rightarrow C=-2,\\ D=3;\\mathbf v(1.2)=7.36\\mathbf i+2.04\\mathbf j;|\\mathbf v(1.2)|=\\sqrt{7.36^2+2.04^2}\\approx7.64\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\tfrac32t^2+6t-2=t^2-2t+3;\\tfrac12t^2+8t-5=0;t=-8\\pm\\sqrt{74};t=-8+\\sqrt{74}\\approx0.602\\text{ s};v_y=(t-1)^2+2>0\\text{, so velocity is nonzero.}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate acceleration using the initial velocity, then use magnitude or equal components.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathbf v=(\\tfrac32t^2+6t+C)\\mathbf i+(t^2-2t+D)\\mathbf j\" data-display=\"true\"></span><span data-math=\"\\mathbf v(0)=-2\\mathbf i+3\\mathbf j\\Rightarrow C=-2,\\ D=3\" data-display=\"true\"></span><span data-math=\"\\mathbf v(1.2)=7.36\\mathbf i+2.04\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf v(1.2)|=\\sqrt{7.36^2+2.04^2}\\approx7.64\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\tfrac32t^2+6t-2=t^2-2t+3\" data-display=\"true\"></span><span data-math=\"\\tfrac12t^2+8t-5=0\" data-display=\"true\"></span><span data-math=\"t=-8\\pm\\sqrt{74}\" data-display=\"true\"></span><span data-math=\"t=-8+\\sqrt{74}\\approx0.602\\text{ s}\" data-display=\"true\"></span><span data-math=\"v_y=(t-1)^2+2&gt;0\\text{, so velocity is nonzero.}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}
