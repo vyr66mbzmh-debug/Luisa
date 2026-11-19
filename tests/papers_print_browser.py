@@ -175,6 +175,19 @@ class PapersPrintTests(unittest.TestCase):
         finally:
             self.context.unroute('**/papers-print.css')
 
+    def test_unavailable_preview_shell_does_not_overwrite_sign_in(self):
+        self.context.route('**/paper-preview.html', lambda route: route.fulfill(
+            content_type='text/html', body='<h1>Sign in</h1><p>Session expired.</p>'))
+        try:
+            with self.page.expect_popup() as event:
+                self.page.evaluate('rows=>{window.resultPromise=LUISA_PAPERS_PRINT.create(rows).catch(e=>window.failure=e.message)}', [row('1.01', 1)])
+            self.page.evaluate('window.resultPromise')
+            self.assertIn('Sign in or reconnect', self.page.evaluate('window.failure'))
+            self.assertEqual(event.value.locator('h1').inner_text(), 'Sign in')
+            self.assertEqual(event.value.locator('.print-question').count(), 0)
+        finally:
+            self.context.unroute('**/paper-preview.html')
+
     def test_practice_context_hints_portrait_and_part_labels_survive_print(self):
         rows = [practice_row('pure-year-1', 9, '9.5/q4'),
                 practice_row('applied-year-2', 3, 'problem-a/qgold'),

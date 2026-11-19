@@ -107,8 +107,22 @@
     if (!Array.isArray(rows) || !rows.length) throw Error('Select at least one question first.');
     if (new Set(rows.map(row => row.id)).size !== rows.length) throw Error('A paper cannot contain duplicate questions.');
     if (rows.some(row => !row.id || !row.question || !Array.isArray(row.steps) || !row.steps.length)) throw Error('Every selected question needs its original prompt and worked solution.');
-    const win = window.open('', '_blank');
+    // A real same-origin document is controlled by the offline service worker;
+    // an about:blank popup cannot retrieve its cached formatting and diagrams.
+    const previewURL = new URL('paper-preview.html', document.baseURI);
+    const win = window.open(previewURL.href, '_blank');
     if (!win) throw Error('Allow pop-ups for Luisa to open the paper preview.');
+    await whileOpen(win, new Promise((resolve, reject) => {
+      const loaded = () => {
+        try {
+          if (!win.document.querySelector('meta[name="luisa-paper-preview"]')) {
+            reject(Error('The paper preview could not open. Sign in or reconnect, then try again.'));
+          } else resolve();
+        } catch (_) { reject(Error('The paper preview could not open. Please try again.')); }
+      };
+      win.addEventListener('load', loaded, {once: true});
+      if (win.location.href === previewURL.href && win.document.readyState === 'complete') loaded();
+    }));
     const doc = win.document;
     doc.open();
     doc.write('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Maths Paper</title></head><body></body></html>');

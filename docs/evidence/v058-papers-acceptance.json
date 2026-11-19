@@ -18,7 +18,7 @@
     "visualSample": "22 actual PDF pages visually inspected: wide data table, reference context, repeated labels, bordered tables, portrait illustration, Venn diagrams, long multipart statistics, mechanics, worked graphs and hint panels."
   },
   "selectionBrowserTests": 11,
-  "printBrowserTests": 5,
+  "printBrowserTests": 6,
   "catalogueIntegrityTests": 6,
   "offlineDependencyTests": 5,
   "extractionRegressionTests": 8,
@@ -106,5 +106,10 @@
   "limitations": [
     "Physical iiyama testing has not been performed.",
     "Production host revision, live checks, archive and owner SMTP acceptance are recorded separately in GitHub issue #99."
-  ]
+  ],
+  "offlineRuntime": {
+    "result": "Downloaded Pure 2 Numerical Methods, disconnected the browser, selected Practice Booklet 10.1 Q6, printed with its worked SVG and reloaded the selection offline.",
+    "printWindow": "A same-origin cached shell replaces about:blank, allowing service-worker-controlled formatting, fonts and images. Missing or signed-out shells are rejected before question content is inserted.",
+    "limitations": "Desktop Chromium emulation; physical smartboard not claimed."
+  }
 }
