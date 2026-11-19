@@ -1,0 +1,783 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 11,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q1",
+      "status": "worked",
+      "method": "Evaluate displacement, then solve s=0 and exclude the initial instant.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s(2)=3(2)^3-2(2)^2=16\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=t^2(3t-2)=0\\Rightarrow t=0,\\tfrac23\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{return time}=\\tfrac23\\text{ s}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Evaluate displacement, then solve s=0 and exclude the initial instant.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"s(2)=3(2)^3-2(2)^2=16\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=t^2(3t-2)=0\\Rightarrow t=0,\\tfrac23\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{return time}=\\tfrac23\\text{ s}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q2",
+      "status": "worked",
+      "method": "Speed is the absolute value of velocity, so compare endpoints and any turning point.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v(0)=8\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=(3t-2)(t-4)=0\\Rightarrow t=\\tfrac23,4\\text{ s}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3t^2-14t+8=13\\Rightarrow(3t+1)(t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=5\\text{ s}\\quad(t\\ge0)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=3(t-\\tfrac73)^2-\\tfrac{25}3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|v(0)|=8,\\quad|v(7/3)|=25/3,\\quad|v(3)|=7\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{greatest speed}=\\tfrac{25}3\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Speed is the absolute value of velocity, so compare endpoints and any turning point.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=8\\mathrm{\\ m\\,s^{-1}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=(3t-2)(t-4)=0\\Rightarrow t=\\tfrac23,4\\text{ s}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"3t^2-14t+8=13\\Rightarrow(3t+1)(t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=5\\text{ s}\\quad(t\\ge0)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=3(t-\\tfrac73)^2-\\tfrac{25}3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|v(0)|=8,\\quad|v(7/3)|=25/3,\\quad|v(3)|=7\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{greatest speed}=\\tfrac{25}3\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q3",
+      "status": "worked",
+      "method": "Change in displacement means final position minus initial position.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s(5)-s(3)=(150-125)-(54-27)=-2\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s(4)-s(3)=(96-64)-27=5\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Change in displacement means final position minus initial position.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"s(5)-s(3)=(150-125)-(54-27)=-2\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s(4)-s(3)=(96-64)-27=5\\text{ m}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q4",
+      "status": "worked",
+      "method": "Complete the square and identify the outward and return journeys.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=\\frac{25}{16}-\\frac14(t-\\tfrac52)^2\\Rightarrow s_{\\max}=\\frac{25}{16}\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"t(5-t)/4=0\\Rightarrow t=5\\text{ s on return}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=2s_{\\max}=\\frac{25}{8}\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s\\ge0,\\ t\\ge0\\Rightarrow0\\le t\\le5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Complete the square and identify the outward and return journeys.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"s=\\frac{25}{16}-\\frac14(t-\\tfrac52)^2\\Rightarrow s_{\\max}=\\frac{25}{16}\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"t(5-t)/4=0\\Rightarrow t=5\\text{ s on return}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=2s_{\\max}=\\frac{25}{8}\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s\\ge0,\\ t\\ge0\\Rightarrow0\\le t\\le5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q5",
+      "status": "worked",
+      "method": "Factor the expression and use t≥0.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=3t(t^2-4t+4)=3t(t-2)^2\\ge0\"></span><p>Its position never lies on the negative x-axis. This does not mean it never moves in the negative x-direction: it can return towards O while x remains nonnegative.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Factor the expression and use t≥0.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=3t(t^2-4t+4)=3t(t-2)^2\\ge0\"></span><p>Its position never lies on the negative x-axis. This does not mean it never moves in the negative x-direction: it can return towards O while x remains nonnegative.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q6",
+      "status": "worked",
+      "method": "Solve each velocity equation; compare absolute velocities at stationary points and endpoints.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2t^2-13t+15=(2t-3)(t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=1.5,5\\text{ s}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2t^2-13t+6=(2t-1)(t-6)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=0.5,6\\text{ s}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=2(t-\\tfrac{13}4)^2-\\tfrac{49}8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|v(0)|=15,\\quad|v(13/4)|=49/8,\\quad|v(5)|=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{greatest speed}=15\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Solve each velocity equation; compare absolute velocities at stationary points and endpoints.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"2t^2-13t+15=(2t-3)(t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=1.5,5\\text{ s}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"2t^2-13t+6=(2t-1)(t-6)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=0.5,6\\text{ s}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=2(t-\\tfrac{13}4)^2-\\tfrac{49}8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|v(0)|=15,\\quad|v(13/4)|=49/8,\\quad|v(5)|=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{greatest speed}=15\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q7",
+      "status": "worked",
+      "method": "The third second is the interval from t=2 to t=3.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s(3)-s(2)=(45-27)-(20-8)=6\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=t^2(5-t)\\ge0\\quad\\text{for }0\\le t\\le5\"></span><p>It is negative for t&gt;5, so the maximum permitted endpoint is T=5 s.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The third second is the interval from t=2 to t=3.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"s(3)-s(2)=(45-27)-(20-8)=6\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=t^2(5-t)\\ge0\\quad\\text{for }0\\le t\\le5\"></span><p>It is negative for t&gt;5, so the maximum permitted endpoint is T=5 s.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q8",
+      "status": "worked",
+      "method": "Factor to find rest instants; complete the square for maximum velocity.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=t(10-t)=0\\Rightarrow t=0,10\\text{ s}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=25-(t-5)^2\\Rightarrow v_{\\max}=25\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Factor to find rest instants; complete the square for maximum velocity.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=t(10-t)=0\\Rightarrow t=0,10\\text{ s}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=25-(t-5)^2\\Rightarrow v_{\\max}=25\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q1",
+      "status": "worked",
+      "method": "Differentiate displacement to obtain velocity, then substitute t=2.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=12t^2-1\\Rightarrow v(2)=47\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=2+2t\\Rightarrow v(2)=6\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=1-t^{-2}\\Rightarrow v(2)=\\tfrac34\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Differentiate displacement to obtain velocity, then substitute t=2.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=12t^2-1\\Rightarrow v(2)=47\\mathrm{\\ m\\,s^{-1}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=2+2t\\Rightarrow v(2)=6\\mathrm{\\ m\\,s^{-1}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=1-t^{-2}\\Rightarrow v(2)=\\tfrac34\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q2",
+      "status": "worked",
+      "method": "Use v=ds/dt and a=dv/dt; rewrite products and quotients as powers first.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac34t^4-t^{-2}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }v=3t^3+2t^{-3};\\quad\\text{(ii) }a=9t^2-6t^{-4}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=6t^3-10t^2+3t-5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }v=18t^2-20t+3;\\quad\\text{(ii) }a=36t-20\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac12t^3-\\tfrac34t+2t^{-1}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }v=\\tfrac32t^2-\\tfrac34-2t^{-2};\\quad\\text{(ii) }a=3t+4t^{-3}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use v=ds/dt and a=dv/dt; rewrite products and quotients as powers first.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac34t^4-t^{-2}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }v=3t^3+2t^{-3};\\quad\\text{(ii) }a=9t^2-6t^{-4}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=6t^3-10t^2+3t-5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }v=18t^2-20t+3;\\quad\\text{(ii) }a=36t-20\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac12t^3-\\tfrac34t+2t^{-1}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }v=\\tfrac32t^2-\\tfrac34-2t^{-2};\\quad\\text{(ii) }a=3t+4t^{-3}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q3",
+      "status": "worked",
+      "method": "Differentiate x once for velocity and twice for acceleration.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=6t^2-10t\\Rightarrow v(4)=96-40=56\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2t(3t-5)=0\\Rightarrow t=0,\\tfrac53\\text{ s}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=12t-10\\Rightarrow a(2)=14\\mathrm{\\ m\\,s^{-2}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Differentiate x once for velocity and twice for acceleration.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=6t^2-10t\\Rightarrow v(4)=96-40=56\\mathrm{\\ m\\,s^{-1}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"2t(3t-5)=0\\Rightarrow t=0,\\tfrac53\\text{ s}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=12t-10\\Rightarrow a(2)=14\\mathrm{\\ m\\,s^{-2}}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q4",
+      "status": "worked",
+      "method": "Find the nonnegative root of v=0 before evaluating acceleration.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"20+t-t^2=0\\Rightarrow(t-5)(t+4)=0\\Rightarrow t=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=1-2t\\Rightarrow a(5)=-9\\mathrm{\\ m\\,s^{-2}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Find the nonnegative root of v=0 before evaluating acceleration.</p><span class=\"equation\" data-display=\"true\" data-math=\"20+t-t^2=0\\Rightarrow(t-5)(t+4)=0\\Rightarrow t=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=1-2t\\Rightarrow a(5)=-9\\mathrm{\\ m\\,s^{-2}}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q5",
+      "status": "worked",
+      "method": "Keep centimetres as the distance unit throughout.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=2t^2-14t+20=2(t-2)(t-5)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=2,5;\\quad s(2)=\\frac{142}3,\\ s(5)=\\frac{115}3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=|s(5)-s(2)|=9\\text{ cm}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=4t-14\\Rightarrow a(2)=-6,\\ a(5)=6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|a|=6\\mathrm{\\ cm\\,s^{-2}}\\text{ at both points}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Keep centimetres as the distance unit throughout.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=2t^2-14t+20=2(t-2)(t-5)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=2,5;\\quad s(2)=\\frac{142}3,\\ s(5)=\\frac{115}3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=|s(5)-s(2)|=9\\text{ cm}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=4t-14\\Rightarrow a(2)=-6,\\ a(5)=6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|a|=6\\mathrm{\\ cm\\,s^{-2}}\\text{ at both points}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q6",
+      "status": "worked",
+      "method": "Speed is |v|; check both endpoints and the minimum of the quadratic velocity.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=(2t-3)(t-7)=0\\Rightarrow t=1.5,7\\text{ s}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=4t-17=0\\Rightarrow t=17/4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=21,\\quad v(17/4)=-121/8,\\quad v(6)=-9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\max|v|=21\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Speed is |v|; check both endpoints and the minimum of the quadratic velocity.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=(2t-3)(t-7)=0\\Rightarrow t=1.5,7\\text{ s}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=4t-17=0\\Rightarrow t=17/4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=21,\\quad v(17/4)=-121/8,\\quad v(6)=-9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\max|v|=21\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q7",
+      "status": "worked",
+      "method": "Determine k from v(1), then find every rest instant.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=3kt^2-10t,\\quad8=3k-10\\Rightarrow k=6\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=18t^2-10t=2t(9t-5)=0\\Rightarrow t=0,\\tfrac59\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=36t-10\\Rightarrow a(0)=-10,\\ a(5/9)=10\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|a|=10\\mathrm{\\ m\\,s^{-2}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Determine k from v(1), then find every rest instant.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=3kt^2-10t,\\quad8=3k-10\\Rightarrow k=6\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=18t^2-10t=2t(9t-5)=0\\Rightarrow t=0,\\tfrac59\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=36t-10\\Rightarrow a(0)=-10,\\ a(5/9)=10\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|a|=10\\mathrm{\\ m\\,s^{-2}}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q8",
+      "status": "worked",
+      "method": "Expand or use the product rule to differentiate the velocity.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/da3052e9e67082c1cf6f.png\" alt=\"ans112-q8: solution graph\"></figure><p>The curve starts at(0,0), has a local maximum at t=8/3, touches the axis at(8,0), and ends at(10,4).</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=\\tfrac1{10}(64-32t+3t^2)=\\tfrac1{10}(3t-8)(t-8)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=0\\Rightarrow t=\\tfrac83,8\\text{ s}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(8/3)=\\frac{1024}{135}\\mathrm{\\ m\\,s^{-1}},\\quad v(8)=0\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Expand or use the product rule to differentiate the velocity.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/da3052e9e67082c1cf6f.png\" alt=\"ans112-q8: solution graph\"></figure><p>The curve starts at(0,0), has a local maximum at t=8/3, touches the axis at(8,0), and ends at(10,4).</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=\\tfrac1{10}(64-32t+3t^2)=\\tfrac1{10}(3t-8)(t-8)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=0\\Rightarrow t=\\tfrac83,8\\text{ s}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(8/3)=\\frac{1024}{135}\\mathrm{\\ m\\,s^{-1}},\\quad v(8)=0\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q1",
+      "status": "worked",
+      "method": "Distance must be nonnegative; evaluate stationary points within the allowed interval.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=-\\tfrac14t(t-4)(t+3)\\ge0\\quad(0\\le t\\le4)\"></span><p>The particle starts and returns at s=0; beyond 4 s the formula gives negative distance.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=3+\\tfrac12t-\\tfrac34t^2=0\\Rightarrow3t^2-2t-12=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=\\frac{1+\\sqrt{37}}3\\approx2.361\\text{ s}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s_{\\max}\\approx5.19\\text{ m}\"></span><p>The other stationary time is negative; both interval endpoints have s=0.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Distance must be nonnegative; evaluate stationary points within the allowed interval.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"s=-\\tfrac14t(t-4)(t+3)\\ge0\\quad(0\\le t\\le4)\"></span><p>The particle starts and returns at s=0; beyond 4 s the formula gives negative distance.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=3+\\tfrac12t-\\tfrac34t^2=0\\Rightarrow3t^2-2t-12=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=\\frac{1+\\sqrt{37}}3\\approx2.361\\text{ s}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s_{\\max}\\approx5.19\\text{ m}\"></span><p>The other stationary time is negative; both interval endpoints have s=0.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q2",
+      "status": "worked",
+      "method": "Compare the velocity at stationary points and interval endpoints.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/65677041d84dc7778c00.png\" alt=\"ans113-q2: solution graph\"></figure><p>The curve touches the axis at t=0 and 5; it has a local maximum at t=2.5 and ends at(6,36).</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=2t(t-5)(2t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=0,\\quad v(2.5)=\\frac{625}{16},\\quad v(5)=0,\\quad v(6)=36\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v_{\\max}=\\frac{625}{16}\\approx39.1\\mathrm{\\ m\\,s^{-1}}\\text{ at }t=2.5\\text{ s}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Compare the velocity at stationary points and interval endpoints.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/65677041d84dc7778c00.png\" alt=\"ans113-q2: solution graph\"></figure><p>The curve touches the axis at t=0 and 5; it has a local maximum at t=2.5 and ends at(6,36).</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=2t(t-5)(2t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=0,\\quad v(2.5)=\\frac{625}{16},\\quad v(5)=0,\\quad v(6)=36\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v_{\\max}=\\frac{625}{16}\\approx39.1\\mathrm{\\ m\\,s^{-1}}\\text{ at }t=2.5\\text{ s}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q3",
+      "status": "worked",
+      "method": "Minimum velocity occurs where its upward-opening quadratic has zero derivative.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=1.5t^2-0.9t-2.1,\\quad a=3t-0.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=0\\Rightarrow t=0.3\\text{ s}\"></span><p>The coefficient of t² in v is positive, so this is a minimum.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s(0.3)=0.5(0.3)^3-0.45(0.3)^2-2.1(0.3)+6=5.343\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v(0.3)=1.5(0.3)^2-0.9(0.3)-2.1=-2.235\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Minimum velocity occurs where its upward-opening quadratic has zero derivative.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=1.5t^2-0.9t-2.1,\\quad a=3t-0.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=0\\Rightarrow t=0.3\\text{ s}\"></span><p>The coefficient of t² in v is positive, so this is a minimum.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s(0.3)=0.5(0.3)^3-0.45(0.3)^2-2.1(0.3)+6=5.343\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v(0.3)=1.5(0.3)^2-0.9(0.3)-2.1=-2.235\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q4",
+      "status": "worked",
+      "method": "Factor s and differentiate to locate the maximum in[0,5].",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=t^3(5-t)=0\\Rightarrow t=5\\text{ s on return}\"></span>"
+        },
+        {
+          "explanation": "<p>For 0≤t≤5, both t³ and 5−t are nonnegative, hence s≥0.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=15t^2-4t^3=t^2(15-4t)=0\\Rightarrow t=0,15/4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(15/4)=\\frac{16875}{256}\\approx65.9\\text{ m}\"></span><p>The endpoints give zero displacement; the interior stationary point gives the maximum.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Factor s and differentiate to locate the maximum in[0,5].</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"s=t^3(5-t)=0\\Rightarrow t=5\\text{ s on return}\"></span></li><li><p>For 0≤t≤5, both t³ and 5−t are nonnegative, hence s≥0.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=15t^2-4t^3=t^2(15-4t)=0\\Rightarrow t=0,15/4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(15/4)=\\frac{16875}{256}\\approx65.9\\text{ m}\"></span><p>The endpoints give zero displacement; the interior stationary point gives the maximum.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q5",
+      "status": "worked",
+      "method": "Minimise velocity, not displacement.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=1.5t^2-0.6t-0.8,\\quad a=3t-0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=0\\Rightarrow t=0.2\\text{ s}\"></span><p>The quadratic velocity has positive leading coefficient, so this is its minimum.</p><span class=\"equation\" data-display=\"true\" data-math=\"s(0.2)=0.5(0.2)^3-0.3(0.2)^2-0.8(0.2)+6=5.832\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Minimise velocity, not displacement.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=1.5t^2-0.6t-0.8,\\quad a=3t-0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=0\\Rightarrow t=0.2\\text{ s}\"></span><p>The quadratic velocity has positive leading coefficient, so this is its minimum.</p><span class=\"equation\" data-display=\"true\" data-math=\"s(0.2)=0.5(0.2)^3-0.3(0.2)^2-0.8(0.2)+6=5.832\\text{ m}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q6",
+      "status": "worked",
+      "method": "Complete the square.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=3(t-1)^2+5\\ge5&gt;0\"></span><p>Velocity is never zero, so P never comes to rest.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v_{\\min}=5\\mathrm{\\ m\\,s^{-1}}\\quad\\text{at }t=1\\text{ s}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Complete the square.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=3(t-1)^2+5\\ge5&gt;0\"></span><p>Velocity is never zero, so P never comes to rest.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v_{\\min}=5\\mathrm{\\ m\\,s^{-1}}\\quad\\text{at }t=1\\text{ s}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q7",
+      "status": "worked",
+      "method": "Compare all stationary values and endpoints on the stated time interval.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=4.8+2.4t-0.03t^2=0\\Rightarrow t=40\\pm4\\sqrt{110}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=40+4\\sqrt{110}\\approx81.95\\text{ s}\\quad(0\\le t\\le100)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=0,\\quad s(100)=2480,\\quad s(81.95\\ldots)\\approx2948.72\\text{ m}\"></span><p>The maximum is approximately 2.95 km, less than 5 km, so the car never reaches the end of the track.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Compare all stationary values and endpoints on the stated time interval.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=4.8+2.4t-0.03t^2=0\\Rightarrow t=40\\pm4\\sqrt{110}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=40+4\\sqrt{110}\\approx81.95\\text{ s}\\quad(0\\le t\\le100)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=0,\\quad s(100)=2480,\\quad s(81.95\\ldots)\\approx2948.72\\text{ m}\"></span><p>The maximum is approximately 2.95 km, less than 5 km, so the car never reaches the end of the track.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q8",
+      "status": "worked",
+      "method": "Use the initial speed and the location and value of the minimum.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"c=28,\\quad6a+b=0,\\quad9a+3b+28=1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"b=-6a\\Rightarrow a=3,\\ b=-18\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=6t-18\\Rightarrow a(4)=6\\mathrm{\\ m\\,s^{-2}}\"></span><p>Here acceleration is measured in the direction of motion. The speed is always positive, so the particle does not reverse.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the initial speed and the location and value of the minimum.</p><span class=\"equation\" data-display=\"true\" data-math=\"c=28,\\quad6a+b=0,\\quad9a+3b+28=1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"b=-6a\\Rightarrow a=3,\\ b=-18\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=6t-18\\Rightarrow a(4)=6\\mathrm{\\ m\\,s^{-2}}\"></span><p>Here acceleration is measured in the direction of motion. The speed is always positive, so the particle does not reverse.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q1",
+      "status": "worked",
+      "method": "Integrate acceleration and use v(0)=0 to fix the constant.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=\\int(4t^2-3t^3)\\,dt=\\tfrac43t^3-\\tfrac34t^4+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"C=0\\Rightarrow v=\\tfrac43t^3-\\tfrac34t^4\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=\\int(5t+\\tfrac32t^2)\\,dt=\\tfrac52t^2+\\tfrac12t^3+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"C=0\\Rightarrow v=\\tfrac52t^2+\\tfrac12t^3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=2t^2-t\\quad(t\\ne0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac23t^3-\\tfrac12t^2+C,\\quad C=0\"></span><p>Use the continuous extension at t=0: the printed quotient itself is undefined there.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Integrate acceleration and use v(0)=0 to fix the constant.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=\\int(4t^2-3t^3)\\,dt=\\tfrac43t^3-\\tfrac34t^4+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"C=0\\Rightarrow v=\\tfrac43t^3-\\tfrac34t^4\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=\\int(5t+\\tfrac32t^2)\\,dt=\\tfrac52t^2+\\tfrac12t^3+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"C=0\\Rightarrow v=\\tfrac52t^2+\\tfrac12t^3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=2t^2-t\\quad(t\\ne0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac23t^3-\\tfrac12t^2+C,\\quad C=0\"></span><p>Use the continuous extension at t=0: the printed quotient itself is undefined there.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q2",
+      "status": "worked",
+      "method": "Integrate velocity, retaining an arbitrary initial displacement C; distance uses the change in s.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }s=\\tfrac12t^4-\\tfrac16t^2+t+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }s(3)-s(0)=40.5-1.5+3=42\\text{ m}\"></span><p>Velocity stays positive: its minimum for t≥0 occurs at t=1/√18 and equals 1−2/(9√18)&gt;0.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac23t^3+\\tfrac13t^4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }s=\\tfrac16t^4+\\tfrac1{15}t^5+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) distance}=81/6+243/15=29.7\\text{ m}\"></span><p>Velocity is nonnegative on[0,3].</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }s=\\tfrac53t^3+t^{3/2}+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) distance}=45+3\\sqrt3\\approx50.2\\text{ m}\"></span><p>Velocity is nonnegative on[0,3].</p>"
+        }
+      ],
+      "solutionHtml": "<p>Integrate velocity, retaining an arbitrary initial displacement C; distance uses the change in s.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }s=\\tfrac12t^4-\\tfrac16t^2+t+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }s(3)-s(0)=40.5-1.5+3=42\\text{ m}\"></span><p>Velocity stays positive: its minimum for t≥0 occurs at t=1/√18 and equals 1−2/(9√18)&gt;0.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac23t^3+\\tfrac13t^4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }s=\\tfrac16t^4+\\tfrac1{15}t^5+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) distance}=81/6+243/15=29.7\\text{ m}\"></span><p>Velocity is nonnegative on[0,3].</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }s=\\tfrac53t^3+t^{3/2}+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) distance}=45+3\\sqrt3\\approx50.2\\text{ m}\"></span><p>Velocity is nonnegative on[0,3].</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q3",
+      "status": "worked",
+      "method": "Integrate and use the initial position x(0)=5.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=10t+\\tfrac32t^2-\\tfrac23t^3+C,\\quad C=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x(2)=20+6-16/3+5=\\frac{77}3\\text{ m}\"></span><p>This position is positive, so its distance from O is 77/3 m.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Integrate and use the initial position x(0)=5.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=10t+\\tfrac32t^2-\\tfrac23t^3+C,\\quad C=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x(2)=20+6-16/3+5=\\frac{77}3\\text{ m}\"></span><p>This position is positive, so its distance from O is 77/3 m.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q4",
+      "status": "worked",
+      "method": "Find the rest instants, then subtract their positions.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=(2t-3)(2t-7)=0\\Rightarrow t=\\tfrac32,\\tfrac72\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac43t^3-10t^2+21t\\quad(s(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(3/2)=\\frac{27}2,\\quad s(7/2)=\\frac{49}6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=\\left|\\frac{49}6-\\frac{27}2\\right|=\\frac{16}3\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Find the rest instants, then subtract their positions.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=(2t-3)(2t-7)=0\\Rightarrow t=\\tfrac32,\\tfrac72\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac43t^3-10t^2+21t\\quad(s(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(3/2)=\\frac{27}2,\\quad s(7/2)=\\frac{49}6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=\\left|\\frac{49}6-\\frac{27}2\\right|=\\frac{16}3\\text{ m}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q5",
+      "status": "worked",
+      "method": "Integrate acceleration using v(0)=4, then integrate between the rest instants.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac12t^2-3t+C,\\quad C=4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac12t^2-3t+4\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"t^2-6t+8=(t-2)(t-4)=0\\Rightarrow t=2,4\\text{ s}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\Delta s=\\left[\\tfrac16t^3-\\tfrac32t^2+4t\\right]_2^4=-\\frac23\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=|\\Delta s|=\\frac23\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Integrate acceleration using v(0)=4, then integrate between the rest instants.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac12t^2-3t+C,\\quad C=4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac12t^2-3t+4\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"t^2-6t+8=(t-2)(t-4)=0\\Rightarrow t=2,4\\text{ s}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\Delta s=\\left[\\tfrac16t^3-\\tfrac32t^2+4t\\right]_2^4=-\\frac23\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=|\\Delta s|=\\frac23\\text{ m}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q6",
+      "status": "worked",
+      "method": "Integrate and impose the two velocity conditions.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac52t^2+9t+C,\\quad C=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"7=\\tfrac52T^2+9T+3\\Rightarrow5T^2+18T-8=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(5T-2)(T+4)=0\\Rightarrow T=\\frac25\\text{ s}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Integrate and impose the two velocity conditions.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac52t^2+9t+C,\\quad C=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"7=\\tfrac52T^2+9T+3\\Rightarrow5T^2+18T-8=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(5T-2)(T+4)=0\\Rightarrow T=\\frac25\\text{ s}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q7",
+      "status": "worked",
+      "method": "Introduce the proportionality constant k and determine both integration constants.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=k(5-t^2)\\Rightarrow v=k(5t-t^3/3)+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=0\\Rightarrow C=0;\\quad11=k(10-8/3)\\Rightarrow k=\\tfrac32\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac{15}2t-\\tfrac12t^3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac{15}4t^2-\\tfrac18t^4+D,\\quad s(0)=0\\Rightarrow D=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\frac{t^2(30-t^2)}8\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Introduce the proportionality constant k and determine both integration constants.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=k(5-t^2)\\Rightarrow v=k(5t-t^3/3)+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=0\\Rightarrow C=0;\\quad11=k(10-8/3)\\Rightarrow k=\\tfrac32\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac{15}2t-\\tfrac12t^3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac{15}4t^2-\\tfrac18t^4+D,\\quad s(0)=0\\Rightarrow D=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\frac{t^2(30-t^2)}8\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q8",
+      "status": "worked",
+      "method": "First maximise velocity, then integrate it from0 to that time.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=16t-6t^2=2t(8-3t)=0\\Rightarrow t=0,8/3\"></span><p>Velocity increases then decreases at T=8/3; both endpoints have v=5, so this is the maximum.</p><span class=\"equation\" data-display=\"true\" data-math=\"s(T)=\\int_0^{8/3}(5+8t^2-2t^3)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[5t+\\tfrac83t^3-\\tfrac12t^4\\right]_0^{8/3}=\\frac{3128}{81}\\approx38.6\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>First maximise velocity, then integrate it from 0 to that time.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=16t-6t^2=2t(8-3t)=0\\Rightarrow t=0,8/3\"></span><p>Velocity increases then decreases at T=8/3; both endpoints have v=5, so this is the maximum.</p><span class=\"equation\" data-display=\"true\" data-math=\"s(T)=\\int_0^{8/3}(5+8t^2-2t^3)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[5t+\\tfrac83t^3-\\tfrac12t^4\\right]_0^{8/3}=\\frac{3128}{81}\\approx38.6\\text{ m}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q1",
+      "status": "worked",
+      "method": "Differentiate with respect to time; u and a are constants.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=\\frac{ds}{dt}=u+at\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=a\\mathrm{\\ m\\,s^{-2}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Differentiate with respect to time; u and a are constants.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=\\frac{ds}{dt}=u+at\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=a\\mathrm{\\ m\\,s^{-2}}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q2",
+      "status": "worked",
+      "method": "Integrate twice and use each initial condition.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=\\int a\\,dt=at+C,\\quad v(0)=u\\Rightarrow v=u+at\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=\\int(u+at)\\,dt=ut+\\tfrac12at^2+D\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=0\\Rightarrow s=ut+\\tfrac12at^2\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Integrate twice and use each initial condition.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=\\int a\\,dt=at+C,\\quad v(0)=u\\Rightarrow v=u+at\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=\\int(u+at)\\,dt=ut+\\tfrac12at^2+D\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=0\\Rightarrow s=ut+\\tfrac12at^2\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q3",
+      "status": "worked",
+      "method": "Acceleration is the second derivative of displacement.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=3-6t^2,\\quad a=-12t\"></span><p>Not constant.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=2t-7,\\quad a=2\"></span><p>Constant acceleration 2 m/s².</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=-5t^{-2},\\quad a=10t^{-3}\"></span><p>Not constant on its domain t≠0.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=-t,\\quad a=-1\"></span><p>Constant acceleration−1 m/s².</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=0,\\quad a=0\"></span><p>Constant zero acceleration: the particle is stationary.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Acceleration is the second derivative of displacement.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=3-6t^2,\\quad a=-12t\"></span><p>Not constant.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=2t-7,\\quad a=2\"></span><p>Constant acceleration 2 m/s².</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=-5t^{-2},\\quad a=10t^{-3}\"></span><p>Not constant on its domain t≠0.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=-t,\\quad a=-1\"></span><p>Constant acceleration−1 m/s².</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=0,\\quad a=0\"></span><p>Constant zero acceleration: the particle is stationary.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q4",
+      "status": "worked",
+      "method": "Evaluate s(50) and differentiate twice.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"AB=32(50)-0.3(50)^2=850\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=32-0.6t,\\quad a=-0.6\\mathrm{\\ m\\,s^{-2}}\"></span><p>Acceleration does not depend on time.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Evaluate s(50) and differentiate twice.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"AB=32(50)-0.3(50)^2=850\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=32-0.6t,\\quad a=-0.6\\mathrm{\\ m\\,s^{-2}}\"></span><p>Acceleration does not depend on time.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q5",
+      "status": "worked",
+      "method": "Use the initial values to determine constants after integration.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=\\int3\\,dt=3t+C,\\quad v(0)=10\\Rightarrow v=10+3t\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=\\int(10+3t)\\,dt=10t+1.5t^2+D\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=5\\Rightarrow s=10t+1.5t^2+5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the initial values to determine constants after integration.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=\\int3\\,dt=3t+C,\\quad v(0)=10\\Rightarrow v=10+3t\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=\\int(10+3t)\\,dt=10t+1.5t^2+D\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=5\\Rightarrow s=10t+1.5t^2+5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q6",
+      "status": "worked",
+      "method": "Find p from acceleration, then q from velocity and r from displacement.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=2pt+q,\\quad a=2p=6\\Rightarrow p=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(2)=12+q=7\\Rightarrow q=-5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(2)=12-10+r=8\\Rightarrow r=6\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Find p from acceleration, then q from velocity and r from displacement.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=2pt+q,\\quad a=2p=6\\Rightarrow p=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(2)=12+q=7\\Rightarrow q=-5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(2)=12-10+r=8\\Rightarrow r=6\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q7",
+      "status": "worked",
+      "method": "Constant acceleration gives a linear velocity and quadratic displacement.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=(13-5)/2=4\\mathrm{\\ m\\,s^{-2}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=5+4t\\Rightarrow s=5t+2t^2+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=3\\Rightarrow s=3+5t+2t^2\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Constant acceleration gives a linear velocity and quadratic displacement.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"a=(13-5)/2=4\\mathrm{\\ m\\,s^{-2}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=5+4t\\Rightarrow s=5t+2t^2+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=3\\Rightarrow s=3+5t+2t^2\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-a/qbronze",
+      "status": "worked",
+      "method": "Differentiate for rest instants and acceleration; use positions for the distance between points.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=3t^2-16t+5=(3t-1)(t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=\\tfrac13,5\\text{ s}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x(1/3)=\\frac{22}{27},\\quad x(5)=-50\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=\\frac{1372}{27}\\approx50.8\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=6t-16&gt;0\\Rightarrow t&gt;\\frac83\\text{ s}\"></span><p>The inequality is strict: at t=8/3 the acceleration is zero, not positive.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Differentiate for rest instants and acceleration; use positions for the distance between points.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=3t^2-16t+5=(3t-1)(t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=\\tfrac13,5\\text{ s}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x(1/3)=\\frac{22}{27},\\quad x(5)=-50\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=\\frac{1372}{27}\\approx50.8\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=6t-16&gt;0\\Rightarrow t&gt;\\frac83\\text{ s}\"></span><p>The inequality is strict: at t=8/3 the acceleration is zero, not positive.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-a/qsilver",
+      "status": "worked",
+      "method": "Distinguish negative direction from negative position.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=3t^2-18t+15=3(t-1)(t-5)\"></span><p>The motion is in the negative direction for 1&lt;t&lt;5.</p><span class=\"equation\" data-display=\"true\" data-math=\"x(1)=7,\\quad x(5)=-25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance in negative direction}=7-(-25)=32\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=t(t^2-9t+15)=0\\Rightarrow t=0,\\frac{9\\pm\\sqrt{21}}2\"></span><p>Between the two positive roots, P travels from O to x=−25 and back to O.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance on negative axis}=25+25=50\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Distinguish negative direction from negative position.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=3t^2-18t+15=3(t-1)(t-5)\"></span><p>The motion is in the negative direction for 1&lt;t&lt;5.</p><span class=\"equation\" data-display=\"true\" data-math=\"x(1)=7,\\quad x(5)=-25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance in negative direction}=7-(-25)=32\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x=t(t^2-9t+15)=0\\Rightarrow t=0,\\frac{9\\pm\\sqrt{21}}2\"></span><p>Between the two positive roots, P travels from O to x=−25 and back to O.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance on negative axis}=25+25=50\\text{ m}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-a/qgold",
+      "status": "worked",
+      "method": "Use factorisation to locate the particle and velocity signs to calculate total distance.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=\\tfrac13t^2\\big((t-3)^2+1\\big)\\ge0\"></span><p>The particle never has negative position.</p>"
+        },
+        {
+          "explanation": "<p>(i) Paula has calculated displacement. The particle reverses direction, so total distance must add the lengths of all stages.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac23t(2t-5)(t-2)=0\\Rightarrow t=0,2,\\tfrac52\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x(0)=0,\\quad x(2)=\\frac83,\\quad x(5/2)=\\frac{125}{48},\\quad x(3)=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) distance}=\\frac83+\\left(\\frac83-\\frac{125}{48}\\right)+\\left(3-\\frac{125}{48}\\right)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\frac{25}8=3.125\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use factorisation to locate the particle and velocity signs to calculate total distance.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x=\\tfrac13t^2\\big((t-3)^2+1\\big)\\ge0\"></span><p>The particle never has negative position.</p></li><li><p>(i) Paula has calculated displacement. The particle reverses direction, so total distance must add the lengths of all stages.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac23t(2t-5)(t-2)=0\\Rightarrow t=0,2,\\tfrac52\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x(0)=0,\\quad x(2)=\\frac83,\\quad x(5/2)=\\frac{125}{48},\\quad x(3)=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) distance}=\\frac83+\\left(\\frac83-\\frac{125}{48}\\right)+\\left(3-\\frac{125}{48}\\right)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\frac{25}8=3.125\\text{ m}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-b/qbronze",
+      "status": "worked",
+      "method": "The initial velocity should have units m/s, not the printed m/s². Integrate using v(0)=6.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=5t-t^2+C=5t-t^2+6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=0\\Rightarrow(t-6)(t+1)=0\\Rightarrow t=6\\text{ s}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=\\int_0^6(5t-t^2+6)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[\\tfrac52t^2-\\tfrac13t^3+6t\\right]_0^6=54\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The initial velocity should have units m/s, not the printed m/s². Integrate using v(0)=6.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=5t-t^2+C=5t-t^2+6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=0\\Rightarrow(t-6)(t+1)=0\\Rightarrow t=6\\text{ s}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=\\int_0^6(5t-t^2+6)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[\\tfrac52t^2-\\tfrac13t^3+6t\\right]_0^6=54\\text{ m}\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-b/qsilver",
+      "status": "worked",
+      "method": "Integrate acceleration; velocity is nonnegative throughout[0,3].",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=9t-3t^2\\quad(v(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\frac{27}4-3(t-\\tfrac32)^2\\Rightarrow\\max|v|=\\frac{27}4=6.75\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=\\int_0^3(9t-3t^2)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[\\tfrac92t^2-t^3\\right]_0^3=13.5\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Integrate acceleration; velocity is nonnegative throughout[0,3].</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=9t-3t^2\\quad(v(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\frac{27}4-3(t-\\tfrac32)^2\\Rightarrow\\max|v|=\\frac{27}4=6.75\\mathrm{\\ m\\,s^{-1}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=\\int_0^3(9t-3t^2)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[\\tfrac92t^2-t^3\\right]_0^3=13.5\\text{ m}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-b/qgold",
+      "status": "worked",
+      "method": "Integrate, find the reversal time and split the distance there.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=26t-6t^2=2t(13-3t)\\quad(v(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=13t^2-2t^3\\quad(s(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t_{\\rm turn}=13/3,\\quad s(13/3)=2197/27,\\quad s(5)=75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=2(2197/27)-75=2369/27\\approx87.7\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=t^2(13-2t)=0\\Rightarrow t=6.5\\text{ s on return}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Integrate, find the reversal time and split the distance there.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=26t-6t^2=2t(13-3t)\\quad(v(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=13t^2-2t^3\\quad(s(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t_{\\rm turn}=13/3,\\quad s(13/3)=2197/27,\\quad s(5)=75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=2(2197/27)-75=2369/27\\approx87.7\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=t^2(13-2t)=0\\Rightarrow t=6.5\\text{ s on return}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q46",
+      "status": "worked",
+      "method": "Minimise the quadratic velocity before integrating to find position.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=4t-3=0\\Rightarrow t=\\tfrac34\"></span><p>The positive t² coefficient makes this a minimum.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=\\tfrac23t^3-\\tfrac32t^2+4t\\quad(x(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x(3/4)=\\frac{39}{16}=2.4375\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Minimise the quadratic velocity before integrating to find position.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=4t-3=0\\Rightarrow t=\\tfrac34\"></span><p>The positive t² coefficient makes this a minimum.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=\\tfrac23t^3-\\tfrac32t^2+4t\\quad(x(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x(3/4)=\\frac{39}{16}=2.4375\\text{ m}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q49",
+      "status": "worked",
+      "method": "The speed minimum gives a zero derivative at t=3.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"r=10,\\quad6p+q=0,\\quad4p+2q+10=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p=\\tfrac58,\\quad q=-\\tfrac{15}4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=\\tfrac54t-\\tfrac{15}4\\Rightarrow a(4)=\\frac54\\mathrm{\\ m\\,s^{-2}}\"></span><p>Acceleration is measured along the direction of motion.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{third-second distance}=\\int_2^3\\left(\\tfrac58t^2-\\tfrac{15}4t+10\\right)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[\\tfrac5{24}t^3-\\tfrac{15}8t^2+10t\\right]_2^3=\\frac{55}{12}\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The speed minimum gives a zero derivative at t=3.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"r=10,\\quad6p+q=0,\\quad4p+2q+10=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p=\\tfrac58,\\quad q=-\\tfrac{15}4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=\\tfrac54t-\\tfrac{15}4\\Rightarrow a(4)=\\frac54\\mathrm{\\ m\\,s^{-2}}\"></span><p>Acceleration is measured along the direction of motion.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{third-second distance}=\\int_2^3\\left(\\tfrac58t^2-\\tfrac{15}4t+10\\right)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[\\tfrac5{24}t^3-\\tfrac{15}8t^2+10t\\right]_2^3=\\frac{55}{12}\\text{ m}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q50",
+      "status": "worked",
+      "method": "Measure both positions from A, positive towards B.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"AB=25(30)-0.3(30)^2=480\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x_1=25t-0.3t^2,\\quad x_2=480-15t-0.05t^2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x_1=x_2\\Rightarrow t^2-160t+1920=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=80-8\\sqrt{70}\\approx13.07\\text{ s}\\quad(0\\le t\\le30)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=25t-0.3t^2\\approx275.5\\text{ m from }A\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Measure both positions from A, positive towards B.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"AB=25(30)-0.3(30)^2=480\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x_1=25t-0.3t^2,\\quad x_2=480-15t-0.05t^2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x_1=x_2\\Rightarrow t^2-160t+1920=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=80-8\\sqrt{70}\\approx13.07\\text{ s}\\quad(0\\le t\\le30)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=25t-0.3t^2\\approx275.5\\text{ m from }A\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q54",
+      "status": "worked",
+      "method": "Apply the chain rule, then rewrite in powers of t−2.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=-4(2-t)^3=4(t-2)^3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v\\ge0\\iff t\\ge2\\Rightarrow k=2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=\\frac{dv}{dt}=12(t-2)^2\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Apply the chain rule, then rewrite in powers of t−2.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=-4(2-t)^3=4(t-2)^3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v\\ge0\\iff t\\ge2\\Rightarrow k=2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=\\frac{dv}{dt}=12(t-2)^2\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q56",
+      "status": "worked",
+      "method": "Integrate and use both conditions at t=1. Work on t>0, where the model is defined.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=3t+t^{-2}+C,\\quad v(1)=0\\Rightarrow C=-4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=3t+\\frac1{t^2}-4\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac32t^2-t^{-1}-4t+D\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(1)=0\\Rightarrow D=\\tfrac72\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\frac32t^2-\\frac1t-4t+\\frac72\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Integrate and use both conditions at t=1. Work on t&gt;0, where the model is defined.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=3t+t^{-2}+C,\\quad v(1)=0\\Rightarrow C=-4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=3t+\\frac1{t^2}-4\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac32t^2-t^{-1}-4t+D\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(1)=0\\Rightarrow D=\\tfrac72\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\frac32t^2-\\frac1t-4t+\\frac72\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q58",
+      "status": "worked",
+      "method": "Introduce the proportionality constant and use the limiting velocity.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=kt^{-3}\\Rightarrow v=-\\frac{k}{2t^2}+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\lim_{t\\to\\infty}v=C=6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(1)=2\\Rightarrow2=-k/2+6\\Rightarrow k=8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=6-\\frac4{t^2}\\quad(t&gt;0)\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Introduce the proportionality constant and use the limiting velocity.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=kt^{-3}\\Rightarrow v=-\\frac{k}{2t^2}+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\lim_{t\\to\\infty}v=C=6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(1)=2\\Rightarrow2=-k/2+6\\Rightarrow k=8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=6-\\frac4{t^2}\\quad(t&gt;0)\"></span>",
+      "answerCheck": "matches"
+    }
+  ]
+}
