@@ -1,0 +1,1317 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 14,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.1/q1",
+      "status": "worked",
+      "method": "Raise numerator and denominator to the stated power; a negative power takes the reciprocal.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(\\frac23)^3=\\frac{2^3}{3^3}=\\frac8{27}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"4^{-2}=\\frac1{4^2}=\\frac1{16}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(\\frac15)^{-2}=5^2=25\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(\\frac43)^{-3}=(\\frac34)^3=\\frac{27}{64}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Raise numerator and denominator to the stated power; a negative power takes the reciprocal.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"(\\frac23)^3=\\frac{2^3}{3^3}=\\frac8{27}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"4^{-2}=\\frac1{4^2}=\\frac1{16}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(\\frac15)^{-2}=5^2=25\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(\\frac43)^{-3}=(\\frac34)^3=\\frac{27}{64}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.1/q2",
+      "status": "worked",
+      "method": "Substitute each x value, then plot the resulting points and join them with a smooth increasing curve.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1.2^{-3}=\\frac1{1.2^3}\\approx0.58\"></span><table class=\"practice-table\"><tr><th>x</th><th>-3</th><th>-2</th><th>-1</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td><p>y</p></td><td><p>0.58</p></td><td><p>0.69</p></td><td><p>0.83</p></td><td><p>1.00</p></td><td><p>1.20</p></td><td><p>1.44</p></td><td><p>1.73</p></td></tr></table>"
+        },
+        {
+          "explanation": "<p>The curve passes through (0,1), is positive, and approaches y=0 as x decreases.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/8ce824ce2a5f86f86bb0.png\" alt=\"Solution sketch: a1412b\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>Substitute each x value, then plot the resulting points and join them with a smooth increasing curve.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"1.2^{-3}=\\frac1{1.2^3}\\approx0.58\"></span><table class=\"practice-table\"><tr><th>x</th><th>-3</th><th>-2</th><th>-1</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td><p>y</p></td><td><p>0.58</p></td><td><p>0.69</p></td><td><p>0.83</p></td><td><p>1.00</p></td><td><p>1.20</p></td><td><p>1.44</p></td><td><p>1.73</p></td></tr></table></li><li><p>The curve passes through (0,1), is positive, and approaches y=0 as x decreases.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/8ce824ce2a5f86f86bb0.png\" alt=\"Solution sketch: a1412b\"></figure></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.1/q3",
+      "status": "worked",
+      "method": "Use the reciprocal for negative exponents; the base is below 1, so the curve decreases.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(\\frac23)^{-3}=(\\frac32)^3=\\frac{27}8\"></span><table class=\"practice-table\"><tr><th>x</th><th>-3</th><th>-2</th><th>-1</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td><p>y</p></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{27}{8}\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{9}{4}\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{3}{2}\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"1\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{2}{3}\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{4}{9}\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{8}{27}\"></span></td></tr></table>"
+        },
+        {
+          "explanation": "<p>Plot the seven exact values and draw a smooth curve through (0,1), tending towards y=0 to the right.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/5ba2c767fadff55beb5e.png\" alt=\"Solution sketch: a1413b\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x\\approx-1.7\\quad\\text{from the graph};\\qquad x=\\frac{\\ln2}{\\ln(2/3)}\\approx-1.7095\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the reciprocal for negative exponents; the base is below 1, so the curve decreases.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"(\\frac23)^{-3}=(\\frac32)^3=\\frac{27}8\"></span><table class=\"practice-table\"><tr><th>x</th><th>-3</th><th>-2</th><th>-1</th><th>0</th><th>1</th><th>2</th><th>3</th></tr><tr><td><p>y</p></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{27}{8}\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{9}{4}\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{3}{2}\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"1\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{2}{3}\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{4}{9}\"></span></td><td><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{8}{27}\"></span></td></tr></table></li><li><p>Plot the seven exact values and draw a smooth curve through (0,1), tending towards y=0 to the right.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/5ba2c767fadff55beb5e.png\" alt=\"Solution sketch: a1413b\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x\\approx-1.7\\quad\\text{from the graph};\\qquad x=\\frac{\\ln2}{\\ln(2/3)}\\approx-1.7095\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.1/q4",
+      "status": "worked",
+      "method": "Apply each transformation to A=(0,1), and calculate intercepts separately.",
+      "steps": [
+        {
+          "explanation": "<p>Translate left by 2: A becomes (−2,1), the y-intercept is (0,4), and y=0 remains the asymptote. There is no x-intercept.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/fb4a6d6ff8aa567b13da.png\" alt=\"Solution sketch: a1414a\"></figure>"
+        },
+        {
+          "explanation": "<p>Translate down by 2: A becomes (0,−1). Solve 2ˣ=2 to get the x-intercept (1,0); asymptote y=−2.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/e68b9295d3f62cbe6440.png\" alt=\"Solution sketch: a1414b\"></figure>"
+        },
+        {
+          "explanation": "<p>Double all y-coordinates: A becomes (0,2). No x-intercept; asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/c616751005b08d808bba.png\" alt=\"Solution sketch: a1414c\"></figure>"
+        },
+        {
+          "explanation": "<p>Reflect in the x-axis: A becomes (0,−1). No x-intercept; asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/85f8a4e5ac8cad4e6630.png\" alt=\"Solution sketch: a1414d\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>Apply each transformation to A=(0,1), and calculate intercepts separately.</p><ol class=\"parts\" type=\"a\"><li><p>Translate left by 2: A becomes (−2,1), the y-intercept is (0,4), and y=0 remains the asymptote. There is no x-intercept.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/fb4a6d6ff8aa567b13da.png\" alt=\"Solution sketch: a1414a\"></figure></li><li><p>Translate down by 2: A becomes (0,−1). Solve 2ˣ=2 to get the x-intercept (1,0); asymptote y=−2.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/e68b9295d3f62cbe6440.png\" alt=\"Solution sketch: a1414b\"></figure></li><li><p>Double all y-coordinates: A becomes (0,2). No x-intercept; asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/c616751005b08d808bba.png\" alt=\"Solution sketch: a1414c\"></figure></li><li><p>Reflect in the x-axis: A becomes (0,−1). No x-intercept; asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/85f8a4e5ac8cad4e6630.png\" alt=\"Solution sketch: a1414d\"></figure></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.1/q5",
+      "status": "worked",
+      "method": "Use exponential positivity and the stated transformations.",
+      "steps": [
+        {
+          "explanation": "<p>The decreasing curve passes through (0,1), has no x-intercept and has horizontal asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/ea8f034023a528a3851c.png\" alt=\"Solution sketch: a1415a\"></figure>"
+        },
+        {
+          "explanation": "<ol class=\"parts\" type=\"i\"><li><p>Shift left 3 and down 4. The asymptote is y=−4; the y-intercept is (0,−31/8).</p><span class=\"equation\" data-display=\"true\" data-math=\"(\\frac12)^{x+3}=4\\Rightarrow x=-5\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/1186ff90499b5e796ce2.png\" alt=\"Solution sketch: a1415bi\"></figure></li><li><p>Reflect in the x-axis and stretch vertically by factor 2. The intercept is (0,−2), no x-intercept, and asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/59bd653ee63bdf7873ad.png\" alt=\"Solution sketch: a1415bii\"></figure></li></ol>"
+        }
+      ],
+      "solutionHtml": "<p>Use exponential positivity and the stated transformations.</p><ol class=\"parts\" type=\"a\"><li><p>The decreasing curve passes through (0,1), has no x-intercept and has horizontal asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/ea8f034023a528a3851c.png\" alt=\"Solution sketch: a1415a\"></figure></li><li><ol class=\"parts\" type=\"i\"><li><p>Shift left 3 and down 4. The asymptote is y=−4; the y-intercept is (0,−31/8).</p><span class=\"equation\" data-display=\"true\" data-math=\"(\\frac12)^{x+3}=4\\Rightarrow x=-5\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/1186ff90499b5e796ce2.png\" alt=\"Solution sketch: a1415bi\"></figure></li><li><p>Reflect in the x-axis and stretch vertically by factor 2. The intercept is (0,−2), no x-intercept, and asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/59bd653ee63bdf7873ad.png\" alt=\"Solution sketch: a1415bii\"></figure></li></ol></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.1/q6",
+      "status": "worked",
+      "method": "Both curves meet the y-axis at (0,1); positive exponentials never cross the x-axis.",
+      "steps": [
+        {
+          "explanation": "<p>g(−x) is the reflection of g(x) in the y-axis. Both have asymptote y=0, approached in opposite directions.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/70a4b3c7eb6efdcc16a9.png\" alt=\"Solution sketch: a1416a\"></figure>"
+        },
+        {
+          "explanation": "<p>g(x/2) is a horizontal stretch by factor 2, so it grows more slowly for x&gt;0. Both have asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/6f360796ee30ae3a7c9c.png\" alt=\"Solution sketch: a1416b\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>Both curves meet the y-axis at (0,1); positive exponentials never cross the x-axis.</p><ol class=\"parts\" type=\"a\"><li><p>g(−x) is the reflection of g(x) in the y-axis. Both have asymptote y=0, approached in opposite directions.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/70a4b3c7eb6efdcc16a9.png\" alt=\"Solution sketch: a1416a\"></figure></li><li><p>g(x/2) is a horizontal stretch by factor 2, so it grows more slowly for x&gt;0. Both have asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/6f360796ee30ae3a7c9c.png\" alt=\"Solution sketch: a1416b\"></figure></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.1/q7",
+      "status": "worked",
+      "method": "Substitute the two points and divide to eliminate k.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"ka=2,\\quad ka^{-2}=128\\Rightarrow a^3=\\frac2{128}=\\frac1{64}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=\\frac14,\\quad k=\\frac2a=8\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Substitute the two points and divide to eliminate k.</p><span class=\"equation\" data-display=\"true\" data-math=\"ka=2,\\quad ka^{-2}=128\\Rightarrow a^3=\\frac2{128}=\\frac1{64}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=\\frac14,\\quad k=\\frac2a=8\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.2/q1",
+      "status": "worked",
+      "method": "Start from eˣ, whose y-intercept is 1 and horizontal asymptote is y=0.",
+      "steps": [
+        {
+          "explanation": "<p>Reflection in the y-axis: decreasing through (0,1), asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/e215b24b2f6324d797da.png\" alt=\"Solution sketch: a1421a\"></figure>"
+        },
+        {
+          "explanation": "<p>Translate left 5 and down 6; asymptote y=−6.</p><span class=\"equation\" data-display=\"true\" data-math=\"y(0)=e^5-6,\\quad y=0\\Rightarrow x=\\ln6-5\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/3ce5bde883d0588ccc6a.png\" alt=\"Solution sketch: a1421b\"></figure>"
+        },
+        {
+          "explanation": "<p>Reflect and stretch vertically by 3, then move down 5. Intercept (0,−8), no real x-intercept, asymptote y=−5.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/ca075145e3c114ec988d.png\" alt=\"Solution sketch: a1421c\"></figure>"
+        },
+        {
+          "explanation": "<p>Horizontal compression by factor 1/4. Same intercept (0,1) and asymptote y=0; faster growth for x&gt;0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/155b337c009ef73266cc.png\" alt=\"Solution sketch: a1421d\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y(0)=1,\\quad y=0\\Rightarrow x=\\ln(6/5)\"></span><p>Decreasing curve with horizontal asymptote y=6.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/59eae7295064995af28e.png\" alt=\"Solution sketch: a1421e\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y(0)=-1,\\quad y=0\\Rightarrow x=2\\ln2\"></span><p>Horizontal stretch by 2 and downward translation by 2; asymptote y=−2.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/72eefc53c2e3d7da0e4f.png\" alt=\"Solution sketch: a1421f\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>Start from eˣ, whose y-intercept is 1 and horizontal asymptote is y=0.</p><ol class=\"parts\" type=\"a\"><li><p>Reflection in the y-axis: decreasing through (0,1), asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/e215b24b2f6324d797da.png\" alt=\"Solution sketch: a1421a\"></figure></li><li><p>Translate left 5 and down 6; asymptote y=−6.</p><span class=\"equation\" data-display=\"true\" data-math=\"y(0)=e^5-6,\\quad y=0\\Rightarrow x=\\ln6-5\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/3ce5bde883d0588ccc6a.png\" alt=\"Solution sketch: a1421b\"></figure></li><li><p>Reflect and stretch vertically by 3, then move down 5. Intercept (0,−8), no real x-intercept, asymptote y=−5.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/ca075145e3c114ec988d.png\" alt=\"Solution sketch: a1421c\"></figure></li><li><p>Horizontal compression by factor 1/4. Same intercept (0,1) and asymptote y=0; faster growth for x&gt;0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/155b337c009ef73266cc.png\" alt=\"Solution sketch: a1421d\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"y(0)=1,\\quad y=0\\Rightarrow x=\\ln(6/5)\"></span><p>Decreasing curve with horizontal asymptote y=6.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/59eae7295064995af28e.png\" alt=\"Solution sketch: a1421e\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"y(0)=-1,\\quad y=0\\Rightarrow x=2\\ln2\"></span><p>Horizontal stretch by 2 and downward translation by 2; asymptote y=−2.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/72eefc53c2e3d7da0e4f.png\" alt=\"Solution sketch: a1421f\"></figure></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.2/q2",
+      "status": "worked",
+      "method": "Differentiate e^(kx) by multiplying by k.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"f^{\\prime}(x)=\\frac12e^{x/2}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"f^{\\prime}(x)=-5e^{-5x}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"f^{\\prime}(x)=-4(6)e^{6x}=-24e^{6x}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"f^{\\prime}(x)=7(\\frac13)e^{x/3}=\\frac73e^{x/3}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Differentiate e^(kx) by multiplying by k.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"f^{\\prime}(x)=\\frac12e^{x/2}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"f^{\\prime}(x)=-5e^{-5x}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"f^{\\prime}(x)=-4(6)e^{6x}=-24e^{6x}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"f^{\\prime}(x)=7(\\frac13)e^{x/3}=\\frac73e^{x/3}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.2/q3",
+      "status": "worked",
+      "method": "Simplify products and quotients of exponentials before differentiating term by term.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dy}{dx}=3(2)e^{2x}+4e^{4x}=6e^{2x}+4e^{4x}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y=6e^{-2x}+5e^{-x}\\Rightarrow\\frac{dy}{dx}=-12e^{-2x}-5e^{-x}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y=e^x-4e^{2x}\\Rightarrow\\frac{dy}{dx}=e^x-8e^{2x}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y=2e^{-3x}-e^{2x}\\Rightarrow\\frac{dy}{dx}=-6e^{-3x}-2e^{2x}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Simplify products and quotients of exponentials before differentiating term by term.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dy}{dx}=3(2)e^{2x}+4e^{4x}=6e^{2x}+4e^{4x}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"y=6e^{-2x}+5e^{-x}\\Rightarrow\\frac{dy}{dx}=-12e^{-2x}-5e^{-x}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"y=e^x-4e^{2x}\\Rightarrow\\frac{dy}{dx}=e^x-8e^{2x}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"y=2e^{-3x}-e^{2x}\\Rightarrow\\frac{dy}{dx}=-6e^{-3x}-2e^{2x}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.2/q4",
+      "status": "worked",
+      "method": "Use e^(u+v)=eᵘeᵛ and separate the constant factor.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"e^{5x+4}=e^4e^{5x}\\Rightarrow A=e^4,\\ b=5\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"e^{7x-1}=e^{-1}e^{7x}\\Rightarrow A=e^{-1},\\ b=7\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"e^{3-x/2}=e^3e^{-x/2}\\Rightarrow A=e^3,\\ b=-\\frac12\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use e^(u+v)=eᵘeᵛ and separate the constant factor.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"e^{5x+4}=e^4e^{5x}\\Rightarrow A=e^4,\\ b=5\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"e^{7x-1}=e^{-1}e^{7x}\\Rightarrow A=e^{-1},\\ b=7\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"e^{3-x/2}=e^3e^{-x/2}\\Rightarrow A=e^3,\\ b=-\\frac12\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.2/q5",
+      "status": "worked",
+      "method": "Rewrite negative powers and expand the product before differentiating.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y=8x^2-e^{-6x}\\Rightarrow\\frac{dy}{dx}=16x+6e^{-6x}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y=8e^{4x}-6e^{-x}\\Rightarrow\\frac{dy}{dx}=32e^{4x}+6e^{-x}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Rewrite negative powers and expand the product before differentiating.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"y=8x^2-e^{-6x}\\Rightarrow\\frac{dy}{dx}=16x+6e^{-6x}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"y=8e^{4x}-6e^{-x}\\Rightarrow\\frac{dy}{dx}=32e^{4x}+6e^{-x}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.2/q6",
+      "status": "worked",
+      "method": "Write the algebraic terms as powers of x and differentiate each term.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y=5x^{1/2}+10x^{-2}-4e^{-2x}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dy}{dx}=\\frac52x^{-1/2}-20x^{-3}+8e^{-2x}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Write the algebraic terms as powers of x and differentiate each term.</p><span class=\"equation\" data-display=\"true\" data-math=\"y=5x^{1/2}+10x^{-2}-4e^{-2x}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dy}{dx}=\\frac52x^{-1/2}-20x^{-3}+8e^{-2x}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.2/q7",
+      "status": "worked",
+      "method": "Expand the exponent, then separate its constant part.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"e^{2(3x-1)}=e^{6x-2}=e^{-2}e^{6x};\\quad A=e^{-2},\\ b=6\"></span>"
+        },
+        {
+          "explanation": "<p>An increasing positive exponential, with y-intercept (0,e⁻²), no x-intercept, and horizontal asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/1d7fbc2621468543bb20.png\" alt=\"Solution sketch: a1427b\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>Expand the exponent, then separate its constant part.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"e^{2(3x-1)}=e^{6x-2}=e^{-2}e^{6x};\\quad A=e^{-2},\\ b=6\"></span></li><li><p>An increasing positive exponential, with y-intercept (0,e⁻²), no x-intercept, and horizontal asymptote y=0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/1d7fbc2621468543bb20.png\" alt=\"Solution sketch: a1427b\"></figure></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.2/q8",
+      "status": "worked",
+      "method": "Use the derivative for the gradient and point-gradient form for the tangent.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"f(\\frac12)=e^2,\\quad f^{\\prime}(x)=4e^{4x}\\Rightarrow m=4e^2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"y-e^2=4e^2(x-\\frac12)\\Rightarrow y=4e^2x-e^2\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the derivative for the gradient and point-gradient form for the tangent.</p><span class=\"equation\" data-display=\"true\" data-math=\"f(\\frac12)=e^2,\\quad f^{\\prime}(x)=4e^{4x}\\Rightarrow m=4e^2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"y-e^2=4e^2(x-\\frac12)\\Rightarrow y=4e^2x-e^2\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.3/q1",
+      "status": "worked",
+      "method": "Differentiate the exponential and substitute t=10.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dP}{dt}=20000(0.01)e^{0.01t}=200e^{0.01t}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P^{\\prime}(10)=200e^{0.1}\\approx221.0\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the exponential and substitute t=10.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dP}{dt}=20000(0.01)e^{0.01t}=200e^{0.01t}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P^{\\prime}(10)=200e^{0.1}\\approx221.0\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.3/q2",
+      "status": "worked",
+      "method": "The negative exponent gives a decreasing exponential.",
+      "steps": [
+        {
+          "explanation": "<p>V(0)=32,000, V remains positive and tends to zero as t increases.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/a34e527cd0939ef02524.png\" alt=\"Solution sketch: a1432a\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dV}{dt}=32000(-0.08)e^{-0.08t}=-2560e^{-0.08t}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"V^{\\prime}(20)=-2560e^{-1.6}\\approx-516.9\"></span>"
+        },
+        {
+          "explanation": "<p>The negative rate means the car is losing value at that time.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The negative exponent gives a decreasing exponential.</p><ol class=\"parts\" type=\"a\"><li><p>V(0)=32,000, V remains positive and tends to zero as t increases.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/a34e527cd0939ef02524.png\" alt=\"Solution sketch: a1432a\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dV}{dt}=32000(-0.08)e^{-0.08t}=-2560e^{-0.08t}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"V^{\\prime}(20)=-2560e^{-1.6}\\approx-516.9\"></span></li><li><p>The negative rate means the car is losing value at that time.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.3/q3",
+      "status": "worked",
+      "method": "Use years throughout; 30 months is 2.5 years.",
+      "steps": [
+        {
+          "explanation": "<ol class=\"parts\" type=\"i\"><li><span class=\"equation\" data-display=\"true\" data-math=\"D(0)=1300\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"D(2)=1300e^{1/4}\\approx1669\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"D(2.5)=1300e^{5/16}\\approx1777\"></span></li></ol>"
+        },
+        {
+          "explanation": "<p>1300 is the initial number of deer.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dD}{dt}=\\frac{1300}{8}e^{t/8}=162.5e^{t/8}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"D^{\\prime}(8)=162.5e\\approx441.72\\approx440\\text{ deer/year (2 s.f.)}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"D^{\\prime}(80)=162.5e^{10}\\approx3579300\\text{ deer/year}\"></span><p>Unbounded growth at this rate is unrealistic in a habitat with finite food and space, so the model cannot remain valid indefinitely.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use years throughout; 30 months is 2.5 years.</p><ol class=\"parts\" type=\"a\"><li><ol class=\"parts\" type=\"i\"><li><span class=\"equation\" data-display=\"true\" data-math=\"D(0)=1300\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"D(2)=1300e^{1/4}\\approx1669\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"D(2.5)=1300e^{5/16}\\approx1777\"></span></li></ol></li><li><p>1300 is the initial number of deer.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dD}{dt}=\\frac{1300}{8}e^{t/8}=162.5e^{t/8}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"D^{\\prime}(8)=162.5e\\approx441.72\\approx440\\text{ deer/year (2 s.f.)}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"D^{\\prime}(80)=162.5e^{10}\\approx3579300\\text{ deer/year}\"></span><p>Unbounded growth at this rate is unrealistic in a habitat with finite food and space, so the model cannot remain valid indefinitely.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.3/q4",
+      "status": "worked",
+      "method": "Substitute t=6 and differentiate to compare the rates of depreciation.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"V(6)=29000e^{-0.72}\\approx14115.82\\text{ pounds}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"V^{\\prime}(t)=-3480e^{-0.12t}\"></span><ol class=\"parts\" type=\"i\"><li><span class=\"equation\" data-display=\"true\" data-math=\"V^{\\prime}(2)=-3480e^{-0.24}\\approx-2737.46\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"V^{\\prime}(6)=-3480e^{-0.72}\\approx-1693.90\"></span></li></ol>"
+        },
+        {
+          "explanation": "<p>The value falls from £29,000 to about £14,116. The annual loss is larger initially, then slows as the magnitude of the negative derivative decreases.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Substitute t=6 and differentiate to compare the rates of depreciation.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"V(6)=29000e^{-0.72}\\approx14115.82\\text{ pounds}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"V^{\\prime}(t)=-3480e^{-0.12t}\"></span><ol class=\"parts\" type=\"i\"><li><span class=\"equation\" data-display=\"true\" data-math=\"V^{\\prime}(2)=-3480e^{-0.24}\\approx-2737.46\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"V^{\\prime}(6)=-3480e^{-0.72}\\approx-1693.90\"></span></li></ol></li><li><p>The value falls from £29,000 to about £14,116. The annual loss is larger initially, then slows as the magnitude of the negative derivative decreases.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.3/q5",
+      "status": "worked",
+      "method": "The year 2005 corresponds to t=25.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(0)=P_0=18000\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P^{\\prime}(t)=360e^{0.02t};\\quad P^{\\prime}(25)=360e^{0.5}\\approx594\\text{ people/year}\"></span>"
+        },
+        {
+          "explanation": "<p>The model predicts unlimited growth at an ever-increasing absolute rate. A town has finite space and resources, so this is not credible indefinitely.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The year 2005 corresponds to t=25.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(0)=P_0=18000\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P^{\\prime}(t)=360e^{0.02t};\\quad P^{\\prime}(25)=360e^{0.5}\\approx594\\text{ people/year}\"></span></li><li><p>The model predicts unlimited growth at an ever-increasing absolute rate. A town has finite space and resources, so this is not credible indefinitely.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.3/q6",
+      "status": "worked",
+      "method": "Substitute the time and differentiate to compare the derivative with P.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(6)=250e^{-0.9}\\approx101.6\\text{ mg}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dP}{dt}=250(-0.15)e^{-0.15t}=-0.15P;\\quad k=-0.15\"></span>"
+        },
+        {
+          "explanation": "<p>A negative k means the modelled amount in the body decreases over time.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Substitute the time and differentiate to compare the derivative with P.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(6)=250e^{-0.9}\\approx101.6\\text{ mg}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dP}{dt}=250(-0.15)e^{-0.15t}=-0.15P;\\quad k=-0.15\"></span></li><li><p>A negative k means the modelled amount in the body decreases over time.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.3/q7",
+      "status": "worked",
+      "method": "Use V(0), V(7), then the derivative to bracket the stated threshold.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"V(0)=150000\\text{ pounds}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"V(7)=150000e^{0.42}\\approx228294\\text{ pounds}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dV}{dt}=9000e^{0.06t}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"V^{\\prime}(8)\\approx14544.67&lt;15000&lt;V^{\\prime}(9)\\approx15444.06\"></span><p>The rate is continuous and increasing, so it passes through £15,000 per year between years 8 and 9, meeting the model’s stated condition.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use V(0), V(7), then the derivative to bracket the stated threshold.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"V(0)=150000\\text{ pounds}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"V(7)=150000e^{0.42}\\approx228294\\text{ pounds}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dV}{dt}=9000e^{0.06t}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"V^{\\prime}(8)\\approx14544.67&lt;15000&lt;V^{\\prime}(9)\\approx15444.06\"></span><p>The rate is continuous and increasing, so it passes through £15,000 per year between years 8 and 9, meeting the model’s stated condition.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.4/q1",
+      "status": "worked",
+      "method": "Use the equivalence aᵇ=c ⇔ logₐc=b.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"10^3=1000\\Leftrightarrow\\log_{10}1000=3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_2 8=3\\Leftrightarrow2^3=8\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"7^2=49\\Leftrightarrow\\log_7 49=2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"6^{-3}=\\frac1{216}\\Leftrightarrow\\log_6\\frac1{216}=-3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_4\\frac1{256}=-4\\Leftrightarrow4^{-4}=\\frac1{256}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_9 9=1\\Leftrightarrow9^1=9\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"25^{1/2}=5\\Leftrightarrow\\log_{25}5=\\frac12\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_{27}3=\\frac13\\Leftrightarrow27^{1/3}=3\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the equivalence aᵇ=c ⇔ logₐc=b.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"10^3=1000\\Leftrightarrow\\log_{10}1000=3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_2 8=3\\Leftrightarrow2^3=8\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"7^2=49\\Leftrightarrow\\log_7 49=2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"6^{-3}=\\frac1{216}\\Leftrightarrow\\log_6\\frac1{216}=-3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_4\\frac1{256}=-4\\Leftrightarrow4^{-4}=\\frac1{256}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_9 9=1\\Leftrightarrow9^1=9\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"25^{1/2}=5\\Leftrightarrow\\log_{25}5=\\frac12\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_{27}3=\\frac13\\Leftrightarrow27^{1/3}=3\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.4/q2",
+      "status": "worked",
+      "method": "Express the logarithm’s argument as a power of its base.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"64=8^2\\Rightarrow\\log_8 64=2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac1{16}=2^{-4}\\Rightarrow\\log_2\\frac1{16}=-4\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"5=5^1\\Rightarrow\\log_5 5=1\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\sqrt[3]3=3^{1/3}\\Rightarrow\\log_3\\sqrt[3]3=\\frac13\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"0.01=10^{-2}\\Rightarrow\\log_{10}0.01=-2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1=9^0\\Rightarrow\\log_9 1=0\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Express the logarithm’s argument as a power of its base.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"64=8^2\\Rightarrow\\log_8 64=2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac1{16}=2^{-4}\\Rightarrow\\log_2\\frac1{16}=-4\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"5=5^1\\Rightarrow\\log_5 5=1\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\sqrt[3]3=3^{1/3}\\Rightarrow\\log_3\\sqrt[3]3=\\frac13\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"0.01=10^{-2}\\Rightarrow\\log_{10}0.01=-2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1=9^0\\Rightarrow\\log_9 1=0\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.4/q3",
+      "status": "worked",
+      "method": "Convert to exponential form. A logarithm base must be positive and unequal to 1.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=3^4=81\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3x-1=5^3=125\\Rightarrow x=42\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x^3=729\\Rightarrow x=9\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x^2=4x\\Rightarrow x(x-4)=0\\Rightarrow x=4\\quad(x=0\\text{ is not a valid base})\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Convert to exponential form. A logarithm base must be positive and unequal to 1.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x=3^4=81\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"3x-1=5^3=125\\Rightarrow x=42\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x^3=729\\Rightarrow x=9\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x^2=4x\\Rightarrow x(x-4)=0\\Rightarrow x=4\\quad(x=0\\text{ is not a valid base})\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.4/q4",
+      "status": "worked",
+      "method": "Change base using logₐb=ln(b)/ln(a).",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_5 18=\\frac{\\ln18}{\\ln5}\\approx1.7959\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_e0.6=\\ln0.6\\approx-0.5108\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2\\log_8 9=\\frac{2\\ln9}{\\ln8}\\approx2.1133\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Change base using logₐb=ln(b)/ln(a).</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_5 18=\\frac{\\ln18}{\\ln5}\\approx1.7959\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_e0.6=\\ln0.6\\approx-0.5108\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"2\\log_8 9=\\frac{2\\ln9}{\\ln8}\\approx2.1133\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.4/q5",
+      "status": "worked",
+      "method": "Rewrite the logarithmic equation in exponential form.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2x-1=8^{5/3}=(\\sqrt[3]8)^5=32\\Rightarrow x=\\frac{33}2\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Rewrite the logarithmic equation in exponential form.</p><span class=\"equation\" data-display=\"true\" data-math=\"2x-1=8^{5/3}=(\\sqrt[3]8)^5=32\\Rightarrow x=\\frac{33}2\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.4/q6",
+      "status": "worked",
+      "method": "Raise both sides of the corresponding power equation to 4/3.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x^{3/4}=64\\Rightarrow x=64^{4/3}=4^4=256\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Raise both sides of the corresponding power equation to 4/3.</p><span class=\"equation\" data-display=\"true\" data-math=\"x^{3/4}=64\\Rightarrow x=64^{4/3}=4^4=256\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.4/q7",
+      "status": "worked",
+      "method": "Convert to a power; use 125=5³.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=125^{-4/3}=(5^3)^{-4/3}=5^{-4}=\\frac1{625}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Convert to a power; use 125=5³.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=125^{-4/3}=(5^3)^{-4/3}=5^{-4}=\\frac1{625}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.4/q8",
+      "status": "worked",
+      "method": "A cube root is a power of 1/3; logₐ(aʳ)=r for a>0, a≠1.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_a\\sqrt[3]{a^2}=\\log_a a^{2/3}=\\frac23\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>A cube root is a power of 1/3; logₐ(aʳ)=r for a&gt;0, a≠1.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\log_a\\sqrt[3]{a^2}=\\log_a a^{2/3}=\\frac23\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.5/q1",
+      "status": "worked",
+      "method": "Use the power, product and quotient laws.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"4\\log_7 2=\\log_7 2^4=\\log_7 16\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_3 16-\\log_3 2=\\log_3(16/2)=\\log_3 8\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_5 6+\\log_5 7=\\log_5(6\\cdot7)=\\log_5 42\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3\\log_4 5+2\\log_4 8=\\log_4(5^3 8^2)=\\log_4 8000\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3\\log_7 4-4\\log_7 3=\\log_7(4^3/3^4)=\\log_7\\frac{64}{81}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_6 3+\\log_6 4-\\log_6 5=\\log_6\\frac{12}5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the power, product and quotient laws.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"4\\log_7 2=\\log_7 2^4=\\log_7 16\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_3 16-\\log_3 2=\\log_3(16/2)=\\log_3 8\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_5 6+\\log_5 7=\\log_5(6\\cdot7)=\\log_5 42\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"3\\log_4 5+2\\log_4 8=\\log_4(5^3 8^2)=\\log_4 8000\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"3\\log_7 4-4\\log_7 3=\\log_7(4^3/3^4)=\\log_7\\frac{64}{81}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_6 3+\\log_6 4-\\log_6 5=\\log_6\\frac{12}5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.5/q2",
+      "status": "worked",
+      "method": "Combine into one logarithm and recognise the resulting power of the base.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_{10}(5\\cdot20)=\\log_{10}100=2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_8(2^4\\cdot4)=\\log_8 64=2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_2(48/6)=\\log_2 8=3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_5(4/20)=\\log_5(5^{-1})=-1\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_8\\frac{5^2 2^4}{10^2}=\\log_8 4=\\frac23\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Combine into one logarithm and recognise the resulting power of the base.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_{10}(5\\cdot20)=\\log_{10}100=2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_8(2^4\\cdot4)=\\log_8 64=2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_2(48/6)=\\log_2 8=3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_5(4/20)=\\log_5(5^{-1})=-1\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_8\\frac{5^2 2^4}{10^2}=\\log_8 4=\\frac23\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.5/q3",
+      "status": "worked",
+      "method": "For positive x,y,z and a>0, a≠1, expand products, quotients and powers using the logarithm laws.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_a a^3=3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_a(x^2y^3)=2\\log_a x+3\\log_a y\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_a(x^3/z^4)=3\\log_a x-4\\log_a z\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_a\\frac{x\\sqrt y}{z^2}=\\log_a x+\\frac12\\log_a y-2\\log_a z\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac13\\log_a(ax^2yz^4)=\\frac13+\\frac23\\log_a x+\\frac13\\log_a y+\\frac43\\log_a z\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_a\\frac{a^3x^4y}{\\sqrt z}=3+4\\log_a x+\\log_a y-\\frac12\\log_a z\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>For positive x,y,z and a&gt;0, a≠1, expand products, quotients and powers using the logarithm laws.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_a a^3=3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_a(x^2y^3)=2\\log_a x+3\\log_a y\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_a(x^3/z^4)=3\\log_a x-4\\log_a z\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_a\\frac{x\\sqrt y}{z^2}=\\log_a x+\\frac12\\log_a y-2\\log_a z\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac13\\log_a(ax^2yz^4)=\\frac13+\\frac23\\log_a x+\\frac13\\log_a y+\\frac43\\log_a z\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_a\\frac{a^3x^4y}{\\sqrt z}=3+4\\log_a x+\\log_a y-\\frac12\\log_a z\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.5/q4",
+      "status": "worked",
+      "method": "Combine logarithms before converting to powers. Check that every original logarithm has a positive argument.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_6(4x)=2\\Rightarrow4x=36\\Rightarrow x=9\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_8 x=\\log_8 36+\\log_8 8=\\log_8 288\\Rightarrow x=288\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_6 x^2=\\log_6(36\\cdot4)\\Rightarrow x^2=144\\Rightarrow x=12\\ (x&gt;0)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_4\\frac{(x-1)^2}{9}=1\\Rightarrow(x-1)^2=36\\Rightarrow x=7\\ (x&gt;1)\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Combine logarithms before converting to powers. Check that every original logarithm has a positive argument.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_6(4x)=2\\Rightarrow4x=36\\Rightarrow x=9\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_8 x=\\log_8 36+\\log_8 8=\\log_8 288\\Rightarrow x=288\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_6 x^2=\\log_6(36\\cdot4)\\Rightarrow x^2=144\\Rightarrow x=12\\ (x&gt;0)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_4\\frac{(x-1)^2}{9}=1\\Rightarrow(x-1)^2=36\\Rightarrow x=7\\ (x&gt;1)\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.5/q5",
+      "status": "worked",
+      "method": "Move both variable logarithms to one side, combine, and use x>0.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_5(4^3x^2)=2\\Rightarrow64x^2=25\\Rightarrow x=\\frac58\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Move both variable logarithms to one side, combine, and use x&gt;0.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\log_5(4^3x^2)=2\\Rightarrow64x^2=25\\Rightarrow x=\\frac58\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.5/q6",
+      "status": "worked",
+      "method": "Collect the logarithms and convert to exponential form.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3\\log_5 x=4\\Rightarrow x=5^{4/3}=5\\sqrt[3]5;\\quad p=5,\\ q=3,\\ r=5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Collect the logarithms and convert to exponential form.</p><span class=\"equation\" data-display=\"true\" data-math=\"3\\log_5 x=4\\Rightarrow x=5^{4/3}=5\\sqrt[3]5;\\quad p=5,\\ q=3,\\ r=5\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.5/q7",
+      "status": "worked",
+      "method": "Use the quotient law and check x>1/4.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_3\\frac{2x+5}{4x-1}=2\\Rightarrow2x+5=9(4x-1)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"34x=14\\Rightarrow x=\\frac7{17}&gt;\\frac14\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the quotient law and check x&gt;1/4.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\log_3\\frac{2x+5}{4x-1}=2\\Rightarrow2x+5=9(4x-1)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"34x=14\\Rightarrow x=\\frac7{17}&gt;\\frac14\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.5/q8",
+      "status": "worked",
+      "method": "Combine into one logarithm; the original domain is x>1.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{x+5}{(x-1)^2}=2\\Rightarrow x+5=2(x-1)^2\\Rightarrow2x^2-5x-3=0\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(2x+1)(x-3)=0\\Rightarrow x=-\\frac12\\text{ or }3\"></span><p>Only x=3 lies in the original domain, so it is the sole solution.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Combine into one logarithm; the original domain is x&gt;1.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{x+5}{(x-1)^2}=2\\Rightarrow x+5=2(x-1)^2\\Rightarrow2x^2-5x-3=0\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(2x+1)(x-3)=0\\Rightarrow x=-\\frac12\\text{ or }3\"></span><p>Only x=3 lies in the original domain, so it is the sole solution.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.6/q1",
+      "status": "worked",
+      "method": "Take logarithms of both sides and bring the exponent down.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x\\ln6=\\ln31\\Rightarrow x=\\frac{\\ln31}{\\ln6}\\approx 1.92\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac{\\ln70}{\\ln3}\\approx 3.87\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2x\\ln5=\\ln640\\Rightarrow x=\\frac{\\ln640}{2\\ln5}\\approx 2.01\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Take logarithms of both sides and bring the exponent down.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x\\ln6=\\ln31\\Rightarrow x=\\frac{\\ln31}{\\ln6}\\approx 1.92\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac{\\ln70}{\\ln3}\\approx 3.87\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"2x\\ln5=\\ln640\\Rightarrow x=\\frac{\\ln640}{2\\ln5}\\approx 2.01\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.6/q2",
+      "status": "worked",
+      "method": "Take logarithms and solve the resulting linear equation in x.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(x+3)\\ln5=\\ln0.3\\Rightarrow x=\\frac{\\ln0.3}{\\ln5}-3\\approx -3.75\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(2x-5)\\ln4=\\ln85\\Rightarrow x=\\frac12(5+\\frac{\\ln85}{\\ln4})\\approx 4.1\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(1-4x)\\ln7=\\ln11\\Rightarrow x=\\frac14(1-\\frac{\\ln11}{\\ln7})\\approx -0.0581\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Take logarithms and solve the resulting linear equation in x.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"(x+3)\\ln5=\\ln0.3\\Rightarrow x=\\frac{\\ln0.3}{\\ln5}-3\\approx -3.75\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(2x-5)\\ln4=\\ln85\\Rightarrow x=\\frac12(5+\\frac{\\ln85}{\\ln4})\\approx 4.1\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(1-4x)\\ln7=\\ln11\\Rightarrow x=\\frac14(1-\\frac{\\ln11}{\\ln7})\\approx -0.0581\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.6/q3",
+      "status": "worked",
+      "method": "Use u=baseˣ, solve the quadratic in u, then take logarithms of each positive root.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"u=5^x;\\quad(u-5)(u-6)=0\\Rightarrow u=5,6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=1,\\ \\frac{\\ln6}{\\ln5}\\approx1.11\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"u=4^x;\\quad(u-4)(u-15)=0\\Rightarrow u=4,15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=1,\\ \\frac{\\ln15}{\\ln4}\\approx1.95\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"u=5^x;\\quad(5u-9)(u-2)=0\\Rightarrow u=\\frac95,2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac{\\ln(9/5)}{\\ln5}\\approx0.365,\\quad\\frac{\\ln2}{\\ln5}\\approx0.431\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use u=baseˣ, solve the quadratic in u, then take logarithms of each positive root.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"u=5^x;\\quad(u-5)(u-6)=0\\Rightarrow u=5,6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=1,\\ \\frac{\\ln6}{\\ln5}\\approx1.11\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"u=4^x;\\quad(u-4)(u-15)=0\\Rightarrow u=4,15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=1,\\ \\frac{\\ln15}{\\ln4}\\approx1.95\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"u=5^x;\\quad(5u-9)(u-2)=0\\Rightarrow u=\\frac95,2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac{\\ln(9/5)}{\\ln5}\\approx0.365,\\quad\\frac{\\ln2}{\\ln5}\\approx0.431\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.6/q4",
+      "status": "worked",
+      "method": "Factorise the substituted quadratic and enforce positivity of 3ˣ.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(3u+4)(3u-5)=0\\Rightarrow u=-\\frac43,\\frac53\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3^{2x+2}=9(3^x)^2\\Rightarrow9u^2-3u-20=0\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3^x=\\frac53\\Rightarrow x=\\log_3\\frac53\\approx0.465\"></span><p>The other root is negative, whereas 3ˣ is positive for every real x; therefore only one real solution exists.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Factorise the substituted quadratic and enforce positivity of 3ˣ.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"(3u+4)(3u-5)=0\\Rightarrow u=-\\frac43,\\frac53\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"3^{2x+2}=9(3^x)^2\\Rightarrow9u^2-3u-20=0\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"3^x=\\frac53\\Rightarrow x=\\log_3\\frac53\\approx0.465\"></span><p>The other root is negative, whereas 3ˣ is positive for every real x; therefore only one real solution exists.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.6/q5",
+      "status": "worked",
+      "method": "Take logarithms and collect the terms containing x.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x(\\ln8-\\ln5)=3\\ln5\\Rightarrow x=\\frac{3\\ln5}{\\ln8-\\ln5}\\approx 10.3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3\\ln7=x(\\ln7+2\\ln3)\\Rightarrow x=\\frac{3\\ln7}{\\ln7+2\\ln3}\\approx 1.41\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x(2\\ln6-\\ln4)=3\\ln4\\Rightarrow x=\\frac{3\\ln4}{2\\ln6-\\ln4}\\approx 1.89\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Take logarithms and collect the terms containing x.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x(\\ln8-\\ln5)=3\\ln5\\Rightarrow x=\\frac{3\\ln5}{\\ln8-\\ln5}\\approx 10.3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"3\\ln7=x(\\ln7+2\\ln3)\\Rightarrow x=\\frac{3\\ln7}{\\ln7+2\\ln3}\\approx 1.41\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x(2\\ln6-\\ln4)=3\\ln4\\Rightarrow x=\\frac{3\\ln4}{2\\ln6-\\ln4}\\approx 1.89\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.6/q6",
+      "status": "worked",
+      "method": "Take logarithms in (a); in (b), first put u=6ˣ>0.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(2x-5)\\ln7=\\ln400\\Rightarrow x=\\frac12(5+\\frac{\\ln400}{\\ln7})\\approx 4.04\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"u^2+4u-21=(u+7)(u-3)=0\\Rightarrow u=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac{\\ln3}{\\ln6}\\approx 0.613\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Take logarithms in (a); in (b), first put u=6ˣ&gt;0.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"(2x-5)\\ln7=\\ln400\\Rightarrow x=\\frac12(5+\\frac{\\ln400}{\\ln7})\\approx 4.04\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"u^2+4u-21=(u+7)(u-3)=0\\Rightarrow u=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac{\\ln3}{\\ln6}\\approx 0.613\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.6/q7",
+      "status": "worked",
+      "method": "Use logarithms for the exponential equation and exponential form for the logarithmic equation.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x(\\ln5-\\ln4)=2\\ln4+\\ln5\\Rightarrow x=\\frac{2\\ln4+\\ln5}{\\ln5-\\ln4}\\approx 19.6\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"5-x=7^{0.8}\\Rightarrow x=5-7^{0.8}\\approx 0.257\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use logarithms for the exponential equation and exponential form for the logarithmic equation.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x(\\ln5-\\ln4)=2\\ln4+\\ln5\\Rightarrow x=\\frac{2\\ln4+\\ln5}{\\ln5-\\ln4}\\approx 19.6\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"5-x=7^{0.8}\\Rightarrow x=5-7^{0.8}\\approx 0.257\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.6/q8",
+      "status": "worked",
+      "method": "Reflect 2ˣ in the x-axis and translate upwards by 7.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y(0)=6;\\quad y=0\\Rightarrow x=\\log_2 7\"></span><p>The horizontal asymptote is y=7; the curve decreases.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/3abd513e739d0da0778d.png\" alt=\"Solution sketch: a1468a\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2^x=13\\Rightarrow x=\\frac{\\ln13}{\\ln2}\\approx3.70\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Reflect 2ˣ in the x-axis and translate upwards by 7.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"y(0)=6;\\quad y=0\\Rightarrow x=\\log_2 7\"></span><p>The horizontal asymptote is y=7; the curve decreases.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/3abd513e739d0da0778d.png\" alt=\"Solution sketch: a1468a\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"2^x=13\\Rightarrow x=\\frac{\\ln13}{\\ln2}\\approx3.70\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.6/q9",
+      "status": "worked",
+      "method": "Write every exponential in terms of 3ˣ.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"9^x=(3^x)^2,\\quad3^{x+1}=3(3^x)\\Rightarrow u^2-3u-10=0\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(u-5)(u+2)=0;\\quad u&gt;0\\Rightarrow u=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac{\\ln5}{\\ln3}\\approx1.46\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Write every exponential in terms of 3ˣ.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"9^x=(3^x)^2,\\quad3^{x+1}=3(3^x)\\Rightarrow u^2-3u-10=0\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(u-5)(u+2)=0;\\quad u&gt;0\\Rightarrow u=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac{\\ln5}{\\ln3}\\approx1.46\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.7/q1",
+      "status": "worked",
+      "method": "Isolate the exponential and take natural logarithms.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=\\ln8\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{x}2=\\ln6\\Rightarrow x=2\\ln6\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x+5=\\ln81\\Rightarrow x=-5+\\ln81\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3x-1=\\ln23\\Rightarrow x=\\frac13+\\frac13\\ln23\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1-x=\\ln(29/4)\\Rightarrow x=1-\\ln(29/4)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3x=\\ln(21/2)\\Rightarrow x=\\frac13\\ln(21/2)\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Isolate the exponential and take natural logarithms.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x=\\ln8\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{x}2=\\ln6\\Rightarrow x=2\\ln6\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x+5=\\ln81\\Rightarrow x=-5+\\ln81\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"3x-1=\\ln23\\Rightarrow x=\\frac13+\\frac13\\ln23\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1-x=\\ln(29/4)\\Rightarrow x=1-\\ln(29/4)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"3x=\\ln(21/2)\\Rightarrow x=\\frac13\\ln(21/2)\"></span></li></ol><p>For part (d), the printed equation has coefficient 3, so the denominator is 3. The supplied key’s denominator 5 does not solve that equation.</p>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.7/q2",
+      "status": "worked",
+      "method": "Exponentiate both sides and solve. Keep the original logarithm argument positive.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=e^{11}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"6x=e^3\\Rightarrow x=\\frac{e^3}6\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"3-5x=e^{-1}\\Rightarrow x=\\frac{3-e^{-1}}5\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"5-2x=e^{2/5}\\Rightarrow x=\\frac{5-e^{2/5}}2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\ln(3x-5)=\\frac72\\Rightarrow x=\\frac{5+e^{7/2}}3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x^2-9x+21=1\\Rightarrow(x-4)(x-5)=0\\Rightarrow x=4,5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Exponentiate both sides and solve. Keep the original logarithm argument positive.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x=e^{11}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"6x=e^3\\Rightarrow x=\\frac{e^3}6\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"3-5x=e^{-1}\\Rightarrow x=\\frac{3-e^{-1}}5\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"5-2x=e^{2/5}\\Rightarrow x=\\frac{5-e^{2/5}}2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\ln(3x-5)=\\frac72\\Rightarrow x=\\frac{5+e^{7/2}}3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x^2-9x+21=1\\Rightarrow(x-4)(x-5)=0\\Rightarrow x=4,5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.7/q3",
+      "status": "worked",
+      "method": "Put u=eˣ>0 and factorise.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"u^2-5u+4=(u-1)(u-4)=0\\Rightarrow e^x=1,4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\ln1=0\\text{ or }x=\\ln4\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Put u=eˣ&gt;0 and factorise.</p><span class=\"equation\" data-display=\"true\" data-math=\"u^2-5u+4=(u-1)(u-4)=0\\Rightarrow e^x=1,4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\ln1=0\\text{ or }x=\\ln4\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.7/q4",
+      "status": "worked",
+      "method": "Put u=e²ˣ>0, solve the quadratic and take logarithms.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2u^2-11u+14=(2u-7)(u-2)=0\\Rightarrow u=\\frac72,2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac12\\ln\\frac72\\text{ or }x=\\frac12\\ln2\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Put u=e²ˣ&gt;0, solve the quadratic and take logarithms.</p><span class=\"equation\" data-display=\"true\" data-math=\"2u^2-11u+14=(2u-7)(u-2)=0\\Rightarrow u=\\frac72,2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac12\\ln\\frac72\\text{ or }x=\\frac12\\ln2\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.7/q5",
+      "status": "worked",
+      "method": "Put u=e^(x/2)>0, so eˣ=u².",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"u^2-u-12=(u-4)(u+3)=0\\Rightarrow u=4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{x}2=\\ln4\\Rightarrow x=\\ln16\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Put u=e^(x/2)&gt;0, so eˣ=u².</p><span class=\"equation\" data-display=\"true\" data-math=\"u^2-u-12=(u-4)(u+3)=0\\Rightarrow u=4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{x}2=\\ln4\\Rightarrow x=\\ln16\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.7/q6",
+      "status": "worked",
+      "method": "Put u=e⁴ˣ>0 and multiply through by u.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2u+\\frac{15}u=13\\Rightarrow2u^2-13u+15=(2u-3)(u-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"u=\\frac32,5\\Rightarrow x=\\frac14\\ln\\frac32\\text{ or }x=\\frac14\\ln5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Put u=e⁴ˣ&gt;0 and multiply through by u.</p><span class=\"equation\" data-display=\"true\" data-math=\"2u+\\frac{15}u=13\\Rightarrow2u^2-13u+15=(2u-3)(u-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"u=\\frac32,5\\Rightarrow x=\\frac14\\ln\\frac32\\text{ or }x=\\frac14\\ln5\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.7/q7",
+      "status": "worked",
+      "method": "Take natural logarithms and collect the x terms.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1-6x=\\ln4+x\\ln12\\Rightarrow x=\\frac{1-\\ln4}{6+\\ln12}=\\frac{1+\\ln(1/4)}{6+\\ln12}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Take natural logarithms and collect the x terms.</p><span class=\"equation\" data-display=\"true\" data-math=\"1-6x=\\ln4+x\\ln12\\Rightarrow x=\\frac{1-\\ln4}{6+\\ln12}=\\frac{1+\\ln(1/4)}{6+\\ln12}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.7/q8",
+      "status": "worked",
+      "method": "At A, x=0. At B, y=0.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"A=(0,3-2\\ln2)=(0,3-\\ln4)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\ln(x+2)=\\frac32\\Rightarrow B=(e^{3/2}-2,0)\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>At A, x=0. At B, y=0.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"A=(0,3-2\\ln2)=(0,3-\\ln4)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\ln(x+2)=\\frac32\\Rightarrow B=(e^{3/2}-2,0)\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.7/q9",
+      "status": "worked",
+      "method": "Use the initial value and the limiting exponential value, then solve T=25.",
+      "steps": [
+        {
+          "explanation": "<p>For x≥0 the curve decreases from (0,38) towards the horizontal asymptote T=7; there is no x-intercept.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/4de506f137c0032caed9.png\" alt=\"Solution sketch: a1479a\"></figure>"
+        },
+        {
+          "explanation": "<p>7°C is the limiting ambient temperature approached as time increases. It is not reached at any finite time in this model.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"31e^{-0.05x}=18\\Rightarrow x=-20\\ln(18/31)\\approx10.9\\text{ minutes}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the initial value and the limiting exponential value, then solve T=25.</p><ol class=\"parts\" type=\"a\"><li><p>For x≥0 the curve decreases from (0,38) towards the horizontal asymptote T=7; there is no x-intercept.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/4de506f137c0032caed9.png\" alt=\"Solution sketch: a1479a\"></figure></li><li><p>7°C is the limiting ambient temperature approached as time increases. It is not reached at any finite time in this model.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"31e^{-0.05x}=18\\Rightarrow x=-20\\ln(18/31)\\approx10.9\\text{ minutes}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.8/q1",
+      "status": "worked",
+      "method": "Take base-10 logarithms and compare with Y=mX+c, where X=log₁₀x and Y=log₁₀V.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_{10}V=\\log_{10}(5x^3)=\\log_{10}5+3\\log_{10}x\"></span>"
+        },
+        {
+          "explanation": "<p>The vertical intercept is log₁₀5≈0.699 and the slope is positive.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/9c49b19cf8fd81e50154.png\" alt=\"Solution sketch: a1481b\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"m=3\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Take base-10 logarithms and compare with Y=mX+c, where X=log₁₀x and Y=log₁₀V.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_{10}V=\\log_{10}(5x^3)=\\log_{10}5+3\\log_{10}x\"></span></li><li><p>The vertical intercept is log₁₀5≈0.699 and the slope is positive.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/9c49b19cf8fd81e50154.png\" alt=\"Solution sketch: a1481b\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"m=3\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.8/q2",
+      "status": "worked",
+      "method": "Apply the logarithm product and power laws; here the horizontal variable remains t.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_{10}H=\\log_{10}[3(3/2)^t]=\\log_{10}3+t\\log_{10}(3/2)\"></span>"
+        },
+        {
+          "explanation": "<p>A straight line with vertical intercept log₁₀3 and positive gradient.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/38e853fff5387ba6378f.png\" alt=\"Solution sketch: a1482b\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"m=\\log_{10}(3/2)\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Apply the logarithm product and power laws; here the horizontal variable remains t.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_{10}H=\\log_{10}[3(3/2)^t]=\\log_{10}3+t\\log_{10}(3/2)\"></span></li><li><p>A straight line with vertical intercept log₁₀3 and positive gradient.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/38e853fff5387ba6378f.png\" alt=\"Solution sketch: a1482b\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"m=\\log_{10}(3/2)\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.8/q3",
+      "status": "worked",
+      "method": "Taking logarithms converts the exponential model to a straight line.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log y=\\log(ab^x)=\\log a+x\\log b\"></span>"
+        },
+        {
+          "explanation": "<table class=\"practice-table\"><tr><th>x</th><th>0.5</th><th>2</th><th>5</th><th>7</th></tr><tr><td><p>log₁₀y</p></td><td><p>2.93</p></td><td><p>3.27</p></td><td><p>3.97</p></td><td><p>4.43</p></td></tr></table>"
+        },
+        {
+          "explanation": "<p>Plot the transformed values and draw one straight best-fit line, rather than joining successive rounded points.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/6ac9f871a862306bf17a.png\" alt=\"Solution sketch: a1483c\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"m\\approx\\frac{4.43-2.93}{7-0.5}=0.23077;\\quad c\\approx2.93-0.5m=2.81462\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^c\\approx650,\\qquad b=10^m\\approx1.7\\quad(2\\text{ s.f.})\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Taking logarithms converts the exponential model to a straight line.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log y=\\log(ab^x)=\\log a+x\\log b\"></span></li><li><table class=\"practice-table\"><tr><th>x</th><th>0.5</th><th>2</th><th>5</th><th>7</th></tr><tr><td><p>log₁₀y</p></td><td><p>2.93</p></td><td><p>3.27</p></td><td><p>3.97</p></td><td><p>4.43</p></td></tr></table></li><li><p>Plot the transformed values and draw one straight best-fit line, rather than joining successive rounded points.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/6ac9f871a862306bf17a.png\" alt=\"Solution sketch: a1483c\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"m\\approx\\frac{4.43-2.93}{7-0.5}=0.23077;\\quad c\\approx2.93-0.5m=2.81462\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^c\\approx650,\\qquad b=10^m\\approx1.7\\quad(2\\text{ s.f.})\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.8/q4",
+      "status": "worked",
+      "method": "Measure time since 2008 and use base-10 logarithms.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><tr><th>t</th><th>0</th><th>2</th><th>4</th><th>6</th><th>8</th><th>10</th></tr><tr><td><p>log₁₀V</p></td><td><p>4.40</p></td><td><p>4.17</p></td><td><p>3.94</p></td><td><p>3.72</p></td><td><p>3.49</p></td><td><p>3.26</p></td></tr></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log V=\\log(ab^t)=\\log a+t\\log b\"></span>"
+        },
+        {
+          "explanation": "<p>Plot each transformed value against t.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/1382b43ab6fff492ba7e.png\" alt=\"Solution sketch: a1484c\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"m\\approx\\frac{3.26-4.40}{10-0}=-0.114\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log a\\approx4.40\\Rightarrow a\\approx10^{4.40}\\approx25100\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\log b\\approx-0.114\\Rightarrow b\\approx10^{-0.114}\\approx0.770\"></span><p>These are estimates read from the rounded graph; using the unrounded data gives a≈25,000.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Measure time since 2008 and use base-10 logarithms.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><tr><th>t</th><th>0</th><th>2</th><th>4</th><th>6</th><th>8</th><th>10</th></tr><tr><td><p>log₁₀V</p></td><td><p>4.40</p></td><td><p>4.17</p></td><td><p>3.94</p></td><td><p>3.72</p></td><td><p>3.49</p></td><td><p>3.26</p></td></tr></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log V=\\log(ab^t)=\\log a+t\\log b\"></span></li><li><p>Plot each transformed value against t.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/1382b43ab6fff492ba7e.png\" alt=\"Solution sketch: a1484c\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"m\\approx\\frac{3.26-4.40}{10-0}=-0.114\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log a\\approx4.40\\Rightarrow a\\approx10^{4.40}\\approx25100\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\log b\\approx-0.114\\Rightarrow b\\approx10^{-0.114}\\approx0.770\"></span><p>These are estimates read from the rounded graph; using the unrounded data gives a≈25,000.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.8/q5",
+      "status": "worked",
+      "method": "Use the table’s stated time origin, 12 March 2018, and plot log₁₀P against t.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><tr><th>t</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td><p>log₁₀P</p></td><td><p>1.44</p></td><td><p>1.47</p></td><td><p>1.51</p></td><td><p>1.54</p></td><td><p>1.58</p></td></tr></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log P=\\log(ab^t)=\\log a+t\\log b\"></span>"
+        },
+        {
+          "explanation": "<p>Plot the points and draw a best-fit straight line.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/6e449294ac8a67b72c0f.png\" alt=\"Solution sketch: a1485c\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"c\\approx\\log(27.43),\\quad m\\approx\\frac{\\log(38.01)-\\log(27.43)}4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^c\\approx27.4,\\quad b=10^m\\approx1.09\\quad(3\\text{ s.f.})\"></span><p>The opening text instead describes time since the 9 March takeover. With that origin, replace t by t−3 in the table-based model: the multiplier b is unchanged and the initial coefficient becomes about 21.5. The requested table and supplied answer use 12 March as zero.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the table’s stated time origin, 12 March 2018, and plot log₁₀P against t.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><tr><th>t</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td><p>log₁₀P</p></td><td><p>1.44</p></td><td><p>1.47</p></td><td><p>1.51</p></td><td><p>1.54</p></td><td><p>1.58</p></td></tr></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log P=\\log(ab^t)=\\log a+t\\log b\"></span></li><li><p>Plot the points and draw a best-fit straight line.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/6e449294ac8a67b72c0f.png\" alt=\"Solution sketch: a1485c\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"c\\approx\\log(27.43),\\quad m\\approx\\frac{\\log(38.01)-\\log(27.43)}4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^c\\approx27.4,\\quad b=10^m\\approx1.09\\quad(3\\text{ s.f.})\"></span><p>The opening text instead describes time since the 9 March takeover. With that origin, replace t by t−3 in the table-based model: the multiplier b is unchanged and the initial coefficient becomes about 21.5. The requested table and supplied answer use 12 March as zero.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.8/q6",
+      "status": "worked",
+      "method": "The graph has intercept 5.2 and passes through (20,3.7). Compare with log₄P=log₄a+t log₄b.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"m=\\frac{3.7-5.2}{20}=-0.075\\Rightarrow\\log_4P=5.2-0.075t\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(0)=4^{5.2}\\approx1350\\quad(3\\text{ s.f.})\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=4^{5.2}\\approx1350,\\qquad b=4^{-0.075}\\approx0.901\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(30)=4^{5.2-0.075(30)}=4^{2.95}\\approx60\\text{ people}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The graph has intercept 5.2 and passes through (20,3.7). Compare with log₄P=log₄a+t log₄b.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"m=\\frac{3.7-5.2}{20}=-0.075\\Rightarrow\\log_4P=5.2-0.075t\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(0)=4^{5.2}\\approx1350\\quad(3\\text{ s.f.})\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=4^{5.2}\\approx1350,\\qquad b=4^{-0.075}\\approx0.901\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(30)=4^{5.2-0.075(30)}=4^{2.95}\\approx60\\text{ people}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/14.8/q7",
+      "status": "worked",
+      "method": "Use the intercept 9.3 and point (10,11.9), then undo the base-2 logarithm.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"m=\\frac{11.9-9.3}{10}=0.26\\Rightarrow\\log_2N=9.3+0.26t\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log_2a=9.3\\Rightarrow a=2^{9.3}\\approx630.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\log_2b=0.26\\Rightarrow b=2^{0.26}\\approx1.2\"></span>"
+        },
+        {
+          "explanation": "<p>a is the model’s initial number of bacteria at t=0.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the intercept 9.3 and point (10,11.9), then undo the base-2 logarithm.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"m=\\frac{11.9-9.3}{10}=0.26\\Rightarrow\\log_2N=9.3+0.26t\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log_2a=9.3\\Rightarrow a=2^{9.3}\\approx630.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\log_2b=0.26\\Rightarrow b=2^{0.26}\\approx1.2\"></span></li><li><p>a is the model’s initial number of bacteria at t=0.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/problem-a/qbronze",
+      "status": "worked",
+      "method": "Take logarithms and isolate x.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(3x-2)\\ln6=\\ln23\\Rightarrow x=\\frac13(2+\\frac{\\ln23}{\\ln6})\\approx1.25\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Take logarithms and isolate x.</p><span class=\"equation\" data-display=\"true\" data-math=\"(3x-2)\\ln6=\\ln23\\Rightarrow x=\\frac13(2+\\frac{\\ln23}{\\ln6})\\approx1.25\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/problem-a/qsilver",
+      "status": "worked",
+      "method": "Express 9ˣ as (3ˣ)² and 3^(x+2) as 9·3ˣ.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"u=3^x\\Rightarrow u^2-9u+20=0\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(u-4)(u-5)=0\\Rightarrow x=\\log_3 4\\text{ or }x=\\log_3 5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Express 9ˣ as (3ˣ)² and 3^(x+2) as 9·3ˣ.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"u=3^x\\Rightarrow u^2-9u+20=0\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(u-4)(u-5)=0\\Rightarrow x=\\log_3 4\\text{ or }x=\\log_3 5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/problem-a/qgold",
+      "status": "worked",
+      "method": "Let u=2²ˣ=4ˣ>0, so 4²ˣ=u² and 2^(2x+3)=8u.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"u^2-8u+12=(u-2)(u-6)=0\\Rightarrow u=2,6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\log_4 2=\\frac12\\text{ or }x=\\log_4 6=\\frac{\\ln6}{2\\ln2}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Let u=2²ˣ=4ˣ&gt;0, so 4²ˣ=u² and 2^(2x+3)=8u.</p><span class=\"equation\" data-display=\"true\" data-math=\"u^2-8u+12=(u-2)(u-6)=0\\Rightarrow u=2,6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\log_4 2=\\frac12\\text{ or }x=\\log_4 6=\\frac{\\ln6}{2\\ln2}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/problem-b/qbronze",
+      "status": "worked",
+      "method": "The positive exponential decays towards zero, leaving the constant 50.",
+      "steps": [
+        {
+          "explanation": "<p>The curve decreases from (0,750) towards horizontal asymptote V=50, with no horizontal-axis intersection for t≥0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/ccab1258d8da221a5092.png\" alt=\"Solution sketch: aPSBB\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"V(5)=50+700e^{-2}\\approx144.73\\text{ pounds}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"100=50+700e^{-0.4t}\\Rightarrow e^{-0.4t}=\\frac1{14}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=-\\frac52\\ln(1/14)=\\frac52\\ln14\\text{ years}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The positive exponential decays towards zero, leaving the constant 50.</p><ol class=\"parts\" type=\"a\"><li><p>The curve decreases from (0,750) towards horizontal asymptote V=50, with no horizontal-axis intersection for t≥0.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/ccab1258d8da221a5092.png\" alt=\"Solution sketch: aPSBB\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"V(5)=50+700e^{-2}\\approx144.73\\text{ pounds}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"100=50+700e^{-0.4t}\\Rightarrow e^{-0.4t}=\\frac1{14}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=-\\frac52\\ln(1/14)=\\frac52\\ln14\\text{ years}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/problem-b/qsilver",
+      "status": "worked",
+      "method": "C is in thousands, so 12,000 computers per hour means dC/dt=12.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1000C(11)=1000(e^{11/4}-1)\\approx14643\\text{ computers}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dC}{dt}=\\frac14e^{t/4}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac14e^{t/4}=12\\Rightarrow e^{t/4}=48\\Rightarrow t=4\\ln48\\text{ hours}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>C is in thousands, so 12,000 computers per hour means dC/dt=12.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"1000C(11)=1000(e^{11/4}-1)\\approx14643\\text{ computers}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dC}{dt}=\\frac14e^{t/4}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac14e^{t/4}=12\\Rightarrow e^{t/4}=48\\Rightarrow t=4\\ln48\\text{ hours}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/problem-b/qgold",
+      "status": "worked",
+      "method": "Use the two temperature readings to determine the model, then set its derivative to −1.5.",
+      "steps": [
+        {
+          "explanation": "<p>The soup cools towards 25°C, so the positive excess-temperature term must decay, requiring k&lt;0.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"70=a+25\\Rightarrow a=45\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"55=45e^{5k}+25\\Rightarrow e^{5k}=\\frac23\\Rightarrow k=\\frac15\\ln\\frac23\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dT}{dt}=45ke^{kt}=-1.5\\Rightarrow t=\\frac1k\\ln\\left(\\frac{-1.5}{45k}\\right)\\approx10.96\\text{ minutes}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the two temperature readings to determine the model, then set its derivative to −1.5.</p><ol class=\"parts\" type=\"a\"><li><p>The soup cools towards 25°C, so the positive excess-temperature term must decay, requiring k&lt;0.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"70=a+25\\Rightarrow a=45\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"55=45e^{5k}+25\\Rightarrow e^{5k}=\\frac23\\Rightarrow k=\\frac15\\ln\\frac23\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dT}{dt}=45ke^{kt}=-1.5\\Rightarrow t=\\frac1k\\ln\\left(\\frac{-1.5}{45k}\\right)\\approx10.96\\text{ minutes}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/exam/q3",
+      "status": "worked",
+      "method": "Reflect 2ˣ in the x-axis, then move it up by 3.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"f(0)=2;\\quad f(x)=0\\Rightarrow2^x=3\\Rightarrow x=\\log_2 3\"></span><p>Intercepts (0,2) and (log₂3,0); horizontal asymptote y=3. The curve decreases.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/b9afc6ae30ab4e825bad.png\" alt=\"Solution sketch: exam3-answer\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>Reflect 2ˣ in the x-axis, then move it up by 3.</p><span class=\"equation\" data-display=\"true\" data-math=\"f(0)=2;\\quad f(x)=0\\Rightarrow2^x=3\\Rightarrow x=\\log_2 3\"></span><p>Intercepts (0,2) and (log₂3,0); horizontal asymptote y=3. The curve decreases.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/b9afc6ae30ab4e825bad.png\" alt=\"Solution sketch: exam3-answer\"></figure>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/exam/q18",
+      "status": "worked",
+      "method": "Convert to exponential form and isolate x.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1-3x=16^{3/4}=8\\Rightarrow x=-\\frac73\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Convert to exponential form and isolate x.</p><span class=\"equation\" data-display=\"true\" data-math=\"1-3x=16^{3/4}=8\\Rightarrow x=-\\frac73\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/exam/q25",
+      "status": "worked",
+      "method": "Put u=e³ˣ>0 and factorise the quadratic.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"6u^2-38u+40=2(3u-4)(u-5)=0\\Rightarrow u=\\frac43,5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac13\\ln\\frac43\\text{ or }x=\\frac13\\ln5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Put u=e³ˣ&gt;0 and factorise the quadratic.</p><span class=\"equation\" data-display=\"true\" data-math=\"6u^2-38u+40=2(3u-4)(u-5)=0\\Rightarrow u=\\frac43,5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=\\frac13\\ln\\frac43\\text{ or }x=\\frac13\\ln5\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/exam/q54",
+      "status": "worked",
+      "method": "Combine the logarithms and preserve the domain x>18/7.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{7x-18}{(x-2)^2}=3\\Rightarrow7x-18=3(x-2)^2\\Rightarrow3x^2-19x+30=0\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(3x-10)(x-3)=0\\Rightarrow x=\\frac{10}3,3\"></span><p>Both values exceed 18/7, so both satisfy the original logarithmic equation.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Combine the logarithms and preserve the domain x&gt;18/7.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{7x-18}{(x-2)^2}=3\\Rightarrow7x-18=3(x-2)^2\\Rightarrow3x^2-19x+30=0\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(3x-10)(x-3)=0\\Rightarrow x=\\frac{10}3,3\"></span><p>Both values exceed 18/7, so both satisfy the original logarithmic equation.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/exam/q59",
+      "status": "worked",
+      "method": "Use P=700 and r/100=0.035.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"A(4)=700e^{0.14}\\approx805.19\\text{ pounds}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dA}{dt}=700(0.035)e^{0.035t}=24.5e^{0.035t}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1400=700e^{0.035t}\\Rightarrow t=\\frac{\\ln2}{0.035}\\approx19.8\\text{ years}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use P=700 and r/100=0.035.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"A(4)=700e^{0.14}\\approx805.19\\text{ pounds}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dA}{dt}=700(0.035)e^{0.035t}=24.5e^{0.035t}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1400=700e^{0.035t}\\Rightarrow t=\\frac{\\ln2}{0.035}\\approx19.8\\text{ years}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch14/exam/q68",
+      "status": "worked",
+      "method": "Use t=0,5,10,15,20,25 and take base-10 logarithms.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log C=\\log(ab^t)=\\log a+t\\log b\"></span>"
+        },
+        {
+          "explanation": "<table class=\"practice-table\"><tr><th>t</th><th>0</th><th>5</th><th>10</th><th>15</th><th>20</th><th>25</th></tr><tr><td><p>log₁₀C</p></td><td><p>3.7099</p></td><td><p>3.5958</p></td><td><p>3.4816</p></td><td><p>3.3675</p></td><td><p>3.2533</p></td><td><p>3.1392</p></td></tr></table><p>Plot these points and draw a straight best-fit line.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/8e8d99d39b4164f3dbbd.png\" alt=\"Solution sketch: exam68-answer\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"c\\approx\\log(5128),\\quad m\\approx\\frac{\\log(1378)-\\log(5128)}{25}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^c\\approx5100,\\qquad b=10^m\\approx0.95\\quad(2\\text{ s.f.})\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use t=0,5,10,15,20,25 and take base-10 logarithms.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log C=\\log(ab^t)=\\log a+t\\log b\"></span></li><li><table class=\"practice-table\"><tr><th>t</th><th>0</th><th>5</th><th>10</th><th>15</th><th>20</th><th>25</th></tr><tr><td><p>log₁₀C</p></td><td><p>3.7099</p></td><td><p>3.5958</p></td><td><p>3.4816</p></td><td><p>3.3675</p></td><td><p>3.2533</p></td><td><p>3.1392</p></td></tr></table><p>Plot these points and draw a straight best-fit line.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/8e8d99d39b4164f3dbbd.png\" alt=\"Solution sketch: exam68-answer\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"c\\approx\\log(5128),\\quad m\\approx\\frac{\\log(1378)-\\log(5128)}{25}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^c\\approx5100,\\qquad b=10^m\\approx0.95\\quad(2\\text{ s.f.})\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}
