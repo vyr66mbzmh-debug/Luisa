@@ -80,20 +80,26 @@
   // Split only at semantic boundaries. A single mathematical expression or diagram
   // is never cut, rasterised, or clipped to manufacture a fit.
   function splitBlock(node) {
-    if (!node.children.length || node.matches('[data-math],figure,table,.math-table,p')) return null;
+    if (!node.children.length || node.matches('[data-math],figure,p')) return null;
     if (node.matches('ol,ul')) {
-      return [...node.children].map((child, index) => {
+      if (node.children.length > 1) return [...node.children].map((child, index) => {
         const list = node.cloneNode(false);
-        if (node.tagName === 'OL') list.start = (Number(node.getAttribute('start')) || 1) + index;
+        if (node.tagName === 'OL') list.start = Number(child.getAttribute('value')) || (Number(node.getAttribute('start')) || 1) + index;
         list.append(child.cloneNode(true));
         return list;
       });
     }
-    return [...node.childNodes].filter(n => n.nodeType !== 3 || n.textContent.trim()).map(child => {
+    const children = [...node.childNodes].filter(n => n.nodeType !== 3 || n.textContent.trim());
+    if (children.length > 1) return children.map((child, index) => {
       const wrapper = node.cloneNode(false);
+      if (node.tagName === 'LI' && index) wrapper.style.listStyle = 'none';
       wrapper.append(child.cloneNode(true));
       return wrapper;
     });
+    // Preserve every ancestor when reaching a nested table/list. This allows
+    // table rows to continue on another sheet without flattening cells or labels.
+    const pieces = node.firstElementChild && splitBlock(node.firstElementChild);
+    return pieces?.map(piece => { const wrapper = node.cloneNode(false); wrapper.append(piece); return wrapper; }) || null;
   }
   async function create(rows) {
     if (!Array.isArray(rows) || !rows.length) throw Error('Select at least one question first.');
@@ -139,23 +145,56 @@
         return body;
       }
       const warnings = [];
-      for (let i = 0; i < rendered.length; i += 2) {
+      const extendedQuestions = [];
+      let questionBody;
+      for (let i = 0; i < rendered.length; i++) {
         if (i % 20 === 0) {
           if (win.closed) throw Error('Paper preview was closed.');
           status.textContent = `Laying out questions: ${i + 1} of ${rows.length}…`;
           await new Promise(resolve => window.setTimeout(resolve, 0));
         }
-        const body = page('questions');
-        for (const item of rendered.slice(i, i + 2)) {
-          body.append(item.question);
-          if (overflows(item.question) || wideContent(item.question.querySelector('.math-content'))) item.question.classList.add('compact');
-          if (overflows(item.question)) {
-            for (const list of item.question.querySelectorAll('.math-content > ol.parts, .math-content > ul.parts')) {
-              list.classList.add('columns');
-              if (list.scrollWidth > list.clientWidth + 1 || wideContent(list)) list.classList.remove('columns');
-            }
+        const item = rendered[i];
+        if (!questionBody || questionBody.children.length === 2) questionBody = page('questions');
+        questionBody.append(item.question);
+        if (overflows(item.question) || wideContent(item.question.querySelector('.math-content'))) item.question.classList.add('compact');
+        if (overflows(item.question)) {
+          for (const list of item.question.querySelectorAll('.math-content > ol.parts, .math-content > ul.parts')) {
+            list.classList.add('columns');
+            if (list.scrollWidth > list.clientWidth + 1 || wideContent(list)) list.classList.remove('columns');
           }
-          if (overflows(item.question) || wideContent(item.question.querySelector('.math-content'))) warnings.push(`${source(item.row)} is too long or wide for a half-page with useful working space at readable type size.`);
+        }
+        if (!overflows(item.question) && !wideContent(item.question.querySelector('.math-content'))) continue;
+        // Owner-approved exception: give the original question additional pages
+        // at normal type size, preserving its position in the selected paper.
+        extendedQuestions.push(source(item.row));
+        item.question.remove();
+        if (!questionBody.children.length) questionBody.parentElement.remove();
+        questionBody = null;
+        item.question.classList.remove('compact');
+        item.question.querySelectorAll('.columns').forEach(list => list.classList.remove('columns'));
+        const queue = [...item.question.querySelector('.math-content').childNodes].filter(n => n.nodeType !== 3 || n.textContent.trim()).map(node => node.cloneNode(true));
+        let section, prompt;
+        let first = true, hasContent = false;
+        function extendedPage() {
+          const body = page('questions'); body.parentElement.classList.add('extended-page');
+          section = element(doc, 'article', 'print-question extended-question'); section.dataset.questionId = item.row.id;
+          section.append(heading(doc, item.row, i + 1, !first));
+          prompt = element(doc, 'div', 'math-content'); section.append(prompt, item.question.querySelector('.working-space').cloneNode(true)); body.append(section);
+          first = false; hasContent = false;
+        }
+        extendedPage();
+        while (queue.length) {
+          const block = queue.shift(); prompt.append(block);
+          if (wideContent(prompt)) block.nodeType === 1 && block.classList.add('compact');
+          if (!overflows(section) && !wideContent(prompt)) { hasContent = true; continue; }
+          block.remove();
+          if (hasContent) { extendedPage(); queue.unshift(block); continue; }
+          const pieces = block.nodeType === 1 && splitBlock(block);
+          if (pieces?.length > 1) { queue.unshift(...pieces); continue; }
+          if (block.nodeType === 1) block.classList.add('compact');
+          prompt.append(block);
+          if (overflows(section) || wideContent(prompt)) warnings.push(`${source(item.row)} has an indivisible question expression or figure that does not fit a full page at readable size.`);
+          hasContent = true;
         }
       }
       // Solutions always begin on a fresh page, after every question.
@@ -190,11 +229,6 @@
           }
           const pieces = splitBlock(block);
           if (pieces && pieces.length > 1) { queue.unshift(...pieces); continue; }
-          // A wrapper with one child may still contain a splittable list.
-          if (pieces?.length === 1 && block.firstElementChild && block.firstElementChild !== block) {
-            const inner = splitBlock(block.firstElementChild);
-            if (inner?.length > 1) { queue.unshift(...inner); continue; }
-          }
           block.classList.add('compact'); section.append(block);
           if (overflows(body)) warnings.push(`${source(item.row)} has a worked block too tall for one page; no content has been removed.`);
           hasContent = true;
@@ -211,12 +245,12 @@
         const message = 'This selection cannot be printed completely in the required layout. Remove or replace the listed questions, then create a new preview.';
         status.textContent = message;
         const list = element(doc, 'ul', 'print-errors'); [...new Set(warnings)].forEach(warning => list.append(element(doc, 'li', '', warning))); toolbar.append(list);
-        return {window: win, pageCount: total, warnings: [...new Set(warnings)], ready: false};
+        return {window: win, pageCount: total, warnings: [...new Set(warnings)], extendedQuestions, ready: false};
       }
       ready = true;
-      status.textContent = `${rows.length} questions · ${total} A4 pages · worked solutions at the back. Choose A4, 100% scale and turn off browser headers and footers in the print dialog. Select Save as PDF to download.`;
+      status.textContent = `${rows.length} questions · ${total} A4 pages · worked solutions at the back.${extendedQuestions.length ? ` ${extendedQuestions.length} longer questions use extra space or continuation pages.` : ''} Choose A4, 100% scale and turn off browser headers and footers in the print dialog. Select Save as PDF to download.`;
       print.disabled = false; print.onclick = () => win.print();
-      return {window: win, pageCount: total, warnings: [], ready: true};
+      return {window: win, pageCount: total, warnings: [], extendedQuestions, ready: true};
     } catch (error) {
       if (!win.closed) { doc.body.classList.add('not-ready'); status.textContent = `Paper preview unavailable: ${error.message}`; }
       throw error;

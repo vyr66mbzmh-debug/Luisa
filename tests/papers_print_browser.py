@@ -14,6 +14,10 @@ from playwright.sync_api import sync_playwright
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 
+class BrowserTestServer(http.server.ThreadingHTTPServer):
+    request_queue_size = 128
+
+
 class QuietServer(http.server.SimpleHTTPRequestHandler):
     def log_message(self, *args):
         pass
@@ -24,15 +28,20 @@ class QuietServer(http.server.SimpleHTTPRequestHandler):
         super().end_headers()
 
 
+CATALOGUE = json.loads((ROOT / 'data.js').read_text().split('=', 1)[1].rstrip(';\n'))
+METADATA = {s['id']: dict(skillCode=s['code'], courseTitle=c['title'], bookTitle=b['title'], topicTitle=t['title'])
+            for c in CATALOGUE['courses'] for b in c['books'] for t in b['topics'] for s in t['skills']}
+
+
 def row(skill, number):
     question = next(q for q in json.loads((ROOT / 'content' / (skill + '.json')).read_text()) if q['number'] == number)
-    return dict(question, skillCode=skill, courseTitle='Mathematics', bookTitle='Question library', topicTitle='Practice')
+    return dict(question, **METADATA[skill])
 
 
 class PapersPrintTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.server = http.server.ThreadingHTTPServer(('127.0.0.1', 0), functools.partial(QuietServer, directory=str(ROOT)))
+        cls.server = BrowserTestServer(('127.0.0.1', 0), functools.partial(QuietServer, directory=str(ROOT)))
         threading.Thread(target=cls.server.serve_forever, daemon=True).start()
         cls.playwright = sync_playwright().start()
         cls.browser = cls.playwright.chromium.launch(channel='chrome')
@@ -100,12 +109,53 @@ class PapersPrintTests(unittest.TestCase):
             pdf[0].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save('/tmp/luisa57-verified-question-page.png')
             pdf[2].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save('/tmp/luisa57-verified-solution-page.png')
 
-    def test_oversized_original_is_identified_and_never_clipped_into_pdf(self):
-        preview, result = self.preview([row('smq-1.53', 2)])
-        self.assertFalse(result['ready'])
-        self.assertTrue(any('smq-1.53 Q2' in warning for warning in result['warnings']))
-        self.assertTrue(preview.get_by_role('button', name='Print / Save PDF').is_disabled())
-        self.assertEqual(preview.locator('.print-question img').count(), 21)
+    def test_long_original_continues_without_losing_any_diagrams(self):
+        item = row('smq-1.53', 2)
+        preview, result = self.preview([row('1.01', 1), item, row('1.01', 2), row('1.01', 3)])
+        self.assertTrue(result['ready'], result)
+        self.assertTrue(preview.get_by_role('button', name='Print / Save PDF').is_enabled())
+        self.assertGreater(preview.locator('.extended-page').count(), 1)
+        selector = '.print-question[data-question-id="' + item['id'] + '"]'
+        images = preview.locator(selector + ' img').evaluate_all('nodes=>nodes.map(n=>n.getAttribute("src"))')
+        expected = self.page.evaluate('html=>{const n=document.createElement("div");n.innerHTML=html;return [...n.querySelectorAll("img")].map(x=>x.getAttribute("src"))}', item['question'])
+        self.assertEqual(images, expected)
+        self.assertEqual(len(images), 21)
+        self.assertIn('Question 2 · continued', preview.locator('.questions-page').all_inner_texts()[2])
+        self.assertTrue(all(value <= 1 for value in preview.locator('.page-content,.print-question').evaluate_all('nodes=>nodes.flatMap(n=>[n.scrollHeight-n.clientHeight,n.scrollWidth-n.clientWidth])')))
+        # Following ordinary questions return to two per sheet, preserving order.
+        self.assertEqual(preview.locator('.questions-page').last.locator('.print-question h2').all_text_contents(), ['Question 3','Question 4'])
+        preview.pdf(path='/tmp/luisa57-long-question.pdf', prefer_css_page_size=True)
+
+    def test_all_eligible_long_sources_preserve_content_and_fit(self):
+        rejected = {r['id'] for r in json.loads((ROOT / 'docs/evidence/v057-papers-print.json').read_text())['promptAudit']['rejections']}
+        allowed = {(r['skill'], r['question']) for r in json.loads((ROOT / 'textbook-catalogue.json').read_text())['questions']}
+        rows = [row(skill, number) for skill, number in sorted(allowed) if row(skill, number)['id'] in rejected]
+        self.assertEqual(len(rows), 271)
+        for offset in range(0, len(rows), 10):
+            batch = rows[offset:offset + 10]
+            preview, result = self.preview(batch)
+            self.assertTrue(result['ready'], result)
+            self.assertFalse(preview.locator('.page-content,.print-question').evaluate_all('nodes=>nodes.some(n=>n.scrollHeight>n.clientHeight+1||n.scrollWidth>n.clientWidth+1)'))
+            identities = preview.evaluate(r'''rows=>{
+              function identity(nodes){
+                const parent=document.createElement('div');
+                for(const node of nodes)parent.append(node.cloneNode(true));
+                const maths=[...parent.querySelectorAll('[data-math]')].map(n=>n.dataset.math);
+                const images=[...parent.querySelectorAll('img')].map(n=>n.getAttribute('src'));
+                const parts=[...parent.querySelectorAll('ol>li')].map(n=>Number(n.getAttribute('value'))||(Number(n.parentElement.getAttribute('start'))||1)+[...n.parentElement.children].indexOf(n));
+                parent.querySelectorAll('[data-math]').forEach(n=>n.remove());
+                return {maths,images,parts,text:parent.textContent.replace(/\s+/g,' ').trim()};
+              }
+              return rows.map(row=>{
+                const question=document.createElement('div');question.innerHTML=row.question;
+                const solution=document.createElement('div');solution.innerHTML=row.steps.join('');
+                const actualQuestion=identity(document.querySelectorAll('.print-question[data-question-id="'+row.id+'"]>.math-content'));
+                const actualSolution=identity(document.querySelectorAll('.print-solution[data-question-id="'+row.id+'"]>.solution-step'));
+                return {id:row.id,question:JSON.stringify(identity([question]))===JSON.stringify(actualQuestion),solution:JSON.stringify(identity([solution]))===JSON.stringify(actualSolution),imagesLoaded:[...document.querySelectorAll('[data-question-id="'+row.id+'"] img')].every(n=>n.complete&&n.naturalWidth>0)};
+              });
+            }''', batch)
+            self.assertTrue(all(item['question'] and item['solution'] and item['imagesLoaded'] for item in identities), identities)
+            preview.close()
 
     def test_closed_loading_preview_releases_caller(self):
         self.context.route('**/papers-print.css', lambda route: None)

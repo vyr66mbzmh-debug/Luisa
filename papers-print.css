@@ -58,3 +58,6 @@ body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
 
 .print-page .parts.columns {columns:2; column-gap:8mm}
 .print-page .parts.columns>li {break-inside:avoid; padding-right:2mm}
+
+.questions-page.extended-page .page-content {display:flex; flex-direction:column; gap:0}
+.extended-question {flex:1; min-height:0}
