@@ -1,0 +1,882 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-2",
+  "chapter": 10,
+  "sourcePdf": "resources/practice/pure-year-2/chapter-10.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.1/q1",
+      "status": "worked",
+      "method": "A root is an x-axis crossing. Support the displayed crossing by evaluating the polynomial at the requested bounds.",
+      "steps": [
+        {
+          "latex": "",
+          "explanation": "The continuous curve crosses the x-axis between −1 and 0, so f(x)=0 at a point in that interval."
+        },
+        {
+          "latex": "\\text{i }f(2.2)=2(2.2)^3-4(2.2)^2-2(2.2)+2=-0.464;\\quad\\text{ii }f(2.3)=2(2.3)^3-4(2.3)^2-2(2.3)+2=0.574",
+          "explanation": ""
+        },
+        {
+          "latex": "",
+          "explanation": "The values −0.464 and 0.574 have opposite signs, and the polynomial is continuous, so it has a root between 2.2 and 2.3."
+        }
+      ],
+      "solutionHtml": "<p>A root is an x-axis crossing. Support the displayed crossing by evaluating the polynomial at the requested bounds.</p><ol class=\"parts\" type=\"a\"><li><p>The continuous curve crosses the x-axis between −1 and 0, so f(x)=0 at a point in that interval.</p></li><li><span data-math=\"\\begin{aligned}&amp;\\text{i }f(2.2)=2(2.2)^3-4(2.2)^2-2(2.2)+2=-0.464\\\\&amp;\\text{ii }f(2.3)=2(2.3)^3-4(2.3)^2-2(2.3)+2=0.574\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The values −0.464 and 0.574 have opposite signs, and the polynomial is continuous, so it has a root between 2.2 and 2.3.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.1/q2",
+      "status": "worked",
+      "method": "Evaluate both endpoints. Each function is continuous throughout its stated interval, so an opposite-sign pair establishes a root.",
+      "steps": [
+        {
+          "latex": "f(-1.2)\\approx-0.176<0;\\quadf(-1.1)\\approx0.733>0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f(0.6)\\approx0.171865175>0;\\quadf(0.7)\\approx-0.202276137<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f(-1.11)\\approx0.0403430935>0;\\quadf(-1.1)\\approx-0.126574005<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f(2.37)\\approx0.00113697716>0;\\quadf(2.38)\\approx-0.0140740344<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        }
+      ],
+      "solutionHtml": "<p>Evaluate both endpoints. Each function is continuous throughout its stated interval, so an opposite-sign pair establishes a root.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(-1.2)\\approx-0.176&lt;0\\\\&amp;f(-1.1)\\approx0.733&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(0.6)\\approx0.171865175&gt;0\\\\&amp;f(0.7)\\approx-0.202276137&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(-1.11)\\approx0.0403430935&gt;0\\\\&amp;f(-1.1)\\approx-0.126574005&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(2.37)\\approx0.00113697716&gt;0\\\\&amp;f(2.38)\\approx-0.0140740344&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.1/q3",
+      "status": "worked",
+      "method": "Compare the increasing logarithm with the decreasing part of the parabola on x>0.",
+      "steps": [
+        {
+          "latex": "y=\\ln x:\\ (1,0),\\quad x=0\\text{ vertical asymptote};\\quad y=-(x+1)^2+6:\\ \\text{vertex }(-1,6),\\ (0,5)",
+          "explanation": "Sketch the curves on the same axes. For x>0 the parabola decreases while the logarithm increases, giving one crossing."
+        },
+        {
+          "latex": "f^{\\prime}(x)=1/x+2(x+1)>0\\quad(x>0);\\quad f(x)\\to-\\infty\\ (x\\to0^+),\\quad f(x)\\to+\\infty\\ (x\\to\\infty)",
+          "explanation": "The graphs have exactly one intersection: strict increase gives at most one root and the endpoint behaviour ensures existence."
+        },
+        {
+          "latex": "f(1.3)\\approx-0.447635736<0;\\quadf(1.4)\\approx0.0964722366>0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        }
+      ],
+      "solutionHtml": "<p>Compare the increasing logarithm with the decreasing part of the parabola on x&gt;0.</p><ol class=\"parts\" type=\"a\"><li><p>Sketch the curves on the same axes. For x&gt;0 the parabola decreases while the logarithm increases, giving one crossing.</p><span data-math=\"\\begin{aligned}&amp;y=\\ln x:\\ (1,0),\\quad x=0\\text{ vertical asymptote}\\\\&amp;y=-(x+1)^2+6:\\ \\text{vertex }(-1,6),\\ (0,5)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The graphs have exactly one intersection: strict increase gives at most one root and the endpoint behaviour ensures existence.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=1/x+2(x+1)&gt;0\\quad(x&gt;0)\\\\&amp;f(x)\\to-\\infty\\ (x\\to0^+),\\quad f(x)\\to+\\infty\\ (x\\to\\infty)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1.3)\\approx-0.447635736&lt;0\\\\&amp;f(1.4)\\approx0.0964722366&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/5fbb2b4e5d17b03b5e44.png\" alt=\"Sketch accompanying the worked solution.\" style=\"max-width:100%;height:auto\"><figcaption>Sketch accompanying the worked solution.</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.1/q4",
+      "status": "worked",
+      "method": "Find a zero of the continuous derivative. The half-unit rounding interval establishes the requested precision.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=-2\\cos x\\sin x+2e^{-2x}",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(3.1)\\approx0.0871482641>0;\\quadf^{\\prime}(3.2)\\approx-0.11322609<0",
+          "explanation": "The derivative changes from positive to negative, locating a stationary maximum in this interval."
+        },
+        {
+          "latex": "f^{\\prime}(3.1425)\\approx0.00191342212>0;\\quadf^{\\prime}(3.1435)\\approx-9.40184057e-5<0",
+          "explanation": "The root lies strictly between the two rounding boundaries, so α=3.143 to 3 decimal places."
+        }
+      ],
+      "solutionHtml": "<p>Find a zero of the continuous derivative. The half-unit rounding interval establishes the requested precision.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"f^{\\prime}(x)=-2\\cos x\\sin x+2e^{-2x}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The derivative changes from positive to negative, locating a stationary maximum in this interval.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(3.1)\\approx0.0871482641&gt;0\\\\&amp;f^{\\prime}(3.2)\\approx-0.11322609&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The root lies strictly between the two rounding boundaries, so α=3.143 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(3.1425)\\approx0.00191342212&gt;0\\\\&amp;f^{\\prime}(3.1435)\\approx-9.40184057e-5&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.1/q5",
+      "status": "worked",
+      "method": "Use continuity and a sign change; for 3 decimal places use bounds 0.0005 either side of 1.165.",
+      "steps": [
+        {
+          "latex": "g(1.1)\\approx-0.241692243<0;\\quadg(1.2)\\approx0.139284491>0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "g(1.1645)\\approx-0.000853691507<0;\\quadg(1.1655)\\approx0.00301972272>0",
+          "explanation": "Thus 1.1645<α<1.1655 and α=1.165 to 3 decimal places."
+        }
+      ],
+      "solutionHtml": "<p>Use continuity and a sign change; for 3 decimal places use bounds 0.0005 either side of 1.165.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;g(1.1)\\approx-0.241692243&lt;0\\\\&amp;g(1.2)\\approx0.139284491&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Thus 1.1645&lt;α&lt;1.1655 and α=1.165 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;g(1.1645)\\approx-0.000853691507&lt;0\\\\&amp;g(1.1655)\\approx0.00301972272&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.1/q6",
+      "status": "worked",
+      "method": "Compare the two complete graphs. A wider view is needed because the exponential eventually overtakes the parabola.",
+      "steps": [
+        {
+          "latex": "y=(x+2)^2-1:\\ \\text{vertex }(-2,-1),\\ \\text{zeros }-3,-1;\\quad y=2^x:\\ (0,1),\\quad y\\to0\\ (x\\to-\\infty)",
+          "explanation": "The sketches below show the two left crossings and the additional positive crossing."
+        },
+        {
+          "latex": "f(-4)=-47/16<0,\\quad f(-3)=1/8>0;\\quad f(-0.8)>0,\\quad f(-0.7)<0;\\quad f(5)=-16<0,\\quad f(6)=1>0;\\quad f^{\\prime\\prime\\prime}(x)=(\\ln2)^3 2^x>0",
+          "explanation": "There are three distinct real roots, not two: one in each displayed interval. There cannot be four, since Rolle’s theorem would then force f‴ to have a zero. The supplied local sketch misses the positive root."
+        },
+        {
+          "latex": "f(-0.8)\\approx0.134349177>0;\\quadf(-0.7)\\approx-0.0744277933<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        }
+      ],
+      "solutionHtml": "<p>Compare the two complete graphs. A wider view is needed because the exponential eventually overtakes the parabola.</p><ol class=\"parts\" type=\"a\"><li><p>The sketches below show the two left crossings and the additional positive crossing.</p><span data-math=\"\\begin{aligned}&amp;y=(x+2)^2-1:\\ \\text{vertex }(-2,-1),\\ \\text{zeros }-3,-1\\\\&amp;y=2^x:\\ (0,1),\\quad y\\to0\\ (x\\to-\\infty)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>There are three distinct real roots, not two: one in each displayed interval. There cannot be four, since Rolle’s theorem would then force f‴ to have a zero. The supplied local sketch misses the positive root.</p><span data-math=\"\\begin{aligned}&amp;f(-4)=-47/16&lt;0,\\quad f(-3)=1/8&gt;0\\\\&amp;f(-0.8)&gt;0,\\quad f(-0.7)&lt;0\\\\&amp;f(5)=-16&lt;0,\\quad f(6)=1&gt;0\\\\&amp;f^{\\prime\\prime\\prime}(x)=(\\ln2)^3 2^x&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(-0.8)\\approx0.134349177&gt;0\\\\&amp;f(-0.7)\\approx-0.0744277933&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/ca86cd9c5cae6af0ee34.svg\" alt=\"Two views show all three intersections; the upper panel shows the left pair and the lower panel shows the third.\" style=\"max-width:100%;height:auto\"><figcaption>Two views show all three intersections; the upper panel shows the left pair and the lower panel shows the third.</figcaption></figure>",
+      "answerCheck": "source-discrepancy",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.1/q7",
+      "status": "worked",
+      "method": "Distinguish a discontinuous sign change from a continuous root bracket.",
+      "steps": [
+        {
+          "latex": "f(1.9)=\\frac2{0.3}-4=8/3\\approx2.67;\\quad f(2.1)=\\frac2{-0.3}-4=-32/3\\approx-10.67",
+          "explanation": ""
+        },
+        {
+          "latex": "x=2\\Rightarrow6-3x=0",
+          "explanation": "The function is undefined at x=2, so the continuity condition fails. The sign change occurs across the vertical asymptote and does not guarantee a root."
+        },
+        {
+          "latex": "\\frac2{6-3x}=4\\Rightarrow2=24-12x\\Rightarrow\\alpha=11/6",
+          "explanation": "This only root lies below 1.9, confirming there is none in the requested interval."
+        }
+      ],
+      "solutionHtml": "<p>Distinguish a discontinuous sign change from a continuous root bracket.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f(1.9)=\\frac2{0.3}-4=8/3\\approx2.67\\\\&amp;f(2.1)=\\frac2{-0.3}-4=-32/3\\approx-10.67\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The function is undefined at x=2, so the continuity condition fails. The sign change occurs across the vertical asymptote and does not guarantee a root.</p><span data-math=\"x=2\\Rightarrow6-3x=0\" data-display=\"true\" class=\"equation\"></span></li><li><p>This only root lies below 1.9, confirming there is none in the requested interval.</p><span data-math=\"\\begin{aligned}&amp;\\frac2{6-3x}=4\\\\&amp;\\Rightarrow 2=24-12x\\\\&amp;\\Rightarrow \\alpha=11/6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.1/q8",
+      "status": "worked",
+      "method": "Compare the bounded sine wave with the increasing logarithm, then check the crossing numerically.",
+      "steps": [
+        {
+          "latex": "-1/4\\le\\tfrac14\\sin2x\\le1/4;\\quad y=\\ln x:\\ (1,0),\\ x>0",
+          "explanation": "Sketch the sine wave of amplitude 1/4 and period π with the logarithm."
+        },
+        {
+          "latex": "\\ln x=\\tfrac14\\sin2x\\Rightarrow e^{-1/4}\\le x\\le e^{1/4};\\quad h^{\\prime}(x)=2\\cos2x-4/x<0\\text{ on this interval}",
+          "explanation": "Outside this band the logarithm is beyond the sine amplitude. Within it, x≤e^(1/4)<2 ensures h′≤2−4/x<0. Thus the curves cross at most once; the following bracket proves existence."
+        },
+        {
+          "latex": "h(1.18)\\approx0.0423530119>0;\\quadh(1.19)\\approx-0.00573824494<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        }
+      ],
+      "solutionHtml": "<p>Compare the bounded sine wave with the increasing logarithm, then check the crossing numerically.</p><ol class=\"parts\" type=\"a\"><li><p>Sketch the sine wave of amplitude 1/4 and period π with the logarithm.</p><span data-math=\"\\begin{aligned}&amp;-1/4\\le\\tfrac14\\sin2x\\le1/4\\\\&amp;y=\\ln x:\\ (1,0),\\ x&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Outside this band the logarithm is beyond the sine amplitude. Within it, x≤e^(1/4)&lt;2 ensures h′≤2−4/x&lt;0. Thus the curves cross at most once; the following bracket proves existence.</p><span data-math=\"\\begin{aligned}&amp;\\ln x=\\tfrac14\\sin2x\\\\&amp;\\Rightarrow e^{-1/4}\\le x\\le e^{1/4}\\\\&amp;h^{\\prime}(x)=2\\cos2x-4/x&lt;0\\text{ on this interval}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;h(1.18)\\approx0.0423530119&gt;0\\\\&amp;h(1.19)\\approx-0.00573824494&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/6555bedf34312d673580.png\" alt=\"Sketch accompanying the worked solution.\" style=\"max-width:100%;height:auto\"><figcaption>Sketch accompanying the worked solution.</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.2/q1",
+      "status": "worked",
+      "method": "Rearrange the original quadratic while preserving its constant term.",
+      "steps": [
+        {
+          "latex": "x^2=8x-3\\Rightarrow x=\\sqrt{8x-3}",
+          "explanation": "Both roots 4±√13 are positive, so the positive square root retains them."
+        },
+        {
+          "latex": "x^2-8x+3=0\\Rightarrow x-8+3/x=0\\Rightarrow x=8-3/x,\\quad x\\ne0",
+          "explanation": ""
+        },
+        {
+          "latex": "8x=x^2+3\\Rightarrow x=(x^2+3)/8",
+          "explanation": "The requested expression with −3 is not equivalent to the original equation. Substituting a true root into it gives x−3/4 instead of x."
+        }
+      ],
+      "solutionHtml": "<p>Rearrange the original quadratic while preserving its constant term.</p><ol class=\"parts\" type=\"a\"><li><p>Both roots 4±√13 are positive, so the positive square root retains them.</p><span data-math=\"x^2=8x-3\\Rightarrow x=\\sqrt{8x-3}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x^2-8x+3=0\\\\&amp;\\Rightarrow x-8+3/x=0\\\\&amp;\\Rightarrow x=8-3/x,\\quad x\\ne0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The requested expression with −3 is not equivalent to the original equation. Substituting a true root into it gives x−3/4 instead of x.</p><span data-math=\"8x=x^2+3\\Rightarrow x=(x^2+3)/8\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.2/q2",
+      "status": "worked",
+      "method": "Rearrange for the positive root, then repeatedly apply the given iteration.",
+      "steps": [
+        {
+          "latex": "x^2=4x+2\\Rightarrow x=\\sqrt{4x+2}\\quad(x\\ge0)",
+          "explanation": "This iteration targets the positive root 2+√6. The other original root 2−√6 is negative and is excluded by taking the positive square root."
+        },
+        {
+          "latex": "x_0=5;\\quad x_1\\approx4.690;\\quad x_2\\approx4.556;\\quad x_3\\approx4.497;\\quad x_4\\approx4.471",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        }
+      ],
+      "solutionHtml": "<p>Rearrange for the positive root, then repeatedly apply the given iteration.</p><ol class=\"parts\" type=\"a\"><li><p>This iteration targets the positive root 2+√6. The other original root 2−√6 is negative and is excluded by taking the positive square root.</p><span data-math=\"\\begin{aligned}&amp;x^2=4x+2\\\\&amp;\\Rightarrow x=\\sqrt{4x+2}\\quad(x\\ge0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=5\\\\&amp;x_1\\approx4.690\\\\&amp;x_2\\approx4.556\\\\&amp;x_3\\approx4.497\\\\&amp;x_4\\approx4.471\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.2/q3",
+      "status": "worked",
+      "method": "Rearrange the cubic in two ways. The square-root rearrangement selects nonnegative roots.",
+      "steps": [
+        {
+          "latex": "\\text{i }x^3=3x^2-1\\Rightarrow x=\\sqrt[3]{3x^2-1};\\quad\\text{ii }3x^2=x^3+1\\Rightarrow x=\\sqrt{(x^3+1)/3}\\quad(x\\ge0)",
+          "explanation": ""
+        },
+        {
+          "latex": "x_0=1;\\quad x_1\\approx1.260;\\quad x_2\\approx1.555;\\quad x_3\\approx1.843;\\quad x_4\\approx2.094",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        },
+        {
+          "latex": "x_0=1;\\quad x_1\\approx0.816;\\quad x_2\\approx0.717;\\quad x_3\\approx0.676;\\quad x_4\\approx0.660",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        },
+        {
+          "latex": "",
+          "explanation": "The first sequence moves upward toward a root near 2.88, while the second moves downward toward a different root near 0.653. Their different apparent limits suggest more than one solution; a finite list of iterates alone is not a proof of convergence."
+        }
+      ],
+      "solutionHtml": "<p>Rearrange the cubic in two ways. The square-root rearrangement selects nonnegative roots.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\text{i }x^3=3x^2-1\\\\&amp;\\Rightarrow x=\\sqrt[3]{3x^2-1}\\\\&amp;\\text{ii }3x^2=x^3+1\\\\&amp;\\Rightarrow x=\\sqrt{(x^3+1)/3}\\quad(x\\ge0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=1\\\\&amp;x_1\\approx1.260\\\\&amp;x_2\\approx1.555\\\\&amp;x_3\\approx1.843\\\\&amp;x_4\\approx2.094\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=1\\\\&amp;x_1\\approx0.816\\\\&amp;x_2\\approx0.717\\\\&amp;x_3\\approx0.676\\\\&amp;x_4\\approx0.660\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The first sequence moves upward toward a root near 2.88, while the second moves downward toward a different root near 0.653. Their different apparent limits suggest more than one solution; a finite list of iterates alone is not a proof of convergence.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.2/q4",
+      "status": "worked",
+      "method": "Rearrange for the nonnegative branch and iterate. The specified α is the positive nonzero root; x=0 is also a root.",
+      "steps": [
+        {
+          "latex": "x^2=4\\sin x\\Rightarrow x=\\sqrt{4\\sin x}\\quad(x\\ge0)",
+          "explanation": ""
+        },
+        {
+          "latex": "x_0=1.5;\\quad x_1\\approx1.997;\\quad x_2\\approx1.908;\\quad x_3\\approx1.943",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        },
+        {
+          "latex": "f(1.9335)\\approx0.000670814606>0;\\quadf(1.9345)\\approx-0.00197372682<0",
+          "explanation": "Hence the positive nonzero root satisfies α=1.934 to 3 decimal places."
+        }
+      ],
+      "solutionHtml": "<p>Rearrange for the nonnegative branch and iterate. The specified α is the positive nonzero root; x=0 is also a root.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;x^2=4\\sin x\\\\&amp;\\Rightarrow x=\\sqrt{4\\sin x}\\quad(x\\ge0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=1.5\\\\&amp;x_1\\approx1.997\\\\&amp;x_2\\approx1.908\\\\&amp;x_3\\approx1.943\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Hence the positive nonzero root satisfies α=1.934 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f(1.9335)\\approx0.000670814606&gt;0\\\\&amp;f(1.9345)\\approx-0.00197372682&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.2/q5",
+      "status": "worked",
+      "method": "Use the given quadratic for the two outer x-intercepts, then iterate toward the middle positive root.",
+      "steps": [
+        {
+          "latex": "x^2-x-1=0\\Rightarrow x=(1\\pm\\sqrt5)/2;\\quad A=((1-\\sqrt5)/2,0),\\quad C=((1+\\sqrt5)/2,0)",
+          "explanation": ""
+        },
+        {
+          "latex": "5x^2=x^5+2\\Rightarrow x=\\sqrt{(x^5+2)/5}\\quad(x\\ge0)",
+          "explanation": "This square-root form targets positive roots; it does not retain the negative root at A."
+        },
+        {
+          "latex": "x_0=0.5;\\quad x_1\\approx0.637;\\quad x_2\\approx0.649;\\quad x_3\\approx0.650",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        },
+        {
+          "latex": "f(0.6505)\\approx0.000724765216>0;\\quadf(0.6515)\\approx-0.00488719729<0",
+          "explanation": "The middle root therefore rounds to α=0.651 to 3 decimal places."
+        }
+      ],
+      "solutionHtml": "<p>Use the given quadratic for the two outer x-intercepts, then iterate toward the middle positive root.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;x^2-x-1=0\\\\&amp;\\Rightarrow x=(1\\pm\\sqrt5)/2\\\\&amp;A=((1-\\sqrt5)/2,0),\\quad C=((1+\\sqrt5)/2,0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>This square-root form targets positive roots; it does not retain the negative root at A.</p><span data-math=\"\\begin{aligned}&amp;5x^2=x^5+2\\\\&amp;\\Rightarrow x=\\sqrt{(x^5+2)/5}\\quad(x\\ge0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=0.5\\\\&amp;x_1\\approx0.637\\\\&amp;x_2\\approx0.649\\\\&amp;x_3\\approx0.650\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The middle root therefore rounds to α=0.651 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f(0.6505)\\approx0.000724765216&gt;0\\\\&amp;f(0.6515)\\approx-0.00488719729&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.2/q6",
+      "status": "worked",
+      "method": "Bracket the root, take logarithms of a positive expression, and iterate without intermediate rounding.",
+      "steps": [
+        {
+          "latex": "f(-1.9)\\approx-0.0288300874<0;\\quadf(-1.8)\\approx0.645013499>0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "e^{x+4}=10-x^2/2>0\\Rightarrow x+4=\\ln(10-x^2/2)\\Rightarrow x=\\ln(10-x^2/2)-4",
+          "explanation": ""
+        },
+        {
+          "latex": "x_0=-3;\\quad x_1\\approx-2.295;\\quad x_2\\approx-2.003;\\quad x_3\\approx-1.921",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        },
+        {
+          "latex": "f(-1.89545)\\approx-0.000224004664<0;\\quadf(-1.89535)\\approx0.000406837419>0",
+          "explanation": "The root lies in the rounding interval for −1.8954 to 4 decimal places."
+        }
+      ],
+      "solutionHtml": "<p>Bracket the root, take logarithms of a positive expression, and iterate without intermediate rounding.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(-1.9)\\approx-0.0288300874&lt;0\\\\&amp;f(-1.8)\\approx0.645013499&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;e^{x+4}=10-x^2/2&gt;0\\\\&amp;\\Rightarrow x+4=\\ln(10-x^2/2)\\\\&amp;\\Rightarrow x=\\ln(10-x^2/2)-4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=-3\\\\&amp;x_1\\approx-2.295\\\\&amp;x_2\\approx-2.003\\\\&amp;x_3\\approx-1.921\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The root lies in the rounding interval for −1.8954 to 4 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f(-1.89545)\\approx-0.000224004664&lt;0\\\\&amp;f(-1.89535)\\approx0.000406837419&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.2/q7",
+      "status": "worked",
+      "method": "Differentiate the product, isolate the interior turning point, then apply the principal arccosine on 0<x<π.",
+      "steps": [
+        {
+          "latex": "f(0)=0\\sin^20=0;\\quad f(\\pi)=\\pi\\sin^2\\pi=0;\\quad A=(0,0),\\ B=(\\pi,0)",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(x)=\\sin^2x+2x\\sin x\\cos x",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(1.8)\\approx0.15184241>0;\\quadf^{\\prime}(1.9)\\approx-0.267046137<0",
+          "explanation": "The derivative changes positive to negative, locating the turning point P in this interval."
+        },
+        {
+          "latex": "\\sin x(\\sin x+2x\\cos x)=0;\\quad P:\\sin x\\ne0,\\ x\\ne0\\Rightarrow\\cos x=-\\frac{\\sin x}{2x};\\quad x=\\arccos\\left(-\\frac{\\sin x}{2x}\\right)",
+          "explanation": ""
+        },
+        {
+          "latex": "x_0=1.8;\\quad x_1\\approx1.845;\\quad x_2\\approx1.835;\\quad x_3\\approx1.837",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the product, isolate the interior turning point, then apply the principal arccosine on 0&lt;x&lt;π.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f(0)=0\\sin^20=0\\\\&amp;f(\\pi)=\\pi\\sin^2\\pi=0\\\\&amp;A=(0,0),\\ B=(\\pi,0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"f^{\\prime}(x)=\\sin^2x+2x\\sin x\\cos x\" data-display=\"true\" class=\"equation\"></span></li><li><p>The derivative changes positive to negative, locating the turning point P in this interval.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(1.8)\\approx0.15184241&gt;0\\\\&amp;f^{\\prime}(1.9)\\approx-0.267046137&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin x(\\sin x+2x\\cos x)=0\\\\&amp;P:\\sin x\\ne0,\\ x\\ne0\\\\&amp;\\Rightarrow \\cos x=-\\frac{\\sin x}{2x}\\\\&amp;x=\\arccos\\left(-\\frac{\\sin x}{2x}\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=1.8\\\\&amp;x_1\\approx1.845\\\\&amp;x_2\\approx1.835\\\\&amp;x_3\\approx1.837\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.2/q8",
+      "status": "worked",
+      "method": "Use the difference between the curve and line to bracket the intersection and the cobweb diagram to assess the iteration.",
+      "steps": [
+        {
+          "latex": "f(0.5)\\approx0.166666667>0;\\quadf(1)\\approx-0.5<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "x_0=2,\\quad x_1=1/3,\\quad x_2=3/4,\\quad x_3=4/7;\\quad g^{\\prime}(x)=-1/(x+1)^2",
+          "explanation": "The cobweb steps alternate across the intersection and move inward. After x₁, all iterates lie in [1/3,3/4], which maps into itself and has |g′|≤9/16<1. Hence the iteration converges to α."
+        }
+      ],
+      "solutionHtml": "<p>Use the difference between the curve and line to bracket the intersection and the cobweb diagram to assess the iteration.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(0.5)\\approx0.166666667&gt;0\\\\&amp;f(1)\\approx-0.5&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The cobweb steps alternate across the intersection and move inward. After x₁, all iterates lie in [1/3,3/4], which maps into itself and has |g′|≤9/16&lt;1. Hence the iteration converges to α.</p><span data-math=\"\\begin{aligned}&amp;x_0=2,\\quad x_1=1/3,\\quad x_2=3/4,\\quad x_3=4/7\\\\&amp;g^{\\prime}(x)=-1/(x+1)^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/66be057a2f8ff4a3a7bc.png\" alt=\"Sketch accompanying the worked solution.\" style=\"max-width:100%;height:auto\"><figcaption>Sketch accompanying the worked solution.</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.3/q1",
+      "status": "worked",
+      "method": "Apply one tangent-based Newton step, then compare with the exact quadratic roots.",
+      "steps": [
+        {
+          "latex": "f(1.5)\\approx0.25>0;\\quadf(1.6)\\approx-0.04<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f^{\\prime}(x)=2x-6\\Rightarrow f^{\\prime}(1.6)=-2.8",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(x)=2 x - 6;\\quad f(1.6)\\approx-0.04,\\quad f^{\\prime}(1.6)\\approx-2.8;\\quad x_1=1.6-\\frac{-0.04}{-2.8}\\approx1.585714",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        },
+        {
+          "latex": "x^2-6x+7=0\\Rightarrow x=\\frac{6\\pm\\sqrt{36-28}}2=3\\pm\\sqrt2",
+          "explanation": ""
+        },
+        {
+          "latex": "3-\\sqrt2\\approx1.585786;\\quad|1.585714-(3-\\sqrt2)|\\approx0.0000716",
+          "explanation": "The one-step approximation and exact root both round to 1.586 to 3 decimal places, but their 4-decimal-place rounded values differ."
+        }
+      ],
+      "solutionHtml": "<p>Apply one tangent-based Newton step, then compare with the exact quadratic roots.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1.5)\\approx0.25&gt;0\\\\&amp;f(1.6)\\approx-0.04&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=2x-6\\\\&amp;\\Rightarrow f^{\\prime}(1.6)=-2.8\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=2 x - 6\\\\&amp;f(1.6)\\approx-0.04,\\quad f^{\\prime}(1.6)\\approx-2.8\\\\&amp;x_1=1.6-\\frac{-0.04}{-2.8}\\approx1.585714\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x^2-6x+7=0\\\\&amp;\\Rightarrow x=\\frac{6\\pm\\sqrt{36-28}}2=3\\pm\\sqrt2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The one-step approximation and exact root both round to 1.586 to 3 decimal places, but their 4-decimal-place rounded values differ.</p><span data-math=\"\\begin{aligned}&amp;3-\\sqrt2\\approx1.585786\\\\&amp;|1.585714-(3-\\sqrt2)|\\approx0.0000716\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.3/q2",
+      "status": "worked",
+      "method": "Check continuity and opposite signs, then use the derivative in one Newton–Raphson step.",
+      "steps": [
+        {
+          "latex": "f(1.2)\\approx-0.0464<0;\\quadf(1.3)\\approx0.0861>0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f^{\\prime}(x)=4 x^{3} - 6 x + 1;\\quad f(1.3)\\approx0.0861,\\quad f^{\\prime}(1.3)\\approx1.988;\\quad x_1=1.3-\\frac{0.0861}{1.988}\\approx1.257",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        }
+      ],
+      "solutionHtml": "<p>Check continuity and opposite signs, then use the derivative in one Newton–Raphson step.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1.2)\\approx-0.0464&lt;0\\\\&amp;f(1.3)\\approx0.0861&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=4 x^{3} - 6 x + 1\\\\&amp;f(1.3)\\approx0.0861,\\quad f^{\\prime}(1.3)\\approx1.988\\\\&amp;x_1=1.3-\\frac{0.0861}{1.988}\\approx1.257\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.3/q3",
+      "status": "worked",
+      "method": "A valid Newton step needs a defined function and a nonzero finite derivative at the starting point.",
+      "steps": [
+        {
+          "latex": "x_{n+1}=x_n-f(x_n)/f^{\\prime}(x_n)",
+          "explanation": "B, D, F and H are stationary points in the supplied sketch. Their horizontal tangents have f′=0, so the Newton quotient divides by zero and these starting x-coordinates are unsuitable."
+        }
+      ],
+      "solutionHtml": "<p>A valid Newton step needs a defined function and a nonzero finite derivative at the starting point.</p><p>B, D, F and H are stationary points in the supplied sketch. Their horizontal tangents have f′=0, so the Newton quotient divides by zero and these starting x-coordinates are unsuitable.</p><span data-math=\"x_{n+1}=x_n-f(x_n)/f^{\\prime}(x_n)\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.3/q4",
+      "status": "worked",
+      "method": "Differentiate the squared cosine by the chain rule and use one Newton step.",
+      "steps": [
+        {
+          "latex": "f(1.3)\\approx0.0136907002>0;\\quadf(1.4)\\approx-0.131041645<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f^{\\prime}(x)=-8\\cos x\\sin x+e^{-x}",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(x)=- 8 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)} + e^{- x};\\quad f(1.3)\\approx0.0136907002,\\quad f^{\\prime}(1.3)\\approx-1.78947369;\\quad x_1=1.3-\\frac{0.0136907002}{-1.78947369}\\approx1.308",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the squared cosine by the chain rule and use one Newton step.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1.3)\\approx0.0136907002&gt;0\\\\&amp;f(1.4)\\approx-0.131041645&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"f^{\\prime}(x)=-8\\cos x\\sin x+e^{-x}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)\\\\&amp;=- 8 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)} + e^{- x}\\\\&amp;f(1.3)\\approx0.0136907002,\\quad f^{\\prime}(1.3)\\approx-1.78947369\\\\&amp;x_1=1.3-\\frac{0.0136907002}{-1.78947369}\\approx1.308\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.3/q5",
+      "status": "worked",
+      "method": "Bracket the root, calculate one Newton step, and test its rounding boundaries.",
+      "steps": [
+        {
+          "latex": "f(3.4)\\approx0.0874149319>0;\\quadf(3.5)\\approx-0.0206379803<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f^{\\prime}(x)=- \\frac{x}{2} + \\frac{3}{4} - \\frac{e^{- \\frac{x}{4}}}{4};\\quad f(3.5)\\approx-0.0206379803,\\quad f^{\\prime}(3.5)\\approx-1.1042155;\\quad x_1=3.5-\\frac{-0.0206379803}{-1.1042155}\\approx3.481",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        },
+        {
+          "latex": "f(3.4805)\\approx0.000804121077>0;\\quadf(3.4815)\\approx-0.000291090629<0",
+          "explanation": "The root lies in the rounding interval for 3.481, confirming the approximation to 3 decimal places."
+        }
+      ],
+      "solutionHtml": "<p>Bracket the root, calculate one Newton step, and test its rounding boundaries.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(3.4)\\approx0.0874149319&gt;0\\\\&amp;f(3.5)\\approx-0.0206379803&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)\\\\&amp;=- \\frac{x}{2} + \\frac{3}{4} - \\frac{e^{- \\frac{x}{4}}}{4}\\\\&amp;f(3.5)\\approx-0.0206379803,\\quad f^{\\prime}(3.5)\\approx-1.1042155\\\\&amp;x_1=3.5-\\frac{-0.0206379803}{-1.1042155}\\approx3.481\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The root lies in the rounding interval for 3.481, confirming the approximation to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f(3.4805)\\approx0.000804121077&gt;0\\\\&amp;f(3.4815)\\approx-0.000291090629&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.3/q6",
+      "status": "worked",
+      "method": "Use the quotient rule for cos²x/x and the logarithmic derivative, then apply one Newton step.",
+      "steps": [
+        {
+          "latex": "f(1.2)\\approx0.063838896>0;\\quadf(1.3)\\approx-0.010548279<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f^{\\prime}(x)=\\frac{-2x\\sin x\\cos x-\\cos^2x}{x^2}-\\frac1{4x}",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(x)=- \\frac{2 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)}}{x} - \\frac{1}{4 x} - \\frac{\\cos^{2}{\\left(x \\right)}}{x^{2}};\\quad f(1.3)\\approx-0.010548279,\\quad f^{\\prime}(1.3)\\approx-0.631187815;\\quad x_1=1.3-\\frac{-0.010548279}{-0.631187815}\\approx1.283",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        }
+      ],
+      "solutionHtml": "<p>Use the quotient rule for cos²x/x and the logarithmic derivative, then apply one Newton step.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1.2)\\approx0.063838896&gt;0\\\\&amp;f(1.3)\\approx-0.010548279&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=\\frac{-2x\\sin x\\cos x-\\cos^2x}{x^2}-\\frac1{4x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)\\\\&amp;=- \\frac{2 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)}}{x} - \\frac{1}{4 x} - \\frac{\\cos^{2}{\\left(x \\right)}}{x^{2}}\\\\&amp;f(1.3)\\approx-0.010548279,\\quad f^{\\prime}(1.3)\\approx-0.631187815\\\\&amp;x_1=1.3-\\frac{-0.010548279}{-0.631187815}\\approx1.283\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.3/q7",
+      "status": "worked",
+      "method": "Find the stationary starting point from f′=0; avoid it in Newton’s formula.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=1+8/x^3=0\\Rightarrow x^3=-8\\Rightarrow p=-2",
+          "explanation": "At p the derivative is zero, so the Newton step divides by zero and is undefined."
+        },
+        {
+          "latex": "f(0.8)\\approx-0.45<0;\\quadf(0.9)\\approx0.961728395>0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f^{\\prime}(x)=1 + \\frac{8}{x^{3}};\\quad f(-5)\\approx-0.16,\\quad f^{\\prime}(-5)\\approx0.936;\\quad x_1=-5-\\frac{-0.16}{0.936}\\approx-4.829",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        }
+      ],
+      "solutionHtml": "<p>Find the stationary starting point from f′=0; avoid it in Newton’s formula.</p><ol class=\"parts\" type=\"a\"><li><p>At p the derivative is zero, so the Newton step divides by zero and is undefined.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=1+8/x^3=0\\\\&amp;\\Rightarrow x^3=-8\\\\&amp;\\Rightarrow p=-2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(0.8)\\approx-0.45&lt;0\\\\&amp;f(0.9)\\approx0.961728395&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=1 + \\frac{8}{x^{3}}\\\\&amp;f(-5)\\approx-0.16,\\quad f^{\\prime}(-5)\\approx0.936\\\\&amp;x_1=-5-\\frac{-0.16}{0.936}\\approx-4.829\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.4/q1",
+      "status": "worked",
+      "method": "A minimum ranking number occurs at the local minimum of the model; locate it using the derivative.",
+      "steps": [
+        {
+          "latex": "w^{\\prime}(x)=-\\frac2{25}x^3+\\frac{21}{10}x^2-14x+17",
+          "explanation": ""
+        },
+        {
+          "latex": "w^{\\prime}(8.3)\\approx-0.27396<0;\\quadw^{\\prime}(8.4)\\approx0.15968>0",
+          "explanation": "The derivative changes from negative to positive. Also w″=−(6/25)x²+(21/5)x−14 is positive throughout [8.3,8.4], so the stationary point there is a local minimum."
+        },
+        {
+          "latex": "\\frac{21}{10}x^2=\\frac2{25}x^3+14x-17;\\quad x^2=\\frac{10}{21}\\left(\\frac2{25}x^3+14x-17\\right);\\quad x=\\pm\\sqrt{\\frac{10}{21}\\left(\\frac2{25}x^3+14x-17\\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "x_0=8.3;\\quad x_1\\approx8.308;\\quad x_2\\approx8.315;\\quad x_3\\approx8.321;\\quad x_4\\approx8.326",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        }
+      ],
+      "solutionHtml": "<p>A minimum ranking number occurs at the local minimum of the model; locate it using the derivative.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;w^{\\prime}(x)=-\\frac2{25}x^3+\\frac{21}{10}x^2-14x+17\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The derivative changes from negative to positive. Also w″=−(6/25)x²+(21/5)x−14 is positive throughout [8.3,8.4], so the stationary point there is a local minimum.</p><span data-math=\"\\begin{aligned}&amp;w^{\\prime}(8.3)\\approx-0.27396&lt;0\\\\&amp;w^{\\prime}(8.4)\\approx0.15968&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{21}{10}x^2=\\frac2{25}x^3+14x-17\\\\&amp;x^2=\\frac{10}{21}\\left(\\frac2{25}x^3+14x-17\\right)\\\\&amp;x=\\pm\\sqrt{\\frac{10}{21}\\left(\\frac2{25}x^3+14x-17\\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=8.3\\\\&amp;x_1\\approx8.308\\\\&amp;x_2\\approx8.315\\\\&amp;x_3\\approx8.321\\\\&amp;x_4\\approx8.326\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.4/q2",
+      "status": "worked",
+      "method": "Use the first positive ground-level crossing for landing and the derivative sign change for the first peak.",
+      "steps": [
+        {
+          "latex": "h(10)\\approx17.7920996>0;\\quadh(11)\\approx-10.8879831<0",
+          "explanation": "The first positive zero occurs when t²/36=π, giving t=6√π between 10 and 11 seconds."
+        },
+        {
+          "latex": "h^{\\prime}(t)=50\\cos(t^2/36)(2t/36)=\\frac{25t}9\\cos(t^2/36)",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(t)=\\frac{25 t \\cos{\\left(\\frac{t^{2}}{36} \\right)}}{9};\\quad f(10.5)\\approx3.95051084,\\quad f^{\\prime}(10.5)\\approx-29.075486;\\quad t_1=10.5-\\frac{3.95051084}{-29.075486}\\approx10.64",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        },
+        {
+          "latex": "h^{\\prime}(7.515)\\approx0.0425865736>0;\\quadh^{\\prime}(7.525)\\approx-0.0446838546<0",
+          "explanation": "The derivative changes positive to negative, so the first maximum occurs at a time that rounds to 7.52 seconds. The model reaches height 50 m there."
+        }
+      ],
+      "solutionHtml": "<p>Use the first positive ground-level crossing for landing and the derivative sign change for the first peak.</p><ol class=\"parts\" type=\"a\"><li><p>The first positive zero occurs when t²/36=π, giving t=6√π between 10 and 11 seconds.</p><span data-math=\"\\begin{aligned}&amp;h(10)\\approx17.7920996&gt;0\\\\&amp;h(11)\\approx-10.8879831&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;h^{\\prime}(t)=50\\cos(t^2/36)(2t/36)=\\frac{25t}9\\cos(t^2/36)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(t)=\\frac{25 t \\cos{\\left(\\frac{t^{2}}{36} \\right)}}{9}\\\\&amp;f(10.5)\\approx3.95051084,\\quad f^{\\prime}(10.5)\\approx-29.075486\\\\&amp;t_1=10.5-\\frac{3.95051084}{-29.075486}\\approx10.64\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The derivative changes positive to negative, so the first maximum occurs at a time that rounds to 7.52 seconds. The model reaches height 50 m there.</p><span data-math=\"\\begin{aligned}&amp;h^{\\prime}(7.515)\\approx0.0425865736&gt;0\\\\&amp;h^{\\prime}(7.525)\\approx-0.0446838546&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.4/q3",
+      "status": "worked",
+      "method": "Evaluate the initial price, differentiate, then solve the zero-derivative equation by iteration.",
+      "steps": [
+        {
+          "latex": "p(0)=1/3+1.29=1.62333\\ldots\\Rightarrow\\pounds1.62",
+          "explanation": ""
+        },
+        {
+          "latex": "p^{\\prime}(x)=-\\frac19\\sin(x/3)+x/50",
+          "explanation": ""
+        },
+        {
+          "latex": "p^{\\prime}(5)\\approx-0.0106008842<0;\\quadp^{\\prime}(5.5)\\approx0.00269614958>0",
+          "explanation": "The derivative changes negative to positive, giving a local minimum. On this interval p″=−cos(x/3)/27+1/50>0, so there is a unique stationary point in the bracket."
+        },
+        {
+          "latex": "-\\frac19\\sin(x/3)+x/50=0\\Rightarrow x=\\frac{50}9\\sin(x/3)",
+          "explanation": ""
+        },
+        {
+          "latex": "x_0=5.3;\\quad x_1\\approx5.449;\\quad x_2\\approx5.389;\\quad x_3\\approx5.415",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        }
+      ],
+      "solutionHtml": "<p>Evaluate the initial price, differentiate, then solve the zero-derivative equation by iteration.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;p(0)=1/3+1.29=1.62333\\ldots\\\\&amp;\\Rightarrow \\pounds1.62\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"p^{\\prime}(x)=-\\frac19\\sin(x/3)+x/50\" data-display=\"true\" class=\"equation\"></span></li><li><p>The derivative changes negative to positive, giving a local minimum. On this interval p″=−cos(x/3)/27+1/50&gt;0, so there is a unique stationary point in the bracket.</p><span data-math=\"\\begin{aligned}&amp;p^{\\prime}(5)\\approx-0.0106008842&lt;0\\\\&amp;p^{\\prime}(5.5)\\approx0.00269614958&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;-\\frac19\\sin(x/3)+x/50=0\\\\&amp;\\Rightarrow x=\\frac{50}9\\sin(x/3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=5.3\\\\&amp;x_1\\approx5.449\\\\&amp;x_2\\approx5.389\\\\&amp;x_3\\approx5.415\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.4/q4",
+      "status": "worked",
+      "method": "Find the zero by continuity and one Newton step, then check the model’s behaviour at larger times.",
+      "steps": [
+        {
+          "latex": "v(5)\\approx25.591762>0;\\quadv(6)\\approx-16.0026307<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "v^{\\prime}(t)=-225e^{-t/2}+40\\sin t",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(t)=40 \\sin{\\left(t \\right)} - 225 e^{- \\frac{t}{2}};\\quad f(5)\\approx25.591762,\\quad f^{\\prime}(5)\\approx-56.8260957;\\quad t_1=5-\\frac{25.591762}{-56.8260957}\\approx5.45",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        },
+        {
+          "latex": "v(6)\\approx-16.003\\text{ pounds};\\quad v(t)\\sim-40\\cos t\\quad(t\\to\\infty)",
+          "explanation": "The model predicts negative resale values and persistent increases and decreases for an old phone, so it is unsuitable for long-term resale value."
+        }
+      ],
+      "solutionHtml": "<p>Find the zero by continuity and one Newton step, then check the model’s behaviour at larger times.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;v(5)\\approx25.591762&gt;0\\\\&amp;v(6)\\approx-16.0026307&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"v^{\\prime}(t)=-225e^{-t/2}+40\\sin t\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(t)=40 \\sin{\\left(t \\right)} - 225 e^{- \\frac{t}{2}}\\\\&amp;f(5)\\approx25.591762,\\quad f^{\\prime}(5)\\approx-56.8260957\\\\&amp;t_1=5-\\frac{25.591762}{-56.8260957}\\approx5.45\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The model predicts negative resale values and persistent increases and decreases for an old phone, so it is unsuitable for long-term resale value.</p><span data-math=\"\\begin{aligned}&amp;v(6)\\approx-16.003\\text{ pounds}\\\\&amp;v(t)\\sim-40\\cos t\\quad(t\\to\\infty)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/10.4/q5",
+      "status": "worked",
+      "method": "Compare the height with 10 m and use the principal arccosine for the first crossing in 0≤t≤π.",
+      "steps": [
+        {
+          "latex": "(h-10)(2)\\approx17.0045223>0;\\quad(h-10)(3)\\approx-7.92003516<0",
+          "explanation": "The height is continuous and changes from above 10 m to below 10 m, so it equals 10 m at an intermediate time."
+        },
+        {
+          "latex": "h(3)\\approx2.07996484\\ \\mathrm m<10\\ \\mathrm m",
+          "explanation": "The jump is unsafe according to this model."
+        },
+        {
+          "latex": "40\\cos t=4t^{2/3}-40\\Rightarrow\\cos t=\\frac{4t^{2/3}-40}{40};\\quad t=\\arccos\\left(\\frac{4t^{2/3}-40}{40}\\right)",
+          "explanation": "This principal-value rearrangement is for the first crossing in [0,π]. A later crossing in the full 0≤t≤6 interval requires the other cosine branch."
+        },
+        {
+          "latex": "t_0=2.5;\\quad t_1\\approx2.52490;\\quad t_2\\approx2.52280;\\quad t_3\\approx2.52297;\\quad t_4\\approx2.52296",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        }
+      ],
+      "solutionHtml": "<p>Compare the height with 10 m and use the principal arccosine for the first crossing in 0≤t≤π.</p><ol class=\"parts\" type=\"a\"><li><p>The height is continuous and changes from above 10 m to below 10 m, so it equals 10 m at an intermediate time.</p><span data-math=\"\\begin{aligned}&amp;(h-10)(2)\\approx17.0045223&gt;0\\\\&amp;(h-10)(3)\\approx-7.92003516&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The jump is unsafe according to this model.</p><span data-math=\"\\begin{aligned}&amp;h(3)\\approx2.07996484\\ \\mathrm m&lt;10\\ \\mathrm m\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>This principal-value rearrangement is for the first crossing in [0,π]. A later crossing in the full 0≤t≤6 interval requires the other cosine branch.</p><span data-math=\"\\begin{aligned}&amp;40\\cos t=4t^{2/3}-40\\\\&amp;\\Rightarrow \\cos t=\\frac{4t^{2/3}-40}{40}\\\\&amp;t=\\arccos\\left(\\frac{4t^{2/3}-40}{40}\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;t_0=2.5\\\\&amp;t_1\\approx2.52490\\\\&amp;t_2\\approx2.52280\\\\&amp;t_3\\approx2.52297\\\\&amp;t_4\\approx2.52296\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/problem-a/qbronze",
+      "status": "worked",
+      "method": "Locate the specified positive root and use the inverse cosine on its principal branch.",
+      "steps": [
+        {
+          "latex": "f(1)\\approx0.770151153>0;\\quadf(1.5)\\approx-0.0640868114<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "\\cos(x^2)=x-2;\\quad1\\le x\\le1.5\\Rightarrow0\\le x^2\\le\\pi;\\quad x^2=\\arccos(x-2)\\Rightarrow x=\\sqrt{\\arccos(x-2)}",
+          "explanation": "The branch restriction is needed; the rearrangement is local to the specified root rather than all real solutions."
+        },
+        {
+          "latex": "x_0=1.5;\\quad x_1\\approx1.447;\\quad x_2\\approx1.469;\\quad x_3\\approx1.460",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        }
+      ],
+      "solutionHtml": "<p>Locate the specified positive root and use the inverse cosine on its principal branch.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1)\\approx0.770151153&gt;0\\\\&amp;f(1.5)\\approx-0.0640868114&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The branch restriction is needed; the rearrangement is local to the specified root rather than all real solutions.</p><span data-math=\"\\begin{aligned}&amp;\\cos(x^2)=x-2\\\\&amp;1\\le x\\le1.5\\\\&amp;\\Rightarrow 0\\le x^2\\le\\pi\\\\&amp;x^2=\\arccos(x-2)\\\\&amp;\\Rightarrow x=\\sqrt{\\arccos(x-2)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=1.5\\\\&amp;x_1\\approx1.447\\\\&amp;x_2\\approx1.469\\\\&amp;x_3\\approx1.460\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/problem-a/qsilver",
+      "status": "worked",
+      "method": "Bracket the intersection and use the decreasing cobweb steps to justify convergence.",
+      "steps": [
+        {
+          "latex": "f(2)\\approx0.357661782>0;\\quadf(3)\\approx-1.37909308<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "g(x)=3\\cos(x/3),\\quad g^{\\prime}(x)=-\\sin(x/3);\\quad |g^{\\prime}(x)|\\le\\sin1<1\\quad(1.6\\le x\\le3)",
+          "explanation": "Starting at 3, the graph gives alternating cobweb steps toward α. The interval [1.6,3] maps into itself, and the derivative bound gives a contraction, so convergence follows."
+        },
+        {
+          "latex": "x_0=3;\\quad x_1\\approx1.621;\\quad x_2\\approx2.573;\\quad x_3\\approx1.963",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        }
+      ],
+      "solutionHtml": "<p>Bracket the intersection and use the decreasing cobweb steps to justify convergence.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(2)\\approx0.357661782&gt;0\\\\&amp;f(3)\\approx-1.37909308&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Starting at 3, the graph gives alternating cobweb steps toward α. The interval [1.6,3] maps into itself, and the derivative bound gives a contraction, so convergence follows.</p><span data-math=\"\\begin{aligned}&amp;g(x)=3\\cos(x/3),\\quad g^{\\prime}(x)=-\\sin(x/3)\\\\&amp;|g^{\\prime}(x)|\\le\\sin1&lt;1\\quad(1.6\\le x\\le3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=3\\\\&amp;x_1\\approx1.621\\\\&amp;x_2\\approx2.573\\\\&amp;x_3\\approx1.963\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/c8ae80f25cf0b42ba897.png\" alt=\"Sketch accompanying the worked solution.\" style=\"max-width:100%;height:auto\"><figcaption>Sketch accompanying the worked solution.</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/problem-a/qgold",
+      "status": "worked",
+      "method": "Use the intersection equation and examine how the iteration behaves on each side of the repelling positive fixed point.",
+      "steps": [
+        {
+          "latex": "f(1)\\approx-1.0<0;\\quadf(2)\\approx5.3890561>0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "g(x)=(x-1)e^x,\\quad g^{\\prime}(x)=xe^x;\\quad x_0=1/2\\Rightarrow x_1=-\\tfrac12e^{1/2}\\approx-0.824;\\quad x_0=2\\Rightarrow x_1=e^2>7",
+          "explanation": "(i) The first starting value moves into [−1,0], which maps into itself and has |g′|≤1/e<1. It converges to the negative root α, not β. (ii) Starting at 2, successive values grow without bound and diverge."
+        },
+        {
+          "latex": "f(-0.8065)\\approx4.62490113e-5>0;\\quadf(-0.8055)\\approx-0.00131374366<0",
+          "explanation": "These opposite signs establish α=−0.806 to 3 decimal places."
+        }
+      ],
+      "solutionHtml": "<p>Use the intersection equation and examine how the iteration behaves on each side of the repelling positive fixed point.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1)\\approx-1.0&lt;0\\\\&amp;f(2)\\approx5.3890561&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) The first starting value moves into [−1,0], which maps into itself and has |g′|≤1/e&lt;1. It converges to the negative root α, not β. (ii) Starting at 2, successive values grow without bound and diverge.</p><span data-math=\"\\begin{aligned}&amp;g(x)=(x-1)e^x,\\quad g^{\\prime}(x)=xe^x\\\\&amp;x_0=1/2\\\\&amp;\\Rightarrow x_1=-\\tfrac12e^{1/2}\\approx-0.824\\\\&amp;x_0=2\\\\&amp;\\Rightarrow x_1=e^2&gt;7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>These opposite signs establish α=−0.806 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f(-0.8065)\\approx4.62490113e-5&gt;0\\\\&amp;f(-0.8055)\\approx-0.00131374366&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/problem-b/qbronze",
+      "status": "worked",
+      "method": "Use the positive-domain power derivative in one Newton step and verify the requested 2-decimal-place accuracy.",
+      "steps": [
+        {
+          "latex": "f(1.1)\\approx-0.0601422857<0;\\quadf(1.2)\\approx0.225570849>0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f^{\\prime}(x)=4 \\sqrt[3]{x} - \\frac{4}{3};\\quad f(1.2)\\approx0.225570849,\\quad f^{\\prime}(1.2)\\approx2.91730094;\\quad x_1=1.2-\\frac{0.225570849}{2.91730094}\\approx1.123",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        },
+        {
+          "latex": "f(1.115)\\approx-0.0180651374<0;\\quadf(1.125)\\approx0.0101414514>0",
+          "explanation": "The root rounds to 1.12 to 2 decimal places. The one-step approximation 1.123 also rounds to 1.12, so it has the requested accuracy."
+        }
+      ],
+      "solutionHtml": "<p>Use the positive-domain power derivative in one Newton step and verify the requested 2-decimal-place accuracy.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1.1)\\approx-0.0601422857&lt;0\\\\&amp;f(1.2)\\approx0.225570849&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=4 \\sqrt[3]{x} - \\frac{4}{3}\\\\&amp;f(1.2)\\approx0.225570849,\\quad f^{\\prime}(1.2)\\approx2.91730094\\\\&amp;x_1=1.2-\\frac{0.225570849}{2.91730094}\\approx1.123\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The root rounds to 1.12 to 2 decimal places. The one-step approximation 1.123 also rounds to 1.12, so it has the requested accuracy.</p><span data-math=\"\\begin{aligned}&amp;f(1.115)\\approx-0.0180651374&lt;0\\\\&amp;f(1.125)\\approx0.0101414514&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/problem-b/qsilver",
+      "status": "worked",
+      "method": "Differentiate the exponential–sine product for Newton’s formula, then check the 3-decimal-place bracket.",
+      "steps": [
+        {
+          "latex": "f(1.5)\\approx0.173611597>0;\\quadf(2)\\approx-0.10242208<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "f^{\\prime}(x)=2 x e^{- x} \\cos{\\left(x^{2} \\right)} - e^{- x} \\sin{\\left(x^{2} \\right)};\\quad f(1.75)\\approx0.0137299169,\\quad f^{\\prime}(1.75)\\approx-0.62003734;\\quad x_1=1.75-\\frac{0.0137299169}{-0.62003734}\\approx1.772",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        },
+        {
+          "latex": "f(1.7715)\\approx0.000574930108>0;\\quadf(1.7725)\\approx-2.77962877e-5<0",
+          "explanation": "Hence the root rounds to 1.772 to 3 decimal places, agreeing with the Newton step."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the exponential–sine product for Newton’s formula, then check the 3-decimal-place bracket.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1.5)\\approx0.173611597&gt;0\\\\&amp;f(2)\\approx-0.10242208&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)\\\\&amp;=2 x e^{- x} \\cos{\\left(x^{2} \\right)} - e^{- x} \\sin{\\left(x^{2} \\right)}\\\\&amp;f(1.75)\\approx0.0137299169,\\quad f^{\\prime}(1.75)\\approx-0.62003734\\\\&amp;x_1=1.75-\\frac{0.0137299169}{-0.62003734}\\approx1.772\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Hence the root rounds to 1.772 to 3 decimal places, agreeing with the Newton step.</p><span data-math=\"\\begin{aligned}&amp;f(1.7715)\\approx0.000574930108&gt;0\\\\&amp;f(1.7725)\\approx-2.77962877e-5&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/problem-b/qgold",
+      "status": "worked",
+      "method": "Find the stationary point by differentiating the product and avoid a zero derivative as the initial Newton value.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=12e^{-2x}(1-2x)=0\\Rightarrow p=1/2;\\quad q=f(1/2)=6/e-1;\\quad P=(1/2,6/e-1)",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(p)=0",
+          "explanation": "Newton’s formula would divide by zero at p, so this starting value is unsuitable."
+        },
+        {
+          "latex": "f^{\\prime}(x)=- 24 x e^{- 2 x} + 12 e^{- 2 x};\\quad f(1.5)\\approx-0.103832769,\\quad f^{\\prime}(1.5)\\approx-1.19488964;\\quad x_1=1.5-\\frac{-0.103832769}{-1.19488964}\\approx1.41",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        }
+      ],
+      "solutionHtml": "<p>Find the stationary point by differentiating the product and avoid a zero derivative as the initial Newton value.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=12e^{-2x}(1-2x)=0\\\\&amp;\\Rightarrow p=1/2\\\\&amp;q=f(1/2)=6/e-1\\\\&amp;P=(1/2,6/e-1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Newton’s formula would divide by zero at p, so this starting value is unsuitable.</p><span data-math=\"f^{\\prime}(p)=0\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=- 24 x e^{- 2 x} + 12 e^{- 2 x}\\\\&amp;f(1.5)\\approx-0.103832769,\\quad f^{\\prime}(1.5)\\approx-1.19488964\\\\&amp;x_1=1.5-\\frac{-0.103832769}{-1.19488964}\\approx1.41\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/exam/q2",
+      "status": "worked",
+      "method": "A sign change across a pole does not satisfy the continuity condition required for a root bracket.",
+      "steps": [
+        {
+          "latex": "f(2)=1/(-1)-1=-2;\\quad f(2.5)=1/(1/2)-1=1",
+          "explanation": ""
+        },
+        {
+          "latex": "x=7/3\\text{ is a pole in }[2,2.5];\\quad f(x)=0\\Rightarrow3x-7=1\\Rightarrow x=8/3",
+          "explanation": "The discontinuity invalidates the student’s argument. The only root 8/3 is outside the interval."
+        }
+      ],
+      "solutionHtml": "<p>A sign change across a pole does not satisfy the continuity condition required for a root bracket.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f(2)=1/(-1)-1=-2\\\\&amp;f(2.5)=1/(1/2)-1=1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The discontinuity invalidates the student’s argument. The only root 8/3 is outside the interval.</p><span data-math=\"\\begin{aligned}&amp;x=7/3\\text{ is a pole in }[2,2.5]\\\\&amp;f(x)=0\\\\&amp;\\Rightarrow 3x-7=1\\\\&amp;\\Rightarrow x=8/3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/exam/q12",
+      "status": "worked",
+      "method": "Isolate sin x and use the principal inverse on the specified interval 0<x<1.",
+      "steps": [
+        {
+          "latex": "3\\sin x=x^2/3+1\\Rightarrow\\sin x=x^2/9+1/3;\\quad x=\\arcsin(x^2/9+1/3)",
+          "explanation": ""
+        },
+        {
+          "latex": "x_0=0.5;\\quad x_1\\approx0.369;\\quad x_2\\approx0.356;\\quad x_3\\approx0.355",
+          "explanation": "Substitute each unrounded iterate into the next evaluation; round only the displayed values."
+        },
+        {
+          "latex": "f^{\\prime}(x)=\\frac{2 x}{3} - 3 \\cos{\\left(x \\right)};\\quad f(0.4)\\approx-0.114921694,\\quad f^{\\prime}(0.4)\\approx-2.49651632;\\quad x_1=0.4-\\frac{-0.114921694}{-2.49651632}\\approx0.354",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        }
+      ],
+      "solutionHtml": "<p>Isolate sin x and use the principal inverse on the specified interval 0&lt;x&lt;1.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;3\\sin x=x^2/3+1\\\\&amp;\\Rightarrow \\sin x=x^2/9+1/3\\\\&amp;x=\\arcsin(x^2/9+1/3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute each unrounded iterate into the next evaluation; round only the displayed values.</p><span data-math=\"\\begin{aligned}&amp;x_0=0.5\\\\&amp;x_1\\approx0.369\\\\&amp;x_2\\approx0.356\\\\&amp;x_3\\approx0.355\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=\\frac{2 x}{3} - 3 \\cos{\\left(x \\right)}\\\\&amp;f(0.4)\\approx-0.114921694,\\quad f^{\\prime}(0.4)\\approx-2.49651632\\\\&amp;x_1=0.4-\\frac{-0.114921694}{-2.49651632}\\approx0.354\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/exam/q18",
+      "status": "worked",
+      "method": "Use the curve–line difference and the positive-slope cobweb to establish convergence.",
+      "steps": [
+        {
+          "latex": "f(1)\\approx0.385640646>0;\\quadf(2)\\approx-0.4<0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        },
+        {
+          "latex": "g(x)=\\frac45\\sqrt{x+2},\\quad g^{\\prime}(x)=\\frac2{5\\sqrt{x+2}};\\quad0<g^{\\prime}(x)\\le\\frac2{5\\sqrt3}<1\\quad(1\\le x\\le2)",
+          "explanation": "The interval maps into itself. Starting at 1, the staircase steps rise toward the intersection, and the slope bound guarantees convergence."
+        }
+      ],
+      "solutionHtml": "<p>Use the curve–line difference and the positive-slope cobweb to establish convergence.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1)\\approx0.385640646&gt;0\\\\&amp;f(2)\\approx-0.4&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The interval maps into itself. Starting at 1, the staircase steps rise toward the intersection, and the slope bound guarantees convergence.</p><span data-math=\"\\begin{aligned}&amp;g(x)=\\frac45\\sqrt{x+2},\\quad g^{\\prime}(x)=\\frac2{5\\sqrt{x+2}}\\\\&amp;0&lt;g^{\\prime}(x)\\le\\frac2{5\\sqrt3}&lt;1\\quad(1\\le x\\le2)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/exam/q22",
+      "status": "worked",
+      "method": "Use the ground-level equation, one Newton step, and the appropriate rounding interval.",
+      "steps": [
+        {
+          "latex": "h(9)\\approx0.711162018>0;\\quadh(10)\\approx-2.78439658<0",
+          "explanation": "Continuity gives a ground-level crossing between 9 and 10 seconds, as shown by the model’s first descent to ground."
+        },
+        {
+          "latex": "f^{\\prime}(t)=\\frac{10 \\cos{\\left(\\frac{t}{3} \\right)}}{3} - \\frac{1}{10} - 9 e^{- \\frac{t}{2}};\\quad f(9)\\approx0.711162018,\\quad f^{\\prime}(9)\\approx-3.49995596;\\quad t_1=9-\\frac{0.711162018}{-3.49995596}\\approx9.203",
+          "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
+        },
+        {
+          "latex": "h(9.2025)\\approx0.000705826979>0;\\quadh(9.2035)\\approx-0.00280873299<0",
+          "explanation": "The landing time therefore rounds to 9.203 seconds to 3 decimal places."
+        }
+      ],
+      "solutionHtml": "<p>Use the ground-level equation, one Newton step, and the appropriate rounding interval.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity gives a ground-level crossing between 9 and 10 seconds, as shown by the model’s first descent to ground.</p><span data-math=\"\\begin{aligned}&amp;h(9)\\approx0.711162018&gt;0\\\\&amp;h(10)\\approx-2.78439658&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(t)\\\\&amp;=\\frac{10 \\cos{\\left(\\frac{t}{3} \\right)}}{3} - \\frac{1}{10} - 9 e^{- \\frac{t}{2}}\\\\&amp;f(9)\\approx0.711162018,\\quad f^{\\prime}(9)\\approx-3.49995596\\\\&amp;t_1=9-\\frac{0.711162018}{-3.49995596}\\approx9.203\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The landing time therefore rounds to 9.203 seconds to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;h(9.2025)\\approx0.000705826979&gt;0\\\\&amp;h(9.2035)\\approx-0.00280873299&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/exam/q29",
+      "status": "worked",
+      "method": "Retain the logarithm’s domain x>0. The origin shown by the sketch is a limiting point rather than a point of the original function.",
+      "steps": [
+        {
+          "latex": "x>0,\\quad x^3\\ln x=0\\Rightarrow x=1\\Rightarrow B=(1,0);\\quad\\lim_{x\\to0^+}x^3\\ln x=0",
+          "explanation": "A=(0,0) belongs only to the continuous extension. The original function is undefined at x=0, so it does not literally cut the x-axis there."
+        },
+        {
+          "latex": "f^{\\prime}(x)=3x^2\\ln x+x^3(1/x)=x^2(3\\ln x+1)",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(0.7165)\\approx-6.73006079e-5<0;\\quadf^{\\prime}(0.7175)\\approx0.0020865128>0",
+          "explanation": "The derivative changes negative to positive, establishing the stationary x-coordinate as 0.717 to 3 decimal places."
+        },
+        {
+          "latex": "x^2(3\\ln x+1)=0,\\quad x>0\\Rightarrow\\ln x=-1/3\\Rightarrow x=e^{-1/3}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Retain the logarithm’s domain x&gt;0. The origin shown by the sketch is a limiting point rather than a point of the original function.</p><ol class=\"parts\" type=\"a\"><li><p>A=(0,0) belongs only to the continuous extension. The original function is undefined at x=0, so it does not literally cut the x-axis there.</p><span data-math=\"\\begin{aligned}&amp;x&gt;0,\\quad x^3\\ln x=0\\\\&amp;\\Rightarrow x=1\\\\&amp;\\Rightarrow B=(1,0)\\\\&amp;\\lim_{x\\to0^+}x^3\\ln x=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=3x^2\\ln x+x^3(1/x)=x^2(3\\ln x+1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The derivative changes negative to positive, establishing the stationary x-coordinate as 0.717 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(0.7165)\\approx-6.73006079e-5&lt;0\\\\&amp;f^{\\prime}(0.7175)\\approx0.0020865128&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x^2(3\\ln x+1)=0,\\quad x&gt;0\\\\&amp;\\Rightarrow \\ln x=-1/3\\\\&amp;\\Rightarrow x=e^{-1/3}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch10/exam/q37",
+      "status": "worked",
+      "method": "Compare a strictly increasing logarithm with a decreasing line on x>0.",
+      "steps": [
+        {
+          "latex": "y=2\\ln x:\\ (1,0),\\ x=0\\text{ vertical asymptote};\\quad2x+5y=10\\Rightarrow y=2-2x/5",
+          "explanation": "Sketch the line through (0,2),(5,0) and the logarithm; they cross once."
+        },
+        {
+          "latex": "2\\ln x=2-2x/5\\Longleftrightarrow10\\ln x+2x-10=0;\\quad f^{\\prime}(x)=10/x+2>0\\quad(x>0)",
+          "explanation": "The difference is strictly increasing from −∞ to +∞, so the intersection and root are unique."
+        },
+        {
+          "latex": "f(1.8)\\approx-0.522133351<0;\\quadf(1.9)\\approx0.218538862>0",
+          "explanation": "Continuity on the interval and the opposite signs guarantee at least one root inside."
+        }
+      ],
+      "solutionHtml": "<p>Compare a strictly increasing logarithm with a decreasing line on x&gt;0.</p><ol class=\"parts\" type=\"a\"><li><p>Sketch the line through (0,2),(5,0) and the logarithm; they cross once.</p><span data-math=\"\\begin{aligned}&amp;y=2\\ln x:\\ (1,0),\\ x=0\\text{ vertical asymptote}\\\\&amp;2x+5y=10\\\\&amp;\\Rightarrow y=2-2x/5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The difference is strictly increasing from −∞ to +∞, so the intersection and root are unique.</p><span data-math=\"\\begin{aligned}&amp;2\\ln x=2-2x/5\\Longleftrightarrow10\\ln x+2x-10=0\\\\&amp;f^{\\prime}(x)=10/x+2&gt;0\\quad(x&gt;0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1.8)\\approx-0.522133351&lt;0\\\\&amp;f(1.9)\\approx0.218538862&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/9213ab610f4d2d1c2673.png\" alt=\"Sketch accompanying the worked solution.\" style=\"max-width:100%;height:auto\"><figcaption>Sketch accompanying the worked solution.</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    }
+  ]
+}
