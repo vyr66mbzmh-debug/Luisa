@@ -28,3 +28,9 @@ a worked solution or make the row ready for inclusion in a paper. Lead-owned
 integration supplies checked solutions, skill mappings and the root catalogue.
 Rebuilding extracted data overwrites those fields, so merge downstream data only
 after extraction has completed.
+
+For a renderer-only correction after integration, repeat step 4 with
+`--refresh-prompts`. This verifies the same source hashes and complete question
+ID inventory, then replaces only each row’s `question` and `hints` fields.
+Worked solutions, source context, skill mappings and other metadata are retained.
+Never use an ordinary rebuild over integrated chapter data.

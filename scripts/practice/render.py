@@ -9,6 +9,12 @@ import shutil
 from pathlib import Path
 from extract import environment, group, split_items
 
+def escaped(text, index):
+    """A TeX character is escaped only by an odd run of preceding slashes."""
+    start=index
+    while start and text[start-1]=='\\':start-=1
+    return (index-start)%2==1
+
 class Renderer:
     def __init__(self, source_dir, output_dir, asset_url):
         self.source_dir=Path(source_dir);self.output_dir=Path(output_dir);self.asset_url=asset_url;self.assets={}
@@ -49,7 +55,7 @@ class Renderer:
         while i<len(s):
             if s[i]=='$':
                 j=i+1
-                while j<len(s) and (s[j]!='$' or s[j-1]=='\\'):j+=1
+                while j<len(s) and (s[j]!='$' or escaped(s,j)):j+=1
                 if j==len(s):raise ValueError('Unclosed inline math')
                 out.append(self.math(s[i+1:j]));i=j+1;continue
             if s.startswith(r'\[',i) or s.startswith(r'\(',i):
@@ -86,14 +92,19 @@ class Renderer:
                     # Protect inline mathematical arrays and escaped ampersands.
                     cells=[];rows=[];start=0;math=False;braces=0;k=0
                     while k<len(table):
-                        if table[k]=='$' and (not k or table[k-1]!='\\'):math=not math
+                        if table[k]=='$' and not escaped(table,k):math=not math
                         if not math:
-                            if table[k]=='{':braces+=1
-                            if table[k]=='}':braces-=1
-                            if braces==0 and table[k]=='&' and (not k or table[k-1]!='\\'):
+                            if table[k]=='{' and not escaped(table,k):braces+=1
+                            if table[k]=='}' and not escaped(table,k):braces-=1
+                            if braces==0 and table[k]=='&' and not escaped(table,k):
                                 cells.append(table[start:k]);start=k+1
                             elif braces==0 and table.startswith('\\\\',k):
-                                cells.append(table[start:k]);rows.append(cells);cells=[];k+=1;start=k+1
+                                cells.append(table[start:k]);rows.append(cells);cells=[];k+=2
+                                # Optional TeX row spacing is layout, not cell content.
+                                spacing=re.match(r'\s*\[[^\]]*\]',table[k:])
+                                if spacing:k+=spacing.end()
+                                start=k
+                                continue
                         k+=1
                     if table[start:].strip():cells.append(table[start:])
                     if cells:rows.append(cells)

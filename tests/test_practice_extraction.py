@@ -37,4 +37,20 @@ class ExtractionTests(unittest.TestCase):
         result=Renderer('.','.','assets').render(r'\begin{tabular}{ll}$a$&$b$\end{tabular}')
         self.assertIn('practice-layout-table',result)
 
+    def test_table_math_after_rule_and_rowbreak(self):
+        result=Renderer('.','.','assets').render(r'\begin{tabular}{|ccc|}$x$&2&4\\\hline$f$&4&8\\$y$&1&3\end{tabular}')
+        self.assertEqual(result.count('<tr>'),3)
+        self.assertEqual(result.count('<td>'),9)
+        self.assertIn('data-math="f"',result)
+        self.assertNotIn('&amp;',result)
+
+    def test_table_optional_spacing_and_nested_math(self):
+        result=Renderer('.','.','assets').render(r'\begin{tabular}{ll}$\begin{matrix}1&2\\3&4\end{matrix}$&A\&B\\[3pt]$c$&d\\ [-2mm]$e$&f\end{tabular}')
+        self.assertEqual(result.count('<tr>'),3)
+        self.assertEqual(result.count('<td>'),6)
+        self.assertIn('A&amp;B',result)
+        self.assertNotIn('[3pt]',result)
+        self.assertNotIn('[-2mm]',result)
+        self.assertIn(r'1&amp;2\\3&amp;4',result)
+
 if __name__=='__main__':unittest.main()
