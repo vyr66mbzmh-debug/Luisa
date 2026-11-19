@@ -1,0 +1,1064 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-1",
+  "chapter": 7,
+  "sourcePdf": "resources/practice/pure-year-1/chapter-07.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.1/q1",
+      "status": "worked",
+      "method": "Divide every numerator term by the common denominator, keeping x≠0.",
+      "steps": [
+        {
+          "latex": "\\frac{6x^4+8x^3-4x^2}{2x}=3x^{4-1}+4x^{3-1}-2x^{2-1}=3x^3+4x^2-2x",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{12x-24x^2+9x^3}{3x}=4-8x+3x^2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{8x^6-4x^3+2x^4}{-2x^2}=-4x^{6-2}+2x^{3-2}-x^{4-2}=-4x^4+2x-x^2",
+          "explanation": "The supplied key has 2x³ in its middle term. The original numerator term is −4x³, so dividing it by −2x² gives 2x; the worked result follows the original question."
+        }
+      ],
+      "solutionHtml": "<p>Divide every numerator term by the common denominator, keeping x≠0.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{6x^4+8x^3-4x^2}{2x}\\\\&amp;=3x^{4-1}+4x^{3-1}-2x^{2-1}\\\\&amp;=3x^3+4x^2-2x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\frac{12x-24x^2+9x^3}{3x}=4-8x+3x^2\" data-display=\"true\" class=\"equation\"></span></li><li><p>The supplied key has 2x³ in its middle term. The original numerator term is −4x³, so dividing it by −2x² gives 2x; the worked result follows the original question.</p><span data-math=\"\\begin{aligned}&amp;\\frac{8x^6-4x^3+2x^4}{-2x^2}\\\\&amp;=-4x^{6-2}+2x^{3-2}-x^{4-2}\\\\&amp;=-4x^4+2x-x^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.1/q2",
+      "status": "worked",
+      "method": "Factorise the numerator and cancel the common linear factor. The original denominator exclusions still apply.",
+      "steps": [
+        {
+          "latex": "\\frac{x^2-9}{x-3}=\\frac{(x-3)(x+3)}{x-3}=x+3\\quad(x\\ne3)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{x^2-3x+2}{x-2}=\\frac{(x-1)(x-2)}{x-2}=x-1\\quad(x\\ne2)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{2x^2+5x-3}{x+3}=\\frac{(2x-1)(x+3)}{x+3}=2x-1\\quad(x\\ne-3)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Factorise the numerator and cancel the common linear factor. The original denominator exclusions still apply.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{x^2-9}{x-3}\\\\&amp;=\\frac{(x-3)(x+3)}{x-3}\\\\&amp;=x+3\\quad(x\\ne3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{x^2-3x+2}{x-2}\\\\&amp;=\\frac{(x-1)(x-2)}{x-2}\\\\&amp;=x-1\\quad(x\\ne2)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{2x^2+5x-3}{x+3}\\\\&amp;=\\frac{(2x-1)(x+3)}{x+3}\\\\&amp;=2x-1\\quad(x\\ne-3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.1/q3",
+      "status": "worked",
+      "method": "Factorise both quadratics before cancelling. Retain exclusions from every factor of the original denominator.",
+      "steps": [
+        {
+          "latex": "\\frac{2x^2-3x-2}{x^2+x-6}=\\frac{(2x+1)(x-2)}{(x+3)(x-2)}=\\frac{2x+1}{x+3}\\quad(x\\ne-3,2)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{3x^2+x-2}{2x^2+5x+3}=\\frac{(3x-2)(x+1)}{(2x+3)(x+1)}=\\frac{3x-2}{2x+3}\\quad(x\\ne-1,-\\frac32)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{6x^2+11x-10}{2x^2-3x-20}=\\frac{(3x-2)(2x+5)}{(2x+5)(x-4)}=\\frac{3x-2}{x-4}\\quad(x\\ne4,-\\frac52)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Factorise both quadratics before cancelling. Retain exclusions from every factor of the original denominator.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{2x^2-3x-2}{x^2+x-6}\\\\&amp;=\\frac{(2x+1)(x-2)}{(x+3)(x-2)}\\\\&amp;=\\frac{2x+1}{x+3}\\quad(x\\ne-3,2)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{3x^2+x-2}{2x^2+5x+3}\\\\&amp;=\\frac{(3x-2)(x+1)}{(2x+3)(x+1)}\\\\&amp;=\\frac{3x-2}{2x+3}\\quad(x\\ne-1,-\\frac32)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{6x^2+11x-10}{2x^2-3x-20}\\\\&amp;=\\frac{(3x-2)(2x+5)}{(2x+5)(x-4)}\\\\&amp;=\\frac{3x-2}{x-4}\\quad(x\\ne4,-\\frac52)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.1/q4",
+      "status": "worked",
+      "method": "Factorise, cancel and then divide each term of the numerator by x.",
+      "steps": [
+        {
+          "latex": "\\frac{15x^2-16x-15}{3x^2-5x}=\\frac{(3x-5)(5x+3)}{x(3x-5)}=\\frac{5x+3}{x}=5+\\frac3x;\\quad A=5,\\ B=3\\quad(x\\ne0,\\frac53)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Factorise, cancel and then divide each term of the numerator by x.</p><span data-math=\"\\begin{aligned}&amp;\\frac{15x^2-16x-15}{3x^2-5x}\\\\&amp;=\\frac{(3x-5)(5x+3)}{x(3x-5)}\\\\&amp;=\\frac{5x+3}{x}\\\\&amp;=5+\\frac3x\\\\&amp;A=5,\\ B=3\\quad(x\\ne0,\\frac53)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.1/q5",
+      "status": "worked",
+      "method": "Factorise the known denominator. The cancelled factor must also occur in the numerator.",
+      "steps": [
+        {
+          "latex": "x^2+2x-3=(x+3)(x-1);\\quad x^2-2x+k=(x+3)(x-5)=x^2-2x-15\\Rightarrow k=-15",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Factorise the known denominator. The cancelled factor must also occur in the numerator.</p><span data-math=\"\\begin{aligned}&amp;x^2+2x-3=(x+3)(x-1)\\\\&amp;x^2-2x+k=(x+3)(x-5)=x^2-2x-15\\\\&amp;\\Rightarrow k=-15\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.1/q6",
+      "status": "worked",
+      "method": "Factorise the numerator and reconstruct the denominator using the common cancelled factor.",
+      "steps": [
+        {
+          "latex": "4x^2+8x-5=(2x-1)(2x+5);\\quad6x^2-7x+k=(2x-1)(3x-2)=6x^2-7x+2\\Rightarrow k=2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Factorise the numerator and reconstruct the denominator using the common cancelled factor.</p><span data-math=\"\\begin{aligned}&amp;4x^2+8x-5=(2x-1)(2x+5)\\\\&amp;6x^2-7x+k=(2x-1)(3x-2)=6x^2-7x+2\\\\&amp;\\Rightarrow k=2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.1/q7",
+      "status": "worked",
+      "method": "Take out 2x, factorise the two quadratics and cancel x−1.",
+      "steps": [
+        {
+          "latex": "\\frac{6x^3-2x^2-4x}{2x^2-7x+5}=\\frac{2x(3x+2)(x-1)}{(2x-5)(x-1)}=\\frac{2x(3x+2)}{2x-5};\\quad a=2,\\ b=3,\\ c=2,\\ p=2,\\ q=-5",
+          "explanation": "This is the standard integer-factor choice. The original expression excludes x=1 and x=5/2."
+        }
+      ],
+      "solutionHtml": "<p>Take out 2x, factorise the two quadratics and cancel x−1.</p><p>This is the standard integer-factor choice. The original expression excludes x=1 and x=5/2.</p><span data-math=\"\\begin{aligned}&amp;\\frac{6x^3-2x^2-4x}{2x^2-7x+5}\\\\&amp;=\\frac{2x(3x+2)(x-1)}{(2x-5)(x-1)}\\\\&amp;=\\frac{2x(3x+2)}{2x-5}\\\\&amp;a=2,\\ b=3,\\ c=2,\\ p=2,\\ q=-5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.2/q1",
+      "status": "worked",
+      "method": "Perform polynomial long division, including every descending power, then write dividend = divisor × quotient.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\2 x^{2}&- 3 x^{2} + 8 x - 5\\\\- 3 x&5 x - 5\\\\5&0\\end{array};\\quad 2 x^{3} - 5 x^{2} + 8 x - 5=(x - 1)(2 x^{2} - 3 x + 5)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\3 x^{2}&2 x^{2} + 3 x - 2\\\\2 x&- x - 2\\\\-1&0\\end{array};\\quad 3 x^{3} + 8 x^{2} + 3 x - 2=(x + 2)(3 x^{2} + 2 x - 1)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\2 x^{2}&7 x^{2} - 17 x - 12\\\\7 x&4 x - 12\\\\4&0\\end{array};\\quad 2 x^{3} + x^{2} - 17 x - 12=(x - 3)(2 x^{2} + 7 x + 4)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\4 x^{2}&- 3 x^{2} - 11 x + 4\\\\- 3 x&x + 4\\\\1&0\\end{array};\\quad 4 x^{3} + 13 x^{2} - 11 x + 4=(x + 4)(4 x^{2} - 3 x + 1)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        }
+      ],
+      "solutionHtml": "<p>Perform polynomial long division, including every descending power, then write dividend = divisor × quotient.</p><ol class=\"parts\" type=\"a\"><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\2 x^{2}&amp;- 3 x^{2} + 8 x - 5\\\\- 3 x&amp;5 x - 5\\\\5&amp;0\\end{array}\\\\&amp;2 x^{3} - 5 x^{2} + 8 x - 5\\\\&amp;=(x - 1)(2 x^{2} - 3 x + 5)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\3 x^{2}&amp;2 x^{2} + 3 x - 2\\\\2 x&amp;- x - 2\\\\-1&amp;0\\end{array}\\\\&amp;3 x^{3} + 8 x^{2} + 3 x - 2\\\\&amp;=(x + 2)(3 x^{2} + 2 x - 1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\2 x^{2}&amp;7 x^{2} - 17 x - 12\\\\7 x&amp;4 x - 12\\\\4&amp;0\\end{array}\\\\&amp;2 x^{3} + x^{2} - 17 x - 12\\\\&amp;=(x - 3)(2 x^{2} + 7 x + 4)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\4 x^{2}&amp;- 3 x^{2} - 11 x + 4\\\\- 3 x&amp;x + 4\\\\1&amp;0\\end{array}\\\\&amp;4 x^{3} + 13 x^{2} - 11 x + 4\\\\&amp;=(x + 4)(4 x^{2} - 3 x + 1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.2/q2",
+      "status": "worked",
+      "method": "Divide the leading terms, subtract their product and repeat until the remainder has lower degree than the divisor.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\3 x^{3}&2 x^{3} - x^{2} - 13 x - 6\\\\2 x^{2}&- 5 x^{2} - 13 x - 6\\\\- 5 x&- 3 x - 6\\\\-3&0\\end{array};\\quad 3 x^{4} + 8 x^{3} - x^{2} - 13 x - 6=(x + 2)(3 x^{3} + 2 x^{2} - 5 x - 3)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\2 x^{3}&- 10 x^{3} + x^{2} - x - 2\\\\- 5 x^{2}&6 x^{2} - x - 2\\\\3 x&- 4 x - 2\\\\-2&0\\end{array};\\quad 4 x^{4} - 8 x^{3} + x^{2} - x - 2=(2 x + 1)(2 x^{3} - 5 x^{2} + 3 x - 2)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\3 x^{3}&3 x^{3} - 17 x^{2} + 13 x - 2\\\\x^{2}&- 15 x^{2} + 13 x - 2\\\\- 5 x&3 x - 2\\\\1&0\\end{array};\\quad 9 x^{4} - 3 x^{3} - 17 x^{2} + 13 x - 2=(3 x - 2)(3 x^{3} + x^{2} - 5 x + 1)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\2 x^{3}&- 6 x^{3} - 5 x^{2} + 15 x + 9\\\\- 3 x^{2}&- 14 x^{2} + 15 x + 9\\\\- 7 x&9 - 6 x\\\\-3&0\\end{array};\\quad 4 x^{4} - 12 x^{3} - 5 x^{2} + 15 x + 9=(2 x - 3)(2 x^{3} - 3 x^{2} - 7 x - 3)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        }
+      ],
+      "solutionHtml": "<p>Divide the leading terms, subtract their product and repeat until the remainder has lower degree than the divisor.</p><ol class=\"parts\" type=\"a\"><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\3 x^{3}&amp;2 x^{3} - x^{2} - 13 x - 6\\\\2 x^{2}&amp;- 5 x^{2} - 13 x - 6\\\\- 5 x&amp;- 3 x - 6\\\\-3&amp;0\\end{array}\\\\&amp;3 x^{4} + 8 x^{3} - x^{2} - 13 x - 6\\\\&amp;=(x + 2)(3 x^{3} + 2 x^{2} - 5 x - 3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\2 x^{3}&amp;- 10 x^{3} + x^{2} - x - 2\\\\- 5 x^{2}&amp;6 x^{2} - x - 2\\\\3 x&amp;- 4 x - 2\\\\-2&amp;0\\end{array}\\\\&amp;4 x^{4} - 8 x^{3} + x^{2} - x - 2\\\\&amp;=(2 x + 1)(2 x^{3} - 5 x^{2} + 3 x - 2)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\3 x^{3}&amp;3 x^{3} - 17 x^{2} + 13 x - 2\\\\x^{2}&amp;- 15 x^{2} + 13 x - 2\\\\- 5 x&amp;3 x - 2\\\\1&amp;0\\end{array}\\\\&amp;9 x^{4} - 3 x^{3} - 17 x^{2} + 13 x - 2\\\\&amp;=(3 x - 2)(3 x^{3} + x^{2} - 5 x + 1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\2 x^{3}&amp;- 6 x^{3} - 5 x^{2} + 15 x + 9\\\\- 3 x^{2}&amp;- 14 x^{2} + 15 x + 9\\\\- 7 x&amp;9 - 6 x\\\\-3&amp;0\\end{array}\\\\&amp;4 x^{4} - 12 x^{3} - 5 x^{2} + 15 x + 9\\\\&amp;=(2 x - 3)(2 x^{3} - 3 x^{2} - 7 x - 3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.2/q3",
+      "status": "worked",
+      "method": "Use a zero coefficient for any missing power before performing long division.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\2 x^{2}&4 x^{2} - 4\\\\4 x&- 4 x - 4\\\\-4&0\\end{array};\\quad 2 x^{3} + 6 x^{2} - 4=(x + 1)(2 x^{2} + 4 x - 4)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\3 x^{2}&18 - 2 x^{2}\\\\- 2 x&6 x + 18\\\\6&0\\end{array};\\quad 3 x^{3} + 7 x^{2} + 18=(x + 3)(3 x^{2} - 2 x + 6)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\4 x^{2}&8 x^{2} - 11 x - 10\\\\8 x&5 x - 10\\\\5&0\\end{array};\\quad 4 x^{3} - 11 x - 10=(x - 2)(4 x^{2} + 8 x + 5)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\2 x^{2}&75 - 3 x^{2}\\\\- 3 x&15 x + 75\\\\15&0\\end{array};\\quad 2 x^{3} + 7 x^{2} + 75=(x + 5)(2 x^{2} - 3 x + 15)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        }
+      ],
+      "solutionHtml": "<p>Use a zero coefficient for any missing power before performing long division.</p><ol class=\"parts\" type=\"a\"><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\2 x^{2}&amp;4 x^{2} - 4\\\\4 x&amp;- 4 x - 4\\\\-4&amp;0\\end{array}\\\\&amp;2 x^{3} + 6 x^{2} - 4\\\\&amp;=(x + 1)(2 x^{2} + 4 x - 4)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\3 x^{2}&amp;18 - 2 x^{2}\\\\- 2 x&amp;6 x + 18\\\\6&amp;0\\end{array}\\\\&amp;3 x^{3} + 7 x^{2} + 18\\\\&amp;=(x + 3)(3 x^{2} - 2 x + 6)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\4 x^{2}&amp;8 x^{2} - 11 x - 10\\\\8 x&amp;5 x - 10\\\\5&amp;0\\end{array}\\\\&amp;4 x^{3} - 11 x - 10\\\\&amp;=(x - 2)(4 x^{2} + 8 x + 5)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\2 x^{2}&amp;75 - 3 x^{2}\\\\- 3 x&amp;15 x + 75\\\\15&amp;0\\end{array}\\\\&amp;2 x^{3} + 7 x^{2} + 75\\\\&amp;=(x + 5)(2 x^{2} - 3 x + 15)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.2/q4",
+      "status": "worked",
+      "method": "The remainder on division by x−r is f(r). Substitute the zero of each divisor.",
+      "steps": [
+        {
+          "latex": "f(-4)=(-4)^3+3(-4)^2+5(-4)-8=-64+48-20-8=-44",
+          "explanation": ""
+        },
+        {
+          "latex": "f(3)=2(27)-5(9)+12(3)-20=54-45+36-20=25",
+          "explanation": ""
+        },
+        {
+          "latex": "f(-5)=3(-125)+2(25)-40(-5)+45=-375+50+200+45=-80",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The remainder on division by x−r is f(r). Substitute the zero of each divisor.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f(-4)\\\\&amp;=(-4)^3+3(-4)^2+5(-4)-8\\\\&amp;=-64+48-20-8\\\\&amp;=-44\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"f(3)=2(27)-5(9)+12(3)-20=54-45+36-20=25\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(-5)\\\\&amp;=3(-125)+2(25)-40(-5)+45\\\\&amp;=-375+50+200+45\\\\&amp;=-80\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.2/q5",
+      "status": "worked",
+      "method": "Set 5x−2=0. Evaluating the polynomial at x=2/5 gives the constant remainder.",
+      "steps": [
+        {
+          "latex": "r=f\\left(\\frac25\\right)=-15\\left(\\frac25\\right)^3+26\\left(\\frac25\\right)^2-13\\left(\\frac25\\right)+5=-\\frac{24}{25}+\\frac{104}{25}-\\frac{130}{25}+\\frac{125}{25}=3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Set 5x−2=0. Evaluating the polynomial at x=2/5 gives the constant remainder.</p><span data-math=\"\\begin{aligned}&amp;r\\\\&amp;=f\\left(\\frac25\\right)\\\\&amp;=-15\\left(\\frac25\\right)^3+26\\left(\\frac25\\right)^2-13\\left(\\frac25\\right)+5\\\\&amp;=-\\frac{24}{25}+\\frac{104}{25}-\\frac{130}{25}+\\frac{125}{25}\\\\&amp;=3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.2/q6",
+      "status": "worked",
+      "method": "Use the remainder theorem in (a); divide by the known factor and factorise the quadratic in (b).",
+      "steps": [
+        {
+          "latex": "f(-3)=6(-27)-13(9)-13(-3)+30=-162-117+39+30=-210",
+          "explanation": ""
+        },
+        {
+          "latex": "f(2)=6(2)^{3}+-13(2)^{2}+-13(2)^{1}+30(2)^{0}=0;\\quad f(x)=(x - 2)(6 x^{2} - x - 15)=\\left(x - 2\\right) \\left(2 x + 3\\right) \\left(3 x - 5\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic."
+        }
+      ],
+      "solutionHtml": "<p>Use the remainder theorem in (a); divide by the known factor and factorise the quadratic in (b).</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f(-3)\\\\&amp;=6(-27)-13(9)-13(-3)+30\\\\&amp;=-162-117+39+30\\\\&amp;=-210\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic.</p><span data-math=\"\\begin{aligned}&amp;f(2)\\\\&amp;=6(2)^{3}+-13(2)^{2}+-13(2)^{1}+30(2)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x - 2)(6 x^{2} - x - 15)\\\\&amp;=\\left(x - 2\\right) \\left(2 x + 3\\right) \\left(3 x - 5\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.2/q7",
+      "status": "worked",
+      "method": "A factor x+3 means f(−3)=0. Substitute k, divide, then check the quadratic discriminant.",
+      "steps": [
+        {
+          "latex": "f(-3)=2(-27)+3(9)-4(-3)+k=-15+k=0\\Rightarrow k=15",
+          "explanation": ""
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\2 x^{2}&- 3 x^{2} - 4 x + 15\\\\- 3 x&5 x + 15\\\\5&0\\end{array};\\quad 2 x^{3} + 3 x^{2} - 4 x + 15=(x + 3)(2 x^{2} - 3 x + 5)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\Delta=(-3)^2-4(2)(5)=-31<0",
+          "explanation": "The quadratic factor 2x²−3x+5 has no real roots. The linear factor gives x=−3, so there is exactly one real solution."
+        }
+      ],
+      "solutionHtml": "<p>A factor x+3 means f(−3)=0. Substitute k, divide, then check the quadratic discriminant.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f(-3)=2(-27)+3(9)-4(-3)+k=-15+k=0\\\\&amp;\\Rightarrow k=15\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\2 x^{2}&amp;- 3 x^{2} - 4 x + 15\\\\- 3 x&amp;5 x + 15\\\\5&amp;0\\end{array}\\\\&amp;2 x^{3} + 3 x^{2} - 4 x + 15\\\\&amp;=(x + 3)(2 x^{2} - 3 x + 5)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The quadratic factor 2x²−3x+5 has no real roots. The linear factor gives x=−3, so there is exactly one real solution.</p><span data-math=\"\\Delta=(-3)^2-4(2)(5)=-31&lt;0\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.2/q8",
+      "status": "worked",
+      "method": "Evaluate f(2) for the remainder, then divide the polynomial by x−2.",
+      "steps": [
+        {
+          "latex": "r=f(2)=3(8)+10(4)-8(2)-5=43",
+          "explanation": ""
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\3 x^{2}&16 x^{2} - 8 x - 5\\\\16 x&24 x - 5\\\\24&43\\end{array};\\quad 3 x^{3} + 10 x^{2} - 8 x - 5=(x - 2)(3 x^{2} + 16 x + 24)+43",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        }
+      ],
+      "solutionHtml": "<p>Evaluate f(2) for the remainder, then divide the polynomial by x−2.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"r=f(2)=3(8)+10(4)-8(2)-5=43\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\3 x^{2}&amp;16 x^{2} - 8 x - 5\\\\16 x&amp;24 x - 5\\\\24&amp;43\\end{array}\\\\&amp;3 x^{3} + 10 x^{2} - 8 x - 5\\\\&amp;=(x - 2)(3 x^{2} + 16 x + 24)+43\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.2/q9",
+      "status": "worked",
+      "method": "Divide by the stated factor, factorise the resulting quadratic, and set every factor to zero.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\10 x^{2}&- 19 x^{2} + 4 x + 15\\\\- 19 x&15 - 15 x\\\\-15&0\\end{array};\\quad 10 x^{3} - 29 x^{2} + 4 x + 15=(x - 1)(10 x^{2} - 19 x - 15)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "10x^2-19x-15=10x^2-25x+6x-15=(2x-5)(5x+3);\\quad f(x)=(x-1)(2x-5)(5x+3)",
+          "explanation": ""
+        },
+        {
+          "latex": "x=1,\\quad x=\\frac52,\\quad x=-\\frac35",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Divide by the stated factor, factorise the resulting quadratic, and set every factor to zero.</p><ol class=\"parts\" type=\"a\"><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\10 x^{2}&amp;- 19 x^{2} + 4 x + 15\\\\- 19 x&amp;15 - 15 x\\\\-15&amp;0\\end{array}\\\\&amp;10 x^{3} - 29 x^{2} + 4 x + 15\\\\&amp;=(x - 1)(10 x^{2} - 19 x - 15)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;10x^2-19x-15\\\\&amp;=10x^2-25x+6x-15\\\\&amp;=(2x-5)(5x+3)\\\\&amp;f(x)=(x-1)(2x-5)(5x+3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"x=1,\\quad x=\\frac52,\\quad x=-\\frac35\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.3/q1",
+      "status": "worked",
+      "method": "For each stated factor x−r, substitute r and demonstrate that the remainder f(r) is zero.",
+      "steps": [
+        {
+          "latex": "f(-1)=2(-1)^3+7(-1)^2-5=-2+7-5=0",
+          "explanation": ""
+        },
+        {
+          "latex": "f(-2)=(-2)^3+4(-2)^2+3(-2)-2=-8+16-6-2=0",
+          "explanation": ""
+        },
+        {
+          "latex": "f(3)=2(27)-3(9)-7(3)-6=54-27-21-6=0",
+          "explanation": ""
+        },
+        {
+          "latex": "f(4)=4^4-3(4^3)-15(4)-4=256-192-60-4=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>For each stated factor x−r, substitute r and demonstrate that the remainder f(r) is zero.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"f(-1)=2(-1)^3+7(-1)^2-5=-2+7-5=0\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"f(-2)=(-2)^3+4(-2)^2+3(-2)-2=-8+16-6-2=0\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"f(3)=2(27)-3(9)-7(3)-6=54-27-21-6=0\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"f(4)=4^4-3(4^3)-15(4)-4=256-192-60-4=0\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.3/q2",
+      "status": "worked",
+      "method": "Verify the stated root by substitution. Divide out the linear factor and factorise the remaining quadratic.",
+      "steps": [
+        {
+          "latex": "f(2)=2(2)^{3}+1(2)^{2}+-13(2)^{1}+6(2)^{0}=0;\\quad f(x)=(x - 2)(2 x^{2} + 5 x - 3)=\\left(x - 2\\right) \\left(x + 3\\right) \\left(2 x - 1\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic."
+        },
+        {
+          "latex": "f(-3)=2(-3)^{3}+17(-3)^{2}+38(-3)^{1}+15(-3)^{0}=0;\\quad f(x)=(x + 3)(2 x^{2} + 11 x + 5)=\\left(x + 3\\right) \\left(x + 5\\right) \\left(2 x + 1\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic."
+        },
+        {
+          "latex": "f(1)=6(1)^{3}+-1(1)^{2}+-11(1)^{1}+6(1)^{0}=0;\\quad f(x)=(x - 1)(6 x^{2} + 5 x - 6)=\\left(x - 1\\right) \\left(2 x + 3\\right) \\left(3 x - 2\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic."
+        },
+        {
+          "latex": "f(-4)=15(-4)^{3}+61(-4)^{2}+-2(-4)^{1}+-24(-4)^{0}=0;\\quad f(x)=(x + 4)(15 x^{2} + x - 6)=\\left(x + 4\\right) \\left(3 x + 2\\right) \\left(5 x - 3\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic."
+        }
+      ],
+      "solutionHtml": "<p>Verify the stated root by substitution. Divide out the linear factor and factorise the remaining quadratic.</p><ol class=\"parts\" type=\"a\"><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic.</p><span data-math=\"\\begin{aligned}&amp;f(2)\\\\&amp;=2(2)^{3}+1(2)^{2}+-13(2)^{1}+6(2)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x - 2)(2 x^{2} + 5 x - 3)\\\\&amp;=\\left(x - 2\\right) \\left(x + 3\\right) \\left(2 x - 1\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic.</p><span data-math=\"\\begin{aligned}&amp;f(-3)\\\\&amp;=2(-3)^{3}+17(-3)^{2}+38(-3)^{1}+15(-3)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x + 3)(2 x^{2} + 11 x + 5)\\\\&amp;=\\left(x + 3\\right) \\left(x + 5\\right) \\left(2 x + 1\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic.</p><span data-math=\"\\begin{aligned}&amp;f(1)\\\\&amp;=6(1)^{3}+-1(1)^{2}+-11(1)^{1}+6(1)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x - 1)(6 x^{2} + 5 x - 6)\\\\&amp;=\\left(x - 1\\right) \\left(2 x + 3\\right) \\left(3 x - 2\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic.</p><span data-math=\"\\begin{aligned}&amp;f(-4)\\\\&amp;=15(-4)^{3}+61(-4)^{2}+-2(-4)^{1}+-24(-4)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x + 4)(15 x^{2} + x - 6)\\\\&amp;=\\left(x + 4\\right) \\left(3 x + 2\\right) \\left(5 x - 3\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.3/q3",
+      "status": "worked",
+      "method": "Test a small integer divisor of the constant term as a root. Once its substitution gives zero, divide out that factor and factorise the quadratic.",
+      "steps": [
+        {
+          "latex": "f(1)=1(1)^{3}+2(1)^{2}+-21(1)^{1}+18(1)^{0}=0;\\quad f(x)=(x - 1)(x^{2} + 3 x - 18)=\\left(x - 3\\right) \\left(x - 1\\right) \\left(x + 6\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic."
+        },
+        {
+          "latex": "f(-2)=2(-2)^{3}+13(-2)^{2}+13(-2)^{1}+-10(-2)^{0}=0;\\quad f(x)=(x + 2)(2 x^{2} + 9 x - 5)=\\left(x + 2\\right) \\left(x + 5\\right) \\left(2 x - 1\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic."
+        },
+        {
+          "latex": "f(-3)=3(-3)^{3}+2(-3)^{2}+-41(-3)^{1}+-60(-3)^{0}=0;\\quad f(x)=(x + 3)(3 x^{2} - 7 x - 20)=\\left(x - 4\\right) \\left(x + 3\\right) \\left(3 x + 5\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic."
+        }
+      ],
+      "solutionHtml": "<p>Test a small integer divisor of the constant term as a root. Once its substitution gives zero, divide out that factor and factorise the quadratic.</p><ol class=\"parts\" type=\"a\"><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic.</p><span data-math=\"\\begin{aligned}&amp;f(1)\\\\&amp;=1(1)^{3}+2(1)^{2}+-21(1)^{1}+18(1)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x - 1)(x^{2} + 3 x - 18)\\\\&amp;=\\left(x - 3\\right) \\left(x - 1\\right) \\left(x + 6\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic.</p><span data-math=\"\\begin{aligned}&amp;f(-2)\\\\&amp;=2(-2)^{3}+13(-2)^{2}+13(-2)^{1}+-10(-2)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x + 2)(2 x^{2} + 9 x - 5)\\\\&amp;=\\left(x + 2\\right) \\left(x + 5\\right) \\left(2 x - 1\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic.</p><span data-math=\"\\begin{aligned}&amp;f(-3)\\\\&amp;=3(-3)^{3}+2(-3)^{2}+-41(-3)^{1}+-60(-3)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x + 3)(3 x^{2} - 7 x - 20)\\\\&amp;=\\left(x - 4\\right) \\left(x + 3\\right) \\left(3 x + 5\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.3/q4",
+      "status": "worked",
+      "method": "Find one root using the factor theorem and factorise fully. Use the resulting roots, y-intercept and positive cubic leading term to sketch.",
+      "steps": [
+        {
+          "latex": "f(2)=2(2)^{3}+-11(2)^{2}+5(2)^{1}+18(2)^{0}=0;\\quad f(x)=(x - 2)(2 x^{2} - 7 x - 9)=\\left(x - 2\\right) \\left(x + 1\\right) \\left(2 x - 9\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic. The simple x-intercepts are (-1,0), (2,0), (9/2,0). The y-intercept is (0,18). With a positive leading coefficient, the cubic has a lower-left tail and an upper-right tail."
+        },
+        {
+          "latex": "f(5)=2(5)^{3}+-3(5)^{2}+-39(5)^{1}+20(5)^{0}=0;\\quad f(x)=(x - 5)(2 x^{2} + 7 x - 4)=\\left(x - 5\\right) \\left(x + 4\\right) \\left(2 x - 1\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic. The simple x-intercepts are (-4,0), (1/2,0), (5,0). The y-intercept is (0,20). With a positive leading coefficient, the cubic has a lower-left tail and an upper-right tail."
+        },
+        {
+          "latex": "f(-3)=6(-3)^{3}+37(-3)^{2}+50(-3)^{1}+-21(-3)^{0}=0;\\quad f(x)=(x + 3)(6 x^{2} + 19 x - 7)=\\left(x + 3\\right) \\left(2 x + 7\\right) \\left(3 x - 1\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic. The simple x-intercepts are (-7/2,0), (-3,0), (1/3,0). The y-intercept is (0,-21). With a positive leading coefficient, the cubic has a lower-left tail and an upper-right tail."
+        }
+      ],
+      "solutionHtml": "<p>Find one root using the factor theorem and factorise fully. Use the resulting roots, y-intercept and positive cubic leading term to sketch.</p><ol class=\"parts\" type=\"a\"><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic. The simple x-intercepts are (-1,0), (2,0), (9/2,0). The y-intercept is (0,18). With a positive leading coefficient, the cubic has a lower-left tail and an upper-right tail.</p><span data-math=\"\\begin{aligned}&amp;f(2)\\\\&amp;=2(2)^{3}+-11(2)^{2}+5(2)^{1}+18(2)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x - 2)(2 x^{2} - 7 x - 9)\\\\&amp;=\\left(x - 2\\right) \\left(x + 1\\right) \\left(2 x - 9\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic. The simple x-intercepts are (-4,0), (1/2,0), (5,0). The y-intercept is (0,20). With a positive leading coefficient, the cubic has a lower-left tail and an upper-right tail.</p><span data-math=\"\\begin{aligned}&amp;f(5)\\\\&amp;=2(5)^{3}+-3(5)^{2}+-39(5)^{1}+20(5)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x - 5)(2 x^{2} + 7 x - 4)\\\\&amp;=\\left(x - 5\\right) \\left(x + 4\\right) \\left(2 x - 1\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic. The simple x-intercepts are (-7/2,0), (-3,0), (1/3,0). The y-intercept is (0,-21). With a positive leading coefficient, the cubic has a lower-left tail and an upper-right tail.</p><span data-math=\"\\begin{aligned}&amp;f(-3)\\\\&amp;=6(-3)^{3}+37(-3)^{2}+50(-3)^{1}+-21(-3)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x + 3)(6 x^{2} + 19 x - 7)\\\\&amp;=\\left(x + 3\\right) \\left(2 x + 7\\right) \\left(3 x - 1\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/23aea55803b2e90dbea9.png\" alt=\"Answer sketch — part a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/32b0b9edc3ad7377aabb.png\" alt=\"Answer sketch — part b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/17c5c397038d9e0eecee.png\" alt=\"Answer sketch — part c\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part c</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 3
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.3/q5",
+      "status": "worked",
+      "method": "Divide by x−3 and factorise the quadratic; each linear factor gives a solution.",
+      "steps": [
+        {
+          "latex": "f(x)=(x-3)(6x^2+x-12)=(x-3)(2x+3)(3x-4);\\quad x=3,-\\frac32,\\frac43",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Divide by x−3 and factorise the quadratic; each linear factor gives a solution.</p><span data-math=\"\\begin{aligned}&amp;f(x)=(x-3)(6x^2+x-12)=(x-3)(2x+3)(3x-4)\\\\&amp;x=3,-\\frac32,\\frac43\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.3/q6",
+      "status": "worked",
+      "method": "Substitute −4 to prove the factor, then divide and recognise a perfect square.",
+      "steps": [
+        {
+          "latex": "f(-4)=9(-64)+24(16)-44(-4)+16=-576+384+176+16=0",
+          "explanation": ""
+        },
+        {
+          "latex": "f(x)=(x+4)(9x^2-12x+4)=(x+4)(3x-2)^2;\\quad p=3,\\ q=-2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Substitute −4 to prove the factor, then divide and recognise a perfect square.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f(-4)\\\\&amp;=9(-64)+24(16)-44(-4)+16\\\\&amp;=-576+384+176+16\\\\&amp;=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(x)=(x+4)(9x^2-12x+4)=(x+4)(3x-2)^2\\\\&amp;p=3,\\ q=-2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.3/q7",
+      "status": "worked",
+      "method": "Try x=1, then divide out x−1 and factorise the quadratic.",
+      "steps": [
+        {
+          "latex": "f(1)=2(1)^{3}+-3(1)^{2}+-5(1)^{1}+6(1)^{0}=0;\\quad f(x)=(x - 1)(2 x^{2} - x - 6)=\\left(x - 2\\right) \\left(x - 1\\right) \\left(2 x + 3\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic."
+        }
+      ],
+      "solutionHtml": "<p>Try x=1, then divide out x−1 and factorise the quadratic.</p><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic.</p><span data-math=\"\\begin{aligned}&amp;f(1)\\\\&amp;=2(1)^{3}+-3(1)^{2}+-5(1)^{1}+6(1)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x - 1)(2 x^{2} - x - 6)\\\\&amp;=\\left(x - 2\\right) \\left(x - 1\\right) \\left(2 x + 3\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.3/q8",
+      "status": "worked",
+      "method": "Use the known root to determine k, then factorise and use the roots for the graph.",
+      "steps": [
+        {
+          "latex": "g(-1)=-1+2+19+k=0\\Rightarrow k=-20",
+          "explanation": ""
+        },
+        {
+          "latex": "g(x)=(x+1)(x^2+x-20)=(x+1)(x-4)(x+5)",
+          "explanation": ""
+        },
+        {
+          "latex": "g(0)=-20;\\quad x=-5,-1,4",
+          "explanation": "The curve crosses the x-axis at (−5,0),(−1,0),(4,0) and the y-axis at (0,−20). All roots are simple. The cubic has a lower-left tail and upper-right tail."
+        }
+      ],
+      "solutionHtml": "<p>Use the known root to determine k, then factorise and use the roots for the graph.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"g(-1)=-1+2+19+k=0\\Rightarrow k=-20\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"g(x)=(x+1)(x^2+x-20)=(x+1)(x-4)(x+5)\" data-display=\"true\" class=\"equation\"></span></li><li><p>The curve crosses the x-axis at (−5,0),(−1,0),(4,0) and the y-axis at (0,−20). All roots are simple. The cubic has a lower-left tail and upper-right tail.</p><span data-math=\"g(0)=-20;\\quad x=-5,-1,4\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/9ea0a48e8aeb9dace8c0.png\" alt=\"Answer sketch — part c\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part c</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.3/q9",
+      "status": "worked",
+      "method": "Verify the root −3, then divide and factor the quadratic as a square.",
+      "steps": [
+        {
+          "latex": "p(-3)=25(-27)+55(9)-56(-3)+12=-675+495+168+12=0",
+          "explanation": ""
+        },
+        {
+          "latex": "p(x)=(x+3)(25x^2-20x+4)=(x+3)(5x-2)^2",
+          "explanation": ""
+        },
+        {
+          "latex": "x=-3\\quad\\text{or}\\quad x=\\frac25",
+          "explanation": "The root 2/5 is repeated, so it is one distinct value. There are exactly two distinct real roots."
+        }
+      ],
+      "solutionHtml": "<p>Verify the root −3, then divide and factor the quadratic as a square.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;p(-3)\\\\&amp;=25(-27)+55(9)-56(-3)+12\\\\&amp;=-675+495+168+12\\\\&amp;=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"p(x)=(x+3)(25x^2-20x+4)=(x+3)(5x-2)^2\" data-display=\"true\" class=\"equation\"></span></li><li><p>The root 2/5 is repeated, so it is one distinct value. There are exactly two distinct real roots.</p><span data-math=\"x=-3\\quad\\text{or}\\quad x=\\frac25\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.4/q1",
+      "status": "worked",
+      "method": "Start with the left-hand side, expand one pair of brackets and then distribute the remaining factor.",
+      "steps": [
+        {
+          "latex": "(x-4)(x+6)(2x+3)=(x-4)(2x^2+15x+18)=2x^3+15x^2+18x-8x^2-60x-72=2x^3+7x^2-42x-72",
+          "explanation": "The final expression is exactly the right-hand side for every x, proving the identity."
+        }
+      ],
+      "solutionHtml": "<p>Start with the left-hand side, expand one pair of brackets and then distribute the remaining factor.</p><p>The final expression is exactly the right-hand side for every x, proving the identity.</p><span data-math=\"\\begin{aligned}&amp;(x-4)(x+6)(2x+3)\\\\&amp;=(x-4)(2x^2+15x+18)\\\\&amp;=2x^3+15x^2+18x-8x^2-60x-72\\\\&amp;=2x^3+7x^2-42x-72\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.4/q2",
+      "status": "worked",
+      "method": "Compute squared side lengths and apply the converse of Pythagoras’ theorem.",
+      "steps": [
+        {
+          "latex": "PQ^2=(10+6)^2+(14-2)^2=400;\\quad QR^2=(12+6)^2+(8-2)^2=360;\\quad PR^2=(12-10)^2+(8-14)^2=40;\\quad QR^2+PR^2=400=PQ^2",
+          "explanation": "Thus the triangle is right-angled at R, opposite its longest side PQ."
+        }
+      ],
+      "solutionHtml": "<p>Compute squared side lengths and apply the converse of Pythagoras’ theorem.</p><p>Thus the triangle is right-angled at R, opposite its longest side PQ.</p><span data-math=\"\\begin{aligned}&amp;PQ^2=(10+6)^2+(14-2)^2=400\\\\&amp;QR^2=(12+6)^2+(8-2)^2=360\\\\&amp;PR^2=(12-10)^2+(8-14)^2=40\\\\&amp;QR^2+PR^2=400=PQ^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.4/q3",
+      "status": "worked",
+      "method": "At a tangency, the simultaneous equation must have a repeated root, so its discriminant is zero.",
+      "steps": [
+        {
+          "latex": "kx=4x^2-5x+4\\Rightarrow4x^2-(5+k)x+4=0;\\quad\\Delta=(5+k)^2-64=k^2+10k-39=(k+13)(k-3)",
+          "explanation": "For k=3 or k=−13, Δ=0, so there is exactly one intersection and each line is tangent. The repeated x-values are 1 and −1 respectively."
+        }
+      ],
+      "solutionHtml": "<p>At a tangency, the simultaneous equation must have a repeated root, so its discriminant is zero.</p><p>For k=3 or k=−13, Δ=0, so there is exactly one intersection and each line is tangent. The repeated x-values are 1 and −1 respectively.</p><span data-math=\"\\begin{aligned}&amp;kx=4x^2-5x+4\\\\&amp;\\Rightarrow 4x^2-(5+k)x+4=0\\\\&amp;\\Delta=(5+k)^2-64=k^2+10k-39=(k+13)(k-3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.4/q4",
+      "status": "worked",
+      "method": "Compare gradients of adjacent segments which share the point B.",
+      "steps": [
+        {
+          "latex": "m_{AB}=\\frac{1-3}{2-(-2)}=-\\frac12;\\quad m_{BC}=\\frac{-5-1}{14-2}=-\\frac12",
+          "explanation": "Both segments have the same gradient and pass through B. They lie on the same line, proving that A, B and C are collinear."
+        }
+      ],
+      "solutionHtml": "<p>Compare gradients of adjacent segments which share the point B.</p><p>Both segments have the same gradient and pass through B. They lie on the same line, proving that A, B and C are collinear.</p><span data-math=\"\\begin{aligned}&amp;m_{AB}=\\frac{1-3}{2-(-2)}=-\\frac12\\\\&amp;m_{BC}=\\frac{-5-1}{14-2}=-\\frac12\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.4/q5",
+      "status": "worked",
+      "method": "Complete the square and use the nonnegativity of a real square.",
+      "steps": [
+        {
+          "latex": "x^2-6x+10=(x-3)^2+1\\ge1>0",
+          "explanation": "This holds for every real x, proving the strict inequality."
+        }
+      ],
+      "solutionHtml": "<p>Complete the square and use the nonnegativity of a real square.</p><p>This holds for every real x, proving the strict inequality.</p><span data-math=\"x^2-6x+10=(x-3)^2+1\\ge1&gt;0\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.4/q6",
+      "status": "worked",
+      "method": "Expand both squares, distribute the subtraction and cancel like terms.",
+      "steps": [
+        {
+          "latex": "(x+y)^2-(x-y)^2=x^2+2xy+y^2-(x^2-2xy+y^2)=4xy",
+          "explanation": "The equality holds identically for every x and y."
+        }
+      ],
+      "solutionHtml": "<p>Expand both squares, distribute the subtraction and cancel like terms.</p><p>The equality holds identically for every x and y.</p><span data-math=\"\\begin{aligned}&amp;(x+y)^2-(x-y)^2\\\\&amp;=x^2+2xy+y^2-(x^2-2xy+y^2)\\\\&amp;=4xy\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.4/q7",
+      "status": "worked",
+      "method": "Let the consecutive odd integers be 2n+1 and 2n+3, with n an integer.",
+      "steps": [
+        {
+          "latex": "(2n+3)^2-(2n+1)^2=4n^2+12n+9-(4n^2+4n+1)=8n+8=8(n+1)",
+          "explanation": "Since n+1 is an integer, this difference is a multiple of 8. Reversing the order changes only its sign, which remains a multiple of 8."
+        }
+      ],
+      "solutionHtml": "<p>Let the consecutive odd integers be 2n+1 and 2n+3, with n an integer.</p><p>Since n+1 is an integer, this difference is a multiple of 8. Reversing the order changes only its sign, which remains a multiple of 8.</p><span data-math=\"\\begin{aligned}&amp;(2n+3)^2-(2n+1)^2\\\\&amp;=4n^2+12n+9-(4n^2+4n+1)\\\\&amp;=8n+8\\\\&amp;=8(n+1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.4/q8",
+      "status": "worked",
+      "method": "Write the odd integer as 2n+1, where n is an integer, then expand the cube and square.",
+      "steps": [
+        {
+          "latex": "(2n+1)^3-(2n+1)^2=8n^3+12n^2+6n+1-(4n^2+4n+1)=8n^3+8n^2+2n=2(4n^3+4n^2+n)",
+          "explanation": "The bracket is an integer, so the difference is twice an integer and hence even."
+        }
+      ],
+      "solutionHtml": "<p>Write the odd integer as 2n+1, where n is an integer, then expand the cube and square.</p><p>The bracket is an integer, so the difference is twice an integer and hence even.</p><span data-math=\"\\begin{aligned}&amp;(2n+1)^3-(2n+1)^2\\\\&amp;=8n^3+12n^2+6n+1-(4n^2+4n+1)\\\\&amp;=8n^3+8n^2+2n\\\\&amp;=2(4n^3+4n^2+n)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.4/q9",
+      "status": "worked",
+      "method": "No real roots requires a negative discriminant. Solve the resulting quadratic inequality.",
+      "steps": [
+        {
+          "latex": "(k-3)^2-4(3-2k)<0\\Rightarrow k^2+2k-3<0\\Rightarrow(k+3)(k-1)<0\\Rightarrow -3<k<1",
+          "explanation": "The upward-opening quadratic is negative strictly between its roots −3 and 1; the endpoints would give a repeated real root and are excluded."
+        }
+      ],
+      "solutionHtml": "<p>No real roots requires a negative discriminant. Solve the resulting quadratic inequality.</p><p>The upward-opening quadratic is negative strictly between its roots −3 and 1; the endpoints would give a repeated real root and are excluded.</p><span data-math=\"\\begin{aligned}&amp;(k-3)^2-4(3-2k)&lt;0\\\\&amp;\\Rightarrow k^2+2k-3&lt;0\\\\&amp;\\Rightarrow (k+3)(k-1)&lt;0\\\\&amp;\\Rightarrow -3&lt;k&lt;1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.5/q1",
+      "status": "worked",
+      "method": "Use exhaustion over the finite interval, then give one positive-integer counterexample to the unrestricted claim.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|rrrrrr}n&5&6&7&8&9&10\\\\f(n)&47&59&73&89&107&127\\end{array}",
+          "explanation": "All six values are prime: none is divisible by 2,3,5,7 or 11, which includes every possible prime factor up to the square root of the largest value 127. The six cases exhaust 5≤n≤10."
+        },
+        {
+          "latex": "f(17)=17^2+17+17=17(17+1+1)=17\\times19=323",
+          "explanation": "This is composite, so f(n) is not prime for every positive integer n."
+        }
+      ],
+      "solutionHtml": "<p>Use exhaustion over the finite interval, then give one positive-integer counterexample to the unrestricted claim.</p><ol class=\"parts\" type=\"a\"><li><p>All six values are prime: none is divisible by 2,3,5,7 or 11, which includes every possible prime factor up to the square root of the largest value 127. The six cases exhaust 5≤n≤10.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|rrrrrr}n&amp;5&amp;6&amp;7&amp;8&amp;9&amp;10\\\\f(n)&amp;47&amp;59&amp;73&amp;89&amp;107&amp;127\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>This is composite, so f(n) is not prime for every positive integer n.</p><span data-math=\"\\begin{aligned}&amp;f(17)\\\\&amp;=17^2+17+17\\\\&amp;=17(17+1+1)\\\\&amp;=17\\times19\\\\&amp;=323\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.5/q2",
+      "status": "worked",
+      "method": "A universal claim is disproved by one valid counterexample.",
+      "steps": [
+        {
+          "latex": "3-2=1",
+          "explanation": "Both 3 and 2 are prime, but their difference is odd. Therefore the difference of two primes is not always even."
+        }
+      ],
+      "solutionHtml": "<p>A universal claim is disproved by one valid counterexample.</p><p>Both 3 and 2 are prime, but their difference is odd. Therefore the difference of two primes is not always even.</p><span data-math=\"3-2=1\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.5/q3",
+      "status": "worked",
+      "method": "Subtract the right-hand side from the left-hand side, then test a value outside the stated positive domain.",
+      "steps": [
+        {
+          "latex": "(1+2x)^2-(1+4x^2)=1+4x+4x^2-1-4x^2=4x>0\\quad(x>0)",
+          "explanation": "Hence the left-hand side is strictly greater for every positive x."
+        },
+        {
+          "latex": "x=-1:\\quad(1+2x)^2=1,\\quad1+4x^2=5",
+          "explanation": "The required inequality would be 1>5, which is false."
+        }
+      ],
+      "solutionHtml": "<p>Subtract the right-hand side from the left-hand side, then test a value outside the stated positive domain.</p><ol class=\"parts\" type=\"a\"><li><p>Hence the left-hand side is strictly greater for every positive x.</p><span data-math=\"\\begin{aligned}&amp;(1+2x)^2-(1+4x^2)\\\\&amp;=1+4x+4x^2-1-4x^2\\\\&amp;=4x&gt;0\\quad(x&gt;0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The required inequality would be 1&gt;5, which is false.</p><span data-math=\"x=-1:\\quad(1+2x)^2=1,\\quad1+4x^2=5\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.5/q4",
+      "status": "worked",
+      "method": "Cancellation is valid only when the cancelled denominator is nonzero.",
+      "steps": [
+        {
+          "latex": "",
+          "explanation": "The proof cancels x without restricting the domain to x≠0. The simplified expression is positive everywhere, but it is not equal to a defined original fraction at x=0."
+        },
+        {
+          "latex": "x=0",
+          "explanation": "The original fraction has denominator zero, so it is undefined at this value and cannot be a positive real number there."
+        }
+      ],
+      "solutionHtml": "<p>Cancellation is valid only when the cancelled denominator is nonzero.</p><ol class=\"parts\" type=\"a\"><li><p>The proof cancels x without restricting the domain to x≠0. The simplified expression is positive everywhere, but it is not equal to a defined original fraction at x=0.</p></li><li><p>The original fraction has denominator zero, so it is undefined at this value and cannot be a positive real number there.</p><span data-math=\"x=0\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.5/q5",
+      "status": "worked",
+      "method": "Choose x=−2, so adding 2 makes the result zero.",
+      "steps": [
+        {
+          "latex": "(-2+2)^2=0<4=(-2)^2",
+          "explanation": "This valid counterexample disproves the claim that the new square is always greater."
+        }
+      ],
+      "solutionHtml": "<p>Choose x=−2, so adding 2 makes the result zero.</p><p>This valid counterexample disproves the claim that the new square is always greater.</p><span data-math=\"(-2+2)^2=0&lt;4=(-2)^2\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.5/q6",
+      "status": "worked",
+      "method": "There are only six positive integers less than 7, so test all six cases.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|r|r}n&(2n+1)^2&2^{n+1}\\\\1&9&4\\\\2&25&8\\\\3&49&16\\\\4&81&32\\\\5&121&64\\\\6&169&128\\end{array}",
+          "explanation": "Every entry in the middle column is strictly larger than the corresponding entry in the final column. This proves the statement by exhaustion."
+        }
+      ],
+      "solutionHtml": "<p>There are only six positive integers less than 7, so test all six cases.</p><p>Every entry in the middle column is strictly larger than the corresponding entry in the final column. This proves the statement by exhaustion.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|r|r}n&amp;(2n+1)^2&amp;2^{n+1}\\\\1&amp;9&amp;4\\\\2&amp;25&amp;8\\\\3&amp;49&amp;16\\\\4&amp;81&amp;32\\\\5&amp;121&amp;64\\\\6&amp;169&amp;128\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.5/q7",
+      "status": "worked",
+      "method": "Factor the difference and determine its sign.",
+      "steps": [
+        {
+          "latex": "x^2\\ge x\\Leftrightarrow x(x-1)\\ge0\\Leftrightarrow x\\le0\\text{ or }x\\ge1",
+          "explanation": "The claim is sometimes true. For example x=2 gives 4≥2, but x=1/2 gives 1/4<1/2. It fails precisely on 0<x<1."
+        }
+      ],
+      "solutionHtml": "<p>Factor the difference and determine its sign.</p><p>The claim is sometimes true. For example x=2 gives 4≥2, but x=1/2 gives 1/4&lt;1/2. It fails precisely on 0&lt;x&lt;1.</p><span data-math=\"\\begin{aligned}&amp;x^2\\ge x\\Leftrightarrow x(x-1)\\ge0\\Leftrightarrow x\\le0\\text{ or }x\\ge1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.5/q8",
+      "status": "worked",
+      "method": "Complete the square in the difference between the two sides.",
+      "steps": [
+        {
+          "latex": "(x+5)^2-(4x+9)=x^2+6x+16=(x+3)^2+7\\ge7>0",
+          "explanation": "Since the difference is positive for every real x, the claimed non-strict inequality holds for every real x."
+        }
+      ],
+      "solutionHtml": "<p>Complete the square in the difference between the two sides.</p><p>Since the difference is positive for every real x, the claimed non-strict inequality holds for every real x.</p><span data-math=\"(x+5)^2-(4x+9)=x^2+6x+16=(x+3)^2+7\\ge7&gt;0\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/7.5/q9",
+      "status": "worked",
+      "method": "Check every integer in the finite interval and record its remainder on division by 4.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|rrrrrr}n&2&3&4&5&6&7\\\\n^2+2&6&11&18&27&38&51\\\\\\text{remainder mod }4&2&3&2&3&2&3\\end{array}",
+          "explanation": "None of the remainders is zero. These six cases exhaust 2≤n≤7, proving that none of the values is divisible by 4."
+        }
+      ],
+      "solutionHtml": "<p>Check every integer in the finite interval and record its remainder on division by 4.</p><p>None of the remainders is zero. These six cases exhaust 2≤n≤7, proving that none of the values is divisible by 4.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|rrrrrr}n&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7\\\\n^2+2&amp;6&amp;11&amp;18&amp;27&amp;38&amp;51\\\\\\text{remainder mod }4&amp;2&amp;3&amp;2&amp;3&amp;2&amp;3\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/problem-a/qbronze",
+      "status": "worked",
+      "method": "Use the remainder theorem and long division, then factorise using the known root. The final assertion concerns just four integers.",
+      "steps": [
+        {
+          "latex": "r=p(4)=64-144+8+48=-24",
+          "explanation": ""
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\x^{2}&- 5 x^{2} + 2 x + 48\\\\- 5 x&48 - 18 x\\\\-18&-24\\end{array};\\quad x^{3} - 9 x^{2} + 2 x + 48=(x - 4)(x^{2} - 5 x - 18)+-24",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "p(x)=(x+2)(x^2-11x+24)=(x+2)(x-3)(x-8)",
+          "explanation": ""
+        },
+        {
+          "latex": "p(4)=-24,\\quad p(5)=-42,\\quad p(6)=-48,\\quad p(7)=-36",
+          "explanation": "All four values are negative. Since 4,5,6,7 are exactly the integers satisfying 3<n<8, this proves the claim by exhaustion."
+        }
+      ],
+      "solutionHtml": "<p>Use the remainder theorem and long division, then factorise using the known root. The final assertion concerns just four integers.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"r=p(4)=64-144+8+48=-24\" data-display=\"true\" class=\"equation\"></span></li><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\x^{2}&amp;- 5 x^{2} + 2 x + 48\\\\- 5 x&amp;48 - 18 x\\\\-18&amp;-24\\end{array}\\\\&amp;x^{3} - 9 x^{2} + 2 x + 48\\\\&amp;=(x - 4)(x^{2} - 5 x - 18)+-24\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"p(x)=(x+2)(x^2-11x+24)=(x+2)(x-3)(x-8)\" data-display=\"true\" class=\"equation\"></span></li><li><p>All four values are negative. Since 4,5,6,7 are exactly the integers satisfying 3&lt;n&lt;8, this proves the claim by exhaustion.</p><span data-math=\"\\begin{aligned}&amp;p(4)\\\\&amp;=-24,\\quad p(5)\\\\&amp;=-42,\\quad p(6)\\\\&amp;=-48,\\quad p(7)\\\\&amp;=-36\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/problem-a/qsilver",
+      "status": "worked",
+      "method": "Use polynomial long division, then the discriminant and completing the square.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\x^{2}&- 16 x^{2} + 32 x + 20\\\\- 8 x&40 x + 20\\\\20&0\\end{array};\\quad 2 x^{3} - 15 x^{2} + 32 x + 20=(2 x + 1)(x^{2} - 8 x + 20)",
+          "explanation": "Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column."
+        },
+        {
+          "latex": "\\Delta=(-8)^2-4(1)(20)=-16<0;\\quad2x+1=0\\Rightarrow x=-\\frac12",
+          "explanation": "The quadratic factor has no real roots; hence the linear factor gives the only real root."
+        },
+        {
+          "latex": "p(x)=(2x+1)(x^2-8x+20)=(2x+1)((x-4)^2+4)",
+          "explanation": "For x>0, 2x+1>0. Also (x−4)²+4≥4>0 for every real x. Their product is therefore strictly positive for every positive x."
+        }
+      ],
+      "solutionHtml": "<p>Use polynomial long division, then the discriminant and completing the square.</p><ol class=\"parts\" type=\"a\"><li><p>Divide the leading term of the current remainder by the leading term of the divisor. Subtract the divisor multiplied by that quotient term and repeat. Add the quotient terms in the left column.</p><span data-math=\"\\begin{aligned}&amp;\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\x^{2}&amp;- 16 x^{2} + 32 x + 20\\\\- 8 x&amp;40 x + 20\\\\20&amp;0\\end{array}\\\\&amp;2 x^{3} - 15 x^{2} + 32 x + 20\\\\&amp;=(2 x + 1)(x^{2} - 8 x + 20)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The quadratic factor has no real roots; hence the linear factor gives the only real root.</p><span data-math=\"\\begin{aligned}&amp;\\Delta=(-8)^2-4(1)(20)=-16&lt;0\\\\&amp;2x+1=0\\\\&amp;\\Rightarrow x=-\\frac12\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>For x&gt;0, 2x+1&gt;0. Also (x−4)²+4≥4&gt;0 for every real x. Their product is therefore strictly positive for every positive x.</p><span data-math=\"p(x)=(2x+1)(x^2-8x+20)=(2x+1)((x-4)^2+4)\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/problem-a/qgold",
+      "status": "worked",
+      "method": "Find the integer root x=2, divide by x−2 and recognise the quadratic as a perfect square.",
+      "steps": [
+        {
+          "latex": "p(2)=72-24-40-8=0;\\quad p(x)=(x-2)(9x^2+12x+4);\\quad a=9,\\ b=12,\\ c=4,\\ d=-2",
+          "explanation": ""
+        },
+        {
+          "latex": "p(x)=(x-2)(3x+2)^2;\\quad x=2\\text{ or }x=-\\frac23",
+          "explanation": "Equivalently the quadratic has discriminant 12²−4×9×4=0. Its repeated root and the different linear root give exactly two distinct real roots."
+        },
+        {
+          "latex": "p(0)=-8",
+          "explanation": "The graph touches the x-axis at (−2/3,0), crosses at (2,0), and has y-intercept (0,−8). Its positive leading coefficient gives an upward right tail."
+        },
+        {
+          "latex": "(x-2)(3x+2)^2<0\\Rightarrow\\{x:x<-\\frac23\\}\\cup\\{x:-\\frac23<x<2\\}",
+          "explanation": "The squared factor is positive except at −2/3, where the product is zero. For strict negativity require x<2 and exclude −2/3."
+        }
+      ],
+      "solutionHtml": "<p>Find the integer root x=2, divide by x−2 and recognise the quadratic as a perfect square.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;p(2)=72-24-40-8=0\\\\&amp;p(x)=(x-2)(9x^2+12x+4)\\\\&amp;a=9,\\ b=12,\\ c=4,\\ d=-2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Equivalently the quadratic has discriminant 12²−4×9×4=0. Its repeated root and the different linear root give exactly two distinct real roots.</p><span data-math=\"\\begin{aligned}&amp;p(x)=(x-2)(3x+2)^2\\\\&amp;x=2\\text{ or }x=-\\frac23\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The graph touches the x-axis at (−2/3,0), crosses at (2,0), and has y-intercept (0,−8). Its positive leading coefficient gives an upward right tail.</p><span data-math=\"p(0)=-8\" data-display=\"true\" class=\"equation\"></span></li><li><p>The squared factor is positive except at −2/3, where the product is zero. For strict negativity require x&lt;2 and exclude −2/3.</p><span data-math=\"\\begin{aligned}&amp;(x-2)(3x+2)^2&lt;0\\\\&amp;\\Rightarrow \\{x:x&lt;-\\frac23\\}\\cup\\{x:-\\frac23&lt;x&lt;2\\}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/71fc5846b711417b1fb9.png\" alt=\"Answer sketch\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/problem-b/qbronze",
+      "status": "worked",
+      "method": "Each stated linear factor supplies a zero value of the polynomial. Solve the resulting simultaneous equations.",
+      "steps": [
+        {
+          "latex": "f(-1)=-1-1-p+q=0\\Rightarrow q-p=2",
+          "explanation": ""
+        },
+        {
+          "latex": "f(-3)=-27-9-3p+q=0\\Rightarrow q-3p=36",
+          "explanation": ""
+        },
+        {
+          "latex": "(q-3p)-(q-p)=36-2\\Rightarrow-2p=34\\Rightarrow p=-17;\\quad q=p+2=-15",
+          "explanation": ""
+        },
+        {
+          "latex": "f(x)=x^3-x^2-17x-15=(x+1)(x^2-2x-15)=(x+1)(x+3)(x-5)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Each stated linear factor supplies a zero value of the polynomial. Solve the resulting simultaneous equations.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"f(-1)=-1-1-p+q=0\\Rightarrow q-p=2\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"f(-3)=-27-9-3p+q=0\\Rightarrow q-3p=36\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;(q-3p)-(q-p)=36-2\\\\&amp;\\Rightarrow -2p=34\\\\&amp;\\Rightarrow p=-17\\\\&amp;q=p+2=-15\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(x)\\\\&amp;=x^3-x^2-17x-15\\\\&amp;=(x+1)(x^2-2x-15)\\\\&amp;=(x+1)(x+3)(x-5)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/problem-b/qsilver",
+      "status": "worked",
+      "method": "Apply the factor theorem at −2 and 3 and solve for p and q.",
+      "steps": [
+        {
+          "latex": "f(-2)=2(-8)-4-2p+q=0\\Rightarrow q-2p-20=0",
+          "explanation": ""
+        },
+        {
+          "latex": "f(3)=54-9+3p+q=0\\Rightarrow3p+q=-45;\\quad q=2p+20\\Rightarrow5p=-65\\Rightarrow p=-13,\\ q=-6",
+          "explanation": ""
+        },
+        {
+          "latex": "f(x)=2x^3-x^2-13x-6=(x+2)(2x^2-5x-3)=(x+2)(x-3)(2x+1)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply the factor theorem at −2 and 3 and solve for p and q.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f(-2)=2(-8)-4-2p+q=0\\\\&amp;\\Rightarrow q-2p-20=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(3)=54-9+3p+q=0\\\\&amp;\\Rightarrow 3p+q=-45\\\\&amp;q=2p+20\\\\&amp;\\Rightarrow 5p=-65\\\\&amp;\\Rightarrow p=-13,\\ q=-6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(x)\\\\&amp;=2x^3-x^2-13x-6\\\\&amp;=(x+2)(2x^2-5x-3)\\\\&amp;=(x+2)(x-3)(2x+1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/problem-b/qgold",
+      "status": "worked",
+      "method": "Apply the factor theorem at x=2 and x=−p. Eliminate q, using the given positive-p condition.",
+      "steps": [
+        {
+          "latex": "f(2)=8+4(p+4)+16+q=0\\Rightarrow4p+q+40=0",
+          "explanation": ""
+        },
+        {
+          "latex": "f(-p)=-p^3+(p+4)p^2-8p+q=0\\Rightarrow4p^2-8p+q=0",
+          "explanation": ""
+        },
+        {
+          "latex": "q=-4p-40\\Rightarrow4p^2-12p-40=0\\Rightarrow(p-5)(p+2)=0;\\quad p>0\\Rightarrow p=5,\\ q=-60",
+          "explanation": ""
+        },
+        {
+          "latex": "f(x)=x^3+9x^2+8x-60=(x-2)(x^2+11x+30)=(x-2)(x+5)(x+6)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply the factor theorem at x=2 and x=−p. Eliminate q, using the given positive-p condition.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"f(2)=8+4(p+4)+16+q=0\\Rightarrow4p+q+40=0\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(-p)=-p^3+(p+4)p^2-8p+q=0\\\\&amp;\\Rightarrow 4p^2-8p+q=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;q=-4p-40\\\\&amp;\\Rightarrow 4p^2-12p-40=0\\\\&amp;\\Rightarrow (p-5)(p+2)=0\\\\&amp;p&gt;0\\\\&amp;\\Rightarrow p=5,\\ q=-60\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(x)\\\\&amp;=x^3+9x^2+8x-60\\\\&amp;=(x-2)(x^2+11x+30)\\\\&amp;=(x-2)(x+5)(x+6)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/exam/q30",
+      "status": "worked",
+      "method": "Both p−q and √(p²−q²) are positive under the assumptions, so comparing their squares preserves the inequality.",
+      "steps": [
+        {
+          "latex": "(p-q)^2=p^2+q^2-2pq=p^2-q^2+2q(q-p)<p^2-q^2",
+          "explanation": "Since q>0 and q−p<0, the last added term is negative. Taking positive square roots gives p−q<√(p²−q²), as required."
+        },
+        {
+          "latex": "p=0,\\quad q=0:\\quad\\sqrt{p^2-q^2}=0,\\quad p-q=0",
+          "explanation": "The claimed strict inequality would be 0>0, which is false. Thus it does not hold for unrestricted p and q."
+        }
+      ],
+      "solutionHtml": "<p>Both p−q and √(p²−q²) are positive under the assumptions, so comparing their squares preserves the inequality.</p><ol class=\"parts\" type=\"a\"><li><p>Since q&gt;0 and q−p&lt;0, the last added term is negative. Taking positive square roots gives p−q&lt;√(p²−q²), as required.</p><span data-math=\"\\begin{aligned}&amp;(p-q)^2\\\\&amp;=p^2+q^2-2pq\\\\&amp;=p^2-q^2+2q(q-p)&lt;p^2-q^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The claimed strict inequality would be 0&gt;0, which is false. Thus it does not hold for unrestricted p and q.</p><span data-math=\"\\begin{aligned}&amp;p\\\\&amp;=0,\\quad q\\\\&amp;=0:\\quad\\sqrt{p^2-q^2}\\\\&amp;=0,\\quad p-q\\\\&amp;=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/exam/q34",
+      "status": "worked",
+      "method": "Use one negative exponent for the counterexample. Represent consecutive odd integers algebraically for the proof.",
+      "steps": [
+        {
+          "latex": "x=-1:\\quad5^x=\\frac15<\\frac12=2^x",
+          "explanation": "This disproves the universal claim."
+        },
+        {
+          "latex": "\\frac12(2n-1)^2+\\frac12(2n+1)^2=\\frac12(4n^2-4n+1)+\\frac12(4n^2+4n+1)=4n^2+1=2(2n^2)+1",
+          "explanation": "For integer n, 2n² is an integer, so the result has the form 2m+1 and is odd."
+        }
+      ],
+      "solutionHtml": "<p>Use one negative exponent for the counterexample. Represent consecutive odd integers algebraically for the proof.</p><ol class=\"parts\" type=\"a\"><li><p>This disproves the universal claim.</p><span data-math=\"x=-1:\\quad5^x=\\frac15&lt;\\frac12=2^x\" data-display=\"true\" class=\"equation\"></span></li><li><p>For integer n, 2n² is an integer, so the result has the form 2m+1 and is odd.</p><span data-math=\"\\begin{aligned}&amp;\\frac12(2n-1)^2+\\frac12(2n+1)^2\\\\&amp;=\\frac12(4n^2-4n+1)+\\frac12(4n^2+4n+1)\\\\&amp;=4n^2+1\\\\&amp;=2(2n^2)+1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/exam/q41",
+      "status": "worked",
+      "method": "Find the factor x+1, factor the quotient, then cancel the common factors in the rational expression.",
+      "steps": [
+        {
+          "latex": "f(-1)=6(-1)^{3}+5(-1)^{2}+-3(-1)^{1}+-2(-1)^{0}=0;\\quad f(x)=(x + 1)(6 x^{2} - x - 2)=\\left(x + 1\\right) \\left(2 x + 1\\right) \\left(3 x - 2\\right)",
+          "explanation": "The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic."
+        },
+        {
+          "latex": "\\frac{6x^3+5x^2-3x-2}{2x^3+3x^2+x}=\\frac{(x+1)(2x+1)(3x-2)}{x(x+1)(2x+1)}=\\frac{3x-2}{x}=3-\\frac2x;\\quad A=3,\\ B=-2",
+          "explanation": "Keep the original exclusions x≠0,−1,−1/2."
+        }
+      ],
+      "solutionHtml": "<p>Find the factor x+1, factor the quotient, then cancel the common factors in the rational expression.</p><ol class=\"parts\" type=\"a\"><li><p>The zero remainder proves the linear factor by the factor theorem. Divide by it to obtain the displayed quadratic, then factorise that quadratic.</p><span data-math=\"\\begin{aligned}&amp;f(-1)\\\\&amp;=6(-1)^{3}+5(-1)^{2}+-3(-1)^{1}+-2(-1)^{0}\\\\&amp;=0\\\\&amp;f(x)\\\\&amp;=(x + 1)(6 x^{2} - x - 2)\\\\&amp;=\\left(x + 1\\right) \\left(2 x + 1\\right) \\left(3 x - 2\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Keep the original exclusions x≠0,−1,−1/2.</p><span data-math=\"\\begin{aligned}&amp;\\frac{6x^3+5x^2-3x-2}{2x^3+3x^2+x}\\\\&amp;=\\frac{(x+1)(2x+1)(3x-2)}{x(x+1)(2x+1)}\\\\&amp;=\\frac{3x-2}{x}\\\\&amp;=3-\\frac2x\\\\&amp;A=3,\\ B=-2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/exam/q57",
+      "status": "worked",
+      "method": "Verify the factor, divide and factor the perfect square. For a non-strict inequality, retain isolated zeros of the squared factor.",
+      "steps": [
+        {
+          "latex": "g(-3)=4(-27)-16(9)-35(-3)+147=-108-144+105+147=0",
+          "explanation": "By the factor theorem, x+3 divides g(x)."
+        },
+        {
+          "latex": "g(x)=(x+3)(4x^2-28x+49)=(x+3)(2x-7)^2;\\quad a=2,\\ b=-7",
+          "explanation": ""
+        },
+        {
+          "latex": "\\text{i }x\\le-3\\text{ or }x=\\frac72;\\quad\\text{ii }x\\le-\\frac32\\text{ or }x=\\frac74",
+          "explanation": "For (i), the square is positive except at x=7/2, so the product is negative for x<−3 and zero at both −3 and 7/2. For (ii), replace the argument by 2x. The supplied final key omits the isolated double-root equality in both parts; it must be included for ≤0."
+        }
+      ],
+      "solutionHtml": "<p>Verify the factor, divide and factor the perfect square. For a non-strict inequality, retain isolated zeros of the squared factor.</p><ol class=\"parts\" type=\"a\"><li><p>By the factor theorem, x+3 divides g(x).</p><span data-math=\"\\begin{aligned}&amp;g(-3)\\\\&amp;=4(-27)-16(9)-35(-3)+147\\\\&amp;=-108-144+105+147\\\\&amp;=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;g(x)=(x+3)(4x^2-28x+49)=(x+3)(2x-7)^2\\\\&amp;a=2,\\ b=-7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>For (i), the square is positive except at x=7/2, so the product is negative for x&lt;−3 and zero at both −3 and 7/2. For (ii), replace the argument by 2x. The supplied final key omits the isolated double-root equality in both parts; it must be included for ≤0.</p><span data-math=\"\\begin{aligned}&amp;\\text{i }x\\le-3\\text{ or }x=\\frac72\\\\&amp;\\text{ii }x\\le-\\frac32\\text{ or }x\\\\&amp;=\\frac74\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/exam/q69",
+      "status": "worked",
+      "method": "Use the supplied quotient-and-remainder form and the factor theorem at x=1.",
+      "steps": [
+        {
+          "latex": "f(x)=(x^2+k)(2x+5)+7;\\quad r=7",
+          "explanation": ""
+        },
+        {
+          "latex": "f(1)=7(1+k)+7=0\\Rightarrow7k=-14\\Rightarrow k=-2",
+          "explanation": ""
+        },
+        {
+          "latex": "f(x)=(x^2-2)(2x+5)+7=2x^3+5x^2-4x-3=(x-1)(2x^2+7x+3)=(x-1)(2x+1)(x+3);\\quad x=1,-\\frac12,-3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the supplied quotient-and-remainder form and the factor theorem at x=1.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"f(x)=(x^2+k)(2x+5)+7;\\quad r=7\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(1)=7(1+k)+7=0\\\\&amp;\\Rightarrow 7k=-14\\\\&amp;\\Rightarrow k=-2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(x)\\\\&amp;=(x^2-2)(2x+5)+7\\\\&amp;=2x^3+5x^2-4x-3\\\\&amp;=(x-1)(2x^2+7x+3)\\\\&amp;=(x-1)(2x+1)(x+3)\\\\&amp;x=1,-\\frac12,-3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/exam/q75",
+      "status": "worked",
+      "method": "Use the known root to determine k and factorise. Then set t=5ʸ, which is always positive, to solve the exponential equation.",
+      "steps": [
+        {
+          "latex": "f(5)=250+25k-120+45=0\\Rightarrow25k=-175\\Rightarrow k=-7",
+          "explanation": ""
+        },
+        {
+          "latex": "f(x)=(x-5)(2x^2+3x-9)=(x-5)(2x-3)(x+3)",
+          "explanation": ""
+        },
+        {
+          "latex": "t=5^y>0;\\quad(t-5)(2t-3)(t+3)=0\\Rightarrow t=5\\text{ or }\\frac32;\\quad y=1\\text{ or }\\frac{\\ln(3/2)}{\\ln5}=0.25\\text{ (2 d.p.)}",
+          "explanation": "The algebraic root t=−3 is rejected because 5ʸ is positive for every real y."
+        }
+      ],
+      "solutionHtml": "<p>Use the known root to determine k and factorise. Then set t=5ʸ, which is always positive, to solve the exponential equation.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f(5)=250+25k-120+45=0\\\\&amp;\\Rightarrow 25k=-175\\\\&amp;\\Rightarrow k=-7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"f(x)=(x-5)(2x^2+3x-9)=(x-5)(2x-3)(x+3)\" data-display=\"true\" class=\"equation\"></span></li><li><p>The algebraic root t=−3 is rejected because 5ʸ is positive for every real y.</p><span data-math=\"\\begin{aligned}&amp;t=5^y&gt;0\\\\&amp;(t-5)(2t-3)(t+3)=0\\\\&amp;\\Rightarrow t=5\\text{ or }\\frac32\\\\&amp;y\\\\&amp;=1\\text{ or }\\frac{\\ln(3/2)}{\\ln5}\\\\&amp;=0.25\\text{ (2 d.p.)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch7/exam/q83",
+      "status": "worked",
+      "method": "Verify the factor, examine the quadratic quotient, and rewrite the difference from 18 as a nonnegative product.",
+      "steps": [
+        {
+          "latex": "f(-2)=-8-8-2+18=0",
+          "explanation": "Therefore x+2 is a factor by the factor theorem."
+        },
+        {
+          "latex": "f(x)=(x+2)(x^2-4x+9);\\quad\\Delta=(-4)^2-4(1)(9)=-20<0",
+          "explanation": "The quadratic has no real roots, leaving x=−2 as the only real root."
+        },
+        {
+          "latex": "f(x)-18=x^3-2x^2+x=x(x-1)^2\\ge0\\quad(x\\ge0)",
+          "explanation": "Both factors are nonnegative for x≥0, so f(x)≥18 throughout the given domain."
+        }
+      ],
+      "solutionHtml": "<p>Verify the factor, examine the quadratic quotient, and rewrite the difference from 18 as a nonnegative product.</p><ol class=\"parts\" type=\"a\"><li><p>Therefore x+2 is a factor by the factor theorem.</p><span data-math=\"f(-2)=-8-8-2+18=0\" data-display=\"true\" class=\"equation\"></span></li><li><p>The quadratic has no real roots, leaving x=−2 as the only real root.</p><span data-math=\"\\begin{aligned}&amp;f(x)=(x+2)(x^2-4x+9)\\\\&amp;\\Delta=(-4)^2-4(1)(9)=-20&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Both factors are nonnegative for x≥0, so f(x)≥18 throughout the given domain.</p><span data-math=\"\\begin{aligned}&amp;f(x)-18\\\\&amp;=x^3-2x^2+x\\\\&amp;=x(x-1)^2\\ge0\\quad(x\\ge0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    }
+  ]
+}
