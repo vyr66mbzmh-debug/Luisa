@@ -1,0 +1,966 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-1",
+  "chapter": 11,
+  "sourcePdf": "resources/practice/pure-year-1/chapter-11.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.1/q1",
+      "status": "worked",
+      "method": "For the intended regular hexagon, take A as origin: F=a, O=b, B=b−a, C=2b−a, D=2b and E=a+b. A directed vector is endpoint minus start point.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{AD}=2\\mathbf b-\\mathbf0=2\\mathbf b",
+          "explanation": "The prompt only says hexagon. These answers use the regular-hexagon geometry intended by the picture and key; an arbitrary hexagon is not determined by AF and AO alone."
+        },
+        {
+          "latex": "\\overrightarrow{EB}=(\\mathbf b-\\mathbf a)-(\\mathbf a+\\mathbf b)=-2\\mathbf a",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{CB}=(\\mathbf b-\\mathbf a)-(2\\mathbf b-\\mathbf a)=-\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{AE}=\\mathbf a+\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{OF}=\\mathbf a-\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{FC}=(2\\mathbf b-\\mathbf a)-\\mathbf a=-2\\mathbf a+2\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{CE}=(\\mathbf a+\\mathbf b)-(2\\mathbf b-\\mathbf a)=2\\mathbf a-\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{BF}=\\mathbf a-(\\mathbf b-\\mathbf a)=2\\mathbf a-\\mathbf b",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>For the intended regular hexagon, take A as origin: F=a, O=b, B=b−a, C=2b−a, D=2b and E=a+b. A directed vector is endpoint minus start point.</p><ol class=\"parts\" type=\"a\"><li><p>The prompt only says hexagon. These answers use the regular-hexagon geometry intended by the picture and key; an arbitrary hexagon is not determined by AF and AO alone.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AD}=2\\mathbf b-\\mathbf0=2\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{EB}=(\\mathbf b-\\mathbf a)-(\\mathbf a+\\mathbf b)=-2\\mathbf a\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{CB}=(\\mathbf b-\\mathbf a)-(2\\mathbf b-\\mathbf a)=-\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\overrightarrow{AE}=\\mathbf a+\\mathbf b\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\overrightarrow{OF}=\\mathbf a-\\mathbf b\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{FC}=(2\\mathbf b-\\mathbf a)-\\mathbf a=-2\\mathbf a+2\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{CE}=(\\mathbf a+\\mathbf b)-(2\\mathbf b-\\mathbf a)=2\\mathbf a-\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{BF}=\\mathbf a-(\\mathbf b-\\mathbf a)=2\\mathbf a-\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.1/q2",
+      "status": "worked",
+      "method": "Take routes through W and X, reversing a vector when traversing its arrow backwards.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{XP}=\\overrightarrow{XW}+\\overrightarrow{WP}=-\\mathbf a+\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{PY}=\\overrightarrow{PW}+\\overrightarrow{WX}+\\overrightarrow{XY}=-\\mathbf b+\\mathbf a+\\mathbf d",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{PZ}=\\overrightarrow{PW}+\\overrightarrow{WZ}=-\\mathbf b+\\mathbf c",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{ZY}=\\overrightarrow{ZW}+\\overrightarrow{WX}+\\overrightarrow{XY}=-\\mathbf c+\\mathbf a+\\mathbf d",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Take routes through W and X, reversing a vector when traversing its arrow backwards.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{XP}=\\overrightarrow{XW}+\\overrightarrow{WP}=-\\mathbf a+\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PY}\\\\&amp;=\\overrightarrow{PW}+\\overrightarrow{WX}+\\overrightarrow{XY}\\\\&amp;=-\\mathbf b+\\mathbf a+\\mathbf d\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PZ}=\\overrightarrow{PW}+\\overrightarrow{WZ}=-\\mathbf b+\\mathbf c\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{ZY}\\\\&amp;=\\overrightarrow{ZW}+\\overrightarrow{WX}+\\overrightarrow{XY}\\\\&amp;=-\\mathbf c+\\mathbf a+\\mathbf d\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.1/q3",
+      "status": "worked",
+      "method": "Add adjacent sides for the diagonal; the midpoint gives half that diagonal. Use SP=−b in the last route.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{PR}=\\overrightarrow{PQ}+\\overrightarrow{QR}=\\mathbf a+\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{PM}=\\frac12\\overrightarrow{PR}=\\frac12\\mathbf a+\\frac12\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{SM}=\\overrightarrow{SP}+\\overrightarrow{PM}=-\\mathbf b+\\frac12(\\mathbf a+\\mathbf b)=\\frac12\\mathbf a-\\frac12\\mathbf b",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Add adjacent sides for the diagonal; the midpoint gives half that diagonal. Use SP=−b in the last route.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PR}=\\overrightarrow{PQ}+\\overrightarrow{QR}=\\mathbf a+\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PM}=\\frac12\\overrightarrow{PR}=\\frac12\\mathbf a+\\frac12\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{SM}\\\\&amp;=\\overrightarrow{SP}+\\overrightarrow{PM}\\\\&amp;=-\\mathbf b+\\frac12(\\mathbf a+\\mathbf b)\\\\&amp;=\\frac12\\mathbf a-\\frac12\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.1/q4",
+      "status": "worked",
+      "method": "For independent a and b, parallel vectors have proportional corresponding coefficients.",
+      "steps": [
+        {
+          "latex": "p=8t,\\quad q=-10t\\Rightarrow\\frac pq=\\frac8{-10}=-\\frac45",
+          "explanation": "This uses the usual intended assumption that a and b are independent and the parallel vector is nonzero. Without independence, its coefficients need not have this ratio."
+        }
+      ],
+      "solutionHtml": "<p>For independent a and b, parallel vectors have proportional corresponding coefficients.</p><p>This uses the usual intended assumption that a and b are independent and the parallel vector is nonzero. Without independence, its coefficients need not have this ratio.</p><span data-math=\"\\begin{aligned}&amp;p=8t,\\quad q=-10t\\\\&amp;\\Rightarrow \\frac pq=\\frac8{-10}=-\\frac45\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.1/q5",
+      "status": "worked",
+      "method": "Use the internal ratios to locate X and Y from P, then subtract PY from PX.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{PX}=\\frac14\\mathbf a;\\quad\\overrightarrow{QR}=\\mathbf b-\\mathbf a;\\quad\\overrightarrow{PY}=\\mathbf a+\\frac25(\\mathbf b-\\mathbf a)=\\frac35\\mathbf a+\\frac25\\mathbf b;\\quad\\overrightarrow{YX}=\\overrightarrow{PX}-\\overrightarrow{PY}=-\\frac7{20}\\mathbf a-\\frac25\\mathbf b",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the internal ratios to locate X and Y from P, then subtract PY from PX.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PX}=\\frac14\\mathbf a\\\\&amp;\\overrightarrow{QR}=\\mathbf b-\\mathbf a\\\\&amp;\\overrightarrow{PY}\\\\&amp;=\\mathbf a+\\frac25(\\mathbf b-\\mathbf a)\\\\&amp;=\\frac35\\mathbf a+\\frac25\\mathbf b\\\\&amp;\\overrightarrow{YX}\\\\&amp;=\\overrightarrow{PX}-\\overrightarrow{PY}\\\\&amp;=-\\frac7{20}\\mathbf a-\\frac25\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.1/q6",
+      "status": "worked",
+      "method": "Travel from D through B to E, using half of each side because D and E are midpoints.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{AC}=\\mathbf a+\\mathbf b;\\quad\\overrightarrow{DE}=\\overrightarrow{DB}+\\overrightarrow{BE}=\\frac12\\mathbf a+\\frac12\\mathbf b=\\frac12\\overrightarrow{AC}",
+          "explanation": "The nonzero vectors are scalar multiples, so AC and DE are parallel."
+        }
+      ],
+      "solutionHtml": "<p>Travel from D through B to E, using half of each side because D and E are midpoints.</p><p>The nonzero vectors are scalar multiples, so AC and DE are parallel.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AC}=\\mathbf a+\\mathbf b\\\\&amp;\\overrightarrow{DE}\\\\&amp;=\\overrightarrow{DB}+\\overrightarrow{BE}\\\\&amp;=\\frac12\\mathbf a+\\frac12\\mathbf b\\\\&amp;=\\frac12\\overrightarrow{AC}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.1/q7",
+      "status": "worked",
+      "method": "Find MN by both paths around the trapezium and add the results to eliminate b and c.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{MN}=\\overrightarrow{MF}+\\overrightarrow{FG}+\\overrightarrow{GN}=\\frac12\\mathbf b+k\\mathbf a-\\frac12\\mathbf c;\\quad\\overrightarrow{MN}=\\overrightarrow{ME}+\\overrightarrow{EH}+\\overrightarrow{HN}=-\\frac12\\mathbf b+\\mathbf a+\\frac12\\mathbf c;\\quad2\\overrightarrow{MN}=(k+1)\\mathbf a\\Rightarrow\\overrightarrow{MN}=\\frac{1+k}2\\mathbf a",
+          "explanation": ""
+        },
+        {
+          "latex": "",
+          "explanation": "EH=a, FG=ka and MN=((1+k)/2)a are nonzero scalar multiples of the same vector in the trapezium, so all three lines are parallel."
+        }
+      ],
+      "solutionHtml": "<p>Find MN by both paths around the trapezium and add the results to eliminate b and c.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{MN}\\\\&amp;=\\overrightarrow{MF}+\\overrightarrow{FG}+\\overrightarrow{GN}\\\\&amp;=\\frac12\\mathbf b+k\\mathbf a-\\frac12\\mathbf c\\\\&amp;\\overrightarrow{MN}\\\\&amp;=\\overrightarrow{ME}+\\overrightarrow{EH}+\\overrightarrow{HN}\\\\&amp;=-\\frac12\\mathbf b+\\mathbf a+\\frac12\\mathbf c\\\\&amp;2\\overrightarrow{MN}=(k+1)\\mathbf a\\\\&amp;\\Rightarrow \\overrightarrow{MN}=\\frac{1+k}2\\mathbf a\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>EH=a, FG=ka and MN=((1+k)/2)a are nonzero scalar multiples of the same vector in the trapezium, so all three lines are parallel.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.2/q1",
+      "status": "worked",
+      "method": "Scale each component and combine the i and j coefficients separately.",
+      "steps": [
+        {
+          "latex": "3\\mathbf a=3(-7\\mathbf i+3\\mathbf j)=-21\\mathbf i+9\\mathbf j",
+          "explanation": ""
+        },
+        {
+          "latex": "\\mathbf a-2\\mathbf b=(-7-4)\\mathbf i+(3+10)\\mathbf j=-11\\mathbf i+13\\mathbf j",
+          "explanation": ""
+        },
+        {
+          "latex": "3\\mathbf b-\\mathbf a=(6+7)\\mathbf i+(-15-3)\\mathbf j=13\\mathbf i-18\\mathbf j",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Scale each component and combine the i and j coefficients separately.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;3\\mathbf a=3(-7\\mathbf i+3\\mathbf j)=-21\\mathbf i+9\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\mathbf a-2\\mathbf b=(-7-4)\\mathbf i+(3+10)\\mathbf j=-11\\mathbf i+13\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;3\\mathbf b-\\mathbf a=(6+7)\\mathbf i+(-15-3)\\mathbf j=13\\mathbf i-18\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.2/q2",
+      "status": "worked",
+      "method": "Apply the operation to each coordinate of the column vector.",
+      "steps": [
+        {
+          "latex": "\\frac12\\mathbf a=\\begin{pmatrix}-2/2\\\\4/2\\end{pmatrix}=\\begin{pmatrix}-1\\\\2\\end{pmatrix}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\mathbf a+\\mathbf b+\\mathbf c=\\begin{pmatrix}-2+6-3\\\\4-1-5\\end{pmatrix}=\\begin{pmatrix}1\\\\-2\\end{pmatrix}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\mathbf c+2\\mathbf b-\\frac32\\mathbf a=\\begin{pmatrix}-3+12+3\\\\-5-2-6\\end{pmatrix}=\\begin{pmatrix}12\\\\-13\\end{pmatrix}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply the operation to each coordinate of the column vector.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac12\\mathbf a\\\\&amp;=\\begin{pmatrix}-2/2\\\\4/2\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}-1\\\\2\\end{pmatrix}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\mathbf a+\\mathbf b+\\mathbf c\\\\&amp;=\\begin{pmatrix}-2+6-3\\\\4-1-5\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}1\\\\-2\\end{pmatrix}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\mathbf c+2\\mathbf b-\\frac32\\mathbf a\\\\&amp;=\\begin{pmatrix}-3+12+3\\\\-5-2-6\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}12\\\\-13\\end{pmatrix}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.2/q3",
+      "status": "worked",
+      "method": "The resultant is the sum of the two vectors.",
+      "steps": [
+        {
+          "latex": "\\mathbf a+\\mathbf b=(-6+3)\\mathbf i+(7-5)\\mathbf j=-3\\mathbf i+2\\mathbf j",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The resultant is the sum of the two vectors.</p><span data-math=\"\\begin{aligned}&amp;\\mathbf a+\\mathbf b=(-6+3)\\mathbf i+(7-5)\\mathbf j=-3\\mathbf i+2\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.2/q4",
+      "status": "worked",
+      "method": "Follow BC via A, so subtract AB from AC.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{BC}=\\overrightarrow{AC}-\\overrightarrow{AB}=(11+8)\\mathbf i+(-1-7)\\mathbf j=19\\mathbf i-8\\mathbf j",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Follow BC via A, so subtract AB from AC.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{BC}\\\\&amp;=\\overrightarrow{AC}-\\overrightarrow{AB}\\\\&amp;=(11+8)\\mathbf i+(-1-7)\\mathbf j\\\\&amp;=19\\mathbf i-8\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.2/q5",
+      "status": "worked",
+      "method": "Equate corresponding components of 2b−c=a.",
+      "steps": [
+        {
+          "latex": "\\begin{pmatrix}-6-q\\\\-8-11\\end{pmatrix}=\\begin{pmatrix}2\\\\p\\end{pmatrix}\\Rightarrow-6-q=2,\\quad p=-19\\Rightarrow q=-8,\\quad p=-19",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Equate corresponding components of 2b−c=a.</p><span data-math=\"\\begin{aligned}&amp;\\begin{pmatrix}-6-q\\\\-8-11\\end{pmatrix}=\\begin{pmatrix}2\\\\p\\end{pmatrix}\\\\&amp;\\Rightarrow -6-q=2,\\quad p=-19\\\\&amp;\\Rightarrow q=-8,\\quad p=-19\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.2/q6",
+      "status": "worked",
+      "method": "Calculate the two vectors and test whether their corresponding components have the same scale factor.",
+      "steps": [
+        {
+          "latex": "2\\mathbf a+5\\mathbf b=(-4+15)\\mathbf i+(14-10)\\mathbf j=11\\mathbf i+4\\mathbf j;\\quad2\\mathbf d-\\mathbf c=(4+1)\\mathbf i+(-4+6)\\mathbf j=5\\mathbf i+2\\mathbf j;\\quad\\frac{11}5\\ne\\frac42",
+          "explanation": "No single scalar multiplies both components correctly, so the vectors are not parallel."
+        }
+      ],
+      "solutionHtml": "<p>Calculate the two vectors and test whether their corresponding components have the same scale factor.</p><p>No single scalar multiplies both components correctly, so the vectors are not parallel.</p><span data-math=\"\\begin{aligned}&amp;2\\mathbf a+5\\mathbf b=(-4+15)\\mathbf i+(14-10)\\mathbf j=11\\mathbf i+4\\mathbf j\\\\&amp;2\\mathbf d-\\mathbf c=(4+1)\\mathbf i+(-4+6)\\mathbf j=5\\mathbf i+2\\mathbf j\\\\&amp;\\frac{11}5\\ne\\frac42\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.2/q7",
+      "status": "worked",
+      "method": "Equate the i and j components, then solve the two linear equations.",
+      "steps": [
+        {
+          "latex": "-4q-2p=-10,\\quad p-3q=10;\\quad p=10+3q;\\quad-4q-2(10+3q)=-10\\Rightarrow-10q=10\\Rightarrow q=-1,\\quad p=7",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Equate the i and j components, then solve the two linear equations.</p><span data-math=\"\\begin{aligned}&amp;-4q-2p=-10,\\quad p-3q=10\\\\&amp;p=10+3q\\\\&amp;-4q-2(10+3q)=-10\\\\&amp;\\Rightarrow -10q=10\\\\&amp;\\Rightarrow q=-1,\\quad p=7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.3/q1",
+      "status": "worked",
+      "method": "Apply Pythagoras to the two perpendicular components and simplify the surd.",
+      "steps": [
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(6)^2+(-8)^2}=10",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(5)^2+(4)^2}=\\sqrt{41}",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(-3)^2+(6)^2}=3 \\sqrt{5}",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(-8)^2+(-8)^2}=8 \\sqrt{2}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply Pythagoras to the two perpendicular components and simplify the surd.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"|\\mathbf v|=\\sqrt{(6)^2+(-8)^2}=10\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"|\\mathbf v|=\\sqrt{(5)^2+(4)^2}=\\sqrt{41}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(-3)^2+(6)^2}=3 \\sqrt{5}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(-8)^2+(-8)^2}=8 \\sqrt{2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.3/q2",
+      "status": "worked",
+      "method": "Use the acute reference angle from the component ratio, then place the vector in its quadrant.",
+      "steps": [
+        {
+          "latex": "\\alpha=\\tan^{-1}(4/2)=\\tan^{-1}2\\approx63.4^\\circ",
+          "explanation": "Both components are positive: 63.4° above the positive x-axis."
+        },
+        {
+          "latex": "\\alpha=\\tan^{-1}(1/7)\\approx8.1^\\circ;\\quad\\theta=180^\\circ+\\alpha\\approx188.1^\\circ",
+          "explanation": "Quadrant III: equivalently 171.9° clockwise (below) from the positive x-axis."
+        },
+        {
+          "latex": "\\theta=90^\\circ",
+          "explanation": "The vector points directly along the positive y-axis."
+        },
+        {
+          "latex": "\\alpha=\\tan^{-1}(5/5)=45^\\circ",
+          "explanation": "Positive horizontal and negative vertical components give 45° below the positive x-axis (315° anticlockwise)."
+        }
+      ],
+      "solutionHtml": "<p>Use the acute reference angle from the component ratio, then place the vector in its quadrant.</p><ol class=\"parts\" type=\"a\"><li><p>Both components are positive: 63.4° above the positive x-axis.</p><span data-math=\"\\begin{aligned}&amp;\\alpha=\\tan^{-1}(4/2)=\\tan^{-1}2\\approx63.4^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Quadrant III: equivalently 171.9° clockwise (below) from the positive x-axis.</p><span data-math=\"\\begin{aligned}&amp;\\alpha=\\tan^{-1}(1/7)\\approx8.1^\\circ\\\\&amp;\\theta=180^\\circ+\\alpha\\approx188.1^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The vector points directly along the positive y-axis.</p><span data-math=\"\\theta=90^\\circ\" data-display=\"true\" class=\"equation\"></span></li><li><p>Positive horizontal and negative vertical components give 45° below the positive x-axis (315° anticlockwise).</p><span data-math=\"\\alpha=\\tan^{-1}(5/5)=45^\\circ\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.3/q3",
+      "status": "worked",
+      "method": "Divide the vector by its positive magnitude to preserve its direction and make its length one.",
+      "steps": [
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(-5)^2+12^2}=13;\\quad\\widehat{\\mathbf v}=\\frac{\\mathbf v}{13}=-\\frac5{13}\\mathbf i+\\frac{12}{13}\\mathbf j",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Divide the vector by its positive magnitude to preserve its direction and make its length one.</p><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(-5)^2+12^2}=13\\\\&amp;\\widehat{\\mathbf v}=\\frac{\\mathbf v}{13}=-\\frac5{13}\\mathbf i+\\frac{12}{13}\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.3/q4",
+      "status": "worked",
+      "method": "The diagram has magnitude 50 and direction 45° below the horizontal; resolve into positive horizontal and negative vertical components.",
+      "steps": [
+        {
+          "latex": "p=50\\cos45^\\circ=25\\sqrt2;\\quad q=-50\\sin45^\\circ=-25\\sqrt2;\\quad\\mathbf v=25\\sqrt2\\mathbf i-25\\sqrt2\\mathbf j",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The diagram has magnitude 50 and direction 45° below the horizontal; resolve into positive horizontal and negative vertical components.</p><span data-math=\"\\begin{aligned}&amp;p=50\\cos45^\\circ=25\\sqrt2\\\\&amp;q=-50\\sin45^\\circ=-25\\sqrt2\\\\&amp;\\mathbf v=25\\sqrt2\\mathbf i-25\\sqrt2\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.3/q5",
+      "status": "worked",
+      "method": "The angle is measured from the positive y-axis: the horizontal component is opposite 20° and the vertical component adjacent.",
+      "steps": [
+        {
+          "latex": "p=11\\sin20^\\circ\\approx3.76;\\quad q=11\\cos20^\\circ\\approx10.3\\quad\\text{(3 s.f.)}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The angle is measured from the positive y-axis: the horizontal component is opposite 20° and the vertical component adjacent.</p><span data-math=\"\\begin{aligned}&amp;p=11\\sin20^\\circ\\approx3.76\\\\&amp;q=11\\cos20^\\circ\\approx10.3\\quad\\text{(3 s.f.)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.3/q6",
+      "status": "worked",
+      "method": "Square the magnitude equation and retain both signs of p.",
+      "steps": [
+        {
+          "latex": "(2p)^2+(3p)^2=(7\\sqrt{13})^2\\Rightarrow13p^2=637\\Rightarrow p^2=49\\Rightarrow p=7\\text{ or }-7",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Square the magnitude equation and retain both signs of p.</p><span data-math=\"\\begin{aligned}&amp;(2p)^2+(3p)^2=(7\\sqrt{13})^2\\\\&amp;\\Rightarrow 13p^2=637\\\\&amp;\\Rightarrow p^2=49\\\\&amp;\\Rightarrow p=7\\text{ or }-7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.3/q7",
+      "status": "worked",
+      "method": "First locate B and C from O. B is on the positive x-axis, while C lies below it; add the two component angles for AOC.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OB}=\\overrightarrow{OA}+\\overrightarrow{AB}=12\\mathbf i;\\quad\\angle AOB=\\tan^{-1}(4/5)\\approx38.7^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{OC}=\\overrightarrow{OB}-\\overrightarrow{CB}=2\\mathbf i-7\\mathbf j;\\quad\\angle BOC=\\tan^{-1}(7/2)\\approx74.1^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\angle AOC=\\tan^{-1}(4/5)+\\tan^{-1}(7/2)\\approx112.7^\\circ",
+          "explanation": "Add the unrounded angles before rounding."
+        }
+      ],
+      "solutionHtml": "<p>First locate B and C from O. B is on the positive x-axis, while C lies below it; add the two component angles for AOC.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OB}=\\overrightarrow{OA}+\\overrightarrow{AB}=12\\mathbf i\\\\&amp;\\angle AOB=\\tan^{-1}(4/5)\\approx38.7^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OC}=\\overrightarrow{OB}-\\overrightarrow{CB}=2\\mathbf i-7\\mathbf j\\\\&amp;\\angle BOC=\\tan^{-1}(7/2)\\approx74.1^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Add the unrounded angles before rounding.</p><span data-math=\"\\begin{aligned}&amp;\\angle AOC=\\tan^{-1}(4/5)+\\tan^{-1}(7/2)\\approx112.7^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.3/q8",
+      "status": "worked",
+      "method": "Use q/p=−5/12 and p²+q²=6.5². The 5–12–13 triangle has scale factor 6.5/13=1/2.",
+      "steps": [
+        {
+          "latex": "q=-\\frac5{12}p;\\quad p^2+\\frac{25}{144}p^2=\\frac{169}4\\Rightarrow\\frac{169}{144}p^2=\\frac{169}4\\Rightarrow p=\\pm6;\\quad(p,q)=(6,-2.5)\\text{ or }(-6,2.5)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use q/p=−5/12 and p²+q²=6.5². The 5–12–13 triangle has scale factor 6.5/13=1/2.</p><span data-math=\"\\begin{aligned}&amp;q=-\\frac5{12}p\\\\&amp;p^2+\\frac{25}{144}p^2=\\frac{169}4\\\\&amp;\\Rightarrow \\frac{169}{144}p^2=\\frac{169}4\\\\&amp;\\Rightarrow p=\\pm6\\\\&amp;(p,q)=(6,-2.5)\\text{ or }(-6,2.5)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.4/q1",
+      "status": "worked",
+      "method": "A position vector uses the point’s coordinates; subtract the starting position from the ending position for PQ.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OP}=-2\\mathbf i+3\\mathbf j",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{OQ}=7\\mathbf i+0\\mathbf j=7\\mathbf i",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{PQ}=[7-(-2)]\\mathbf i+(0-3)\\mathbf j=9\\mathbf i-3\\mathbf j",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>A position vector uses the point’s coordinates; subtract the starting position from the ending position for PQ.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OP}=-2\\mathbf i+3\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OQ}=7\\mathbf i+0\\mathbf j=7\\mathbf i\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PQ}=[7-(-2)]\\mathbf i+(0-3)\\mathbf j=9\\mathbf i-3\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.4/q2",
+      "status": "worked",
+      "method": "Use endpoint minus start point for each directed displacement.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OA}=6\\mathbf i-2\\mathbf j",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{BC}=[1-(-1)]\\mathbf i+[3-(-1)]\\mathbf j=2\\mathbf i+4\\mathbf j",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{CA}=(6-1)\\mathbf i+(-2-3)\\mathbf j=5\\mathbf i-5\\mathbf j",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use endpoint minus start point for each directed displacement.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OA}=6\\mathbf i-2\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{BC}=[1-(-1)]\\mathbf i+[3-(-1)]\\mathbf j=2\\mathbf i+4\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{CA}=(6-1)\\mathbf i+(-2-3)\\mathbf j=5\\mathbf i-5\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.4/q3",
+      "status": "worked",
+      "method": "Reversing a vector leaves its magnitude unchanged. Find OE=OD−ED before calculating its magnitude.",
+      "steps": [
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(-6)^2+(8)^2}=10",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(9)^2+(-3)^2}=3 \\sqrt{10}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{OE}=(-6+9)\\mathbf i+(8-3)\\mathbf j=3\\mathbf i+5\\mathbf j;\\quad|\\overrightarrow{OE}|=\\sqrt{3^2+5^2}=\\sqrt{34}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Reversing a vector leaves its magnitude unchanged. Find OE=OD−ED before calculating its magnitude.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"|\\mathbf v|=\\sqrt{(-6)^2+(8)^2}=10\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(9)^2+(-3)^2}=3 \\sqrt{10}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OE}=(-6+9)\\mathbf i+(8-3)\\mathbf j=3\\mathbf i+5\\mathbf j\\\\&amp;|\\overrightarrow{OE}|=\\sqrt{3^2+5^2}=\\sqrt{34}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.4/q4",
+      "status": "worked",
+      "method": "Add the directed route OA+AB, then use Pythagoras.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OB}=\\begin{pmatrix}-7+3\\\\-6+11\\end{pmatrix}=\\begin{pmatrix}-4\\\\5\\end{pmatrix}",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(-4)^2+(5)^2}=\\sqrt{41}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Add the directed route OA+AB, then use Pythagoras.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OB}\\\\&amp;=\\begin{pmatrix}-7+3\\\\-6+11\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}-4\\\\5\\end{pmatrix}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(-4)^2+(5)^2}=\\sqrt{41}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.4/q5",
+      "status": "worked",
+      "method": "Write P=(x,2x−3), use its squared distance from O and factor the resulting quadratic.",
+      "steps": [
+        {
+          "latex": "x^2+(2x-3)^2=53\\Rightarrow5x^2-12x-44=0\\Rightarrow(5x-22)(x+2)=0;\\quad x=\\frac{22}5\\Rightarrow y=\\frac{29}5;\\quad x=-2\\Rightarrow y=-7;\\quad\\overrightarrow{OP}=\\frac{22}5\\mathbf i+\\frac{29}5\\mathbf j\\ \\text{or}\\ -2\\mathbf i-7\\mathbf j",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Write P=(x,2x−3), use its squared distance from O and factor the resulting quadratic.</p><span data-math=\"\\begin{aligned}&amp;x^2+(2x-3)^2=53\\\\&amp;\\Rightarrow 5x^2-12x-44=0\\\\&amp;\\Rightarrow (5x-22)(x+2)=0\\\\&amp;x=\\frac{22}5\\\\&amp;\\Rightarrow y=\\frac{29}5\\\\&amp;x=-2\\\\&amp;\\Rightarrow y=-7\\\\&amp;\\overrightarrow{OP}\\\\&amp;=\\frac{22}5\\mathbf i+\\frac{29}5\\mathbf j\\ \\text{or}\\ -2\\mathbf i-7\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.5/q1",
+      "status": "worked",
+      "method": "The ratio PN:NQ=1:3 makes PN one quarter of PQ; follow the route O→P→N.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{PQ}=\\mathbf q-\\mathbf p",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{PN}=\\frac1{1+3}\\overrightarrow{PQ}=\\frac14\\overrightarrow{PQ}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{ON}=\\overrightarrow{OP}+\\overrightarrow{PN}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{ON}=\\mathbf p+\\frac14(\\mathbf q-\\mathbf p)=\\frac34\\mathbf p+\\frac14\\mathbf q",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The ratio PN:NQ=1:3 makes PN one quarter of PQ; follow the route O→P→N.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\overrightarrow{PQ}=\\mathbf q-\\mathbf p\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PN}=\\frac1{1+3}\\overrightarrow{PQ}=\\frac14\\overrightarrow{PQ}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{ON}=\\overrightarrow{OP}+\\overrightarrow{PN}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{ON}\\\\&amp;=\\mathbf p+\\frac14(\\mathbf q-\\mathbf p)\\\\&amp;=\\frac34\\mathbf p+\\frac14\\mathbf q\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.5/q2",
+      "status": "worked",
+      "method": "AM is two fifths of AB. Add that displacement to OA.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OM}=\\mathbf a+\\frac25(\\mathbf b-\\mathbf a)=\\frac35\\mathbf a+\\frac25\\mathbf b",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>AM is two fifths of AB. Add that displacement to OA.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OM}\\\\&amp;=\\mathbf a+\\frac25(\\mathbf b-\\mathbf a)\\\\&amp;=\\frac35\\mathbf a+\\frac25\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.5/q3",
+      "status": "worked",
+      "method": "AX is three quarters of AB; XY is two fifths of XD. Find XD by travelling via A.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{AX}=\\frac34\\mathbf a;\\quad\\overrightarrow{XD}=\\mathbf b-\\frac34\\mathbf a;\\quad\\overrightarrow{XY}=\\frac25\\left(\\mathbf b-\\frac34\\mathbf a\\right)=-\\frac3{10}\\mathbf a+\\frac25\\mathbf b",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>AX is three quarters of AB; XY is two fifths of XD. Find XD by travelling via A.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AX}=\\frac34\\mathbf a\\\\&amp;\\overrightarrow{XD}=\\mathbf b-\\frac34\\mathbf a\\\\&amp;\\overrightarrow{XY}\\\\&amp;=\\frac25\\left(\\mathbf b-\\frac34\\mathbf a\\right)\\\\&amp;=-\\frac3{10}\\mathbf a+\\frac25\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.5/q4",
+      "status": "worked",
+      "method": "Find QR=PR−PQ. Its squared length is 85, while PQ²=65 and PR²=40; use the cosine rule at P.",
+      "steps": [
+        {
+          "latex": "\\cos \\angle QPR=\\frac{65+40-85}{2\\sqrt{65}\\sqrt{40}}=\\frac{\\sqrt{26}}{26};\\quad \\angle QPR=\\cos^{-1}\\left(\\frac{\\sqrt{26}}{26}\\right)\\approx78.7^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find QR=PR−PQ. Its squared length is 85, while PQ²=65 and PR²=40; use the cosine rule at P.</p><span data-math=\"\\begin{aligned}&amp;\\cos \\angle QPR=\\frac{65+40-85}{2\\sqrt{65}\\sqrt{40}}=\\frac{\\sqrt{26}}{26}\\\\&amp;\\angle QPR=\\cos^{-1}\\left(\\frac{\\sqrt{26}}{26}\\right)\\approx78.7^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.5/q5",
+      "status": "worked",
+      "method": "Use the midpoint position vectors from J, then subtract the starting point.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{KL}=\\mathbf b-\\mathbf a;\\quad\\overrightarrow{PR}=\\overrightarrow{JR}-\\overrightarrow{JP}=\\frac12\\mathbf b-\\frac12\\mathbf a=\\frac12\\overrightarrow{KL}",
+          "explanation": ""
+        },
+        {
+          "latex": "",
+          "explanation": "PR is a nonzero scalar multiple of KL, so their directions are parallel."
+        }
+      ],
+      "solutionHtml": "<p>Use the midpoint position vectors from J, then subtract the starting point.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{KL}=\\mathbf b-\\mathbf a\\\\&amp;\\overrightarrow{PR}\\\\&amp;=\\overrightarrow{JR}-\\overrightarrow{JP}\\\\&amp;=\\frac12\\mathbf b-\\frac12\\mathbf a\\\\&amp;=\\frac12\\overrightarrow{KL}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>PR is a nonzero scalar multiple of KL, so their directions are parallel.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.5/q6",
+      "status": "worked",
+      "method": "Take A as origin and locate each division point. Compare the independent a and b coefficients in the two routes to M.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{AW}=\\frac13\\mathbf a,\\quad\\overrightarrow{AY}=\\frac23\\mathbf a+\\mathbf b;\\quad\\text{i }\\overrightarrow{WY}=\\frac13\\mathbf a+\\mathbf b;\\quad\\overrightarrow{AX}=\\mathbf a+\\frac12\\mathbf b,\\quad\\overrightarrow{AZ}=\\frac12\\mathbf b;\\quad\\text{ii }\\overrightarrow{XZ}=-\\mathbf a",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{AM}=\\overrightarrow{AW}+\\lambda\\overrightarrow{WY}=\\frac13\\mathbf a+\\lambda\\left(\\frac13\\mathbf a+\\mathbf b\\right)=\\frac{1+\\lambda}3\\mathbf a+\\lambda\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{AM}=\\overrightarrow{AX}+\\mu\\overrightarrow{XZ}=\\mathbf a+\\frac12\\mathbf b-\\mu\\mathbf a=(1-\\mu)\\mathbf a+\\frac12\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\lambda=\\frac12,\\quad\\frac{1+\\lambda}3=1-\\mu\\Rightarrow\\frac12=1-\\mu\\Rightarrow\\mu=\\frac12",
+          "explanation": "WM is half of WY and XM is half of XZ, so M is the midpoint of both segments."
+        }
+      ],
+      "solutionHtml": "<p>Take A as origin and locate each division point. Compare the independent a and b coefficients in the two routes to M.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AW}\\\\&amp;=\\frac13\\mathbf a,\\quad\\overrightarrow{AY}\\\\&amp;=\\frac23\\mathbf a+\\mathbf b\\\\&amp;\\text{i }\\overrightarrow{WY}=\\frac13\\mathbf a+\\mathbf b\\\\&amp;\\overrightarrow{AX}\\\\&amp;=\\mathbf a+\\frac12\\mathbf b,\\quad\\overrightarrow{AZ}\\\\&amp;=\\frac12\\mathbf b\\\\&amp;\\text{ii }\\overrightarrow{XZ}=-\\mathbf a\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AM}\\\\&amp;=\\overrightarrow{AW}+\\lambda\\overrightarrow{WY}\\\\&amp;=\\frac13\\mathbf a+\\lambda\\left(\\frac13\\mathbf a+\\mathbf b\\right)\\\\&amp;=\\frac{1+\\lambda}3\\mathbf a+\\lambda\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AM}\\\\&amp;=\\overrightarrow{AX}+\\mu\\overrightarrow{XZ}\\\\&amp;=\\mathbf a+\\frac12\\mathbf b-\\mu\\mathbf a\\\\&amp;=(1-\\mu)\\mathbf a+\\frac12\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>WM is half of WY and XM is half of XZ, so M is the midpoint of both segments.</p><span data-math=\"\\begin{aligned}&amp;\\lambda=\\frac12,\\quad\\frac{1+\\lambda}3=1-\\mu\\\\&amp;\\Rightarrow \\frac12=1-\\mu\\\\&amp;\\Rightarrow \\mu=\\frac12\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.5/q7",
+      "status": "worked",
+      "method": "Let OA=a and OB=b. Both given ratios are internal, so k>0; use the fraction 1/(1+k) of each directed side.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OP}=\\frac{\\mathbf a}{1+k};\\quad\\overrightarrow{OQ}=\\mathbf b+\\frac{\\mathbf a-\\mathbf b}{1+k}=\\frac{\\mathbf a+k\\mathbf b}{1+k};\\quad\\overrightarrow{PQ}=\\overrightarrow{OQ}-\\overrightarrow{OP}=\\frac{k}{1+k}\\mathbf b",
+          "explanation": "PQ is a nonzero scalar multiple of OB, hence parallel to it."
+        },
+        {
+          "latex": "\\frac{|PQ|}{|OB|}=\\frac{k}{1+k}=\\frac13\\Rightarrow3k=1+k\\Rightarrow k=\\frac12",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Let OA=a and OB=b. Both given ratios are internal, so k&gt;0; use the fraction 1/(1+k) of each directed side.</p><ol class=\"parts\" type=\"a\"><li><p>PQ is a nonzero scalar multiple of OB, hence parallel to it.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OP}=\\frac{\\mathbf a}{1+k}\\\\&amp;\\overrightarrow{OQ}\\\\&amp;=\\mathbf b+\\frac{\\mathbf a-\\mathbf b}{1+k}\\\\&amp;=\\frac{\\mathbf a+k\\mathbf b}{1+k}\\\\&amp;\\overrightarrow{PQ}=\\overrightarrow{OQ}-\\overrightarrow{OP}=\\frac{k}{1+k}\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{|PQ|}{|OB|}=\\frac{k}{1+k}=\\frac13\\\\&amp;\\Rightarrow 3k=1+k\\\\&amp;\\Rightarrow k=\\frac12\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.6/q1",
+      "status": "worked",
+      "method": "Speed is the magnitude of velocity, keeping the stated distance and time units.",
+      "steps": [
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(5)^2+(-12)^2}=13\\ \\mathrm{m\\,s^{-1}}",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(-6)^2+(-8)^2}=10\\ \\mathrm{km\\,s^{-1}}",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(6)^2+(1)^2}=\\sqrt{37}\\ \\mathrm{mm\\,s^{-1}}",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(0)^2+(14)^2}=14\\ \\mathrm{cm\\,s^{-1}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Speed is the magnitude of velocity, keeping the stated distance and time units.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(5)^2+(-12)^2}=13\\ \\mathrm{m\\,s^{-1}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(-6)^2+(-8)^2}=10\\ \\mathrm{km\\,s^{-1}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(6)^2+(1)^2}=\\sqrt{37}\\ \\mathrm{mm\\,s^{-1}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(0)^2+(14)^2}=14\\ \\mathrm{cm\\,s^{-1}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.6/q2",
+      "status": "worked",
+      "method": "Find the constant speed, then use distance=speed×time.",
+      "steps": [
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(-4)^2+(3)^2}=5\\ \\mathrm{m\\,s^{-1}}",
+          "explanation": ""
+        },
+        {
+          "latex": "d=5\\times4=20\\ \\mathrm m",
+          "explanation": ""
+        },
+        {
+          "latex": "t=\\frac{27.5}5=5.5\\ \\mathrm s",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find the constant speed, then use distance=speed×time.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(-4)^2+(3)^2}=5\\ \\mathrm{m\\,s^{-1}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"d=5\\times4=20\\ \\mathrm m\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"t=\\frac{27.5}5=5.5\\ \\mathrm s\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.6/q3",
+      "status": "worked",
+      "method": "Subtract the initial velocity from the final velocity componentwise, then divide by the elapsed 6 seconds.",
+      "steps": [
+        {
+          "latex": "\\mathbf a=\\frac{(2\\mathbf i-51\\mathbf j)-(-7\\mathbf i-24\\mathbf j)}6=\\frac{9\\mathbf i-27\\mathbf j}6=\\left(\\frac32\\mathbf i-\\frac92\\mathbf j\\right)\\ \\mathrm{km\\,s^{-2}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Subtract the initial velocity from the final velocity componentwise, then divide by the elapsed 6 seconds.</p><span data-math=\"\\begin{aligned}&amp;\\mathbf a\\\\&amp;=\\frac{(2\\mathbf i-51\\mathbf j)-(-7\\mathbf i-24\\mathbf j)}6\\\\&amp;=\\frac{9\\mathbf i-27\\mathbf j}6\\\\&amp;=\\left(\\frac32\\mathbf i-\\frac92\\mathbf j\\right)\\ \\mathrm{km\\,s^{-2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.6/q4",
+      "status": "worked",
+      "method": "Substitute t=4 in v=u+at, then take the magnitude of the resulting velocity.",
+      "steps": [
+        {
+          "latex": "\\mathbf v=(\\mathbf i-4\\mathbf j)+4(2\\mathbf i-3\\mathbf j)=(9\\mathbf i-16\\mathbf j)\\ \\mathrm{m\\,s^{-1}}",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf v|=\\sqrt{(9)^2+(-16)^2}=\\sqrt{337}\\ \\mathrm{m\\,s^{-1}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Substitute t=4 in v=u+at, then take the magnitude of the resulting velocity.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\mathbf v\\\\&amp;=(\\mathbf i-4\\mathbf j)+4(2\\mathbf i-3\\mathbf j)\\\\&amp;=(9\\mathbf i-16\\mathbf j)\\ \\mathrm{m\\,s^{-1}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf v|=\\sqrt{(9)^2+(-16)^2}=\\sqrt{337}\\ \\mathrm{m\\,s^{-1}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.6/q5",
+      "status": "worked",
+      "method": "Take east as positive i and north as positive j. Bearings are measured clockwise from north.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OA}=(-3\\mathbf i+6\\mathbf j)\\ \\mathrm{km}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{AB}=(8+3)\\mathbf i+(2-6)\\mathbf j=11\\mathbf i-4\\mathbf j;\\quad|AB|=\\sqrt{11^2+(-4)^2}=\\sqrt{137}\\ \\mathrm{km}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\text{bearing}=90^\\circ+\\tan^{-1}(4/11)\\approx110.0^\\circ",
+          "explanation": "The direction is southeast, so add the angle below east to the 90° bearing of east."
+        }
+      ],
+      "solutionHtml": "<p>Take east as positive i and north as positive j. Bearings are measured clockwise from north.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OA}=(-3\\mathbf i+6\\mathbf j)\\ \\mathrm{km}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AB}=(8+3)\\mathbf i+(2-6)\\mathbf j=11\\mathbf i-4\\mathbf j\\\\&amp;|AB|=\\sqrt{11^2+(-4)^2}=\\sqrt{137}\\ \\mathrm{km}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The direction is southeast, so add the angle below east to the 90° bearing of east.</p><span data-math=\"\\begin{aligned}&amp;\\text{bearing}=90^\\circ+\\tan^{-1}(4/11)\\approx110.0^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.6/q6",
+      "status": "worked",
+      "method": "Write R=t(2i−3j). Parallel permits either sign of the nonzero scale factor until the additional value of p is used.",
+      "steps": [
+        {
+          "latex": "\\alpha=\\tan^{-1}(3/2)\\approx56.3^\\circ",
+          "explanation": "For t>0, R is 56.3° below the positive x-axis, as in the supplied answer. For t<0, it is 123.7° above that axis. Parallel alone does not specify the orientation; the later condition p=3 fixes t>0."
+        },
+        {
+          "latex": "p+3=2t,\\quad q-7=-3t;\\quad3(p+3)+2(q-7)=0\\Rightarrow3p+2q=5",
+          "explanation": ""
+        },
+        {
+          "latex": "p=3\\Rightarrow9+2q=5\\Rightarrow q=-2;\\quad\\mathbf R=6\\mathbf i-9\\mathbf j;\\quad|\\mathbf R|=\\sqrt{6^2+(-9)^2}=3\\sqrt{13}\\ \\mathrm N",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Write R=t(2i−3j). Parallel permits either sign of the nonzero scale factor until the additional value of p is used.</p><ol class=\"parts\" type=\"a\"><li><p>For t&gt;0, R is 56.3° below the positive x-axis, as in the supplied answer. For t&lt;0, it is 123.7° above that axis. Parallel alone does not specify the orientation; the later condition p=3 fixes t&gt;0.</p><span data-math=\"\\alpha=\\tan^{-1}(3/2)\\approx56.3^\\circ\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;p+3=2t,\\quad q-7=-3t\\\\&amp;3(p+3)+2(q-7)=0\\\\&amp;\\Rightarrow 3p+2q=5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;p=3\\\\&amp;\\Rightarrow 9+2q=5\\\\&amp;\\Rightarrow q=-2\\\\&amp;\\mathbf R=6\\mathbf i-9\\mathbf j\\\\&amp;|\\mathbf R|=\\sqrt{6^2+(-9)^2}=3\\sqrt{13}\\ \\mathrm N\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.6/q7",
+      "status": "worked",
+      "method": "Use the two side vectors from A to calculate the included angle and area.",
+      "steps": [
+        {
+          "latex": "\\cos \\theta=\\frac{34+37-97}{2\\sqrt{34}\\sqrt{37}}=- \\frac{13 \\sqrt{1258}}{1258};\\quad \\theta=\\cos^{-1}\\left(- \\frac{13 \\sqrt{1258}}{1258}\\right)\\approx111.5^\\circ;\\quad\\sin\\theta=\\sqrt{1-\\cos^2\\theta}=\\frac{33 \\sqrt{1258}}{1258};\\quad A=\\frac12\\sqrt{34}\\sqrt{37}\\sin\\theta=\\frac{33}{2}\\ \\mathrm{km}^2",
+          "explanation": "Use the cosine rule to find the included angle, then the triangle area formula. Retain the exact cosine and positive sine in the calculation."
+        }
+      ],
+      "solutionHtml": "<p>Use the two side vectors from A to calculate the included angle and area.</p><p>Use the cosine rule to find the included angle, then the triangle area formula. Retain the exact cosine and positive sine in the calculation.</p><span data-math=\"\\begin{aligned}&amp;\\cos \\theta=\\frac{34+37-97}{2\\sqrt{34}\\sqrt{37}}=- \\frac{13 \\sqrt{1258}}{1258}\\\\&amp;\\theta=\\cos^{-1}\\left(- \\frac{13 \\sqrt{1258}}{1258}\\right)\\approx111.5^\\circ\\\\&amp;\\sin\\theta=\\sqrt{1-\\cos^2\\theta}=\\frac{33 \\sqrt{1258}}{1258}\\\\&amp;A=\\frac12\\sqrt{34}\\sqrt{37}\\sin\\theta=\\frac{33}{2}\\ \\mathrm{km}^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/11.6/q8",
+      "status": "worked",
+      "method": "Use the resultant’s component ratio, then compare components of the force sum.",
+      "steps": [
+        {
+          "latex": "\\alpha=\\tan^{-1}(32/8)=\\tan^{-1}4\\approx76.0^\\circ",
+          "explanation": "Both components are positive, so this is above the positive i direction."
+        },
+        {
+          "latex": "a-3=8\\Rightarrow a=11;\\quad b+7=32\\Rightarrow b=25",
+          "explanation": ""
+        },
+        {
+          "latex": "\\mathbf R+\\mathbf F_3=(8+c)\\mathbf i+42\\mathbf j;\\quad8+c=0\\Rightarrow c=-8",
+          "explanation": "Parallel to j requires a zero horizontal component; the vertical component 42 is nonzero."
+        }
+      ],
+      "solutionHtml": "<p>Use the resultant’s component ratio, then compare components of the force sum.</p><ol class=\"parts\" type=\"a\"><li><p>Both components are positive, so this is above the positive i direction.</p><span data-math=\"\\begin{aligned}&amp;\\alpha=\\tan^{-1}(32/8)=\\tan^{-1}4\\approx76.0^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;a-3=8\\\\&amp;\\Rightarrow a=11\\\\&amp;b+7=32\\\\&amp;\\Rightarrow b=25\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Parallel to j requires a zero horizontal component; the vertical component 42 is nonzero.</p><span data-math=\"\\begin{aligned}&amp;\\mathbf R+\\mathbf F_3=(8+c)\\mathbf i+42\\mathbf j\\\\&amp;8+c=0\\\\&amp;\\Rightarrow c=-8\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/problem-a/qbronze",
+      "status": "worked",
+      "method": "Subtract side vectors for BC; use Pythagoras for the lengths and the cosine rule for the angle at A.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{BC}=(12-5)\\mathbf i+(5-12)\\mathbf j=7\\mathbf i-7\\mathbf j",
+          "explanation": ""
+        },
+        {
+          "latex": "AB=\\sqrt{5^2+12^2}=13;\\quad AC=\\sqrt{12^2+5^2}=13;\\quad BC=\\sqrt{7^2+(-7)^2}=7\\sqrt2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos \\angle BAC=\\frac{169+169-98}{2\\sqrt{169}\\sqrt{169}}=\\frac{120}{169};\\quad \\angle BAC=\\cos^{-1}\\left(\\frac{120}{169}\\right)\\approx44.8^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Subtract side vectors for BC; use Pythagoras for the lengths and the cosine rule for the angle at A.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{BC}=(12-5)\\mathbf i+(5-12)\\mathbf j=7\\mathbf i-7\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;AB=\\sqrt{5^2+12^2}=13\\\\&amp;AC=\\sqrt{12^2+5^2}=13\\\\&amp;BC=\\sqrt{7^2+(-7)^2}=7\\sqrt2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos \\angle BAC=\\frac{169+169-98}{2\\sqrt{169}\\sqrt{169}}=\\frac{120}{169}\\\\&amp;\\angle BAC=\\cos^{-1}\\left(\\frac{120}{169}\\right)\\approx44.8^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/problem-a/qsilver",
+      "status": "worked",
+      "method": "Subtract the position vectors to obtain the triangle sides, then use the cosine rule and triangle area formula.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{BC}=(7-0)\\mathbf i+(9-8)\\mathbf j=7\\mathbf i+\\mathbf j",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{AB}=\\mathbf i+4\\mathbf j,\\quad\\overrightarrow{AC}=8\\mathbf i+5\\mathbf j;\\quad\\cos \\angle BAC=\\frac{17+89-50}{2\\sqrt{17}\\sqrt{89}}=\\frac{28 \\sqrt{1513}}{1513};\\quad \\angle BAC=\\cos^{-1}\\left(\\frac{28 \\sqrt{1513}}{1513}\\right)\\approx44.0^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos \\theta=\\frac{17+89-50}{2\\sqrt{17}\\sqrt{89}}=\\frac{28 \\sqrt{1513}}{1513};\\quad \\theta=\\cos^{-1}\\left(\\frac{28 \\sqrt{1513}}{1513}\\right)\\approx44.0^\\circ;\\quad\\sin\\theta=\\sqrt{1-\\cos^2\\theta}=\\frac{27 \\sqrt{1513}}{1513};\\quad A=\\frac12\\sqrt{17}\\sqrt{89}\\sin\\theta=\\frac{27}{2}",
+          "explanation": "Use the cosine rule to find the included angle, then the triangle area formula. Retain the exact cosine and positive sine in the calculation."
+        }
+      ],
+      "solutionHtml": "<p>Subtract the position vectors to obtain the triangle sides, then use the cosine rule and triangle area formula.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{BC}=(7-0)\\mathbf i+(9-8)\\mathbf j=7\\mathbf i+\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AB}\\\\&amp;=\\mathbf i+4\\mathbf j,\\quad\\overrightarrow{AC}\\\\&amp;=8\\mathbf i+5\\mathbf j\\\\&amp;\\cos \\angle BAC=\\frac{17+89-50}{2\\sqrt{17}\\sqrt{89}}=\\frac{28 \\sqrt{1513}}{1513}\\\\&amp;\\angle BAC=\\cos^{-1}\\left(\\frac{28 \\sqrt{1513}}{1513}\\right)\\approx44.0^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the cosine rule to find the included angle, then the triangle area formula. Retain the exact cosine and positive sine in the calculation.</p><span data-math=\"\\begin{aligned}&amp;\\cos \\theta=\\frac{17+89-50}{2\\sqrt{17}\\sqrt{89}}=\\frac{28 \\sqrt{1513}}{1513}\\\\&amp;\\theta=\\cos^{-1}\\left(\\frac{28 \\sqrt{1513}}{1513}\\right)\\approx44.0^\\circ\\\\&amp;\\sin\\theta=\\sqrt{1-\\cos^2\\theta}=\\frac{27 \\sqrt{1513}}{1513}\\\\&amp;A=\\frac12\\sqrt{17}\\sqrt{89}\\sin\\theta=\\frac{27}{2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/problem-a/qgold",
+      "status": "worked",
+      "method": "Calculate the included angle from the three squared side lengths and use one half times both adjacent lengths times its sine.",
+      "steps": [
+        {
+          "latex": "\\cos \\theta=\\frac{68+53-61}{2\\sqrt{68}\\sqrt{53}}=\\frac{15 \\sqrt{901}}{901};\\quad \\theta=\\cos^{-1}\\left(\\frac{15 \\sqrt{901}}{901}\\right)\\approx60.0^\\circ;\\quad\\sin\\theta=\\sqrt{1-\\cos^2\\theta}=\\frac{26 \\sqrt{901}}{901};\\quad A=\\frac12\\sqrt{68}\\sqrt{53}\\sin\\theta=26",
+          "explanation": "Use the cosine rule to find the included angle, then the triangle area formula. Retain the exact cosine and positive sine in the calculation."
+        }
+      ],
+      "solutionHtml": "<p>Calculate the included angle from the three squared side lengths and use one half times both adjacent lengths times its sine.</p><p>Use the cosine rule to find the included angle, then the triangle area formula. Retain the exact cosine and positive sine in the calculation.</p><span data-math=\"\\begin{aligned}&amp;\\cos \\theta=\\frac{68+53-61}{2\\sqrt{68}\\sqrt{53}}=\\frac{15 \\sqrt{901}}{901}\\\\&amp;\\theta=\\cos^{-1}\\left(\\frac{15 \\sqrt{901}}{901}\\right)\\approx60.0^\\circ\\\\&amp;\\sin\\theta=\\sqrt{1-\\cos^2\\theta}=\\frac{26 \\sqrt{901}}{901}\\\\&amp;A=\\frac12\\sqrt{68}\\sqrt{53}\\sin\\theta=26\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/problem-b/qbronze",
+      "status": "worked",
+      "method": "R is three fifths of the way from A to B. Use directed displacements from Q and B to establish a shared straight line.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OR}=\\mathbf a+\\frac35(\\mathbf b-\\mathbf a)=\\frac25\\mathbf a+\\frac35\\mathbf b;\\quad\\overrightarrow{OP}=5\\overrightarrow{OR}=2\\mathbf a+3\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{QB}=\\mathbf b-(-\\mathbf a)=\\mathbf a+\\mathbf b;\\quad\\overrightarrow{BP}=(2\\mathbf a+3\\mathbf b)-\\mathbf b=2(\\mathbf a+\\mathbf b)=2\\overrightarrow{QB}",
+          "explanation": "QB and BP are parallel and share B, so Q, B and P are collinear."
+        }
+      ],
+      "solutionHtml": "<p>R is three fifths of the way from A to B. Use directed displacements from Q and B to establish a shared straight line.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OR}\\\\&amp;=\\mathbf a+\\frac35(\\mathbf b-\\mathbf a)\\\\&amp;=\\frac25\\mathbf a+\\frac35\\mathbf b\\\\&amp;\\overrightarrow{OP}=5\\overrightarrow{OR}=2\\mathbf a+3\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>QB and BP are parallel and share B, so Q, B and P are collinear.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{QB}=\\mathbf b-(-\\mathbf a)=\\mathbf a+\\mathbf b\\\\&amp;\\overrightarrow{BP}\\\\&amp;=(2\\mathbf a+3\\mathbf b)-\\mathbf b\\\\&amp;=2(\\mathbf a+\\mathbf b)\\\\&amp;=2\\overrightarrow{QB}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/problem-b/qsilver",
+      "status": "worked",
+      "method": "Let OC=t b. Since OM=a and M is the midpoint of OA, OA=2a. Express B using each of its two lines and compare coefficients.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OB}=\\mathbf a+\\frac15(t\\mathbf b-\\mathbf a)=\\frac45\\mathbf a+\\frac t5\\mathbf b;\\quad\\overrightarrow{OB}=2\\mathbf a+k(\\mathbf b-2\\mathbf a)=(2-2k)\\mathbf a+k\\mathbf b;\\quad2-2k=\\frac45\\Rightarrow k=\\frac35",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac t5=k=\\frac35\\Rightarrow t=3\\Rightarrow\\overrightarrow{OC}=3\\mathbf b",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Let OC=t b. Since OM=a and M is the midpoint of OA, OA=2a. Express B using each of its two lines and compare coefficients.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OB}\\\\&amp;=\\mathbf a+\\frac15(t\\mathbf b-\\mathbf a)\\\\&amp;=\\frac45\\mathbf a+\\frac t5\\mathbf b\\\\&amp;\\overrightarrow{OB}=2\\mathbf a+k(\\mathbf b-2\\mathbf a)=(2-2k)\\mathbf a+k\\mathbf b\\\\&amp;2-2k=\\frac45\\\\&amp;\\Rightarrow k=\\frac35\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac t5=k=\\frac35\\\\&amp;\\Rightarrow t=3\\\\&amp;\\Rightarrow \\overrightarrow{OC}=3\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/problem-b/qgold",
+      "status": "worked",
+      "method": "Let AB=a and AD=b, and let the intersection be R with MR=kMC and PR=jPQ. Compare the two routes from A to R.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{AM}=\\frac12\\mathbf b,\\quad\\overrightarrow{MC}=\\mathbf a+\\frac12\\mathbf b;\\quad\\overrightarrow{AP}=\\frac45\\mathbf a,\\quad\\overrightarrow{AQ}=\\frac25\\mathbf a+\\mathbf b,\\quad\\overrightarrow{PQ}=-\\frac25\\mathbf a+\\mathbf b;\\quad\\overrightarrow{AR}=k\\mathbf a+\\frac{1+k}2\\mathbf b;\\quad\\overrightarrow{AR}=\\left(\\frac45-\\frac25j\\right)\\mathbf a+j\\mathbf b;\\quad k=\\frac45-\\frac25j,\\quad j=\\frac{1+k}2;\\quad k=\\frac45-\\frac{1+k}5\\Rightarrow6k=3\\Rightarrow k=\\frac12",
+          "explanation": "Thus MR=(1/2)MC, so R is the midpoint of MC and PQ bisects MC. The value j=3/4 also places the intersection on segment PQ."
+        }
+      ],
+      "solutionHtml": "<p>Let AB=a and AD=b, and let the intersection be R with MR=kMC and PR=jPQ. Compare the two routes from A to R.</p><p>Thus MR=(1/2)MC, so R is the midpoint of MC and PQ bisects MC. The value j=3/4 also places the intersection on segment PQ.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AM}\\\\&amp;=\\frac12\\mathbf b,\\quad\\overrightarrow{MC}\\\\&amp;=\\mathbf a+\\frac12\\mathbf b\\\\&amp;\\overrightarrow{AP}\\\\&amp;=\\frac45\\mathbf a,\\quad\\overrightarrow{AQ}\\\\&amp;=\\frac25\\mathbf a+\\mathbf b,\\quad\\overrightarrow{PQ}\\\\&amp;=-\\frac25\\mathbf a+\\mathbf b\\\\&amp;\\overrightarrow{AR}=k\\mathbf a+\\frac{1+k}2\\mathbf b\\\\&amp;\\overrightarrow{AR}=\\left(\\frac45-\\frac25j\\right)\\mathbf a+j\\mathbf b\\\\&amp;k=\\frac45-\\frac25j,\\quad j=\\frac{1+k}2\\\\&amp;k=\\frac45-\\frac{1+k}5\\\\&amp;\\Rightarrow 6k=3\\\\&amp;\\Rightarrow k=\\frac12\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/exam/q5",
+      "status": "worked",
+      "method": "Normalize by the positive magnitude; use the component ratio and quadrant for direction.",
+      "steps": [
+        {
+          "latex": "|\\mathbf a|=\\sqrt{6^2+(-3)^2}=3\\sqrt5;\\quad\\widehat{\\mathbf a}=\\frac{6\\mathbf i-3\\mathbf j}{3\\sqrt5}=\\frac{2\\sqrt5}5\\mathbf i-\\frac{\\sqrt5}5\\mathbf j",
+          "explanation": ""
+        },
+        {
+          "latex": "\\alpha=\\tan^{-1}(3/6)\\approx26.6^\\circ",
+          "explanation": "The vector has positive horizontal and negative vertical components, so it is 26.6° below the positive x-axis."
+        }
+      ],
+      "solutionHtml": "<p>Normalize by the positive magnitude; use the component ratio and quadrant for direction.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf a|=\\sqrt{6^2+(-3)^2}=3\\sqrt5\\\\&amp;\\widehat{\\mathbf a}\\\\&amp;=\\frac{6\\mathbf i-3\\mathbf j}{3\\sqrt5}\\\\&amp;=\\frac{2\\sqrt5}5\\mathbf i-\\frac{\\sqrt5}5\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The vector has positive horizontal and negative vertical components, so it is 26.6° below the positive x-axis.</p><span data-math=\"\\alpha=\\tan^{-1}(3/6)\\approx26.6^\\circ\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/exam/q14",
+      "status": "worked",
+      "method": "A resultant parallel to i has zero j component. Substitute that p into its horizontal component.",
+      "steps": [
+        {
+          "latex": "\\mathbf R=(6+4p)\\mathbf i+(3p-5)\\mathbf j;\\quad3p-5=0\\Rightarrow p=\\frac53",
+          "explanation": ""
+        },
+        {
+          "latex": "\\mathbf R=\\left(6+4\\cdot\\frac53\\right)\\mathbf i=\\frac{38}3\\mathbf i\\Rightarrow|\\mathbf R|=\\frac{38}3\\ \\mathrm N",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>A resultant parallel to i has zero j component. Substitute that p into its horizontal component.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\mathbf R=(6+4p)\\mathbf i+(3p-5)\\mathbf j\\\\&amp;3p-5=0\\\\&amp;\\Rightarrow p=\\frac53\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\mathbf R=\\left(6+4\\cdot\\frac53\\right)\\mathbf i=\\frac{38}3\\mathbf i\\\\&amp;\\Rightarrow |\\mathbf R|=\\frac{38}3\\ \\mathrm N\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/exam/q16",
+      "status": "worked",
+      "method": "Each position is velocity multiplied by 2 hours because both start at O. Subtract positions for the separation.",
+      "steps": [
+        {
+          "latex": "\\mathbf r_S=2(-\\mathbf i+3\\mathbf j)=-2\\mathbf i+6\\mathbf j\\ \\mathrm{km};\\quad\\mathbf r_B=2(6\\mathbf i-2\\mathbf j)=12\\mathbf i-4\\mathbf j\\ \\mathrm{km}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{SB}=14\\mathbf i-10\\mathbf j;\\quad SB=\\sqrt{14^2+(-10)^2}=\\sqrt{296}=2\\sqrt{74}\\ \\mathrm{km}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Each position is velocity multiplied by 2 hours because both start at O. Subtract positions for the separation.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\mathbf r_S=2(-\\mathbf i+3\\mathbf j)=-2\\mathbf i+6\\mathbf j\\ \\mathrm{km}\\\\&amp;\\mathbf r_B=2(6\\mathbf i-2\\mathbf j)=12\\mathbf i-4\\mathbf j\\ \\mathrm{km}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{SB}=14\\mathbf i-10\\mathbf j\\\\&amp;SB=\\sqrt{14^2+(-10)^2}=\\sqrt{296}=2\\sqrt{74}\\ \\mathrm{km}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/exam/q19",
+      "status": "worked",
+      "method": "Use y=(12−3x)/2 and the squared distance equation, then retain the root with positive x.",
+      "steps": [
+        {
+          "latex": "x^2+\\left(\\frac{12-3x}2\\right)^2=100\\Rightarrow13x^2-72x-256=0\\Rightarrow(x-8)(13x+32)=0;\\quad x>0\\Rightarrow x=8,\\quad y=\\frac{12-24}2=-6;\\quad\\overrightarrow{OB}=8\\mathbf i-6\\mathbf j",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use y=(12−3x)/2 and the squared distance equation, then retain the root with positive x.</p><span data-math=\"\\begin{aligned}&amp;x^2+\\left(\\frac{12-3x}2\\right)^2=100\\\\&amp;\\Rightarrow 13x^2-72x-256=0\\\\&amp;\\Rightarrow (x-8)(13x+32)=0\\\\&amp;x&gt;0\\\\&amp;\\Rightarrow x=8,\\quad y=\\frac{12-24}2=-6\\\\&amp;\\overrightarrow{OB}=8\\mathbf i-6\\mathbf j\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/exam/q56",
+      "status": "worked",
+      "method": "Find EF=DF−DE and the three squared lengths. At F, use FD=−DF and FE=DE−DF in the cosine rule.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{EF}=5\\mathbf i-8\\mathbf j;\\quad DE^2=3^2+7^2=58;\\quad DF^2=8^2+(-1)^2=65;\\quad EF^2=5^2+(-8)^2=89",
+          "explanation": "The three squared lengths, hence the lengths themselves, are all different; the triangle is scalene."
+        },
+        {
+          "latex": "\\cos \\angle DFE=\\frac{65+89-58}{2\\sqrt{65}\\sqrt{89}}=\\frac{48 \\sqrt{5785}}{5785};\\quad \\angle DFE=\\cos^{-1}\\left(\\frac{48 \\sqrt{5785}}{5785}\\right)\\approx50.9^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find EF=DF−DE and the three squared lengths. At F, use FD=−DF and FE=DE−DF in the cosine rule.</p><ol class=\"parts\" type=\"a\"><li><p>The three squared lengths, hence the lengths themselves, are all different; the triangle is scalene.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{EF}=5\\mathbf i-8\\mathbf j\\\\&amp;DE^2=3^2+7^2=58\\\\&amp;DF^2=8^2+(-1)^2=65\\\\&amp;EF^2=5^2+(-8)^2=89\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos \\angle DFE=\\frac{65+89-58}{2\\sqrt{65}\\sqrt{89}}=\\frac{48 \\sqrt{5785}}{5785}\\\\&amp;\\angle DFE=\\cos^{-1}\\left(\\frac{48 \\sqrt{5785}}{5785}\\right)\\approx50.9^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch11/exam/q80",
+      "status": "worked",
+      "method": "Take O as origin. B=a+b and Z=(3/5)(a+b); compare the independent side coefficients.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{CZ}=\\frac35(\\mathbf a+\\mathbf b)-\\mathbf b=\\frac35\\mathbf a-\\frac25\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{CA}=\\mathbf a-\\mathbf b;\\quad\\frac35\\ne\\frac25",
+          "explanation": "CZ is not a scalar multiple of CA, so the line CZ does not pass through A."
+        },
+        {
+          "latex": "\\overrightarrow{OP}=\\mathbf a+t\\mathbf b;\\quad\\overrightarrow{OQ}=s\\mathbf b;\\quad\\overrightarrow{OZ}=\\frac35\\mathbf a+\\frac35\\mathbf b",
+          "explanation": "PQ is parallel to OA, so every point on PQ has the same b coefficient. Thus t=s=3/5, giving AP:PB=(3/5):(2/5)=3:2. Along PQ, P has a coefficient 1, Z has 3/5 and Q has 0, so PZ:ZQ=(2/5):(3/5)=2:3."
+        }
+      ],
+      "solutionHtml": "<p>Take O as origin. B=a+b and Z=(3/5)(a+b); compare the independent side coefficients.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{CZ}\\\\&amp;=\\frac35(\\mathbf a+\\mathbf b)-\\mathbf b\\\\&amp;=\\frac35\\mathbf a-\\frac25\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>CZ is not a scalar multiple of CA, so the line CZ does not pass through A.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{CA}=\\mathbf a-\\mathbf b\\\\&amp;\\frac35\\ne\\frac25\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>PQ is parallel to OA, so every point on PQ has the same b coefficient. Thus t=s=3/5, giving AP:PB=(3/5):(2/5)=3:2. Along PQ, P has a coefficient 1, Z has 3/5 and Q has 0, so PZ:ZQ=(2/5):(3/5)=2:3.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OP}=\\mathbf a+t\\mathbf b\\\\&amp;\\overrightarrow{OQ}=s\\mathbf b\\\\&amp;\\overrightarrow{OZ}=\\frac35\\mathbf a+\\frac35\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}
