@@ -2920,5 +2920,16 @@
     "Oversized source prompts currently prevent printing and identify replacements; owner policy decision pending",
     "Physical printer and non-Chromium device print dialogs not tested",
     "Full6967 worked-solution pagination is not claimed; current solution sample plus overflow guards checked"
-  ]
+  ],
+  "largerSample": {
+    "selection": "100 source questions at deterministic intervals from prompts passing half-page fit audit",
+    "questions": 100,
+    "questionSheets": 50,
+    "solutionSheets": 67,
+    "totalPdfPages": 117,
+    "layoutWarnings": 0,
+    "overflowingContainers": 0,
+    "allPageLabelsVerified": true,
+    "allA4": true
+  }
 }
