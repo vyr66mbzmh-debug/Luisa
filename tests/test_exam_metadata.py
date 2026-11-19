@@ -1,4 +1,4 @@
-"""Metadata contracts: retain source identity and never expose pilot rows as content."""
+"""Source contracts: retain question identity, verified metadata and complete printable joins."""
 import collections
 import hashlib
 import json
@@ -59,7 +59,7 @@ class PilotMetadata(unittest.TestCase):
             '9FM0/01': ([6,5,5,8,5,5,8,12,9,12], (3,4,3)),
             '9FM0/02': ([6,8,12,10,4,8,12,8,7], (3,3,3)),
         }
-        self.assertFalse(data['printable'])
+        self.assertTrue(data['printable'])
         self.assertEqual({p['paperCode'] for p in data['papers']}, set(expected))
         all_rows = []
         for paper in data['papers']:
@@ -74,8 +74,8 @@ class PilotMetadata(unittest.TestCase):
             for field in ('questionPaperUrl', 'markSchemeUrl'):
                 self.assertTrue(paper['source'][field].startswith('https://pmt.physicsandmathstutor.com/'))
             for q in rows:
-                self.assertFalse(q['printable'])
-                self.assertEqual(q['contentStatus'], 'awaiting-owner-source-attachment')
+                self.assertTrue(q['printable'])
+                self.assertEqual(q['contentStatus'], 'checked')
                 self.assertEqual(q['id'], 'exam/'+paper['id']+'/q'+str(q['originalQuestionNumber']))
                 self.assertEqual(q['questionNumber'], q['originalQuestionNumber'])
                 self.assertTrue(q['skillMappings'])
@@ -86,6 +86,30 @@ class PilotMetadata(unittest.TestCase):
         self.assertEqual(len({q['id'] for q in all_rows}), 47)
         self.assertEqual(sum(q['marks'] for q in all_rows), data['totalMarks'])
         self.assertEqual(data['totalMarks'], 350)
+
+
+    def test_printable_payloads_and_assets_are_complete(self):
+        import re
+        catalogue = read('exam-catalogue.json')['questions']
+        metadata = {q['id']: q for p in read('content/exams/pilot-metadata.json')['papers'] for q in p['questions']}
+        self.assertEqual({q['id'] for q in catalogue}, set(metadata))
+        self.assertEqual(len(catalogue), 47)
+        self.assertEqual(sum(q['marks'] for q in catalogue), 350)
+        for row in catalogue:
+            self.assertEqual(row['status'], 'checked')
+            for key in ('marks','difficulty','sourceLabel','skillMappings'):
+                self.assertEqual(row[key], metadata[row['id']][key])
+            payload = read(row['dataPath'])['questions']
+            matches = [q for q in payload if q['id'] == row['id']]
+            self.assertEqual(len(matches), 1)
+            q = matches[0]
+            self.assertTrue(q['question'])
+            self.assertTrue(q['steps'])
+            self.assertIn('You should show sufficient working to make your methods clear.', q['contextHtml'])
+            for src in re.findall(r'src="([^"]+)"', q['question'] + ''.join(q['steps'])):
+                self.assertTrue(src.startswith('resources/exams/'))
+                self.assertTrue((ROOT / src).is_file(), src)
+            self.assertNotIn('-ms-', q['question'])
 
 
 if __name__ == '__main__':

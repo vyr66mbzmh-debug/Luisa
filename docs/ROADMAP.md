@@ -6,7 +6,7 @@ Product chapter backlog is derived from current catalogue availability, not old 
 
 ## Papers v0.59
 
-[Issue #101](https://github.com/vyr66mbzmh-debug/Luisa/issues/101) is in development: Exam bank classification, flexible print layouts, marked paper support and mathematical corrections. The five-paper pilot is indexed; full question imports await owner PDF attachments. Local implementation acceptance and remaining release work are recorded in HANDOFF.md and `docs/evidence/v059-integration.json`.
+[Issue #101](https://github.com/vyr66mbzmh-debug/Luisa/issues/101) adds the five-paper June 2025 pilot: 47 original questions and matching schemes. Papers now has 8,669 questions, Practice questions / Exam bank selection, difficulty guides, flexible layouts, optional solutions, known marks and past-paper timing. The roots/complex-number corrections and release evidence are recorded in HANDOFF.md and `docs/evidence/v059-*.json`.
 
 ## Papers v0.58
 

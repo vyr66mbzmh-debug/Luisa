@@ -141,15 +141,21 @@ def generate(root, entries, version):
                 files.add(name)
                 files.update(refs(json.loads((root/name).read_text()), ('',)))
             practice=[q for q in catalogue['questions'] if any(t['book']==book['id'] and t['chapter']==ch['id'] for t in q['targets'])]
-            chapter_skills = {q['skill'] for q in practice}
-            # One exam can span multiple topics/books. Include its complete payload and
-            # worked diagrams in each mapped chapter pack, without counting it twice.
-            chapter_skills.update(skill for q in practice_index['questions']
+            # Skill-library books and Edexcel textbook books differ: for example,
+            # skill 1.30 belongs to library Core1 but is taught in textbook Core2.
+            # Match the qualified source skill to its chapter target, not the
+            # target book to the source book.
+            skill_origins = catalogue.get('skills', {})
+            chapter_skills = {(skill_origins[q['skill']]['course'],
+                skill_origins[q['skill']]['book'], q['skill'])
+                for q in practice if q['skill'] in skill_origins}
+            chapter_skills.update((q.get('courseId', book['course']), q['bookId'], skill)
+                for q in practice_index['questions']
                 if q['bookId'] == book['id'] and str(q['chapterNumber']) == ch['id']
                 for skill in q.get('skillIds', []))
             exams = [q for q in exam_index['questions'] if any(
-                m['courseId'] == book['course'] and m['bookId'] == book['id']
-                and m['skillId'] in chapter_skills for m in q['skillMappings'])]
+                (m['courseId'], m['bookId'], m['skillId']) in chapter_skills
+                for m in q['skillMappings'])]
             covered_exams.update(q['id'] for q in exams)
             for name in {q['dataPath'] for q in exams}:
                 if name not in entries:raise ValueError('Offline exam questions missing: '+name)

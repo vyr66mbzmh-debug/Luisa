@@ -115,7 +115,7 @@
       "promptSourceChecked": true,
       "mathsAudit": "checked",
       "visualAudit": "checked-source-and-rendered-print",
-      "mathsCheckpoint": "A=20, B=0.3; height20m and T=(200/3)^(2/3)≈16.4 seconds."
+      "mathsCheckpoint": "A=20, B=0.3; nest height20m; 0<T≤(200/3)^(2/3)."
     },
     {
       "id": "exam/edexcel-9ma0-01-2025-june/q7",
@@ -1676,5 +1676,7 @@
     "Official worked solutions and examiner guidance are faithful vector crops, not searchable native maths.",
     "The exact original prompt error in Q8 is deliberate and preserved; its correction appears only in solutions.",
     "Browser/PDF checks are local; publishing, integrated catalogues and offline acceptance remain lead-owned."
-  ]
+  ],
+  "sourceInstructionContext": "Exact original page 1 working and rounding instructions added to each standalone question; integrated six-mode acceptance supersedes the earlier paper-only pagination counts.",
+  "independentReview": "Second implementer checked all16 original prompts/parts/marks against supplied QP and independently checked16 mathematical results; no payload defects. Deliberate Q8 error retained. Exact cover instructions checked. Final context-aware print acceptance in v059-import-print.json."
 }

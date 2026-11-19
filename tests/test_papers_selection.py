@@ -53,6 +53,7 @@ class PapersSelection(unittest.TestCase):
         self.page = self.context.new_page()
         self.page.route('**/papers-print.js', lambda route: route.fulfill(content_type='text/javascript', body='window.LUISA_PAPERS_PRINT={create:async (rows,opts)=>{window.testPaperSnapshot=rows;window.testPrintOptions=opts;return {warnings:[]}}};'))
         self.page.route('**/practice-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
+        self.page.route('**/exam-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.goto(self.url)
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('6,147')")
 

@@ -1,22 +1,22 @@
 {
   "release": "0.59",
   "issue": 101,
-  "status": "implementation checked locally; past-paper content and release pending",
+  "status": "Implementation and source/print acceptance complete; final release checks recorded in GitHub #101",
   "catalogue": {
-    "totalSelectable": 8622,
+    "totalSelectable": 8669,
     "practiceQuestions": 8068,
-    "examBank": 554,
+    "examBank": 601,
     "examStyle": 290,
     "bronzeEasy": 88,
     "silverMedium": 88,
     "goldDifficult": 88,
     "existingQuestionPayloadsPreserved": 2475,
-    "pastPaperMetadataOnly": {
+    "pastPaperPilot": {
       "papers": 5,
       "questions": 47,
       "marks": 350,
-      "printable": false,
-      "dependency": "Owner attachments of the five question papers and matching mark schemes; linked source text has not been imported."
+      "printable": true,
+      "source": "Owner supplied all10 PDFs; independent source/maths review and six-mode print acceptance passed."
     }
   },
   "papers": {
@@ -32,10 +32,12 @@
     ],
     "answersOnOffVerifiedInPdf": true,
     "actualCatalogueDesktopAndMobile": "passed; no horizontal document overflow",
-    "offlineMetadataTests": 8,
+    "offlineMetadataTests": 9,
     "offlineResult": "passed",
-    "offlineReview": "Exam payloads and nested diagrams included for ordinary, practice-only and additional skill mappings; unmapped exams fail closed.",
-    "independentReview": "Print agent reviewed integration; topic grouping, regeneration order, source prefix and supplemental offline mapping findings resolved."
+    "offlineReview": "Qualified source skills mapped to textbook chapter targets, including Core1skills1.30/1.10 ->Core2chapters6/2. Independent review and wrong-course/wrong-book collision regressions pass. Unmapped questions fail closed.",
+    "independentReview": "Print agent reviewed integration; topic grouping, regeneration order, source prefix and supplemental offline mapping findings resolved.",
+    "actualPastPaperPrintEvidence": "docs/evidence/v059-import-print.json",
+    "actualOfflineBrowser": "Passed: download Core2chapter6, disconnect, select CP1June2025Q2 via libraryskill1.30, print full matching scheme and reload saved selection."
   },
   "mathematics": {
     "skill": "1.01",
@@ -268,24 +270,20 @@
     "reproduction": {
       "editions": 2,
       "pages": 48,
-      "status": "Both staged LaTeX wrappers compile and all pages are pixel-identical to accepted PDFs; owner installation pending release."
+      "status": "Both LaTeX wrappers compile; all48pages pixel-identical; owner PDF/TeX/reproduction assets installed with matching hashes."
     },
     "numbering": "All 96 teaching-panel numbers checked"
   },
   "pending": [
-    "Import and independently check the 47 actual past-paper questions after owner source attachments",
-    "Populate checked exam-catalogue.json descriptors and payloads; regenerate counts/evidence",
-    "Install staged verified owner booklet/reproduction copies at release",
-    "Bump version and refresh report/handoff for final release",
-    "Exact-head CI and review, merge, all-host deployment/authenticated checks, recovery archive and owner release email"
+    "Final exact-head CI/merge and both-host verification, account preservation, recovery and owner report: outcome in GitHub #101."
   ],
-  "production": "Unchanged v0.58; no account or credential changes.",
+  "production": "Final deployed revision and account checks recorded in GitHub #101; build acceptance alone is not publication.",
   "localGate": {
     "command": "python scripts/luisa.py gate",
     "result": "passed",
-    "pythonTests": 78,
-    "ownerBuildFiles": 9911,
-    "artifactStatus": "working-tree gate passed; final release/head and all-host checks remain pending",
+    "pythonTests": 79,
+    "ownerBuildFiles": 10159,
+    "artifactStatus": "Full local gate passed; exact-head hosted CI and final production verification required.",
     "initialFailure": "Historical booklet acceptance hashes required the verified v0.59 replacement overlay; historical evidence retained unchanged."
   }
 }

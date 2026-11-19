@@ -16,7 +16,7 @@ class OfflineInventory(unittest.TestCase):
                'content/test.json':json.dumps([{'question':'<img src="assets/diagram.svg">','steps':['Answer']}]),
                'assets/diagram.svg':'<svg xmlns="http://www.w3.org/2000/svg"><image href="detail.svg"/></svg>'}
         if not missing:files['assets/detail.svg']='<svg xmlns="http://www.w3.org/2000/svg"/>'
-        files['textbook-catalogue.json']=json.dumps({'books':[{'id':'test','title':'Test','course':'test','chapters':[{'id':'1','title':'One','resources':[]}]}],'questions':[{'skill':'test','targets':[{'book':'test','chapter':'1'}]}]})
+        files['textbook-catalogue.json']=json.dumps({'skills':{'test':{'course':'test','book':'test'}},'books':[{'id':'test','title':'Test','course':'test','chapters':[{'id':'1','title':'One','resources':[]}]}],'questions':[{'skill':'test','targets':[{'book':'test','chapter':'1'}]}]})
         entries={}
         for name,data in files.items():
             p=root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(data)
@@ -99,6 +99,24 @@ class OfflineInventory(unittest.TestCase):
             self.assertIn('exam-catalogue.json',result['shared'])
             self.assertTrue({'content/exams/test.json','assets/exam.svg','assets/exam-detail.svg'} <= set(pack['files']))
             self.assertEqual(pack['practiceEntries'],2)
+            # The library skill may belong to a different book from its Edexcel
+            # chapter target (Core1 hyperbolic skill -> Core2 chapter6).
+            cat = json.loads((root/'textbook-catalogue.json').read_text())
+            cat['skills']['test']['book'] = 'source-book'
+            (root/'textbook-catalogue.json').write_text(json.dumps(cat))
+            exam = json.loads((root/'exam-catalogue.json').read_text())
+            for m in exam['questions'][0]['skillMappings']:m['bookId']='source-book'
+            (root/'exam-catalogue.json').write_text(json.dumps(exam))
+            self.assertIn('content/exams/test.json', offline.generate(root,entries,'0.59')['packs'][0]['files'])
+            # Identical skill text in a different course must not cross-match.
+            for m in exam['questions'][0]['skillMappings']:m['courseId']='different-course'
+            (root/'exam-catalogue.json').write_text(json.dumps(exam))
+            with self.assertRaisesRegex(ValueError,'Offline exam mapping has no chapter pack'):
+                offline.generate(root,entries,'0.59')
+            cat['skills']['test']['book']='test'
+            (root/'textbook-catalogue.json').write_text(json.dumps(cat))
+            for m in exam['questions'][0]['skillMappings']:m.update(courseId='test',bookId='test')
+            (root/'exam-catalogue.json').write_text(json.dumps(exam))
             # A practice-only skill also resolves to its chapter; payload/answer
             # dependencies are not already referenced by the ordinary fixture.
             practice={'questions':[{'bookId':'test','chapterNumber':1,
