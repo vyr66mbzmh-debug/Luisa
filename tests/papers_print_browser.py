@@ -204,7 +204,7 @@ class PapersPrintTests(unittest.TestCase):
 
     def test_past_exam_marks_totals_time_and_continuations(self):
         import fitz
-        rows = [dict(row('smq-1.53', 2), sourceKind='past-exam', sourceLabel='Exam fixture A Q2', marks=7, difficulty='Hard'),
+        rows = [dict(row('smq-1.53', 2), sourceKind='past-exam', sourceLabel='Source: Exam fixture A Q2', marks=7, difficulty='Hard'),
                 dict(row('1.01', 1), sourceKind='past-exam', sourceLabel='Exam fixture B Q1', marks=6, difficulty='Easy')]
         for layout in ('one', 'two', 'condensed'):
             with self.subTest(layout=layout):
@@ -222,6 +222,7 @@ class PapersPrintTests(unittest.TestCase):
                 self.assertEqual(sum(int(text.split(': ')[1].split(' ')[0]) for text in totals), 13)
                 self.assertTrue(all('final page' in text for text in preview.locator('.marks-policy').all_text_contents()))
                 self.assertIn('Source: Exam fixture A Q2', preview.locator('.questions-page').first.inner_text())
+                self.assertNotIn('Source: Source:', preview.locator('body').inner_text())
                 self.assertIn('Difficulty: Hard', preview.locator('.questions-page').first.inner_text())
                 self.assertEqual(preview.locator('.print-question img').count(), 21)
                 self.assertFalse(preview.locator('.page-content,.print-question').evaluate_all(

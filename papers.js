@@ -6,6 +6,7 @@
   // Keep these identical to the question library renderer in app.js.
   const mathMacros = {"\\p":"\\mathrm P(#1)",'\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
   const catalogue = [], skills = [], rows = new Map(), contentCache = new Map(), sourceCounts = new Map();
+  let selectionOrder = [];
   let selected = [], chosenSkills = new Set(), chosenTopics = new Set(), page = 0, browseOpen = false;
   let operation = null, browseOperation = null, printing = false, persistEnabled = false;
   function status(message, error = false) {
@@ -23,23 +24,28 @@
       window.katex.render(node.dataset.math, node, {displayMode: node.dataset.display === 'true', throwOnError: true, strict: 'error', macros: {...mathMacros}});
     }
   }
-  const sourceLabel = row => row.sourceKind === 'practice-booklet'
+  const sourceLabel = row => row.sourceKind === 'past-exam' ? `Source: ${row.sourceLabel.replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const contextLabel = row => `${row.courseTitle} · ${row.bookTitle} · ${row.topicTitle}`;
   function persist() {
     if (!persistEnabled) return;
     try {
-      sessionStorage.setItem(storageKey, JSON.stringify({version: 1, source: $('papers-source').value, selected: selected.map(row => row.id), course: $('papers-course').value, book: $('papers-book').value, topics: [...chosenTopics], skills: [...chosenSkills], count: $('papers-count').value}));
+      sessionStorage.setItem(storageKey, JSON.stringify({version: 2, sources: {practice: $('papers-source-practice').checked, exam: $('papers-source-exam').checked}, difficulty: $('papers-difficulty').value, layout: $('papers-layout').value, includeAnswers: $('papers-answers').checked, order: $('papers-order').value, selected: selected.map(row => row.id), selectionOrder, course: $('papers-course').value, book: $('papers-book').value, topics: [...chosenTopics], skills: [...chosenSkills], count: $('papers-count').value}));
     } catch (_) { $('papers-selection-note').textContent = 'Your selection is held on this page. Browser session storage is unavailable.'; }
   }
   function sourceMatches(row) {
-    const source = $('papers-source').value;
-    return source === 'both' || row.sourceKind === source;
+    const bank = row.bank || (row.sourceKind === 'past-exam' ? 'exam' : 'practice');
+    const difficulty = $('papers-difficulty').value;
+    return $('papers-source-' + bank).checked && (!difficulty || (row.difficulty || 'unclassified') === difficulty);
   }
-  function skillCount(skill) {
-    return sourceCounts.get(`${$('papers-source').value}/${skill.key}`) || 0;
+  function refreshSourceCounts() {
+    sourceCounts.clear();
+    for (const row of catalogue) if (sourceMatches(row)) for (const key of new Set(row.skillKeys)) {
+      sourceCounts.set(key, (sourceCounts.get(key) || 0) + 1);
+    }
   }
+  function skillCount(skill) { return sourceCounts.get(skill.key) || 0; }
   function filteredSkills() {
     return skills.filter(s => skillCount(s) > 0 && (!$('papers-course').value || s.courseId === $('papers-course').value) && (!$('papers-book').value || s.bookKey === $('papers-book').value) && (!chosenTopics.size || chosenTopics.has(s.topicKey)));
   }
@@ -53,6 +59,7 @@
     select.value = choices.some(([value]) => value === wanted) ? wanted : '';
   }
   function refreshFilters(wantedBook = '') {
+    refreshSourceCounts();
     const courses = window.FMQ_LIBRARY.courses.filter(c => !$('papers-course').value || c.id === $('papers-course').value);
     options('papers-book', 'All books', courses.flatMap(c => c.books.map(b => [`${c.id}/${b.id}`, b.title])), wantedBook);
     const topicMap = new Map();
@@ -82,7 +89,7 @@
   function updatePool() {
     cancelLoading();
     const count = pool().length;
-    $('papers-pool-count').textContent = `${count.toLocaleString()} questions in this pool`;
+    $('filter-title').textContent = `${count.toLocaleString()} questions in the selection`;
     $('papers-count').max = String(count);
     page = 0; updateControls(); persist();
     if (browseOpen) renderBrowse();
@@ -105,7 +112,7 @@
   async function loadRow(descriptor, signal) {
     if (rows.has(descriptor.id)) return rows.get(descriptor.id);
     if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
-    const practice = descriptor.sourceKind === 'practice-booklet';
+    const practice = ['practice-booklet', 'past-exam'].includes(descriptor.sourceKind);
     const dataPath = practice ? descriptor.dataPath : `content/${encodeURIComponent(descriptor.skillId)}.json`;
     let content = contentCache.get(dataPath);
     if (!content) {
@@ -124,8 +131,11 @@
     if (!question?.question || (question.contextHtml !== undefined && typeof question.contextHtml !== 'string') || !Array.isArray(question.steps) || !question.steps.length || question.steps.some(step => typeof step !== 'string' || !step.trim()) || (question.hints !== undefined && (!Array.isArray(question.hints) || question.hints.some(hint => typeof hint !== 'string')))) {
       throw new Error(`${sourceLabel(descriptor)} has incomplete content. Your previous paper has been kept.`);
     }
-    const row = Object.freeze({...descriptor, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? 'practice-booklet' : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: practice ? descriptor.id : null})});
+    const row = Object.freeze({...descriptor, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: descriptor.sourceKind === 'past-exam' ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
     rows.set(row.id, row); return row;
+  }
+  function questionMetadata(row) {
+    return [Number.isInteger(row.marks) && row.marks > 0 ? `${row.marks} marks` : '', row.difficulty ? `${row.difficulty[0].toUpperCase()}${row.difficulty.slice(1)} · difficulty guide` : ''].filter(Boolean).join(' · ');
   }
   function fillPreview(container, row) {
     container.innerHTML = (row.contextHtml || '') + row.question;
@@ -141,13 +151,32 @@
     catch (_) { container.replaceChildren(element('p', 'This mathematical preview could not be rendered. Reload the page before printing.', 'preview-error')); }
   }
   function updateSelection() {
+    const currentIds = new Set(selected.map(r => r.id));
+    selectionOrder = selectionOrder.filter(id => currentIds.has(id));
+    const ordered = new Set(selectionOrder);
+    selectionOrder.push(...selected.filter(r => !ordered.has(r.id)).map(r => r.id));
+    if ($('papers-order').value === 'selection') selected.sort((a,b) => selectionOrder.indexOf(a.id)-selectionOrder.indexOf(b.id));
+    if ($('papers-order').value === 'topic') {
+      selected.sort((a, b) => {
+        const ak = [a.courseTitle, a.bookTitle, a.topicTitle].join('/');
+        const bk = [b.courseTitle, b.bookTitle, b.topicTitle].join('/');
+        return ak.localeCompare(bk, 'en', {numeric: true});
+      });
+    }
     $('papers-selected-count').textContent = selected.length.toLocaleString();
+    const known = selected.filter(r => Number.isInteger(r.marks) && r.marks > 0);
+    const marks = known.reduce((n, r) => n + r.marks, 0);
+    let summary = selected.length ? `${selected.length} questions` : '';
+    if (known.length) summary += known.length === selected.length ? ` · ${marks} marks` : ` · ${marks} known marks (${known.length} of ${selected.length} questions)`;
+    if (selected.length && known.length === selected.length && selected.every(r => r.sourceKind === 'past-exam')) summary += ` · Suggested practice time: ${Math.ceil(marks * 5 / 6)} minutes`;
+    $('papers-summary').textContent = summary;
     $('papers-empty').hidden = Boolean(selected.length);
     $('papers-selected').replaceChildren(...selected.map(row => {
       const li = element('li', undefined, 'selected-item');
       const details = document.createElement('details');
       const summary = element('summary', sourceLabel(row));
       summary.append(element('small', `${contextLabel(row)} · ${row.skillTitle}`));
+      summary.append(element('small', questionMetadata(row), 'question-meta'));
       const preview = element('div', undefined, 'math-content selected-preview');
       details.append(summary, preview);
       details.addEventListener('toggle', () => { if (details.open && !preview.childNodes.length) fillPreview(preview, row); });
@@ -165,7 +194,7 @@
       button.setAttribute('aria-pressed', String(included));
     });
   }
-  async function setSelection(descriptors, message) {
+  async function setSelection(descriptors, message, resetOrder = false) {
     cancelLoading(false);
     const controller = new AbortController(); operation = controller; updateControls();
     status(`Loading ${descriptors.length} questions…`);
@@ -176,7 +205,7 @@
         if (next.length % 20 === 0) status(`Loading questions: ${next.length} of ${descriptors.length}…`);
       }
       if (operation !== controller) return;
-      selected = next; operation = null; updateSelection(); status(message);
+      selected = next; if (resetOrder) selectionOrder = next.map(r => r.id); operation = null; updateSelection(); status(message);
     } catch (error) {
       if (operation !== controller) return;
       operation = null; updateControls();
@@ -197,7 +226,7 @@
     }
     const next = candidates.slice(0, count), previous = new Set(selected.map(row => row.id));
     if (count < candidates.length && next.length === selected.length && next.every(row => previous.has(row.id))) next[count - 1] = candidates[count];
-    setSelection(next, `${count} questions selected. Review your paper or choose Preview & print.${count === candidates.length ? ' Every question in this pool is included.' : ''}`);
+    setSelection(next, `${count} questions selected. Review your paper or choose Preview & print.${count === candidates.length ? ' Every question in this pool is included.' : ''}`, true);
   }
   async function renderBrowse() {
     browseOperation?.abort();
@@ -217,6 +246,7 @@
       if (loaded.length) target.replaceChildren(...loaded.map(row => {
         const card = element('article', undefined, 'question-card');
         card.append(element('h3', sourceLabel(row), 'source-label'), element('p', `${contextLabel(row)} · ${row.skillTitle}`, 'question-context'));
+        card.append(element('p', questionMetadata(row), 'question-meta'));
         const preview = element('div', undefined, 'math-content'); fillPreview(preview, row);
         const add = element('button', 'Add to paper'); add.type = 'button'; add.dataset.add = row.id;
         add.setAttribute('aria-label', `Add or remove ${sourceLabel(row)} from ${row.bookTitle}`);
@@ -250,7 +280,7 @@
         const id = `${key}/q${question.number}`;
         if (ids.has(id)) continue;
         ids.add(id);
-        catalogue.push(Object.freeze({id, sourceKind: 'luisa', skillKeys: Object.freeze([key]), number: question.number, courseId: course.id, bookId: book.id, topicId: topic.id, skillId: skill.id, skillKey: key, courseTitle: course.title, bookTitle: book.title, topicTitle: topic.title, skillCode: skill.code, skillTitle: skill.title}));
+        catalogue.push(Object.freeze({id, sourceKind: 'luisa', bank: 'practice', difficulty: null, skillKeys: Object.freeze([key]), number: question.number, courseId: course.id, bookId: book.id, topicId: topic.id, skillId: skill.id, skillKey: key, courseTitle: course.title, bookTitle: book.title, topicTitle: topic.title, skillCode: skill.code, skillTitle: skill.title}));
       }
     }
     const practiceResponse = await fetch(new URL('practice-catalogue.json', document.baseURI));
@@ -270,24 +300,40 @@
     for (const q of practiceCatalogue.questions) {
       const mapped = Array.isArray(q.skillIds) && q.skillIds.map(id => skillIndex.get(`${q.courseId}/${q.bookId}/${id}`));
       if (!q.id?.startsWith('practice/') || ids.has(q.id) || !mapped?.length || mapped.some(s => !s) || !/^content\/practice\/[a-z0-9/-]+\.json$/.test(q.dataPath) || !q.chapterNumber || !q.subchapterId || !q.subchapterTitle || !q.questionLabel || q.board !== 'Edexcel') throw new Error('A Practice Booklet source is incomplete or unverified.');
+      if (!['practice','exam'].includes(q.bank || 'practice') || ![null,undefined,'easy','medium','difficult'].includes(q.difficulty)) throw new Error('A question classification is invalid.');
       const first = mapped[0];
       ids.add(q.id);
-      catalogue.push(Object.freeze({...q, sourceKind: 'practice-booklet', skillKeys: Object.freeze(mapped.map(s => s.key)), courseTitle: first.courseTitle, bookTitle: first.bookTitle, topicTitle: q.chapterTitle, skillTitle: q.subchapterTitle}));
+      catalogue.push(Object.freeze({...q, bank: q.bank || 'practice', sourceKind: 'practice-booklet', skillKeys: Object.freeze(mapped.map(s => s.key)), courseTitle: first.courseTitle, bookTitle: first.bookTitle, topicTitle: first.topicTitle, skillTitle: q.subchapterTitle}));
     }
-    for (const row of catalogue) for (const key of new Set(row.skillKeys)) {
-      for (const kind of [row.sourceKind, 'both']) sourceCounts.set(`${kind}/${key}`, (sourceCounts.get(`${kind}/${key}`) || 0) + 1);
+
+    const examResponse = await fetch(new URL('exam-catalogue.json', document.baseURI));
+    if (!examResponse.ok) throw new Error('The Exam bank catalogue could not be loaded. Check your connection and reload.');
+    const examCatalogue = await examResponse.json();
+    if (examCatalogue.version !== 1 || !Array.isArray(examCatalogue.questions)) throw new Error('The Exam bank catalogue is invalid.');
+    for (const q of examCatalogue.questions) {
+      const mapped = Array.isArray(q.skillMappings) && q.skillMappings.map(m => skillIndex.get(`${m.courseId}/${m.bookId}/${m.skillId}`));
+      if (!q.id?.startsWith('exam/') || ids.has(q.id) || !mapped?.length || mapped.some(s => !s) || !/^content\/exams\/[a-z0-9-]+\.json$/.test(q.dataPath) || !q.sourceLabel || q.board !== 'Edexcel' || q.status !== 'checked' || !Number.isInteger(q.marks) || q.marks <= 0 || !['easy','medium','difficult'].includes(q.difficulty)) throw new Error('A past-exam question is incomplete or unverified.');
+      const first = mapped[0];
+      ids.add(q.id);
+      catalogue.push(Object.freeze({...q, sourceKind:'past-exam', bank:'exam', skillKeys:Object.freeze([...new Set(mapped.map(s => s.key))]), courseId:first.courseId, bookId:first.bookId, topicId:first.topicId, courseTitle:first.courseTitle, bookTitle:first.bookTitle, topicTitle:first.topicTitle, skillTitle:[...new Set(mapped.map(s=>s.title))].join(' · ')}));
     }
     let saved = null;
     try { saved = JSON.parse(sessionStorage.getItem(storageKey)); } catch (_) { /* A new session or unavailable storage. */ }
-    if (saved?.version !== 1) saved = null;
-    $('papers-source').value = ['luisa', 'practice-booklet', 'both'].includes(saved?.source) ? saved.source : 'both';
+    if (![1, 2].includes(saved?.version)) saved = null;
+    for (const bank of ['practice', 'exam']) $('papers-source-' + bank).checked = saved?.version === 2 && typeof saved.sources?.[bank] === 'boolean' ? saved.sources[bank] : true;
+    if (['easy','medium','difficult','unclassified'].includes(saved?.difficulty)) $('papers-difficulty').value = saved.difficulty;
+    if (['one','two','condensed'].includes(saved?.layout)) $('papers-layout').value = saved.layout;
+    if (typeof saved?.includeAnswers === 'boolean') $('papers-answers').checked = saved.includeAnswers;
+    if (saved?.order === 'selection') $('papers-order').value = 'selection';
     options('papers-course', 'All courses', window.FMQ_LIBRARY.courses.map(c => [c.id, c.title]), saved?.course);
     chosenSkills = new Set(Array.isArray(saved?.skills) ? saved.skills : []);
     chosenTopics = new Set(Array.isArray(saved?.topics) ? saved.topics : saved?.topic ? [saved.topic] : []);
     if (saved?.count && /^\d+$/.test(saved.count)) $('papers-count').value = saved.count;
     refreshFilters(saved?.book);
     persistEnabled = true;
-    $('papers-source').addEventListener('change', () => { chosenSkills.clear(); chosenTopics.clear(); refreshFilters($('papers-book').value); });
+    for (const id of ['papers-source-practice', 'papers-source-exam', 'papers-difficulty']) $(id).addEventListener('change', () => { chosenSkills.clear(); chosenTopics.clear(); refreshFilters($('papers-book').value); });
+    for (const id of ['papers-layout','papers-answers']) $(id).addEventListener('change', persist);
+    $('papers-order').addEventListener('change', updateSelection);
     $('papers-course').addEventListener('change', () => { chosenSkills.clear(); chosenTopics.clear(); refreshFilters(); });
     $('papers-book').addEventListener('change', () => { chosenSkills.clear(); chosenTopics.clear(); refreshFilters($('papers-book').value); });
     $('papers-topics').addEventListener('change', event => {
@@ -328,19 +374,20 @@
       const snapshot = Object.freeze([...selected]);
       printing = true; updateControls(); status('Preparing the print preview…');
       try {
-        const result = await window.LUISA_PAPERS_PRINT.create(snapshot);
+        const result = await window.LUISA_PAPERS_PRINT.create(snapshot, {layout: $('papers-layout').value, includeAnswers: $('papers-answers').checked});
         if (result?.ready === false) status(`The preview needs attention before printing. ${(result.warnings || []).join(' ')}`, true);
         else status(result?.warnings?.length ? `Print preview ready. ${result.warnings.join(' ')}` : 'Print preview ready in a new window. Use its Print / Save PDF button.');
       } catch (error) { status(error.message || 'The print preview could not be opened. Allow pop-ups for this site and try again.', true); }
       finally { printing = false; updateControls(); }
     });
-    for (const id of ['papers-source', 'papers-course', 'papers-book', 'papers-all-topics', 'papers-all-skills', 'papers-count', 'papers-generate', 'papers-browse']) $(id).disabled = false;
+    for (const id of ['papers-source-practice', 'papers-source-exam', 'papers-difficulty', 'papers-course', 'papers-book', 'papers-all-topics', 'papers-all-skills', 'papers-count', 'papers-generate', 'papers-browse']) $(id).disabled = false;
     updateControls();
     const savedIds = new Set(Array.isArray(saved?.selected) ? saved.selected : []);
     const byId = new Map(catalogue.map(row => [row.id, row]));
     const restored = [...savedIds].map(id => byId.get(id)).filter(Boolean);
+    selectionOrder = Array.isArray(saved?.selectionOrder) ? [...new Set(saved.selectionOrder.filter(id => savedIds.has(id)))] : [...savedIds];
     if (restored.length) setSelection(restored, `${restored.length} questions restored from this browser session.`);
-    else status(`${catalogue.length.toLocaleString()} Edexcel-filtered worked questions available. Choose your pool to begin.`);
+    else status(`${catalogue.length.toLocaleString()} Edexcel-filtered worked questions available. Choose topics or skills to begin.`);
   } catch (error) {
     status(error.message || 'The paper builder could not start. Reload the page to retry.', true);
     for (const id of ['papers-generate', 'papers-regenerate', 'papers-print', 'papers-browse']) $(id).disabled = true;

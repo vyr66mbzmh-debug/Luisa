@@ -26,3 +26,7 @@ Do not mark any provider setting complete until verified in that provider.
 Secrets and private denylist phrases, if desired, must be entered by the owner through GitHub settings, never pasted into prompts or committed. This setup does not require an LLM key or any new deployment credential.
 
 The v0.37 solutions release passed both host checks. Physical iPad and smartboard checks remain with the owner.
+
+## v0.59 source dependency
+
+Attach the five June 2025 Edexcel question papers and their matching mark schemes to complete the agreed past-paper pilot in issue #101. Metadata indexing and the independent interface/print/mathematics work are complete locally; no v0.59 production deployment has been made.
