@@ -4949,16 +4949,36 @@
     },
     {
       "id": "PAP-058",
-      "requirement": "Extend paper sources to practice booklets and later past papers.",
-      "scope": "Future releases, deferred from v0.57.",
+      "requirement": "Add Practice Booklet questions and checked worked solutions to Papers.",
+      "scope": "v0.58 owner Cloudflare and both authenticated ADA roles.",
+      "priority": "P2",
+      "implementation": "in_progress",
+      "verification": "not_checked",
+      "origin": "Owner v0.58 instruction and confirmed solution/hint choices; GitHub #99",
+      "acceptance": [
+        "Import the 45 existing Maths Practice Booklets, preserving exact question text, original numbering, subparts, mathematics and meaningful diagrams. Edexcel only; original PDFs remain unchanged.",
+        "Use stable course/book/chapter/subchapter/question IDs and consistent Practice Booklet source labels. Map to topics and individual skills using source evidence.",
+        "Allow Luisa, Practice Booklet or both sources for random/regenerated and manual selections; preserve existing catalogue eligibility and behavior.",
+        "Provide fully worked solutions for each imported question, independently checked against source answers; place hints with solutions. Source discrepancies require explicit review rather than silently rewritten questions.",
+        "Two questions per page normally with readable extra pages where required; matched solutions at the back, complete diagrams and source references.",
+        "Preserve ADA authentication, account data and edition-specific access; verify source, maths, visual, interaction and print acceptance before release."
+      ],
+      "evidence": [
+        "GitHub issue #99"
+      ]
+    },
+    {
+      "id": "PAP-FUTURE-METADATA",
+      "requirement": "Extend paper metadata and future source coverage.",
+      "scope": "Future releases beyond Practice Booklet ingestion.",
       "priority": "P2",
       "implementation": "planned",
       "verification": "not_checked",
-      "origin": "Owner v0.58 roadmap; GitHub #97",
+      "origin": "Owner Papers roadmap, GitHub #97 and #99",
       "acceptance": [
-        "Practice Booklet source labels identify chapter, subchapter and original question number, with course/book context.",
-        "Future past-paper metadata includes topic, skill, marks and difficulty. Suggested position-based difficulty uses first five questions as easy, last five as difficult, intervening questions as medium.",
-        "Estimated duration uses six marks per five minutes when genuine marks metadata is available. Extend to further courses including IGCSE."
+        "Use genuine topic/skill/mark metadata for future past-paper imports. Do not invent marks or difficulty for current questions.",
+        "Owner proposed original-paper position difficulty: first five easy, last five difficult, others medium. Resolve overlap for short papers before use.",
+        "Estimated duration uses six marks per five minutes when marks exist. Future scope includes IGCSE."
       ],
       "evidence": [
         "GitHub issue #97"
