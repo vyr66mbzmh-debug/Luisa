@@ -18,7 +18,7 @@ import urllib.parse
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_DIRS = {'assets', 'content', 'printouts', 'resources', 'vendor'}
 PUBLIC_SUFFIXES = {'.html', '.js', '.css', '.svg', '.webmanifest'}
-PUBLIC_JSON = {'textbook-catalogue.json', 'version-history.json', 'release.json'}
+PUBLIC_JSON = {'practice-catalogue.json', 'textbook-catalogue.json', 'version-history.json', 'release.json'}
 
 
 def emit(event, **data):

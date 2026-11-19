@@ -5,7 +5,7 @@
   const pageSize = 8;
   // Keep these identical to the question library renderer in app.js.
   const mathMacros = {"\\p":"\\mathrm P(#1)",'\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
-  const catalogue = [], skills = [], rows = new Map(), contentCache = new Map();
+  const catalogue = [], skills = [], rows = new Map(), contentCache = new Map(), sourceCounts = new Map();
   let selected = [], chosenSkills = new Set(), chosenTopics = new Set(), page = 0, browseOpen = false;
   let operation = null, browseOperation = null, printing = false, persistEnabled = false;
   function status(message, error = false) {
@@ -23,20 +23,29 @@
       window.katex.render(node.dataset.math, node, {displayMode: node.dataset.display === 'true', throwOnError: true, strict: 'error', macros: {...mathMacros}});
     }
   }
-  const sourceLabel = row => `Source: Luisa ${row.skillCode} Q${row.number}`;
+  const sourceLabel = row => row.sourceKind === 'practice-booklet'
+    ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
+    : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const contextLabel = row => `${row.courseTitle} · ${row.bookTitle} · ${row.topicTitle}`;
   function persist() {
     if (!persistEnabled) return;
     try {
-      sessionStorage.setItem(storageKey, JSON.stringify({version: 1, selected: selected.map(row => row.id), course: $('papers-course').value, book: $('papers-book').value, topics: [...chosenTopics], skills: [...chosenSkills], count: $('papers-count').value}));
+      sessionStorage.setItem(storageKey, JSON.stringify({version: 1, source: $('papers-source').value, selected: selected.map(row => row.id), course: $('papers-course').value, book: $('papers-book').value, topics: [...chosenTopics], skills: [...chosenSkills], count: $('papers-count').value}));
     } catch (_) { $('papers-selection-note').textContent = 'Your selection is held on this page. Browser session storage is unavailable.'; }
   }
+  function sourceMatches(row) {
+    const source = $('papers-source').value;
+    return source === 'both' || row.sourceKind === source;
+  }
+  function skillCount(skill) {
+    return sourceCounts.get(`${$('papers-source').value}/${skill.key}`) || 0;
+  }
   function filteredSkills() {
-    return skills.filter(s => (!$('papers-course').value || s.courseId === $('papers-course').value) && (!$('papers-book').value || s.bookKey === $('papers-book').value) && (!chosenTopics.size || chosenTopics.has(s.topicKey)));
+    return skills.filter(s => skillCount(s) > 0 && (!$('papers-course').value || s.courseId === $('papers-course').value) && (!$('papers-book').value || s.bookKey === $('papers-book').value) && (!chosenTopics.size || chosenTopics.has(s.topicKey)));
   }
   function pool() {
     const included = new Set(filteredSkills().filter(s => !chosenSkills.size || chosenSkills.has(s.key)).map(s => s.key));
-    return catalogue.filter(row => included.has(row.skillKey));
+    return catalogue.filter(row => sourceMatches(row) && row.skillKeys.some(key => included.has(key)));
   }
   function options(id, label, choices, wanted = '') {
     const select = $(id);
@@ -46,7 +55,12 @@
   function refreshFilters(wantedBook = '') {
     const courses = window.FMQ_LIBRARY.courses.filter(c => !$('papers-course').value || c.id === $('papers-course').value);
     options('papers-book', 'All books', courses.flatMap(c => c.books.map(b => [`${c.id}/${b.id}`, b.title])), wantedBook);
-    const topics = courses.flatMap(c => c.books.filter(b => !$('papers-book').value || `${c.id}/${b.id}` === $('papers-book').value).flatMap(b => b.topics.filter(t => skills.some(s => s.topicKey === `${c.id}/${b.id}/${t.id}`)).map(t => ({key: `${c.id}/${b.id}/${t.id}`, title: t.title, bookTitle: b.title}))));
+    const topicMap = new Map();
+    for (const skill of skills) {
+      if (!skillCount(skill) || ($('papers-course').value && skill.courseId !== $('papers-course').value) || ($('papers-book').value && skill.bookKey !== $('papers-book').value)) continue;
+      topicMap.set(skill.topicKey, {key: skill.topicKey, title: skill.topicTitle, bookTitle: skill.bookTitle});
+    }
+    const topics = [...topicMap.values()];
     chosenTopics = new Set([...chosenTopics].filter(key => topics.some(t => t.key === key)));
     $('papers-topics').replaceChildren(...topics.map(t => {
       const label = element('label', undefined, 'topic-choice');
@@ -60,7 +74,7 @@
       const label = element('label', undefined, 'skill-choice');
       const input = document.createElement('input'); input.type = 'checkbox'; input.value = s.key; input.checked = chosenSkills.has(s.key);
       const text = element('span', `${s.code} · ${s.title}`);
-      text.append(element('small', `${s.bookTitle} · ${s.count} questions`));
+      text.append(element('small', `${s.bookTitle} · ${skillCount(s)} questions`));
       label.append(input, text); return label;
     }));
     updatePool();
@@ -91,23 +105,26 @@
   async function loadRow(descriptor, signal) {
     if (rows.has(descriptor.id)) return rows.get(descriptor.id);
     if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
-    let content = contentCache.get(descriptor.skillKey);
+    const practice = descriptor.sourceKind === 'practice-booklet';
+    const dataPath = practice ? descriptor.dataPath : `content/${encodeURIComponent(descriptor.skillId)}.json`;
+    let content = contentCache.get(dataPath);
     if (!content) {
-      content = window.FMQ_CONTENT?.[descriptor.skillId];
+      content = !practice && window.FMQ_CONTENT?.[descriptor.skillId];
       if (!content) {
-        const response = await fetch(new URL(`content/${encodeURIComponent(descriptor.skillId)}.json`, document.baseURI), {signal});
-        if (!response.ok) throw new Error(`Could not load skill ${descriptor.skillCode}. Check your connection and try again.`);
+        const response = await fetch(new URL(dataPath, document.baseURI), {signal});
+        if (!response.ok) throw new Error(`Could not load ${sourceLabel(descriptor)}. Check your connection and try again.`);
         content = await response.json();
       }
-      if (!Array.isArray(content)) throw new Error(`Skill ${descriptor.skillCode} has invalid question data.`);
-      contentCache.set(descriptor.skillKey, content);
+      if (practice && content.schemaVersion === 1) content = content.questions;
+      if (!Array.isArray(content)) throw new Error('The question source has invalid data.');
+      contentCache.set(dataPath, content);
     }
     if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
-    const question = content.find(q => String(q.number) === String(descriptor.number) && !q.reference);
-    if (!question?.question || !Array.isArray(question.steps) || !question.steps.length || question.steps.some(step => typeof step !== 'string')) {
-      throw new Error(`Question ${descriptor.skillCode} Q${descriptor.number} has incomplete content. Your previous paper has been kept.`);
+    const question = content.find(q => practice ? q.id === descriptor.id : String(q.number) === String(descriptor.number) && !q.reference);
+    if (!question?.question || !Array.isArray(question.steps) || !question.steps.length || question.steps.some(step => typeof step !== 'string' || !step.trim()) || (question.hints !== undefined && (!Array.isArray(question.hints) || question.hints.some(hint => typeof hint !== 'string')))) {
+      throw new Error(`${sourceLabel(descriptor)} has incomplete content. Your previous paper has been kept.`);
     }
-    const row = Object.freeze({...descriptor, question: question.question, steps: Object.freeze([...question.steps]), source: Object.freeze({kind: 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId, questionId: question.id || null, questionNumber: question.number, chapterId: null, subchapterId: null, practiceBookletQuestionId: null})});
+    const row = Object.freeze({...descriptor, question: question.question, steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? 'practice-booklet' : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: practice ? descriptor.id : null})});
     rows.set(row.id, row); return row;
   }
   function fillPreview(container, row) {
@@ -214,29 +231,55 @@
     // Reuse the question-level eligibility already used by By textbook. Some
     // skills mix eligible and other-board questions, so a skill flag is insufficient.
     const edexcelIds = new Set(textbook.questions.map(q => `${q.skill}/${q.question}`));
-    const ids = new Set();
+    const ids = new Set(), skillIndex = new Map();
     for (const course of window.FMQ_LIBRARY.courses) for (const book of course.books) for (const topic of book.topics) for (const skill of topic.skills) {
       if (skill.reference || skill.available === false) continue;
       const eligible = skill.questions.filter(q => !q.reference && edexcelIds.has(`${skill.id}/${q.number}`));
-      if (!eligible.length) continue;
       const key = `${course.id}/${book.id}/${topic.id}/${skill.id}`;
-      skills.push({key, courseId: course.id, bookKey: `${course.id}/${book.id}`, topicKey: `${course.id}/${book.id}/${topic.id}`, code: skill.code, title: skill.title, bookTitle: book.title, count: eligible.length});
+      const metadata = {key, topicTitle: topic.title, courseId: course.id, bookKey: `${course.id}/${book.id}`, topicKey: `${course.id}/${book.id}/${topic.id}`, code: skill.code, title: skill.title, bookTitle: book.title, count: eligible.length};
+      skills.push(metadata); skillIndex.set(`${course.id}/${book.id}/${skill.id}`, {...metadata, courseTitle: course.title, bookId: book.id, topicId: topic.id, topicTitle: topic.title, skillId: skill.id});
       for (const question of eligible) {
         const id = `${key}/q${question.number}`;
         if (ids.has(id)) continue;
         ids.add(id);
-        catalogue.push(Object.freeze({id, number: question.number, courseId: course.id, bookId: book.id, topicId: topic.id, skillId: skill.id, skillKey: key, courseTitle: course.title, bookTitle: book.title, topicTitle: topic.title, skillCode: skill.code, skillTitle: skill.title}));
+        catalogue.push(Object.freeze({id, sourceKind: 'luisa', skillKeys: Object.freeze([key]), number: question.number, courseId: course.id, bookId: book.id, topicId: topic.id, skillId: skill.id, skillKey: key, courseTitle: course.title, bookTitle: book.title, topicTitle: topic.title, skillCode: skill.code, skillTitle: skill.title}));
       }
+    }
+    const practiceResponse = await fetch(new URL('practice-catalogue.json', document.baseURI));
+    if (!practiceResponse.ok) throw new Error('The Practice Booklet catalogue could not be loaded. Check your connection and reload.');
+    const practiceCatalogue = await practiceResponse.json();
+    if (practiceCatalogue.version !== 1 || !Array.isArray(practiceCatalogue.questions)) throw new Error('The Practice Booklet catalogue is invalid.');
+    for (const item of practiceCatalogue.skills || []) {
+      const course = window.FMQ_LIBRARY.courses.find(c => c.id === item.courseId);
+      const book = course?.books.find(b => b.id === item.bookId);
+      const topic = book?.topics.find(t => t.id === item.topicId) || (book && item.topicId?.startsWith('practice-topic-') && item.topicTitle ? {id: item.topicId, title: item.topicTitle} : null);
+      const indexKey = `${item.courseId}/${item.bookId}/${item.id}`;
+      if (!topic || !item.id?.startsWith('practice-') || skillIndex.has(indexKey)) throw new Error('A Practice Booklet skill is invalid.');
+      const key = `${item.courseId}/${item.bookId}/${item.topicId}/${item.id}`;
+      const metadata = {key, courseId: course.id, bookId: book.id, bookKey: `${course.id}/${book.id}`, topicKey: `${course.id}/${book.id}/${topic.id}`, topicId: topic.id, topicTitle: topic.title, courseTitle: course.title, bookTitle: book.title, code: item.code, title: item.title};
+      skills.push(metadata); skillIndex.set(indexKey, metadata);
+    }
+    for (const q of practiceCatalogue.questions) {
+      const mapped = Array.isArray(q.skillIds) && q.skillIds.map(id => skillIndex.get(`${q.courseId}/${q.bookId}/${id}`));
+      if (!q.id?.startsWith('practice/') || ids.has(q.id) || !mapped?.length || mapped.some(s => !s) || !/^content\/practice\/[a-z0-9/-]+\.json$/.test(q.dataPath) || !q.chapterNumber || !q.subchapterId || !q.subchapterTitle || !q.questionLabel || q.board !== 'Edexcel') throw new Error('A Practice Booklet source is incomplete or unverified.');
+      const first = mapped[0];
+      ids.add(q.id);
+      catalogue.push(Object.freeze({...q, sourceKind: 'practice-booklet', skillKeys: Object.freeze(mapped.map(s => s.key)), courseTitle: first.courseTitle, bookTitle: first.bookTitle, topicTitle: q.chapterTitle, skillTitle: q.subchapterTitle}));
+    }
+    for (const row of catalogue) for (const key of new Set(row.skillKeys)) {
+      for (const kind of [row.sourceKind, 'both']) sourceCounts.set(`${kind}/${key}`, (sourceCounts.get(`${kind}/${key}`) || 0) + 1);
     }
     let saved = null;
     try { saved = JSON.parse(sessionStorage.getItem(storageKey)); } catch (_) { /* A new session or unavailable storage. */ }
     if (saved?.version !== 1) saved = null;
+    $('papers-source').value = ['luisa', 'practice-booklet', 'both'].includes(saved?.source) ? saved.source : 'both';
     options('papers-course', 'All courses', window.FMQ_LIBRARY.courses.map(c => [c.id, c.title]), saved?.course);
     chosenSkills = new Set(Array.isArray(saved?.skills) ? saved.skills : []);
     chosenTopics = new Set(Array.isArray(saved?.topics) ? saved.topics : saved?.topic ? [saved.topic] : []);
     if (saved?.count && /^\d+$/.test(saved.count)) $('papers-count').value = saved.count;
     refreshFilters(saved?.book);
     persistEnabled = true;
+    $('papers-source').addEventListener('change', () => { chosenSkills.clear(); chosenTopics.clear(); refreshFilters($('papers-book').value); });
     $('papers-course').addEventListener('change', () => { chosenSkills.clear(); chosenTopics.clear(); refreshFilters(); });
     $('papers-book').addEventListener('change', () => { chosenSkills.clear(); chosenTopics.clear(); refreshFilters($('papers-book').value); });
     $('papers-topics').addEventListener('change', event => {
@@ -283,7 +326,7 @@
       } catch (error) { status(error.message || 'The print preview could not be opened. Allow pop-ups for this site and try again.', true); }
       finally { printing = false; updateControls(); }
     });
-    for (const id of ['papers-course', 'papers-book', 'papers-all-topics', 'papers-all-skills', 'papers-count', 'papers-generate', 'papers-browse']) $(id).disabled = false;
+    for (const id of ['papers-source', 'papers-course', 'papers-book', 'papers-all-topics', 'papers-all-skills', 'papers-count', 'papers-generate', 'papers-browse']) $(id).disabled = false;
     updateControls();
     const savedIds = new Set(Array.isArray(saved?.selected) ? saved.selected : []);
     const byId = new Map(catalogue.map(row => [row.id, row]));

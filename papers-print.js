@@ -2,7 +2,9 @@
 (() => {
   'use strict';
   const macros = {'\\p':'\\mathrm P(#1)','\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
-  const source = row => `Source: Luisa ${row.skillCode} Q${row.number}`;
+  const source = row => row.sourceKind === 'practice-booklet'
+    ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
+    : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const context = row => [row.courseTitle, row.bookTitle, row.topicTitle].filter(Boolean).join(' · ');
   function element(doc, tag, className, text) {
     const node = doc.createElement(tag);
@@ -129,6 +131,11 @@
         question.append(heading(doc, row, index + 1), content(doc, row.question));
         const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); question.append(working);
         const solution = content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join(''));
+        if (row.hints?.length) {
+          const hints = element(doc, 'section', 'solution-hints');
+          hints.append(element(doc, 'h3', '', 'Hints from the booklet'), content(doc, row.hints.map(html => `<div class="solution-step">${html}</div>`).join('')));
+          solution.append(hints);
+        }
         return {row, question, solution};
       });
       const staging = element(doc, 'div', 'print-staging'); doc.body.append(staging);

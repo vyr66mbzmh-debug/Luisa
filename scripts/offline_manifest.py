@@ -14,7 +14,11 @@ def generate(root, entries, version):
     root = Path(root)
     teaching = json.loads((root/'teaching-catalogue.js').read_text().split('=',1)[1].strip().rstrip(';'))
     catalogue = json.loads((root/'textbook-catalogue.json').read_text())
-    shared = {n for n in entries if (len(Path(n).parts)==1 and Path(n).suffix in {'.html','.js','.css','.webmanifest'}) or n in {'textbook-catalogue.json','release.json','version-history.json'} or n.startswith('vendor/') or n.startswith('assets/luisa/') or (n.startswith('resources/') and (Path(n).suffix in {'.js','.css'} or Path(n).name=='index.json'))}
+    practice_index = json.loads((root/'practice-catalogue.json').read_text()) if (root/'practice-catalogue.json').exists() else {'questions': []}
+    practice_files = {}
+    for question in practice_index['questions']:
+        practice_files.setdefault((question['bookId'], str(question['chapterNumber'])), set()).add(question['dataPath'])
+    shared = {n for n in entries if (len(Path(n).parts)==1 and Path(n).suffix in {'.html','.js','.css','.webmanifest'}) or n in {'textbook-catalogue.json','practice-catalogue.json','release.json','version-history.json'} or n.startswith('vendor/') or n.startswith('assets/luisa/') or (n.startswith('resources/') and (Path(n).suffix in {'.js','.css'} or Path(n).name=='index.json'))}
     shared.discard('sw.js')
     def local(url, bases=('',)):
         p = urlsplit(url)
@@ -129,6 +133,10 @@ def generate(root, entries, version):
                     extras.append(base+f'booklets/chapter-{number:02}.pdf')
                 for extra in extras:
                     if extra in entries:files.add(extra)
+            for name in practice_files.get((book['id'], ch['id']), set()):
+                if name not in entries:raise ValueError('Offline Practice Booklet questions missing: '+name)
+                files.add(name)
+                files.update(refs(json.loads((root/name).read_text()), ('',)))
             practice=[q for q in catalogue['questions'] if any(t['book']==book['id'] and t['chapter']==ch['id'] for t in q['targets'])]
             for skill in {q['skill'] for q in practice}:
                 name='content/'+skill+'.json'
