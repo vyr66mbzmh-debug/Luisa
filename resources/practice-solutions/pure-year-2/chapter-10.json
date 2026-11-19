@@ -86,11 +86,11 @@
           "explanation": "The derivative changes from positive to negative, locating a stationary maximum in this interval."
         },
         {
-          "latex": "f^{\\prime}(3.1425)\\approx0.00191342212>0;\\quadf^{\\prime}(3.1435)\\approx-9.40184057e-5<0",
+          "latex": "f^{\\prime}(3.1425)\\approx0.00191342212>0;\\quadf^{\\prime}(3.1435)\\approx-9.40184057\\times10^{-5}<0",
           "explanation": "The root lies strictly between the two rounding boundaries, so α=3.143 to 3 decimal places."
         }
       ],
-      "solutionHtml": "<p>Find a zero of the continuous derivative. The half-unit rounding interval establishes the requested precision.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"f^{\\prime}(x)=-2\\cos x\\sin x+2e^{-2x}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The derivative changes from positive to negative, locating a stationary maximum in this interval.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(3.1)\\approx0.0871482641&gt;0\\\\&amp;f^{\\prime}(3.2)\\approx-0.11322609&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The root lies strictly between the two rounding boundaries, so α=3.143 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(3.1425)\\approx0.00191342212&gt;0\\\\&amp;f^{\\prime}(3.1435)\\approx-9.40184057e-5&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "solutionHtml": "<p>Find a zero of the continuous derivative. The half-unit rounding interval establishes the requested precision.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"f^{\\prime}(x)=-2\\cos x\\sin x+2e^{-2x}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The derivative changes from positive to negative, locating a stationary maximum in this interval.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(3.1)\\approx0.0871482641&gt;0\\\\&amp;f^{\\prime}(3.2)\\approx-0.11322609&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The root lies strictly between the two rounding boundaries, so α=3.143 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(3.1425)\\approx0.00191342212&gt;0\\\\&amp;f^{\\prime}(3.1435)\\approx-9.40184057\\times10^{-5}&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
       "answerCheck": "matches"
     },
     {
@@ -685,11 +685,11 @@
           "explanation": "(i) The first starting value moves into [−1,0], which maps into itself and has |g′|≤1/e<1. It converges to the negative root α, not β. (ii) Starting at 2, successive values grow without bound and diverge."
         },
         {
-          "latex": "f(-0.8065)\\approx4.62490113e-5>0;\\quadf(-0.8055)\\approx-0.00131374366<0",
+          "latex": "f(-0.8065)\\approx4.62490113\\times10^{-5}>0;\\quadf(-0.8055)\\approx-0.00131374366<0",
           "explanation": "These opposite signs establish α=−0.806 to 3 decimal places."
         }
       ],
-      "solutionHtml": "<p>Use the intersection equation and examine how the iteration behaves on each side of the repelling positive fixed point.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1)\\approx-1.0&lt;0\\\\&amp;f(2)\\approx5.3890561&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) The first starting value moves into [−1,0], which maps into itself and has |g′|≤1/e&lt;1. It converges to the negative root α, not β. (ii) Starting at 2, successive values grow without bound and diverge.</p><span data-math=\"\\begin{aligned}&amp;g(x)=(x-1)e^x,\\quad g^{\\prime}(x)=xe^x\\\\&amp;x_0=1/2\\\\&amp;\\Rightarrow x_1=-\\tfrac12e^{1/2}\\approx-0.824\\\\&amp;x_0=2\\\\&amp;\\Rightarrow x_1=e^2&gt;7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>These opposite signs establish α=−0.806 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f(-0.8065)\\approx4.62490113e-5&gt;0\\\\&amp;f(-0.8055)\\approx-0.00131374366&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "solutionHtml": "<p>Use the intersection equation and examine how the iteration behaves on each side of the repelling positive fixed point.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1)\\approx-1.0&lt;0\\\\&amp;f(2)\\approx5.3890561&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) The first starting value moves into [−1,0], which maps into itself and has |g′|≤1/e&lt;1. It converges to the negative root α, not β. (ii) Starting at 2, successive values grow without bound and diverge.</p><span data-math=\"\\begin{aligned}&amp;g(x)=(x-1)e^x,\\quad g^{\\prime}(x)=xe^x\\\\&amp;x_0=1/2\\\\&amp;\\Rightarrow x_1=-\\tfrac12e^{1/2}\\approx-0.824\\\\&amp;x_0=2\\\\&amp;\\Rightarrow x_1=e^2&gt;7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>These opposite signs establish α=−0.806 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f(-0.8065)\\approx4.62490113\\times10^{-5}&gt;0\\\\&amp;f(-0.8055)\\approx-0.00131374366&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
       "answerCheck": "matches"
     },
     {
@@ -727,11 +727,11 @@
           "explanation": "Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding."
         },
         {
-          "latex": "f(1.7715)\\approx0.000574930108>0;\\quadf(1.7725)\\approx-2.77962877e-5<0",
+          "latex": "f(1.7715)\\approx0.000574930108>0;\\quadf(1.7725)\\approx-2.77962877\\times10^{-5}<0",
           "explanation": "Hence the root rounds to 1.772 to 3 decimal places, agreeing with the Newton step."
         }
       ],
-      "solutionHtml": "<p>Differentiate the exponential–sine product for Newton’s formula, then check the 3-decimal-place bracket.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1.5)\\approx0.173611597&gt;0\\\\&amp;f(2)\\approx-0.10242208&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)\\\\&amp;=2 x e^{- x} \\cos{\\left(x^{2} \\right)} - e^{- x} \\sin{\\left(x^{2} \\right)}\\\\&amp;f(1.75)\\approx0.0137299169,\\quad f^{\\prime}(1.75)\\approx-0.62003734\\\\&amp;x_1=1.75-\\frac{0.0137299169}{-0.62003734}\\approx1.772\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Hence the root rounds to 1.772 to 3 decimal places, agreeing with the Newton step.</p><span data-math=\"\\begin{aligned}&amp;f(1.7715)\\approx0.000574930108&gt;0\\\\&amp;f(1.7725)\\approx-2.77962877e-5&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "solutionHtml": "<p>Differentiate the exponential–sine product for Newton’s formula, then check the 3-decimal-place bracket.</p><ol class=\"parts\" type=\"a\"><li><p>Continuity on the interval and the opposite signs guarantee at least one root inside.</p><span data-math=\"\\begin{aligned}&amp;f(1.5)\\approx0.173611597&gt;0\\\\&amp;f(2)\\approx-0.10242208&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use the Newton–Raphson step x₁=x₀−f(x₀)/f′(x₀), keeping full precision before the final rounding.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)\\\\&amp;=2 x e^{- x} \\cos{\\left(x^{2} \\right)} - e^{- x} \\sin{\\left(x^{2} \\right)}\\\\&amp;f(1.75)\\approx0.0137299169,\\quad f^{\\prime}(1.75)\\approx-0.62003734\\\\&amp;x_1=1.75-\\frac{0.0137299169}{-0.62003734}\\approx1.772\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Hence the root rounds to 1.772 to 3 decimal places, agreeing with the Newton step.</p><span data-math=\"\\begin{aligned}&amp;f(1.7715)\\approx0.000574930108&gt;0\\\\&amp;f(1.7725)\\approx-2.77962877\\times10^{-5}&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
       "answerCheck": "matches"
     },
     {
@@ -845,7 +845,7 @@
           "explanation": ""
         },
         {
-          "latex": "f^{\\prime}(0.7165)\\approx-6.73006079e-5<0;\\quadf^{\\prime}(0.7175)\\approx0.0020865128>0",
+          "latex": "f^{\\prime}(0.7165)\\approx-6.73006079\\times10^{-5}<0;\\quadf^{\\prime}(0.7175)\\approx0.0020865128>0",
           "explanation": "The derivative changes negative to positive, establishing the stationary x-coordinate as 0.717 to 3 decimal places."
         },
         {
@@ -853,7 +853,7 @@
           "explanation": ""
         }
       ],
-      "solutionHtml": "<p>Retain the logarithm’s domain x&gt;0. The origin shown by the sketch is a limiting point rather than a point of the original function.</p><ol class=\"parts\" type=\"a\"><li><p>A=(0,0) belongs only to the continuous extension. The original function is undefined at x=0, so it does not literally cut the x-axis there.</p><span data-math=\"\\begin{aligned}&amp;x&gt;0,\\quad x^3\\ln x=0\\\\&amp;\\Rightarrow x=1\\\\&amp;\\Rightarrow B=(1,0)\\\\&amp;\\lim_{x\\to0^+}x^3\\ln x=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=3x^2\\ln x+x^3(1/x)=x^2(3\\ln x+1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The derivative changes negative to positive, establishing the stationary x-coordinate as 0.717 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(0.7165)\\approx-6.73006079e-5&lt;0\\\\&amp;f^{\\prime}(0.7175)\\approx0.0020865128&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x^2(3\\ln x+1)=0,\\quad x&gt;0\\\\&amp;\\Rightarrow \\ln x=-1/3\\\\&amp;\\Rightarrow x=e^{-1/3}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "solutionHtml": "<p>Retain the logarithm’s domain x&gt;0. The origin shown by the sketch is a limiting point rather than a point of the original function.</p><ol class=\"parts\" type=\"a\"><li><p>A=(0,0) belongs only to the continuous extension. The original function is undefined at x=0, so it does not literally cut the x-axis there.</p><span data-math=\"\\begin{aligned}&amp;x&gt;0,\\quad x^3\\ln x=0\\\\&amp;\\Rightarrow x=1\\\\&amp;\\Rightarrow B=(1,0)\\\\&amp;\\lim_{x\\to0^+}x^3\\ln x=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=3x^2\\ln x+x^3(1/x)=x^2(3\\ln x+1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The derivative changes negative to positive, establishing the stationary x-coordinate as 0.717 to 3 decimal places.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(0.7165)\\approx-6.73006079\\times10^{-5}&lt;0\\\\&amp;f^{\\prime}(0.7175)\\approx0.0020865128&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x^2(3\\ln x+1)=0,\\quad x&gt;0\\\\&amp;\\Rightarrow \\ln x=-1/3\\\\&amp;\\Rightarrow x=e^{-1/3}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
       "answerCheck": "domain-qualified"
     },
     {
