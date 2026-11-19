@@ -193,7 +193,7 @@ def student_restricted_pdfs(root):
     return urls, hashes
 
 
-LIBRARY_PAGES = {'index.html', 'textbook-view.html', 'teaching-chapters.html'}
+LIBRARY_PAGES = {'index.html', 'textbook-view.html', 'teaching-chapters.html', 'papers.html'}
 
 TEACHING_VIEWERS = {
     'lesson-viewer.html',
@@ -436,6 +436,12 @@ def check_artifact(directory, profile, root=ROOT):
         page = (directory / name).read_text()
         if page.count('href="https://www.geogebra.org/classic?lang=en"') != 1:
             raise ValueError('Missing GeoGebra Classic navigation: ' + name)
+    for name in LIBRARY_PAGES:
+        page = (directory / name).read_text()
+        navigation = re.search(r'<nav\b[^>]*aria-label="Library view"[^>]*>(.*?)</nav>', page, re.S)
+        labels = re.findall(r'<a\b[^>]*>(.*?)</a>', navigation[1], re.S) if navigation else []
+        if labels != ['By skill', 'By textbook', 'Resources', 'Papers']:
+            raise ValueError('Incorrect library navigation order: ' + name)
     for name in TEACHING_VIEWERS:
         page = (directory / name).read_text()
         if ('id="library" href="teaching-chapters.html"' not in page or

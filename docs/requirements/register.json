@@ -4924,6 +4924,41 @@
       "evidence": [
         "GitHub issue #94"
       ]
+    },
+    {
+      "id": "PAP-057",
+      "requirement": "Build printable papers from existing Luisa questions.",
+      "scope": "Owner Cloudflare and both authenticated ADA roles.",
+      "priority": "P1",
+      "implementation": "in_progress",
+      "verification": "not_checked",
+      "origin": "Owner v0.57 instruction; GitHub #97",
+      "acceptance": [
+        "Add Papers as the fourth common tab. Select topics or individual skills, question count, random generation/regeneration and manual question selection.",
+        "Use the current worked question database; exclude reference-only entries. Preserve exact questions, diagrams and matching solutions.",
+        "Two questions per A4 page with writing space, solutions at the back, consistent paper numbering and Source: Luisa <skill> Q<question> with course/book context and stable internal IDs.",
+        "Preserve role protections and existing account credentials. No paper activity analytics."
+      ],
+      "evidence": [
+        "GitHub issue #97"
+      ]
+    },
+    {
+      "id": "PAP-058",
+      "requirement": "Extend paper sources to practice booklets and later past papers.",
+      "scope": "Future releases, deferred from v0.57.",
+      "priority": "P2",
+      "implementation": "planned",
+      "verification": "not_checked",
+      "origin": "Owner v0.58 roadmap; GitHub #97",
+      "acceptance": [
+        "Practice Booklet source labels identify chapter, subchapter and original question number, with course/book context.",
+        "Future past-paper metadata includes topic, skill, marks and difficulty. Suggested position-based difficulty uses first five questions as easy, last five as difficult, intervening questions as medium.",
+        "Estimated duration uses six marks per five minutes when genuine marks metadata is available. Extend to further courses including IGCSE."
+      ],
+      "evidence": [
+        "GitHub issue #97"
+      ]
     }
   ]
 }
