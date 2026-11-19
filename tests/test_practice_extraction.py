@@ -16,6 +16,7 @@ class ExtractionTests(unittest.TestCase):
 
     def test_counter_continuation_is_original_number(self):
         self.assertEqual(split_items(r'\setcounter{enumi}{7}\item Next')[0][0],'8')
+        self.assertEqual(split_items(r'\setcounter{enumii}{1}\item Next')[0][0],'2')
 
     def test_hint_separated_without_changing_prompt(self):
         text=r'\begin{document}\chaptersection{s11}{1.1 Algebra}{1}\begin{questions}\item Show $x=2$.\begin{hintbox}Try substitution.\end{hintbox}\end{questions}\hypertarget{answers}{}'

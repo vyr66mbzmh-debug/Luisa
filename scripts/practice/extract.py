@@ -43,7 +43,7 @@ def environment(text, start, name):
 def split_items(text):
     """Return only list-level items; nested subparts never become questions."""
     stack=[]; items=[]; start=None; number=0
-    token=re.compile(r'\\(?:begin\{([^}]+)\}|end\{([^}]+)\}|item\b|setcounter\{enumi\}\{(\d+)\})')
+    token=re.compile(r'\\(?:begin\{([^}]+)\}|end\{([^}]+)\}|item\b|setcounter\{enum(?:i|ii|iii|iv)\}\{(\d+)\})')
     for m in token.finditer(text):
         if m[1]:stack.append(m[1])
         elif m[2]:

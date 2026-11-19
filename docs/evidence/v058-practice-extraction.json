@@ -3969,5 +3969,28 @@
     "e5fc5dcdbbcbc773250c.png": {
       "sha256": "e5fc5dcdbbcbc773250c4393a542b8c813063dba25071ae799c5d17e560373c8"
     }
+  },
+  "continuedSubparts": {
+    "nativeCounters": [
+      "enumi",
+      "enumii",
+      "enumiii",
+      "enumiv"
+    ],
+    "regression": "Continuation values honoured after question extraction removes the enclosing enumerate.",
+    "additionalBrowserCases": [
+      {
+        "id": "practice/maths-a-level/maths-pure-year-1/ch5/5.1/q8",
+        "images": [],
+        "mathRendered": true,
+        "overflow": false
+      },
+      {
+        "id": "practice/maths-a-level/maths-pure-year-1/ch5/5.3/q8",
+        "images": [],
+        "mathRendered": true,
+        "overflow": false
+      }
+    ]
   }
 }
