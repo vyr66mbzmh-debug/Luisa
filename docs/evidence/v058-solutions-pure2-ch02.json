@@ -1,0 +1,45 @@
+{
+  "issue": 99,
+  "release": "0.58",
+  "chapter": "Pure Year 2 Chapter 2 \u2014 Functions and graphs",
+  "questions": 69,
+  "workedSolutions": 69,
+  "originalQuestionIdsMatched": 69,
+  "sourceAnswerGraphs": 73,
+  "authoredExactGraphs": 2,
+  "exactIndependentChecks": 320,
+  "strictBrowserMathExpressions": 445,
+  "browserQuestionsRendered": 69,
+  "browserHorizontalOverflows": 0,
+  "visualReview": "All 94 referenced original question/answer diagrams inspected. All 69 original prompts and supplied final answers compared. Every row renders with strict KaTeX, no mathematical failures, missing images or horizontal overflow; representative inverse, modulus and new exact graph renders inspected. Source and solution top-level subpart counts match for every row. Full Papers print integration remains separate.",
+  "suppliedPromptOrKeyDefects": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch2/2.2/q4",
+      "note": "The line ends at an open point (2,4); the parabola starts at a closed point (2,6) and has vertex (4,2). Each real input belongs to exactly one branch, so it has one output. The supplied answer incorrectly calls this mapping one-to-one; for example f(3)=f(5)=3."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch2/2.3/q5",
+      "note": "The exact range is (\u2212\u221e,k+4], not the open interval (\u2212\u221e,6). Read literally as equality of ranges, the wording has no solution; the intended strict upper-bound condition gives k<2 with k=0 excluded by the question."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch2/2.6/q7",
+      "note": "The parabola opens upward, crossing at (\u22123,0),(1,0),(0,\u22123). Part (i) has three turning points: the central maximum (\u22121,10) and two cusp minima (\u22123,2),(1,2). The supplied answer lists only the transformed original vertex."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch2/problem-a/qsilver",
+      "note": "The endpoint x=2 is excluded: the supplied answer incorrectly includes it. The minimum 2 is approached but never attained; the supplied non-strict bound is incorrect. The supplied extra root \u221211 is outside the domain of g."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch2/problem-b/qsilver",
+      "note": "The original answer sketches incorrectly label the y-intercept 1. These sketches use the stated formula and the correct value 2."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch2/exam/q66",
+      "note": "The given original expression also excludes x=3, despite the statement saying only x>2. T\u2081 translates by (2,0), T\u2082 reflects in the x-axis, and T\u2083 translates by (0,2). These map to the continuous extension of the simplified curve. The literal original function has a hole at (3,1); no three ordinary affine transformations of the full starting branch create that missing point."
+    }
+  ],
+  "solutionSha256": "b4392f2589ccc0f1fe89fa42138917ff7e3cf38099bc4d2ec27e1fa54f88620e",
+  "sourcePdf": "resources/practice/pure-year-2/chapter-02.pdf",
+  "sourcePdfSha256": "4c5ab74635632eebfb50c5a7f2b8463770506893ef9f1a4ddafd39a74361b74a",
+  "independentReview": "pending lead review"
+}
