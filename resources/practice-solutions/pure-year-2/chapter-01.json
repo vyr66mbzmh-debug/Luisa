@@ -1,0 +1,914 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-2",
+  "chapter": 1,
+  "sourcePdf": "resources/practice/pure-year-2/chapter-01.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.1/q1",
+      "status": "worked",
+      "method": "Negate a universal implication by asserting an example where its hypothesis is true and its conclusion false.",
+      "steps": [
+        {
+          "latex": "",
+          "explanation": "There are only finitely many prime numbers.",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "There exists an integer n for which n² is even and n is odd.",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "There exist integers p and q for which pq is odd while both p and q are even.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Negate a universal implication by asserting an example where its hypothesis is true and its conclusion false.</p><ol type=\"a\" class=\"parts\"><li><p>There are only finitely many prime numbers.</p></li><li><p>There exists an integer n for which n² is even and n is odd.</p></li><li><p>There exist integers p and q for which pq is odd while both p and q are even.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.1/q2",
+      "status": "worked",
+      "method": "Assume a greatest even integer exists and construct a larger one.",
+      "steps": [
+        {
+          "latex": "N=2k;N+2=2(k+1)>N",
+          "explanation": "If N is the greatest even integer, N+2 is also even and is larger than N. This contradicts the assumption, so no greatest even integer exists.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Assume a greatest even integer exists and construct a larger one.</p><p>If N is the greatest even integer, N+2 is also even and is larger than N. This contradicts the assumption, so no greatest even integer exists.</p><span data-math=\"N=2k\" data-display=\"true\"></span><span data-math=\"N+2=2(k+1)&gt;N\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.1/q3",
+      "status": "worked",
+      "method": "Assume equality and examine the possible remainders of a square on division by 4.",
+      "steps": [
+        {
+          "latex": "a^2=4b+7\\equiv3\\pmod4;a=2k\\Rightarrow a^2\\equiv0\\pmod4;a=2k+1\\Rightarrow a^2=4k(k+1)+1\\equiv1\\pmod4",
+          "explanation": "An integer square is congruent to 0 or 1 modulo 4, never 3. This contradiction proves a²−4b−7≠0.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Assume equality and examine the possible remainders of a square on division by 4.</p><p>An integer square is congruent to 0 or 1 modulo 4, never 3. This contradiction proves a²−4b−7≠0.</p><span data-math=\"a^2=4b+7\\equiv3\\pmod4\" data-display=\"true\"></span><span data-math=\"a=2k\\Rightarrow a^2\\equiv0\\pmod4\" data-display=\"true\"></span><span data-math=\"a=2k+1\\Rightarrow a^2=4k(k+1)+1\\equiv1\\pmod4\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.1/q4",
+      "status": "worked",
+      "method": "Assume a smallest positive rational number r exists and halve it.",
+      "steps": [
+        {
+          "latex": "r=\\frac ab>0;\\frac r2=\\frac a{2b};0<\\frac r2<r",
+          "explanation": "Here a,b are integers and b≠0. The number r/2 is rational, positive and smaller than r, contradicting minimality.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Assume a smallest positive rational number r exists and halve it.</p><p>Here a,b are integers and b≠0. The number r/2 is rational, positive and smaller than r, contradicting minimality.</p><span data-math=\"r=\\frac ab&gt;0\" data-display=\"true\"></span><span data-math=\"\\frac r2=\\frac a{2b}\" data-display=\"true\"></span><span data-math=\"0&lt;\\frac r2&lt;r\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.1/q5",
+      "status": "worked",
+      "method": "Assume n³ is odd but n is even.",
+      "steps": [
+        {
+          "latex": "n=2k\\Rightarrow n^3=8k^3=2(4k^3)",
+          "explanation": "Then n³ is even, contradicting the given odd cube. Therefore n must be odd.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Assume n³ is odd but n is even.</p><p>Then n³ is even, contradicting the given odd cube. Therefore n must be odd.</p><span data-math=\"n=2k\\Rightarrow n^3=8k^3=2(4k^3)\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.1/q6",
+      "status": "worked",
+      "method": "Assume x and y are both nonzero integers satisfying the equation, and factor the difference of squares.",
+      "steps": [
+        {
+          "latex": "(x-y)(x+y)=1;(x-y,x+y)=(1,1)\\text{ or }(-1,-1);2y=0\\Rightarrow y=0",
+          "explanation": "The only integer factor pairs of 1 are (1,1) and (−1,−1); either forces y=0, a contradiction. Thus no solution has both coordinates nonzero. The integer solutions (±1,0) are excluded by that condition.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Assume x and y are both nonzero integers satisfying the equation, and factor the difference of squares.</p><p>The only integer factor pairs of 1 are (1,1) and (−1,−1); either forces y=0, a contradiction. Thus no solution has both coordinates nonzero. The integer solutions (±1,0) are excluded by that condition.</p><span data-math=\"(x-y)(x+y)=1\" data-display=\"true\"></span><span data-math=\"(x-y,x+y)=(1,1)\\text{ or }(-1,-1)\" data-display=\"true\"></span><span data-math=\"2y=0\\Rightarrow y=0\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.1/q7",
+      "status": "worked",
+      "method": "Assume √5 can be written as a fraction in lowest terms.",
+      "steps": [
+        {
+          "latex": "\\sqrt5=\\frac ab,\\quad\\gcd(a,b)=1,\\ b\\ne0;a^2=5b^2\\Rightarrow5\\mid a;a=5k\\Rightarrow25k^2=5b^2;b^2=5k^2\\Rightarrow5\\mid b",
+          "explanation": "Because 5 is prime, divisibility of a square by 5 implies divisibility of its integer root by 5. Both a and b would be divisible by 5, contradicting the fraction being in lowest terms. Hence √5 is irrational.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Assume √5 can be written as a fraction in lowest terms.</p><p>Because 5 is prime, divisibility of a square by 5 implies divisibility of its integer root by 5. Both a and b would be divisible by 5, contradicting the fraction being in lowest terms. Hence √5 is irrational.</p><span data-math=\"\\sqrt5=\\frac ab,\\quad\\gcd(a,b)=1,\\ b\\ne0\" data-display=\"true\"></span><span data-math=\"a^2=5b^2\\Rightarrow5\\mid a\" data-display=\"true\"></span><span data-math=\"a=5k\\Rightarrow25k^2=5b^2\" data-display=\"true\"></span><span data-math=\"b^2=5k^2\\Rightarrow5\\mid b\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.1/q8",
+      "status": "worked",
+      "method": "Assume a rational number p minus an irrational number q is rational.",
+      "steps": [
+        {
+          "latex": "p=\\frac ab,\\quad p-q=\\frac cd,\\quad b,d\\ne0;q=\\frac ab-\\frac cd=\\frac{ad-bc}{bd}",
+          "explanation": "The numerator and denominator are integers and bd≠0, so q would be rational. This contradiction shows p−q is irrational. Reversing the difference only changes its sign, and that is irrational too.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Assume a rational number p minus an irrational number q is rational.</p><p>The numerator and denominator are integers and bd≠0, so q would be rational. This contradiction shows p−q is irrational. Reversing the difference only changes its sign, and that is irrational too.</p><span data-math=\"p=\\frac ab,\\quad p-q=\\frac cd,\\quad b,d\\ne0\" data-display=\"true\"></span><span data-math=\"q=\\frac ab-\\frac cd=\\frac{ad-bc}{bd}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.2/q1",
+      "status": "worked",
+      "method": "Factor first and cancel common factors, keeping the original restrictions.",
+      "steps": [
+        {
+          "latex": "\\frac{x-3}{(x-3)(x+3)}=\\frac1{x+3};x\\ne\\pm3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{(x-1)(x+1)}{3(x+1)^2}=\\frac{x-1}{3(x+1)};x\\ne-1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{x(x+5)}{y-2}\\frac{y(y-2)}{x^2}=\\frac{y(x+5)}x;x\\ne0,\\ y\\ne2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor first and cancel common factors, keeping the original restrictions.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{x-3}{(x-3)(x+3)}=\\frac1{x+3}\" data-display=\"true\"></span><span data-math=\"x\\ne\\pm3\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{(x-1)(x+1)}{3(x+1)^2}=\\frac{x-1}{3(x+1)}\" data-display=\"true\"></span><span data-math=\"x\\ne-1\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{x(x+5)}{y-2}\\frac{y(y-2)}{x^2}=\\frac{y(x+5)}x\" data-display=\"true\"></span><span data-math=\"x\\ne0,\\ y\\ne2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.2/q2",
+      "status": "worked",
+      "method": "Replace division by multiplication by the reciprocal, then factor and cancel.",
+      "steps": [
+        {
+          "latex": "\\frac{x}{x+2}\\frac{(x+2)(x-1)}{x^3}=\\frac{x-1}{x^2};x\\ne-2,1,0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{(3x-4)(3x+4)}{5(x-2)}\\frac{10}{3x-4}=\\frac{2(3x+4)}{x-2};x\\ne2,\\frac43",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{(2x-y)(x+2y)}{5xy}\\frac{10x^2}{x(x+2y)}=\\frac{2(2x-y)}y;x\\ne0,\\ y\\ne0,\\ x+2y\\ne0",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Replace division by multiplication by the reciprocal, then factor and cancel.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{x}{x+2}\\frac{(x+2)(x-1)}{x^3}=\\frac{x-1}{x^2}\" data-display=\"true\"></span><span data-math=\"x\\ne-2,1,0\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{(3x-4)(3x+4)}{5(x-2)}\\frac{10}{3x-4}=\\frac{2(3x+4)}{x-2}\" data-display=\"true\"></span><span data-math=\"x\\ne2,\\frac43\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{(2x-y)(x+2y)}{5xy}\\frac{10x^2}{x(x+2y)}=\\frac{2(2x-y)}y\" data-display=\"true\"></span><span data-math=\"x\\ne0,\\ y\\ne0,\\ x+2y\\ne0\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.2/q3",
+      "status": "worked",
+      "method": "Use a common denominator and combine the numerators.",
+      "steps": [
+        {
+          "latex": "\\frac{5(x-1)+2(x+3)}{(x+3)(x-1)}=\\frac{7x+1}{(x+3)(x-1)};x\\ne-3,1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{6(x+1)+5(x-3)}{3(x-3)(x+1)}=\\frac{11x-9}{3(x-3)(x+1)};x\\ne3,-1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{2x(x+5)-3x(x-5)}{(x-5)(x+5)}=\\frac{x(25-x)}{(x-5)(x+5)};x\\ne\\pm5",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{(x+1)(x+2)-2x(2x-3)}{(2x-3)(x+2)}=\\frac{-3x^2+9x+2}{(2x-3)(x+2)};x\\ne\\frac32,-2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use a common denominator and combine the numerators.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{5(x-1)+2(x+3)}{(x+3)(x-1)}=\\frac{7x+1}{(x+3)(x-1)}\" data-display=\"true\"></span><span data-math=\"x\\ne-3,1\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{6(x+1)+5(x-3)}{3(x-3)(x+1)}=\\frac{11x-9}{3(x-3)(x+1)}\" data-display=\"true\"></span><span data-math=\"x\\ne3,-1\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{2x(x+5)-3x(x-5)}{(x-5)(x+5)}=\\frac{x(25-x)}{(x-5)(x+5)}\" data-display=\"true\"></span><span data-math=\"x\\ne\\pm5\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{(x+1)(x+2)-2x(2x-3)}{(2x-3)(x+2)}=\\frac{-3x^2+9x+2}{(2x-3)(x+2)}\" data-display=\"true\"></span><span data-math=\"x\\ne\\frac32,-2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.2/q4",
+      "status": "worked",
+      "method": "Factor the denominators, use their common factors, and simplify the combined numerator.",
+      "steps": [
+        {
+          "latex": "\\frac{5x+3(2x+3)}{(2x-3)(2x+3)}=\\frac{11x+9}{(2x-3)(2x+3)};x\\ne\\pm\\frac32",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac2{(x+4)(x-3)}+\\frac1{(x-3)(x-2)};=\\frac{2(x-2)+(x+4)}{(x+4)(x-3)(x-2)};=\\frac{3x}{(x+4)(x-3)(x-2)};x\\ne-4,3,2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac5{(2x+1)^2}-\\frac3{(2x+1)(2x-1)};=\\frac{5(2x-1)-3(2x+1)}{(2x+1)^2(2x-1)};=\\frac{4x-8}{(2x+1)^2(2x-1)};x\\ne\\pm\\frac12",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{x-1}{(x+1)(x+2)}-\\frac{x-2}{(x-3)(x+1)};=\\frac{(x-1)(x-3)-(x-2)(x+2)}{(x+1)(x+2)(x-3)};=\\frac{7-4x}{(x+1)(x+2)(x-3)};x\\ne-1,-2,3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor the denominators, use their common factors, and simplify the combined numerator.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{5x+3(2x+3)}{(2x-3)(2x+3)}=\\frac{11x+9}{(2x-3)(2x+3)}\" data-display=\"true\"></span><span data-math=\"x\\ne\\pm\\frac32\" data-display=\"true\"></span></li><li><span data-math=\"\\frac2{(x+4)(x-3)}+\\frac1{(x-3)(x-2)}\" data-display=\"true\"></span><span data-math=\"=\\frac{2(x-2)+(x+4)}{(x+4)(x-3)(x-2)}\" data-display=\"true\"></span><span data-math=\"=\\frac{3x}{(x+4)(x-3)(x-2)}\" data-display=\"true\"></span><span data-math=\"x\\ne-4,3,2\" data-display=\"true\"></span></li><li><span data-math=\"\\frac5{(2x+1)^2}-\\frac3{(2x+1)(2x-1)}\" data-display=\"true\"></span><span data-math=\"=\\frac{5(2x-1)-3(2x+1)}{(2x+1)^2(2x-1)}\" data-display=\"true\"></span><span data-math=\"=\\frac{4x-8}{(2x+1)^2(2x-1)}\" data-display=\"true\"></span><span data-math=\"x\\ne\\pm\\frac12\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{x-1}{(x+1)(x+2)}-\\frac{x-2}{(x-3)(x+1)}\" data-display=\"true\"></span><span data-math=\"=\\frac{(x-1)(x-3)-(x-2)(x+2)}{(x+1)(x+2)(x-3)}\" data-display=\"true\"></span><span data-math=\"=\\frac{7-4x}{(x+1)(x+2)(x-3)}\" data-display=\"true\"></span><span data-math=\"x\\ne-1,-2,3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.2/q5",
+      "status": "worked",
+      "method": "Multiply by the reciprocal and factor the differences of squares.",
+      "steps": [
+        {
+          "latex": "\\frac{(x+2)^2}{(y-3)^2}\\frac{(y-3)(y+3)}{(x-2)(x+2)};=\\frac{(x+2)(y+3)}{(x-2)(y-3)};x\\ne\\pm2,\\ y\\ne\\pm3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Multiply by the reciprocal and factor the differences of squares.</p><span data-math=\"\\frac{(x+2)^2}{(y-3)^2}\\frac{(y-3)(y+3)}{(x-2)(x+2)}\" data-display=\"true\"></span><span data-math=\"=\\frac{(x+2)(y+3)}{(x-2)(y-3)}\" data-display=\"true\"></span><span data-math=\"x\\ne\\pm2,\\ y\\ne\\pm3\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.2/q6",
+      "status": "worked",
+      "method": "Factor each polynomial and cancel only the shared x+3 factor.",
+      "steps": [
+        {
+          "latex": "\\frac{(x-5)(x+3)}{2(x^2-6)}\\frac{x^2(x-6)}{(x-8)(x+3)};=\\frac{x^2(x-5)(x-6)}{2(x^2-6)(x-8)};x\\ne\\pm\\sqrt6,8,-3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor each polynomial and cancel only the shared x+3 factor.</p><span data-math=\"\\frac{(x-5)(x+3)}{2(x^2-6)}\\frac{x^2(x-6)}{(x-8)(x+3)}\" data-display=\"true\"></span><span data-math=\"=\\frac{x^2(x-5)(x-6)}{2(x^2-6)(x-8)}\" data-display=\"true\"></span><span data-math=\"x\\ne\\pm\\sqrt6,8,-3\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.2/q7",
+      "status": "worked",
+      "method": "Factor the difference of squares in the first denominator and use it as the common denominator.",
+      "steps": [
+        {
+          "latex": "\\frac{2x^2-5x+3x(5x+1)}{(5x-1)(5x+1)};=\\frac{x(17x-2)}{(5x-1)(5x+1)};x\\ne\\pm\\frac15",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor the difference of squares in the first denominator and use it as the common denominator.</p><span data-math=\"\\frac{2x^2-5x+3x(5x+1)}{(5x-1)(5x+1)}\" data-display=\"true\"></span><span data-math=\"=\\frac{x(17x-2)}{(5x-1)(5x+1)}\" data-display=\"true\"></span><span data-math=\"x\\ne\\pm\\frac15\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.2/q8",
+      "status": "worked",
+      "method": "Factor the quadratic denominator before combining.",
+      "steps": [
+        {
+          "latex": "2x^2-5x-3=(2x+1)(x-3);\\frac{3x-2-5(x-3)}{(2x+1)(x-3)}=\\frac{13-2x}{(2x+1)(x-3)};x\\ne-\\frac12,3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor the quadratic denominator before combining.</p><span data-math=\"2x^2-5x-3=(2x+1)(x-3)\" data-display=\"true\"></span><span data-math=\"\\frac{3x-2-5(x-3)}{(2x+1)(x-3)}=\\frac{13-2x}{(2x+1)(x-3)}\" data-display=\"true\"></span><span data-math=\"x\\ne-\\frac12,3\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.2/q9",
+      "status": "worked",
+      "method": "Use the common denominator, then factor the cubic numerator.",
+      "steps": [
+        {
+          "latex": "f=\\frac{x(x+3)(x-5)+5(x-5)+40}{(x+3)(x-5)};=\\frac{x^3-2x^2-10x+15}{(x+3)(x-5)}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "x^3-2x^2-10x+15=(x+3)(x^2-5x+5);f=\\frac{x^2-5x+5}{x-5};x\\ne-3,5",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the common denominator, then factor the cubic numerator.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f=\\frac{x(x+3)(x-5)+5(x-5)+40}{(x+3)(x-5)}\" data-display=\"true\"></span><span data-math=\"=\\frac{x^3-2x^2-10x+15}{(x+3)(x-5)}\" data-display=\"true\"></span></li><li><span data-math=\"x^3-2x^2-10x+15=(x+3)(x^2-5x+5)\" data-display=\"true\"></span><span data-math=\"f=\\frac{x^2-5x+5}{x-5}\" data-display=\"true\"></span><span data-math=\"x\\ne-3,5\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.3/q1",
+      "status": "worked",
+      "method": "Resolve each rational expression into fractions with linear denominators.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{8 x - 1}{\\left(x - 2\\right) \\left(x + 1\\right)};F(x)=\\frac{A}{x + 1} + \\frac{B}{x - 2};8 x - 1=;- 2 A + B + x \\left(A + B\\right);A + B = 8;- 2 A + B = -1;A=3,\\quad B=5;F(x)=\\frac{3}{x + 1} + \\frac{5}{x - 2}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        },
+        {
+          "latex": "F(x)=\\frac{2 x + 13}{\\left(x + 3\\right) \\left(2 x - 1\\right)};F(x)=\\frac{A}{2 x - 1} + \\frac{B}{x + 3};2 x + 13=;3 A - B + x \\left(A + 2 B\\right);A + 2 B = 2;3 A - B = 13;A=4,\\quad B=-1;F(x)=\\frac{4}{2 x - 1} - \\frac{1}{x + 3}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        },
+        {
+          "latex": "F(x)=\\frac{7 - 11 x}{\\left(2 x + 1\\right) \\left(3 x - 1\\right)};F(x)=\\frac{A}{3 x - 1} + \\frac{B}{2 x + 1};7 - 11 x=;A - B + x \\left(2 A + 3 B\\right);2 A + 3 B = -11;A - B = 7;A=2,\\quad B=-5;F(x)=\\frac{2}{3 x - 1} - \\frac{5}{2 x + 1}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Resolve each rational expression into fractions with linear denominators.</p><ol type=\"a\" class=\"parts\"><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{8 x - 1}{\\left(x - 2\\right) \\left(x + 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x + 1} + \\frac{B}{x - 2}\" data-display=\"true\"></span><span data-math=\"8 x - 1=\" data-display=\"true\"></span><span data-math=\"- 2 A + B + x \\left(A + B\\right)\" data-display=\"true\"></span><span data-math=\"A + B = 8\" data-display=\"true\"></span><span data-math=\"- 2 A + B = -1\" data-display=\"true\"></span><span data-math=\"A=3,\\quad B=5\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{3}{x + 1} + \\frac{5}{x - 2}\" data-display=\"true\"></span></li><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{2 x + 13}{\\left(x + 3\\right) \\left(2 x - 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{2 x - 1} + \\frac{B}{x + 3}\" data-display=\"true\"></span><span data-math=\"2 x + 13=\" data-display=\"true\"></span><span data-math=\"3 A - B + x \\left(A + 2 B\\right)\" data-display=\"true\"></span><span data-math=\"A + 2 B = 2\" data-display=\"true\"></span><span data-math=\"3 A - B = 13\" data-display=\"true\"></span><span data-math=\"A=4,\\quad B=-1\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{4}{2 x - 1} - \\frac{1}{x + 3}\" data-display=\"true\"></span></li><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{7 - 11 x}{\\left(2 x + 1\\right) \\left(3 x - 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{3 x - 1} + \\frac{B}{2 x + 1}\" data-display=\"true\"></span><span data-math=\"7 - 11 x=\" data-display=\"true\"></span><span data-math=\"A - B + x \\left(2 A + 3 B\\right)\" data-display=\"true\"></span><span data-math=\"2 A + 3 B = -11\" data-display=\"true\"></span><span data-math=\"A - B = 7\" data-display=\"true\"></span><span data-math=\"A=2,\\quad B=-5\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{2}{3 x - 1} - \\frac{5}{2 x + 1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.3/q2",
+      "status": "worked",
+      "method": "Factor the quadratic denominator before resolving into partial fractions.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{7 x - 15}{x \\left(x - 5\\right)};F(x)=\\frac{A}{x} + \\frac{B}{x - 5};7 x - 15=;- 5 A + x \\left(A + B\\right);A + B = 7;- 5 A = -15;A=3,\\quad B=4;F(x)=\\frac{4}{x - 5} + \\frac{3}{x}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        },
+        {
+          "latex": "F(x)=\\frac{3 x + 21}{\\left(x - 3\\right) \\left(x + 3\\right)};F(x)=\\frac{A}{x - 3} + \\frac{B}{x + 3};3 x + 21=;3 A - 3 B + x \\left(A + B\\right);A + B = 3;3 A - 3 B = 21;A=5,\\quad B=-2;F(x)=- \\frac{2}{x + 3} + \\frac{5}{x - 3}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        },
+        {
+          "latex": "F(x)=\\frac{9 x - 1}{\\left(x - 5\\right) \\left(2 x + 1\\right)};F(x)=\\frac{A}{2 x + 1} + \\frac{B}{x - 5};9 x - 1=;- 5 A + B + x \\left(A + 2 B\\right);A + 2 B = 9;- 5 A + B = -1;A=1,\\quad B=4;F(x)=\\frac{1}{2 x + 1} + \\frac{4}{x - 5}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor the quadratic denominator before resolving into partial fractions.</p><ol type=\"a\" class=\"parts\"><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{7 x - 15}{x \\left(x - 5\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x} + \\frac{B}{x - 5}\" data-display=\"true\"></span><span data-math=\"7 x - 15=\" data-display=\"true\"></span><span data-math=\"- 5 A + x \\left(A + B\\right)\" data-display=\"true\"></span><span data-math=\"A + B = 7\" data-display=\"true\"></span><span data-math=\"- 5 A = -15\" data-display=\"true\"></span><span data-math=\"A=3,\\quad B=4\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{4}{x - 5} + \\frac{3}{x}\" data-display=\"true\"></span></li><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{3 x + 21}{\\left(x - 3\\right) \\left(x + 3\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x - 3} + \\frac{B}{x + 3}\" data-display=\"true\"></span><span data-math=\"3 x + 21=\" data-display=\"true\"></span><span data-math=\"3 A - 3 B + x \\left(A + B\\right)\" data-display=\"true\"></span><span data-math=\"A + B = 3\" data-display=\"true\"></span><span data-math=\"3 A - 3 B = 21\" data-display=\"true\"></span><span data-math=\"A=5,\\quad B=-2\" data-display=\"true\"></span><span data-math=\"F(x)=- \\frac{2}{x + 3} + \\frac{5}{x - 3}\" data-display=\"true\"></span></li><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{9 x - 1}{\\left(x - 5\\right) \\left(2 x + 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{2 x + 1} + \\frac{B}{x - 5}\" data-display=\"true\"></span><span data-math=\"9 x - 1=\" data-display=\"true\"></span><span data-math=\"- 5 A + B + x \\left(A + 2 B\\right)\" data-display=\"true\"></span><span data-math=\"A + 2 B = 9\" data-display=\"true\"></span><span data-math=\"- 5 A + B = -1\" data-display=\"true\"></span><span data-math=\"A=1,\\quad B=4\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{1}{2 x + 1} + \\frac{4}{x - 5}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.3/q3",
+      "status": "worked",
+      "method": "Use one constant numerator for each distinct linear denominator.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{6 x^{2} - 43 x + 50}{x \\left(x - 5\\right) \\left(x - 2\\right)};F(x)=\\frac{A}{x} + \\frac{B}{x - 2} + \\frac{C}{x - 5};6 x^{2} - 43 x + 50=;10 A + x^{2} \\left(A + B + C\\right) + x \\left(- 7 A - 5 B - 2 C\\right);A + B + C = 6;- 7 A - 5 B - 2 C = -43;10 A = 50;A=5,\\quad B=2,\\quad C=-1;F(x)=\\frac{2}{x - 2} - \\frac{1}{x - 5} + \\frac{5}{x}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        },
+        {
+          "latex": "F(x)=\\frac{4 x^{2} + 11 x + 9}{\\left(x - 1\\right) \\left(x + 2\\right) \\left(x + 3\\right)};F(x)=\\frac{A}{x - 1} + \\frac{B}{x + 2} + \\frac{C}{x + 3};4 x^{2} + 11 x + 9=;6 A - 3 B - 2 C + x^{2} \\left(A + B + C\\right) + x \\left(5 A + 2 B + C\\right);A + B + C = 4;5 A + 2 B + C = 11;6 A - 3 B - 2 C = 9;A=2,\\quad B=-1,\\quad C=3;F(x)=\\frac{3}{x + 3} - \\frac{1}{x + 2} + \\frac{2}{x - 1}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        },
+        {
+          "latex": "F(x)=\\frac{5 x^{2} - 22 x + 6}{x \\left(x - 3\\right) \\left(2 x - 1\\right)};F(x)=\\frac{A}{x} + \\frac{B}{x - 3} + \\frac{C}{2 x - 1};5 x^{2} - 22 x + 6=;3 A + x^{2} \\left(2 A + 2 B + C\\right) + x \\left(- 7 A - B - 3 C\\right);2 A + 2 B + C = 5;- 7 A - B - 3 C = -22;3 A = 6;A=2,\\quad B=-1,\\quad C=3;F(x)=\\frac{3}{2 x - 1} - \\frac{1}{x - 3} + \\frac{2}{x}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use one constant numerator for each distinct linear denominator.</p><ol type=\"a\" class=\"parts\"><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{6 x^{2} - 43 x + 50}{x \\left(x - 5\\right) \\left(x - 2\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x} + \\frac{B}{x - 2} + \\frac{C}{x - 5}\" data-display=\"true\"></span><span data-math=\"6 x^{2} - 43 x + 50=\" data-display=\"true\"></span><span data-math=\"10 A + x^{2} \\left(A + B + C\\right) + x \\left(- 7 A - 5 B - 2 C\\right)\" data-display=\"true\"></span><span data-math=\"A + B + C = 6\" data-display=\"true\"></span><span data-math=\"- 7 A - 5 B - 2 C = -43\" data-display=\"true\"></span><span data-math=\"10 A = 50\" data-display=\"true\"></span><span data-math=\"A=5,\\quad B=2,\\quad C=-1\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{2}{x - 2} - \\frac{1}{x - 5} + \\frac{5}{x}\" data-display=\"true\"></span></li><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{4 x^{2} + 11 x + 9}{\\left(x - 1\\right) \\left(x + 2\\right) \\left(x + 3\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x - 1} + \\frac{B}{x + 2} + \\frac{C}{x + 3}\" data-display=\"true\"></span><span data-math=\"4 x^{2} + 11 x + 9=\" data-display=\"true\"></span><span data-math=\"6 A - 3 B - 2 C + x^{2} \\left(A + B + C\\right) + x \\left(5 A + 2 B + C\\right)\" data-display=\"true\"></span><span data-math=\"A + B + C = 4\" data-display=\"true\"></span><span data-math=\"5 A + 2 B + C = 11\" data-display=\"true\"></span><span data-math=\"6 A - 3 B - 2 C = 9\" data-display=\"true\"></span><span data-math=\"A=2,\\quad B=-1,\\quad C=3\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{3}{x + 3} - \\frac{1}{x + 2} + \\frac{2}{x - 1}\" data-display=\"true\"></span></li><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{5 x^{2} - 22 x + 6}{x \\left(x - 3\\right) \\left(2 x - 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x} + \\frac{B}{x - 3} + \\frac{C}{2 x - 1}\" data-display=\"true\"></span><span data-math=\"5 x^{2} - 22 x + 6=\" data-display=\"true\"></span><span data-math=\"3 A + x^{2} \\left(2 A + 2 B + C\\right) + x \\left(- 7 A - B - 3 C\\right)\" data-display=\"true\"></span><span data-math=\"2 A + 2 B + C = 5\" data-display=\"true\"></span><span data-math=\"- 7 A - B - 3 C = -22\" data-display=\"true\"></span><span data-math=\"3 A = 6\" data-display=\"true\"></span><span data-math=\"A=2,\\quad B=-1,\\quad C=3\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{3}{2 x - 1} - \\frac{1}{x - 3} + \\frac{2}{x}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.3/q4",
+      "status": "worked",
+      "method": "An improper fraction needs a constant term as well as its simple fractions.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{- 10 x^{2} + 15 x + 1}{- \\left(x - 2\\right) \\left(2 x - 1\\right)};F(x)=A + \\frac{B}{x - 2} + \\frac{C}{1 - 2 x};- 10 x^{2} + 15 x + 1=;- 2 A x^{2} - 2 A + B - 2 C + x \\left(5 A - 2 B + C\\right);- 2 A = -10;5 A - 2 B + C = 15;- 2 A + B - 2 C = 1;A=5,\\quad B=3,\\quad C=-4;F(x)=5 + \\frac{3}{x - 2} - \\frac{4}{1 - 2 x}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>An improper fraction needs a constant term as well as its simple fractions.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{- 10 x^{2} + 15 x + 1}{- \\left(x - 2\\right) \\left(2 x - 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=A + \\frac{B}{x - 2} + \\frac{C}{1 - 2 x}\" data-display=\"true\"></span><span data-math=\"- 10 x^{2} + 15 x + 1=\" data-display=\"true\"></span><span data-math=\"- 2 A x^{2} - 2 A + B - 2 C + x \\left(5 A - 2 B + C\\right)\" data-display=\"true\"></span><span data-math=\"- 2 A = -10\" data-display=\"true\"></span><span data-math=\"5 A - 2 B + C = 15\" data-display=\"true\"></span><span data-math=\"- 2 A + B - 2 C = 1\" data-display=\"true\"></span><span data-math=\"A=5,\\quad B=3,\\quad C=-4\" data-display=\"true\"></span><span data-math=\"F(x)=5 + \\frac{3}{x - 2} - \\frac{4}{1 - 2 x}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.3/q5",
+      "status": "worked",
+      "method": "Clear the denominator and match the coefficients of x and the constant.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{4}{\\left(x + 1\\right) \\left(3 x - 2\\right)};F(x)=\\frac{A}{x + 1} + \\frac{B}{3 x - 2};4=;- 2 A + B + x \\left(3 A + B\\right);3 A + B = 0;- 2 A + B = 4;A=- \\frac{4}{5},\\quad B=\\frac{12}{5};F(x)=\\frac{12}{5 \\left(3 x - 2\\right)} - \\frac{4}{5 \\left(x + 1\\right)}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Clear the denominator and match the coefficients of x and the constant.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{4}{\\left(x + 1\\right) \\left(3 x - 2\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x + 1} + \\frac{B}{3 x - 2}\" data-display=\"true\"></span><span data-math=\"4=\" data-display=\"true\"></span><span data-math=\"- 2 A + B + x \\left(3 A + B\\right)\" data-display=\"true\"></span><span data-math=\"3 A + B = 0\" data-display=\"true\"></span><span data-math=\"- 2 A + B = 4\" data-display=\"true\"></span><span data-math=\"A=- \\frac{4}{5},\\quad B=\\frac{12}{5}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{12}{5 \\left(3 x - 2\\right)} - \\frac{4}{5 \\left(x + 1\\right)}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.3/q6",
+      "status": "worked",
+      "method": "Use a constant numerator over each linear factor.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{5 x - 3}{\\left(x + 2\\right) \\left(2 x + 3\\right)};F(x)=\\frac{A}{2 x + 3} + \\frac{B}{x + 2};5 x - 3=;2 A + 3 B + x \\left(A + 2 B\\right);A + 2 B = 5;2 A + 3 B = -3;A=-21,\\quad B=13;F(x)=- \\frac{21}{2 x + 3} + \\frac{13}{x + 2}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use a constant numerator over each linear factor.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{5 x - 3}{\\left(x + 2\\right) \\left(2 x + 3\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{2 x + 3} + \\frac{B}{x + 2}\" data-display=\"true\"></span><span data-math=\"5 x - 3=\" data-display=\"true\"></span><span data-math=\"2 A + 3 B + x \\left(A + 2 B\\right)\" data-display=\"true\"></span><span data-math=\"A + 2 B = 5\" data-display=\"true\"></span><span data-math=\"2 A + 3 B = -3\" data-display=\"true\"></span><span data-math=\"A=-21,\\quad B=13\" data-display=\"true\"></span><span data-math=\"F(x)=- \\frac{21}{2 x + 3} + \\frac{13}{x + 2}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.3/q7",
+      "status": "worked",
+      "method": "Factor 9−y²=(3−y)(3+y) before resolving.",
+      "steps": [
+        {
+          "latex": "F(y)=\\frac{3}{- \\left(y - 3\\right) \\left(y + 3\\right)};F(y)=\\frac{A}{3 - y} + \\frac{B}{y + 3};3=;3 A + 3 B + y \\left(A - B\\right);A - B = 0;3 A + 3 B = 3;A=\\frac{1}{2},\\quad B=\\frac{1}{2};F(y)=\\frac{1}{2 \\left(y + 3\\right)} + \\frac{1}{2 \\left(3 - y\\right)}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor 9−y²=(3−y)(3+y) before resolving.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(y)=\\frac{3}{- \\left(y - 3\\right) \\left(y + 3\\right)}\" data-display=\"true\"></span><span data-math=\"F(y)=\\frac{A}{3 - y} + \\frac{B}{y + 3}\" data-display=\"true\"></span><span data-math=\"3=\" data-display=\"true\"></span><span data-math=\"3 A + 3 B + y \\left(A - B\\right)\" data-display=\"true\"></span><span data-math=\"A - B = 0\" data-display=\"true\"></span><span data-math=\"3 A + 3 B = 3\" data-display=\"true\"></span><span data-math=\"A=\\frac{1}{2},\\quad B=\\frac{1}{2}\" data-display=\"true\"></span><span data-math=\"F(y)=\\frac{1}{2 \\left(y + 3\\right)} + \\frac{1}{2 \\left(3 - y\\right)}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.3/q8",
+      "status": "worked",
+      "method": "Use three constant numerators and equate coefficients after clearing denominators.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{- x^{2} + 33 x - 44}{\\left(x - 1\\right) \\left(x + 5\\right) \\left(2 x - 3\\right)};F(x)=\\frac{A}{x - 1} + \\frac{B}{x + 5} + \\frac{C}{2 x - 3};- x^{2} + 33 x - 44=;- 15 A + 3 B - 5 C + x^{2} \\left(2 A + 2 B + C\\right) + x \\left(7 A - 5 B + 4 C\\right);2 A + 2 B + C = -1;7 A - 5 B + 4 C = 33;- 15 A + 3 B - 5 C = -44;A=2,\\quad B=-3,\\quad C=1;F(x)=\\frac{1}{2 x - 3} - \\frac{3}{x + 5} + \\frac{2}{x - 1}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use three constant numerators and equate coefficients after clearing denominators.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{- x^{2} + 33 x - 44}{\\left(x - 1\\right) \\left(x + 5\\right) \\left(2 x - 3\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x - 1} + \\frac{B}{x + 5} + \\frac{C}{2 x - 3}\" data-display=\"true\"></span><span data-math=\"- x^{2} + 33 x - 44=\" data-display=\"true\"></span><span data-math=\"- 15 A + 3 B - 5 C + x^{2} \\left(2 A + 2 B + C\\right) + x \\left(7 A - 5 B + 4 C\\right)\" data-display=\"true\"></span><span data-math=\"2 A + 2 B + C = -1\" data-display=\"true\"></span><span data-math=\"7 A - 5 B + 4 C = 33\" data-display=\"true\"></span><span data-math=\"- 15 A + 3 B - 5 C = -44\" data-display=\"true\"></span><span data-math=\"A=2,\\quad B=-3,\\quad C=1\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{1}{2 x - 3} - \\frac{3}{x + 5} + \\frac{2}{x - 1}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.3/q9",
+      "status": "worked",
+      "method": "Include a constant term because numerator and denominator have the same degree.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{2 x^{2} - 11}{\\left(x - 2\\right) \\left(x + 1\\right)};F(x)=A + \\frac{B}{x + 1} + \\frac{C}{x - 2};2 x^{2} - 11=;A x^{2} - 2 A - 2 B + C + x \\left(- A + B + C\\right);A = 2;- A + B + C = 0;- 2 A - 2 B + C = -11;A=2,\\quad B=3,\\quad C=-1;F(x)=2 + \\frac{3}{x + 1} - \\frac{1}{x - 2}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Include a constant term because numerator and denominator have the same degree.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{2 x^{2} - 11}{\\left(x - 2\\right) \\left(x + 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=A + \\frac{B}{x + 1} + \\frac{C}{x - 2}\" data-display=\"true\"></span><span data-math=\"2 x^{2} - 11=\" data-display=\"true\"></span><span data-math=\"A x^{2} - 2 A - 2 B + C + x \\left(- A + B + C\\right)\" data-display=\"true\"></span><span data-math=\"A = 2\" data-display=\"true\"></span><span data-math=\"- A + B + C = 0\" data-display=\"true\"></span><span data-math=\"- 2 A - 2 B + C = -11\" data-display=\"true\"></span><span data-math=\"A=2,\\quad B=3,\\quad C=-1\" data-display=\"true\"></span><span data-math=\"F(x)=2 + \\frac{3}{x + 1} - \\frac{1}{x - 2}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.4/q1",
+      "status": "worked",
+      "method": "A repeated factor x² requires both A/x and B/x².",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{5 x^{2} - 5 x + 2}{x^{2} \\left(x - 2\\right)};F(x)=\\frac{A}{x} + \\frac{B}{x^{2}} + \\frac{C}{x - 2};5 x^{2} - 5 x + 2=;- 2 B + x^{2} \\left(A + C\\right) + x \\left(- 2 A + B\\right);A + C = 5;- 2 A + B = -5;- 2 B = 2;A=2,\\quad B=-1,\\quad C=3;F(x)=\\frac{3}{x - 2} + \\frac{2}{x} - \\frac{1}{x^{2}}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>A repeated factor x² requires both A/x and B/x².</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{5 x^{2} - 5 x + 2}{x^{2} \\left(x - 2\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x} + \\frac{B}{x^{2}} + \\frac{C}{x - 2}\" data-display=\"true\"></span><span data-math=\"5 x^{2} - 5 x + 2=\" data-display=\"true\"></span><span data-math=\"- 2 B + x^{2} \\left(A + C\\right) + x \\left(- 2 A + B\\right)\" data-display=\"true\"></span><span data-math=\"A + C = 5\" data-display=\"true\"></span><span data-math=\"- 2 A + B = -5\" data-display=\"true\"></span><span data-math=\"- 2 B = 2\" data-display=\"true\"></span><span data-math=\"A=2,\\quad B=-1,\\quad C=3\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{3}{x - 2} + \\frac{2}{x} - \\frac{1}{x^{2}}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.4/q2",
+      "status": "worked",
+      "method": "Include a term for each power of x+1. The supplied B=4 has the wrong sign: substituting x=−1 after clearing denominators gives 12=−3B, so B=−4.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{8 x^{2} - x + 3}{\\left(x + 1\\right)^{2} \\left(2 x - 1\\right)};F(x)=\\frac{A}{x + 1} + \\frac{B}{\\left(x + 1\\right)^{2}} + \\frac{C}{2 x - 1};8 x^{2} - x + 3=;- A - B + C + x^{2} \\left(2 A + C\\right) + x \\left(A + 2 B + 2 C\\right);2 A + C = 8;A + 2 B + 2 C = -1;- A - B + C = 3;A=3,\\quad B=-4,\\quad C=2;F(x)=\\frac{2}{2 x - 1} + \\frac{3}{x + 1} - \\frac{4}{\\left(x + 1\\right)^{2}}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Include a term for each power of x+1. The supplied B=4 has the wrong sign: substituting x=−1 after clearing denominators gives 12=−3B, so B=−4.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{8 x^{2} - x + 3}{\\left(x + 1\\right)^{2} \\left(2 x - 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x + 1} + \\frac{B}{\\left(x + 1\\right)^{2}} + \\frac{C}{2 x - 1}\" data-display=\"true\"></span><span data-math=\"8 x^{2} - x + 3=\" data-display=\"true\"></span><span data-math=\"- A - B + C + x^{2} \\left(2 A + C\\right) + x \\left(A + 2 B + 2 C\\right)\" data-display=\"true\"></span><span data-math=\"2 A + C = 8\" data-display=\"true\"></span><span data-math=\"A + 2 B + 2 C = -1\" data-display=\"true\"></span><span data-math=\"- A - B + C = 3\" data-display=\"true\"></span><span data-math=\"A=3,\\quad B=-4,\\quad C=2\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{2}{2 x - 1} + \\frac{3}{x + 1} - \\frac{4}{\\left(x + 1\\right)^{2}}\" data-display=\"true\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.4/q3",
+      "status": "worked",
+      "method": "Clear the squared denominator and compare coefficients.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{4 x - 1}{\\left(2 x + 1\\right)^{2}};F(x)=\\frac{A}{2 x + 1} + \\frac{B}{\\left(2 x + 1\\right)^{2}};4 x - 1=;2 A x + A + B;2 A = 4;A + B = -1;A=2,\\quad B=-3;F(x)=\\frac{2}{2 x + 1} - \\frac{3}{\\left(2 x + 1\\right)^{2}}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Clear the squared denominator and compare coefficients.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{4 x - 1}{\\left(2 x + 1\\right)^{2}}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{2 x + 1} + \\frac{B}{\\left(2 x + 1\\right)^{2}}\" data-display=\"true\"></span><span data-math=\"4 x - 1=\" data-display=\"true\"></span><span data-math=\"2 A x + A + B\" data-display=\"true\"></span><span data-math=\"2 A = 4\" data-display=\"true\"></span><span data-math=\"A + B = -1\" data-display=\"true\"></span><span data-math=\"A=2,\\quad B=-3\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{2}{2 x + 1} - \\frac{3}{\\left(2 x + 1\\right)^{2}}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.4/q4",
+      "status": "worked",
+      "method": "Include both powers of the repeated linear factor.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{x^{2} + 7 x + 32}{\\left(x - 2\\right) \\left(x + 3\\right)^{2}};F(x)=\\frac{A}{x - 2} + \\frac{B}{x + 3} + \\frac{C}{\\left(x + 3\\right)^{2}};x^{2} + 7 x + 32=;9 A - 6 B - 2 C + x^{2} \\left(A + B\\right) + x \\left(6 A + B + C\\right);A + B = 1;6 A + B + C = 7;9 A - 6 B - 2 C = 32;A=2,\\quad B=-1,\\quad C=-4;F(x)=- \\frac{1}{x + 3} - \\frac{4}{\\left(x + 3\\right)^{2}} + \\frac{2}{x - 2}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Include both powers of the repeated linear factor.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{x^{2} + 7 x + 32}{\\left(x - 2\\right) \\left(x + 3\\right)^{2}}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x - 2} + \\frac{B}{x + 3} + \\frac{C}{\\left(x + 3\\right)^{2}}\" data-display=\"true\"></span><span data-math=\"x^{2} + 7 x + 32=\" data-display=\"true\"></span><span data-math=\"9 A - 6 B - 2 C + x^{2} \\left(A + B\\right) + x \\left(6 A + B + C\\right)\" data-display=\"true\"></span><span data-math=\"A + B = 1\" data-display=\"true\"></span><span data-math=\"6 A + B + C = 7\" data-display=\"true\"></span><span data-math=\"9 A - 6 B - 2 C = 32\" data-display=\"true\"></span><span data-math=\"A=2,\\quad B=-1,\\quad C=-4\" data-display=\"true\"></span><span data-math=\"F(x)=- \\frac{1}{x + 3} - \\frac{4}{\\left(x + 3\\right)^{2}} + \\frac{2}{x - 2}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.4/q5",
+      "status": "worked",
+      "method": "First factor 2x³−3x²=x²(2x−3).",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{6 x^{2} - 13 x + 15}{x^{2} \\left(2 x - 3\\right)};F(x)=\\frac{A}{x} + \\frac{B}{x^{2}} + \\frac{C}{2 x - 3};6 x^{2} - 13 x + 15=;- 3 B + x^{2} \\left(2 A + C\\right) + x \\left(- 3 A + 2 B\\right);2 A + C = 6;- 3 A + 2 B = -13;- 3 B = 15;A=1,\\quad B=-5,\\quad C=4;F(x)=\\frac{4}{2 x - 3} + \\frac{1}{x} - \\frac{5}{x^{2}}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>First factor 2x³−3x²=x²(2x−3).</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{6 x^{2} - 13 x + 15}{x^{2} \\left(2 x - 3\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x} + \\frac{B}{x^{2}} + \\frac{C}{2 x - 3}\" data-display=\"true\"></span><span data-math=\"6 x^{2} - 13 x + 15=\" data-display=\"true\"></span><span data-math=\"- 3 B + x^{2} \\left(2 A + C\\right) + x \\left(- 3 A + 2 B\\right)\" data-display=\"true\"></span><span data-math=\"2 A + C = 6\" data-display=\"true\"></span><span data-math=\"- 3 A + 2 B = -13\" data-display=\"true\"></span><span data-math=\"- 3 B = 15\" data-display=\"true\"></span><span data-math=\"A=1,\\quad B=-5,\\quad C=4\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{4}{2 x - 3} + \\frac{1}{x} - \\frac{5}{x^{2}}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.4/q6",
+      "status": "worked",
+      "method": "First factor x³−4x²+4x=x(x−2)².",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{x^{2} - 5 x + 16}{x \\left(x - 2\\right)^{2}};F(x)=\\frac{A}{x} + \\frac{B}{x - 2} + \\frac{C}{\\left(x - 2\\right)^{2}};x^{2} - 5 x + 16=;4 A + x^{2} \\left(A + B\\right) + x \\left(- 4 A - 2 B + C\\right);A + B = 1;- 4 A - 2 B + C = -5;4 A = 16;A=4,\\quad B=-3,\\quad C=5;F(x)=- \\frac{3}{x - 2} + \\frac{5}{\\left(x - 2\\right)^{2}} + \\frac{4}{x}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>First factor x³−4x²+4x=x(x−2)².</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{x^{2} - 5 x + 16}{x \\left(x - 2\\right)^{2}}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x} + \\frac{B}{x - 2} + \\frac{C}{\\left(x - 2\\right)^{2}}\" data-display=\"true\"></span><span data-math=\"x^{2} - 5 x + 16=\" data-display=\"true\"></span><span data-math=\"4 A + x^{2} \\left(A + B\\right) + x \\left(- 4 A - 2 B + C\\right)\" data-display=\"true\"></span><span data-math=\"A + B = 1\" data-display=\"true\"></span><span data-math=\"- 4 A - 2 B + C = -5\" data-display=\"true\"></span><span data-math=\"4 A = 16\" data-display=\"true\"></span><span data-math=\"A=4,\\quad B=-3,\\quad C=5\" data-display=\"true\"></span><span data-math=\"F(x)=- \\frac{3}{x - 2} + \\frac{5}{\\left(x - 2\\right)^{2}} + \\frac{4}{x}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.5/q1",
+      "status": "worked",
+      "method": "Divide x²−5x+7 by x−3, retaining the remainder.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\x&7 - 2 x\\\\-2&1\\end{array};x^{2} - 5 x + 7=(x - 3)(x - 2)+(1);\\frac{x^{2} - 5 x + 7}{x - 3}=x - 2+\\frac{1}{x - 3}",
+          "explanation": "Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide x²−5x+7 by x−3, retaining the remainder.</p><p>Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero.</p><span data-math=\"\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\x&amp;7 - 2 x\\\\-2&amp;1\\end{array}\" data-display=\"true\"></span><span data-math=\"x^{2} - 5 x + 7=(x - 3)(x - 2)+(1)\" data-display=\"true\"></span><span data-math=\"\\frac{x^{2} - 5 x + 7}{x - 3}=x - 2+\\frac{1}{x - 3}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.5/q2",
+      "status": "worked",
+      "method": "Use the remainder theorem at x=−1, then divide.",
+      "steps": [
+        {
+          "latex": "r=(-1)^2-5(-1)+9=15",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\x&9 - 6 x\\\\-6&15\\end{array};x^{2} - 5 x + 9=(x + 1)(x - 6)+(15);\\frac{x^{2} - 5 x + 9}{x + 1}=x - 6+\\frac{15}{x + 1}",
+          "explanation": "Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the remainder theorem at x=−1, then divide.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"r=(-1)^2-5(-1)+9=15\" data-display=\"true\"></span></li><li><p>Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero.</p><span data-math=\"\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\x&amp;9 - 6 x\\\\-6&amp;15\\end{array}\" data-display=\"true\"></span><span data-math=\"x^{2} - 5 x + 9=(x + 1)(x - 6)+(15)\" data-display=\"true\"></span><span data-math=\"\\frac{x^{2} - 5 x + 9}{x + 1}=x - 6+\\frac{15}{x + 1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.5/q3",
+      "status": "worked",
+      "method": "Divide the cubic by x+3 and compare the quotient coefficients and remainder.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\x^{2}&- 4 x^{2} - 9\\\\- 4 x&12 x - 9\\\\12&-45\\end{array};x^{3} - x^{2} - 9=(x + 3)(x^{2} - 4 x + 12)+(-45);\\frac{x^{3} - x^{2} - 9}{x + 3}=x^{2} - 4 x + 12+\\frac{-45}{x + 3};A=1,\\ B=-4,\\ C=12,\\ D=-45",
+          "explanation": "Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero. These are the coefficients and remainder in the requested form.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide the cubic by x+3 and compare the quotient coefficients and remainder.</p><p>Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero. These are the coefficients and remainder in the requested form.</p><span data-math=\"\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\x^{2}&amp;- 4 x^{2} - 9\\\\- 4 x&amp;12 x - 9\\\\12&amp;-45\\end{array}\" data-display=\"true\"></span><span data-math=\"x^{3} - x^{2} - 9=(x + 3)(x^{2} - 4 x + 12)+(-45)\" data-display=\"true\"></span><span data-math=\"\\frac{x^{3} - x^{2} - 9}{x + 3}=x^{2} - 4 x + 12+\\frac{-45}{x + 3}\" data-display=\"true\"></span><span data-math=\"A=1,\\ B=-4,\\ C=12,\\ D=-45\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.5/q4",
+      "status": "worked",
+      "method": "Divide by x−4 and compare the resulting polynomial identity.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\x^{2}&2 x^{2} + 5\\\\2 x&8 x + 5\\\\8&37\\end{array};x^{3} - 2 x^{2} + 5=(x - 4)(x^{2} + 2 x + 8)+(37);\\frac{x^{3} - 2 x^{2} + 5}{x - 4}=x^{2} + 2 x + 8+\\frac{37}{x - 4};A=1,\\ B=2,\\ C=8,\\ D=37",
+          "explanation": "Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero. ",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide by x−4 and compare the resulting polynomial identity.</p><p>Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero. </p><span data-math=\"\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\x^{2}&amp;2 x^{2} + 5\\\\2 x&amp;8 x + 5\\\\8&amp;37\\end{array}\" data-display=\"true\"></span><span data-math=\"x^{3} - 2 x^{2} + 5=(x - 4)(x^{2} + 2 x + 8)+(37)\" data-display=\"true\"></span><span data-math=\"\\frac{x^{3} - 2 x^{2} + 5}{x - 4}=x^{2} + 2 x + 8+\\frac{37}{x - 4}\" data-display=\"true\"></span><span data-math=\"A=1,\\ B=2,\\ C=8,\\ D=37\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.5/q5",
+      "status": "worked",
+      "method": "Include a constant term and resolve the proper-fraction remainder.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{18 x^{2} + 22 x - 7}{\\left(x + 2\\right) \\left(3 x - 1\\right)};F(x)=A + \\frac{B}{x + 2} + \\frac{C}{3 x - 1};18 x^{2} + 22 x - 7=;3 A x^{2} - 2 A - B + 2 C + x \\left(5 A + 3 B + C\\right);3 A = 18;5 A + 3 B + C = 22;- 2 A - B + 2 C = -7;A=6,\\quad B=-3,\\quad C=1;F(x)=6 + \\frac{1}{3 x - 1} - \\frac{3}{x + 2}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Include a constant term and resolve the proper-fraction remainder.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{18 x^{2} + 22 x - 7}{\\left(x + 2\\right) \\left(3 x - 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=A + \\frac{B}{x + 2} + \\frac{C}{3 x - 1}\" data-display=\"true\"></span><span data-math=\"18 x^{2} + 22 x - 7=\" data-display=\"true\"></span><span data-math=\"3 A x^{2} - 2 A - B + 2 C + x \\left(5 A + 3 B + C\\right)\" data-display=\"true\"></span><span data-math=\"3 A = 18\" data-display=\"true\"></span><span data-math=\"5 A + 3 B + C = 22\" data-display=\"true\"></span><span data-math=\"- 2 A - B + 2 C = -7\" data-display=\"true\"></span><span data-math=\"A=6,\\quad B=-3,\\quad C=1\" data-display=\"true\"></span><span data-math=\"F(x)=6 + \\frac{1}{3 x - 1} - \\frac{3}{x + 2}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.5/q6",
+      "status": "worked",
+      "method": "Divide by x−3; the quotient gives A,B,C and the remainder gives D.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\2 x^{2}&2 x^{2} + 5 x - 1\\\\2 x&11 x - 1\\\\11&32\\end{array};2 x^{3} - 4 x^{2} + 5 x - 1=(x - 3)(2 x^{2} + 2 x + 11)+(32);\\frac{2 x^{3} - 4 x^{2} + 5 x - 1}{x - 3}=2 x^{2} + 2 x + 11+\\frac{32}{x - 3};A=2,\\ B=2,\\ C=11,\\ D=32",
+          "explanation": "Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero. ",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide by x−3; the quotient gives A,B,C and the remainder gives D.</p><p>Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero. </p><span data-math=\"\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\2 x^{2}&amp;2 x^{2} + 5 x - 1\\\\2 x&amp;11 x - 1\\\\11&amp;32\\end{array}\" data-display=\"true\"></span><span data-math=\"2 x^{3} - 4 x^{2} + 5 x - 1=(x - 3)(2 x^{2} + 2 x + 11)+(32)\" data-display=\"true\"></span><span data-math=\"\\frac{2 x^{3} - 4 x^{2} + 5 x - 1}{x - 3}=2 x^{2} + 2 x + 11+\\frac{32}{x - 3}\" data-display=\"true\"></span><span data-math=\"A=2,\\ B=2,\\ C=11,\\ D=32\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.5/q7",
+      "status": "worked",
+      "method": "Divide by x²+2; zero coefficients for missing powers are retained.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\x^{2}&5 - 5 x^{2}\\\\-5&15\\end{array};x^{4} - 3 x^{2} + 5=(x^{2} + 2)(x^{2} - 5)+(15);\\frac{x^{4} - 3 x^{2} + 5}{x^{2} + 2}=x^{2} - 5+\\frac{15}{x^{2} + 2};A=1,\\ B=-5,\\ C=15",
+          "explanation": "Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero. ",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide by x²+2; zero coefficients for missing powers are retained.</p><p>Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero. </p><span data-math=\"\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\x^{2}&amp;5 - 5 x^{2}\\\\-5&amp;15\\end{array}\" data-display=\"true\"></span><span data-math=\"x^{4} - 3 x^{2} + 5=(x^{2} + 2)(x^{2} - 5)+(15)\" data-display=\"true\"></span><span data-math=\"\\frac{x^{4} - 3 x^{2} + 5}{x^{2} + 2}=x^{2} - 5+\\frac{15}{x^{2} + 2}\" data-display=\"true\"></span><span data-math=\"A=1,\\ B=-5,\\ C=15\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.5/q8",
+      "status": "worked",
+      "method": "Include a constant polynomial part, then match coefficients.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{4 x^{2} - 5 x - 3}{\\left(x + 1\\right) \\left(2 x - 1\\right)};F(x)=A + \\frac{B}{x + 1} + \\frac{C}{2 x - 1};4 x^{2} - 5 x - 3=;2 A x^{2} - A - B + C + x \\left(A + 2 B + C\\right);2 A = 4;A + 2 B + C = -5;- A - B + C = -3;A=2,\\quad B=-2,\\quad C=-3;F(x)=2 - \\frac{3}{2 x - 1} - \\frac{2}{x + 1}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Include a constant polynomial part, then match coefficients.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{4 x^{2} - 5 x - 3}{\\left(x + 1\\right) \\left(2 x - 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=A + \\frac{B}{x + 1} + \\frac{C}{2 x - 1}\" data-display=\"true\"></span><span data-math=\"4 x^{2} - 5 x - 3=\" data-display=\"true\"></span><span data-math=\"2 A x^{2} - A - B + C + x \\left(A + 2 B + C\\right)\" data-display=\"true\"></span><span data-math=\"2 A = 4\" data-display=\"true\"></span><span data-math=\"A + 2 B + C = -5\" data-display=\"true\"></span><span data-math=\"- A - B + C = -3\" data-display=\"true\"></span><span data-math=\"A=2,\\quad B=-2,\\quad C=-3\" data-display=\"true\"></span><span data-math=\"F(x)=2 - \\frac{3}{2 x - 1} - \\frac{2}{x + 1}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.5/q9",
+      "status": "worked",
+      "method": "Divide by x²+2; the remainder is linear.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|l}\\text{quotient term}&\\text{remainder after subtraction}\\\\3 x^{2}&- 5 x^{3} - 12 x + 5\\\\- 5 x&5 - 2 x\\end{array};3 x^{4} - 5 x^{3} + 6 x^{2} - 12 x + 5=(x^{2} + 2)(3 x^{2} - 5 x)+(5 - 2 x);\\frac{3 x^{4} - 5 x^{3} + 6 x^{2} - 12 x + 5}{x^{2} + 2}=3 x^{2} - 5 x+\\frac{5 - 2 x}{x^{2} + 2};A=3,\\ B=-5,\\ C=0,\\ D=-2,\\ E=5",
+          "explanation": "Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero. ",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide by x²+2; the remainder is linear.</p><p>Divide the leading terms, multiply by the divisor, subtract and repeat. The final remainder has degree smaller than the divisor; the original denominator must be nonzero. </p><span data-math=\"\\begin{array}{c|l}\\text{quotient term}&amp;\\text{remainder after subtraction}\\\\3 x^{2}&amp;- 5 x^{3} - 12 x + 5\\\\- 5 x&amp;5 - 2 x\\end{array}\" data-display=\"true\"></span><span data-math=\"3 x^{4} - 5 x^{3} + 6 x^{2} - 12 x + 5=(x^{2} + 2)(3 x^{2} - 5 x)+(5 - 2 x)\" data-display=\"true\"></span><span data-math=\"\\frac{3 x^{4} - 5 x^{3} + 6 x^{2} - 12 x + 5}{x^{2} + 2}=3 x^{2} - 5 x+\\frac{5 - 2 x}{x^{2} + 2}\" data-display=\"true\"></span><span data-math=\"A=3,\\ B=-5,\\ C=0,\\ D=-2,\\ E=5\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/problem-a/qbronze",
+      "status": "worked",
+      "method": "Factor and cancel, then use a common denominator for the subtraction.",
+      "steps": [
+        {
+          "latex": "\\frac{(3x-2)(x+1)}{(x-1)(x+1)}=\\frac{3x-2}{x-1};x\\ne\\pm1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{3x-2}{x-1}-\\frac1{x(x-1)};=\\frac{3x^2-2x-1}{x(x-1)}=\\frac{(3x+1)(x-1)}{x(x-1)}=\\frac{3x+1}x;x\\ne-1,0,1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor and cancel, then use a common denominator for the subtraction.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{(3x-2)(x+1)}{(x-1)(x+1)}=\\frac{3x-2}{x-1}\" data-display=\"true\"></span><span data-math=\"x\\ne\\pm1\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{3x-2}{x-1}-\\frac1{x(x-1)}\" data-display=\"true\"></span><span data-math=\"=\\frac{3x^2-2x-1}{x(x-1)}=\\frac{(3x+1)(x-1)}{x(x-1)}=\\frac{3x+1}x\" data-display=\"true\"></span><span data-math=\"x\\ne-1,0,1\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/problem-a/qsilver",
+      "status": "worked",
+      "method": "Cancel the factor 2x−3 in the first fraction, then combine.",
+      "steps": [
+        {
+          "latex": "\\frac{x(2x-3)}{(2x-3)(x+2)}-\\frac6{(x+2)(x-1)};=\\frac{x(x-1)-6}{(x+2)(x-1)};=\\frac{(x-3)(x+2)}{(x+2)(x-1)}=\\frac{x-3}{x-1};x\\ne\\frac32,-2,1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Cancel the factor 2x−3 in the first fraction, then combine.</p><span data-math=\"\\frac{x(2x-3)}{(2x-3)(x+2)}-\\frac6{(x+2)(x-1)}\" data-display=\"true\"></span><span data-math=\"=\\frac{x(x-1)-6}{(x+2)(x-1)}\" data-display=\"true\"></span><span data-math=\"=\\frac{(x-3)(x+2)}{(x+2)(x-1)}=\\frac{x-3}{x-1}\" data-display=\"true\"></span><span data-math=\"x\\ne\\frac32,-2,1\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/problem-a/qgold",
+      "status": "worked",
+      "method": "Cancel the common x+1 factor, then divide the quadratic by 3x+2.",
+      "steps": [
+        {
+          "latex": "2x^3+3x^2-5x-6=(x+1)(2x^2+x-6);3x^2+5x+2=(x+1)(3x+2);\\frac{2x^2+x-6}{3x+2}=\\frac23x-\\frac19-\\frac{52}{9(3x+2)};=\\frac23x-\\frac19-\\frac{52}{27x+18};A=\\frac23,\\ B=-\\frac19,\\ C=-52,\\ D=27,\\ E=18;x\\ne-1,-\\frac23",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Cancel the common x+1 factor, then divide the quadratic by 3x+2.</p><span data-math=\"2x^3+3x^2-5x-6=(x+1)(2x^2+x-6)\" data-display=\"true\"></span><span data-math=\"3x^2+5x+2=(x+1)(3x+2)\" data-display=\"true\"></span><span data-math=\"\\frac{2x^2+x-6}{3x+2}=\\frac23x-\\frac19-\\frac{52}{9(3x+2)}\" data-display=\"true\"></span><span data-math=\"=\\frac23x-\\frac19-\\frac{52}{27x+18}\" data-display=\"true\"></span><span data-math=\"A=\\frac23,\\ B=-\\frac19,\\ C=-52,\\ D=27,\\ E=18\" data-display=\"true\"></span><span data-math=\"x\\ne-1,-\\frac23\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/problem-b/qbronze",
+      "status": "worked",
+      "method": "Use both powers of 3x−2 and the distinct factor 1−x.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{39 x^{2} - 49 x + 15}{- \\left(x - 1\\right) \\left(3 x - 2\\right)^{2}};F(x)=\\frac{A}{3 x - 2} + \\frac{B}{\\left(3 x - 2\\right)^{2}} + \\frac{C}{1 - x};39 x^{2} - 49 x + 15=;- 2 A + B + 4 C + x^{2} \\left(- 3 A + 9 C\\right) + x \\left(5 A - B - 12 C\\right);- 3 A + 9 C = 39;5 A - B - 12 C = -49;- 2 A + B + 4 C = 15;A=2,\\quad B=-1,\\quad C=5;F(x)=\\frac{2}{3 x - 2} - \\frac{1}{\\left(3 x - 2\\right)^{2}} + \\frac{5}{1 - x}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use both powers of 3x−2 and the distinct factor 1−x.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{39 x^{2} - 49 x + 15}{- \\left(x - 1\\right) \\left(3 x - 2\\right)^{2}}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{3 x - 2} + \\frac{B}{\\left(3 x - 2\\right)^{2}} + \\frac{C}{1 - x}\" data-display=\"true\"></span><span data-math=\"39 x^{2} - 49 x + 15=\" data-display=\"true\"></span><span data-math=\"- 2 A + B + 4 C + x^{2} \\left(- 3 A + 9 C\\right) + x \\left(5 A - B - 12 C\\right)\" data-display=\"true\"></span><span data-math=\"- 3 A + 9 C = 39\" data-display=\"true\"></span><span data-math=\"5 A - B - 12 C = -49\" data-display=\"true\"></span><span data-math=\"- 2 A + B + 4 C = 15\" data-display=\"true\"></span><span data-math=\"A=2,\\quad B=-1,\\quad C=5\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{2}{3 x - 2} - \\frac{1}{\\left(3 x - 2\\right)^{2}} + \\frac{5}{1 - x}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/problem-b/qsilver",
+      "status": "worked",
+      "method": "Factor x²−x−6=(x−3)(x+2), retaining a constant polynomial part.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{3 x^{2} - 2 x + 4}{\\left(x - 3\\right) \\left(x + 2\\right)};F(x)=A + \\frac{B}{x - 3} + \\frac{C}{x + 2};3 x^{2} - 2 x + 4=;A x^{2} - 6 A + 2 B - 3 C + x \\left(- A + B + C\\right);A = 3;- A + B + C = -2;- 6 A + 2 B - 3 C = 4;A=3,\\quad B=5,\\quad C=-4;F(x)=3 - \\frac{4}{x + 2} + \\frac{5}{x - 3}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor x²−x−6=(x−3)(x+2), retaining a constant polynomial part.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{3 x^{2} - 2 x + 4}{\\left(x - 3\\right) \\left(x + 2\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=A + \\frac{B}{x - 3} + \\frac{C}{x + 2}\" data-display=\"true\"></span><span data-math=\"3 x^{2} - 2 x + 4=\" data-display=\"true\"></span><span data-math=\"A x^{2} - 6 A + 2 B - 3 C + x \\left(- A + B + C\\right)\" data-display=\"true\"></span><span data-math=\"A = 3\" data-display=\"true\"></span><span data-math=\"- A + B + C = -2\" data-display=\"true\"></span><span data-math=\"- 6 A + 2 B - 3 C = 4\" data-display=\"true\"></span><span data-math=\"A=3,\\quad B=5,\\quad C=-4\" data-display=\"true\"></span><span data-math=\"F(x)=3 - \\frac{4}{x + 2} + \\frac{5}{x - 3}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/problem-b/qgold",
+      "status": "worked",
+      "method": "Since the numerator does not vanish at x=−1, the vertical asymptote identifies a denominator factor x+1.",
+      "steps": [
+        {
+          "latex": "2x^3-5x^2-4x+3=(x+1)(2x^2-7x+3);=(x+1)(2x-1)(x-3);F(x)=\\frac{3 x^{2} + 3}{\\left(x - 3\\right) \\left(x + 1\\right) \\left(2 x - 1\\right)};F(x)=\\frac{A}{x + 1} + \\frac{B}{2 x - 1} + \\frac{C}{x - 3};3 x^{2} + 3=;3 A - 3 B - C + x^{2} \\left(2 A + B + 2 C\\right) + x \\left(- 7 A - 2 B + C\\right);2 A + B + 2 C = 3;- 7 A - 2 B + C = 0;3 A - 3 B - C = 3;A=\\frac{1}{2},\\quad B=-1,\\quad C=\\frac{3}{2};F(x)=- \\frac{1}{2 x - 1} + \\frac{1}{2 \\left(x + 1\\right)} + \\frac{3}{2 \\left(x - 3\\right)}",
+          "explanation": "Divide by x+1, then factor the remaining quadratic. Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Since the numerator does not vanish at x=−1, the vertical asymptote identifies a denominator factor x+1.</p><p>Divide by x+1, then factor the remaining quadratic. Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"2x^3-5x^2-4x+3=(x+1)(2x^2-7x+3)\" data-display=\"true\"></span><span data-math=\"=(x+1)(2x-1)(x-3)\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{3 x^{2} + 3}{\\left(x - 3\\right) \\left(x + 1\\right) \\left(2 x - 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x + 1} + \\frac{B}{2 x - 1} + \\frac{C}{x - 3}\" data-display=\"true\"></span><span data-math=\"3 x^{2} + 3=\" data-display=\"true\"></span><span data-math=\"3 A - 3 B - C + x^{2} \\left(2 A + B + 2 C\\right) + x \\left(- 7 A - 2 B + C\\right)\" data-display=\"true\"></span><span data-math=\"2 A + B + 2 C = 3\" data-display=\"true\"></span><span data-math=\"- 7 A - 2 B + C = 0\" data-display=\"true\"></span><span data-math=\"3 A - 3 B - C = 3\" data-display=\"true\"></span><span data-math=\"A=\\frac{1}{2},\\quad B=-1,\\quad C=\\frac{3}{2}\" data-display=\"true\"></span><span data-math=\"F(x)=- \\frac{1}{2 x - 1} + \\frac{1}{2 \\left(x + 1\\right)} + \\frac{3}{2 \\left(x - 3\\right)}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/exam/q5",
+      "status": "worked",
+      "method": "Divide by x²−4 first, then resolve the remainder over x±2.",
+      "steps": [
+        {
+          "latex": "2x^4+3x^2-5x+2=(x^2-4)(2x^2+11)-5x+46;-5x+46=d(x-2)+e(x+2);d+e=-5,\\quad-2d+2e=46;d=-14,\\ e=9;a=2,b=0,c=11;\\frac{2x^4+3x^2-5x+2}{x^2-4}=2x^2+11-\\frac{14}{x+2}+\\frac9{x-2}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide by x²−4 first, then resolve the remainder over x±2.</p><span data-math=\"2x^4+3x^2-5x+2=(x^2-4)(2x^2+11)-5x+46\" data-display=\"true\"></span><span data-math=\"-5x+46=d(x-2)+e(x+2)\" data-display=\"true\"></span><span data-math=\"d+e=-5,\\quad-2d+2e=46\" data-display=\"true\"></span><span data-math=\"d=-14,\\ e=9\" data-display=\"true\"></span><span data-math=\"a=2,b=0,c=11\" data-display=\"true\"></span><span data-math=\"\\frac{2x^4+3x^2-5x+2}{x^2-4}=2x^2+11-\\frac{14}{x+2}+\\frac9{x-2}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/exam/q9",
+      "status": "worked",
+      "method": "Include both powers of the repeated factor x+1.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{7 x^{2} + 12 x}{\\left(x + 1\\right)^{2} \\left(x + 2\\right)};F(x)=\\frac{A}{x + 1} + \\frac{B}{\\left(x + 1\\right)^{2}} + \\frac{C}{x + 2};7 x^{2} + 12 x=;2 A + 2 B + C + x^{2} \\left(A + C\\right) + x \\left(3 A + B + 2 C\\right);A + C = 7;3 A + B + 2 C = 12;2 A + 2 B + C = 0;A=3,\\quad B=-5,\\quad C=4;F(x)=\\frac{4}{x + 2} + \\frac{3}{x + 1} - \\frac{5}{\\left(x + 1\\right)^{2}}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Include both powers of the repeated factor x+1.</p><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{7 x^{2} + 12 x}{\\left(x + 1\\right)^{2} \\left(x + 2\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{x + 1} + \\frac{B}{\\left(x + 1\\right)^{2}} + \\frac{C}{x + 2}\" data-display=\"true\"></span><span data-math=\"7 x^{2} + 12 x=\" data-display=\"true\"></span><span data-math=\"2 A + 2 B + C + x^{2} \\left(A + C\\right) + x \\left(3 A + B + 2 C\\right)\" data-display=\"true\"></span><span data-math=\"A + C = 7\" data-display=\"true\"></span><span data-math=\"3 A + B + 2 C = 12\" data-display=\"true\"></span><span data-math=\"2 A + 2 B + C = 0\" data-display=\"true\"></span><span data-math=\"A=3,\\quad B=-5,\\quad C=4\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{4}{x + 2} + \\frac{3}{x + 1} - \\frac{5}{\\left(x + 1\\right)^{2}}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/exam/q49",
+      "status": "worked",
+      "method": "Resolve the fractions and integrate each logarithmic term using its linear denominator derivative.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{12 x^{2} + 20 x + 12}{\\left(x + 1\\right) \\left(x + 2\\right) \\left(3 x + 1\\right)};F(x)=\\frac{A}{3 x + 1} + \\frac{B}{x + 1} + \\frac{C}{x + 2};12 x^{2} + 20 x + 12=;2 A + 2 B + C + x^{2} \\left(A + 3 B + 3 C\\right) + x \\left(3 A + 7 B + 4 C\\right);A + 3 B + 3 C = 12;3 A + 7 B + 4 C = 20;2 A + 2 B + C = 12;A=6,\\quad B=-2,\\quad C=4;F(x)=\\frac{6}{3 x + 1} + \\frac{4}{x + 2} - \\frac{2}{x + 1}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        },
+        {
+          "latex": "F(x)=2\\ln(3x+1)-2\\ln(x+1)+4\\ln(x+2);\\int_0^2 f(x)\\,dx=F(2)-F(0);=2\\ln7-2\\ln3+4\\ln4-4\\ln2;=\\ln\\frac{7^2\\cdot2^4}{3^2}=\\ln\\frac{784}9",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Resolve the fractions and integrate each logarithmic term using its linear denominator derivative.</p><ol type=\"a\" class=\"parts\"><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{12 x^{2} + 20 x + 12}{\\left(x + 1\\right) \\left(x + 2\\right) \\left(3 x + 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{A}{3 x + 1} + \\frac{B}{x + 1} + \\frac{C}{x + 2}\" data-display=\"true\"></span><span data-math=\"12 x^{2} + 20 x + 12=\" data-display=\"true\"></span><span data-math=\"2 A + 2 B + C + x^{2} \\left(A + 3 B + 3 C\\right) + x \\left(3 A + 7 B + 4 C\\right)\" data-display=\"true\"></span><span data-math=\"A + 3 B + 3 C = 12\" data-display=\"true\"></span><span data-math=\"3 A + 7 B + 4 C = 20\" data-display=\"true\"></span><span data-math=\"2 A + 2 B + C = 12\" data-display=\"true\"></span><span data-math=\"A=6,\\quad B=-2,\\quad C=4\" data-display=\"true\"></span><span data-math=\"F(x)=\\frac{6}{3 x + 1} + \\frac{4}{x + 2} - \\frac{2}{x + 1}\" data-display=\"true\"></span></li><li><span data-math=\"F(x)=2\\ln(3x+1)-2\\ln(x+1)+4\\ln(x+2)\" data-display=\"true\"></span><span data-math=\"\\int_0^2 f(x)\\,dx=F(2)-F(0)\" data-display=\"true\"></span><span data-math=\"=2\\ln7-2\\ln3+4\\ln4-4\\ln2\" data-display=\"true\"></span><span data-math=\"=\\ln\\frac{7^2\\cdot2^4}{3^2}=\\ln\\frac{784}9\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/exam/q62",
+      "status": "worked",
+      "method": "One counterexample disproves the universal claim. For √2 use a lowest-terms contradiction.",
+      "steps": [
+        {
+          "latex": "p=q=\\sqrt2;\\quad pq=2",
+          "explanation": "Both factors are irrational but the product is rational.",
+          "graphs": []
+        },
+        {
+          "latex": "\\sqrt2=\\frac ab,\\ \\gcd(a,b)=1,\\ b\\ne0;a^2=2b^2\\Rightarrow a\\text{ even};a=2k\\Rightarrow4k^2=2b^2;b^2=2k^2\\Rightarrow b\\text{ even}",
+          "explanation": "A square is even only if its integer root is even. Both a and b would then share factor 2, contradicting the assumed lowest terms. Therefore √2 is irrational.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>One counterexample disproves the universal claim. For √2 use a lowest-terms contradiction.</p><ol type=\"a\" class=\"parts\"><li><p>Both factors are irrational but the product is rational.</p><span data-math=\"p=q=\\sqrt2\" data-display=\"true\"></span><span data-math=\"\\quad pq=2\" data-display=\"true\"></span></li><li><p>A square is even only if its integer root is even. Both a and b would then share factor 2, contradicting the assumed lowest terms. Therefore √2 is irrational.</p><span data-math=\"\\sqrt2=\\frac ab,\\ \\gcd(a,b)=1,\\ b\\ne0\" data-display=\"true\"></span><span data-math=\"a^2=2b^2\\Rightarrow a\\text{ even}\" data-display=\"true\"></span><span data-math=\"a=2k\\Rightarrow4k^2=2b^2\" data-display=\"true\"></span><span data-math=\"b^2=2k^2\\Rightarrow b\\text{ even}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/exam/q69",
+      "status": "worked",
+      "method": "Simplify while retaining x>4; use the resulting range for the inverse and the composite domain.",
+      "steps": [
+        {
+          "latex": "f=\\frac{2(x-1)-(x+2)}{(x-4)(x+2)};=\\frac{x-4}{(x-4)(x+2)}=\\frac1{x+2},\\quad x>4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "x>4\\Rightarrow x+2>6;0<f(x)<\\frac16",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=\\frac1{x+2}\\Rightarrow x=\\frac1y-2;f^{-1}(x)=\\frac1x-2;\\text{domain }0<x<\\frac16",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f(g(x))=\\frac1{2x^2+3}=\\frac1{43};2x^2+3=43;x^2=20;x=\\pm2\\sqrt5;g(\\pm2\\sqrt5)=41>4",
+          "explanation": "Both roots meet the composite domain g(x)>4. The supplied answer omits the negative root, although g is explicitly defined for all real x.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Simplify while retaining x&gt;4; use the resulting range for the inverse and the composite domain.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f=\\frac{2(x-1)-(x+2)}{(x-4)(x+2)}\" data-display=\"true\"></span><span data-math=\"=\\frac{x-4}{(x-4)(x+2)}=\\frac1{x+2},\\quad x&gt;4\" data-display=\"true\"></span></li><li><span data-math=\"x&gt;4\\Rightarrow x+2&gt;6\" data-display=\"true\"></span><span data-math=\"0&lt;f(x)&lt;\\frac16\" data-display=\"true\"></span></li><li><span data-math=\"y=\\frac1{x+2}\\Rightarrow x=\\frac1y-2\" data-display=\"true\"></span><span data-math=\"f^{-1}(x)=\\frac1x-2\" data-display=\"true\"></span><span data-math=\"\\text{domain }0&lt;x&lt;\\frac16\" data-display=\"true\"></span></li><li><p>Both roots meet the composite domain g(x)&gt;4. The supplied answer omits the negative root, although g is explicitly defined for all real x.</p><span data-math=\"f(g(x))=\\frac1{2x^2+3}=\\frac1{43}\" data-display=\"true\"></span><span data-math=\"2x^2+3=43\" data-display=\"true\"></span><span data-math=\"x^2=20\" data-display=\"true\"></span><span data-math=\"x=\\pm2\\sqrt5\" data-display=\"true\"></span><span data-math=\"g(\\pm2\\sqrt5)=41&gt;4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/exam/q75",
+      "status": "worked",
+      "method": "Factor, cancel, then combine; retain all exclusions from the original denominators.",
+      "steps": [
+        {
+          "latex": "\\frac{x(5x-4)}{(5x-4)(x+2)}-\\frac{10}{(x-3)(x+2)};=\\frac{x(x-3)-10}{(x+2)(x-3)};=\\frac{(x-5)(x+2)}{(x+2)(x-3)}=\\frac{x-5}{x-3};x\\ne\\frac45,-2,3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{x-5}{x-3}=\\frac{x-3-2}{x-3}=1-\\frac2{x-3};A=1,\\ B=-2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'(x)=2(x-3)^{-2}=\\frac2{(x-3)^2}>0\\quad(x>3)",
+          "explanation": "Thus f is increasing on the entire requested interval x>3. The stated definition lists only x≠3, but the original fractions also exclude −2 and 4/5; these are outside the requested interval.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor, cancel, then combine; retain all exclusions from the original denominators.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{x(5x-4)}{(5x-4)(x+2)}-\\frac{10}{(x-3)(x+2)}\" data-display=\"true\"></span><span data-math=\"=\\frac{x(x-3)-10}{(x+2)(x-3)}\" data-display=\"true\"></span><span data-math=\"=\\frac{(x-5)(x+2)}{(x+2)(x-3)}=\\frac{x-5}{x-3}\" data-display=\"true\"></span><span data-math=\"x\\ne\\frac45,-2,3\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{x-5}{x-3}=\\frac{x-3-2}{x-3}=1-\\frac2{x-3}\" data-display=\"true\"></span><span data-math=\"A=1,\\ B=-2\" data-display=\"true\"></span></li><li><p>Thus f is increasing on the entire requested interval x&gt;3. The stated definition lists only x≠3, but the original fractions also exclude −2 and 4/5; these are outside the requested interval.</p><span data-math=\"f&#x27;(x)=2(x-3)^{-2}=\\frac2{(x-3)^2}&gt;0\\quad(x&gt;3)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/exam/q78",
+      "status": "worked",
+      "method": "Resolve the fraction, then use the geometric series for each reciprocal.",
+      "steps": [
+        {
+          "latex": "F(x)=\\frac{3 x^{2} - x + 2}{\\left(x - 2\\right) \\left(x + 1\\right)};F(x)=A + \\frac{B}{x + 1} + \\frac{C}{x - 2};3 x^{2} - x + 2=;A x^{2} - 2 A - 2 B + C + x \\left(- A + B + C\\right);A = 3;- A + B + C = -1;- 2 A - 2 B + C = 2;A=3,\\quad B=-2,\\quad C=4;F(x)=3 - \\frac{2}{x + 1} + \\frac{4}{x - 2}",
+          "explanation": "Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.",
+          "graphs": []
+        },
+        {
+          "latex": "f=3-\\frac2{1+x}-\\frac2{1-x/2};\\frac1{1+x}=1-x+x^2+\\cdots;\\frac1{1-x/2}=1+\\frac x2+\\frac{x^2}4+\\cdots;f=-1+x-\\frac52x^2+\\cdots",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "|x|<1\\text{ and }|x/2|<1;\\text{combined domain }|x|<1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Resolve the fraction, then use the geometric series for each reciprocal.</p><ol type=\"a\" class=\"parts\"><li><p>Multiply by the common denominator. Equate coefficients of matching powers of the variable and solve; denominators retain their original nonzero restrictions.</p><span data-math=\"F(x)=\\frac{3 x^{2} - x + 2}{\\left(x - 2\\right) \\left(x + 1\\right)}\" data-display=\"true\"></span><span data-math=\"F(x)=A + \\frac{B}{x + 1} + \\frac{C}{x - 2}\" data-display=\"true\"></span><span data-math=\"3 x^{2} - x + 2=\" data-display=\"true\"></span><span data-math=\"A x^{2} - 2 A - 2 B + C + x \\left(- A + B + C\\right)\" data-display=\"true\"></span><span data-math=\"A = 3\" data-display=\"true\"></span><span data-math=\"- A + B + C = -1\" data-display=\"true\"></span><span data-math=\"- 2 A - 2 B + C = 2\" data-display=\"true\"></span><span data-math=\"A=3,\\quad B=-2,\\quad C=4\" data-display=\"true\"></span><span data-math=\"F(x)=3 - \\frac{2}{x + 1} + \\frac{4}{x - 2}\" data-display=\"true\"></span></li><li><span data-math=\"f=3-\\frac2{1+x}-\\frac2{1-x/2}\" data-display=\"true\"></span><span data-math=\"\\frac1{1+x}=1-x+x^2+\\cdots\" data-display=\"true\"></span><span data-math=\"\\frac1{1-x/2}=1+\\frac x2+\\frac{x^2}4+\\cdots\" data-display=\"true\"></span><span data-math=\"f=-1+x-\\frac52x^2+\\cdots\" data-display=\"true\"></span></li><li><span data-math=\"|x|&lt;1\\text{ and }|x/2|&lt;1\" data-display=\"true\"></span><span data-math=\"\\text{combined domain }|x|&lt;1\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}
