@@ -2931,5 +2931,25 @@
     "overflowingContainers": 0,
     "allPageLabelsVerified": true,
     "allA4": true
+  },
+  "edexcelSubset": {
+    "sourceQuestions": 6217,
+    "fit": 5932,
+    "requiresDifferentLayout": 285,
+    "method": "Intersect the audited source IDs with the existing library Edexcel skill filter; Maths uses its fixed syllabus catalogue.",
+    "excludes": 750,
+    "selectionTests": {
+      "passed": 7,
+      "command": "LUISA_BROWSER_CHANNEL=chrome python -m unittest discover -s tests -p test_papers_selection.py -v",
+      "covers": [
+        "eligible counts",
+        "excluded skills and empty topics",
+        "restored selection removes ineligible IDs",
+        "random and manual selection",
+        "immutable print content",
+        "loading and cancellation",
+        "mobile width"
+      ]
+    }
   }
 }

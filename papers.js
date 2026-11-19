@@ -46,7 +46,7 @@
   function refreshFilters(wantedBook = '') {
     const courses = window.FMQ_LIBRARY.courses.filter(c => !$('papers-course').value || c.id === $('papers-course').value);
     options('papers-book', 'All books', courses.flatMap(c => c.books.map(b => [`${c.id}/${b.id}`, b.title])), wantedBook);
-    const topics = courses.flatMap(c => c.books.filter(b => !$('papers-book').value || `${c.id}/${b.id}` === $('papers-book').value).flatMap(b => b.topics.map(t => ({key: `${c.id}/${b.id}/${t.id}`, title: t.title, bookTitle: b.title}))));
+    const topics = courses.flatMap(c => c.books.filter(b => !$('papers-book').value || `${c.id}/${b.id}` === $('papers-book').value).flatMap(b => b.topics.filter(t => skills.some(s => s.topicKey === `${c.id}/${b.id}/${t.id}`)).map(t => ({key: `${c.id}/${b.id}/${t.id}`, title: t.title, bookTitle: b.title}))));
     chosenTopics = new Set([...chosenTopics].filter(key => topics.some(t => t.key === key)));
     $('papers-topics').replaceChildren(...topics.map(t => {
       const label = element('label', undefined, 'topic-choice');
@@ -209,6 +209,8 @@
     const ids = new Set();
     for (const course of window.FMQ_LIBRARY.courses) for (const book of course.books) for (const topic of book.topics) for (const skill of topic.skills) {
       if (skill.reference || skill.available === false) continue;
+      // Match the existing library's Edexcel filter; Maths uses its fixed syllabus catalogue.
+      if (course.id !== 'maths-a-level' && skill.edexcel !== true) continue;
       const eligible = skill.questions.filter(q => !q.reference);
       if (!eligible.length) continue;
       const key = `${course.id}/${book.id}/${topic.id}/${skill.id}`;
@@ -279,7 +281,7 @@
     const byId = new Map(catalogue.map(row => [row.id, row]));
     const restored = [...savedIds].map(id => byId.get(id)).filter(Boolean);
     if (restored.length) setSelection(restored, `${restored.length} questions restored from this browser session.`);
-    else status(`${catalogue.length.toLocaleString()} worked questions available. Choose your pool to begin.`);
+    else status(`${catalogue.length.toLocaleString()} Edexcel-filtered worked questions available. Choose your pool to begin.`);
   } catch (error) {
     status(error.message || 'The paper builder could not start. Reload the page to retry.', true);
     for (const id of ['papers-generate', 'papers-regenerate', 'papers-print', 'papers-browse']) $(id).disabled = true;

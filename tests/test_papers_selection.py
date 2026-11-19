@@ -19,6 +19,12 @@ except ImportError:
 ROOT = Path(__file__).resolve().parents[1]
 
 
+class BrowserTestServer(ThreadingHTTPServer):
+    # Browser asset bursts plus Playwright routing can exceed Python's default
+    # five-connection backlog and reset otherwise valid local requests on macOS.
+    request_queue_size = 128
+
+
 class QuietHandler(SimpleHTTPRequestHandler):
     def log_message(self, *_args):
         pass
@@ -28,7 +34,7 @@ class QuietHandler(SimpleHTTPRequestHandler):
 class PapersSelection(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.server = ThreadingHTTPServer(('127.0.0.1', 0), partial(QuietHandler, directory=str(ROOT)))
+        cls.server = BrowserTestServer(('127.0.0.1', 0), partial(QuietHandler, directory=str(ROOT)))
         cls.thread = threading.Thread(target=cls.server.serve_forever, daemon=True)
         cls.thread.start()
         cls.playwright = sync_playwright().start()
@@ -47,7 +53,7 @@ class PapersSelection(unittest.TestCase):
         self.page = self.context.new_page()
         self.page.route('**/papers-print.js', lambda route: route.fulfill(content_type='text/javascript', body='window.LUISA_PAPERS_PRINT={create:async rows=>{window.testPaperSnapshot=rows;return {warnings:[]}}};'))
         self.page.goto(self.url)
-        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('6,967')")
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('6,217')")
 
     def tearDown(self):
         self.context.close()
@@ -61,7 +67,7 @@ class PapersSelection(unittest.TestCase):
         return self.page.locator('[data-remove]').evaluate_all('(nodes)=>nodes.map(node=>node.dataset.remove)')
 
     def test_all_actual_questions_reference_exclusion_and_qualified_ids(self):
-        self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '6,967 questions in this pool')
+        self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '6,217 questions in this pool')
         self.page.locator('#papers-course').select_option('maths-a-level')
         self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '3,423 questions in this pool')
         self.assertEqual(self.page.locator('#papers-skills input[value$="/smq-2.48"]').count(), 0)
@@ -73,6 +79,24 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(len(ids), len(set(ids)))
         self.assertTrue(all(i.startswith('further-maths-a-level/pure-core-2/') for i in ids))
         self.assertTrue(any(i.endswith('/q34') for i in ids))
+
+    def test_edexcel_filter_excludes_skills_topics_and_saved_questions(self):
+        self.page.locator('#papers-course').select_option('further-maths-a-level')
+        self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '2,794 questions in this pool')
+        self.assertEqual(self.page.locator('#papers-skills input[value$="/1.16"]').count(), 0)
+        self.assertEqual(self.page.locator('#papers-topics input[value$="/further-algebra"]').count(), 0)
+        self.page.evaluate("""() => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({
+            version:1, selected:[
+                'further-maths-a-level/pure-core-1/further-algebra/1.16/q1',
+                'further-maths-a-level/pure-core-1/complex-numbers/1.01/q1'
+            ]
+        }))""")
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-selected-count').textContent==='1'")
+        self.assertEqual(self.selection_ids(), ['further-maths-a-level/pure-core-1/complex-numbers/1.01/q1'])
+        self.page.locator('#papers-print').click()
+        self.page.wait_for_function('Boolean(window.testPaperSnapshot)')
+        self.assertEqual(self.page.evaluate('testPaperSnapshot.length'), 1)
 
     def test_random_without_replacement_and_regeneration(self):
         self.generate(12)
@@ -110,7 +134,7 @@ class PapersSelection(unittest.TestCase):
             self.assertEqual(row['question'], original['question'])
             self.assertEqual(row['steps'], original['steps'])
             self.assertEqual(row['source']['questionId'], original['id'])
-        self.page.locator('#papers-selected details').first.evaluate('(node) => {node.open = true}')
+        self.page.locator('#papers-selected summary').first.click()
         self.page.locator('#papers-selected .katex').first.wait_for()
         self.page.set_viewport_size({'width': 1440, 'height': 1100})
         screenshot_dir = os.environ.get('LUISA_SCREENSHOT_DIR')
