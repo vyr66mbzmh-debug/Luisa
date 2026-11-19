@@ -1,0 +1,871 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-1",
+  "chapter": 8,
+  "sourcePdf": "resources/practice/pure-year-1/chapter-08.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.1/q1",
+      "status": "worked",
+      "method": "Use the Pascal coefficients 1,4,6,4,1 for power 4 and 1,5,10,10,5,1 for power 5, multiplying by the appropriate powers of each term.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{5}r(3)^{5-r}(- x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&243\\\\1&- 405 x\\\\2&270 x^{2}\\\\3&- 90 x^{3}\\\\4&15 x^{4}\\\\5&- x^{5}\\end{array};\\quad (3- x)^{5}=243- 405 x+270 x^{2}- 90 x^{3}+15 x^{4}- x^{5}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "T_r=\\binom{4}r(2 x)^{4-r}(y)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&16 x^{4}\\\\1&32 x^{3} y\\\\2&24 x^{2} y^{2}\\\\3&8 x y^{3}\\\\4&y^{4}\\end{array};\\quad (2 x+y)^{4}=16 x^{4}+32 x^{3} y+24 x^{2} y^{2}+8 x y^{3}+y^{4}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "T_r=\\binom{5}r(3 x)^{5-r}(- 2 y)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&243 x^{5}\\\\1&- 810 x^{4} y\\\\2&1080 x^{3} y^{2}\\\\3&- 720 x^{2} y^{3}\\\\4&240 x y^{4}\\\\5&- 32 y^{5}\\end{array};\\quad (3 x- 2 y)^{5}=\\begin{aligned}&243 x^{5}- 810 x^{4} y+1080 x^{3} y^{2}\\\\&- 720 x^{2} y^{3}+240 x y^{4}- 32 y^{5}\\end{aligned}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        }
+      ],
+      "solutionHtml": "<p>Use the Pascal coefficients 1,4,6,4,1 for power 4 and 1,5,10,10,5,1 for power 5, multiplying by the appropriate powers of each term.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{5}r(3)^{5-r}(- x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;243\\\\1&amp;- 405 x\\\\2&amp;270 x^{2}\\\\3&amp;- 90 x^{3}\\\\4&amp;15 x^{4}\\\\5&amp;- x^{5}\\end{array}\\\\&amp;(3- x)^{5}\\\\&amp;=243- 405 x+270 x^{2}- 90 x^{3}+15 x^{4}- x^{5}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{4}r(2 x)^{4-r}(y)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;16 x^{4}\\\\1&amp;32 x^{3} y\\\\2&amp;24 x^{2} y^{2}\\\\3&amp;8 x y^{3}\\\\4&amp;y^{4}\\end{array}\\\\&amp;(2 x+y)^{4}\\\\&amp;=16 x^{4}+32 x^{3} y+24 x^{2} y^{2}+8 x y^{3}+y^{4}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{5}r(3 x)^{5-r}(- 2 y)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;243 x^{5}\\\\1&amp;- 810 x^{4} y\\\\2&amp;1080 x^{3} y^{2}\\\\3&amp;- 720 x^{2} y^{3}\\\\4&amp;240 x y^{4}\\\\5&amp;- 32 y^{5}\\end{array}\\\\&amp;(3 x- 2 y)^{5}\\\\&amp;=\\begin{aligned}&amp;243 x^{5}- 810 x^{4} y+1080 x^{3} y^{2}\\\\&amp;- 720 x^{2} y^{3}+240 x y^{4}- 32 y^{5}\\end{aligned}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.1/q2",
+      "status": "worked",
+      "method": "For the x³ term, take three copies of the term containing x and the remaining copies of the constant.",
+      "steps": [
+        {
+          "latex": "[x^{3}](5+(2)x)^{4}=\\binom{4}{3}(5)^{1}(2)^{3}=160",
+          "explanation": ""
+        },
+        {
+          "latex": "[x^{3}](2+(-3)x)^{5}=\\binom{5}{3}(2)^{2}(-3)^{3}=-1080",
+          "explanation": ""
+        },
+        {
+          "latex": "[x^{3}](3+(- \\frac{1}{2})x)^{4}=\\binom{4}{3}(3)^{1}(- \\frac{1}{2})^{3}=- \\frac{3}{2}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>For the x³ term, take three copies of the term containing x and the remaining copies of the constant.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;[x^{3}](5+(2)x)^{4}\\\\&amp;=\\binom{4}{3}(5)^{1}(2)^{3}\\\\&amp;=160\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;[x^{3}](2+(-3)x)^{5}\\\\&amp;=\\binom{5}{3}(2)^{2}(-3)^{3}\\\\&amp;=-1080\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;[x^{3}](3+(- \\frac{1}{2})x)^{4}\\\\&amp;=\\binom{4}{3}(3)^{1}(- \\frac{1}{2})^{3}\\\\&amp;=- \\frac{3}{2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.1/q3",
+      "status": "worked",
+      "method": "Expand the cubic first, then distribute both terms of the linear factor and collect like powers.",
+      "steps": [
+        {
+          "latex": "(1+3x)^3=1+9x+27x^2+27x^3;\\quad(1-2x)(1+3x)^3=1+9x+27x^2+27x^3-2x-18x^2-54x^3-54x^4=1+7x+9x^2-27x^3-54x^4",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the cubic first, then distribute both terms of the linear factor and collect like powers.</p><span data-math=\"\\begin{aligned}&amp;(1+3x)^3=1+9x+27x^2+27x^3\\\\&amp;(1-2x)(1+3x)^3\\\\&amp;=1+9x+27x^2+27x^3-2x-18x^2-54x^3-54x^4\\\\&amp;=1+7x+9x^2-27x^3-54x^4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.1/q4",
+      "status": "worked",
+      "method": "Use the fourth row of coefficients. Replacing x by −x changes the signs of the odd-power terms only.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{4}r(2)^{4-r}(3 x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&16\\\\1&96 x\\\\2&216 x^{2}\\\\3&216 x^{3}\\\\4&81 x^{4}\\end{array};\\quad (2+3 x)^{4}=16+96 x+216 x^{2}+216 x^{3}+81 x^{4}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "(2-3x)^4=16-96x+216x^2-216x^3+81x^4",
+          "explanation": "Take the expansion in (a) and replace each x by −x; the constant, x² and x⁴ terms retain their signs."
+        }
+      ],
+      "solutionHtml": "<p>Use the fourth row of coefficients. Replacing x by −x changes the signs of the odd-power terms only.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{4}r(2)^{4-r}(3 x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;16\\\\1&amp;96 x\\\\2&amp;216 x^{2}\\\\3&amp;216 x^{3}\\\\4&amp;81 x^{4}\\end{array}\\\\&amp;(2+3 x)^{4}\\\\&amp;=16+96 x+216 x^{2}+216 x^{3}+81 x^{4}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Take the expansion in (a) and replace each x by −x; the constant, x² and x⁴ terms retain their signs.</p><span data-math=\"(2-3x)^4=16-96x+216x^2-216x^3+81x^4\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.1/q5",
+      "status": "worked",
+      "method": "Equate the coefficient obtained by choosing two kx factors to the given coefficient.",
+      "steps": [
+        {
+          "latex": "\\binom42 3^2k^2=1350\\Rightarrow54k^2=1350\\Rightarrow k^2=25\\Rightarrow k=5\\text{ or }-5",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Equate the coefficient obtained by choosing two kx factors to the given coefficient.</p><span data-math=\"\\begin{aligned}&amp;\\binom42 3^2k^2=1350\\\\&amp;\\Rightarrow 54k^2=1350\\\\&amp;\\Rightarrow k^2=25\\\\&amp;\\Rightarrow k=5\\text{ or }-5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.1/q6",
+      "status": "worked",
+      "method": "First expand with k as a single term, then substitute k=x²−x and collect powers.",
+      "steps": [
+        {
+          "latex": "(4+k)^3=4^3+3(4^2)k+3(4)k^2+k^3=64+48k+12k^2+k^3",
+          "explanation": ""
+        },
+        {
+          "latex": "(4+x^2-x)^3=64+48(x^2-x)+12(x^4-2x^3+x^2)+(x^6-3x^5+3x^4-x^3)=64-48x+60x^2-25x^3+15x^4-3x^5+x^6",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>First expand with k as a single term, then substitute k=x²−x and collect powers.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;(4+k)^3\\\\&amp;=4^3+3(4^2)k+3(4)k^2+k^3\\\\&amp;=64+48k+12k^2+k^3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;(4+x^2-x)^3\\\\&amp;=64+48(x^2-x)+12(x^4-2x^3+x^2)+(x^6-3x^5+3x^4-x^3)\\\\&amp;=64-48x+60x^2-25x^3+15x^4-3x^5+x^6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.1/q7",
+      "status": "worked",
+      "method": "The x² coefficient comes from 5 times the quadratic term and x times the linear term of the cubic.",
+      "steps": [
+        {
+          "latex": "(2-kx)^3=8-12kx+6k^2x^2-k^3x^3;\\quad[x^2](5+x)(2-kx)^3=30k^2-12k=18;\\quad5k^2-2k-3=(5k+3)(k-1)=0\\Rightarrow k=1\\text{ or }-\\frac35",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The x² coefficient comes from 5 times the quadratic term and x times the linear term of the cubic.</p><span data-math=\"\\begin{aligned}&amp;(2-kx)^3=8-12kx+6k^2x^2-k^3x^3\\\\&amp;[x^2](5+x)(2-kx)^3=30k^2-12k=18\\\\&amp;5k^2-2k-3=(5k+3)(k-1)=0\\\\&amp;\\Rightarrow k=1\\text{ or }-\\frac35\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.2/q1",
+      "status": "worked",
+      "method": "Use 0!=1 and cancel the matching factorial in each quotient.",
+      "steps": [
+        {
+          "latex": "0!5!=1(5\\times4\\times3\\times2\\times1)=120",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{12!}{9!}=\\frac{12\\times11\\times10\\times9!}{9!}=12\\times11\\times10=1320",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{20!}{18!}=20\\times19=380",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use 0!=1 and cancel the matching factorial in each quotient.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;0!5!\\\\&amp;=1(5\\times4\\times3\\times2\\times1)\\\\&amp;=120\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{12!}{9!}\\\\&amp;=\\frac{12\\times11\\times10\\times9!}{9!}\\\\&amp;=12\\times11\\times10\\\\&amp;=1320\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\frac{20!}{18!}=20\\times19=380\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.2/q2",
+      "status": "worked",
+      "method": "Use nCr = n!/[r!(n−r)!] with the stated n and r.",
+      "steps": [
+        {
+          "latex": "\\binom{16}{9}=\\frac{16!}{9!7!}=11440",
+          "explanation": ""
+        },
+        {
+          "latex": "\\binom{12}{5}=\\frac{12!}{5!7!}=792",
+          "explanation": ""
+        },
+        {
+          "latex": "\\binom{22}{10}=\\frac{22!}{10!12!}=646646",
+          "explanation": ""
+        },
+        {
+          "latex": "\\binom{18}{11}=\\frac{18!}{11!7!}=31824",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use nCr = n!/[r!(n−r)!] with the stated n and r.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\binom{16}{9}=\\frac{16!}{9!7!}=11440\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\binom{12}{5}=\\frac{12!}{5!7!}=792\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\binom{22}{10}=\\frac{22!}{10!12!}=646646\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\binom{18}{11}=\\frac{18!}{11!7!}=31824\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.2/q3",
+      "status": "worked",
+      "method": "Count rows from the top row 1 as row 1 and positions from the left starting at 1. Row n, position r gives (n−1)C(r−1).",
+      "steps": [
+        {
+          "latex": "p=\\binom42=6,\\quad q=\\binom53=10,\\quad r=\\binom63=20,\\quad s=\\binom64=15",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Count rows from the top row 1 as row 1 and positions from the left starting at 1. Row n, position r gives (n−1)C(r−1).</p><span data-math=\"\\begin{aligned}&amp;p\\\\&amp;=\\binom42\\\\&amp;=6,\\quad q\\\\&amp;=\\binom53\\\\&amp;=10,\\quad r\\\\&amp;=\\binom63\\\\&amp;=20,\\quad s\\\\&amp;=\\binom64\\\\&amp;=15\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.2/q4",
+      "status": "worked",
+      "method": "Apply the row convention given in the question’s own hint: the nth row uses exponent n−1.",
+      "steps": [
+        {
+          "latex": "\\text{row }15,\\ \\text{entry }8\\Rightarrow\\binom{15-1}{8-1}=\\binom{14}{7}",
+          "explanation": "The supplied answer 15C7 is one row too far down under the explicitly stated convention. The requested entry is 14C7."
+        }
+      ],
+      "solutionHtml": "<p>Apply the row convention given in the question’s own hint: the nth row uses exponent n−1.</p><p>The supplied answer 15C7 is one row too far down under the explicitly stated convention. The requested entry is 14C7.</p><span data-math=\"\\begin{aligned}&amp;\\text{row }15,\\ \\text{entry }8\\\\&amp;\\Rightarrow \\binom{15-1}{8-1}=\\binom{14}{7}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.2/q5",
+      "status": "worked",
+      "method": "Substitute each requested count into the given binomial-probability formula.",
+      "steps": [
+        {
+          "latex": "P(N=0)=\\binom{10}{0}\\left(\\frac16\\right)^0\\left(\\frac56\\right)^{10}=\\left(\\frac56\\right)^{10}\\approx0.162\\text{ (3 s.f.)}",
+          "explanation": ""
+        },
+        {
+          "latex": "P(N=5)=\\binom{10}{5}\\left(\\frac16\\right)^5\\left(\\frac56\\right)^5=252\\frac{5^5}{6^{10}}\\approx0.0130\\text{ (3 s.f.)}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Substitute each requested count into the given binomial-probability formula.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;P(N\\\\&amp;=0)\\\\&amp;=\\binom{10}{0}\\left(\\frac16\\right)^0\\left(\\frac56\\right)^{10}\\\\&amp;=\\left(\\frac56\\right)^{10}\\approx0.162\\text{ (3 s.f.)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;P(N\\\\&amp;=5)\\\\&amp;=\\binom{10}{5}\\left(\\frac16\\right)^5\\left(\\frac56\\right)^5\\\\&amp;=252\\frac{5^5}{6^{10}}\\approx0.0130\\text{ (3 s.f.)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.2/q6",
+      "status": "worked",
+      "method": "Compare the factorial denominator with n!/[r!(n−r)!].",
+      "steps": [
+        {
+          "latex": "p=25-11=14",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Compare the factorial denominator with n!/[r!(n−r)!].</p><span data-math=\"p=25-11=14\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.2/q7",
+      "status": "worked",
+      "method": "The other factorial index is 30−q, so equate it to 8.",
+      "steps": [
+        {
+          "latex": "30-q=8\\Rightarrow q=22",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The other factorial index is 30−q, so equate it to 8.</p><span data-math=\"30-q=8\\Rightarrow q=22\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.2/q8",
+      "status": "worked",
+      "method": "Cancel factorials, solve the resulting quadratic and enforce the integer domain of the combination.",
+      "steps": [
+        {
+          "latex": "\\binom{k+2}{k}=\\frac{(k+2)!}{k!2!}=\\frac{(k+2)(k+1)}2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{(k+2)(k+1)}2=36\\Rightarrow k^2+3k-70=0\\Rightarrow(k+10)(k-7)=0\\Rightarrow k=7",
+          "explanation": ""
+        },
+        {
+          "latex": "",
+          "explanation": "The other algebraic root k=−10 is not an admissible nonnegative integer index for the factorial expression, so only k=7 is valid."
+        }
+      ],
+      "solutionHtml": "<p>Cancel factorials, solve the resulting quadratic and enforce the integer domain of the combination.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\binom{k+2}{k}\\\\&amp;=\\frac{(k+2)!}{k!2!}\\\\&amp;=\\frac{(k+2)(k+1)}2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{(k+2)(k+1)}2=36\\\\&amp;\\Rightarrow k^2+3k-70=0\\\\&amp;\\Rightarrow (k+10)(k-7)=0\\\\&amp;\\Rightarrow k=7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The other algebraic root k=−10 is not an admissible nonnegative integer index for the factorial expression, so only k=7 is valid.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.3/q1",
+      "status": "worked",
+      "method": "Use the binomial theorem and calculate every term.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{5}r(1)^{5-r}(x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&5 x\\\\2&10 x^{2}\\\\3&10 x^{3}\\\\4&5 x^{4}\\\\5&x^{5}\\end{array};\\quad (1+x)^{5}=1+5 x+10 x^{2}+10 x^{3}+5 x^{4}+x^{5}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "T_r=\\binom{6}r(2)^{6-r}(x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&64\\\\1&192 x\\\\2&240 x^{2}\\\\3&160 x^{3}\\\\4&60 x^{4}\\\\5&12 x^{5}\\\\6&x^{6}\\end{array};\\quad (2+x)^{6}=64+192 x+240 x^{2}+160 x^{3}+60 x^{4}+12 x^{5}+x^{6}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "T_r=\\binom{4}r(10)^{4-r}(x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&10000\\\\1&4000 x\\\\2&600 x^{2}\\\\3&40 x^{3}\\\\4&x^{4}\\end{array};\\quad (10+x)^{4}=10000+4000 x+600 x^{2}+40 x^{3}+x^{4}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        }
+      ],
+      "solutionHtml": "<p>Use the binomial theorem and calculate every term.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{5}r(1)^{5-r}(x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;5 x\\\\2&amp;10 x^{2}\\\\3&amp;10 x^{3}\\\\4&amp;5 x^{4}\\\\5&amp;x^{5}\\end{array}\\\\&amp;(1+x)^{5}\\\\&amp;=1+5 x+10 x^{2}+10 x^{3}+5 x^{4}+x^{5}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{6}r(2)^{6-r}(x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;64\\\\1&amp;192 x\\\\2&amp;240 x^{2}\\\\3&amp;160 x^{3}\\\\4&amp;60 x^{4}\\\\5&amp;12 x^{5}\\\\6&amp;x^{6}\\end{array}\\\\&amp;(2+x)^{6}\\\\&amp;=64+192 x+240 x^{2}+160 x^{3}+60 x^{4}+12 x^{5}+x^{6}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{4}r(10)^{4-r}(x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;10000\\\\1&amp;4000 x\\\\2&amp;600 x^{2}\\\\3&amp;40 x^{3}\\\\4&amp;x^{4}\\end{array}\\\\&amp;(10+x)^{4}\\\\&amp;=10000+4000 x+600 x^{2}+40 x^{3}+x^{4}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.3/q2",
+      "status": "worked",
+      "method": "Keep the sign and fractional coefficient inside the powered second term.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{4}r(3)^{4-r}(- 2 x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&81\\\\1&- 216 x\\\\2&216 x^{2}\\\\3&- 96 x^{3}\\\\4&16 x^{4}\\end{array};\\quad (3- 2 x)^{4}=81- 216 x+216 x^{2}- 96 x^{3}+16 x^{4}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "T_r=\\binom{5}r(4)^{5-r}(\\frac{x}{2})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1024\\\\1&640 x\\\\2&160 x^{2}\\\\3&20 x^{3}\\\\4&\\frac{5 x^{4}}{4}\\\\5&\\frac{x^{5}}{32}\\end{array};\\quad (4+\\frac{x}{2})^{5}=1024+640 x+160 x^{2}+20 x^{3}+\\frac{5 x^{4}}{4}+\\frac{x^{5}}{32}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "T_r=\\binom{6}r(-2)^{6-r}(x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&64\\\\1&- 192 x\\\\2&240 x^{2}\\\\3&- 160 x^{3}\\\\4&60 x^{4}\\\\5&- 12 x^{5}\\\\6&x^{6}\\end{array};\\quad (-2+x)^{6}=64- 192 x+240 x^{2}- 160 x^{3}+60 x^{4}- 12 x^{5}+x^{6}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        }
+      ],
+      "solutionHtml": "<p>Keep the sign and fractional coefficient inside the powered second term.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{4}r(3)^{4-r}(- 2 x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;81\\\\1&amp;- 216 x\\\\2&amp;216 x^{2}\\\\3&amp;- 96 x^{3}\\\\4&amp;16 x^{4}\\end{array}\\\\&amp;(3- 2 x)^{4}\\\\&amp;=81- 216 x+216 x^{2}- 96 x^{3}+16 x^{4}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{5}r(4)^{5-r}(\\frac{x}{2})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1024\\\\1&amp;640 x\\\\2&amp;160 x^{2}\\\\3&amp;20 x^{3}\\\\4&amp;\\frac{5 x^{4}}{4}\\\\5&amp;\\frac{x^{5}}{32}\\end{array}\\\\&amp;(4+\\frac{x}{2})^{5}\\\\&amp;=1024+640 x+160 x^{2}+20 x^{3}+\\frac{5 x^{4}}{4}+\\frac{x^{5}}{32}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{6}r(-2)^{6-r}(x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;64\\\\1&amp;- 192 x\\\\2&amp;240 x^{2}\\\\3&amp;- 160 x^{3}\\\\4&amp;60 x^{4}\\\\5&amp;- 12 x^{5}\\\\6&amp;x^{6}\\end{array}\\\\&amp;(-2+x)^{6}\\\\&amp;=64- 192 x+240 x^{2}- 160 x^{3}+60 x^{4}- 12 x^{5}+x^{6}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.3/q3",
+      "status": "worked",
+      "method": "The first four terms have r=0,1,2,3 in the binomial formula.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{10}r(1)^{10-r}(x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&10 x\\\\2&45 x^{2}\\\\3&120 x^{3}\\end{array};\\quad (1+x)^{10}=1+10 x+45 x^{2}+120 x^{3}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "T_r=\\binom{15}r(1)^{15-r}(x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&15 x\\\\2&105 x^{2}\\\\3&455 x^{3}\\end{array};\\quad (1+x)^{15}=1+15 x+105 x^{2}+455 x^{3}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "T_r=\\binom{9}r(2)^{9-r}(x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&512\\\\1&2304 x\\\\2&4608 x^{2}\\\\3&5376 x^{3}\\end{array};\\quad (2+x)^{9}=512+2304 x+4608 x^{2}+5376 x^{3}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        }
+      ],
+      "solutionHtml": "<p>The first four terms have r=0,1,2,3 in the binomial formula.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{10}r(1)^{10-r}(x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;10 x\\\\2&amp;45 x^{2}\\\\3&amp;120 x^{3}\\end{array}\\\\&amp;(1+x)^{10}\\\\&amp;=1+10 x+45 x^{2}+120 x^{3}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{15}r(1)^{15-r}(x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;15 x\\\\2&amp;105 x^{2}\\\\3&amp;455 x^{3}\\end{array}\\\\&amp;(1+x)^{15}\\\\&amp;=1+15 x+105 x^{2}+455 x^{3}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{9}r(2)^{9-r}(x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;512\\\\1&amp;2304 x\\\\2&amp;4608 x^{2}\\\\3&amp;5376 x^{3}\\end{array}\\\\&amp;(2+x)^{9}\\\\&amp;=512+2304 x+4608 x^{2}+5376 x^{3}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.3/q4",
+      "status": "worked",
+      "method": "Use r=0,1,2,3, raising the complete signed coefficient of x to the rth power.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{10}r(1)^{10-r}(- \\frac{x}{2})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&- 5 x\\\\2&\\frac{45 x^{2}}{4}\\\\3&- 15 x^{3}\\end{array};\\quad (1- \\frac{x}{2})^{10}=1- 5 x+\\frac{45 x^{2}}{4}- 15 x^{3}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "T_r=\\binom{9}r(2)^{9-r}(- \\frac{x}{3})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&512\\\\1&- 768 x\\\\2&512 x^{2}\\\\3&- \\frac{1792 x^{3}}{9}\\end{array};\\quad (2- \\frac{x}{3})^{9}=512- 768 x+512 x^{2}- \\frac{1792 x^{3}}{9}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "T_r=\\binom{8}r(3)^{8-r}(2 x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&6561\\\\1&34992 x\\\\2&81648 x^{2}\\\\3&108864 x^{3}\\end{array};\\quad (3+2 x)^{8}=6561+34992 x+81648 x^{2}+108864 x^{3}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        }
+      ],
+      "solutionHtml": "<p>Use r=0,1,2,3, raising the complete signed coefficient of x to the rth power.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r\\\\&amp;=\\binom{10}r(1)^{10-r}(- \\frac{x}{2})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;- 5 x\\\\2&amp;\\frac{45 x^{2}}{4}\\\\3&amp;- 15 x^{3}\\end{array}\\\\&amp;(1- \\frac{x}{2})^{10}\\\\&amp;=1- 5 x+\\frac{45 x^{2}}{4}- 15 x^{3}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{9}r(2)^{9-r}(- \\frac{x}{3})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;512\\\\1&amp;- 768 x\\\\2&amp;512 x^{2}\\\\3&amp;- \\frac{1792 x^{3}}{9}\\end{array}\\\\&amp;(2- \\frac{x}{3})^{9}\\\\&amp;=512- 768 x+512 x^{2}- \\frac{1792 x^{3}}{9}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{8}r(3)^{8-r}(2 x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;6561\\\\1&amp;34992 x\\\\2&amp;81648 x^{2}\\\\3&amp;108864 x^{3}\\end{array}\\\\&amp;(3+2 x)^{8}\\\\&amp;=6561+34992 x+81648 x^{2}+108864 x^{3}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.3/q5",
+      "status": "worked",
+      "method": "Calculate the constant, x, x² and x³ terms by choosing r=0,1,2,3.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{5}r(2)^{5-r}(- 3 x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&32\\\\1&- 240 x\\\\2&720 x^{2}\\\\3&- 1080 x^{3}\\end{array};\\quad (2- 3 x)^{5}=32- 240 x+720 x^{2}- 1080 x^{3}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        }
+      ],
+      "solutionHtml": "<p>Calculate the constant, x, x² and x³ terms by choosing r=0,1,2,3.</p><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{5}r(2)^{5-r}(- 3 x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;32\\\\1&amp;- 240 x\\\\2&amp;720 x^{2}\\\\3&amp;- 1080 x^{3}\\end{array}\\\\&amp;(2- 3 x)^{5}\\\\&amp;=32- 240 x+720 x^{2}- 1080 x^{3}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.3/q6",
+      "status": "worked",
+      "method": "Compare the first three binomial terms with A+Bx+Cx².",
+      "steps": [
+        {
+          "latex": "A=3^{12}=531441;\\quad B=\\binom{12}1 3^{11}(-1)=-2125764;\\quad C=\\binom{12}2 3^{10}(-1)^2=3897234",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Compare the first three binomial terms with A+Bx+Cx².</p><span data-math=\"\\begin{aligned}&amp;A=3^{12}=531441\\\\&amp;B=\\binom{12}1 3^{11}(-1)=-2125764\\\\&amp;C=\\binom{12}2 3^{10}(-1)^2=3897234\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.3/q7",
+      "status": "worked",
+      "method": "Use r=0,1,2,3 and retain the alternating signs.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{9}r(1)^{9-r}(- \\frac{2 x}{3})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&- 6 x\\\\2&16 x^{2}\\\\3&- \\frac{224 x^{3}}{9}\\end{array};\\quad (1- \\frac{2 x}{3})^{9}=1- 6 x+16 x^{2}- \\frac{224 x^{3}}{9}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        }
+      ],
+      "solutionHtml": "<p>Use r=0,1,2,3 and retain the alternating signs.</p><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r\\\\&amp;=\\binom{9}r(1)^{9-r}(- \\frac{2 x}{3})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;- 6 x\\\\2&amp;16 x^{2}\\\\3&amp;- \\frac{224 x^{3}}{9}\\end{array}\\\\&amp;(1- \\frac{2 x}{3})^{9}\\\\&amp;=1- 6 x+16 x^{2}- \\frac{224 x^{3}}{9}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.3/q8",
+      "status": "worked",
+      "method": "In the rth term the power of x is 5−r−r=5−2r. Include all six terms, with x≠0.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{5}r(x)^{5-r}(- \\frac{2}{x})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&x^{5}\\\\1&- 10 x^{3}\\\\2&40 x\\\\3&- \\frac{80}{x}\\\\4&\\frac{80}{x^{3}}\\\\5&- \\frac{32}{x^{5}}\\end{array};\\quad (x- \\frac{2}{x})^{5}=\\begin{aligned}&x^{5}- 10 x^{3}+40 x\\\\&- \\frac{80}{x}+\\frac{80}{x^{3}}- \\frac{32}{x^{5}}\\end{aligned}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        }
+      ],
+      "solutionHtml": "<p>In the rth term the power of x is 5−r−r=5−2r. Include all six terms, with x≠0.</p><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{5}r(x)^{5-r}(- \\frac{2}{x})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;x^{5}\\\\1&amp;- 10 x^{3}\\\\2&amp;40 x\\\\3&amp;- \\frac{80}{x}\\\\4&amp;\\frac{80}{x^{3}}\\\\5&amp;- \\frac{32}{x^{5}}\\end{array}\\\\&amp;(x- \\frac{2}{x})^{5}\\\\&amp;=\\begin{aligned}&amp;x^{5}- 10 x^{3}+40 x\\\\&amp;- \\frac{80}{x}+\\frac{80}{x^{3}}- \\frac{32}{x^{5}}\\end{aligned}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.4/q1",
+      "status": "worked",
+      "method": "Use the term with r=3; the coefficient is nC3 × a^(n−3) × b³ for (a+bx)ⁿ.",
+      "steps": [
+        {
+          "latex": "[x^{3}](1+(1)x)^{14}=\\binom{14}{3}(1)^{11}(1)^{3}=364",
+          "explanation": ""
+        },
+        {
+          "latex": "[x^{3}](2+(1)x)^{10}=\\binom{10}{3}(2)^{7}(1)^{3}=15360",
+          "explanation": ""
+        },
+        {
+          "latex": "[x^{3}](5+(-1)x)^{7}=\\binom{7}{3}(5)^{4}(-1)^{3}=-21875",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the term with r=3; the coefficient is nC3 × a^(n−3) × b³ for (a+bx)ⁿ.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;[x^{3}](1+(1)x)^{14}\\\\&amp;=\\binom{14}{3}(1)^{11}(1)^{3}\\\\&amp;=364\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;[x^{3}](2+(1)x)^{10}\\\\&amp;=\\binom{10}{3}(2)^{7}(1)^{3}\\\\&amp;=15360\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;[x^{3}](5+(-1)x)^{7}\\\\&amp;=\\binom{7}{3}(5)^{4}(-1)^{3}\\\\&amp;=-21875\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.4/q2",
+      "status": "worked",
+      "method": "Use the term with r=4 and raise the entire coefficient of x to the fourth power.",
+      "steps": [
+        {
+          "latex": "[x^{4}](3+(-2)x)^{9}=\\binom{9}{4}(3)^{5}(-2)^{4}=489888",
+          "explanation": ""
+        },
+        {
+          "latex": "[x^{4}](5+(3)x)^{7}=\\binom{7}{4}(5)^{3}(3)^{4}=354375",
+          "explanation": ""
+        },
+        {
+          "latex": "[x^{4}](\\frac{1}{2}+(8)x)^{12}=\\binom{12}{4}(\\frac{1}{2})^{8}(8)^{4}=7920",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the term with r=4 and raise the entire coefficient of x to the fourth power.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;[x^{4}](3+(-2)x)^{9}\\\\&amp;=\\binom{9}{4}(3)^{5}(-2)^{4}\\\\&amp;=489888\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;[x^{4}](5+(3)x)^{7}\\\\&amp;=\\binom{7}{4}(5)^{3}(3)^{4}\\\\&amp;=354375\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;[x^{4}](\\frac{1}{2}+(8)x)^{12}\\\\&amp;=\\binom{12}{4}(\\frac{1}{2})^{8}(8)^{4}\\\\&amp;=7920\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.4/q3",
+      "status": "worked",
+      "method": "Only the cubic and quadratic terms of the binomial factor contribute to the requested coefficient.",
+      "steps": [
+        {
+          "latex": "[x^2](2+3x)^6=\\binom62 2^4 3^2=2160;\\quad[x^3](2+3x)^6=\\binom63 2^3 3^3=4320;\\quad[x^3](3-x)(2+3x)^6=3(4320)-2160=10800",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Only the cubic and quadratic terms of the binomial factor contribute to the requested coefficient.</p><span data-math=\"\\begin{aligned}&amp;[x^2](2+3x)^6=\\binom62 2^4 3^2=2160\\\\&amp;[x^3](2+3x)^6=\\binom63 2^3 3^3=4320\\\\&amp;[x^3](3-x)(2+3x)^6=3(4320)-2160=10800\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.4/q4",
+      "status": "worked",
+      "method": "Choose the term with exactly three factors of (2/3)x.",
+      "steps": [
+        {
+          "latex": "[x^{3}](1+(\\frac{2}{3})x)^{6}=\\binom{6}{3}(1)^{3}(\\frac{2}{3})^{3}=\\frac{160}{27}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Choose the term with exactly three factors of (2/3)x.</p><span data-math=\"\\begin{aligned}&amp;[x^{3}](1+(\\frac{2}{3})x)^{6}\\\\&amp;=\\binom{6}{3}(1)^{3}(\\frac{2}{3})^{3}\\\\&amp;=\\frac{160}{27}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.4/q5",
+      "status": "worked",
+      "method": "Equate the coefficient of x² to 60, then choose the positive solution for n.",
+      "steps": [
+        {
+          "latex": "\\binom n2 2^2=60\\Rightarrow2n(n-1)=60\\Rightarrow n^2-n-30=(n-6)(n+5)=0;\\quad n>0\\Rightarrow n=6",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Equate the coefficient of x² to 60, then choose the positive solution for n.</p><span data-math=\"\\begin{aligned}&amp;\\binom n2 2^2=60\\\\&amp;\\Rightarrow 2n(n-1)=60\\\\&amp;\\Rightarrow n^2-n-30=(n-6)(n+5)=0\\\\&amp;n&gt;0\\\\&amp;\\Rightarrow n=6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.4/q6",
+      "status": "worked",
+      "method": "Choose two ax factors and equate their coefficient to 4320.",
+      "steps": [
+        {
+          "latex": "\\binom52 3^3a^2=4320\\Rightarrow270a^2=4320\\Rightarrow a^2=16\\Rightarrow a=4\\text{ or }-4",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Choose two ax factors and equate their coefficient to 4320.</p><span data-math=\"\\begin{aligned}&amp;\\binom52 3^3a^2=4320\\\\&amp;\\Rightarrow 270a^2=4320\\\\&amp;\\Rightarrow a^2=16\\\\&amp;\\Rightarrow a=4\\text{ or }-4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.4/q7",
+      "status": "worked",
+      "method": "The cubic term contains the cube of −b, including its negative sign.",
+      "steps": [
+        {
+          "latex": "\\binom63 2^3(-b)^3=-20\\Rightarrow-160b^3=-20\\Rightarrow b^3=\\frac18\\Rightarrow b=\\frac12",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The cubic term contains the cube of −b, including its negative sign.</p><span data-math=\"\\begin{aligned}&amp;\\binom63 2^3(-b)^3=-20\\\\&amp;\\Rightarrow -160b^3=-20\\\\&amp;\\Rightarrow b^3=\\frac18\\\\&amp;\\Rightarrow b=\\frac12\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.4/q8",
+      "status": "worked",
+      "method": "Expand through x³. In the product, combine the original cubic coefficient and half the quadratic coefficient.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{8}r(2)^{8-r}(- 3 x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&256\\\\1&- 3072 x\\\\2&16128 x^{2}\\\\3&- 48384 x^{3}\\end{array};\\quad (2- 3 x)^{8}=256- 3072 x+16128 x^{2}- 48384 x^{3}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "[x^3]\\left(1+\\frac x2\\right)(2-3x)^8=-48384+\\frac12(16128)=-40320",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand through x³. In the product, combine the original cubic coefficient and half the quadratic coefficient.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{8}r(2)^{8-r}(- 3 x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;256\\\\1&amp;- 3072 x\\\\2&amp;16128 x^{2}\\\\3&amp;- 48384 x^{3}\\end{array}\\\\&amp;(2- 3 x)^{8}\\\\&amp;=256- 3072 x+16128 x^{2}- 48384 x^{3}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;[x^3]\\left(1+\\frac x2\\right)(2-3x)^8\\\\&amp;=-48384+\\frac12(16128)\\\\&amp;=-40320\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.4/q9",
+      "status": "worked",
+      "method": "Calculate the first three terms, then use the stated relation between coefficients and the nonzero-p condition.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{6}r(3)^{6-r}(p x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&729\\\\1&1458 p x\\\\2&1215 p^{2} x^{2}\\end{array};\\quad (3+p x)^{6}=729+1458 p x+1215 p^{2} x^{2}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "1215p^2=5(1458p);\\quad p\\ne0\\Rightarrow1215p=7290\\Rightarrow p=6",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Calculate the first three terms, then use the stated relation between coefficients and the nonzero-p condition.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{6}r(3)^{6-r}(p x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;729\\\\1&amp;1458 p x\\\\2&amp;1215 p^{2} x^{2}\\end{array}\\\\&amp;(3+p x)^{6}\\\\&amp;=729+1458 p x+1215 p^{2} x^{2}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;1215p^2=5(1458p)\\\\&amp;p\\ne0\\\\&amp;\\Rightarrow 1215p=7290\\\\&amp;\\Rightarrow p=6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.5/q1",
+      "status": "worked",
+      "method": "Use the first four binomial terms. Match the base to find the x-value for the estimate.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{9}r(1)^{9-r}(- \\frac{x}{5})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&- \\frac{9 x}{5}\\\\2&\\frac{36 x^{2}}{25}\\\\3&- \\frac{84 x^{3}}{125}\\end{array};\\quad (1- \\frac{x}{5})^{9}=1- \\frac{9 x}{5}+\\frac{36 x^{2}}{25}- \\frac{84 x^{3}}{125}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "1-\\frac x5=0.985\\Rightarrow x=0.075;\\quad0.985^9\\approx1-\\frac95(0.075)+\\frac{36}{25}(0.075)^2-\\frac{84}{125}(0.075)^3=0.8728165\\approx0.8728",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the first four binomial terms. Match the base to find the x-value for the estimate.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{9}r(1)^{9-r}(- \\frac{x}{5})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;- \\frac{9 x}{5}\\\\2&amp;\\frac{36 x^{2}}{25}\\\\3&amp;- \\frac{84 x^{3}}{125}\\end{array}\\\\&amp;(1- \\frac{x}{5})^{9}\\\\&amp;=1- \\frac{9 x}{5}+\\frac{36 x^{2}}{25}- \\frac{84 x^{3}}{125}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;1-\\frac x5=0.985\\\\&amp;\\Rightarrow x=0.075\\\\&amp;0.985^9\\approx1-\\frac95(0.075)+\\frac{36}{25}(0.075)^2-\\frac{84}{125}(0.075)^3\\\\&amp;=0.8728165\\approx0.8728\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.5/q2",
+      "status": "worked",
+      "method": "Retain terms through x² and discard every product of degree 3 or higher.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{6}r(1)^{6-r}(- 2 x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&- 12 x\\\\2&60 x^{2}\\end{array};\\quad (1- 2 x)^{6}=1- 12 x+60 x^{2}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "(3+x)(1-2x)^6\\approx(3+x)(1-12x+60x^2)=3-36x+180x^2+x-12x^2+60x^3\\approx3-35x+168x^2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Retain terms through x² and discard every product of degree 3 or higher.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{6}r(1)^{6-r}(- 2 x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;- 12 x\\\\2&amp;60 x^{2}\\end{array}\\\\&amp;(1- 2 x)^{6}=1- 12 x+60 x^{2}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;(3+x)(1-2x)^6\\approx(3+x)(1-12x+60x^2)\\\\&amp;=3-36x+180x^2+x-12x^2+60x^3\\approx3-35x+168x^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.5/q3",
+      "status": "worked",
+      "method": "Use r=0,1,2,3, then solve 3+x/4=3.05 before substituting.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{8}r(3)^{8-r}(\\frac{x}{4})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&6561\\\\1&4374 x\\\\2&\\frac{5103 x^{2}}{4}\\\\3&\\frac{1701 x^{3}}{8}\\end{array};\\quad (3+\\frac{x}{4})^{8}=6561+4374 x+\\frac{5103 x^{2}}{4}+\\frac{1701 x^{3}}{8}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "3+\\frac x4=3.05\\Rightarrow x=0.2;\\quad3.05^8\\approx6561+4374(0.2)+\\frac{5103}4(0.2)^2+\\frac{1701}8(0.2)^3=7488.531",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use r=0,1,2,3, then solve 3+x/4=3.05 before substituting.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{8}r(3)^{8-r}(\\frac{x}{4})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;6561\\\\1&amp;4374 x\\\\2&amp;\\frac{5103 x^{2}}{4}\\\\3&amp;\\frac{1701 x^{3}}{8}\\end{array}\\\\&amp;(3+\\frac{x}{4})^{8}\\\\&amp;=6561+4374 x+\\frac{5103 x^{2}}{4}+\\frac{1701 x^{3}}{8}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;3+\\frac x4=3.05\\\\&amp;\\Rightarrow x=0.2\\\\&amp;3.05^8\\approx6561+4374(0.2)+\\frac{5103}4(0.2)^2+\\frac{1701}8(0.2)^3\\\\&amp;=7488.531\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.5/q4",
+      "status": "worked",
+      "method": "Expand through x³ and match 1+x/4 to the required numerical base.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{9}r(1)^{9-r}(\\frac{x}{4})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&\\frac{9 x}{4}\\\\2&\\frac{9 x^{2}}{4}\\\\3&\\frac{21 x^{3}}{16}\\end{array};\\quad (1+\\frac{x}{4})^{9}=1+\\frac{9 x}{4}+\\frac{9 x^{2}}{4}+\\frac{21 x^{3}}{16}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "1+\\frac x4=1.015\\Rightarrow x=0.06;\\quad1.015^9\\approx1+\\frac94(0.06)+\\frac94(0.06)^2+\\frac{21}{16}(0.06)^3=1.1433835\\approx1.143",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand through x³ and match 1+x/4 to the required numerical base.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{9}r(1)^{9-r}(\\frac{x}{4})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;\\frac{9 x}{4}\\\\2&amp;\\frac{9 x^{2}}{4}\\\\3&amp;\\frac{21 x^{3}}{16}\\end{array}\\\\&amp;(1+\\frac{x}{4})^{9}\\\\&amp;=1+\\frac{9 x}{4}+\\frac{9 x^{2}}{4}+\\frac{21 x^{3}}{16}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;1+\\frac x4=1.015\\\\&amp;\\Rightarrow x=0.06\\\\&amp;1.015^9\\approx1+\\frac94(0.06)+\\frac94(0.06)^2+\\frac{21}{16}(0.06)^3\\\\&amp;=1.1433835\\approx1.143\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.5/q5",
+      "status": "worked",
+      "method": "Find the cubic truncation, then retain only terms through x² in the requested product.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{6}r(1)^{6-r}(- 3 x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&- 18 x\\\\2&135 x^{2}\\\\3&- 540 x^{3}\\end{array};\\quad (1- 3 x)^{6}=1- 18 x+135 x^{2}- 540 x^{3}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "\\left(1+\\frac x2\\right)(1-3x)^6\\approx\\left(1+\\frac x2\\right)(1-18x+135x^2);\\quad\\approx1+\\left(-18+\\frac12\\right)x+(135-9)x^2=1-\\frac{35}2x+126x^2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find the cubic truncation, then retain only terms through x² in the requested product.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{6}r(1)^{6-r}(- 3 x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;- 18 x\\\\2&amp;135 x^{2}\\\\3&amp;- 540 x^{3}\\end{array}\\\\&amp;(1- 3 x)^{6}\\\\&amp;=1- 18 x+135 x^{2}- 540 x^{3}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\left(1+\\frac x2\\right)(1-3x)^6\\approx\\left(1+\\frac x2\\right)(1-18x+135x^2)\\\\&amp;\\approx1+\\left(-18+\\frac12\\right)x+(135-9)x^2\\\\&amp;=1-\\frac{35}2x+126x^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.5/q6",
+      "status": "worked",
+      "method": "Calculate the first three terms, then choose x so that the bracket equals 1.985.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{7}r(2)^{7-r}(- \\frac{x}{2})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&128\\\\1&- 224 x\\\\2&168 x^{2}\\end{array};\\quad (2- \\frac{x}{2})^{7}=128- 224 x+168 x^{2}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "2-\\frac x2=1.985\\Rightarrow x=0.03;\\quad1.985^7\\approx128-224(0.03)+168(0.03)^2=121.4312",
+          "explanation": "Substitute x=0.03 into the quadratic truncation, omitting the cubic and higher-order terms."
+        }
+      ],
+      "solutionHtml": "<p>Calculate the first three terms, then choose x so that the bracket equals 1.985.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{7}r(2)^{7-r}(- \\frac{x}{2})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;128\\\\1&amp;- 224 x\\\\2&amp;168 x^{2}\\end{array}\\\\&amp;(2- \\frac{x}{2})^{7}\\\\&amp;=128- 224 x+168 x^{2}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute x=0.03 into the quadratic truncation, omitting the cubic and higher-order terms.</p><span data-math=\"\\begin{aligned}&amp;2-\\frac x2=1.985\\\\&amp;\\Rightarrow x=0.03\\\\&amp;1.985^7\\approx128-224(0.03)+168(0.03)^2\\\\&amp;=121.4312\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/8.5/q7",
+      "status": "worked",
+      "method": "Expand through x³. Use the exact substitution x=0.025 and compare the truncated estimate with the calculator value.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{10}r(3)^{10-r}(- \\frac{x}{5})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&59049\\\\1&- 39366 x\\\\2&\\frac{59049 x^{2}}{5}\\\\3&- \\frac{52488 x^{3}}{25}\\end{array};\\quad (3- \\frac{x}{5})^{10}=59049- 39366 x+\\frac{59049 x^{2}}{5}- \\frac{52488 x^{3}}{25}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "3-\\frac x5=2.995\\Rightarrow x=0.025;\\quad2.995^{10}\\approx59049-39366(0.025)+\\frac{59049}5(0.025)^2-\\frac{52488}{25}(0.025)^3=58072.198320",
+          "explanation": ""
+        },
+        {
+          "latex": "2.995^{10}=58072.198415490153\\ldots;\\quad\\text{percentage error}=\\frac{|58072.198320-58072.198415490153\\ldots|}{58072.198415490153\\ldots}\\times100\\%=1.64\\times10^{-7}\\%\\text{ (3 s.f.)}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand through x³. Use the exact substitution x=0.025 and compare the truncated estimate with the calculator value.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r\\\\&amp;=\\binom{10}r(3)^{10-r}(- \\frac{x}{5})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;59049\\\\1&amp;- 39366 x\\\\2&amp;\\frac{59049 x^{2}}{5}\\\\3&amp;- \\frac{52488 x^{3}}{25}\\end{array}\\\\&amp;(3- \\frac{x}{5})^{10}\\\\&amp;=59049- 39366 x+\\frac{59049 x^{2}}{5}- \\frac{52488 x^{3}}{25}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;3-\\frac x5=2.995\\\\&amp;\\Rightarrow x=0.025\\\\&amp;2.995^{10}\\approx59049-39366(0.025)+\\frac{59049}5(0.025)^2-\\frac{52488}{25}(0.025)^3\\\\&amp;=58072.198320\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;2.995^{10}=58072.198415490153\\ldots\\\\&amp;\\text{percentage error}\\\\&amp;=\\frac{|58072.198320-58072.198415490153\\ldots|}{58072.198415490153\\ldots}\\times100\\%\\\\&amp;=1.64\\times10^{-7}\\%\\text{ (3 s.f.)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/problem-a/qbronze",
+      "status": "worked",
+      "method": "Use the r=3 coefficient to determine k, then the r=4 coefficient for the same expansion.",
+      "steps": [
+        {
+          "latex": "\\binom63 3^3(-k)^3=-4320\\Rightarrow-540k^3=-4320\\Rightarrow k^3=8\\Rightarrow k=2",
+          "explanation": ""
+        },
+        {
+          "latex": "[x^4](3-2x)^6=\\binom64 3^2(-2)^4=15(9)(16)=2160",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the r=3 coefficient to determine k, then the r=4 coefficient for the same expansion.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\binom63 3^3(-k)^3=-4320\\\\&amp;\\Rightarrow -540k^3=-4320\\\\&amp;\\Rightarrow k^3=8\\\\&amp;\\Rightarrow k=2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;[x^4](3-2x)^6\\\\&amp;=\\binom64 3^2(-2)^4\\\\&amp;=15(9)(16)\\\\&amp;=2160\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/problem-a/qsilver",
+      "status": "worked",
+      "method": "Find the constant, linear and quadratic terms. Eliminate q using its definition and reject p=0 as given.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{11}r(2)^{11-r}(- p x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&2048\\\\1&- 11264 p x\\\\2&28160 p^{2} x^{2}\\end{array};\\quad (2- p x)^{11}=2048- 11264 p x+28160 p^{2} x^{2}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "q=-11264p;\\quad28160p^2=10q=-112640p;\\quad p\\ne0\\Rightarrow p=-4;\\quad q=-11264(-4)=45056",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find the constant, linear and quadratic terms. Eliminate q using its definition and reject p=0 as given.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{11}r(2)^{11-r}(- p x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;2048\\\\1&amp;- 11264 p x\\\\2&amp;28160 p^{2} x^{2}\\end{array}\\\\&amp;(2- p x)^{11}\\\\&amp;=2048- 11264 p x+28160 p^{2} x^{2}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;q=-11264p\\\\&amp;28160p^2=10q=-112640p\\\\&amp;p\\ne0\\\\&amp;\\Rightarrow p=-4\\\\&amp;q=-11264(-4)=45056\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/problem-a/qgold",
+      "status": "worked",
+      "method": "Write both coefficient formulae and equate the quadratic coefficient to three times the cubic coefficient.",
+      "steps": [
+        {
+          "latex": "[x^2]=\\binom82\\frac{3^6}{k^2}=\\frac{20412}{k^2};\\quad[x^3]=\\binom83\\frac{3^5}{k^3}=\\frac{13608}{k^3};\\quad\\frac{20412}{k^2}=3\\frac{13608}{k^3}\\Rightarrow20412k=40824\\Rightarrow k=2",
+          "explanation": "Here k≠0 because the original expression contains x/k, so multiplying by k³ is valid."
+        }
+      ],
+      "solutionHtml": "<p>Write both coefficient formulae and equate the quadratic coefficient to three times the cubic coefficient.</p><p>Here k≠0 because the original expression contains x/k, so multiplying by k³ is valid.</p><span data-math=\"\\begin{aligned}&amp;[x^2]\\\\&amp;=\\binom82\\frac{3^6}{k^2}\\\\&amp;=\\frac{20412}{k^2}\\\\&amp;[x^3]\\\\&amp;=\\binom83\\frac{3^5}{k^3}\\\\&amp;=\\frac{13608}{k^3}\\\\&amp;\\frac{20412}{k^2}=3\\frac{13608}{k^3}\\\\&amp;\\Rightarrow 20412k=40824\\\\&amp;\\Rightarrow k=2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/problem-b/qbronze",
+      "status": "worked",
+      "method": "Expand the binomial through x² and multiply by 2+kx. Compare the constant, linear and quadratic coefficients in order.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{4}r(1)^{4-r}(- 5 x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&- 20 x\\\\2&150 x^{2}\\end{array};\\quad (1- 5 x)^{4}=1- 20 x+150 x^{2}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "A=2\\times1=2",
+          "explanation": ""
+        },
+        {
+          "latex": "[x]f(x)=2(-20)+k=-37\\Rightarrow k=3",
+          "explanation": ""
+        },
+        {
+          "latex": "B=2(150)-20k=300-60=240",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the binomial through x² and multiply by 2+kx. Compare the constant, linear and quadratic coefficients in order.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{4}r(1)^{4-r}(- 5 x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;- 20 x\\\\2&amp;150 x^{2}\\end{array}\\\\&amp;(1- 5 x)^{4}=1- 20 x+150 x^{2}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"A=2\\times1=2\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"[x]f(x)=2(-20)+k=-37\\Rightarrow k=3\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"B=2(150)-20k=300-60=240\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/problem-b/qsilver",
+      "status": "worked",
+      "method": "Expand the binomial through x², multiply by 1+kx and compare coefficients.",
+      "steps": [
+        {
+          "latex": "(2-5x)^4=16-160x+600x^2+\\cdots;\\quad f(x)=16+(16k-160)x+(600-160k)x^2+\\cdots;\\quad A=16;\\quad16k-160=-64\\Rightarrow k=6;\\quad B=600-160(6)=-360",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the binomial through x², multiply by 1+kx and compare coefficients.</p><span data-math=\"\\begin{aligned}&amp;(2-5x)^4=16-160x+600x^2+\\cdots\\\\&amp;f(x)=16+(16k-160)x+(600-160k)x^2+\\cdots\\\\&amp;A=16\\\\&amp;16k-160=-64\\\\&amp;\\Rightarrow k=6\\\\&amp;B=600-160(6)=-360\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/problem-b/qgold",
+      "status": "worked",
+      "method": "Compare the x and x² coefficients to solve for the positive constants, then calculate the x³ coefficient.",
+      "steps": [
+        {
+          "latex": "(1+qx)^5=1+5qx+10q^2x^2+10q^3x^3+\\cdots;\\quad p+15q=17,\\quad5pq+30q^2=\\frac{70}3;\\quad p=17-15q\\Rightarrow27q^2-51q+14=(3q-1)(9q-14)=0",
+          "explanation": "If q=1/3, then p=12. The alternative q=14/9 gives p=−19/3, which violates p>0 and is rejected. Thus p=12 and q=1/3."
+        },
+        {
+          "latex": "k=30q^3+10pq^2=30\\left(\\frac13\\right)^3+10(12)\\left(\\frac13\\right)^2=\\frac{130}9",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Compare the x and x² coefficients to solve for the positive constants, then calculate the x³ coefficient.</p><ol class=\"parts\" type=\"a\"><li><p>If q=1/3, then p=12. The alternative q=14/9 gives p=−19/3, which violates p&gt;0 and is rejected. Thus p=12 and q=1/3.</p><span data-math=\"\\begin{aligned}&amp;(1+qx)^5=1+5qx+10q^2x^2+10q^3x^3+\\cdots\\\\&amp;p+15q=17,\\quad5pq+30q^2=\\frac{70}3\\\\&amp;p=17-15q\\\\&amp;\\Rightarrow 27q^2-51q+14=(3q-1)(9q-14)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;k\\\\&amp;=30q^3+10pq^2\\\\&amp;=30\\left(\\frac13\\right)^3+10(12)\\left(\\frac13\\right)^2\\\\&amp;=\\frac{130}9\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/exam/q9",
+      "status": "worked",
+      "method": "Write the coefficients of x and x² and use the given ratio.",
+      "steps": [
+        {
+          "latex": "[x]=3n;\\quad[x^2]=9\\frac{n(n-1)}2;\\quad\\frac{9n(n-1)}2=6(3n);\\quad n>0\\Rightarrow9(n-1)=36\\Rightarrow n=5",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Write the coefficients of x and x² and use the given ratio.</p><span data-math=\"\\begin{aligned}&amp;[x]=3n\\\\&amp;[x^2]=9\\frac{n(n-1)}2\\\\&amp;\\frac{9n(n-1)}2=6(3n)\\\\&amp;n&gt;0\\\\&amp;\\Rightarrow 9(n-1)=36\\\\&amp;\\Rightarrow n=5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/exam/q20",
+      "status": "worked",
+      "method": "Expand both factors through every power that can contribute to the required coefficient, then combine all ways to form x.",
+      "steps": [
+        {
+          "latex": "\\left(1+\\frac2x\\right)^2=1+2\\left(\\frac2x\\right)+\\left(\\frac2x\\right)^2=1+\\frac4x+\\frac4{x^2}\\quad(x\\ne0)",
+          "explanation": ""
+        },
+        {
+          "latex": "T_r=\\binom{6}r(1)^{6-r}(\\frac{2 x}{5})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&\\frac{12 x}{5}\\\\2&\\frac{12 x^{2}}{5}\\\\3&\\frac{32 x^{3}}{25}\\end{array};\\quad (1+\\frac{2 x}{5})^{6}=1+\\frac{12 x}{5}+\\frac{12 x^{2}}{5}+\\frac{32 x^{3}}{25}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "[x]=1\\left(\\frac{12}5\\right)+4\\left(\\frac{12}5\\right)+4\\left(\\frac{32}{25}\\right)=\\frac{60+240+128}{25}=\\frac{428}{25}",
+          "explanation": "The three contributions come from powers 0+1, −1+2 and −2+3 in the two factors."
+        }
+      ],
+      "solutionHtml": "<p>Expand both factors through every power that can contribute to the required coefficient, then combine all ways to form x.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\left(1+\\frac2x\\right)^2\\\\&amp;=1+2\\left(\\frac2x\\right)+\\left(\\frac2x\\right)^2\\\\&amp;=1+\\frac4x+\\frac4{x^2}\\quad(x\\ne0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{6}r(1)^{6-r}(\\frac{2 x}{5})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;\\frac{12 x}{5}\\\\2&amp;\\frac{12 x^{2}}{5}\\\\3&amp;\\frac{32 x^{3}}{25}\\end{array}\\\\&amp;(1+\\frac{2 x}{5})^{6}\\\\&amp;=1+\\frac{12 x}{5}+\\frac{12 x^{2}}{5}+\\frac{32 x^{3}}{25}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The three contributions come from powers 0+1, −1+2 and −2+3 in the two factors.</p><span data-math=\"\\begin{aligned}&amp;[x]\\\\&amp;=1\\left(\\frac{12}5\\right)+4\\left(\\frac{12}5\\right)+4\\left(\\frac{32}{25}\\right)\\\\&amp;=\\frac{60+240+128}{25}\\\\&amp;=\\frac{428}{25}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/exam/q29",
+      "status": "worked",
+      "method": "The term with pʳ counts exactly r faulty bulbs. Adding r=0,1,2,3 gives the required cumulative probability.",
+      "steps": [
+        {
+          "latex": "(q+p)^{100}=q^{100}+\\binom{100}1q^{99}p+\\binom{100}2q^{98}p^2+\\binom{100}3q^{97}p^3+\\cdots=q^{100}+100q^{99}p+4950q^{98}p^2+161700q^{97}p^3+\\cdots",
+          "explanation": ""
+        },
+        {
+          "latex": "p=0.02,\\quad q=1-p=0.98;\\quad P(N\\le3)=\\begin{aligned}&0.98^{100}+100(0.98)^{99}(0.02)\\\\&+4950(0.98)^{98}(0.02)^2\\\\&+161700(0.98)^{97}(0.02)^3\\end{aligned};\\quad P(N\\le3)\\approx0.85896",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The term with pʳ counts exactly r faulty bulbs. Adding r=0,1,2,3 gives the required cumulative probability.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;(q+p)^{100}\\\\&amp;=q^{100}+\\binom{100}1q^{99}p+\\binom{100}2q^{98}p^2+\\binom{100}3q^{97}p^3+\\cdots\\\\&amp;=q^{100}+100q^{99}p+4950q^{98}p^2+161700q^{97}p^3+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;p=0.02,\\quad q=1-p=0.98\\\\&amp;P(N\\le3)\\\\&amp;=\\begin{aligned}&amp;0.98^{100}+100(0.98)^{99}(0.02)\\\\&amp;+4950(0.98)^{98}(0.02)^2\\\\&amp;+161700(0.98)^{97}(0.02)^3\\end{aligned}\\\\&amp;P(N\\le3)\\approx0.85896\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/exam/q40",
+      "status": "worked",
+      "method": "Expand the binomial through x², then compare the constant and linear coefficients after multiplication by p+qx.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{10}r(2)^{10-r}(- \\frac{x}{15})^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1024\\\\1&- \\frac{1024 x}{3}\\\\2&\\frac{256 x^{2}}{5}\\end{array};\\quad (2- \\frac{x}{15})^{10}=1024- \\frac{1024 x}{3}+\\frac{256 x^{2}}{5}+\\cdots",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "1024p=512\\Rightarrow p=\\frac12",
+          "explanation": ""
+        },
+        {
+          "latex": "1024q-\\frac{1024}3p=-\\frac{256}3;\\quad p=\\frac12\\Rightarrow1024q=\\frac{256}3\\Rightarrow q=\\frac1{12}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand the binomial through x², then compare the constant and linear coefficients after multiplication by p+qx.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r\\\\&amp;=\\binom{10}r(2)^{10-r}(- \\frac{x}{15})^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1024\\\\1&amp;- \\frac{1024 x}{3}\\\\2&amp;\\frac{256 x^{2}}{5}\\end{array}\\\\&amp;(2- \\frac{x}{15})^{10}\\\\&amp;=1024- \\frac{1024 x}{3}+\\frac{256 x^{2}}{5}+\\cdots\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"1024p=512\\Rightarrow p=\\frac12\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;1024q-\\frac{1024}3p=-\\frac{256}3\\\\&amp;p=\\frac12\\\\&amp;\\Rightarrow 1024q=\\frac{256}3\\\\&amp;\\Rightarrow q=\\frac1{12}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/exam/q51",
+      "status": "worked",
+      "method": "Expand using the fifth Pascal row. Substitute x=√5, collect rational and surd terms, and apply the logarithm product rule.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{5}r(1)^{5-r}(x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&5 x\\\\2&10 x^{2}\\\\3&10 x^{3}\\\\4&5 x^{4}\\\\5&x^{5}\\end{array};\\quad (1+x)^{5}=1+5 x+10 x^{2}+10 x^{3}+5 x^{4}+x^{5}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "\\text{i }(1+\\sqrt5)^5=1+5\\sqrt5+50+50\\sqrt5+125+25\\sqrt5=176+80\\sqrt5;\\quad\\text{ii }176+80\\sqrt5=16(11+5\\sqrt5);\\quad\\log_2(1+\\sqrt5)^5=\\log_2 16+\\log_2(11+5\\sqrt5)=4+\\log_2(11+5\\sqrt5);\\quad p=4",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Expand using the fifth Pascal row. Substitute x=√5, collect rational and surd terms, and apply the logarithm product rule.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{5}r(1)^{5-r}(x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;5 x\\\\2&amp;10 x^{2}\\\\3&amp;10 x^{3}\\\\4&amp;5 x^{4}\\\\5&amp;x^{5}\\end{array}\\\\&amp;(1+x)^{5}\\\\&amp;=1+5 x+10 x^{2}+10 x^{3}+5 x^{4}+x^{5}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\text{i }(1+\\sqrt5)^5\\\\&amp;=1+5\\sqrt5+50+50\\sqrt5+125+25\\sqrt5\\\\&amp;=176+80\\sqrt5\\\\&amp;\\text{ii }176+80\\sqrt5=16(11+5\\sqrt5)\\\\&amp;\\log_2(1+\\sqrt5)^5\\\\&amp;=\\log_2 16+\\log_2(11+5\\sqrt5)\\\\&amp;=4+\\log_2(11+5\\sqrt5)\\\\&amp;p=4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch8/exam/q61",
+      "status": "worked",
+      "method": "Expand both fourth powers, cancel the odd terms in their sum, then differentiate the resulting polynomial.",
+      "steps": [
+        {
+          "latex": "T_r=\\binom{4}r(1)^{4-r}(3 x)^r;\\quad \\begin{array}{c|l}r&T_r\\\\0&1\\\\1&12 x\\\\2&54 x^{2}\\\\3&108 x^{3}\\\\4&81 x^{4}\\end{array};\\quad (1+3 x)^{4}=1+12 x+54 x^{2}+108 x^{3}+81 x^{4}",
+          "explanation": "Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order."
+        },
+        {
+          "latex": "(1-3x)^4=1-12x+54x^2-108x^3+81x^4;\\quad f(x)=(1+3x)^4+(1-3x)^4=2+108x^2+162x^4",
+          "explanation": "The x and x³ terms cancel because replacing x by −x reverses only their signs."
+        },
+        {
+          "latex": "f^{\\prime}(x)=216x+648x^3=216x(1+3x^2)=0",
+          "explanation": "Since 1+3x²>0 for every real x, the only stationary x-value is 0. Substituting gives f(0)=2, so the only stationary point is (0,2)."
+        }
+      ],
+      "solutionHtml": "<p>Expand both fourth powers, cancel the odd terms in their sum, then differentiate the resulting polynomial.</p><ol class=\"parts\" type=\"a\"><li><p>Substitute the stated two terms into the binomial formula. The table evaluates each required term, including its sign; add them in the listed order.</p><span data-math=\"\\begin{aligned}&amp;T_r=\\binom{4}r(1)^{4-r}(3 x)^r\\\\&amp;\\begin{array}{c|l}r&amp;T_r\\\\0&amp;1\\\\1&amp;12 x\\\\2&amp;54 x^{2}\\\\3&amp;108 x^{3}\\\\4&amp;81 x^{4}\\end{array}\\\\&amp;(1+3 x)^{4}\\\\&amp;=1+12 x+54 x^{2}+108 x^{3}+81 x^{4}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The x and x³ terms cancel because replacing x by −x reverses only their signs.</p><span data-math=\"\\begin{aligned}&amp;(1-3x)^4=1-12x+54x^2-108x^3+81x^4\\\\&amp;f(x)=(1+3x)^4+(1-3x)^4=2+108x^2+162x^4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Since 1+3x²&gt;0 for every real x, the only stationary x-value is 0. Substituting gives f(0)=2, so the only stationary point is (0,2).</p><span data-math=\"f^{\\prime}(x)=216x+648x^3=216x(1+3x^2)=0\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}
