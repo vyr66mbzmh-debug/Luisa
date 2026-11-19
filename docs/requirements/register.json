@@ -4952,8 +4952,8 @@
       "requirement": "Add Practice Booklet questions and checked worked solutions to Papers.",
       "scope": "v0.58 owner Cloudflare and both authenticated ADA roles.",
       "priority": "P2",
-      "implementation": "in_progress",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner v0.58 instruction and confirmed solution/hint choices; GitHub #99",
       "acceptance": [
         "Import the 45 existing Maths Practice Booklets, preserving exact question text, original numbering, subparts, mathematics and meaningful diagrams. Edexcel only; original PDFs remain unchanged.",
@@ -4964,7 +4964,12 @@
         "Preserve ADA authentication, account data and edition-specific access; verify source, maths, visual, interaction and print acceptance before release."
       ],
       "evidence": [
-        "GitHub issue #99"
+        "GitHub issue #99",
+        "docs/evidence/v058-papers-acceptance.json",
+        "docs/evidence/v058-practice-extraction.json",
+        "docs/evidence/v058-practice-table-fidelity.json",
+        "docs/evidence/v058-independent-extraction-review.json",
+        "Per-chapter v058-solutions evidence; production verification recorded in #99."
       ]
     },
     {

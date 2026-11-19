@@ -1,5 +1,8 @@
 """Source-label regressions for practice solutions shown in mixed Papers."""
 import importlib.util
+import hashlib
+import json
+from collections import Counter
 from pathlib import Path
 import unittest
 spec=importlib.util.spec_from_file_location('practice_catalogue',Path(__file__).resolve().parents[1]/'scripts/build_practice_catalogue.py')
@@ -42,5 +45,34 @@ class SourceContext(unittest.TestCase):
         self.assertIn(original['question'],result)
         self.assertNotIn('SECRET',result)
         self.assertEqual(selected['question'],'<p>Find its domain.</p>')
+
+
+class CompletePracticeBank(unittest.TestCase):
+    def test_all_source_questions_have_matching_working_and_original_pdf(self):
+        root=Path(__file__).resolve().parents[1]
+        index=json.loads((root/'practice-catalogue.json').read_text())
+        descriptors={q['id']:q for q in index['questions']}
+        self.assertEqual(len(descriptors),2475)
+        self.assertEqual(len(index['questions']),2475)
+        counts=Counter();seen=set();chapters=list((root/'content/practice').glob('*/chapter-*.json'))
+        self.assertEqual(len(chapters),45)
+        for path in chapters:
+            doc=json.loads(path.read_text())
+            authored=json.loads((root/'resources/practice-solutions'/path.parent.name/path.name).read_text())
+            working={q['id']:q for q in authored['solutions']}
+            self.assertEqual(len(working),len(authored['solutions']))
+            self.assertEqual(set(working),{q['id'] for q in doc['questions']})
+            pdf_hash=hashlib.sha256((root/doc['sourcePdf']).read_bytes()).hexdigest()
+            for q in doc['questions']:
+                self.assertNotIn(q['id'],seen);seen.add(q['id']);counts[doc['sourceFamily']]+=1
+                self.assertEqual(q['source']['pdfSha256'],pdf_hash)
+                self.assertEqual(q['solutionStatus'],'worked')
+                self.assertEqual(q['steps'],[module.align_solution_parts(q['question'],working[q['id']]['solutionHtml'])])
+                self.assertEqual(descriptors[q['id']]['board'],'Edexcel')
+                self.assertEqual(descriptors[q['id']]['dataPath'],path.relative_to(root).as_posix())
+                self.assertTrue(q['skillIds'])
+                self.assertEqual(q['subchapterLabel'],module.title_label(q['subchapterTitle']))
+        self.assertEqual(seen,set(descriptors))
+        self.assertEqual(counts,{'pure-year-1':874,'pure-year-2':738,'applied-year-1':459,'applied-year-2':404})
 
 if __name__=='__main__':unittest.main()

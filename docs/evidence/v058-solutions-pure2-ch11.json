@@ -27,9 +27,21 @@
     "horizontalOverflows": 0
   },
   "review": "All 99 source prompts, their subparts and supplied answer rows compared with explicit worked derivations. Verification uses independent central finite differences at three real-domain inputs for primitives, numerical quadrature for definite integrals, differential-equation residuals, boundary values, table arithmetic and geometry areas. Source discrepancies are qualified, including a nonexistent differentiable initial-value solution at a singular boundary point. All 20 source diagrams inspected. No cross-question context dependencies identified.",
-  "pending": [
-    "Integrated Papers screen and print acceptance",
-    "Independent agent review"
-  ],
-  "reviewCorrection": "11.7 Q7(b) now explicitly combines the logarithms into the requested a ln b form: (6/5) ln(4/3), with a=6/5 and b=4/3. The integral and value are unchanged. 11.9 Q3(d) distinguishes the 6.72% error using the requested reported approximation 0.436 from 6.82% using the unrounded table estimate."
+  "pending": [],
+  "reviewCorrection": "11.7 Q7(b) now explicitly combines the logarithms into the requested a ln b form: (6/5) ln(4/3), with a=6/5 and b=4/3. The integral and value are unchanged. 11.9 Q3(d) distinguishes the 6.72% error using the requested reported approximation 0.436 from 6.82% using the unrounded table estimate.",
+  "independentReview": {
+    "family": "pure-year-2",
+    "chapter": 11,
+    "status": "accepted",
+    "reviewer": "practice-extraction agent, independently of solution author",
+    "questionCount": 99,
+    "solutionPath": "resources/practice-solutions/pure-year-2/chapter-11.json",
+    "solutionDataSha256": "0ae23fa0a3535144183ab50b5d2bef078fee47df4f62a97f17dbe30c8c527087",
+    "allNativePromptAndWorkingRowsRead": true,
+    "referencedFiguresReviewed": 20,
+    "mathChecksRerunPassed": 693,
+    "mathCheckScript": "scripts/check_practice_pure2_ch11.py",
+    "review": "All integrals, transformations, bounds, areas, trapezium estimates, differential equations and contextual initial conditions reviewed. Review added the requested rational logarithm form in 11.7 Q7(b), and distinguished the requested rounded approximation from the unrounded table estimate in 11.9 Q3(d). All original source-figure regions were inspected."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
 }

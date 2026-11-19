@@ -23,8 +23,20 @@
     "horizontalOverflows": 0
   },
   "review": "All 45 native prompts, source subparts and supplied keys compared against full coordinate, vector and mechanics working. Independent exact checks cover coordinate subtraction, all distance roots, unit magnitudes, all isosceles alternatives, equilibrium and F=ma. Angle checks use the cosine rule independently of authored scalar products; area checks use cross-product determinants independently of the displayed included-angle formula. Both cuboid bisection proofs checked symbolically. All eight source diagrams inspected. No cross-question dependencies.",
-  "pending": [
-    "Integrated Papers screen and print acceptance",
-    "Independent agent review"
-  ]
+  "pending": [],
+  "independentReview": {
+    "family": "pure-year-2",
+    "chapter": 12,
+    "status": "accepted",
+    "reviewer": "practice-extraction agent, independently of solution author",
+    "questionCount": 45,
+    "solutionPath": "resources/practice-solutions/pure-year-2/chapter-12.json",
+    "solutionDataSha256": "5013cb4dfa6b81d21e866962594f5e8d7129496dc2477472abc58b634df6a9a3",
+    "allNativePromptAndWorkingRowsRead": true,
+    "referencedFiguresReviewed": 7,
+    "mathChecksRerunPassed": 186,
+    "mathCheckScript": "scripts/check_practice_pure2_ch12.py",
+    "review": "All vector differences, distances, angles, parallelism, midpoint proofs, forces and accelerations reviewed against native prompts and diagrams. The source force/acceleration discrepancy and limiting/domain qualifications are handled correctly. No additional defect found."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
 }

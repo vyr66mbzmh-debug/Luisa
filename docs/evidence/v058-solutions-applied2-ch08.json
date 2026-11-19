@@ -1,7 +1,7 @@
 {
   "issue": 99,
   "release": "0.58",
-  "chapter": "Applied Year 2 Chapter 8 \u2014 Further kinematics",
+  "chapter": "Applied Year 2 Chapter 8 — Further kinematics",
   "questions": 52,
   "workedSolutions": 52,
   "originalQuestionIdsMatched": 52,
@@ -16,14 +16,14 @@
       "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.1/q6",
       "note": "Find the initial velocity component by component. Distance travelled is the integral of speed because the direction changes.",
       "details": [
-        "Numerical integration gives 81.872591\u2026 m. The supplied 79.5 m is the magnitude of displacement, not the distance travelled."
+        "Numerical integration gives 81.872591… m. The supplied 79.5 m is the magnitude of displacement, not the distance travelled."
       ]
     },
     {
       "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.2/q5",
       "note": "The flight ends at the launch height. OB is a distance, so it determines the magnitude of the horizontal velocity.",
       "details": [
-        "Choosing the positive horizontal direction towards B gives a=24 as in the supplied answer. Without that direction convention, a=\u221224 is also possible."
+        "Choosing the positive horizontal direction towards B gives a=24 as in the supplied answer. Without that direction convention, a=−24 is also possible."
       ]
     },
     {
@@ -37,21 +37,21 @@
       "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.3/q6",
       "note": "Differentiate the exponential twice. The magnitude of force is nonnegative.",
       "details": [
-        "The force acts in the negative coordinate direction. The supplied \u22128/e is its signed component, not the requested magnitude."
+        "The force acts in the negative coordinate direction. The supplied −8/e is its signed component, not the requested magnitude."
       ]
     },
     {
       "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q6",
-      "note": "Use the stated position formula. It gives r(0)=2i, contradicting the words \u201cinitially at O\u201d; position relative to O and displacement from the actual initial point therefore differ.",
+      "note": "Use the stated position formula. It gives r(0)=2i, contradicting the words “initially at O”; position relative to O and displacement from the actual initial point therefore differ.",
       "details": [
-        "The supplied answer \u2212i+3j is position relative to O. The displacement from the formula\u2019s actual initial point is \u22123i+3j."
+        "The supplied answer −i+3j is position relative to O. The displacement from the formula’s actual initial point is −3i+3j."
       ]
     },
     {
       "id": "practice/maths-a-level/maths-mechanics-year-2/ch8/8.4/q7",
       "note": "Use the chain rule for velocity and the product rule for acceleration.",
       "details": [
-        "Acceleration has units m s\u207b\u00b2; the supplied key prints velocity units here."
+        "Acceleration has units m s⁻²; the supplied key prints velocity units here."
       ]
     },
     {
@@ -91,5 +91,6 @@
   "solutionSha256": "f48c560a399cafdd17e0cfcb9e2faeadc158261c68f6e7093b2c787892e94bf7",
   "sourcePdf": "resources/practice/applied-year-2/chapter-08.pdf",
   "sourcePdfSha256": "7f174cdeb5eb90961a73e69939026b842b910873ad1712da72f41931a256d8e1",
-  "independentReview": "pending lead review"
+  "independentReview": "Lead reviewed all 52 original prompts and worked solutions plus all three source figures, and reran 189 independent mathematical checks. Confirmed distance versus displacement, incompatible projectile conditions, force magnitude and the non-unique parameter. Final combined Papers print acceptance is recorded separately.",
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
 }

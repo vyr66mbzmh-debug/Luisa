@@ -27,10 +27,7 @@
     "horizontalOverflows": 0
   },
   "review": "All 40 native prompts and answer rows compared with authored steps. Independent bisection confirms root brackets; finite differences independently check Newton derivatives and actual displayed rounded Newton results. Every displayed iterate is checked numerically. Branch qualifications, contraction arguments and the three-root correction are explicit. All 22 original diagrams were inspected; the incomplete two-root answer sketch is replaced with a two-panel deterministic plot showing all three intersections.",
-  "pending": [
-    "Integrated Papers screen and print acceptance",
-    "Independent agent review"
-  ],
+  "pending": [],
   "sourcePdfSha256": "1f374e6ca812d023c72a95bb8a8612616b30d074947ab7f64c51f5fa1325935c",
   "scientificNotationCorrection": {
     "questions": [
@@ -40,5 +37,20 @@
       "practice/maths-a-level/maths-pure-year-2/ch10/exam/q29"
     ],
     "note": "Converted numeric formatter exponent notation to explicit LaTeX multiplication by a power of ten. Values and root brackets are unchanged; genuine exponential expressions were not changed."
-  }
+  },
+  "independentReview": {
+    "family": "pure-year-2",
+    "chapter": 10,
+    "status": "accepted",
+    "reviewer": "practice-extraction agent, independently of solution author",
+    "questionCount": 40,
+    "solutionPath": "resources/practice-solutions/pure-year-2/chapter-10.json",
+    "solutionDataSha256": "978d391c0b7c79ba4d9db9ff05cc865d5638ba00951117329fa1574c9c87e716",
+    "allNativePromptAndWorkingRowsRead": true,
+    "referencedFiguresReviewed": 22,
+    "mathChecksRerunPassed": 195,
+    "mathCheckScript": "scripts/check_practice_pure2_ch10.py",
+    "review": "All sign-change brackets, iteration sequences, convergence arguments, Newton steps and contextual models reviewed. The replacement graph correctly shows three exponential/parabola crossings. Four scientific-notation literals were corrected to powers of ten."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
 }

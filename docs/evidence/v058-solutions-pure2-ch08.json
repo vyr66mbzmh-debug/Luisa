@@ -25,9 +25,21 @@
     "horizontalOverflows": 0
   },
   "review": "All native prompts, subparts, supplied keys and meaningful diagrams compared with authored working. Elimination preserves original parameter domains and all curve branches. Intersections distinguish algebraic extensions and actual parametrised points. Complete value tables, curve sketches, model calculations, line equations and extrema are included. Exact symbolic substitution, endpoint checks, model evaluations and area integration independently verify the working.",
-  "pending": [
-    "Integrated Papers screen and print acceptance",
-    "Independent agent review"
-  ],
-  "reviewCorrection": "Independent review corrected the source-labelled intercepts in Problem B Gold: A is the upper y-axis intersection (0,5 ln 5), B is the lower intersection (0,2 ln 2). The area and all numerical results are unchanged."
+  "pending": [],
+  "reviewCorrection": "Independent review corrected the source-labelled intercepts in Problem B Gold: A is the upper y-axis intersection (0,5 ln 5), B is the lower intersection (0,2 ln 2). The area and all numerical results are unchanged.",
+  "independentReview": {
+    "family": "pure-year-2",
+    "chapter": 8,
+    "status": "accepted",
+    "reviewer": "practice-extraction agent, independently of solution author",
+    "questionCount": 51,
+    "solutionPath": "resources/practice-solutions/pure-year-2/chapter-08.json",
+    "solutionDataSha256": "1c6806aab3e99f35c6eb0ce959dfb5abfddea6b3ee5defe08b84ba488acea9bf",
+    "allNativePromptAndWorkingRowsRead": true,
+    "referencedFiguresReviewed": 29,
+    "mathChecksRerunPassed": 150,
+    "mathCheckScript": "scripts/check_practice_pure2_ch08.py",
+    "review": "All parameter eliminations, branch restrictions, completed coordinate tables, intercepts, intersections and areas reviewed. Four replacement sketches inspected. Review corrected the source-labelled A/B intercepts in Problem B Gold; the area was unchanged."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
 }

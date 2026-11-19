@@ -20,7 +20,18 @@
     "horizontalOverflows": 0
   },
   "review": "All native questions/subparts and supplied answers compared with authored working. Binomial expansions provide general-term substitution and evaluated term tables; coefficients, simultaneous equations, estimates and probability sums include intermediate calculations. Independent checks compare full and truncated expansions, exact coefficients, factorial combinations, decimal approximations and the percentage error. Independent review covered all 51 rows and 80 checks; the requested Pascal rows are explicit within each part of 8.1 Q1.",
-  "pending": [
-    "Integrated Papers screen and print acceptance"
-  ]
+  "pending": [],
+  "independentReview": {
+    "family": "pure-year-1",
+    "chapter": 8,
+    "status": "accepted",
+    "reviewer": "practice-extraction agent, independently of solution author",
+    "questionCount": 51,
+    "solutionPath": "resources/practice-solutions/pure-year-1/chapter-08.json",
+    "solutionDataSha256": "74aa8dc3f740e94f4c755872b9f54ec441a551c48d5db78e27cadd2666cdc6fd",
+    "allNativePromptAndWorkingRowsRead": true,
+    "mathChecksRerunPassed": 80,
+    "review": "Earlier independent review covered all 51 source/working rows and 80 exact checks. Requested Pascal coefficient rows are now explicit within each part of 8.1 Q1 and linked to its evaluated term table. The original top-row convention in 8.2 Q4 is preserved and the supplied-key off-by-one is explained."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
 }

@@ -129,6 +129,14 @@
   }
   function fillPreview(container, row) {
     container.innerHTML = (row.contextHtml || '') + row.question;
+    container.querySelectorAll('table').forEach(table => {
+      if (table.closest('.math-table')) return;
+      const scroll = element('div', undefined, 'math-table');
+      scroll.tabIndex = 0;
+      scroll.setAttribute('role', 'region');
+      scroll.setAttribute('aria-label', 'Question table; scroll horizontally if needed');
+      table.before(scroll); scroll.append(table);
+    });
     try { renderMath(container); }
     catch (_) { container.replaceChildren(element('p', 'This mathematical preview could not be rendered. Reload the page before printing.', 'preview-error')); }
   }

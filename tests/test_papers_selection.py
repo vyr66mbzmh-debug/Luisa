@@ -123,6 +123,25 @@ class PapersSelection(unittest.TestCase):
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('incomplete content')")
         self.assertEqual(self.selection_ids(), previous)
 
+    def test_wide_practice_table_scrolls_inside_mobile_preview(self):
+        descriptor, question = self.practice_fixture()
+        question['question'] = '<table class="practice-table"><tr>' + ''.join(
+            f'<td>{100000 + n}</td>' for n in range(12)) + '</tr></table>'
+        self.page.route('**/content/practice/pure-year-1/chapter-01.json', lambda route: route.fulfill(
+            content_type='application/json', body=json.dumps({'schemaVersion': 1, 'questions': [question]})))
+        self.page.set_viewport_size({'width': 390, 'height': 844})
+        self.page.locator('#papers-source').select_option('practice-booklet')
+        self.generate(1)
+        self.page.locator('#papers-selected summary').click()
+        table = self.page.locator('#papers-selected .math-table')
+        table.wait_for(state='visible')
+        self.assertEqual(table.locator('td').count(), 12)
+        self.assertTrue(self.page.evaluate('document.documentElement.scrollWidth <= innerWidth'))
+        self.assertTrue(table.evaluate('n=>n.scrollWidth>n.clientWidth'))
+        table.focus()
+        table.press('ArrowRight')
+        self.page.wait_for_function("document.querySelector('#papers-selected .math-table').scrollLeft > 0")
+
     def test_all_actual_questions_reference_exclusion_and_qualified_ids(self):
         self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '6,147 questions in this pool')
         self.page.locator('#papers-course').select_option('maths-a-level')

@@ -24,8 +24,20 @@
     "horizontalOverflows": 0
   },
   "review": "All 95 native prompts and supplied answer rows compared against explicit authored differentiation, tangent/normal, stationary point, concavity, first-principles and rate workings. Chain/product/quotient substitutions are explicit. The verification script parses 65 final displayed derivatives from the authored JSON and compares each against independent central finite differences at three real-domain inputs; 77 additional exact checks cover implicit and parametric derivatives, stationary points, line gradients, extrema and areas. Original branch and domain restrictions are retained.",
-  "pending": [
-    "Integrated Papers screen and print acceptance",
-    "Independent agent review"
-  ]
+  "pending": [],
+  "independentReview": {
+    "family": "pure-year-2",
+    "chapter": 9,
+    "status": "accepted",
+    "reviewer": "practice-extraction agent, independently of solution author",
+    "questionCount": 95,
+    "solutionPath": "resources/practice-solutions/pure-year-2/chapter-09.json",
+    "solutionDataSha256": "d2ef8d6c18b006118ecb36b9c881f203a3eb4bbb2c76b889472694fbfe228838",
+    "allNativePromptAndWorkingRowsRead": true,
+    "referencedFiguresReviewed": 6,
+    "mathChecksRerunPassed": 272,
+    "mathCheckScript": "scripts/check_practice_pure2_ch09.py",
+    "review": "All chain/product/quotient, implicit and parametric derivatives, tangent/normal equations, convexity intervals and rate models reviewed. Original invalid points and omitted inverse branches are explicitly qualified. No additional defect found."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
 }
