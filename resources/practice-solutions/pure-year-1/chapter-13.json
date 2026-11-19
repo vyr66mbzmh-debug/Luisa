@@ -1061,16 +1061,21 @@
     {
       "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-a/qgold",
       "status": "worked",
-      "method": "Integrate retaining both unknown constants, then use the two values to form simultaneous equations.",
+      "method": "Assume the same integration constant for the two given values, integrate, then solve the simultaneous equations.",
       "steps": [
         {
           "latex": "f=x^3+\\frac p2x^2-8x^{-1}+C;-85=-64+8p+2+C\\Rightarrow8p+C=-23;11=8+2p-4+C\\Rightarrow2p+C=7;6p=-30;p=-5,C=17;f=x^3-\\frac52x^2-8x^{-1}+17",
           "explanation": "",
           "graphs": []
+        },
+        {
+          "latex": "C_-=-23-8p,\\quad C_+=7-2p",
+          "explanation": "The expected answer assumes one common integration constant on both sides of x=0. The derivative is undefined at zero, so without that assumption the two separate domain intervals can have different constants and p is not uniquely determined.",
+          "graphs": []
         }
       ],
-      "solutionHtml": "<p>Integrate retaining both unknown constants, then use the two values to form simultaneous equations.</p><span data-math=\"f=x^3+\\frac p2x^2-8x^{-1}+C\" data-display=\"true\"></span><span data-math=\"-85=-64+8p+2+C\\Rightarrow8p+C=-23\" data-display=\"true\"></span><span data-math=\"11=8+2p-4+C\\Rightarrow2p+C=7\" data-display=\"true\"></span><span data-math=\"6p=-30\" data-display=\"true\"></span><span data-math=\"p=-5,C=17\" data-display=\"true\"></span><span data-math=\"f=x^3-\\frac52x^2-8x^{-1}+17\" data-display=\"true\"></span>",
-      "answerCheck": "matches"
+      "solutionHtml": "<p>Assume the same integration constant for the two given values, integrate, then solve the simultaneous equations.</p><span data-math=\"f=x^3+\\frac p2x^2-8x^{-1}+C\" data-display=\"true\"></span><span data-math=\"-85=-64+8p+2+C\\Rightarrow8p+C=-23\" data-display=\"true\"></span><span data-math=\"11=8+2p-4+C\\Rightarrow2p+C=7\" data-display=\"true\"></span><span data-math=\"6p=-30\" data-display=\"true\"></span><span data-math=\"p=-5,C=17\" data-display=\"true\"></span><span data-math=\"f=x^3-\\frac52x^2-8x^{-1}+17\" data-display=\"true\"></span><p>The expected answer assumes one common integration constant on both sides of x=0. The derivative is undefined at zero, so without that assumption the two separate domain intervals can have different constants and p is not uniquely determined.</p><span data-math=\"C_-=-23-8p,\\quad C_+=7-2p\" data-display=\"true\"></span>",
+      "answerCheck": "domain-qualified"
     },
     {
       "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-b/qbronze",

@@ -1,7 +1,7 @@
 {
   "issue": 99,
   "release": "0.58",
-  "chapter": "Pure Year 1 Chapter 13 \u2014 Integration",
+  "chapter": "Pure Year 1 Chapter 13 — Integration",
   "questions": 66,
   "workedSolutions": 66,
   "originalQuestionIdsMatched": 66,
@@ -14,7 +14,7 @@
   "suppliedPromptOrKeyDefects": [
     {
       "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q4",
-      "note": "The printed domain x\u22650 conflicts with the negative intercept A shown in the diagram. Both the literal-domain result and the illustrated intended region are given."
+      "note": "The printed domain x≥0 conflicts with the negative intercept A shown in the diagram. Both the literal-domain result and the illustrated intended region are given."
     },
     {
       "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q5",
@@ -22,15 +22,19 @@
     },
     {
       "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q7",
-      "note": "Use y=\u22123x\u22126 in the curve equation. The first subpart names C, but the third intersection is D as stated and drawn; C labels the turning point."
+      "note": "Use y=−3x−6 in the curve equation. The first subpart names C, but the third intersection is D as stated and drawn; C labels the turning point."
     },
     {
       "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-b/qgold",
       "note": "Equate the line and curve, then use the stated segment BC to select the integration interval."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-a/qgold",
+      "note": "The expected answer assumes one common integration constant on both sides of x=0. The derivative is undefined at zero, so without that assumption the two separate domain intervals can have different constants and p is not uniquely determined."
     }
   ],
-  "solutionSha256": "cb3a6aa66c52b934660806cd050419d8dd67ef13f3ee8d2e3f032eeaa2ce71c1",
+  "solutionSha256": "09a4b7d7d1738781f394cb382fdb27a4086b3ea44dd1a75706247503abd67658",
   "sourcePdf": "resources/practice/pure-year-1/chapter-13.pdf",
   "sourcePdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
-  "independentReview": "pending lead review"
+  "independentReview": "Lead reviewed all 66 original questions, worked solutions and source diagrams; reran 119 exact checks. Added the disconnected-domain qualification to Problem A Gold. Final combined Papers print acceptance remains separate."
 }
