@@ -1,0 +1,2924 @@
+{
+  "issue": 97,
+  "scope": "Browser paper renderer baseline; oversized policy pending owner decision",
+  "runtime": "Chrome 157, single Playwright worker",
+  "format": "A4 portrait; two complete question slots; native KaTeX; original diagrams; matched solutions at back; physical page labels",
+  "pdfMethod": "Native browser Print / Save PDF; vendored PDF.js only reads PDFs",
+  "sourceQuestions": 6967,
+  "promptAudit": {
+    "method": "All original prompts at 10pt with 12mm minimum working space; conservative course/book/topic heading; two-column part lists only when their mathematics and columns fit",
+    "fit": 6647,
+    "requiresDifferentLayout": 320,
+    "warning": "These are measured failures of this specific layout, not a claim that every rejected prompt is mathematically impossible to rearrange. Actual selected context and browser measurements remain authoritative.",
+    "rejections": [
+      {
+        "id": "fm-core1-1.22-q3",
+        "skill": "1.22",
+        "number": 3,
+        "height": 587,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.18-q2",
+        "skill": "1.18",
+        "number": 2,
+        "height": 597,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.18-q5",
+        "skill": "1.18",
+        "number": 5,
+        "height": 587,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.18-q11",
+        "skill": "1.18",
+        "number": 11,
+        "height": 521,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.18-q12",
+        "skill": "1.18",
+        "number": 12,
+        "height": 591,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.30-q1",
+        "skill": "smq-2.30",
+        "number": 1,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.30-q23",
+        "skill": "smq-2.30",
+        "number": 23,
+        "height": 550,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.49-q19",
+        "skill": "2.49",
+        "number": 19,
+        "height": 588,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.49-q23",
+        "skill": "2.49",
+        "number": 23,
+        "height": 531,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.49-q24",
+        "skill": "2.49",
+        "number": 24,
+        "height": 512,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.49-q25",
+        "skill": "2.49",
+        "number": 25,
+        "height": 597,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.61-q9",
+        "skill": "smq-1.61",
+        "number": 9,
+        "height": 481,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.61-q10",
+        "skill": "smq-1.61",
+        "number": 10,
+        "height": 759,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.61-q12",
+        "skill": "smq-1.61",
+        "number": 12,
+        "height": 623,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.16-q1",
+        "skill": "smq-1.16",
+        "number": 1,
+        "height": 836,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.16-q3",
+        "skill": "smq-1.16",
+        "number": 3,
+        "height": 836,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.16-q5",
+        "skill": "smq-1.16",
+        "number": 5,
+        "height": 818,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.16-q7",
+        "skill": "smq-1.16",
+        "number": 7,
+        "height": 818,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.16-q9",
+        "skill": "smq-1.16",
+        "number": 9,
+        "height": 818,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.41-q4",
+        "skill": "smq-1.41",
+        "number": 4,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.41-q6",
+        "skill": "smq-1.41",
+        "number": 6,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.41-q9",
+        "skill": "smq-1.41",
+        "number": 9,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.41-q11",
+        "skill": "smq-1.41",
+        "number": 11,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.41-q12",
+        "skill": "smq-1.41",
+        "number": 12,
+        "height": 553,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.41-q20",
+        "skill": "smq-1.41",
+        "number": 20,
+        "height": 541,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.41-q21",
+        "skill": "smq-1.41",
+        "number": 21,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.41-q22",
+        "skill": "smq-1.41",
+        "number": 22,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.41-q23",
+        "skill": "smq-1.41",
+        "number": 23,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.41-q24",
+        "skill": "smq-1.41",
+        "number": 24,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.47-q1",
+        "skill": "smq-2.47",
+        "number": 1,
+        "height": 879,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.10-q1",
+        "skill": "smq-2.10",
+        "number": 1,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.10-q2",
+        "skill": "smq-2.10",
+        "number": 2,
+        "height": 735,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.10-q9",
+        "skill": "smq-2.10",
+        "number": 9,
+        "height": 906,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.04-q14",
+        "skill": "2.04",
+        "number": 14,
+        "height": 526,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.53-q33",
+        "skill": "2.53",
+        "number": 33,
+        "height": 482,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.53-q34",
+        "skill": "2.53",
+        "number": 34,
+        "height": 481,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.03-q11",
+        "skill": "1.03",
+        "number": 11,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.54-q39",
+        "skill": "1.54",
+        "number": 39,
+        "height": 464,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.54-q44",
+        "skill": "1.54",
+        "number": 44,
+        "height": 495,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.54-q45",
+        "skill": "1.54",
+        "number": 45,
+        "height": 464,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.54-q46",
+        "skill": "1.54",
+        "number": 46,
+        "height": 542,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q5",
+        "skill": "1.15",
+        "number": 5,
+        "height": 506,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q6",
+        "skill": "1.15",
+        "number": 6,
+        "height": 539,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q7",
+        "skill": "1.15",
+        "number": 7,
+        "height": 611,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q9",
+        "skill": "1.15",
+        "number": 9,
+        "height": 511,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q11",
+        "skill": "1.15",
+        "number": 11,
+        "height": 486,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q17",
+        "skill": "1.15",
+        "number": 17,
+        "height": 569,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q19",
+        "skill": "1.15",
+        "number": 19,
+        "height": 476,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q21",
+        "skill": "1.15",
+        "number": 21,
+        "height": 495,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q29",
+        "skill": "1.15",
+        "number": 29,
+        "height": 523,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q31",
+        "skill": "1.15",
+        "number": 31,
+        "height": 530,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q33",
+        "skill": "1.15",
+        "number": 33,
+        "height": 552,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.15-q36",
+        "skill": "1.15",
+        "number": 36,
+        "height": 683,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.56-q1",
+        "skill": "smq-1.56",
+        "number": 1,
+        "height": 638,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.50-q1",
+        "skill": "smq-2.50",
+        "number": 1,
+        "height": 614,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.60-q10",
+        "skill": "smq-1.60",
+        "number": 10,
+        "height": 598,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.60-q11",
+        "skill": "smq-1.60",
+        "number": 11,
+        "height": 557,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.48-q15",
+        "skill": "2.48",
+        "number": 15,
+        "height": 569,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.48-q17",
+        "skill": "2.48",
+        "number": 17,
+        "height": 476,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.48-q19",
+        "skill": "2.48",
+        "number": 19,
+        "height": 663,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.48-q23",
+        "skill": "2.48",
+        "number": 23,
+        "height": 652,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.19-q4",
+        "skill": "1.19",
+        "number": 4,
+        "height": 485,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.19-q5",
+        "skill": "1.19",
+        "number": 5,
+        "height": 485,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.19-q6",
+        "skill": "1.19",
+        "number": 6,
+        "height": 485,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.19-q7",
+        "skill": "1.19",
+        "number": 7,
+        "height": 485,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.19-q21",
+        "skill": "1.19",
+        "number": 21,
+        "height": 545,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.19-q23",
+        "skill": "1.19",
+        "number": 23,
+        "height": 547,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.35-q1",
+        "skill": "1.35",
+        "number": 1,
+        "height": 535,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.35-q2",
+        "skill": "1.35",
+        "number": 2,
+        "height": 535,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.25-q29",
+        "skill": "2.25",
+        "number": 29,
+        "height": 477,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.23-q3",
+        "skill": "1.23",
+        "number": 3,
+        "height": 588,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.64-q18",
+        "skill": "2.64",
+        "number": 18,
+        "height": 544,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.28-q2",
+        "skill": "1.28",
+        "number": 2,
+        "height": 470,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.28-q4",
+        "skill": "1.28",
+        "number": 4,
+        "height": 496,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.28-q6",
+        "skill": "1.28",
+        "number": 6,
+        "height": 472,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.28-q8",
+        "skill": "1.28",
+        "number": 8,
+        "height": 472,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.28-q10",
+        "skill": "1.28",
+        "number": 10,
+        "height": 474,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.28-q16",
+        "skill": "1.28",
+        "number": 16,
+        "height": 703,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.28-q20",
+        "skill": "1.28",
+        "number": 20,
+        "height": 531,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.28-q23",
+        "skill": "1.28",
+        "number": 23,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.28-q36",
+        "skill": "1.28",
+        "number": 36,
+        "height": 539,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.51-q3",
+        "skill": "smq-1.51",
+        "number": 3,
+        "height": 502,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.16-q2",
+        "skill": "smq-2.16",
+        "number": 2,
+        "height": 477,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.06-q18",
+        "skill": "smq-1.06",
+        "number": 18,
+        "height": 724,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.45-q16",
+        "skill": "1.45",
+        "number": 16,
+        "height": 483,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.63-q16",
+        "skill": "2.63",
+        "number": 16,
+        "height": 474,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.24-q5",
+        "skill": "1.24",
+        "number": 5,
+        "height": 557,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.22-q6",
+        "skill": "2.22",
+        "number": 6,
+        "height": 510,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.71-q7",
+        "skill": "smq-1.71",
+        "number": 7,
+        "height": 490,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.61-q1",
+        "skill": "smq-2.61",
+        "number": 1,
+        "height": 1046,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.61-q2",
+        "skill": "smq-2.61",
+        "number": 2,
+        "height": 464,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.61-q3",
+        "skill": "smq-2.61",
+        "number": 3,
+        "height": 562,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.61-q5",
+        "skill": "smq-2.61",
+        "number": 5,
+        "height": 537,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.61-q9",
+        "skill": "smq-2.61",
+        "number": 9,
+        "height": 465,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.61-q10",
+        "skill": "smq-2.61",
+        "number": 10,
+        "height": 506,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.61-q11",
+        "skill": "smq-2.61",
+        "number": 11,
+        "height": 508,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.61-q12",
+        "skill": "smq-2.61",
+        "number": 12,
+        "height": 468,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.59-q2",
+        "skill": "2.59",
+        "number": 2,
+        "height": 563,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.26-q7",
+        "skill": "smq-1.26",
+        "number": 7,
+        "height": 511,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.26-q25",
+        "skill": "smq-1.26",
+        "number": 25,
+        "height": 676,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.67-q2",
+        "skill": "smq-1.67",
+        "number": 2,
+        "height": 535,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.67-q3",
+        "skill": "smq-1.67",
+        "number": 3,
+        "height": 535,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.08-q4",
+        "skill": "1.08",
+        "number": 4,
+        "height": 546,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.09-q22",
+        "skill": "1.09",
+        "number": 22,
+        "height": 483,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.66-q2",
+        "skill": "smq-1.66",
+        "number": 2,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.66-q3",
+        "skill": "smq-1.66",
+        "number": 3,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.58-q1",
+        "skill": "2.58",
+        "number": 1,
+        "height": 530,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.58-q3",
+        "skill": "2.58",
+        "number": 3,
+        "height": 530,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.27-q18",
+        "skill": "smq-1.27",
+        "number": 18,
+        "height": 501,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.27-q19",
+        "skill": "smq-1.27",
+        "number": 19,
+        "height": 493,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.27-q21",
+        "skill": "smq-1.27",
+        "number": 21,
+        "height": 525,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.27-q23",
+        "skill": "smq-1.27",
+        "number": 23,
+        "height": 498,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.27-q24",
+        "skill": "smq-1.27",
+        "number": 24,
+        "height": 510,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.27-q25",
+        "skill": "smq-1.27",
+        "number": 25,
+        "height": 510,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.60-q1",
+        "skill": "smq-2.60",
+        "number": 1,
+        "height": 696,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.60-q4",
+        "skill": "smq-2.60",
+        "number": 4,
+        "height": 465,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.60-q5",
+        "skill": "smq-2.60",
+        "number": 5,
+        "height": 470,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.60-q8",
+        "skill": "smq-2.60",
+        "number": 8,
+        "height": 560,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.60-q27",
+        "skill": "smq-2.60",
+        "number": 27,
+        "height": 494,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.70-q6",
+        "skill": "smq-1.70",
+        "number": 6,
+        "height": 482,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.70-q7",
+        "skill": "smq-1.70",
+        "number": 7,
+        "height": 694,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.70-q8",
+        "skill": "smq-1.70",
+        "number": 8,
+        "height": 490,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.70-q11",
+        "skill": "smq-1.70",
+        "number": 11,
+        "height": 471,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.70-q13",
+        "skill": "smq-1.70",
+        "number": 13,
+        "height": 521,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.70-q15",
+        "skill": "smq-1.70",
+        "number": 15,
+        "height": 477,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.70-q17",
+        "skill": "smq-1.70",
+        "number": 17,
+        "height": 489,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.70-q18",
+        "skill": "smq-1.70",
+        "number": 18,
+        "height": 487,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.33-q8",
+        "skill": "1.33",
+        "number": 8,
+        "height": 535,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.25-q23",
+        "skill": "1.25",
+        "number": 23,
+        "height": 541,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.35-q10",
+        "skill": "2.35",
+        "number": 10,
+        "height": 467,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.35-q18",
+        "skill": "2.35",
+        "number": 18,
+        "height": 504,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.35-q23",
+        "skill": "2.35",
+        "number": 23,
+        "height": 592,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.35-q28",
+        "skill": "2.35",
+        "number": 28,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.35-q31",
+        "skill": "2.35",
+        "number": 31,
+        "height": 513,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.35-q32",
+        "skill": "2.35",
+        "number": 32,
+        "height": 534,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.35-q33",
+        "skill": "2.35",
+        "number": 33,
+        "height": 482,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.35-q35",
+        "skill": "2.35",
+        "number": 35,
+        "height": 512,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.50-q10",
+        "skill": "smq-1.50",
+        "number": 10,
+        "height": 476,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.50-q11",
+        "skill": "smq-1.50",
+        "number": 11,
+        "height": 467,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.50-q13",
+        "skill": "smq-1.50",
+        "number": 13,
+        "height": 750,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.50-q18",
+        "skill": "smq-1.50",
+        "number": 18,
+        "height": 494,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.50-q19",
+        "skill": "smq-1.50",
+        "number": 19,
+        "height": 494,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.50-q25",
+        "skill": "smq-1.50",
+        "number": 25,
+        "height": 511,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.46-q3",
+        "skill": "smq-1.46",
+        "number": 3,
+        "height": 476,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.39-q10",
+        "skill": "2.39",
+        "number": 10,
+        "height": 464,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q1",
+        "skill": "smq-2.56",
+        "number": 1,
+        "height": 483,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q2",
+        "skill": "smq-2.56",
+        "number": 2,
+        "height": 501,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q3",
+        "skill": "smq-2.56",
+        "number": 3,
+        "height": 476,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q4",
+        "skill": "smq-2.56",
+        "number": 4,
+        "height": 482,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q5",
+        "skill": "smq-2.56",
+        "number": 5,
+        "height": 465,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q7",
+        "skill": "smq-2.56",
+        "number": 7,
+        "height": 488,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q8",
+        "skill": "smq-2.56",
+        "number": 8,
+        "height": 484,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q9",
+        "skill": "smq-2.56",
+        "number": 9,
+        "height": 476,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q11",
+        "skill": "smq-2.56",
+        "number": 11,
+        "height": 494,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q13",
+        "skill": "smq-2.56",
+        "number": 13,
+        "height": 495,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.56-q15",
+        "skill": "smq-2.56",
+        "number": 15,
+        "height": 523,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.29-q21",
+        "skill": "1.29",
+        "number": 21,
+        "height": 470,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.11-q2",
+        "skill": "smq-1.11",
+        "number": 2,
+        "height": 488,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.01-q4",
+        "skill": "smq-2.01",
+        "number": 4,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.41-q43",
+        "skill": "2.41",
+        "number": 43,
+        "height": 474,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.28-q7",
+        "skill": "smq-1.28",
+        "number": 7,
+        "height": 546,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.28-q34",
+        "skill": "smq-1.28",
+        "number": 34,
+        "height": 546,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.28-q41",
+        "skill": "smq-1.28",
+        "number": 41,
+        "height": 546,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.04-q2",
+        "skill": "smq-1.04",
+        "number": 2,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.04-q4",
+        "skill": "smq-1.04",
+        "number": 4,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.04-q7",
+        "skill": "smq-1.04",
+        "number": 7,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.14-q4",
+        "skill": "smq-2.14",
+        "number": 4,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.14-q11",
+        "skill": "smq-2.14",
+        "number": 11,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.14-q19",
+        "skill": "smq-2.14",
+        "number": 19,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.53-q1",
+        "skill": "smq-1.53",
+        "number": 1,
+        "height": 820,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.53-q2",
+        "skill": "smq-1.53",
+        "number": 2,
+        "height": 2582,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.43-q4",
+        "skill": "smq-2.43",
+        "number": 4,
+        "height": 483,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.43-q5",
+        "skill": "smq-2.43",
+        "number": 5,
+        "height": 500,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.43-q9",
+        "skill": "smq-2.43",
+        "number": 9,
+        "height": 494,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.43-q12",
+        "skill": "smq-2.43",
+        "number": 12,
+        "height": 526,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.43-q13",
+        "skill": "smq-2.43",
+        "number": 13,
+        "height": 465,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.43-q14",
+        "skill": "smq-2.43",
+        "number": 14,
+        "height": 515,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.43-q17",
+        "skill": "smq-2.43",
+        "number": 17,
+        "height": 532,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.43-q18",
+        "skill": "smq-2.43",
+        "number": 18,
+        "height": 562,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.43-q21",
+        "skill": "smq-2.43",
+        "number": 21,
+        "height": 516,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.55-q1",
+        "skill": "smq-2.55",
+        "number": 1,
+        "height": 516,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.55-q2",
+        "skill": "smq-2.55",
+        "number": 2,
+        "height": 555,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.55-q8",
+        "skill": "smq-2.55",
+        "number": 8,
+        "height": 532,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.55-q9",
+        "skill": "smq-2.55",
+        "number": 9,
+        "height": 475,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.55-q10",
+        "skill": "smq-2.55",
+        "number": 10,
+        "height": 467,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.55-q11",
+        "skill": "smq-2.55",
+        "number": 11,
+        "height": 482,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.55-q13",
+        "skill": "smq-2.55",
+        "number": 13,
+        "height": 523,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.55-q19",
+        "skill": "smq-2.55",
+        "number": 19,
+        "height": 543,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.55-q25",
+        "skill": "smq-2.55",
+        "number": 25,
+        "height": 477,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.24-q1",
+        "skill": "smq-1.24",
+        "number": 1,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.24-q3",
+        "skill": "smq-1.24",
+        "number": 3,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.24-q5",
+        "skill": "smq-1.24",
+        "number": 5,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.24-q7",
+        "skill": "smq-1.24",
+        "number": 7,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.24-q9",
+        "skill": "smq-1.24",
+        "number": 9,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.24-q11",
+        "skill": "smq-1.24",
+        "number": 11,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.24-q13",
+        "skill": "smq-1.24",
+        "number": 13,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.08-q1",
+        "skill": "smq-1.08",
+        "number": 1,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.08-q3",
+        "skill": "smq-1.08",
+        "number": 3,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.08-q5",
+        "skill": "smq-1.08",
+        "number": 5,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.08-q7",
+        "skill": "smq-1.08",
+        "number": 7,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.08-q9",
+        "skill": "smq-1.08",
+        "number": 9,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.08-q11",
+        "skill": "smq-1.08",
+        "number": 11,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.08-q13",
+        "skill": "smq-1.08",
+        "number": 13,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.36-q12",
+        "skill": "2.36",
+        "number": 12,
+        "height": 524,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.49-q2",
+        "skill": "smq-1.49",
+        "number": 2,
+        "height": 913,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.49-q7",
+        "skill": "smq-1.49",
+        "number": 7,
+        "height": 486,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.49-q12",
+        "skill": "smq-1.49",
+        "number": 12,
+        "height": 561,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.49-q16",
+        "skill": "smq-1.49",
+        "number": 16,
+        "height": 865,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.60-q3",
+        "skill": "2.60",
+        "number": 3,
+        "height": 548,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.37-q8",
+        "skill": "2.37",
+        "number": 8,
+        "height": 535,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.58-q5",
+        "skill": "smq-2.58",
+        "number": 5,
+        "height": 476,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.58-q17",
+        "skill": "smq-2.58",
+        "number": 17,
+        "height": 484,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.21-q1",
+        "skill": "2.21",
+        "number": 1,
+        "height": 533,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.21-q5",
+        "skill": "2.21",
+        "number": 5,
+        "height": 660,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.21-q8",
+        "skill": "2.21",
+        "number": 8,
+        "height": 529,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.31-q8",
+        "skill": "1.31",
+        "number": 8,
+        "height": 535,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.25-q1",
+        "skill": "smq-1.25",
+        "number": 1,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.25-q3",
+        "skill": "smq-1.25",
+        "number": 3,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.25-q5",
+        "skill": "smq-1.25",
+        "number": 5,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.25-q7",
+        "skill": "smq-1.25",
+        "number": 7,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.25-q9",
+        "skill": "smq-1.25",
+        "number": 9,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.25-q11",
+        "skill": "smq-1.25",
+        "number": 11,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.25-q13",
+        "skill": "smq-1.25",
+        "number": 13,
+        "height": 556,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.35-q65",
+        "skill": "smq-2.35",
+        "number": 65,
+        "height": 483,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.33-q1",
+        "skill": "smq-1.33",
+        "number": 1,
+        "height": 597,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.33-q3",
+        "skill": "smq-1.33",
+        "number": 3,
+        "height": 902,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.64-q16",
+        "skill": "smq-1.64",
+        "number": 16,
+        "height": 500,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.64-q23",
+        "skill": "smq-1.64",
+        "number": 23,
+        "height": 525,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.03-q4",
+        "skill": "smq-2.03",
+        "number": 4,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.03-q6",
+        "skill": "smq-2.03",
+        "number": 6,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.03-q9",
+        "skill": "smq-2.03",
+        "number": 9,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.03-q11",
+        "skill": "smq-2.03",
+        "number": 11,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.03-q12",
+        "skill": "smq-2.03",
+        "number": 12,
+        "height": 553,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.03-q20",
+        "skill": "smq-2.03",
+        "number": 20,
+        "height": 541,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.03-q21",
+        "skill": "smq-2.03",
+        "number": 21,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.03-q22",
+        "skill": "smq-2.03",
+        "number": 22,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.03-q23",
+        "skill": "smq-2.03",
+        "number": 23,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.03-q24",
+        "skill": "smq-2.03",
+        "number": 24,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.54-q2",
+        "skill": "smq-2.54",
+        "number": 2,
+        "height": 482,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.54-q3",
+        "skill": "smq-2.54",
+        "number": 3,
+        "height": 488,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.54-q6",
+        "skill": "smq-2.54",
+        "number": 6,
+        "height": 506,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.42-q11",
+        "skill": "smq-2.42",
+        "number": 11,
+        "height": 550,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.42-q19",
+        "skill": "smq-2.42",
+        "number": 19,
+        "height": 534,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.42-q22",
+        "skill": "smq-2.42",
+        "number": 22,
+        "height": 551,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.52-q21",
+        "skill": "smq-1.52",
+        "number": 21,
+        "height": 483,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.52-q22",
+        "skill": "smq-1.52",
+        "number": 22,
+        "height": 483,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.52-q26",
+        "skill": "smq-1.52",
+        "number": 26,
+        "height": 476,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.56-q1",
+        "skill": "2.56",
+        "number": 1,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.56-q3",
+        "skill": "2.56",
+        "number": 3,
+        "height": 535,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.07-q2",
+        "skill": "1.07",
+        "number": 2,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.07-q10",
+        "skill": "1.07",
+        "number": 10,
+        "height": 528,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.07-q16",
+        "skill": "1.07",
+        "number": 16,
+        "height": 535,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.63-q9",
+        "skill": "smq-1.63",
+        "number": 9,
+        "height": 536,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.63-q10",
+        "skill": "smq-1.63",
+        "number": 10,
+        "height": 618,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.63-q13",
+        "skill": "smq-1.63",
+        "number": 13,
+        "height": 487,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.71-q19",
+        "skill": "2.71",
+        "number": 19,
+        "height": 500,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.49-q19",
+        "skill": "smq-2.49",
+        "number": 19,
+        "height": 501,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.49-q20",
+        "skill": "smq-2.49",
+        "number": 20,
+        "height": 695,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.59-q7",
+        "skill": "smq-1.59",
+        "number": 7,
+        "height": 610,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.20-q3",
+        "skill": "1.20",
+        "number": 3,
+        "height": 518,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.20-q5",
+        "skill": "1.20",
+        "number": 5,
+        "height": 524,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.20-q7",
+        "skill": "1.20",
+        "number": 7,
+        "height": 476,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.20-q11",
+        "skill": "1.20",
+        "number": 11,
+        "height": 497,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.67-q11",
+        "skill": "2.67",
+        "number": 11,
+        "height": 531,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.18-q2",
+        "skill": "smq-1.18",
+        "number": 2,
+        "height": 529,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.18-q7",
+        "skill": "smq-1.18",
+        "number": 7,
+        "height": 530,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.28-q6",
+        "skill": "smq-2.28",
+        "number": 6,
+        "height": 570,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.51-q3",
+        "skill": "2.51",
+        "number": 3,
+        "height": 779,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.51-q4",
+        "skill": "2.51",
+        "number": 4,
+        "height": 564,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.51-q8",
+        "skill": "2.51",
+        "number": 8,
+        "height": 779,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.45-q20",
+        "skill": "smq-2.45",
+        "number": 20,
+        "height": 684,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.45-q28",
+        "skill": "smq-2.45",
+        "number": 28,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.43-q2",
+        "skill": "smq-1.43",
+        "number": 2,
+        "height": 655,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.43-q3",
+        "skill": "smq-1.43",
+        "number": 3,
+        "height": 655,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.43-q6",
+        "skill": "smq-1.43",
+        "number": 6,
+        "height": 655,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.43-q11",
+        "skill": "smq-1.43",
+        "number": 11,
+        "height": 617,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.53-q2",
+        "skill": "smq-2.53",
+        "number": 2,
+        "height": 722,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.53-q11",
+        "skill": "smq-2.53",
+        "number": 11,
+        "height": 545,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.53-q14",
+        "skill": "smq-2.53",
+        "number": 14,
+        "height": 470,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.53-q22",
+        "skill": "smq-2.53",
+        "number": 22,
+        "height": 500,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.53-q23",
+        "skill": "smq-2.53",
+        "number": 23,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.05-q2",
+        "skill": "smq-2.05",
+        "number": 2,
+        "height": 553,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.05-q3",
+        "skill": "smq-2.05",
+        "number": 3,
+        "height": 553,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.05-q6",
+        "skill": "smq-2.05",
+        "number": 6,
+        "height": 553,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.05-q10",
+        "skill": "smq-2.05",
+        "number": 10,
+        "height": 559,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.15-q1",
+        "skill": "smq-1.15",
+        "number": 1,
+        "height": 836,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.15-q3",
+        "skill": "smq-1.15",
+        "number": 3,
+        "height": 836,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.15-q5",
+        "skill": "smq-1.15",
+        "number": 5,
+        "height": 818,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.15-q7",
+        "skill": "smq-1.15",
+        "number": 7,
+        "height": 818,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.15-q9",
+        "skill": "smq-1.15",
+        "number": 9,
+        "height": 818,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.52-q2",
+        "skill": "smq-2.52",
+        "number": 2,
+        "height": 906,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.52-q3",
+        "skill": "smq-2.52",
+        "number": 3,
+        "height": 535,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.52-q4",
+        "skill": "smq-2.52",
+        "number": 4,
+        "height": 1315,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.52-q5",
+        "skill": "smq-2.52",
+        "number": 5,
+        "height": 521,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.52-q10",
+        "skill": "smq-2.52",
+        "number": 10,
+        "height": 476,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.52-q11",
+        "skill": "smq-2.52",
+        "number": 11,
+        "height": 567,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.52-q15",
+        "skill": "smq-2.52",
+        "number": 15,
+        "height": 482,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.52-q16",
+        "skill": "smq-2.52",
+        "number": 16,
+        "height": 585,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.13-q7",
+        "skill": "smq-2.13",
+        "number": 7,
+        "height": 1084,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.03-q22",
+        "skill": "smq-1.03",
+        "number": 22,
+        "height": 507,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.17-q4",
+        "skill": "1.17",
+        "number": 4,
+        "height": 472,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.07-q36",
+        "skill": "2.07",
+        "number": 36,
+        "height": 737,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.50-q24",
+        "skill": "2.50",
+        "number": 24,
+        "height": 622,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.50-q27",
+        "skill": "2.50",
+        "number": 27,
+        "height": 484,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.29-q3",
+        "skill": "smq-2.29",
+        "number": 3,
+        "height": 546,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.29-q21",
+        "skill": "smq-2.29",
+        "number": 21,
+        "height": 477,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.39-q8",
+        "skill": "smq-1.39",
+        "number": 8,
+        "height": 517,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core1-1.21-q2",
+        "skill": "1.21",
+        "number": 2,
+        "height": 575,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "fm-core2-2.27-q20",
+        "skill": "2.27",
+        "number": 20,
+        "height": 656,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.58-q15",
+        "skill": "smq-1.58",
+        "number": 15,
+        "height": 497,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.58-q16",
+        "skill": "smq-1.58",
+        "number": 16,
+        "height": 475,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.35-q13",
+        "skill": "smq-1.35",
+        "number": 13,
+        "height": 504,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.35-q15",
+        "skill": "smq-1.35",
+        "number": 15,
+        "height": 499,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.35-q16",
+        "skill": "smq-1.35",
+        "number": 16,
+        "height": 543,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.35-q17",
+        "skill": "smq-1.35",
+        "number": 17,
+        "height": 493,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.25-q24",
+        "skill": "smq-2.25",
+        "number": 24,
+        "height": 474,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year2-2.25-q32",
+        "skill": "smq-2.25",
+        "number": 32,
+        "height": 466,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.62-q6",
+        "skill": "smq-1.62",
+        "number": 6,
+        "height": 652,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.62-q8",
+        "skill": "smq-1.62",
+        "number": 8,
+        "height": 520,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      },
+      {
+        "id": "smq-year1-1.62-q10",
+        "skill": "smq-1.62",
+        "number": 10,
+        "height": 599,
+        "available": 459,
+        "wide": false,
+        "working": 44
+      }
+    ]
+  },
+  "targetedTests": {
+    "command": "python tests/papers_print_browser.py -v",
+    "passed": 3,
+    "checks": [
+      "ADA Content-Security-Policy",
+      "four mixed original questions on two question sheets",
+      "matching solution numbering and original source labels",
+      "all source solution data-math expressions in exact order",
+      "loaded original diagram",
+      "worked solutions span pages after all questions",
+      "no printed content container overflow",
+      "PDF page count agrees with preview",
+      "every PDF page A4 and carries Page n of total",
+      "oversized21-diagram source retained and print blocked",
+      "closing pending-load popup promptly releases caller"
+    ]
+  },
+  "visualReview": [
+    "Question page: readable11pt native mathematics, two questions, useful working space, footer clear",
+    "Diagram page: complete original curve and original prompt, no clipping or distortion",
+    "Solution page: ordered worked expressions, readable type, matching source/question headings, page numbers"
+  ],
+  "limitations": [
+    "Browser Save PDF requires A4, 100% scaling and browser headers/footers disabled as stated in preview",
+    "Oversized source prompts currently prevent printing and identify replacements; owner policy decision pending",
+    "Physical printer and non-Chromium device print dialogs not tested",
+    "Full6967 worked-solution pagination is not claimed; current solution sample plus overflow guards checked"
+  ]
+}
