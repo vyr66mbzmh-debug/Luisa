@@ -1024,11 +1024,11 @@
           "latex": "y=-e^{|x|};y(0)=-1",
           "explanation": "Mirror the decreasing negative-exponential right half in the y-axis. The highest point is the cusp (0,−1), with both tails decreasing without bound.",
           "graphs": [
-            "ans26-q3b"
+            "pure2-ch02-negative-exponential.svg"
           ]
         }
       ],
-      "solutionHtml": "<p>Apply the outer reflection and scale to the exponential, or mirror its right half before reflecting.</p><ol type=\"a\" class=\"parts\"><li><p>The decreasing curve lies below the horizontal asymptote y=−1 and crosses the y-axis at (0,−3).</p><span data-math=\"y=-2e^x-1\" data-display=\"true\"></span><span data-math=\"y(0)=-3\" data-display=\"true\"></span><span data-math=\"\\lim_{x\\to-\\infty}y=-1\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/f9dc3396dcb1540c2daf.png\" alt=\"Original question diagram\"></li><li><p>Mirror the decreasing negative-exponential right half in the y-axis. The highest point is the cusp (0,−1), with both tails decreasing without bound.</p><span data-math=\"y=-e^{|x|}\" data-display=\"true\"></span><span data-math=\"y(0)=-1\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/912bd870b397582abaa5.png\" alt=\"Original question diagram\"></li></ol>",
+      "solutionHtml": "<p>Apply the outer reflection and scale to the exponential, or mirror its right half before reflecting.</p><ol type=\"a\" class=\"parts\"><li><p>The decreasing curve lies below the horizontal asymptote y=−1 and crosses the y-axis at (0,−3).</p><span data-math=\"y=-2e^x-1\" data-display=\"true\"></span><span data-math=\"y(0)=-3\" data-display=\"true\"></span><span data-math=\"\\lim_{x\\to-\\infty}y=-1\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/f9dc3396dcb1540c2daf.png\" alt=\"Original question diagram\"></li><li><p>Mirror the decreasing negative-exponential right half in the y-axis. The highest point is the cusp (0,−1), with both tails decreasing without bound.</p><span data-math=\"y=-e^{|x|}\" data-display=\"true\"></span><span data-math=\"y(0)=-1\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/pure2-ch02-negative-exponential.svg\" alt=\"Original question diagram\"></li></ol>",
       "answerCheck": "matches"
     },
     {
@@ -1068,13 +1068,13 @@
         },
         {
           "latex": "P\\mapsto(\\pm3,4);Q\\mapsto(\\pm5,0);\\text{central cusp }(0,f(0)-1)",
-          "explanation": "Mirror the right-hand half and move it down 1. There are maxima at (±3,4), minima at (±5,0), and the central cusp minimum visible in the sketch. Its numerical ordinate is not supplied.",
+          "explanation": "Mirror the right-hand half and move it down 1. There are maxima at (±3,4), minima at (±5,0), and a central cusp minimum at (0,f(0)−1) below the displayed source crop. The supplied sketch stops both branches before they meet, and its numerical ordinate is not supplied.",
           "graphs": [
             "ans26-q5b"
           ]
         }
       ],
-      "solutionHtml": "<p>Use the transformed coordinates, including the new central cusp created by mirroring the right half.</p><ol type=\"a\" class=\"parts\"><li><p>The original local maximum becomes a local minimum; the original minimum becomes a local maximum.</p><span data-math=\"(u,v)\\mapsto(u,1-3v)\" data-display=\"true\"></span><span data-math=\"P\\mapsto(3,-14)\" data-display=\"true\"></span><span data-math=\"Q\\mapsto(5,-2)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/e19fc920c0564e965f2d.png\" alt=\"Original question diagram\"></li><li><p>Mirror the right-hand half and move it down 1. There are maxima at (±3,4), minima at (±5,0), and the central cusp minimum visible in the sketch. Its numerical ordinate is not supplied.</p><span data-math=\"P\\mapsto(\\pm3,4)\" data-display=\"true\"></span><span data-math=\"Q\\mapsto(\\pm5,0)\" data-display=\"true\"></span><span data-math=\"\\text{central cusp }(0,f(0)-1)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/7d5384216dbd3c2aeacf.png\" alt=\"Original question diagram\"></li></ol>",
+      "solutionHtml": "<p>Use the transformed coordinates, including the new central cusp created by mirroring the right half.</p><ol type=\"a\" class=\"parts\"><li><p>The original local maximum becomes a local minimum; the original minimum becomes a local maximum.</p><span data-math=\"(u,v)\\mapsto(u,1-3v)\" data-display=\"true\"></span><span data-math=\"P\\mapsto(3,-14)\" data-display=\"true\"></span><span data-math=\"Q\\mapsto(5,-2)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/e19fc920c0564e965f2d.png\" alt=\"Original question diagram\"></li><li><p>Mirror the right-hand half and move it down 1. There are maxima at (±3,4), minima at (±5,0), and a central cusp minimum at (0,f(0)−1) below the displayed source crop. The supplied sketch stops both branches before they meet, and its numerical ordinate is not supplied.</p><span data-math=\"P\\mapsto(\\pm3,4)\" data-display=\"true\"></span><span data-math=\"Q\\mapsto(\\pm5,0)\" data-display=\"true\"></span><span data-math=\"\\text{central cusp }(0,f(0)-1)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/7d5384216dbd3c2aeacf.png\" alt=\"Original question diagram\"></li></ol>",
       "answerCheck": "matches"
     },
     {

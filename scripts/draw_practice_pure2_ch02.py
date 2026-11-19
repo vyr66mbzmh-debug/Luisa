@@ -1,4 +1,4 @@
-"""Draw exact piecewise-linear solution graphs from the printed functions.
+"""Draw deterministic solution graphs from the printed functions.
 
 The original answer sketches label the y-intercept as 1; the question's
 f(x)=2|x+3|-4 instead gives 2. Original source assets remain untouched.
@@ -20,3 +20,8 @@ def draw(name,title,points,labels,xlim,ylim):
 draw('pure2-ch02-silver-modulus.svg','y = |2|x + 3| − 4|',[(-8,6),(-5,0),(-3,4),(-1,0),(2,6)],[((-5,0),'(−5, 0)',-38,25),((-3,4),'(−3, 4)',-30,-13),((-1,0),'(−1, 0)',-36,25),((0,2),'(0, 2)',12,5)],(-8,2),(-1,7))
 draw('pure2-ch02-silver-input.svg','y = 2|x| + 2',[(-4,10),(0,2),(4,10)],[((0,2),'(0, 2)',12,12)],(-4.5,4.5),(-1,11))
 print('2 exact line graphs drawn')
+# Keep x=0 as an explicit vertex so the reflected exponentials meet at a corner.
+import math
+exponential_points=[(i/100,-math.exp(abs(i/100))) for i in range(-160,161)]
+draw('pure2-ch02-negative-exponential.svg','y = −e^|x|',exponential_points,[((0,-1),'(0, −1)',12,-12)],(-1.8,1.8),(-5.2,0.5))
+print('1 reflected exponential graph drawn with an exact central corner')

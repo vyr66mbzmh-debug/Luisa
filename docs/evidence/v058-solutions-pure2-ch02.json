@@ -5,8 +5,8 @@
   "questions": 69,
   "workedSolutions": 69,
   "originalQuestionIdsMatched": 69,
-  "sourceAnswerGraphs": 73,
-  "authoredExactGraphs": 2,
+  "sourceAnswerGraphs": 72,
+  "authoredExactGraphs": 3,
   "exactIndependentChecks": 320,
   "strictBrowserMathExpressions": 445,
   "browserQuestionsRendered": 69,
@@ -38,9 +38,9 @@
       "note": "The given original expression also excludes x=3, despite the statement saying only x>2. T\u2081 translates by (2,0), T\u2082 reflects in the x-axis, and T\u2083 translates by (0,2). These map to the continuous extension of the simplified curve. The literal original function has a hole at (3,1); no three ordinary affine transformations of the full starting branch create that missing point."
     }
   ],
-  "solutionSha256": "f3da4bf6ae5c7daf0f3294acdbe1d9974a23e4f7f53f5d6aeae3493fde5fdbca",
+  "solutionSha256": "4e7023d0d6dd73bccf379189fdb3e9e5147602b676d0d20ab2dfdd679cc5817e",
   "sourcePdf": "resources/practice/pure-year-2/chapter-02.pdf",
   "sourcePdfSha256": "4c5ab74635632eebfb50c5a7f2b8463770506893ef9f1a4ddafd39a74361b74a",
   "independentReview": "pending lead review",
-  "reviewNote": "Independent reviewer requested removing the incorrect adjective decreasing from Set A Gold method; the function is increasing. No equation, number or diagram changed."
+  "reviewNote": "Independent review: removed decreasing from Set A Gold method. Replaced the rounded source maximum in 2.6 Q3(b) by a deterministic exponential plot with the exact corner (0,\u22121), left derivative +1 and right derivative \u22121. Qualified 2.6 Q5(b): the central cusp lies below the displayed source crop. Seven changed rows across chapters 2, 4 and 5 passed strict browser maths, image loading and overflow checks."
 }
