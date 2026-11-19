@@ -9,6 +9,7 @@ import argparse
 from collections import Counter
 import json
 from html.parser import HTMLParser
+from html import escape
 import re
 from pathlib import Path
 
@@ -103,6 +104,27 @@ SECTION_SKILLS={
   8:['2.57','2.58','2.59','2.59','2.59']}}
 
 
+# Preserve the original prompt while supplying earlier-question material needed
+# when a dependent question is selected on its own in Papers.
+CONTEXT_QUESTIONS={
+ 'practice/maths-a-level/maths-pure-year-1/ch9/9.5/q4':['1','2','3'],
+ 'practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q5':['1'],
+ 'practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q6':['2'],
+ 'practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q7':['3'],
+ 'practice/maths-a-level/maths-pure-year-2/ch3/3.3/q2':['1'],
+}
+
+def source_context(question, by_id):
+    parts=[]
+    prefix=question['id'].rsplit('/q',1)[0]
+    for number in CONTEXT_QUESTIONS.get(question['id'],[]):
+        reference=by_id[prefix+'/q'+number]
+        label='Reference from '+reference['subchapterId']+' Q'+reference['questionLabel']
+        parts.append('<p class="practice-context-label">'+escape(label)+'</p>'+reference['question'])
+    if not parts:return ''
+    return '<aside class="practice-context" aria-label="Referenced question material">'+''.join(parts)+'</aside>'
+
+
 def build(root=ROOT):
     textbook=json.loads((root/'textbook-catalogue.json').read_text())
     books={b['id']:b for b in textbook['books']}
@@ -117,6 +139,7 @@ def build(root=ROOT):
         if len(by_id)!=len(solutions):raise ValueError(f'Duplicate worked solutions: {authored}')
         if set(by_id)!={q['id'] for q in doc['questions']}:raise ValueError(f'Source/solution mismatch: {authored}')
         changed=[]
+        source_by_id={q['id']:q for q in doc['questions']}
         for question in doc['questions']:
             ident=question['id'];book=question['bookId'];course=question['courseId'];section=question['subchapterId']
             if ident in seen:raise ValueError(f'Duplicate source question: {ident}')
@@ -138,6 +161,7 @@ def build(root=ROOT):
             solution=by_id[ident]
             if solution.get('status')!='worked' or not solution.get('method') or not solution.get('solutionHtml') or not solution.get('steps'):raise ValueError(f'Incomplete solution: {ident}')
             if solution.get('answerCheck') not in {'matches','domain-qualified','source-discrepancy'}:raise ValueError(f'Unchecked answer: {ident}')
+            question['contextHtml']=source_context(question,source_by_id)
             question.update(steps=[align_solution_parts(question['question'],solution['solutionHtml'])],solutionStatus='worked',skillIds=mapped)
             fields=('id','courseId','bookId','chapterId','chapterNumber','chapterTitle','subchapterId','subchapterTitle','questionLabel')
             descriptors.append(dict(**{k:question[k] for k in fields},board='Edexcel',skillIds=mapped,dataPath=path.relative_to(root).as_posix()))

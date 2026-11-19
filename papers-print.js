@@ -128,7 +128,7 @@
       await whileOpen(win, Promise.all([asset(doc, 'link', 'papers-print.css'), asset(doc, 'link', 'vendor/katex.min.css'), asset(doc, 'script', 'vendor/katex.min.js')]));
       const rendered = rows.map((row, index) => {
         const question = element(doc, 'article', 'print-question'); question.dataset.questionId = row.id;
-        question.append(heading(doc, row, index + 1), content(doc, row.question));
+        question.append(heading(doc, row, index + 1), content(doc, (row.contextHtml || '') + row.question));
         const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); question.append(working);
         const solution = content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join(''));
         if (row.hints?.length) {

@@ -24,4 +24,16 @@ class SolutionPartLabels(unittest.TestCase):
         solution='<ol type="a"><li>Diagram a</li><li>Diagram b</li></ol>'
         self.assertEqual(module.align_solution_parts('<img src="diagram.png">',solution),solution)
 
+class SourceContext(unittest.TestCase):
+    def test_reference_uses_only_original_prompt(self):
+        key='practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/'
+        original={'id':key+'q1','question':'<p>Original model.</p>','steps':['SECRET ANSWER'],
+                  'hints':['SECRET HINT'],'subchapterId':'8.1','questionLabel':'1'}
+        selected={'id':key+'q5','question':'<p>Find its domain.</p>'}
+        result=module.source_context(selected,{key+'q1':original})
+        self.assertIn('Reference from 8.1 Q1',result)
+        self.assertIn(original['question'],result)
+        self.assertNotIn('SECRET',result)
+        self.assertEqual(selected['question'],'<p>Find its domain.</p>')
+
 if __name__=='__main__':unittest.main()

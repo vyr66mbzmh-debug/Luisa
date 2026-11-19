@@ -74,7 +74,7 @@ class PapersSelection(unittest.TestCase):
                           subchapterId='1.1', subchapterTitle='1.1 Index laws', questionLabel='1',
                           board='Edexcel', skillIds=['smq-1.01', 'smq-1.02'],
                           dataPath='content/practice/pure-year-1/chapter-01.json')
-        question = dict(id=descriptor['id'], question='<p>Simplify the expression.</p>',
+        question = dict(id=descriptor['id'], question='<p>Simplify the expression.</p>', contextHtml='<aside>Referenced model: x squared.</aside>',
                         steps=[] if incomplete else ['<p>Apply the index law.</p>'],
                         hints=['<p>Remember that powers add.</p>'])
         self.page.route('**/practice-catalogue.json', lambda route: route.fulfill(
@@ -99,6 +99,9 @@ class PapersSelection(unittest.TestCase):
         self.page.locator('#papers-print').click()
         self.page.wait_for_function('Boolean(window.testPaperSnapshot)')
         row = self.page.evaluate('testPaperSnapshot[0]')
+        self.assertEqual(row['question'], question['question'])
+        self.assertEqual(row['contextHtml'], question['contextHtml'])
+        self.assertIn('Referenced model',self.page.locator('#papers-selected').inner_text())
         self.assertEqual(row['hints'], question['hints'])
         self.assertEqual(row['steps'], question['steps'])
         self.assertEqual(row['source']['practiceBookletQuestionId'], descriptor['id'])

@@ -1,0 +1,594 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 7,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.1/q1",
+      "status": "worked",
+      "method": "Let p be the probability of rolling a three.",
+      "steps": [
+        {
+          "explanation": "<p>X is the number of threes in 50 rolls; under the null hypothesis X~B(50,0.25).</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.25\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_1:p&gt;0.25\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Let p be the probability of rolling a three.</p><ol class=\"parts\" type=\"a\"><li><p>X is the number of threes in 50 rolls; under the null hypothesis X~B(50,0.25).</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.25\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_1:p&gt;0.25\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.1/q2",
+      "status": "worked",
+      "method": "A directional inequality gives one tail; “not equal” gives two.",
+      "steps": [
+        {
+          "explanation": "<p>One-tailed, lower tail(p&lt;0.7).</p>"
+        },
+        {
+          "explanation": "<p>One-tailed, upper tail(p&gt;0.5).</p>"
+        },
+        {
+          "explanation": "<p>Two-tailed(p≠0.4).</p>"
+        }
+      ],
+      "solutionHtml": "<p>A directional inequality gives one tail; “not equal” gives two.</p><ol class=\"parts\" type=\"a\"><li><p>One-tailed, lower tail(p&lt;0.7).</p></li><li><p>One-tailed, upper tail(p&gt;0.5).</p></li><li><p>Two-tailed(p≠0.4).</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.1/q3",
+      "status": "worked",
+      "method": "Let p be the population proportion supporting the MP.",
+      "steps": [
+        {
+          "explanation": "<p>X is the number of supporters in the sample of 50.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.65;\\qquad H_1:p&lt;0.65\"></span>"
+        },
+        {
+          "explanation": "<p>Under H₀, calculate P(X≤24)with X~B(50,0.65). Reject H₀ when this lower-tail probability is at most 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 24)=\\sum_{r=0}^{24}\\binom{50}r(0.65)^r(1-0.65)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.010043644\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Let p be the population proportion supporting the MP.</p><ol class=\"parts\" type=\"a\"><li><p>X is the number of supporters in the sample of 50.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.65;\\qquad H_1:p&lt;0.65\"></span></li><li><p>Under H₀, calculate P(X≤24)with X~B(50,0.65). Reject H₀ when this lower-tail probability is at most 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 24)=\\sum_{r=0}^{24}\\binom{50}r(0.65)^r(1-0.65)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.010043644\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.1/q4",
+      "status": "worked",
+      "method": "Let p be the probability that a cereal packet contains a prize.",
+      "steps": [
+        {
+          "explanation": "<p>X is the number of prize-containing packets in the 120 purchased.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p&gt;0.05\"></span>"
+        },
+        {
+          "explanation": "<p>Do not reject H₀ if P(X≥15), under B(120,0.05), is greater than 0.10. “Accept” in the question means insufficient evidence against H₀, not proof of the claim.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Let p be the probability that a cereal packet contains a prize.</p><ol class=\"parts\" type=\"a\"><li><p>X is the number of prize-containing packets in the 120 purchased.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p&gt;0.05\"></span></li><li><p>Do not reject H₀ if P(X≥15), under B(120,0.05), is greater than 0.10. “Accept” in the question means insufficient evidence against H₀, not proof of the claim.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.1/q5",
+      "status": "worked",
+      "method": "Let p denote the proportion of services taking strictly less than two hours.",
+      "steps": [
+        {
+          "explanation": "<p>X counts services taking less than two hours among 50. If none took exactly two hours, the observed count is 45; the statement “five take longer” alone does not rule out services taking exactly two hours.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.6;\\qquad H_1:p\\ne0.6\"></span>"
+        },
+        {
+          "explanation": "<p>With that no-exactly-two-hours assumption, reject H₀ if P(X≥45), under B(50,0.6), is at most 0.025: half of the two-tailed 5%level.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(45\\le X\\le 50)=\\sum_{r=45}^{50}\\binom{50}r(0.6)^r(1-0.6)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx2.6745317e-06\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Let p denote the proportion of services taking strictly less than two hours.</p><ol class=\"parts\" type=\"a\"><li><p>X counts services taking less than two hours among 50. If none took exactly two hours, the observed count is 45; the statement “five take longer” alone does not rule out services taking exactly two hours.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.6;\\qquad H_1:p\\ne0.6\"></span></li><li><p>With that no-exactly-two-hours assumption, reject H₀ if P(X≥45), under B(50,0.6), is at most 0.025: half of the two-tailed 5%level.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(45\\le X\\le 50)=\\sum_{r=45}^{50}\\binom{50}r(0.6)^r(1-0.6)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx2.6745317e-06\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q1",
+      "status": "worked",
+      "method": "Use the binomial distribution under H₀ and check adjacent boundary values.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(8,0.6)\"></span><p>Use the lower tail with threshold 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)=0.04980736\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.1736704\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.04980736\\approx4.981\\%\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the binomial distribution under H₀ and check adjacent boundary values.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(8,0.6)\"></span><p>Use the lower tail with threshold 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)=0.04980736\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.1736704\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.04980736\\approx4.981\\%\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q2",
+      "status": "worked",
+      "method": "Use the binomial distribution under H₀ and check adjacent boundary values.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.3)\"></span><p>Use the upper tail with threshold 0.1.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge8)=0.05001254\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge7)=0.13114257\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\ge8\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.05001254\\approx5.001\\%\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the binomial distribution under H₀ and check adjacent boundary values.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.3)\"></span><p>Use the upper tail with threshold 0.1.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge8)=0.05001254\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge7)=0.13114257\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\ge8\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.05001254\\approx5.001\\%\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q3",
+      "status": "worked",
+      "method": "Use the binomial distribution under H₀ and check adjacent boundary values.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.42)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le6)=0.04950892\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le7)=0.11064858\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge16)=0.022026163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge15)=0.053460357\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le6\\quad\\text{or}\\quad X\\ge16\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.071535084\\approx7.154\\%\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the binomial distribution under H₀ and check adjacent boundary values.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.42)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le6)=0.04950892\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le7)=0.11064858\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge16)=0.022026163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge15)=0.053460357\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le6\\quad\\text{or}\\quad X\\ge16\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.071535084\\approx7.154\\%\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q4",
+      "status": "worked",
+      "method": "Use independent trials with the same success probability p.",
+      "steps": [
+        {
+          "explanation": "<p>X counts blue-flowered plants in the 30 purchased.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.2;\\qquad H_1:p&lt;0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.2)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.2)\"></span><p>Use the lower tail with threshold 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)=0.044178985\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.12271081\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.044178985\\approx4.418\\%\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use independent trials with the same success probability p.</p><ol class=\"parts\" type=\"a\"><li><p>X counts blue-flowered plants in the 30 purchased.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.2;\\qquad H_1:p&lt;0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.2)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.2)\"></span><p>Use the lower tail with threshold 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)=0.044178985\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.12271081\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.044178985\\approx4.418\\%\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q5",
+      "status": "worked",
+      "method": "Use independent trials with the same success probability p.",
+      "steps": [
+        {
+          "explanation": "<p>X counts 5-star reviews among the 20 sampled.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.6;\\qquad H_1:p&gt;0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.6)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.6)\"></span><p>Use the upper tail with threshold 0.1.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge16)=0.050951953\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge15)=0.12559897\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\ge16\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.050951953\\approx5.095\\%\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use independent trials with the same success probability p.</p><ol class=\"parts\" type=\"a\"><li><p>X counts 5-star reviews among the 20 sampled.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.6;\\qquad H_1:p&gt;0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.6)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.6)\"></span><p>Use the upper tail with threshold 0.1.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge16)=0.050951953\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge15)=0.12559897\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\ge16\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.050951953\\approx5.095\\%\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q6",
+      "status": "worked",
+      "method": "Use independent trials with the same success probability p.",
+      "steps": [
+        {
+          "explanation": "<p>X counts faulty components in a random sample of 50.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p\\ne0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.05)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.05)\"></span><p>Use 0.1 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le0)=0.076944975\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le1)=0.27943175\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge6)=0.037776173\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge5)=0.10361681\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le0\\quad\\text{or}\\quad X\\ge6\"></span><p>The supplied answer instead chooses X=0 or X≥5, taking the upper tail closest to 0.10 even though it slightly exceeds that allocation.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge5)=0.10361681\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.11472115\\approx11.47\\%\"></span><p>For that alternative, the total actual significance is:</p><span class=\"equation\" data-display=\"true\" data-math=\"0.07694497527671315+0.10361681=0.18056179\"></span><p>Both total rejection probabilities remain below 20%; state the convention used. The first region keeps each tail at or below 10%.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use independent trials with the same success probability p.</p><ol class=\"parts\" type=\"a\"><li><p>X counts faulty components in a random sample of 50.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p\\ne0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.05)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.05)\"></span><p>Use 0.1 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le0)=0.076944975\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le1)=0.27943175\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge6)=0.037776173\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge5)=0.10361681\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le0\\quad\\text{or}\\quad X\\ge6\"></span><p>The supplied answer instead chooses X=0 or X≥5, taking the upper tail closest to 0.10 even though it slightly exceeds that allocation.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge5)=0.10361681\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.11472115\\approx11.47\\%\"></span><p>For that alternative, the total actual significance is:</p><span class=\"equation\" data-display=\"true\" data-math=\"0.07694497527671315+0.10361681=0.18056179\"></span><p>Both total rejection probabilities remain below 20%; state the convention used. The first region keeps each tail at or below 10%.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q7",
+      "status": "worked",
+      "method": "Use the explicitly requested closest-tail convention.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.3)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.033240517\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)=0.090471919\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge13)=0.017469741\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)=0.044246497\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge13\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p><p>The support ends at 25; the supplied upper bound 50 is a typo.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.050710257\\approx5.071\\%\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the explicitly requested closest-tail convention.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.3)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.033240517\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)=0.090471919\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge13)=0.017469741\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)=0.044246497\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge13\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p><p>The support ends at 25; the supplied upper bound 50 is a typo.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.050710257\\approx5.071\\%\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q1",
+      "status": "worked",
+      "method": "Calculate the probability of the observed count or something still smaller under the null.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.4;\\qquad H_1:p&lt;0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.4)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 3)=\\sum_{r=0}^{3}\\binom{20}r(0.4)^r(1-0.4)^{20-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.015961163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.015961163&lt;0.02\"></span><p>Reject H₀: there is evidence that p is less than 0.4.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate the probability of the observed count or something still smaller under the null.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.4;\\qquad H_1:p&lt;0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.4)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 3)=\\sum_{r=0}^{3}\\binom{20}r(0.4)^r(1-0.4)^{20-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.015961163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.015961163&lt;0.02\"></span><p>Reject H₀: there is evidence that p is less than 0.4.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q2",
+      "status": "worked",
+      "method": "Calculate the probability of the observed count or something still larger under the null.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.45;\\qquad H_1:p&gt;0.45\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.45)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(17\\le X\\le 25)=\\sum_{r=17}^{25}\\binom{25}r(0.45)^r(1-0.45)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.017356895\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.017356895&gt;0.01\"></span><p>Do not reject H₀: there is insufficient evidence that p is greater than 0.45. This does not prove the null hypothesis.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate the probability of the observed count or something still larger under the null.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.45;\\qquad H_1:p&gt;0.45\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.45)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(17\\le X\\le 25)=\\sum_{r=17}^{25}\\binom{25}r(0.45)^r(1-0.45)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.017356895\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.017356895&gt;0.01\"></span><p>Do not reject H₀: there is insufficient evidence that p is greater than 0.45. This does not prove the null hypothesis.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q3",
+      "status": "worked",
+      "method": "Count people fooled, with independent outcomes and a common probability.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(n,0.9)\\quad\\text{under the claimed model}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.9;\\qquad H_1:p&lt;0.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(40,0.9)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 33)=\\sum_{r=0}^{33}\\binom{40}r(0.9)^r(1-0.9)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.099516424\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.099516424&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that the magician’s claimed 90%success rate is overstated. This does not prove the null hypothesis.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Count people fooled, with independent outcomes and a common probability.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(n,0.9)\\quad\\text{under the claimed model}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.9;\\qquad H_1:p&lt;0.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(40,0.9)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 33)=\\sum_{r=0}^{33}\\binom{40}r(0.9)^r(1-0.9)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.099516424\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.099516424&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that the magician’s claimed 90%success rate is overstated. This does not prove the null hypothesis.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q4",
+      "status": "worked",
+      "method": "Let p be the proportion of marrows longer than40cm.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.6;\\qquad H_1:p&gt;0.6\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.6)\"></span><p>Use the upper tail with threshold 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge23)=0.043524119\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge22)=0.094011216\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\ge23\"></span>"
+        },
+        {
+          "explanation": "<p>25≥23, so the observation lies in the critical region. Reject H₀: there is evidence at 5%that the new fertiliser increases the proportion longer than 40 cm.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Let p be the proportion of marrows longer than 40 cm.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.6;\\qquad H_1:p&gt;0.6\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.6)\"></span><p>Use the upper tail with threshold 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge23)=0.043524119\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge22)=0.094011216\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\ge23\"></span></li><li><p>25≥23, so the observation lies in the critical region. Reject H₀: there is evidence at 5%that the new fertiliser increases the proportion longer than 40 cm.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q5",
+      "status": "worked",
+      "method": "Let p be the fracture probability with the new clay; X counts fractures in50pots.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.1;\\qquad H_1:p&lt;0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.1)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 1)=\\sum_{r=0}^{1}\\binom{50}r(0.1)^r(1-0.1)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.03378586\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.03378586&lt;0.05\"></span><p>Reject H₀: there is evidence that the new clay reduces the fracture probability.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Let p be the fracture probability with the new clay; X counts fractures in 50 pots.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.1;\\qquad H_1:p&lt;0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.1)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 1)=\\sum_{r=0}^{1}\\binom{50}r(0.1)^r(1-0.1)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.03378586\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.03378586&lt;0.05\"></span><p>Reject H₀: there is evidence that the new clay reduces the fracture probability.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q6",
+      "status": "worked",
+      "method": "A one-point probability is not the upper-tail probability required for the test.",
+      "steps": [
+        {
+          "explanation": "<p>Briony omitted the possible outcomes 8,9 and 10. She must calculate P(X≥7), not P(X=7).</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.3;\\qquad H_1:p&gt;0.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(10,0.3)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(7\\le X\\le 10)=\\sum_{r=7}^{10}\\binom{10}r(0.3)^r(1-0.3)^{10-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.010592078\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.010592078&gt;0.01\"></span><p>Do not reject H₀: there is insufficient evidence that p exceeds 0.3. This does not prove the null hypothesis.</p>"
+        }
+      ],
+      "solutionHtml": "<p>A one-point probability is not the upper-tail probability required for the test.</p><p>Briony omitted the possible outcomes 8,9 and 10. She must calculate P(X≥7), not P(X=7).</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.3;\\qquad H_1:p&gt;0.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(10,0.3)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(7\\le X\\le 10)=\\sum_{r=7}^{10}\\binom{10}r(0.3)^r(1-0.3)^{10-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.010592078\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.010592078&gt;0.01\"></span><p>Do not reject H₀: there is insufficient evidence that p exceeds 0.3. This does not prove the null hypothesis.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q7",
+      "status": "worked",
+      "method": "Assume independent household outcomes with the same sale probability.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{at least one sale})=1-0.95^{15}\\approx0.53670877\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p&gt;0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(26,0.05)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le X\\le 26)=\\sum_{r=4}^{26}\\binom{26}r(0.05)^r(1-0.05)^{26-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.038741396\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.038741396&lt;0.05\"></span><p>Reject H₀: there is evidence that the new pitch increases the chance of a sale.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Assume independent household outcomes with the same sale probability.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{at least one sale})=1-0.95^{15}\\approx0.53670877\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p&gt;0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(26,0.05)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le X\\le 26)=\\sum_{r=4}^{26}\\binom{26}r(0.05)^r(1-0.05)^{26-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.038741396\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.038741396&lt;0.05\"></span><p>Reject H₀: there is evidence that the new pitch increases the chance of a sale.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q1",
+      "status": "worked",
+      "method": "Use the binomial model under H₀ and split the significance between the two tails.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.4;\\qquad H_1:p\\ne0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.4)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 3)=\\sum_{r=0}^{3}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.090501902\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.090501902&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that p differs from 0.4. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the binomial model under H₀ and split the significance between the two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.4;\\qquad H_1:p\\ne0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.4)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 3)=\\sum_{r=0}^{3}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.090501902\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.090501902&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that p differs from 0.4. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q2",
+      "status": "worked",
+      "method": "Use the binomial model under H₀ and split the significance between the two tails.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.7;\\qquad H_1:p\\ne0.7\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(40,0.7)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(34\\le X\\le 40)=\\sum_{r=34}^{40}\\binom{40}r(0.7)^r(1-0.7)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.023760946\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.023760946&lt;0.025\"></span><p>Reject H₀: there is evidence that p differs from 0.7.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the binomial model under H₀ and split the significance between the two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.7;\\qquad H_1:p\\ne0.7\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(40,0.7)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(34\\le X\\le 40)=\\sum_{r=34}^{40}\\binom{40}r(0.7)^r(1-0.7)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.023760946\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.023760946&lt;0.025\"></span><p>Reject H₀: there is evidence that p differs from 0.7.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q3",
+      "status": "worked",
+      "method": "Use the binomial model under H₀ and split the significance between the two tails.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p\\ne0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(200,0.05)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(16\\le X\\le 200)=\\sum_{r=16}^{200}\\binom{200}r(0.05)^r(1-0.05)^{200-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.044355629\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.044355629&gt;0.025\"></span><p>Do not reject H₀: there is insufficient evidence that the south-west disease proportion differs from the national proportion. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the binomial model under H₀ and split the significance between the two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p\\ne0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(200,0.05)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(16\\le X\\le 200)=\\sum_{r=16}^{200}\\binom{200}r(0.05)^r(1-0.05)^{200-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.044355629\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.044355629&gt;0.025\"></span><p>Do not reject H₀: there is insufficient evidence that the south-west disease proportion differs from the national proportion. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q4",
+      "status": "worked",
+      "method": "Let X count overweight clients, with X~B(50,0.1)under the null.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.1;\\qquad H_1:p\\ne0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.1)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le1)=0.03378586\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)=0.11172876\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge10)=0.024537936\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge9)=0.057867206\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le1\\quad\\text{or}\\quad X\\ge10\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.058323795\\approx5.832\\%\"></span>"
+        },
+        {
+          "explanation": "<p>2 lies between the two critical tails: it is neither at most 1 nor at least 10. Do not reject H₀; there is insufficient evidence that the proportion changed.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Let X count overweight clients, with X~B(50,0.1)under the null.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.1;\\qquad H_1:p\\ne0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.1)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le1)=0.03378586\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)=0.11172876\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge10)=0.024537936\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge9)=0.057867206\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le1\\quad\\text{or}\\quad X\\ge10\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.058323795\\approx5.832\\%\"></span></li><li><p>2 lies between the two critical tails: it is neither at most 1 nor at least 10. Do not reject H₀; there is insufficient evidence that the proportion changed.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q5",
+      "status": "worked",
+      "method": "Let p be the probability of rolling an eight; fairness gives p=1/8.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.125;\\qquad H_1:p\\ne0.125\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(120,0.125)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(25\\le X\\le 120)=\\sum_{r=25}^{120}\\binom{120}r(0.125)^r(1-0.125)^{120-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0068461755\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.0068461755&lt;0.025\"></span><p>Reject H₀: there is evidence that the probability of an eight differs from 1/8, so the dice is biased.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Let p be the probability of rolling an eight; fairness gives p=1/8.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.125;\\qquad H_1:p\\ne0.125\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(120,0.125)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(25\\le X\\le 120)=\\sum_{r=25}^{120}\\binom{120}r(0.125)^r(1-0.125)^{120-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0068461755\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.0068461755&lt;0.025\"></span><p>Reject H₀: there is evidence that the probability of an eight differs from 1/8, so the dice is biased.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q6",
+      "status": "worked",
+      "method": "Use the closest-tail convention explicitly stated in the question.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.25)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.037449326\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)=0.0978696\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)=0.05065828\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge11)=0.10572812\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge12\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.088107606\\approx8.811\\%\"></span>"
+        },
+        {
+          "explanation": "<p>11 is not in X≤3 or X≥12. Do not reject H₀: there is insufficient evidence that p differs from 0.25.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the closest-tail convention explicitly stated in the question.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.25)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.037449326\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)=0.0978696\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)=0.05065828\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge11)=0.10572812\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge12\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.088107606\\approx8.811\\%\"></span></li><li><p>11 is not in X≤3 or X≥12. Do not reject H₀: there is insufficient evidence that p differs from 0.25.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q7",
+      "status": "worked",
+      "method": "Let p be the probability of a double yolk and X count such eggs among50.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.02;\\qquad H_1:p\\ne0.02\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.02)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(3\\le X\\le 50)=\\sum_{r=3}^{50}\\binom{50}r(0.02)^r(1-0.02)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.078427748\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.078427748&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that the double-yolk probability has changed. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Let p be the probability of a double yolk and X count such eggs among 50.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.02;\\qquad H_1:p\\ne0.02\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.02)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(3\\le X\\le 50)=\\sum_{r=3}^{50}\\binom{50}r(0.02)^r(1-0.02)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.078427748\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.078427748&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that the double-yolk probability has changed. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-a/qbronze",
+      "status": "worked",
+      "method": "For the conventional equal-tail test, neither tail may exceed0.025.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.36)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le5)=0.017848535\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le6)=0.046672671\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge17)=0.016702265\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge16)=0.039089053\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le5\\quad\\text{or}\\quad X\\ge17\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.034550801\\approx3.455\\%\"></span>"
+        },
+        {
+          "explanation": "<p>16 lies between the critical tails X≤5 and X≥17. Do not reject H₀; there is insufficient evidence of a change from p=0.36.</p>"
+        }
+      ],
+      "solutionHtml": "<p>For the conventional equal-tail test, neither tail may exceed 0.025.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.36)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le5)=0.017848535\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le6)=0.046672671\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge17)=0.016702265\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge16)=0.039089053\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le5\\quad\\text{or}\\quad X\\ge17\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.034550801\\approx3.455\\%\"></span></li><li><p>16 lies between the critical tails X≤5 and X≥17. Do not reject H₀; there is insufficient evidence of a change from p=0.36.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-a/qsilver",
+      "status": "worked",
+      "method": "Choose each tail as close as possible to0.05, as requested.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(35,0.45)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le10)=0.03540645\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le11)=0.072939466\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge21)=0.053599902\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge20)=0.10160629\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le10\\quad\\text{or}\\quad X\\ge21\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.089006352\\approx8.901\\%\"></span>"
+        },
+        {
+          "explanation": "<p>22≥21 lies in the upper critical tail. Reject H₀: there is evidence that p differs from 0.45.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Choose each tail as close as possible to 0.05, as requested.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(35,0.45)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le10)=0.03540645\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le11)=0.072939466\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge21)=0.053599902\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge20)=0.10160629\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le10\\quad\\text{or}\\quad X\\ge21\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.089006352\\approx8.901\\%\"></span></li><li><p>22≥21 lies in the upper critical tail. Reject H₀: there is evidence that p differs from 0.45.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-a/qgold",
+      "status": "worked",
+      "method": "First find the actual rejection probability for one test, then model repeated independent tests.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.4)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.015961163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)=0.050951953\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge13)=0.021028927\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)=0.056526367\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge13\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.03699009\\approx3.699\\%\"></span>"
+        },
+        {
+          "explanation": "<p>Let Y count critical-region observations among 15 independent repetitions. More than one quarter of 15 means Y≥4.</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(15,q),\\qquad q=0.03699009027\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le Y\\le 15)=\\sum_{r=4}^{15}\\binom{15}r(0.03699009)^r(1-0.03699009)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0018404132\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>First find the actual rejection probability for one test, then model repeated independent tests.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.4)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.015961163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)=0.050951953\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge13)=0.021028927\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)=0.056526367\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge13\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.03699009\\approx3.699\\%\"></span></li><li><p>Let Y count critical-region observations among 15 independent repetitions. More than one quarter of 15 means Y≥4.</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(15,q),\\qquad q=0.03699009027\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le Y\\le 15)=\\sum_{r=4}^{15}\\binom{15}r(0.03699009)^r(1-0.03699009)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0018404132\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-b/qbronze",
+      "status": "worked",
+      "method": "Let p be the probability of juggling for over ten minutes.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.65;\\qquad H_1:p\\ne0.65\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.65)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(13\\le X\\le 15)=\\sum_{r=13}^{15}\\binom{15}r(0.65)^r(1-0.65)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.061734095\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.061734095&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that the claimed 65%success rate is incorrect. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Let p be the probability of juggling for over ten minutes.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.65;\\qquad H_1:p\\ne0.65\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.65)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(13\\le X\\le 15)=\\sum_{r=13}^{15}\\binom{15}r(0.65)^r(1-0.65)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.061734095\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.061734095&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that the claimed 65%success rate is incorrect. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-b/qsilver",
+      "status": "worked",
+      "method": "First normalise the model, then test the implied probability of a four.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(1+2+3+4)/k=1\\Rightarrow k=10;\\quad P(X=4)=4/10=0.4\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.4;\\qquad H_1:p\\ne0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.4)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(28\\le X\\le 50)=\\sum_{r=28}^{50}\\binom{50}r(0.4)^r(1-0.4)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.016034764\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.016034764&lt;0.025\"></span><p>Reject H₀: there is evidence that the probability of a four differs from 0.4, contradicting the model.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>First normalise the model, then test the implied probability of a four.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"(1+2+3+4)/k=1\\Rightarrow k=10;\\quad P(X=4)=4/10=0.4\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.4;\\qquad H_1:p\\ne0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.4)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(28\\le X\\le 50)=\\sum_{r=28}^{50}\\binom{50}r(0.4)^r(1-0.4)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.016034764\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.016034764&lt;0.025\"></span><p>Reject H₀: there is evidence that the probability of a four differs from 0.4, contradicting the model.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-b/qgold",
+      "status": "worked",
+      "method": "Use the tail in the direction of the observed deviation and half the two-sided significance level.",
+      "steps": [
+        {
+          "explanation": "<p>Mistake 1: use P(X≥5), not P(X≤5), because 5 exceeds the null mean 1.2. Mistake 2: compare that tail with 0.025, not 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.004;\\qquad H_1:p\\ne0.004\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(300,0.004)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(5\\le X\\le 300)=\\sum_{r=5}^{300}\\binom{300}r(0.004)^r(1-0.004)^{300-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0076003472\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.0076003472&lt;0.025\"></span><p>Reject H₀: there is evidence that the defect rate has changed.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the tail in the direction of the observed deviation and half the two-sided significance level.</p><p>Mistake 1: use P(X≥5), not P(X≤5), because 5 exceeds the null mean 1.2. Mistake 2: compare that tail with 0.025, not 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.004;\\qquad H_1:p\\ne0.004\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(300,0.004)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(5\\le X\\le 300)=\\sum_{r=5}^{300}\\binom{300}r(0.004)^r(1-0.004)^{300-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0076003472\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.0076003472&lt;0.025\"></span><p>Reject H₀: there is evidence that the defect rate has changed.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/exam/q23",
+      "status": "worked",
+      "method": "Treat each car as an independent trial with a common illegal-tyre probability.",
+      "steps": [
+        {
+          "explanation": "<p>There are 30 fixed trials and two outcomes per car: illegal tyres or legal tyres. Assume independent cars and constant p=0.2; this supports a binomial model.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 3)=\\sum_{r=0}^{3}\\binom{30}r(0.2)^r(1-0.2)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.12271081\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.2;\\qquad H_1:p&lt;0.2\"></span>"
+        },
+        {
+          "explanation": "<p>The lower-tail probability from part b is approximately 0.1227&gt;0.10. Do not reject H₀: insufficient evidence that the proportion is less than 20%.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Treat each car as an independent trial with a common illegal-tyre probability.</p><ol class=\"parts\" type=\"a\"><li><p>There are 30 fixed trials and two outcomes per car: illegal tyres or legal tyres. Assume independent cars and constant p=0.2; this supports a binomial model.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 3)=\\sum_{r=0}^{3}\\binom{30}r(0.2)^r(1-0.2)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.12271081\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.2;\\qquad H_1:p&lt;0.2\"></span></li><li><p>The lower-tail probability from part b is approximately 0.1227&gt;0.10. Do not reject H₀: insufficient evidence that the proportion is less than 20%.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/exam/q27",
+      "status": "worked",
+      "method": "The critical region consists of observations that trigger rejection of H₀.",
+      "steps": [
+        {
+          "explanation": "<p>It is the set of values of the test statistic for which H₀is rejected.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.3;\\qquad H_1:p\\ne0.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.3)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.033240517\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)=0.090471919\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge13)=0.017469741\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)=0.044246497\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge13\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.050710257\\approx5.071\\%\"></span>"
+        },
+        {
+          "explanation": "<p>4 is outside both tails. Do not reject H₀: the data do not provide sufficient evidence against p=0.3. They do not establish that her probability is exactly 0.3.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The critical region consists of observations that trigger rejection of H₀.</p><ol class=\"parts\" type=\"a\"><li><p>It is the set of values of the test statistic for which H₀is rejected.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.3;\\qquad H_1:p\\ne0.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.3)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.033240517\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)=0.090471919\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge13)=0.017469741\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)=0.044246497\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge13\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.050710257\\approx5.071\\%\"></span></li><li><p>4 is outside both tails. Do not reject H₀: the data do not provide sufficient evidence against p=0.3. They do not establish that her probability is exactly 0.3.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/exam/q29",
+      "status": "worked",
+      "method": "Use the requested closest-tail boundaries; calculate the actual rejection probability.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.34)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)=0.071870155\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.19404319\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge9)=0.03505124\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge8)=0.097739676\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le2\\quad\\text{or}\\quad X\\ge9\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.10692139\\approx10.69\\%\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{Donna rejects}\\mid H_0)=q^2=(0.10692139)^2\\approx0.011432185\"></span><p>This is smaller than q: both independent observations must be in the critical region.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the requested closest-tail boundaries; calculate the actual rejection probability.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.34)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)=0.071870155\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)=0.19404319\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge9)=0.03505124\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge8)=0.097739676\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le2\\quad\\text{or}\\quad X\\ge9\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)=0.10692139\\approx10.69\\%\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{Donna rejects}\\mid H_0)=q^2=(0.10692139)^2\\approx0.011432185\"></span><p>This is smaller than q: both independent observations must be in the critical region.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/exam/q31",
+      "status": "worked",
+      "method": "Use X~B(25,0.2)under the original model.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X=6)=\\binom{25}{6}(0.2)^{6}(1-0.2)^{19}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.16334592\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(9\\le X\\le 25)=\\sum_{r=9}^{25}\\binom{25}r(0.2)^r(1-0.2)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.046774242\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.2;\\qquad H_1:p&gt;0.2\"></span>"
+        },
+        {
+          "explanation": "<p>P(X≥9)≈0.0468&lt;0.05, so reject H₀. There is evidence that Charlie’s trick increases the winning probability.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use X~B(25,0.2)under the original model.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X=6)=\\binom{25}{6}(0.2)^{6}(1-0.2)^{19}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.16334592\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(9\\le X\\le 25)=\\sum_{r=9}^{25}\\binom{25}r(0.2)^r(1-0.2)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.046774242\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.2;\\qquad H_1:p&gt;0.2\"></span></li><li><p>P(X≥9)≈0.0468&lt;0.05, so reject H₀. There is evidence that Charlie’s trick increases the winning probability.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/exam/q34",
+      "status": "worked",
+      "method": "Let p be the chance of7or8oktas on a sampled2015day.",
+      "steps": [
+        {
+          "explanation": "<p>Divide the data into the six months and select days randomly without replacement within each month. About 7 days per month gives 42 days, as in the supplied answer. For exact proportional allocation, use 42×(days in that month)/(total available days), with integer rounding while keeping the total 42.</p>"
+        },
+        {
+          "explanation": "<p>The null hypothesis is the specified population claim used as the working assumption for calculating the distribution of the test statistic; it is not presumed proven.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.36;\\qquad H_1:p&gt;0.36\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.36;\\qquad H_1:p&gt;0.36\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(42,0.36)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(22\\le X\\le 42)=\\sum_{r=22}^{42}\\binom{42}r(0.36)^r(1-0.36)^{42-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.021803632\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.021803632&lt;0.05\"></span><p>Reject H₀: there is evidence that the chance of 7 or 8 oktas increased in 2015.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Let p be the chance of 7 or 8 oktas on a sampled 2015 day.</p><ol class=\"parts\" type=\"a\"><li><p>Divide the data into the six months and select days randomly without replacement within each month. About 7 days per month gives 42 days, as in the supplied answer. For exact proportional allocation, use 42×(days in that month)/(total available days), with integer rounding while keeping the total 42.</p></li><li><p>The null hypothesis is the specified population claim used as the working assumption for calculating the distribution of the test statistic; it is not presumed proven.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.36;\\qquad H_1:p&gt;0.36\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.36;\\qquad H_1:p&gt;0.36\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(42,0.36)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(22\\le X\\le 42)=\\sum_{r=22}^{42}\\binom{42}r(0.36)^r(1-0.36)^{42-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.021803632\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.021803632&lt;0.05\"></span><p>Reject H₀: there is evidence that the chance of 7 or 8 oktas increased in 2015.</p></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}

@@ -121,14 +121,14 @@
     }
     if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
     const question = content.find(q => practice ? q.id === descriptor.id : String(q.number) === String(descriptor.number) && !q.reference);
-    if (!question?.question || !Array.isArray(question.steps) || !question.steps.length || question.steps.some(step => typeof step !== 'string' || !step.trim()) || (question.hints !== undefined && (!Array.isArray(question.hints) || question.hints.some(hint => typeof hint !== 'string')))) {
+    if (!question?.question || (question.contextHtml !== undefined && typeof question.contextHtml !== 'string') || !Array.isArray(question.steps) || !question.steps.length || question.steps.some(step => typeof step !== 'string' || !step.trim()) || (question.hints !== undefined && (!Array.isArray(question.hints) || question.hints.some(hint => typeof hint !== 'string')))) {
       throw new Error(`${sourceLabel(descriptor)} has incomplete content. Your previous paper has been kept.`);
     }
-    const row = Object.freeze({...descriptor, question: question.question, steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? 'practice-booklet' : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: practice ? descriptor.id : null})});
+    const row = Object.freeze({...descriptor, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? 'practice-booklet' : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: practice ? descriptor.id : null})});
     rows.set(row.id, row); return row;
   }
   function fillPreview(container, row) {
-    container.innerHTML = row.question;
+    container.innerHTML = (row.contextHtml || '') + row.question;
     try { renderMath(container); }
     catch (_) { container.replaceChildren(element('p', 'This mathematical preview could not be rendered. Reload the page before printing.', 'preview-error')); }
   }
