@@ -1,0 +1,542 @@
+{
+  "version": 1,
+  "scope": "Classification only; original questions, solutions, assets and stable IDs are unchanged.",
+  "rules": [
+    {
+      "sourceField": "questionLabel",
+      "sourceValues": [
+        "Bronze",
+        "Silver",
+        "Gold"
+      ],
+      "bank": "exam",
+      "examTypes": [
+        "bronze",
+        "silver",
+        "gold"
+      ],
+      "difficulties": [
+        "easy",
+        "medium",
+        "difficult"
+      ]
+    },
+    {
+      "sourceField": "subchapterTitle",
+      "sourceValue": "Selected exam question bank questions",
+      "bank": "exam",
+      "examType": "exam-style",
+      "difficulty": null
+    },
+    {
+      "sourceField": "otherwise",
+      "bank": "practice",
+      "examType": null,
+      "difficulty": null
+    }
+  ],
+  "sourceInspection": "All 2,475 existing source-backed JSON question labels and section titles classified. Representative Bronze/Silver/Gold panels visually checked in the first-chapter source PDFs for all four families. Private archive originals inspected read-only; image-only files have no usable text layer.",
+  "counts": {
+    "practice": 1921,
+    "bronze": 88,
+    "silver": 88,
+    "gold": 88,
+    "exam-style": 290
+  },
+  "chapters": [
+    {
+      "path": "content/practice/applied-year-1/chapter-01.json",
+      "sha256": "abf05950b513fc74e807eb77e5ee372999e7659fcfc13c45085bf46511c6dd2c",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 4,
+        "gold": 2,
+        "practice": 29,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-1/chapter-02.json",
+      "sha256": "31e10398400fa63a181c8c1ad72b9583ec6e9d28b85699205b69accb063498a2",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 5,
+        "gold": 2,
+        "practice": 32,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-1/chapter-03.json",
+      "sha256": "afaf316faa33369ac2acbc6166179a47035138525417363447a7958b4e5d4c83",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 5,
+        "gold": 2,
+        "practice": 26,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-1/chapter-04.json",
+      "sha256": "cc40bdfaf8a6cea2c7514ff7a5af8171243e911fb67cc2f442feb3ca5dfc2adb",
+      "counts": {
+        "bronze": 1,
+        "exam-style": 5,
+        "gold": 1,
+        "practice": 11,
+        "silver": 1
+      }
+    },
+    {
+      "path": "content/practice/applied-year-1/chapter-05.json",
+      "sha256": "89e6801e7250670eb83de9fae6a3febf96857ce782f10ab7eea06f79b36aab23",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 5,
+        "gold": 2,
+        "practice": 27,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-1/chapter-06.json",
+      "sha256": "1d60c3359f96a483be1e191eafb0b0fb89a0636ce3078d29cf409bf2232707d3",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 24,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-1/chapter-07.json",
+      "sha256": "22a55c9c38bd05ea8e75583fb46c9c60e2ea42ed63e5529b0adacc1fad17bbc8",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 5,
+        "gold": 2,
+        "practice": 26,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-1/chapter-08.json",
+      "sha256": "6ba5ec638652d4a78a4e219b63e351e646c4add2a198ce02f019bfc56bb56c9f",
+      "counts": {
+        "bronze": 2,
+        "gold": 2,
+        "practice": 21,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-1/chapter-09.json",
+      "sha256": "0e698bf9828da75b8db07ab10d111315aae4c207b35eed6a4ed96d23fde95a68",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 10,
+        "gold": 2,
+        "practice": 49,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-1/chapter-10.json",
+      "sha256": "f760cf91dc0e427388b7c788e6a642db1a20df8ba409d0efa2c3efe4508659c3",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 8,
+        "gold": 2,
+        "practice": 52,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-1/chapter-11.json",
+      "sha256": "8aae624f1f0c4f674e1e9eb82b40d4c33fd2e551c74e8eb2d513e8f0baa4d0ac",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 39,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-2/chapter-01.json",
+      "sha256": "b67ca9a0f401d916ccb7237b2fdbd7f2717826b5388a32e809890a1986927f38",
+      "counts": {
+        "bronze": 1,
+        "exam-style": 6,
+        "gold": 1,
+        "practice": 25,
+        "silver": 1
+      }
+    },
+    {
+      "path": "content/practice/applied-year-2/chapter-02.json",
+      "sha256": "4e603a94748ed0f84c05ce1eca66d8d46ae6b4e2b0db0ab83d1d6010dac21bf9",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 43,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-2/chapter-03.json",
+      "sha256": "23a4aebe5fc6838582159b76b6fee9d1b77a595d2e5d5809bbb2cfa4b4beeb17",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 62,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-2/chapter-04.json",
+      "sha256": "d3d844ab81e8e345d4813cfa676ba6c15e2d6c4aa8568d8dbab7704ad1827821",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 38,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-2/chapter-05.json",
+      "sha256": "e684ee17ed318daf0c320ecfd982379a261491816798de1c33c9b74c4a01ff71",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 23,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-2/chapter-06.json",
+      "sha256": "e5458b1a59c368321f0cb9eafacf6392928f797d32d975653fff54f3df6baa50",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 31,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-2/chapter-07.json",
+      "sha256": "428550731da105ec520ca3088b837fc572e6ec6e4cca797ca3e8488e8dfa105b",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 45,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/applied-year-2/chapter-08.json",
+      "sha256": "4278299d7e776fba0ecb44e3b8062028766402872d6ee726822d43700b14dbc1",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 40,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-01.json",
+      "sha256": "8a049c5f2b5e65b3ab405c730afadf4256f1d3b160b16781581b2ffce8c67beb",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 53,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-02.json",
+      "sha256": "e52eb28ba79d2cf2517a962caa963473c01bf7d91cc4797d13b6da77004349bb",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 5,
+        "gold": 2,
+        "practice": 45,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-03.json",
+      "sha256": "e6de715cdd6cd4f32f4f432317f74a3e35e06987aa3b0ce2ee85c2f1053e84b8",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 9,
+        "gold": 2,
+        "practice": 53,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-04.json",
+      "sha256": "1ae60e08468177c922d0d4e5cafaae673cf0e321814bcd33e803d8316504d69d",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 55,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-05.json",
+      "sha256": "45c4d4205478198e3f6c9f903578f4321c637acd91edf3a795cc10968e1e32de",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 44,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-06.json",
+      "sha256": "9e30b2a57ce1721265207d4724ca97e3550c2df5fcb3cf888cead84f333e08b7",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 44,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-07.json",
+      "sha256": "2db60a79218a84315589d0a9928681096cc0c4cd2a62d83ffd82870ade5b880e",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 43,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-08.json",
+      "sha256": "03a9ca9577bc4c1885eb6b1cdcebec489bb01052628017fff1a9c98f1a745095",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 39,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-09.json",
+      "sha256": "1db515c6014074520b92fe57b8b1f779bb51b1058fffbf620f4ec04e3a046956",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 8,
+        "gold": 2,
+        "practice": 47,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-10.json",
+      "sha256": "b5fbdf1d1b27ff58f20d8d025b1e70397061823ebfb4acbdb231f9758ee6c130",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 44,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-11.json",
+      "sha256": "8c5ca4e2529fb50723223aab1567326191dfa5aa443a55450f1e6c63ccefe2c8",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 42,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-12.json",
+      "sha256": "5d1259729027f165e4dc7aaf0e5109c97c50920803b22cab32fd8fc7d8e109c0",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 72,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-13.json",
+      "sha256": "ad722986082148c7d21707380155744b1c0f63f24871cf48997a7840dd4d5fa5",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 54,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-1/chapter-14.json",
+      "sha256": "308bc0c07764a21e9a935accb24c7450fca3a85506527503f00d3e272c8aab5f",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 63,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-01.json",
+      "sha256": "0dc172e368df741005314a2659aa87d994172c4ee3afddd7f546c45fafaa6f96",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 41,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-02.json",
+      "sha256": "c5dbed524c12b0d45f1d1779b8cf3f7691826aa81a79978843f614966cba2710",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 8,
+        "gold": 2,
+        "practice": 55,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-03.json",
+      "sha256": "be273da8534430610c0355adfac0e353bd91103ddc0d454f7c3da62a26f75d65",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 8,
+        "gold": 2,
+        "practice": 76,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-04.json",
+      "sha256": "661e9d9551065a555634be46ae0163d621e3be4ff33614cb24e7198827cb092a",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 7,
+        "gold": 2,
+        "practice": 24,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-05.json",
+      "sha256": "128ec2f417ddad34fac2867444fcf5b3022e31d023dc4608e567dc8a5d9a08e9",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 35,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-06.json",
+      "sha256": "20cc5a18db23d949e6e42dbc6264a867bb3405ba34f5ee96b80285c2978185d3",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 35,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-07.json",
+      "sha256": "4cfc5e9c2cf3c373bfdfcfdcb2af4b5b152d588097e1b26f875894c60e3a1580",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 8,
+        "gold": 2,
+        "practice": 50,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-08.json",
+      "sha256": "3d4d46d2ea585ecbd42456b6497de6ee3e3ef791a584590e15a8885117351ea9",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 8,
+        "gold": 2,
+        "practice": 37,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-09.json",
+      "sha256": "345f88ad1757b357881065175660e87362350bcaf96d2af6572085d61854c547",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 8,
+        "gold": 2,
+        "practice": 81,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-10.json",
+      "sha256": "f8a03d79a50c5f264d89e58e856fee57c2cee0e6d8be3f89544e58952601d3af",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 28,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-11.json",
+      "sha256": "cd6a2c79859e38d5de2afae391798b8fdb882b176f156f7bde0fc8a1491135d0",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 8,
+        "gold": 2,
+        "practice": 85,
+        "silver": 2
+      }
+    },
+    {
+      "path": "content/practice/pure-year-2/chapter-12.json",
+      "sha256": "f03a05f282ab2001c4dc3d7b731734b1df1f3def8354020ff8f0bf7baf5411f9",
+      "counts": {
+        "bronze": 2,
+        "exam-style": 6,
+        "gold": 2,
+        "practice": 33,
+        "silver": 2
+      }
+    }
+  ]
+}
