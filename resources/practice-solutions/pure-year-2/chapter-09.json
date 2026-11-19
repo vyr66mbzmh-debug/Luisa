@@ -1,0 +1,1683 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-2",
+  "chapter": 9,
+  "sourcePdf": "resources/practice/pure-year-2/chapter-09.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.1/q1",
+      "status": "worked",
+      "method": "For sin u use u′ cos u; for cos u use −u′ sin u. Multiply by the constant coefficient.",
+      "steps": [
+        {
+          "latex": "u=x,\\quad u^{\\prime}=1;\\quad\\frac{dy}{dx}=6\\cdot\\left(\\cos{\\left(x \\right)}\\right)\\cdot\\left(1\\right)=6 \\cos{\\left(x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\frac{x}{2},\\quad u^{\\prime}=\\frac{1}{2};\\quad\\frac{dy}{dx}=-3\\cdot\\left(\\cos{\\left(\\frac{x}{2} \\right)}\\right)\\cdot\\left(\\frac{1}{2}\\right)=- \\frac{3 \\cos{\\left(\\frac{x}{2} \\right)}}{2}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=5 x,\\quad u^{\\prime}=5;\\quad\\frac{dy}{dx}=\\frac{1}{3}\\cdot\\left(\\cos{\\left(5 x \\right)}\\right)\\cdot\\left(5\\right)=\\frac{5 \\cos{\\left(5 x \\right)}}{3}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=4 x,\\quad u^{\\prime}=4;\\quad\\frac{dy}{dx}=1\\cdot\\left(- \\sin{\\left(4 x \\right)}\\right)\\cdot\\left(4\\right)=- 4 \\sin{\\left(4 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=6 x,\\quad u^{\\prime}=6;\\quad\\frac{dy}{dx}=5\\cdot\\left(- \\sin{\\left(6 x \\right)}\\right)\\cdot\\left(6\\right)=- 30 \\sin{\\left(6 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=7 x,\\quad u^{\\prime}=7;\\quad\\frac{dy}{dx}=- \\frac{1}{2}\\cdot\\left(- \\sin{\\left(7 x \\right)}\\right)\\cdot\\left(7\\right)=\\frac{7 \\sin{\\left(7 x \\right)}}{2}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>For sin u use u′ cos u; for cos u use −u′ sin u. Multiply by the constant coefficient.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=x,\\quad u^{\\prime}=1\\\\&amp;\\frac{dy}{dx}\\\\&amp;=6\\cdot\\left(\\cos{\\left(x \\right)}\\right)\\cdot\\left(1\\right)\\\\&amp;=6 \\cos{\\left(x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=\\frac{x}{2},\\quad u^{\\prime}=\\frac{1}{2}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=-3\\cdot\\left(\\cos{\\left(\\frac{x}{2} \\right)}\\right)\\cdot\\left(\\frac{1}{2}\\right)\\\\&amp;=- \\frac{3 \\cos{\\left(\\frac{x}{2} \\right)}}{2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=5 x,\\quad u^{\\prime}=5\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{1}{3}\\cdot\\left(\\cos{\\left(5 x \\right)}\\right)\\cdot\\left(5\\right)\\\\&amp;=\\frac{5 \\cos{\\left(5 x \\right)}}{3}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=4 x,\\quad u^{\\prime}=4\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(- \\sin{\\left(4 x \\right)}\\right)\\cdot\\left(4\\right)\\\\&amp;=- 4 \\sin{\\left(4 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=6 x,\\quad u^{\\prime}=6\\\\&amp;\\frac{dy}{dx}\\\\&amp;=5\\cdot\\left(- \\sin{\\left(6 x \\right)}\\right)\\cdot\\left(6\\right)\\\\&amp;=- 30 \\sin{\\left(6 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=7 x,\\quad u^{\\prime}=7\\\\&amp;\\frac{dy}{dx}\\\\&amp;=- \\frac{1}{2}\\cdot\\left(- \\sin{\\left(7 x \\right)}\\right)\\cdot\\left(7\\right)\\\\&amp;=\\frac{7 \\sin{\\left(7 x \\right)}}{2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.1/q2",
+      "status": "worked",
+      "method": "Differentiate each term; the inner angle contributes its multiplier, and xⁿ differentiates to nxⁿ⁻¹.",
+      "steps": [
+        {
+          "latex": "\\frac{d}{dx}\\left(4 \\sin{\\left(x \\right)} - 3 \\cos{\\left(x \\right)}\\right)=\\frac{d}{dx}\\left(4 \\sin{\\left(x \\right)}\\right)+\\frac{d}{dx}\\left(- 3 \\cos{\\left(x \\right)}\\right)=(4 \\cos{\\left(x \\right)})+(3 \\sin{\\left(x \\right)})=3 \\sin{\\left(x \\right)} + 4 \\cos{\\left(x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{d}{dx}\\left(- 6 \\sin{\\left(\\frac{x}{4} \\right)} + \\frac{\\sin{\\left(2 x \\right)}}{2} + 4 \\cos{\\left(x \\right)}\\right)=\\frac{d}{dx}\\left(\\frac{\\sin{\\left(2 x \\right)}}{2}\\right)+\\frac{d}{dx}\\left(4 \\cos{\\left(x \\right)}\\right)+\\frac{d}{dx}\\left(- 6 \\sin{\\left(\\frac{x}{4} \\right)}\\right)=(\\cos{\\left(2 x \\right)})+(- 4 \\sin{\\left(x \\right)})+(- \\frac{3 \\cos{\\left(\\frac{x}{4} \\right)}}{2})=- 4 \\sin{\\left(x \\right)} - \\frac{3 \\cos{\\left(\\frac{x}{4} \\right)}}{2} + \\cos{\\left(2 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{d}{dx}\\left(5 x^{\\frac{3}{2}} - 6 \\sin{\\left(\\frac{x}{3} \\right)} - \\frac{4}{x^{2}}\\right)=\\frac{d}{dx}\\left(5 x^{\\frac{3}{2}}\\right)+\\frac{d}{dx}\\left(- \\frac{4}{x^{2}}\\right)+\\frac{d}{dx}\\left(- 6 \\sin{\\left(\\frac{x}{3} \\right)}\\right)=(\\frac{15 \\sqrt{x}}{2})+(\\frac{8}{x^{3}})+(- 2 \\cos{\\left(\\frac{x}{3} \\right)})=\\frac{15 \\sqrt{x}}{2} - 2 \\cos{\\left(\\frac{x}{3} \\right)} + \\frac{8}{x^{3}}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{d}{dx}\\left(3 \\cos{\\left(\\frac{x}{6} \\right)} + \\frac{8}{\\sqrt{x}}\\right)=\\frac{d}{dx}\\left(\\frac{8}{\\sqrt{x}}\\right)+\\frac{d}{dx}\\left(3 \\cos{\\left(\\frac{x}{6} \\right)}\\right)=(- \\frac{4}{x^{\\frac{3}{2}}})+(- \\frac{\\sin{\\left(\\frac{x}{6} \\right)}}{2})=- \\frac{\\sin{\\left(\\frac{x}{6} \\right)}}{2} - \\frac{4}{x^{\\frac{3}{2}}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate each term; the inner angle contributes its multiplier, and xⁿ differentiates to nxⁿ⁻¹.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{d}{dx}\\left(4 \\sin{\\left(x \\right)} - 3 \\cos{\\left(x \\right)}\\right)\\\\&amp;=\\frac{d}{dx}\\left(4 \\sin{\\left(x \\right)}\\right)+\\frac{d}{dx}\\left(- 3 \\cos{\\left(x \\right)}\\right)\\\\&amp;=(4 \\cos{\\left(x \\right)})+(3 \\sin{\\left(x \\right)})\\\\&amp;=3 \\sin{\\left(x \\right)} + 4 \\cos{\\left(x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{d}{dx}\\left(- 6 \\sin{\\left(\\frac{x}{4} \\right)} + \\frac{\\sin{\\left(2 x \\right)}}{2} + 4 \\cos{\\left(x \\right)}\\right)\\\\&amp;=\\frac{d}{dx}\\left(\\frac{\\sin{\\left(2 x \\right)}}{2}\\right)+\\frac{d}{dx}\\left(4 \\cos{\\left(x \\right)}\\right)+\\frac{d}{dx}\\left(- 6 \\sin{\\left(\\frac{x}{4} \\right)}\\right)\\\\&amp;=(\\cos{\\left(2 x \\right)})+(- 4 \\sin{\\left(x \\right)})+(- \\frac{3 \\cos{\\left(\\frac{x}{4} \\right)}}{2})\\\\&amp;=- 4 \\sin{\\left(x \\right)} - \\frac{3 \\cos{\\left(\\frac{x}{4} \\right)}}{2} + \\cos{\\left(2 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{d}{dx}\\left(5 x^{\\frac{3}{2}} - 6 \\sin{\\left(\\frac{x}{3} \\right)} - \\frac{4}{x^{2}}\\right)\\\\&amp;=\\frac{d}{dx}\\left(5 x^{\\frac{3}{2}}\\right)+\\frac{d}{dx}\\left(- \\frac{4}{x^{2}}\\right)+\\frac{d}{dx}\\left(- 6 \\sin{\\left(\\frac{x}{3} \\right)}\\right)\\\\&amp;=(\\frac{15 \\sqrt{x}}{2})+(\\frac{8}{x^{3}})+(- 2 \\cos{\\left(\\frac{x}{3} \\right)})\\\\&amp;=\\frac{15 \\sqrt{x}}{2} - 2 \\cos{\\left(\\frac{x}{3} \\right)} + \\frac{8}{x^{3}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{d}{dx}\\left(3 \\cos{\\left(\\frac{x}{6} \\right)} + \\frac{8}{\\sqrt{x}}\\right)\\\\&amp;=\\frac{d}{dx}\\left(\\frac{8}{\\sqrt{x}}\\right)+\\frac{d}{dx}\\left(3 \\cos{\\left(\\frac{x}{6} \\right)}\\right)\\\\&amp;=(- \\frac{4}{x^{\\frac{3}{2}}})+(- \\frac{\\sin{\\left(\\frac{x}{6} \\right)}}{2})\\\\&amp;=- \\frac{\\sin{\\left(\\frac{x}{6} \\right)}}{2} - \\frac{4}{x^{\\frac{3}{2}}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.1/q3",
+      "status": "worked",
+      "method": "With x in degrees, the derivative carries the common positive factor π/180. This factor does not change its zeros.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=\\frac\\pi{180}(5\\cos x+3\\sin x)=0;\\quad\\tan x=-5/3;\\quad x=-\\tan^{-1}(5/3),\\ 180^\\circ-\\tan^{-1}(5/3)\\approx-59.0^\\circ,121.0^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>With x in degrees, the derivative carries the common positive factor π/180. This factor does not change its zeros.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=\\frac\\pi{180}(5\\cos x+3\\sin x)=0\\\\&amp;\\tan x=-5/3\\\\&amp;x=-\\tan^{-1}(5/3),\\ 180^\\circ-\\tan^{-1}(5/3)\\approx-59.0^\\circ,121.0^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.1/q4",
+      "status": "worked",
+      "method": "Differentiate to obtain the tangent gradient and use the given point.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=1+2\\sin2x;\\quad m=1+2\\sin(\\pi/2)=3;\\quad y-\\pi/4=3(x-\\pi/4)\\Rightarrow y=3x-\\pi/2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate to obtain the tangent gradient and use the given point.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=1+2\\sin2x\\\\&amp;m=1+2\\sin(\\pi/2)=3\\\\&amp;y-\\pi/4=3(x-\\pi/4)\\\\&amp;\\Rightarrow y=3x-\\pi/2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.1/q5",
+      "status": "worked",
+      "method": "Factor the derivative using sin 2x=2 sin x cos x and keep both factors.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=6\\cos x+6\\sin2x=6\\cos x(1+2\\sin x);\\quad\\cos x=0\\text{ or }\\sin x=-1/2;\\quad x=\\pi/2,7\\pi/6,3\\pi/2,11\\pi/6;\\quad(x,y)=(\\pi/2,9),(7\\pi/6,-9/2),(3\\pi/2,-3),(11\\pi/6,-9/2)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Factor the derivative using sin 2x=2 sin x cos x and keep both factors.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=6\\cos x+6\\sin2x=6\\cos x(1+2\\sin x)\\\\&amp;\\cos x=0\\text{ or }\\sin x=-1/2\\\\&amp;x=\\pi/2,7\\pi/6,3\\pi/2,11\\pi/6\\\\&amp;(x,y)=(\\pi/2,9),(7\\pi/6,-9/2),(3\\pi/2,-3),(11\\pi/6,-9/2)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.1/q6",
+      "status": "worked",
+      "method": "Find the tangent gradient, take its negative reciprocal, and use point–slope form.",
+      "steps": [
+        {
+          "latex": "g^{\\prime}(x)=12\\cos2x+8\\sin2x;\\quad g^{\\prime}(\\pi)=12;\\quad m_N=-1/12;\\quad y+4=-(x-\\pi)/12\\Rightarrow y=-x/12+\\pi/12-4",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find the tangent gradient, take its negative reciprocal, and use point–slope form.</p><span data-math=\"\\begin{aligned}&amp;g^{\\prime}(x)=12\\cos2x+8\\sin2x\\\\&amp;g^{\\prime}(\\pi)=12\\\\&amp;m_N=-1/12\\\\&amp;y+4=-(x-\\pi)/12\\\\&amp;\\Rightarrow y=-x/12+\\pi/12-4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.1/q7",
+      "status": "worked",
+      "method": "Evaluate the height and derivative at π/2, substitute into point–slope form and clear fractions.",
+      "steps": [
+        {
+          "latex": "h(\\pi/2)=3+\\pi^2/8;\\quad h^{\\prime}(x)=3\\cos x+4\\sin x+x;\\quad h^{\\prime}(\\pi/2)=4+\\pi/2;\\quad y-3-\\pi^2/8=(4+\\pi/2)(x-\\pi/2);\\quad8y-(32+4\\pi)x=24-16\\pi-\\pi^2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Evaluate the height and derivative at π/2, substitute into point–slope form and clear fractions.</p><span data-math=\"\\begin{aligned}&amp;h(\\pi/2)=3+\\pi^2/8\\\\&amp;h^{\\prime}(x)=3\\cos x+4\\sin x+x\\\\&amp;h^{\\prime}(\\pi/2)=4+\\pi/2\\\\&amp;y-3-\\pi^2/8=(4+\\pi/2)(x-\\pi/2)\\\\&amp;8y-(32+4\\pi)x=24-16\\pi-\\pi^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.1/q8",
+      "status": "worked",
+      "method": "Start from the difference quotient, expand cos(x+h), and use the standard small-angle limits in radians.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=\\lim_{h\\to0}\\frac{\\cos(x+h)-\\cos x}{h};\\quad=\\lim_{h\\to0}\\left(\\cos x\\frac{\\cos h-1}{h}-\\sin x\\frac{\\sin h}{h}\\right);\\quad\\lim_{h\\to0}\\frac{\\sin h}{h}=1,\\quad\\lim_{h\\to0}\\frac{\\cos h-1}{h}=0;\\quad f^{\\prime}(x)=0\\cos x-1\\sin x=-\\sin x",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Start from the difference quotient, expand cos(x+h), and use the standard small-angle limits in radians.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=\\lim_{h\\to0}\\frac{\\cos(x+h)-\\cos x}{h}\\\\&amp;=\\lim_{h\\to0}\\left(\\cos x\\frac{\\cos h-1}{h}-\\sin x\\frac{\\sin h}{h}\\right)\\\\&amp;\\lim_{h\\to0}\\frac{\\sin h}{h}=1,\\quad\\lim_{h\\to0}\\frac{\\cos h-1}{h}=0\\\\&amp;f^{\\prime}(x)=0\\cos x-1\\sin x=-\\sin x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.2/q1",
+      "status": "worked",
+      "method": "Differentiate eᵘ as u′eᵘ. In (d), expand and divide first.",
+      "steps": [
+        {
+          "latex": "u=- 3 x,\\quad u^{\\prime}=-3;\\quad\\frac{dy}{dx}=6\\cdot\\left(e^{- 3 x}\\right)\\cdot\\left(-3\\right)=- 18 e^{- 3 x}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{d}{dx}\\left(5 e^{2 x} - 7 e^{- x}\\right)=\\frac{d}{dx}\\left(5 e^{2 x}\\right)+\\frac{d}{dx}\\left(- 7 e^{- x}\\right)=(10 e^{2 x})+(7 e^{- x})=10 e^{2 x} + 7 e^{- x}",
+          "explanation": ""
+        },
+        {
+          "latex": "7/e^{5x}=7e^{-5x};\\quad\\frac{d}{dx}(7e^{-5x})=7(-5)e^{-5x}=-35e^{-5x}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{(1-e^{2x})^2}{e^{2x}}=e^{-2x}-2+e^{2x};\\quad\\frac{dy}{dx}=-2e^{-2x}+2e^{2x}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate eᵘ as u′eᵘ. In (d), expand and divide first.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=- 3 x,\\quad u^{\\prime}=-3\\\\&amp;\\frac{dy}{dx}\\\\&amp;=6\\cdot\\left(e^{- 3 x}\\right)\\cdot\\left(-3\\right)\\\\&amp;=- 18 e^{- 3 x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{d}{dx}\\left(5 e^{2 x} - 7 e^{- x}\\right)\\\\&amp;=\\frac{d}{dx}\\left(5 e^{2 x}\\right)+\\frac{d}{dx}\\left(- 7 e^{- x}\\right)\\\\&amp;=(10 e^{2 x})+(7 e^{- x})\\\\&amp;=10 e^{2 x} + 7 e^{- x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;7/e^{5x}=7e^{-5x}\\\\&amp;\\frac{d}{dx}(7e^{-5x})=7(-5)e^{-5x}=-35e^{-5x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{(1-e^{2x})^2}{e^{2x}}=e^{-2x}-2+e^{2x}\\\\&amp;\\frac{dy}{dx}=-2e^{-2x}+2e^{2x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.2/q2",
+      "status": "worked",
+      "method": "Use (ln u)′=u′/u on the real domain of the original logarithm.",
+      "steps": [
+        {
+          "latex": "u=2 x,\\quad u^{\\prime}=2;\\quad\\frac{dy}{dx}=1\\cdot\\left(\\frac{1}{2 x}\\right)\\cdot\\left(2\\right)=\\frac{1}{x}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=x^{2},\\quad u^{\\prime}=2 x;\\quad\\frac{dy}{dx}=1\\cdot\\left(\\frac{1}{x^{2}}\\right)\\cdot\\left(2 x\\right)=\\frac{2}{x}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\frac{7}{x},\\quad u^{\\prime}=- \\frac{7}{x^{2}};\\quad\\frac{dy}{dx}=1\\cdot\\left(\\frac{x}{7}\\right)\\cdot\\left(- \\frac{7}{x^{2}}\\right)=- \\frac{1}{x}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=4 x^{3},\\quad u^{\\prime}=12 x^{2};\\quad\\frac{dy}{dx}=1\\cdot\\left(\\frac{1}{4 x^{3}}\\right)\\cdot\\left(12 x^{2}\\right)=\\frac{3}{x}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use (ln u)′=u′/u on the real domain of the original logarithm.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=2 x,\\quad u^{\\prime}=2\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(\\frac{1}{2 x}\\right)\\cdot\\left(2\\right)\\\\&amp;=\\frac{1}{x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=x^{2},\\quad u^{\\prime}=2 x\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(\\frac{1}{x^{2}}\\right)\\cdot\\left(2 x\\right)\\\\&amp;=\\frac{2}{x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=\\frac{7}{x},\\quad u^{\\prime}=- \\frac{7}{x^{2}}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(\\frac{x}{7}\\right)\\cdot\\left(- \\frac{7}{x^{2}}\\right)\\\\&amp;=- \\frac{1}{x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=4 x^{3},\\quad u^{\\prime}=12 x^{2}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(\\frac{1}{4 x^{3}}\\right)\\cdot\\left(12 x^{2}\\right)\\\\&amp;=\\frac{3}{x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.2/q3",
+      "status": "worked",
+      "method": "Use aᵘ=eᵘˡⁿᵃ and multiply by u′ ln a.",
+      "steps": [
+        {
+          "latex": "\\frac{d}{dx}3^x=3^x\\ln3",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{d}{dx}5^{2x}=5^{2x}(2\\ln5)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{d}{dx}(2/5)^{4x}=(2/5)^{4x}(4\\ln(2/5))",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{d}{dx}8^{-x}=8^{-x}(-\\ln8)=-\\frac{\\ln8}{8^x}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use aᵘ=eᵘˡⁿᵃ and multiply by u′ ln a.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\frac{d}{dx}3^x=3^x\\ln3\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\frac{d}{dx}5^{2x}=5^{2x}(2\\ln5)\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{d}{dx}(2/5)^{4x}=(2/5)^{4x}(4\\ln(2/5))\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{d}{dx}8^{-x}=8^{-x}(-\\ln8)=-\\frac{\\ln8}{8^x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.2/q4",
+      "status": "worked",
+      "method": "Find the point and derivative value, then apply point–slope form.",
+      "steps": [
+        {
+          "latex": "y(-1/2)=1/2;\\quad y^{\\prime}=4^x\\ln4;\\quad m=\\frac12\\ln4=\\ln2;\\quad y-1/2=(\\ln2)(x+1/2)\\Rightarrow y=x\\ln2+\\frac12(1+\\ln2)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find the point and derivative value, then apply point–slope form.</p><span data-math=\"\\begin{aligned}&amp;y(-1/2)=1/2\\\\&amp;y^{\\prime}=4^x\\ln4\\\\&amp;m=\\frac12\\ln4=\\ln2\\\\&amp;y-1/2=(\\ln2)(x+1/2)\\\\&amp;\\Rightarrow y=x\\ln2+\\frac12(1+\\ln2)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.2/q5",
+      "status": "worked",
+      "method": "Differentiate the exponential and logarithm using their inner derivatives.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=-e^{-x}+2\\frac{3x^2}{x^3}=-e^{-x}+\\frac6x,\\quad x>0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the exponential and logarithm using their inner derivatives.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=-e^{-x}+2\\frac{3x^2}{x^3}=-e^{-x}+\\frac6x,\\quad x&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.2/q6",
+      "status": "worked",
+      "method": "Use the negative reciprocal of the derivative at x=1 for the normal.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=3e^x-2/x;\\quad(x,y)=(1,3e),\\quad m_N=-1/(3e-2);\\quad y-3e=-\\frac{x-1}{3e-2};\\quad x+(3e-2)y-9e^2+6e-1=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the negative reciprocal of the derivative at x=1 for the normal.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=3e^x-2/x\\\\&amp;(x,y)=(1,3e),\\quad m_N=-1/(3e-2)\\\\&amp;y-3e=-\\frac{x-1}{3e-2}\\\\&amp;x+(3e-2)y-9e^2+6e-1=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.2/q7",
+      "status": "worked",
+      "method": "Differentiate both exponentials, noting the minus sign from the exponent −x.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=(\\ln4)(4^x-4^{-x});\\quad f(1/2)=2+1/2=5/2;\\quad f^{\\prime}(1/2)=\\frac32\\ln4=\\ln8;\\quad y-5/2=(\\ln8)(x-1/2)\\Rightarrow y=(\\ln8)x+5/2-\\frac12\\ln8",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate both exponentials, noting the minus sign from the exponent −x.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=(\\ln4)(4^x-4^{-x})\\\\&amp;f(1/2)=2+1/2=5/2\\\\&amp;f^{\\prime}(1/2)=\\frac32\\ln4=\\ln8\\\\&amp;y-5/2=(\\ln8)(x-1/2)\\\\&amp;\\Rightarrow y=(\\ln8)x+5/2-\\frac12\\ln8\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.2/q8",
+      "status": "worked",
+      "method": "Rewrite both powers with base 3, then differentiate the combined exponential.",
+      "steps": [
+        {
+          "latex": "9^{3x}=(3^2)^{3x}=3^{6x};\\quad f(x)=2(3^{6x}),\\quad a=2,\\ k=6",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime}(x)=2(3^{6x})(6\\ln3)=12(\\ln3)3^{6x}=(4\\ln3)3^{6x+1}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Rewrite both powers with base 3, then differentiate the combined exponential.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;9^{3x}=(3^2)^{3x}=3^{6x}\\\\&amp;f(x)=2(3^{6x}),\\quad a=2,\\ k=6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=2(3^{6x})(6\\ln3)=12(\\ln3)3^{6x}=(4\\ln3)3^{6x+1}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.3/q1",
+      "status": "worked",
+      "method": "For y=c uᵖ, use y′=cp uᵖ⁻¹u′. The inner derivative is included explicitly.",
+      "steps": [
+        {
+          "latex": "u=4 - 3 x,\\quad u^{\\prime}=-3;\\quad\\frac{dy}{dx}=1\\cdot3\\left(4 - 3 x\\right)^{2}\\cdot\\left(-3\\right)=- 9 \\left(4 - 3 x\\right)^{2}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=5 x + 6,\\quad u^{\\prime}=5;\\quad\\frac{dy}{dx}=1\\cdot\\frac{1}{2}\\left(5 x + 6\\right)^{- \\frac{1}{2}}\\cdot\\left(5\\right)=\\frac{5}{2 \\sqrt{5 x + 6}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=2 x^{3} + 5,\\quad u^{\\prime}=6 x^{2};\\quad\\frac{dy}{dx}=1\\cdot4\\left(2 x^{3} + 5\\right)^{3}\\cdot\\left(6 x^{2}\\right)=24 x^{2} \\left(2 x^{3} + 5\\right)^{3}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=3 x^{2} + 7,\\quad u^{\\prime}=6 x;\\quad\\frac{dy}{dx}=1\\cdot-5\\left(3 x^{2} + 7\\right)^{-6}\\cdot\\left(6 x\\right)=- \\frac{30 x}{\\left(3 x^{2} + 7\\right)^{6}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=4 - 5 x,\\quad u^{\\prime}=-5;\\quad\\frac{dy}{dx}=6\\cdot- \\frac{1}{2}\\left(4 - 5 x\\right)^{- \\frac{3}{2}}\\cdot\\left(-5\\right)=\\frac{15}{\\left(4 - 5 x\\right)^{\\frac{3}{2}}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=6 - x,\\quad u^{\\prime}=-1;\\quad\\frac{dy}{dx}=1\\cdot-1\\left(6 - x\\right)^{-2}\\cdot\\left(-1\\right)=\\frac{1}{\\left(6 - x\\right)^{2}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=2 x^{4} + 3,\\quad u^{\\prime}=8 x^{3};\\quad\\frac{dy}{dx}=1\\cdot\\frac{1}{3}\\left(2 x^{4} + 3\\right)^{- \\frac{2}{3}}\\cdot\\left(8 x^{3}\\right)=\\frac{8 x^{3}}{3 \\left(2 x^{4} + 3\\right)^{\\frac{2}{3}}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=7 x^{3} - 4,\\quad u^{\\prime}=21 x^{2};\\quad\\frac{dy}{dx}=1\\cdot\\frac{1}{2}\\left(7 x^{3} - 4\\right)^{- \\frac{1}{2}}\\cdot\\left(21 x^{2}\\right)=\\frac{21 x^{2}}{2 \\sqrt{7 x^{3} - 4}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>For y=c uᵖ, use y′=cp uᵖ⁻¹u′. The inner derivative is included explicitly.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=4 - 3 x,\\quad u^{\\prime}=-3\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot3\\left(4 - 3 x\\right)^{2}\\cdot\\left(-3\\right)\\\\&amp;=- 9 \\left(4 - 3 x\\right)^{2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=5 x + 6,\\quad u^{\\prime}=5\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\frac{1}{2}\\left(5 x + 6\\right)^{- \\frac{1}{2}}\\cdot\\left(5\\right)\\\\&amp;=\\frac{5}{2 \\sqrt{5 x + 6}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=2 x^{3} + 5,\\quad u^{\\prime}=6 x^{2}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot4\\left(2 x^{3} + 5\\right)^{3}\\cdot\\left(6 x^{2}\\right)\\\\&amp;=24 x^{2} \\left(2 x^{3} + 5\\right)^{3}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=3 x^{2} + 7,\\quad u^{\\prime}=6 x\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot-5\\left(3 x^{2} + 7\\right)^{-6}\\cdot\\left(6 x\\right)\\\\&amp;=- \\frac{30 x}{\\left(3 x^{2} + 7\\right)^{6}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=4 - 5 x,\\quad u^{\\prime}=-5\\\\&amp;\\frac{dy}{dx}\\\\&amp;=6\\cdot- \\frac{1}{2}\\left(4 - 5 x\\right)^{- \\frac{3}{2}}\\cdot\\left(-5\\right)\\\\&amp;=\\frac{15}{\\left(4 - 5 x\\right)^{\\frac{3}{2}}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=6 - x,\\quad u^{\\prime}=-1\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot-1\\left(6 - x\\right)^{-2}\\cdot\\left(-1\\right)\\\\&amp;=\\frac{1}{\\left(6 - x\\right)^{2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=2 x^{4} + 3,\\quad u^{\\prime}=8 x^{3}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\frac{1}{3}\\left(2 x^{4} + 3\\right)^{- \\frac{2}{3}}\\cdot\\left(8 x^{3}\\right)\\\\&amp;=\\frac{8 x^{3}}{3 \\left(2 x^{4} + 3\\right)^{\\frac{2}{3}}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=7 x^{3} - 4,\\quad u^{\\prime}=21 x^{2}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\frac{1}{2}\\left(7 x^{3} - 4\\right)^{- \\frac{1}{2}}\\cdot\\left(21 x^{2}\\right)\\\\&amp;=\\frac{21 x^{2}}{2 \\sqrt{7 x^{3} - 4}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.3/q2",
+      "status": "worked",
+      "method": "Differentiate the outer function and multiply by the derivative of its inner expression.",
+      "steps": [
+        {
+          "latex": "u=\\sin{\\left(x \\right)},\\quad u^{\\prime}=\\cos{\\left(x \\right)};\\quad\\frac{dy}{dx}=1\\cdot3\\left(\\sin{\\left(x \\right)}\\right)^{2}\\cdot\\left(\\cos{\\left(x \\right)}\\right)=3 \\sin^{2}{\\left(x \\right)} \\cos{\\left(x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=x^{4},\\quad u^{\\prime}=4 x^{3};\\quad\\frac{dy}{dx}=1\\cdot\\left(\\frac{1}{x^{4}}\\right)\\cdot\\left(4 x^{3}\\right)=\\frac{4}{x}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\cos{\\left(4 x \\right)},\\quad u^{\\prime}=- 4 \\sin{\\left(4 x \\right)};\\quad\\frac{dy}{dx}=1\\cdot\\left(e^{\\cos{\\left(4 x \\right)}}\\right)\\cdot\\left(- 4 \\sin{\\left(4 x \\right)}\\right)=- 4 e^{\\cos{\\left(4 x \\right)}} \\sin{\\left(4 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\ln{\\left(x \\right)},\\quad u^{\\prime}=\\frac{1}{x};\\quad\\frac{dy}{dx}=1\\cdot2\\left(\\ln{\\left(x \\right)}\\right)^{1}\\cdot\\left(\\frac{1}{x}\\right)=\\frac{2 \\ln{\\left(x \\right)}}{x}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\cos{\\left(x \\right)},\\quad u^{\\prime}=- \\sin{\\left(x \\right)};\\quad\\frac{dy}{dx}=1\\cdot\\left(\\frac{1}{\\cos{\\left(x \\right)}}\\right)\\cdot\\left(- \\sin{\\left(x \\right)}\\right)=- \\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=e^{- 3 x},\\quad u^{\\prime}=- 3 e^{- 3 x};\\quad\\frac{dy}{dx}=1\\cdot\\left(\\cos{\\left(e^{- 3 x} \\right)}\\right)\\cdot\\left(- 3 e^{- 3 x}\\right)=- 3 e^{- 3 x} \\cos{\\left(e^{- 3 x} \\right)}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the outer function and multiply by the derivative of its inner expression.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=\\sin{\\left(x \\right)},\\quad u^{\\prime}=\\cos{\\left(x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot3\\left(\\sin{\\left(x \\right)}\\right)^{2}\\cdot\\left(\\cos{\\left(x \\right)}\\right)\\\\&amp;=3 \\sin^{2}{\\left(x \\right)} \\cos{\\left(x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=x^{4},\\quad u^{\\prime}=4 x^{3}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(\\frac{1}{x^{4}}\\right)\\cdot\\left(4 x^{3}\\right)\\\\&amp;=\\frac{4}{x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=\\cos{\\left(4 x \\right)},\\quad u^{\\prime}=- 4 \\sin{\\left(4 x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(e^{\\cos{\\left(4 x \\right)}}\\right)\\cdot\\left(- 4 \\sin{\\left(4 x \\right)}\\right)\\\\&amp;=- 4 e^{\\cos{\\left(4 x \\right)}} \\sin{\\left(4 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=\\ln{\\left(x \\right)},\\quad u^{\\prime}=\\frac{1}{x}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot2\\left(\\ln{\\left(x \\right)}\\right)^{1}\\cdot\\left(\\frac{1}{x}\\right)\\\\&amp;=\\frac{2 \\ln{\\left(x \\right)}}{x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=\\cos{\\left(x \\right)},\\quad u^{\\prime}=- \\sin{\\left(x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(\\frac{1}{\\cos{\\left(x \\right)}}\\right)\\cdot\\left(- \\sin{\\left(x \\right)}\\right)\\\\&amp;=- \\frac{\\sin{\\left(x \\right)}}{\\cos{\\left(x \\right)}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=e^{- 3 x},\\quad u^{\\prime}=- 3 e^{- 3 x}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(\\cos{\\left(e^{- 3 x} \\right)}\\right)\\cdot\\left(- 3 e^{- 3 x}\\right)\\\\&amp;=- 3 e^{- 3 x} \\cos{\\left(e^{- 3 x} \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.3/q3",
+      "status": "worked",
+      "method": "Use the chain rule twice, then substitute the exact argument.",
+      "steps": [
+        {
+          "latex": "u=3-\\ln6x,\\quad u^{\\prime}=-1/x;\\quad f^{\\prime}(x)=2(3-\\ln6x)(-1/x)=-\\frac2x(3-\\ln6x)",
+          "explanation": ""
+        },
+        {
+          "latex": "x=e^2/6\\Rightarrow\\ln6x=2;\\quad f^{\\prime}(e^2/6)=-\\frac{12}{e^2}(3-2)=-12/e^2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the chain rule twice, then substitute the exact argument.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=3-\\ln6x,\\quad u^{\\prime}=-1/x\\\\&amp;f^{\\prime}(x)=2(3-\\ln6x)(-1/x)=-\\frac2x(3-\\ln6x)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x=e^2/6\\\\&amp;\\Rightarrow \\ln6x=2\\\\&amp;f^{\\prime}(e^2/6)=-\\frac{12}{e^2}(3-2)=-12/e^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.3/q4",
+      "status": "worked",
+      "method": "Check the supplied point before evaluating the derivative on the curve.",
+      "steps": [
+        {
+          "latex": "2(6)^2-4(6)=48\\ne3;\\quad\\frac{dx}{dy}=4y-4\\Rightarrow\\frac{dy}{dx}=\\frac1{4y-4}",
+          "explanation": "The point (3,6) is not on the stated curve, so its curve gradient is undefined there. At the actual point (48,6), the gradient is 1/20, which is the value obtained by substituting y=6 into the derivative. This does not make (3,6) a point on the curve."
+        }
+      ],
+      "solutionHtml": "<p>Check the supplied point before evaluating the derivative on the curve.</p><p>The point (3,6) is not on the stated curve, so its curve gradient is undefined there. At the actual point (48,6), the gradient is 1/20, which is the value obtained by substituting y=6 into the derivative. This does not make (3,6) a point on the curve.</p><span data-math=\"\\begin{aligned}&amp;2(6)^2-4(6)=48\\ne3\\\\&amp;\\frac{dx}{dy}=4y-4\\\\&amp;\\Rightarrow \\frac{dy}{dx}=\\frac1{4y-4}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.3/q5",
+      "status": "worked",
+      "method": "Use the chain rule, evaluate P, and take the negative reciprocal for the normal.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=5(2x-3)^4\\cdot2=10(2x-3)^4;\\quad P=(2,1),\\quad m_N=-1/10;\\quad y-1=-(x-2)/10\\Rightarrow x+10y-12=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the chain rule, evaluate P, and take the negative reciprocal for the normal.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=5(2x-3)^4\\cdot2=10(2x-3)^4\\\\&amp;P=(2,1),\\quad m_N=-1/10\\\\&amp;y-1=-(x-2)/10\\\\&amp;\\Rightarrow x+10y-12=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.3/q6",
+      "status": "worked",
+      "method": "Differentiate 3(6−x)⁻³ and use the point at x=4.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=3(-3)(6-x)^{-4}(-1)=9/(6-x)^4;\\quad f(4)=3/8,\\quad m=9/16;\\quad y-3/8=(9/16)(x-4)\\Rightarrow9x-16y-30=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate 3(6−x)⁻³ and use the point at x=4.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=3(-3)(6-x)^{-4}(-1)=9/(6-x)^4\\\\&amp;f(4)=3/8,\\quad m=9/16\\\\&amp;y-3/8=(9/16)(x-4)\\\\&amp;\\Rightarrow 9x-16y-30=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.3/q7",
+      "status": "worked",
+      "method": "Differentiate both squared trigonometric terms and evaluate the exact sine and cosine.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=6\\sin x\\cos x+4\\cos x\\sin x=10\\sin x\\cos x;\\quad x=-5\\pi/6:\\ \\sin x=-1/2,\\ \\cos x=-\\sqrt3/2;\\quad y=-3/4,\\quad m=5\\sqrt3/2;\\quad y+3/4=(5\\sqrt3/2)(x+5\\pi/6);\\quad12y-30\\sqrt3x-25\\pi\\sqrt3+9=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate both squared trigonometric terms and evaluate the exact sine and cosine.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=6\\sin x\\cos x+4\\cos x\\sin x=10\\sin x\\cos x\\\\&amp;x=-5\\pi/6:\\ \\sin x=-1/2,\\ \\cos x=-\\sqrt3/2\\\\&amp;y=-3/4,\\quad m=5\\sqrt3/2\\\\&amp;y+3/4=(5\\sqrt3/2)(x+5\\pi/6)\\\\&amp;12y-30\\sqrt3x-25\\pi\\sqrt3+9=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.3/q8",
+      "status": "worked",
+      "method": "Differentiate x with respect to y, take the reciprocal for the tangent slope and its negative reciprocal for the normal.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{dy}=-8\\cos4y;\\quad y=2\\pi/3\\Rightarrow x=-\\sqrt3,\\quad\\frac{dx}{dy}=4;\\quad m_T=1/4,\\quad m_N=-4;\\quad y-2\\pi/3=-4(x+\\sqrt3);\\quad4x+y+4\\sqrt3-2\\pi/3=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate x with respect to y, take the reciprocal for the tangent slope and its negative reciprocal for the normal.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dy}=-8\\cos4y\\\\&amp;y=2\\pi/3\\\\&amp;\\Rightarrow x=-\\sqrt3,\\quad\\frac{dx}{dy}=4\\\\&amp;m_T=1/4,\\quad m_N=-4\\\\&amp;y-2\\pi/3=-4(x+\\sqrt3)\\\\&amp;4x+y+4\\sqrt3-2\\pi/3=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.3/q9",
+      "status": "worked",
+      "method": "Use the exponential chain rule with inner function x⁴, then substitute the point.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=2^{x^4}(\\ln2)(4x^3);\\quad m=2(\\ln2)(-4)=-8\\ln2;\\quad y-2=-8(\\ln2)(x+1);\\quad(8\\ln2)x+y+8\\ln2-2=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the exponential chain rule with inner function x⁴, then substitute the point.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=2^{x^4}(\\ln2)(4x^3)\\\\&amp;m=2(\\ln2)(-4)=-8\\ln2\\\\&amp;y-2=-8(\\ln2)(x+1)\\\\&amp;(8\\ln2)x+y+8\\ln2-2=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.4/q1",
+      "status": "worked",
+      "method": "Apply the product rule u′v+uv′, using the chain rule for the powered factor.",
+      "steps": [
+        {
+          "latex": "u=x,\\ v=\\left(4 - 5 x\\right)^{3};\\quad u^{\\prime}=1,\\ v^{\\prime}=- 15 \\left(4 - 5 x\\right)^{2};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(1)(\\left(4 - 5 x\\right)^{3})+(x)(- 15 \\left(4 - 5 x\\right)^{2})=- 15 x \\left(4 - 5 x\\right)^{2} + \\left(4 - 5 x\\right)^{3}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=3 x^{3},\\ v=\\left(2 x - 1\\right)^{6};\\quad u^{\\prime}=9 x^{2},\\ v^{\\prime}=12 \\left(2 x - 1\\right)^{5};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(9 x^{2})(\\left(2 x - 1\\right)^{6})+(3 x^{3})(12 \\left(2 x - 1\\right)^{5})=36 x^{3} \\left(2 x - 1\\right)^{5} + 9 x^{2} \\left(2 x - 1\\right)^{6}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\frac{4}{x^{2}},\\ v=\\left(6 x - 7\\right)^{4};\\quad u^{\\prime}=- \\frac{8}{x^{3}},\\ v^{\\prime}=24 \\left(6 x - 7\\right)^{3};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(- \\frac{8}{x^{3}})(\\left(6 x - 7\\right)^{4})+(\\frac{4}{x^{2}})(24 \\left(6 x - 7\\right)^{3})=\\frac{96 \\left(6 x - 7\\right)^{3}}{x^{2}} - \\frac{8 \\left(6 x - 7\\right)^{4}}{x^{3}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=8 x^{2},\\ v=\\frac{1}{\\left(2 x^{3} - 4\\right)^{3}};\\quad u^{\\prime}=16 x,\\ v^{\\prime}=- \\frac{18 x^{2}}{\\left(2 x^{3} - 4\\right)^{4}};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(16 x)(\\frac{1}{\\left(2 x^{3} - 4\\right)^{3}})+(8 x^{2})(- \\frac{18 x^{2}}{\\left(2 x^{3} - 4\\right)^{4}})=- \\frac{144 x^{4}}{\\left(2 x^{3} - 4\\right)^{4}} + \\frac{16 x}{\\left(2 x^{3} - 4\\right)^{3}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply the product rule u′v+uv′, using the chain rule for the powered factor.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=x,\\ v=\\left(4 - 5 x\\right)^{3}\\\\&amp;u^{\\prime}=1,\\ v^{\\prime}=- 15 \\left(4 - 5 x\\right)^{2}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(1)(\\left(4 - 5 x\\right)^{3})+(x)(- 15 \\left(4 - 5 x\\right)^{2})\\\\&amp;=- 15 x \\left(4 - 5 x\\right)^{2} + \\left(4 - 5 x\\right)^{3}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=3 x^{3},\\ v=\\left(2 x - 1\\right)^{6}\\\\&amp;u^{\\prime}=9 x^{2},\\ v^{\\prime}=12 \\left(2 x - 1\\right)^{5}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(9 x^{2})(\\left(2 x - 1\\right)^{6})+(3 x^{3})(12 \\left(2 x - 1\\right)^{5})\\\\&amp;=36 x^{3} \\left(2 x - 1\\right)^{5} + 9 x^{2} \\left(2 x - 1\\right)^{6}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=\\frac{4}{x^{2}},\\ v=\\left(6 x - 7\\right)^{4}\\\\&amp;u^{\\prime}=- \\frac{8}{x^{3}},\\ v^{\\prime}=24 \\left(6 x - 7\\right)^{3}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(- \\frac{8}{x^{3}})(\\left(6 x - 7\\right)^{4})+(\\frac{4}{x^{2}})(24 \\left(6 x - 7\\right)^{3})\\\\&amp;=\\frac{96 \\left(6 x - 7\\right)^{3}}{x^{2}} - \\frac{8 \\left(6 x - 7\\right)^{4}}{x^{3}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=8 x^{2},\\ v=\\frac{1}{\\left(2 x^{3} - 4\\right)^{3}}\\\\&amp;u^{\\prime}\\\\&amp;=16 x,\\ v^{\\prime}\\\\&amp;=- \\frac{18 x^{2}}{\\left(2 x^{3} - 4\\right)^{4}}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(16 x)(\\frac{1}{\\left(2 x^{3} - 4\\right)^{3}})+(8 x^{2})(- \\frac{18 x^{2}}{\\left(2 x^{3} - 4\\right)^{4}})\\\\&amp;=- \\frac{144 x^{4}}{\\left(2 x^{3} - 4\\right)^{4}} + \\frac{16 x}{\\left(2 x^{3} - 4\\right)^{3}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.4/q2",
+      "status": "worked",
+      "method": "Differentiate both factors and use u′v+uv′. Logarithms retain their original real domains.",
+      "steps": [
+        {
+          "latex": "u=x^{2},\\ v=\\cos{\\left(2 x \\right)};\\quad u^{\\prime}=2 x,\\ v^{\\prime}=- 2 \\sin{\\left(2 x \\right)};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(2 x)(\\cos{\\left(2 x \\right)})+(x^{2})(- 2 \\sin{\\left(2 x \\right)})=- 2 x^{2} \\sin{\\left(2 x \\right)} + 2 x \\cos{\\left(2 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=e^{3 x},\\ v=\\sin{\\left(5 x \\right)};\\quad u^{\\prime}=3 e^{3 x},\\ v^{\\prime}=5 \\cos{\\left(5 x \\right)};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(3 e^{3 x})(\\sin{\\left(5 x \\right)})+(e^{3 x})(5 \\cos{\\left(5 x \\right)})=3 e^{3 x} \\sin{\\left(5 x \\right)} + 5 e^{3 x} \\cos{\\left(5 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=e^{- x},\\ v=\\left(2 x^{2} + 3\\right)^{3};\\quad u^{\\prime}=- e^{- x},\\ v^{\\prime}=12 x \\left(2 x^{2} + 3\\right)^{2};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(- e^{- x})(\\left(2 x^{2} + 3\\right)^{3})+(e^{- x})(12 x \\left(2 x^{2} + 3\\right)^{2})=12 x \\left(2 x^{2} + 3\\right)^{2} e^{- x} - \\left(2 x^{2} + 3\\right)^{3} e^{- x}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=- 3 \\cos{\\left(4 x \\right)},\\ v=\\sin{\\left(2 x \\right)};\\quad u^{\\prime}=12 \\sin{\\left(4 x \\right)},\\ v^{\\prime}=2 \\cos{\\left(2 x \\right)};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(12 \\sin{\\left(4 x \\right)})(\\sin{\\left(2 x \\right)})+(- 3 \\cos{\\left(4 x \\right)})(2 \\cos{\\left(2 x \\right)})=12 \\sin{\\left(2 x \\right)} \\sin{\\left(4 x \\right)} - 6 \\cos{\\left(2 x \\right)} \\cos{\\left(4 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=x^{2},\\ v=\\ln{\\left(x \\right)};\\quad u^{\\prime}=2 x,\\ v^{\\prime}=\\frac{1}{x};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(2 x)(\\ln{\\left(x \\right)})+(x^{2})(\\frac{1}{x})=2 x \\ln{\\left(x \\right)} + x",
+          "explanation": ""
+        },
+        {
+          "latex": "u=e^{4 x},\\ v=\\ln{\\left(\\cos{\\left(3 x \\right)} \\right)};\\quad u^{\\prime}=4 e^{4 x},\\ v^{\\prime}=- \\frac{3 \\sin{\\left(3 x \\right)}}{\\cos{\\left(3 x \\right)}};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(4 e^{4 x})(\\ln{\\left(\\cos{\\left(3 x \\right)} \\right)})+(e^{4 x})(- \\frac{3 \\sin{\\left(3 x \\right)}}{\\cos{\\left(3 x \\right)}})=4 e^{4 x} \\ln{\\left(\\cos{\\left(3 x \\right)} \\right)} - \\frac{3 e^{4 x} \\sin{\\left(3 x \\right)}}{\\cos{\\left(3 x \\right)}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate both factors and use u′v+uv′. Logarithms retain their original real domains.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=x^{2},\\ v=\\cos{\\left(2 x \\right)}\\\\&amp;u^{\\prime}=2 x,\\ v^{\\prime}=- 2 \\sin{\\left(2 x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(2 x)(\\cos{\\left(2 x \\right)})+(x^{2})(- 2 \\sin{\\left(2 x \\right)})\\\\&amp;=- 2 x^{2} \\sin{\\left(2 x \\right)} + 2 x \\cos{\\left(2 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=e^{3 x},\\ v=\\sin{\\left(5 x \\right)}\\\\&amp;u^{\\prime}=3 e^{3 x},\\ v^{\\prime}=5 \\cos{\\left(5 x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(3 e^{3 x})(\\sin{\\left(5 x \\right)})+(e^{3 x})(5 \\cos{\\left(5 x \\right)})\\\\&amp;=3 e^{3 x} \\sin{\\left(5 x \\right)} + 5 e^{3 x} \\cos{\\left(5 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=e^{- x},\\ v=\\left(2 x^{2} + 3\\right)^{3}\\\\&amp;u^{\\prime}=- e^{- x},\\ v^{\\prime}=12 x \\left(2 x^{2} + 3\\right)^{2}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(- e^{- x})(\\left(2 x^{2} + 3\\right)^{3})+(e^{- x})(12 x \\left(2 x^{2} + 3\\right)^{2})\\\\&amp;=12 x \\left(2 x^{2} + 3\\right)^{2} e^{- x} - \\left(2 x^{2} + 3\\right)^{3} e^{- x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=- 3 \\cos{\\left(4 x \\right)},\\ v=\\sin{\\left(2 x \\right)}\\\\&amp;u^{\\prime}\\\\&amp;=12 \\sin{\\left(4 x \\right)},\\ v^{\\prime}\\\\&amp;=2 \\cos{\\left(2 x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(12 \\sin{\\left(4 x \\right)})(\\sin{\\left(2 x \\right)})+(- 3 \\cos{\\left(4 x \\right)})(2 \\cos{\\left(2 x \\right)})\\\\&amp;=12 \\sin{\\left(2 x \\right)} \\sin{\\left(4 x \\right)} - 6 \\cos{\\left(2 x \\right)} \\cos{\\left(4 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=x^{2},\\ v=\\ln{\\left(x \\right)}\\\\&amp;u^{\\prime}=2 x,\\ v^{\\prime}=\\frac{1}{x}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(2 x)(\\ln{\\left(x \\right)})+(x^{2})(\\frac{1}{x})\\\\&amp;=2 x \\ln{\\left(x \\right)} + x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=e^{4 x},\\ v=\\ln{\\left(\\cos{\\left(3 x \\right)} \\right)}\\\\&amp;u^{\\prime}\\\\&amp;=4 e^{4 x},\\ v^{\\prime}\\\\&amp;=- \\frac{3 \\sin{\\left(3 x \\right)}}{\\cos{\\left(3 x \\right)}}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(4 e^{4 x})(\\ln{\\left(\\cos{\\left(3 x \\right)} \\right)})+(e^{4 x})(- \\frac{3 \\sin{\\left(3 x \\right)}}{\\cos{\\left(3 x \\right)}})\\\\&amp;=4 e^{4 x} \\ln{\\left(\\cos{\\left(3 x \\right)} \\right)} - \\frac{3 e^{4 x} \\sin{\\left(3 x \\right)}}{\\cos{\\left(3 x \\right)}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.4/q3",
+      "status": "worked",
+      "method": "Differentiate the product, retaining the inner derivative −4x, then evaluate at x=1.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=12x^2(1-2x^2)^4+4x^3\\cdot4(1-2x^2)^3(-4x);\\quad y^{\\prime}(1)=12(-1)^4-64(-1)^3=76",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the product, retaining the inner derivative −4x, then evaluate at x=1.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=12x^2(1-2x^2)^4+4x^3\\cdot4(1-2x^2)^3(-4x)\\\\&amp;y^{\\prime}(1)=12(-1)^4-64(-1)^3=76\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.4/q4",
+      "status": "worked",
+      "method": "Use the product rule; retain each inner derivative when differentiating the trigonometric and exponential factors.",
+      "steps": [
+        {
+          "latex": "u=x^{4} - 3 x^{2},\\ v=e^{- 2 x};\\quad u^{\\prime}=4 x^{3} - 6 x,\\ v^{\\prime}=- 2 e^{- 2 x};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(4 x^{3} - 6 x)(e^{- 2 x})+(x^{4} - 3 x^{2})(- 2 e^{- 2 x})=\\left(4 x^{3} - 6 x\\right) e^{- 2 x} - 2 \\left(x^{4} - 3 x^{2}\\right) e^{- 2 x}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=- \\sin{\\left(x \\right)} + 4 \\cos{\\left(2 x \\right)},\\ v=e^{3 x};\\quad u^{\\prime}=- 8 \\sin{\\left(2 x \\right)} - \\cos{\\left(x \\right)},\\ v^{\\prime}=3 e^{3 x};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(- 8 \\sin{\\left(2 x \\right)} - \\cos{\\left(x \\right)})(e^{3 x})+(- \\sin{\\left(x \\right)} + 4 \\cos{\\left(2 x \\right)})(3 e^{3 x})=3 \\left(- \\sin{\\left(x \\right)} + 4 \\cos{\\left(2 x \\right)}\\right) e^{3 x} + \\left(- 8 \\sin{\\left(2 x \\right)} - \\cos{\\left(x \\right)}\\right) e^{3 x}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=x^{2} - 5 \\cos{\\left(\\frac{x}{2} \\right)},\\ v=\\ln{\\left(4 x \\right)};\\quad u^{\\prime}=2 x + \\frac{5 \\sin{\\left(\\frac{x}{2} \\right)}}{2},\\ v^{\\prime}=\\frac{1}{x};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(2 x + \\frac{5 \\sin{\\left(\\frac{x}{2} \\right)}}{2})(\\ln{\\left(4 x \\right)})+(x^{2} - 5 \\cos{\\left(\\frac{x}{2} \\right)})(\\frac{1}{x})=\\left(2 x + \\frac{5 \\sin{\\left(\\frac{x}{2} \\right)}}{2}\\right) \\ln{\\left(4 x \\right)} + \\frac{x^{2} - 5 \\cos{\\left(\\frac{x}{2} \\right)}}{x}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the product rule; retain each inner derivative when differentiating the trigonometric and exponential factors.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=x^{4} - 3 x^{2},\\ v=e^{- 2 x}\\\\&amp;u^{\\prime}=4 x^{3} - 6 x,\\ v^{\\prime}=- 2 e^{- 2 x}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(4 x^{3} - 6 x)(e^{- 2 x})+(x^{4} - 3 x^{2})(- 2 e^{- 2 x})\\\\&amp;=\\left(4 x^{3} - 6 x\\right) e^{- 2 x} - 2 \\left(x^{4} - 3 x^{2}\\right) e^{- 2 x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=- \\sin{\\left(x \\right)} + 4 \\cos{\\left(2 x \\right)},\\ v=e^{3 x}\\\\&amp;u^{\\prime}\\\\&amp;=- 8 \\sin{\\left(2 x \\right)} - \\cos{\\left(x \\right)},\\ v^{\\prime}\\\\&amp;=3 e^{3 x}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(- 8 \\sin{\\left(2 x \\right)} - \\cos{\\left(x \\right)})(e^{3 x})+(- \\sin{\\left(x \\right)} + 4 \\cos{\\left(2 x \\right)})(3 e^{3 x})\\\\&amp;=3 \\left(- \\sin{\\left(x \\right)} + 4 \\cos{\\left(2 x \\right)}\\right) e^{3 x} + \\left(- 8 \\sin{\\left(2 x \\right)} - \\cos{\\left(x \\right)}\\right) e^{3 x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=x^{2} - 5 \\cos{\\left(\\frac{x}{2} \\right)},\\ v=\\ln{\\left(4 x \\right)}\\\\&amp;u^{\\prime}\\\\&amp;=2 x + \\frac{5 \\sin{\\left(\\frac{x}{2} \\right)}}{2},\\ v^{\\prime}\\\\&amp;=\\frac{1}{x}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(2 x + \\frac{5 \\sin{\\left(\\frac{x}{2} \\right)}}{2})(\\ln{\\left(4 x \\right)})+(x^{2} - 5 \\cos{\\left(\\frac{x}{2} \\right)})(\\frac{1}{x})\\\\&amp;=\\left(2 x + \\frac{5 \\sin{\\left(\\frac{x}{2} \\right)}}{2}\\right) \\ln{\\left(4 x \\right)} + \\frac{x^{2} - 5 \\cos{\\left(\\frac{x}{2} \\right)}}{x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.4/q5",
+      "status": "worked",
+      "method": "Apply u′v+uv′; for ln(sin x), the chain rule gives cos x/sin x.",
+      "steps": [
+        {
+          "latex": "u=e^{- x},\\ v=\\cos{\\left(3 x \\right)};\\quad u^{\\prime}=- e^{- x},\\ v^{\\prime}=- 3 \\sin{\\left(3 x \\right)};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(- e^{- x})(\\cos{\\left(3 x \\right)})+(e^{- x})(- 3 \\sin{\\left(3 x \\right)})=- 3 e^{- x} \\sin{\\left(3 x \\right)} - e^{- x} \\cos{\\left(3 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=x^{4},\\ v=\\ln{\\left(\\sin{\\left(x \\right)} \\right)};\\quad u^{\\prime}=4 x^{3},\\ v^{\\prime}=\\frac{\\cos{\\left(x \\right)}}{\\sin{\\left(x \\right)}};\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(4 x^{3})(\\ln{\\left(\\sin{\\left(x \\right)} \\right)})+(x^{4})(\\frac{\\cos{\\left(x \\right)}}{\\sin{\\left(x \\right)}})=\\frac{x^{4} \\cos{\\left(x \\right)}}{\\sin{\\left(x \\right)}} + 4 x^{3} \\ln{\\left(\\sin{\\left(x \\right)} \\right)}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply u′v+uv′; for ln(sin x), the chain rule gives cos x/sin x.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=e^{- x},\\ v=\\cos{\\left(3 x \\right)}\\\\&amp;u^{\\prime}=- e^{- x},\\ v^{\\prime}=- 3 \\sin{\\left(3 x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(- e^{- x})(\\cos{\\left(3 x \\right)})+(e^{- x})(- 3 \\sin{\\left(3 x \\right)})\\\\&amp;=- 3 e^{- x} \\sin{\\left(3 x \\right)} - e^{- x} \\cos{\\left(3 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=x^{4},\\ v=\\ln{\\left(\\sin{\\left(x \\right)} \\right)}\\\\&amp;u^{\\prime}\\\\&amp;=4 x^{3},\\ v^{\\prime}\\\\&amp;=\\frac{\\cos{\\left(x \\right)}}{\\sin{\\left(x \\right)}}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(4 x^{3})(\\ln{\\left(\\sin{\\left(x \\right)} \\right)})+(x^{4})(\\frac{\\cos{\\left(x \\right)}}{\\sin{\\left(x \\right)}})\\\\&amp;=\\frac{x^{4} \\cos{\\left(x \\right)}}{\\sin{\\left(x \\right)}} + 4 x^{3} \\ln{\\left(\\sin{\\left(x \\right)} \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.4/q6",
+      "status": "worked",
+      "method": "Differentiate the stated curve and factor the actual derivative. The requested factor in the prompt needs x² to match this curve.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=8x^3(2-5x^2)^3+2x^4\\cdot3(2-5x^2)^2(-10x);\\quad y^{\\prime}=x^3(2-5x^2)^2[8(2-5x^2)-60x^2]=x^3(2-5x^2)^2(16-100x^2)",
+          "explanation": "For the factor (2−5x²)ⁿ, the constants are n=2,a=−100,b=0,c=16. The printed (2−5x)ⁿ cannot give the stated identity; the original derivative is displayed explicitly."
+        },
+        {
+          "latex": "x^3(2-5x^2)^2(16-100x^2)=0;\\quad x=0,\\quad x=\\pm\\sqrt{2/5},\\quad x=\\pm2/5",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the stated curve and factor the actual derivative. The requested factor in the prompt needs x² to match this curve.</p><ol class=\"parts\" type=\"a\"><li><p>For the factor (2−5x²)ⁿ, the constants are n=2,a=−100,b=0,c=16. The printed (2−5x)ⁿ cannot give the stated identity; the original derivative is displayed explicitly.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=8x^3(2-5x^2)^3+2x^4\\cdot3(2-5x^2)^2(-10x)\\\\&amp;y^{\\prime}=x^3(2-5x^2)^2[8(2-5x^2)-60x^2]=x^3(2-5x^2)^2(16-100x^2)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x^3(2-5x^2)^2(16-100x^2)=0\\\\&amp;x=0,\\quad x=\\pm\\sqrt{2/5},\\quad x=\\pm2/5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.4/q7",
+      "status": "worked",
+      "method": "Differentiate the product and use the fact that e⁴ˣ never vanishes.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=e^{4x}(4\\sin x+\\cos x)=0;\\quad4\\sin x+\\cos x=0\\Rightarrow\\tan x=-1/4",
+          "explanation": "At these roots the derivative factor has nonzero derivative 4 cos x−sin x, so the stationary points are turning points."
+        },
+        {
+          "latex": "f(\\pi/2)=e^{2\\pi},\\quad f^{\\prime}(\\pi/2)=4e^{2\\pi};\\quad y-e^{2\\pi}=-\\frac{x-\\pi/2}{4e^{2\\pi}};\\quad x+4e^{2\\pi}y-4e^{4\\pi}-\\pi/2=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the product and use the fact that e⁴ˣ never vanishes.</p><ol class=\"parts\" type=\"a\"><li><p>At these roots the derivative factor has nonzero derivative 4 cos x−sin x, so the stationary points are turning points.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=e^{4x}(4\\sin x+\\cos x)=0\\\\&amp;4\\sin x+\\cos x=0\\\\&amp;\\Rightarrow \\tan x=-1/4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(\\pi/2)=e^{2\\pi},\\quad f^{\\prime}(\\pi/2)=4e^{2\\pi}\\\\&amp;y-e^{2\\pi}=-\\frac{x-\\pi/2}{4e^{2\\pi}}\\\\&amp;x+4e^{2\\pi}y-4e^{4\\pi}-\\pi/2=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.4/q8",
+      "status": "worked",
+      "method": "Differentiate the product and evaluate at the specified angle.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=\\sin2x+2(x-\\pi)\\cos2x;\\quad x=3\\pi/4\\Rightarrow y=\\pi/4,\\ m=-1;\\quad y-\\pi/4=-(x-3\\pi/4)\\Rightarrow x+y=\\pi",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the product and evaluate at the specified angle.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=\\sin2x+2(x-\\pi)\\cos2x\\\\&amp;x=3\\pi/4\\\\&amp;\\Rightarrow y=\\pi/4,\\ m=-1\\\\&amp;y-\\pi/4=-(x-3\\pi/4)\\\\&amp;\\Rightarrow x+y=\\pi\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.5/q1",
+      "status": "worked",
+      "method": "For y=u/v use (u′v−uv′)/v², with the denominator nonzero.",
+      "steps": [
+        {
+          "latex": "u=4 x + 3,\\ v=2 x - 9;\\quad u^{\\prime}=4,\\ v^{\\prime}=2;\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(4)(2 x - 9)-(4 x + 3)(2)}{(2 x - 9)^2}=- \\frac{42}{\\left(2 x - 9\\right)^{2}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=6 x^{2},\\ v=3 - 5 x;\\quad u^{\\prime}=12 x,\\ v^{\\prime}=-5;\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(12 x)(3 - 5 x)-(6 x^{2})(-5)}{(3 - 5 x)^2}=- \\frac{6 x \\left(5 x - 6\\right)}{\\left(5 x - 3\\right)^{2}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=1 - 8 x,\\ v=\\left(3 x^{3} + 2\\right)^{2};\\quad u^{\\prime}=-8,\\ v^{\\prime}=18 x^{2} \\left(3 x^{3} + 2\\right);\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(-8)(\\left(3 x^{3} + 2\\right)^{2})-(1 - 8 x)(18 x^{2} \\left(3 x^{3} + 2\\right))}{(\\left(3 x^{3} + 2\\right)^{2})^2}=\\frac{2 \\left(60 x^{3} - 9 x^{2} - 8\\right)}{\\left(3 x^{3} + 2\\right)^{3}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=7 x^{2} - 9 x,\\ v=\\sqrt{x^{2} + 6};\\quad u^{\\prime}=14 x - 9,\\ v^{\\prime}=\\frac{x}{\\sqrt{x^{2} + 6}};\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(14 x - 9)(\\sqrt{x^{2} + 6})-(7 x^{2} - 9 x)(\\frac{x}{\\sqrt{x^{2} + 6}})}{(\\sqrt{x^{2} + 6})^2}=\\frac{7 x^{3} + 84 x - 54}{\\left(x^{2} + 6\\right)^{\\frac{3}{2}}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>For y=u/v use (u′v−uv′)/v², with the denominator nonzero.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=4 x + 3,\\ v=2 x - 9\\\\&amp;u^{\\prime}=4,\\ v^{\\prime}=2\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(4)(2 x - 9)-(4 x + 3)(2)}{(2 x - 9)^2}\\\\&amp;=- \\frac{42}{\\left(2 x - 9\\right)^{2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=6 x^{2},\\ v=3 - 5 x\\\\&amp;u^{\\prime}=12 x,\\ v^{\\prime}=-5\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(12 x)(3 - 5 x)-(6 x^{2})(-5)}{(3 - 5 x)^2}\\\\&amp;=- \\frac{6 x \\left(5 x - 6\\right)}{\\left(5 x - 3\\right)^{2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=1 - 8 x,\\ v=\\left(3 x^{3} + 2\\right)^{2}\\\\&amp;u^{\\prime}=-8,\\ v^{\\prime}=18 x^{2} \\left(3 x^{3} + 2\\right)\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(-8)(\\left(3 x^{3} + 2\\right)^{2})-(1 - 8 x)(18 x^{2} \\left(3 x^{3} + 2\\right))}{(\\left(3 x^{3} + 2\\right)^{2})^2}\\\\&amp;=\\frac{2 \\left(60 x^{3} - 9 x^{2} - 8\\right)}{\\left(3 x^{3} + 2\\right)^{3}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=7 x^{2} - 9 x,\\ v=\\sqrt{x^{2} + 6}\\\\&amp;u^{\\prime}=14 x - 9,\\ v^{\\prime}=\\frac{x}{\\sqrt{x^{2} + 6}}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(14 x - 9)(\\sqrt{x^{2} + 6})-(7 x^{2} - 9 x)(\\frac{x}{\\sqrt{x^{2} + 6}})}{(\\sqrt{x^{2} + 6})^2}\\\\&amp;=\\frac{7 x^{3} + 84 x - 54}{\\left(x^{2} + 6\\right)^{\\frac{3}{2}}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.5/q2",
+      "status": "worked",
+      "method": "Use the quotient rule and the chain rule for each denominator; retain the domain restrictions of the original expression.",
+      "steps": [
+        {
+          "latex": "u=4 x^{2},\\ v=\\cos{\\left(2 x \\right)};\\quad u^{\\prime}=8 x,\\ v^{\\prime}=- 2 \\sin{\\left(2 x \\right)};\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(8 x)(\\cos{\\left(2 x \\right)})-(4 x^{2})(- 2 \\sin{\\left(2 x \\right)})}{(\\cos{\\left(2 x \\right)})^2}=\\frac{8 x \\left(x \\sin{\\left(2 x \\right)} + \\cos{\\left(2 x \\right)}\\right)}{\\cos^{2}{\\left(2 x \\right)}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=x - e^{- x},\\ v=\\ln{\\left(x \\right)};\\quad u^{\\prime}=1 + e^{- x},\\ v^{\\prime}=\\frac{1}{x};\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(1 + e^{- x})(\\ln{\\left(x \\right)})-(x - e^{- x})(\\frac{1}{x})}{(\\ln{\\left(x \\right)})^2}=\\frac{\\left(x e^{x} \\ln{\\left(x \\right)} - x e^{x} + x \\ln{\\left(x \\right)} + 1\\right) e^{- x}}{x \\ln{\\left(x \\right)}^{2}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=e^{x},\\ v=\\cos^{2}{\\left(x \\right)};\\quad u^{\\prime}=e^{x},\\ v^{\\prime}=- 2 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)};\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(e^{x})(\\cos^{2}{\\left(x \\right)})-(e^{x})(- 2 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)})}{(\\cos^{2}{\\left(x \\right)})^2}=\\frac{\\left(2 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}\\right) e^{x}}{\\cos^{3}{\\left(x \\right)}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=5 - e^{- x},\\ v=\\sin{\\left(4 x \\right)};\\quad u^{\\prime}=e^{- x},\\ v^{\\prime}=4 \\cos{\\left(4 x \\right)};\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(e^{- x})(\\sin{\\left(4 x \\right)})-(5 - e^{- x})(4 \\cos{\\left(4 x \\right)})}{(\\sin{\\left(4 x \\right)})^2}=- \\frac{\\left(20 e^{x} \\cos{\\left(4 x \\right)} - \\sin{\\left(4 x \\right)} - 4 \\cos{\\left(4 x \\right)}\\right) e^{- x}}{\\sin^{2}{\\left(4 x \\right)}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the quotient rule and the chain rule for each denominator; retain the domain restrictions of the original expression.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=4 x^{2},\\ v=\\cos{\\left(2 x \\right)}\\\\&amp;u^{\\prime}=8 x,\\ v^{\\prime}=- 2 \\sin{\\left(2 x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(8 x)(\\cos{\\left(2 x \\right)})-(4 x^{2})(- 2 \\sin{\\left(2 x \\right)})}{(\\cos{\\left(2 x \\right)})^2}\\\\&amp;=\\frac{8 x \\left(x \\sin{\\left(2 x \\right)} + \\cos{\\left(2 x \\right)}\\right)}{\\cos^{2}{\\left(2 x \\right)}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=x - e^{- x},\\ v=\\ln{\\left(x \\right)}\\\\&amp;u^{\\prime}=1 + e^{- x},\\ v^{\\prime}=\\frac{1}{x}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(1 + e^{- x})(\\ln{\\left(x \\right)})-(x - e^{- x})(\\frac{1}{x})}{(\\ln{\\left(x \\right)})^2}\\\\&amp;=\\frac{\\left(x e^{x} \\ln{\\left(x \\right)} - x e^{x} + x \\ln{\\left(x \\right)} + 1\\right) e^{- x}}{x \\ln{\\left(x \\right)}^{2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=e^{x},\\ v=\\cos^{2}{\\left(x \\right)}\\\\&amp;u^{\\prime}\\\\&amp;=e^{x},\\ v^{\\prime}\\\\&amp;=- 2 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(e^{x})(\\cos^{2}{\\left(x \\right)})-(e^{x})(- 2 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)})}{(\\cos^{2}{\\left(x \\right)})^2}\\\\&amp;=\\frac{\\left(2 \\sin{\\left(x \\right)} + \\cos{\\left(x \\right)}\\right) e^{x}}{\\cos^{3}{\\left(x \\right)}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=5 - e^{- x},\\ v=\\sin{\\left(4 x \\right)}\\\\&amp;u^{\\prime}=e^{- x},\\ v^{\\prime}=4 \\cos{\\left(4 x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(e^{- x})(\\sin{\\left(4 x \\right)})-(5 - e^{- x})(4 \\cos{\\left(4 x \\right)})}{(\\sin{\\left(4 x \\right)})^2}\\\\&amp;=- \\frac{\\left(20 e^{x} \\cos{\\left(4 x \\right)} - \\sin{\\left(4 x \\right)} - 4 \\cos{\\left(4 x \\right)}\\right) e^{- x}}{\\sin^{2}{\\left(4 x \\right)}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.5/q3",
+      "status": "worked",
+      "method": "Differentiate the quotient before substituting x=1/2.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=\\frac{-2(4x+1)-4(8-2x)}{(4x+1)^2}=-\\frac{34}{(4x+1)^2};\\quad y^{\\prime}(1/2)=-34/9",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the quotient before substituting x=1/2.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=\\frac{-2(4x+1)-4(8-2x)}{(4x+1)^2}=-\\frac{34}{(4x+1)^2}\\\\&amp;y^{\\prime}(1/2)=-34/9\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.5/q4",
+      "status": "worked",
+      "method": "Use the quotient rule, then take the negative reciprocal of the derivative at x=1.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=\\frac{(2x-6)e^{2x}-2e^{2x}(x^2-6x)}{e^{4x}}=\\frac{-2x^2+14x-6}{e^{2x}}",
+          "explanation": ""
+        },
+        {
+          "latex": "m_T=6/e^2,\\quad m_N=-e^2/6;\\quad y+5/e^2=-\\frac{e^2}6(x-1)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the quotient rule, then take the negative reciprocal of the derivative at x=1.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;y^{\\prime}\\\\&amp;=\\frac{(2x-6)e^{2x}-2e^{2x}(x^2-6x)}{e^{4x}}\\\\&amp;=\\frac{-2x^2+14x-6}{e^{2x}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;m_T=6/e^2,\\quad m_N=-e^2/6\\\\&amp;y+5/e^2=-\\frac{e^2}6(x-1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.5/q5",
+      "status": "worked",
+      "method": "Differentiate the numerator by the chain rule and apply the quotient rule.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=\\frac{(2\\sin x\\cos x)e^{2x}-2e^{2x}\\sin^2x}{e^{4x}}=\\frac{2\\sin x(\\cos x-\\sin x)}{e^{2x}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the numerator by the chain rule and apply the quotient rule.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}\\\\&amp;=\\frac{(2\\sin x\\cos x)e^{2x}-2e^{2x}\\sin^2x}{e^{4x}}\\\\&amp;=\\frac{2\\sin x(\\cos x-\\sin x)}{e^{2x}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.5/q6",
+      "status": "worked",
+      "method": "Use u=e⁴ˣ and v=x²−5x in the quotient rule.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=\\frac{4e^{4x}(x^2-5x)-e^{4x}(2x-5)}{(x^2-5x)^2}=\\frac{e^{4x}(4x^2-22x+5)}{x^2(x-5)^2},\\quad x\\ne0,5",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use u=e⁴ˣ and v=x²−5x in the quotient rule.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}\\\\&amp;=\\frac{4e^{4x}(x^2-5x)-e^{4x}(2x-5)}{(x^2-5x)^2}\\\\&amp;=\\frac{e^{4x}(4x^2-22x+5)}{x^2(x-5)^2},\\quad x\\ne0,5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.5/q7",
+      "status": "worked",
+      "method": "Differentiate x with respect to y, then use its reciprocal as the tangent gradient.",
+      "steps": [
+        {
+          "latex": "x=e^{-y}\\cos2y;\\quad\\frac{dx}{dy}=e^{-y}(-2\\sin2y-\\cos2y);\\quad y=\\pi/8\\Rightarrow x=\\frac{e^{-\\pi/8}}{\\sqrt2},\\quad\\frac{dx}{dy}=-\\frac{3e^{-\\pi/8}}{\\sqrt2};\\quad m_T=-\\frac{\\sqrt2e^{\\pi/8}}3;\\quad y-\\pi/8=-\\frac{\\sqrt2e^{\\pi/8}}3\\left(x-\\frac{e^{-\\pi/8}}{\\sqrt2}\\right);\\quad\\sqrt2e^{\\pi/8}x+3y-1-3\\pi/8=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate x with respect to y, then use its reciprocal as the tangent gradient.</p><span data-math=\"\\begin{aligned}&amp;x=e^{-y}\\cos2y\\\\&amp;\\frac{dx}{dy}=e^{-y}(-2\\sin2y-\\cos2y)\\\\&amp;y=\\pi/8\\\\&amp;\\Rightarrow x=\\frac{e^{-\\pi/8}}{\\sqrt2},\\quad\\frac{dx}{dy}=-\\frac{3e^{-\\pi/8}}{\\sqrt2}\\\\&amp;m_T=-\\frac{\\sqrt2e^{\\pi/8}}3\\\\&amp;y-\\pi/8=-\\frac{\\sqrt2e^{\\pi/8}}3\\left(x-\\frac{e^{-\\pi/8}}{\\sqrt2}\\right)\\\\&amp;\\sqrt2e^{\\pi/8}x+3y-1-3\\pi/8=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.5/q8",
+      "status": "worked",
+      "method": "Factor the derivative before solving, so the zero-cosine minima are retained.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=e^{-x}[-2\\cos x\\sin x-\\cos^2x]=-e^{-x}\\cos x(2\\sin x+\\cos x);\\quad f^{\\prime}(x)=0\\Rightarrow\\cos x=0\\text{ or }\\tan x=-1/2",
+          "explanation": ""
+        },
+        {
+          "latex": "A:-\\pi/2\\approx-1.57;\\quad B:-\\tan^{-1}(1/2)\\approx-0.46;\\quad C:\\pi/2\\approx1.57;\\quad D:\\pi-\\tan^{-1}(1/2)\\approx2.68",
+          "explanation": "The displayed graph orders these four stationary points from left to right."
+        }
+      ],
+      "solutionHtml": "<p>Factor the derivative before solving, so the zero-cosine minima are retained.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=e^{-x}[-2\\cos x\\sin x-\\cos^2x]=-e^{-x}\\cos x(2\\sin x+\\cos x)\\\\&amp;f^{\\prime}(x)=0\\\\&amp;\\Rightarrow \\cos x=0\\text{ or }\\tan x=-1/2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The displayed graph orders these four stationary points from left to right.</p><span data-math=\"\\begin{aligned}&amp;A:-\\pi/2\\approx-1.57\\\\&amp;B:-\\tan^{-1}(1/2)\\approx-0.46\\\\&amp;C:\\pi/2\\approx1.57\\\\&amp;D:\\pi-\\tan^{-1}(1/2)\\approx2.68\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.6/q1",
+      "status": "worked",
+      "method": "Apply the standard tangent/cotangent derivatives and the chain rule.",
+      "steps": [
+        {
+          "latex": "u=4 x,\\quad u^{\\prime}=4;\\quad\\frac{dy}{dx}=1\\cdot\\left(\\sec^{2}{\\left(4 x \\right)}\\right)\\cdot\\left(4\\right)=4 \\tan^{2}{\\left(4 x \\right)} + 4",
+          "explanation": ""
+        },
+        {
+          "latex": "u=2 x,\\quad u^{\\prime}=2;\\quad\\frac{dy}{dx}=7\\cdot\\left(- \\operatorname{cosec}^{2}{\\left(2 x \\right)}\\right)\\cdot\\left(2\\right)=- 14 \\cot^{2}{\\left(2 x \\right)} - 14",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\cot{\\left(x \\right)},\\quad u^{\\prime}=- \\cot^{2}{\\left(x \\right)} - 1;\\quad\\frac{dy}{dx}=1\\cdot5\\left(\\cot{\\left(x \\right)}\\right)^{4}\\cdot\\left(- \\cot^{2}{\\left(x \\right)} - 1\\right)=\\left(- 5 \\cot^{2}{\\left(x \\right)} - 5\\right) \\cot^{4}{\\left(x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\tan{\\left(x \\right)},\\quad u^{\\prime}=\\tan^{2}{\\left(x \\right)} + 1;\\quad\\frac{dy}{dx}=-3\\cdot2\\left(\\tan{\\left(x \\right)}\\right)^{1}\\cdot\\left(\\tan^{2}{\\left(x \\right)} + 1\\right)=- 3 \\left(2 \\tan^{2}{\\left(x \\right)} + 2\\right) \\tan{\\left(x \\right)}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply the standard tangent/cotangent derivatives and the chain rule.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=4 x,\\quad u^{\\prime}=4\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(\\sec^{2}{\\left(4 x \\right)}\\right)\\cdot\\left(4\\right)\\\\&amp;=4 \\tan^{2}{\\left(4 x \\right)} + 4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=2 x,\\quad u^{\\prime}=2\\\\&amp;\\frac{dy}{dx}\\\\&amp;=7\\cdot\\left(- \\operatorname{cosec}^{2}{\\left(2 x \\right)}\\right)\\cdot\\left(2\\right)\\\\&amp;=- 14 \\cot^{2}{\\left(2 x \\right)} - 14\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=\\cot{\\left(x \\right)},\\quad u^{\\prime}=- \\cot^{2}{\\left(x \\right)} - 1\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot5\\left(\\cot{\\left(x \\right)}\\right)^{4}\\cdot\\left(- \\cot^{2}{\\left(x \\right)} - 1\\right)\\\\&amp;=\\left(- 5 \\cot^{2}{\\left(x \\right)} - 5\\right) \\cot^{4}{\\left(x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=\\tan{\\left(x \\right)},\\quad u^{\\prime}=\\tan^{2}{\\left(x \\right)} + 1\\\\&amp;\\frac{dy}{dx}\\\\&amp;=-3\\cdot2\\left(\\tan{\\left(x \\right)}\\right)^{1}\\cdot\\left(\\tan^{2}{\\left(x \\right)} + 1\\right)\\\\&amp;=- 3 \\left(2 \\tan^{2}{\\left(x \\right)} + 2\\right) \\tan{\\left(x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.6/q2",
+      "status": "worked",
+      "method": "Differentiate cosecant and secant with their inner-angle factors; use the power rule for powers of those functions.",
+      "steps": [
+        {
+          "latex": "u=6 x,\\quad u^{\\prime}=6;\\quad\\frac{dy}{dx}=1\\cdot\\left(- \\cot{\\left(6 x \\right)} \\operatorname{cosec}{\\left(6 x \\right)}\\right)\\cdot\\left(6\\right)=- 6 \\cot{\\left(6 x \\right)} \\operatorname{cosec}{\\left(6 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=5 x,\\quad u^{\\prime}=5;\\quad\\frac{dy}{dx}=-4\\cdot\\left(\\tan{\\left(5 x \\right)} \\sec{\\left(5 x \\right)}\\right)\\cdot\\left(5\\right)=- 20 \\tan{\\left(5 x \\right)} \\sec{\\left(5 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "y=(\\operatorname{cosec}x)^{4/3};\\quad y^{\\prime}=\\frac43(\\operatorname{cosec}x)^{1/3}(-\\operatorname{cosec}x\\cot x)=-\\frac43(\\operatorname{cosec}x)^{4/3}\\cot x",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\sec{\\left(4 x \\right)},\\quad u^{\\prime}=4 \\tan{\\left(4 x \\right)} \\sec{\\left(4 x \\right)};\\quad\\frac{dy}{dx}=-2\\cdot3\\left(\\sec{\\left(4 x \\right)}\\right)^{2}\\cdot\\left(4 \\tan{\\left(4 x \\right)} \\sec{\\left(4 x \\right)}\\right)=- 24 \\tan{\\left(4 x \\right)} \\sec^{3}{\\left(4 x \\right)}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate cosecant and secant with their inner-angle factors; use the power rule for powers of those functions.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=6 x,\\quad u^{\\prime}=6\\\\&amp;\\frac{dy}{dx}\\\\&amp;=1\\cdot\\left(- \\cot{\\left(6 x \\right)} \\operatorname{cosec}{\\left(6 x \\right)}\\right)\\cdot\\left(6\\right)\\\\&amp;=- 6 \\cot{\\left(6 x \\right)} \\operatorname{cosec}{\\left(6 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=5 x,\\quad u^{\\prime}=5\\\\&amp;\\frac{dy}{dx}\\\\&amp;=-4\\cdot\\left(\\tan{\\left(5 x \\right)} \\sec{\\left(5 x \\right)}\\right)\\cdot\\left(5\\right)\\\\&amp;=- 20 \\tan{\\left(5 x \\right)} \\sec{\\left(5 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;y=(\\operatorname{cosec}x)^{4/3}\\\\&amp;y^{\\prime}\\\\&amp;=\\frac43(\\operatorname{cosec}x)^{1/3}(-\\operatorname{cosec}x\\cot x)\\\\&amp;=-\\frac43(\\operatorname{cosec}x)^{4/3}\\cot x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u\\\\&amp;=\\sec{\\left(4 x \\right)},\\quad u^{\\prime}\\\\&amp;=4 \\tan{\\left(4 x \\right)} \\sec{\\left(4 x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=-2\\cdot3\\left(\\sec{\\left(4 x \\right)}\\right)^{2}\\cdot\\left(4 \\tan{\\left(4 x \\right)} \\sec{\\left(4 x \\right)}\\right)\\\\&amp;=- 24 \\tan{\\left(4 x \\right)} \\sec^{3}{\\left(4 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.6/q3",
+      "status": "worked",
+      "method": "Choose the product, quotient or logarithmic chain rule for each expression, retaining its original domain.",
+      "steps": [
+        {
+          "latex": "u=x^{2},\\ v=\\tan{\\left(3 x \\right)};\\quad u^{\\prime}=2 x,\\ v^{\\prime}=3 \\tan^{2}{\\left(3 x \\right)} + 3;\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(2 x)(\\tan{\\left(3 x \\right)})+(x^{2})(3 \\tan^{2}{\\left(3 x \\right)} + 3)=x^{2} \\left(3 \\tan^{2}{\\left(3 x \\right)} + 3\\right) + 2 x \\tan{\\left(3 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=e^{\\sec{\\left(x \\right)}},\\ v=x^{2} + 1;\\quad u^{\\prime}=e^{\\sec{\\left(x \\right)}} \\tan{\\left(x \\right)} \\sec{\\left(x \\right)},\\ v^{\\prime}=2 x;\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(e^{\\sec{\\left(x \\right)}} \\tan{\\left(x \\right)} \\sec{\\left(x \\right)})(x^{2} + 1)-(e^{\\sec{\\left(x \\right)}})(2 x)}{(x^{2} + 1)^2}=\\frac{\\left(x^{2} \\tan{\\left(x \\right)} \\sec{\\left(x \\right)} - 2 x + \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}\\right) e^{\\sec{\\left(x \\right)}}}{\\left(x^{2} + 1\\right)^{2}}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{d}{dx}\\ln(\\operatorname{cosec}^2x)=\\frac{2\\operatorname{cosec}x(-\\operatorname{cosec}x\\cot x)}{\\operatorname{cosec}^2x}=-2\\cot x",
+          "explanation": ""
+        },
+        {
+          "latex": "u=e^{- x},\\ v=\\cot{\\left(4 x \\right)};\\quad u^{\\prime}=- e^{- x},\\ v^{\\prime}=- 4 \\cot^{2}{\\left(4 x \\right)} - 4;\\quad\\frac{dy}{dx}=u^{\\prime}v+uv^{\\prime}=(- e^{- x})(\\cot{\\left(4 x \\right)})+(e^{- x})(- 4 \\cot^{2}{\\left(4 x \\right)} - 4)=\\left(- 4 \\cot^{2}{\\left(4 x \\right)} - 4\\right) e^{- x} - e^{- x} \\cot{\\left(4 x \\right)}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\sec^{2}{\\left(x \\right)},\\ v=\\ln{\\left(x \\right)};\\quad u^{\\prime}=2 \\tan{\\left(x \\right)} \\sec^{2}{\\left(x \\right)},\\ v^{\\prime}=\\frac{1}{x};\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(2 \\tan{\\left(x \\right)} \\sec^{2}{\\left(x \\right)})(\\ln{\\left(x \\right)})-(\\sec^{2}{\\left(x \\right)})(\\frac{1}{x})}{(\\ln{\\left(x \\right)})^2}=\\frac{\\left(2 x \\ln{\\left(x \\right)} \\tan{\\left(x \\right)} - 1\\right) \\sec^{2}{\\left(x \\right)}}{x \\ln{\\left(x \\right)}^{2}}",
+          "explanation": ""
+        },
+        {
+          "latex": "u=\\left(4 x - 1\\right)^{3},\\ v=\\cot^{2}{\\left(x \\right)};\\quad u^{\\prime}=12 \\left(4 x - 1\\right)^{2},\\ v^{\\prime}=\\left(- 2 \\cot^{2}{\\left(x \\right)} - 2\\right) \\cot{\\left(x \\right)};\\quad\\frac{dy}{dx}=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}=\\frac{(12 \\left(4 x - 1\\right)^{2})(\\cot^{2}{\\left(x \\right)})-(\\left(4 x - 1\\right)^{3})(\\left(- 2 \\cot^{2}{\\left(x \\right)} - 2\\right) \\cot{\\left(x \\right)})}{(\\cot^{2}{\\left(x \\right)})^2}=\\frac{2 \\left(4 x - 1\\right)^{2} \\left(4 x \\cot^{2}{\\left(x \\right)} + 4 x - \\cot^{2}{\\left(x \\right)} + 6 \\cot{\\left(x \\right)} - 1\\right)}{\\cot^{3}{\\left(x \\right)}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Choose the product, quotient or logarithmic chain rule for each expression, retaining its original domain.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;u=x^{2},\\ v=\\tan{\\left(3 x \\right)}\\\\&amp;u^{\\prime}=2 x,\\ v^{\\prime}=3 \\tan^{2}{\\left(3 x \\right)} + 3\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(2 x)(\\tan{\\left(3 x \\right)})+(x^{2})(3 \\tan^{2}{\\left(3 x \\right)} + 3)\\\\&amp;=x^{2} \\left(3 \\tan^{2}{\\left(3 x \\right)} + 3\\right) + 2 x \\tan{\\left(3 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=e^{\\sec{\\left(x \\right)}},\\ v=x^{2} + 1\\\\&amp;u^{\\prime}\\\\&amp;=e^{\\sec{\\left(x \\right)}} \\tan{\\left(x \\right)} \\sec{\\left(x \\right)},\\ v^{\\prime}\\\\&amp;=2 x\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(e^{\\sec{\\left(x \\right)}} \\tan{\\left(x \\right)} \\sec{\\left(x \\right)})(x^{2} + 1)-(e^{\\sec{\\left(x \\right)}})(2 x)}{(x^{2} + 1)^2}\\\\&amp;=\\frac{\\left(x^{2} \\tan{\\left(x \\right)} \\sec{\\left(x \\right)} - 2 x + \\tan{\\left(x \\right)} \\sec{\\left(x \\right)}\\right) e^{\\sec{\\left(x \\right)}}}{\\left(x^{2} + 1\\right)^{2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{d}{dx}\\ln(\\operatorname{cosec}^2x)\\\\&amp;=\\frac{2\\operatorname{cosec}x(-\\operatorname{cosec}x\\cot x)}{\\operatorname{cosec}^2x}\\\\&amp;=-2\\cot x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=e^{- x},\\ v=\\cot{\\left(4 x \\right)}\\\\&amp;u^{\\prime}=- e^{- x},\\ v^{\\prime}=- 4 \\cot^{2}{\\left(4 x \\right)} - 4\\\\&amp;\\frac{dy}{dx}\\\\&amp;=u^{\\prime}v+uv^{\\prime}\\\\&amp;=(- e^{- x})(\\cot{\\left(4 x \\right)})+(e^{- x})(- 4 \\cot^{2}{\\left(4 x \\right)} - 4)\\\\&amp;=\\left(- 4 \\cot^{2}{\\left(4 x \\right)} - 4\\right) e^{- x} - e^{- x} \\cot{\\left(4 x \\right)}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=\\sec^{2}{\\left(x \\right)},\\ v=\\ln{\\left(x \\right)}\\\\&amp;u^{\\prime}\\\\&amp;=2 \\tan{\\left(x \\right)} \\sec^{2}{\\left(x \\right)},\\ v^{\\prime}\\\\&amp;=\\frac{1}{x}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(2 \\tan{\\left(x \\right)} \\sec^{2}{\\left(x \\right)})(\\ln{\\left(x \\right)})-(\\sec^{2}{\\left(x \\right)})(\\frac{1}{x})}{(\\ln{\\left(x \\right)})^2}\\\\&amp;=\\frac{\\left(2 x \\ln{\\left(x \\right)} \\tan{\\left(x \\right)} - 1\\right) \\sec^{2}{\\left(x \\right)}}{x \\ln{\\left(x \\right)}^{2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;u=\\left(4 x - 1\\right)^{3},\\ v=\\cot^{2}{\\left(x \\right)}\\\\&amp;u^{\\prime}\\\\&amp;=12 \\left(4 x - 1\\right)^{2},\\ v^{\\prime}\\\\&amp;=\\left(- 2 \\cot^{2}{\\left(x \\right)} - 2\\right) \\cot{\\left(x \\right)}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{u^{\\prime}v-uv^{\\prime}}{v^2}\\\\&amp;=\\frac{(12 \\left(4 x - 1\\right)^{2})(\\cot^{2}{\\left(x \\right)})-(\\left(4 x - 1\\right)^{3})(\\left(- 2 \\cot^{2}{\\left(x \\right)} - 2\\right) \\cot{\\left(x \\right)})}{(\\cot^{2}{\\left(x \\right)})^2}\\\\&amp;=\\frac{2 \\left(4 x - 1\\right)^{2} \\left(4 x \\cot^{2}{\\left(x \\right)} + 4 x - \\cot^{2}{\\left(x \\right)} + 6 \\cot{\\left(x \\right)} - 1\\right)}{\\cot^{3}{\\left(x \\right)}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.6/q4",
+      "status": "worked",
+      "method": "Differentiate with respect to y and invert locally where the derivative is nonzero. No branch restriction on y was supplied.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{dy}=2\\cos2y",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{dy}{dx}=\\frac1{2\\cos2y};\\quad\\cos^22y=1-\\sin^22y=1-x^2;\\quad\\frac{dy}{dx}=\\pm\\frac1{2\\sqrt{1-x^2}},\\quad|x|<1",
+          "explanation": "The sign is the sign of cos 2y. The positive answer alone requires a branch with cos 2y>0. At x=±1 the inverse derivative is not finite."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate with respect to y and invert locally where the derivative is nonzero. No branch restriction on y was supplied.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\frac{dx}{dy}=2\\cos2y\" data-display=\"true\" class=\"equation\"></span></li><li><p>The sign is the sign of cos 2y. The positive answer alone requires a branch with cos 2y&gt;0. At x=±1 the inverse derivative is not finite.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dy}{dx}=\\frac1{2\\cos2y}\\\\&amp;\\cos^22y=1-\\sin^22y=1-x^2\\\\&amp;\\frac{dy}{dx}=\\pm\\frac1{2\\sqrt{1-x^2}},\\quad|x|&lt;1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.6/q5",
+      "status": "worked",
+      "method": "Write cosecant as a reciprocal and apply the quotient rule.",
+      "steps": [
+        {
+          "latex": "y=1/\\sin x;\\quad y^{\\prime}=\\frac{0\\cdot\\sin x-1\\cdot\\cos x}{\\sin^2x}=-\\frac1{\\sin x}\\frac{\\cos x}{\\sin x}=-\\operatorname{cosec}x\\cot x",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Write cosecant as a reciprocal and apply the quotient rule.</p><span data-math=\"\\begin{aligned}&amp;y=1/\\sin x\\\\&amp;y^{\\prime}\\\\&amp;=\\frac{0\\cdot\\sin x-1\\cdot\\cos x}{\\sin^2x}\\\\&amp;=-\\frac1{\\sin x}\\frac{\\cos x}{\\sin x}\\\\&amp;=-\\operatorname{cosec}x\\cot x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.6/q6",
+      "status": "worked",
+      "method": "Use the logarithmic chain rule and the sine double-angle identity.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=\\frac{-2\\operatorname{cosec}^22x}{\\cot2x}=-\\frac2{\\sin2x\\cos2x}=-\\frac4{\\sin4x}=-4\\operatorname{cosec}4x",
+          "explanation": "This applies where cot 2x>0 so the original logarithm is real."
+        },
+        {
+          "latex": "f(\\pi/8)=\\ln1=0,\\quad m_T=-4;\\quad m_N=1/4;\\quad y=\\frac14(x-\\pi/8)=x/4-\\pi/32",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the logarithmic chain rule and the sine double-angle identity.</p><ol class=\"parts\" type=\"a\"><li><p>This applies where cot 2x&gt;0 so the original logarithm is real.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)\\\\&amp;=\\frac{-2\\operatorname{cosec}^22x}{\\cot2x}\\\\&amp;=-\\frac2{\\sin2x\\cos2x}\\\\&amp;=-\\frac4{\\sin4x}\\\\&amp;=-4\\operatorname{cosec}4x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(\\pi/8)=\\ln1=0,\\quad m_T=-4\\\\&amp;m_N=1/4\\\\&amp;y=\\frac14(x-\\pi/8)=x/4-\\pi/32\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.6/q7",
+      "status": "worked",
+      "method": "Find the y-intercept and the two line intercepts, then use the horizontal base and vertical height of the triangle.",
+      "steps": [
+        {
+          "latex": "A=(0,e^{\\tan0})=(0,1);\\quad f^{\\prime}(x)=\\frac12\\sec^2(x/2)e^{\\tan(x/2)};\\quad m_T=1/2,\\quad m_N=-2;\\quad\\text{tangent: }y=x/2+1\\Rightarrow B=(-2,0);\\quad\\text{normal: }y=-2x+1\\Rightarrow C=(1/2,0);\\quad\\text{area}=\\frac12(1/2+2)(1)=5/4",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find the y-intercept and the two line intercepts, then use the horizontal base and vertical height of the triangle.</p><span data-math=\"\\begin{aligned}&amp;A=(0,e^{\\tan0})=(0,1)\\\\&amp;f^{\\prime}(x)=\\frac12\\sec^2(x/2)e^{\\tan(x/2)}\\\\&amp;m_T=1/2,\\quad m_N=-2\\\\&amp;\\text{tangent: }y=x/2+1\\\\&amp;\\Rightarrow B=(-2,0)\\\\&amp;\\text{normal: }y=-2x+1\\\\&amp;\\Rightarrow C=(1/2,0)\\\\&amp;\\text{area}=\\frac12(1/2+2)(1)=5/4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.6/q8",
+      "status": "worked",
+      "method": "Differentiate sec 4y and invert locally. Keep both tangent signs because the prompt does not specify a branch.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{dy}=4\\sec4y\\tan4y",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{dy}{dx}=\\frac1{4x\\tan4y};\\quad\\tan^24y=\\sec^24y-1=x^2-1;\\quad\\frac{dy}{dx}=\\pm\\frac1{4x\\sqrt{x^2-1}},\\quad|x|>1",
+          "explanation": "The choice of ± tracks the sign of tan 4y. At x=±1 the inverse slope is not finite; the positive-square-root form alone assumes tan 4y>0."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate sec 4y and invert locally. Keep both tangent signs because the prompt does not specify a branch.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\frac{dx}{dy}=4\\sec4y\\tan4y\" data-display=\"true\" class=\"equation\"></span></li><li><p>The choice of ± tracks the sign of tan 4y. At x=±1 the inverse slope is not finite; the positive-square-root form alone assumes tan 4y&gt;0.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dy}{dx}=\\frac1{4x\\tan4y}\\\\&amp;\\tan^24y=\\sec^24y-1=x^2-1\\\\&amp;\\frac{dy}{dx}=\\pm\\frac1{4x\\sqrt{x^2-1}},\\quad|x|&gt;1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.7/q1",
+      "status": "worked",
+      "method": "Differentiate x and y separately with respect to t, then divide dy/dt by dx/dt where the latter is nonzero.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{dt}=4,\\quad\\frac{dy}{dt}=6 t^{2};\\quad\\frac{dy}{dx}=\\frac{6 t^{2}}{4}=\\frac{3 t^{2}}{2}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{dx}{dt}=- \\frac{4}{t^{3}},\\quad\\frac{dy}{dt}=- 2 t;\\quad\\frac{dy}{dx}=\\frac{- 2 t}{- \\frac{4}{t^{3}}}=\\frac{t^{4}}{2}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{dx}{dt}=3,\\quad\\frac{dy}{dt}=4 t e^{4 t} + e^{4 t};\\quad\\frac{dy}{dx}=\\frac{4 t e^{4 t} + e^{4 t}}{3}=\\frac{4 t e^{4 t}}{3} + \\frac{e^{4 t}}{3}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{dx}{dt}=4 \\cos{\\left(t \\right)},\\quad\\frac{dy}{dt}=5 \\tan^{2}{\\left(t \\right)} + 5;\\quad\\frac{dy}{dx}=\\frac{5 \\tan^{2}{\\left(t \\right)} + 5}{4 \\cos{\\left(t \\right)}}=\\frac{5}{4 \\cos^{3}{\\left(t \\right)}}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{dx}{dt}=12 e^{3 t},\\quad\\frac{dy}{dt}=2 e^{t};\\quad\\frac{dy}{dx}=\\frac{2 e^{t}}{12 e^{3 t}}=\\frac{e^{- 2 t}}{6}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{dx}{dt}=6 t^{2},\\quad\\frac{dy}{dt}=\\frac{1}{t};\\quad\\frac{dy}{dx}=\\frac{\\frac{1}{t}}{6 t^{2}}=\\frac{1}{6 t^{3}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate x and y separately with respect to t, then divide dy/dt by dx/dt where the latter is nonzero.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dt}=4,\\quad\\frac{dy}{dt}=6 t^{2}\\\\&amp;\\frac{dy}{dx}=\\frac{6 t^{2}}{4}=\\frac{3 t^{2}}{2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dt}=- \\frac{4}{t^{3}},\\quad\\frac{dy}{dt}=- 2 t\\\\&amp;\\frac{dy}{dx}=\\frac{- 2 t}{- \\frac{4}{t^{3}}}=\\frac{t^{4}}{2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dt}=3,\\quad\\frac{dy}{dt}=4 t e^{4 t} + e^{4 t}\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{4 t e^{4 t} + e^{4 t}}{3}\\\\&amp;=\\frac{4 t e^{4 t}}{3} + \\frac{e^{4 t}}{3}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dt}\\\\&amp;=4 \\cos{\\left(t \\right)},\\quad\\frac{dy}{dt}\\\\&amp;=5 \\tan^{2}{\\left(t \\right)} + 5\\\\&amp;\\frac{dy}{dx}\\\\&amp;=\\frac{5 \\tan^{2}{\\left(t \\right)} + 5}{4 \\cos{\\left(t \\right)}}\\\\&amp;=\\frac{5}{4 \\cos^{3}{\\left(t \\right)}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dt}=12 e^{3 t},\\quad\\frac{dy}{dt}=2 e^{t}\\\\&amp;\\frac{dy}{dx}=\\frac{2 e^{t}}{12 e^{3 t}}=\\frac{e^{- 2 t}}{6}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dt}=6 t^{2},\\quad\\frac{dy}{dt}=\\frac{1}{t}\\\\&amp;\\frac{dy}{dx}=\\frac{\\frac{1}{t}}{6 t^{2}}=\\frac{1}{6 t^{3}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.7/q2",
+      "status": "worked",
+      "method": "Divide the two parameter derivatives and evaluate the point at t=π/4.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{dt}=\\sec^2t,\\quad\\frac{dy}{dt}=\\sec t\\tan t;\\quad\\frac{dy}{dx}=\\frac{\\tan t}{\\sec t}=\\sin t",
+          "explanation": ""
+        },
+        {
+          "latex": "P=(1,\\sqrt2),\\quad m=\\sin(\\pi/4)=\\sqrt2/2;\\quad y-\\sqrt2=\\frac{\\sqrt2}2(x-1)\\Rightarrow y=\\frac{\\sqrt2}2x+\\frac{\\sqrt2}2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Divide the two parameter derivatives and evaluate the point at t=π/4.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dt}=\\sec^2t,\\quad\\frac{dy}{dt}=\\sec t\\tan t\\\\&amp;\\frac{dy}{dx}=\\frac{\\tan t}{\\sec t}=\\sin t\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;P=(1,\\sqrt2),\\quad m=\\sin(\\pi/4)=\\sqrt2/2\\\\&amp;y-\\sqrt2=\\frac{\\sqrt2}2(x-1)\\\\&amp;\\Rightarrow y=\\frac{\\sqrt2}2x+\\frac{\\sqrt2}2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.7/q3",
+      "status": "worked",
+      "method": "Take the ratio of the parametric derivatives, then evaluate the point and normal gradient.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{dt}=-2t,\\quad\\frac{dy}{dt}=3t^2+4t;\\quad\\frac{dy}{dx}=-\\frac{3t+4}2\\quad(t\\ne0)",
+          "explanation": "The limiting tangent slope at t=0 is −2, although the raw derivative ratio is 0/0 there."
+        },
+        {
+          "latex": "t=-3\\Rightarrow P=(-8,-9),\\quad m_T=5/2,\\quad m_N=-2/5;\\quad y+9=-\\frac25(x+8)\\Rightarrow2x+5y+61=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Take the ratio of the parametric derivatives, then evaluate the point and normal gradient.</p><ol class=\"parts\" type=\"a\"><li><p>The limiting tangent slope at t=0 is −2, although the raw derivative ratio is 0/0 there.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dt}=-2t,\\quad\\frac{dy}{dt}=3t^2+4t\\\\&amp;\\frac{dy}{dx}=-\\frac{3t+4}2\\quad(t\\ne0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;t=-3\\\\&amp;\\Rightarrow P=(-8,-9),\\quad m_T=5/2,\\quad m_N=-2/5\\\\&amp;y+9=-\\frac25(x+8)\\\\&amp;\\Rightarrow 2x+5y+61=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.7/q4",
+      "status": "worked",
+      "method": "Use the ratio of derivatives. A zero slope requires dy/dθ=0 while dx/dθ remains nonzero.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{d\\theta}=2\\sin2\\theta,\\quad\\frac{dy}{d\\theta}=8\\cos2\\theta;\\quad\\frac{dy}{dx}=4\\cot2\\theta",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos2\\theta=0\\Rightarrow\\sin2\\theta=\\pm1;\\quad(x,y)=(1,4),(1,-4)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the ratio of derivatives. A zero slope requires dy/dθ=0 while dx/dθ remains nonzero.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{d\\theta}=2\\sin2\\theta,\\quad\\frac{dy}{d\\theta}=8\\cos2\\theta\\\\&amp;\\frac{dy}{dx}=4\\cot2\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos2\\theta=0\\\\&amp;\\Rightarrow \\sin2\\theta=\\pm1\\\\&amp;(x,y)=(1,4),(1,-4)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.7/q5",
+      "status": "worked",
+      "method": "Simplify the derivative ratio using sec θ=1/cos θ and tan θ=sin θ/cos θ.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{d\\theta}=2\\sec\\theta\\tan\\theta,\\quad\\frac{dy}{d\\theta}=-8\\sin\\theta\\cos\\theta;\\quad\\frac{dy}{dx}=-4\\cos^3\\theta",
+          "explanation": "The simplified expression also gives the limiting slope at parameter values where both raw derivatives vanish; sec θ must remain defined."
+        },
+        {
+          "latex": "\\theta=\\pi/3\\Rightarrow(x,y)=(4,1),\\quad m_T=-1/2,\\quad m_N=2;\\quad y-1=2(x-4)\\Rightarrow y=2x-7",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Simplify the derivative ratio using sec θ=1/cos θ and tan θ=sin θ/cos θ.</p><ol class=\"parts\" type=\"a\"><li><p>The simplified expression also gives the limiting slope at parameter values where both raw derivatives vanish; sec θ must remain defined.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{d\\theta}\\\\&amp;=2\\sec\\theta\\tan\\theta,\\quad\\frac{dy}{d\\theta}\\\\&amp;=-8\\sin\\theta\\cos\\theta\\\\&amp;\\frac{dy}{dx}=-4\\cos^3\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\theta=\\pi/3\\\\&amp;\\Rightarrow (x,y)=(4,1),\\quad m_T=-1/2,\\quad m_N=2\\\\&amp;y-1=2(x-4)\\\\&amp;\\Rightarrow y=2x-7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.7/q6",
+      "status": "worked",
+      "method": "Equate the parametric gradient to 2, then find the corresponding point.",
+      "steps": [
+        {
+          "latex": "\\frac{dy}{dx}=\\frac{2t+4}{2(t-2)}=\\frac{t+2}{t-2};\\quad\\frac{t+2}{t-2}=2\\Rightarrow t=6;\\quad(x,y)=(16,60);\\quad y-60=2(x-16)\\Rightarrow y=2x+28",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Equate the parametric gradient to 2, then find the corresponding point.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dy}{dx}=\\frac{2t+4}{2(t-2)}=\\frac{t+2}{t-2}\\\\&amp;\\frac{t+2}{t-2}=2\\\\&amp;\\Rightarrow t=6\\\\&amp;(x,y)=(16,60)\\\\&amp;y-60=2(x-16)\\\\&amp;\\Rightarrow y=2x+28\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.7/q7",
+      "status": "worked",
+      "method": "Differentiate with respect to the actual parameter t; the displayed θ interval is interpreted as the intended interval for t.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{dt}=-4\\sec2t\\tan2t,\\quad\\frac{dy}{dt}=-2\\operatorname{cosec}^2t;\\quad\\frac{dy}{dx}=\\frac{\\operatorname{cosec}^2t}{2\\sec2t\\tan2t}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cot t=-\\sqrt3\\Rightarrow t=-\\pi/6;\\quad\\sec2t=2,\\quad\\tan2t=-\\sqrt3,\\quad\\operatorname{cosec}^2t=4;\\quad m=-\\frac1{\\sqrt3};\\quad y+2\\sqrt3=-\\frac{x+4}{\\sqrt3};\\quad\\sqrt3x+3y+10\\sqrt3=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate with respect to the actual parameter t; the displayed θ interval is interpreted as the intended interval for t.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dt}=-4\\sec2t\\tan2t,\\quad\\frac{dy}{dt}=-2\\operatorname{cosec}^2t\\\\&amp;\\frac{dy}{dx}=\\frac{\\operatorname{cosec}^2t}{2\\sec2t\\tan2t}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cot t=-\\sqrt3\\\\&amp;\\Rightarrow t=-\\pi/6\\\\&amp;\\sec2t=2,\\quad\\tan2t=-\\sqrt3,\\quad\\operatorname{cosec}^2t=4\\\\&amp;m=-\\frac1{\\sqrt3}\\\\&amp;y+2\\sqrt3=-\\frac{x+4}{\\sqrt3}\\\\&amp;\\sqrt3x+3y+10\\sqrt3=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.7/q8",
+      "status": "worked",
+      "method": "Use the derivative ratio for the normal; solve x=t/(1−t) for t to eliminate the parameter.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{dt}=\\frac1{(1-t)^2},\\quad\\frac{dy}{dt}=-\\frac{2t}{(1+t^2)^2};\\quad t=-1/2\\Rightarrow(x,y)=(-1/3,4/5),\\quad m_T=\\frac{16/25}{4/9}=36/25;\\quad y-4/5=-\\frac{25}{36}(x+1/3);\\quad y=-\\frac{25}{36}x+\\frac{307}{540}",
+          "explanation": ""
+        },
+        {
+          "latex": "x(1-t)=t\\Rightarrow t=x/(x+1);\\quad y=\\frac1{1+x^2/(x+1)^2}=\\frac{x^2+2x+1}{2x^2+2x+1},\\quad x>-1/2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the derivative ratio for the normal; solve x=t/(1−t) for t to eliminate the parameter.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dt}=\\frac1{(1-t)^2},\\quad\\frac{dy}{dt}=-\\frac{2t}{(1+t^2)^2}\\\\&amp;t=-1/2\\\\&amp;\\Rightarrow (x,y)=(-1/3,4/5),\\quad m_T=\\frac{16/25}{4/9}=36/25\\\\&amp;y-4/5=-\\frac{25}{36}(x+1/3)\\\\&amp;y=-\\frac{25}{36}x+\\frac{307}{540}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x(1-t)=t\\\\&amp;\\Rightarrow t=x/(x+1)\\\\&amp;y=\\frac1{1+x^2/(x+1)^2}=\\frac{x^2+2x+1}{2x^2+2x+1},\\quad x&gt;-1/2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.8/q1",
+      "status": "worked",
+      "method": "Treat y as a differentiable function of x and apply the chain rule.",
+      "steps": [
+        {
+          "latex": "u=y^5,\\quad\\frac{du}{dy}=5y^4;\\quad\\frac{d}{dx}(y^5)=\\frac{du}{dy}\\frac{dy}{dx}=5y^4\\frac{dy}{dx}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Treat y as a differentiable function of x and apply the chain rule.</p><span data-math=\"\\begin{aligned}&amp;u=y^5,\\quad\\frac{du}{dy}=5y^4\\\\&amp;\\frac{d}{dx}(y^5)=\\frac{du}{dy}\\frac{dy}{dx}=5y^4\\frac{dy}{dx}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.8/q2",
+      "status": "worked",
+      "method": "Use the product rule on x³ and y², then the chain rule on y².",
+      "steps": [
+        {
+          "latex": "\\frac{d}{dx}(x^3y^2)=3x^2y^2+x^3\\frac{d}{dx}(y^2)=3x^2y^2+2x^3y\\frac{dy}{dx}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the product rule on x³ and y², then the chain rule on y².</p><span data-math=\"\\begin{aligned}&amp;\\frac{d}{dx}(x^3y^2)\\\\&amp;=3x^2y^2+x^3\\frac{d}{dx}(y^2)\\\\&amp;=3x^2y^2+2x^3y\\frac{dy}{dx}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.8/q3",
+      "status": "worked",
+      "method": "Differentiate implicitly, writing y′ for dy/dx, then collect its terms and divide where the resulting denominator is nonzero.",
+      "steps": [
+        {
+          "latex": "4x^3-3y^2y^{\\prime}=0\\Rightarrow y^{\\prime}=\\frac{4x^3}{3y^2}",
+          "explanation": ""
+        },
+        {
+          "latex": "6x+8yy^{\\prime}-10xy-5x^2y^{\\prime}=0;\\quad(8y-5x^2)y^{\\prime}=10xy-6x;\\quad y^{\\prime}=\\frac{6x-10xy}{5x^2-8y}",
+          "explanation": ""
+        },
+        {
+          "latex": "y(x^2-y^2)=5y^2;\\quad2xy+(x^2-3y^2)y^{\\prime}=10yy^{\\prime};\\quad y^{\\prime}=\\frac{2xy}{10y+3y^2-x^2}",
+          "explanation": "The original denominator x²−y² must be nonzero. Multiplying rather than dividing by y retains the y=0 branch."
+        },
+        {
+          "latex": "\\frac4{x-5}-\\frac{3y^2y^{\\prime}}{y^3}=0\\Rightarrow y^{\\prime}=\\frac{4y}{3(x-5)},\\quad x>5,\\ y>0",
+          "explanation": ""
+        },
+        {
+          "latex": "-\\sin x+2\\sin y\\cos y\\,y^{\\prime}=0\\Rightarrow y^{\\prime}=\\frac{\\sin x}{2\\sin y\\cos y}",
+          "explanation": ""
+        },
+        {
+          "latex": "e^{-y}-xe^{-y}y^{\\prime}+e^{2x}y^{\\prime}+2ye^{2x}=0;\\quad y^{\\prime}=\\frac{e^{-y}+2ye^{2x}}{xe^{-y}-e^{2x}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate implicitly, writing y′ for dy/dx, then collect its terms and divide where the resulting denominator is nonzero.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;4x^3-3y^2y^{\\prime}=0\\\\&amp;\\Rightarrow y^{\\prime}=\\frac{4x^3}{3y^2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;6x+8yy^{\\prime}-10xy-5x^2y^{\\prime}=0\\\\&amp;(8y-5x^2)y^{\\prime}=10xy-6x\\\\&amp;y^{\\prime}=\\frac{6x-10xy}{5x^2-8y}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The original denominator x²−y² must be nonzero. Multiplying rather than dividing by y retains the y=0 branch.</p><span data-math=\"\\begin{aligned}&amp;y(x^2-y^2)=5y^2\\\\&amp;2xy+(x^2-3y^2)y^{\\prime}=10yy^{\\prime}\\\\&amp;y^{\\prime}=\\frac{2xy}{10y+3y^2-x^2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac4{x-5}-\\frac{3y^2y^{\\prime}}{y^3}=0\\\\&amp;\\Rightarrow y^{\\prime}=\\frac{4y}{3(x-5)},\\quad x&gt;5,\\ y&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;-\\sin x+2\\sin y\\cos y\\,y^{\\prime}=0\\\\&amp;\\Rightarrow y^{\\prime}=\\frac{\\sin x}{2\\sin y\\cos y}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;e^{-y}-xe^{-y}y^{\\prime}+e^{2x}y^{\\prime}+2ye^{2x}=0\\\\&amp;y^{\\prime}=\\frac{e^{-y}+2ye^{2x}}{xe^{-y}-e^{2x}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.8/q4",
+      "status": "worked",
+      "method": "Differentiate the product x²y implicitly and solve for y′.",
+      "steps": [
+        {
+          "latex": "2x-8xy-4x^2y^{\\prime}+2yy^{\\prime}=0\\Rightarrow y^{\\prime}=\\frac{8xy-2x}{2y-4x^2}",
+          "explanation": ""
+        },
+        {
+          "latex": "y^{\\prime}(2,-1)=\\frac{-16-4}{-2-16}=10/9",
+          "explanation": ""
+        },
+        {
+          "latex": "y+1=\\frac{10}9(x-2)\\Rightarrow y=\\frac{10}9x-\\frac{29}9",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the product x²y implicitly and solve for y′.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2x-8xy-4x^2y^{\\prime}+2yy^{\\prime}=0\\\\&amp;\\Rightarrow y^{\\prime}=\\frac{8xy-2x}{2y-4x^2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;y^{\\prime}(2,-1)=\\frac{-16-4}{-2-16}=10/9\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;y+1=\\frac{10}9(x-2)\\\\&amp;\\Rightarrow y=\\frac{10}9x-\\frac{29}9\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.8/q5",
+      "status": "worked",
+      "method": "Differentiate each term, using the product rule for xy, and evaluate the resulting ratio.",
+      "steps": [
+        {
+          "latex": "6x-3y^2y^{\\prime}-5y-5xy^{\\prime}=0;\\quad y^{\\prime}=\\frac{6x-5y}{3y^2+5x};\\quad y^{\\prime}(2,1)=\\frac{12-5}{3+10}=7/13",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate each term, using the product rule for xy, and evaluate the resulting ratio.</p><span data-math=\"\\begin{aligned}&amp;6x-3y^2y^{\\prime}-5y-5xy^{\\prime}=0\\\\&amp;y^{\\prime}=\\frac{6x-5y}{3y^2+5x}\\\\&amp;y^{\\prime}(2,1)=\\frac{12-5}{3+10}=7/13\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.8/q6",
+      "status": "worked",
+      "method": "Use the chain rule on both exponentials and the product rule on xy.",
+      "steps": [
+        {
+          "latex": "-3e^{-3y}y^{\\prime}+2e^{-2x}=4y+4xy^{\\prime};\\quad(4x+3e^{-3y})y^{\\prime}=2e^{-2x}-4y;\\quad y^{\\prime}=\\frac{2e^{-2x}-4y}{4x+3e^{-3y}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the chain rule on both exponentials and the product rule on xy.</p><span data-math=\"\\begin{aligned}&amp;-3e^{-3y}y^{\\prime}+2e^{-2x}=4y+4xy^{\\prime}\\\\&amp;(4x+3e^{-3y})y^{\\prime}=2e^{-2x}-4y\\\\&amp;y^{\\prime}=\\frac{2e^{-2x}-4y}{4x+3e^{-3y}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.8/q7",
+      "status": "worked",
+      "method": "Differentiate implicitly; use the allowed y-interval to select the point, then calculate its tangent gradient.",
+      "steps": [
+        {
+          "latex": "-2\\sin2x+2\\cos2y\\,y^{\\prime}=0\\Rightarrow y^{\\prime}=\\frac{\\sin2x}{\\cos2y}",
+          "explanation": ""
+        },
+        {
+          "latex": "x=-\\pi/6\\Rightarrow\\sin2y=1-\\cos(-\\pi/3)=1/2;\\quad0<2y<\\pi/3\\Rightarrow y=\\pi/12;\\quad m=\\frac{-\\sqrt3/2}{\\sqrt3/2}=-1;\\quad y-\\pi/12=-(x+\\pi/6)\\Rightarrow x+y+\\pi/12=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate implicitly; use the allowed y-interval to select the point, then calculate its tangent gradient.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;-2\\sin2x+2\\cos2y\\,y^{\\prime}=0\\\\&amp;\\Rightarrow y^{\\prime}=\\frac{\\sin2x}{\\cos2y}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x=-\\pi/6\\\\&amp;\\Rightarrow \\sin2y=1-\\cos(-\\pi/3)=1/2\\\\&amp;0&lt;2y&lt;\\pi/3\\\\&amp;\\Rightarrow y=\\pi/12\\\\&amp;m=\\frac{-\\sqrt3/2}{\\sqrt3/2}=-1\\\\&amp;y-\\pi/12=-(x+\\pi/6)\\\\&amp;\\Rightarrow x+y+\\pi/12=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.8/q8",
+      "status": "worked",
+      "method": "Differentiate the given ellipse and take the negative reciprocal of its tangent gradient at (1,8).",
+      "steps": [
+        {
+          "latex": "8x+2yy^{\\prime}+6-8y^{\\prime}=0\\Rightarrow y^{\\prime}=-\\frac{8x+6}{2y-8};\\quad m_T=-14/8=-7/4,\\quad m_N=4/7;\\quad y-8=\\frac47(x-1)\\Rightarrow4x-7y+52=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the given ellipse and take the negative reciprocal of its tangent gradient at (1,8).</p><span data-math=\"\\begin{aligned}&amp;8x+2yy^{\\prime}+6-8y^{\\prime}=0\\\\&amp;\\Rightarrow y^{\\prime}=-\\frac{8x+6}{2y-8}\\\\&amp;m_T=-14/8=-7/4,\\quad m_N=4/7\\\\&amp;y-8=\\frac47(x-1)\\\\&amp;\\Rightarrow 4x-7y+52=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.9/q1",
+      "status": "worked",
+      "method": "Apply the product rule once, then again to both terms of the first derivative.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=-e^{-x}\\cos2x-2e^{-x}\\sin2x",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime\\prime}(x)=e^{-x}\\cos2x+2e^{-x}\\sin2x+2e^{-x}\\sin2x-4e^{-x}\\cos2x=e^{-x}(4\\sin2x-3\\cos2x)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply the product rule once, then again to both terms of the first derivative.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=-e^{-x}\\cos2x-2e^{-x}\\sin2x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime\\prime}(x)\\\\&amp;=e^{-x}\\cos2x+2e^{-x}\\sin2x+2e^{-x}\\sin2x-4e^{-x}\\cos2x\\\\&amp;=e^{-x}(4\\sin2x-3\\cos2x)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.9/q2",
+      "status": "worked",
+      "method": "Differentiate twice and inspect the sign of every term.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=16x+12e^{4x};\\quad f^{\\prime\\prime}(x)=16+48e^{4x}",
+          "explanation": ""
+        },
+        {
+          "latex": "e^{4x}>0\\Rightarrow f^{\\prime\\prime}(x)>16>0",
+          "explanation": "The second derivative is positive for every real x, so the function is convex everywhere."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate twice and inspect the sign of every term.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=16x+12e^{4x}\\\\&amp;f^{\\prime\\prime}(x)=16+48e^{4x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The second derivative is positive for every real x, so the function is convex everywhere.</p><span data-math=\"\\begin{aligned}&amp;e^{4x}&gt;0\\\\&amp;\\Rightarrow f^{\\prime\\prime}(x)&gt;16&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.9/q3",
+      "status": "worked",
+      "method": "A twice-differentiable function is concave on an interval where its second derivative is nonpositive.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=-2\\sin2x;\\quad f^{\\prime\\prime}(x)=-4\\cos2x",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime\\prime}(x)\\le0\\Rightarrow\\cos2x\\ge0;\\quad-\\pi\\le2x\\le\\pi\\Rightarrow-\\pi/2\\le2x\\le\\pi/2;\\quad-\\pi/4\\le x\\le\\pi/4",
+          "explanation": "The second derivative is strictly negative inside this interval and zero at its endpoints. The two outer intervals in the supplied key are convex, not concave."
+        }
+      ],
+      "solutionHtml": "<p>A twice-differentiable function is concave on an interval where its second derivative is nonpositive.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=-2\\sin2x\\\\&amp;f^{\\prime\\prime}(x)=-4\\cos2x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The second derivative is strictly negative inside this interval and zero at its endpoints. The two outer intervals in the supplied key are convex, not concave.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime\\prime}(x)\\le0\\\\&amp;\\Rightarrow \\cos2x\\ge0\\\\&amp;-\\pi\\le2x\\le\\pi\\\\&amp;\\Rightarrow -\\pi/2\\le2x\\le\\pi/2\\\\&amp;-\\pi/4\\le x\\le\\pi/4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.9/q4",
+      "status": "worked",
+      "method": "Differentiate the product twice, factor the second derivative, and check the sign around x=1/6.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=(2x-1)^5+10x(2x-1)^4=(2x-1)^4(12x-1);\\quad f^{\\prime\\prime}(x)=8(2x-1)^3(12x-1)+12(2x-1)^4=20(2x-1)^3(6x-1)",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime\\prime}(1/6)=20(-2/3)^3(0)=0;\\quad f^{\\prime\\prime}(1/2)=20(0)^3(2)=0",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime\\prime}(0.1)=20(-0.8)^3(-0.4)=4.096>0;\\quad f^{\\prime\\prime}(0.2)=20(-0.6)^3(0.2)=-0.864<0",
+          "explanation": "The factor 2x−1 stays negative near x=1/6 while 6x−1 changes sign, proving a change of concavity and therefore an inflection point."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the product twice, factor the second derivative, and check the sign around x=1/6.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=(2x-1)^5+10x(2x-1)^4=(2x-1)^4(12x-1)\\\\&amp;f^{\\prime\\prime}(x)=8(2x-1)^3(12x-1)+12(2x-1)^4=20(2x-1)^3(6x-1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime\\prime}(1/6)=20(-2/3)^3(0)=0\\\\&amp;f^{\\prime\\prime}(1/2)=20(0)^3(2)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The factor 2x−1 stays negative near x=1/6 while 6x−1 changes sign, proving a change of concavity and therefore an inflection point.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime\\prime}(0.1)=20(-0.8)^3(-0.4)=4.096&gt;0\\\\&amp;f^{\\prime\\prime}(0.2)=20(-0.6)^3(0.2)=-0.864&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.9/q5",
+      "status": "worked",
+      "method": "Differentiate twice and solve f″(x)≥0.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=3x^2-16x+6;\\quad f^{\\prime\\prime}(x)=6x-16;\\quad6x-16\\ge0\\Rightarrow x\\ge8/3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate twice and solve f″(x)≥0.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=3x^2-16x+6\\\\&amp;f^{\\prime\\prime}(x)=6x-16\\\\&amp;6x-16\\ge0\\\\&amp;\\Rightarrow x\\ge8/3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.9/q6",
+      "status": "worked",
+      "method": "Use the product rule twice and factor the second derivative to show its sign change.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=(2x-5)^4+8x(2x-5)^3;\\quad f^{\\prime\\prime}(x)=16(2x-5)^3+48x(2x-5)^2=80(2x-5)^2(x-1)",
+          "explanation": ""
+        },
+        {
+          "latex": "f^{\\prime\\prime}(1)=0;\\quad f^{\\prime\\prime}(0.95)=-38.44<0;\\quad f^{\\prime\\prime}(1.05)=33.64>0",
+          "explanation": "Near x=1, the squared factor is positive and x−1 changes sign. The curve therefore has an inflection point at x=1. These derivative values use the stated curve directly."
+        }
+      ],
+      "solutionHtml": "<p>Use the product rule twice and factor the second derivative to show its sign change.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=(2x-5)^4+8x(2x-5)^3\\\\&amp;f^{\\prime\\prime}(x)=16(2x-5)^3+48x(2x-5)^2=80(2x-5)^2(x-1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Near x=1, the squared factor is positive and x−1 changes sign. The curve therefore has an inflection point at x=1. These derivative values use the stated curve directly.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime\\prime}(1)=0\\\\&amp;f^{\\prime\\prime}(0.95)=-38.44&lt;0\\\\&amp;f^{\\prime\\prime}(1.05)=33.64&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.9/q7",
+      "status": "worked",
+      "method": "Differentiate twice, then solve the trigonometric inequality for the sign of the second derivative.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=e^{-2x}(4\\cos4x-2\\sin4x);\\quad f^{\\prime\\prime}(x)=-4e^{-2x}(3\\sin4x+4\\cos4x);\\quad3\\sin4x+4\\cos4x\\le0;\\quad0\\le4x\\le\\pi\\Rightarrow\\pi-\\tan^{-1}(4/3)\\le4x\\le\\pi;\\quad\\frac{\\pi-\\tan^{-1}(4/3)}4\\le x\\le\\pi/4",
+          "explanation": "The exact lower endpoint is approximately 0.55 radians. Include that endpoint because the second derivative is zero there."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate twice, then solve the trigonometric inequality for the sign of the second derivative.</p><p>The exact lower endpoint is approximately 0.55 radians. Include that endpoint because the second derivative is zero there.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=e^{-2x}(4\\cos4x-2\\sin4x)\\\\&amp;f^{\\prime\\prime}(x)=-4e^{-2x}(3\\sin4x+4\\cos4x)\\\\&amp;3\\sin4x+4\\cos4x\\le0\\\\&amp;0\\le4x\\le\\pi\\\\&amp;\\Rightarrow \\pi-\\tan^{-1}(4/3)\\le4x\\le\\pi\\\\&amp;\\frac{\\pi-\\tan^{-1}(4/3)}4\\le x\\le\\pi/4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.9/q8",
+      "status": "worked",
+      "method": "Differentiate twice, factor out the positive exponential, and use a sign chart for the remaining cubic.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=e^x(x^3+3x^2);\\quad f^{\\prime\\prime}(x)=e^x(x^3+6x^2+6x)=e^xx(x+3-\\sqrt3)(x+3+\\sqrt3);\\quad f^{\\prime\\prime}(x)\\le0\\Rightarrow x\\le-3-\\sqrt3\\text{ or }-3+\\sqrt3\\le x\\le0",
+          "explanation": "The three simple roots divide the real line into intervals with alternating signs; the exponential is always positive."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate twice, factor out the positive exponential, and use a sign chart for the remaining cubic.</p><p>The three simple roots divide the real line into intervals with alternating signs; the exponential is always positive.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=e^x(x^3+3x^2)\\\\&amp;f^{\\prime\\prime}(x)=e^x(x^3+6x^2+6x)=e^xx(x+3-\\sqrt3)(x+3+\\sqrt3)\\\\&amp;f^{\\prime\\prime}(x)\\le0\\\\&amp;\\Rightarrow x\\le-3-\\sqrt3\\text{ or }-3+\\sqrt3\\le x\\le0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.10/q1",
+      "status": "worked",
+      "method": "Apply dS/dt=(dS/dx)(dx/dt), then substitute the given x.",
+      "steps": [
+        {
+          "latex": "\\frac{dS}{dx}=12x;\\quad\\frac{dS}{dt}=12x\\cdot\\frac23=8x",
+          "explanation": ""
+        },
+        {
+          "latex": "x=3\\Rightarrow\\frac{dS}{dt}=24",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply dS/dt=(dS/dx)(dx/dt), then substitute the given x.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{dS}{dx}=12x\\\\&amp;\\frac{dS}{dt}=12x\\cdot\\frac23=8x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"x=3\\Rightarrow\\frac{dS}{dt}=24\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.10/q2",
+      "status": "worked",
+      "method": "Differentiate y with respect to x by the product rule, then multiply by dx/dt.",
+      "steps": [
+        {
+          "latex": "\\frac{dy}{dx}=\\cos4x-4x\\sin4x;\\quad\\frac{dy}{dt}=3(\\cos4x-4x\\sin4x);\\quad x=5\\pi/16\\Rightarrow\\frac{dy}{dt}=3\\left(-\\frac1{\\sqrt2}+\\frac{5\\pi}{4\\sqrt2}\\right)=\\frac3{4\\sqrt2}(5\\pi-4)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate y with respect to x by the product rule, then multiply by dx/dt.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dy}{dx}=\\cos4x-4x\\sin4x\\\\&amp;\\frac{dy}{dt}=3(\\cos4x-4x\\sin4x)\\\\&amp;x=5\\pi/16\\\\&amp;\\Rightarrow \\frac{dy}{dt}\\\\&amp;=3\\left(-\\frac1{\\sqrt2}+\\frac{5\\pi}{4\\sqrt2}\\right)\\\\&amp;=\\frac3{4\\sqrt2}(5\\pi-4)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.10/q3",
+      "status": "worked",
+      "method": "Differentiate e²ˣx⁻², then multiply by the given rate of x.",
+      "steps": [
+        {
+          "latex": "\\frac{dy}{dx}=2e^{2x}x^{-2}-2e^{2x}x^{-3}=\\frac{2e^{2x}(x-1)}{x^3};\\quad\\frac{dy}{dt}=-\\frac12\\frac{2e^{2x}(x-1)}{x^3};\\quad x=4\\Rightarrow\\frac{dy}{dt}=-3e^8/64",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate e²ˣx⁻², then multiply by the given rate of x.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dy}{dx}=2e^{2x}x^{-2}-2e^{2x}x^{-3}=\\frac{2e^{2x}(x-1)}{x^3}\\\\&amp;\\frac{dy}{dt}=-\\frac12\\frac{2e^{2x}(x-1)}{x^3}\\\\&amp;x=4\\\\&amp;\\Rightarrow \\frac{dy}{dt}=-3e^8/64\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.10/q4",
+      "status": "worked",
+      "method": "Use the power rule, then the chain rule for the rate in time.",
+      "steps": [
+        {
+          "latex": "\\frac{dV}{dr}=\\frac43\\pi\\cdot3r^2=4\\pi r^2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{dV}{dt}=\\frac{dV}{dr}\\frac{dr}{dt}=4\\pi r^2\\cdot3=12\\pi r^2\\ \\mathrm{cm^3\\,s^{-1}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the power rule, then the chain rule for the rate in time.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{dV}{dr}=\\frac43\\pi\\cdot3r^2=4\\pi r^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{dV}{dt}\\\\&amp;=\\frac{dV}{dr}\\frac{dr}{dt}\\\\&amp;=4\\pi r^2\\cdot3\\\\&amp;=12\\pi r^2\\ \\mathrm{cm^3\\,s^{-1}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.10/q5",
+      "status": "worked",
+      "method": "Translate proportionality into a constant multiplier; the sign determines growth or decline.",
+      "steps": [
+        {
+          "latex": "\\frac{dP}{dt}=kP,\\quad k>0",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{dP}{dt}=-kP,\\quad k>0",
+          "explanation": "Equivalently keep dP/dt=kP and take k<0 for decline."
+        }
+      ],
+      "solutionHtml": "<p>Translate proportionality into a constant multiplier; the sign determines growth or decline.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\frac{dP}{dt}=kP,\\quad k&gt;0\" data-display=\"true\" class=\"equation\"></span></li><li><p>Equivalently keep dP/dt=kP and take k&lt;0 for decline.</p><span data-math=\"\\frac{dP}{dt}=-kP,\\quad k&gt;0\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.10/q6",
+      "status": "worked",
+      "method": "A decay rate is negative, with magnitude proportional to √I.",
+      "steps": [
+        {
+          "latex": "\\frac{dI}{dt}=-k\\sqrt I,\\quad k>0,\\quad I\\ge0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>A decay rate is negative, with magnitude proportional to √I.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dI}{dt}=-k\\sqrt I,\\quad k&gt;0,\\quad I\\ge0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.10/q7",
+      "status": "worked",
+      "method": "Substitute t=7 for value; differentiate the exponential before substituting t=10 for the rate.",
+      "steps": [
+        {
+          "latex": "V(7)=23500e^{-1.75}\\approx\\pounds4083.69",
+          "explanation": ""
+        },
+        {
+          "latex": "V^{\\prime}(t)=23500(-0.25)e^{-0.25t}=-5875e^{-0.25t};\\quad V^{\\prime}(10)=-5875e^{-2.5}\\approx-\\pounds482.25\\text{ per year}",
+          "explanation": "The negative sign means the value is decreasing."
+        }
+      ],
+      "solutionHtml": "<p>Substitute t=7 for value; differentiate the exponential before substituting t=10 for the rate.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"V(7)=23500e^{-1.75}\\approx\\pounds4083.69\" data-display=\"true\" class=\"equation\"></span></li><li><p>The negative sign means the value is decreasing.</p><span data-math=\"\\begin{aligned}&amp;V^{\\prime}(t)=23500(-0.25)e^{-0.25t}=-5875e^{-0.25t}\\\\&amp;V^{\\prime}(10)=-5875e^{-2.5}\\approx-\\pounds482.25\\text{ per year}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/9.10/q8",
+      "status": "worked",
+      "method": "Eliminate the radius using surface area, then apply the chain rule with the surface-area rate.",
+      "steps": [
+        {
+          "latex": "r=\\sqrt{S/(4\\pi)};\\quad V=\\frac43\\pi\\left(\\frac S{4\\pi}\\right)^{3/2}=\\frac1{6\\sqrt\\pi}S^{3/2}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{dV}{dS}=\\frac1{6\\sqrt\\pi}\\frac32S^{1/2}=\\frac14\\sqrt{S/\\pi};\\quad\\frac{dV}{dt}=\\frac14\\sqrt{S/\\pi}\\cdot4=\\sqrt{S/\\pi}",
+          "explanation": "For a surface-area rate, the intended units of the stated 4 are cm²/s, giving a volume rate in cm³/s. The printed cm/s would instead be a length rate."
+        }
+      ],
+      "solutionHtml": "<p>Eliminate the radius using surface area, then apply the chain rule with the surface-area rate.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;r=\\sqrt{S/(4\\pi)}\\\\&amp;V=\\frac43\\pi\\left(\\frac S{4\\pi}\\right)^{3/2}=\\frac1{6\\sqrt\\pi}S^{3/2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>For a surface-area rate, the intended units of the stated 4 are cm²/s, giving a volume rate in cm³/s. The printed cm/s would instead be a length rate.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dV}{dS}=\\frac1{6\\sqrt\\pi}\\frac32S^{1/2}=\\frac14\\sqrt{S/\\pi}\\\\&amp;\\frac{dV}{dt}=\\frac14\\sqrt{S/\\pi}\\cdot4=\\sqrt{S/\\pi}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/problem-a/qbronze",
+      "status": "worked",
+      "method": "Differentiate twice, factor, and inspect the sign of each factor on the proposed interval.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=4x^3-20x^2+28x+6;\\quad y^{\\prime\\prime}=12x^2-40x+28=4(x-1)(3x-7)",
+          "explanation": ""
+        },
+        {
+          "latex": "1\\le x\\le7/3\\Rightarrow x-1\\ge0,\\quad3x-7\\le0;\\quad y^{\\prime\\prime}\\le0",
+          "explanation": "Therefore the curve is concave on [1,7/3]."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate twice, factor, and inspect the sign of each factor on the proposed interval.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=4x^3-20x^2+28x+6\\\\&amp;y^{\\prime\\prime}=12x^2-40x+28=4(x-1)(3x-7)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Therefore the curve is concave on [1,7/3].</p><span data-math=\"\\begin{aligned}&amp;1\\le x\\le7/3\\\\&amp;\\Rightarrow x-1\\ge0,\\quad3x-7\\le0\\\\&amp;y^{\\prime\\prime}\\le0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/problem-a/qsilver",
+      "status": "worked",
+      "method": "Use the product rule twice, remembering that (ln x²)′=2/x for x>0.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=12x^2\\ln x^2+8x^2;\\quad y^{\\prime\\prime}=24x\\ln x^2+24x+16x=8x(3\\ln x^2+5);\\quad x>0\\Rightarrow y^{\\prime\\prime}\\ge0\\Longleftrightarrow6\\ln x+5\\ge0\\Longleftrightarrow x\\ge e^{-5/6}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the product rule twice, remembering that (ln x²)′=2/x for x&gt;0.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=12x^2\\ln x^2+8x^2\\\\&amp;y^{\\prime\\prime}=24x\\ln x^2+24x+16x=8x(3\\ln x^2+5)\\\\&amp;x&gt;0\\\\&amp;\\Rightarrow y^{\\prime\\prime}\\ge0\\Longleftrightarrow6\\ln x+5\\ge0\\Longleftrightarrow x\\ge e^{-5/6}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/problem-a/qgold",
+      "status": "worked",
+      "method": "Convexity for all real x requires the quadratic f″(x) to be nonnegative everywhere.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=4ax^3+6x^2+6x-10;\\quad f^{\\prime\\prime}(x)=12ax^2+12x+6;\\quad a>0,\\quad\\Delta=12^2-4(12a)(6)\\le0;\\quad144-288a\\le0\\Rightarrow a\\ge1/2",
+          "explanation": "If a<0 the second derivative is negative for large |x|; if a=0 it is a nonconstant linear function and changes sign. Thus a≥1/2 is necessary and sufficient, including equality."
+        }
+      ],
+      "solutionHtml": "<p>Convexity for all real x requires the quadratic f″(x) to be nonnegative everywhere.</p><p>If a&lt;0 the second derivative is negative for large |x|; if a=0 it is a nonconstant linear function and changes sign. Thus a≥1/2 is necessary and sufficient, including equality.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=4ax^3+6x^2+6x-10\\\\&amp;f^{\\prime\\prime}(x)=12ax^2+12x+6\\\\&amp;a&gt;0,\\quad\\Delta=12^2-4(12a)(6)\\le0\\\\&amp;144-288a\\le0\\\\&amp;\\Rightarrow a\\ge1/2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/problem-b/qbronze",
+      "status": "worked",
+      "method": "Differentiate both sides using the product rule, then find the point and normal gradient.",
+      "steps": [
+        {
+          "latex": "2x+y^{\\prime}=-(y-1)+(2-x)y^{\\prime};\\quad(x-1)y^{\\prime}=1-y-2x;\\quad y^{\\prime}=\\frac{2x+y-1}{1-x}",
+          "explanation": ""
+        },
+        {
+          "latex": "x=0\\Rightarrow y=2(y-1)\\Rightarrow y=2;\\quad m_T=1,\\quad m_N=-1;\\quad y-2=-x\\Rightarrow y=-x+2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate both sides using the product rule, then find the point and normal gradient.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2x+y^{\\prime}=-(y-1)+(2-x)y^{\\prime}\\\\&amp;(x-1)y^{\\prime}=1-y-2x\\\\&amp;y^{\\prime}=\\frac{2x+y-1}{1-x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x=0\\\\&amp;\\Rightarrow y=2(y-1)\\\\&amp;\\Rightarrow y=2\\\\&amp;m_T=1,\\quad m_N=-1\\\\&amp;y-2=-x\\\\&amp;\\Rightarrow y=-x+2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/problem-b/qsilver",
+      "status": "worked",
+      "method": "Eliminate t to identify the circle; the normal is its radius through the upper y-axis intersection B.",
+      "steps": [
+        {
+          "latex": "(x+1)^2+(y-3)^2=4(\\sin^2t+\\cos^2t)=4;\\quad\\text{centre }(-1,3),\\quad r=2",
+          "explanation": ""
+        },
+        {
+          "latex": "x=0\\Rightarrow\\sin t=1/2\\Rightarrow t=\\pi/6,5\\pi/6;\\quad y=3\\pm\\sqrt3;\\quad B=(0,3+\\sqrt3)",
+          "explanation": "The diagram labels the upper intersection as B."
+        },
+        {
+          "latex": "m_N=\\frac{(3+\\sqrt3)-3}{0-(-1)}=\\sqrt3;\\quad l_1:y=\\sqrt3x+3+\\sqrt3;\\quad A=(-1-\\sqrt3,0);\\quad\\text{area}=\\frac12(1+\\sqrt3)(3+\\sqrt3)=3+2\\sqrt3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Eliminate t to identify the circle; the normal is its radius through the upper y-axis intersection B.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;(x+1)^2+(y-3)^2=4(\\sin^2t+\\cos^2t)=4\\\\&amp;\\text{centre }(-1,3),\\quad r=2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The diagram labels the upper intersection as B.</p><span data-math=\"\\begin{aligned}&amp;x=0\\\\&amp;\\Rightarrow \\sin t=1/2\\\\&amp;\\Rightarrow t=\\pi/6,5\\pi/6\\\\&amp;y=3\\pm\\sqrt3\\\\&amp;B=(0,3+\\sqrt3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;m_N=\\frac{(3+\\sqrt3)-3}{0-(-1)}=\\sqrt3\\\\&amp;l_1:y=\\sqrt3x+3+\\sqrt3\\\\&amp;A=(-1-\\sqrt3,0)\\\\&amp;\\text{area}=\\frac12(1+\\sqrt3)(3+\\sqrt3)=3+2\\sqrt3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/problem-b/qgold",
+      "status": "worked",
+      "method": "Set the implicit derivative equal to 1, then use the Pythagorean identity to solve exactly.",
+      "steps": [
+        {
+          "latex": "-\\sin y\\,y^{\\prime}+\\cos x=0\\Rightarrow y^{\\prime}=\\frac{\\cos x}{\\sin y};\\quad y^{\\prime}=1\\Rightarrow\\sin y=\\cos x;\\quad\\cos y=1-\\sin x;\\quad(1-\\sin x)^2+\\cos^2x=1\\Rightarrow2-2\\sin x=1\\Rightarrow\\sin x=1/2;\\quad(x,y)=(\\pi/6,\\pi/3),(5\\pi/6,-\\pi/3);\\quad y-\\pi/3=x-\\pi/6\\Rightarrow y=x+\\pi/6;\\quad y+\\pi/3=x-5\\pi/6\\Rightarrow y=x-7\\pi/6",
+          "explanation": "The stated y-interval fixes the sign and value of y in each case, and sin y≠0 at both points, so their slopes are well defined."
+        }
+      ],
+      "solutionHtml": "<p>Set the implicit derivative equal to 1, then use the Pythagorean identity to solve exactly.</p><p>The stated y-interval fixes the sign and value of y in each case, and sin y≠0 at both points, so their slopes are well defined.</p><span data-math=\"\\begin{aligned}&amp;-\\sin y\\,y^{\\prime}+\\cos x=0\\\\&amp;\\Rightarrow y^{\\prime}=\\frac{\\cos x}{\\sin y}\\\\&amp;y^{\\prime}=1\\\\&amp;\\Rightarrow \\sin y=\\cos x\\\\&amp;\\cos y=1-\\sin x\\\\&amp;(1-\\sin x)^2+\\cos^2x=1\\\\&amp;\\Rightarrow 2-2\\sin x=1\\\\&amp;\\Rightarrow \\sin x=1/2\\\\&amp;(x,y)=(\\pi/6,\\pi/3),(5\\pi/6,-\\pi/3)\\\\&amp;y-\\pi/3=x-\\pi/6\\\\&amp;\\Rightarrow y=x+\\pi/6\\\\&amp;y+\\pi/3=x-5\\pi/6\\\\&amp;\\Rightarrow y=x-7\\pi/6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/exam/q4",
+      "status": "worked",
+      "method": "Differentiate term by term and use the gradient at x=0.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=4x+2-e^x",
+          "explanation": ""
+        },
+        {
+          "latex": "m=2-1=1;\\quad y+1=x\\Rightarrow y=x-1",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate term by term and use the gradient at x=0.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"y^{\\prime}=4x+2-e^x\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"m=2-1=1;\\quad y+1=x\\Rightarrow y=x-1\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/exam/q7",
+      "status": "worked",
+      "method": "Differentiate x as a quotient in y, then take the reciprocal where dx/dy is nonzero.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{dy}=\\frac{(1/y)y-\\ln y}{y^2}=\\frac{1-\\ln y}{y^2};\\quad\\frac{dy}{dx}=\\frac{y^2}{1-\\ln y},\\quad y>0,\\ y\\ne e",
+          "explanation": ""
+        },
+        {
+          "latex": "y=e^{-4}\\Rightarrow\\frac{dy}{dx}=\\frac{e^{-8}}{1+4}=\\frac1{5e^8}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate x as a quotient in y, then take the reciprocal where dx/dy is nonzero.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{dy}=\\frac{(1/y)y-\\ln y}{y^2}=\\frac{1-\\ln y}{y^2}\\\\&amp;\\frac{dy}{dx}=\\frac{y^2}{1-\\ln y},\\quad y&gt;0,\\ y\\ne e\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;y=e^{-4}\\\\&amp;\\Rightarrow \\frac{dy}{dx}=\\frac{e^{-8}}{1+4}=\\frac1{5e^8}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/exam/q28",
+      "status": "worked",
+      "method": "Differentiate twice using the chain and product rules; factor the first derivative and test the second at the requested point.",
+      "steps": [
+        {
+          "latex": "y^{\\prime}=-2\\sin2x-4\\sin2x\\cos2x;\\quad y^{\\prime\\prime}=-4\\cos2x-8(\\cos^22x-\\sin^22x)=-4\\cos2x-8\\cos4x",
+          "explanation": ""
+        },
+        {
+          "latex": "y^{\\prime}=-2\\sin2x(1+2\\cos2x)=0;\\quad\\sin2x=0\\text{ or }\\cos2x=-1/2;\\quad x=-\\pi,-2\\pi/3,-\\pi/2,-\\pi/3,0",
+          "explanation": ""
+        },
+        {
+          "latex": "y^{\\prime}(-\\pi/2)=0;\\quad y^{\\prime\\prime}(-\\pi/2)=-4(-1)-8(1)=-4<0",
+          "explanation": "The stationary point is a local maximum."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate twice using the chain and product rules; factor the first derivative and test the second at the requested point.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=-2\\sin2x-4\\sin2x\\cos2x\\\\&amp;y^{\\prime\\prime}=-4\\cos2x-8(\\cos^22x-\\sin^22x)=-4\\cos2x-8\\cos4x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;y^{\\prime}=-2\\sin2x(1+2\\cos2x)=0\\\\&amp;\\sin2x=0\\text{ or }\\cos2x=-1/2\\\\&amp;x=-\\pi,-2\\pi/3,-\\pi/2,-\\pi/3,0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The stationary point is a local maximum.</p><span data-math=\"\\begin{aligned}&amp;y^{\\prime}(-\\pi/2)=0\\\\&amp;y^{\\prime\\prime}(-\\pi/2)=-4(-1)-8(1)=-4&lt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/exam/q39",
+      "status": "worked",
+      "method": "Differentiate both powers with their exponent multipliers and use the point at x=−1.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=(\\ln2)2^x-(\\ln4)4^{-x};\\quad f(-1)=1/2+4=9/2;\\quad m=\\frac12\\ln2-4\\ln4=-\\frac{15}2\\ln2;\\quad y-9/2=-\\frac{15}2(\\ln2)(x+1);\\quad(15\\ln2)x+2y+15\\ln2-9=0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Differentiate both powers with their exponent multipliers and use the point at x=−1.</p><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=(\\ln2)2^x-(\\ln4)4^{-x}\\\\&amp;f(-1)=1/2+4=9/2\\\\&amp;m=\\frac12\\ln2-4\\ln4=-\\frac{15}2\\ln2\\\\&amp;y-9/2=-\\frac{15}2(\\ln2)(x+1)\\\\&amp;(15\\ln2)x+2y+15\\ln2-9=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/exam/q43",
+      "status": "worked",
+      "method": "Differentiate implicitly, then impose the specified gradient and simplify the resulting linear relation.",
+      "steps": [
+        {
+          "latex": "12x-12yy^{\\prime}-4y-4xy^{\\prime}=0;\\quad y^{\\prime}=\\frac{12x-4y}{12y+4x}=\\frac{3x-y}{3y+x}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac{3x-y}{3y+x}=-3/5\\Rightarrow15x-5y=-9y-3x\\Rightarrow9x+2y=0",
+          "explanation": "Substituting y=−9x/2 into the original curve gives x²=16/39, so there are two distinct real points on this line and the derivative denominator is nonzero at each."
+        }
+      ],
+      "solutionHtml": "<p>Differentiate implicitly, then impose the specified gradient and simplify the resulting linear relation.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;12x-12yy^{\\prime}-4y-4xy^{\\prime}=0\\\\&amp;y^{\\prime}=\\frac{12x-4y}{12y+4x}=\\frac{3x-y}{3y+x}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Substituting y=−9x/2 into the original curve gives x²=16/39, so there are two distinct real points on this line and the derivative denominator is nonzero at each.</p><span data-math=\"\\begin{aligned}&amp;\\frac{3x-y}{3y+x}=-3/5\\\\&amp;\\Rightarrow 15x-5y=-9y-3x\\\\&amp;\\Rightarrow 9x+2y=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/exam/q52",
+      "status": "worked",
+      "method": "Use the product rule twice and factor f″ to locate its zeros and test the sign near x=2/5.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=2x(2-5x)^5-25x^2(2-5x)^4;\\quad f^{\\prime\\prime}(x)=2(2-5x)^5-100x(2-5x)^4+500x^2(2-5x)^3=2(2-5x)^3(525x^2-120x+4)",
+          "explanation": ""
+        },
+        {
+          "latex": "2-5x=0\\Rightarrow x=2/5;\\quad525x^2-120x+4=0\\Rightarrow x=\\frac{120\\pm\\sqrt{120^2-4(525)(4)}}{1050}=\\frac{12\\pm2\\sqrt{15}}{105};\\quad x\\approx0.04,0.19,0.40",
+          "explanation": ""
+        },
+        {
+          "latex": "525(2/5)^2-120(2/5)+4=40>0;\\quad(2-5x)^3>0\\text{ for }x<2/5,\\quad(2-5x)^3<0\\text{ for }x>2/5",
+          "explanation": "The quadratic factor remains positive near 2/5, while the cubic factor changes sign. Hence f″ changes positive to negative and x=2/5 is an inflection point."
+        }
+      ],
+      "solutionHtml": "<p>Use the product rule twice and factor f″ to locate its zeros and test the sign near x=2/5.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=2x(2-5x)^5-25x^2(2-5x)^4\\\\&amp;f^{\\prime\\prime}(x)\\\\&amp;=2(2-5x)^5-100x(2-5x)^4+500x^2(2-5x)^3\\\\&amp;=2(2-5x)^3(525x^2-120x+4)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;2-5x=0\\\\&amp;\\Rightarrow x=2/5\\\\&amp;525x^2-120x+4=0\\\\&amp;\\Rightarrow x=\\frac{120\\pm\\sqrt{120^2-4(525)(4)}}{1050}=\\frac{12\\pm2\\sqrt{15}}{105}\\\\&amp;x\\approx0.04,0.19,0.40\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The quadratic factor remains positive near 2/5, while the cubic factor changes sign. Hence f″ changes positive to negative and x=2/5 is an inflection point.</p><span data-math=\"\\begin{aligned}&amp;525(2/5)^2-120(2/5)+4=40&gt;0\\\\&amp;(2-5x)^3&gt;0\\text{ for }x&lt;2/5,\\quad(2-5x)^3&lt;0\\text{ for }x&gt;2/5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/exam/q67",
+      "status": "worked",
+      "method": "Divide the parametric derivatives, evaluate P, then use the normal’s axis intercepts for the area.",
+      "steps": [
+        {
+          "latex": "\\frac{dx}{d\\theta}=-4\\sin2\\theta,\\quad\\frac{dy}{d\\theta}=\\frac12\\cos\\theta;\\quad\\frac{dy}{dx}=-\\frac{\\cos\\theta}{8\\sin2\\theta}=-\\frac1{16\\sin\\theta}=-\\frac1{16}\\operatorname{cosec}\\theta",
+          "explanation": "The simplified ratio is valid for interior parameter values and extends by its limit at θ=π/2; it is unbounded at θ=0."
+        },
+        {
+          "latex": "\\theta=\\pi/6\\Rightarrow P=(1,1/4),\\quad m_T=-1/8,\\quad m_N=8;\\quad y-1/4=8(x-1)\\Rightarrow32x-4y-31=0",
+          "explanation": ""
+        },
+        {
+          "latex": "y=0\\Rightarrow M=(31/32,0);\\quad x=0\\Rightarrow N=(0,-31/4);\\quad\\text{area}=\\frac12\\frac{31}{32}\\frac{31}4=\\frac{961}{256}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Divide the parametric derivatives, evaluate P, then use the normal’s axis intercepts for the area.</p><ol class=\"parts\" type=\"a\"><li><p>The simplified ratio is valid for interior parameter values and extends by its limit at θ=π/2; it is unbounded at θ=0.</p><span data-math=\"\\begin{aligned}&amp;\\frac{dx}{d\\theta}=-4\\sin2\\theta,\\quad\\frac{dy}{d\\theta}=\\frac12\\cos\\theta\\\\&amp;\\frac{dy}{dx}\\\\&amp;=-\\frac{\\cos\\theta}{8\\sin2\\theta}\\\\&amp;=-\\frac1{16\\sin\\theta}\\\\&amp;=-\\frac1{16}\\operatorname{cosec}\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\theta=\\pi/6\\\\&amp;\\Rightarrow P=(1,1/4),\\quad m_T=-1/8,\\quad m_N=8\\\\&amp;y-1/4=8(x-1)\\\\&amp;\\Rightarrow 32x-4y-31=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;y=0\\\\&amp;\\Rightarrow M=(31/32,0)\\\\&amp;x=0\\\\&amp;\\Rightarrow N=(0,-31/4)\\\\&amp;\\text{area}=\\frac12\\frac{31}{32}\\frac{31}4=\\frac{961}{256}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch9/exam/q77",
+      "status": "worked",
+      "method": "Use the product rule for the tangent slope and its negative reciprocal for the normal; the triangle height is the distance of P below the x-axis.",
+      "steps": [
+        {
+          "latex": "f^{\\prime}(x)=e^{-x}(2x-4)-e^{-x}(x^2-4x)=e^{-x}(-x^2+6x-4);\\quad f^{\\prime}(1)=1/e;\\quad y+3/e=(x-1)/e\\Rightarrow x-ey=4",
+          "explanation": ""
+        },
+        {
+          "latex": "A=(4,0);\\quad m_N=-e;\\quad y+3/e=-e(x-1);\\quad y=0\\Rightarrow B=(1-3/e^2,0);\\quad AB=3+3/e^2;\\quad\\text{area}=\\frac12(3+3/e^2)\\frac3e=\\frac{9(e^2+1)}{2e^3}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the product rule for the tangent slope and its negative reciprocal for the normal; the triangle height is the distance of P below the x-axis.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f^{\\prime}(x)=e^{-x}(2x-4)-e^{-x}(x^2-4x)=e^{-x}(-x^2+6x-4)\\\\&amp;f^{\\prime}(1)=1/e\\\\&amp;y+3/e=(x-1)/e\\\\&amp;\\Rightarrow x-ey=4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;A=(4,0)\\\\&amp;m_N=-e\\\\&amp;y+3/e=-e(x-1)\\\\&amp;y=0\\\\&amp;\\Rightarrow B=(1-3/e^2,0)\\\\&amp;AB=3+3/e^2\\\\&amp;\\text{area}=\\frac12(3+3/e^2)\\frac3e=\\frac{9(e^2+1)}{2e^3}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}
