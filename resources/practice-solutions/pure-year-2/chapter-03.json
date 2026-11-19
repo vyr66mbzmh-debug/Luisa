@@ -1,0 +1,1853 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-2",
+  "chapter": 3,
+  "sourcePdf": "resources/practice/pure-year-2/chapter-03.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.1/q1",
+      "status": "worked",
+      "method": "Substitute n=1,2,3,4; the first value is a and successive differences give d.",
+      "steps": [
+        {
+          "latex": "7,11,15,19; a=7,\\ d=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "4,1,-2,-5; a=4,\\ d=-3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\tfrac{17}2,9,\\tfrac{19}2,10; a=\\tfrac{17}2,\\ d=\\tfrac12",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-3,-1,1,3; a=-3,\\ d=2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Substitute n=1,2,3,4; the first value is a and successive differences give d.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"7,11,15,19\" data-display=\"true\"></span><span data-math=\"a=7,\\ d=4\" data-display=\"true\"></span></li><li><span data-math=\"4,1,-2,-5\" data-display=\"true\"></span><span data-math=\"a=4,\\ d=-3\" data-display=\"true\"></span></li><li><span data-math=\"\\tfrac{17}2,9,\\tfrac{19}2,10\" data-display=\"true\"></span><span data-math=\"a=\\tfrac{17}2,\\ d=\\tfrac12\" data-display=\"true\"></span></li><li><span data-math=\"-3,-1,1,3\" data-display=\"true\"></span><span data-math=\"a=-3,\\ d=2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.1/q2",
+      "status": "worked",
+      "method": "Use u_n=a+(n−1)d and substitute n=10.",
+      "steps": [
+        {
+          "latex": "u_n=a+(n-1)d=2+(n-1)(4);u_{10}=2+9(4)=38",
+          "explanation": "Use the first term as n=1.",
+          "graphs": []
+        },
+        {
+          "latex": "u_n=a+(n-1)d=5+(n-1)(-2);u_{10}=5+9(-2)=-13",
+          "explanation": "Use the first term as n=1.",
+          "graphs": []
+        },
+        {
+          "latex": "u_n=a+(n-1)d=-2+(n-1)(3);u_{10}=-2+9(3)=25",
+          "explanation": "Use the first term as n=1.",
+          "graphs": []
+        },
+        {
+          "latex": "u_n=a+(n-1)d=8 y+(n-1)(- 3 y);u_{10}=8 y+9(- 3 y)=- 19 y",
+          "explanation": "Use the first term as n=1.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use u_n=a+(n−1)d and substitute n=10.</p><ol type=\"a\" class=\"parts\"><li><p>Use the first term as n=1.</p><span data-math=\"u_n=a+(n-1)d=2+(n-1)(4)\" data-display=\"true\"></span><span data-math=\"u_{10}=2+9(4)=38\" data-display=\"true\"></span></li><li><p>Use the first term as n=1.</p><span data-math=\"u_n=a+(n-1)d=5+(n-1)(-2)\" data-display=\"true\"></span><span data-math=\"u_{10}=5+9(-2)=-13\" data-display=\"true\"></span></li><li><p>Use the first term as n=1.</p><span data-math=\"u_n=a+(n-1)d=-2+(n-1)(3)\" data-display=\"true\"></span><span data-math=\"u_{10}=-2+9(3)=25\" data-display=\"true\"></span></li><li><p>Use the first term as n=1.</p><span data-math=\"u_n=a+(n-1)d=8 y+(n-1)(- 3 y)\" data-display=\"true\"></span><span data-math=\"u_{10}=8 y+9(- 3 y)=- 19 y\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.1/q3",
+      "status": "worked",
+      "method": "Set the last term equal to a+(n−1)d and solve for the number of terms.",
+      "steps": [
+        {
+          "latex": "98=2+3(n-1);3n=99;n=33",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-5=75-2(n-1);2n=82;n=41",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "113=-3+4(n-1);4n=120;n=30",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "100k=-4k+2k(n-1);100=-4+2(n-1);n=53",
+          "explanation": "Assuming k≠0, cancel k. If k=0 the displayed values are all zero and do not determine the term count.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Set the last term equal to a+(n−1)d and solve for the number of terms.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"98=2+3(n-1)\" data-display=\"true\"></span><span data-math=\"3n=99\" data-display=\"true\"></span><span data-math=\"n=33\" data-display=\"true\"></span></li><li><span data-math=\"-5=75-2(n-1)\" data-display=\"true\"></span><span data-math=\"2n=82\" data-display=\"true\"></span><span data-math=\"n=41\" data-display=\"true\"></span></li><li><span data-math=\"113=-3+4(n-1)\" data-display=\"true\"></span><span data-math=\"4n=120\" data-display=\"true\"></span><span data-math=\"n=30\" data-display=\"true\"></span></li><li><p>Assuming k≠0, cancel k. If k=0 the displayed values are all zero and do not determine the term count.</p><span data-math=\"100k=-4k+2k(n-1)\" data-display=\"true\"></span><span data-math=\"100=-4+2(n-1)\" data-display=\"true\"></span><span data-math=\"n=53\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.1/q4",
+      "status": "worked",
+      "method": "Subtract the two equations for the known terms.",
+      "steps": [
+        {
+          "latex": "a+3d=17;a+9d=47;6d=30\\Rightarrow d=5;a=17-15=2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Subtract the two equations for the known terms.</p><span data-math=\"a+3d=17\" data-display=\"true\"></span><span data-math=\"a+9d=47\" data-display=\"true\"></span><span data-math=\"6d=30\\Rightarrow d=5\" data-display=\"true\"></span><span data-math=\"a=17-15=2\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.1/q5",
+      "status": "worked",
+      "method": "Apply the arithmetic term formula.",
+      "steps": [
+        {
+          "latex": "u_{25}=20+24(-\\tfrac12)=8",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "0=20-\\tfrac12(r-1);r-1=40;r=41",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Apply the arithmetic term formula.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_{25}=20+24(-\\tfrac12)=8\" data-display=\"true\"></span></li><li><span data-math=\"0=20-\\tfrac12(r-1)\" data-display=\"true\"></span><span data-math=\"r-1=40\" data-display=\"true\"></span><span data-math=\"r=41\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.1/q6",
+      "status": "worked",
+      "method": "Evaluate the formula for the first three positive integer inputs, then compare consecutive values.",
+      "steps": [
+        {
+          "latex": "u_1=-1,\\quad u_2=2,\\quad u_3=5",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "d=u_2-u_1=2-(-1)=3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Evaluate the formula for the first three positive integer inputs, then compare consecutive values.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_1=-1,\\quad u_2=2,\\quad u_3=5\" data-display=\"true\"></span></li><li><span data-math=\"d=u_2-u_1=2-(-1)=3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.1/q7",
+      "status": "worked",
+      "method": "Subtract the known term equations to eliminate a, then solve the target term equation.",
+      "steps": [
+        {
+          "latex": "a+3d=-2;a+8d=-22;5d=-20\\Rightarrow d=-4;a=-2+12=10",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-54=10-4(n-1);4(n-1)=64;n=17",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Subtract the known term equations to eliminate a, then solve the target term equation.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a+3d=-2\" data-display=\"true\"></span><span data-math=\"a+8d=-22\" data-display=\"true\"></span><span data-math=\"5d=-20\\Rightarrow d=-4\" data-display=\"true\"></span><span data-math=\"a=-2+12=10\" data-display=\"true\"></span></li><li><span data-math=\"-54=10-4(n-1)\" data-display=\"true\"></span><span data-math=\"4(n-1)=64\" data-display=\"true\"></span><span data-math=\"n=17\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.1/q8",
+      "status": "worked",
+      "method": "Consecutive arithmetic terms have equal differences.",
+      "steps": [
+        {
+          "latex": "b=a+d,\\quad c=a+2d;\\frac{a+c}2=\\frac{2a+2d}2=a+d=b",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2p^2=15-p;2p^2+p-15=0;(2p-5)(p+3)=0;p=\\frac52\\text{ or }-3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Consecutive arithmetic terms have equal differences.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"b=a+d,\\quad c=a+2d\" data-display=\"true\"></span><span data-math=\"\\frac{a+c}2=\\frac{2a+2d}2=a+d=b\" data-display=\"true\"></span></li><li><span data-math=\"2p^2=15-p\" data-display=\"true\"></span><span data-math=\"2p^2+p-15=0\" data-display=\"true\"></span><span data-math=\"(2p-5)(p+3)=0\" data-display=\"true\"></span><span data-math=\"p=\\frac52\\text{ or }-3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.1/q9",
+      "status": "worked",
+      "method": "Equate successive differences, then use the resulting first term and common difference.",
+      "steps": [
+        {
+          "latex": "(4k-3)-k=(3k+10)-(4k-3);3k-3=13-k;k=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=4;d=13-4=9;u_{50}=4+49(9)=445",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Equate successive differences, then use the resulting first term and common difference.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"(4k-3)-k=(3k+10)-(4k-3)\" data-display=\"true\"></span><span data-math=\"3k-3=13-k\" data-display=\"true\"></span><span data-math=\"k=4\" data-display=\"true\"></span></li><li><span data-math=\"a=4\" data-display=\"true\"></span><span data-math=\"d=13-4=9\" data-display=\"true\"></span><span data-math=\"u_{50}=4+49(9)=445\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q1",
+      "status": "worked",
+      "method": "Use S_n=n[2a+(n−1)d]/2 for each arithmetic series.",
+      "steps": [
+        {
+          "latex": "a=5,\\quad d=4,\\quad n=20;S_n=\\frac n2[2a+(n-1)d];S_{20}=\\frac{20}2[2(5)+19(4)]=860",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=3,\\quad d=5,\\quad n=15;S_n=\\frac n2[2a+(n-1)d];S_{15}=\\frac{15}2[2(3)+14(5)]=570",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=12,\\quad d=-2,\\quad n=40;S_n=\\frac n2[2a+(n-1)d];S_{40}=\\frac{40}2[2(12)+39(-2)]=-1080",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=8,\\quad d=- \\frac{1}{2},\\quad n=25;S_n=\\frac n2[2a+(n-1)d];S_{25}=\\frac{25}2[2(8)+24(- \\frac{1}{2})]=50",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use S_n=n[2a+(n−1)d]/2 for each arithmetic series.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a=5,\\quad d=4,\\quad n=20\" data-display=\"true\"></span><span data-math=\"S_n=\\frac n2[2a+(n-1)d]\" data-display=\"true\"></span><span data-math=\"S_{20}=\\frac{20}2[2(5)+19(4)]=860\" data-display=\"true\"></span></li><li><span data-math=\"a=3,\\quad d=5,\\quad n=15\" data-display=\"true\"></span><span data-math=\"S_n=\\frac n2[2a+(n-1)d]\" data-display=\"true\"></span><span data-math=\"S_{15}=\\frac{15}2[2(3)+14(5)]=570\" data-display=\"true\"></span></li><li><span data-math=\"a=12,\\quad d=-2,\\quad n=40\" data-display=\"true\"></span><span data-math=\"S_n=\\frac n2[2a+(n-1)d]\" data-display=\"true\"></span><span data-math=\"S_{40}=\\frac{40}2[2(12)+39(-2)]=-1080\" data-display=\"true\"></span></li><li><span data-math=\"a=8,\\quad d=- \\frac{1}{2},\\quad n=25\" data-display=\"true\"></span><span data-math=\"S_n=\\frac n2[2a+(n-1)d]\" data-display=\"true\"></span><span data-math=\"S_{25}=\\frac{25}2[2(8)+24(- \\frac{1}{2})]=50\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q2",
+      "status": "worked",
+      "method": "Find the number of terms from the last term, then use S_n=n(a+l)/2.",
+      "steps": [
+        {
+          "latex": "51=6+3(n-1)\\Rightarrow n=16;S=\\frac{16}2(6+51)=456",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-103=52-5(n-1)\\Rightarrow n=32;S=\\frac{32}2(52-103)=-816",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "175=-2+3(n-1)\\Rightarrow n=60;S=\\frac{60}2(-2+175)=5190",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "0=120-8(n-1)\\Rightarrow n=16;S=\\frac{16}2(120+0)=960",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the number of terms from the last term, then use S_n=n(a+l)/2.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"51=6+3(n-1)\\Rightarrow n=16\" data-display=\"true\"></span><span data-math=\"S=\\frac{16}2(6+51)=456\" data-display=\"true\"></span></li><li><span data-math=\"-103=52-5(n-1)\\Rightarrow n=32\" data-display=\"true\"></span><span data-math=\"S=\\frac{32}2(52-103)=-816\" data-display=\"true\"></span></li><li><span data-math=\"175=-2+3(n-1)\\Rightarrow n=60\" data-display=\"true\"></span><span data-math=\"S=\\frac{60}2(-2+175)=5190\" data-display=\"true\"></span></li><li><span data-math=\"0=120-8(n-1)\\Rightarrow n=16\" data-display=\"true\"></span><span data-math=\"S=\\frac{16}2(120+0)=960\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q3",
+      "status": "worked",
+      "method": "Pair the same sum written forwards and backwards.",
+      "steps": [
+        {
+          "latex": "S=1+2+\\cdots+60;S=60+59+\\cdots+1;2S=\\underbrace{61+61+\\cdots+61}_{60\\text{ terms}}=60\\cdot61;S=1830",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Pair the same sum written forwards and backwards.</p><span data-math=\"S=1+2+\\cdots+60\" data-display=\"true\"></span><span data-math=\"S=60+59+\\cdots+1\" data-display=\"true\"></span><span data-math=\"2S=\\underbrace{61+61+\\cdots+61}_{60\\text{ terms}}=60\\cdot61\" data-display=\"true\"></span><span data-math=\"S=1830\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q4",
+      "status": "worked",
+      "method": "The terms are positive, so the partial sums increase. Check the first integer crossing the bound.",
+      "steps": [
+        {
+          "latex": "S_n=\\frac n2[10+3(n-1)]=\\frac{n(3n+7)}2;S_{24}=948<1000;S_{25}=1025>1000; n_{\\min}=25",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The terms are positive, so the partial sums increase. Check the first integer crossing the bound.</p><span data-math=\"S_n=\\frac n2[10+3(n-1)]=\\frac{n(3n+7)}2\" data-display=\"true\"></span><span data-math=\"S_{24}=948&lt;1000\" data-display=\"true\"></span><span data-math=\"S_{25}=1025&gt;1000\" data-display=\"true\"></span><span data-math=\"n_{\\min}=25\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q5",
+      "status": "worked",
+      "method": "Read the first terms from the term formula and substitute into the arithmetic-sum formula.",
+      "steps": [
+        {
+          "latex": "u_1=-1,\\quad u_2=3,\\quad u_3=7",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "d=3-(-1)=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_n=\\frac n2(u_1+u_n);=\\frac n2(-1+4n-5)=n(2n-3)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Read the first terms from the term formula and substitute into the arithmetic-sum formula.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_1=-1,\\quad u_2=3,\\quad u_3=7\" data-display=\"true\"></span></li><li><span data-math=\"d=3-(-1)=4\" data-display=\"true\"></span></li><li><span data-math=\"S_n=\\frac n2(u_1+u_n)\" data-display=\"true\"></span><span data-math=\"=\\frac n2(-1+4n-5)=n(2n-3)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q6",
+      "status": "worked",
+      "method": "Derive the sum by pairing, without invoking the arithmetic-series formula.",
+      "steps": [
+        {
+          "latex": "S=1+2+\\cdots+n;S=n+(n-1)+\\cdots+1;2S=\\underbrace{(n+1)+\\cdots+(n+1)}_{n\\text{ terms}};S=\\frac{n(n+1)}2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2+4+\\cdots+200=2(1+2+\\cdots+100);=2\\frac{100\\cdot101}2=10100",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Derive the sum by pairing, without invoking the arithmetic-series formula.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"S=1+2+\\cdots+n\" data-display=\"true\"></span><span data-math=\"S=n+(n-1)+\\cdots+1\" data-display=\"true\"></span><span data-math=\"2S=\\underbrace{(n+1)+\\cdots+(n+1)}_{n\\text{ terms}}\" data-display=\"true\"></span><span data-math=\"S=\\frac{n(n+1)}2\" data-display=\"true\"></span></li><li><span data-math=\"2+4+\\cdots+200=2(1+2+\\cdots+100)\" data-display=\"true\"></span><span data-math=\"=2\\frac{100\\cdot101}2=10100\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q7",
+      "status": "worked",
+      "method": "Use the difference of the known terms to find d and then a. Reject non-integer term counts.",
+      "steps": [
+        {
+          "latex": "a+3d=103;a+11d=79;8d=-24\\Rightarrow d=-3;a=112;u_{25}=112-24(3)=40",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac n2[224-3(n-1)]=1925;3n^2-227n+3850=0;(n-50)(3n-77)=0;n=50\\text{ or }\\tfrac{77}3;n\\in\\mathbb N\\Rightarrow n=50",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the difference of the known terms to find d and then a. Reject non-integer term counts.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a+3d=103\" data-display=\"true\"></span><span data-math=\"a+11d=79\" data-display=\"true\"></span><span data-math=\"8d=-24\\Rightarrow d=-3\" data-display=\"true\"></span><span data-math=\"a=112\" data-display=\"true\"></span><span data-math=\"u_{25}=112-24(3)=40\" data-display=\"true\"></span></li><li><span data-math=\"\\frac n2[224-3(n-1)]=1925\" data-display=\"true\"></span><span data-math=\"3n^2-227n+3850=0\" data-display=\"true\"></span><span data-math=\"(n-50)(3n-77)=0\" data-display=\"true\"></span><span data-math=\"n=50\\text{ or }\\tfrac{77}3\" data-display=\"true\"></span><span data-math=\"n\\in\\mathbb N\\Rightarrow n=50\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q8",
+      "status": "worked",
+      "method": "Write the sum and term conditions as simultaneous linear equations.",
+      "steps": [
+        {
+          "latex": "366=S_{12}=\\frac{12}2(2a+11d);12a+66d=366",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u_8=a+7d=38",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2a+11d=61;2a+14d=76;3d=15\\Rightarrow d=5;a=38-35=3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Write the sum and term conditions as simultaneous linear equations.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"366=S_{12}=\\frac{12}2(2a+11d)\" data-display=\"true\"></span><span data-math=\"12a+66d=366\" data-display=\"true\"></span></li><li><span data-math=\"u_8=a+7d=38\" data-display=\"true\"></span></li><li><span data-math=\"2a+11d=61\" data-display=\"true\"></span><span data-math=\"2a+14d=76\" data-display=\"true\"></span><span data-math=\"3d=15\\Rightarrow d=5\" data-display=\"true\"></span><span data-math=\"a=38-35=3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q9",
+      "status": "worked",
+      "method": "Express each named term in a,d, then solve using the sum condition.",
+      "steps": [
+        {
+          "latex": "u_2+u_6=(a+d)+(a+5d)=14;2a+6d=14\\Rightarrow a+3d=7",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-120=10(2a+19d)\\Rightarrow2a+19d=-12;2a+6d=14;13d=-26\\Rightarrow d=-2;a=13",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Express each named term in a,d, then solve using the sum condition.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_2+u_6=(a+d)+(a+5d)=14\" data-display=\"true\"></span><span data-math=\"2a+6d=14\\Rightarrow a+3d=7\" data-display=\"true\"></span></li><li><span data-math=\"-120=10(2a+19d)\\Rightarrow2a+19d=-12\" data-display=\"true\"></span><span data-math=\"2a+6d=14\" data-display=\"true\"></span><span data-math=\"13d=-26\\Rightarrow d=-2\" data-display=\"true\"></span><span data-math=\"a=13\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q10",
+      "status": "worked",
+      "method": "Subtract the two term equations and then solve the quadratic for the term count.",
+      "steps": [
+        {
+          "latex": "a+14d=11;a+19d=\\frac{37}2;5d=\\frac{15}2\\Rightarrow d=\\frac32;a=11-21=-10;u_2=-10+\\frac32=-\\frac{17}2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2055=\\frac n2[-20+\\tfrac32(n-1)];3n^2-43n-8220=0;(n-60)(3n+137)=0;n>0\\Rightarrow n=60",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Subtract the two term equations and then solve the quadratic for the term count.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a+14d=11\" data-display=\"true\"></span><span data-math=\"a+19d=\\frac{37}2\" data-display=\"true\"></span><span data-math=\"5d=\\frac{15}2\\Rightarrow d=\\frac32\" data-display=\"true\"></span><span data-math=\"a=11-21=-10\" data-display=\"true\"></span><span data-math=\"u_2=-10+\\frac32=-\\frac{17}2\" data-display=\"true\"></span></li><li><span data-math=\"2055=\\frac n2[-20+\\tfrac32(n-1)]\" data-display=\"true\"></span><span data-math=\"3n^2-43n-8220=0\" data-display=\"true\"></span><span data-math=\"(n-60)(3n+137)=0\" data-display=\"true\"></span><span data-math=\"n&gt;0\\Rightarrow n=60\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q11",
+      "status": "worked",
+      "method": "Equate the two successive differences. Remember the given terms start at the second term.",
+      "steps": [
+        {
+          "latex": "d=(4k+5)-3k=7k-(4k+5);k+5=3k-5\\Rightarrow k=5;d=10;u_2=15\\Rightarrow a=5;S_n=\\frac n2[10+10(n-1)]=5n^2=kn^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Equate the two successive differences. Remember the given terms start at the second term.</p><span data-math=\"d=(4k+5)-3k=7k-(4k+5)\" data-display=\"true\"></span><span data-math=\"k+5=3k-5\\Rightarrow k=5\" data-display=\"true\"></span><span data-math=\"d=10\" data-display=\"true\"></span><span data-math=\"u_2=15\\Rightarrow a=5\" data-display=\"true\"></span><span data-math=\"S_n=\\frac n2[10+10(n-1)]=5n^2=kn^2\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.2/q12",
+      "status": "worked",
+      "method": "Equate the differences, then work back two terms from the third term.",
+      "steps": [
+        {
+          "latex": "d=(4k+3)-3k=(6k-9)-(4k+3);k+3=2k-12\\Rightarrow k=15;d=18;a=3k-2d=45-36=9;S_n=\\frac n2[18+18(n-1)]=9n^2=(3n)^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Equate the differences, then work back two terms from the third term.</p><span data-math=\"d=(4k+3)-3k=(6k-9)-(4k+3)\" data-display=\"true\"></span><span data-math=\"k+3=2k-12\\Rightarrow k=15\" data-display=\"true\"></span><span data-math=\"d=18\" data-display=\"true\"></span><span data-math=\"a=3k-2d=45-36=9\" data-display=\"true\"></span><span data-math=\"S_n=\\frac n2[18+18(n-1)]=9n^2=(3n)^2\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.3/q1",
+      "status": "worked",
+      "method": "Divide the second term by the first to get r, then use u_n=ar^(n−1).",
+      "steps": [
+        {
+          "latex": "r=6/2=3;u_n=2\\cdot3^{n-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "r=30/60=\\frac12;u_n=60(\\tfrac12)^{n-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "r=-20/10=-2;u_n=10(-2)^{n-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "r=60/40=\\frac32;u_n=40(\\tfrac32)^{n-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide the second term by the first to get r, then use u_n=ar^(n−1).</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"r=6/2=3\" data-display=\"true\"></span><span data-math=\"u_n=2\\cdot3^{n-1}\" data-display=\"true\"></span></li><li><span data-math=\"r=30/60=\\frac12\" data-display=\"true\"></span><span data-math=\"u_n=60(\\tfrac12)^{n-1}\" data-display=\"true\"></span></li><li><span data-math=\"r=-20/10=-2\" data-display=\"true\"></span><span data-math=\"u_n=10(-2)^{n-1}\" data-display=\"true\"></span></li><li><span data-math=\"r=60/40=\\frac32\" data-display=\"true\"></span><span data-math=\"u_n=40(\\tfrac32)^{n-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.3/q2",
+      "status": "worked",
+      "method": "A negative common ratio alternates the signs. For the identity use a separate symbol t for the common ratio.",
+      "steps": [
+        {
+          "latex": "10,-20,40,-80,\\ldots;\\quad r=-2",
+          "explanation": "This is sequence (c) from question 1.",
+          "graphs": []
+        },
+        {
+          "latex": "q=pt,\\quad r=pt^2;pr=p(pt^2)=p^2t^2=(pt)^2=q^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>A negative common ratio alternates the signs. For the identity use a separate symbol t for the common ratio.</p><ol type=\"a\" class=\"parts\"><li><p>This is sequence (c) from question 1.</p><span data-math=\"10,-20,40,-80,\\ldots\" data-display=\"true\"></span><span data-math=\"\\quad r=-2\" data-display=\"true\"></span></li><li><span data-math=\"q=pt,\\quad r=pt^2\" data-display=\"true\"></span><span data-math=\"pr=p(pt^2)=p^2t^2=(pt)^2=q^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.3/q3",
+      "status": "worked",
+      "method": "Use the middle-term identity, then select the positive solution.",
+      "steps": [
+        {
+          "latex": "x^2=5(x+10);x^2-5x-50=0;(x-10)(x+5)=0;x>0\\Rightarrow x=10",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=5,\\quad r=10/5=2;u_{10}=5\\cdot2^9=2560",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the middle-term identity, then select the positive solution.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"x^2=5(x+10)\" data-display=\"true\"></span><span data-math=\"x^2-5x-50=0\" data-display=\"true\"></span><span data-math=\"(x-10)(x+5)=0\" data-display=\"true\"></span><span data-math=\"x&gt;0\\Rightarrow x=10\" data-display=\"true\"></span></li><li><span data-math=\"a=5,\\quad r=10/5=2\" data-display=\"true\"></span><span data-math=\"u_{10}=5\\cdot2^9=2560\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.3/q4",
+      "status": "worked",
+      "method": "Use u_n=4·3^(n−1) and compare consecutive terms around the threshold.",
+      "steps": [
+        {
+          "latex": "4\\cdot3^{n-1}>10^6;n>1+\\frac{\\ln250000}{\\ln3}\\approx12.31;u_{12}=708588<10^6;u_{13}=2125764>10^6;\\text{first qualifying term: }u_{13}=2125764",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use u_n=4·3^(n−1) and compare consecutive terms around the threshold.</p><span data-math=\"4\\cdot3^{n-1}&gt;10^6\" data-display=\"true\"></span><span data-math=\"n&gt;1+\\frac{\\ln250000}{\\ln3}\\approx12.31\" data-display=\"true\"></span><span data-math=\"u_{12}=708588&lt;10^6\" data-display=\"true\"></span><span data-math=\"u_{13}=2125764&gt;10^6\" data-display=\"true\"></span><span data-math=\"\\text{first qualifying term: }u_{13}=2125764\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.3/q5",
+      "status": "worked",
+      "method": "Divide the seventh-term equation by the fourth-term equation.",
+      "steps": [
+        {
+          "latex": "ar^3=16,\\quad ar^6=250;r^3=\\frac{250}{16}=\\frac{125}8;r=\\frac52",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=\\frac{16}{(5/2)^3}=\\frac{128}{125}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide the seventh-term equation by the fourth-term equation.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"ar^3=16,\\quad ar^6=250\" data-display=\"true\"></span><span data-math=\"r^3=\\frac{250}{16}=\\frac{125}8\" data-display=\"true\"></span><span data-math=\"r=\\frac52\" data-display=\"true\"></span></li><li><span data-math=\"a=\\frac{16}{(5/2)^3}=\\frac{128}{125}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.3/q6",
+      "status": "worked",
+      "method": "The square of the second term equals the product of the first and third; use k>0 to cancel k².",
+      "steps": [
+        {
+          "latex": "(3k)^2=(k+4)(2k^2);9k^2=2k^2(k+4);9=2k+8;k=\\frac12",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The square of the second term equals the product of the first and third; use k&gt;0 to cancel k².</p><span data-math=\"(3k)^2=(k+4)(2k^2)\" data-display=\"true\"></span><span data-math=\"9k^2=2k^2(k+4)\" data-display=\"true\"></span><span data-math=\"9=2k+8\" data-display=\"true\"></span><span data-math=\"k=\\frac12\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.3/q7",
+      "status": "worked",
+      "method": "Use the ratio of the sixth and third terms, then test the decay threshold with logarithms.",
+      "steps": [
+        {
+          "latex": "ar^2=108,\\quad ar^5=32;r^3=\\frac8{27}\\Rightarrow r=\\frac23;a=\\frac{108}{(2/3)^2}=243;u_{20}=243(\\tfrac23)^{19}\\approx0.110",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "243(\\tfrac23)^{n-1}<1;n>1+\\frac{\\ln(1/243)}{\\ln(2/3)}\\approx14.55;u_{14}\\approx1.25>1;u_{15}\\approx0.832<1;\\text{first term below 1: }u_{15}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the ratio of the sixth and third terms, then test the decay threshold with logarithms.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"ar^2=108,\\quad ar^5=32\" data-display=\"true\"></span><span data-math=\"r^3=\\frac8{27}\\Rightarrow r=\\frac23\" data-display=\"true\"></span><span data-math=\"a=\\frac{108}{(2/3)^2}=243\" data-display=\"true\"></span><span data-math=\"u_{20}=243(\\tfrac23)^{19}\\approx0.110\" data-display=\"true\"></span></li><li><span data-math=\"243(\\tfrac23)^{n-1}&lt;1\" data-display=\"true\"></span><span data-math=\"n&gt;1+\\frac{\\ln(1/243)}{\\ln(2/3)}\\approx14.55\" data-display=\"true\"></span><span data-math=\"u_{14}\\approx1.25&gt;1\" data-display=\"true\"></span><span data-math=\"u_{15}\\approx0.832&lt;1\" data-display=\"true\"></span><span data-math=\"\\text{first term below 1: }u_{15}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.3/q8",
+      "status": "worked",
+      "method": "Use the fifth-term condition, then take natural logarithms.",
+      "steps": [
+        {
+          "latex": "150r^4=50;r^4=\\frac13;4\\ln r=-\\ln3;4\\ln r+\\ln3=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "r=e^{-\\ln3/4}=3^{-1/4}\\approx0.760\\quad(3\\text{ s.f.})",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the fifth-term condition, then take natural logarithms.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"150r^4=50\" data-display=\"true\"></span><span data-math=\"r^4=\\frac13\" data-display=\"true\"></span><span data-math=\"4\\ln r=-\\ln3\" data-display=\"true\"></span><span data-math=\"4\\ln r+\\ln3=0\" data-display=\"true\"></span></li><li><span data-math=\"r=e^{-\\ln3/4}=3^{-1/4}\\approx0.760\\quad(3\\text{ s.f.})\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.3/q9",
+      "status": "worked",
+      "method": "Use the middle-term identity and select k>0, then locate the first term beyond the threshold.",
+      "steps": [
+        {
+          "latex": "(4k+3)^2=5k(6k+7);14k^2+11k-9=0;(2k-1)(7k+9)=0;k>0\\Rightarrow k=\\frac12",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=\\frac52,\\quad r=5/(5/2)=2;u_n=\\frac52\\,2^{n-1};u_{12}=5120<10000;u_{13}=10240>10000;\\text{first qualifying term: }u_{13}=10240",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the middle-term identity and select k&gt;0, then locate the first term beyond the threshold.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"(4k+3)^2=5k(6k+7)\" data-display=\"true\"></span><span data-math=\"14k^2+11k-9=0\" data-display=\"true\"></span><span data-math=\"(2k-1)(7k+9)=0\" data-display=\"true\"></span><span data-math=\"k&gt;0\\Rightarrow k=\\frac12\" data-display=\"true\"></span></li><li><span data-math=\"a=\\frac52,\\quad r=5/(5/2)=2\" data-display=\"true\"></span><span data-math=\"u_n=\\frac52\\,2^{n-1}\" data-display=\"true\"></span><span data-math=\"u_{12}=5120&lt;10000\" data-display=\"true\"></span><span data-math=\"u_{13}=10240&gt;10000\" data-display=\"true\"></span><span data-math=\"\\text{first qualifying term: }u_{13}=10240\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.4/q1",
+      "status": "worked",
+      "method": "Use S_n=a(1−r^n)/(1−r). Keep exact values until the final rounding.",
+      "steps": [
+        {
+          "latex": "a=2,\\quad r=3,\\quad n=10;S_n=\\frac{a(1-r^n)}{1-r};S_{10}=\\frac{2[1-(3)^{10}]}{1-(3)}=59048",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=48,\\quad r=\\frac{1}{2},\\quad n=12;S_n=\\frac{a(1-r^n)}{1-r};S_{12}=\\frac{48[1-(\\frac{1}{2})^{12}]}{1-(\\frac{1}{2})}=\\frac{12285}{128};\\approx96.0\\quad(3\\text{ s.f.})",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=3,\\quad r=-2,\\quad n=8;S_n=\\frac{a(1-r^n)}{1-r};S_{8}=\\frac{3[1-(-2)^{8}]}{1-(-2)}=-255",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=810,\\quad r=\\frac{2}{3},\\quad n=9;S_n=\\frac{a(1-r^n)}{1-r};S_{9}=\\frac{810[1-(\\frac{2}{3})^{9}]}{1-(\\frac{2}{3})}=\\frac{191710}{81};\\approx2370\\quad(3\\text{ s.f.})",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use S_n=a(1−r^n)/(1−r). Keep exact values until the final rounding.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a=2,\\quad r=3,\\quad n=10\" data-display=\"true\"></span><span data-math=\"S_n=\\frac{a(1-r^n)}{1-r}\" data-display=\"true\"></span><span data-math=\"S_{10}=\\frac{2[1-(3)^{10}]}{1-(3)}=59048\" data-display=\"true\"></span></li><li><span data-math=\"a=48,\\quad r=\\frac{1}{2},\\quad n=12\" data-display=\"true\"></span><span data-math=\"S_n=\\frac{a(1-r^n)}{1-r}\" data-display=\"true\"></span><span data-math=\"S_{12}=\\frac{48[1-(\\frac{1}{2})^{12}]}{1-(\\frac{1}{2})}=\\frac{12285}{128}\" data-display=\"true\"></span><span data-math=\"\\approx96.0\\quad(3\\text{ s.f.})\" data-display=\"true\"></span></li><li><span data-math=\"a=3,\\quad r=-2,\\quad n=8\" data-display=\"true\"></span><span data-math=\"S_n=\\frac{a(1-r^n)}{1-r}\" data-display=\"true\"></span><span data-math=\"S_{8}=\\frac{3[1-(-2)^{8}]}{1-(-2)}=-255\" data-display=\"true\"></span></li><li><span data-math=\"a=810,\\quad r=\\frac{2}{3},\\quad n=9\" data-display=\"true\"></span><span data-math=\"S_n=\\frac{a(1-r^n)}{1-r}\" data-display=\"true\"></span><span data-math=\"S_{9}=\\frac{810[1-(\\frac{2}{3})^{9}]}{1-(\\frac{2}{3})}=\\frac{191710}{81}\" data-display=\"true\"></span><span data-math=\"\\approx2370\\quad(3\\text{ s.f.})\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.4/q2",
+      "status": "worked",
+      "method": "Use the final term to determine n, then apply the geometric sum formula.",
+      "steps": [
+        {
+          "latex": "640=5\\cdot2^{n-1}\\Rightarrow2^{n-1}=128\\Rightarrow n=8;S=5\\frac{2^8-1}{2-1}=1275",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2=13122(\\tfrac13)^{n-1};3^{n-1}=6561=3^8\\Rightarrow n=9;S=13122\\frac{1-(1/3)^9}{1-1/3}=19682",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-\\frac1{16}=1024(-\\tfrac14)^{n-1};n=8;S=1024\\frac{1-(-1/4)^8}{1+1/4};=\\frac{13107}{16}=819.1875\\approx819",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "1458=128(\\tfrac32)^{n-1};(\\tfrac32)^{n-1}=\\frac{729}{64}=(\\tfrac32)^6;n=7;S=128\\frac{(3/2)^7-1}{3/2-1}=4118",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the final term to determine n, then apply the geometric sum formula.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"640=5\\cdot2^{n-1}\\Rightarrow2^{n-1}=128\\Rightarrow n=8\" data-display=\"true\"></span><span data-math=\"S=5\\frac{2^8-1}{2-1}=1275\" data-display=\"true\"></span></li><li><span data-math=\"2=13122(\\tfrac13)^{n-1}\" data-display=\"true\"></span><span data-math=\"3^{n-1}=6561=3^8\\Rightarrow n=9\" data-display=\"true\"></span><span data-math=\"S=13122\\frac{1-(1/3)^9}{1-1/3}=19682\" data-display=\"true\"></span></li><li><span data-math=\"-\\frac1{16}=1024(-\\tfrac14)^{n-1}\" data-display=\"true\"></span><span data-math=\"n=8\" data-display=\"true\"></span><span data-math=\"S=1024\\frac{1-(-1/4)^8}{1+1/4}\" data-display=\"true\"></span><span data-math=\"=\\frac{13107}{16}=819.1875\\approx819\" data-display=\"true\"></span></li><li><span data-math=\"1458=128(\\tfrac32)^{n-1}\" data-display=\"true\"></span><span data-math=\"(\\tfrac32)^{n-1}=\\frac{729}{64}=(\\tfrac32)^6\" data-display=\"true\"></span><span data-math=\"n=7\" data-display=\"true\"></span><span data-math=\"S=128\\frac{(3/2)^7-1}{3/2-1}=4118\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.4/q3",
+      "status": "worked",
+      "method": "The sum is increasing, so find the first integer satisfying its bound.",
+      "steps": [
+        {
+          "latex": "S_n=3(2^n-1)>1000000;2^n>\\frac{1000003}3;n>\\frac{\\ln(1000003/3)}{\\ln2}\\approx18.35;S_{18}=786429;S_{19}=1572861;n_{\\min}=19",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The sum is increasing, so find the first integer satisfying its bound.</p><span data-math=\"S_n=3(2^n-1)&gt;1000000\" data-display=\"true\"></span><span data-math=\"2^n&gt;\\frac{1000003}3\" data-display=\"true\"></span><span data-math=\"n&gt;\\frac{\\ln(1000003/3)}{\\ln2}\\approx18.35\" data-display=\"true\"></span><span data-math=\"S_{18}=786429\" data-display=\"true\"></span><span data-math=\"S_{19}=1572861\" data-display=\"true\"></span><span data-math=\"n_{\\min}=19\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.4/q4",
+      "status": "worked",
+      "method": "The ratio of consecutive terms gives r, then use the fourth term for a.",
+      "steps": [
+        {
+          "latex": "r=48/24=2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "ar^3=24\\Rightarrow a=24/8=3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_{20}=3\\frac{2^{20}-1}{2-1}=3145725",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The ratio of consecutive terms gives r, then use the fourth term for a.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"r=48/24=2\" data-display=\"true\"></span></li><li><span data-math=\"ar^3=24\\Rightarrow a=24/8=3\" data-display=\"true\"></span></li><li><span data-math=\"S_{20}=3\\frac{2^{20}-1}{2-1}=3145725\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.4/q5",
+      "status": "worked",
+      "method": "Use the term formula; for the sum inequality divide by the negative logarithm carefully.",
+      "steps": [
+        {
+          "latex": "u_{10}=10(\\tfrac35)^9\\approx0.101\\quad(3\\text{ d.p.})",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_n=25(1-0.6^n)>20;0.6^n<0.2;n>\\frac{\\ln0.2}{\\ln0.6}\\approx3.151;n_{\\min}=4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the term formula; for the sum inequality divide by the negative logarithm carefully.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_{10}=10(\\tfrac35)^9\\approx0.101\\quad(3\\text{ d.p.})\" data-display=\"true\"></span></li><li><span data-math=\"S_n=25(1-0.6^n)&gt;20\" data-display=\"true\"></span><span data-math=\"0.6^n&lt;0.2\" data-display=\"true\"></span><span data-math=\"n&gt;\\frac{\\ln0.2}{\\ln0.6}\\approx3.151\" data-display=\"true\"></span><span data-math=\"n_{\\min}=4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.4/q6",
+      "status": "worked",
+      "method": "Isolate the power, then reverse the inequality when dividing by ln0.8<0.",
+      "steps": [
+        {
+          "latex": "S_k=100(1-0.8^k)>50;0.8^k<0.5;k\\ln0.8<\\ln0.5;k>\\frac{\\ln0.5}{\\ln0.8}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{\\ln0.5}{\\ln0.8}\\approx3.106;k_{\\min}=4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Isolate the power, then reverse the inequality when dividing by ln0.8&lt;0.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"S_k=100(1-0.8^k)&gt;50\" data-display=\"true\"></span><span data-math=\"0.8^k&lt;0.5\" data-display=\"true\"></span><span data-math=\"k\\ln0.8&lt;\\ln0.5\" data-display=\"true\"></span><span data-math=\"k&gt;\\frac{\\ln0.5}{\\ln0.8}\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{\\ln0.5}{\\ln0.8}\\approx3.106\" data-display=\"true\"></span><span data-math=\"k_{\\min}=4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.4/q7",
+      "status": "worked",
+      "method": "Use the middle-term identity, retain the positive integer root, and then apply geometric formulas.",
+      "steps": [
+        {
+          "latex": "(k+2)^2=(2k-4)(k-1);k^2+4k+4=2k^2-6k+4;k(k-10)=0;k>0\\Rightarrow k=10",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=16,\\quad r=12/16=\\frac34;u_{20}=16(\\tfrac34)^{19}\\approx0.0677",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_{20}=16\\frac{1-(3/4)^{20}}{1-3/4};=64[1-(\\tfrac34)^{20}]\\approx63.8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the middle-term identity, retain the positive integer root, and then apply geometric formulas.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"(k+2)^2=(2k-4)(k-1)\" data-display=\"true\"></span><span data-math=\"k^2+4k+4=2k^2-6k+4\" data-display=\"true\"></span><span data-math=\"k(k-10)=0\" data-display=\"true\"></span><span data-math=\"k&gt;0\\Rightarrow k=10\" data-display=\"true\"></span></li><li><span data-math=\"a=16,\\quad r=12/16=\\frac34\" data-display=\"true\"></span><span data-math=\"u_{20}=16(\\tfrac34)^{19}\\approx0.0677\" data-display=\"true\"></span></li><li><span data-math=\"S_{20}=16\\frac{1-(3/4)^{20}}{1-3/4}\" data-display=\"true\"></span><span data-math=\"=64[1-(\\tfrac34)^{20}]\\approx63.8\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.4/q8",
+      "status": "worked",
+      "method": "Use ar=96 to eliminate a, solve the quadratic in r, and keep r<1.",
+      "steps": [
+        {
+          "latex": "a=96/r;96/r+96+96r=292.8;r+1/r=2.05;20r^2-41r+20=0;(5r-4)(4r-5)=0;r<1\\Rightarrow r=\\frac45;a=120;S_{10}=120\\frac{1-(4/5)^{10}}{1-4/5}\\approx536\\quad(3\\text{ s.f.})",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use ar=96 to eliminate a, solve the quadratic in r, and keep r&lt;1.</p><span data-math=\"a=96/r\" data-display=\"true\"></span><span data-math=\"96/r+96+96r=292.8\" data-display=\"true\"></span><span data-math=\"r+1/r=2.05\" data-display=\"true\"></span><span data-math=\"20r^2-41r+20=0\" data-display=\"true\"></span><span data-math=\"(5r-4)(4r-5)=0\" data-display=\"true\"></span><span data-math=\"r&lt;1\\Rightarrow r=\\frac45\" data-display=\"true\"></span><span data-math=\"a=120\" data-display=\"true\"></span><span data-math=\"S_{10}=120\\frac{1-(4/5)^{10}}{1-4/5}\\approx536\\quad(3\\text{ s.f.})\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.4/q9",
+      "status": "worked",
+      "method": "Cancel the nonzero first term to obtain an equation for r alone.",
+      "steps": [
+        {
+          "latex": "a+ar=ar^2\\Rightarrow1+r=r^2;r^2-r-1=0",
+          "explanation": "This cancellation assumes a≠0, as for a nonzero geometric series. If a=0 the all-zero series imposes no condition on r.",
+          "graphs": []
+        },
+        {
+          "latex": "r=\\frac{1+\\sqrt5}2\\quad(r>0);a=2;S_{20}=\\frac{2(r^{20}-1)}{r-1}\\approx48900\\quad(3\\text{ s.f.})",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Cancel the nonzero first term to obtain an equation for r alone.</p><ol type=\"a\" class=\"parts\"><li><p>This cancellation assumes a≠0, as for a nonzero geometric series. If a=0 the all-zero series imposes no condition on r.</p><span data-math=\"a+ar=ar^2\\Rightarrow1+r=r^2\" data-display=\"true\"></span><span data-math=\"r^2-r-1=0\" data-display=\"true\"></span></li><li><span data-math=\"r=\\frac{1+\\sqrt5}2\\quad(r&gt;0)\" data-display=\"true\"></span><span data-math=\"a=2\" data-display=\"true\"></span><span data-math=\"S_{20}=\\frac{2(r^{20}-1)}{r-1}\\approx48900\\quad(3\\text{ s.f.})\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q1",
+      "status": "worked",
+      "method": "Check the magnitude of the common ratio, then use S∞=a/(1−r).",
+      "steps": [
+        {
+          "latex": "r=0.2/2=0.1;|r|<1\\Rightarrow\\text{convergent}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_\\infty=\\frac2{1-0.1}=\\frac{20}9",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Check the magnitude of the common ratio, then use S∞=a/(1−r).</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"r=0.2/2=0.1\" data-display=\"true\"></span><span data-math=\"|r|&lt;1\\Rightarrow\\text{convergent}\" data-display=\"true\"></span></li><li><span data-math=\"S_\\infty=\\frac2{1-0.1}=\\frac{20}9\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q2",
+      "status": "worked",
+      "method": "For a geometric series convergence requires |r|<1. Check whether the printed terms actually have a common ratio.",
+      "steps": [
+        {
+          "latex": "r=2/5=\\frac25;|r|<1;S_\\infty=\\frac5{1-2/5}=\\frac{25}3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{0.3}{0.1}=3,\\quad\\frac{0.9}{0.3}=3,\\quad\\frac{1.2}{0.9}=\\frac43",
+          "explanation": "The printed fourth term breaks the geometric pattern. The displayed finite prefix alone cannot determine convergence. If the intended continuation multiplies by 3 (making the fourth term 2.7), it diverges because the terms do not tend to zero; this is the interpretation used by the supplied answer.",
+          "graphs": []
+        },
+        {
+          "latex": "r=-27/81=-\\frac13;|r|<1;S_\\infty=\\frac{81}{1+1/3}=\\frac{243}4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u_n=20-2(n-1)=22-2n;u_n\\not\\to0",
+          "explanation": "This arithmetic series is divergent, since its terms do not tend to zero.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>For a geometric series convergence requires |r|&lt;1. Check whether the printed terms actually have a common ratio.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"r=2/5=\\frac25\" data-display=\"true\"></span><span data-math=\"|r|&lt;1\" data-display=\"true\"></span><span data-math=\"S_\\infty=\\frac5{1-2/5}=\\frac{25}3\" data-display=\"true\"></span></li><li><p>The printed fourth term breaks the geometric pattern. The displayed finite prefix alone cannot determine convergence. If the intended continuation multiplies by 3 (making the fourth term 2.7), it diverges because the terms do not tend to zero; this is the interpretation used by the supplied answer.</p><span data-math=\"\\frac{0.3}{0.1}=3,\\quad\\frac{0.9}{0.3}=3,\\quad\\frac{1.2}{0.9}=\\frac43\" data-display=\"true\"></span></li><li><span data-math=\"r=-27/81=-\\frac13\" data-display=\"true\"></span><span data-math=\"|r|&lt;1\" data-display=\"true\"></span><span data-math=\"S_\\infty=\\frac{81}{1+1/3}=\\frac{243}4\" data-display=\"true\"></span></li><li><p>This arithmetic series is divergent, since its terms do not tend to zero.</p><span data-math=\"u_n=20-2(n-1)=22-2n\" data-display=\"true\"></span><span data-math=\"u_n\\not\\to0\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q3",
+      "status": "worked",
+      "method": "Divide the seventh-term equation by the fifth-term equation; both signs of r are possible.",
+      "steps": [
+        {
+          "latex": "r^2=\\frac{1.572864}{2.4576}=0.64;r=\\pm0.8;|r|<1\\Rightarrow\\text{convergent}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=\\frac{2.4576}{(0.8)^4}=6;r=0.8:\\ S_\\infty=\\frac6{0.2}=30;r=-0.8:\\ S_\\infty=\\frac6{1.8}=\\frac{10}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide the seventh-term equation by the fifth-term equation; both signs of r are possible.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"r^2=\\frac{1.572864}{2.4576}=0.64\" data-display=\"true\"></span><span data-math=\"r=\\pm0.8\" data-display=\"true\"></span><span data-math=\"|r|&lt;1\\Rightarrow\\text{convergent}\" data-display=\"true\"></span></li><li><span data-math=\"a=\\frac{2.4576}{(0.8)^4}=6\" data-display=\"true\"></span><span data-math=\"r=0.8:\\ S_\\infty=\\frac6{0.2}=30\" data-display=\"true\"></span><span data-math=\"r=-0.8:\\ S_\\infty=\\frac6{1.8}=\\frac{10}3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q4",
+      "status": "worked",
+      "method": "Rearrange S∞=a/(1−r).",
+      "steps": [
+        {
+          "latex": "25=\\frac8{1-r};1-r=\\frac8{25};r=\\frac{17}{25}=0.68",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "40=\\frac a{1-1/5};a=40\\cdot\\frac45=32",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rearrange S∞=a/(1−r).</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"25=\\frac8{1-r}\" data-display=\"true\"></span><span data-math=\"1-r=\\frac8{25}\" data-display=\"true\"></span><span data-math=\"r=\\frac{17}{25}=0.68\" data-display=\"true\"></span></li><li><span data-math=\"40=\\frac a{1-1/5}\" data-display=\"true\"></span><span data-math=\"a=40\\cdot\\frac45=32\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q5",
+      "status": "worked",
+      "method": "Divide S4 by S∞ to eliminate a. Positivity of every term then selects the sign.",
+      "steps": [
+        {
+          "latex": "\\frac{S_4}{S_\\infty}=1-r^4=\\frac{80}{81};r^4=\\frac1{81};r=\\pm\\frac13",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{all terms positive}\\Rightarrow r=\\frac13;a=81(1-\\tfrac13)=54",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide S4 by S∞ to eliminate a. Positivity of every term then selects the sign.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{S_4}{S_\\infty}=1-r^4=\\frac{80}{81}\" data-display=\"true\"></span><span data-math=\"r^4=\\frac1{81}\" data-display=\"true\"></span><span data-math=\"r=\\pm\\frac13\" data-display=\"true\"></span></li><li><span data-math=\"\\text{all terms positive}\\Rightarrow r=\\frac13\" data-display=\"true\"></span><span data-math=\"a=81(1-\\tfrac13)=54\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q6",
+      "status": "worked",
+      "method": "Rearrange the infinite geometric sum formula.",
+      "steps": [
+        {
+          "latex": "12=\\frac4{1-r};1-r=\\frac13;r=\\frac23",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rearrange the infinite geometric sum formula.</p><span data-math=\"12=\\frac4{1-r}\" data-display=\"true\"></span><span data-math=\"1-r=\\frac13\" data-display=\"true\"></span><span data-math=\"r=\\frac23\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q7",
+      "status": "worked",
+      "method": "Use the geometric convergence criterion and the first term at the stated starting index.",
+      "steps": [
+        {
+          "latex": "|r|<1\\quad\\text{(for a nonzero geometric series)}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=\\frac38,\\quad r=\\frac12;S_\\infty=\\frac{3/8}{1-1/2}=\\frac34",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the geometric convergence criterion and the first term at the stated starting index.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"|r|&lt;1\\quad\\text{(for a nonzero geometric series)}\" data-display=\"true\"></span></li><li><span data-math=\"a=\\frac38,\\quad r=\\frac12\" data-display=\"true\"></span><span data-math=\"S_\\infty=\\frac{3/8}{1-1/2}=\\frac34\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q8",
+      "status": "worked",
+      "method": "Divide the finite sum by the infinite sum. The equation fixes r⁴, so both real fourth roots must be retained.",
+      "steps": [
+        {
+          "latex": "\\frac4{1-r}=20\\frac{4(1-r^4)}{1-r};1=20(1-r^4);r^4=\\frac{19}{20};r=\\pm(\\tfrac{19}{20})^{1/4}\\approx\\pm0.9873",
+          "explanation": "Both ratios have magnitude below 1 and satisfy the stated condition. The supplied answer omits the negative possibility.",
+          "graphs": []
+        },
+        {
+          "latex": "u_5=4r^4=4\\cdot\\frac{19}{20}=3.8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide the finite sum by the infinite sum. The equation fixes r⁴, so both real fourth roots must be retained.</p><ol type=\"a\" class=\"parts\"><li><p>Both ratios have magnitude below 1 and satisfy the stated condition. The supplied answer omits the negative possibility.</p><span data-math=\"\\frac4{1-r}=20\\frac{4(1-r^4)}{1-r}\" data-display=\"true\"></span><span data-math=\"1=20(1-r^4)\" data-display=\"true\"></span><span data-math=\"r^4=\\frac{19}{20}\" data-display=\"true\"></span><span data-math=\"r=\\pm(\\tfrac{19}{20})^{1/4}\\approx\\pm0.9873\" data-display=\"true\"></span></li><li><span data-math=\"u_5=4r^4=4\\cdot\\frac{19}{20}=3.8\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q9",
+      "status": "worked",
+      "method": "Find r from the infinite sum, then use the term and finite-sum formulas.",
+      "steps": [
+        {
+          "latex": "120=\\frac{80}{1-r};1-r=\\frac23;r=\\frac13",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u_4-u_5=80(\\tfrac13)^3(1-\\tfrac13);=\\frac{160}{81}\\approx1.98\\quad(2\\text{ d.p.})",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_6=120[1-(\\tfrac13)^6]=\\frac{29120}{243}\\approx119.8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find r from the infinite sum, then use the term and finite-sum formulas.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"120=\\frac{80}{1-r}\" data-display=\"true\"></span><span data-math=\"1-r=\\frac23\" data-display=\"true\"></span><span data-math=\"r=\\frac13\" data-display=\"true\"></span></li><li><span data-math=\"u_4-u_5=80(\\tfrac13)^3(1-\\tfrac13)\" data-display=\"true\"></span><span data-math=\"=\\frac{160}{81}\\approx1.98\\quad(2\\text{ d.p.})\" data-display=\"true\"></span></li><li><span data-math=\"S_6=120[1-(\\tfrac13)^6]=\\frac{29120}{243}\\approx119.8\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q10",
+      "status": "worked",
+      "method": "Use a=10(1−r) to eliminate a from ar=12/5, then solve the finite-sum bound.",
+      "steps": [
+        {
+          "latex": "a=10(1-r);\\frac{12}5=10r(1-r);50r^2-50r+12=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2(5r-2)(5r-3)=0;r=\\frac25\\text{ or }\\frac35",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "r=\\frac25\\Rightarrow a=6;r=\\frac35\\Rightarrow a=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "r=\\frac25:\\ S_n=10(1-0.4^n)>9.99;0.4^n<0.001;n>\\frac{\\ln0.001}{\\ln0.4}\\approx7.539;n_{\\min}=8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use a=10(1−r) to eliminate a from ar=12/5, then solve the finite-sum bound.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a=10(1-r)\" data-display=\"true\"></span><span data-math=\"\\frac{12}5=10r(1-r)\" data-display=\"true\"></span><span data-math=\"50r^2-50r+12=0\" data-display=\"true\"></span></li><li><span data-math=\"2(5r-2)(5r-3)=0\" data-display=\"true\"></span><span data-math=\"r=\\frac25\\text{ or }\\frac35\" data-display=\"true\"></span></li><li><span data-math=\"r=\\frac25\\Rightarrow a=6\" data-display=\"true\"></span><span data-math=\"r=\\frac35\\Rightarrow a=4\" data-display=\"true\"></span></li><li><span data-math=\"r=\\frac25:\\ S_n=10(1-0.4^n)&gt;9.99\" data-display=\"true\"></span><span data-math=\"0.4^n&lt;0.001\" data-display=\"true\"></span><span data-math=\"n&gt;\\frac{\\ln0.001}{\\ln0.4}\\approx7.539\" data-display=\"true\"></span><span data-math=\"n_{\\min}=8\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q1",
+      "status": "worked",
+      "method": "Evaluate the summand at every index in the stated inclusive range, then add.",
+      "steps": [
+        {
+          "latex": "1+5+9+13+17+21=66",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2+16+54+128+250=450",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cos0^\\circ+\\cos90^\\circ+\\cos180^\\circ+\\cos270^\\circ+\\cos360^\\circ;=1+0-1+0+1=1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-\\frac38+\\frac3{16}-\\frac3{32}+\\frac3{64}-\\frac3{128};=\\frac{-48+24-12+6-3}{128}=-\\frac{33}{128}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Evaluate the summand at every index in the stated inclusive range, then add.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"1+5+9+13+17+21=66\" data-display=\"true\"></span></li><li><span data-math=\"2+16+54+128+250=450\" data-display=\"true\"></span></li><li><span data-math=\"\\cos0^\\circ+\\cos90^\\circ+\\cos180^\\circ+\\cos270^\\circ+\\cos360^\\circ\" data-display=\"true\"></span><span data-math=\"=1+0-1+0+1=1\" data-display=\"true\"></span></li><li><span data-math=\"-\\frac38+\\frac3{16}-\\frac3{32}+\\frac3{64}-\\frac3{128}\" data-display=\"true\"></span><span data-math=\"=\\frac{-48+24-12+6-3}{128}=-\\frac{33}{128}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q2",
+      "status": "worked",
+      "method": "Read the first term and difference from u_n, then sum 12 terms.",
+      "steps": [
+        {
+          "latex": "a=5(1)-1=4;d=5",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_{12}=\\frac{12}2[2(4)+11(5)]=378",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Read the first term and difference from u_n, then sum 12 terms.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a=5(1)-1=4\" data-display=\"true\"></span><span data-math=\"d=5\" data-display=\"true\"></span></li><li><span data-math=\"S_{12}=\\frac{12}2[2(4)+11(5)]=378\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q3",
+      "status": "worked",
+      "method": "The exponent n−1 gives first term 3 and ratio 2.",
+      "steps": [
+        {
+          "latex": "a=3\\cdot2^0=3; r=2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_{20}=3\\frac{2^{20}-1}{2-1}=3145725",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The exponent n−1 gives first term 3 and ratio 2.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a=3\\cdot2^0=3\" data-display=\"true\"></span><span data-math=\"r=2\" data-display=\"true\"></span></li><li><span data-math=\"S_{20}=3\\frac{2^{20}-1}{2-1}=3145725\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q4",
+      "status": "worked",
+      "method": "Separate constants and linear terms, and use the actual first term of the infinite series.",
+      "steps": [
+        {
+          "latex": "\\sum_{r=1}^{10}(3r+2)=3\\frac{10\\cdot11}2+2(10)=185",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\sum_{r=1}^{20}3=20(3)=60",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=5\\cdot\\frac23=\\frac{10}3,\\quad r=\\frac23;S_\\infty=\\frac{10/3}{1-2/3}=10",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Separate constants and linear terms, and use the actual first term of the infinite series.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sum_{r=1}^{10}(3r+2)=3\\frac{10\\cdot11}2+2(10)=185\" data-display=\"true\"></span></li><li><span data-math=\"\\sum_{r=1}^{20}3=20(3)=60\" data-display=\"true\"></span></li><li><span data-math=\"a=5\\cdot\\frac23=\\frac{10}3,\\quad r=\\frac23\" data-display=\"true\"></span><span data-math=\"S_\\infty=\\frac{10/3}{1-2/3}=10\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q5",
+      "status": "worked",
+      "method": "Subtract the unwanted initial block of terms from the full sum.",
+      "steps": [
+        {
+          "latex": "\\sum_{r=1}^{30}(5-2r)=\\sum_{r=1}^{7}(5-2r)+\\sum_{r=8}^{30}(5-2r)",
+          "explanation": "Rearranging removes exactly the indices 1 to 7, leaving 8 to 30.",
+          "graphs": []
+        },
+        {
+          "latex": "\\sum_{r=1}^{30}(5-2r)=150-2\\frac{30\\cdot31}2=-780;\\sum_{r=1}^{7}(5-2r)=35-2\\frac{7\\cdot8}2=-21;\\sum_{r=8}^{30}(5-2r)=-780-(-21)=-759",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Subtract the unwanted initial block of terms from the full sum.</p><ol type=\"a\" class=\"parts\"><li><p>Rearranging removes exactly the indices 1 to 7, leaving 8 to 30.</p><span data-math=\"\\sum_{r=1}^{30}(5-2r)=\\sum_{r=1}^{7}(5-2r)+\\sum_{r=8}^{30}(5-2r)\" data-display=\"true\"></span></li><li><span data-math=\"\\sum_{r=1}^{30}(5-2r)=150-2\\frac{30\\cdot31}2=-780\" data-display=\"true\"></span><span data-math=\"\\sum_{r=1}^{7}(5-2r)=35-2\\frac{7\\cdot8}2=-21\" data-display=\"true\"></span><span data-math=\"\\sum_{r=8}^{30}(5-2r)=-780-(-21)=-759\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q6",
+      "status": "worked",
+      "method": "The first included index is 10 and there are 15−10+1=6 terms.",
+      "steps": [
+        {
+          "latex": "a=4\\cdot3^9,\\quad r=3,\\quad n=6;S=4\\cdot3^9\\frac{3^6-1}{3-1}=28658448",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The first included index is 10 and there are 15−10+1=6 terms.</p><span data-math=\"a=4\\cdot3^9,\\quad r=3,\\quad n=6\" data-display=\"true\"></span><span data-math=\"S=4\\cdot3^9\\frac{3^6-1}{3-1}=28658448\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q7",
+      "status": "worked",
+      "method": "The first included term is 10·3=30, with ratio 3.",
+      "steps": [
+        {
+          "latex": "S=30\\frac{3^{10}-1}{3-1}=885720",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The first included term is 10·3=30, with ratio 3.</p><span data-math=\"S=30\\frac{3^{10}-1}{3-1}=885720\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q8",
+      "status": "worked",
+      "method": "Use the sum of the first k integers and factor the resulting quadratic.",
+      "steps": [
+        {
+          "latex": "\\sum_{r=1}^k(3r+6)=\\frac{3k(k+1)}2+6k=750;3k^2+15k-1500=0;(k-20)(3k+75)=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "k=20\\text{ or }-25; k\\in\\mathbb N\\Rightarrow k=20",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the sum of the first k integers and factor the resulting quadratic.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sum_{r=1}^k(3r+6)=\\frac{3k(k+1)}2+6k=750\" data-display=\"true\"></span><span data-math=\"3k^2+15k-1500=0\" data-display=\"true\"></span><span data-math=\"(k-20)(3k+75)=0\" data-display=\"true\"></span></li><li><span data-math=\"k=20\\text{ or }-25\" data-display=\"true\"></span><span data-math=\"k\\in\\mathbb N\\Rightarrow k=20\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q9",
+      "status": "worked",
+      "method": "Use a geometric sum starting at 8, then subtract the first k terms from the first 20.",
+      "steps": [
+        {
+          "latex": "8(2^k-1)=262136;2^k=32768;k\\ln2=\\ln32768;k=\\frac{\\ln32768}{\\ln2}=15",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\sum_{r=16}^{20}4\\cdot2^r=8(2^{20}-1)-262136;=8388600-262136=8126464",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use a geometric sum starting at 8, then subtract the first k terms from the first 20.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"8(2^k-1)=262136\" data-display=\"true\"></span><span data-math=\"2^k=32768\" data-display=\"true\"></span><span data-math=\"k\\ln2=\\ln32768\" data-display=\"true\"></span><span data-math=\"k=\\frac{\\ln32768}{\\ln2}=15\" data-display=\"true\"></span></li><li><span data-math=\"\\sum_{r=16}^{20}4\\cdot2^r=8(2^{20}-1)-262136\" data-display=\"true\"></span><span data-math=\"=8388600-262136=8126464\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q10",
+      "status": "worked",
+      "method": "The common ratio is 4x, so first impose convergence and then use the sum.",
+      "steps": [
+        {
+          "latex": "|4x|<1\\Rightarrow-\\frac14<x<\\frac14",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac1{1-4x}=5;1-4x=\\frac15;x=\\frac15",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The common ratio is 4x, so first impose convergence and then use the sum.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"|4x|&lt;1\\Rightarrow-\\frac14&lt;x&lt;\\frac14\" data-display=\"true\"></span></li><li><span data-math=\"\\frac1{1-4x}=5\" data-display=\"true\"></span><span data-math=\"1-4x=\\frac15\" data-display=\"true\"></span><span data-math=\"x=\\frac15\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.6/q11",
+      "status": "worked",
+      "method": "Split the sum into a constant, an arithmetic component and a geometric component.",
+      "steps": [
+        {
+          "latex": "\\sum_{r=1}^{10}(4+3r+2^{r-1});=4(10)+3\\frac{10\\cdot11}2+\\frac{2^{10}-1}{2-1};=40+165+1023=1228",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Split the sum into a constant, an arithmetic component and a geometric component.</p><span data-math=\"\\sum_{r=1}^{10}(4+3r+2^{r-1})\" data-display=\"true\"></span><span data-math=\"=4(10)+3\\frac{10\\cdot11}2+\\frac{2^{10}-1}{2-1}\" data-display=\"true\"></span><span data-math=\"=40+165+1023=1228\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.7/q1",
+      "status": "worked",
+      "method": "Start from u1 and repeatedly apply the recurrence to the preceding term.",
+      "steps": [
+        {
+          "latex": "u_1=3;u_2=2(3)-1=5;u_3=2(5)-1=9;u_4=2(9)-1=17",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u_1=10;u_2=10-4=6;u_3=6-4=2;u_4=2-4=-2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u_1=4;u_2=4^2/2=8;u_3=8^2/2=32;u_4=32^2/2=512",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Start from u1 and repeatedly apply the recurrence to the preceding term.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_1=3\" data-display=\"true\"></span><span data-math=\"u_2=2(3)-1=5\" data-display=\"true\"></span><span data-math=\"u_3=2(5)-1=9\" data-display=\"true\"></span><span data-math=\"u_4=2(9)-1=17\" data-display=\"true\"></span></li><li><span data-math=\"u_1=10\" data-display=\"true\"></span><span data-math=\"u_2=10-4=6\" data-display=\"true\"></span><span data-math=\"u_3=6-4=2\" data-display=\"true\"></span><span data-math=\"u_4=2-4=-2\" data-display=\"true\"></span></li><li><span data-math=\"u_1=4\" data-display=\"true\"></span><span data-math=\"u_2=4^2/2=8\" data-display=\"true\"></span><span data-math=\"u_3=8^2/2=32\" data-display=\"true\"></span><span data-math=\"u_4=32^2/2=512\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.7/q2",
+      "status": "worked",
+      "method": "Compare consecutive values and look for the shortest repeating block.",
+      "steps": [
+        {
+          "latex": "u_{n+1}-u_n=4>0",
+          "explanation": "Increasing.",
+          "graphs": []
+        },
+        {
+          "latex": "(1,0,-1,0)\\text{ repeats}",
+          "explanation": "Periodic, of order 4.",
+          "graphs": []
+        },
+        {
+          "latex": "u_{n+1}-u_n=-3<0",
+          "explanation": "Decreasing.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Compare consecutive values and look for the shortest repeating block.</p><ol type=\"a\" class=\"parts\"><li><p>Increasing.</p><span data-math=\"u_{n+1}-u_n=4&gt;0\" data-display=\"true\"></span></li><li><p>Periodic, of order 4.</p><span data-math=\"(1,0,-1,0)\\text{ repeats}\" data-display=\"true\"></span></li><li><p>Decreasing.</p><span data-math=\"u_{n+1}-u_n=-3&lt;0\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.7/q3",
+      "status": "worked",
+      "method": "Evaluate the formula or recurrence five times, then justify the observed pattern.",
+      "steps": [
+        {
+          "latex": "2,5,8,11,14;u_{n+1}-u_n=3>0",
+          "explanation": "Increasing.",
+          "graphs": []
+        },
+        {
+          "latex": "1,\\frac12,\\frac14,\\frac18,\\frac1{16};u_{n+1}=\\frac12u_n",
+          "explanation": "Positive terms halve, so decreasing.",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac12,-\\frac12,\\frac12,-\\frac12,\\frac12;u_n=\\frac{(-1)^{n+1}}2",
+          "explanation": "Periodic, of order 2; angles are in degrees.",
+          "graphs": []
+        },
+        {
+          "latex": "1,3,7,15,31;u_{n+1}-u_n=u_n+1>0",
+          "explanation": "All terms are positive, so increasing.",
+          "graphs": []
+        },
+        {
+          "latex": "8,-4,8,-4,8;u_{n+2}=4-(4-u_n)=u_n",
+          "explanation": "Periodic, of order 2.",
+          "graphs": []
+        },
+        {
+          "latex": "10,6,2,-2,-6;u_{n+1}-u_n=-4",
+          "explanation": "Decreasing.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Evaluate the formula or recurrence five times, then justify the observed pattern.</p><ol type=\"a\" class=\"parts\"><li><p>Increasing.</p><span data-math=\"2,5,8,11,14\" data-display=\"true\"></span><span data-math=\"u_{n+1}-u_n=3&gt;0\" data-display=\"true\"></span></li><li><p>Positive terms halve, so decreasing.</p><span data-math=\"1,\\frac12,\\frac14,\\frac18,\\frac1{16}\" data-display=\"true\"></span><span data-math=\"u_{n+1}=\\frac12u_n\" data-display=\"true\"></span></li><li><p>Periodic, of order 2; angles are in degrees.</p><span data-math=\"\\frac12,-\\frac12,\\frac12,-\\frac12,\\frac12\" data-display=\"true\"></span><span data-math=\"u_n=\\frac{(-1)^{n+1}}2\" data-display=\"true\"></span></li><li><p>All terms are positive, so increasing.</p><span data-math=\"1,3,7,15,31\" data-display=\"true\"></span><span data-math=\"u_{n+1}-u_n=u_n+1&gt;0\" data-display=\"true\"></span></li><li><p>Periodic, of order 2.</p><span data-math=\"8,-4,8,-4,8\" data-display=\"true\"></span><span data-math=\"u_{n+2}=4-(4-u_n)=u_n\" data-display=\"true\"></span></li><li><p>Decreasing.</p><span data-math=\"10,6,2,-2,-6\" data-display=\"true\"></span><span data-math=\"u_{n+1}-u_n=-4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.7/q4",
+      "status": "worked",
+      "method": "Work through the alternating increments and group terms in pairs.",
+      "steps": [
+        {
+          "latex": "a_2=k-1;a_3=(k-1)+1=k;a_4=k-1=a_2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "k=3:\\ 3,2,3,2,\\ldots;\\sum_{r=1}^{400}a_r=200(3+2)=1000",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "399\\text{ is odd}\\Rightarrow a_{399}=3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Work through the alternating increments and group terms in pairs.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a_2=k-1\" data-display=\"true\"></span><span data-math=\"a_3=(k-1)+1=k\" data-display=\"true\"></span><span data-math=\"a_4=k-1=a_2\" data-display=\"true\"></span></li><li><span data-math=\"k=3:\\ 3,2,3,2,\\ldots\" data-display=\"true\"></span><span data-math=\"\\sum_{r=1}^{400}a_r=200(3+2)=1000\" data-display=\"true\"></span></li><li><span data-math=\"399\\text{ is odd}\\Rightarrow a_{399}=3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.7/q5",
+      "status": "worked",
+      "method": "Use the two known updates as simultaneous linear equations.",
+      "steps": [
+        {
+          "latex": "3=4p+q;1=3p+q;2=p;q=3-8=-5",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the two known updates as simultaneous linear equations.</p><span data-math=\"3=4p+q\" data-display=\"true\"></span><span data-math=\"1=3p+q\" data-display=\"true\"></span><span data-math=\"2=p\" data-display=\"true\"></span><span data-math=\"q=3-8=-5\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.7/q6",
+      "status": "worked",
+      "method": "Iterate symbolically, use the integer restriction, then continue with the selected k.",
+      "steps": [
+        {
+          "latex": "u_2=5k-8;u_3=k(5k-8)-8=5k^2-8k-8",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "5k^2-8k-8=40;5k^2-8k-48=0;(k-4)(5k+12)=0;k\\in\\mathbb Z\\Rightarrow k=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u_3=40;u_4=4(40)-8=152;u_5=4(152)-8=600",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Iterate symbolically, use the integer restriction, then continue with the selected k.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_2=5k-8\" data-display=\"true\"></span><span data-math=\"u_3=k(5k-8)-8=5k^2-8k-8\" data-display=\"true\"></span></li><li><span data-math=\"5k^2-8k-8=40\" data-display=\"true\"></span><span data-math=\"5k^2-8k-48=0\" data-display=\"true\"></span><span data-math=\"(k-4)(5k+12)=0\" data-display=\"true\"></span><span data-math=\"k\\in\\mathbb Z\\Rightarrow k=4\" data-display=\"true\"></span></li><li><span data-math=\"u_3=40\" data-display=\"true\"></span><span data-math=\"u_4=4(40)-8=152\" data-display=\"true\"></span><span data-math=\"u_5=4(152)-8=600\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.7/q7",
+      "status": "worked",
+      "method": "Use the four-value sine cycle.",
+      "steps": [
+        {
+          "latex": "u_1,u_2,u_3,u_4=1,0,-1,0;\\text{period }4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "1+0-1+0=0;200=50\\cdot4;\\sum_{r=1}^{200}u_r=50(0)=0",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the four-value sine cycle.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_1,u_2,u_3,u_4=1,0,-1,0\" data-display=\"true\"></span><span data-math=\"\\text{period }4\" data-display=\"true\"></span></li><li><span data-math=\"1+0-1+0=0\" data-display=\"true\"></span><span data-math=\"200=50\\cdot4\" data-display=\"true\"></span><span data-math=\"\\sum_{r=1}^{200}u_r=50(0)=0\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.7/q8",
+      "status": "worked",
+      "method": "Expand the first four terms, then factor their sum.",
+      "steps": [
+        {
+          "latex": "a_2=5k+4;a_3=5(5k+4)+4=25k+24",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a_4=5(25k+24)+4=125k+124;\\sum_{r=1}^4a_r=k+(5k+4)+(25k+24)+(125k+124);=156k+152=4(39k+38)",
+          "explanation": "This is an integer multiple of 4 if k is an integer (or more generally if 39k+38 is an integer). The question does not explicitly state that k is integral; without that assumption, the divisibility claim is not guaranteed.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand the first four terms, then factor their sum.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a_2=5k+4\" data-display=\"true\"></span><span data-math=\"a_3=5(5k+4)+4=25k+24\" data-display=\"true\"></span></li><li><p>This is an integer multiple of 4 if k is an integer (or more generally if 39k+38 is an integer). The question does not explicitly state that k is integral; without that assumption, the divisibility claim is not guaranteed.</p><span data-math=\"a_4=5(25k+24)+4=125k+124\" data-display=\"true\"></span><span data-math=\"\\sum_{r=1}^4a_r=k+(5k+4)+(25k+24)+(125k+124)\" data-display=\"true\"></span><span data-math=\"=156k+152=4(39k+38)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.7/q9",
+      "status": "worked",
+      "method": "Find the repeating block and count complete blocks plus the remaining terms.",
+      "steps": [
+        {
+          "latex": "a_1=3;a_2=1-\\frac1{3-2}=0;a_3=1-\\frac1{0-2}=\\frac32;a_4=1-\\frac1{3/2-2}=3;50=16(3)+2;\\sum_{r=1}^{50}a_r=16(3+0+\\tfrac32)+3+0=75",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "49=16(3)+1;\\sum_{r=1}^{49}a_r=16(\\tfrac92)+3=75;\\sum_{r=1}^{50}a_r+\\sum_{r=1}^{49}a_r=150",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the repeating block and count complete blocks plus the remaining terms.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a_1=3\" data-display=\"true\"></span><span data-math=\"a_2=1-\\frac1{3-2}=0\" data-display=\"true\"></span><span data-math=\"a_3=1-\\frac1{0-2}=\\frac32\" data-display=\"true\"></span><span data-math=\"a_4=1-\\frac1{3/2-2}=3\" data-display=\"true\"></span><span data-math=\"50=16(3)+2\" data-display=\"true\"></span><span data-math=\"\\sum_{r=1}^{50}a_r=16(3+0+\\tfrac32)+3+0=75\" data-display=\"true\"></span></li><li><span data-math=\"49=16(3)+1\" data-display=\"true\"></span><span data-math=\"\\sum_{r=1}^{49}a_r=16(\\tfrac92)+3=75\" data-display=\"true\"></span><span data-math=\"\\sum_{r=1}^{50}a_r+\\sum_{r=1}^{49}a_r=150\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.8/q1",
+      "status": "worked",
+      "method": "Model the Sunday run lengths by a=6,d=2 and count the first Sunday as term 1.",
+      "steps": [
+        {
+          "latex": "u_5=6+(5-1)2=14\\text{ km}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u_n=6+2(n-1)=2n+4\\text{ km}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2n+4=42\\Rightarrow n=19",
+          "explanation": "He reaches marathon distance on the 19th training Sunday/week, which is 18 elapsed weeks after his first Sunday run.",
+          "graphs": []
+        },
+        {
+          "latex": "S_{20}=\\frac{20}2[12+19(2)]=500\\text{ km}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Model the Sunday run lengths by a=6,d=2 and count the first Sunday as term 1.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_5=6+(5-1)2=14\\text{ km}\" data-display=\"true\"></span></li><li><span data-math=\"u_n=6+2(n-1)=2n+4\\text{ km}\" data-display=\"true\"></span></li><li><p>He reaches marathon distance on the 19th training Sunday/week, which is 18 elapsed weeks after his first Sunday run.</p><span data-math=\"2n+4=42\\Rightarrow n=19\" data-display=\"true\"></span></li><li><span data-math=\"S_{20}=\\frac{20}2[12+19(2)]=500\\text{ km}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.8/q2",
+      "status": "worked",
+      "method": "A 2.5% annual increase multiplies the previous population by 1.025.",
+      "steps": [
+        {
+          "latex": "P_2=28000(1.025)=28700",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "P_n=28000(1.025)^{n-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "P_{10}=28000(1.025)^9\\approx34968\\text{ adults}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "A constant percentage increase every year is unrealistic: migration, births, deaths and changes in the population reaching adulthood vary over time.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>A 2.5% annual increase multiplies the previous population by 1.025.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"P_2=28000(1.025)=28700\" data-display=\"true\"></span></li><li><span data-math=\"P_n=28000(1.025)^{n-1}\" data-display=\"true\"></span></li><li><span data-math=\"P_{10}=28000(1.025)^9\\approx34968\\text{ adults}\" data-display=\"true\"></span></li><li><p>A constant percentage increase every year is unrealistic: migration, births, deaths and changes in the population reaching adulthood vary over time.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.8/q3",
+      "status": "worked",
+      "method": "Work in pounds with first deposit 0.10 and common difference 0.05.",
+      "steps": [
+        {
+          "latex": "u_{52}=0.10+51(0.05)=2.65;\\text{week 52 deposit: £2.65}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_{52}=\\frac{52}2(0.10+2.65)=71.50;\\text{total: £71.50}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Work in pounds with first deposit 0.10 and common difference 0.05.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_{52}=0.10+51(0.05)=2.65\" data-display=\"true\"></span><span data-math=\"\\text{week 52 deposit: £2.65}\" data-display=\"true\"></span></li><li><span data-math=\"S_{52}=\\frac{52}2(0.10+2.65)=71.50\" data-display=\"true\"></span><span data-math=\"\\text{total: £71.50}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.8/q4",
+      "status": "worked",
+      "method": "Compare total repayments; subtracting the same £6000 principal preserves the difference in interest.",
+      "steps": [
+        {
+          "latex": "S_1=\\frac{24}2(120+396)=6192;I_1=6192-6000=192;S_2=110\\frac{1.07^{24}-1}{1.07-1}\\approx6399.43;I_2\\approx399.43;I_2-I_1\\approx207.43;\\text{Option 1 is cheaper by £207.43 (about £207).}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Compare total repayments; subtracting the same £6000 principal preserves the difference in interest.</p><span data-math=\"S_1=\\frac{24}2(120+396)=6192\" data-display=\"true\"></span><span data-math=\"I_1=6192-6000=192\" data-display=\"true\"></span><span data-math=\"S_2=110\\frac{1.07^{24}-1}{1.07-1}\\approx6399.43\" data-display=\"true\"></span><span data-math=\"I_2\\approx399.43\" data-display=\"true\"></span><span data-math=\"I_2-I_1\\approx207.43\" data-display=\"true\"></span><span data-math=\"\\text{Option 1 is cheaper by £207.43 (about £207).}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.8/q5",
+      "status": "worked",
+      "method": "Use elapsed years after purchase as the exponent, then solve the decay inequality.",
+      "steps": [
+        {
+          "latex": "V_3=15000(0.75)^3=6328.125;\\text{nearest pound: £6328}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "15000(0.75)^t<1000;0.75^t<\\frac1{15};t>\\frac{\\ln(1/15)}{\\ln0.75}\\approx9.414;\\text{first whole year: }t=10",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use elapsed years after purchase as the exponent, then solve the decay inequality.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"V_3=15000(0.75)^3=6328.125\" data-display=\"true\"></span><span data-math=\"\\text{nearest pound: £6328}\" data-display=\"true\"></span></li><li><span data-math=\"15000(0.75)^t&lt;1000\" data-display=\"true\"></span><span data-math=\"0.75^t&lt;\\frac1{15}\" data-display=\"true\"></span><span data-math=\"t&gt;\\frac{\\ln(1/15)}{\\ln0.75}\\approx9.414\" data-display=\"true\"></span><span data-math=\"\\text{first whole year: }t=10\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.8/q6",
+      "status": "worked",
+      "method": "Use a geometric progression for annual premiums. Apply the 10% discount only until its £35 cap is reached.",
+      "steps": [
+        {
+          "latex": "P_4=250(1.05)^3=289.40625;\\text{fourth-year cost: £289.41}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "T=250\\frac{1.05^{10}-1}{0.05}\\approx3144.47;\\text{total: £3144.47}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "0.1P_n=25(1.05)^{n-1};25(1.05)^6<35<25(1.05)^7;\\text{years 1–7: 10\\% discount};\\text{years 8–10: £35 each};D=25\\frac{1.05^7-1}{0.05}+3(35)\\approx308.55;T-D\\approx2835.92;\\text{nearest pound: £2836}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use a geometric progression for annual premiums. Apply the 10% discount only until its £35 cap is reached.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"P_4=250(1.05)^3=289.40625\" data-display=\"true\"></span><span data-math=\"\\text{fourth-year cost: £289.41}\" data-display=\"true\"></span></li><li><span data-math=\"T=250\\frac{1.05^{10}-1}{0.05}\\approx3144.47\" data-display=\"true\"></span><span data-math=\"\\text{total: £3144.47}\" data-display=\"true\"></span></li><li><span data-math=\"0.1P_n=25(1.05)^{n-1}\" data-display=\"true\"></span><span data-math=\"25(1.05)^6&lt;35&lt;25(1.05)^7\" data-display=\"true\"></span><span data-math=\"\\text{years 1–7: 10\\% discount}\" data-display=\"true\"></span><span data-math=\"\\text{years 8–10: £35 each}\" data-display=\"true\"></span><span data-math=\"D=25\\frac{1.05^7-1}{0.05}+3(35)\\approx308.55\" data-display=\"true\"></span><span data-math=\"T-D\\approx2835.92\" data-display=\"true\"></span><span data-math=\"\\text{nearest pound: £2836}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.8/q7",
+      "status": "worked",
+      "method": "The height after n bounces is 2(3/4)^n. The 10th ground impact includes the initial fall and nine complete up-and-down rebounds.",
+      "steps": [
+        {
+          "latex": "2(\\tfrac34)^n<0.10;n>\\frac{\\ln0.05}{\\ln0.75}\\approx10.413;n_{\\min}=11\\text{ bounces}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "D=2+2\\sum_{j=1}^{9}2(\\tfrac34)^j;=2+3\\frac{1-(3/4)^9}{1-3/4};=2+12[1-(\\tfrac34)^9]\\approx13.10\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "A fixed rebound ratio predicts infinitely many ever-smaller bounces. Real deformation and energy losses eventually stop the ball, so the model is unsuitable for very large bounce counts.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The height after n bounces is 2(3/4)^n. The 10th ground impact includes the initial fall and nine complete up-and-down rebounds.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"2(\\tfrac34)^n&lt;0.10\" data-display=\"true\"></span><span data-math=\"n&gt;\\frac{\\ln0.05}{\\ln0.75}\\approx10.413\" data-display=\"true\"></span><span data-math=\"n_{\\min}=11\\text{ bounces}\" data-display=\"true\"></span></li><li><span data-math=\"D=2+2\\sum_{j=1}^{9}2(\\tfrac34)^j\" data-display=\"true\"></span><span data-math=\"=2+3\\frac{1-(3/4)^9}{1-3/4}\" data-display=\"true\"></span><span data-math=\"=2+12[1-(\\tfrac34)^9]\\approx13.10\\text{ m}\" data-display=\"true\"></span></li><li><p>A fixed rebound ratio predicts infinitely many ever-smaller bounces. Real deformation and energy losses eventually stop the ball, so the model is unsuitable for very large bounce counts.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/problem-a/qbronze",
+      "status": "worked",
+      "method": "Subtract the term equations to find the common difference, then solve the sum equation.",
+      "steps": [
+        {
+          "latex": "a+15d=25;a+24d=47.5;9d=22.5\\Rightarrow d=2.5;a=25-37.5=-12.5",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "712.5=\\frac n2[-25+2.5(n-1)];n(n-11)=570;(n-30)(n+19)=0;n>0\\Rightarrow n=30",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Subtract the term equations to find the common difference, then solve the sum equation.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a+15d=25\" data-display=\"true\"></span><span data-math=\"a+24d=47.5\" data-display=\"true\"></span><span data-math=\"9d=22.5\\Rightarrow d=2.5\" data-display=\"true\"></span><span data-math=\"a=25-37.5=-12.5\" data-display=\"true\"></span></li><li><span data-math=\"712.5=\\frac n2[-25+2.5(n-1)]\" data-display=\"true\"></span><span data-math=\"n(n-11)=570\" data-display=\"true\"></span><span data-math=\"(n-30)(n+19)=0\" data-display=\"true\"></span><span data-math=\"n&gt;0\\Rightarrow n=30\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/problem-a/qsilver",
+      "status": "worked",
+      "method": "If there are n terms, the last term is np=200. Use this to eliminate p.",
+      "steps": [
+        {
+          "latex": "np=200;S=\\frac n2(p+200)=1700;np+200n=3400;200+200n=3400;n=16;p=200/16=12.5",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>If there are n terms, the last term is np=200. Use this to eliminate p.</p><span data-math=\"np=200\" data-display=\"true\"></span><span data-math=\"S=\\frac n2(p+200)=1700\" data-display=\"true\"></span><span data-math=\"np+200n=3400\" data-display=\"true\"></span><span data-math=\"200+200n=3400\" data-display=\"true\"></span><span data-math=\"n=16\" data-display=\"true\"></span><span data-math=\"p=200/16=12.5\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/problem-a/qgold",
+      "status": "worked",
+      "method": "The common difference is 2k+5. Apply the positivity condition to term 60.",
+      "steps": [
+        {
+          "latex": "d=(5k+7)-(3k+2)=2k+5;u_{60}=3k+2+59(2k+5)=121k+297;121k+297>0;k>-\\frac{297}{121}=-\\frac{27}{11}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The common difference is 2k+5. Apply the positivity condition to term 60.</p><span data-math=\"d=(5k+7)-(3k+2)=2k+5\" data-display=\"true\"></span><span data-math=\"u_{60}=3k+2+59(2k+5)=121k+297\" data-display=\"true\"></span><span data-math=\"121k+297&gt;0\" data-display=\"true\"></span><span data-math=\"k&gt;-\\frac{297}{121}=-\\frac{27}{11}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/problem-b/qbronze",
+      "status": "worked",
+      "method": "The tail is itself a geometric series starting with the r=8 term.",
+      "steps": [
+        {
+          "latex": "a=3(\\tfrac12)^8=\\frac3{256};r=\\frac12;S=\\frac{3/256}{1-1/2}=\\frac3{128}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The tail is itself a geometric series starting with the r=8 term.</p><span data-math=\"a=3(\\tfrac12)^8=\\frac3{256}\" data-display=\"true\"></span><span data-math=\"r=\\frac12\" data-display=\"true\"></span><span data-math=\"S=\\frac{3/256}{1-1/2}=\\frac3{128}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/problem-b/qsilver",
+      "status": "worked",
+      "method": "There are k−7 terms, starting at 11 and ending at 2k−5.",
+      "steps": [
+        {
+          "latex": "299=\\frac{k-7}2[11+(2k-5)];(k-7)(k+3)=299;k^2-4k-320=0;(k-20)(k+16)=0;k>0\\Rightarrow k=20",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>There are k−7 terms, starting at 11 and ending at 2k−5.</p><span data-math=\"299=\\frac{k-7}2[11+(2k-5)]\" data-display=\"true\"></span><span data-math=\"(k-7)(k+3)=299\" data-display=\"true\"></span><span data-math=\"k^2-4k-320=0\" data-display=\"true\"></span><span data-math=\"(k-20)(k+16)=0\" data-display=\"true\"></span><span data-math=\"k&gt;0\\Rightarrow k=20\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/problem-b/qgold",
+      "status": "worked",
+      "method": "Split the sum into arithmetic, geometric and constant contributions.",
+      "steps": [
+        {
+          "latex": "3\\frac{16\\cdot17}2+2\\frac{2^{16}-1}{2-1}+16k=131550;408+131070+16k=131550;16k=72;k=\\frac92",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Split the sum into arithmetic, geometric and constant contributions.</p><span data-math=\"3\\frac{16\\cdot17}2+2\\frac{2^{16}-1}{2-1}+16k=131550\" data-display=\"true\"></span><span data-math=\"408+131070+16k=131550\" data-display=\"true\"></span><span data-math=\"16k=72\" data-display=\"true\"></span><span data-math=\"k=\\frac92\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/exam/q24",
+      "status": "worked",
+      "method": "Use the arithmetic term and sum formulas.",
+      "steps": [
+        {
+          "latex": "u_{20}=2+19(6)=116",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "7450=\\frac n2[4+6(n-1)];3n^2-n-7450=0;(n-50)(3n+149)=0;n>0\\Rightarrow n=50",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the arithmetic term and sum formulas.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_{20}=2+19(6)=116\" data-display=\"true\"></span></li><li><span data-math=\"7450=\\frac n2[4+6(n-1)]\" data-display=\"true\"></span><span data-math=\"3n^2-n-7450=0\" data-display=\"true\"></span><span data-math=\"(n-50)(3n+149)=0\" data-display=\"true\"></span><span data-math=\"n&gt;0\\Rightarrow n=50\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/exam/q27",
+      "status": "worked",
+      "method": "Apply the recurrence successively, then add the first four terms.",
+      "steps": [
+        {
+          "latex": "a_2=3k-5",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a_3=3(3k-5)-5=9k-20",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a_4=3(9k-20)-5=27k-65;\\sum_{r=1}^4a_r=k+(3k-5)+(9k-20)+(27k-65);=40k-90=-30;k=\\frac32",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Apply the recurrence successively, then add the first four terms.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a_2=3k-5\" data-display=\"true\"></span></li><li><span data-math=\"a_3=3(3k-5)-5=9k-20\" data-display=\"true\"></span></li><li><span data-math=\"a_4=3(9k-20)-5=27k-65\" data-display=\"true\"></span><span data-math=\"\\sum_{r=1}^4a_r=k+(3k-5)+(9k-20)+(27k-65)\" data-display=\"true\"></span><span data-math=\"=40k-90=-30\" data-display=\"true\"></span><span data-math=\"k=\\frac32\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/exam/q61",
+      "status": "worked",
+      "method": "Split the finite sum, and group the recurrence into repeating pairs.",
+      "steps": [
+        {
+          "latex": "\\sum_{r=1}^{12}(2+4r+3^r);=2(12)+4\\frac{12\\cdot13}2+3\\frac{3^{12}-1}{3-1};=24+312+797160=797496",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u_1=\\frac34;u_2=-\\frac43;u_3=\\frac34;\\text{period }2;\\sum_{r=1}^{200}u_r=100(\\tfrac34-\\tfrac43)=-\\frac{175}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Split the finite sum, and group the recurrence into repeating pairs.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sum_{r=1}^{12}(2+4r+3^r)\" data-display=\"true\"></span><span data-math=\"=2(12)+4\\frac{12\\cdot13}2+3\\frac{3^{12}-1}{3-1}\" data-display=\"true\"></span><span data-math=\"=24+312+797160=797496\" data-display=\"true\"></span></li><li><span data-math=\"u_1=\\frac34\" data-display=\"true\"></span><span data-math=\"u_2=-\\frac43\" data-display=\"true\"></span><span data-math=\"u_3=\\frac34\" data-display=\"true\"></span><span data-math=\"\\text{period }2\" data-display=\"true\"></span><span data-math=\"\\sum_{r=1}^{200}u_r=100(\\tfrac34-\\tfrac43)=-\\frac{175}3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/exam/q64",
+      "status": "worked",
+      "method": "Use the finite sum, and recognise the remaining tail as S∞r^N.",
+      "steps": [
+        {
+          "latex": "S_{15}=30\\frac{1-(5/8)^{15}}{1-5/8};=80[1-(\\tfrac58)^{15}]\\approx79.9\\quad(1\\text{ d.p.})",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_\\infty-S_N=80(\\tfrac58)^N<0.5;(\\tfrac58)^N<\\frac1{160};N>\\frac{\\ln(1/160)}{\\ln(5/8)}\\approx10.798;N_{\\min}=11",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the finite sum, and recognise the remaining tail as S∞r^N.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"S_{15}=30\\frac{1-(5/8)^{15}}{1-5/8}\" data-display=\"true\"></span><span data-math=\"=80[1-(\\tfrac58)^{15}]\\approx79.9\\quad(1\\text{ d.p.})\" data-display=\"true\"></span></li><li><span data-math=\"S_\\infty-S_N=80(\\tfrac58)^N&lt;0.5\" data-display=\"true\"></span><span data-math=\"(\\tfrac58)^N&lt;\\frac1{160}\" data-display=\"true\"></span><span data-math=\"N&gt;\\frac{\\ln(1/160)}{\\ln(5/8)}\\approx10.798\" data-display=\"true\"></span><span data-math=\"N_{\\min}=11\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/exam/q68",
+      "status": "worked",
+      "method": "Apply the term, infinite-sum and finite-sum formulas with r=0.6.",
+      "steps": [
+        {
+          "latex": "u_{20}=10(\\tfrac35)^{19}\\approx0.000609\\quad(3\\text{ s.f.})",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_\\infty=\\frac{10}{1-3/5}=25",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "25(1-0.6^k)>24.99;0.6^k<0.0004;k\\log0.6<\\log0.0004;k>\\frac{\\log0.0004}{\\log0.6}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{\\log0.0004}{\\log0.6}\\approx15.316;k_{\\min}=16",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Apply the term, infinite-sum and finite-sum formulas with r=0.6.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_{20}=10(\\tfrac35)^{19}\\approx0.000609\\quad(3\\text{ s.f.})\" data-display=\"true\"></span></li><li><span data-math=\"S_\\infty=\\frac{10}{1-3/5}=25\" data-display=\"true\"></span></li><li><span data-math=\"25(1-0.6^k)&gt;24.99\" data-display=\"true\"></span><span data-math=\"0.6^k&lt;0.0004\" data-display=\"true\"></span><span data-math=\"k\\log0.6&lt;\\log0.0004\" data-display=\"true\"></span><span data-math=\"k&gt;\\frac{\\log0.0004}{\\log0.6}\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{\\log0.0004}{\\log0.6}\\approx15.316\" data-display=\"true\"></span><span data-math=\"k_{\\min}=16\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/exam/q73",
+      "status": "worked",
+      "method": "Count 2018 as term 1, and translate the resulting term number back to a calendar year.",
+      "steps": [
+        {
+          "latex": "P_n=60000r^{n-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "60000r^{n-1}>240000;r^{n-1}>4;(n-1)\\log r>\\log4;n>\\frac{\\log4}{\\log r}+1\\quad(r>1)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "r=1.08:\\ n>\\frac{\\log4}{\\log1.08}+1\\approx19.013;n_{\\min}=20;\\text{calendar year }2018+(20-1)=2037",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S_{10}=60000\\frac{1.08^{10}-1}{0.08}\\approx869193.75;\\text{nearest £10000: £870000}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Count 2018 as term 1, and translate the resulting term number back to a calendar year.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"P_n=60000r^{n-1}\" data-display=\"true\"></span></li><li><span data-math=\"60000r^{n-1}&gt;240000\" data-display=\"true\"></span><span data-math=\"r^{n-1}&gt;4\" data-display=\"true\"></span><span data-math=\"(n-1)\\log r&gt;\\log4\" data-display=\"true\"></span><span data-math=\"n&gt;\\frac{\\log4}{\\log r}+1\\quad(r&gt;1)\" data-display=\"true\"></span></li><li><span data-math=\"r=1.08:\\ n&gt;\\frac{\\log4}{\\log1.08}+1\\approx19.013\" data-display=\"true\"></span><span data-math=\"n_{\\min}=20\" data-display=\"true\"></span><span data-math=\"\\text{calendar year }2018+(20-1)=2037\" data-display=\"true\"></span></li><li><span data-math=\"S_{10}=60000\\frac{1.08^{10}-1}{0.08}\\approx869193.75\" data-display=\"true\"></span><span data-math=\"\\text{nearest £10000: £870000}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/exam/q76",
+      "status": "worked",
+      "method": "The even-index terms determine r², so consider both signs before applying the final sum condition.",
+      "steps": [
+        {
+          "latex": "ar=270,\\quad ar^3=120;r^2=\\frac49\\Rightarrow r=\\pm\\frac23;r=\\frac23\\Rightarrow a=405,\\quad S_\\infty=1215;r=-\\frac23\\Rightarrow a=-405,\\quad S_\\infty=-243",
+          "explanation": "Both ratios satisfy part (a), whereas the supplied answer gives only the positive-ratio case. The existence of the bound in part (b) selects the positive ratio.",
+          "graphs": []
+        },
+        {
+          "latex": "r=\\frac23:\\ S_n=1215[1-(\\tfrac23)^n]>1200;(\\tfrac23)^n<\\frac1{81};n>\\frac{\\ln(1/81)}{\\ln(2/3)}\\approx10.838;n_{\\min}=11",
+          "explanation": "For r=−2/3, all partial sums −243[1−(−2/3)^n] are negative, so none exceeds 1200.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The even-index terms determine r², so consider both signs before applying the final sum condition.</p><ol type=\"a\" class=\"parts\"><li><p>Both ratios satisfy part (a), whereas the supplied answer gives only the positive-ratio case. The existence of the bound in part (b) selects the positive ratio.</p><span data-math=\"ar=270,\\quad ar^3=120\" data-display=\"true\"></span><span data-math=\"r^2=\\frac49\\Rightarrow r=\\pm\\frac23\" data-display=\"true\"></span><span data-math=\"r=\\frac23\\Rightarrow a=405,\\quad S_\\infty=1215\" data-display=\"true\"></span><span data-math=\"r=-\\frac23\\Rightarrow a=-405,\\quad S_\\infty=-243\" data-display=\"true\"></span></li><li><p>For r=−2/3, all partial sums −243[1−(−2/3)^n] are negative, so none exceeds 1200.</p><span data-math=\"r=\\frac23:\\ S_n=1215[1-(\\tfrac23)^n]&gt;1200\" data-display=\"true\"></span><span data-math=\"(\\tfrac23)^n&lt;\\frac1{81}\" data-display=\"true\"></span><span data-math=\"n&gt;\\frac{\\ln(1/81)}{\\ln(2/3)}\\approx10.838\" data-display=\"true\"></span><span data-math=\"n_{\\min}=11\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/exam/q80",
+      "status": "worked",
+      "method": "Use the middle-term identity, then select the root k<1 and compute with its negative ratio.",
+      "steps": [
+        {
+          "latex": "(4k-5)^2=(6k-5)(5-k);22k^2-75k+50=0;(11k-10)(2k-5)=0;k<1\\Rightarrow k=\\frac{10}{11}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=6(\\tfrac{10}{11})-5=\\frac5{11};u_2=-\\frac{15}{11}\\Rightarrow r=-3;\\text{(i) }u_4=\\frac5{11}(-3)^3=-\\frac{135}{11};\\text{(ii) }S_{10}=\\frac5{11}\\frac{1-(-3)^{10}}{1+3}=-6710",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the middle-term identity, then select the root k&lt;1 and compute with its negative ratio.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"(4k-5)^2=(6k-5)(5-k)\" data-display=\"true\"></span><span data-math=\"22k^2-75k+50=0\" data-display=\"true\"></span><span data-math=\"(11k-10)(2k-5)=0\" data-display=\"true\"></span><span data-math=\"k&lt;1\\Rightarrow k=\\frac{10}{11}\" data-display=\"true\"></span></li><li><span data-math=\"a=6(\\tfrac{10}{11})-5=\\frac5{11}\" data-display=\"true\"></span><span data-math=\"u_2=-\\frac{15}{11}\\Rightarrow r=-3\" data-display=\"true\"></span><span data-math=\"\\text{(i) }u_4=\\frac5{11}(-3)^3=-\\frac{135}{11}\" data-display=\"true\"></span><span data-math=\"\\text{(ii) }S_{10}=\\frac5{11}\\frac{1-(-3)^{10}}{1+3}=-6710\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}

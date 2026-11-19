@@ -14,7 +14,13 @@ def generate(root, entries, version):
     root = Path(root)
     teaching = json.loads((root/'teaching-catalogue.js').read_text().split('=',1)[1].strip().rstrip(';'))
     catalogue = json.loads((root/'textbook-catalogue.json').read_text())
-    shared = {n for n in entries if (len(Path(n).parts)==1 and Path(n).suffix in {'.html','.js','.css','.webmanifest'}) or n in {'textbook-catalogue.json','release.json','version-history.json'} or n.startswith('vendor/') or n.startswith('assets/luisa/') or (n.startswith('resources/') and (Path(n).suffix in {'.js','.css'} or Path(n).name=='index.json'))}
+    practice_index = json.loads((root/'practice-catalogue.json').read_text()) if (root/'practice-catalogue.json').exists() else {'questions': []}
+    practice_files = {}; practice_counts = {}
+    for question in practice_index['questions']:
+        key = (question['bookId'], str(question['chapterNumber']))
+        practice_files.setdefault(key, set()).add(question['dataPath'])
+        practice_counts[key] = practice_counts.get(key, 0) + 1
+    shared = {n for n in entries if (len(Path(n).parts)==1 and Path(n).suffix in {'.html','.js','.css','.webmanifest'}) or n in {'textbook-catalogue.json','practice-catalogue.json','release.json','version-history.json'} or n.startswith('vendor/') or n.startswith('assets/luisa/') or (n.startswith('resources/') and (Path(n).suffix in {'.js','.css'} or Path(n).name=='index.json'))}
     shared.discard('sw.js')
     def local(url, bases=('',)):
         p = urlsplit(url)
@@ -129,14 +135,19 @@ def generate(root, entries, version):
                     extras.append(base+f'booklets/chapter-{number:02}.pdf')
                 for extra in extras:
                     if extra in entries:files.add(extra)
+            for name in practice_files.get((book['id'], ch['id']), set()):
+                if name not in entries:raise ValueError('Offline Practice Booklet questions missing: '+name)
+                files.add(name)
+                files.update(refs(json.loads((root/name).read_text()), ('',)))
             practice=[q for q in catalogue['questions'] if any(t['book']==book['id'] and t['chapter']==ch['id'] for t in q['targets'])]
             for skill in {q['skill'] for q in practice}:
                 name='content/'+skill+'.json'
                 if name not in entries:raise ValueError('Offline practice missing: '+name)
                 files.add(name);files.update(refs(json.loads((root/name).read_text()),('',)));files.update(print_by_skill.get(skill,set()))
-            if not practice:unavailable.append('Mapped practice questions (not yet available)')
+            practice_count = len(practice) + practice_counts.get((book['id'], ch['id']), 0)
+            if not practice_count:unavailable.append('Mapped practice questions (not yet available)')
             if not files:continue
-            packs.append({'id':book['id']+':'+ch['id'],'book':book['title'],'chapter':ch['id'],'title':ch['title'],'course':book['course'],'bookId':book['id'],'links':links,'unavailable':unavailable,'practiceEntries':len(practice),'files':sorted(close_assets(files)-shared)})
+            packs.append({'id':book['id']+':'+ch['id'],'book':book['title'],'chapter':ch['id'],'title':ch['title'],'course':book['course'],'bookId':book['id'],'links':links,'unavailable':unavailable,'practiceEntries':practice_count,'files':sorted(close_assets(files)-shared)})
     # Non-Edexcel/unmapped skill practice remains accessible from the skill library.
     mapped_skills={q['skill'] for q in catalogue['questions'] if q.get('targets')}
     for course in library['courses']:

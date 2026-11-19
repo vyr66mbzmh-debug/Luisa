@@ -1,0 +1,1658 @@
+{
+  "schemaVersion": 1,
+  "sourceFamily": "applied-year-1",
+  "chapterNumber": 3,
+  "chapterTitle": "Representations of data",
+  "sourcePdf": "resources/practice/applied-year-1/chapter-03.pdf",
+  "questions": [
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "1",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.1",
+      "subchapterTitle": "3.1 Outliers",
+      "number": "1",
+      "question": "The scores achieved by a group of students on a maths test are recorded.\n\nThe quartiles are: <span data-math=\"Q_1=50\\%\"></span> and <span data-math=\"Q_3=65\\%\"></span>.\n\nA value greater than <span data-math=\"Q_3+1.5\\times(Q_3-Q_1)\"></span> or smaller than <span data-math=\"Q_1-1.5\\times(Q_3-Q_1)\"></span> is defined as an outlier.\n\nWork out whether the following scores are outliers, according to this definition:\n<ol type=\"a\"><li value=\"1\">12%</li><li value=\"2\">71%</li><li value=\"3\">90%</li></ol>",
+      "hints": [
+        "Use the definition of an outlier supplied in the question, and work out the lower and upper bounds."
+      ],
+      "steps": [
+        "<p>IQR=65−50=15. The outlier fences are 50−1.5(15)=27.5 and 65+1.5(15)=87.5.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>12%&lt;27.5%, so it is an outlier.</p></li><li value=\"2\"><p>71% is between the fences, so it is not an outlier.</p></li><li value=\"3\"><p>90%&gt;87.5%, so it is an outlier.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "1f40a070eef8c6cb11e271932afffc2b1e2742c14a06b510cbbaf62655a8f0ac",
+        "printedBookPage": "17",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            309.212,
+            68.247,
+            320.121
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.1 Outliers"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "2",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.1",
+      "subchapterTitle": "3.1 Outliers",
+      "number": "2",
+      "question": "Some data is collected. The mean and standard deviation are calculated and found to be 14.5 and 6.2 respectively.\n\nAn outlier is defined as an observation which lies more than 2 standard deviations from the mean.\n\nWork out whether the following are outliers using this rule:\n<ol type=\"a\"><li value=\"1\">12.5</li><li value=\"2\">27.1</li><li value=\"3\">26.9</li></ol>",
+      "hints": [
+        "There are many possible definitions of an outlier. You will be told which definition to use in the question."
+      ],
+      "steps": [
+        "<p>The non-outlier interval is 14.5±2(6.2), or[2.1,26.9].</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>12.5 lies within the interval: not an outlier.</p></li><li value=\"2\"><p>27.1&gt;26.9: an outlier.</p></li><li value=\"3\"><p>26.9 is exactly on the boundary. The rule says more than two standard deviations, so it is not an outlier.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "d3d2269f3225e247f36a495f03a05264b373416f4539a363da2876f37541917c",
+        "printedBookPage": "17",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            467.57,
+            68.247,
+            478.479
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.1 Outliers"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "3",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.1",
+      "subchapterTitle": "3.1 Outliers",
+      "number": "3",
+      "question": "<span class=\"practice-tag\">E/P</span>  The lengths of a colony of rattlesnakes are recorded. The mean length is 1.5 m and the variance is 0.04.\n\nAn outlier is an observation which lies <span data-math=\"\\pm2\"></span> standard deviations from the mean.\n\nThe length of one of the rattlesnakes is recorded as 2.1 m.\n<ol type=\"a\"><li value=\"1\">State, with a reason, whether this is an outlier. <span class=\"marks\">(2 marks)</span></li><li value=\"2\">Calculate the largest and smallest lengths that a rattlesnake can be without being considered an outlier. <span class=\"marks\">(2 marks)</span></li><li value=\"3\">State, with a reason, whether this recorded length should be removed from the data. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>First take the square root of the variance.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma\\approx\\sqrt{0.04}=0.2;\\quad1.5+2(0.2)=1.9&lt;2.1\"></span><p>Thus 2.1 m is an outlier.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"1.5\\pm2(0.2)\\Rightarrow[1.1,1.9]\\text{ m}\"></span></li><li value=\"3\"><p>Do not remove it merely because it is an outlier: a large adult rattlesnake could genuinely be 2.1 m. Check the measurement and retain it if valid.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "65c0b06eee6ee2706fd2a936dbfaeb18ec911d02d438743e374ca3469433ea37",
+        "printedBookPage": "17",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            612.118,
+            68.247,
+            623.027
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.1 Outliers"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "4",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.1",
+      "subchapterTitle": "3.1 Outliers",
+      "number": "4",
+      "question": "<span class=\"practice-tag\">E/P</span>  The ages of 20 people on a coach trip are recorded. The lower quartile of the ages is found to be 22 and the upper quartile is found to be 46.\n\nAn outlier is an observation that falls either <span data-math=\"1.5\\times\"></span> the interquartile range below the lower quartile, or <span data-math=\"1.5\\times\"></span> the interquartile range above the upper quartile.\n<ol type=\"a\"><li value=\"1\">Calculate the minimum age and maximum age a person on the trip could be without being considered an outlier. <span class=\"marks\">(3 marks)</span></li></ol>\nOne of the people on the trip has an age recorded as 103.\n<ol type=\"a\"><li value=\"2\">Suggest a reason why this could be a legitimate data value. <span class=\"marks\">(1 mark)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Calculate IQR=46−22=24, and also respect the fact that age cannot be negative.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"22-1.5(24)=-14;\\quad46+1.5(24)=82\"></span><p>The statistical lower fence is−14, but the smallest possible age is 0. The non-outlier ages therefore range from 0 to 82.</p></li><li value=\"2\"><p>A person may genuinely live to 103, so a value outside the statistical fence is not necessarily a recording error.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "fbbae8bee2e15293d076d7c3e78ac571638744de02fda2ba62b72e55f44a1540",
+        "printedBookPage": "17",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            734.459,
+            68.247,
+            745.368
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.1 Outliers"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "5",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.1",
+      "subchapterTitle": "3.1 Outliers",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E/P</span>  The ages of 10 students at a secondary school are recorded.\n\nThe summary statistics are <span data-math=\"\\sum x=154\"></span> and <span data-math=\"\\sum x^2=2438\"></span>.\n<ol type=\"a\"><li value=\"1\">Calculate the mean and standard deviation of the ages. <span class=\"marks\">(3 marks)</span></li></ol>\nAn outlier is an observation which lies <span data-math=\"\\pm2\"></span> standard deviations from the mean.\n\nOne of the ages recorded is 21.\n<ol type=\"a\"><li value=\"2\">State, with a reason, whether this is an outlier. <span class=\"marks\">(2 marks)</span></li></ol>\nPoppy decides to exclude this data value from her analysis.\n<ol type=\"a\"><li value=\"3\">Give one reason to justify this decision. <span class=\"marks\">(1 mark)</span></li><li value=\"4\">Calculate the mean and standard deviation of the 9 remaining students. <span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Calculate the original summaries, then subtract both the observation and its square if it is removed.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{154}{10}=15.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{2438}{10}-\\left(\\frac{154}{10}\\right)^2}\\approx2.57682\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"15.4+2\\sqrt{243.8-15.4^2}\\approx20.5536&lt;21\"></span><p>21 is an outlier.</p></li><li value=\"3\"><p>It might be a recording error or a person outside the intended secondary-school population. Verify that explanation before exclusion; unusual age alone does not prove an error.</p></li><li value=\"4\"><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{133}{9}\\approx14.7778\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{1997}{9}-\\left(\\frac{133}{9}\\right)^2}\\approx1.87248\"></span><p>Remaining mean≈14.8 years and standard deviation≈1.87 years.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "a1faf7ba0a8c5cdb9dc69994f3e073044e72194d22a64acb5d4585b2d0b9a025",
+        "printedBookPage": "17",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            118.499,
+            68.247,
+            129.408
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.1 Outliers"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.1/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "6",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.1",
+      "subchapterTitle": "3.1 Outliers",
+      "number": "6",
+      "question": "<span class=\"practice-tag\">E/P</span>  The daily mean temperatures, <span data-math=\"^\\circ\"></span>C, are recorded for a random sample of 12 days in Beijing.\n<span data-math=\"18.5\\quad26.1\\quad27.4\\quad27.9\\quad28.1\\quad28.2\\quad29.4\\quad30.9\\quad30.4\\quad27.2\\quad30.0\\quad42.6\" data-display=\"true\"></span>\n<ol type=\"a\"><li value=\"1\">Calculate the mean and standard deviation of the daily mean temperatures. <span class=\"marks\">(2 marks)</span></li></ol>\nAn outlier is an observation which is <span data-math=\"\\pm2\"></span> standard deviations from the mean.\n<ol type=\"a\"><li value=\"2\">Show that there are two outliers in the data and state their values. <span class=\"marks\">(2 marks)</span></li><li value=\"3\">Suggest, with reasons, whether the outliers should be excluded from the data. <span class=\"marks\">(2 marks)</span></li><li value=\"4\">Clean the data and recalculate the mean and standard deviation. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Apply the two-standard-deviation rule, then distinguish unusual values from confirmed errors.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{346.7}{12}\\approx28.8917\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{10335.41}{12}-\\left(\\frac{346.7}{12}\\right)^2}\\approx5.15323\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x\\pm2\\sigma\\approx[18.5852,39.1981]\"></span><p>18.5°C and 42.6°C lie outside these fences.</p></li><li value=\"3\"><p>18.5°C could be a genuine cooler day, so retain it unless the source says otherwise.42.6°C is particularly suspicious as a daily mean and should be checked against the original record. An outlier rule alone does not justify deleting it.</p></li><li value=\"4\"><p>Following the supplied key’s proposed cleaning, assume 42.6°C has been confirmed erroneous and remove only that observation; retain 18.5°C.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{304.1}{11}\\approx27.6455\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{8520.65}{11}-\\left(\\frac{304.1}{11}\\right)^2}\\approx3.21456\"></span><p>If the original record confirms 42.6°C, retain it instead; the question alone cannot establish which recording is wrong.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "0d8001d4681560c61d27bc98197d43c6d8c72796e4d6452e0701bc9ca1e4cf85",
+        "printedBookPage": "17",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            260.367,
+            68.247,
+            271.276
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.1 Outliers"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.2/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "1",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.2",
+      "subchapterTitle": "3.2 Box plots",
+      "number": "1",
+      "question": "A group of learner drivers took a test in which they had to identify road hazards.\n\nTheir scores are summarised as follows:\n<div><table class=\"practice-layout-table\"><tbody><tr><td>Lower quartile <span data-math=\"=30\"></span></td><td>Median <span data-math=\"=42\"></span></td><td>Upper quartile <span data-math=\"=45\"></span></td></tr><tr><td>Lowest score <span data-math=\"=18\"></span></td><td>Highest score <span data-math=\"=52\"></span></td></tr></tbody></table></div>\nGiven that there are no outliers, draw a box plot to illustrate this data.",
+      "hints": [
+        "Draw little vertical lines at each key value from the summary data."
+      ],
+      "steps": [
+        "<p>Place the five-number summary on one labelled score axis.</p><p>Whiskers at 18 and 52; box edges at 30 and 45; median line at 42. No separate outlier marks are needed.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/d5c50bd36513d0736c93.png\" alt=\"ans32-q1: solution graph\"></figure>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "dd1f2ad38d939be518e80c24ab365c901f3430212bf9a67efcacbf58545d07c0",
+        "printedBookPage": "18",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            463.778,
+            68.247,
+            474.687
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.2 Box plots"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.2/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "2",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.2",
+      "subchapterTitle": "3.2 Box plots",
+      "number": "2",
+      "question": "The diagram shows a box plot of the goals scored by football teams over a season.\n<img style=\"max-width:95mm\" class=\"practice-figure\"  src=\"content/practice/assets/ee97d16853bc2606d695.png\" alt=\"Original question diagram\">\nWrite down:\n<ol type=\"a\"><li value=\"1\">the median</li><li value=\"2\">the interquartile range</li><li value=\"3\">the range.</li></ol>",
+      "hints": [
+        "Read the quartiles and maximum and minimum values from the box plot."
+      ],
+      "steps": [
+        "<p>Read the median, box edges and whisker endpoints from the common scale.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>The median line is at 51 goals.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=66-38=28\\text{ goals}\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Range}=82-25=57\\text{ goals}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "2c13cb7d415fd6a2cf42f0d143c8fa55cbf1def5089d009ceadd3c9b1af042a2",
+        "printedBookPage": "18",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.2 Box plots"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.2/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "3",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.2",
+      "subchapterTitle": "3.2 Box plots",
+      "number": "3",
+      "question": "<span class=\"practice-tag\">E/P</span>  The masses, in grams, of a group of male and female ruby-throated hummingbirds are recorded. The data is summarised in two box plots.\n<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/6288b97e768d6749a274.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"1\">Explain what is represented by <span data-math=\"\\times\"></span> in the box plot for the male hummingbirds. <span class=\"marks\">(1 mark)</span></li><li value=\"2\">Compare the masses of the male and female hummingbirds. <span class=\"marks\">(2 marks)</span></li></ol>\nOne of the hummingbirds is found to have a mass of 3.6 g.\n<ol type=\"a\"><li value=\"3\">State, with a reason, whether this hummingbird is likely to be male or female. <span class=\"marks\">(1 mark)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Compare medians for typical mass and box widths for the middle-half spread.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>The cross marks an outlier: an unusually large recorded male mass compared with the rest of that sample.</p></li><li value=\"2\"><p>Females have the higher median(about 3.4 versus 3.1 g). The boxes have similar widths, so their interquartile spreads are similar.</p></li><li value=\"3\"><p>Female is more likely from these plots:3.6 g lies within the female box, whereas all but the single male outlier are below it. This is an inference, not certain identification.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "2d684f854da94ceceb9e6d92afea96ef64f935598d4cc6abf19213c97d54af52",
+        "printedBookPage": "18",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            247.886,
+            68.247,
+            258.795
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.2 Box plots"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.2/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "4",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.2",
+      "subchapterTitle": "3.2 Box plots",
+      "number": "4",
+      "question": "<span class=\"practice-tag\">E/P</span>  Data for the daily mean windspeed (in knots) in Leuchars is July 1987 is taken from the large data set.\n<span data-math=\"\\begin{array}{rrrrrrrrrrr}3&amp;4&amp;5&amp;5&amp;5&amp;5&amp;5&amp;5&amp;5&amp;5&amp;6\\\\6&amp;6&amp;7&amp;7&amp;7&amp;8&amp;8&amp;8&amp;8&amp;9&amp;9\\\\9&amp;9&amp;10&amp;11&amp;11&amp;12&amp;15&amp;16&amp;19&amp;&amp;\\end{array}\" data-display=\"true\"></span>\n<ol type=\"a\"><li value=\"1\">Calculate the median and the interquartile range. <span class=\"marks\">(3 marks)</span></li></ol>\nAn outlier is defined as a value which lies either <span data-math=\"1.5\\times\"></span> the interquartile range above the upper quartile or <span data-math=\"1.5\\times\"></span> the interquartile range below the lower quartile.\n<ol type=\"a\"><li value=\"2\">Determine whether there are any outliers in the data. <span class=\"marks\">(2 marks)</span></li><li value=\"3\">Draw a box plot for this data. <span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>There are 31 observations; use the middle value and quartiles of the two 15-value halves.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"Q_1=5,\\quad Q_2=7,\\quad Q_3=9;\\quad\\mathrm{IQR}=4\\text{ knots}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"5-1.5(4)=-1;\\quad9+1.5(4)=15\"></span><p>Values 16 and 19 are outliers.15 lies on the boundary and is not an outlier.</p></li><li value=\"3\"><p>Whiskers at 3 and 15; box from 5 to 9, median 7; crosses at 16 and 19.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/7ba6a92a1d922f03cbfb.png\" alt=\"ans32-q4: solution graph\"></figure></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "748435b15572e896969f5ae76cc2276b3e3f4bd53c0948f30eb0e2eb7f40e0de",
+        "printedBookPage": "18",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            486.756,
+            68.247,
+            497.665
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.2 Box plots"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.3/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "1",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.3",
+      "subchapterTitle": "3.3 Cumulative frequency",
+      "number": "1",
+      "question": "The table shows the heights, in cm, of 70 teenagers.\n<div><table class=\"practice-table\"><tbody><tr><td><strong>Height, <span data-math=\"h\"></span> (cm)</strong></td><td><span data-math=\"130\\leq h&lt;140\"></span></td><td><span data-math=\"140\\leq h&lt;150\"></span></td><td><span data-math=\"150\\leq h&lt;160\"></span></td><td><span data-math=\"160\\leq h&lt;170\"></span></td></tr><tr><td><strong>Frequency</strong></td><td>15</td><td>18</td><td>23</td><td>14</td></tr></tbody></table></div>\n<ol type=\"a\"><li value=\"1\">Draw a cumulative frequency table for this data.</li><li value=\"2\">Draw a cumulative frequency diagram for this data.</li></ol>",
+      "hints": [
+        "Add up the frequencies as you go along.",
+        "Each point is plotted at the upper class boundary."
+      ],
+      "steps": [
+        "<p>Add frequencies successively and plot cumulative frequency at upper class boundaries.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><table class=\"practice-table\"><thead><tr><th>Height below (cm)</th><th>Cumulative frequency</th></tr></thead><tbody><tr><td>130</td><td>0</td></tr><tr><td>140</td><td>15</td></tr><tr><td>150</td><td>33</td></tr><tr><td>160</td><td>56</td></tr><tr><td>170</td><td>70</td></tr></tbody></table></li><li value=\"2\"><p>Plot(130,0),(140,15),(150,33),(160,56),(170,70), with labelled axes and an increasing curve.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/1df39f39ea4cb0beb445.png\" alt=\"ans33-q1: solution graph\"></figure></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "9225d04a50b25924cfc0a58930b3474b94e243791ebd3d0997f68b138e659419",
+        "printedBookPage": "19",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            710.124,
+            68.247,
+            721.033
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.3 Cumulative frequency"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.3/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "2",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.3",
+      "subchapterTitle": "3.3 Cumulative frequency",
+      "number": "2",
+      "question": "The cumulative frequency diagram shows the masses, in grams, of 120 apples.\n<img style=\"max-width:65mm\" class=\"practice-figure\"  src=\"content/practice/assets/f1b864ce4af7f8892fcc.png\" alt=\"Original question diagram\">\nFind an estimate for:\n<ol type=\"a\"><li value=\"1\">the median mass</li><li value=\"2\">the interquartile range.</li></ol>",
+      "hints": [
+        "Draw horizontal lines across to the curve from the cumulative frequency axis."
+      ],
+      "steps": [
+        "<p>There are 120 apples; read across at cumulative frequencies 30,60 and 90.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>At cumulative frequency 60, read the median mass≈90 g.</p></li><li value=\"2\"><p>At cumulative frequencies 30 and 90, read approximately 84.6 g and 95.0 g.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}\\approx95.0-84.6=10.4\\text{ g}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "395d01352fd895e8cd5d9fd15b4e2539c38bbcc79d83748b3f67809de9395599",
+        "printedBookPage": "19",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            153.731,
+            68.247,
+            164.64
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.3 Cumulative frequency"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.3/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "3",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.3",
+      "subchapterTitle": "3.3 Cumulative frequency",
+      "number": "3",
+      "question": "<span class=\"practice-tag\">E</span> The cumulative frequency diagram shows the times taken, in minutes, by a number of fun runners to complete an obstacle course.\n<img style=\"max-width:65mm\" class=\"practice-figure\"  src=\"content/practice/assets/6450a8bddd00f46b36c5.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"1\">State how many runners took part. <span class=\"marks\">(1 mark)</span></li><li value=\"2\">Estimate the median time taken. <span class=\"marks\">(2 marks)</span></li></ol>\nThe qualifying time for the regional final was 58 minutes.\n<ol type=\"a\"><li value=\"3\">Estimate the number of runners who qualified for the regional final. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Read the total from the top of the curve; a qualifying count is a cumulative frequency.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>The final cumulative frequency is 200, so 200 runners took part.</p></li><li value=\"2\"><p>Half of 200 is 100. Reading across from 100 to the curve and down gives approximately 60.5 minutes.</p></li><li value=\"3\"><p>Read upwards from 58 minutes to the curve, then across to the cumulative-frequency axis: approximately 76 runners qualified.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "17b18da749a3bccbd65a30de10e8777eea5cfa30e01b09fac70f0203be841c53",
+        "printedBookPage": "19",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            406.718,
+            68.247,
+            417.627
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.3 Cumulative frequency"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.3/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "4",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.3",
+      "subchapterTitle": "3.3 Cumulative frequency",
+      "number": "4",
+      "question": "<span class=\"practice-tag\">E/P</span>  From the large data set, the daily mean temperature (<span data-math=\"^\\circ\"></span>C) in Hurn for the months of May and June 2015 is summarised in the cumulative frequency diagram.\n<img style=\"max-width:65mm\" class=\"practice-figure\"  src=\"content/practice/assets/9b5ffafba3e790d16d1e.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"1\">Write down the number of days represented in this cumulative frequency diagram<br><span class=\"marks\">(1 mark)</span></li><li value=\"2\">Estimate the median and interquartile range of the daily mean temperatures.<br><span class=\"marks\">(3 marks)</span></li><li value=\"3\">Estimate the number of days during this period that the temperature was greater than <span data-math=\"15^\\circ\"></span>C.<br><span class=\"marks\">(2 marks)</span></li></ol>\nPhyllis says that the range of temperatures for the given period is <span data-math=\"12^\\circ\"></span>C.\n<ol type=\"a\"><li value=\"4\">Explain why Phyllis might be wrong. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Read cumulative positions based on 61 observations.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>61 days, consistent with 31 days in May and 30 in June.</p></li><li value=\"2\"><p>Read at cumulative frequencies 15.25,30.5 and 45.75. Median≈13.5°C; the difference between the upper and lower quartile readings is about 4.1°C.</p></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"N(T&gt;15)\\approx61-42=19\\text{ days}\"></span></li><li value=\"4\"><p>The plotted endpoints are class boundaries, not necessarily the smallest and largest actual temperatures. Their difference 12°C is therefore only an estimated range, not a known exact range.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "cb132a7877979222f28cbde4850e14e0c728eb3d700cdc1b6fa0d521b4d4aed3",
+        "printedBookPage": "19",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.3 Cumulative frequency"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.3/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "5",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.3",
+      "subchapterTitle": "3.3 Cumulative frequency",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E/P</span>  The masses, in grams, of a crop of potatoes are shown in the cumulative frequency diagram.\n<img style=\"max-width:65mm\" class=\"practice-figure\"  src=\"content/practice/assets/7b1122189344cd147b9d.png\" alt=\"Original question diagram\">\nOnly potatoes weighing between 102 g and 117 g can be sold to a supermarket.\n\nEstimate the percentage of the crop that can be sold to the supermarket. <span class=\"marks\">(4 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Subtract the cumulative count below 102 g from that below 117 g, then divide by the total.</p><p>From the graph, read approximately 80 below 102 g and 265 below 117 g, with about 280 potatoes in total.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{265-80}{280}\\times100\\approx66\\%\"></span><p>Small differences are expected from graph readings.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "d121fe7b769fed9b0577899aca7d303f70e1b29ddd17163e77b77cf7be95b9b7",
+        "printedBookPage": "19",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            499.751,
+            68.247,
+            510.66
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.3 Cumulative frequency"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "1",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.4",
+      "subchapterTitle": "3.4 Histograms",
+      "number": "1",
+      "question": "The table records the times taken by a group of Sudoku enthusiasts to complete a puzzle.\n<div><table class=\"practice-table\"><tbody><tr><td><strong>Time, <span data-math=\"t\"></span> (min)</strong></td><td><span data-math=\"3\\leq t&lt;4\"></span></td><td><span data-math=\"4\\leq t&lt;4.5\"></span></td><td><span data-math=\"4.5\\leq t&lt;5\"></span></td><td><span data-math=\"5\\leq t&lt;6.5\"></span></td><td><span data-math=\"6.5\\leq t&lt;8\"></span></td></tr><tr><td><strong>Frequency</strong></td><td>7</td><td>13</td><td>19</td><td>15</td><td>6</td></tr></tbody></table></div>\n<ol type=\"a\"><li value=\"1\">Write down the class width of the <span data-math=\"4\\leq t&lt;4.5\"></span> interval.</li><li value=\"2\">Calculate the frequency densities for each class.</li></ol>",
+      "hints": [
+        "<span data-math=\"\\text{frequency density}=\\dfrac{\\text{frequency}}{\\text{class width}}\"></span>"
+      ],
+      "steps": [
+        "<p>Frequency density equals frequency divided by class width.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"4.5-4=0.5\\text{ minutes}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"\\frac71=7,\\quad\\frac{13}{0.5}=26,\\quad\\frac{19}{0.5}=38,\\quad\\frac{15}{1.5}=10,\\quad\\frac6{1.5}=4\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "627f8681bcb6a8c49f29138ef9f9db58fe853e1a0e5a4d84cf5b370eddd43f03",
+        "printedBookPage": "20",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            102.215,
+            68.247,
+            113.124
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.4 Histograms"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "2",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.4",
+      "subchapterTitle": "3.4 Histograms",
+      "number": "2",
+      "question": "The table shows the length of time, <span data-math=\"t\"></span> minutes, that it takes 41 cats to eat their dinner.\n<div><table class=\"practice-table\"><tbody><tr><td><strong>Time, <span data-math=\"t\"></span> (min)</strong></td><td><span data-math=\"0\\leq t&lt;3\"></span></td><td><span data-math=\"3\\leq t&lt;4\"></span></td><td><span data-math=\"4\\leq t&lt;4.5\"></span></td><td><span data-math=\"4.5\\leq t&lt;5\"></span></td><td><span data-math=\"5\\leq t&lt;6\"></span></td><td><span data-math=\"6\\leq t&lt;10\"></span></td></tr><tr><td><strong>Frequency</strong></td><td>3</td><td>6</td><td>8</td><td>7</td><td>5</td><td>12</td></tr></tbody></table></div>\n<ol type=\"a\"><li value=\"1\">Explain why a histogram is a suitable diagram for displaying this data.</li><li value=\"2\">Draw a histogram to represent the data.</li></ol>",
+      "hints": [
+        "Calculate the frequency densities first."
+      ],
+      "steps": [
+        "<p>Continuous grouped times with unequal widths should use bar area to represent frequency.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>The variable is continuous and the class intervals have different widths; a histogram displays frequencies through areas.</p></li><li value=\"2\"><table class=\"practice-table\"><thead><tr><th>Interval (min)</th><th>Frequency density</th></tr></thead><tbody><tr><td>0–3</td><td>1</td></tr><tr><td>3–4</td><td>6</td></tr><tr><td>4–4.5</td><td>16</td></tr><tr><td>4.5–5</td><td>14</td></tr><tr><td>5–6</td><td>5</td></tr><tr><td>6–10</td><td>3</td></tr></tbody></table><p>Use these heights above the corresponding class intervals, with no gaps.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/0a999002faf405490854.png\" alt=\"ans34-q2: solution graph\"></figure></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "7752dfd4e6a642d1f57ea6e230856f0268a7514f5ff4cc2a2e46f7e683faa3d4",
+        "printedBookPage": "20",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            241.133,
+            68.247,
+            252.042
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.4 Histograms"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "3",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.4",
+      "subchapterTitle": "3.4 Histograms",
+      "number": "3",
+      "question": "<span class=\"practice-tag\">E/P</span>  The table shows the lengths of time, to the nearest ms, that it takes a group of students to respond to a stimulus.\n<div><table class=\"practice-table\"><tbody><tr><td><strong>Time, <span data-math=\"t\"></span> (ms)</strong></td><td><span data-math=\"0\\leq t&lt;4\"></span></td><td><span data-math=\"4\\leq t&lt;6\"></span></td><td><span data-math=\"6\\leq t&lt;7\"></span></td><td><span data-math=\"7\\leq t&lt;7.5\"></span></td><td><span data-math=\"7.5\\leq t&lt;8.5\"></span></td><td><span data-math=\"8.5\\leq t&lt;10\"></span></td></tr><tr><td><strong>Frequency</strong></td><td>2</td><td>10</td><td>15</td><td>12</td><td>8</td><td>3</td></tr></tbody></table></div>\n<ol type=\"a\"><li value=\"1\">Give two reasons why a histogram is appropriate for displaying this data. <span class=\"marks\">(2 marks)</span></li></ol>\nThe bar to represent the students who took between 4 ms and 6 ms to respond is of width 1 cm and height 2.5 cm.\n<ol type=\"a\"><li value=\"2\">Calculate the width and height of the bar representing students who took between 7.5 ms and 8.5 ms to respond. <span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use separate horizontal and vertical drawing scales.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>Response time is continuous, and the data is grouped into unequal-width classes.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"\\text{New width}=\\frac{8.5-7.5}{6-4}(1)=0.5\\text{ cm}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"d_{4\\text{–}6}=10/2=5,\\quad d_{7.5\\text{–}8.5}=8/1=8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{New height}=2.5\\frac85=4\\text{ cm}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "781732c6e9e3b07dbaf1a52ae29e6026185600d76bbe18ae98f3ffe1deb990bb",
+        "printedBookPage": "20",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            368.421,
+            68.247,
+            379.33
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.4 Histograms"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "4",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.4",
+      "subchapterTitle": "3.4 Histograms",
+      "number": "4",
+      "question": "<span class=\"practice-tag\">E/P</span>  The histogram shows the distribution of the heights of 66 garden gnomes in a garden centre.\n<img style=\"max-width:70mm\" class=\"practice-figure\"  src=\"content/practice/assets/ac74d2133e5e396d7fc7.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"1\">Write down the number of gnomes that are between 25 cm and 35 cm tall. <span class=\"marks\">(2 marks)</span></li></ol>\nA gnome collector wants to buy all of the gnomes that are greater than 45 cm tall.\n<ol type=\"a\"><li value=\"2\">Calculate the percentage of the 66 gnomes that the collector will buy. <span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Frequency is bar width multiplied by density.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"N_{25\\text{–}35}=10(0.8)=8\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"N_{&gt;45}=10(1.3)+15(0.8)=25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"100\\frac{25}{66}\\approx37.9\\%\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "8aed705b786497b7dfbe8346eff19f93a09c169f86c777a7f42f1d1ef46e6904",
+        "printedBookPage": "20",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            514.495,
+            68.247,
+            525.404
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.4 Histograms"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "5",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.4",
+      "subchapterTitle": "3.4 Histograms",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E/P</span>  The table shows the times taken, in minutes, by runners to complete a cross-country race.\n<div><table class=\"practice-table\"><tbody><tr><td><strong>Time, <span data-math=\"t\"></span> (min)</strong></td><td><span data-math=\"35\\leq t&lt;45\"></span></td><td><span data-math=\"45\\leq t&lt;50\"></span></td><td><span data-math=\"50\\leq t&lt;55\"></span></td><td><span data-math=\"55\\leq t&lt;65\"></span></td><td><span data-math=\"65\\leq t&lt;100\"></span></td></tr><tr><td><strong>Frequency</strong></td><td>18</td><td><span data-math=\"p\"></span></td><td>42</td><td><span data-math=\"q\"></span></td><td>14</td></tr></tbody></table></div>\nThe partially completed histogram shows the same data.\n<img style=\"max-width:70mm\" class=\"practice-figure\"  src=\"content/practice/assets/92aa15a7890ec12aa7bb.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"1\">Calculate the values of <span data-math=\"p\"></span> and <span data-math=\"q\"></span>. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">Calculate the height of the bar representing runners who took between 50 and 55 minutes to complete the race. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>The first bar has plotted height 0.9 and width 10, but frequency 18, so multiply plotted area by 2.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"p=2(5)(3)=30;\\qquad q=2(10)(3.5)=70\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Plotted height}=\\frac{42}{2(5)}=4.2\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "9cea2cd94a3412df003c7e0f07951409e26e8d318a9afc08076c2a5655f0b79d",
+        "printedBookPage": "20",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.4 Histograms"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.4/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "6",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.4",
+      "subchapterTitle": "3.4 Histograms",
+      "number": "6",
+      "question": "<span class=\"practice-tag\">E/P</span>  The histogram shows the masses, in kg, of 200 Malabar large-spotted civets.\n<img style=\"max-width:70mm\" class=\"practice-figure\"  src=\"content/practice/assets/af9d6ffea757de52dbd4.png\" alt=\"Original question diagram\">\nUse interpolation to estimate the number of civets that are heavier than 10 kg. <span class=\"marks\">(4 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>The histogram’s total area represents 200 civets; use the area below 10 kg.</p><p>The first class is 8.5–10.5 kg at density 6. The portion from 8.5 to 10 has plotted area 1.5×6=9. The whole plotted area is 100, representing 200 animals.</p><span class=\"equation\" data-display=\"true\" data-math=\"N_{&gt;10}\\approx200-200\\frac9{100}=182\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "20aeefcecccfec1388d017287c93532e04b510a86a58cf8bcfb589f8cb0c4546",
+        "printedBookPage": "20",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            388.927,
+            68.247,
+            399.836
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.4 Histograms"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.5/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "1",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.5",
+      "subchapterTitle": "3.5 Comparing data",
+      "number": "1",
+      "question": "Summary statistics are calculated for the daily total hours of sunshine in a random sample taken from each of Hurn and Leeming during 1987. The results are shown in the table.\n<div><table class=\"practice-table\"><tbody><tr><td></td><td><strong>Median</strong></td><td><strong>Interquartile range</strong></td></tr><tr><td><strong>Hurn</strong></td><td>4.1 hours</td><td>5.6 hours</td></tr><tr><td><strong>Leeming</strong></td><td>4.9 hours</td><td>4.2 hours</td></tr></tbody></table></div>\n© Crown Copyright Met Office<br>\nWrite down two comparisons between the data from the two locations.",
+      "hints": [
+        "Compare a measure of location and a measure of spread.\n\nGive your answers in the context of the data."
+      ],
+      "steps": [
+        "<p>Compare location and spread using the supplied summaries.</p><p>Hurn has the lower median sunshine(4.1 versus 4.9 hours), so its typical daily total is lower. Its IQR is larger(5.6 versus 4.2 hours), so its middle half varies more.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "8f4ee9f290ca588f7036f611c73e121a00329548926bd3251691ee56a3d79633",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            718.249,
+            68.247,
+            729.158
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.5 Comparing data"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.5/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "2",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.5",
+      "subchapterTitle": "3.5 Comparing data",
+      "number": "2",
+      "question": "The times taken, in minutes, to complete a Kakuro puzzle are recorded for a random sample of year 8 students and a random sample of year 10 students. Summary statistics for each of the two data sets are recorded in the table.\n<div><table class=\"practice-table\"><tbody><tr><td></td><td><span data-math=\"n\"></span></td><td><span data-math=\"\\sum x\"></span></td><td><span data-math=\"\\sum x^2\"></span></td></tr><tr><td><strong>Year 8</strong></td><td>15</td><td>94</td><td>610</td></tr><tr><td><strong>Year 10</strong></td><td>10</td><td>79</td><td>688</td></tr></tbody></table></div>\n<ol type=\"a\"><li value=\"1\">Calculate the mean and standard deviation of each data set.</li><li value=\"2\">Compare the two data sets.</li></ol>",
+      "hints": [
+        "Make sure you give two comparisons."
+      ],
+      "steps": [
+        "<p>Use mean=Σx/n and population standard deviation.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>Year 8:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{94}{15}\\approx6.26667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{610}{15}-\\left(\\frac{94}{15}\\right)^2}\\approx1.18134\"></span><p>Year 10:</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{79}{10}=7.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{688}{10}-\\left(\\frac{79}{10}\\right)^2}\\approx2.52784\"></span></li><li value=\"2\"><p>Year 10 has the higher mean time(7.9 versusabout 6.3 minutes) and the larger standard deviation(about 2.5 versus 1.2 minutes): slower on average and more variable.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "95a8e9d4d552c074207fc135fdd7197b3231c50ee6c28d20b07e268a05411fe8",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            58.494,
+            135.011,
+            68.247,
+            145.92
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.5 Comparing data"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.5/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "3",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.5",
+      "subchapterTitle": "3.5 Comparing data",
+      "number": "3",
+      "question": "<span class=\"practice-tag\">E/P</span>  The box plots show the distributions of daily mean windspeeds in Camborne and Leuchars during July and August 2015.\n<img style=\"max-width:70mm\" class=\"practice-figure\"  src=\"content/practice/assets/e4faf8f3468e6499050b.png\" alt=\"Original question diagram\">\nAnne and Colin want to go on a sailing holiday. To get the best out of the holiday, they want the windspeed to be as consistent as possible.\n<ol type=\"a\"><li value=\"1\">Suggest, with reasons, which of the two locations they should go to for their holiday. <span class=\"marks\">(2 marks)</span></li></ol>\nThese box plots show the data on daily maximum gusts in Camborne and Leuchars for the same two months.\n<img style=\"max-width:70mm\" class=\"practice-figure\"  src=\"content/practice/assets/e0534a044e30c812c603.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"2\">Does this information change your recommendation? Give a reason for your answer. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Consistency concerns spread, not simply a lower median.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>Leuchars has a slightly narrower IQR and a smaller non-outlier range, so it is the tentative choice based on mean windspeed. Its two high outliers remain relevant and should not be silently discarded.</p></li><li value=\"2\"><p>The gust data favour Camborne: its box and overall range are narrower, indicating less variable gusts. Considering both measures can therefore change the recommendation to Camborne.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "26df9d823cf2b1ebe2f72c58228716152c2f5774e0a67076ac36d8c2a1862a32",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            58.494,
+            309.271,
+            68.247,
+            320.18
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.5 Comparing data"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.5/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "4",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.5",
+      "subchapterTitle": "3.5 Comparing data",
+      "number": "4",
+      "question": "<span class=\"practice-tag\">E</span> The cumulative frequency diagram shows the distribution of lengths in cm of 50 male and 50 female Eurasian otters.\n<img style=\"max-width:70mm\" class=\"practice-figure\"  src=\"content/practice/assets/effcc0d92031da2c2304.png\" alt=\"Original question diagram\">\nCompare the lengths of male and female otters. <span class=\"marks\">(4 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>For each group of 50, read the median at 25 and quartiles at 12.5 and 37.5.</p><p>Male median length is about 78 cm, compared with about 72 cm for females, so males are typically longer. Female IQR is about 15 cm versus 11 cm for males, so female lengths have greater variability in their middle half.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "9536d2663525ae6b9270163761534d32f8b3efe987644f70666866cfdafeb697",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 10,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.5 Comparing data"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/3.5/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "5",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "3.5",
+      "subchapterTitle": "3.5 Comparing data",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E/P</span>  A rodent expert records the masses, in grams, of colonies of brown and black rats. Her results are shown in the table.\n<div><table class=\"practice-table\"><tbody><tr><td><strong>Mass (g)</strong></td><td><span><strong>Frequency</strong><br><strong>(black rats)</strong></span></td><td><span><strong>Frequency</strong><br><strong>(brown rats)</strong></span></td></tr><tr><td><span data-math=\"100\\leq m&lt;150\"></span></td><td>2</td><td>1</td></tr><tr><td><span data-math=\"150\\leq m&lt;200\"></span></td><td>7</td><td>8</td></tr><tr><td><span data-math=\"200\\leq m&lt;250\"></span></td><td>18</td><td>32</td></tr><tr><td><span data-math=\"250\\leq m&lt;300\"></span></td><td>24</td><td>22</td></tr><tr><td><span data-math=\"300\\leq m&lt;350\"></span></td><td>13</td><td>7</td></tr><tr><td><span data-math=\"350\\leq m&lt;400\"></span></td><td>6</td><td>0</td></tr></tbody></table></div>\n<ol type=\"a\"><li value=\"1\">Draw cumulative frequency diagrams for both sets of data on the same axes. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">State which type of rat has the greater spread of masses. <span class=\"marks\">(2 marks)</span></li></ol>\nA black rat is considered overweight if its mass is greater than 320 g and a brown rat is considered overweight if its mass is greater than 280 g.\n<ol type=\"a\"><li value=\"3\">Which colony contains the greatest number of overweight rats? <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use cumulative frequencies at the upper class boundaries, then compare quartiles and upper-tail counts.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><table class=\"practice-table\"><thead><tr><th>Mass below(g)</th><th>Black cumulative</th><th>Brown cumulative</th></tr></thead><tbody><tr><td>100</td><td>0</td><td>0</td></tr><tr><td>150</td><td>2</td><td>1</td></tr><tr><td>200</td><td>9</td><td>9</td></tr><tr><td>250</td><td>27</td><td>41</td></tr><tr><td>300</td><td>51</td><td>63</td></tr><tr><td>350</td><td>64</td><td>70</td></tr><tr><td>400</td><td>70</td><td>70</td></tr></tbody></table><figure class=\"practice-figure\"><img src=\"content/practice/assets/d822947baed838e6c1a9.png\" alt=\"ans35-q5: solution graph\"></figure></li><li value=\"2\"><p>Both groups contain 70 rats. Using linear interpolation:</p><span class=\"equation\" data-display=\"true\" data-math=\"Q_{1,B}=200+\\frac{17.5-9}{18}50\\approx223.61\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_{3,B}=300+\\frac{52.5-51}{13}50\\approx305.77\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}_B\\approx82.16;\\qquad\\mathrm{IQR}_{\\rm brown}\\approx62.86\\text{ g}\"></span><p>Black rats have greater spread.</p></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"N_{\\rm black,&gt;320}\\approx13\\frac{350-320}{50}+6=13.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"N_{\\rm brown,&gt;280}\\approx22\\frac{300-280}{50}+7=15.8\"></span><p>The brown colony has the larger estimated number: about 16 compared with 14.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.49"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "d97b297db313425f373980cbda807331ba6d30777ef330f4238acd10337f0969",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 10,
+          "bbox": [
+            58.494,
+            266.171,
+            68.247,
+            277.08
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "3.5 Comparing data"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-a/qbronze",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "Bronze",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem solving: Set A",
+      "number": "Bronze",
+      "question": "The times taken, <span data-math=\"t\"></span> seconds, for each of ten dogs to eat a biscuit are recorded.\n\nThe following summary statistics are calculated:\n<span data-math=\"\\sum t=42\\qquad\\sum t^2=216.4\" data-display=\"true\"></span>\nAn outlier is defined as being a data point that is greater than <span data-math=\"\\pm2\"></span> standard deviations from the mean.\n\nOne of the dogs took 8.3 seconds to eat a biscuit.\n<ol type=\"a\"><li value=\"1\">Show that this piece of data is an outlier. <span class=\"marks\">(3 marks)</span></li></ol>\nA student decides to remove this time from the data set before analysing the data further.\n<ol type=\"a\"><li value=\"2\">Suggest one reason why this may not be a valid approach. <span class=\"marks\">(1 mark)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Calculate the standard deviation before applying the fence.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{42}{10}=4.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{216.4}{10}-\\left(\\frac{42}{10}\\right)^2}\\approx2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"4.2+2(2)=8.2&lt;8.3\"></span><p>Thus 8.3 seconds is an outlier.</p></li><li value=\"2\"><p>8.3 seconds may be a genuine time for a slower dog. Being outside a statistical fence is not enough to establish a measurement error.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "d0427e056d4022b65f2de7f7c56f19f61856e66f522e4018e6827ce4fabcadf6",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 11,
+          "bbox": [
+            57.49,
+            78.455,
+            90.19,
+            87.421
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-a/qsilver",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "Silver",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem solving: Set A",
+      "number": "Silver",
+      "question": "A supermarket is testing the masses, <span data-math=\"m\"></span> grams, of grapefruit. The masses of a random sample of 20 grapefruits are recorded, and the data is summarised as follows:\n<span data-math=\"n=20\\qquad\\sum m=3218\\qquad\\sum m^2=530\\,276\" data-display=\"true\"></span>\nAn outlier is defined as being a data point that is greater than <span data-math=\"\\pm2\"></span> standard deviations from the mean.\n\nThe two largest masses recorded in the sample are 223 g and 845 g.\n\nBenedict suggests that both of these values should be removed from the data set.\n\nUse the definition of an outlier given above to evaluate Benedict&#x27;s suggestion. <span class=\"marks\">(4 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>First check whether the individual values can agree with the given summaries.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{3218}{20}=160.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{530276}{20}-\\left(\\frac{3218}{20}\\right)^2}\\approx24.9998\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar m+2\\sigma\\approx210.9\\text{ g}\"></span><p>If those summaries are used, both 223 g and 845 g lie above the upper fence. However, the data as printed are inconsistent:</p><span class=\"equation\" data-display=\"true\" data-math=\"845^2=714025&gt;\\sum m^2=530276\"></span><p>A single observation’s square cannot exceed the sum of all squares. Check the original 845 g entry and the summary statistics before cleaning or recalculating.223 g could be valid; neither value should be discarded solely because it is an outlier. The supplied advice to remove only 845 g requires confirmation of an error.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "99a7837fea533a4caced4030f1aec20a09c70054dadf84648a10bb24dbfd22e8",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 11,
+          "bbox": [
+            57.49,
+            219.518,
+            83.833,
+            228.484
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-a/qgold",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "Gold",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem solving: Set A",
+      "number": "Gold",
+      "question": "A chemical reaction is carried out 9 times. Each time the volume of reactant, in ml, is recorded. The results are shown below:\n<span data-math=\"13\\quad43\\quad25\\quad29\\quad51\\quad36\\quad75\\quad52\\quad27\" data-display=\"true\"></span>\nA researcher wants to identify extreme data values before carrying out her analysis. To do this, she proposes two different definitions of an outlier.\n\nDefinition A: a data point that is greater than <span data-math=\"\\pm2\"></span> standard deviations from the mean.\n\nDefinition B: a data point that is more than <span data-math=\"1.5\\times\"></span> the interquartile range below the lower quartile, or is more than <span data-math=\"1.5\\times\"></span> the interquartile range above the upper quartile.\n\nState, with reasons, which of these definitions would be most useful to the researcher. <span class=\"marks\">(5 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Compare what each rule flags; the choice of fence does not establish whether a value is erroneous.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{351}{9}=39\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{16439}{9}-\\left(\\frac{351}{9}\\right)^2}\\approx17.4801\"></span><span class=\"equation\" data-display=\"true\" data-math=\"A:\\quad\\bar x\\pm2\\sigma\\approx[4.040,73.960]\"></span><p>75 ml is the only observation outside these bounds.</p><span class=\"equation\" data-display=\"true\" data-math=\"B:\\quad Q_1=27,\\ Q_3=51,\\ IQR=24\"></span><span class=\"equation\" data-display=\"true\" data-math=\"[Q_1-1.5IQR,Q_3+1.5IQR]=[-9,87]\"></span><p>Using the supplied quartile convention, B flags no observation and its negative lower fence cannot identify unusually small nonnegative volumes. A is more sensitive for this data and flags 75 for investigation. Neither rule automatically justifies deleting it.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "70c931449c279916ee6dedffe3b8d8abe4ffaef148d4747c3c5b5b780bf64729",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 11,
+          "bbox": [
+            57.49,
+            344.178,
+            79.978,
+            353.144
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-b/qbronze",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "Bronze",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem solving: Set B",
+      "number": "Bronze",
+      "question": "The histogram shows the times taken, in minutes, for a group of 600 students to complete a jigsaw puzzle.\n<img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/f0f4157c0a326575ad54.png\" alt=\"Original question diagram\">\nEstimate the number of students who took between 32 and 42 minutes to complete the puzzle. <span class=\"marks\">(4 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Use areas of the portions of bars between 32 and 42 minutes.</p><span class=\"equation\" data-display=\"true\" data-math=\"N=3(21)+5(43)+2(8)=63+215+16=294\\text{ students}\"></span><p>The three pieces cover 32–35,35–40 and 40–42 minutes. The full histogram area is 600, so these plotted areas already give frequencies.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "4fdeb2659548da9a7ba9faebe11a45b11bcb994cd2d14b1ce7c7db6187d876d7",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 11,
+          "bbox": [
+            57.49,
+            508.941,
+            90.19,
+            517.907
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-b/qsilver",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "Silver",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem solving: Set B",
+      "number": "Silver",
+      "question": "The histogram shows the times taken, in minutes, for a group of 100 runners to complete a cross-country race.\n<img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/6fd9efadc5ebb4b7b3f7.png\" alt=\"Original question diagram\">\nEstimate the number of runners who took between 25 and 50 minutes to complete the race. <span class=\"marks\">(4 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Read relative heights 0.8,7.2,8,0.8 for the four bars; their total area is 100.</p><span class=\"equation\" data-display=\"true\" data-math=\"N_{25\\text{–}50}=5(0.8)+5(7.2)+5(8)+10(0.8)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"N=4+36+40+8=88\\text{ runners}\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "117e5433f296c3e3808db556256e4943ee30847be96da1a00453cdccc6d991c6",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 12,
+          "bbox": [
+            57.49,
+            52.842,
+            83.833,
+            61.808
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/problem-b/qgold",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "Gold",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem solving: Set B",
+      "number": "Gold",
+      "question": "A group of 120 swimmers completed an open water race and recorded their finishing times, <span data-math=\"t\"></span> minutes. The times for two thirds of the participants are shown on the histogram. The bars for <span data-math=\"30\\leq t&lt;35\"></span> and <span data-math=\"40\\leq t&lt;45\"></span> are missing.\n<img style=\"max-width:45mm\" class=\"practice-figure\"  src=\"content/practice/assets/433ad5bcce6e50ebe826.png\" alt=\"Original question diagram\">\nFour times as many swimmers finished the race in 40–45 minutes as finished the race in 30–35 minutes.\n\nEstimate the number of swimmers who took between 25 and 43 minutes to complete the race. <span class=\"marks\">(6 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>The shown bars represent 80 swimmers; the missing two bars therefore represent 40.</p><p>Reading the shown bar areas gives 4 in 20–30,18 in 35–38,24 in 38–40,20 in 45–50 and 14 in 50–60 minutes. Their sum is 80.</p><span class=\"equation\" data-display=\"true\" data-math=\"n_{30\\text{–}35}+n_{40\\text{–}45}=40,\\quad n_{40\\text{–}45}=4n_{30\\text{–}35}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"n_{30\\text{–}35}=8,\\quad n_{40\\text{–}45}=32\"></span><span class=\"equation\" data-display=\"true\" data-math=\"N_{25\\text{–}43}\\approx\\frac12(4)+8+18+24+\\frac35(32)=71.2\"></span><p>Approximately 71 swimmers; small graph-reading variation can give 72.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "1cabc4bce49dcbef303ccca884f5f72f693f1f3834adb91badc1239d0fedb71d",
+        "printedBookPage": "22",
+        "marker": {
+          "page": 12,
+          "bbox": [
+            57.49,
+            274.592,
+            79.978,
+            283.558
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/exam/q11",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "11",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "11",
+      "question": "The box plots show the distributions of monthly daily mean temperatures, in <span data-math=\"^\\circ\"></span>C, for Perth in 2015. The box plots are not in correct month order.\n<img style=\"max-width:65mm\" class=\"practice-figure\"  src=\"content/practice/assets/36f37b07629350f128b7.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"1\">Using your knowledge of the large data set, suggest which two box plots represent the distribution of daily mean temperatures for July and August. <span class=\"marks\">(2 marks)</span></li><li value=\"2\">Explain what is meant by <span data-math=\"\\times\"></span> in the box plots for months <span data-math=\"A\"></span> and <span data-math=\"D\"></span>. <span class=\"marks\">(1 mark)</span></li><li value=\"3\">Estimate the number of days in month <span data-math=\"C\"></span> that had a daily mean temperature greater than <span data-math=\"20^\\circ\"></span>C.<br><span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Perth’s winter falls in July and August; use the lower temperature distributions.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>B and E have the lowest typical temperatures, so they are the July/August candidates.</p></li><li value=\"2\"><p>The crosses represent outliers in those months.</p></li><li value=\"3\"><p>20°C lies roughly halfway between C’s upper quartile and maximum. Assuming an even spread within that top quarter, aboutone eighth of 31 days exceeds 20°C:31/8≈4 days. A box plot alone does not determine this count exactly.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "2f84319a3a67309466ce40364fbcf3b02fc017a8d277b50944faf0ce0f11d72a",
+        "printedBookPage": null,
+        "marker": {
+          "page": 13,
+          "bbox": [
+            48.189,
+            80.251,
+            118.33,
+            92.206
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/exam/q20",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "20",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "20",
+      "question": "Subitsaa took a random sample of 30 daily mean windspeeds, in knots, from the large data set for Leeming in 2015. Her sample was stratified by month.\n<ol type=\"a\"><li value=\"1\">State how many data values Subitsaa sampled from the data for July 2015. <span class=\"marks\">(2 marks)</span></li></ol>\nThe data that Subitsaa collected is summarised in the table.\n<div><table class=\"practice-table\"><tbody><tr><td><strong>Windspeed, <span data-math=\"w\"></span> (knots)</strong></td><td><span data-math=\"4\\leq w&lt;6\"></span></td><td><span data-math=\"6\\leq w&lt;8\"></span></td><td><span data-math=\"8\\leq w&lt;10\"></span></td><td><span data-math=\"10\\leq w&lt;12\"></span></td></tr><tr><td><strong>Frequency</strong></td><td>8</td><td>9</td><td>6</td><td>7</td></tr></tbody></table></div>\n© Crown Copyright Met Office<br>\n<ol type=\"a\"><li value=\"2\">Use linear interpolation to estimate the median and interquartile range in Subitsaa&#x27;s sample of daily mean windspeeds. <span class=\"marks\">(2 marks)</span></li></ol>\nShe took another random sample of daily mean windspeeds from the large data set for 30 days in Hurn in 2015. Her data is summarised in the box plot.\n<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/37d5c926b8ca9a914333.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"3\">Compare the distribution of daily mean windspeeds, in knots, for Leeming and Hurn. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use proportional allocation, then interpolate within the grouped windspeed data.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"30\\frac{31}{184}\\approx5.05\\Rightarrow5\\text{ July observations}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"Q_2=6+\\frac{15-8}{9}(2)\\approx7.56\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_1=4+\\frac{7.5}{8}(2)=5.875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_3=8+\\frac{22.5-17}{6}(2)\\approx9.8333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}\\approx9.8333-5.875=3.96\\text{ knots}\"></span></li><li value=\"3\"><p>From Hurn’s box plot the median is about 7 knots and IQR about 5 knots. Hurn therefore has lower typical daily mean windspeeds but greater variability in the middle half.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "c68b4fed1d9f23c067a667ff118663b33b45e3973331feaa054981971b230198",
+        "printedBookPage": null,
+        "marker": {
+          "page": 13,
+          "bbox": [
+            48.189,
+            415.703,
+            118.33,
+            427.658
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/exam/q22",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "22",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "22",
+      "question": "The cumulative frequency diagram shows the distribution of masses, in grams, of 100 loggerhead shrikes.\n<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/4f5dc811188b552c463b.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"1\">Estimate the median and interquartile range for this data. <span class=\"marks\">(3 marks)</span></li></ol>\nA team of ornithologists wants to catch, ring and release any of the birds that are heavier than 51 g.\n<ol type=\"a\"><li value=\"2\">Estimate the number of loggerhead shrikes that they need to catch. <span class=\"marks\">(2 marks)</span></li></ol>\nThe box plot shows the distribution of masses, in grams, of 100 great grey shrikes.\n<img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/51e0847979285016423f.png\" alt=\"Original question diagram\">\nThe ornithologists want to catch, ring and release the same number of great grey shrikes as loggerhead shrikes. They estimate that the great grey shrikes have to have a mass greater than <span data-math=\"x\"></span> g.\n<ol type=\"a\"><li value=\"3\">Use interpolation to calculate the value of <span data-math=\"x\"></span>. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Read the loggerhead cumulative curve at 25,50 and 75, then use the required upper-tail count.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>Median≈46 g. Quartiles approximately 43.5 g and 48.5 g give IQR≈5 g.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"N_{&gt;51}\\approx100-89=11\"></span></li><li value=\"3\"><p>To select the heaviest 11 of 100 great grey shrikes, estimate the 89 th percentile. The box plot has Q₃=67 g and maximum 70 g; assume observations spread uniformly across that top quarter.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=67+\\frac{89-75}{100-75}(70-67)=68.68\\text{ g}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "1d65721374713b97d16c71363e63bde98a55e31a4db11f670fe1872a7550a487",
+        "printedBookPage": null,
+        "marker": {
+          "page": 14,
+          "bbox": [
+            48.189,
+            51.504,
+            118.33,
+            63.459
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/exam/q26",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "26",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "26",
+      "question": "The histogram shows the distribution of the times taken, in hours, for 1000 athletes to complete a marathon.\n<img style=\"max-width:70mm\" class=\"practice-figure\"  src=\"content/practice/assets/b00c41c3bb239ecbce5d.png\" alt=\"Original question diagram\">\nThe runners qualify for the national championships if they finish the marathon in less than 2 hours and 36 minutes.\n<ol type=\"a\"><li value=\"1\">Estimate the number of runners who qualified for the championships. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">Estimate the mean and standard deviation of the times taken. <span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use bar areas, scaled so that the total represents 1000 athletes.2 hours 36 minutes=2.6 hours.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>Reading bar heights approximately 14,40,125,150,60,12,2 over intervals 2–2.5,2.5–2.8,2.8–3,3–3.2,3.2–3.5,3.5–4,4–5 gives total area 100. Thus multiply area by 10.</p><span class=\"equation\" data-display=\"true\" data-math=\"N_{&lt;2.6}\\approx10[0.5(14)+0.1(40)]=110\"></span></li><li value=\"2\"><table class=\"practice-table\"><thead><tr><th>Midpoint(h)</th><th>Estimated frequency</th></tr></thead><tbody><tr><td>2.25</td><td>70</td></tr><tr><td>2.65</td><td>120</td></tr><tr><td>2.9</td><td>250</td></tr><tr><td>3.1</td><td>300</td></tr><tr><td>3.35</td><td>180</td></tr><tr><td>3.75</td><td>60</td></tr><tr><td>4.5</td><td>20</td></tr></tbody></table><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{3048.5}{1000}=3.0485\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{9451.375}{1000}-\\left(\\frac{3048.5}{1000}\\right)^2}\\approx0.397521\"></span><p>The displayed histogram gives approximately 3.05 hours and 0.398 hours. The supplied key’s 3.03 and 0.290 do not agree with these bar readings; estimates depend slightly on reading the graph scale.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "b12ee0bd4b1586ab9eef5874affc8ead85b4f9a2ad4b396bb93fb93eae16647f",
+        "printedBookPage": null,
+        "marker": {
+          "page": 15,
+          "bbox": [
+            48.189,
+            51.504,
+            118.33,
+            63.459
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch3/exam/q36",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch3",
+      "chapterNumber": 3,
+      "questionLabel": "36",
+      "chapterTitle": "Representations of data",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "36",
+      "question": "Tanvi is researching the distances travelled by people to her local church. She stands outside the door of the church on Sunday between 10 am and 10:30 am and asks the first 20 people, as they arrive, how far they have travelled.\n<ol type=\"a\"><li value=\"1\">State the sampling method Tanvi has used. <span class=\"marks\">(1 mark)</span></li><li value=\"2\">State and briefly describe an alternative non-random sampling method that Tanvi could have used to collect her sample of 20 people. <span class=\"marks\">(2 marks)</span></li></ol>\nSpardha decides to ask every person that attends church on Sunday the distance, <span data-math=\"x\"></span> km, that they have travelled.\n<ol type=\"a\"><li value=\"3\">State the data selection process that Spardha has used. <span class=\"marks\">(1 mark)</span></li></ol>\nSpardha&#x27;s results are summarised by the box plot and summary statistics below.\n<span data-math=\"n=50,\\quad\\sum x=385,\\quad\\sum x^2=3517\" data-display=\"true\"></span>\n<img style=\"max-width:70mm\" class=\"practice-figure\"  src=\"content/practice/assets/95208f5b6483096fc86a.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"4\">Write down the interquartile range for these data. <span class=\"marks\">(1 mark)</span></li><li value=\"5\">Calculate the mean and standard deviation for these data. <span class=\"marks\">(3 marks)</span></li><li value=\"6\">State, giving a reason, whether you would recommend using the mean and standard deviation, or the median and interquartile range, to describe these data. <span class=\"marks\">(2 marks)</span></li></ol>\nJoan and Esha both attend the church and have moved house since Spardha collected her data. Joan&#x27;s journey has changed from a distance of 4.5 km to 9 km and Esha&#x27;s journey has changed from a distance of 4.8 km to 8 km.\n\nSpardha redrew her box plot and only had to change two values.\n<ol type=\"a\"><li value=\"7\">Explain which two values Spardha had to change and whether they had increased or decreased.<br><span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Combine the sampling definitions with the plotted distribution and summaries.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>Opportunity sampling.</p></li><li value=\"2\"><p>Quota sampling: choose categories such as age groups, set category totals adding to 20, and approach available people until each quota is filled.</p></li><li value=\"3\"><p>A census of the people attending that Sunday, because every attendee is asked.</p></li><li value=\"4\"><span class=\"equation\" data-display=\"true\" data-math=\"\\mathrm{IQR}=9.5-5=4.5\\text{ km}\"></span></li><li value=\"5\"><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{385}{50}=7.7\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{3517}{50}-\\left(\\frac{385}{50}\\right)^2}\\approx3.32415\"></span></li><li value=\"6\"><p>Use median and IQR: the plotted distribution is skewed and contains large outliers, which affect the mean and standard deviation more strongly.</p></li><li value=\"7\"><p>Both changed values move from below the lower quartile to above the median, but stay below the upper quartile. The lower quartile and median increase; the extremes and upper quartile stay unchanged, consistent with the statement that only two plotted values changed.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch3-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-03.pdf",
+        "pdfSha256": "7e784c3086b4e2cdbbda4c696659154cd4391960612f6f6e382e5ade31ab84c5",
+        "nativeSha256": "679b34b5ad572a1cfc80f9d269f3a0754c16e323e0537c1b82a9fe01400c6a47",
+        "questionLatexSha256": "f689cad6ae62d22a4fb56337e55e1e17827ac6061eace65c4338945f872e9f4b",
+        "printedBookPage": null,
+        "marker": {
+          "page": 15,
+          "bbox": [
+            48.189,
+            419.656,
+            118.33,
+            431.611
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    }
+  ]
+}

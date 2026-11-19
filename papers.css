@@ -2,3 +2,14 @@
 @media(max-width:950px){.builder-grid{grid-template-columns:260px minmax(0,1fr)}.panel{padding:16px}.papers-main{padding:22px 16px}}@media(max-width:700px){.builder-grid{grid-template-columns:1fr}.skill-list,.topic-list{max-height:210px}.papers-main{padding:20px 12px}.selected-item{grid-template-columns:22px minmax(0,1fr)}.remove-question{grid-column:2;justify-self:start}.math-content{font-size:1rem}.page-heading h1{font-size:1.8rem}.generate-panel form>button{flex:1 1 auto}.count-field{width:100%}}
 
 .topic-list{max-height:240px}.topic-choice{display:grid;grid-template-columns:20px 1fr;gap:8px;align-items:start;padding:8px 4px;font-size:.85rem;line-height:1.45}.topic-choice input{width:17px;height:17px;margin:2px 0;accent-color:#153b57}.topic-choice small{display:block;color:#536879}
+
+/* Practice Booklet native tables, diagrams and original question labels. */
+.math-content .practice-table{border-collapse:collapse;max-width:100%;margin:.8em 0}.practice-table td,.practice-table th{border:1px solid #aab9c4;padding:.3em .55em}.practice-figure{margin:.8em 0;max-width:100%}.practice-figure img{max-width:100%;height:auto}.practice-tag{font-size:.8em;font-weight:600}.marks{white-space:nowrap;font-size:.9em}.solution-hints{border-top:1px solid #c4d3de;margin-top:1em;padding-top:.5em}.solution-hints h3{font-size:1em;margin:.3em 0}
+
+.math-content .practice-layout-table{border-collapse:collapse;max-width:100%}.practice-layout-table td{border:0;padding:.25em .6em}.math-content .marks{float:none;display:inline-block;margin-left:.4em}
+
+.practice-context {border-left:2px solid #bd9957; padding-left:1em; margin:0 0 1em}
+.practice-context-label {font:600 .85em/1.4 system-ui,sans-serif; color:#465b6d}
+
+.math-content li>.equation:first-child {display:inline-block;vertical-align:top;width:100%;padding-top:0}
+.math-content li>.equation:first-child .katex-display {margin-top:0}

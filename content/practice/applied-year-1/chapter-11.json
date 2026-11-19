@@ -1,0 +1,2279 @@
+{
+  "schemaVersion": 1,
+  "sourceFamily": "applied-year-1",
+  "chapterNumber": 11,
+  "chapterTitle": "Variable acceleration",
+  "sourcePdf": "resources/practice/applied-year-1/chapter-11.pdf",
+  "questions": [
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "1",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.1",
+      "subchapterTitle": "11.1 Functions of time",
+      "number": "1",
+      "question": "A particle <span data-math=\"P\"></span> moves in a straight line. At time <span data-math=\"t\"></span> seconds (<span data-math=\"t\\geq0\"></span>), the displacement, <span data-math=\"s\"></span> metres, of <span data-math=\"P\"></span> from a point <span data-math=\"O\"></span> is given by <span data-math=\"s=3t^3-2t^2\"></span>. Find:\n<ol type=\"a\"><li value=\"1\"><span data-math=\"s\"></span> when <span data-math=\"t=2\"></span></li><li value=\"2\">the time taken for the particle to return to <span data-math=\"O\"></span>.</li></ol>",
+      "hints": [
+        "When the particle returns to <span data-math=\"O\"></span> the displacement, <span data-math=\"s=0\"></span>.   <span data-math=\"\\leftarrow\"></span> Section 9.3"
+      ],
+      "steps": [
+        "<p>Evaluate displacement, then solve s=0 and exclude the initial instant.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"s(2)=3(2)^3-2(2)^2=16\\text{ m}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"s=t^2(3t-2)=0\\Rightarrow t=0,\\tfrac23\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{return time}=\\tfrac23\\text{ s}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "d70fdf1ef9e358acb7450db5656fb79e361cbeadd02d8d421e02cf0fb7340fa0",
+        "printedBookPage": "77",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            309.212,
+            68.247,
+            320.121
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.1 Functions of time"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "2",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.1",
+      "subchapterTitle": "11.1 Functions of time",
+      "number": "2",
+      "question": "A body moves in a straight line such that its velocity, <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span>, at time <span data-math=\"t\"></span> seconds, is given by <span data-math=\"v=3t^2-14t+8\"></span> for <span data-math=\"t\\geq0\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the initial velocity</li><li value=\"2\">the values of <span data-math=\"t\"></span> when the body is instantaneously at rest</li><li value=\"3\">the value of <span data-math=\"t\"></span> when the velocity is 13 m s<span data-math=\"^{-1}\"></span></li><li value=\"4\">the greatest speed of the body in the interval <span data-math=\"0\\leq t\\leq3\"></span>.</li></ol>",
+      "hints": [
+        "For part <strong>d</strong>, sketch a velocity–time graph for the motion of the body and use the symmetric properties of the quadratic curve. <strong>Speed</strong> is the magnitude of the velocity, so the greatest speed could occur when the velocity is either positive or negative.   <span data-math=\"\\leftarrow\"></span> Pure Year 1, Chapter 2"
+      ],
+      "steps": [
+        "<p>Speed is the absolute value of velocity, so compare endpoints and any turning point.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=8\\mathrm{\\ m\\,s^{-1}}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v=(3t-2)(t-4)=0\\Rightarrow t=\\tfrac23,4\\text{ s}\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"3t^2-14t+8=13\\Rightarrow(3t+1)(t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=5\\text{ s}\\quad(t\\ge0)\"></span></li><li value=\"4\"><span class=\"equation\" data-display=\"true\" data-math=\"v=3(t-\\tfrac73)^2-\\tfrac{25}3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|v(0)|=8,\\quad|v(7/3)|=25/3,\\quad|v(3)|=7\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{greatest speed}=\\tfrac{25}3\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "56dc1ec9b94755f3033c0288c9758096d6030b23548c9afc62bfb1f736279e43",
+        "printedBookPage": "77",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            412.886,
+            68.247,
+            423.795
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.1 Functions of time"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "3",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.1",
+      "subchapterTitle": "11.1 Functions of time",
+      "number": "3",
+      "question": "A particle <span data-math=\"P\"></span> moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds, the displacement, <span data-math=\"s\"></span> metres, is given by <span data-math=\"s=6t^2-t^3\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the change in displacement between <span data-math=\"t=3\"></span> and <span data-math=\"t=5\"></span></li><li value=\"2\">the change in the displacement in the fourth second.</li></ol>",
+      "hints": [
+        "The fourth second is the time between <span data-math=\"t=3\"></span> and <span data-math=\"t=4\"></span>."
+      ],
+      "steps": [
+        "<p>Change in displacement means final position minus initial position.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"s(5)-s(3)=(150-125)-(54-27)=-2\\text{ m}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"s(4)-s(3)=(96-64)-27=5\\text{ m}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "81f62f2e2804a97991f1b2451743ef5ab500886e46f8d1e05be82752d246996a",
+        "printedBookPage": "77",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            571.805,
+            68.247,
+            582.714
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.1 Functions of time"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "4",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.1",
+      "subchapterTitle": "11.1 Functions of time",
+      "number": "4",
+      "question": "At time <span data-math=\"t=0\"></span>, a toy train is at a point <span data-math=\"P\"></span>. The train moves from point <span data-math=\"P\"></span> in a straight line and then returns to <span data-math=\"P\"></span> along the same straight line. Its distance from <span data-math=\"P\"></span>, <span data-math=\"s\"></span> m, at time <span data-math=\"t\"></span> seconds can be modelled by\n<span data-math=\"s=\\tfrac14(5t-t^2)\" data-display=\"true\"></span>\nFind:\n<ol type=\"a\"><li value=\"1\">the maximum distance of the train from <span data-math=\"P\"></span></li><li value=\"2\">the time taken for the toy train to return to <span data-math=\"P\"></span></li><li value=\"3\">the total distance travelled in this time</li><li value=\"4\">the values of <span data-math=\"t\"></span> for which the model is valid.</li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Complete the square and identify the outward and return journeys.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"s=\\frac{25}{16}-\\frac14(t-\\tfrac52)^2\\Rightarrow s_{\\max}=\\frac{25}{16}\\text{ m}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"t(5-t)/4=0\\Rightarrow t=5\\text{ s on return}\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=2s_{\\max}=\\frac{25}{8}\\text{ m}\"></span></li><li value=\"4\"><span class=\"equation\" data-display=\"true\" data-math=\"s\\ge0,\\ t\\ge0\\Rightarrow0\\le t\\le5\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "eb1317fe706d28fa2fb3642e8846b5c882be1c578873a728a91eb4a3bfbd8dd2",
+        "printedBookPage": "77",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.1 Functions of time"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "5",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.1",
+      "subchapterTitle": "11.1 Functions of time",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E</span>  A particle <span data-math=\"P\"></span> moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds (<span data-math=\"t\\geq0\"></span>), the displacement, <span data-math=\"x\"></span> metres, of <span data-math=\"P\"></span> from the origin <span data-math=\"O\"></span> is given by <span data-math=\"x=3t(t^2-4t+4)\"></span>. Show that <span data-math=\"P\"></span> will never move along the negative <span data-math=\"x\"></span>-axis. <span class=\"marks\">(2 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Factor the expression and use t≥0.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=3t(t^2-4t+4)=3t(t-2)^2\\ge0\"></span><p>Its position never lies on the negative x-axis. This does not mean it never moves in the negative x-direction: it can return towards O while x remains nonnegative.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "0b979ce2fe77f75a0e9ab9868ef99fd4add22592823de4b77ad4bda91671a5db",
+        "printedBookPage": "77",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            196.706,
+            68.247,
+            207.615
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.1 Functions of time"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "6",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.1",
+      "subchapterTitle": "11.1 Functions of time",
+      "number": "6",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle <span data-math=\"P\"></span> moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds the velocity of <span data-math=\"P\"></span> is <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span> in the direction of <span data-math=\"x\"></span> increasing, where <span data-math=\"v=2t^2-13t+15\"></span>, <span data-math=\"t\\geq0\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the times when <span data-math=\"P\"></span> is instantaneously at rest <span class=\"marks\">(3 marks)</span></li><li value=\"2\">the times when the velocity is 9 m s<span data-math=\"^{-1}\"></span> <span class=\"marks\">(3 marks)</span></li><li value=\"3\">the greatest speed of <span data-math=\"P\"></span> in the interval <span data-math=\"0\\leq t\\leq5\"></span>. <span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Solve each velocity equation; compare absolute velocities at stationary points and endpoints.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"2t^2-13t+15=(2t-3)(t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=1.5,5\\text{ s}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"2t^2-13t+6=(2t-1)(t-6)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=0.5,6\\text{ s}\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"v=2(t-\\tfrac{13}4)^2-\\tfrac{49}8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|v(0)|=15,\\quad|v(13/4)|=49/8,\\quad|v(5)|=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{greatest speed}=15\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "a2a0bb5ee904c3e167019bde5bf09d8a03991dc0edb19023ceb32077eb13b29f",
+        "printedBookPage": "77",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            243.331,
+            68.247,
+            254.24
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.1 Functions of time"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "7",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.1",
+      "subchapterTitle": "11.1 Functions of time",
+      "number": "7",
+      "question": "<span class=\"practice-tag\">E/P</span>  At time <span data-math=\"t=0\"></span>, a body moves in a straight horizontal line from a point <span data-math=\"O\"></span> and then returns to its starting point. The displacement, <span data-math=\"s\"></span> metres, from the point <span data-math=\"O\"></span> at time <span data-math=\"t\"></span> seconds is given by <span data-math=\"s=5t^2-t^3\"></span>, <span data-math=\"0\\leq t\\leq T\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the change in the displacement in the third second. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">Given that the model is valid when <span data-math=\"s\\geq0\"></span>, find the value of <span data-math=\"T\"></span>. Justify your answer. <span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>The third second is the interval from t=2 to t=3.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"s(3)-s(2)=(45-27)-(20-8)=6\\text{ m}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"s=t^2(5-t)\\ge0\\quad\\text{for }0\\le t\\le5\"></span><p>It is negative for t&gt;5, so the maximum permitted endpoint is T=5 s.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "a62c17a0b64aded8dc7eed8f4be77232ecda1c534a96983413e3623bff442de1",
+        "printedBookPage": "77",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            325.025,
+            68.247,
+            335.934
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.1 Functions of time"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.1/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "8",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.1",
+      "subchapterTitle": "11.1 Functions of time",
+      "number": "8",
+      "question": "<span class=\"practice-tag\">E/P</span>  At time <span data-math=\"t=0\"></span>, a particle <span data-math=\"P\"></span> leaves the origin <span data-math=\"O\"></span> and moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds the velocity of <span data-math=\"P\"></span> is <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span>, where <span data-math=\"v=10t-t^2\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the times when <span data-math=\"P\"></span> is instantaneously at rest <span class=\"marks\">(2 marks)</span></li><li value=\"2\">the maximum value of <span data-math=\"v\"></span>. <span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Factor to find rest instants; complete the square for maximum velocity.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=t(10-t)=0\\Rightarrow t=0,10\\text{ s}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v=25-(t-5)^2\\Rightarrow v_{\\max}=25\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "0f0ff605a384fba29481ae642b98989cad4afe36e57c358cddf62de22b679f8a",
+        "printedBookPage": "77",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            404.726,
+            68.247,
+            415.635
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.1 Functions of time"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "1",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.2",
+      "subchapterTitle": "11.2 Using differentiation",
+      "number": "1",
+      "question": "Find the velocity of each particle at time <span data-math=\"t=2\"></span>, given that the particle&#x27;s displacement (<span data-math=\"s\"></span> metres) at time <span data-math=\"t\"></span> seconds is given by:\n<ol type=\"a\"><li value=\"1\"><span data-math=\"s=4t^3-t\"></span></li><li value=\"2\"><span data-math=\"s=2t+t^2-1\"></span></li><li value=\"3\"><span data-math=\"s=t+t^{-1}\"></span></li></ol>",
+      "hints": [
+        "Differentiate the expression for the displacement to find an expression for the velocity, then substitute <span data-math=\"t=2\"></span> in that expression. The units of velocity will be m s<span data-math=\"^{-1}\"></span>."
+      ],
+      "steps": [
+        "<p>Differentiate displacement to obtain velocity, then substitute t=2.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=12t^2-1\\Rightarrow v(2)=47\\mathrm{\\ m\\,s^{-1}}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v=2+2t\\Rightarrow v(2)=6\\mathrm{\\ m\\,s^{-1}}\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"v=1-t^{-2}\\Rightarrow v(2)=\\tfrac34\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "d0c92ee45b537b7664de0c8e6b8daba651d40bd719ca66f2d75f02ee5a952301",
+        "printedBookPage": "78",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            541.586,
+            68.247,
+            552.495
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.2 Using differentiation"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "2",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.2",
+      "subchapterTitle": "11.2 Using differentiation",
+      "number": "2",
+      "question": "Find an expression for <strong>i</strong> the velocity and <strong>ii</strong> the acceleration of a particle given that the displacement, <span data-math=\"s\"></span> metres, at time <span data-math=\"t\"></span> seconds is given by:\n<ol type=\"a\"><li value=\"1\"><span data-math=\"s=\\dfrac{3t^4}{4}-\\dfrac1{t^2}\"></span></li><li value=\"2\"><span data-math=\"s=(3t-5)(2t^2+1)\"></span></li><li value=\"3\"><span data-math=\"s=\\dfrac{2t^4-3t^2+8}{4t}\"></span></li></ol>",
+      "hints": [
+        "<span data-math=\"v=\\dfrac{\\mathrm ds}{\\mathrm dt}\"></span>, <span data-math=\"a=\\dfrac{\\mathrm dv}{\\mathrm dt}=\\dfrac{\\mathrm d^2s}{\\mathrm dt^2}\"></span>"
+      ],
+      "steps": [
+        "<p>Use v=ds/dt and a=dv/dt; rewrite products and quotients as powers first.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac34t^4-t^{-2}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }v=3t^3+2t^{-3};\\quad\\text{(ii) }a=9t^2-6t^{-4}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"s=6t^3-10t^2+3t-5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }v=18t^2-20t+3;\\quad\\text{(ii) }a=36t-20\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac12t^3-\\tfrac34t+2t^{-1}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }v=\\tfrac32t^2-\\tfrac34-2t^{-2};\\quad\\text{(ii) }a=3t+4t^{-3}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "b423d2c6fad76a7f3ad1d6158e7a11b146a77e12835ab7e0fee7e0906fe1caa7",
+        "printedBookPage": "78",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.2 Using differentiation"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "3",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.2",
+      "subchapterTitle": "11.2 Using differentiation",
+      "number": "3",
+      "question": "A particle <span data-math=\"P\"></span> is moving along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds the displacement, <span data-math=\"x\"></span> metres, from <span data-math=\"O\"></span> is given by <span data-math=\"x=2t^3-5t^2+8\"></span>, <span data-math=\"t\\geq0\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the velocity of <span data-math=\"P\"></span> when <span data-math=\"t=4\"></span></li><li value=\"2\">the values of <span data-math=\"t\"></span> for which <span data-math=\"P\"></span> is instantaneously at rest</li><li value=\"3\">the acceleration of <span data-math=\"P\"></span> when <span data-math=\"t=2\"></span>.</li></ol>",
+      "hints": [
+        "The particle is instantaneously at rest when <span data-math=\"v=0\"></span>."
+      ],
+      "steps": [
+        "<p>Differentiate x once for velocity and twice for acceleration.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=6t^2-10t\\Rightarrow v(4)=96-40=56\\mathrm{\\ m\\,s^{-1}}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"2t(3t-5)=0\\Rightarrow t=0,\\tfrac53\\text{ s}\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"a=12t-10\\Rightarrow a(2)=14\\mathrm{\\ m\\,s^{-2}}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "98be659e4f7ae55411e3dcb2efe8e8e5e088da5ecd5acc771ae48cffc3ca6958",
+        "printedBookPage": "78",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            206.502,
+            68.247,
+            217.411
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.2 Using differentiation"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "4",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.2",
+      "subchapterTitle": "11.2 Using differentiation",
+      "number": "4",
+      "question": "A particle <span data-math=\"P\"></span> is moving along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds (where <span data-math=\"t\\geq0\"></span>), the velocity of <span data-math=\"P\"></span> is <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span> in the direction of <span data-math=\"x\"></span> increasing, where <span data-math=\"v=20+t-t^2\"></span>. Find the acceleration of <span data-math=\"P\"></span> when <span data-math=\"P\"></span> is instantaneously at rest.",
+      "hints": [],
+      "steps": [
+        "<p>Find the nonnegative root of v=0 before evaluating acceleration.</p><span class=\"equation\" data-display=\"true\" data-math=\"20+t-t^2=0\\Rightarrow(t-5)(t+4)=0\\Rightarrow t=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=1-2t\\Rightarrow a(5)=-9\\mathrm{\\ m\\,s^{-2}}\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "ddcdce955e7f5709eb5f7569608eb32b786bc3821536959ef9b47d26a6786f1b",
+        "printedBookPage": "78",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            323.721,
+            68.247,
+            334.63
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.2 Using differentiation"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "5",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.2",
+      "subchapterTitle": "11.2 Using differentiation",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E</span>  A particle <span data-math=\"P\"></span> moves in a straight line. At time <span data-math=\"t\"></span> seconds, the displacement, <span data-math=\"s\"></span> cm, from a fixed point <span data-math=\"O\"></span> is given by\n<span data-math=\"s=\\tfrac13(2t^3-21t^2+60t+90),\\ t\\geq0\" data-display=\"true\"></span>\nFind:\n<ol type=\"a\"><li value=\"1\">the distance between the points at which the particle is instantaneously at rest <span class=\"marks\">(7 marks)</span></li><li value=\"2\">the magnitude of the acceleration at these points. <span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Keep centimetres as the distance unit throughout.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=2t^2-14t+20=2(t-2)(t-5)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=2,5;\\quad s(2)=\\frac{142}3,\\ s(5)=\\frac{115}3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=|s(5)-s(2)|=9\\text{ cm}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"a=4t-14\\Rightarrow a(2)=-6,\\ a(5)=6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|a|=6\\mathrm{\\ cm\\,s^{-2}}\\text{ at both points}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "7dab9caf6c14442d0e80183eea43d1f6f052a7ad329207f0f622c45715810737",
+        "printedBookPage": "78",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            370.347,
+            68.247,
+            381.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.2 Using differentiation"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "6",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.2",
+      "subchapterTitle": "11.2 Using differentiation",
+      "number": "6",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle <span data-math=\"P\"></span> moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds the velocity of <span data-math=\"P\"></span> is <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span> in the direction of <span data-math=\"x\"></span> increasing, where <span data-math=\"v=2t^2-17t+21\"></span>, <span data-math=\"t\\geq0\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the times when <span data-math=\"P\"></span> is instantaneously at rest <span class=\"marks\">(3 marks)</span></li><li value=\"2\">the greatest speed of <span data-math=\"P\"></span> in the interval <span data-math=\"0\\leq t\\leq6\"></span>. <span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Speed is |v|; check both endpoints and the minimum of the quadratic velocity.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=(2t-3)(t-7)=0\\Rightarrow t=1.5,7\\text{ s}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"a=4t-17=0\\Rightarrow t=17/4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=21,\\quad v(17/4)=-121/8,\\quad v(6)=-9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\max|v|=21\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "f19e306483d04fe8e1eb96b7f20372d1358f311b5a61a163922b54f026fb5d0b",
+        "printedBookPage": "78",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            470.073,
+            68.247,
+            480.982
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.2 Using differentiation"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "7",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.2",
+      "subchapterTitle": "11.2 Using differentiation",
+      "number": "7",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle <span data-math=\"P\"></span> moves in a straight line. At time <span data-math=\"t\"></span> seconds the displacement, <span data-math=\"s\"></span> metres, is given by <span data-math=\"s=kt^3-5t^2+12\"></span>, where <span data-math=\"k\"></span> is a constant. When <span data-math=\"t=1\"></span>, the velocity of <span data-math=\"P\"></span> is 8 m s<span data-math=\"^{-1}\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the value of <span data-math=\"k\"></span>. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">Hence find the magnitude of the acceleration when <span data-math=\"P\"></span> is instantaneously at rest. <span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Determine k from v(1), then find every rest instant.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=3kt^2-10t,\\quad8=3k-10\\Rightarrow k=6\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v=18t^2-10t=2t(9t-5)=0\\Rightarrow t=0,\\tfrac59\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=36t-10\\Rightarrow a(0)=-10,\\ a(5/9)=10\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|a|=10\\mathrm{\\ m\\,s^{-2}}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "a3bd48e822061c3bfbbca5166316bfeeec670e0563d4741fe540d30733e63a73",
+        "printedBookPage": "78",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            536.225,
+            68.247,
+            547.134
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.2 Using differentiation"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.2/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "8",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.2",
+      "subchapterTitle": "11.2 Using differentiation",
+      "number": "8",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle <span data-math=\"P\"></span> moves along a straight line. At time <span data-math=\"t\"></span> seconds the velocity of <span data-math=\"P\"></span> is <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span>, where\n<span data-math=\"v=\\tfrac1{10}t(8-t)^2,\\ 0\\leq t\\leq10\" data-display=\"true\"></span>\n<ol type=\"a\"><li value=\"1\">Sketch a velocity–time graph for the motion of <span data-math=\"P\"></span>. <span class=\"marks\">(2 marks)</span></li><li value=\"2\">Find the values of <span data-math=\"t\"></span> and the corresponding values of <span data-math=\"v\"></span> when the acceleration of <span data-math=\"P\"></span> is instantaneously zero. <span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Expand or use the product rule to differentiate the velocity.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><figure class=\"practice-figure\"><img src=\"content/practice/assets/da3052e9e67082c1cf6f.png\" alt=\"ans112-q8: solution graph\"></figure><p>The curve starts at(0,0), has a local maximum at t=8/3, touches the axis at(8,0), and ends at(10,4).</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"a=\\tfrac1{10}(64-32t+3t^2)=\\tfrac1{10}(3t-8)(t-8)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=0\\Rightarrow t=\\tfrac83,8\\text{ s}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(8/3)=\\frac{1024}{135}\\mathrm{\\ m\\,s^{-1}},\\quad v(8)=0\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "8b799dc6749853d3f8db13d556884007b3f3ad653ff2f9248bb76b1d9ade993a",
+        "printedBookPage": "78",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            602.377,
+            68.247,
+            613.286
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.2 Using differentiation"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "1",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.3",
+      "subchapterTitle": "11.3 Maxima and minima problems",
+      "number": "1",
+      "question": "A particle starts at a fixed point <span data-math=\"O\"></span> and moves in a straight line before returning to <span data-math=\"O\"></span>. The distance, <span data-math=\"s\"></span> metres, from <span data-math=\"O\"></span> at time <span data-math=\"t\"></span> seconds is given by <span data-math=\"s=3t+0.25t^2-0.25t^3\"></span>, <span data-math=\"0\\leq t\\leq4\"></span>.\n<ol type=\"a\"><li value=\"1\">Justify the restriction <span data-math=\"0\\leq t\\leq4\"></span>.</li><li value=\"2\">Find the maximum distance of the particle from <span data-math=\"O\"></span>, correct to 3 significant figures.</li></ol>",
+      "hints": [
+        "For part <strong>a</strong>, find the roots of the cubic function and draw a sketch.   <span data-math=\"\\leftarrow\"></span> Pure Year 1, Section 4.1\n\nFor part <strong>b</strong>, look at your sketch. If the maximum distance occurs at a turning point, you can find the value of <span data-math=\"t\"></span> by solving <span data-math=\"\\dfrac{\\mathrm ds}{\\mathrm dt}=0\"></span>.   <span data-math=\"\\leftarrow\"></span> Pure Year 1, Section 12.9"
+      ],
+      "steps": [
+        "<p>Distance must be nonnegative; evaluate stationary points within the allowed interval.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"s=-\\tfrac14t(t-4)(t+3)\\ge0\\quad(0\\le t\\le4)\"></span><p>The particle starts and returns at s=0; beyond 4 s the formula gives negative distance.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v=3+\\tfrac12t-\\tfrac34t^2=0\\Rightarrow3t^2-2t-12=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=\\frac{1+\\sqrt{37}}3\\approx2.361\\text{ s}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s_{\\max}\\approx5.19\\text{ m}\"></span><p>The other stationary time is negative; both interval endpoints have s=0.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "4dd395718d0db7700835c176097b71d631e26d2ff0d0fcd882662ec704c8ec26",
+        "printedBookPage": "79",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            102.215,
+            68.247,
+            113.124
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.3 Maxima and minima problems"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "2",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.3",
+      "subchapterTitle": "11.3 Maxima and minima problems",
+      "number": "2",
+      "question": "At time <span data-math=\"t=0\"></span>, a particle <span data-math=\"P\"></span> leaves the origin, <span data-math=\"O\"></span>, and moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds the velocity of <span data-math=\"P\"></span> is <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span> where <span data-math=\"v=t^2(t-5)^2\"></span>, <span data-math=\"0\\leq t\\leq6\"></span>.\n<ol type=\"a\"><li value=\"1\">Sketch a velocity–time graph for the motion of <span data-math=\"P\"></span>.</li><li value=\"2\">Find the maximum value of <span data-math=\"v\"></span> and the time at which it occurs.</li></ol>",
+      "hints": [
+        "Set <span data-math=\"\\dfrac{\\mathrm dv}{\\mathrm dt}=0\"></span>, or use the symmetry of the graph.   <span data-math=\"\\leftarrow\"></span> Pure Year 1, Section 12.9"
+      ],
+      "steps": [
+        "<p>Compare the velocity at stationary points and interval endpoints.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><figure class=\"practice-figure\"><img src=\"content/practice/assets/65677041d84dc7778c00.png\" alt=\"ans113-q2: solution graph\"></figure><p>The curve touches the axis at t=0 and 5; it has a local maximum at t=2.5 and ends at(6,36).</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=2t(t-5)(2t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=0,\\quad v(2.5)=\\frac{625}{16},\\quad v(5)=0,\\quad v(6)=36\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v_{\\max}=\\frac{625}{16}\\approx39.1\\mathrm{\\ m\\,s^{-1}}\\text{ at }t=2.5\\text{ s}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "0f2381ae1da6abb168af489a6adf1e4e986b6b541020d86554b8201c5d653fb0",
+        "printedBookPage": "79",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            239.584,
+            68.247,
+            250.493
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.3 Maxima and minima problems"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "3",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.3",
+      "subchapterTitle": "11.3 Maxima and minima problems",
+      "number": "3",
+      "question": "A particle <span data-math=\"P\"></span> moves in a straight line such that its distance, <span data-math=\"s\"></span> metres, from a fixed point <span data-math=\"O\"></span> at time <span data-math=\"t\"></span> seconds is given by\n<span data-math=\"s=0.5t^3-0.45t^2-2.1t+6,\\ 0\\leq t\\leq4\" data-display=\"true\"></span>\nThe diagram shows the displacement–time graph of the motion of <span data-math=\"P\"></span>.\n<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/8078f65f515a411cc259.png\" alt=\"Original question diagram\">\n<ol type=\"a\"><li value=\"1\">Determine the time at which <span data-math=\"P\"></span> is moving with minimum velocity.</li><li value=\"2\">Find the displacement of <span data-math=\"P\"></span> from <span data-math=\"O\"></span> at this time.</li><li value=\"3\">Find the velocity of <span data-math=\"P\"></span> at this time.</li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Minimum velocity occurs where its upward-opening quadratic has zero derivative.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=1.5t^2-0.9t-2.1,\\quad a=3t-0.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=0\\Rightarrow t=0.3\\text{ s}\"></span><p>The coefficient of t² in v is positive, so this is a minimum.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"s(0.3)=0.5(0.3)^3-0.45(0.3)^2-2.1(0.3)+6=5.343\\text{ m}\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"v(0.3)=1.5(0.3)^2-0.9(0.3)-2.1=-2.235\\mathrm{\\ m\\,s^{-1}}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "2c6e576e1fd9a3c7fbf4fe3ea4601c515ecef4e2a0c9232b9e2def65ded38dbc",
+        "printedBookPage": "79",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            352.798,
+            68.247,
+            363.707
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.3 Maxima and minima problems"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "4",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.3",
+      "subchapterTitle": "11.3 Maxima and minima problems",
+      "number": "4",
+      "question": "A body starts from rest and moves in a straight line. At time <span data-math=\"t\"></span> seconds, the displacement of the body from the starting point, <span data-math=\"s\"></span> metres, is given by <span data-math=\"s=5t^3-t^4\"></span>, <span data-math=\"0\\leq t\\leq5\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the time taken for the particle to return to the starting point.</li><li value=\"2\">Explain why <span data-math=\"s\"></span> is always non-negative.</li><li value=\"3\">Find the maximum displacement of the body from its starting point.</li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Factor s and differentiate to locate the maximum in[0,5].</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"s=t^3(5-t)=0\\Rightarrow t=5\\text{ s on return}\"></span></li><li value=\"2\"><p>For 0≤t≤5, both t³ and 5−t are nonnegative, hence s≥0.</p></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"v=15t^2-4t^3=t^2(15-4t)=0\\Rightarrow t=0,15/4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(15/4)=\\frac{16875}{256}\\approx65.9\\text{ m}\"></span><p>The endpoints give zero displacement; the interior stationary point gives the maximum.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "399a0df846dafa880ae1cf6facff26bd2a4e17ddc77f633f632b744f878131ff",
+        "printedBookPage": "79",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            634.356,
+            68.247,
+            645.265
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.3 Maxima and minima problems"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "5",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.3",
+      "subchapterTitle": "11.3 Maxima and minima problems",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E</span>  A particle <span data-math=\"P\"></span> moves in a straight line such that its displacement, <span data-math=\"s\"></span> metres, from a fixed point <span data-math=\"O\"></span> at time <span data-math=\"t\"></span> seconds is given by <span data-math=\"s=0.5t^3-0.3t^2-0.8t+6\"></span>, <span data-math=\"0\\leq t\\leq4\"></span>. Find the displacement of <span data-math=\"P\"></span> from <span data-math=\"O\"></span> when it is moving with minimum velocity. <span class=\"marks\">(6 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Minimise velocity, not displacement.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=1.5t^2-0.6t-0.8,\\quad a=3t-0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=0\\Rightarrow t=0.2\\text{ s}\"></span><p>The quadratic velocity has positive leading coefficient, so this is its minimum.</p><span class=\"equation\" data-display=\"true\" data-math=\"s(0.2)=0.5(0.2)^3-0.3(0.2)^2-0.8(0.2)+6=5.832\\text{ m}\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "0e0184ed3a2da47b1673a096194b882145c7f1daded48a02872e13cf848d7e6f",
+        "printedBookPage": "79",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            716.05,
+            68.247,
+            726.959
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.3 Maxima and minima problems"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "6",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.3",
+      "subchapterTitle": "11.3 Maxima and minima problems",
+      "number": "6",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle <span data-math=\"P\"></span> moves along the <span data-math=\"x\"></span>-axis. Its velocity, <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span>, in the positive <span data-math=\"x\"></span>-direction at time <span data-math=\"t\"></span> seconds is given by <span data-math=\"v=3t^2-6t+8\"></span>, <span data-math=\"t\\geq0\"></span>.\n<ol type=\"a\"><li value=\"1\">Show that <span data-math=\"P\"></span> never comes to rest. <span class=\"marks\">(2 marks)</span></li><li value=\"2\">Find the minimum velocity of <span data-math=\"P\"></span>. <span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Complete the square.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=3(t-1)^2+5\\ge5&gt;0\"></span><p>Velocity is never zero, so P never comes to rest.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v_{\\min}=5\\mathrm{\\ m\\,s^{-1}}\\quad\\text{at }t=1\\text{ s}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "fa06330e7cb05dff52887711b47056311c6c60c4376e2650b47595baeef3f458",
+        "printedBookPage": "79",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.3 Maxima and minima problems"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "7",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.3",
+      "subchapterTitle": "11.3 Maxima and minima problems",
+      "number": "7",
+      "question": "<span class=\"practice-tag\">E/P</span>  An electric car moves in a straight line along a 5 km test track. The motion of the car is modelled as a particle travelling in a straight line and the distance, <span data-math=\"s\"></span> m, of the car from the start of the track after <span data-math=\"t\"></span> seconds is given by <span data-math=\"s=4.8t+1.2t^2-0.01t^3\"></span>, <span data-math=\"0\\leq t\\leq100\"></span>. Show that the car never reaches the end of the track. <span class=\"marks\">(7 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Compare all stationary values and endpoints on the stated time interval.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=4.8+2.4t-0.03t^2=0\\Rightarrow t=40\\pm4\\sqrt{110}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=40+4\\sqrt{110}\\approx81.95\\text{ s}\\quad(0\\le t\\le100)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=0,\\quad s(100)=2480,\\quad s(81.95\\ldots)\\approx2948.72\\text{ m}\"></span><p>The maximum is approximately 2.95 km, less than 5 km, so the car never reaches the end of the track.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "bf82196cf36b5cbc9613117f8d6d30e95ee88dc529c158ab78ebfe962a5900b8",
+        "printedBookPage": "79",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            118.499,
+            68.247,
+            129.408
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.3 Maxima and minima problems"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.3/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "8",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.3",
+      "subchapterTitle": "11.3 Maxima and minima problems",
+      "number": "8",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle <span data-math=\"P\"></span> moves in a straight line. The speed of <span data-math=\"P\"></span> at time <span data-math=\"t\"></span> seconds (<span data-math=\"t\\geq0\"></span>) is <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span>, where <span data-math=\"v=at^2+bt+c\"></span> and <span data-math=\"a\"></span>, <span data-math=\"b\"></span> and <span data-math=\"c\"></span> are constants. When <span data-math=\"t=3\"></span>, the speed of <span data-math=\"P\"></span> has its minimum value. When <span data-math=\"t=0\"></span>, <span data-math=\"v=28\"></span> and when <span data-math=\"t=3\"></span>, <span data-math=\"v=1\"></span>.\n\nFind the acceleration of <span data-math=\"P\"></span> when <span data-math=\"t=4\"></span>. <span class=\"marks\">(8 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Use the initial speed and the location and value of the minimum.</p><span class=\"equation\" data-display=\"true\" data-math=\"c=28,\\quad6a+b=0,\\quad9a+3b+28=1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"b=-6a\\Rightarrow a=3,\\ b=-18\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=6t-18\\Rightarrow a(4)=6\\mathrm{\\ m\\,s^{-2}}\"></span><p>Here acceleration is measured in the direction of motion. The speed is always positive, so the particle does not reverse.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "ac9620c0e29da3b2c60dd97ae93f6920bca12066f826b8b0f717bf39710040c4",
+        "printedBookPage": "79",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            178.674,
+            68.247,
+            189.583
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.3 Maxima and minima problems"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "1",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.4",
+      "subchapterTitle": "11.4 Using integration",
+      "number": "1",
+      "question": "A particle is moving in a straight line. Given that <span data-math=\"v=0\"></span> when <span data-math=\"t=0\"></span>, find an expression for the velocity of the particle if the acceleration is given by:\n<ol type=\"a\"><li value=\"1\"><span data-math=\"a=4t^2-3t^3\"></span></li><li value=\"2\"><span data-math=\"a=5t+\\dfrac{3t^2}{2}\"></span></li><li value=\"3\"><span data-math=\"a=\\dfrac{2t^3-t^2}{t}\"></span></li></ol>",
+      "hints": [
+        "<span data-math=\"v=\\int a\\,\\mathrm dt\"></span>. Use the initial condition that <span data-math=\"v=0\"></span> when <span data-math=\"t=0\"></span> to find the constant of integration."
+      ],
+      "steps": [
+        "<p>Integrate acceleration and use v(0)=0 to fix the constant.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=\\int(4t^2-3t^3)\\,dt=\\tfrac43t^3-\\tfrac34t^4+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"C=0\\Rightarrow v=\\tfrac43t^3-\\tfrac34t^4\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v=\\int(5t+\\tfrac32t^2)\\,dt=\\tfrac52t^2+\\tfrac12t^3+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"C=0\\Rightarrow v=\\tfrac52t^2+\\tfrac12t^3\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"a=2t^2-t\\quad(t\\ne0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac23t^3-\\tfrac12t^2+C,\\quad C=0\"></span><p>Use the continuous extension at t=0: the printed quotient itself is undefined there.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "96eb37d65f3a5b34fa2ecaa3034924f4a67cb7bc6850a68b878f136670b180f3",
+        "printedBookPage": "81",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            311.548,
+            68.247,
+            322.457
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.4 Using integration"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "2",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.4",
+      "subchapterTitle": "11.4 Using integration",
+      "number": "2",
+      "question": "A particle is moving in a straight line. Find:\n<ol type=\"i\"><li value=\"1\">an expression for the displacement of the particle</li><li value=\"2\">the distance travelled by the particle in the first 3 seconds</li></ol>\nwhen the velocity is given by:\n<ol type=\"a\"><li value=\"1\"><span data-math=\"v=2t^3-\\dfrac t3+1\"></span></li><li value=\"2\"><span data-math=\"v=\\dfrac t3(2t^2+t^3)\"></span></li><li value=\"3\"><span data-math=\"v=5t^2+\\dfrac{3\\sqrt t}{2}\"></span></li></ol>",
+      "hints": [
+        "If the velocity is always positive in the interval <span data-math=\"0\\leq t\\leq3\"></span>, then the distance travelled is given by the definite integral <span data-math=\"\\int_0^3v\\,\\mathrm dt\"></span>."
+      ],
+      "steps": [
+        "<p>Integrate velocity, retaining an arbitrary initial displacement C; distance uses the change in s.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }s=\\tfrac12t^4-\\tfrac16t^2+t+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }s(3)-s(0)=40.5-1.5+3=42\\text{ m}\"></span><p>Velocity stays positive: its minimum for t≥0 occurs at t=1/√18 and equals 1−2/(9√18)&gt;0.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac23t^3+\\tfrac13t^4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }s=\\tfrac16t^4+\\tfrac1{15}t^5+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) distance}=81/6+243/15=29.7\\text{ m}\"></span><p>Velocity is nonnegative on[0,3].</p></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }s=\\tfrac53t^3+t^{3/2}+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) distance}=45+3\\sqrt3\\approx50.2\\text{ m}\"></span><p>Velocity is nonnegative on[0,3].</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "b6d915be2dee351272f87d88c45b299b7a320d6faa2a59bd16cfd0bd942ed1d3",
+        "printedBookPage": "81",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            454.481,
+            68.247,
+            465.39
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.4 Using integration"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "3",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.4",
+      "subchapterTitle": "11.4 Using integration",
+      "number": "3",
+      "question": "A particle <span data-math=\"P\"></span> is moving on the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds, the velocity of <span data-math=\"P\"></span> is <span data-math=\"(10+3t-2t^2)\"></span> m s<span data-math=\"^{-1}\"></span>. At time <span data-math=\"t=0\"></span>, <span data-math=\"P\"></span> is at the point where <span data-math=\"x=5\"></span>. Find the distance of <span data-math=\"P\"></span> from <span data-math=\"O\"></span> when <span data-math=\"t=2\"></span>.",
+      "hints": [],
+      "steps": [
+        "<p>Integrate and use the initial position x(0)=5.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=10t+\\tfrac32t^2-\\tfrac23t^3+C,\\quad C=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x(2)=20+6-16/3+5=\\frac{77}3\\text{ m}\"></span><p>This position is positive, so its distance from O is 77/3 m.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "27b22f14dfba987d80e1f81d6f65ecf2b9ad2eeae758aee296b6c31c628f88a9",
+        "printedBookPage": "81",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            651.707,
+            68.247,
+            662.616
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.4 Using integration"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "4",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.4",
+      "subchapterTitle": "11.4 Using integration",
+      "number": "4",
+      "question": "A particle is moving in a straight line. At time <span data-math=\"t\"></span> seconds its velocity, <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span>, is given by <span data-math=\"v=4t^2-20t+21\"></span>. When <span data-math=\"t=0\"></span>, the displacement is 0. Find the distance between the two points where the particle is instantaneously at rest.",
+      "hints": [],
+      "steps": [
+        "<p>Find the rest instants, then subtract their positions.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=(2t-3)(2t-7)=0\\Rightarrow t=\\tfrac32,\\tfrac72\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac43t^3-10t^2+21t\\quad(s(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(3/2)=\\frac{27}2,\\quad s(7/2)=\\frac{49}6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=\\left|\\frac{49}6-\\frac{27}2\\right|=\\frac{16}3\\text{ m}\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "c9dc44325788109fd26e310d0eafc3ab55551bfcd74209afb3cbce3f0b1eac11",
+        "printedBookPage": "81",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            684.783,
+            68.247,
+            695.692
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.4 Using integration"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "5",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.4",
+      "subchapterTitle": "11.4 Using integration",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E</span>  A particle <span data-math=\"P\"></span> moves on the <span data-math=\"x\"></span>-axis. The acceleration of <span data-math=\"P\"></span> at time <span data-math=\"t\"></span> seconds is <span data-math=\"(t-3)\"></span> m s<span data-math=\"^{-2}\"></span> in the positive <span data-math=\"x\"></span>-direction. The velocity of <span data-math=\"P\"></span> at time <span data-math=\"t\"></span> seconds is <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span>. When <span data-math=\"t=0\"></span>, <span data-math=\"v=4\"></span>. Find:\n<ol type=\"a\"><li value=\"1\"><span data-math=\"v\"></span> in terms of <span data-math=\"t\"></span> <span class=\"marks\">(4 marks)</span></li><li value=\"2\">the values of <span data-math=\"t\"></span> when <span data-math=\"P\"></span> is instantaneously at rest <span class=\"marks\">(3 marks)</span></li><li value=\"3\">the distance between the two points at which <span data-math=\"P\"></span> is instantaneously at rest. <span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate acceleration using v(0)=4, then integrate between the rest instants.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac12t^2-3t+C,\\quad C=4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac12t^2-3t+4\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"t^2-6t+8=(t-2)(t-4)=0\\Rightarrow t=2,4\\text{ s}\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"\\Delta s=\\left[\\tfrac16t^3-\\tfrac32t^2+4t\\right]_2^4=-\\frac23\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=|\\Delta s|=\\frac23\\text{ m}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "15fe1c3c4bf22795cd9208f8580df00797595b52762aefebab0771fb8ca72106",
+        "printedBookPage": "81",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.4 Using integration"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "6",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.4",
+      "subchapterTitle": "11.4 Using integration",
+      "number": "6",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle <span data-math=\"P\"></span> moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds (<span data-math=\"t\\geq0\"></span>), the acceleration of <span data-math=\"P\"></span> is <span data-math=\"(5t+9)\"></span> m s<span data-math=\"^{-2}\"></span> in the positive <span data-math=\"x\"></span>-direction. When <span data-math=\"t=0\"></span>, the velocity of <span data-math=\"P\"></span> is 3 m s<span data-math=\"^{-1}\"></span> in the positive <span data-math=\"x\"></span>-direction. At time <span data-math=\"t=T\"></span>, the velocity of <span data-math=\"P\"></span> is 7 m s<span data-math=\"^{-1}\"></span> in the positive <span data-math=\"x\"></span>-direction. Find the value of <span data-math=\"T\"></span>. <span class=\"marks\">(6 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate and impose the two velocity conditions.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac52t^2+9t+C,\\quad C=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"7=\\tfrac52T^2+9T+3\\Rightarrow5T^2+18T-8=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(5T-2)(T+4)=0\\Rightarrow T=\\frac25\\text{ s}\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "53e917fb5b643a67c4cb5b885e9a855be2a6577388525068fdaece81f40bd9d4",
+        "printedBookPage": "81",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            134.041,
+            68.247,
+            144.95
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.4 Using integration"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "7",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.4",
+      "subchapterTitle": "11.4 Using integration",
+      "number": "7",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle <span data-math=\"P\"></span> starts from rest at a fixed point <span data-math=\"O\"></span> and moves in a straight line. At time <span data-math=\"t\"></span> seconds the acceleration of <span data-math=\"P\"></span> is proportional to <span data-math=\"(5-t^2)\"></span>, where <span data-math=\"t\\geq0\"></span>, and the displacement of <span data-math=\"P\"></span> from <span data-math=\"O\"></span> is <span data-math=\"s\"></span> metres. When <span data-math=\"t=2\"></span>, the velocity of <span data-math=\"P\"></span> is 11 m s<span data-math=\"^{-1}\"></span>.\n\nShow that <span data-math=\"s=\\dfrac{t^2(30-t^2)}8\"></span>. <span class=\"marks\">(7 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Introduce the proportionality constant k and determine both integration constants.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=k(5-t^2)\\Rightarrow v=k(5t-t^3/3)+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(0)=0\\Rightarrow C=0;\\quad11=k(10-8/3)\\Rightarrow k=\\tfrac32\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac{15}2t-\\tfrac12t^3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac{15}4t^2-\\tfrac18t^4+D,\\quad s(0)=0\\Rightarrow D=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\frac{t^2(30-t^2)}8\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "b4b22671223a201d3415a62e52340d51374bc08cd0b05cfbcd57bc39d252d5f5",
+        "printedBookPage": "81",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            180.666,
+            68.247,
+            191.575
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.4 Using integration"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.4/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "8",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.4",
+      "subchapterTitle": "11.4 Using integration",
+      "number": "8",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle <span data-math=\"P\"></span> moves in a straight line through a fixed point, <span data-math=\"O\"></span>. The velocity of the particle, <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span> at time <span data-math=\"t\"></span> seconds after passing through <span data-math=\"O\"></span> is given by <span data-math=\"v=5+8t^2-2t^3\"></span>, <span data-math=\"0\\leq t\\leq4\"></span>. The diagram shows a velocity–time graph of the motion of <span data-math=\"P\"></span>.\n<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/7dbc65a9fc4592859f3c.png\" alt=\"Original question diagram\">\nFind the distance of <span data-math=\"P\"></span> from <span data-math=\"O\"></span> at time <span data-math=\"T\"></span> seconds, when the particle is moving with maximum velocity. <span class=\"marks\">(7 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>First maximise velocity, then integrate it from 0 to that time.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=16t-6t^2=2t(8-3t)=0\\Rightarrow t=0,8/3\"></span><p>Velocity increases then decreases at T=8/3; both endpoints have v=5, so this is the maximum.</p><span class=\"equation\" data-display=\"true\" data-math=\"s(T)=\\int_0^{8/3}(5+8t^2-2t^3)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[5t+\\tfrac83t^3-\\tfrac12t^4\\right]_0^{8/3}=\\frac{3128}{81}\\approx38.6\\text{ m}\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "585d7cb15c6102f723bce05c7259012f102287dc370bec71c02bf44a0a6a6c6d",
+        "printedBookPage": "81",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            249.74,
+            68.247,
+            260.649
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.4 Using integration"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "1",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.5",
+      "subchapterTitle": "11.5 Constant acceleration formulae",
+      "number": "1",
+      "question": "A particle moves in a straight line such that its displacement, <span data-math=\"s\"></span> metres, from a fixed point <span data-math=\"O\"></span> at time <span data-math=\"t\"></span> seconds is given by <span data-math=\"s=ut+\\frac12at^2\"></span>, where <span data-math=\"u\"></span> and <span data-math=\"a\"></span> are constants. Use calculus to:\n<ol type=\"a\"><li value=\"1\">find an expression for the velocity <span data-math=\"v\"></span> in terms of <span data-math=\"u\"></span>, <span data-math=\"a\"></span> and <span data-math=\"t\"></span></li><li value=\"2\">show that the acceleration is <span data-math=\"a\"></span> m s<span data-math=\"^{-2}\"></span>.</li></ol>",
+      "hints": [
+        "For part <strong>a</strong>, use <span data-math=\"v=\\dfrac{\\mathrm ds}{\\mathrm dt}\"></span>.\n\nFor part <strong>b</strong>, use acceleration <span data-math=\"=\\dfrac{\\mathrm dv}{\\mathrm dt}=\\dfrac{\\mathrm d^2s}{\\mathrm dt^2}\"></span>."
+      ],
+      "steps": [
+        "<p>Differentiate with respect to time; u and a are constants.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=\\frac{ds}{dt}=u+at\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=a\\mathrm{\\ m\\,s^{-2}}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "2fe70ae7131298ed60a9544c73df3e5506821da5eb1091e696426750f7199c22",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            527.912,
+            68.247,
+            538.821
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.5 Constant acceleration formulae"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "2",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.5",
+      "subchapterTitle": "11.5 Constant acceleration formulae",
+      "number": "2",
+      "question": "A particle moves in a straight line with constant acceleration <span data-math=\"a\"></span> m s<span data-math=\"^{-2}\"></span>. Given that when <span data-math=\"t=0\"></span>, the velocity is <span data-math=\"u\"></span> m s<span data-math=\"^{-1}\"></span> and the displacement is 0 m, find expressions in terms of <span data-math=\"u\"></span>, <span data-math=\"a\"></span> and <span data-math=\"t\"></span> for:\n<ol type=\"a\"><li value=\"1\">the velocity, <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span></li><li value=\"2\">the displacement, <span data-math=\"s\"></span> m.</li></ol>",
+      "hints": [
+        "For part <strong>a</strong>, use <span data-math=\"v=\\int a\\,\\mathrm dt\"></span>.\n\nFor part <strong>b</strong>, use <span data-math=\"s=\\int v\\,\\mathrm dt\"></span>."
+      ],
+      "steps": [
+        "<p>Integrate twice and use each initial condition.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=\\int a\\,dt=at+C,\\quad v(0)=u\\Rightarrow v=u+at\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"s=\\int(u+at)\\,dt=ut+\\tfrac12at^2+D\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=0\\Rightarrow s=ut+\\tfrac12at^2\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "c229a1ce6d0bb88f5514fccd9950d20a23984806eded718ba86f9e6f44002981",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            663.805,
+            68.247,
+            674.714
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.5 Constant acceleration formulae"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "3",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.5",
+      "subchapterTitle": "11.5 Constant acceleration formulae",
+      "number": "3",
+      "question": "Which of these equations for displacement describe constant acceleration? Explain your answers.\n<ol type=\"a\"><li value=\"1\"><span data-math=\"s=3t-2t^3\"></span></li><li value=\"2\"><span data-math=\"s=t^2-7t\"></span></li><li value=\"3\"><span data-math=\"s=\\dfrac5t+8\"></span></li><li value=\"4\"><span data-math=\"s=16-\\dfrac{t^2}2\"></span></li><li value=\"5\"><span data-math=\"s=10\"></span></li></ol>",
+      "hints": [
+        "Check whether <span data-math=\"\\dfrac{\\mathrm d^2s}{\\mathrm dt^2}\"></span> is a constant."
+      ],
+      "steps": [
+        "<p>Acceleration is the second derivative of displacement.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=3-6t^2,\\quad a=-12t\"></span><p>Not constant.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v=2t-7,\\quad a=2\"></span><p>Constant acceleration 2 m/s².</p></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"v=-5t^{-2},\\quad a=10t^{-3}\"></span><p>Not constant on its domain t≠0.</p></li><li value=\"4\"><span class=\"equation\" data-display=\"true\" data-math=\"v=-t,\\quad a=-1\"></span><p>Constant acceleration−1 m/s².</p></li><li value=\"5\"><span class=\"equation\" data-display=\"true\" data-math=\"v=0,\\quad a=0\"></span><p>Constant zero acceleration: the particle is stationary.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "873154ed1d5c5c87b9874a3dd364f785e2f00e87cf917e3e53ffb5f60a3302ac",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.5 Constant acceleration formulae"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "4",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.5",
+      "subchapterTitle": "11.5 Constant acceleration formulae",
+      "number": "4",
+      "question": "<span class=\"practice-tag\">E</span>  A car travels along a straight road. It passes through point <span data-math=\"A\"></span> when <span data-math=\"t=0\"></span> and through point <span data-math=\"B\"></span> 50 seconds later. Its distance from <span data-math=\"A\"></span> at time <span data-math=\"t\"></span> seconds is given by <span data-math=\"s=32t-0.3t^2\"></span>, <span data-math=\"0\\leq t\\leq50\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the distance <span data-math=\"AB\"></span>. <span class=\"marks\">(1 mark)</span></li><li value=\"2\">Show that the car travels with constant acceleration. <span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Evaluate s(50) and differentiate twice.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"AB=32(50)-0.3(50)^2=850\\text{ m}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v=32-0.6t,\\quad a=-0.6\\mathrm{\\ m\\,s^{-2}}\"></span><p>Acceleration does not depend on time.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "d9ceaf91931100cc67a2c3a6371c432d4c41d21651fbc9e8dbc54e3c1d547556",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            215.906,
+            68.247,
+            226.815
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.5 Constant acceleration formulae"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "5",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.5",
+      "subchapterTitle": "11.5 Constant acceleration formulae",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle moves in a straight line with a constant acceleration of 3 m s<span data-math=\"^{-2}\"></span>.\n<ol type=\"a\"><li value=\"1\">Given that its initial velocity is 10 m s<span data-math=\"^{-1}\"></span>, use calculus to show that its velocity at time <span data-math=\"t\"></span> seconds is given by <span data-math=\"v=10+3t\"></span>. <span class=\"marks\">(2 marks)</span></li><li value=\"2\">Given that the initial displacement of the particle is 5 m, show that <span data-math=\"s=10t+1.5t^2+5\"></span>. <span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use the initial values to determine constants after integration.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=\\int3\\,dt=3t+C,\\quad v(0)=10\\Rightarrow v=10+3t\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"s=\\int(10+3t)\\,dt=10t+1.5t^2+D\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=5\\Rightarrow s=10t+1.5t^2+5\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "9edd85e13320ef4378a84ebccf712a5a4e825a5bd0674ba3bceff11476b22225",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            282.058,
+            68.247,
+            292.967
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.5 Constant acceleration formulae"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "6",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.5",
+      "subchapterTitle": "11.5 Constant acceleration formulae",
+      "number": "6",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle moves in a straight line such that its displacement, <span data-math=\"s\"></span> metres, from a fixed point <span data-math=\"O\"></span> at time <span data-math=\"t\"></span> seconds is given by <span data-math=\"s=pt^2+qt+r\"></span>, where <span data-math=\"p\"></span>, <span data-math=\"q\"></span> and <span data-math=\"r\"></span> are constants.\n\nGiven that when <span data-math=\"t=2\"></span>, <span data-math=\"s=8\"></span>, <span data-math=\"v=7\"></span> and <span data-math=\"a=6\"></span>, find the values of <span data-math=\"p\"></span>, <span data-math=\"q\"></span> and <span data-math=\"r\"></span>. <span class=\"marks\">(5 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Find p from acceleration, then q from velocity and r from displacement.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=2pt+q,\\quad a=2p=6\\Rightarrow p=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(2)=12+q=7\\Rightarrow q=-5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(2)=12-10+r=8\\Rightarrow r=6\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "2f6b194500202c62fb3f05406be6c2f38709eb9975109b7811e465e98f6fd44f",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            348.21,
+            68.247,
+            359.119
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.5 Constant acceleration formulae"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/11.5/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "7",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "11.5",
+      "subchapterTitle": "11.5 Constant acceleration formulae",
+      "number": "7",
+      "question": "<span class=\"practice-tag\">E/P</span>  A particle moves in a straight line with constant acceleration. The initial displacement of the particle is 3 m and the initial velocity of the particle is 5 m s<span data-math=\"^{-1}\"></span>. After 2 seconds it is moving with velocity 13 m s<span data-math=\"^{-1}\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the acceleration of the particle <span class=\"marks\">(3 marks)</span></li><li value=\"2\">an equation for the displacement of the particle, <span data-math=\"s\"></span> metres, in terms of <span data-math=\"t\"></span>. <span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Constant acceleration gives a linear velocity and quadratic displacement.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"a=(13-5)/2=4\\mathrm{\\ m\\,s^{-2}}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"v=5+4t\\Rightarrow s=5t+2t^2+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(0)=3\\Rightarrow s=3+5t+2t^2\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.71"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "431f7b7c88d93b4799e3e33d307b94b081f1f40d24f9af35afbc8c6bca49a226",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            394.835,
+            68.247,
+            405.744
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "11.5 Constant acceleration formulae"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-a/qbronze",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "Bronze",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem set A",
+      "number": "Bronze",
+      "question": "A particle <span data-math=\"P\"></span> moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds (<span data-math=\"t\\geq0\"></span>), the displacement, <span data-math=\"x\"></span> metres, of <span data-math=\"P\"></span> from the origin <span data-math=\"O\"></span> is given by <span data-math=\"x=t^3-8t^2+5t\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the times when <span data-math=\"P\"></span> is instantaneously at rest <span class=\"marks\">(3 marks)</span></li><li value=\"2\">the distance between the two points at which <span data-math=\"P\"></span> is instantaneously at rest <span class=\"marks\">(4 marks)</span></li><li value=\"3\">the values of <span data-math=\"t\"></span> for which the acceleration is positive. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Differentiate for rest instants and acceleration; use positions for the distance between points.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=3t^2-16t+5=(3t-1)(t-5)=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=\\tfrac13,5\\text{ s}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"x(1/3)=\\frac{22}{27},\\quad x(5)=-50\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=\\frac{1372}{27}\\approx50.8\\text{ m}\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"a=6t-16&gt;0\\Rightarrow t&gt;\\frac83\\text{ s}\"></span><p>The inequality is strict: at t=8/3 the acceleration is zero, not positive.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "7b2be94402dc408a82d698a62a7de1d0d2e7031eed019fb2f70022995ac293ee",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            70.96,
+            92.797,
+            80.923
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-a/qsilver",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "Silver",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem set A",
+      "number": "Silver",
+      "question": "A particle <span data-math=\"P\"></span> moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds (<span data-math=\"t\\geq0\"></span>), the displacement, <span data-math=\"x\"></span> metres, of <span data-math=\"P\"></span> from the origin <span data-math=\"O\"></span> is given by <span data-math=\"x=t(t^2-9t+15)\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the distance travelled by <span data-math=\"P\"></span> in the negative <span data-math=\"x\"></span>-direction <span class=\"marks\">(6 marks)</span></li><li value=\"2\">the total distance travelled by <span data-math=\"P\"></span> on the negative <span data-math=\"x\"></span>-axis. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Distinguish negative direction from negative position.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=3t^2-18t+15=3(t-1)(t-5)\"></span><p>The motion is in the negative direction for 1&lt;t&lt;5.</p><span class=\"equation\" data-display=\"true\" data-math=\"x(1)=7,\\quad x(5)=-25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance in negative direction}=7-(-25)=32\\text{ m}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"x=t(t^2-9t+15)=0\\Rightarrow t=0,\\frac{9\\pm\\sqrt{21}}2\"></span><p>Between the two positive roots, P travels from O to x=−25 and back to O.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance on negative axis}=25+25=50\\text{ m}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "d56accaf51d8a1379ff5bc17bb9018ba8219a9924e1fee4966bface4f6606d54",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            161.124,
+            85.923,
+            171.087
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-a/qgold",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "Gold",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem set A",
+      "number": "Gold",
+      "question": "A particle <span data-math=\"P\"></span> moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds (<span data-math=\"t\\geq0\"></span>), the displacement, <span data-math=\"x\"></span> metres, of <span data-math=\"P\"></span> from the origin <span data-math=\"O\"></span> is given by <span data-math=\"x=\\frac13t^2(t^2-6t+10)\"></span>.\n<ol type=\"a\"><li value=\"1\">Show that <span data-math=\"P\"></span> will never move along the negative <span data-math=\"x\"></span>-axis. <span class=\"marks\">(2 marks)</span></li></ol>\nPaula substitutes <span data-math=\"t=3\"></span> into the expression for <span data-math=\"x\"></span> and obtains an answer of 3. She states that the particle has moved a total distance of 3 m in the first three seconds of its motion.\n<ol type=\"a\"><li value=\"2\"><ol type=\"i\"><li value=\"1\">Explain the mistake Paula has made.</li><li value=\"2\">Determine the distance the particle travels in the first three seconds of its motion.</li></ol><span class=\"marks\">(7 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use factorisation to locate the particle and velocity signs to calculate total distance.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"x=\\tfrac13t^2\\big((t-3)^2+1\\big)\\ge0\"></span><p>The particle never has negative position.</p></li><li value=\"2\"><p>(i) Paula has calculated displacement. The particle reverses direction, so total distance must add the lengths of all stages.</p><span class=\"equation\" data-display=\"true\" data-math=\"v=\\tfrac23t(2t-5)(t-2)=0\\Rightarrow t=0,2,\\tfrac52\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x(0)=0,\\quad x(2)=\\frac83,\\quad x(5/2)=\\frac{125}{48},\\quad x(3)=3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) distance}=\\frac83+\\left(\\frac83-\\frac{125}{48}\\right)+\\left(3-\\frac{125}{48}\\right)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\frac{25}8=3.125\\text{ m}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "f14b55e8a29e67f613c4fd4083c63a47aac0454eebcfaad7c50fb01c8e14e676",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            237.886,
+            81.769,
+            247.849
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-b/qbronze",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "Bronze",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem set B",
+      "number": "Bronze",
+      "question": "A particle starts from a point, <span data-math=\"P\"></span>, and moves in a straight line. At time <span data-math=\"t\"></span> seconds after the beginning of its motion, the acceleration of the particle, <span data-math=\"a\"></span> m s<span data-math=\"^{-2}\"></span>, is given by <span data-math=\"a=5-2t\"></span> for <span data-math=\"t\\geq0\"></span>. When <span data-math=\"t=0\"></span>, <span data-math=\"v=6\"></span> m s<span data-math=\"^{-2}\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the time when the particle is instantaneously at rest <span class=\"marks\">(6 marks)</span></li><li value=\"2\">the displacement of the particle from <span data-math=\"P\"></span> at this time. <span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>The initial velocity should have units m/s, not the printed m/s². Integrate using v(0)=6.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=5t-t^2+C=5t-t^2+6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=0\\Rightarrow(t-6)(t+1)=0\\Rightarrow t=6\\text{ s}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"s=\\int_0^6(5t-t^2+6)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[\\tfrac52t^2-\\tfrac13t^3+6t\\right]_0^6=54\\text{ m}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "19b5526889bfe921b172b23fda9ca96c5c185ad2fe58b86d6ab47fa098394341",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            399.51,
+            92.797,
+            409.473
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-b/qsilver",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "Silver",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem set B",
+      "number": "Silver",
+      "question": "A particle starts from rest and moves in a straight line from a point, <span data-math=\"P\"></span>. At time <span data-math=\"t\"></span> seconds after the beginning of its motion, the acceleration of the particle, <span data-math=\"a\"></span> m s<span data-math=\"^{-2}\"></span>, is given by <span data-math=\"a=9-6t\"></span> for <span data-math=\"0\\leq t\\leq3\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the greatest speed of the particle <span class=\"marks\">(6 marks)</span></li><li value=\"2\">the total distance travelled by the particle in the interval <span data-math=\"0\\leq t\\leq3\"></span>. <span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate acceleration; velocity is nonnegative throughout[0,3].</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=9t-3t^2\\quad(v(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=\\frac{27}4-3(t-\\tfrac32)^2\\Rightarrow\\max|v|=\\frac{27}4=6.75\\mathrm{\\ m\\,s^{-1}}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=\\int_0^3(9t-3t^2)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[\\tfrac92t^2-t^3\\right]_0^3=13.5\\text{ m}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "8bd89316bbefc1f27ddb5d9420ebf406e2f494b793728095668797f3d7addf5c",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            487.342,
+            85.923,
+            497.305
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/problem-b/qgold",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "Gold",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem set B",
+      "number": "Gold",
+      "question": "A particle starts from rest and moves in a straight line from a point, <span data-math=\"P\"></span>. At time <span data-math=\"t\"></span> seconds after the beginning of its motion, the acceleration of the particle, <span data-math=\"a\"></span> m s<span data-math=\"^{-2}\"></span>, is given by <span data-math=\"a=26-12t\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the total distance travelled by the particle in the first 5 seconds <span class=\"marks\">(7 marks)</span></li><li value=\"2\">the time taken for the particle to return to <span data-math=\"P\"></span>. <span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate, find the reversal time and split the distance there.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=26t-6t^2=2t(13-3t)\\quad(v(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=13t^2-2t^3\\quad(s(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t_{\\rm turn}=13/3,\\quad s(13/3)=2197/27,\\quad s(5)=75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{distance}=2(2197/27)-75=2369/27\\approx87.7\\text{ m}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"s=t^2(13-2t)=0\\Rightarrow t=6.5\\text{ s on return}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "7453bca842722110c45fcccba9c5e0e4a63c076d36702f6b3071abb3212ea5d0",
+        "printedBookPage": "82",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            563.767,
+            81.769,
+            573.73
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q46",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "46",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "46",
+      "question": "A particle <span data-math=\"P\"></span> moves along the <span data-math=\"x\"></span>-axis. At time <span data-math=\"t\"></span> seconds the velocity of <span data-math=\"P\"></span> is <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span> in the positive <span data-math=\"x\"></span>-direction, where <span data-math=\"v=2t^2-3t+4\"></span>. When <span data-math=\"t=0\"></span>, <span data-math=\"P\"></span> is at the origin <span data-math=\"O\"></span>. Find the distance of <span data-math=\"P\"></span> from <span data-math=\"O\"></span> when <span data-math=\"P\"></span> is moving with minimum velocity. <span class=\"marks\">(8 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Minimise the quadratic velocity before integrating to find position.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=4t-3=0\\Rightarrow t=\\tfrac34\"></span><p>The positive t² coefficient makes this a minimum.</p><span class=\"equation\" data-display=\"true\" data-math=\"x=\\tfrac23t^3-\\tfrac32t^2+4t\\quad(x(0)=0)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x(3/4)=\\frac{39}{16}=2.4375\\text{ m}\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "687b713fd859e193436c011859a6ae46275fb930dfeaeb2444ba0361cfdf2c19",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            80.251,
+            118.33,
+            92.206
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q49",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "49",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "49",
+      "question": "A particle <span data-math=\"P\"></span> moves along a straight line. The speed of <span data-math=\"P\"></span> at time <span data-math=\"t\"></span> seconds (<span data-math=\"t\\geq0\"></span>) is <span data-math=\"v\"></span> m s<span data-math=\"^{-1}\"></span>, where <span data-math=\"v=(pt^2+qt+r)\"></span> and <span data-math=\"p\"></span>, <span data-math=\"q\"></span> and <span data-math=\"r\"></span> are constants. When <span data-math=\"t=3\"></span>, the speed of <span data-math=\"P\"></span> has its minimum value. When <span data-math=\"t=0\"></span>, <span data-math=\"v=10\"></span> and when <span data-math=\"t=2\"></span>, <span data-math=\"v=5\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the acceleration of <span data-math=\"P\"></span> when <span data-math=\"t=4\"></span> <span class=\"marks\">(8 marks)</span></li><li value=\"2\">the distance travelled by <span data-math=\"P\"></span> in the third second of the motion. <span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>The speed minimum gives a zero derivative at t=3.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"r=10,\\quad6p+q=0,\\quad4p+2q+10=5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p=\\tfrac58,\\quad q=-\\tfrac{15}4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{dv}{dt}=\\tfrac54t-\\tfrac{15}4\\Rightarrow a(4)=\\frac54\\mathrm{\\ m\\,s^{-2}}\"></span><p>Acceleration is measured along the direction of motion.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"\\text{third-second distance}=\\int_2^3\\left(\\tfrac58t^2-\\tfrac{15}4t+10\\right)\\,dt\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=\\left[\\tfrac5{24}t^3-\\tfrac{15}8t^2+10t\\right]_2^3=\\frac{55}{12}\\text{ m}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "421e97af028affdef743bc445cfe63af7cbff3de117a227cdd6de8bb518f71b1",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            165.15,
+            118.33,
+            177.105
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q50",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "50",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "50",
+      "question": "A car travels in a straight line. It passes through a point <span data-math=\"A\"></span> when <span data-math=\"t=0\"></span> and through a point <span data-math=\"B\"></span> when <span data-math=\"t=30\"></span>. Its distance from <span data-math=\"A\"></span> at time <span data-math=\"t\"></span> seconds is given by <span data-math=\"s=25t-0.3t^2\"></span>, <span data-math=\"0\\leq t\\leq30\"></span>.\n\nA second car travels in the opposite direction along the same road as the first car. It passes through <span data-math=\"B\"></span> when <span data-math=\"t=0\"></span> with an initial velocity of 15 m s<span data-math=\"^{-1}\"></span> and travels directly towards <span data-math=\"A\"></span> with a constant acceleration of 0.1 m s<span data-math=\"^{-2}\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the distance <span data-math=\"AB\"></span> <span class=\"marks\">(2 marks)</span></li><li value=\"2\">the distance from <span data-math=\"A\"></span> at which the two cars pass one another. <span class=\"marks\">(8 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Measure both positions from A, positive towards B.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"AB=25(30)-0.3(30)^2=480\\text{ m}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"x_1=25t-0.3t^2,\\quad x_2=480-15t-0.05t^2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x_1=x_2\\Rightarrow t^2-160t+1920=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"t=80-8\\sqrt{70}\\approx13.07\\text{ s}\\quad(0\\le t\\le30)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=25t-0.3t^2\\approx275.5\\text{ m from }A\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "0632d0c842b7ec5df14b97f49abe82f1ebbfffcd69cc6de4b0f4f5c688b4d3c0",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            287.11,
+            118.33,
+            299.065
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q54",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "54",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "54",
+      "question": "A particle moves in a straight line. At time <span data-math=\"t\"></span> seconds, the particle&#x27;s displacement, <span data-math=\"s\"></span> m, is given as <span data-math=\"s=(2-t)^4\"></span>, <span data-math=\"t\\geq0\"></span>. Show that:\n<ol type=\"a\"><li value=\"1\"><span data-math=\"v\\geq0\"></span> when <span data-math=\"t\\geq k\"></span> (where <span data-math=\"v\"></span> is the particle&#x27;s velocity in m s<span data-math=\"^{-1}\"></span>) and state the least possible value of <span data-math=\"k\"></span>. <span class=\"marks\">(5 marks)</span></li><li value=\"2\">the acceleration, <span data-math=\"a\"></span> m s<span data-math=\"^{-2}\"></span>, can be written as <span data-math=\"a=12(t-2)^2\"></span>. <span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Apply the chain rule, then rewrite in powers of t−2.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=-4(2-t)^3=4(t-2)^3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v\\ge0\\iff t\\ge2\\Rightarrow k=2\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"a=\\frac{dv}{dt}=12(t-2)^2\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "35ff54a08ebbe9f3a31330644323c24c93614bc9b57d2da41f099fb98e0577a9",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            440.154,
+            118.33,
+            452.109
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q56",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "56",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "56",
+      "question": "A particle moves in a straight line. At time <span data-math=\"t\"></span> seconds, the acceleration of the particle, <span data-math=\"a\"></span> m s<span data-math=\"^{-2}\"></span>, is given by <span data-math=\"a=3-\\dfrac2{t^3}\"></span>.\n\nWhen <span data-math=\"t=1\"></span>, the particle is at rest at a fixed point <span data-math=\"P\"></span> on the line. Find, in terms of <span data-math=\"t\"></span>:\n<ol type=\"a\"><li value=\"1\">an expression for the velocity of the particle <span class=\"marks\">(5 marks)</span></li><li value=\"2\">an expression for the displacement, <span data-math=\"s\"></span> m, of the particle from <span data-math=\"P\"></span>. <span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate and use both conditions at t=1. Work on t&gt;0, where the model is defined.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"v=3t+t^{-2}+C,\\quad v(1)=0\\Rightarrow C=-4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=3t+\\frac1{t^2}-4\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"s=\\tfrac32t^2-t^{-1}-4t+D\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s(1)=0\\Rightarrow D=\\tfrac72\"></span><span class=\"equation\" data-display=\"true\" data-math=\"s=\\frac32t^2-\\frac1t-4t+\\frac72\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "ec84f25d8d322559bfcc928c528848a68dccb198133b3e826ac04288009d82a7",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            562.114,
+            118.33,
+            574.069
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch11/exam/q58",
+      "courseId": "maths-a-level",
+      "bookId": "maths-mechanics-year-1",
+      "chapterId": "ch11",
+      "chapterNumber": 11,
+      "questionLabel": "58",
+      "chapterTitle": "Variable acceleration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "58",
+      "question": "A particle moves in a straight line with acceleration <span data-math=\"a\"></span> m s<span data-math=\"^{-2}\"></span>. At any time, <span data-math=\"t\"></span> seconds, <span data-math=\"a\"></span> is inversely proportional to <span data-math=\"t^3\"></span>. When <span data-math=\"t=1\"></span>, the velocity of the particle is 2 m s<span data-math=\"^{-1}\"></span>. Given the velocity approaches a limiting value of 6 m s<span data-math=\"^{-1}\"></span>, find an expression for the velocity at any time <span data-math=\"t\"></span>. <span class=\"marks\">(9 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Introduce the proportionality constant and use the limiting velocity.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=kt^{-3}\\Rightarrow v=-\\frac{k}{2t^2}+C\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\lim_{t\\to\\infty}v=C=6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v(1)=2\\Rightarrow2=-k/2+6\\Rightarrow k=8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"v=6-\\frac4{t^2}\\quad(t&gt;0)\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch11-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-11.pdf",
+        "pdfSha256": "94dfafd98b89f2a0023d12f36c8bfd2fb605183300b197d19d2c68bbfed8b91f",
+        "nativeSha256": "a442319c466ae708f4107085826bb86b52ba665506ec5c0ad6d01cd6a1e32424",
+        "questionLatexSha256": "d971c6153d8149c2ce6151ec1f59e635fcaea18323aa51e73ad05719af3e12f5",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            694.785,
+            118.33,
+            706.74
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    }
+  ]
+}

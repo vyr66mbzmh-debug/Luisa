@@ -1,0 +1,1270 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-1",
+  "chapter": 4,
+  "sourcePdf": "resources/practice/pure-year-1/chapter-04.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.1/q1",
+      "status": "worked",
+      "method": "Use the factors for the x-intercepts, substitute x=0 for the y-intercept, and use the leading term for the tails.",
+      "steps": [
+        {
+          "latex": "y=\\left(x - 2\\right) \\left(x + 1\\right) \\left(x + 3\\right)=\\left(x - 2\\right) \\left(x + 1\\right) \\left(x + 3\\right);\\quad y(0)=-6",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-3,0), crosses at (-1,0), crosses at (2,0). The y-intercept is (0,-6); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "y=x \\left(2 x - 1\\right) \\left(2 x + 1\\right)=x \\left(2 x - 1\\right) \\left(2 x + 1\\right);\\quad y(0)=0",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-1/2,0), crosses at (0,0), crosses at (1/2,0). The y-intercept is (0,0); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "y=\\left(x - 2\\right) \\left(x + 4\\right)^{2}=\\left(x - 2\\right) \\left(x + 4\\right)^{2};\\quad y(0)=-32",
+          "explanation": "Set each factor equal to zero: the curve touches at (-4,0), crosses at (2,0). The y-intercept is (0,-32); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        }
+      ],
+      "solutionHtml": "<p>Use the factors for the x-intercepts, substitute x=0 for the y-intercept, and use the leading term for the tails.</p><ol class=\"parts\" type=\"a\"><li><p>Set each factor equal to zero: the curve crosses at (-3,0), crosses at (-1,0), crosses at (2,0). The y-intercept is (0,-6); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=\\left(x - 2\\right) \\left(x + 1\\right) \\left(x + 3\\right)\\\\&amp;=\\left(x - 2\\right) \\left(x + 1\\right) \\left(x + 3\\right)\\\\&amp;y(0)=-6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve crosses at (-1/2,0), crosses at (0,0), crosses at (1/2,0). The y-intercept is (0,0); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=x \\left(2 x - 1\\right) \\left(2 x + 1\\right)\\\\&amp;=x \\left(2 x - 1\\right) \\left(2 x + 1\\right)\\\\&amp;y(0)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve touches at (-4,0), crosses at (2,0). The y-intercept is (0,-32); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=\\left(x - 2\\right) \\left(x + 4\\right)^{2}\\\\&amp;=\\left(x - 2\\right) \\left(x + 4\\right)^{2}\\\\&amp;y(0)=-32\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/596575796e0acbd275a9.png\" alt=\"Supplied answer sketch for 4.1 question 1 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/c170bfd73d510f58239c.png\" alt=\"Supplied answer sketch for 4.1 question 1 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/58c254be6718270e5475.png\" alt=\"Supplied answer sketch for 4.1 question 1 c\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part c</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 3
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.1/q2",
+      "status": "worked",
+      "method": "Take out the common factor and factorise the remaining quadratic; use the root multiplicities for the sketch.",
+      "steps": [
+        {
+          "latex": "y=x^{3} + 2 x^{2} - 3 x=x \\left(x - 1\\right) \\left(x + 3\\right);\\quad y(0)=0",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-3,0), crosses at (0,0), crosses at (1,0). The y-intercept is (0,0); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "y=- x^{3} - 2 x^{2} + 3 x=- x \\left(x - 1\\right) \\left(x + 3\\right);\\quad y(0)=0",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-3,0), crosses at (0,0), crosses at (1,0). The y-intercept is (0,0); left tail points upwards and right tail downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "y=6 x^{3} - 3 x^{2}=3 x^{2} \\left(2 x - 1\\right);\\quad y(0)=0",
+          "explanation": "Set each factor equal to zero: the curve touches at (0,0), crosses at (1/2,0). The y-intercept is (0,0); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        }
+      ],
+      "solutionHtml": "<p>Take out the common factor and factorise the remaining quadratic; use the root multiplicities for the sketch.</p><ol class=\"parts\" type=\"a\"><li><p>Set each factor equal to zero: the curve crosses at (-3,0), crosses at (0,0), crosses at (1,0). The y-intercept is (0,0); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=x^{3} + 2 x^{2} - 3 x\\\\&amp;=x \\left(x - 1\\right) \\left(x + 3\\right)\\\\&amp;y(0)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve crosses at (-3,0), crosses at (0,0), crosses at (1,0). The y-intercept is (0,0); left tail points upwards and right tail downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=- x^{3} - 2 x^{2} + 3 x\\\\&amp;=- x \\left(x - 1\\right) \\left(x + 3\\right)\\\\&amp;y(0)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve touches at (0,0), crosses at (1/2,0). The y-intercept is (0,0); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=6 x^{3} - 3 x^{2}\\\\&amp;=3 x^{2} \\left(2 x - 1\\right)\\\\&amp;y(0)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/ceee937a3d8342c7e1ab.png\" alt=\"Supplied answer sketch for 4.1 question 2 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/6a4a987b90c7d3999a2b.png\" alt=\"Supplied answer sketch for 4.1 question 2 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/53c96c9ab7093fbe0def.png\" alt=\"Supplied answer sketch for 4.1 question 2 c\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part c</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 3
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.1/q3",
+      "status": "worked",
+      "method": "Determine the real roots and the y-intercepts; a cubed factor crosses the axis with a horizontal tangent.",
+      "steps": [
+        {
+          "latex": "y(0)=-6;\\quad x^2+x+3=\\left(x+\\frac12\\right)^2+\\frac{11}4>0",
+          "explanation": "Only x−2 can vanish, so the curve crosses at (2,0) and meets the y-axis at (0,−6). Its derivative 3x²−2x+1 is always positive, so it increases throughout."
+        },
+        {
+          "latex": "y=\\left(x - 3\\right)^{3}=\\left(x - 3\\right)^{3};\\quad y(0)=-27",
+          "explanation": "Set each factor equal to zero: the curve crosses at (3,0) with a horizontal tangent. The y-intercept is (0,-27); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "y=- \\left(x - 4\\right)^{3}=- \\left(x - 4\\right)^{3};\\quad y(0)=64",
+          "explanation": "Set each factor equal to zero: the curve crosses at (4,0) with a horizontal tangent. The y-intercept is (0,64); left tail points upwards and right tail downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        }
+      ],
+      "solutionHtml": "<p>Determine the real roots and the y-intercepts; a cubed factor crosses the axis with a horizontal tangent.</p><ol class=\"parts\" type=\"a\"><li><p>Only x−2 can vanish, so the curve crosses at (2,0) and meets the y-axis at (0,−6). Its derivative 3x²−2x+1 is always positive, so it increases throughout.</p><span data-math=\"\\begin{aligned}&amp;y(0)=-6\\\\&amp;x^2+x+3\\\\&amp;=\\left(x+\\frac12\\right)^2+\\frac{11}4&gt;0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve crosses at (3,0) with a horizontal tangent. The y-intercept is (0,-27); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=\\left(x - 3\\right)^{3}\\\\&amp;=\\left(x - 3\\right)^{3}\\\\&amp;y(0)=-27\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve crosses at (4,0) with a horizontal tangent. The y-intercept is (0,64); left tail points upwards and right tail downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=- \\left(x - 4\\right)^{3}\\\\&amp;=- \\left(x - 4\\right)^{3}\\\\&amp;y(0)=64\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/04e31c620b74a57513ba.png\" alt=\"Supplied answer sketch for 4.1 question 3 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/4f443d74eb0985325912.png\" alt=\"Supplied answer sketch for 4.1 question 3 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/13e246d1d70a1f7ccfc4.png\" alt=\"Supplied answer sketch for 4.1 question 3 c\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part c</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 3
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.1/q4",
+      "status": "worked",
+      "method": "Remove x and recognise a perfect square; the double root gives a touch.",
+      "steps": [
+        {
+          "latex": "x^3+8x^2+16x=x(x^2+8x+16)=x(x+4)^2",
+          "explanation": ""
+        },
+        {
+          "latex": "y=x \\left(x + 4\\right)^{2}=x \\left(x + 4\\right)^{2};\\quad y(0)=0",
+          "explanation": "Set each factor equal to zero: the curve touches at (-4,0), crosses at (0,0). The y-intercept is (0,0); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        }
+      ],
+      "solutionHtml": "<p>Remove x and recognise a perfect square; the double root gives a touch.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"x^3+8x^2+16x=x(x^2+8x+16)=x(x+4)^2\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve touches at (-4,0), crosses at (0,0). The y-intercept is (0,0); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=x \\left(x + 4\\right)^{2}\\\\&amp;=x \\left(x + 4\\right)^{2}\\\\&amp;y(0)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/ef24ac944ce160a44b80.png\" alt=\"Supplied answer sketch for 4.1 question 4 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.1/q5",
+      "status": "worked",
+      "method": "Remove x and use the difference of squares; the negative leading coefficient determines the tails.",
+      "steps": [
+        {
+          "latex": "25x-4x^3=x(25-4x^2)=x(5-2x)(5+2x)",
+          "explanation": ""
+        },
+        {
+          "latex": "y=- 4 x^{3} + 25 x=- x \\left(2 x - 5\\right) \\left(2 x + 5\\right);\\quad y(0)=0",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-5/2,0), crosses at (0,0), crosses at (5/2,0). The y-intercept is (0,0); left tail points upwards and right tail downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        }
+      ],
+      "solutionHtml": "<p>Remove x and use the difference of squares; the negative leading coefficient determines the tails.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"25x-4x^3=x(25-4x^2)=x(5-2x)(5+2x)\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve crosses at (-5/2,0), crosses at (0,0), crosses at (5/2,0). The y-intercept is (0,0); left tail points upwards and right tail downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=- 4 x^{3} + 25 x\\\\&amp;=- x \\left(2 x - 5\\right) \\left(2 x + 5\\right)\\\\&amp;y(0)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/ab669e7c6fd7ba099748.png\" alt=\"Supplied answer sketch for 4.1 question 5 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.1/q6",
+      "status": "worked",
+      "method": "The roots determine the factors but not the vertical scale. Use the given point to find that scale.",
+      "steps": [
+        {
+          "latex": "",
+          "explanation": "The student assumed the coefficient of the cubic is 1. The proposed expression gives 4×64=256 at x=−2, whereas the given point has y=32."
+        },
+        {
+          "latex": "y=k(x+6)(x-6)^2;\\quad32=k(4)(64)\\Rightarrow k=\\frac18;\\quad y=\\frac18x^3-\\frac34x^2-\\frac92x+27",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The roots determine the factors but not the vertical scale. Use the given point to find that scale.</p><ol class=\"parts\" type=\"a\"><li><p>The student assumed the coefficient of the cubic is 1. The proposed expression gives 4×64=256 at x=−2, whereas the given point has y=32.</p></li><li><span data-math=\"\\begin{aligned}&amp;y=k(x+6)(x-6)^2\\\\&amp;32=k(4)(64)\\\\&amp;\\Rightarrow k=\\frac18\\\\&amp;y=\\frac18x^3-\\frac34x^2-\\frac92x+27\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.1/q7",
+      "status": "worked",
+      "method": "Use a double factor at x=1 and a single factor at x=4. The specified leading coefficient is 1.",
+      "steps": [
+        {
+          "latex": "y=(x-1)^2(x-4)=(x^2-2x+1)(x-4)=x^3-6x^2+9x-4;\\quad a=6,\\ b=9,\\ c=4",
+          "explanation": ""
+        },
+        {
+          "latex": "y(0)=-4\\Rightarrow(0,-4)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use a double factor at x=1 and a single factor at x=4. The specified leading coefficient is 1.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=(x-1)^2(x-4)\\\\&amp;=(x^2-2x+1)(x-4)\\\\&amp;=x^3-6x^2+9x-4\\\\&amp;a=6,\\ b=9,\\ c=4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"y(0)=-4\\Rightarrow(0,-4)\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.1/q8",
+      "status": "worked",
+      "method": "Read roots −1, 2 and 5 from the graph, then use the y-intercept 30 to determine the leading coefficient.",
+      "steps": [
+        {
+          "latex": "y=k(x+1)(x-2)(x-5);\\quad30=k(1)(-2)(-5)\\Rightarrow k=3;\\quad y=3x^3-18x^2+9x+30;\\quad a=3,\\ b=18,\\ c=9,\\ d=30",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Read roots −1, 2 and 5 from the graph, then use the y-intercept 30 to determine the leading coefficient.</p><span data-math=\"\\begin{aligned}&amp;y=k(x+1)(x-2)(x-5)\\\\&amp;30=k(1)(-2)(-5)\\\\&amp;\\Rightarrow k=3\\\\&amp;y=3x^3-18x^2+9x+30\\\\&amp;a=3,\\ b=18,\\ c=9,\\ d=30\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.2/q1",
+      "status": "worked",
+      "method": "Set each factor to zero, retaining multiplicity; calculate the y-intercept by substituting x=0.",
+      "steps": [
+        {
+          "latex": "y=\\left(x - 3\\right) \\left(x - 1\\right) \\left(x + 1\\right) \\left(x + 3\\right)=\\left(x - 3\\right) \\left(x - 1\\right) \\left(x + 1\\right) \\left(x + 3\\right);\\quad y(0)=9",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-3,0), crosses at (-1,0), crosses at (1,0), crosses at (3,0). The y-intercept is (0,9); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "y=- \\left(x - 5\\right)^{2} \\left(x - 2\\right)^{2}=- \\left(x - 5\\right)^{2} \\left(x - 2\\right)^{2};\\quad y(0)=-100",
+          "explanation": "Set each factor equal to zero: the curve touches at (2,0), touches at (5,0). The y-intercept is (0,-100); both tails point downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "y=\\left(x - 3\\right) \\left(2 x + 1\\right)^{3}=\\left(x - 3\\right) \\left(2 x + 1\\right)^{3};\\quad y(0)=-3",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-1/2,0) with a horizontal tangent, crosses at (3,0). The y-intercept is (0,-3); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        }
+      ],
+      "solutionHtml": "<p>Set each factor to zero, retaining multiplicity; calculate the y-intercept by substituting x=0.</p><ol class=\"parts\" type=\"a\"><li><p>Set each factor equal to zero: the curve crosses at (-3,0), crosses at (-1,0), crosses at (1,0), crosses at (3,0). The y-intercept is (0,9); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=\\left(x - 3\\right) \\left(x - 1\\right) \\left(x + 1\\right) \\left(x + 3\\right)\\\\&amp;=\\left(x - 3\\right) \\left(x - 1\\right) \\left(x + 1\\right) \\left(x + 3\\right)\\\\&amp;y(0)=9\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve touches at (2,0), touches at (5,0). The y-intercept is (0,-100); both tails point downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=- \\left(x - 5\\right)^{2} \\left(x - 2\\right)^{2}\\\\&amp;=- \\left(x - 5\\right)^{2} \\left(x - 2\\right)^{2}\\\\&amp;y(0)=-100\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve crosses at (-1/2,0) with a horizontal tangent, crosses at (3,0). The y-intercept is (0,-3); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=\\left(x - 3\\right) \\left(2 x + 1\\right)^{3}\\\\&amp;=\\left(x - 3\\right) \\left(2 x + 1\\right)^{3}\\\\&amp;y(0)=-3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/83530548c6d7c552b474.png\" alt=\"Supplied answer sketch for 4.2 question 1 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/8cb61c30bc2e91bea48e.png\" alt=\"Supplied answer sketch for 4.2 question 1 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/5835b65658165f756525.png\" alt=\"Supplied answer sketch for 4.2 question 1 c\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part c</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 3
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.2/q2",
+      "status": "worked",
+      "method": "Fully factorise before identifying intercepts and the direction of the tails.",
+      "steps": [
+        {
+          "latex": "y=\\left(x^{2} - x - 2\\right) \\left(x^{2} + x - 12\\right)=\\left(x - 3\\right) \\left(x - 2\\right) \\left(x + 1\\right) \\left(x + 4\\right);\\quad y(0)=24",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-4,0), crosses at (-1,0), crosses at (2,0), crosses at (3,0). The y-intercept is (0,24); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "y=\\left(x - 5\\right)^{2} \\left(x^{2} - 3 x + 2\\right)=\\left(x - 5\\right)^{2} \\left(x - 2\\right) \\left(x - 1\\right);\\quad y(0)=50",
+          "explanation": "Set each factor equal to zero: the curve crosses at (1,0), crosses at (2,0), touches at (5,0). The y-intercept is (0,50); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "y=\\left(2 x + 5\\right)^{4}=\\left(2 x + 5\\right)^{4};\\quad y(0)=625",
+          "explanation": "Set each factor equal to zero: the curve touches at (-5/2,0). The y-intercept is (0,625); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        }
+      ],
+      "solutionHtml": "<p>Fully factorise before identifying intercepts and the direction of the tails.</p><ol class=\"parts\" type=\"a\"><li><p>Set each factor equal to zero: the curve crosses at (-4,0), crosses at (-1,0), crosses at (2,0), crosses at (3,0). The y-intercept is (0,24); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=\\left(x^{2} - x - 2\\right) \\left(x^{2} + x - 12\\right)\\\\&amp;=\\left(x - 3\\right) \\left(x - 2\\right) \\left(x + 1\\right) \\left(x + 4\\right)\\\\&amp;y(0)=24\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve crosses at (1,0), crosses at (2,0), touches at (5,0). The y-intercept is (0,50); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=\\left(x - 5\\right)^{2} \\left(x^{2} - 3 x + 2\\right)\\\\&amp;=\\left(x - 5\\right)^{2} \\left(x - 2\\right) \\left(x - 1\\right)\\\\&amp;y(0)=50\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve touches at (-5/2,0). The y-intercept is (0,625); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=\\left(2 x + 5\\right)^{4}\\\\&amp;=\\left(2 x + 5\\right)^{4}\\\\&amp;y(0)=625\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/1f2d623e38198414b8f4.png\" alt=\"Supplied answer sketch for 4.2 question 2 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/8ce162091d7a6b8ebc3b.png\" alt=\"Supplied answer sketch for 4.2 question 2 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/29fde3bb8dffafc77a8b.png\" alt=\"Supplied answer sketch for 4.2 question 2 c\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part c</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 3
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.2/q3",
+      "status": "worked",
+      "method": "The graph gives four simple roots −4, −2, 2 and 3. The leading coefficient is 1.",
+      "steps": [
+        {
+          "latex": "y=(x+4)(x+2)(x-2)(x-3);\\quad y(0)=4(2)(-2)(-3)=48;\\quad P=(0,48)",
+          "explanation": ""
+        },
+        {
+          "latex": "(x^2+6x+8)(x^2-5x+6)=x^4+x^3-16x^2-4x+48;\\quad c=16,\\ d=4,\\ e=48",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The graph gives four simple roots −4, −2, 2 and 3. The leading coefficient is 1.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;y=(x+4)(x+2)(x-2)(x-3)\\\\&amp;y(0)=4(2)(-2)(-3)=48\\\\&amp;P=(0,48)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;(x^2+6x+8)(x^2-5x+6)=x^4+x^3-16x^2-4x+48\\\\&amp;c=16,\\ d=4,\\ e=48\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.2/q4",
+      "status": "worked",
+      "method": "Factorise the quadratic, then use all four simple roots and the positive leading coefficient.",
+      "steps": [
+        {
+          "latex": "y=\\left(x - 4\\right) \\left(x + 3\\right) \\left(x^{2} + 7 x + 10\\right)=\\left(x - 4\\right) \\left(x + 2\\right) \\left(x + 3\\right) \\left(x + 5\\right);\\quad y(0)=-120",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-5,0), crosses at (-3,0), crosses at (-2,0), crosses at (4,0). The y-intercept is (0,-120); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        }
+      ],
+      "solutionHtml": "<p>Factorise the quadratic, then use all four simple roots and the positive leading coefficient.</p><p>Set each factor equal to zero: the curve crosses at (-5,0), crosses at (-3,0), crosses at (-2,0), crosses at (4,0). The y-intercept is (0,-120); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=\\left(x - 4\\right) \\left(x + 3\\right) \\left(x^{2} + 7 x + 10\\right)\\\\&amp;=\\left(x - 4\\right) \\left(x + 2\\right) \\left(x + 3\\right) \\left(x + 5\\right)\\\\&amp;y(0)=-120\\end{aligned}\" data-display=\"true\" class=\"equation\"></span><figure><img src=\"resources/practice-solutions/assets/112337426e268c74e063.png\" alt=\"Supplied answer sketch for 4.2 question 4 \" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.2/q5",
+      "status": "worked",
+      "method": "Factorise the quadratic; preserve the double root and the negative sign in the leading term.",
+      "steps": [
+        {
+          "latex": "y=- \\left(x + 2\\right)^{2} \\left(x^{2} - 4 x + 3\\right)=- \\left(x - 3\\right) \\left(x - 1\\right) \\left(x + 2\\right)^{2};\\quad y(0)=-12",
+          "explanation": "Set each factor equal to zero: the curve touches at (-2,0), crosses at (1,0), crosses at (3,0). The y-intercept is (0,-12); both tails point downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        }
+      ],
+      "solutionHtml": "<p>Factorise the quadratic; preserve the double root and the negative sign in the leading term.</p><p>Set each factor equal to zero: the curve touches at (-2,0), crosses at (1,0), crosses at (3,0). The y-intercept is (0,-12); both tails point downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=- \\left(x + 2\\right)^{2} \\left(x^{2} - 4 x + 3\\right)\\\\&amp;=- \\left(x - 3\\right) \\left(x - 1\\right) \\left(x + 2\\right)^{2}\\\\&amp;y(0)=-12\\end{aligned}\" data-display=\"true\" class=\"equation\"></span><figure><img src=\"resources/practice-solutions/assets/1c7ddd16fa3d9d228534.png\" alt=\"Supplied answer sketch for 4.2 question 5 \" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.2/q6",
+      "status": "worked",
+      "method": "Read the roots −3, −2, 1 and 2 and include the given negative leading coefficient.",
+      "steps": [
+        {
+          "latex": "y=-(x+3)(x+2)(x-1)(x-2);\\quad y(0)=-(3)(2)(-1)(-2)=-12;\\quad P=(0,-12)",
+          "explanation": ""
+        },
+        {
+          "latex": "y=-(x^2+5x+6)(x^2-3x+2)=-x^4-2x^3+7x^2+8x-12;\\quad b=2,\\ c=7,\\ d=8,\\ e=12",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Read the roots −3, −2, 1 and 2 and include the given negative leading coefficient.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;y=-(x+3)(x+2)(x-1)(x-2)\\\\&amp;y(0)=-(3)(2)(-1)(-2)=-12\\\\&amp;P=(0,-12)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=-(x^2+5x+6)(x^2-3x+2)\\\\&amp;=-x^4-2x^3+7x^2+8x-12\\\\&amp;b=2,\\ c=7,\\ d=8,\\ e=12\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.2/q7",
+      "status": "worked",
+      "method": "Both x-intercepts are touches, so the roots −2 and 3 each have multiplicity 2.",
+      "steps": [
+        {
+          "latex": "y=(x+2)^2(x-3)^2;\\quad y(0)=4(9)=36;\\quad P=(0,36)",
+          "explanation": ""
+        },
+        {
+          "latex": "y=(x^2-x-6)^2=x^4-2x^3-11x^2+12x+36;\\quad b=2,\\ c=11,\\ d=12,\\ e=36",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Both x-intercepts are touches, so the roots −2 and 3 each have multiplicity 2.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;y=(x+2)^2(x-3)^2\\\\&amp;y(0)=4(9)=36\\\\&amp;P=(0,36)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;y=(x^2-x-6)^2=x^4-2x^3-11x^2+12x+36\\\\&amp;b=2,\\ c=11,\\ d=12,\\ e=36\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.3/q1",
+      "status": "worked",
+      "method": "Plot an exact point on each branch, determine signs, and approach both coordinate axes as asymptotes. The larger absolute numerator gives a curve further from the axes.",
+      "steps": [
+        {
+          "latex": "y=\\frac{2}{x};\\quad x=0,\\ y=0\\text{ are asymptotes}",
+          "explanation": "The graph passes through (1,2) and (−1,-2) and lies in quadrants I and III. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound."
+        },
+        {
+          "latex": "y=\\frac{6}{x};\\quad x=0,\\ y=0\\text{ are asymptotes}",
+          "explanation": "The graph passes through (1,6) and (−1,-6) and lies in quadrants I and III. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound."
+        }
+      ],
+      "solutionHtml": "<p>Plot an exact point on each branch, determine signs, and approach both coordinate axes as asymptotes. The larger absolute numerator gives a curve further from the axes.</p><ol class=\"parts\" type=\"a\"><li><p>The graph passes through (1,2) and (−1,-2) and lies in quadrants I and III. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound.</p><span data-math=\"\\begin{aligned}&amp;y=\\frac{2}{x}\\\\&amp;x=0,\\ y=0\\text{ are asymptotes}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The graph passes through (1,6) and (−1,-6) and lies in quadrants I and III. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound.</p><span data-math=\"\\begin{aligned}&amp;y=\\frac{6}{x}\\\\&amp;x=0,\\ y=0\\text{ are asymptotes}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/a8fc9127823b749f0811.png\" alt=\"Supplied answer sketch for 4.3 question 1 \" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.3/q2",
+      "status": "worked",
+      "method": "Plot an exact point on each branch, determine signs, and approach both coordinate axes as asymptotes. The larger absolute numerator gives a curve further from the axes.",
+      "steps": [
+        {
+          "latex": "y=\\frac{-3}{x};\\quad x=0,\\ y=0\\text{ are asymptotes}",
+          "explanation": "The graph passes through (1,-3) and (−1,3) and lies in quadrants II and IV. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound."
+        },
+        {
+          "latex": "y=\\frac{-7}{x};\\quad x=0,\\ y=0\\text{ are asymptotes}",
+          "explanation": "The graph passes through (1,-7) and (−1,7) and lies in quadrants II and IV. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound."
+        }
+      ],
+      "solutionHtml": "<p>Plot an exact point on each branch, determine signs, and approach both coordinate axes as asymptotes. The larger absolute numerator gives a curve further from the axes.</p><ol class=\"parts\" type=\"a\"><li><p>The graph passes through (1,-3) and (−1,3) and lies in quadrants II and IV. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound.</p><span data-math=\"\\begin{aligned}&amp;y=\\frac{-3}{x}\\\\&amp;x=0,\\ y=0\\text{ are asymptotes}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The graph passes through (1,-7) and (−1,7) and lies in quadrants II and IV. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound.</p><span data-math=\"\\begin{aligned}&amp;y=\\frac{-7}{x}\\\\&amp;x=0,\\ y=0\\text{ are asymptotes}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/2f7cbe5fd43f86826067.png\" alt=\"Supplied answer sketch for 4.3 question 2 \" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.3/q3",
+      "status": "worked",
+      "method": "Plot an exact point on each branch, determine signs, and approach both coordinate axes as asymptotes. The larger absolute numerator gives a curve further from the axes.",
+      "steps": [
+        {
+          "latex": "y=\\frac{5}{x^2};\\quad x=0,\\ y=0\\text{ are asymptotes}",
+          "explanation": "The graph passes through (1,5) and (−1,5) and lies in quadrants I and II. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound."
+        },
+        {
+          "latex": "y=\\frac{10}{x^2};\\quad x=0,\\ y=0\\text{ are asymptotes}",
+          "explanation": "The graph passes through (1,10) and (−1,10) and lies in quadrants I and II. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound."
+        }
+      ],
+      "solutionHtml": "<p>Plot an exact point on each branch, determine signs, and approach both coordinate axes as asymptotes. The larger absolute numerator gives a curve further from the axes.</p><ol class=\"parts\" type=\"a\"><li><p>The graph passes through (1,5) and (−1,5) and lies in quadrants I and II. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound.</p><span data-math=\"\\begin{aligned}&amp;y=\\frac{5}{x^2}\\\\&amp;x=0,\\ y=0\\text{ are asymptotes}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The graph passes through (1,10) and (−1,10) and lies in quadrants I and II. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound.</p><span data-math=\"\\begin{aligned}&amp;y=\\frac{10}{x^2}\\\\&amp;x=0,\\ y=0\\text{ are asymptotes}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/f230eb8853ce468c7bca.png\" alt=\"Supplied answer sketch for 4.3 question 3 \" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.3/q4",
+      "status": "worked",
+      "method": "Plot an exact point on each branch, determine signs, and approach both coordinate axes as asymptotes. The larger absolute numerator gives a curve further from the axes.",
+      "steps": [
+        {
+          "latex": "y=\\frac{-1}{x^2};\\quad x=0,\\ y=0\\text{ are asymptotes}",
+          "explanation": "The graph passes through (1,-1) and (−1,-1) and lies in quadrants III and IV. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound."
+        },
+        {
+          "latex": "y=\\frac{-9}{x^2};\\quad x=0,\\ y=0\\text{ are asymptotes}",
+          "explanation": "The graph passes through (1,-9) and (−1,-9) and lies in quadrants III and IV. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound."
+        }
+      ],
+      "solutionHtml": "<p>Plot an exact point on each branch, determine signs, and approach both coordinate axes as asymptotes. The larger absolute numerator gives a curve further from the axes.</p><ol class=\"parts\" type=\"a\"><li><p>The graph passes through (1,-1) and (−1,-1) and lies in quadrants III and IV. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound.</p><span data-math=\"\\begin{aligned}&amp;y=\\frac{-1}{x^2}\\\\&amp;x=0,\\ y=0\\text{ are asymptotes}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The graph passes through (1,-9) and (−1,-9) and lies in quadrants III and IV. It never meets either axis. As |x| increases, y approaches 0; as x approaches 0, its magnitude grows without bound.</p><span data-math=\"\\begin{aligned}&amp;y=\\frac{-9}{x^2}\\\\&amp;x=0,\\ y=0\\text{ are asymptotes}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/c0e63d86c6bafa6aea21.png\" alt=\"Supplied answer sketch for 4.3 question 4 \" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.3/q5",
+      "status": "worked",
+      "method": "Use signs and exact points to place both curves on the same axes.",
+      "steps": [
+        {
+          "latex": "y=\\frac1x:\\ (1,1),(-1,-1);\\quad y=\\frac4{x^2}:\\ (1,4),(-1,4)",
+          "explanation": "The reciprocal has branches in I and III; the reciprocal square has both branches above the x-axis. On the positive side they meet when x=4, y=1/4."
+        },
+        {
+          "latex": "x=0,\\qquad y=0",
+          "explanation": "Both functions are undefined at x=0 and approach zero as |x| tends to infinity, giving these asymptotes."
+        }
+      ],
+      "solutionHtml": "<p>Use signs and exact points to place both curves on the same axes.</p><ol class=\"parts\" type=\"a\"><li><p>The reciprocal has branches in I and III; the reciprocal square has both branches above the x-axis. On the positive side they meet when x=4, y=1/4.</p><span data-math=\"\\begin{aligned}&amp;y=\\frac1x:\\ (1,1),(-1,-1)\\\\&amp;y=\\frac4{x^2}:\\ (1,4),(-1,4)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Both functions are undefined at x=0 and approach zero as |x| tends to infinity, giving these asymptotes.</p><span data-math=\"x=0,\\qquad y=0\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/aa45dd62aede19d14b98.png\" alt=\"Supplied answer sketch for 4.3 question 5 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.3/q6",
+      "status": "worked",
+      "method": "Use signs and exact points to place both curves on the same axes.",
+      "steps": [
+        {
+          "latex": "y=-\\frac3x:\\ (1,-3),(-1,3);\\quad y=-\\frac{15}{x^2}:\\ (1,-15),(-1,-15)",
+          "explanation": "The first graph lies in II and IV; the second lies below the x-axis. On the positive side they meet at (5,−3/5)."
+        },
+        {
+          "latex": "x=0,\\qquad y=0",
+          "explanation": "Both functions are undefined at x=0 and approach zero as |x| tends to infinity."
+        }
+      ],
+      "solutionHtml": "<p>Use signs and exact points to place both curves on the same axes.</p><ol class=\"parts\" type=\"a\"><li><p>The first graph lies in II and IV; the second lies below the x-axis. On the positive side they meet at (5,−3/5).</p><span data-math=\"\\begin{aligned}&amp;y=-\\frac3x:\\ (1,-3),(-1,3)\\\\&amp;y=-\\frac{15}{x^2}:\\ (1,-15),(-1,-15)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Both functions are undefined at x=0 and approach zero as |x| tends to infinity.</p><span data-math=\"x=0,\\qquad y=0\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/b8e3b237836a1a8207da.png\" alt=\"Supplied answer sketch for 4.3 question 6 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q1",
+      "status": "worked",
+      "method": "Sketch from the factors, then equate y-values. Substitute each resulting x-value into the simpler curve.",
+      "steps": [
+        {
+          "latex": "x(x-4)=x^2(3-x)\\Rightarrow x(x^2-2x-4)=0\\Rightarrow x=0,1\\pm\\sqrt5;\\quad y=x^2-4x=4-2x",
+          "explanation": "The quadratic crosses at x=0,4 and opens upwards; the cubic touches at 0 and crosses at 3 with its right tail down. Intersections are (0,0), (1+√5,2−2√5), and (1−√5,2+2√5). The simplification y=4−2x applies to the two nonzero roots only; at x=0 use y=0."
+        },
+        {
+          "latex": "x^2+x-2=x^3+x^2-2x\\Rightarrow x^3-3x+2=(x-1)^2(x+2)=0",
+          "explanation": "The parabola has roots −2,1; the cubic has roots −2,0,1 and a positive leading term. The curves intersect at (−2,0) and (1,0); x=1 is a double root of the intersection equation, so it counts once."
+        }
+      ],
+      "solutionHtml": "<p>Sketch from the factors, then equate y-values. Substitute each resulting x-value into the simpler curve.</p><ol class=\"parts\" type=\"a\"><li><p>The quadratic crosses at x=0,4 and opens upwards; the cubic touches at 0 and crosses at 3 with its right tail down. Intersections are (0,0), (1+√5,2−2√5), and (1−√5,2+2√5).</p><span data-math=\"\\begin{aligned}&amp;x(x-4)=x^2(3-x)\\\\&amp;\\Rightarrow x(x^2-2x-4)=0\\\\&amp;\\Rightarrow x=0,1\\pm\\sqrt5\\\\&amp;y=x^2-4x=4-2x\\quad(x\\ne0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The parabola has roots −2,1; the cubic has roots −2,0,1 and a positive leading term. The curves intersect at (−2,0) and (1,0); x=1 is a double root of the intersection equation, so it counts once.</p><span data-math=\"\\begin{aligned}&amp;x^2+x-2=x^3+x^2-2x\\\\&amp;\\Rightarrow x^3-3x+2=(x-1)^2(x+2)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/8ef49c104ae1cc0a7b61.png\" alt=\"Supplied answer sketch for 4.4 question 1 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/6d7c35146d28ccba702d.png\" alt=\"Supplied answer sketch for 4.4 question 1 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 2
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q2",
+      "status": "worked",
+      "method": "Use the different signs and monotonic behaviour of the two curves to locate intersections.",
+      "steps": [
+        {
+          "latex": "",
+          "explanation": "The cubic y=x³ increases through (0,0). The graph y=5/x² is positive on both sides of x=0, with both coordinate axes as asymptotes. They can meet only for x>0; there the cubic increases while the reciprocal square decreases."
+        },
+        {
+          "latex": "x^3=\\frac5{x^2}\\Rightarrow x^5=5\\Rightarrow x^5-5=0\\quad(x\\ne0)",
+          "explanation": ""
+        },
+        {
+          "latex": "x=\\sqrt[5]{5}",
+          "explanation": "There is exactly one real solution because x⁵ is strictly increasing from −∞ to ∞."
+        }
+      ],
+      "solutionHtml": "<p>Use the different signs and monotonic behaviour of the two curves to locate intersections.</p><ol class=\"parts\" type=\"a\"><li><p>The cubic y=x³ increases through (0,0). The graph y=5/x² is positive on both sides of x=0, with both coordinate axes as asymptotes. They can meet only for x&gt;0; there the cubic increases while the reciprocal square decreases.</p></li><li><span data-math=\"\\begin{aligned}&amp;x^3=\\frac5{x^2}\\\\&amp;\\Rightarrow x^5=5\\\\&amp;\\Rightarrow x^5-5=0\\quad(x\\ne0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>There is exactly one real solution because x⁵ is strictly increasing from −∞ to ∞.</p><span data-math=\"x=\\sqrt[5]{5}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/e02abebde93f292f059d.png\" alt=\"Supplied answer sketch for 4.4 question 2 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q3",
+      "status": "worked",
+      "method": "The reciprocal square is always negative; the cubic has roots −5/2 and 0, with a double root at 0.",
+      "steps": [
+        {
+          "latex": "",
+          "explanation": "Sketch y=−3/x² below the x-axis with asymptotes x=0 and y=0. The cubic y=−x²(2x+5) crosses at (−5/2,0), touches at (0,0), and has a downward right tail."
+        },
+        {
+          "latex": "-\\frac3{x^2}=-x^2(2x+5)\\Rightarrow x^4(2x+5)-3=0\\quad(x\\ne0)",
+          "explanation": ""
+        },
+        {
+          "latex": "H(x)=2x^5+5x^4-3;\\quad H(-2)=13,\\ H(0)=-3",
+          "explanation": "There are three intersections. To confirm the sketch, H′=10x³(x+2): H increases up to −2, decreases to 0, then increases. With opposite signs at the two extrema and tails −∞/+∞, it crosses zero once on each interval."
+        }
+      ],
+      "solutionHtml": "<p>The reciprocal square is always negative; the cubic has roots −5/2 and 0, with a double root at 0.</p><ol class=\"parts\" type=\"a\"><li><p>Sketch y=−3/x² below the x-axis with asymptotes x=0 and y=0. The cubic y=−x²(2x+5) crosses at (−5/2,0), touches at (0,0), and has a downward right tail.</p></li><li><span data-math=\"\\begin{aligned}&amp;-\\frac3{x^2}=-x^2(2x+5)\\\\&amp;\\Rightarrow x^4(2x+5)-3=0\\quad(x\\ne0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>There are three intersections. To confirm the sketch, H′=10x³(x+2): H increases up to −2, decreases to 0, then increases. With opposite signs at the two extrema and tails −∞/+∞, it crosses zero once on each interval.</p><span data-math=\"\\begin{aligned}&amp;H(x)=2x^5+5x^4-3\\\\&amp;H(-2)=13,\\ H(0)=-3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/b68d5688310506473975.png\" alt=\"Supplied answer sketch for 4.4 question 3 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q4",
+      "status": "worked",
+      "method": "Sketch from the roots, signs and asymptotes, then count intersections. Each different intersection supplies one real solution.",
+      "steps": [
+        {
+          "latex": "-\\frac1x=(x+1)(x-3)^2\\Rightarrow x(x+1)(x-3)^2+1=0",
+          "explanation": "The reciprocal lies in II and IV. The cubic crosses at −1, touches at 3, and has y-intercept 9. Intersections occur twice in −1<x<0 and nowhere else: outside that interval the signs of the two sides differ. The supplied common-axis sketch shows the two intersections."
+        },
+        {
+          "latex": "\\frac7{x^2}=x^2(4x-9)\\Rightarrow x^4(4x-9)=7",
+          "explanation": "The left side is positive, so x>9/4 is necessary. There, x⁴(4x−9) increases strictly from 0 to ∞, giving exactly one intersection. The cubic touches at 0, crosses at 9/4 and has an upward right tail; the reciprocal square is above the axis."
+        }
+      ],
+      "solutionHtml": "<p>Sketch from the roots, signs and asymptotes, then count intersections. Each different intersection supplies one real solution.</p><ol class=\"parts\" type=\"a\"><li><p>The reciprocal lies in II and IV. The cubic crosses at −1, touches at 3, and has y-intercept 9. Intersections occur twice in −1&lt;x&lt;0 and nowhere else: outside that interval the signs of the two sides differ. The supplied common-axis sketch shows the two intersections.</p><span data-math=\"\\begin{aligned}&amp;-\\frac1x=(x+1)(x-3)^2\\\\&amp;\\Rightarrow x(x+1)(x-3)^2+1=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The left side is positive, so x&gt;9/4 is necessary. There, x⁴(4x−9) increases strictly from 0 to ∞, giving exactly one intersection. The cubic touches at 0, crosses at 9/4 and has an upward right tail; the reciprocal square is above the axis.</p><span data-math=\"\\begin{aligned}&amp;\\frac7{x^2}=x^2(4x-9)\\\\&amp;\\Rightarrow x^4(4x-9)=7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/db06d3af7ec9a5106edb.png\" alt=\"Supplied answer sketch for 4.4 question 4 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/45ad80c35d6c52f5d5ec.png\" alt=\"Supplied answer sketch for 4.4 question 4 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 2
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q5",
+      "status": "worked",
+      "method": "Equate the two y-values, cancel the common constant and multiply by x, which is nonzero.",
+      "steps": [
+        {
+          "latex": "\\frac2x-5=2x-5\\Rightarrow2=2x^2\\Rightarrow x=\\pm1;\\quad x=-1\\Rightarrow y=-7;\\quad x=1\\Rightarrow y=-3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Equate the two y-values, cancel the common constant and multiply by x, which is nonzero.</p><span data-math=\"\\begin{aligned}&amp;\\frac2x-5=2x-5\\\\&amp;\\Rightarrow 2=2x^2\\\\&amp;\\Rightarrow x=\\pm1\\\\&amp;x=-1\\\\&amp;\\Rightarrow y=-7\\\\&amp;x=1\\\\&amp;\\Rightarrow y=-3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q6",
+      "status": "worked",
+      "method": "Factor the quartic to sketch it, then equate the two functions and solve the resulting factorised equation.",
+      "steps": [
+        {
+          "latex": "y=x^2(x-2)(x+1)",
+          "explanation": "The quartic crosses at −1 and 2, touches at 0, and has both tails upwards. The other curve is a decreasing negative cubic through the origin. Their common-axis sketch has three different intersections."
+        },
+        {
+          "latex": "3\\text{ distinct real solutions}",
+          "explanation": ""
+        },
+        {
+          "latex": "-4x^2(x^2-x-2)=x^3\\Rightarrow4x^4-3x^3-8x^2=0\\Rightarrow x^2(4x^2-3x-8)=0",
+          "explanation": ""
+        },
+        {
+          "latex": "x=0\\quad\\text{or}\\quad x=\\frac{3\\pm\\sqrt{(-3)^2-4(4)(-8)}}{8}=\\frac{3\\pm\\sqrt{137}}8",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Factor the quartic to sketch it, then equate the two functions and solve the resulting factorised equation.</p><ol class=\"parts\" type=\"a\"><li><p>The quartic crosses at −1 and 2, touches at 0, and has both tails upwards. The other curve is a decreasing negative cubic through the origin. Their common-axis sketch has three different intersections.</p><span data-math=\"y=x^2(x-2)(x+1)\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"3\\text{ distinct real solutions}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;-4x^2(x^2-x-2)=x^3\\\\&amp;\\Rightarrow 4x^4-3x^3-8x^2=0\\\\&amp;\\Rightarrow x^2(4x^2-3x-8)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x\\\\&amp;=0\\quad\\text{or}\\quad x\\\\&amp;=\\frac{3\\pm\\sqrt{(-3)^2-4(4)(-8)}}{8}\\\\&amp;=\\frac{3\\pm\\sqrt{137}}8\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/f7a067f58ac219261fd7.png\" alt=\"Supplied answer sketch for 4.4 question 6 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q7",
+      "status": "worked",
+      "method": "Find intercepts and asymptotes from the equations before equating the functions.",
+      "steps": [
+        {
+          "latex": "\\frac1x+2=0\\Rightarrow x=-\\frac12;\\quad\\text{asymptotes }x=0,\\ y=2",
+          "explanation": ""
+        },
+        {
+          "latex": "y=x^2+2;\\quad y(0)=2",
+          "explanation": "Curve D is an upward-opening parabola with vertex and y-intercept (0,2), and no x-intercepts. Retain the two branches of C about x=0 and y=2."
+        },
+        {
+          "latex": "\\frac1x+2=x^2+2\\Rightarrow x^3=1\\Rightarrow x=1;\\quad y=3;\\quad(1,3)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find intercepts and asymptotes from the equations before equating the functions.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac1x+2=0\\\\&amp;\\Rightarrow x=-\\frac12\\\\&amp;\\text{asymptotes }x=0,\\ y=2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Curve D is an upward-opening parabola with vertex and y-intercept (0,2), and no x-intercepts. Retain the two branches of C about x=0 and y=2.</p><span data-math=\"y=x^2+2;\\quad y(0)=2\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac1x+2=x^2+2\\\\&amp;\\Rightarrow x^3=1\\\\&amp;\\Rightarrow x=1\\\\&amp;y=3\\\\&amp;(1,3)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/291f00bf838f3e39b022.png\" alt=\"Supplied answer sketch for 4.4 question 7 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q8",
+      "status": "worked",
+      "method": "Use the cubic factors and the reciprocal asymptotes, then count their crossings.",
+      "steps": [
+        {
+          "latex": "y=x(x+3)(2-x):\\quad(-3,0),(0,0),(2,0)",
+          "explanation": "The cubic has a negative leading term, so the left tail is up and the right tail down. The reciprocal −4/x has no axis intercepts and asymptotes x=0,y=0, with branches in II and IV."
+        },
+        {
+          "latex": "x(x+3)(2-x)+\\frac4x=0\\Leftrightarrow x(x+3)(2-x)=-\\frac4x",
+          "explanation": "There are two intersections, one with x<−3 and one with x>2. Thus the equation has two real solutions; x=0 is excluded."
+        }
+      ],
+      "solutionHtml": "<p>Use the cubic factors and the reciprocal asymptotes, then count their crossings.</p><ol class=\"parts\" type=\"a\"><li><p>The cubic has a negative leading term, so the left tail is up and the right tail down. The reciprocal −4/x has no axis intercepts and asymptotes x=0,y=0, with branches in II and IV.</p><span data-math=\"y=x(x+3)(2-x):\\quad(-3,0),(0,0),(2,0)\" data-display=\"true\" class=\"equation\"></span></li><li><p>There are two intersections, one with x&lt;−3 and one with x&gt;2. Thus the equation has two real solutions; x=0 is excluded.</p><span data-math=\"\\begin{aligned}&amp;x(x+3)(2-x)+\\frac4x\\\\&amp;=0\\Leftrightarrow x(x+3)(2-x)\\\\&amp;=-\\frac4x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/7818ff1e5f970c45a6d3.png\" alt=\"Supplied answer sketch for 4.4 question 8 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q9",
+      "status": "worked",
+      "method": "Use the reciprocal asymptotes and the line intercepts, then solve the intersection quadratic.",
+      "steps": [
+        {
+          "latex": "y=4x-2:\\quad(0,-2),\\left(\\frac12,0\\right)",
+          "explanation": "The line rises with gradient 4. The reciprocal 2/x has branches in I and III and asymptotes x=0,y=0."
+        },
+        {
+          "latex": "\\frac2x=4x-2\\Rightarrow4x^2-2x-2=0\\Rightarrow(2x+1)(x-1)=0;\\quad\\left(-\\frac12,-4\\right),\\ (1,2)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the reciprocal asymptotes and the line intercepts, then solve the intersection quadratic.</p><ol class=\"parts\" type=\"a\"><li><p>The line rises with gradient 4. The reciprocal 2/x has branches in I and III and asymptotes x=0,y=0.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=4x-2:\\quad(0,-2),\\left(\\frac12,0\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac2x=4x-2\\\\&amp;\\Rightarrow 4x^2-2x-2=0\\\\&amp;\\Rightarrow (2x+1)(x-1)=0\\\\&amp;\\left(-\\frac12,-4\\right),\\ (1,2)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/90f0aa554934aa6f9c32.png\" alt=\"Supplied answer sketch for 4.4 question 9 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q10",
+      "status": "worked",
+      "method": "Equate y-values; the linear terms cancel.",
+      "steps": [
+        {
+          "latex": "x^2-10x-15=10-10x\\Rightarrow x^2=25\\Rightarrow x=\\pm5;\\quad x=-5\\Rightarrow y=60;\\quad x=5\\Rightarrow y=-40",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Equate y-values; the linear terms cancel.</p><span data-math=\"\\begin{aligned}&amp;x^2-10x-15=10-10x\\\\&amp;\\Rightarrow x^2=25\\\\&amp;\\Rightarrow x=\\pm5\\\\&amp;x=-5\\\\&amp;\\Rightarrow y=60\\\\&amp;x=5\\\\&amp;\\Rightarrow y=-40\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.4/q11",
+      "status": "worked",
+      "method": "Two distinct intersections require a positive discriminant. For the specified value of a, solve without rounding intermediate values.",
+      "steps": [
+        {
+          "latex": "x^2-9x+24=2x+a\\Rightarrow x^2-11x+24-a=0;\\quad\\Delta=121-4(24-a)=25+4a>0\\Rightarrow a>-\\frac{25}4",
+          "explanation": ""
+        },
+        {
+          "latex": "a=5:\\quad x=\\frac{11\\pm\\sqrt{121-76}}2=\\frac{11\\pm3\\sqrt5}2;\\quad y=2x+5=16\\pm3\\sqrt5",
+          "explanation": "To 3 significant figures, A=(2.15,9.29) and B=(8.85,22.7)."
+        }
+      ],
+      "solutionHtml": "<p>Two distinct intersections require a positive discriminant. For the specified value of a, solve without rounding intermediate values.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;x^2-9x+24=2x+a\\\\&amp;\\Rightarrow x^2-11x+24-a=0\\\\&amp;\\Delta=121-4(24-a)=25+4a&gt;0\\\\&amp;\\Rightarrow a&gt;-\\frac{25}4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>To 3 significant figures, A=(2.15,9.29) and B=(8.85,22.7).</p><span data-math=\"\\begin{aligned}&amp;a\\\\&amp;=5:\\quad x\\\\&amp;=\\frac{11\\pm\\sqrt{121-76}}2\\\\&amp;=\\frac{11\\pm3\\sqrt5}2\\\\&amp;y=2x+5=16\\pm3\\sqrt5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.5/q1",
+      "status": "worked",
+      "method": "A constant added outside f shifts vertically; replacing x by x−2 shifts right 2; replacing x by x+3 shifts left 3. Substitute x=0 and solve y=0 for each transformed equation.",
+      "steps": [
+        {
+          "latex": "\\text{i }y=x^2+1;\\quad\\text{ii }y=(x-2)^2;\\quad\\text{iii }y=(x+3)^2;\\quad\\text{iv }y=x^2-4",
+          "explanation": "(i) y-intercept (0,1), no x-intercept, vertex (0,1). (ii) touch (2,0), y-intercept (0,4). (iii) touch (−3,0), y-intercept (0,9). (iv) cross (−2,0),(2,0), y-intercept (0,−4). All four parabolas open upwards and have no asymptotes."
+        },
+        {
+          "latex": "\\text{i }y=x^3+1;\\quad\\text{ii }y=(x-2)^3;\\quad\\text{iii }y=(x+3)^3;\\quad\\text{iv }y=x^3-4",
+          "explanation": "(i) intercepts (−1,0),(0,1). (ii) intercepts (2,0),(0,−8). (iii) intercepts (−3,0),(0,27). (iv) intercepts (∛4,0),(0,−4). All increase from bottom left to top right and have no asymptotes."
+        },
+        {
+          "latex": "\\text{i }y=\\frac1x+1;\\quad\\text{ii }y=\\frac1{x-2};\\quad\\text{iii }y=\\frac1{x+3};\\quad\\text{iv }y=\\frac1x-4",
+          "explanation": "(i) x-intercept (−1,0), no y-intercept, asymptotes x=0,y=1. (ii) no x-intercept, y-intercept (0,−1/2), asymptotes x=2,y=0. (iii) no x-intercept, y-intercept (0,1/3), asymptotes x=−3,y=0. (iv) x-intercept (1/4,0), no y-intercept, asymptotes x=0,y=−4."
+        }
+      ],
+      "solutionHtml": "<p>A constant added outside f shifts vertically; replacing x by x−2 shifts right 2; replacing x by x+3 shifts left 3. Substitute x=0 and solve y=0 for each transformed equation.</p><ol class=\"parts\" type=\"a\"><li><p>(i) y-intercept (0,1), no x-intercept, vertex (0,1). (ii) touch (2,0), y-intercept (0,4). (iii) touch (−3,0), y-intercept (0,9). (iv) cross (−2,0),(2,0), y-intercept (0,−4). All four parabolas open upwards and have no asymptotes.</p><span data-math=\"\\begin{aligned}&amp;\\text{i }y=x^2+1\\\\&amp;\\text{ii }y=(x-2)^2\\\\&amp;\\text{iii }y=(x+3)^2\\\\&amp;\\text{iv }y=x^2-4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) intercepts (−1,0),(0,1). (ii) intercepts (2,0),(0,−8). (iii) intercepts (−3,0),(0,27). (iv) intercepts (∛4,0),(0,−4). All increase from bottom left to top right and have no asymptotes.</p><span data-math=\"\\begin{aligned}&amp;\\text{i }y=x^3+1\\\\&amp;\\text{ii }y=(x-2)^3\\\\&amp;\\text{iii }y=(x+3)^3\\\\&amp;\\text{iv }y=x^3-4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) x-intercept (−1,0), no y-intercept, asymptotes x=0,y=1. (ii) no x-intercept, y-intercept (0,−1/2), asymptotes x=2,y=0. (iii) no x-intercept, y-intercept (0,1/3), asymptotes x=−3,y=0. (iv) x-intercept (1/4,0), no y-intercept, asymptotes x=0,y=−4.</p><span data-math=\"\\begin{aligned}&amp;\\text{i }y=\\frac1x+1\\\\&amp;\\text{ii }y=\\frac1{x-2}\\\\&amp;\\text{iii }y=\\frac1{x+3}\\\\&amp;\\text{iv }y=\\frac1x-4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/7a43b08ca406f342725d.png\" alt=\"Supplied answer sketch for 4.5 question 1 ai\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part ai</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/3bf0a7fdc588b0d95274.png\" alt=\"Supplied answer sketch for 4.5 question 1 aii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part aii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/65dcee4e14cbbdc3075a.png\" alt=\"Supplied answer sketch for 4.5 question 1 aiii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part aiii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/09e3905503e994233449.png\" alt=\"Supplied answer sketch for 4.5 question 1 aiv\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part aiv</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/f92b312874225a624443.png\" alt=\"Supplied answer sketch for 4.5 question 1 bi\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part bi</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/5ef15c38127f41565906.png\" alt=\"Supplied answer sketch for 4.5 question 1 bii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part bii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/6d4bb12ad5b1c7c0df08.png\" alt=\"Supplied answer sketch for 4.5 question 1 biii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part biii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/7c267f8fd8bcfda4bd48.png\" alt=\"Supplied answer sketch for 4.5 question 1 biv\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part biv</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/4c7f3ef3e19590e8473b.png\" alt=\"Supplied answer sketch for 4.5 question 1 ci\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part ci</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/ae53189721ff4c89fb98.png\" alt=\"Supplied answer sketch for 4.5 question 1 cii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part cii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/a181954348a51ca05322.png\" alt=\"Supplied answer sketch for 4.5 question 1 ciii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part ciii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/395f95716b92e8c1ddef.png\" alt=\"Supplied answer sketch for 4.5 question 1 civ\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part civ</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 12
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.5/q2",
+      "status": "worked",
+      "method": "Substitute the new argument into every factor; vertical translations change y-values and horizontal asymptotes.",
+      "steps": [
+        {
+          "latex": "f(x-3)=x(x-2)(x-5)",
+          "explanation": "Shift right 3. The simple x-intercepts are (0,0),(2,0),(5,0), and the y-intercept is the origin. Positive cubic tails; no asymptotes."
+        },
+        {
+          "latex": "g\\left(x+\\frac12\\right)=\\left(x+\\frac12\\right)\\left(x+\\frac72\\right);\\quad g\\left(\\frac12\\right)=\\frac74",
+          "explanation": "Shift left 1/2. Crosses at (−7/2,0),(−1/2,0), with y-intercept (0,7/4). The parabola opens upwards; no asymptotes."
+        },
+        {
+          "latex": "h(x)-5=\\frac1x-5;\\quad\\frac1x-5=0\\Rightarrow x=\\frac15",
+          "explanation": "Shift down 5. The x-intercept is (1/5,0); there is no y-intercept. Asymptotes x=0,y=−5."
+        }
+      ],
+      "solutionHtml": "<p>Substitute the new argument into every factor; vertical translations change y-values and horizontal asymptotes.</p><ol class=\"parts\" type=\"a\"><li><p>Shift right 3. The simple x-intercepts are (0,0),(2,0),(5,0), and the y-intercept is the origin. Positive cubic tails; no asymptotes.</p><span data-math=\"f(x-3)=x(x-2)(x-5)\" data-display=\"true\" class=\"equation\"></span></li><li><p>Shift left 1/2. Crosses at (−7/2,0),(−1/2,0), with y-intercept (0,7/4). The parabola opens upwards; no asymptotes.</p><span data-math=\"\\begin{aligned}&amp;g\\left(x+\\frac12\\right)\\\\&amp;=\\left(x+\\frac12\\right)\\left(x+\\frac72\\right)\\\\&amp;g\\left(\\frac12\\right)=\\frac74\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Shift down 5. The x-intercept is (1/5,0); there is no y-intercept. Asymptotes x=0,y=−5.</p><span data-math=\"\\begin{aligned}&amp;h(x)-5=\\frac1x-5\\\\&amp;\\frac1x-5=0\\\\&amp;\\Rightarrow x=\\frac15\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/d47c44f09a771a2c1aca.png\" alt=\"Supplied answer sketch for 4.5 question 2 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/687ad18e3390382316f9.png\" alt=\"Supplied answer sketch for 4.5 question 2 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/500f428bff7b66e0a9f4.png\" alt=\"Supplied answer sketch for 4.5 question 2 c\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part c</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 3
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.5/q3",
+      "status": "worked",
+      "method": "The original factors give the roots; for the second curve replace every x by x−2.",
+      "steps": [
+        {
+          "latex": "y=x^{2} \\left(x - 2\\right) \\left(x + 3\\right)=x^{2} \\left(x - 2\\right) \\left(x + 3\\right);\\quad y(0)=0",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-3,0), touches at (0,0), crosses at (2,0). The y-intercept is (0,0); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "f(x-2)=(x-2)^2(x-4)(x+1);\\quad f(-2)=-16",
+          "explanation": "Shift right 2. The curve crosses at (−1,0),(4,0), touches at (2,0), and has y-intercept (0,−16). Both tails point upwards."
+        }
+      ],
+      "solutionHtml": "<p>The original factors give the roots; for the second curve replace every x by x−2.</p><ol class=\"parts\" type=\"a\"><li><p>Set each factor equal to zero: the curve crosses at (-3,0), touches at (0,0), crosses at (2,0). The y-intercept is (0,0); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=x^{2} \\left(x - 2\\right) \\left(x + 3\\right)\\\\&amp;=x^{2} \\left(x - 2\\right) \\left(x + 3\\right)\\\\&amp;y(0)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Shift right 2. The curve crosses at (−1,0),(4,0), touches at (2,0), and has y-intercept (0,−16). Both tails point upwards.</p><span data-math=\"f(x-2)=(x-2)^2(x-4)(x+1);\\quad f(-2)=-16\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/f48d7917108ff55883cc.png\" alt=\"Supplied answer sketch for 4.5 question 3 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/57380273fda3462b0eac.png\" alt=\"Supplied answer sketch for 4.5 question 3 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 2
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.5/q4",
+      "status": "worked",
+      "method": "From f(x)=3(x+1)²(x−2), the labelled points are A(−1,0), B(0,−6), C(1,−12), D(2,0). Transform each coordinate.",
+      "steps": [
+        {
+          "latex": "(x,y)\\mapsto(x,y+4)",
+          "explanation": "A→(−1,4), B→(0,−2), C→(1,−8), D→(2,4). The entire curve shifts upwards 4 units."
+        },
+        {
+          "latex": "(x,y)\\mapsto(x+3,y)",
+          "explanation": "A→(2,0), B→(3,−6), C→(4,−12), D→(5,0). The entire curve shifts right 3 units."
+        }
+      ],
+      "solutionHtml": "<p>From f(x)=3(x+1)²(x−2), the labelled points are A(−1,0), B(0,−6), C(1,−12), D(2,0). Transform each coordinate.</p><ol class=\"parts\" type=\"a\"><li><p>A→(−1,4), B→(0,−2), C→(1,−8), D→(2,4). The entire curve shifts upwards 4 units.</p><span data-math=\"(x,y)\\mapsto(x,y+4)\" data-display=\"true\" class=\"equation\"></span></li><li><p>A→(2,0), B→(3,−6), C→(4,−12), D→(5,0). The entire curve shifts right 3 units.</p><span data-math=\"(x,y)\\mapsto(x+3,y)\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/1483fcc41f9b655e8358.png\" alt=\"Supplied answer sketch for 4.5 question 4 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/3d210634259ce12811a4.png\" alt=\"Supplied answer sketch for 4.5 question 4 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 2
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.5/q5",
+      "status": "worked",
+      "method": "Use the double root −4 and simple root 2. Then translate the curve right by 2.",
+      "steps": [
+        {
+          "latex": "f(x)=(x+4)^2(x-2);\\quad f(0)=16(-2)=-32",
+          "explanation": ""
+        },
+        {
+          "latex": "f(x-2)=(x+2)^2(x-4);\\quad f(-2)=4(-4)=-16",
+          "explanation": "Touches at (−2,0), crosses at (4,0), and meets the y-axis at (0,−16). Its tails retain the positive cubic orientation."
+        }
+      ],
+      "solutionHtml": "<p>Use the double root −4 and simple root 2. Then translate the curve right by 2.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"f(x)=(x+4)^2(x-2);\\quad f(0)=16(-2)=-32\" data-display=\"true\" class=\"equation\"></span></li><li><p>Touches at (−2,0), crosses at (4,0), and meets the y-axis at (0,−16). Its tails retain the positive cubic orientation.</p><span data-math=\"\\begin{aligned}&amp;f(x-2)=(x+2)^2(x-4)\\\\&amp;f(-2)=4(-4)=-16\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/5b33d2760830e1bbab77.png\" alt=\"Supplied answer sketch for 4.5 question 5 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.5/q6",
+      "status": "worked",
+      "method": "Find the nonzero root, then compare the old and new maximum heights.",
+      "steps": [
+        {
+          "latex": "x^2(6-2x)=0\\Rightarrow x=0\\text{ or }3;\\quad A=(3,0)",
+          "explanation": ""
+        },
+        {
+          "latex": "8-k=1\\Rightarrow k=7",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find the nonzero root, then compare the old and new maximum heights.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;x^2(6-2x)=0\\\\&amp;\\Rightarrow x=0\\text{ or }3\\\\&amp;A=(3,0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"8-k=1\\Rightarrow k=7\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.5/q7",
+      "status": "worked",
+      "method": "Passing through the origin means that the transformed function is zero at x=0.",
+      "steps": [
+        {
+          "latex": "f(a)=(a+3)(a-2)^2=0\\Rightarrow a=-3\\text{ or }2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Passing through the origin means that the transformed function is zero at x=0.</p><span data-math=\"\\begin{aligned}&amp;f(a)=(a+3)(a-2)^2=0\\\\&amp;\\Rightarrow a=-3\\text{ or }2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.5/q8",
+      "status": "worked",
+      "method": "For three distinct roots, y=−a must lie strictly between the original minimum height 3 and maximum height 7.",
+      "steps": [
+        {
+          "latex": "3<-a<7\\Rightarrow -7<a<-3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>For three distinct roots, y=−a must lie strictly between the original minimum height 3 and maximum height 7.</p><span data-math=\"3&lt;-a&lt;7\\Rightarrow -7&lt;a&lt;-3\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.6/q1",
+      "status": "worked",
+      "method": "For y=3f(x), multiply y-coordinates by 3. For y=f(x/2), double x-coordinates. Negating f reflects in the x-axis; negating its argument reflects in the y-axis.",
+      "steps": [
+        {
+          "latex": "\\text{i }y=3(x-1)^2;\\quad\\text{ii }y=\\left(\\frac x2-1\\right)^2;\\quad\\text{iii }y=-(x-1)^2;\\quad\\text{iv }y=(x+1)^2",
+          "explanation": "(i) touch (1,0), y-intercept (0,3), upward. (ii) touch (2,0), y-intercept (0,1), upward. (iii) touch (1,0), y-intercept (0,−1), downward. (iv) touch (−1,0), y-intercept (0,1), upward. No asymptotes."
+        },
+        {
+          "latex": "\\text{i }y=3x^3+3;\\quad\\text{ii }y=\\frac{x^3}{8}+1;\\quad\\text{iii }y=-x^3-1;\\quad\\text{iv }y=1-x^3",
+          "explanation": "(i) intercepts (−1,0),(0,3), increasing. (ii) (−2,0),(0,1), increasing. (iii) (−1,0),(0,−1), decreasing. (iv) (1,0),(0,1), decreasing. No asymptotes."
+        },
+        {
+          "latex": "\\text{i }y=\\frac3{x-1};\\quad\\text{ii }y=\\frac1{x/2-1};\\quad\\text{iii }y=-\\frac1{x-1};\\quad\\text{iv }y=-\\frac1{x+1}",
+          "explanation": "No x-intercepts; every horizontal asymptote is y=0. (i) vertical asymptote x=1, y-intercept (0,−3). (ii) x=2, (0,−1). (iii) x=1, (0,1). (iv) x=−1, (0,−1)."
+        }
+      ],
+      "solutionHtml": "<p>For y=3f(x), multiply y-coordinates by 3. For y=f(x/2), double x-coordinates. Negating f reflects in the x-axis; negating its argument reflects in the y-axis.</p><ol class=\"parts\" type=\"a\"><li><p>(i) touch (1,0), y-intercept (0,3), upward. (ii) touch (2,0), y-intercept (0,1), upward. (iii) touch (1,0), y-intercept (0,−1), downward. (iv) touch (−1,0), y-intercept (0,1), upward. No asymptotes.</p><span data-math=\"\\begin{aligned}&amp;\\text{i }y=3(x-1)^2\\\\&amp;\\text{ii }y=\\left(\\frac x2-1\\right)^2\\\\&amp;\\text{iii }y=-(x-1)^2\\\\&amp;\\text{iv }y=(x+1)^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) intercepts (−1,0),(0,3), increasing. (ii) (−2,0),(0,1), increasing. (iii) (−1,0),(0,−1), decreasing. (iv) (1,0),(0,1), decreasing. No asymptotes.</p><span data-math=\"\\begin{aligned}&amp;\\text{i }y=3x^3+3\\\\&amp;\\text{ii }y=\\frac{x^3}{8}+1\\\\&amp;\\text{iii }y=-x^3-1\\\\&amp;\\text{iv }y=1-x^3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>No x-intercepts; every horizontal asymptote is y=0. (i) vertical asymptote x=1, y-intercept (0,−3). (ii) x=2, (0,−1). (iii) x=1, (0,1). (iv) x=−1, (0,−1).</p><span data-math=\"\\begin{aligned}&amp;\\text{i }y=\\frac3{x-1}\\\\&amp;\\text{ii }y=\\frac1{x/2-1}\\\\&amp;\\text{iii }y=-\\frac1{x-1}\\\\&amp;\\text{iv }y=-\\frac1{x+1}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/191515cd7bf32263e539.png\" alt=\"Supplied answer sketch for 4.6 question 1 ai\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part ai</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/e1261a79d70b75680e95.png\" alt=\"Supplied answer sketch for 4.6 question 1 aii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part aii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/1318fdfb7a2301f1696d.png\" alt=\"Supplied answer sketch for 4.6 question 1 aiii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part aiii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/eed015e138f2a648ac01.png\" alt=\"Supplied answer sketch for 4.6 question 1 aiv\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part aiv</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/d2530ca2182e1b0c1082.png\" alt=\"Supplied answer sketch for 4.6 question 1 bi\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part bi</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/21ba7c58ffbda58aad38.png\" alt=\"Supplied answer sketch for 4.6 question 1 bii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part bii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/8d5b22a8321c8d06379c.png\" alt=\"Supplied answer sketch for 4.6 question 1 biii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part biii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/b190cabf193c607f5317.png\" alt=\"Supplied answer sketch for 4.6 question 1 biv\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part biv</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/251cc1aeb6919ffdbfe8.png\" alt=\"Supplied answer sketch for 4.6 question 1 ci\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part ci</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/6f02ecddfb519633a9e7.png\" alt=\"Supplied answer sketch for 4.6 question 1 cii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part cii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/a16e3e899fcd3875c0bb.png\" alt=\"Supplied answer sketch for 4.6 question 1 ciii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part ciii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/c5b4c3ef6d2331f629d9.png\" alt=\"Supplied answer sketch for 4.6 question 1 civ\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part civ</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 12
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.6/q2",
+      "status": "worked",
+      "method": "Substitute x/2 for x, multiply the entire function by 1/4, or negate the function as requested.",
+      "steps": [
+        {
+          "latex": "y=x^{2} - 16=\\left(x - 4\\right) \\left(x + 4\\right);\\quad y(0)=-16",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-4,0), crosses at (4,0). The y-intercept is (0,-16); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "\\text{i }f\\left(\\frac x2\\right)=\\frac{x^2}4-16;\\quad\\text{ii }\\frac14f(x)=\\frac{x^2}4-4;\\quad\\text{iii }-f(x)=16-x^2",
+          "explanation": "The first two parabolas open upwards, with roots ±8 and ±4 respectively. The last opens downwards with roots ±4. The supplied sketches retain these intercepts."
+        },
+        {
+          "latex": "x=0:\\quad\\text{i }(0,-16),\\quad\\text{ii }(0,-4),\\quad\\text{iii }(0,16)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Substitute x/2 for x, multiply the entire function by 1/4, or negate the function as requested.</p><ol class=\"parts\" type=\"a\"><li><p>Set each factor equal to zero: the curve crosses at (-4,0), crosses at (4,0). The y-intercept is (0,-16); both tails point upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=x^{2} - 16\\\\&amp;=\\left(x - 4\\right) \\left(x + 4\\right)\\\\&amp;y(0)=-16\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The first two parabolas open upwards, with roots ±8 and ±4 respectively. The last opens downwards with roots ±4. The supplied sketches retain these intercepts.</p><span data-math=\"\\begin{aligned}&amp;\\text{i }f\\left(\\frac x2\\right)\\\\&amp;=\\frac{x^2}4-16\\\\&amp;\\text{ii }\\frac14f(x)=\\frac{x^2}4-4\\\\&amp;\\text{iii }-f(x)=16-x^2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x\\\\&amp;=0:\\quad\\text{i }(0,-16),\\quad\\text{ii }(0,-4),\\quad\\text{iii }(0,16)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/957e4ce344e684109c81.png\" alt=\"Supplied answer sketch for 4.6 question 2 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/107a3a2119355ad13855.png\" alt=\"Supplied answer sketch for 4.6 question 2 bi\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part bi</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/9c3cdf77e5ba45e79eac.png\" alt=\"Supplied answer sketch for 4.6 question 2 bii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part bii</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/3abb97ca1876cac9445e.png\" alt=\"Supplied answer sketch for 4.6 question 2 biii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part biii</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 4
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.6/q3",
+      "status": "worked",
+      "method": "Compare D with f(4x), where f(x)=x²(x−5). Each x-coordinate is divided by 4.",
+      "steps": [
+        {
+          "latex": "y=x^{2} \\left(x - 5\\right)=x^{2} \\left(x - 5\\right);\\quad y(0)=0",
+          "explanation": "Set each factor equal to zero: the curve touches at (0,0), crosses at (5,0). The y-intercept is (0,0); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "y=(4x)^2(4x-5)=f(4x)",
+          "explanation": "Curve D touches at (0,0) and crosses at (5/4,0). Both cubics have an upward right tail; plot C and D on the same axes."
+        },
+        {
+          "latex": "(x,y)\\mapsto\\left(\\frac x4,y\\right)",
+          "explanation": "A horizontal stretch with scale factor 1/4 (compression towards the y-axis)."
+        }
+      ],
+      "solutionHtml": "<p>Compare D with f(4x), where f(x)=x²(x−5). Each x-coordinate is divided by 4.</p><ol class=\"parts\" type=\"a\"><li><p>Set each factor equal to zero: the curve touches at (0,0), crosses at (5,0). The y-intercept is (0,0); left tail points downwards and right tail upwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=x^{2} \\left(x - 5\\right)\\\\&amp;=x^{2} \\left(x - 5\\right)\\\\&amp;y(0)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Curve D touches at (0,0) and crosses at (5/4,0). Both cubics have an upward right tail; plot C and D on the same axes.</p><span data-math=\"y=(4x)^2(4x-5)=f(4x)\" data-display=\"true\" class=\"equation\"></span></li><li><p>A horizontal stretch with scale factor 1/4 (compression towards the y-axis).</p><span data-math=\"(x,y)\\mapsto\\left(\\frac x4,y\\right)\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/e5eaa637023340a34452.png\" alt=\"Supplied answer sketch for 4.6 question 3 ab\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part ab</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.6/q4",
+      "status": "worked",
+      "method": "Replacing x by x/2 doubles the x-coordinate of each original point; y stays fixed.",
+      "steps": [
+        {
+          "latex": "(x,y)\\mapsto(2x,y)",
+          "explanation": "A(−2,0)→(−4,0); B(−1,4)→(−2,4); C(0,2)→(0,2); D(1,0)→(2,0). Draw the same curve shape through the transformed points."
+        }
+      ],
+      "solutionHtml": "<p>Replacing x by x/2 doubles the x-coordinate of each original point; y stays fixed.</p><p>A(−2,0)→(−4,0); B(−1,4)→(−2,4); C(0,2)→(0,2); D(1,0)→(2,0). Draw the same curve shape through the transformed points.</p><span data-math=\"(x,y)\\mapsto(2x,y)\" data-display=\"true\" class=\"equation\"></span><figure><img src=\"resources/practice-solutions/assets/3306d0f7f4255e5e1c56.png\" alt=\"Supplied answer sketch for 4.6 question 4 \" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.6/q5",
+      "status": "worked",
+      "method": "Transform the two turning points and the origin; retain whether each is a maximum or minimum.",
+      "steps": [
+        {
+          "latex": "(x,y)\\mapsto(2x,y)",
+          "explanation": "A maximum becomes (4,6), B minimum becomes (−6,−8), and the y-intercept remains (0,0)."
+        },
+        {
+          "latex": "(x,y)\\mapsto(-x,y)",
+          "explanation": "Reflect in the y-axis: A maximum becomes (−2,6), B minimum becomes (3,−8), and the y-intercept remains (0,0)."
+        }
+      ],
+      "solutionHtml": "<p>Transform the two turning points and the origin; retain whether each is a maximum or minimum.</p><ol class=\"parts\" type=\"a\"><li><p>A maximum becomes (4,6), B minimum becomes (−6,−8), and the y-intercept remains (0,0).</p><span data-math=\"(x,y)\\mapsto(2x,y)\" data-display=\"true\" class=\"equation\"></span></li><li><p>Reflect in the y-axis: A maximum becomes (−2,6), B minimum becomes (3,−8), and the y-intercept remains (0,0).</p><span data-math=\"(x,y)\\mapsto(-x,y)\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/24c7788359627588f9ba.png\" alt=\"Supplied answer sketch for 4.6 question 5 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/45a15f71582628f4dbd1.png\" alt=\"Supplied answer sketch for 4.6 question 5 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 2
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.6/q6",
+      "status": "worked",
+      "method": "A vertical stretch by 3 leaves x-intercepts fixed and multiplies every y-coordinate by 3.",
+      "steps": [
+        {
+          "latex": "3f(0)=3(-25)=-75",
+          "explanation": "Touches at (−5,0), crosses at (1,0), and has y-intercept (0,−75). The right tail still points upwards."
+        },
+        {
+          "latex": "y=3(x+5)^2(x-1)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>A vertical stretch by 3 leaves x-intercepts fixed and multiplies every y-coordinate by 3.</p><ol class=\"parts\" type=\"a\"><li><p>Touches at (−5,0), crosses at (1,0), and has y-intercept (0,−75). The right tail still points upwards.</p><span data-math=\"3f(0)=3(-25)=-75\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"y=3(x+5)^2(x-1)\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/715e5d742de947cb8891.png\" alt=\"Supplied answer sketch for 4.6 question 6 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.6/q7",
+      "status": "worked",
+      "method": "For f(ax), divide old x-coordinates by a; for bf(x), multiply old y-coordinates by b.",
+      "steps": [
+        {
+          "latex": "\\frac{-2}{a}=-\\frac14\\Rightarrow a=8",
+          "explanation": ""
+        },
+        {
+          "latex": "12b=6\\Rightarrow b=\\frac12",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>For f(ax), divide old x-coordinates by a; for bf(x), multiply old y-coordinates by b.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\frac{-2}{a}=-\\frac14\\Rightarrow a=8\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"12b=6\\Rightarrow b=\\frac12\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.7/q1",
+      "status": "worked",
+      "method": "Apply the coordinate map to all four labelled points; join their images with the correspondingly transformed curve.",
+      "steps": [
+        {
+          "latex": "(x,y)\\mapsto(x+2,y)",
+          "explanation": "A→(1,0), B→(2,4), C→(4,0), D→(5,4)."
+        },
+        {
+          "latex": "(x,y)\\mapsto(x,y+3)",
+          "explanation": "A→(−1,3), B→(0,7), C→(2,3), D→(3,7)."
+        },
+        {
+          "latex": "(x,y)\\mapsto\\left(\\frac x2,y\\right)",
+          "explanation": "A→(−1/2,0), B→(0,4), C→(1,0), D→(3/2,4)."
+        }
+      ],
+      "solutionHtml": "<p>Apply the coordinate map to all four labelled points; join their images with the correspondingly transformed curve.</p><ol class=\"parts\" type=\"a\"><li><p>A→(1,0), B→(2,4), C→(4,0), D→(5,4).</p><span data-math=\"(x,y)\\mapsto(x+2,y)\" data-display=\"true\" class=\"equation\"></span></li><li><p>A→(−1,3), B→(0,7), C→(2,3), D→(3,7).</p><span data-math=\"(x,y)\\mapsto(x,y+3)\" data-display=\"true\" class=\"equation\"></span></li><li><p>A→(−1/2,0), B→(0,4), C→(1,0), D→(3/2,4).</p><span data-math=\"(x,y)\\mapsto\\left(\\frac x2,y\\right)\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/04a276285a2949343de5.png\" alt=\"Supplied answer sketch for 4.7 question 1 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/479022a9e745522c61ff.png\" alt=\"Supplied answer sketch for 4.7 question 1 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/6a6e67d4ef0b2b5fc3bf.png\" alt=\"Supplied answer sketch for 4.7 question 1 c\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part c</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 3
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.7/q2",
+      "status": "worked",
+      "method": "Transform intercepts and asymptotes using the same coordinate map as the curve.",
+      "steps": [
+        {
+          "latex": "(x,y)\\mapsto(-x,y)",
+          "explanation": "Intercepts (2,0),(0,2); asymptotes x=1,y=1."
+        },
+        {
+          "latex": "(x,y)\\mapsto(x,3y)",
+          "explanation": "Intercepts (−2,0),(0,6); asymptotes x=−1,y=3."
+        },
+        {
+          "latex": "(x,y)\\mapsto(2x,y)",
+          "explanation": "Intercepts (−4,0),(0,2); asymptotes x=−2,y=1."
+        }
+      ],
+      "solutionHtml": "<p>Transform intercepts and asymptotes using the same coordinate map as the curve.</p><ol class=\"parts\" type=\"a\"><li><p>Intercepts (2,0),(0,2); asymptotes x=1,y=1.</p><span data-math=\"(x,y)\\mapsto(-x,y)\" data-display=\"true\" class=\"equation\"></span></li><li><p>Intercepts (−2,0),(0,6); asymptotes x=−1,y=3.</p><span data-math=\"(x,y)\\mapsto(x,3y)\" data-display=\"true\" class=\"equation\"></span></li><li><p>Intercepts (−4,0),(0,2); asymptotes x=−2,y=1.</p><span data-math=\"(x,y)\\mapsto(2x,y)\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/59e748f225f02c9d88eb.png\" alt=\"Supplied answer sketch for 4.7 question 2 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/f32f90aac4c4124fb5c7.png\" alt=\"Supplied answer sketch for 4.7 question 2 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/f052d419aeeb9a259dc5.png\" alt=\"Supplied answer sketch for 4.7 question 2 c\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part c</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 3
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.7/q3",
+      "status": "worked",
+      "method": "First isolate y, then apply the indicated change to the old y-coordinates; x-coordinates stay fixed.",
+      "steps": [
+        {
+          "latex": "2y=f(x)\\Rightarrow y=\\frac12f(x)",
+          "explanation": "A(−1,0), B(0,−4.5), C(1,−8), D(3,0)."
+        },
+        {
+          "latex": "\\frac14y=f(x)\\Rightarrow y=4f(x)",
+          "explanation": "A(−1,0), B(0,−36), C(1,−64), D(3,0)."
+        },
+        {
+          "latex": "y+1=f(x)\\Rightarrow y=f(x)-1",
+          "explanation": "A(−1,−1), B(0,−10), C(1,−17), D(3,−1)."
+        }
+      ],
+      "solutionHtml": "<p>First isolate y, then apply the indicated change to the old y-coordinates; x-coordinates stay fixed.</p><ol class=\"parts\" type=\"a\"><li><p>A(−1,0), B(0,−4.5), C(1,−8), D(3,0).</p><span data-math=\"2y=f(x)\\Rightarrow y=\\frac12f(x)\" data-display=\"true\" class=\"equation\"></span></li><li><p>A(−1,0), B(0,−36), C(1,−64), D(3,0).</p><span data-math=\"\\frac14y=f(x)\\Rightarrow y=4f(x)\" data-display=\"true\" class=\"equation\"></span></li><li><p>A(−1,−1), B(0,−10), C(1,−17), D(3,−1).</p><span data-math=\"y+1=f(x)\\Rightarrow y=f(x)-1\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.7/q4",
+      "status": "worked",
+      "method": "Replacing x by x−3 translates the graph right by 3 units.",
+      "steps": [
+        {
+          "latex": "(x,y)\\mapsto(x+3,y)",
+          "explanation": "A(−4,0)→(−1,0), B(−3,12)→(0,12), C(−1,0)→(2,0), D(0,12)→(3,12)."
+        }
+      ],
+      "solutionHtml": "<p>Replacing x by x−3 translates the graph right by 3 units.</p><p>A(−4,0)→(−1,0), B(−3,12)→(0,12), C(−1,0)→(2,0), D(0,12)→(3,12).</p><span data-math=\"(x,y)\\mapsto(x+3,y)\" data-display=\"true\" class=\"equation\"></span><figure><img src=\"resources/practice-solutions/assets/ca522d41d284033e00f9.png\" alt=\"Supplied answer sketch for 4.7 question 4 \" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Required curve y=f(x−3); the supplied sketch retains its original label.</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.7/q5",
+      "status": "worked",
+      "method": "Reflect x-coordinates for the first curve and add a to them for the second curve.",
+      "steps": [
+        {
+          "latex": "(x,y)\\mapsto(-x,y)",
+          "explanation": "Intersections with the x-axis: (0,0),(−8,0). Local minimum: (−4,−16)."
+        },
+        {
+          "latex": "(x,y)\\mapsto(x+a,y)",
+          "explanation": "Intersections with the x-axis: (a,0),(8+a,0). Local minimum: (4+a,−16). Since a>0, the whole graph shifts right."
+        }
+      ],
+      "solutionHtml": "<p>Reflect x-coordinates for the first curve and add a to them for the second curve.</p><ol class=\"parts\" type=\"a\"><li><p>Intersections with the x-axis: (0,0),(−8,0). Local minimum: (−4,−16).</p><span data-math=\"(x,y)\\mapsto(-x,y)\" data-display=\"true\" class=\"equation\"></span></li><li><p>Intersections with the x-axis: (a,0),(8+a,0). Local minimum: (4+a,−16). Since a&gt;0, the whole graph shifts right.</p><span data-math=\"(x,y)\\mapsto(x+a,y)\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/b810b7000cd6f70f70ff.png\" alt=\"Supplied answer sketch for 4.7 question 5 a\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part a</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/c7a9e5d5d0fbc5ec672b.png\" alt=\"Supplied answer sketch for 4.7 question 5 b\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part b</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 2
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.7/q6",
+      "status": "worked",
+      "method": "The argument 2x halves x-coordinates; the minus sign reverses y-coordinates and swaps maxima with minima.",
+      "steps": [
+        {
+          "latex": "(x,y)\\mapsto\\left(\\frac x2,-y\\right)",
+          "explanation": "A(−2,8) becomes the local minimum (−1,−8). B(3,−16) becomes the local maximum (3/2,16). The y-intercept remains the origin."
+        }
+      ],
+      "solutionHtml": "<p>The argument 2x halves x-coordinates; the minus sign reverses y-coordinates and swaps maxima with minima.</p><p>A(−2,8) becomes the local minimum (−1,−8). B(3,−16) becomes the local maximum (3/2,16). The y-intercept remains the origin.</p><span data-math=\"(x,y)\\mapsto\\left(\\frac x2,-y\\right)\" data-display=\"true\" class=\"equation\"></span><figure><img src=\"resources/practice-solutions/assets/3977322234b7cd729042.png\" alt=\"Supplied answer sketch for 4.7 question 6 \" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.7/q7",
+      "status": "worked",
+      "method": "Find the nonzero root, then transform the known roots and turning points. Recalculate a y-intercept after horizontal translation.",
+      "steps": [
+        {
+          "latex": "x^2(12-4x)=0\\Rightarrow x=0\\text{ or }3;\\quad A=(3,0)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\text{i }f(x-2)=(x-2)^2(20-4x);\\quad\\text{ii }f(2x)=4x^2(12-8x)",
+          "explanation": "(i) Minimum (2,0), maximum (4,16), x-intercepts (2,0),(5,0), y-intercept (0,80). (ii) Minimum and y-intercept (0,0), maximum (1,16), other x-intercept (3/2,0)."
+        },
+        {
+          "latex": "16+k=5\\Rightarrow k=-11",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find the nonzero root, then transform the known roots and turning points. Recalculate a y-intercept after horizontal translation.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;x^2(12-4x)=0\\\\&amp;\\Rightarrow x=0\\text{ or }3\\\\&amp;A=(3,0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>(i) Minimum (2,0), maximum (4,16), x-intercepts (2,0),(5,0), y-intercept (0,80). (ii) Minimum and y-intercept (0,0), maximum (1,16), other x-intercept (3/2,0).</p><span data-math=\"\\begin{aligned}&amp;\\text{i }f(x-2)=(x-2)^2(20-4x)\\\\&amp;\\text{ii }f(2x)=4x^2(12-8x)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"16+k=5\\Rightarrow k=-11\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/6bf0df2a829be7eca97b.png\" alt=\"Supplied answer sketch for 4.7 question 7 bi\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part bi</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/bb95261d07026d3d2072.png\" alt=\"Supplied answer sketch for 4.7 question 7 bii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch — part bii</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 2
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/4.7/q8",
+      "status": "worked",
+      "method": "The equation means intersecting y=f(x) with the horizontal line y=−a. Use the maximum height 6 and the horizontal asymptote y=2.",
+      "steps": [
+        {
+          "latex": "-a=6\\quad\\text{or}\\quad-a\\le2\\Rightarrow\\{a:a=-6\\}\\cup\\{a:a\\ge-2\\}",
+          "explanation": "At height 6 the line touches the maximum once. At any height at or below 2 it meets only the descending right-hand branch. Heights strictly between 2 and 6 give two intersections; heights above 6 give none."
+        }
+      ],
+      "solutionHtml": "<p>The equation means intersecting y=f(x) with the horizontal line y=−a. Use the maximum height 6 and the horizontal asymptote y=2.</p><p>At height 6 the line touches the maximum once. At any height at or below 2 it meets only the descending right-hand branch. Heights strictly between 2 and 6 give two intersections; heights above 6 give none.</p><span data-math=\"\\begin{aligned}&amp;-a=6\\quad\\text{or}\\quad-a\\le2\\\\&amp;\\Rightarrow \\{a:a=-6\\}\\cup\\{a:a\\ge-2\\}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/problem-a/qbronze",
+      "status": "worked",
+      "method": "The graph gives roots −2,1,3 and the leading coefficient is 1. Expand their factors.",
+      "steps": [
+        {
+          "latex": "y=(x+2)(x-1)(x-3)=(x+2)(x^2-4x+3)=x^3-2x^2-5x+6;\\quad b=-2,\\ c=-5,\\ d=6",
+          "explanation": ""
+        },
+        {
+          "latex": "y(0)=6\\Rightarrow(0,6)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The graph gives roots −2,1,3 and the leading coefficient is 1. Expand their factors.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=(x+2)(x-1)(x-3)\\\\&amp;=(x+2)(x^2-4x+3)\\\\&amp;=x^3-2x^2-5x+6\\\\&amp;b=-2,\\ c=-5,\\ d=6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"y(0)=6\\Rightarrow(0,6)\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/problem-a/qsilver",
+      "status": "worked",
+      "method": "Write the unknown root as r. The leading coefficient is 1; use the y-intercept to determine r.",
+      "steps": [
+        {
+          "latex": "y=(x-r)(x-2)(x-5);\\quad5=(-r)(-2)(-5)=-10r\\Rightarrow r=-\\frac12;\\quad y=\\left(x+\\frac12\\right)(x^2-7x+10)=x^3-\\frac{13}2x^2+\\frac{13}2x+5;\\quad b=-\\frac{13}2,\\ c=\\frac{13}2,\\ d=5",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Write the unknown root as r. The leading coefficient is 1; use the y-intercept to determine r.</p><span data-math=\"\\begin{aligned}&amp;y=(x-r)(x-2)(x-5)\\\\&amp;5=(-r)(-2)(-5)=-10r\\\\&amp;\\Rightarrow r=-\\frac12\\\\&amp;y\\\\&amp;=\\left(x+\\frac12\\right)(x^2-7x+10)\\\\&amp;=x^3-\\frac{13}2x^2+\\frac{13}2x+5\\\\&amp;b=-\\frac{13}2,\\ c=\\frac{13}2,\\ d=5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/problem-a/qgold",
+      "status": "worked",
+      "method": "Use roots 0,4 and the repeated root 2. Substituting either specified solution of f(x)=8 determines a.",
+      "steps": [
+        {
+          "latex": "f(x)=ax(x-4)(x-2)^2=a(x^4-8x^3+20x^2-16x);\\quad m=-8,\\ n=20,\\ p=-16",
+          "explanation": ""
+        },
+        {
+          "latex": "x=2\\pm\\sqrt2:\\quad (x-2)^2=2,\\quad x(x-4)=(x-2)^2-4=-2;\\quad8=a(-2)(2)\\Rightarrow a=-2;\\quad y=-2x^4+16x^3-40x^2+32x",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use roots 0,4 and the repeated root 2. Substituting either specified solution of f(x)=8 determines a.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;f(x)\\\\&amp;=ax(x-4)(x-2)^2\\\\&amp;=a(x^4-8x^3+20x^2-16x)\\\\&amp;m=-8,\\ n=20,\\ p=-16\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x\\\\&amp;=2\\pm\\sqrt2:\\quad (x-2)^2\\\\&amp;=2,\\quad x(x-4)\\\\&amp;=(x-2)^2-4\\\\&amp;=-2\\\\&amp;8=a(-2)(2)\\\\&amp;\\Rightarrow a=-2\\\\&amp;y=-2x^4+16x^3-40x^2+32x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/problem-b/qbronze",
+      "status": "worked",
+      "method": "Sketch the cubic from its factors and the straight line from its gradient. Equate y-values and factorise.",
+      "steps": [
+        {
+          "latex": "y=x^2(x-2),\\qquad y=3x",
+          "explanation": "The cubic touches at (0,0), crosses at (2,0) and has an upward right tail. The line passes through the origin with gradient 3."
+        },
+        {
+          "latex": "3\\text{ intersections, hence 3 distinct real solutions}",
+          "explanation": ""
+        },
+        {
+          "latex": "x^2(x-2)=3x\\Rightarrow x^3-2x^2-3x=0\\Rightarrow x(x+1)(x-3)=0",
+          "explanation": ""
+        },
+        {
+          "latex": "x=-1,0,3;\\quad y=3x\\Rightarrow(-1,-3),(0,0),(3,9)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Sketch the cubic from its factors and the straight line from its gradient. Equate y-values and factorise.</p><ol class=\"parts\" type=\"a\"><li><p>The cubic touches at (0,0), crosses at (2,0) and has an upward right tail. The line passes through the origin with gradient 3.</p><span data-math=\"y=x^2(x-2),\\qquad y=3x\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;3\\text{ intersections, hence 3 distinct real solutions}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x^2(x-2)=3x\\\\&amp;\\Rightarrow x^3-2x^2-3x=0\\\\&amp;\\Rightarrow x(x+1)(x-3)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;x=-1,0,3\\\\&amp;y=3x\\\\&amp;\\Rightarrow (-1,-3),(0,0),(3,9)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/a8ff2b6e931c0d49c851.png\" alt=\"Supplied answer sketch for problem-b question bronze psBbronze\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/problem-b/qsilver",
+      "status": "worked",
+      "method": "Draw the asymptotes of each reciprocal graph, then clear denominators only for x≠0,3.",
+      "steps": [
+        {
+          "latex": "y=\\frac3{(x-3)^2}:\\ x=3,\\ y=0;\\quad y=\\frac6x:\\ x=0,\\ y=0",
+          "explanation": "The first graph is positive with y-intercept (0,1/3); the second has branches in I and III. There are two intersections on the positive-x side."
+        },
+        {
+          "latex": "2\\text{ distinct real solutions}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\frac3{(x-3)^2}=\\frac6x\\Rightarrow3x=6(x-3)^2\\Rightarrow2x^2-13x+18=(2x-9)(x-2)=0;\\quad(2,3),\\left(\\frac92,\\frac43\\right)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Draw the asymptotes of each reciprocal graph, then clear denominators only for x≠0,3.</p><ol class=\"parts\" type=\"a\"><li><p>The first graph is positive with y-intercept (0,1/3); the second has branches in I and III. There are two intersections on the positive-x side.</p><span data-math=\"\\begin{aligned}&amp;y=\\frac3{(x-3)^2}:\\ x=3,\\ y=0\\\\&amp;y=\\frac6x:\\ x=0,\\ y=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"2\\text{ distinct real solutions}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac3{(x-3)^2}=\\frac6x\\\\&amp;\\Rightarrow 3x=6(x-3)^2\\\\&amp;\\Rightarrow 2x^2-13x+18=(2x-9)(x-2)=0\\\\&amp;(2,3),\\left(\\frac92,\\frac43\\right)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/b4873e6e643de4ba2642.png\" alt=\"Supplied answer sketch for problem-b question silver psBsilver\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/problem-b/qgold",
+      "status": "worked",
+      "method": "Clear the denominator and factorise using the known root x=1; then identify all intercepts for the sketch.",
+      "steps": [
+        {
+          "latex": "\\frac4{(x-2)^2}=5-x\\Rightarrow4=(5-x)(x-2)^2\\Rightarrow x^3-9x^2+24x-16=(x-1)(x-4)^2=0;\\quad x=4\\Rightarrow y=1",
+          "explanation": "The only additional intersection is (4,1), where the repeated root shows tangency."
+        },
+        {
+          "latex": "C:\\ (0,1),\\ x=2,\\ y=0;\\quad L:\\ (0,5),(5,0)",
+          "explanation": "C has y-intercept (0,1), no x-intercept, vertical asymptote x=2 and horizontal asymptote y=0. L is the decreasing line through (0,5),(5,0). Label intersections (1,4),(4,1)."
+        }
+      ],
+      "solutionHtml": "<p>Clear the denominator and factorise using the known root x=1; then identify all intercepts for the sketch.</p><ol class=\"parts\" type=\"a\"><li><p>The only additional intersection is (4,1), where the repeated root shows tangency.</p><span data-math=\"\\begin{aligned}&amp;\\frac4{(x-2)^2}=5-x\\\\&amp;\\Rightarrow 4=(5-x)(x-2)^2\\\\&amp;\\Rightarrow x^3-9x^2+24x-16=(x-1)(x-4)^2=0\\\\&amp;x=4\\\\&amp;\\Rightarrow y=1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>C has y-intercept (0,1), no x-intercept, vertical asymptote x=2 and horizontal asymptote y=0. L is the decreasing line through (0,5),(5,0). Label intersections (1,4),(4,1).</p><span data-math=\"\\begin{aligned}&amp;C:\\ (0,1),\\ x=2,\\ y=0\\\\&amp;L:\\ (0,5),(5,0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/d69de670782f567c8267.png\" alt=\"Supplied answer sketch for problem-b question gold psBgold\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/exam/q12",
+      "status": "worked",
+      "method": "Use the value at x=0 for the vertical shift and the repeated root for the local minimum. Expand before differentiating.",
+      "steps": [
+        {
+          "latex": "f(0)=(-3)^2(2)=18\\Rightarrow k=18;\\quad f(c)=0\\text{ at the local minimum }c=\\frac32",
+          "explanation": "For (i), y=f(x)−k passes through the origin when f(0)−k=0. For (ii), the local minimum of f at (3/2,0) moves to x=3/2−c, so c=3/2."
+        },
+        {
+          "latex": "f(x)=(4x^2-12x+9)(x+2)=4x^3-4x^2-15x+18;\\quad f^{\\prime}(x)=12x^2-8x-15",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the value at x=0 for the vertical shift and the repeated root for the local minimum. Expand before differentiating.</p><ol class=\"parts\" type=\"a\"><li><p>For (i), y=f(x)−k passes through the origin when f(0)−k=0. For (ii), the local minimum of f at (3/2,0) moves to x=3/2−c, so c=3/2.</p><span data-math=\"\\begin{aligned}&amp;f(0)=(-3)^2(2)=18\\\\&amp;\\Rightarrow k=18\\\\&amp;f(c)\\\\&amp;=0\\text{ at the local minimum }c\\\\&amp;=\\frac32\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;f(x)=(4x^2-12x+9)(x+2)=4x^3-4x^2-15x+18\\\\&amp;f^{\\prime}(x)=12x^2-8x-15\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/exam/q22",
+      "status": "worked",
+      "method": "The squared factor is nonnegative, so away from its zero the sign is the sign of x+1. For the second part set the transformed factors equal to zero.",
+      "steps": [
+        {
+          "latex": "(x+1)(2x-3)^2\\le0\\Rightarrow x\\le-1\\text{ or }x=\\frac32",
+          "explanation": ""
+        },
+        {
+          "latex": "g(2x)=(2x+1)(4x-3)^2=0\\Rightarrow x=-\\frac12\\text{ or }\\frac34",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The squared factor is nonnegative, so away from its zero the sign is the sign of x+1. For the second part set the transformed factors equal to zero.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;(x+1)(2x-3)^2\\le0\\\\&amp;\\Rightarrow x\\le-1\\text{ or }x=\\frac32\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;g(2x)=(2x+1)(4x-3)^2=0\\\\&amp;\\Rightarrow x=-\\frac12\\text{ or }\\frac34\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/exam/q33",
+      "status": "worked",
+      "method": "Apply the relevant graph feature or coordinate transformation to each part.",
+      "steps": [
+        {
+          "latex": "(5,-1.5)\\mapsto(5,3(-1.5))=(5,-4.5)",
+          "explanation": ""
+        },
+        {
+          "latex": "x-2=3\\text{ or }8\\Rightarrow x=5\\text{ or }10",
+          "explanation": "The largest root is 10."
+        },
+        {
+          "latex": "x\\ge5",
+          "explanation": "The curve is increasing to the right of its unique minimum and has zero gradient at the minimum."
+        },
+        {
+          "latex": "-k\\ge-1.5\\Rightarrow k\\le1.5",
+          "explanation": "A horizontal line y=−k meets the curve only if it is at least as high as the minimum."
+        }
+      ],
+      "solutionHtml": "<p>Apply the relevant graph feature or coordinate transformation to each part.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"(5,-1.5)\\mapsto(5,3(-1.5))=(5,-4.5)\" data-display=\"true\" class=\"equation\"></span></li><li><p>The largest root is 10.</p><span data-math=\"\\begin{aligned}&amp;x-2=3\\text{ or }8\\\\&amp;\\Rightarrow x=5\\text{ or }10\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The curve is increasing to the right of its unique minimum and has zero gradient at the minimum.</p><span data-math=\"x\\ge5\" data-display=\"true\" class=\"equation\"></span></li><li><p>A horizontal line y=−k meets the curve only if it is at least as high as the minimum.</p><span data-math=\"-k\\ge-1.5\\Rightarrow k\\le1.5\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/exam/q49",
+      "status": "worked",
+      "method": "Use the difference of squares for the factors. Substitute the given x-coordinates before using the distance formula.",
+      "steps": [
+        {
+          "latex": "36x-25x^3=x(36-25x^2)=x(6+5x)(6-5x)",
+          "explanation": ""
+        },
+        {
+          "latex": "y=- 25 x^{3} + 36 x=- x \\left(5 x - 6\\right) \\left(5 x + 6\\right);\\quad y(0)=0",
+          "explanation": "Set each factor equal to zero: the curve crosses at (-6/5,0), crosses at (0,0), crosses at (6/5,0). The y-intercept is (0,0); left tail points upwards and right tail downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings."
+        },
+        {
+          "latex": "A=(-1,-11),\\quad B=(1,11);\\quad AB=\\sqrt{(1+1)^2+(11+11)^2}=\\sqrt{488}=2\\sqrt{122};\\quad k=122",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the difference of squares for the factors. Substitute the given x-coordinates before using the distance formula.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"36x-25x^3=x(36-25x^2)=x(6+5x)(6-5x)\" data-display=\"true\" class=\"equation\"></span></li><li><p>Set each factor equal to zero: the curve crosses at (-6/5,0), crosses at (0,0), crosses at (6/5,0). The y-intercept is (0,0); left tail points upwards and right tail downwards. Even-multiplicity roots are touches; odd-multiplicity roots are crossings.</p><span data-math=\"\\begin{aligned}&amp;y\\\\&amp;=- 25 x^{3} + 36 x\\\\&amp;=- x \\left(5 x - 6\\right) \\left(5 x + 6\\right)\\\\&amp;y(0)=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;A=(-1,-11),\\quad B=(1,11)\\\\&amp;AB\\\\&amp;=\\sqrt{(1+1)^2+(11+11)^2}\\\\&amp;=\\sqrt{488}\\\\&amp;=2\\sqrt{122}\\\\&amp;k=122\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/7d19ea1535ac6fc1d9aa.png\" alt=\"Supplied answer sketch for exam question 49 exam49-answer-graph\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "matches",
+      "answerGraphCount": 1
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/exam/q72",
+      "status": "worked",
+      "method": "Factor the cubic to find both nonzero intercepts. Split the shaded area at the origin because the curve changes sign there.",
+      "steps": [
+        {
+          "latex": "-x^3+2x^2+15x=-x(x-5)(x+3)=0\\Rightarrow A=(-3,0),\\ B=(5,0)",
+          "explanation": ""
+        },
+        {
+          "latex": "F(x)=-\\frac{x^4}4+\\frac{2x^3}3+\\frac{15x^2}2;\\quad F(-3)=\\frac{117}4,\\ F(0)=0,\\ F(5)=\\frac{1375}{12};\\quad \\text{area}=-[F(0)-F(-3)]+[F(5)-F(0)]=\\frac{117}4+\\frac{1375}{12}=\\frac{863}6",
+          "explanation": "The integral from −3 to 0 is negative; negate it to obtain the positive area of that lobe, then add the positive integral from 0 to 5."
+        }
+      ],
+      "solutionHtml": "<p>Factor the cubic to find both nonzero intercepts. Split the shaded area at the origin because the curve changes sign there.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;-x^3+2x^2+15x=-x(x-5)(x+3)=0\\\\&amp;\\Rightarrow A=(-3,0),\\ B=(5,0)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The integral from −3 to 0 is negative; negate it to obtain the positive area of that lobe, then add the positive integral from 0 to 5.</p><span data-math=\"\\begin{aligned}&amp;F(x)\\\\&amp;=-\\frac{x^4}4+\\frac{2x^3}3+\\frac{15x^2}2\\\\&amp;F(-3)\\\\&amp;=\\frac{117}4,\\ F(0)\\\\&amp;=0,\\ F(5)\\\\&amp;=\\frac{1375}{12}\\\\&amp;\\text{area}\\\\&amp;=-[F(0)-F(-3)]+[F(5)-F(0)]\\\\&amp;=\\frac{117}4+\\frac{1375}{12}\\\\&amp;=\\frac{863}6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches",
+      "answerGraphCount": 0
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch4/exam/q88",
+      "status": "worked",
+      "method": "Draw each function from its gradient/intercepts/asymptotes. Two distinct intersections require a strictly positive discriminant, while the original condition c>0 must be retained.",
+      "steps": [
+        {
+          "latex": "\\text{i }y=-5x+c:\\ (0,c),\\left(\\frac c5,0\\right);\\quad\\text{ii }y=\\frac1x+6:\\ x=0,\\ y=6",
+          "explanation": "(i) A decreasing straight line of gradient −5 with positive y-intercept c and no horizontal asymptote. (ii) A translated reciprocal with no y-intercept, x-intercept (−1/6,0), vertical asymptote x=0 and horizontal asymptote y=6."
+        },
+        {
+          "latex": "-5x+c=\\frac1x+6\\Rightarrow5x^2+(6-c)x+1=0;\\quad\\Delta=(6-c)^2-20>0\\Rightarrow(6-c)^2>20",
+          "explanation": ""
+        },
+        {
+          "latex": "|6-c|>2\\sqrt5\\Rightarrow0<c<6-2\\sqrt5\\text{ or }c>6+2\\sqrt5",
+          "explanation": "The supplied final range omits the original positive-c restriction. Including it is necessary; c=0 or negative c is outside the stated question."
+        }
+      ],
+      "solutionHtml": "<p>Draw each function from its gradient/intercepts/asymptotes. Two distinct intersections require a strictly positive discriminant, while the original condition c&gt;0 must be retained.</p><ol class=\"parts\" type=\"a\"><li><p>(i) A decreasing straight line of gradient −5 with positive y-intercept c and no horizontal asymptote. (ii) A translated reciprocal with no y-intercept, x-intercept (−1/6,0), vertical asymptote x=0 and horizontal asymptote y=6.</p><span data-math=\"\\begin{aligned}&amp;\\text{i }y\\\\&amp;=-5x+c:\\ (0,c),\\left(\\frac c5,0\\right)\\\\&amp;\\text{ii }y=\\frac1x+6:\\ x=0,\\ y=6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;-5x+c=\\frac1x+6\\\\&amp;\\Rightarrow 5x^2+(6-c)x+1=0\\\\&amp;\\Delta=(6-c)^2-20&gt;0\\\\&amp;\\Rightarrow (6-c)^2&gt;20\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The supplied final range omits the original positive-c restriction. Including it is necessary; c=0 or negative c is outside the stated question.</p><span data-math=\"\\begin{aligned}&amp;|6-c|&gt;2\\sqrt5\\\\&amp;\\Rightarrow 0&lt;c&lt;6-2\\sqrt5\\text{ or }c&gt;6+2\\sqrt5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol><figure><img src=\"resources/practice-solutions/assets/6019b03282a1eef2bc59.png\" alt=\"Supplied answer sketch for exam question 88 exam88-answer-i\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure><figure><img src=\"resources/practice-solutions/assets/ef9375ee809ac329b50d.png\" alt=\"Supplied answer sketch for exam question 88 exam88-answer-ii\" style=\"max-width:280px;max-height:230px;object-fit:contain\"><figcaption>Answer sketch</figcaption></figure>",
+      "answerCheck": "domain-qualified",
+      "answerGraphCount": 2
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "issue": 99,
+  "release": "0.58",
+  "chapter": "Pure Year 2 Chapter 1 — Algebraic methods",
+  "questions": 54,
+  "workedSolutions": 54,
+  "originalQuestionIdsMatched": 54,
+  "sourceAnswerGraphs": 0,
+  "exactIndependentChecks": 81,
+  "strictBrowserMathExpressions": 405,
+  "browserQuestionsRendered": 54,
+  "browserHorizontalOverflows": 0,
+  "visualReview": "All 54 original prompts and supplied final answers compared. All questions rendered with strict KaTeX and no mathematical rendering failures; representative partial-fraction, polynomial-division and exam renders inspected. Full Papers print integration remains separate.",
+  "suppliedPromptOrKeyDefects": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/1.4/q2",
+      "note": "Include a term for each power of x+1. The supplied B=4 has the wrong sign: substituting x=−1 after clearing denominators gives 12=−3B, so B=−4."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch1/exam/q69",
+      "note": "Simplify while retaining x>4; use the resulting range for the inverse and the composite domain."
+    }
+  ],
+  "solutionSha256": "cb46d78dad7f4fba097f9661c177390292ab47b3ba35db8fb13d4ca2fdc9b899",
+  "sourcePdf": "resources/practice/pure-year-2/chapter-01.pdf",
+  "sourcePdfSha256": "216e667aa5e1dcda41b2edc908e619d9e6082e83771971d6e5f3921443c37ad1",
+  "independentReview": "accepted: all original prompts and authored working independently reviewed; findings corrected",
+  "independentReviewEvidence": {
+    "reviewer": "practice_solutions",
+    "questionsReviewed": 54,
+    "solutionSha256": "cb46d78dad7f4fba097f9661c177390292ab47b3ba35db8fb13d4ca2fdc9b899",
+    "sourceAndMathematicalScope": "Every original question and subpart compared with authored working. Independently assessed calculations, method requirements, domains, cases, rounding and source-discrepancy qualifications. Supplied figures inspected wherever present; independent check scripts rerun separately from authoring.",
+    "sourceAndAnswerFiguresInspected": 0,
+    "independentChecksRerun": 81,
+    "allRerunChecksPassed": true,
+    "findingsResolved": true,
+    "detail": "All 0 referenced original figures inspected; no unresolved mathematical findings.",
+    "integrationScope": "Acceptance covers source, worked mathematics and figures. Final combined Papers print and browser integration are recorded separately by the lead."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
+}

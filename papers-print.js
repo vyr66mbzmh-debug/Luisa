@@ -2,7 +2,9 @@
 (() => {
   'use strict';
   const macros = {'\\p':'\\mathrm P(#1)','\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
-  const source = row => `Source: Luisa ${row.skillCode} Q${row.number}`;
+  const source = row => row.sourceKind === 'practice-booklet'
+    ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
+    : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const context = row => [row.courseTitle, row.bookTitle, row.topicTitle].filter(Boolean).join(' · ');
   function element(doc, tag, className, text) {
     const node = doc.createElement(tag);
@@ -105,8 +107,22 @@
     if (!Array.isArray(rows) || !rows.length) throw Error('Select at least one question first.');
     if (new Set(rows.map(row => row.id)).size !== rows.length) throw Error('A paper cannot contain duplicate questions.');
     if (rows.some(row => !row.id || !row.question || !Array.isArray(row.steps) || !row.steps.length)) throw Error('Every selected question needs its original prompt and worked solution.');
-    const win = window.open('', '_blank');
+    // A real same-origin document is controlled by the offline service worker;
+    // an about:blank popup cannot retrieve its cached formatting and diagrams.
+    const previewURL = new URL('paper-preview.html', document.baseURI);
+    const win = window.open(previewURL.href, '_blank');
     if (!win) throw Error('Allow pop-ups for Luisa to open the paper preview.');
+    await whileOpen(win, new Promise((resolve, reject) => {
+      const loaded = () => {
+        try {
+          if (!win.document.querySelector('meta[name="luisa-paper-preview"]')) {
+            reject(Error('The paper preview could not open. Sign in or reconnect, then try again.'));
+          } else resolve();
+        } catch (_) { reject(Error('The paper preview could not open. Please try again.')); }
+      };
+      win.addEventListener('load', loaded, {once: true});
+      if (win.location.href === previewURL.href && win.document.readyState === 'complete') loaded();
+    }));
     const doc = win.document;
     doc.open();
     doc.write('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Maths Paper</title></head><body></body></html>');
@@ -126,9 +142,14 @@
       await whileOpen(win, Promise.all([asset(doc, 'link', 'papers-print.css'), asset(doc, 'link', 'vendor/katex.min.css'), asset(doc, 'script', 'vendor/katex.min.js')]));
       const rendered = rows.map((row, index) => {
         const question = element(doc, 'article', 'print-question'); question.dataset.questionId = row.id;
-        question.append(heading(doc, row, index + 1), content(doc, row.question));
+        question.append(heading(doc, row, index + 1), content(doc, (row.contextHtml || '') + row.question));
         const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); question.append(working);
         const solution = content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join(''));
+        if (row.hints?.length) {
+          const hints = element(doc, 'section', 'solution-hints');
+          hints.append(element(doc, 'h3', '', 'Hints from the booklet'), content(doc, row.hints.map(html => `<div class="solution-step">${html}</div>`).join('')));
+          solution.append(hints);
+        }
         return {row, question, solution};
       });
       const staging = element(doc, 'div', 'print-staging'); doc.body.append(staging);

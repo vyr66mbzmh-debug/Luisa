@@ -1,0 +1,785 @@
+{
+  "schemaVersion": 1,
+  "family": "applied-year-2",
+  "chapter": 6,
+  "sourcePdf": "resources/practice/applied-year-2/chapter-06.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.1/q1",
+      "status": "worked",
+      "method": "Horizontal projection has zero initial vertical velocity. Use g=9.8 m s⁻² unless another value is explicitly requested.",
+      "steps": [
+        {
+          "latex": "50=\\frac12gt^2;t=\\sqrt{\\frac{100}{9.8}}=\\frac{10\\sqrt5}7\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "x=15t=\\frac{150\\sqrt5}7\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Horizontal projection has zero initial vertical velocity. Use g=9.8 m s⁻² unless another value is explicitly requested.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"50=\\frac12gt^2\" data-display=\"true\"></span><span data-math=\"t=\\sqrt{\\frac{100}{9.8}}=\\frac{10\\sqrt5}7\\text{ s}\" data-display=\"true\"></span></li><li><span data-math=\"x=15t=\\frac{150\\sqrt5}7\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.1/q2",
+      "status": "worked",
+      "method": "Horizontal velocity stays constant and the vertical motion starts from rest.",
+      "steps": [
+        {
+          "latex": "x=30t\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{downward distance}=\\frac12gt^2=4.9t^2\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Horizontal velocity stays constant and the vertical motion starts from rest.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"x=30t\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\text{downward distance}=\\frac12gt^2=4.9t^2\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.1/q3",
+      "status": "worked",
+      "method": "Use the horizontal motion to find time, then the vertical fall to find height.",
+      "steps": [
+        {
+          "latex": "t=\\frac{100}{40}=2.5\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "h=\\frac12g(2.5)^2=\\frac{245}8\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the horizontal motion to find time, then the vertical fall to find height.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"t=\\frac{100}{40}=2.5\\text{ s}\" data-display=\"true\"></span></li><li><span data-math=\"h=\\frac12g(2.5)^2=\\frac{245}8\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.1/q4",
+      "status": "worked",
+      "method": "Find the falling time from the vertical drop, then divide the horizontal range by that time.",
+      "steps": [
+        {
+          "latex": "15=\\frac12gt^2;t=\\sqrt{30/g};u=\\frac{24.5}{\\sqrt{30/g}}\\approx14.0\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "Assume air resistance is negligible, so horizontal velocity is constant and vertical acceleration is g.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the falling time from the vertical drop, then divide the horizontal range by that time.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"15=\\frac12gt^2\" data-display=\"true\"></span><span data-math=\"t=\\sqrt{30/g}\" data-display=\"true\"></span><span data-math=\"u=\\frac{24.5}{\\sqrt{30/g}}\\approx14.0\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><p>Assume air resistance is negligible, so horizontal velocity is constant and vertical acceleration is g.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.1/q5",
+      "status": "worked",
+      "method": "Resolve the horizontal motion and vertical fall separately.",
+      "steps": [
+        {
+          "latex": "x=20(2)=40\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "h_Q=20-\\frac12g(2^2)=0.4\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "Air resistance slows the horizontal motion, and the trajectory falls more steeply with horizontal distance. The ball reaches the wall lower, or may hit the ground before reaching it.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Resolve the horizontal motion and vertical fall separately.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"x=20(2)=40\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"h_Q=20-\\frac12g(2^2)=0.4\\text{ m}\" data-display=\"true\"></span></li><li><p>Air resistance slows the horizontal motion, and the trajectory falls more steeply with horizontal distance. The ball reaches the wall lower, or may hit the ground before reaching it.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.1/q6",
+      "status": "worked",
+      "method": "The smooth table preserves the given launch speed 0.7 m s⁻¹. Subtract the free-flight time from the total 2 seconds.",
+      "steps": [
+        {
+          "latex": "1=\\frac12gt_f^2\\Rightarrow t_f=\\sqrt{2/g}=\\frac{\\sqrt{10}}7; t_{\\rm table}=2-\\frac{\\sqrt{10}}7;d=0.7t_{\\rm table}=\\frac{14-\\sqrt{10}}{10}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The smooth table preserves the given launch speed 0.7 m s⁻¹. Subtract the free-flight time from the total 2 seconds.</p><span data-math=\"1=\\frac12gt_f^2\\Rightarrow t_f=\\sqrt{2/g}=\\frac{\\sqrt{10}}7\" data-display=\"true\"></span><span data-math=\"t_{\\rm table}=2-\\frac{\\sqrt{10}}7\" data-display=\"true\"></span><span data-math=\"d=0.7t_{\\rm table}=\\frac{14-\\sqrt{10}}{10}\\text{ m}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.1/q7",
+      "status": "worked",
+      "method": "Friction slows the particle on the table. In free flight, use its speed at the edge as the constant horizontal velocity.",
+      "steps": [
+        {
+          "latex": "F=\\mu mg,\\quad a=-\\mu g=-1.96\\text{ m s}^{-2};v=6-1.96(2)=2.08\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "t_f=\\frac{0.78}{2.08}=\\frac38\\text{ s};h=\\frac12g\\left(\\frac38\\right)^2=\\frac{441}{640}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{With the same observed range: }t_f=\\frac{0.78}{6}=0.13\\text{ s};h=\\frac12g(0.13)^2=0.08281\\text{ m}",
+          "explanation": "For a smooth table the edge speed is 6 m s⁻¹. Keeping the stated landing range fixed would imply a smaller inferred table height; changing friction does not physically alter an existing table.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Friction slows the particle on the table. In free flight, use its speed at the edge as the constant horizontal velocity.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"F=\\mu mg,\\quad a=-\\mu g=-1.96\\text{ m s}^{-2}\" data-display=\"true\"></span><span data-math=\"v=6-1.96(2)=2.08\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"t_f=\\frac{0.78}{2.08}=\\frac38\\text{ s}\" data-display=\"true\"></span><span data-math=\"h=\\frac12g\\left(\\frac38\\right)^2=\\frac{441}{640}\\text{ m}\" data-display=\"true\"></span></li><li><p>For a smooth table the edge speed is 6 m s⁻¹. Keeping the stated landing range fixed would imply a smaller inferred table height; changing friction does not physically alter an existing table.</p><span data-math=\"\\text{With the same observed range: }t_f=\\frac{0.78}{6}=0.13\\text{ s}\" data-display=\"true\"></span><span data-math=\"h=\\frac12g(0.13)^2=0.08281\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.2/q1",
+      "status": "worked",
+      "method": "Resolve the initial velocity into horizontal and upward components.",
+      "steps": [
+        {
+          "latex": "u_x=10\\cos30^\\circ=5\\sqrt3\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u_y=10\\sin30^\\circ=5\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Resolve the initial velocity into horizontal and upward components.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_x=10\\cos30^\\circ=5\\sqrt3\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"u_y=10\\sin30^\\circ=5\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.2/q2",
+      "status": "worked",
+      "method": "The two components are equal for a 45° launch.",
+      "steps": [
+        {
+          "latex": "\\mathbf u=20\\cos45^\\circ\\mathbf i+20\\sin45^\\circ\\mathbf j;=(10\\sqrt2\\mathbf i+10\\sqrt2\\mathbf j)\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The two components are equal for a 45° launch.</p><span data-math=\"\\mathbf u=20\\cos45^\\circ\\mathbf i+20\\sin45^\\circ\\mathbf j\" data-display=\"true\"></span><span data-math=\"=(10\\sqrt2\\mathbf i+10\\sqrt2\\mathbf j)\\text{ m s}^{-1}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.2/q3",
+      "status": "worked",
+      "method": "The speed is the vector magnitude; the launch angle follows from the ratio of vertical to horizontal components.",
+      "steps": [
+        {
+          "latex": "u=\\sqrt{12^2+5^2}=13\\text{ m s}^{-1};\\alpha=\\arctan(5/12)\\approx22.6^\\circ\\text{ above horizontal}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The speed is the vector magnitude; the launch angle follows from the ratio of vertical to horizontal components.</p><span data-math=\"u=\\sqrt{12^2+5^2}=13\\text{ m s}^{-1}\" data-display=\"true\"></span><span data-math=\"\\alpha=\\arctan(5/12)\\approx22.6^\\circ\\text{ above horizontal}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.2/q4",
+      "status": "worked",
+      "method": "Resolve the initial velocity; take j vertically upwards.",
+      "steps": [
+        {
+          "latex": "u_x=15\\cos25^\\circ\\approx13.6\\text{ m s}^{-1};u_y=15\\sin25^\\circ\\approx6.34\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf u=(15\\cos25^\\circ\\mathbf i+15\\sin25^\\circ\\mathbf j);\\approx(13.6\\mathbf i+6.34\\mathbf j)\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Resolve the initial velocity; take j vertically upwards.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_x=15\\cos25^\\circ\\approx13.6\\text{ m s}^{-1}\" data-display=\"true\"></span><span data-math=\"u_y=15\\sin25^\\circ\\approx6.34\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf u=(15\\cos25^\\circ\\mathbf i+15\\sin25^\\circ\\mathbf j)\" data-display=\"true\"></span><span data-math=\"\\approx(13.6\\mathbf i+6.34\\mathbf j)\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.2/q5",
+      "status": "worked",
+      "method": "A launch below the horizontal has a negative j component.",
+      "steps": [
+        {
+          "latex": "u_x=8\\cos10^\\circ\\approx7.88\\text{ m s}^{-1};u_y=-8\\sin10^\\circ\\approx-1.39\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf u=(8\\cos10^\\circ\\mathbf i-8\\sin10^\\circ\\mathbf j);\\approx(7.88\\mathbf i-1.39\\mathbf j)\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>A launch below the horizontal has a negative j component.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_x=8\\cos10^\\circ\\approx7.88\\text{ m s}^{-1}\" data-display=\"true\"></span><span data-math=\"u_y=-8\\sin10^\\circ\\approx-1.39\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf u=(8\\cos10^\\circ\\mathbf i-8\\sin10^\\circ\\mathbf j)\" data-display=\"true\"></span><span data-math=\"\\approx(7.88\\mathbf i-1.39\\mathbf j)\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.2/q6",
+      "status": "worked",
+      "method": "Use the 5–12–13 triangle to obtain cosα=5/13 and sinα=12/13.",
+      "steps": [
+        {
+          "latex": "u_x=156\\frac5{13}=60\\text{ m s}^{-1};u_y=156\\frac{12}{13}=144\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf u=(60\\mathbf i+144\\mathbf j)\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the 5–12–13 triangle to obtain cosα=5/13 and sinα=12/13.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"u_x=156\\frac5{13}=60\\text{ m s}^{-1}\" data-display=\"true\"></span><span data-math=\"u_y=156\\frac{12}{13}=144\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf u=(60\\mathbf i+144\\mathbf j)\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.2/q7",
+      "status": "worked",
+      "method": "Use Pythagoras and the tangent ratio.",
+      "steps": [
+        {
+          "latex": "u=\\sqrt{4^2+3^2}=5\\text{ m s}^{-1};\\alpha=\\arctan(3/4)\\approx36.9^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use Pythagoras and the tangent ratio.</p><span data-math=\"u=\\sqrt{4^2+3^2}=5\\text{ m s}^{-1}\" data-display=\"true\"></span><span data-math=\"\\alpha=\\arctan(3/4)\\approx36.9^\\circ\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.3/q1",
+      "status": "worked",
+      "method": "At landing the vertical displacement is zero; discard the launch-time root t=0.",
+      "steps": [
+        {
+          "latex": "0=98\\sin30^\\circ\\,t-\\frac12gt^2;t(49-4.9t)=0;t=10\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>At landing the vertical displacement is zero; discard the launch-time root t=0.</p><span data-math=\"0=98\\sin30^\\circ\\,t-\\frac12gt^2\" data-display=\"true\"></span><span data-math=\"t(49-4.9t)=0\" data-display=\"true\"></span><span data-math=\"t=10\\text{ s}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.3/q2",
+      "status": "worked",
+      "method": "Find flight time from the vertical displacement, then use constant horizontal speed.",
+      "steps": [
+        {
+          "latex": "0=12t-\\frac12gt^2;t=\\frac{24}{g}=\\frac{120}{49}\\approx2.45\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "R=5t=\\frac{600}{49}\\approx12.2\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find flight time from the vertical displacement, then use constant horizontal speed.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"0=12t-\\frac12gt^2\" data-display=\"true\"></span><span data-math=\"t=\\frac{24}{g}=\\frac{120}{49}\\approx2.45\\text{ s}\" data-display=\"true\"></span></li><li><span data-math=\"R=5t=\\frac{600}{49}\\approx12.2\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.3/q3",
+      "status": "worked",
+      "method": "The vertical velocity is zero at the highest point.",
+      "steps": [
+        {
+          "latex": "0=(34\\sin50^\\circ)^2-2gH;H=\\frac{(34\\sin50^\\circ)^2}{2g}\\approx34.6\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The vertical velocity is zero at the highest point.</p><span data-math=\"0=(34\\sin50^\\circ)^2-2gH\" data-display=\"true\"></span><span data-math=\"H=\\frac{(34\\sin50^\\circ)^2}{2g}\\approx34.6\\text{ m}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.3/q4",
+      "status": "worked",
+      "method": "The vertical displacement after 5 seconds is −h.",
+      "steps": [
+        {
+          "latex": "-h=12\\sin35^\\circ(5)-\\frac12g(5^2);h=122.5-60\\sin35^\\circ\\approx88.1\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The vertical displacement after 5 seconds is −h.</p><span data-math=\"-h=12\\sin35^\\circ(5)-\\frac12g(5^2)\" data-display=\"true\"></span><span data-math=\"h=122.5-60\\sin35^\\circ\\approx88.1\\text{ m}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.3/q5",
+      "status": "worked",
+      "method": "Use the positive root of the vertical landing equation, then multiply by horizontal speed.",
+      "steps": [
+        {
+          "latex": "-10=50\\sin20^\\circ\\,t-4.9t^2;t=\\frac{50\\sin20^\\circ+\\sqrt{(50\\sin20^\\circ)^2+196}}{9.8};R=50\\cos20^\\circ\\,t\\approx188\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the positive root of the vertical landing equation, then multiply by horizontal speed.</p><span data-math=\"-10=50\\sin20^\\circ\\,t-4.9t^2\" data-display=\"true\"></span><span data-math=\"t=\\frac{50\\sin20^\\circ+\\sqrt{(50\\sin20^\\circ)^2+196}}{9.8}\" data-display=\"true\"></span><span data-math=\"R=50\\cos20^\\circ\\,t\\approx188\\text{ m}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.3/q6",
+      "status": "worked",
+      "method": "Find the two times at height 10 m; the projectile is above that height between them.",
+      "steps": [
+        {
+          "latex": "10=15t-4.9t^2;4.9t^2-15t+10=0;t=\\frac{15\\pm\\sqrt{29}}{9.8};\\Delta t=\\frac{2\\sqrt{29}}{9.8}\\approx1.10\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the two times at height 10 m; the projectile is above that height between them.</p><span data-math=\"10=15t-4.9t^2\" data-display=\"true\"></span><span data-math=\"4.9t^2-15t+10=0\" data-display=\"true\"></span><span data-math=\"t=\\frac{15\\pm\\sqrt{29}}{9.8}\" data-display=\"true\"></span><span data-math=\"\\Delta t=\\frac{2\\sqrt{29}}{9.8}\\approx1.10\\text{ s}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.3/q7",
+      "status": "worked",
+      "method": "Let the initial horizontal and vertical components be a and b. The maximum height determines b; the range then determines a.",
+      "steps": [
+        {
+          "latex": "\\frac{b^2}{2g}=50\\Rightarrow b=14\\sqrt5;220=a\\frac{2b}{g}\\Rightarrow a=\\frac{77\\sqrt5}5;\\text{(i) }\\alpha=\\arctan(b/a)=\\arctan(10/11)\\approx42.3^\\circ;\\text{(ii) }u=\\sqrt{a^2+b^2}=\\frac{7\\sqrt{1105}}5\\approx46.5\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v(5)=a\\mathbf i+(b-49)\\mathbf j;|\\mathbf v(5)|=\\sqrt{a^2+(b-49)^2}\\approx38.7\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Let the initial horizontal and vertical components be a and b. The maximum height determines b; the range then determines a.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{b^2}{2g}=50\\Rightarrow b=14\\sqrt5\" data-display=\"true\"></span><span data-math=\"220=a\\frac{2b}{g}\\Rightarrow a=\\frac{77\\sqrt5}5\" data-display=\"true\"></span><span data-math=\"\\text{(i) }\\alpha=\\arctan(b/a)=\\arctan(10/11)\\approx42.3^\\circ\" data-display=\"true\"></span><span data-math=\"\\text{(ii) }u=\\sqrt{a^2+b^2}=\\frac{7\\sqrt{1105}}5\\approx46.5\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v(5)=a\\mathbf i+(b-49)\\mathbf j\" data-display=\"true\"></span><span data-math=\"|\\mathbf v(5)|=\\sqrt{a^2+(b-49)^2}\\approx38.7\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.3/q8",
+      "status": "worked",
+      "method": "First check that the projectile clears the cliff face. Then choose the descending time at cliff-top height.",
+      "steps": [
+        {
+          "latex": "t_{\\rm edge}=\\frac{200}{36}=\\frac{50}9; y(t_{\\rm edge})=48t_{\\rm edge}-4.9t_{\\rm edge}^2\\approx115.4>100;100=48t-4.9t^2;t=\\frac{48\\pm\\sqrt{344}}{9.8};t_{\\rm landing}=\\frac{48+\\sqrt{344}}{9.8};d=36t_{\\rm landing}-200\\approx44.5\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>First check that the projectile clears the cliff face. Then choose the descending time at cliff-top height.</p><span data-math=\"t_{\\rm edge}=\\frac{200}{36}=\\frac{50}9\" data-display=\"true\"></span><span data-math=\"y(t_{\\rm edge})=48t_{\\rm edge}-4.9t_{\\rm edge}^2\\approx115.4&gt;100\" data-display=\"true\"></span><span data-math=\"100=48t-4.9t^2\" data-display=\"true\"></span><span data-math=\"t=\\frac{48\\pm\\sqrt{344}}{9.8}\" data-display=\"true\"></span><span data-math=\"t_{\\rm landing}=\\frac{48+\\sqrt{344}}{9.8}\" data-display=\"true\"></span><span data-math=\"d=36t_{\\rm landing}-200\\approx44.5\\text{ m}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.3/q9",
+      "status": "worked",
+      "method": "The farthest crossing of the crossbar height occurs on descent. Use the larger root of the height equation.",
+      "steps": [
+        {
+          "latex": "4=25\\sin40^\\circ\\,t-4.9t^2;t_{\\rm far}=\\frac{25\\sin40^\\circ+\\sqrt{(25\\sin40^\\circ)^2-78.4}}{9.8};D_{\\rm limit}=25\\cos40^\\circ\\,t_{\\rm far}\\approx57.6\\text{ m}",
+          "explanation": "This is the limiting distance at which the particle is at crossbar height. Strict clearance requires a distance slightly below this limit, also beyond the rising-side crossing.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The farthest crossing of the crossbar height occurs on descent. Use the larger root of the height equation.</p><p>This is the limiting distance at which the particle is at crossbar height. Strict clearance requires a distance slightly below this limit, also beyond the rising-side crossing.</p><span data-math=\"4=25\\sin40^\\circ\\,t-4.9t^2\" data-display=\"true\"></span><span data-math=\"t_{\\rm far}=\\frac{25\\sin40^\\circ+\\sqrt{(25\\sin40^\\circ)^2-78.4}}{9.8}\" data-display=\"true\"></span><span data-math=\"D_{\\rm limit}=25\\cos40^\\circ\\,t_{\\rm far}\\approx57.6\\text{ m}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.4/q1",
+      "status": "worked",
+      "method": "Use zero vertical velocity at the highest point.",
+      "steps": [
+        {
+          "latex": "0=(20\\sin\\alpha)^2-2gH;H=\\frac{400\\sin^2\\alpha}{2g}=\\frac{200\\sin^2\\alpha}{g}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use zero vertical velocity at the highest point.</p><span data-math=\"0=(20\\sin\\alpha)^2-2gH\" data-display=\"true\"></span><span data-math=\"H=\\frac{400\\sin^2\\alpha}{2g}=\\frac{200\\sin^2\\alpha}{g}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.4/q2",
+      "status": "worked",
+      "method": "Return to launch height takes twice the time to the highest point.",
+      "steps": [
+        {
+          "latex": "0=U\\sin\\alpha\\,T-\\frac12gT^2;T=\\frac{2U\\sin\\alpha}{g};R=U\\cos\\alpha\\,T=\\frac{U^2\\sin2\\alpha}{g}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\sin2\\alpha\\le1;2\\alpha=90^\\circ\\Rightarrow\\alpha=45^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Return to launch height takes twice the time to the highest point.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"0=U\\sin\\alpha\\,T-\\frac12gT^2\" data-display=\"true\"></span><span data-math=\"T=\\frac{2U\\sin\\alpha}{g}\" data-display=\"true\"></span><span data-math=\"R=U\\cos\\alpha\\,T=\\frac{U^2\\sin2\\alpha}{g}\" data-display=\"true\"></span></li><li><span data-math=\"\\sin2\\alpha\\le1\" data-display=\"true\"></span><span data-math=\"2\\alpha=90^\\circ\\Rightarrow\\alpha=45^\\circ\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.4/q3",
+      "status": "worked",
+      "method": "The printed formula is missing a factor 1/2 in its first term. At maximum height the horizontal distance is R/2, since R is the full range shown.",
+      "steps": [
+        {
+          "latex": "t_{\\rm apex}=\\frac{R}{2U\\cos\\alpha};h=U\\sin\\alpha\\frac{R}{2U\\cos\\alpha}-\\frac g2\\left(\\frac{R}{2U\\cos\\alpha}\\right)^2;h=\\frac R2\\tan\\alpha-\\frac{gR^2}{8U^2\\cos^2\\alpha}",
+          "explanation": "The first term is (R/2)tanα, not the printed Rtanα. Thus the printed statement cannot be shown as written.",
+          "graphs": []
+        },
+        {
+          "latex": "\\sec^2\\alpha=1+\\tan^2\\alpha;h=\\frac R2\\tan\\alpha-\\frac{gR^2}{8U^2}(1+\\tan^2\\alpha)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The printed formula is missing a factor 1/2 in its first term. At maximum height the horizontal distance is R/2, since R is the full range shown.</p><ol type=\"a\" class=\"parts\"><li><p>The first term is (R/2)tanα, not the printed Rtanα. Thus the printed statement cannot be shown as written.</p><span data-math=\"t_{\\rm apex}=\\frac{R}{2U\\cos\\alpha}\" data-display=\"true\"></span><span data-math=\"h=U\\sin\\alpha\\frac{R}{2U\\cos\\alpha}-\\frac g2\\left(\\frac{R}{2U\\cos\\alpha}\\right)^2\" data-display=\"true\"></span><span data-math=\"h=\\frac R2\\tan\\alpha-\\frac{gR^2}{8U^2\\cos^2\\alpha}\" data-display=\"true\"></span></li><li><span data-math=\"\\sec^2\\alpha=1+\\tan^2\\alpha\" data-display=\"true\"></span><span data-math=\"h=\\frac R2\\tan\\alpha-\\frac{gR^2}{8U^2}(1+\\tan^2\\alpha)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.4/q4",
+      "status": "worked",
+      "method": "Use the range formula for each launch and take the absolute difference along the same horizontal line of projection.",
+      "steps": [
+        {
+          "latex": "R_A=\\frac{u_A^2\\sin2\\alpha_A}{g},\\quad R_B=\\frac{u_B^2\\sin2\\alpha_B}{g};d=|R_A-R_B|;=\\frac1g|u_A^2\\sin2\\alpha_A-u_B^2\\sin2\\alpha_B|",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the range formula for each launch and take the absolute difference along the same horizontal line of projection.</p><span data-math=\"R_A=\\frac{u_A^2\\sin2\\alpha_A}{g},\\quad R_B=\\frac{u_B^2\\sin2\\alpha_B}{g}\" data-display=\"true\"></span><span data-math=\"d=|R_A-R_B|\" data-display=\"true\"></span><span data-math=\"=\\frac1g|u_A^2\\sin2\\alpha_A-u_B^2\\sin2\\alpha_B|\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.4/q5",
+      "status": "worked",
+      "method": "Both flares have zero initial vertical velocity and fall through the same height, so their flight times agree. Their opposite horizontal ranges add.",
+      "steps": [
+        {
+          "latex": "h=\\frac12gT^2\\Rightarrow T=\\sqrt{\\frac{2h}{g}};d=uT+2uT=3u\\sqrt{\\frac{2h}{g}}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Both flares have zero initial vertical velocity and fall through the same height, so their flight times agree. Their opposite horizontal ranges add.</p><span data-math=\"h=\\frac12gT^2\\Rightarrow T=\\sqrt{\\frac{2h}{g}}\" data-display=\"true\"></span><span data-math=\"d=uT+2uT=3u\\sqrt{\\frac{2h}{g}}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.4/q6",
+      "status": "worked",
+      "method": "Use the nonzero landing time from vertical motion and the constant horizontal component.",
+      "steps": [
+        {
+          "latex": "0=bT-\\frac12gT^2;T=\\frac{2b}{g};R=aT=\\frac{2ab}{g}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a=12k,\\quad b=5k;200=\\frac{2(12k)(5k)}g;k^2=\\frac{5g}3=\\frac{49}3;u=\\sqrt{(12k)^2+(5k)^2}=13k=\\frac{91}{\\sqrt3};u\\approx52.5\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the nonzero landing time from vertical motion and the constant horizontal component.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"0=bT-\\frac12gT^2\" data-display=\"true\"></span><span data-math=\"T=\\frac{2b}{g}\" data-display=\"true\"></span><span data-math=\"R=aT=\\frac{2ab}{g}\" data-display=\"true\"></span></li><li><span data-math=\"a=12k,\\quad b=5k\" data-display=\"true\"></span><span data-math=\"200=\\frac{2(12k)(5k)}g\" data-display=\"true\"></span><span data-math=\"k^2=\\frac{5g}3=\\frac{49}3\" data-display=\"true\"></span><span data-math=\"u=\\sqrt{(12k)^2+(5k)^2}=13k=\\frac{91}{\\sqrt3}\" data-display=\"true\"></span><span data-math=\"u\\approx52.5\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.4/q7",
+      "status": "worked",
+      "method": "Find the nonzero time at which the vertical displacement returns to zero, then use the double-angle identity.",
+      "steps": [
+        {
+          "latex": "0=U\\sin\\alpha\\,T-\\frac12gT^2;T=\\frac{2U\\sin\\alpha}{g};R=U\\cos\\alpha\\,T=\\frac{2U^2\\sin\\alpha\\cos\\alpha}{g};R=\\frac{U^2\\sin2\\alpha}{g}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the nonzero time at which the vertical displacement returns to zero, then use the double-angle identity.</p><span data-math=\"0=U\\sin\\alpha\\,T-\\frac12gT^2\" data-display=\"true\"></span><span data-math=\"T=\\frac{2U\\sin\\alpha}{g}\" data-display=\"true\"></span><span data-math=\"R=U\\cos\\alpha\\,T=\\frac{2U^2\\sin\\alpha\\cos\\alpha}{g}\" data-display=\"true\"></span><span data-math=\"R=\\frac{U^2\\sin2\\alpha}{g}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/6.4/q8",
+      "status": "worked",
+      "method": "At the wall the vertical displacement relative to launch is 25−15=10 m. Eliminate time using the horizontal displacement.",
+      "steps": [
+        {
+          "latex": "t=\\frac{40}{U\\cos\\alpha};10=U\\sin\\alpha\\,t-\\frac12gt^2;10=40\\tan\\alpha-\\frac{800g}{U^2\\cos^2\\alpha};\\frac{800g}{U^2}(1+\\tan^2\\alpha)-40\\tan\\alpha+10=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "z=\\tan\\alpha,\\quad U=40;4.9(1+z^2)-40z+10=0;49z^2-400z+149=0;z=\\frac{400\\pm\\sqrt{130796}}{98};\\alpha\\approx21.4^\\circ,82.7^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>At the wall the vertical displacement relative to launch is 25−15=10 m. Eliminate time using the horizontal displacement.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"t=\\frac{40}{U\\cos\\alpha}\" data-display=\"true\"></span><span data-math=\"10=U\\sin\\alpha\\,t-\\frac12gt^2\" data-display=\"true\"></span><span data-math=\"10=40\\tan\\alpha-\\frac{800g}{U^2\\cos^2\\alpha}\" data-display=\"true\"></span><span data-math=\"\\frac{800g}{U^2}(1+\\tan^2\\alpha)-40\\tan\\alpha+10=0\" data-display=\"true\"></span></li><li><span data-math=\"z=\\tan\\alpha,\\quad U=40\" data-display=\"true\"></span><span data-math=\"4.9(1+z^2)-40z+10=0\" data-display=\"true\"></span><span data-math=\"49z^2-400z+149=0\" data-display=\"true\"></span><span data-math=\"z=\\frac{400\\pm\\sqrt{130796}}{98}\" data-display=\"true\"></span><span data-math=\"\\alpha\\approx21.4^\\circ,82.7^\\circ\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/problem-a/qbronze",
+      "status": "worked",
+      "method": "The initial vertical component is 2Usinα and the horizontal component is 2Ucosα.",
+      "steps": [
+        {
+          "latex": "0=2U\\sin\\alpha\\,T-\\frac12gT^2;T(2U\\sin\\alpha-\\tfrac12gT)=0;T=\\frac{4U\\sin\\alpha}{g}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "R=2U\\cos\\alpha\\frac{4U\\sin\\alpha}{g};=\\frac{8U^2\\sin\\alpha\\cos\\alpha}{g}=\\frac{4U^2\\sin2\\alpha}{g}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The initial vertical component is 2Usinα and the horizontal component is 2Ucosα.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"0=2U\\sin\\alpha\\,T-\\frac12gT^2\" data-display=\"true\"></span><span data-math=\"T(2U\\sin\\alpha-\\tfrac12gT)=0\" data-display=\"true\"></span><span data-math=\"T=\\frac{4U\\sin\\alpha}{g}\" data-display=\"true\"></span></li><li><span data-math=\"R=2U\\cos\\alpha\\frac{4U\\sin\\alpha}{g}\" data-display=\"true\"></span><span data-math=\"=\\frac{8U^2\\sin\\alpha\\cos\\alpha}{g}=\\frac{4U^2\\sin2\\alpha}{g}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/problem-a/qsilver",
+      "status": "worked",
+      "method": "Use the 3–4–5 triangle and eliminate time from the coordinate equations.",
+      "steps": [
+        {
+          "latex": "x=\\frac45Ut\\Rightarrow t=\\frac{5x}{4U};h=\\frac35Ut-\\frac12gt^2;h=\\frac34x-\\frac{25}{32}\\frac{gx^2}{U^2};a=\\frac34,\\quad b=\\frac{25}{32}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "U=35:\\ u_x=28,\\quad u_y=21;h=21t-4.9t^2,\\quad x=28t;h=x/2\\Rightarrow t(7-4.9t)=0;t=\\frac{10}7\\text{ at the later crossing};v_y=21-9.8\\frac{10}7=7;v=\\sqrt{28^2+7^2}=7\\sqrt{17}\\text{ m s}^{-1}",
+          "explanation": "At launch t=0, h=x/2 also holds and the speed is 35 m s⁻¹. The supplied answer refers to the later nonzero crossing.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the 3–4–5 triangle and eliminate time from the coordinate equations.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"x=\\frac45Ut\\Rightarrow t=\\frac{5x}{4U}\" data-display=\"true\"></span><span data-math=\"h=\\frac35Ut-\\frac12gt^2\" data-display=\"true\"></span><span data-math=\"h=\\frac34x-\\frac{25}{32}\\frac{gx^2}{U^2}\" data-display=\"true\"></span><span data-math=\"a=\\frac34,\\quad b=\\frac{25}{32}\" data-display=\"true\"></span></li><li><p>At launch t=0, h=x/2 also holds and the speed is 35 m s⁻¹. The supplied answer refers to the later nonzero crossing.</p><span data-math=\"U=35:\\ u_x=28,\\quad u_y=21\" data-display=\"true\"></span><span data-math=\"h=21t-4.9t^2,\\quad x=28t\" data-display=\"true\"></span><span data-math=\"h=x/2\\Rightarrow t(7-4.9t)=0\" data-display=\"true\"></span><span data-math=\"t=\\frac{10}7\\text{ at the later crossing}\" data-display=\"true\"></span><span data-math=\"v_y=21-9.8\\frac{10}7=7\" data-display=\"true\"></span><span data-math=\"v=\\sqrt{28^2+7^2}=7\\sqrt{17}\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/problem-a/qgold",
+      "status": "worked",
+      "method": "Write both trajectories in terms of the same horizontal distance x, using g=9.8.",
+      "steps": [
+        {
+          "latex": "y_Q=h-\\frac{x^2}{160},\\quad y_P=x-\\frac{x^2}{80};y_Q=y_P\\Rightarrow h=x-\\frac{x^2}{160};h=40-\\frac{(x-80)^2}{160}\\le40;h_{\\max}=40\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "t_Q=\\frac{x}{28},\\quad t_P=\\frac{x}{14\\sqrt2}=\\sqrt2\\,t_Q",
+          "explanation": "For any intersection with x>0, the arrows reach it at different times, so their crossing paths do not imply a collision. At h=40 m the paths meet at ground level; a strictly airborne intersection needs h<40 m.",
+          "graphs": []
+        },
+        {
+          "latex": "x^2-160x+160h=0;x=80\\pm4\\sqrt{400-10h};\\text{The lower arrow is airborne for }0<x<80;\\text{physical crossing: }x=80-4\\sqrt{400-10h}\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Write both trajectories in terms of the same horizontal distance x, using g=9.8.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y_Q=h-\\frac{x^2}{160},\\quad y_P=x-\\frac{x^2}{80}\" data-display=\"true\"></span><span data-math=\"y_Q=y_P\\Rightarrow h=x-\\frac{x^2}{160}\" data-display=\"true\"></span><span data-math=\"h=40-\\frac{(x-80)^2}{160}\\le40\" data-display=\"true\"></span><span data-math=\"h_{\\max}=40\\text{ m}\" data-display=\"true\"></span></li><li><p>For any intersection with x&gt;0, the arrows reach it at different times, so their crossing paths do not imply a collision. At h=40 m the paths meet at ground level; a strictly airborne intersection needs h&lt;40 m.</p><span data-math=\"t_Q=\\frac{x}{28},\\quad t_P=\\frac{x}{14\\sqrt2}=\\sqrt2\\,t_Q\" data-display=\"true\"></span></li><li><span data-math=\"x^2-160x+160h=0\" data-display=\"true\"></span><span data-math=\"x=80\\pm4\\sqrt{400-10h}\" data-display=\"true\"></span><span data-math=\"\\text{The lower arrow is airborne for }0&lt;x&lt;80\" data-display=\"true\"></span><span data-math=\"\\text{physical crossing: }x=80-4\\sqrt{400-10h}\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/problem-b/qbronze",
+      "status": "worked",
+      "method": "Use g=10 as requested. The horizontal component stays at 10 m s⁻¹.",
+      "steps": [
+        {
+          "latex": "v_y^2=15^2+2(10)(6)=345;v=\\sqrt{10^2+345}=\\sqrt{445}\\approx21.1\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "10^2+(15-10t)^2<15^2;|15-10t|<5\\sqrt5;\\frac{15-5\\sqrt5}{10}<t<\\frac{15+5\\sqrt5}{10};\\Delta t=\\sqrt5\\approx2.24\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use g=10 as requested. The horizontal component stays at 10 m s⁻¹.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"v_y^2=15^2+2(10)(6)=345\" data-display=\"true\"></span><span data-math=\"v=\\sqrt{10^2+345}=\\sqrt{445}\\approx21.1\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"10^2+(15-10t)^2&lt;15^2\" data-display=\"true\"></span><span data-math=\"|15-10t|&lt;5\\sqrt5\" data-display=\"true\"></span><span data-math=\"\\frac{15-5\\sqrt5}{10}&lt;t&lt;\\frac{15+5\\sqrt5}{10}\" data-display=\"true\"></span><span data-math=\"\\Delta t=\\sqrt5\\approx2.24\\text{ s}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/problem-b/qsilver",
+      "status": "worked",
+      "method": "Use g=10 and constant horizontal speed 33 m s⁻¹. Choose the descending vertical velocity.",
+      "steps": [
+        {
+          "latex": "v_y^2=55^2-33^2=1936;v_y=-44;v_y^2=18^2-20s_y;s_y=\\frac{324-1936}{20}=-80.6;\\text{height}=120-80.6=39.4\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "v_y^2=18^2+2(10)(120)=2724;\\beta=\\arctan\\left(\\frac{\\sqrt{2724}}{33}\\right)\\approx57.7^\\circ\\text{ below horizontal}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use g=10 and constant horizontal speed 33 m s⁻¹. Choose the descending vertical velocity.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"v_y^2=55^2-33^2=1936\" data-display=\"true\"></span><span data-math=\"v_y=-44\" data-display=\"true\"></span><span data-math=\"v_y^2=18^2-20s_y\" data-display=\"true\"></span><span data-math=\"s_y=\\frac{324-1936}{20}=-80.6\" data-display=\"true\"></span><span data-math=\"\\text{height}=120-80.6=39.4\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"v_y^2=18^2+2(10)(120)=2724\" data-display=\"true\"></span><span data-math=\"\\beta=\\arctan\\left(\\frac{\\sqrt{2724}}{33}\\right)\\approx57.7^\\circ\\text{ below horizontal}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/problem-b/qgold",
+      "status": "worked",
+      "method": "Use g=10. The horizontal component is 40 and the downward vertical component grows from 6.",
+      "steps": [
+        {
+          "latex": "v_y^2=(-6)^2+2(10)(75)=1536;v=\\sqrt{40^2+1536}=56\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-16\\sqrt6=-6-10T;T=\\frac{16\\sqrt6-6}{10};R=40T;D=\\sqrt{R^2+75^2}\\approx152\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v=8(5\\mathbf i-4\\mathbf j)\\Rightarrow v_y=-32;-32=-6-10t\\Rightarrow t=2.6;h=75-6(2.6)-5(2.6)^2=25.6\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\mathbf v\\parallel\\mathbf i-\\mathbf j\\Rightarrow v_y=-40;\\text{required drop}=\\frac{40^2-6^2}{20}=78.2\\text{ m};78.2>75\\Rightarrow\\text{the ground is reached first}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use g=10. The horizontal component is 40 and the downward vertical component grows from 6.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"v_y^2=(-6)^2+2(10)(75)=1536\" data-display=\"true\"></span><span data-math=\"v=\\sqrt{40^2+1536}=56\\text{ m s}^{-1}\" data-display=\"true\"></span></li><li><span data-math=\"-16\\sqrt6=-6-10T\" data-display=\"true\"></span><span data-math=\"T=\\frac{16\\sqrt6-6}{10}\" data-display=\"true\"></span><span data-math=\"R=40T\" data-display=\"true\"></span><span data-math=\"D=\\sqrt{R^2+75^2}\\approx152\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v=8(5\\mathbf i-4\\mathbf j)\\Rightarrow v_y=-32\" data-display=\"true\"></span><span data-math=\"-32=-6-10t\\Rightarrow t=2.6\" data-display=\"true\"></span><span data-math=\"h=75-6(2.6)-5(2.6)^2=25.6\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"\\mathbf v\\parallel\\mathbf i-\\mathbf j\\Rightarrow v_y=-40\" data-display=\"true\"></span><span data-math=\"\\text{required drop}=\\frac{40^2-6^2}{20}=78.2\\text{ m}\" data-display=\"true\"></span><span data-math=\"78.2&gt;75\\Rightarrow\\text{the ground is reached first}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/exam/q35",
+      "status": "worked",
+      "method": "Horizontal motion is uniform and the initial vertical component is zero.",
+      "steps": [
+        {
+          "latex": "R=Ut,\\quad d=\\frac12gt^2;t=\\sqrt{\\frac{2d}{g}};R=U\\sqrt{\\frac{2d}{g}}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "t=\\frac{2.25}{11.2};d=4.9\\left(\\frac{2.25}{11.2}\\right)^2;d\\approx0.198\\text{ m}=19.8\\text{ cm}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Horizontal motion is uniform and the initial vertical component is zero.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"R=Ut,\\quad d=\\frac12gt^2\" data-display=\"true\"></span><span data-math=\"t=\\sqrt{\\frac{2d}{g}}\" data-display=\"true\"></span><span data-math=\"R=U\\sqrt{\\frac{2d}{g}}\" data-display=\"true\"></span></li><li><span data-math=\"t=\\frac{2.25}{11.2}\" data-display=\"true\"></span><span data-math=\"d=4.9\\left(\\frac{2.25}{11.2}\\right)^2\" data-display=\"true\"></span><span data-math=\"d\\approx0.198\\text{ m}=19.8\\text{ cm}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/exam/q38",
+      "status": "worked",
+      "method": "Measure vertical height from the ground, including the initial 1.1 m.",
+      "steps": [
+        {
+          "latex": "H=1.1+\\frac{18^2}{2g}\\approx17.6\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "t=\\frac{43}{12};h=1.1+18t-4.9t^2\\approx2.68\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "Including air resistance would lower the predicted height at the fielder; the ball might hit the ground before reaching that horizontal position.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Measure vertical height from the ground, including the initial 1.1 m.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"H=1.1+\\frac{18^2}{2g}\\approx17.6\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"t=\\frac{43}{12}\" data-display=\"true\"></span><span data-math=\"h=1.1+18t-4.9t^2\\approx2.68\\text{ m}\" data-display=\"true\"></span></li><li><p>Including air resistance would lower the predicted height at the fielder; the ball might hit the ground before reaching that horizontal position.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/exam/q42",
+      "status": "worked",
+      "method": "Use the 10 m rise to determine the initial vertical component. Energy or vertical kinematics then gives the speeds on descent.",
+      "steps": [
+        {
+          "latex": "0=(50\\sin\\theta)^2-2g(10);50\\sin\\theta=14;\\theta=\\arcsin(14/50)\\approx16.3^\\circ",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "v_x^2=50^2-14^2=2304\\Rightarrow v_x=48;48^2+(14-gt)^2=50^2;14-gt=\\pm14;t=0\\text{ or }t=\\frac{28}{g};\\text{after launch: }t\\approx2.86\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "v_y^2=14^2+2g(36)=901.6;\\beta=\\arctan\\left(\\frac{\\sqrt{901.6}}{48}\\right);\\beta\\approx32.0^\\circ\\text{ below horizontal}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the 10 m rise to determine the initial vertical component. Energy or vertical kinematics then gives the speeds on descent.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"0=(50\\sin\\theta)^2-2g(10)\" data-display=\"true\"></span><span data-math=\"50\\sin\\theta=14\" data-display=\"true\"></span><span data-math=\"\\theta=\\arcsin(14/50)\\approx16.3^\\circ\" data-display=\"true\"></span></li><li><span data-math=\"v_x^2=50^2-14^2=2304\\Rightarrow v_x=48\" data-display=\"true\"></span><span data-math=\"48^2+(14-gt)^2=50^2\" data-display=\"true\"></span><span data-math=\"14-gt=\\pm14\" data-display=\"true\"></span><span data-math=\"t=0\\text{ or }t=\\frac{28}{g}\" data-display=\"true\"></span><span data-math=\"\\text{after launch: }t\\approx2.86\\text{ s}\" data-display=\"true\"></span></li><li><span data-math=\"v_y^2=14^2+2g(36)=901.6\" data-display=\"true\"></span><span data-math=\"\\beta=\\arctan\\left(\\frac{\\sqrt{901.6}}{48}\\right)\" data-display=\"true\"></span><span data-math=\"\\beta\\approx32.0^\\circ\\text{ below horizontal}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/exam/q45",
+      "status": "worked",
+      "method": "Eliminate time at horizontal distance 80 m, then solve the resulting quadratic in tanα.",
+      "steps": [
+        {
+          "latex": "t=\\frac{80}{35\\cos\\alpha};5=35\\sin\\alpha\\,t-4.9t^2;5=80\\tan\\alpha-25.6(1+\\tan^2\\alpha);25.6z^2-80z+30.6=0,\\quad z=\\tan\\alpha;z=\\frac{80+\\sqrt{80^2-4(25.6)(30.6)}}{51.2};\\alpha\\approx69.5^\\circ\\text{ (larger angle)}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "An exact landing is unlikely: the model ignores air resistance and spin, and the golfer cannot reproduce an exact launch speed and angle.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Eliminate time at horizontal distance 80 m, then solve the resulting quadratic in tanα.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"t=\\frac{80}{35\\cos\\alpha}\" data-display=\"true\"></span><span data-math=\"5=35\\sin\\alpha\\,t-4.9t^2\" data-display=\"true\"></span><span data-math=\"5=80\\tan\\alpha-25.6(1+\\tan^2\\alpha)\" data-display=\"true\"></span><span data-math=\"25.6z^2-80z+30.6=0,\\quad z=\\tan\\alpha\" data-display=\"true\"></span><span data-math=\"z=\\frac{80+\\sqrt{80^2-4(25.6)(30.6)}}{51.2}\" data-display=\"true\"></span><span data-math=\"\\alpha\\approx69.5^\\circ\\text{ (larger angle)}\" data-display=\"true\"></span></li><li><p>An exact landing is unlikely: the model ignores air resistance and spin, and the golfer cannot reproduce an exact launch speed and angle.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/exam/q48",
+      "status": "worked",
+      "method": "The ball clears the wall when its height is strictly above 5 m. Use energy for the final speed.",
+      "steps": [
+        {
+          "latex": "x=20\\cos30^\\circ\\,t=10\\sqrt3\\,t;2+10t-4.9t^2>5;4.9t^2-10t+3<0;\\frac{10-\\sqrt{41.2}}{9.8}<t<\\frac{10+\\sqrt{41.2}}{9.8};\\frac{10\\sqrt3(10-\\sqrt{41.2})}{9.8}<x<\\frac{10\\sqrt3(10+\\sqrt{41.2})}{9.8};\\text{approximately }6.33<x<29.0\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "v^2=20^2+2g(2)=439.2;v=\\sqrt{439.2}\\approx21.0\\text{ m s}^{-1}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The ball clears the wall when its height is strictly above 5 m. Use energy for the final speed.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"x=20\\cos30^\\circ\\,t=10\\sqrt3\\,t\" data-display=\"true\"></span><span data-math=\"2+10t-4.9t^2&gt;5\" data-display=\"true\"></span><span data-math=\"4.9t^2-10t+3&lt;0\" data-display=\"true\"></span><span data-math=\"\\frac{10-\\sqrt{41.2}}{9.8}&lt;t&lt;\\frac{10+\\sqrt{41.2}}{9.8}\" data-display=\"true\"></span><span data-math=\"\\frac{10\\sqrt3(10-\\sqrt{41.2})}{9.8}&lt;x&lt;\\frac{10\\sqrt3(10+\\sqrt{41.2})}{9.8}\" data-display=\"true\"></span><span data-math=\"\\text{approximately }6.33&lt;x&lt;29.0\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"v^2=20^2+2g(2)=439.2\" data-display=\"true\"></span><span data-math=\"v=\\sqrt{439.2}\\approx21.0\\text{ m s}^{-1}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-2/ch6/exam/q51",
+      "status": "worked",
+      "method": "Use the speed loss to find height. The diagram shows impact on the descending branch, selecting the negative vertical component at Q.",
+      "steps": [
+        {
+          "latex": "12^2=16^2-2gh;h=\\frac{112}{19.6}=\\frac{40}7\\approx5.71\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u_x=16\\frac35=9.6,\\quad u_y=16\\frac45=12.8;v_y=-\\sqrt{12^2-9.6^2}=-7.2;12.8-9.8t=-7.2\\Rightarrow t=\\frac{100}{49};PQ_{\\rm horizontal}=9.6t=\\frac{960}{49}\\approx19.6\\text{ m}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the speed loss to find height. The diagram shows impact on the descending branch, selecting the negative vertical component at Q.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"12^2=16^2-2gh\" data-display=\"true\"></span><span data-math=\"h=\\frac{112}{19.6}=\\frac{40}7\\approx5.71\\text{ m}\" data-display=\"true\"></span></li><li><span data-math=\"u_x=16\\frac35=9.6,\\quad u_y=16\\frac45=12.8\" data-display=\"true\"></span><span data-math=\"v_y=-\\sqrt{12^2-9.6^2}=-7.2\" data-display=\"true\"></span><span data-math=\"12.8-9.8t=-7.2\\Rightarrow t=\\frac{100}{49}\" data-display=\"true\"></span><span data-math=\"PQ_{\\rm horizontal}=9.6t=\\frac{960}{49}\\approx19.6\\text{ m}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}

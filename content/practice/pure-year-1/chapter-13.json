@@ -1,0 +1,2955 @@
+{
+  "schemaVersion": 1,
+  "sourceFamily": "pure-year-1",
+  "chapterNumber": 13,
+  "chapterTitle": "Integration",
+  "sourcePdf": "resources/practice/pure-year-1/chapter-13.pdf",
+  "questions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "1",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.1",
+      "subchapterTitle": "13.1 Integrating $x^n$",
+      "number": "1",
+      "question": "<div>Find <span data-math=\"f(x)\"></span> when <span data-math=\"f&#x27;(x)\"></span> equals:<ol type=\"a\"><li value=\"1\"><span data-math=\"9x^2\"></span></li><li value=\"2\"><span data-math=\"12x^{-3}\"></span></li><li value=\"3\"><span data-math=\"6x^{5/2}\"></span></li><li value=\"4\">25</li></ol></div>",
+      "hints": [
+        "If <span data-math=\"f&#x27;(x)=x^n\"></span>, then<span data-math=\"f(x)=\\frac1{n+1}x^{n+1}+c,\\ n\\ne-1\" data-display=\"true\"></span>"
+      ],
+      "steps": [
+        "<p>Increase the exponent by one and divide by that new exponent; add an arbitrary constant C.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"f=\\frac93x^3+C=3x^3+C\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"f=\\frac{12}{-2}x^{-2}+C=-6x^{-2}+C\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"f=\\frac6{7/2}x^{7/2}+C=\\frac{12}7x^{7/2}+C\" data-display=\"true\"></span></li><li value=\"4\"><span data-math=\"f=25x+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "57798ff0c9d29b38a8ee622e3efa33ed721e3813ee785c40ad89c1e6c0ba2676",
+        "printedBookPage": "104",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            344.28,
+            68.247,
+            355.189
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.1 Integrating xⁿ"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "2",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.1",
+      "subchapterTitle": "13.1 Integrating $x^n$",
+      "number": "2",
+      "question": "<div>Find <span data-math=\"y\"></span> when <span data-math=\"\\frac{dy}{dx}\"></span> equals:<ol type=\"a\"><li value=\"1\"><span data-math=\"\\sqrt x\"></span></li><li value=\"2\"><span data-math=\"\\frac3{\\sqrt[3]x}\"></span></li><li value=\"3\"><span data-math=\"5\\sqrt[4]x\"></span></li><li value=\"4\"><span data-math=\"-\\frac1{6\\sqrt x}\"></span></li></ol></div>",
+      "hints": [
+        "First write each term in the form <span data-math=\"kx^n\"></span>.<br> If <span data-math=\"\\frac{dy}{dx}=kx^n\"></span>, then <span data-math=\"y=\\frac{k}{n+1}x^{n+1}+c\"></span>, <span data-math=\"n\\ne-1\"></span>"
+      ],
+      "steps": [
+        "<p>Write roots as powers, then integrate using ∫xⁿdx=xⁿ⁺¹/(n+1)+C.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"y&#x27;=x^{1/2}\" data-display=\"true\"></span><span data-math=\"y=\\frac23x^{3/2}+C\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"y&#x27;=3x^{-1/3}\" data-display=\"true\"></span><span data-math=\"y=\\frac3{2/3}x^{2/3}+C=\\frac92x^{2/3}+C\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"y&#x27;=5x^{1/4}\" data-display=\"true\"></span><span data-math=\"y=4x^{5/4}+C\" data-display=\"true\"></span></li><li value=\"4\"><span data-math=\"y&#x27;=-\\frac16x^{-1/2}\" data-display=\"true\"></span><span data-math=\"y=-\\frac13x^{1/2}+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "5b20323d718ace675365b78c66b364d8cb6e6bb74d4b1f5264df7f14b9814bc1",
+        "printedBookPage": "104",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            484.371,
+            68.247,
+            495.28
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.1 Integrating xⁿ"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "3",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.1",
+      "subchapterTitle": "13.1 Integrating $x^n$",
+      "number": "3",
+      "question": "<div>Find <span data-math=\"f(x)\"></span> when <span data-math=\"f&#x27;(x)\"></span> is given by each of the following expressions, giving your coefficients as simplified fractions.<ol type=\"a\"><li value=\"1\"><span data-math=\"x^4+x^3-5x+6\"></span></li><li value=\"2\"><span data-math=\"4x^2+\\frac13x^{-2}-5x^{-3}\"></span></li><li value=\"3\"><span data-math=\"3x^{-1/4}-2x^{-3/4}\"></span></li></ol></div>",
+      "hints": [
+        "Apply the rule of integration to each term in the expression and add <span data-math=\"c\"></span>."
+      ],
+      "steps": [
+        "<p>Integrate each power separately, dividing by its new exponent.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"f=\\frac15x^5+\\frac14x^4-\\frac52x^2+6x+C\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"f=\\frac43x^3-\\frac13x^{-1}+\\frac52x^{-2}+C\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"f=\\frac3{3/4}x^{3/4}-\\frac2{1/4}x^{1/4}+C\" data-display=\"true\"></span><span data-math=\"=4x^{3/4}-8x^{1/4}+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "f4b7dfb6d9c59e7e40dd3de13b382401dc5983ae50433ad2522b2a00ffe35219",
+        "printedBookPage": "104",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            622.422,
+            68.247,
+            633.331
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.1 Integrating xⁿ"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "4",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.1",
+      "subchapterTitle": "13.1 Integrating $x^n$",
+      "number": "4",
+      "question": "<div><span data-math=\"f&#x27;(x)=(4x+3)^2\"></span><ol type=\"a\"><li value=\"1\">Write <span data-math=\"f&#x27;(x)\"></span> in the form <span data-math=\"ax^2+bx+c\"></span>.</li><li value=\"2\">Hence find <span data-math=\"f(x)\"></span>.</li></ol></div>",
+      "hints": [
+        "First expand the brackets, then apply the rule of integration to each term in the expression and add the unknown constant."
+      ],
+      "steps": [
+        "<p>Expand the square before integrating term by term.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"f&#x27;=16x^2+24x+9\" data-display=\"true\"></span><span data-math=\"a=16,b=24,c=9\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"f=\\frac{16}3x^3+12x^2+9x+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "03cfb8557a91c90d6b1894191b13ba4309419b48d9ae577fe9a3a4a98f27fea1",
+        "printedBookPage": "104",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.1 Integrating xⁿ"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "5",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.1",
+      "subchapterTitle": "13.1 Integrating $x^n$",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  Find <span data-math=\"f(x)\"></span> given <span data-math=\"f&#x27;(x)=(3x-5)^2\"></span>.<span class=\"marks\">(4 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Expand, then integrate each term.</p><span data-math=\"f&#x27;=9x^2-30x+25\" data-display=\"true\"></span><span data-math=\"f=3x^3-15x^2+25x+C\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "c4c66c3f60128aea483ee396b90625f247364c58c7305c4c687655c02e691eee",
+        "printedBookPage": "104",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            149.758,
+            68.247,
+            160.667
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.1 Integrating xⁿ"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "6",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.1",
+      "subchapterTitle": "13.1 Integrating $x^n$",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  Find <span data-math=\"y\"></span> given <span data-math=\"\\frac{dy}{dx}=(1-3x)^2\"></span>.<span class=\"marks\">(4 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Expand, then integrate each term.</p><span data-math=\"y&#x27;=1-6x+9x^2\" data-display=\"true\"></span><span data-math=\"y=x-3x^2+3x^3+C\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "5c4f2a52536c54abd3c2d4b45d2efa20539d84dd710bdc41e5fb783d572fb52a",
+        "printedBookPage": "104",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            169.285,
+            68.247,
+            180.194
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.1 Integrating xⁿ"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "7",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.1",
+      "subchapterTitle": "13.1 Integrating $x^n$",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  <span data-math=\"h&#x27;(x)=(p-5x)^4\"></span><ol type=\"a\"><li value=\"1\">The coefficient of the <span data-math=\"x^3\"></span> term in the expansion of <span data-math=\"h&#x27;(x)\"></span> is <span data-math=\"-1000\"></span>.<br> Find the value of the constant <span data-math=\"p\"></span>.<span class=\"marks\">(4 marks)</span></li><li value=\"2\">Hence, or otherwise, find <span data-math=\"h(x)\"></span>.<span class=\"marks\">(2 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Use the binomial coefficient of x³ to determine p; then expand and integrate.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"\\binom43p(-5x)^3=-500px^3\" data-display=\"true\"></span><span data-math=\"-500p=-1000\" data-display=\"true\"></span><span data-math=\"p=2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"h&#x27;=(2-5x)^4=16-160x+600x^2-1000x^3+625x^4\" data-display=\"true\"></span><span data-math=\"h=16x-80x^2+200x^3-250x^4+125x^5+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "a84b887c47c8571b4fe3324796d9906d61f87c4b775a45ac9d38133e0167f0c9",
+        "printedBookPage": "104",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            188.811,
+            68.247,
+            199.72
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.1 Integrating xⁿ"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "8",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.1",
+      "subchapterTitle": "13.1 Integrating $x^n$",
+      "number": "8",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  <span data-math=\"f&#x27;(x)=(4-2\\sqrt x)^2\"></span><ol type=\"a\"><li value=\"1\">Write <span data-math=\"f&#x27;(x)\"></span> in the form <span data-math=\"a+b\\sqrt x+cx\"></span>, where <span data-math=\"a\"></span>, <span data-math=\"b\"></span> and <span data-math=\"c\"></span> are constants to be found.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">Hence find <span data-math=\"f(x)\"></span>.<span class=\"marks\">(3 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Expand the square and integrate powers of x.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"f&#x27;=16-16\\sqrt x+4x\" data-display=\"true\"></span><span data-math=\"a=16,b=-16,c=4\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"f=16x-\\frac{32}3x^{3/2}+2x^2+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "cc5fce2b460462e5d6090f53d05034e5953340d2423e7c2dc60ced31f5506389",
+        "printedBookPage": "104",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            252.24,
+            68.247,
+            263.149
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.1 Integrating xⁿ"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q9",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "9",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.1",
+      "subchapterTitle": "13.1 Integrating $x^n$",
+      "number": "9",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  <span data-math=\"g&#x27;(x)=(3-2x)^8\"></span><ol type=\"a\"><li value=\"1\">Find the first three terms, in ascending powers of <span data-math=\"x\"></span>, if the binomial expansion of <span data-math=\"g&#x27;(x)\"></span>, giving each term in its simplest form.<span class=\"marks\">(4 marks)</span></li><li value=\"2\">Assuming <span data-math=\"x\"></span> is small and higher powers can be ignored, use your answer to part <strong>a</strong> to find an approximation to <span data-math=\"g(x)\"></span> in the form <span data-math=\"px+qx^2+rx^3+c\"></span>.<span class=\"marks\">(1 mark)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Use the first three binomial terms and integrate the resulting polynomial approximation.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"g&#x27;=3^8+8(3^7)(-2x)+\\binom82(3^6)(-2x)^2+\\cdots\" data-display=\"true\"></span><span data-math=\"=6561-34992x+81648x^2+\\cdots\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"g(x)\\approx6561x-17496x^2+27216x^3+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "73b2482e7763372b97087ace9d4eccba5e37acd97f2d9f5dcfe6ef801088fa86",
+        "printedBookPage": "104",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            302.12,
+            68.247,
+            313.029
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.1 Integrating xⁿ"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "1",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.2",
+      "subchapterTitle": "13.2 Indefinite integrals",
+      "number": "1",
+      "question": "<div>Find the following integrals:<ol type=\"a\"><li value=\"1\"><span data-math=\"\\int x^4\\,dx\"></span></li><li value=\"2\"><span data-math=\"\\int-7x^6\\,dx\"></span></li><li value=\"3\"><span data-math=\"\\int4x^{-2}\\,dx\"></span></li></ol></div>",
+      "hints": [
+        "<span data-math=\"\\int kx^n\\,dx=\\frac{k}{n+1}x^{n+1}+c\"></span>, <span data-math=\"n\\ne-1\"></span>"
+      ],
+      "steps": [
+        "<p>Increase each exponent by one and divide by it; include the integration constant.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"\\int x^4\\,dx=\\frac15x^5+C\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"\\int-7x^6\\,dx=-\\frac77x^7+C=-x^7+C\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"\\int4x^{-2}\\,dx=-4x^{-1}+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "99410215e391f2def272fd444c9ccc918533162883a45c6705724d134f45c238",
+        "printedBookPage": "105",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            448.362,
+            68.247,
+            459.271
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.2 Indefinite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "2",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.2",
+      "subchapterTitle": "13.2 Indefinite integrals",
+      "number": "2",
+      "question": "<div>Find the following integrals:<ol type=\"a\"><li value=\"1\"><span data-math=\"\\int(5x^2+9x^{-3})\\,dx\"></span></li><li value=\"2\"><span data-math=\"\\int(\\frac34x^5-4x^{-5}+8x)\\,dx\"></span></li><li value=\"3\"><span data-math=\"\\int(4x^{3/2}-10x^{-3/2})\\,dx\"></span></li></ol></div>",
+      "hints": [
+        "Integrate each term separately:<span data-math=\"\\int(f(x)+g(x))\\,dx=\\int f(x)\\,dx+\\int g(x)\\,dx\" data-display=\"true\"></span>"
+      ],
+      "steps": [
+        "<p>Integrate term by term using the power rule.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"\\frac53x^3-\\frac92x^{-2}+C\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"\\frac{3/4}6x^6+\\frac{-4}{-4}x^{-4}+\\frac82x^2+C\" data-display=\"true\"></span><span data-math=\"=\\frac18x^6+x^{-4}+4x^2+C\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"\\frac4{5/2}x^{5/2}-\\frac{10}{-1/2}x^{-1/2}+C\" data-display=\"true\"></span><span data-math=\"=\\frac85x^{5/2}+20x^{-1/2}+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "457cd042d965b195f7799c3aa2a9633435aaa33c5b88e599f106ba7051f3adad",
+        "printedBookPage": "105",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            554.459,
+            68.247,
+            565.368
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.2 Indefinite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "3",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.2",
+      "subchapterTitle": "13.2 Indefinite integrals",
+      "number": "3",
+      "question": "<div>Find the following integrals:<ol type=\"a\"><li value=\"1\"><span data-math=\"\\int(6-5\\sqrt x)^2\\,dx\"></span></li><li value=\"2\"><span data-math=\"\\int\\frac{(3x-2)^2}{\\sqrt x}\\,dx\"></span></li><li value=\"3\"><span data-math=\"\\int\\left(\\frac{5-7x^3+4x^{-3/2}}{x^2}\\right)\\,dx\"></span></li></ol></div>",
+      "hints": [
+        "First expand the brackets or divide so each term is in the form <span data-math=\"kx^n\"></span>, then integrate."
+      ],
+      "steps": [
+        "<p>Expand or divide first, then integrate the individual powers.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(6-5\\sqrt x)^2=36-60x^{1/2}+25x\" data-display=\"true\"></span><span data-math=\"\\int=36x-40x^{3/2}+\\frac{25}2x^2+C\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"\\frac{(3x-2)^2}{\\sqrt x}=9x^{3/2}-12x^{1/2}+4x^{-1/2}\" data-display=\"true\"></span><span data-math=\"\\int=\\frac{18}5x^{5/2}-8x^{3/2}+8x^{1/2}+C\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"\\frac{5-7x^3+4x^{-3/2}}{x^2}=5x^{-2}-7x+4x^{-7/2}\" data-display=\"true\"></span><span data-math=\"\\int=-5x^{-1}-\\frac72x^2-\\frac85x^{-5/2}+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "03da2d6db5354c3567892ea5f8a8d0ed429152c8bce36e0c3ec0030942c76441",
+        "printedBookPage": "105",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            690.734,
+            68.247,
+            701.643
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.2 Indefinite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "4",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.2",
+      "subchapterTitle": "13.2 Indefinite integrals",
+      "number": "4",
+      "question": "<div>Find the following integrals:<ol type=\"a\"><li value=\"1\"><span data-math=\"\\int\\left(\\frac P{\\sqrt x}-Rx^{3/2}\\right)\\,dx\"></span></li><li value=\"2\"><span data-math=\"\\int\\left(\\frac A{x^3}+\\frac B{x^5}\\right)\\,dx\"></span></li><li value=\"3\"><span data-math=\"\\int(M\\sqrt[3]x-Nx^{3/4})\\,dx\"></span></li></ol></div>",
+      "hints": [
+        "Treat letters other than <span data-math=\"x\"></span> as constants."
+      ],
+      "steps": [
+        "<p>Treat capital letters as constants and integrate each power of x.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"\\int(Px^{-1/2}-Rx^{3/2})\\,dx=2Px^{1/2}-\\frac25Rx^{5/2}+C\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"\\int(Ax^{-3}+Bx^{-5})\\,dx=-\\frac12Ax^{-2}-\\frac14Bx^{-4}+C\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"\\int(Mx^{1/3}-Nx^{3/4})\\,dx=\\frac34Mx^{4/3}-\\frac47Nx^{7/4}+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "33d476096d811ed3b8584eb9b032dc2136dcc62dea33d76f97add276bb154520",
+        "printedBookPage": "105",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.2 Indefinite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "5",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.2",
+      "subchapterTitle": "13.2 Indefinite integrals",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  Given that <span data-math=\"y^{1/2}=6x^{1/5}-5\"></span>, find <span data-math=\"\\int y\\,dx\"></span><span class=\"marks\">(3 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Square the given expression to find y, then integrate.</p><span data-math=\"y=36x^{2/5}-60x^{1/5}+25\" data-display=\"true\"></span><span data-math=\"\\int y\\,dx=\\frac{180}7x^{7/5}-50x^{6/5}+25x+C\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "c4fe01203c8a1346a08c3bc79d4a5316696a984a02701169d0703d5c0e5b54c8",
+        "printedBookPage": "105",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            162.634,
+            68.247,
+            173.543
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.2 Indefinite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "6",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.2",
+      "subchapterTitle": "13.2 Indefinite integrals",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E</span>  Given that <span data-math=\"g(x)=3x^3-7\\sqrt x+\\frac4{\\sqrt[3]x}-\\frac2{x^2}\"></span>, find <span data-math=\"\\int g(x)\\,dx\"></span><span class=\"marks\">(4 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Rewrite all roots and denominators as powers of x.</p><span data-math=\"g=3x^3-7x^{1/2}+4x^{-1/3}-2x^{-2}\" data-display=\"true\"></span><span data-math=\"\\int g\\,dx=\\frac34x^4-\\frac{14}3x^{3/2}+6x^{2/3}+2x^{-1}+C\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "5a499addfff5255e8b78f11f328949a1ae35869840c67b943da387f2df443e2f",
+        "printedBookPage": "105",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            182.161,
+            68.247,
+            193.07
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.2 Indefinite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "7",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.2",
+      "subchapterTitle": "13.2 Indefinite integrals",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  <span data-math=\"\\int\\left(abx^2+\\frac{4b}{x^5}\\right)\\,dx=2x^3-\\frac2{x^4}+c\"></span>, where <span data-math=\"a\"></span> and <span data-math=\"b\"></span> are real constants.<br> Find the values of <span data-math=\"a\"></span> and <span data-math=\"b\"></span>.<span class=\"marks\">(4 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Differentiate the given antiderivative and compare coefficients.</p><span data-math=\"abx^2+4bx^{-5}=6x^2+8x^{-5}\" data-display=\"true\"></span><span data-math=\"4b=8\\Rightarrow b=2\" data-display=\"true\"></span><span data-math=\"ab=6\\Rightarrow a=3\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "c615714977b5688b3b3c95f5343a962b900a4b1a4ce0c8582b1cdd74a2948ffb",
+        "printedBookPage": "105",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            205.368,
+            68.247,
+            216.277
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.2 Indefinite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "8",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.2",
+      "subchapterTitle": "13.2 Indefinite integrals",
+      "number": "8",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  <span data-math=\"g(x)=(1+2x)(4-3x)^8\"></span><br> Given that <span data-math=\"x\"></span> is small, and so terms in <span data-math=\"x^3\"></span> and higher powers of <span data-math=\"x\"></span> can be ignored,<ol type=\"a\"><li value=\"1\">find an approximation for <span data-math=\"g(x)\"></span> in the form <span data-math=\"P+Qx+Rx^2\"></span><span class=\"marks\">(4 marks)</span></li><li value=\"2\">find an approximation for <span data-math=\"\\int g(x)\\,dx\"></span>.<span class=\"marks\">(3 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Expand to x² before multiplying by 1+2x and discard higher powers.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(4-3x)^8=65536-393216x+1032192x^2+\\cdots\" data-display=\"true\"></span><span data-math=\"g\\approx(1+2x)(65536-393216x+1032192x^2)\" data-display=\"true\"></span><span data-math=\"g\\approx65536-262144x+245760x^2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"\\int g\\,dx\\approx65536x-131072x^2+81920x^3+C\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "4b519154e28faa18e7187a12ff126ac236639dad3bd68bf3adb7daf4b1493a5d",
+        "printedBookPage": "105",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            237.714,
+            68.247,
+            248.623
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.2 Indefinite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "1",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.3",
+      "subchapterTitle": "13.3 Finding functions",
+      "number": "1",
+      "question": "<div>Find the equation of the curve with the given derivative of <span data-math=\"y\"></span> with respect to <span data-math=\"x\"></span> that passes through the given point:<ol type=\"a\"><li value=\"1\"><span data-math=\"\\frac{dy}{dx}=4x^3-10x^2\"></span>; point <span data-math=\"(3,6)\"></span></li><li value=\"2\"><span data-math=\"\\frac{dy}{dx}=\\frac5{\\sqrt x}+\\frac12x^2\"></span>; point <span data-math=\"(16,65)\"></span></li></ol></div>",
+      "hints": [
+        "Apply the rule of integration and then substitute the given values of <span data-math=\"x\"></span> and <span data-math=\"y\"></span> to find the constant <span data-math=\"c\"></span>."
+      ],
+      "steps": [
+        "<p>Integrate, then use the given point to determine C.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"y=x^4-\\frac{10}3x^3+C\" data-display=\"true\"></span><span data-math=\"6=81-90+C\\Rightarrow C=15\" data-display=\"true\"></span><span data-math=\"y=x^4-\\frac{10}3x^3+15\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"y=10\\sqrt x+\\frac16x^3+C\" data-display=\"true\"></span><span data-math=\"65=40+\\frac{4096}6+C\" data-display=\"true\"></span><span data-math=\"C=-\\frac{1973}3\" data-display=\"true\"></span><span data-math=\"y=10\\sqrt x+\\frac16x^3-\\frac{1973}3\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "1f4fdc2f8b32366014e8b06a2ae2ee11833b57be89c0513d5060016b68e64dfc",
+        "printedBookPage": "105--106",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            371.012,
+            68.247,
+            381.921
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.3 Finding functions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "2",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.3",
+      "subchapterTitle": "13.3 Finding functions",
+      "number": "2",
+      "question": "<div>Find the equation of the curve with the given derivative of <span data-math=\"y\"></span> with respect to <span data-math=\"x\"></span> that passes through the given point:<ol type=\"a\"><li value=\"1\"><span data-math=\"\\frac{dy}{dx}=\\frac{3-x^2}{x^4}\"></span>; point <span data-math=\"(-1,4)\"></span></li><li value=\"2\"><span data-math=\"\\frac{dy}{dx}=(x-5)^2\"></span>; point <span data-math=\"(2,18)\"></span></li></ol></div>",
+      "hints": [
+        "Begin by writing each term in the form <span data-math=\"ax^n\"></span>, then integrate and finally substitute to find the value of the constant <span data-math=\"c\"></span>."
+      ],
+      "steps": [
+        "<p>Simplify or expand the derivative before integrating and applying the point.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"y&#x27;=3x^{-4}-x^{-2}\" data-display=\"true\"></span><span data-math=\"y=-x^{-3}+x^{-1}+C\" data-display=\"true\"></span><span data-math=\"4=1-1+C\" data-display=\"true\"></span><span data-math=\"C=4\" data-display=\"true\"></span><span data-math=\"y=-x^{-3}+x^{-1}+4\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"y&#x27;=x^2-10x+25\" data-display=\"true\"></span><span data-math=\"y=\\frac13x^3-5x^2+25x+C\" data-display=\"true\"></span><span data-math=\"18=\\frac83-20+50+C\" data-display=\"true\"></span><span data-math=\"C=-\\frac{44}3\" data-display=\"true\"></span><span data-math=\"y=\\frac13x^3-5x^2+25x-\\frac{44}3\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "de8c6ea316ff173b7c867ce6e9988a8d32816b07b3eccc58ec32949ff593fb1c",
+        "printedBookPage": "105--106",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            475.869,
+            68.247,
+            486.778
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.3 Finding functions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "3",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.3",
+      "subchapterTitle": "13.3 Finding functions",
+      "number": "3",
+      "question": "<div>The gradient of a curve, with equation <span data-math=\"y=f(x)\"></span>, is given by <span data-math=\"f&#x27;(x)=\\frac8{\\sqrt x}-4\\sqrt x\"></span><br> The curve passes through the point <span data-math=\"(9,-30)\"></span>.<br> Find the equation of the curve in the form <span data-math=\"y=f(x)\"></span>.</div>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate each fractional power and substitute (9,−30).</p><span data-math=\"y=16\\sqrt x-\\frac83x^{3/2}+C\" data-display=\"true\"></span><span data-math=\"-30=48-72+C\" data-display=\"true\"></span><span data-math=\"C=-6\" data-display=\"true\"></span><span data-math=\"y=16\\sqrt x-\\frac83x^{3/2}-6\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "b31c1e59f96477c3612b35ca32024a2351fa856852c016c63ea509035a8a354f",
+        "printedBookPage": "105--106",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            590.162,
+            68.247,
+            601.071
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.3 Finding functions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "4",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.3",
+      "subchapterTitle": "13.3 Finding functions",
+      "number": "4",
+      "question": "<div><span class=\"practice-tag\">E</span>  <span data-math=\"\\frac{dy}{dx}=10-6x-4x^2\"></span>. Given that <span data-math=\"y=-15\"></span> when <span data-math=\"x=3\"></span>, find <span data-math=\"y\"></span> in terms of <span data-math=\"x\"></span>.<span class=\"marks\">(4 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate the polynomial and use the stated value.</p><span data-math=\"y=10x-3x^2-\\frac43x^3+C\" data-display=\"true\"></span><span data-math=\"-15=30-27-36+C\" data-display=\"true\"></span><span data-math=\"C=18\" data-display=\"true\"></span><span data-math=\"y=10x-3x^2-\\frac43x^3+18\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "8768754c92d692bb674024bcba087d104d049d8a5e225fd034e919ff015898f4",
+        "printedBookPage": "105--106",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            639.313,
+            68.247,
+            650.222
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.3 Finding functions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "5",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.3",
+      "subchapterTitle": "13.3 Finding functions",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E</span>  <span data-math=\"f&#x27;(x)=\\frac{5\\sqrt x-3x^{3/2}}{x^2}\"></span><br> The curve with equation <span data-math=\"y=f(x)\"></span> passes through the point <span data-math=\"(4,7)\"></span>. Find <span data-math=\"f(x)\"></span>.<span class=\"marks\">(5 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Divide by x² before integrating.</p><span data-math=\"f&#x27;=5x^{-3/2}-3x^{-1/2}\" data-display=\"true\"></span><span data-math=\"f=-10x^{-1/2}-6x^{1/2}+C\" data-display=\"true\"></span><span data-math=\"7=-5-12+C\" data-display=\"true\"></span><span data-math=\"C=24\" data-display=\"true\"></span><span data-math=\"f=-10x^{-1/2}-6x^{1/2}+24\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "61473c47412c908c26b79c7aaaddbb49ed6bdabf19297f2cf0d39b46e612260a",
+        "printedBookPage": "105--106",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            662.592,
+            68.247,
+            673.501
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.3 Finding functions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "6",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.3",
+      "subchapterTitle": "13.3 Finding functions",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E</span>  The gradient of a curve, with equation <span data-math=\"y=f(x)\"></span>, is given by <span data-math=\"f&#x27;(x)=6x-\\frac4{\\sqrt[3]x}\"></span><br> The curve passes through the point <span data-math=\"(8,112)\"></span>.<br> Find the equation of the curve in the form <span data-math=\"y=f(x)\"></span>.<span class=\"marks\">(4 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate, then substitute x=8 and y=112.</p><span data-math=\"f=3x^2-6x^{2/3}+C\" data-display=\"true\"></span><span data-math=\"112=192-24+C\" data-display=\"true\"></span><span data-math=\"C=-56\" data-display=\"true\"></span><span data-math=\"f=3x^2-6x^{2/3}-56\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "94404c0e56e039f14a9a22ce4e53d74c3c2381012dea828714fe7901c2873d2b",
+        "printedBookPage": "105--106",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            695.274,
+            68.247,
+            706.183
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.3 Finding functions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "7",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.3",
+      "subchapterTitle": "13.3 Finding functions",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  <span data-math=\"p&#x27;(x)=\\frac{(1-5x)^3}{\\sqrt{x^3}}\"></span><ol type=\"a\"><li value=\"1\">Show that <span data-math=\"p&#x27;(x)=ax^{-3/2}+bx^{-1/2}+cx^{1/2}+dx^{3/2}\"></span> where <span data-math=\"a\"></span>, <span data-math=\"b\"></span>, <span data-math=\"c\"></span> and <span data-math=\"d\"></span> are constants to be found.<span class=\"marks\">(4 marks)</span></li><li value=\"2\">Given that the point <span data-math=\"(1,-24)\"></span> lies on the curve with equation <span data-math=\"y=p(x)\"></span>, find <span data-math=\"p(x)\"></span>.<span class=\"marks\">(3 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Expand the numerator, divide each term by x³ᐟ² and integrate.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"p&#x27;=\\frac{1-15x+75x^2-125x^3}{x^{3/2}}\" data-display=\"true\"></span><span data-math=\"=x^{-3/2}-15x^{-1/2}+75x^{1/2}-125x^{3/2}\" data-display=\"true\"></span><span data-math=\"a=1,b=-15,c=75,d=-125\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"p=-2x^{-1/2}-30x^{1/2}+50x^{3/2}-50x^{5/2}+C\" data-display=\"true\"></span><span data-math=\"-24=-2-30+50-50+C\" data-display=\"true\"></span><span data-math=\"C=8\" data-display=\"true\"></span><span data-math=\"p=-2x^{-1/2}-30x^{1/2}+50x^{3/2}-50x^{5/2}+8\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "88e1fab4cf5f0c091ec5e3c5653e69a979fc5833bc13397e686318ee2566b7a9",
+        "printedBookPage": "105--106",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            53.428,
+            68.247,
+            64.337
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.3 Finding functions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "8",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.3",
+      "subchapterTitle": "13.3 Finding functions",
+      "number": "8",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  Given that <span data-math=\"h&#x27;(x)=\\frac32x^2-\\frac1{4\\sqrt x}\"></span> and <span data-math=\"h(4)=-10\"></span>, find the exact value of <span data-math=\"h(2)\"></span>.<span class=\"marks\">(4 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Find the antiderivative and use h(4) before evaluating h(2).</p><span data-math=\"h=\\frac12x^3-\\frac12\\sqrt x+C\" data-display=\"true\"></span><span data-math=\"-10=32-1+C\" data-display=\"true\"></span><span data-math=\"C=-41\" data-display=\"true\"></span><span data-math=\"h(2)=4-\\frac12\\sqrt2-41=-37-\\frac12\\sqrt2\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.36"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "aad832895e48a5f59bf271a269b3b6edf8397820d283dc0e319a9a87c8b6189d",
+        "printedBookPage": "105--106",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            120.833,
+            68.247,
+            131.742
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.3 Finding functions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "1",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.4",
+      "subchapterTitle": "13.4 Definite integrals",
+      "number": "1",
+      "question": "<div>Evaluate the following definite integrals.<ol type=\"a\"><li value=\"1\"><span data-math=\"\\int_2^{10}x^2\\,dx\"></span></li><li value=\"2\"><span data-math=\"\\int_1^8 6\\sqrt[3]x\\,dx\"></span></li><li value=\"3\"><span data-math=\"\\int_2^4\\frac4{x^3}\\,dx\"></span></li><li value=\"4\"><span data-math=\"\\int_4^9\\frac5{\\sqrt x}\\,dx\"></span></li></ol></div>",
+      "hints": [
+        "If <span data-math=\"f&#x27;(x)\"></span> is the derivative of <span data-math=\"f(x)\"></span> for all values of <span data-math=\"x\"></span> in the interval <span data-math=\"[a,b]\"></span> then the definite integral is defined as<span data-math=\"\\int_a^b f&#x27;(x)\\,dx=[f(x)]_a^b=f(b)-f(a)\" data-display=\"true\"></span>"
+      ],
+      "steps": [
+        "<p>Evaluate an antiderivative at the upper limit minus its value at the lower limit.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"[\\frac13x^3]_2^{10}=\\frac{1000-8}3=\\frac{992}3\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"[\\frac92x^{4/3}]_1^8=\\frac92(16-1)=\\frac{135}2\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"[-2x^{-2}]_2^4=-\\frac18+\\frac12=\\frac38\" data-display=\"true\"></span></li><li value=\"4\"><span data-math=\"[10\\sqrt x]_4^9=30-20=10\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "0151dfed074f1d084f1aa1c4e8d87d5571826fb9681a6629f536b228edc0e89c",
+        "printedBookPage": "106--107",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            213.06,
+            68.247,
+            223.969
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.4 Definite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "2",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.4",
+      "subchapterTitle": "13.4 Definite integrals",
+      "number": "2",
+      "question": "<div>Evaluate the following definite integrals.<ol type=\"a\"><li value=\"1\"><span data-math=\"\\int_1^2\\left(18x-\\frac4{x^3}\\right)\\,dx\"></span></li><li value=\"2\"><span data-math=\"\\int_1^4\\frac1{\\sqrt x}(14x^3-5x^2)\\,dx\"></span></li><li value=\"3\"><span data-math=\"\\int_1^{36}\\left(2\\sqrt x-\\frac6x\\right)^2\\,dx\"></span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Simplify the integrand, find an antiderivative, then subtract endpoint values.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"[9x^2+2x^{-2}]_1^2=(36+\\frac12)-(9+2)=\\frac{51}2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"\\int_1^4(14x^{5/2}-5x^{3/2})\\,dx\" data-display=\"true\"></span><span data-math=\"=[4x^{7/2}-2x^{5/2}]_1^4\" data-display=\"true\"></span><span data-math=\"=(512-64)-(4-2)=446\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"(2\\sqrt x-\\frac6x)^2=4x-24x^{-1/2}+36x^{-2}\" data-display=\"true\"></span><span data-math=\"[2x^2-48\\sqrt x-36x^{-1}]_1^{36}\" data-display=\"true\"></span><span data-math=\"=(2592-288-1)-(2-48-36)=2385\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "576f2f2efbc4a37f702842ead3a99ca7e063fb7ee943af3229dc4bd06ec53b84",
+        "printedBookPage": "106--107",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            376.519,
+            68.247,
+            387.428
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.4 Definite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "3",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.4",
+      "subchapterTitle": "13.4 Definite integrals",
+      "number": "3",
+      "question": "<div>Use calculus to find the value of <span data-math=\"\\int_1^2\\left(\\frac5{x^2}-\\frac3{x^4}\\right)\\,dx\"></span></div>",
+      "hints": [
+        "This question says ‘use calculus’ so you need to use integration and show the integrated function. Do not use a numerical integration function on your calculator."
+      ],
+      "steps": [
+        "<p>Integrate the negative powers and subtract endpoint values.</p><span data-math=\"[-5x^{-1}+x^{-3}]_1^2=(-\\frac52+\\frac18)-(-5+1)=\\frac{13}8\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "ef92a2c4b9899e9597ebbe58e24afca6c243f13192def0a3c247ff455373cf1b",
+        "printedBookPage": "106--107",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            452.1,
+            68.247,
+            463.009
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.4 Definite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "4",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.4",
+      "subchapterTitle": "13.4 Definite integrals",
+      "number": "4",
+      "question": "<div><span class=\"practice-tag\">E</span>  Use calculus to find the value of <span data-math=\"\\int_1^{16}\\left(\\frac2{x^2}+4\\sqrt x\\right)\\,dx\"></span><span class=\"marks\">(4 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate each power of x and use the limits.</p><span data-math=\"[-2x^{-1}+\\frac83x^{3/2}]_1^{16}\" data-display=\"true\"></span><span data-math=\"=(-\\frac18+\\frac{512}3)-(-2+\\frac83)=\\frac{1359}8\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "8c6bc8a238c54ce3744e2eb75cb5614f34ea56cc26468b1752b012126837855c",
+        "printedBookPage": "106--107",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            521.373,
+            68.247,
+            532.282
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.4 Definite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "5",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.4",
+      "subchapterTitle": "13.4 Definite integrals",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E</span>  Use calculus to find the value of <span data-math=\"\\int_1^4\\left(\\frac{8x^3}3-\\frac6{x^2}-\\frac2{\\sqrt x}\\right)\\,dx\"></span><span class=\"marks\">(4 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate term by term and subtract the lower endpoint value.</p><span data-math=\"[\\frac23x^4+6x^{-1}-4x^{1/2}]_1^4\" data-display=\"true\"></span><span data-math=\"=(\\frac{512}3+\\frac32-8)-(\\frac23+6-4)=\\frac{323}2=161.5\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "55b6eee7130c366d79af1da5259ec3c58f72bb89a3e36d26aa29e0e363e6963d",
+        "printedBookPage": "106--107",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            544.941,
+            68.247,
+            555.85
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.4 Definite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "6",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.4",
+      "subchapterTitle": "13.4 Definite integrals",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  Given that <span data-math=\"\\int_4^k9\\sqrt x\\,dx=702\"></span>, find the value of <span data-math=\"k\"></span>.<span class=\"marks\">(4 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Use the antiderivative to form an equation for the upper limit.</p><span data-math=\"[6x^{3/2}]_4^k=702\" data-display=\"true\"></span><span data-math=\"6(k^{3/2}-8)=702\" data-display=\"true\"></span><span data-math=\"k^{3/2}=125\" data-display=\"true\"></span><span data-math=\"k=125^{2/3}=25\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "342587d3e8c9ef435c823ad5b2d41227d9de9632e46d6c0378a28707cdb4e9f5",
+        "printedBookPage": "106--107",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            570.174,
+            68.247,
+            581.083
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.4 Definite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "7",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.4",
+      "subchapterTitle": "13.4 Definite integrals",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E</span>  <span data-math=\"y^{1/2}=2x^{1/3}-\\frac12x^{-1/3}\"></span><ol type=\"a\"><li value=\"1\">Show that <span data-math=\"y=ax^{2/3}+bx^{-2/3}+c\"></span>, where <span data-math=\"a\"></span>, <span data-math=\"b\"></span> and <span data-math=\"c\"></span> are constants to be found.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">Find <span data-math=\"\\int_1^8y\\,dx\"></span><span class=\"marks\">(3 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Square the expression, then integrate its three powers.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"y=4x^{2/3}+\\frac14x^{-2/3}-2\" data-display=\"true\"></span><span data-math=\"a=4,b=\\frac14,c=-2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"[\\frac{12}5x^{5/3}+\\frac34x^{1/3}-2x]_1^8\" data-display=\"true\"></span><span data-math=\"=\\frac{12}5(32-1)+\\frac34(2-1)-2(8-1)\" data-display=\"true\"></span><span data-math=\"=\\frac{1223}{20}\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "199f8d9e10ac54976eca2713f518ba4445578804eb5b65855693a0eeea8ee2c7",
+        "printedBookPage": "106--107",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            590.916,
+            68.247,
+            601.825
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.4 Definite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "8",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.4",
+      "subchapterTitle": "13.4 Definite integrals",
+      "number": "8",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  Given that <span data-math=\"\\int_4^9a\\sqrt x\\,dx=-114\"></span>, find the value of <span data-math=\"a\"></span>.<span class=\"marks\">(3 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Factor out the constant a and evaluate the definite integral.</p><span data-math=\"\\frac{2a}3[x^{3/2}]_4^9=-114\" data-display=\"true\"></span><span data-math=\"\\frac{2a}3(27-8)=-114\" data-display=\"true\"></span><span data-math=\"\\frac{38a}3=-114\" data-display=\"true\"></span><span data-math=\"a=-9\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "8913684e7a07980293b243b01bec184cdd078abd1ddfda5d0235ccc176ba3d66",
+        "printedBookPage": "106--107",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            644.719,
+            68.247,
+            655.628
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.4 Definite integrals"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "1",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.5",
+      "subchapterTitle": "13.5 Areas under curves",
+      "number": "1",
+      "question": "<div>The diagram shows part of the curve <span data-math=\"C\"></span> with equation <span data-math=\"y=-x^3-x^2+x+1\"></span>.<img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/16a94455b259c24549cf.png\" alt=\"Original question diagram\">Find the area of the shaded region.</div>",
+      "hints": [
+        "The area between a positive curve, the <span data-math=\"x\"></span>-axis and the lines <span data-math=\"x=a\"></span> and <span data-math=\"x=b\"></span> is given by<span data-math=\"\\text{Area}=\\int_a^b y\\,dx\" data-display=\"true\"></span>where <span data-math=\"y=f(x)\"></span> is the equation of the curve."
+      ],
+      "steps": [
+        "<p>The graph is above the x-axis between −1 and 1, so integrate over those limits.</p><span data-math=\"A=\\int_{-1}^1(-x^3-x^2+x+1)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac14x^4-\\frac13x^3+\\frac12x^2+x]_{-1}^1\" data-display=\"true\"></span><span data-math=\"=\\frac{11}{12}-(-\\frac5{12})=\\frac43\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "66cf002f82dce4ec3cef66e9b54f0812b98c89f47cf74be23d2efec63dd41333",
+        "printedBookPage": "107--108",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            102.215,
+            68.247,
+            113.124
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.5 Areas under curves"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "2",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.5",
+      "subchapterTitle": "13.5 Areas under curves",
+      "number": "2",
+      "question": "<div>The diagram shows a sketch of the curve with equation <span data-math=\"y=x^2-7x+10\"></span>.<img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/bac5298dd1e01ff78eb9.png\" alt=\"Original question diagram\">Find:<ol type=\"a\"><li value=\"1\">the coordinates of point <span data-math=\"A\"></span></li><li value=\"2\">the area of the shaded region <span data-math=\"R\"></span>.</li></ol></div>",
+      "hints": [
+        "First solve <span data-math=\"x^2-7x+10=0\"></span>. The <span data-math=\"x\"></span>-coordinate of the point <span data-math=\"A\"></span> will be the smaller of the two answers."
+      ],
+      "steps": [
+        "<p>Factor the quadratic to identify A, then use the shaded interval from −1 to A.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"x^2-7x+10=(x-2)(x-5)=0\" data-display=\"true\"></span><span data-math=\"A=(2,0)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"A_R=\\int_{-1}^2(x^2-7x+10)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac13x^3-\\frac72x^2+10x]_{-1}^2\" data-display=\"true\"></span><span data-math=\"=\\frac{26}3-(-\\frac{83}6)=\\frac{45}2\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "0b2900bf6d1eb05c7b78a10877720a5c29ec982ff3827592ffbb4ed667f30abc",
+        "printedBookPage": "107--108",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            326.124,
+            68.247,
+            337.033
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.5 Areas under curves"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "3",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.5",
+      "subchapterTitle": "13.5 Areas under curves",
+      "number": "3",
+      "question": "<div><span data-math=\"f(x)=5x^2+\\frac2{x^3}-5\"></span>, <span data-math=\"x&gt;0\"></span>.<br> The diagram shows the curve with equation <span data-math=\"y=f(x)\"></span>.<img style=\"max-width:50mm\" class=\"practice-figure\"  src=\"content/practice/assets/efa14ae2742238a68dec.png\" alt=\"Original question diagram\">The region <span data-math=\"R\"></span> is bounded by the curve, the <span data-math=\"x\"></span>-axis and the lines <span data-math=\"x=\\frac12\"></span> and <span data-math=\"x=2\"></span>. Use calculus to find the exact area of <span data-math=\"R\"></span>.</div>",
+      "hints": [
+        "The question says ‘use calculus’, so you need to show the integrated function in your working."
+      ],
+      "steps": [
+        "<p>The curve is above the axis throughout the shaded interval; integrate between the given vertical boundaries.</p><span data-math=\"A=\\int_{1/2}^2(5x^2+2x^{-3}-5)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac53x^3-x^{-2}-5x]_{1/2}^2\" data-display=\"true\"></span><span data-math=\"=\\frac{37}{12}-(-\\frac{151}{24})=\\frac{75}8\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "4b5615555161304e6023d7b982cc28a7f4b2b27cd62260eae6894978b641f824",
+        "printedBookPage": "107--108",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.5 Areas under curves"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "4",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.5",
+      "subchapterTitle": "13.5 Areas under curves",
+      "number": "4",
+      "question": "<div><span class=\"practice-tag\">E</span>  The diagram shows the curve with equation <span data-math=\"y=g(x)\"></span>, where <span data-math=\"g(x)=12+4x-x^2\"></span>, <span data-math=\"x\\geq0\"></span>.<img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/c57eb4e31e79bbb1d9cd.png\" alt=\"Original question diagram\">The curve meets the <span data-math=\"x\"></span>-axis at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>. Find:<ol type=\"a\"><li value=\"1\">the coordinates of points <span data-math=\"A\"></span> and <span data-math=\"B\"></span><span class=\"marks\">(2 marks)</span></li><li value=\"2\">the exact area of region <span data-math=\"R\"></span>.<span class=\"marks\">(4 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>The printed domain x≥0 conflicts with the negative intercept A shown in the diagram. Both the literal-domain result and the illustrated intended region are given.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><p>For the full parabola A=(−2,0), but A is excluded by the stated domain. Thus the stated curve has only the intercept B.</p><span data-math=\"12+4x-x^2=-(x-6)(x+2)=0\" data-display=\"true\"></span><span data-math=\"x=-2,6\" data-display=\"true\"></span><span data-math=\"B=(6,0)\" data-display=\"true\"></span></li><li value=\"2\"><p>The drawn region and supplied answer use the whole parabola, giving 256/3. If x≥0 is enforced, only the portion from 0 to 6 remains, with area 72.</p><span data-math=\"F(x)=12x+2x^2-\\frac13x^3\" data-display=\"true\"></span><span data-math=\"\\int_{-2}^6g(x)\\,dx=F(6)-F(-2)=72+\\frac{40}3=\\frac{256}3\" data-display=\"true\"></span><span data-math=\"\\int_0^6g(x)\\,dx=72\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "0403cf7d89b61eacb5527a9482fd8ec4a41d0831dcc3e1bdceb91123d4cf6177",
+        "printedBookPage": "107--108",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            325.381,
+            68.247,
+            336.29
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.5 Areas under curves"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "5",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.5",
+      "subchapterTitle": "13.5 Areas under curves",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  <span data-math=\"h(x)=-(x-1)^2(x-4)\"></span>. The diagram shows the curve with equation <span data-math=\"y=h(x)\"></span>.<img style=\"max-width:50mm\" class=\"practice-figure\"  src=\"content/practice/assets/4deff326c02e6857badd.png\" alt=\"Original question diagram\">The curve meets the <span data-math=\"x\"></span>-axis at the points <span data-math=\"P\"></span> and <span data-math=\"Q\"></span>.<br> Use calculus to find the exact area of region <span data-math=\"R\"></span>.<span class=\"marks\">(6 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>The shaded region is between the roots 1 and 4, where h is nonnegative.</p><span data-math=\"h=-x^3+6x^2-9x+4\" data-display=\"true\"></span><span data-math=\"A=\\int_1^4h(x)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac14x^4+2x^3-\\frac92x^2+4x]_1^4\" data-display=\"true\"></span><span data-math=\"=8-\\frac54=\\frac{27}4\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "5a63deb31181e4bb41c5cba5c54916620e4e93819ff5223933b8b87d3678b727",
+        "printedBookPage": "107--108",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            501.089,
+            68.247,
+            511.998
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.5 Areas under curves"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "6",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.5",
+      "subchapterTitle": "13.5 Areas under curves",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E</span>  <span data-math=\"p(x)=8\\sqrt x-x^2\"></span>. The diagram shows the curve with equation <span data-math=\"y=p(x)\"></span>.<img style=\"max-width:50mm\" class=\"practice-figure\"  src=\"content/practice/assets/3044852377d995dbd37e.png\" alt=\"Original question diagram\">The curve meets the <span data-math=\"x\"></span>-axis at the origin and at the point <span data-math=\"A\"></span>.<br> Find:<ol type=\"a\"><li value=\"1\">the coordinates of point <span data-math=\"A\"></span><span class=\"marks\">(2 marks)</span></li><li value=\"2\">the exact area of region <span data-math=\"R\"></span>.<span class=\"marks\">(4 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Solve the nonzero root, then integrate above the axis from 0 to that root.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"8\\sqrt x-x^2=\\sqrt x(8-x^{3/2})=0\" data-display=\"true\"></span><span data-math=\"x^{3/2}=8\\Rightarrow x=4\" data-display=\"true\"></span><span data-math=\"A=(4,0)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"A_R=\\int_0^4(8x^{1/2}-x^2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac{16}3x^{3/2}-\\frac13x^3]_0^4\" data-display=\"true\"></span><span data-math=\"=\\frac{128}3-\\frac{64}3=\\frac{64}3\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "8422c07baf0f5337a46432eda35edb4b7700ed5eeb9376d3c6561e98693d551c",
+        "printedBookPage": "107--108",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.5 Areas under curves"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "7",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.5",
+      "subchapterTitle": "13.5 Areas under curves",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The shaded region is bounded by the curve with equation <span data-math=\"y=6x^2-12x+9\"></span>, the <span data-math=\"x\"></span>- and <span data-math=\"y\"></span>-axes and the line <span data-math=\"x=k\"></span>. Given that the area of the shaded region is 27, find the value of <span data-math=\"k\"></span>.<img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/f8797b09f9fe32660966.png\" alt=\"Original question diagram\"><span class=\"marks\">(6 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>The integrand is positive, so integrate from 0 to k and equate to 27.</p><span data-math=\"\\int_0^k(6x^2-12x+9)\\,dx=27\" data-display=\"true\"></span><span data-math=\"2k^3-6k^2+9k-27=0\" data-display=\"true\"></span><span data-math=\"(k-3)(2k^2+9)=0\" data-display=\"true\"></span><span data-math=\"2k^2+9&gt;0\\Rightarrow k=3\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "5461e813823d65e942c597ed5d760a1deae38b58f53cfac95e9776b9731c7a36",
+        "printedBookPage": "107--108",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            222.229,
+            68.247,
+            233.138
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.5 Areas under curves"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "1",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.6",
+      "subchapterTitle": "13.6 Areas under the $x$-axis",
+      "number": "1",
+      "question": "<div>Find the area of the finite region bounded by the curve <span data-math=\"y=x^2-x-6\"></span> and the <span data-math=\"x\"></span>-axis.<img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/beb40b6a4e326155208d.png\" alt=\"Original question diagram\"></div>",
+      "hints": [
+        "Find <span data-math=\"\\int_{-2}^3(x^2-x-6)\\,dx\"></span>. The value of the definite integral will be negative because the area is below the <span data-math=\"x\"></span>-axis, but you should state the positive quantity as the final answer."
+      ],
+      "steps": [
+        "<p>Find the two roots and reverse the sign of the integral because the curve is below the axis.</p><span data-math=\"x^2-x-6=(x+2)(x-3)\" data-display=\"true\"></span><span data-math=\"A=-\\int_{-2}^3(x^2-x-6)\\,dx\" data-display=\"true\"></span><span data-math=\"=-[\\frac13x^3-\\frac12x^2-6x]_{-2}^3\" data-display=\"true\"></span><span data-math=\"=-(-\\frac{27}2-\\frac{22}3)=\\frac{125}6\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "424c0b794672a7ba2581172c699e37fec5b6ffd920eec239128e57e0aab0cd69",
+        "printedBookPage": "108--109",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            58.494,
+            102.215,
+            68.247,
+            113.124
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.6 Areas under the x-axis"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "2",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.6",
+      "subchapterTitle": "13.6 Areas under the $x$-axis",
+      "number": "2",
+      "question": "<div>The graph shows a sketch of part of the curve <span data-math=\"C\"></span> with equation <span data-math=\"y=(x+1)(x-2)(x-4)\"></span>. The curve cuts the <span data-math=\"x\"></span>-axis at <span data-math=\"(-1,0)\"></span> and at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/59da2810f6bc1c5267ec.png\" alt=\"Original question diagram\"><ol type=\"a\"><li value=\"1\">Write down the <span data-math=\"x\"></span>-coordinates of the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.</li><li value=\"2\">Find the area of the shaded region <span data-math=\"R\"></span>.</li></ol></div>",
+      "hints": [
+        "The limits of the integral will be the <span data-math=\"x\"></span>-coordinates of points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>."
+      ],
+      "steps": [
+        "<p>The shaded region is below the axis between A and B.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"x_A=2,\\quad x_B=4\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"y=x^3-5x^2+2x+8\" data-display=\"true\"></span><span data-math=\"A_R=-\\int_2^4y\\,dx\" data-display=\"true\"></span><span data-math=\"=-[\\frac14x^4-\\frac53x^3+x^2+8x]_2^4\" data-display=\"true\"></span><span data-math=\"=-\\left(\\frac{16}3-\\frac{32}3\\right)=\\frac{16}3\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "de356c7301c2f661409bf0e79c1f48f6677de6683ae8e3dfb1c2939f52a33ac8",
+        "printedBookPage": "108--109",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            58.494,
+            327.474,
+            68.247,
+            338.383
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.6 Areas under the x-axis"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "3",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.6",
+      "subchapterTitle": "13.6 Areas under the $x$-axis",
+      "number": "3",
+      "question": "<div>The diagram shows the region bounded by the curve <span data-math=\"y=-x^3+5x^2-6x\"></span> and the <span data-math=\"x\"></span>-axis.<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/1b22a3b92e8d45515150.png\" alt=\"Original question diagram\">Find:<ol type=\"a\"><li value=\"1\">the area of region <span data-math=\"R_1\"></span></li><li value=\"2\">the area of region <span data-math=\"R_2\"></span></li><li value=\"3\">the total area of the shaded region.</li></ol></div>",
+      "hints": [
+        "To find the total shaded area, find the areas of the regions above the <span data-math=\"x\"></span>-axis and below the <span data-math=\"x\"></span>-axis separately."
+      ],
+      "steps": [
+        "<p>The curve is below the axis on (0,2) and above it on (2,3); treat these regions separately.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"F(x)=-\\frac14x^4+\\frac53x^3-3x^2\" data-display=\"true\"></span><span data-math=\"A_1=-[F(x)]_0^2=\\frac83\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"A_2=[F(x)]_2^3=-\\frac94+\\frac83=\\frac5{12}\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"A_1+A_2=\\frac83+\\frac5{12}=\\frac{37}{12}\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "855d3af132e361c0b2694627853e2fd4e45dddfa9c8f23860aa4f5005f0014bc",
+        "printedBookPage": "108--109",
+        "marker": {
+          "page": 10,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.6 Areas under the x-axis"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "4",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.6",
+      "subchapterTitle": "13.6 Areas under the $x$-axis",
+      "number": "4",
+      "question": "<div><span class=\"practice-tag\">E</span>  The graph shows a sketch of part of the curve <span data-math=\"C\"></span> with equation <span data-math=\"y=-8\\sqrt x+x^2\"></span><img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/d6935d16defbf5c2795a.png\" alt=\"Original question diagram\">The shaded region <span data-math=\"R\"></span> is bounded by the curve and the <span data-math=\"x\"></span>-axis.<ol type=\"a\"><li value=\"1\">Find the coordinates of the point <span data-math=\"A\"></span>.<span class=\"marks\">(1 mark)</span></li><li value=\"2\">Use calculus to find the exact area of the shaded region <span data-math=\"R\"></span>.<span class=\"marks\">(5 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Find the nonzero intercept; negate the integral where the curve is below the axis.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"\\sqrt x(x^{3/2}-8)=0\" data-display=\"true\"></span><span data-math=\"x^{3/2}=8\\Rightarrow x=4\" data-display=\"true\"></span><span data-math=\"A=(4,0)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"A_R=-\\int_0^4(-8\\sqrt x+x^2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac{16}3x^{3/2}-\\frac13x^3]_0^4=\\frac{64}3\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "a8236ed226934901086b40bcd49b91a55d1a90df30ccf5c17ecc3b9b80c79266",
+        "printedBookPage": "108--109",
+        "marker": {
+          "page": 10,
+          "bbox": [
+            58.494,
+            340.805,
+            68.247,
+            351.714
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.6 Areas under the x-axis"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "5",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.6",
+      "subchapterTitle": "13.6 Areas under the $x$-axis",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E</span>  <span data-math=\"f(x)=\\frac12x^2-\\frac{13}2x+15\"></span>. The graph shows a sketch of part of the curve with equation <span data-math=\"y=f(x)\"></span>.<img style=\"max-width:50mm\" class=\"practice-figure\"  src=\"content/practice/assets/3db91737e3553d8d6b7a.png\" alt=\"Original question diagram\"><ol type=\"a\"><li value=\"1\">Find the coordinates of points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">Find the exact area of the shaded region <span data-math=\"R\"></span>.<span class=\"marks\">(4 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Factor the quadratic to get the limits, then take the negative of its integral.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"2f=x^2-13x+30=(x-3)(x-10)\" data-display=\"true\"></span><span data-math=\"A=(3,0),\\ B=(10,0)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"A_R=-\\int_3^{10}(\\frac12x^2-\\frac{13}2x+15)\\,dx\" data-display=\"true\"></span><span data-math=\"=-[\\frac16x^3-\\frac{13}4x^2+15x]_3^{10}\" data-display=\"true\"></span><span data-math=\"=-(-\\frac{25}3-\\frac{81}4)=\\frac{343}{12}\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "02d5ad1036aebab5d5e26482f39664b3b7b78053754ceab9ccf0e2e30983a06c",
+        "printedBookPage": "108--109",
+        "marker": {
+          "page": 10,
+          "bbox": [
+            58.494,
+            512.226,
+            68.247,
+            523.135
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.6 Areas under the x-axis"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "6",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.6",
+      "subchapterTitle": "13.6 Areas under the $x$-axis",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The graph shows a sketch of part of the curve <span data-math=\"C\"></span> with equation <span data-math=\"y=x(x+4)(x-1)\"></span><img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/33c0a2259b1072fb0696.png\" alt=\"Original question diagram\">The curve cuts the <span data-math=\"x\"></span>-axis at the origin <span data-math=\"O\"></span> and at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<ol type=\"a\"><li value=\"1\">Write down the coordinates of points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<span class=\"marks\">(1 mark)</span></li><li value=\"2\">Find the total area of the shaded region.<span class=\"marks\">(7 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Split at the origin: the left lobe is positive and the right lobe negative.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"A=(-4,0),\\quad B=(1,0)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"y=x^3+3x^2-4x\" data-display=\"true\"></span><span data-math=\"F=\\frac14x^4+x^3-2x^2\" data-display=\"true\"></span><span data-math=\"A_R=[F]_{-4}^0-[F]_0^1=32-(-\\frac34)=\\frac{131}4\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "99eaa1a20cd7750e32f20e549e4633cd15e84cd092289c36ee9c51f05263757d",
+        "printedBookPage": "108--109",
+        "marker": {
+          "page": 11,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.6 Areas under the x-axis"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "7",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.6",
+      "subchapterTitle": "13.6 Areas under the $x$-axis",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  <span data-math=\"f(x)=x^3+6x^2-4x-24\"></span>. The graph shows a sketch of part of the curve with equation <span data-math=\"y=f(x)\"></span>.<img style=\"max-width:50mm\" class=\"practice-figure\"  src=\"content/practice/assets/c3f4975ff0460a3f3d92.png\" alt=\"Original question diagram\"><ol type=\"a\"><li value=\"1\">Show that <span data-math=\"f(2)=0\"></span>.<span class=\"marks\">(1 mark)</span></li><li value=\"2\">Hence, or otherwise, factorise <span data-math=\"f(x)\"></span> completely.<span class=\"marks\">(2 marks)</span></li><li value=\"3\">Find the total shaded area shown in the sketch.<span class=\"marks\">(5 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Factor using the given root, then split the signed integral at the middle root.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"f(2)=8+24-8-24=0\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"f=(x-2)(x^2+8x+12)=(x-2)(x+2)(x+6)\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"F=\\frac14x^4+2x^3-2x^2-24x\" data-display=\"true\"></span><span data-math=\"A=[F]_{-6}^{-2}-[F]_{-2}^2=64-(-64)=128\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "1c1f4447d29efcca7bbf023bfb1e6f3e4323e2fbe2ec29853ebbe29f9920b0df",
+        "printedBookPage": "108--109",
+        "marker": {
+          "page": 11,
+          "bbox": [
+            58.494,
+            238.824,
+            68.247,
+            249.733
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.6 Areas under the x-axis"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "1",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.7",
+      "subchapterTitle": "13.7 Areas between curves and lines",
+      "number": "1",
+      "question": "<div>The diagram shows part of the curve with equation <span data-math=\"y=\\frac14x^2+2\"></span> and the line with equation <span data-math=\"y=6\"></span>. The line cuts the curve at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/7d2c4635725f71f12939.png\" alt=\"Original question diagram\"><ol type=\"a\"><li value=\"1\">Find the coordinates of points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.</li><li value=\"2\">Use integration to find the shaded region <span data-math=\"R_1\"></span>.</li><li value=\"3\">Find the area of the rectangle <span data-math=\"ABCD\"></span>.</li><li value=\"4\">Find the area of the shaded region <span data-math=\"R_2\"></span>.</li></ol></div>",
+      "hints": [
+        "Area of <span data-math=\"R_2={}\"></span>area of rectangle<span data-math=\"-{}\"></span>area of <span data-math=\"R_1\"></span>"
+      ],
+      "steps": [
+        "<p>Find the intersections, integrate the curve for R₁, and subtract from the bounding rectangle for R₂.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"\\frac14x^2+2=6\" data-display=\"true\"></span><span data-math=\"x^2=16\" data-display=\"true\"></span><span data-math=\"A=(-4,6),\\ B=(4,6)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"A_{R_1}=\\int_{-4}^4(\\frac14x^2+2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac1{12}x^3+2x]_{-4}^4\" data-display=\"true\"></span><span data-math=\"=\\frac{80}3\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"A_{ABCD}=8(6)=48\" data-display=\"true\"></span></li><li value=\"4\"><span data-math=\"A_{R_2}=48-\\frac{80}3=\\frac{64}3\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "19768d28dcb98bb5247e956d7922a86ebf795d715e2fe2f8576607ffa9b65cf4",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 12,
+          "bbox": [
+            58.494,
+            102.215,
+            68.247,
+            113.124
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.7 Areas between curves and lines"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "2",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.7",
+      "subchapterTitle": "13.7 Areas between curves and lines",
+      "number": "2",
+      "question": "<div>The diagram shows part of the curve with equation <span data-math=\"y=-x^2+4x\"></span> and the line with equation <span data-math=\"y=4-x\"></span>. The line cuts the curve at the points <span data-math=\"P\"></span> and <span data-math=\"Q\"></span>.<img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/5392cb2bbc6a4275be33.png\" alt=\"Original question diagram\"><ol type=\"a\"><li value=\"1\">Find the coordinates of the points <span data-math=\"P\"></span> and <span data-math=\"Q\"></span>.</li><li value=\"2\">Use integration to find the shaded region bounded by the curve, the line <span data-math=\"PM\"></span> and the <span data-math=\"x\"></span>-axis.</li><li value=\"3\">Find the area of the triangle <span data-math=\"PQM\"></span>.</li><li value=\"4\">Find the area of the shaded region <span data-math=\"R\"></span>.</li></ol></div>",
+      "hints": [
+        "<img style=\"max-width:27.0%\" class=\"practice-figure\"  src=\"content/practice/assets/df046f6f96463eec485c.png\" alt=\"Original question diagram\"> <span data-math=\"=\"></span> <img style=\"max-width:27.0%\" class=\"practice-figure\"  src=\"content/practice/assets/fd53f189e8ad6e6a1bdd.png\" alt=\"Original question diagram\"> <span data-math=\"-\"></span> <img style=\"max-width:27.0%\" class=\"practice-figure\"  src=\"content/practice/assets/57fc67154da469544c78.png\" alt=\"Original question diagram\">"
+      ],
+      "steps": [
+        "<p>Solve the intersections; subtract the triangle beneath the line from the area beneath the curve.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"-x^2+4x=4-x\" data-display=\"true\"></span><span data-math=\"x^2-5x+4=(x-1)(x-4)=0\" data-display=\"true\"></span><span data-math=\"P=(1,3),\\ Q=(4,0)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"\\int_1^4(-x^2+4x)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac13x^3+2x^2]_1^4=\\frac{32}3-\\frac53=9\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"PM=3,\\ MQ=3\" data-display=\"true\"></span><span data-math=\"A_{PQM}=\\frac12(3)(3)=\\frac92\" data-display=\"true\"></span></li><li value=\"4\"><span data-math=\"A_R=9-\\frac92=\\frac92\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "2ce96ee4778448e576955329926a6ad26364242f8077545810d8716913c1ec0c",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 13,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.7 Areas between curves and lines"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "3",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.7",
+      "subchapterTitle": "13.7 Areas between curves and lines",
+      "number": "3",
+      "question": "<div>The diagram shows part of the curve with equation <span data-math=\"y=4\\sqrt x-\\frac12\\sqrt{x^3}+2\"></span> and the line with equation <span data-math=\"5x+8y=49\"></span>.<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/0ce5da28ad29ee07e475.png\" alt=\"Original question diagram\"><ol type=\"a\"><li value=\"1\">Use integration to find the shaded region bounded by the curve, the lines <span data-math=\"x=1\"></span>, <span data-math=\"x=9\"></span> and the <span data-math=\"x\"></span>-axis.</li><li value=\"2\">Find the shaded region <span data-math=\"R\"></span>.</li></ol></div>",
+      "hints": [
+        "<img style=\"max-width:27.0%\" class=\"practice-figure\"  src=\"content/practice/assets/50f808517a0a6f43e0b2.png\" alt=\"Original question diagram\"> <span data-math=\"=\"></span> <img style=\"max-width:27.0%\" class=\"practice-figure\"  src=\"content/practice/assets/a7de49ccc9128b3a39ee.png\" alt=\"Original question diagram\"> <span data-math=\"-\"></span> <img style=\"max-width:27.0%\" class=\"practice-figure\"  src=\"content/practice/assets/a8aa3cf5999e9ffbb2a9.png\" alt=\"Original question diagram\">"
+      ],
+      "steps": [
+        "<p>Integrate the curve from 1 to 9, then subtract the area under the straight line on the same interval.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"A_C=\\int_1^9(4x^{1/2}-\\frac12x^{3/2}+2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac83x^{3/2}-\\frac15x^{5/2}+2x]_1^9\" data-display=\"true\"></span><span data-math=\"=\\frac{554}{15}\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"y_L=\\frac{49-5x}8\" data-display=\"true\"></span><span data-math=\"y_L(1)=\\frac{11}2,\\quad y_L(9)=\\frac12\" data-display=\"true\"></span><span data-math=\"A_L=\\frac12(\\frac{11}2+\\frac12)(9-1)=24\" data-display=\"true\"></span><span data-math=\"A_R=\\frac{554}{15}-24=\\frac{194}{15}\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "2f216de6a1cd0857d9fc9fbc1bf09e3c21941186000a6fcac46a1483dec9c15e",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 14,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.7 Areas between curves and lines"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "4",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.7",
+      "subchapterTitle": "13.7 Areas between curves and lines",
+      "number": "4",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The shaded region <span data-math=\"R\"></span> is bounded by the curve with equation <span data-math=\"y=-\\frac12x^2+\\frac92x-4\"></span> and the line with equation <span data-math=\"x+2y-13=0\"></span> as shown in the diagram. The line intersects the curve at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<img style=\"max-width:70mm\" class=\"practice-figure\"  src=\"content/practice/assets/fb2bf8de56b5daf8a0d9.png\" alt=\"Original question diagram\"><ol type=\"a\"><li value=\"1\">Find the coordinates of the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<span class=\"marks\">(3 marks)</span></li><li value=\"2\">Find the area of the shaded region <span data-math=\"R\"></span>.<span class=\"marks\">(5 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Equate line and curve, then integrate upper minus lower between the intersections.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"-\\frac12x^2+\\frac92x-4=\\frac{13-x}2\" data-display=\"true\"></span><span data-math=\"x^2-10x+21=(x-3)(x-7)=0\" data-display=\"true\"></span><span data-math=\"A=(3,5),\\ B=(7,3)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"A_R=\\int_3^7(-\\frac12x^2+5x-\\frac{21}2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac16x^3+\\frac52x^2-\\frac{21}2x]_3^7=\\frac{16}3\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "627c7739235b0a5f80e104dc28ae7ca19c75bb59f84d6e62f28807e00e5b683b",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 14,
+          "bbox": [
+            58.494,
+            412.233,
+            68.247,
+            423.142
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.7 Areas between curves and lines"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "5",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.7",
+      "subchapterTitle": "13.7 Areas between curves and lines",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  <span data-math=\"h(x)=x^2(x-4)^2\"></span>. The graph shows part of the curve with equation <span data-math=\"y=h(x)\"></span>.<img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/6ab4e2b0676f86a5836c.png\" alt=\"Original question diagram\">The straight line <span data-math=\"y=7x+2\"></span> intersects the curve at the points <span data-math=\"P\"></span> and <span data-math=\"Q\"></span> with <span data-math=\"x\"></span>-coordinates 1 and 2 respectively. Find the area of the finite region bounded by the curve and the segment <span data-math=\"PG\"></span>.<span class=\"marks\">(7 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>The printed segment PG contains an undefined point G. The diagram and defined endpoints identify PQ; the following computes that illustrated region.</p><span data-math=\"h=x^4-8x^3+16x^2\" data-display=\"true\"></span><span data-math=\"h-(7x+2)=x^4-8x^3+16x^2-7x-2\" data-display=\"true\"></span><span data-math=\"A=\\int_1^2[h(x)-(7x+2)]\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac15x^5-2x^4+\\frac{16}3x^3-\\frac72x^2-2x]_1^2\" data-display=\"true\"></span><span data-math=\"=\\frac{31}{30}\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "7b439b615f3a253a1e39faddf440117b9351c23ad7d5fdeb0fd25acf85af42a4",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 15,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.7 Areas between curves and lines"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "6",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.7",
+      "subchapterTitle": "13.7 Areas between curves and lines",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The line with equation <span data-math=\"5x+4y-21=0\"></span> crosses the curve with equation <span data-math=\"y=\\frac4{x^2}\"></span> at the points <span data-math=\"A\"></span>, <span data-math=\"B\"></span> and <span data-math=\"C\"></span>.<img style=\"max-width:65mm\" class=\"practice-figure\"  src=\"content/practice/assets/c5fb8aea19663d528442.png\" alt=\"Original question diagram\"><ol type=\"a\"><li value=\"1\">Show that at points <span data-math=\"A\"></span>, <span data-math=\"B\"></span> and <span data-math=\"C\"></span>, <span data-math=\"5x^3-21x^2+16=0\"></span>.<span class=\"marks\">(3 marks)</span></li></ol>Given that the <span data-math=\"x\"></span>-coordinate of <span data-math=\"B\"></span> is 1, find:<ol type=\"a\"><li value=\"2\">the coordinates of the point <span data-math=\"C\"></span><span class=\"marks\">(2 marks)</span></li><li value=\"3\">the area of the shaded region <span data-math=\"R\"></span>.<span class=\"marks\">(7 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Eliminate y and factor using the known root. The line is above the positive branch between B and C.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"5x+4(\\frac4{x^2})-21=0\" data-display=\"true\"></span><span data-math=\"5x^3-21x^2+16=0\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"(x-1)(5x^2-16x-16)=(x-1)(x-4)(5x+4)=0\" data-display=\"true\"></span><span data-math=\"x_C=4\" data-display=\"true\"></span><span data-math=\"C=(4,\\frac14)\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"A_R=\\int_1^4(\\frac{21-5x}4-\\frac4{x^2})\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac{21}4x-\\frac58x^2+\\frac4x]_1^4\" data-display=\"true\"></span><span data-math=\"=12-\\frac{69}8=\\frac{27}8\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "aabe314cb2ffe44dae84a321681c2ec4f58e56c1209c7d595e2264d712ad63cc",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 15,
+          "bbox": [
+            58.494,
+            265.134,
+            68.247,
+            276.043
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.7 Areas between curves and lines"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "7",
+      "chapterTitle": "Integration",
+      "subchapterId": "13.7",
+      "subchapterTitle": "13.7 Areas between curves and lines",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The line <span data-math=\"L\"></span> with equation <span data-math=\"3x+y+6=0\"></span> crosses the curve <span data-math=\"C\"></span> with equation <span data-math=\"3y=-x^3-2x^2+16x+32\"></span> at the points <span data-math=\"A\"></span>, <span data-math=\"B\"></span> and <span data-math=\"D\"></span>.<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/6ffc759cf874d948b3c7.png\" alt=\"Original question diagram\"><ol type=\"a\"><li value=\"1\">Show that at points <span data-math=\"A\"></span>, <span data-math=\"B\"></span> and <span data-math=\"C\"></span>, <span data-math=\"x^3+2x^2-25x-50=0\"></span>.<span class=\"marks\">(2 marks)</span></li></ol>Given that <span data-math=\"B\"></span> has coordinates <span data-math=\"(-2,0)\"></span>, find:<ol type=\"a\"><li value=\"2\">the coordinates of the point <span data-math=\"D\"></span><span class=\"marks\">(2 marks)</span></li><li value=\"3\">the area of the shaded region <span data-math=\"R\"></span>.<span class=\"marks\">(7 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Use y=−3x−6 in the curve equation. The first subpart names C, but the third intersection is D as stated and drawn; C labels the turning point.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"3(-3x-6)=-x^3-2x^2+16x+32\" data-display=\"true\"></span><span data-math=\"x^3+2x^2-25x-50=0\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"(x+2)(x^2-25)=(x+2)(x-5)(x+5)=0\" data-display=\"true\"></span><span data-math=\"x_D=5\" data-display=\"true\"></span><span data-math=\"y_D=-3(5)-6=-21\" data-display=\"true\"></span><span data-math=\"D=(5,-21)\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"A_R=\\int_{-2}^5\\frac{-x^3-2x^2+25x+50}3\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac1{12}x^4-\\frac29x^3+\\frac{25}6x^2+\\frac{50}3x]_{-2}^5\" data-display=\"true\"></span><span data-math=\"=\\frac{4459}{36}\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.37"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "c5696f521119d9c6d906f14b127059beb4ef0a49f627f275e98c0937155cdfb9",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 16,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "13.7 Areas between curves and lines"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-a/qbronze",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "Bronze",
+      "chapterTitle": "Integration",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem set A",
+      "number": "Bronze",
+      "question": "<span data-math=\"f&#x27;(x)=\\frac{-5x^2+7x^{2/3}}{\\sqrt x}\"></span><ol type=\"a\"><li value=\"1\">Write <span data-math=\"f&#x27;(x)\"></span> in the form <span data-math=\"ax^m+bx^n\"></span>, where <span data-math=\"a\"></span>, <span data-math=\"b\"></span>, <span data-math=\"m\"></span> and <span data-math=\"n\"></span> are rational numbers to be found.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">Given that <span data-math=\"f(1)=-10\"></span>, find an expression for <span data-math=\"f(x)\"></span>.<span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Subtract exponents when dividing by √x, then integrate and use the supplied value.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"f&#x27;=-5x^{3/2}+7x^{1/6}\" data-display=\"true\"></span><span data-math=\"a=-5,b=7,m=\\frac32,n=\\frac16\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"f=-2x^{5/2}+6x^{7/6}+C\" data-display=\"true\"></span><span data-math=\"-10=-2+6+C\\Rightarrow C=-14\" data-display=\"true\"></span><span data-math=\"f=-2x^{5/2}+6x^{7/6}-14\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "5701bc7b6c21b1f631f09595aac1f875e43e4de52dc09e3caad5032e719b95b1",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 17,
+          "bbox": [
+            57.49,
+            75.531,
+            92.797,
+            85.494
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-a/qsilver",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "Silver",
+      "chapterTitle": "Integration",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem set A",
+      "number": "Silver",
+      "question": "<span data-math=\"f&#x27;(x)=(1-2x^{1/3})^3\"></span>. Given that <span data-math=\"f(8)=24\"></span>, find <span data-math=\"f(1)\"></span>.<span class=\"marks\">(6 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Expand the cube and integrate before determining the constant.</p><span data-math=\"f&#x27;=1-6x^{1/3}+12x^{2/3}-8x\" data-display=\"true\"></span><span data-math=\"f=x-\\frac92x^{4/3}+\\frac{36}5x^{5/3}-4x^2+C\" data-display=\"true\"></span><span data-math=\"f(8)=-\\frac{448}5+C=24\\Rightarrow C=\\frac{568}5\" data-display=\"true\"></span><span data-math=\"f(1)=1-\\frac92+\\frac{36}5-4+\\frac{568}5=\\frac{1133}{10}=113.3\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "95e4a63c91706c09944282624a1f3c64869c630004c2fe4edc773f79cc25dfb8",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 17,
+          "bbox": [
+            57.49,
+            142.1,
+            85.923,
+            152.063
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-a/qgold",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "Gold",
+      "chapterTitle": "Integration",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem set A",
+      "number": "Gold",
+      "question": "<span data-math=\"f&#x27;(x)=3x^2+px+\\frac8{x^2}\"></span>. Given that <span data-math=\"f(-4)=-85\"></span> and <span data-math=\"f(2)=11\"></span>, find <span data-math=\"f(x)\"></span>.<span class=\"marks\">(6 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Assume the same integration constant for the two given values, integrate, then solve the simultaneous equations.</p><span data-math=\"f=x^3+\\frac p2x^2-8x^{-1}+C\" data-display=\"true\"></span><span data-math=\"-85=-64+8p+2+C\\Rightarrow8p+C=-23\" data-display=\"true\"></span><span data-math=\"11=8+2p-4+C\\Rightarrow2p+C=7\" data-display=\"true\"></span><span data-math=\"6p=-30\" data-display=\"true\"></span><span data-math=\"p=-5,C=17\" data-display=\"true\"></span><span data-math=\"f=x^3-\\frac52x^2-8x^{-1}+17\" data-display=\"true\"></span><p>The expected answer assumes one common integration constant on both sides of x=0. The derivative is undefined at zero, so without that assumption the two separate domain intervals can have different constants and p is not uniquely determined.</p><span data-math=\"C_-=-23-8p,\\quad C_+=7-2p\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "48a0af8f8a4749ad3ad3c2b8e1d1f78885f7fb905b79ff54216ca2a24ed2f282",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 17,
+          "bbox": [
+            57.49,
+            178.05,
+            81.769,
+            188.013
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-b/qbronze",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "Bronze",
+      "chapterTitle": "Integration",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem set B",
+      "number": "Bronze",
+      "question": "<div>The diagram shows part of the curve with equation <span data-math=\"y=\\frac12x^2+1\"></span> and the line with equation <span data-math=\"y=9\"></span>. The line cuts the curve at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<ol type=\"a\"><li value=\"1\">Find the coordinates of the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">Find the area of the finite region bounded by line <span data-math=\"AB\"></span> and the curve.<span class=\"marks\">(6 marks)</span></li></ol></div> <div><img style=\"max-width:100.0%\" class=\"practice-figure\"  src=\"content/practice/assets/443cbc9d1c2fb61a9d7b.png\" alt=\"Original question diagram\"></div>",
+      "hints": [],
+      "steps": [
+        "<p>Find the intersection limits, then integrate line minus curve.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"\\frac12x^2+1=9\" data-display=\"true\"></span><span data-math=\"x^2=16\" data-display=\"true\"></span><span data-math=\"A=(-4,9),\\ B=(4,9)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"A_R=\\int_{-4}^4(8-\\frac12x^2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[8x-\\frac16x^3]_{-4}^4=\\frac{128}3\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "51ba1cea7703141539865722a3614b214732207f5cf7942bd33f6941fa6ac29b",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 17,
+          "bbox": [
+            57.49,
+            251.345,
+            92.797,
+            261.308
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-b/qsilver",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "Silver",
+      "chapterTitle": "Integration",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem set B",
+      "number": "Silver",
+      "question": "<div>The diagram shows part of the curve with equation <span data-math=\"y=-x^2-x+12\"></span> and the line with equation <span data-math=\"x+y=8\"></span>. The line cuts the curve at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>. Find the area of the finite region bounded by line <span data-math=\"AB\"></span> and the curve.<span class=\"marks\">(9 marks)</span></div> <div><img style=\"max-width:100.0%\" class=\"practice-figure\"  src=\"content/practice/assets/7c50562a384b089ca612.png\" alt=\"Original question diagram\"></div>",
+      "hints": [],
+      "steps": [
+        "<p>Subtract the line from the curve and solve for its zeros.</p><span data-math=\"-x^2-x+12=8-x\" data-display=\"true\"></span><span data-math=\"x^2=4\" data-display=\"true\"></span><span data-math=\"x=-2,2\" data-display=\"true\"></span><span data-math=\"A_R=\\int_{-2}^2(4-x^2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[4x-\\frac13x^3]_{-2}^2=\\frac{32}3\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "dc59e8153ecc8e1aa56bee7868344b484035084a429eba68789fa2879d0329b0",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 17,
+          "bbox": [
+            57.49,
+            410.969,
+            85.923,
+            420.932
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-b/qgold",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "Gold",
+      "chapterTitle": "Integration",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem set B",
+      "number": "Gold",
+      "question": "<div>The diagram shows part of the curve with equation <span data-math=\"y=-x^3-2x^2+4x+8\"></span> and the line with equation <span data-math=\"y=3x+6\"></span>. The line cuts the curve at the points <span data-math=\"A\"></span>, <span data-math=\"B\"></span> and <span data-math=\"C\"></span>.<ol type=\"a\"><li value=\"1\">Show that at points <span data-math=\"A\"></span>, <span data-math=\"B\"></span> and <span data-math=\"C\"></span>, <span data-math=\"x^3+2x^2-x-2=0\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">Given that <span data-math=\"A\"></span> has coordinates <span data-math=\"(-2,0)\"></span>, find the total area of the region bounded by the curve and the line segment <span data-math=\"BC\"></span>.<span class=\"marks\">(9 marks)</span></li></ol></div> <div><img style=\"max-width:100.0%\" class=\"practice-figure\"  src=\"content/practice/assets/02f442fa09f454c49df9.png\" alt=\"Original question diagram\"></div>",
+      "hints": [],
+      "steps": [
+        "<p>Equate the line and curve, then use the stated segment BC to select the integration interval.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"3x+6=-x^3-2x^2+4x+8\" data-display=\"true\"></span><span data-math=\"x^3+2x^2-x-2=0\" data-display=\"true\"></span></li><li value=\"2\"><p>The shaded region bounded by BC has area 8/3. The supplied 37/12 also includes the separate A-to-B lobe of area 5/12, which is outside segment BC.</p><span data-math=\"(x+2)(x^2-1)=0\" data-display=\"true\"></span><span data-math=\"x_A=-2,x_B=-1,x_C=1\" data-display=\"true\"></span><span data-math=\"A_{BC}=\\int_{-1}^1(-x^3-2x^2+x+2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac14x^4-\\frac23x^3+\\frac12x^2+2x]_{-1}^1\" data-display=\"true\"></span><span data-math=\"=\\frac83\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "7a614c8bdb13f07d60ec0b606fa0ae7f678202214aef42cb7ab60395fa978fc7",
+        "printedBookPage": "110--111",
+        "marker": {
+          "page": 17,
+          "bbox": [
+            57.49,
+            526.636,
+            81.769,
+            536.599
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "6",
+      "chapterTitle": "Integration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "6",
+      "question": "Given that <span data-math=\"f(x)=9\\sqrt[3]{x^2}+\\frac4{x^2}-3x^3+2\"></span>, find <span data-math=\"\\int f(x)\\,dx\"></span>.<span class=\"marks\">(4 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Rewrite the cube root and reciprocal as powers and integrate each term.</p><span data-math=\"f=9x^{2/3}+4x^{-2}-3x^3+2\" data-display=\"true\"></span><span data-math=\"\\int f\\,dx=\\frac{27}5x^{5/3}-4x^{-1}-\\frac34x^4+2x+C\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "eb449aa8fde96e3c11ed6a051f25fd98fceaf439d3d7e9cc6c2d206404ee8704",
+        "printedBookPage": null,
+        "marker": {
+          "page": 18,
+          "bbox": [
+            48.189,
+            80.251,
+            111.599,
+            92.206
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "8",
+      "chapterTitle": "Integration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "8",
+      "question": "Find <span data-math=\"\\int_{1/2}^1(4-3x)^3\\,dx\"></span>, leaving your answer as a fraction in its simplest terms.<span class=\"marks\">(5 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Expand the cube, integrate, and subtract the endpoint values.</p><span data-math=\"(4-3x)^3=64-144x+108x^2-27x^3\" data-display=\"true\"></span><span data-math=\"\\int_{1/2}^1(4-3x)^3\\,dx\" data-display=\"true\"></span><span data-math=\"=[64x-72x^2+36x^3-\\frac{27}4x^4]_{1/2}^1\" data-display=\"true\"></span><span data-math=\"=\\frac{85}4-\\frac{1157}{64}=\\frac{203}{64}\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "424f76848e4dd537fd3f7f09cc1f005bb35fdec8347c410394e59f47dba9066d",
+        "printedBookPage": null,
+        "marker": {
+          "page": 18,
+          "bbox": [
+            48.189,
+            138.052,
+            111.599,
+            150.007
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q26",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "26",
+      "chapterTitle": "Integration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "26",
+      "question": "Given that <span data-math=\"\\int_9^k\\frac8{\\sqrt x}\\,dx=32\"></span>, find the value of <span data-math=\"k\"></span>.<span class=\"marks\">(4 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Integrate and solve the equation for the upper limit.</p><span data-math=\"[16\\sqrt x]_9^k=32\" data-display=\"true\"></span><span data-math=\"16(\\sqrt k-3)=32\" data-display=\"true\"></span><span data-math=\"\\sqrt k=5\" data-display=\"true\"></span><span data-math=\"k=25\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "bb791b985ded248d5656a5cff8171589e2fc213f8054e1cce9ffe655e91bb507",
+        "printedBookPage": null,
+        "marker": {
+          "page": 18,
+          "bbox": [
+            48.189,
+            197.07,
+            118.33,
+            209.025
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q44",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "44",
+      "chapterTitle": "Integration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "44",
+      "question": "The diagram shows a sketch of part of the curve <span data-math=\"C\"></span> with equation <span data-math=\"y=-x^2+2x+4\"></span>.<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/c3832da7b52284256e5f.png\" alt=\"Original question diagram\">The straight line <span data-math=\"y=x+2\"></span> crosses the curve at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<ol type=\"a\"><li value=\"1\">Find the coordinates of points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">The the area of the finite region <span data-math=\"R\"></span>.<span class=\"marks\">(7 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Find the intersection points, then integrate curve minus line.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"-x^2+2x+4=x+2\" data-display=\"true\"></span><span data-math=\"x^2-x-2=(x-2)(x+1)=0\" data-display=\"true\"></span><span data-math=\"A=(-1,1),\\ B=(2,4)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"A_R=\\int_{-1}^2(-x^2+x+2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac13x^3+\\frac12x^2+2x]_{-1}^2\" data-display=\"true\"></span><span data-math=\"=\\frac{10}3-(-\\frac76)=\\frac92\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "788e6039b26d11234f5a694a9e98babcfbee3cf43f24f8d398c9d3232b3f896a",
+        "printedBookPage": null,
+        "marker": {
+          "page": 18,
+          "bbox": [
+            48.189,
+            256.52,
+            118.33,
+            268.475
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q53",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "53",
+      "chapterTitle": "Integration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "53",
+      "question": "The diagram shows part of the curve with equation <span data-math=\"y=\\sqrt{x^3}+2x-8\\sqrt x\"></span>.<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/b7c8f4fe4d8aa96af08a.png\" alt=\"Original question diagram\">The curve intersects the <span data-math=\"x\"></span>-axis at the origin and at the point <span data-math=\"A\"></span>.<br> Find:<ol type=\"a\"><li value=\"1\">the <span data-math=\"x\"></span>-coordinate of the point <span data-math=\"A\"></span><span class=\"marks\">(3 marks)</span></li><li value=\"2\">the area of the shaded region.<span class=\"marks\">(6 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Factor out √x and solve in u=√x≥0. The shaded curve is below the axis.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"y=\\sqrt x(x+2\\sqrt x-8)\" data-display=\"true\"></span><span data-math=\"u^2+2u-8=(u+4)(u-2)=0\" data-display=\"true\"></span><span data-math=\"u=2\\Rightarrow x_A=4\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"A_R=-\\int_0^4(x^{3/2}+2x-8x^{1/2})\\,dx\" data-display=\"true\"></span><span data-math=\"=-[\\frac25x^{5/2}+x^2-\\frac{16}3x^{3/2}]_0^4\" data-display=\"true\"></span><span data-math=\"=-(\\frac{64}5+16-\\frac{128}3)=\\frac{208}{15}\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "ad70739b9c96fe3930b2ae50f5d39653d8c4978b4cf260247d862837b45cce75",
+        "printedBookPage": null,
+        "marker": {
+          "page": 19,
+          "bbox": [
+            48.189,
+            51.504,
+            118.33,
+            63.459
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q79",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch13",
+      "chapterNumber": 13,
+      "questionLabel": "79",
+      "chapterTitle": "Integration",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "79",
+      "question": "<span data-math=\"f(x)=4x^{3/2}-\\frac12x^3\"></span>. The diagram shows part of a sketch of the curve with equation <span data-math=\"y=f(x)\"></span>.<img style=\"max-width:60mm\" class=\"practice-figure\"  src=\"content/practice/assets/dbf2e266fd1855c036c1.png\" alt=\"Original question diagram\">The shaded region <span data-math=\"R\"></span> is bounded by the curve and the <span data-math=\"x\"></span>-axis.<ol type=\"a\"><li value=\"1\">Find the coordinates of point <span data-math=\"A\"></span> in the form <span data-math=\"(\\sqrt[3]p,q)\"></span> where <span data-math=\"p\"></span> and <span data-math=\"q\"></span> are integers to be found.<span class=\"marks\">(3 marks)</span></li><li value=\"2\">Verify that point <span data-math=\"B\"></span> has coordinates <span data-math=\"(4,0)\"></span>.<span class=\"marks\">(1 mark)</span></li><li value=\"3\">Find the exact area of the region <span data-math=\"R\"></span>.<span class=\"marks\">(6 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>A is the maximum point: differentiate to locate it. Integrate the nonnegative curve between O and B for the area.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"f&#x27;=6\\sqrt x-\\frac32x^2=\\frac32\\sqrt x(4-x^{3/2})=0\" data-display=\"true\"></span><span data-math=\"x_A^{3/2}=4\" data-display=\"true\"></span><span data-math=\"x_A=\\sqrt[3]{16}\" data-display=\"true\"></span><span data-math=\"f(x_A)=4(4)-\\frac12(16)=8\" data-display=\"true\"></span><span data-math=\"A=(\\sqrt[3]{16},8)\" data-display=\"true\"></span><span data-math=\"p=16,q=8\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"f(4)=4(8)-\\frac12(64)=0\" data-display=\"true\"></span><span data-math=\"B=(4,0)\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"A_R=\\int_0^4(4x^{3/2}-\\frac12x^3)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac85x^{5/2}-\\frac18x^4]_0^4\" data-display=\"true\"></span><span data-math=\"=\\frac{256}5-32=\\frac{96}5\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch13-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-13.pdf",
+        "pdfSha256": "58dbcf8df986ad4ef422ad3a076b8cf285f7dc812e0925c138c9c69def3ca8ed",
+        "nativeSha256": "5911acc627334964d5c3e77e057157cb29ecaddd8a0c95db9836275490cd4a54",
+        "questionLatexSha256": "b132c3a9f69bd3b7e0ee701b696bd2684b95e5ddc7607766919fe6e232267b5f",
+        "printedBookPage": null,
+        "marker": {
+          "page": 19,
+          "bbox": [
+            48.189,
+            354.997,
+            118.33,
+            366.952
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    }
+  ]
+}

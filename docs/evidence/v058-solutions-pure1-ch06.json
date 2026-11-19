@@ -1,0 +1,45 @@
+{
+  "issue": 99,
+  "release": "0.58",
+  "chapter": "Pure Year 1 Chapter 6 — Circles",
+  "questions": 57,
+  "workedSolutions": 57,
+  "originalQuestionIdsMatched": 57,
+  "sourceAnswerGraphs": 1,
+  "exactIndependentChecks": 127,
+  "strictBrowserMathExpressions": 407,
+  "browserQuestionsRendered": 57,
+  "browserHorizontalOverflows": 0,
+  "visualReview": "Representative complete solutions and the supplied answer graph inspected. Original chord diagrams inspected to resolve lower-chord selection. Source final answers compared for every question. Full Papers print integration remains separate.",
+  "suppliedPromptDefects": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.4/q5",
+      "note": "The requested tangent point is outside the derived circle. Working proves the inconsistency and does not present the supplied non-tangent line as a tangent."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.5/q3",
+      "note": "The supplied proof misidentifies the equal sides. Correct working shows AB=BC and a right angle at B."
+    }
+  ],
+  "diagramQualification": {
+    "id": "practice/maths-a-level/maths-pure-year-1/ch6/problem-b/qsilver",
+    "note": "The text alone admits two below-axis chord heights. The original diagram selects the chord below the centre; both the algebraic alternative and diagram selection are explained."
+  },
+  "solutionSha256": "2ba378b36e0afb34241c766dc575f0ac318dc6eb5d6135d79486e27dfb880d00",
+  "sourcePdf": "resources/practice/pure-year-1/chapter-06.pdf",
+  "sourcePdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+  "independentReview": "accepted: all original prompts and authored working independently reviewed; findings corrected",
+  "independentReviewEvidence": {
+    "reviewer": "practice_solutions",
+    "questionsReviewed": 57,
+    "solutionSha256": "2ba378b36e0afb34241c766dc575f0ac318dc6eb5d6135d79486e27dfb880d00",
+    "sourceAndMathematicalScope": "Every original question and subpart compared with authored working. Independently assessed calculations, method requirements, domains, cases, rounding and source-discrepancy qualifications. Supplied figures inspected wherever present; independent check scripts rerun separately from authoring.",
+    "sourceAndAnswerFiguresInspected": 7,
+    "independentChecksRerun": 127,
+    "allRerunChecksPassed": true,
+    "findingsResolved": true,
+    "detail": "All 6 source question diagrams and 1 answer graph inspected. Verified below-centre chord selection and centre O notation in the three corrected subparts.",
+    "integrationScope": "Acceptance covers source, worked mathematics and figures. Final combined Papers print and browser integration are recorded separately by the lead."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
+}

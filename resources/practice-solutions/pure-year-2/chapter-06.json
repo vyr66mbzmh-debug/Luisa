@@ -1,0 +1,974 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-2",
+  "chapter": 6,
+  "sourcePdf": "resources/practice/pure-year-2/chapter-06.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.1/q1",
+      "status": "worked",
+      "method": "Use secx=1/cosx, cosecx=1/sinx and cotx=cosx/sinx with exact unit-circle values.",
+      "steps": [
+        {
+          "latex": "\\sec30^\\circ=\\frac1{\\sqrt3/2}=\\frac{2\\sqrt3}3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\csc\\frac{5\\pi}4=\\frac1{-\\sqrt2/2}=-\\sqrt2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cot\\frac{7\\pi}6=\\frac{-\\sqrt3/2}{-1/2}=\\sqrt3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use secx=1/cosx, cosecx=1/sinx and cotx=cosx/sinx with exact unit-circle values.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sec30^\\circ=\\frac1{\\sqrt3/2}=\\frac{2\\sqrt3}3\" data-display=\"true\"></span></li><li><span data-math=\"\\csc\\frac{5\\pi}4=\\frac1{-\\sqrt2/2}=-\\sqrt2\" data-display=\"true\"></span></li><li><span data-math=\"\\cot\\frac{7\\pi}6=\\frac{-\\sqrt3/2}{-1/2}=\\sqrt3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.1/q2",
+      "status": "worked",
+      "method": "Use the reciprocal trig functions, checking whether each angle is in radians or degrees.",
+      "steps": [
+        {
+          "latex": "\\cot3.6=\\frac1{\\tan3.6}\\approx2.03",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\csc153^\\circ=\\frac1{\\sin153^\\circ}\\approx2.20",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\sec\\frac{7\\pi}4=\\frac1{\\cos(7\\pi/4)}=\\sqrt2\\approx1.41",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the reciprocal trig functions, checking whether each angle is in radians or degrees.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\cot3.6=\\frac1{\\tan3.6}\\approx2.03\" data-display=\"true\"></span></li><li><span data-math=\"\\csc153^\\circ=\\frac1{\\sin153^\\circ}\\approx2.20\" data-display=\"true\"></span></li><li><span data-math=\"\\sec\\frac{7\\pi}4=\\frac1{\\cos(7\\pi/4)}=\\sqrt2\\approx1.41\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.1/q3",
+      "status": "worked",
+      "method": "Choose the correct quadrant before taking the reciprocal.",
+      "steps": [
+        {
+          "latex": "\\sec150^\\circ=\\frac1{-\\sqrt3/2}=-\\frac{2\\sqrt3}3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cot(-135^\\circ)=\\frac{-\\sqrt2/2}{-\\sqrt2/2}=1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\csc\\frac{3\\pi}2=\\frac1{-1}=-1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Choose the correct quadrant before taking the reciprocal.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sec150^\\circ=\\frac1{-\\sqrt3/2}=-\\frac{2\\sqrt3}3\" data-display=\"true\"></span></li><li><span data-math=\"\\cot(-135^\\circ)=\\frac{-\\sqrt2/2}{-\\sqrt2/2}=1\" data-display=\"true\"></span></li><li><span data-math=\"\\csc\\frac{3\\pi}2=\\frac1{-1}=-1\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.1/q4",
+      "status": "worked",
+      "method": "Substitute the exact standard-angle values.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sec60^\\circ}{\\csc270^\\circ}=\\frac{2}{-1}=-2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\csc\\frac{3\\pi}4\\cot\\frac\\pi6=\\sqrt2\\sqrt3=\\sqrt6",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Substitute the exact standard-angle values.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{\\sec60^\\circ}{\\csc270^\\circ}=\\frac{2}{-1}=-2\" data-display=\"true\"></span></li><li><span data-math=\"\\csc\\frac{3\\pi}4\\cot\\frac\\pi6=\\sqrt2\\sqrt3=\\sqrt6\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.1/q5",
+      "status": "worked",
+      "method": "Use the evenness of cosine and the sign changes of sine and cosine after π. Each identity holds wherever the original functions are defined.",
+      "steps": [
+        {
+          "latex": "\\sec(-\\theta)=\\frac1{\\cos(-\\theta)}=\\frac1{\\cos\\theta}=\\sec\\theta",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cot(\\theta+\\pi)=\\frac{\\cos(\\theta+\\pi)}{\\sin(\\theta+\\pi)};=\\frac{-\\cos\\theta}{-\\sin\\theta}=\\cot\\theta",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the evenness of cosine and the sign changes of sine and cosine after π. Each identity holds wherever the original functions are defined.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sec(-\\theta)=\\frac1{\\cos(-\\theta)}=\\frac1{\\cos\\theta}=\\sec\\theta\" data-display=\"true\"></span></li><li><span data-math=\"\\cot(\\theta+\\pi)=\\frac{\\cos(\\theta+\\pi)}{\\sin(\\theta+\\pi)}\" data-display=\"true\"></span><span data-math=\"=\\frac{-\\cos\\theta}{-\\sin\\theta}=\\cot\\theta\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.1/q6",
+      "status": "worked",
+      "method": "Pythagoras gives AB=√(25−16)=3. Relative to angle C, the adjacent side is 4, opposite side 3 and hypotenuse 5.",
+      "steps": [
+        {
+          "latex": "\\sec x=\\frac{\\text{hypotenuse}}{\\text{adjacent}}=\\frac54",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\csc x=\\frac{\\text{hypotenuse}}{\\text{opposite}}=\\frac53",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cot x=\\frac{\\text{adjacent}}{\\text{opposite}}=\\frac43",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Pythagoras gives AB=√(25−16)=3. Relative to angle C, the adjacent side is 4, opposite side 3 and hypotenuse 5.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sec x=\\frac{\\text{hypotenuse}}{\\text{adjacent}}=\\frac54\" data-display=\"true\"></span></li><li><span data-math=\"\\csc x=\\frac{\\text{hypotenuse}}{\\text{opposite}}=\\frac53\" data-display=\"true\"></span></li><li><span data-math=\"\\cot x=\\frac{\\text{adjacent}}{\\text{opposite}}=\\frac43\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.1/q7",
+      "status": "worked",
+      "method": "Use the exact reciprocal values and a common denominator.",
+      "steps": [
+        {
+          "latex": "\\cot\\frac\\pi3-\\csc\\frac\\pi4=\\frac1{\\sqrt3}-\\sqrt2;=\\frac{\\sqrt3-3\\sqrt2}3; a=3,\\quad b=2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the exact reciprocal values and a common denominator.</p><span data-math=\"\\cot\\frac\\pi3-\\csc\\frac\\pi4=\\frac1{\\sqrt3}-\\sqrt2\" data-display=\"true\"></span><span data-math=\"=\\frac{\\sqrt3-3\\sqrt2}3\" data-display=\"true\"></span><span data-math=\"a=3,\\quad b=2\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.2/q1",
+      "status": "worked",
+      "method": "Use the ranges of the reciprocal functions and the intersections of the graphs.",
+      "steps": [
+        {
+          "latex": "\\text{asymptotes }x=\\frac\\pi2,\\frac{3\\pi}2;\\sec x=3\\Rightarrow\\cos x=\\frac13; x=\\arccos(1/3),2\\pi-\\arccos(1/3)",
+          "explanation": "(i) Secant passes through (0,1),(π,−1),(2π,1); add the horizontal line y=3. (ii) There are two intersections, hence two solutions.",
+          "graphs": [
+            "ans62-q1a"
+          ]
+        },
+        {
+          "latex": "\\csc x=-\\sin x\\Rightarrow1=-\\sin^2x",
+          "explanation": "(i) Cosecant has vertical asymptotes at −180°,0°,180° and turning points (−90°,−1),(90°,1). The curve −sinx has the opposite sign on each half-interval. (ii) The curves never intersect: the resulting equation sin²x=−1 has no real solution.",
+          "graphs": [
+            "ans62-q1b"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>Use the ranges of the reciprocal functions and the intersections of the graphs.</p><ol type=\"a\" class=\"parts\"><li><p>(i) Secant passes through (0,1),(π,−1),(2π,1); add the horizontal line y=3. (ii) There are two intersections, hence two solutions.</p><span data-math=\"\\text{asymptotes }x=\\frac\\pi2,\\frac{3\\pi}2\" data-display=\"true\"></span><span data-math=\"\\sec x=3\\Rightarrow\\cos x=\\frac13\" data-display=\"true\"></span><span data-math=\"x=\\arccos(1/3),2\\pi-\\arccos(1/3)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/bee55fe461ca78ba0e6d.png\" alt=\"Original question diagram\"></li><li><p>(i) Cosecant has vertical asymptotes at −180°,0°,180° and turning points (−90°,−1),(90°,1). The curve −sinx has the opposite sign on each half-interval. (ii) The curves never intersect: the resulting equation sin²x=−1 has no real solution.</p><span data-math=\"\\csc x=-\\sin x\\Rightarrow1=-\\sin^2x\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/4d260db5e65d861b2968.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.2/q2",
+      "status": "worked",
+      "method": "Relate each pair by a horizontal shift using the cofunction identities.",
+      "steps": [
+        {
+          "latex": "\\cot x=-\\tan(x-90^\\circ)=-\\tan(x+90^\\circ)",
+          "explanation": "(i) Cotangent has asymptotes at multiples of 180° and zeros at odd multiples of 90°; −tanx has asymptotes at odd multiples of 90° and zeros at multiples of 180°. Both decrease on each branch. (ii) Translate −tanx by 90° horizontally in either direction to obtain cotx.",
+          "graphs": [
+            "ans62-q2a-cot",
+            "ans62-q2a-tan"
+          ]
+        },
+        {
+          "latex": "\\sec(x-\\pi/2)=\\frac1{\\cos(x-\\pi/2)}=\\frac1{\\sin x}=\\csc x",
+          "explanation": "(i) Secant has asymptotes at odd multiples of π/2; cosecant at multiples of π. Their turning values are ±1. (ii) Translate secx by π/2 to the right to obtain cosecx.",
+          "graphs": [
+            "ans62-q2b"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>Relate each pair by a horizontal shift using the cofunction identities.</p><ol type=\"a\" class=\"parts\"><li><p>(i) Cotangent has asymptotes at multiples of 180° and zeros at odd multiples of 90°; −tanx has asymptotes at odd multiples of 90° and zeros at multiples of 180°. Both decrease on each branch. (ii) Translate −tanx by 90° horizontally in either direction to obtain cotx.</p><span data-math=\"\\cot x=-\\tan(x-90^\\circ)=-\\tan(x+90^\\circ)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/96f6f81fb2dc0f3c394f.png\" alt=\"Original question diagram\"><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/5bccc3082544ff22c6cf.png\" alt=\"Original question diagram\"></li><li><p>(i) Secant has asymptotes at odd multiples of π/2; cosecant at multiples of π. Their turning values are ±1. (ii) Translate secx by π/2 to the right to obtain cosecx.</p><span data-math=\"\\sec(x-\\pi/2)=\\frac1{\\cos(x-\\pi/2)}=\\frac1{\\sin x}=\\csc x\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/8620e0b0dc598faecefa.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.2/q3",
+      "status": "worked",
+      "method": "Transform the standard reciprocal graphs, recording zeros, stationary points and vertical asymptotes.",
+      "steps": [
+        {
+          "latex": "\\text{minimum }(90^\\circ,2);\\text{maximum }(270^\\circ,0);\\text{asymptotes }x=0^\\circ,180^\\circ,360^\\circ",
+          "explanation": "The x-axis intersection is (270°,0); there is no y-axis intersection because cosec0 is undefined.",
+          "graphs": [
+            "ans62-q3a"
+          ]
+        },
+        {
+          "latex": "-\\cot(x/2)=0\\Rightarrow x=180^\\circ;\\text{asymptotes }x=0^\\circ,360^\\circ",
+          "explanation": "There are no turning points or y-axis intersection. The branch increases throughout 0°<x<360°.",
+          "graphs": [
+            "ans62-q3b"
+          ]
+        },
+        {
+          "latex": "\\text{minima }(0^\\circ,3),(180^\\circ,3),(360^\\circ,3);\\text{maxima }(90^\\circ,-3),(270^\\circ,-3);\\text{asymptotes }x=45^\\circ,135^\\circ,225^\\circ,315^\\circ",
+          "explanation": "The y-intercept is (0,3); there are no x-intercepts. The endpoint minima refer to the extended periodic graph.",
+          "graphs": [
+            "ans62-q3c"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>Transform the standard reciprocal graphs, recording zeros, stationary points and vertical asymptotes.</p><ol type=\"a\" class=\"parts\"><li><p>The x-axis intersection is (270°,0); there is no y-axis intersection because cosec0 is undefined.</p><span data-math=\"\\text{minimum }(90^\\circ,2)\" data-display=\"true\"></span><span data-math=\"\\text{maximum }(270^\\circ,0)\" data-display=\"true\"></span><span data-math=\"\\text{asymptotes }x=0^\\circ,180^\\circ,360^\\circ\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/8c26114de96b94267b67.png\" alt=\"Original question diagram\"></li><li><p>There are no turning points or y-axis intersection. The branch increases throughout 0°&lt;x&lt;360°.</p><span data-math=\"-\\cot(x/2)=0\\Rightarrow x=180^\\circ\" data-display=\"true\"></span><span data-math=\"\\text{asymptotes }x=0^\\circ,360^\\circ\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/de214c901234c74e895f.png\" alt=\"Original question diagram\"></li><li><p>The y-intercept is (0,3); there are no x-intercepts. The endpoint minima refer to the extended periodic graph.</p><span data-math=\"\\text{minima }(0^\\circ,3),(180^\\circ,3),(360^\\circ,3)\" data-display=\"true\"></span><span data-math=\"\\text{maxima }(90^\\circ,-3),(270^\\circ,-3)\" data-display=\"true\"></span><span data-math=\"\\text{asymptotes }x=45^\\circ,135^\\circ,225^\\circ,315^\\circ\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/0f5b189bd51f7c5a522b.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.2/q4",
+      "status": "worked",
+      "method": "The cosecant graph shifts π/4 to the left. Turning points occur where the shifted sine is ±1, and asymptotes where it is zero.",
+      "steps": [
+        {
+          "latex": "x=0:\\ y=\\csc(\\pi/4)=\\sqrt2;\\text{y-intercept }(0,\\sqrt2)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{minima }(\\pi/4,1),(9\\pi/4,1);\\text{maxima }(5\\pi/4,-1),(13\\pi/4,-1)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "x+\\frac\\pi4=n\\pi;x=\\frac{3\\pi}4,\\frac{7\\pi}4,\\frac{11\\pi}4,\\frac{15\\pi}4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The cosecant graph shifts π/4 to the left. Turning points occur where the shifted sine is ±1, and asymptotes where it is zero.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"x=0:\\ y=\\csc(\\pi/4)=\\sqrt2\" data-display=\"true\"></span><span data-math=\"\\text{y-intercept }(0,\\sqrt2)\" data-display=\"true\"></span></li><li><span data-math=\"\\text{minima }(\\pi/4,1),(9\\pi/4,1)\" data-display=\"true\"></span><span data-math=\"\\text{maxima }(5\\pi/4,-1),(13\\pi/4,-1)\" data-display=\"true\"></span></li><li><span data-math=\"x+\\frac\\pi4=n\\pi\" data-display=\"true\"></span><span data-math=\"x=\\frac{3\\pi}4,\\frac{7\\pi}4,\\frac{11\\pi}4,\\frac{15\\pi}4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.2/q5",
+      "status": "worked",
+      "method": "Scale secx vertically by 4 and shift it up by 2.",
+      "steps": [
+        {
+          "latex": "\\text{range: }y\\le-2\\text{ or }y\\ge6;\\text{asymptotes }x=-270^\\circ,-90^\\circ,90^\\circ,270^\\circ",
+          "explanation": "Positive-branch minima are (−360°,6),(0,6),(360°,6); negative-branch maxima are (−180°,−2),(180°,−2). No x-intercepts; y-intercept (0,6).",
+          "graphs": [
+            "ans62-q5"
+          ]
+        },
+        {
+          "latex": "\\text{No horizontal intersection precisely when }-2<a<6",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Scale secx vertically by 4 and shift it up by 2.</p><ol type=\"a\" class=\"parts\"><li><p>Positive-branch minima are (−360°,6),(0,6),(360°,6); negative-branch maxima are (−180°,−2),(180°,−2). No x-intercepts; y-intercept (0,6).</p><span data-math=\"\\text{range: }y\\le-2\\text{ or }y\\ge6\" data-display=\"true\"></span><span data-math=\"\\text{asymptotes }x=-270^\\circ,-90^\\circ,90^\\circ,270^\\circ\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/e3447b80ba2d56ff9a06.png\" alt=\"Original question diagram\"></li><li><span data-math=\"\\text{No horizontal intersection precisely when }-2&lt;a&lt;6\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.2/q6",
+      "status": "worked",
+      "method": "Cot3x decreases from +∞ to −∞ on each of the three branches. The function is also undefined at x=0, although that exclusion is omitted from the printed domain.",
+      "steps": [
+        {
+          "latex": "0^\\circ<x<60^\\circ,\\quad60^\\circ<x<120^\\circ,\\quad120^\\circ<x<180^\\circ",
+          "explanation": "On each interval cot3x−x is strictly decreasing from positive to negative values, so there is exactly one crossing per branch: three solutions altogether.",
+          "graphs": []
+        },
+        {
+          "latex": "\\cot3x=0\\Rightarrow3x=90^\\circ+180^\\circ n;x=30^\\circ,90^\\circ,150^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Cot3x decreases from +∞ to −∞ on each of the three branches. The function is also undefined at x=0, although that exclusion is omitted from the printed domain.</p><ol type=\"a\" class=\"parts\"><li><p>On each interval cot3x−x is strictly decreasing from positive to negative values, so there is exactly one crossing per branch: three solutions altogether.</p><span data-math=\"0^\\circ&lt;x&lt;60^\\circ,\\quad60^\\circ&lt;x&lt;120^\\circ,\\quad120^\\circ&lt;x&lt;180^\\circ\" data-display=\"true\"></span></li><li><span data-math=\"\\cot3x=0\\Rightarrow3x=90^\\circ+180^\\circ n\" data-display=\"true\"></span><span data-math=\"x=30^\\circ,90^\\circ,150^\\circ\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.2/q7",
+      "status": "worked",
+      "method": "Compare signs on the two half-intervals, then use the range of the reciprocal expression.",
+      "steps": [
+        {
+          "latex": "\\text{asymptotes }x=-\\pi,0,\\pi;\\text{turning points }(-\\pi/2,-1),(\\pi/2,5)",
+          "explanation": "The line y=−x passes through (0,0) and decreases. The positive cosecant branch lies at or above 5; the negative branch lies at or below −1.",
+          "graphs": [
+            "ans62-q7"
+          ]
+        },
+        {
+          "latex": "\\text{number of solutions}=0",
+          "explanation": "For −π<x<0 the curve is negative while −x is positive. For 0<x<π the curve is positive while −x is negative.",
+          "graphs": []
+        },
+        {
+          "latex": "2+3\\csc x\\ge5\\text{ on the positive branch};\\frac1{2+3\\csc x}\\le\\frac15;\\text{maximum }\\frac15\\text{ first occurs at }x=\\frac\\pi2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Compare signs on the two half-intervals, then use the range of the reciprocal expression.</p><ol type=\"a\" class=\"parts\"><li><p>The line y=−x passes through (0,0) and decreases. The positive cosecant branch lies at or above 5; the negative branch lies at or below −1.</p><span data-math=\"\\text{asymptotes }x=-\\pi,0,\\pi\" data-display=\"true\"></span><span data-math=\"\\text{turning points }(-\\pi/2,-1),(\\pi/2,5)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/69643f4a18541dc84532.png\" alt=\"Original question diagram\"></li><li><p>For −π&lt;x&lt;0 the curve is negative while −x is positive. For 0&lt;x&lt;π the curve is positive while −x is negative.</p><span data-math=\"\\text{number of solutions}=0\" data-display=\"true\"></span></li><li><span data-math=\"2+3\\csc x\\ge5\\text{ on the positive branch}\" data-display=\"true\"></span><span data-math=\"\\frac1{2+3\\csc x}\\le\\frac15\" data-display=\"true\"></span><span data-math=\"\\text{maximum }\\frac15\\text{ first occurs at }x=\\frac\\pi2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.3/q1",
+      "status": "worked",
+      "method": "Rearrange the given equation and use the reciprocal definition.",
+      "steps": [
+        {
+          "latex": "\\sec x=\\frac1{1/4}=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac3{\\sin x}=5\\Rightarrow\\csc x=\\frac53",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2\\cos x=3\\sin x\\Rightarrow\\cot x=\\frac{\\cos x}{\\sin x}=\\frac32",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rearrange the given equation and use the reciprocal definition.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sec x=\\frac1{1/4}=4\" data-display=\"true\"></span></li><li><span data-math=\"\\frac3{\\sin x}=5\\Rightarrow\\csc x=\\frac53\" data-display=\"true\"></span></li><li><span data-math=\"2\\cos x=3\\sin x\\Rightarrow\\cot x=\\frac{\\cos x}{\\sin x}=\\frac32\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.3/q2",
+      "status": "worked",
+      "method": "Write everything using sine and cosine and simplify on the original domain; cancelling a factor does not add excluded inputs.",
+      "steps": [
+        {
+          "latex": "\\cos x\\cot x+\\sin x=\\frac{\\cos^2x+\\sin^2x}{\\sin x};=\\frac1{\\sin x}=\\csc x",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac1{\\cos x\\tan x}=\\frac1{\\cos x(\\sin x/\\cos x)};=\\frac1{\\sin x}=\\csc x",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cot3x\\sec3x=\\frac{\\cos3x}{\\sin3x}\\frac1{\\cos3x};=\\frac1{\\sin3x}=\\csc3x",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Write everything using sine and cosine and simplify on the original domain; cancelling a factor does not add excluded inputs.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\cos x\\cot x+\\sin x=\\frac{\\cos^2x+\\sin^2x}{\\sin x}\" data-display=\"true\"></span><span data-math=\"=\\frac1{\\sin x}=\\csc x\" data-display=\"true\"></span></li><li><span data-math=\"\\frac1{\\cos x\\tan x}=\\frac1{\\cos x(\\sin x/\\cos x)}\" data-display=\"true\"></span><span data-math=\"=\\frac1{\\sin x}=\\csc x\" data-display=\"true\"></span></li><li><span data-math=\"\\cot3x\\sec3x=\\frac{\\cos3x}{\\sin3x}\\frac1{\\cos3x}\" data-display=\"true\"></span><span data-math=\"=\\frac1{\\sin3x}=\\csc3x\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.3/q3",
+      "status": "worked",
+      "method": "Take reciprocals, then retain all the solutions in one full turn.",
+      "steps": [
+        {
+          "latex": "\\sin x=\\frac12;x=30^\\circ,150^\\circ",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cos x=\\frac{\\sqrt3}4;\\alpha=\\arccos(\\sqrt3/4);x=\\alpha,360^\\circ-\\alpha\\approx64.3^\\circ,296^\\circ",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\tan x=-\\frac65;\\alpha=\\arctan(6/5);x=180^\\circ-\\alpha,360^\\circ-\\alpha;\\approx130^\\circ,310^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Take reciprocals, then retain all the solutions in one full turn.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sin x=\\frac12\" data-display=\"true\"></span><span data-math=\"x=30^\\circ,150^\\circ\" data-display=\"true\"></span></li><li><span data-math=\"\\cos x=\\frac{\\sqrt3}4\" data-display=\"true\"></span><span data-math=\"\\alpha=\\arccos(\\sqrt3/4)\" data-display=\"true\"></span><span data-math=\"x=\\alpha,360^\\circ-\\alpha\\approx64.3^\\circ,296^\\circ\" data-display=\"true\"></span></li><li><span data-math=\"\\tan x=-\\frac65\" data-display=\"true\"></span><span data-math=\"\\alpha=\\arctan(6/5)\" data-display=\"true\"></span><span data-math=\"x=180^\\circ-\\alpha,360^\\circ-\\alpha\" data-display=\"true\"></span><span data-math=\"\\approx130^\\circ,310^\\circ\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.3/q4",
+      "status": "worked",
+      "method": "Combine sine and cosine fractions; the identity is valid where both sinx and cosx are nonzero.",
+      "steps": [
+        {
+          "latex": "\\frac{\\cot x+\\tan x}{\\sec x};=\\left(\\frac{\\cos x}{\\sin x}+\\frac{\\sin x}{\\cos x}\\right)\\cos x;=\\frac{\\cos^2x+\\sin^2x}{\\sin x}=\\csc x",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\csc x=4\\Rightarrow\\sin x=\\frac14;\\alpha=\\arcsin(1/4);x=\\alpha,180^\\circ-\\alpha\\approx14.5^\\circ,166^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Combine sine and cosine fractions; the identity is valid where both sinx and cosx are nonzero.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{\\cot x+\\tan x}{\\sec x}\" data-display=\"true\"></span><span data-math=\"=\\left(\\frac{\\cos x}{\\sin x}+\\frac{\\sin x}{\\cos x}\\right)\\cos x\" data-display=\"true\"></span><span data-math=\"=\\frac{\\cos^2x+\\sin^2x}{\\sin x}=\\csc x\" data-display=\"true\"></span></li><li><span data-math=\"\\csc x=4\\Rightarrow\\sin x=\\frac14\" data-display=\"true\"></span><span data-math=\"\\alpha=\\arcsin(1/4)\" data-display=\"true\"></span><span data-math=\"x=\\alpha,180^\\circ-\\alpha\\approx14.5^\\circ,166^\\circ\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.3/q5",
+      "status": "worked",
+      "method": "Use the Pythagorean identity on the original domain cos3θ≠0.",
+      "steps": [
+        {
+          "latex": "\\cos3\\theta+\\sin3\\theta\\tan3\\theta;=\\frac{\\cos^23\\theta+\\sin^23\\theta}{\\cos3\\theta};=\\frac1{\\cos3\\theta}=\\sec3\\theta",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2\\sec3\\theta=-1\\Rightarrow\\cos3\\theta=-2;\\text{Impossible since }-1\\le\\cos3\\theta\\le1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the Pythagorean identity on the original domain cos3θ≠0.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\cos3\\theta+\\sin3\\theta\\tan3\\theta\" data-display=\"true\"></span><span data-math=\"=\\frac{\\cos^23\\theta+\\sin^23\\theta}{\\cos3\\theta}\" data-display=\"true\"></span><span data-math=\"=\\frac1{\\cos3\\theta}=\\sec3\\theta\" data-display=\"true\"></span></li><li><span data-math=\"2\\sec3\\theta=-1\\Rightarrow\\cos3\\theta=-2\" data-display=\"true\"></span><span data-math=\"\\text{Impossible since }-1\\le\\cos3\\theta\\le1\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.3/q6",
+      "status": "worked",
+      "method": "The original cotangent requires sinx≠0. Multiply by sinx, then use sin²x=1−cos²x.",
+      "steps": [
+        {
+          "latex": "3\\sin^2x=8\\cos x;3(1-\\cos^2x)=8\\cos x;3\\cos^2x+8\\cos x-3=0;(3\\cos x-1)(\\cos x+3)=0;\\cos x=\\frac13\\quad(\\cos x=-3\\text{ impossible});x=\\arccos(1/3),2\\pi-\\arccos(1/3);x\\approx1.23,5.05",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The original cotangent requires sinx≠0. Multiply by sinx, then use sin²x=1−cos²x.</p><span data-math=\"3\\sin^2x=8\\cos x\" data-display=\"true\"></span><span data-math=\"3(1-\\cos^2x)=8\\cos x\" data-display=\"true\"></span><span data-math=\"3\\cos^2x+8\\cos x-3=0\" data-display=\"true\"></span><span data-math=\"(3\\cos x-1)(\\cos x+3)=0\" data-display=\"true\"></span><span data-math=\"\\cos x=\\frac13\\quad(\\cos x=-3\\text{ impossible})\" data-display=\"true\"></span><span data-math=\"x=\\arccos(1/3),2\\pi-\\arccos(1/3)\" data-display=\"true\"></span><span data-math=\"x\\approx1.23,5.05\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.3/q7",
+      "status": "worked",
+      "method": "Put the fractions over a common denominator and simplify on their original domain.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sin x}{1+\\cos x}+\\frac{1+\\cos x}{\\sin x};=\\frac{\\sin^2x+(1+\\cos x)^2}{(1+\\cos x)\\sin x};=\\frac{2+2\\cos x}{(1+\\cos x)\\sin x}=2\\csc x",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "u=x-\\frac\\pi6;2\\csc u=5\\Rightarrow\\sin u=\\frac25;-\\frac\\pi6\\le u\\le\\frac{11\\pi}6;u=\\arcsin(2/5),\\pi-\\arcsin(2/5);x=\\frac\\pi6+\\arcsin(2/5),\\frac{7\\pi}6-\\arcsin(2/5);x\\approx0.935,3.25",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Put the fractions over a common denominator and simplify on their original domain.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{\\sin x}{1+\\cos x}+\\frac{1+\\cos x}{\\sin x}\" data-display=\"true\"></span><span data-math=\"=\\frac{\\sin^2x+(1+\\cos x)^2}{(1+\\cos x)\\sin x}\" data-display=\"true\"></span><span data-math=\"=\\frac{2+2\\cos x}{(1+\\cos x)\\sin x}=2\\csc x\" data-display=\"true\"></span></li><li><span data-math=\"u=x-\\frac\\pi6\" data-display=\"true\"></span><span data-math=\"2\\csc u=5\\Rightarrow\\sin u=\\frac25\" data-display=\"true\"></span><span data-math=\"-\\frac\\pi6\\le u\\le\\frac{11\\pi}6\" data-display=\"true\"></span><span data-math=\"u=\\arcsin(2/5),\\pi-\\arcsin(2/5)\" data-display=\"true\"></span><span data-math=\"x=\\frac\\pi6+\\arcsin(2/5),\\frac{7\\pi}6-\\arcsin(2/5)\" data-display=\"true\"></span><span data-math=\"x\\approx0.935,3.25\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.4/q1",
+      "status": "worked",
+      "method": "Use 1+cot²x=cosec²x and 1+tan²x=sec²x, retaining the original domains.",
+      "steps": [
+        {
+          "latex": "\\csc^2x+\\tan^2x=(1+\\cot^2x)+(\\sec^2x-1);=\\sec^2x+\\cot^2x",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cot^2x+\\cos^2x=(\\csc^2x-1)+(1-\\sin^2x);=\\csc^2x-\\sin^2x;=(\\csc x-\\sin x)(\\csc x+\\sin x)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac1{1+\\sin x}+\\frac1{1-\\sin x};=\\frac{(1-\\sin x)+(1+\\sin x)}{1-\\sin^2x};=2\\sec^2x=2+2\\tan^2x",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use 1+cot²x=cosec²x and 1+tan²x=sec²x, retaining the original domains.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\csc^2x+\\tan^2x=(1+\\cot^2x)+(\\sec^2x-1)\" data-display=\"true\"></span><span data-math=\"=\\sec^2x+\\cot^2x\" data-display=\"true\"></span></li><li><span data-math=\"\\cot^2x+\\cos^2x=(\\csc^2x-1)+(1-\\sin^2x)\" data-display=\"true\"></span><span data-math=\"=\\csc^2x-\\sin^2x\" data-display=\"true\"></span><span data-math=\"=(\\csc x-\\sin x)(\\csc x+\\sin x)\" data-display=\"true\"></span></li><li><span data-math=\"\\frac1{1+\\sin x}+\\frac1{1-\\sin x}\" data-display=\"true\"></span><span data-math=\"=\\frac{(1-\\sin x)+(1+\\sin x)}{1-\\sin^2x}\" data-display=\"true\"></span><span data-math=\"=2\\sec^2x=2+2\\tan^2x\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.4/q2",
+      "status": "worked",
+      "method": "The angle lies in quadrant II, where cosine is negative.",
+      "steps": [
+        {
+          "latex": "\\cos^2x=1-\\frac{16}{25}=\\frac9{25};\\cos x=-\\frac35",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cot x=\\frac{-3/5}{4/5}=-\\frac34",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\csc x=\\frac1{4/5}=\\frac54",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The angle lies in quadrant II, where cosine is negative.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\cos^2x=1-\\frac{16}{25}=\\frac9{25}\" data-display=\"true\"></span><span data-math=\"\\cos x=-\\frac35\" data-display=\"true\"></span></li><li><span data-math=\"\\cot x=\\frac{-3/5}{4/5}=-\\frac34\" data-display=\"true\"></span></li><li><span data-math=\"\\csc x=\\frac1{4/5}=\\frac54\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.4/q3",
+      "status": "worked",
+      "method": "Replace each expression by a quadratic in one trig function, then discard impossible values and list all interval roots.",
+      "steps": [
+        {
+          "latex": "1+\\tan^2x+\\tan x=1;\\tan x(\\tan x+1)=0;\\tan x=0\\text{ or }-1;x=-\\pi,-\\frac\\pi4,0,\\frac{3\\pi}4,\\pi",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "z=\\csc x:\\ 3(z^2-1)+9z+1=0;3z^2+9z-2=0;z=\\frac{-9\\pm\\sqrt{105}}6;0<\\frac{-9+\\sqrt{105}}6<1\\text{ is impossible};\\sin x=\\frac6{-9-\\sqrt{105}};\\alpha=\\arcsin\\left(\\frac6{9+\\sqrt{105}}\\right);x=\\pi+\\alpha,2\\pi-\\alpha\\approx3.46,5.97",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2\\csc^2x-1=3;\\csc^2x=2\\Rightarrow\\sin x=\\pm\\frac{\\sqrt2}2;x=\\frac\\pi4,\\frac{3\\pi}4,\\frac{5\\pi}4,\\frac{7\\pi}4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Replace each expression by a quadratic in one trig function, then discard impossible values and list all interval roots.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"1+\\tan^2x+\\tan x=1\" data-display=\"true\"></span><span data-math=\"\\tan x(\\tan x+1)=0\" data-display=\"true\"></span><span data-math=\"\\tan x=0\\text{ or }-1\" data-display=\"true\"></span><span data-math=\"x=-\\pi,-\\frac\\pi4,0,\\frac{3\\pi}4,\\pi\" data-display=\"true\"></span></li><li><span data-math=\"z=\\csc x:\\ 3(z^2-1)+9z+1=0\" data-display=\"true\"></span><span data-math=\"3z^2+9z-2=0\" data-display=\"true\"></span><span data-math=\"z=\\frac{-9\\pm\\sqrt{105}}6\" data-display=\"true\"></span><span data-math=\"0&lt;\\frac{-9+\\sqrt{105}}6&lt;1\\text{ is impossible}\" data-display=\"true\"></span><span data-math=\"\\sin x=\\frac6{-9-\\sqrt{105}}\" data-display=\"true\"></span><span data-math=\"\\alpha=\\arcsin\\left(\\frac6{9+\\sqrt{105}}\\right)\" data-display=\"true\"></span><span data-math=\"x=\\pi+\\alpha,2\\pi-\\alpha\\approx3.46,5.97\" data-display=\"true\"></span></li><li><span data-math=\"2\\csc^2x-1=3\" data-display=\"true\"></span><span data-math=\"\\csc^2x=2\\Rightarrow\\sin x=\\pm\\frac{\\sqrt2}2\" data-display=\"true\"></span><span data-math=\"x=\\frac\\pi4,\\frac{3\\pi}4,\\frac{5\\pi}4,\\frac{7\\pi}4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.4/q4",
+      "status": "worked",
+      "method": "Use cosec²x=1+cot²x, then choose the negative cosine because the angle is obtuse.",
+      "steps": [
+        {
+          "latex": "7\\cot^2x-5(1+\\cot^2x)=2;2\\cot^2x=7;\\csc^2x=1+\\frac72=\\frac92;\\sin^2x=\\frac29;\\cos^2x=\\frac79;\\cos x=-\\frac{\\sqrt7}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use cosec²x=1+cot²x, then choose the negative cosine because the angle is obtuse.</p><span data-math=\"7\\cot^2x-5(1+\\cot^2x)=2\" data-display=\"true\"></span><span data-math=\"2\\cot^2x=7\" data-display=\"true\"></span><span data-math=\"\\csc^2x=1+\\frac72=\\frac92\" data-display=\"true\"></span><span data-math=\"\\sin^2x=\\frac29\" data-display=\"true\"></span><span data-math=\"\\cos^2x=\\frac79\" data-display=\"true\"></span><span data-math=\"\\cos x=-\\frac{\\sqrt7}3\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.4/q5",
+      "status": "worked",
+      "method": "Convert to a tangent quadratic and include both periods within 0°≤x≤360°.",
+      "steps": [
+        {
+          "latex": "1+\\tan^2x=5+3\\tan x;\\tan^2x-3\\tan x-4=0;(\\tan x-4)(\\tan x+1)=0;\\tan x=4\\text{ or }-1;x=\\arctan4,135^\\circ,180^\\circ+\\arctan4,315^\\circ;x\\approx76.0^\\circ,135^\\circ,256.0^\\circ,315^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Convert to a tangent quadratic and include both periods within 0°≤x≤360°.</p><span data-math=\"1+\\tan^2x=5+3\\tan x\" data-display=\"true\"></span><span data-math=\"\\tan^2x-3\\tan x-4=0\" data-display=\"true\"></span><span data-math=\"(\\tan x-4)(\\tan x+1)=0\" data-display=\"true\"></span><span data-math=\"\\tan x=4\\text{ or }-1\" data-display=\"true\"></span><span data-math=\"x=\\arctan4,135^\\circ,180^\\circ+\\arctan4,315^\\circ\" data-display=\"true\"></span><span data-math=\"x\\approx76.0^\\circ,135^\\circ,256.0^\\circ,315^\\circ\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.4/q6",
+      "status": "worked",
+      "method": "Use a quadratic in cosecp and reject a cosecant value whose magnitude is less than 1.",
+      "steps": [
+        {
+          "latex": "z=\\csc p:\\ z^2-1=-4z;z^2+4z-1=0;z=-2\\pm\\sqrt5;0<-2+\\sqrt5<1\\text{ is impossible};\\csc p=-2-\\sqrt5",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\sin p=\\frac1{-2-\\sqrt5};=\\frac{-2+\\sqrt5}{4-5}=2-\\sqrt5",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\alpha=\\arcsin(\\sqrt5-2);p=\\pi+\\alpha,2\\pi-\\alpha;p\\approx3.4,6.0\\quad(1\\text{ d.p.})",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use a quadratic in cosecp and reject a cosecant value whose magnitude is less than 1.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"z=\\csc p:\\ z^2-1=-4z\" data-display=\"true\"></span><span data-math=\"z^2+4z-1=0\" data-display=\"true\"></span><span data-math=\"z=-2\\pm\\sqrt5\" data-display=\"true\"></span><span data-math=\"0&lt;-2+\\sqrt5&lt;1\\text{ is impossible}\" data-display=\"true\"></span><span data-math=\"\\csc p=-2-\\sqrt5\" data-display=\"true\"></span></li><li><span data-math=\"\\sin p=\\frac1{-2-\\sqrt5}\" data-display=\"true\"></span><span data-math=\"=\\frac{-2+\\sqrt5}{4-5}=2-\\sqrt5\" data-display=\"true\"></span></li><li><span data-math=\"\\alpha=\\arcsin(\\sqrt5-2)\" data-display=\"true\"></span><span data-math=\"p=\\pi+\\alpha,2\\pi-\\alpha\" data-display=\"true\"></span><span data-math=\"p\\approx3.4,6.0\\quad(1\\text{ d.p.})\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.4/q7",
+      "status": "worked",
+      "method": "Use cosec²x=1+cot²x, then convert the two cotangent values to tangent.",
+      "steps": [
+        {
+          "latex": "2(1+\\cot^2x)+5\\cot x=5;2\\cot^2x+5\\cot x-3=0;(2\\cot x-1)(\\cot x+3)=0;\\cot x=\\frac12\\text{ or }-3;\\tan x=2\\text{ or }-\\frac13;x=\\arctan2-\\pi,-\\arctan(1/3),\\arctan2,\\pi-\\arctan(1/3);x\\approx-2.03,-0.32,1.11,2.82",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use cosec²x=1+cot²x, then convert the two cotangent values to tangent.</p><span data-math=\"2(1+\\cot^2x)+5\\cot x=5\" data-display=\"true\"></span><span data-math=\"2\\cot^2x+5\\cot x-3=0\" data-display=\"true\"></span><span data-math=\"(2\\cot x-1)(\\cot x+3)=0\" data-display=\"true\"></span><span data-math=\"\\cot x=\\frac12\\text{ or }-3\" data-display=\"true\"></span><span data-math=\"\\tan x=2\\text{ or }-\\frac13\" data-display=\"true\"></span><span data-math=\"x=\\arctan2-\\pi,-\\arctan(1/3),\\arctan2,\\pi-\\arctan(1/3)\" data-display=\"true\"></span><span data-math=\"x\\approx-2.03,-0.32,1.11,2.82\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.5/q1",
+      "status": "worked",
+      "method": "Use the principal branches of the inverse trig functions.",
+      "steps": [
+        {
+          "latex": "\\text{domain }[-1,1],\\quad\\text{range }[-\\pi/2,\\pi/2];\\text{axis intersection }(0,0)",
+          "explanation": "Arcsine increases from (−1,−π/2) to (1,π/2).",
+          "graphs": [
+            "ans65-q1a"
+          ]
+        },
+        {
+          "latex": "\\text{domain }[-1,1],\\quad\\text{range }[0,\\pi];\\text{axis intersections }(1,0),(0,\\pi/2)",
+          "explanation": "Arccosine decreases from (−1,π) to (1,0).",
+          "graphs": [
+            "ans65-q1b"
+          ]
+        },
+        {
+          "latex": "\\text{domain }\\mathbb R,\\quad\\text{range }(-\\pi/2,\\pi/2);\\text{axis intersection }(0,0);\\text{horizontal asymptotes }y=\\pm\\pi/2",
+          "explanation": "Arctangent increases, approaching its asymptotes without reaching them.",
+          "graphs": [
+            "ans65-q1c"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>Use the principal branches of the inverse trig functions.</p><ol type=\"a\" class=\"parts\"><li><p>Arcsine increases from (−1,−π/2) to (1,π/2).</p><span data-math=\"\\text{domain }[-1,1],\\quad\\text{range }[-\\pi/2,\\pi/2]\" data-display=\"true\"></span><span data-math=\"\\text{axis intersection }(0,0)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/5600ba58b9195971aae5.png\" alt=\"Original question diagram\"></li><li><p>Arccosine decreases from (−1,π) to (1,0).</p><span data-math=\"\\text{domain }[-1,1],\\quad\\text{range }[0,\\pi]\" data-display=\"true\"></span><span data-math=\"\\text{axis intersections }(1,0),(0,\\pi/2)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/67ee2433790f7241e792.png\" alt=\"Original question diagram\"></li><li><p>Arctangent increases, approaching its asymptotes without reaching them.</p><span data-math=\"\\text{domain }\\mathbb R,\\quad\\text{range }(-\\pi/2,\\pi/2)\" data-display=\"true\"></span><span data-math=\"\\text{axis intersection }(0,0)\" data-display=\"true\"></span><span data-math=\"\\text{horizontal asymptotes }y=\\pm\\pi/2\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/43b5a25ed775bbd88dea.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.5/q2",
+      "status": "worked",
+      "method": "Choose the exact angle inside the principal range of each inverse function.",
+      "steps": [
+        {
+          "latex": "\\tan(\\pi/4)=1\\Rightarrow\\arctan1=\\frac\\pi4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\sin(-\\pi/3)=-\\frac{\\sqrt3}2;\\arcsin(-\\sqrt3/2)=-\\frac\\pi3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cos(\\pi/3)=\\frac12\\Rightarrow\\arccos(1/2)=\\frac\\pi3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Choose the exact angle inside the principal range of each inverse function.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\tan(\\pi/4)=1\\Rightarrow\\arctan1=\\frac\\pi4\" data-display=\"true\"></span></li><li><span data-math=\"\\sin(-\\pi/3)=-\\frac{\\sqrt3}2\" data-display=\"true\"></span><span data-math=\"\\arcsin(-\\sqrt3/2)=-\\frac\\pi3\" data-display=\"true\"></span></li><li><span data-math=\"\\cos(\\pi/3)=\\frac12\\Rightarrow\\arccos(1/2)=\\frac\\pi3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.5/q3",
+      "status": "worked",
+      "method": "Evaluate the inner trig function first, then choose its principal inverse value.",
+      "steps": [
+        {
+          "latex": "\\sin(\\pi/2)=1;\\arcsin1=\\frac\\pi2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\cos3\\pi=-1;\\arccos(-1)=\\pi",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\tan(5\\pi/4)=1;\\arctan1=\\frac\\pi4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Evaluate the inner trig function first, then choose its principal inverse value.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sin(\\pi/2)=1\" data-display=\"true\"></span><span data-math=\"\\arcsin1=\\frac\\pi2\" data-display=\"true\"></span></li><li><span data-math=\"\\cos3\\pi=-1\" data-display=\"true\"></span><span data-math=\"\\arccos(-1)=\\pi\" data-display=\"true\"></span></li><li><span data-math=\"\\tan(5\\pi/4)=1\" data-display=\"true\"></span><span data-math=\"\\arctan1=\\frac\\pi4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.5/q4",
+      "status": "worked",
+      "method": "Translate arcsinx right by 1/2 and up by π/3. Its endpoints come from arguments −1 and 1.",
+      "steps": [
+        {
+          "latex": "-1\\le x-\\frac12\\le1\\Rightarrow-\\frac12\\le x\\le\\frac32;\\text{endpoints }(-\\tfrac12,-\\tfrac\\pi6),(\\tfrac32,\\tfrac{5\\pi}6)",
+          "explanation": "The supplied sketch places the left endpoint correctly to the left of the y-axis but its label omits the minus sign. The correct left endpoint is (−1/2,−π/6).",
+          "graphs": [
+            "ans65-q4"
+          ]
+        },
+        {
+          "latex": "0=\\frac\\pi3+\\arcsin(x-\\tfrac12);x-\\frac12=\\sin(-\\pi/3)=-\\frac{\\sqrt3}2;\\text{x-intercept }(\\tfrac{1-\\sqrt3}2,0)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Translate arcsinx right by 1/2 and up by π/3. Its endpoints come from arguments −1 and 1.</p><ol type=\"a\" class=\"parts\"><li><p>The supplied sketch places the left endpoint correctly to the left of the y-axis but its label omits the minus sign. The correct left endpoint is (−1/2,−π/6).</p><span data-math=\"-1\\le x-\\frac12\\le1\\Rightarrow-\\frac12\\le x\\le\\frac32\" data-display=\"true\"></span><span data-math=\"\\text{endpoints }(-\\tfrac12,-\\tfrac\\pi6),(\\tfrac32,\\tfrac{5\\pi}6)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/1675174ff54d9694a74a.png\" alt=\"Original question diagram\"></li><li><span data-math=\"0=\\frac\\pi3+\\arcsin(x-\\tfrac12)\" data-display=\"true\"></span><span data-math=\"x-\\frac12=\\sin(-\\pi/3)=-\\frac{\\sqrt3}2\" data-display=\"true\"></span><span data-math=\"\\text{x-intercept }(\\tfrac{1-\\sqrt3}2,0)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.5/q5",
+      "status": "worked",
+      "method": "Use the principal arccos range 0≤y≤π.",
+      "steps": [
+        {
+          "latex": "\\arccos(\\sqrt3/2)=\\frac\\pi6;\\arccos(-1/2)=\\frac{2\\pi}3;\\frac\\pi6+\\frac{2\\pi}3=\\frac{5\\pi}6",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the principal arccos range 0≤y≤π.</p><span data-math=\"\\arccos(\\sqrt3/2)=\\frac\\pi6\" data-display=\"true\"></span><span data-math=\"\\arccos(-1/2)=\\frac{2\\pi}3\" data-display=\"true\"></span><span data-math=\"\\frac\\pi6+\\frac{2\\pi}3=\\frac{5\\pi}6\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.5/q6",
+      "status": "worked",
+      "method": "The graph’s horizontal asymptotes are ±π and its x-intercept is −3.",
+      "steps": [
+        {
+          "latex": "a\\frac\\pi2=\\pi\\Rightarrow a=2;\\arctan(x+b)=0\\Rightarrow x=-b;-b=-3\\Rightarrow b=3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "x=0:\\ y=2\\arctan3\\approx2.498;\\text{y-intercept }(0,2.498)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The graph’s horizontal asymptotes are ±π and its x-intercept is −3.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"a\\frac\\pi2=\\pi\\Rightarrow a=2\" data-display=\"true\"></span><span data-math=\"\\arctan(x+b)=0\\Rightarrow x=-b\" data-display=\"true\"></span><span data-math=\"-b=-3\\Rightarrow b=3\" data-display=\"true\"></span></li><li><span data-math=\"x=0:\\ y=2\\arctan3\\approx2.498\" data-display=\"true\"></span><span data-math=\"\\text{y-intercept }(0,2.498)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.5/q7",
+      "status": "worked",
+      "method": "The principal range of arccos is [0,π], so the negative value −π/4 is impossible.",
+      "steps": [
+        {
+          "latex": "\\arccos(x-3)\\ge0\\text{ whenever }2\\le x\\le4;\\boxed{\\text{No real solution}};x=3+\\frac{\\sqrt2}2\\Rightarrow\\arccos(x-3)=\\frac\\pi4\\ne-\\frac\\pi4",
+          "explanation": "Taking cosine loses the range restriction and gives the supplied value (6+√2)/2. Substitution shows that it solves the equation with +π/4, not the printed equation.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The principal range of arccos is [0,π], so the negative value −π/4 is impossible.</p><p>Taking cosine loses the range restriction and gives the supplied value (6+√2)/2. Substitution shows that it solves the equation with +π/4, not the printed equation.</p><span data-math=\"\\arccos(x-3)\\ge0\\text{ whenever }2\\le x\\le4\" data-display=\"true\"></span><span data-math=\"\\boxed{\\text{No real solution}}\" data-display=\"true\"></span><span data-math=\"x=3+\\frac{\\sqrt2}2\\Rightarrow\\arccos(x-3)=\\frac\\pi4\\ne-\\frac\\pi4\" data-display=\"true\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/problem-a/qbronze",
+      "status": "worked",
+      "method": "Put the fractions over their common denominator, then use sin²x+cos²x=1. Keep the original nonzero denominators.",
+      "steps": [
+        {
+          "latex": "p=\\frac{\\cos^2x+(1-\\sin x)^2}{(1-\\sin x)\\cos x};=\\frac{\\cos^2x+1-2\\sin x+\\sin^2x}{(1-\\sin x)\\cos x}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "p=\\frac{2-2\\sin x}{(1-\\sin x)\\cos x};=\\frac2{\\cos x}=2\\sec x;\\sec x=\\frac p2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Put the fractions over their common denominator, then use sin²x+cos²x=1. Keep the original nonzero denominators.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"p=\\frac{\\cos^2x+(1-\\sin x)^2}{(1-\\sin x)\\cos x}\" data-display=\"true\"></span><span data-math=\"=\\frac{\\cos^2x+1-2\\sin x+\\sin^2x}{(1-\\sin x)\\cos x}\" data-display=\"true\"></span></li><li><span data-math=\"p=\\frac{2-2\\sin x}{(1-\\sin x)\\cos x}\" data-display=\"true\"></span><span data-math=\"=\\frac2{\\cos x}=2\\sec x\" data-display=\"true\"></span><span data-math=\"\\sec x=\\frac p2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/problem-a/qsilver",
+      "status": "worked",
+      "method": "Replace cot²x by cosec²x−1, then take reciprocals and use the Pythagorean identity.",
+      "steps": [
+        {
+          "latex": "(\\csc^2x-1)+\\csc^2x=a;2\\csc^2x=a+1;\\csc^2x=\\frac{a+1}2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\sin^2x=\\frac2{a+1};\\cos^2x=1-\\frac2{a+1}=\\frac{a-1}{a+1};\\sec^2x=\\frac{a+1}{a-1},\\quad a\\ne1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Replace cot²x by cosec²x−1, then take reciprocals and use the Pythagorean identity.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"(\\csc^2x-1)+\\csc^2x=a\" data-display=\"true\"></span><span data-math=\"2\\csc^2x=a+1\" data-display=\"true\"></span><span data-math=\"\\csc^2x=\\frac{a+1}2\" data-display=\"true\"></span></li><li><span data-math=\"\\sin^2x=\\frac2{a+1}\" data-display=\"true\"></span><span data-math=\"\\cos^2x=1-\\frac2{a+1}=\\frac{a-1}{a+1}\" data-display=\"true\"></span><span data-math=\"\\sec^2x=\\frac{a+1}{a-1},\\quad a\\ne1\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/problem-a/qgold",
+      "status": "worked",
+      "method": "Use 1+tan²x=sec²x, retaining cosx≠0 from the original expression and z≠1 for the required reciprocal.",
+      "steps": [
+        {
+          "latex": "z=\\frac{1-\\tan^2x}{\\sec^2x};=\\cos^2x-\\sin^2x=1-2\\sin^2x;\\sin^2x=\\frac{1-z}2;\\csc^2x=\\frac2{1-z},\\quad z\\ne1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use 1+tan²x=sec²x, retaining cosx≠0 from the original expression and z≠1 for the required reciprocal.</p><span data-math=\"z=\\frac{1-\\tan^2x}{\\sec^2x}\" data-display=\"true\"></span><span data-math=\"=\\cos^2x-\\sin^2x=1-2\\sin^2x\" data-display=\"true\"></span><span data-math=\"\\sin^2x=\\frac{1-z}2\" data-display=\"true\"></span><span data-math=\"\\csc^2x=\\frac2{1-z},\\quad z\\ne1\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/problem-b/qbronze",
+      "status": "worked",
+      "method": "Use the half-period of tan2x and a perfect-square factorisation.",
+      "steps": [
+        {
+          "latex": "\\text{zeros }x=0,\\frac\\pi2,\\pi;\\text{asymptotes }x=\\frac\\pi4,\\frac{3\\pi}4;\\text{period }\\frac\\pi2",
+          "explanation": "Each tangent branch is increasing.",
+          "graphs": [
+            "ans-setB-bronze"
+          ]
+        },
+        {
+          "latex": "\\cot^22x-4\\cot2x+4=(\\cot2x-2)^2; a=2;\\cot2x=2\\Rightarrow\\tan2x=\\frac12;2x=\\arctan(1/2)+n\\pi,\\quad n=0,1;x=\\frac12\\arctan(1/2),\\frac12\\arctan(1/2)+\\frac\\pi2;x\\approx0.23,1.80",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the half-period of tan2x and a perfect-square factorisation.</p><ol type=\"a\" class=\"parts\"><li><p>Each tangent branch is increasing.</p><span data-math=\"\\text{zeros }x=0,\\frac\\pi2,\\pi\" data-display=\"true\"></span><span data-math=\"\\text{asymptotes }x=\\frac\\pi4,\\frac{3\\pi}4\" data-display=\"true\"></span><span data-math=\"\\text{period }\\frac\\pi2\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/259db7ab1d557d5c1e12.png\" alt=\"Original question diagram\"></li><li><span data-math=\"\\cot^22x-4\\cot2x+4=(\\cot2x-2)^2\" data-display=\"true\"></span><span data-math=\"a=2\" data-display=\"true\"></span><span data-math=\"\\cot2x=2\\Rightarrow\\tan2x=\\frac12\" data-display=\"true\"></span><span data-math=\"2x=\\arctan(1/2)+n\\pi,\\quad n=0,1\" data-display=\"true\"></span><span data-math=\"x=\\frac12\\arctan(1/2),\\frac12\\arctan(1/2)+\\frac\\pi2\" data-display=\"true\"></span><span data-math=\"x\\approx0.23,1.80\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/problem-b/qsilver",
+      "status": "worked",
+      "method": "Use a quadratic in cosec2x; magnitudes less than 1 cannot be cosecant values.",
+      "steps": [
+        {
+          "latex": "z=\\csc2x:\\ 4(z^2-1)+12z+9=0;4z^2+12z+5=(2z+1)(2z+5)=0;z=-\\frac12\\text{ is impossible};z=-\\frac52\\Rightarrow\\sin2x=-\\frac25",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\alpha=\\arcsin(2/5);2x=180^\\circ+\\alpha,360^\\circ-\\alpha,540^\\circ+\\alpha,720^\\circ-\\alpha;x\\approx101.8^\\circ,168.2^\\circ,281.8^\\circ,348.2^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use a quadratic in cosec2x; magnitudes less than 1 cannot be cosecant values.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"z=\\csc2x:\\ 4(z^2-1)+12z+9=0\" data-display=\"true\"></span><span data-math=\"4z^2+12z+5=(2z+1)(2z+5)=0\" data-display=\"true\"></span><span data-math=\"z=-\\frac12\\text{ is impossible}\" data-display=\"true\"></span><span data-math=\"z=-\\frac52\\Rightarrow\\sin2x=-\\frac25\" data-display=\"true\"></span></li><li><span data-math=\"\\alpha=\\arcsin(2/5)\" data-display=\"true\"></span><span data-math=\"2x=180^\\circ+\\alpha,360^\\circ-\\alpha,540^\\circ+\\alpha,720^\\circ-\\alpha\" data-display=\"true\"></span><span data-math=\"x\\approx101.8^\\circ,168.2^\\circ,281.8^\\circ,348.2^\\circ\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/problem-b/qgold",
+      "status": "worked",
+      "method": "First solve the cosecant quadratic, then retain every shifted-angle root in the transformed interval.",
+      "steps": [
+        {
+          "latex": "z=\\csc a:\\ 5+2(z^2-1)=7+7z;2z^2-7z-4=(2z+1)(z-4)=0;z=-\\frac12\\text{ impossible},\\quad z=4;\\sin a=\\frac14,\\quad\\frac\\pi3\\le a\\le\\frac{13\\pi}3;\\alpha=\\arcsin(1/4);a=\\pi-\\alpha,2\\pi+\\alpha,3\\pi-\\alpha,4\\pi+\\alpha;x=\\frac{a-\\pi/3}2\\approx0.92,2.74,4.06,5.89",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>First solve the cosecant quadratic, then retain every shifted-angle root in the transformed interval.</p><span data-math=\"z=\\csc a:\\ 5+2(z^2-1)=7+7z\" data-display=\"true\"></span><span data-math=\"2z^2-7z-4=(2z+1)(z-4)=0\" data-display=\"true\"></span><span data-math=\"z=-\\frac12\\text{ impossible},\\quad z=4\" data-display=\"true\"></span><span data-math=\"\\sin a=\\frac14,\\quad\\frac\\pi3\\le a\\le\\frac{13\\pi}3\" data-display=\"true\"></span><span data-math=\"\\alpha=\\arcsin(1/4)\" data-display=\"true\"></span><span data-math=\"a=\\pi-\\alpha,2\\pi+\\alpha,3\\pi-\\alpha,4\\pi+\\alpha\" data-display=\"true\"></span><span data-math=\"x=\\frac{a-\\pi/3}2\\approx0.92,2.74,4.06,5.89\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/exam/q3",
+      "status": "worked",
+      "method": "Express sinx in terms of n, then substitute into the reciprocal formula for m.",
+      "steps": [
+        {
+          "latex": "\\sin x=5n;m=\\frac2{\\sin x}=\\frac2{5n},\\quad n\\ne0",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Express sinx in terms of n, then substitute into the reciprocal formula for m.</p><span data-math=\"\\sin x=5n\" data-display=\"true\"></span><span data-math=\"m=\\frac2{\\sin x}=\\frac2{5n},\\quad n\\ne0\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/exam/q6",
+      "status": "worked",
+      "method": "The original secant requires cosx≠0. Multiply by cosx and solve the squared cosine equation.",
+      "steps": [
+        {
+          "latex": "4\\cos^2x=3;\\cos x=\\pm\\frac{\\sqrt3}2;x=-150^\\circ,-30^\\circ,30^\\circ,150^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The original secant requires cosx≠0. Multiply by cosx and solve the squared cosine equation.</p><span data-math=\"4\\cos^2x=3\" data-display=\"true\"></span><span data-math=\"\\cos x=\\pm\\frac{\\sqrt3}2\" data-display=\"true\"></span><span data-math=\"x=-150^\\circ,-30^\\circ,30^\\circ,150^\\circ\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/exam/q15",
+      "status": "worked",
+      "method": "Use the reciprocal graphs, their ranges and intersections.",
+      "steps": [
+        {
+          "latex": "3+3\\sec x\\ge6\\text{ or }3+3\\sec x\\le0;\\text{secant asymptotes }x=\\pm90^\\circ;\\text{cotangent asymptotes }x=-180^\\circ,0^\\circ,180^\\circ",
+          "explanation": "The secant curve has minimum (0,6), and reaches zero at the endpoints ±180°. Cotangent decreases on each branch and crosses the x-axis at ±90°.",
+          "graphs": [
+            "bank-ans15"
+          ]
+        },
+        {
+          "latex": "\\text{two solutions}",
+          "explanation": "There is one crossing in (0°,90°) and one in (90°,180°); there are none on the negative half. Equivalently the equation becomes 3sinx(1+cosx)=cos²x, which requires positive sinx and yields one root on each positive quadrant.",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{On positive branches, }3+3\\sec x\\ge6;\\max\\frac1{3+3\\sec x}=\\frac16\\text{ at }x=0;\\text{Negative branches give negative reciprocals}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the reciprocal graphs, their ranges and intersections.</p><ol type=\"a\" class=\"parts\"><li><p>The secant curve has minimum (0,6), and reaches zero at the endpoints ±180°. Cotangent decreases on each branch and crosses the x-axis at ±90°.</p><span data-math=\"3+3\\sec x\\ge6\\text{ or }3+3\\sec x\\le0\" data-display=\"true\"></span><span data-math=\"\\text{secant asymptotes }x=\\pm90^\\circ\" data-display=\"true\"></span><span data-math=\"\\text{cotangent asymptotes }x=-180^\\circ,0^\\circ,180^\\circ\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/ae58110791e22a79d645.png\" alt=\"Original question diagram\"></li><li><p>There is one crossing in (0°,90°) and one in (90°,180°); there are none on the negative half. Equivalently the equation becomes 3sinx(1+cosx)=cos²x, which requires positive sinx and yields one root on each positive quadrant.</p><span data-math=\"\\text{two solutions}\" data-display=\"true\"></span></li><li><span data-math=\"\\text{On positive branches, }3+3\\sec x\\ge6\" data-display=\"true\"></span><span data-math=\"\\max\\frac1{3+3\\sec x}=\\frac16\\text{ at }x=0\" data-display=\"true\"></span><span data-math=\"\\text{Negative branches give negative reciprocals}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/exam/q21",
+      "status": "worked",
+      "method": "CotP is negative and π≤P≤2π, so P must lie in quadrant IV: sinP<0 and cosP>0.",
+      "steps": [
+        {
+          "latex": "\\csc^2P=1+\\cot^2P=5;\\sin^2P=\\frac15;\\sin P=-\\frac1{\\sqrt5}",
+          "explanation": "The supplied ± answer omits the given quadrant restriction.",
+          "graphs": []
+        },
+        {
+          "latex": "\\cos P=\\cot P\\sin P=(-2)(-1/\\sqrt5)=\\frac2{\\sqrt5};\\sec^2P=\\frac54\\Rightarrow\\sec P=\\pm\\frac{\\sqrt5}2; a=5,\\quad\\text{and the quadrant selects }\\sec P=+\\frac{\\sqrt5}2",
+          "explanation": "The requested ± form describes the algebraic square roots, but only the positive choice satisfies the stated interval.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>CotP is negative and π≤P≤2π, so P must lie in quadrant IV: sinP&lt;0 and cosP&gt;0.</p><ol type=\"a\" class=\"parts\"><li><p>The supplied ± answer omits the given quadrant restriction.</p><span data-math=\"\\csc^2P=1+\\cot^2P=5\" data-display=\"true\"></span><span data-math=\"\\sin^2P=\\frac15\" data-display=\"true\"></span><span data-math=\"\\sin P=-\\frac1{\\sqrt5}\" data-display=\"true\"></span></li><li><p>The requested ± form describes the algebraic square roots, but only the positive choice satisfies the stated interval.</p><span data-math=\"\\cos P=\\cot P\\sin P=(-2)(-1/\\sqrt5)=\\frac2{\\sqrt5}\" data-display=\"true\"></span><span data-math=\"\\sec^2P=\\frac54\\Rightarrow\\sec P=\\pm\\frac{\\sqrt5}2\" data-display=\"true\"></span><span data-math=\"a=5,\\quad\\text{and the quadrant selects }\\sec P=+\\frac{\\sqrt5}2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/exam/q42",
+      "status": "worked",
+      "method": "Factor the difference of squares and use sec²x−tan²x=1.",
+      "steps": [
+        {
+          "latex": "\\sec^4x-\\tan^4x=(\\sec^2x-\\tan^2x)(\\sec^2x+\\tan^2x);=1(\\sec^2x+\\sec^2x-1)=2\\sec^2x-1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2\\sec^2x-1=24;\\sec^2x=\\frac{25}2;\\cos x=\\pm\\frac{\\sqrt2}5;\\alpha=\\arccos(\\sqrt2/5);x=\\alpha,180^\\circ-\\alpha,180^\\circ+\\alpha,360^\\circ-\\alpha;x\\approx73.57^\\circ,106.4^\\circ,253.6^\\circ,286.4^\\circ",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor the difference of squares and use sec²x−tan²x=1.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sec^4x-\\tan^4x=(\\sec^2x-\\tan^2x)(\\sec^2x+\\tan^2x)\" data-display=\"true\"></span><span data-math=\"=1(\\sec^2x+\\sec^2x-1)=2\\sec^2x-1\" data-display=\"true\"></span></li><li><span data-math=\"2\\sec^2x-1=24\" data-display=\"true\"></span><span data-math=\"\\sec^2x=\\frac{25}2\" data-display=\"true\"></span><span data-math=\"\\cos x=\\pm\\frac{\\sqrt2}5\" data-display=\"true\"></span><span data-math=\"\\alpha=\\arccos(\\sqrt2/5)\" data-display=\"true\"></span><span data-math=\"x=\\alpha,180^\\circ-\\alpha,180^\\circ+\\alpha,360^\\circ-\\alpha\" data-display=\"true\"></span><span data-math=\"x\\approx73.57^\\circ,106.4^\\circ,253.6^\\circ,286.4^\\circ\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/exam/q58",
+      "status": "worked",
+      "method": "For the composite, the input to arccos must lie between −1 and 1. Use its principal range when inverting.",
+      "steps": [
+        {
+          "latex": "\\mathrm{gh}(x)=\\arccos(x/2);-1\\le x/2\\le1\\Rightarrow-2\\le x\\le2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\text{endpoints }(-2,\\pi),(2,0);\\text{y-intercept }(0,\\pi/2)",
+          "explanation": "The graph decreases across the entire domain.",
+          "graphs": [
+            "bank-ans58"
+          ]
+        },
+        {
+          "latex": "y=\\arccos(x/2)\\Rightarrow x=2\\cos y;(\\mathrm{gh})^{-1}(x)=2\\cos x,\\quad0\\le x\\le\\pi",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>For the composite, the input to arccos must lie between −1 and 1. Use its principal range when inverting.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\mathrm{gh}(x)=\\arccos(x/2)\" data-display=\"true\"></span><span data-math=\"-1\\le x/2\\le1\\Rightarrow-2\\le x\\le2\" data-display=\"true\"></span></li><li><p>The graph decreases across the entire domain.</p><span data-math=\"\\text{endpoints }(-2,\\pi),(2,0)\" data-display=\"true\"></span><span data-math=\"\\text{y-intercept }(0,\\pi/2)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/01dd14566fff900d77b1.png\" alt=\"Original question diagram\"></li><li><span data-math=\"y=\\arccos(x/2)\\Rightarrow x=2\\cos y\" data-display=\"true\"></span><span data-math=\"(\\mathrm{gh})^{-1}(x)=2\\cos x,\\quad0\\le x\\le\\pi\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}

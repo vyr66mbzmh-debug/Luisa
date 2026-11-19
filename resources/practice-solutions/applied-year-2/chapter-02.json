@@ -1,0 +1,1023 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 2,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.1/q1",
+      "status": "worked",
+      "method": "Intersection means both; union means either; a prime means outside the set.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"A^\\prime\\cap B\"></span><p>Inside B but outside A.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(A\\cup B)^\\prime\"></span><p>Outside both circles.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(A\\cap B^\\prime)\\cup(A^\\prime\\cap B)\"></span><p>In exactly one of A and B.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(A\\cup B)^\\prime\"></span><p>Outside A and B, whether inside or outside C.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(A\\cap B)\\cup(B\\cap C)\\cup(A\\cap C)\"></span><p>In at least two sets, including the triple intersection.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"A\\cap C\\cap B^\\prime\"></span><p>In A and C but outside B.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Intersection means both; union means either; a prime means outside the set.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"A^\\prime\\cap B\"></span><p>Inside B but outside A.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(A\\cup B)^\\prime\"></span><p>Outside both circles.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(A\\cap B^\\prime)\\cup(A^\\prime\\cap B)\"></span><p>In exactly one of A and B.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(A\\cup B)^\\prime\"></span><p>Outside A and B, whether inside or outside C.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"(A\\cap B)\\cup(B\\cap C)\\cup(A\\cap C)\"></span><p>In at least two sets, including the triple intersection.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"A\\cap C\\cap B^\\prime\"></span><p>In A and C but outside B.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.1/q2",
+      "status": "worked",
+      "method": "Translate each operation into a region before shading.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/46e97f27e51c58122360.png\" alt=\"ans21-q2a: solution graph\"></figure><p>Shade only the part of A outside B.</p>"
+        },
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/6ad9de49f71a40d2b943.png\" alt=\"ans21-q2b: solution graph\"></figure><span class=\"equation\" data-display=\"true\" data-math=\"A^\\prime\\cup B^\\prime=(A\\cap B)^\\prime\"></span><p>Shade everything except the overlap.</p>"
+        },
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/eb46370ba0a1928a2e61.png\" alt=\"ans21-q2c: solution graph\"></figure><p>Shade the overlap and the region outside both circles.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Translate each operation into a region before shading.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/46e97f27e51c58122360.png\" alt=\"ans21-q2a: solution graph\"></figure><p>Shade only the part of A outside B.</p></li><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/6ad9de49f71a40d2b943.png\" alt=\"ans21-q2b: solution graph\"></figure><span class=\"equation\" data-display=\"true\" data-math=\"A^\\prime\\cup B^\\prime=(A\\cap B)^\\prime\"></span><p>Shade everything except the overlap.</p></li><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/eb46370ba0a1928a2e61.png\" alt=\"ans21-q2c: solution graph\"></figure><p>Shade the overlap and the region outside both circles.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.1/q3",
+      "status": "worked",
+      "method": "Use brackets to decide which regions are included.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/dd8c70cea5eade11f5ee.png\" alt=\"ans21-q3a: solution graph\"></figure><p>Shade all of A, together with the overlap of B and C.</p>"
+        },
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/86f110c2bba65114fb42.png\" alt=\"ans21-q3b: solution graph\"></figure><p>Shade regions in A or B that lie outside C.</p>"
+        },
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/57f419cdcfe497a4b495.png\" alt=\"ans21-q3c: solution graph\"></figure><span class=\"equation\" data-display=\"true\" data-math=\"(A\\cup(B\\cap C^\\prime))^\\prime=A^\\prime\\cap(B^\\prime\\cup C)\"></span><p>Shade everything outside A except the portion of B that lies outside C.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use brackets to decide which regions are included.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/dd8c70cea5eade11f5ee.png\" alt=\"ans21-q3a: solution graph\"></figure><p>Shade all of A, together with the overlap of B and C.</p></li><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/86f110c2bba65114fb42.png\" alt=\"ans21-q3b: solution graph\"></figure><p>Shade regions in A or B that lie outside C.</p></li><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/57f419cdcfe497a4b495.png\" alt=\"ans21-q3c: solution graph\"></figure><span class=\"equation\" data-display=\"true\" data-math=\"(A\\cup(B\\cap C^\\prime))^\\prime=A^\\prime\\cap(B^\\prime\\cup C)\"></span><p>Shade everything outside A except the portion of B that lies outside C.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.1/q4",
+      "status": "worked",
+      "method": "Count the relevant cards out of52 equally likely cards.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(F)=(3+9)/52=3/13\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D)=(10+3)/52=1/4\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D\\cap F)=3/52\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D\\cup F)=(10+3+9)/52=11/26\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(F^\\prime)=1-12/52=10/13\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D^\\prime\\cap F)=9/52\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Count the relevant cards out of 52 equally likely cards.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(F)=(3+9)/52=3/13\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(D)=(10+3)/52=1/4\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(D\\cap F)=3/52\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(D\\cup F)=(10+3+9)/52=11/26\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(F^\\prime)=1-12/52=10/13\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(D^\\prime\\cap F)=9/52\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.1/q5",
+      "status": "worked",
+      "method": "Use inclusion–exclusion and complements.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=0.4+0.3-0.2=0.5\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime)=1-0.4=0.6\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime\\cap B)=0.3-0.2=0.1\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime\\cap B^\\prime)=1-P(A\\cup B)=0.5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use inclusion–exclusion and complements.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=0.4+0.3-0.2=0.5\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime)=1-0.4=0.6\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime\\cap B)=0.3-0.2=0.1\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime\\cap B^\\prime)=1-P(A\\cup B)=0.5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.1/q6",
+      "status": "worked",
+      "method": "The union is55%; subtract it from the sum of the individual percentages to find the overlap.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cap H)=0.4+0.25-0.55=0.10\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/3cb968c2e743ddfd6823.png\" alt=\"ans21-q6: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(C\\cap H)=0.10\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(C\\cap H^\\prime)=0.40-0.10=0.30\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(H\\cap C^\\prime)=0.25-0.10=0.15\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The union is 55%; subtract it from the sum of the individual percentages to find the overlap.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cap H)=0.4+0.25-0.55=0.10\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/3cb968c2e743ddfd6823.png\" alt=\"ans21-q6: solution graph\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(C\\cap H)=0.10\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(C\\cap H^\\prime)=0.40-0.10=0.30\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(H\\cap C^\\prime)=0.25-0.10=0.15\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.1/q7",
+      "status": "worked",
+      "method": "Distinguish mathematical evenness from the roulette betting convention.",
+      "steps": [
+        {
+          "explanation": "<p>Zero is mathematically even. For the literal event “an even number”, E contains 19 slots including 0. B has 18 slots, of which 10 are even.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/aa7affa41a264f7cf384.svg\" alt=\"Venn diagram: B only 8, both 10, E only 9, neither 10\"></figure><p>If E instead means the roulette “even” bet, it excludes 0: E-only is 8 and neither is 11, as in the supplied key.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{Literal event: (i) }P(B\\cup E)=27/37\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(B^\\prime\\cap E)=9/37;\\qquad\\text{(iii) }P((B\\cap E)^\\prime)=27/37\"></span><p>Under the betting convention, the first two probabilities are 26/37 and 8/37; the third remains 27/37.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Distinguish mathematical evenness from the roulette betting convention.</p><ol class=\"parts\" type=\"a\"><li><p>Zero is mathematically even. For the literal event “an even number”, E contains 19 slots including 0. B has 18 slots, of which 10 are even.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/aa7affa41a264f7cf384.svg\" alt=\"Venn diagram: B only 8, both 10, E only 9, neither 10\"></figure><p>If E instead means the roulette “even” bet, it excludes 0: E-only is 8 and neither is 11, as in the supplied key.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Literal event: (i) }P(B\\cup E)=27/37\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(B^\\prime\\cap E)=9/37;\\qquad\\text{(iii) }P((B\\cap E)^\\prime)=27/37\"></span><p>Under the betting convention, the first two probabilities are 26/37 and 8/37; the third remains 27/37.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.1/q8",
+      "status": "worked",
+      "method": "Count each distinct seminar-attendance pattern out of20.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/73e47c78346ded3b59a7.png\" alt=\"ans21-q8: solution graph\"></figure><p>A only:7; B only:4; C only:3; AB only:2; BC only:2; none:2. Divide by 20 for the diagram probabilities.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(A\\cap C)=0\\Rightarrow A,C\\text{ mutually exclusive}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(B)P(C)=\\frac8{20}\\frac5{20}=0.1=P(B\\cap C)\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(A^\\prime\\cap C)=P(C)=5/20=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(A\\cup B^\\prime\\cup C)=1-4/20=0.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P((A\\cup C)^\\prime\\cap B)=4/20=0.2\"></span><p>The supplied 0.3 for(c)(i) is inconsistent with the five attendees of C and with the diagram.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Count each distinct seminar-attendance pattern out of 20.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/73e47c78346ded3b59a7.png\" alt=\"ans21-q8: solution graph\"></figure><p>A only:7; B only:4; C only:3; AB only:2; BC only:2; none:2. Divide by 20 for the diagram probabilities.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(A\\cap C)=0\\Rightarrow A,C\\text{ mutually exclusive}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(B)P(C)=\\frac8{20}\\frac5{20}=0.1=P(B\\cap C)\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(A^\\prime\\cap C)=P(C)=5/20=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(A\\cup B^\\prime\\cup C)=1-4/20=0.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P((A\\cup C)^\\prime\\cap B)=4/20=0.2\"></span><p>The supplied 0.3 for(c)(i) is inconsistent with the five attendees of C and with the diagram.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.2/q1",
+      "status": "worked",
+      "method": "For conditional probabilities, restrict the denominator to the given group.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{Male})=42/80=21/40\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{French}\\mid\\text{Male})=24/42=4/7\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{Male}\\mid\\text{Spanish})=18/40=9/20\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{Spanish}\\mid\\text{Female})=22/38=11/19\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>For conditional probabilities, restrict the denominator to the given group.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{Male})=42/80=21/40\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{French}\\mid\\text{Male})=24/42=4/7\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{Male}\\mid\\text{Spanish})=18/40=9/20\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{Spanish}\\mid\\text{Female})=22/38=11/19\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.2/q2",
+      "status": "worked",
+      "method": "The16 ordered spinner outcomes are equally likely.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>Green / Yellow</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>2</td><td>2</td><td>4</td><td>6</td><td>8</td></tr><tr><td>3</td><td>3</td><td>6</td><td>9</td><td>12</td></tr><tr><td>4</td><td>4</td><td>8</td><td>12</td><td>16</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(X=8)=2/16=1/8\"></span><p>The pairs are(2,4)and(4,2).</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(X=6\\mid G=2)=1/4\"></span><p>Yellow must be 3.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(Y=2\\mid X=4)=1/3\"></span><p>Among(1,4),(2,2),(4,1), just one has yellow 2.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The 16 ordered spinner outcomes are equally likely.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><thead><tr><th>Green / Yellow</th><th>1</th><th>2</th><th>3</th><th>4</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td></tr><tr><td>2</td><td>2</td><td>4</td><td>6</td><td>8</td></tr><tr><td>3</td><td>3</td><td>6</td><td>9</td><td>12</td></tr><tr><td>4</td><td>4</td><td>8</td><td>12</td><td>16</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(X=8)=2/16=1/8\"></span><p>The pairs are(2,4)and(4,2).</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(X=6\\mid G=2)=1/4\"></span><p>Yellow must be 3.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(Y=2\\mid X=4)=1/3\"></span><p>Among(1,4),(2,2),(4,1), just one has yellow 2.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.2/q3",
+      "status": "worked",
+      "method": "List the maximum for each of36 equally likely ordered die pairs.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>Die 2 / Die 1</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>3</td><td>3</td><td>3</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>5</td><td>6</td></tr><tr><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>6</td></tr><tr><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y=4)=(4^2-3^2)/36=7/36\"></span>"
+        },
+        {
+          "explanation": "<p>With the first die 2, the second must be 1 or 2.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=2\\mid D_1=2)=2/6=1/3\"></span>"
+        },
+        {
+          "explanation": "<p>There are 11 ordered pairs with maximum 6. Only(6,3)has second die 3.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(D_2=3\\mid Y=6)=1/11\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>List the maximum for each of 36 equally likely ordered die pairs.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><thead><tr><th>Die 2 / Die 1</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr></thead><tbody><tr><td>1</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>2</td><td>2</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>3</td><td>3</td><td>3</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><td>4</td><td>4</td><td>4</td><td>4</td><td>4</td><td>5</td><td>6</td></tr><tr><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>6</td></tr><tr><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td><td>6</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=4)=(4^2-3^2)/36=7/36\"></span></li><li><p>With the first die 2, the second must be 1 or 2.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y=2\\mid D_1=2)=2/6=1/3\"></span></li><li><p>There are 11 ordered pairs with maximum 6. Only(6,3)has second die 3.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(D_2=3\\mid Y=6)=1/11\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.2/q4",
+      "status": "worked",
+      "method": "A member can attend both classes, so class totals cannot replace membership totals.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(W\\mid Y)=31/(42+31)=31/73\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(F\\mid K)=36/(36+33)=12/23\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(Y\\mid F)=42/65\"></span><p>The supplied 42/78 incorrectly uses total full-member class attendances rather than the 65 full members.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"69+73=142&gt;120\"></span><p>The classes cannot be mutually exclusive: at least 22 members attend both. The overlap is exactly 22 only if every member attends at least one class.</p>"
+        }
+      ],
+      "solutionHtml": "<p>A member can attend both classes, so class totals cannot replace membership totals.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(W\\mid Y)=31/(42+31)=31/73\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(F\\mid K)=36/(36+33)=12/23\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(Y\\mid F)=42/65\"></span><p>The supplied 42/78 incorrectly uses total full-member class attendances rather than the 65 full members.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"69+73=142&gt;120\"></span><p>The classes cannot be mutually exclusive: at least 22 members attend both. The overlap is exactly 22 only if every member attends at least one class.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.2/q5",
+      "status": "worked",
+      "method": "Restrict the sample space to non-primes, including1.",
+      "steps": [
+        {
+          "explanation": "<p>There are 8 primes from 1 to 20, leaving 12 non-primes. The squares 1,4,9,16 are all non-prime.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{square}\\mid\\text{not prime})=4/12=1/3\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Restrict the sample space to non-primes, including 1.</p><p>There are 8 primes from 1 to 20, leaving 12 non-primes. The squares 1,4,9,16 are all non-prime.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{square}\\mid\\text{not prime})=4/12=1/3\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.2/q6",
+      "status": "worked",
+      "method": "Fill the intersection first, then use row and column totals.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th></th><th>H</th><th>H′</th><th>Total</th></tr></thead><tbody><tr><td>L</td><td>36</td><td>28</td><td>64</td></tr><tr><td>L′</td><td>46</td><td>30</td><td>76</td></tr><tr><td>Total</td><td>82</td><td>58</td><td>140</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(L^\\prime)=76/140=19/35\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(H^\\prime\\cap L)=28/140=1/5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(H\\mid L)=36/64=9/16\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iv) }P(L\\mid H^\\prime)=28/58=14/29\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(L)P(H)=\\frac{64}{140}\\frac{82}{140}=\\frac{328}{1225}\\ne\\frac{36}{140}=P(L\\cap H)\"></span><p>The events are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Fill the intersection first, then use row and column totals.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><thead><tr><th></th><th>H</th><th>H′</th><th>Total</th></tr></thead><tbody><tr><td>L</td><td>36</td><td>28</td><td>64</td></tr><tr><td>L′</td><td>46</td><td>30</td><td>76</td></tr><tr><td>Total</td><td>82</td><td>58</td><td>140</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(L^\\prime)=76/140=19/35\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(H^\\prime\\cap L)=28/140=1/5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(H\\mid L)=36/64=9/16\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iv) }P(L\\mid H^\\prime)=28/58=14/29\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(L)P(H)=\\frac{64}{140}\\frac{82}{140}=\\frac{328}{1225}\\ne\\frac{36}{140}=P(L\\cap H)\"></span><p>The events are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.2/q7",
+      "status": "worked",
+      "method": "There are60guests without breakfast:40male and20female. Male full breakfasts total175.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C^\\prime\\cap F^\\prime)=60/540=1/9\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(M\\mid C^\\prime)=(290-75)/(540-160)=215/380=43/76\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(F\\mid M)=(290-75-40)/290=175/290=35/58\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C^\\prime\\cap F^\\prime\\mid M)=40/290=4/29\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>There are 60 guests without breakfast:40 male and 20 female. Male full breakfasts total 175.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C^\\prime\\cap F^\\prime)=60/540=1/9\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(M\\mid C^\\prime)=(290-75)/(540-160)=215/380=43/76\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(F\\mid M)=(290-75-40)/290=175/290=35/58\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C^\\prime\\cap F^\\prime\\mid M)=40/290=4/29\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.2/q8",
+      "status": "worked",
+      "method": "Use adult and kitten totals to complete each food category.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th></th><th>Furina</th><th>Purskers</th><th>Whilix</th><th>Total</th></tr></thead><tbody><tr><td>Adult</td><td>11</td><td>17</td><td>10</td><td>38</td></tr><tr><td>Kitten</td><td>7</td><td>7</td><td>8</td><td>22</td></tr><tr><td>Total</td><td>18</td><td>24</td><td>18</td><td>60</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }11/18;\\qquad\\text{(ii) }8/18=4/9;\\qquad\\text{(iii) }7/22\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{male cats}=18(1/3)+24(2/3)+18(1/2)=31\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{male})=31/60\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use adult and kitten totals to complete each food category.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><thead><tr><th></th><th>Furina</th><th>Purskers</th><th>Whilix</th><th>Total</th></tr></thead><tbody><tr><td>Adult</td><td>11</td><td>17</td><td>10</td><td>38</td></tr><tr><td>Kitten</td><td>7</td><td>7</td><td>8</td><td>22</td></tr><tr><td>Total</td><td>18</td><td>24</td><td>18</td><td>60</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }11/18;\\qquad\\text{(ii) }8/18=4/9;\\qquad\\text{(iii) }7/22\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{male cats}=18(1/3)+24(2/3)+18(1/2)=31\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{male})=31/60\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.3/q1",
+      "status": "worked",
+      "method": "For a conditional probability divide the relevant intersection by the conditioning event.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=0.25+0.15+0.45=0.85\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid B)=0.15/(0.15+0.45)=0.25\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B^\\prime\\mid A)=0.25/(0.25+0.15)=0.625\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid A\\cup B)=0.60/0.85=12/17\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>For a conditional probability divide the relevant intersection by the conditioning event.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=0.25+0.15+0.45=0.85\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid B)=0.15/(0.15+0.45)=0.25\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B^\\prime\\mid A)=0.25/(0.25+0.15)=0.625\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid A\\cup B)=0.60/0.85=12/17\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.3/q2",
+      "status": "worked",
+      "method": "Subtract the overlap from each event to fill the separate regions.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/30f043c0b79feb12a125.png\" alt=\"ans23-q2: solution graph\"></figure><span class=\"equation\" data-display=\"true\" data-math=\"C\\text{ only}=0.6-0.3=0.3,\\quad D\\text{ only}=0.5-0.3=0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{neither}=1-(0.3+0.3+0.2)=0.2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(C\\cup D)=0.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(C\\mid D)=0.3/0.5=0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(D\\mid C^\\prime)=0.2/0.4=0.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iv) }P(D^\\prime\\mid C)=0.3/0.6=0.5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Subtract the overlap from each event to fill the separate regions.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/30f043c0b79feb12a125.png\" alt=\"ans23-q2: solution graph\"></figure><span class=\"equation\" data-display=\"true\" data-math=\"C\\text{ only}=0.6-0.3=0.3,\\quad D\\text{ only}=0.5-0.3=0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{neither}=1-(0.3+0.3+0.2)=0.2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(C\\cup D)=0.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(C\\mid D)=0.3/0.5=0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(D\\mid C^\\prime)=0.2/0.4=0.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iv) }P(D^\\prime\\mid C)=0.3/0.6=0.5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.3/q3",
+      "status": "worked",
+      "method": "Independence gives the intersection as the product of marginal probabilities.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(S\\cap T)=0.25(0.8)=0.2\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/8138d3f249f73180d2df.png\" alt=\"ans23-q3: solution graph\"></figure><p>S only 0.05, T only 0.6, neither 0.15.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }0.2;\\qquad\\text{(ii) }P(S\\mid T^\\prime)=0.05/0.2=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(T^\\prime\\mid S)=0.05/0.25=0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iv) }P(S^\\prime\\cup T\\mid T)=1\"></span><p>The supplied 0.8 for(iii) is P(T|S), not its complement.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Independence gives the intersection as the product of marginal probabilities.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(S\\cap T)=0.25(0.8)=0.2\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/8138d3f249f73180d2df.png\" alt=\"ans23-q3: solution graph\"></figure><p>S only 0.05, T only 0.6, neither 0.15.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }0.2;\\qquad\\text{(ii) }P(S\\mid T^\\prime)=0.05/0.2=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(T^\\prime\\mid S)=0.05/0.25=0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iv) }P(S^\\prime\\cup T\\mid T)=1\"></span><p>The supplied 0.8 for(iii) is P(T|S), not its complement.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.3/q4",
+      "status": "worked",
+      "method": "The four region counts are25black only,25both,50triangular only and50neither.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B^\\prime\\cap T)=(75-25)/150=1/3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(T\\mid B)=25/50=1/2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid T^\\prime)=25/(150-75)=1/3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid B\\cup T)=50/(50+75-25)=1/2\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The four region counts are 25 black only,25 both,50 triangular only and 50 neither.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B^\\prime\\cap T)=(75-25)/150=1/3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(T\\mid B)=25/50=1/2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid T^\\prime)=25/(150-75)=1/3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid B\\cup T)=50/(50+75-25)=1/2\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.3/q5",
+      "status": "worked",
+      "method": "40students like at least one food; inclusion–exclusion gives20who like both.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"n(B\\cap C)=36+24-40=20\\Rightarrow P(B\\cap C)=20/50=0.4\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C\\mid B)=20/36=5/9\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid C)=20/24=5/6\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B^\\prime\\mid C^\\prime)=10/(50-24)=5/13\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>40 students like at least one food; inclusion–exclusion gives 20 who like both.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"n(B\\cap C)=36+24-40=20\\Rightarrow P(B\\cap C)=20/50=0.4\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\mid B)=20/36=5/9\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid C)=20/24=5/6\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B^\\prime\\mid C^\\prime)=10/(50-24)=5/13\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.3/q6",
+      "status": "worked",
+      "method": "Sum the disjoint regions inside each conditioning event.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid B)=\\frac{0.1+0.15}{0.1+0.15+0.15+0.05}=\\frac59\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B^\\prime\\mid C)=\\frac{0.16+0.24}{0.16+0.15+0.05+0.24}=\\frac23\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup C\\mid B^\\prime)=\\frac{0.1+0.16+0.24}{0.1+0.16+0.24+0.05}=\\frac{10}{11}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid B^\\prime\\cap C^\\prime)=\\frac{0.1}{0.1+0.05}=\\frac23\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Sum the disjoint regions inside each conditioning event.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid B)=\\frac{0.1+0.15}{0.1+0.15+0.15+0.05}=\\frac59\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B^\\prime\\mid C)=\\frac{0.16+0.24}{0.16+0.15+0.05+0.24}=\\frac23\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup C\\mid B^\\prime)=\\frac{0.1+0.16+0.24}{0.1+0.16+0.24+0.05}=\\frac{10}{11}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid B^\\prime\\cap C^\\prime)=\\frac{0.1}{0.1+0.05}=\\frac23\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.3/q7",
+      "status": "worked",
+      "method": "The listed disjoint counts already sum to30, leaving zero in unlisted overlaps.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/6efa515d94c97c8957ab.png\" alt=\"ans23-q7: solution graph\"></figure><p>R only 3; S only 12; T only 5; RT only 4; ST only 4; none 2; RS and triple intersection 0.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{only }R\\mid\\text{exactly one mean exceeded})=3/(3+12+5)=3/20\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(S)P(T)=\\frac{16}{30}\\frac{13}{30}=\\frac{52}{225}\\ne\\frac4{30}=P(S\\cap T)\"></span><p>S and T are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The listed disjoint counts already sum to 30, leaving zero in unlisted overlaps.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/6efa515d94c97c8957ab.png\" alt=\"ans23-q7: solution graph\"></figure><p>R only 3; S only 12; T only 5; RT only 4; ST only 4; none 2; RS and triple intersection 0.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{only }R\\mid\\text{exactly one mean exceeded})=3/(3+12+5)=3/20\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(S)P(T)=\\frac{16}{30}\\frac{13}{30}=\\frac{52}{225}\\ne\\frac4{30}=P(S\\cap T)\"></span><p>S and T are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.3/q8",
+      "status": "worked",
+      "method": "Calculate pairwise intersections, then subtract the triple overlap to obtain disjoint regions.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(AB)=0.04,\\quad P(AC)=0.10,\\quad P(BC)=0.025\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/8b4bc8ef522753720e56.png\" alt=\"ans23-q8: solution graph\"></figure><p>Pair-only regions:0.03,0.09,0.015. A only 0.27, B only 0.045, C only 0.135; neither 0.405.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(A\\mid C)=0.10/0.25=0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(B^\\prime\\mid A^\\prime)=\\frac{1-0.4-0.1+0.04}{0.6}=0.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(C\\mid A\\cup B)=\\frac{0.10+0.025-0.01}{0.4+0.1-0.04}=0.25\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate pairwise intersections, then subtract the triple overlap to obtain disjoint regions.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(AB)=0.04,\\quad P(AC)=0.10,\\quad P(BC)=0.025\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/8b4bc8ef522753720e56.png\" alt=\"ans23-q8: solution graph\"></figure><p>Pair-only regions:0.03,0.09,0.015. A only 0.27, B only 0.045, C only 0.135; neither 0.405.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(A\\mid C)=0.10/0.25=0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(B^\\prime\\mid A^\\prime)=\\frac{1-0.4-0.1+0.04}{0.6}=0.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(C\\mid A\\cup B)=\\frac{0.10+0.025-0.01}{0.4+0.1-0.04}=0.25\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.3/q9",
+      "status": "worked",
+      "method": "The given conditional equality establishes independence.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x+y=1-0.08-0.12=0.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{x}{x+y}=0.08+x\\Rightarrow x=0.8(0.08+x)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.2x=0.064\\Rightarrow x=0.32,\\quad y=0.48\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The given conditional equality establishes independence.</p><span class=\"equation\" data-display=\"true\" data-math=\"x+y=1-0.08-0.12=0.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{x}{x+y}=0.08+x\\Rightarrow x=0.8(0.08+x)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.2x=0.064\\Rightarrow x=0.32,\\quad y=0.48\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.4/q1",
+      "status": "worked",
+      "method": "Use inclusion–exclusion; take complements of the omitted regions.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=0.5+0.3-0.6=0.2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime)=1-0.5=0.5\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime\\cup B)=1-P(A\\cap B^\\prime)=1-(0.5-0.2)=0.7\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B^\\prime)=1-P(A^\\prime\\cap B)=1-(0.3-0.2)=0.9\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use inclusion–exclusion; take complements of the omitted regions.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=0.5+0.3-0.6=0.2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime)=1-0.5=0.5\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime\\cup B)=1-P(A\\cap B^\\prime)=1-(0.5-0.2)=0.7\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B^\\prime)=1-P(A^\\prime\\cap B)=1-(0.3-0.2)=0.9\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.4/q2",
+      "status": "worked",
+      "method": "Find the overlap before using conditional probability.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X\\cap Y)=0.45+0.6-0.75=0.3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(X^\\prime\\cap Y^\\prime)=1-0.75=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(Y\\mid X)=0.3/0.45=2/3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(Y\\mid X^\\prime)=(0.6-0.3)/0.55=6/11\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X)P(Y)=0.45(0.6)=0.27\\ne0.3=P(X\\cap Y)\"></span><p>Not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Find the overlap before using conditional probability.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\cap Y)=0.45+0.6-0.75=0.3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(X^\\prime\\cap Y^\\prime)=1-0.75=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(Y\\mid X)=0.3/0.45=2/3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(Y\\mid X^\\prime)=(0.6-0.3)/0.55=6/11\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X)P(Y)=0.45(0.6)=0.27\\ne0.3=P(X\\cap Y)\"></span><p>Not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.4/q3",
+      "status": "worked",
+      "method": "Convert the given conditional probability into an intersection.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=P(A\\mid B)P(B)=0.5(0.7)=0.35\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid A)=0.35/0.4=0.875\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=0.4+0.7-0.35=0.75\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Convert the given conditional probability into an intersection.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=P(A\\mid B)P(B)=0.5(0.7)=0.35\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid A)=0.35/0.4=0.875\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=0.4+0.7-0.35=0.75\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.4/q4",
+      "status": "worked",
+      "method": "The union and the probability of neither sum to1.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(E\\cup F)=x+1.5x-0.3=2.5x-0.3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2.5x-0.3+0.05=1\\Rightarrow x=1.25/2.5=0.5\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(F)=1.5(0.5)=0.75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(E\\cap F^\\prime)=0.5-0.3=0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(E\\mid F^\\prime)=0.2/(1-0.75)=0.8\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The union and the probability of neither sum to 1.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(E\\cup F)=x+1.5x-0.3=2.5x-0.3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"2.5x-0.3+0.05=1\\Rightarrow x=1.25/2.5=0.5\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(F)=1.5(0.5)=0.75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(E\\cap F^\\prime)=0.5-0.3=0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(E\\mid F^\\prime)=0.2/(1-0.75)=0.8\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.4/q5",
+      "status": "worked",
+      "method": "Subtract the overlap from the cat probability.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D\\cap C)=0.4+0.25-0.5=0.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cap D^\\prime)=0.25-0.15=0.10\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Subtract the overlap from the cat probability.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(D\\cap C)=0.4+0.25-0.5=0.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cap D^\\prime)=0.25-0.15=0.10\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.4/q6",
+      "status": "worked",
+      "method": "Let A be abseiling and C be canoeing; the conditional probability gives the overlap.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap C)=0.5(0.3)=0.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(C\\cap A^\\prime)=0.3-0.15=0.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(A^\\prime\\cap C^\\prime)=1-(0.6+0.3-0.15)=0.25\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C\\mid A)=0.15/0.6=0.25\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Let A be abseiling and C be canoeing; the conditional probability gives the overlap.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap C)=0.5(0.3)=0.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(C\\cap A^\\prime)=0.3-0.15=0.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(A^\\prime\\cap C^\\prime)=1-(0.6+0.3-0.15)=0.25\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\mid A)=0.15/0.6=0.25\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.4/q7",
+      "status": "worked",
+      "method": "Partition C according to D or D′.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cap D)=0.2(0.5)=0.1\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cap D^\\prime)=0.6(0.5)=0.3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C)=0.1+0.3=0.4\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D\\mid C)=0.1/0.4=0.25\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D^\\prime\\mid C)=0.3/0.4=0.75\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D^\\prime\\mid C^\\prime)=(0.5-0.3)/(1-0.4)=1/3\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Partition C according to D or D′.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cap D)=0.2(0.5)=0.1\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cap D^\\prime)=0.6(0.5)=0.3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C)=0.1+0.3=0.4\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(D\\mid C)=0.1/0.4=0.25\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(D^\\prime\\mid C)=0.3/0.4=0.75\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(D^\\prime\\mid C^\\prime)=(0.5-0.3)/(1-0.4)=1/3\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.4/q8",
+      "status": "worked",
+      "method": "Use independence for A,C and mutual exclusivity for B,C.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=0.5+0.35-0.24=0.61\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime\\mid B)=(0.35-0.24)/0.35=11/35\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"0.14=P(A)P(C)=0.5P(C)\\Rightarrow P(C)=0.28\"></span>"
+        },
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/bae0d895c4e99044b99a.png\" alt=\"ans24-q8: solution graph\"></figure><p>A only 0.12, B only 0.11, AB0.24, AC0.14, C only 0.14, outside 0.25. No BC or triple overlap.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P((A\\cup C^\\prime)^\\prime)=P(A^\\prime\\cap C)=0.28-0.14=0.14\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use independence for A,C and mutual exclusivity for B,C.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=0.5+0.35-0.24=0.61\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime\\mid B)=(0.35-0.24)/0.35=11/35\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"0.14=P(A)P(C)=0.5P(C)\\Rightarrow P(C)=0.28\"></span></li><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/bae0d895c4e99044b99a.png\" alt=\"ans24-q8: solution graph\"></figure><p>A only 0.12, B only 0.11, AB0.24, AC0.14, C only 0.14, outside 0.25. No BC or triple overlap.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P((A\\cup C^\\prime)^\\prime)=P(A^\\prime\\cap C)=0.28-0.14=0.14\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.4/q9",
+      "status": "worked",
+      "method": "Use the supplied independence and disjointness conditions.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\cap C)=0.4(0.2)=0.08\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid A)=0.1/0.5=0.2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime\\mid B)=(0.4-0.1)/0.4=0.75\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\cap C\\mid A^\\prime)=0.08/(1-0.5)=0.16\"></span><p>BC lies wholly outside A because A and C are mutually exclusive.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the supplied independence and disjointness conditions.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\cap C)=0.4(0.2)=0.08\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid A)=0.1/0.5=0.2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A^\\prime\\mid B)=(0.4-0.1)/0.4=0.75\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\cap C\\mid A^\\prime)=0.08/(1-0.5)=0.16\"></span><p>BC lies wholly outside A because A and C are mutually exclusive.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.4/q10",
+      "status": "worked",
+      "method": "Assume arrival exactly at6pm has probability zero, so before and after are complementary.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(H)=1-0.4=0.6,\\quad P(G\\cap H)=0.6-0.35=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(G\\cup H)=0.6+0.6-0.25=0.95\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(G\\cap H^\\prime)=0.6-0.25=0.35\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(H\\mid G)=0.25/0.6=5/12\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(G)P(H)=0.36\\ne0.25=P(G\\cap H)\"></span><p>G and H are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Assume arrival exactly at 6 pm has probability zero, so before and after are complementary.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(H)=1-0.4=0.6,\\quad P(G\\cap H)=0.6-0.35=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(G\\cup H)=0.6+0.6-0.25=0.95\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(G\\cap H^\\prime)=0.6-0.25=0.35\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(H\\mid G)=0.25/0.6=5/12\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(G)P(H)=0.36\\ne0.25=P(G\\cap H)\"></span><p>G and H are not independent.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.5/q1",
+      "status": "worked",
+      "method": "Each pair of branches sums to1; multiply along a path.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/2ee082dc734b3b103b29.png\" alt=\"ans25-q1: solution graph\"></figure><p>First branches A0.7,A′0.3; after A, B0.25,B′0.75; after A′, B0.6,B′0.4.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(A\\cap B)=0.7(0.25)=0.175\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(A^\\prime\\cap B^\\prime)=0.3(0.4)=0.12\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(B^\\prime\\mid A)=0.75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iv) }P(A\\mid B)=\\frac{0.175}{0.175+0.3(0.6)}=35/71\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Each pair of branches sums to 1; multiply along a path.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/2ee082dc734b3b103b29.png\" alt=\"ans25-q1: solution graph\"></figure><p>First branches A0.7,A′0.3; after A, B0.25,B′0.75; after A′, B0.6,B′0.4.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(A\\cap B)=0.7(0.25)=0.175\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(A^\\prime\\cap B^\\prime)=0.3(0.4)=0.12\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }P(B^\\prime\\mid A)=0.75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iv) }P(A\\mid B)=\\frac{0.175}{0.175+0.3(0.6)}=35/71\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.5/q2",
+      "status": "worked",
+      "method": "The second selection is without replacement, so31bulbs remain.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/139dd8527aeae1083192.png\" alt=\"ans25-q2: solution graph\"></figure><p>First T18/32,D14/32. After T: T17/31,D14/31. After D: T18/31,D13/31.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(TT)=\\frac{18}{32}\\frac{17}{31}=153/496\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(TD\\text{ or }DT)=\\frac{18}{32}\\frac{14}{31}+\\frac{14}{32}\\frac{18}{31}=63/124\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(DD\\mid\\text{at least one }D)=\\frac{(14/32)(13/31)}{1-(18/32)(17/31)}=13/49\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The second selection is without replacement, so 31 bulbs remain.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/139dd8527aeae1083192.png\" alt=\"ans25-q2: solution graph\"></figure><p>First T18/32,D14/32. After T: T17/31,D14/31. After D: T18/31,D13/31.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(TT)=\\frac{18}{32}\\frac{17}{31}=153/496\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(TD\\text{ or }DT)=\\frac{18}{32}\\frac{14}{31}+\\frac{14}{32}\\frac{18}{31}=63/124\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(DD\\mid\\text{at least one }D)=\\frac{(14/32)(13/31)}{1-(18/32)(17/31)}=13/49\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.5/q3",
+      "status": "worked",
+      "method": "Choose each bag with probability½; then use its colour proportions.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{black})=\\tfrac12\\tfrac12+\\tfrac12\\tfrac23=7/12\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid\\text{white})=\\frac{(1/2)(1/2)}{(1/2)(1/2)+(1/2)(1/3)}=3/5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Choose each bag with probability½; then use its colour proportions.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{black})=\\tfrac12\\tfrac12+\\tfrac12\\tfrac23=7/12\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid\\text{white})=\\frac{(1/2)(1/2)}{(1/2)(1/2)+(1/2)(1/3)}=3/5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.5/q4",
+      "status": "worked",
+      "method": "Enumerate the three-day paths from Monday T to Thursday T.",
+      "steps": [
+        {
+          "explanation": "<p>The paths are TTTT, TTBT, TBTT and TBBT, with T=treadmill,B=bike.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(T_{Thu})=0.5^3+0.5(0.5)(0.4)+0.5(0.4)(0.5)+0.5(0.6)(0.4)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=0.125+0.10+0.10+0.12=0.445\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(B_{Tue}\\cap T_{Thu})=0.10+0.12=0.22\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(B_{Tue}\\mid T_{Thu})=0.22/0.445=44/89\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Enumerate the three-day paths from Monday T to Thursday T.</p><p>The paths are TTTT, TTBT, TBTT and TBBT, with T=treadmill,B=bike.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(T_{Thu})=0.5^3+0.5(0.5)(0.4)+0.5(0.4)(0.5)+0.5(0.6)(0.4)\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=0.125+0.10+0.10+0.12=0.445\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(B_{Tue}\\cap T_{Thu})=0.10+0.12=0.22\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(B_{Tue}\\mid T_{Thu})=0.22/0.445=44/89\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.5/q5",
+      "status": "worked",
+      "method": "The second draw has10fish remaining and depends on the first type.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/543ae86e85565e64c025.png\" alt=\"ans25-q5: solution graph\"></figure><p>First R5/11,G6/11. After R: R4/10,G6/10. After G: R5/10,G5/10.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(R_2)=\\frac5{11}\\frac4{10}+\\frac6{11}\\frac5{10}=5/11\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(R_1R_2\\mid R_2)=\\frac{(5/11)(4/10)}{5/11}=2/5=0.4\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The second draw has 10 fish remaining and depends on the first type.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/543ae86e85565e64c025.png\" alt=\"ans25-q5: solution graph\"></figure><p>First R5/11,G6/11. After R: R4/10,G6/10. After G: R5/10,G5/10.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(R_2)=\\frac5{11}\\frac4{10}+\\frac6{11}\\frac5{10}=5/11\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(R_1R_2\\mid R_2)=\\frac{(5/11)(4/10)}{5/11}=2/5=0.4\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.5/q6",
+      "status": "worked",
+      "method": "Player C takes the remaining15%; sum the score paths.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/4de53c4d84ee0c40ed75.png\" alt=\"ans25-q6: solution graph\"></figure><p>A0.35 then score 0.7/miss 0.3; B0.5 then 0.8/0.2; C0.15 then 0.6/0.4.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(B\\cap M)=0.5(0.2)=0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(S)=0.35(0.7)+0.5(0.8)+0.15(0.6)=0.735\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C\\mid M)=\\frac{0.15(0.4)}{1-0.735}=12/53\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Player C takes the remaining 15%; sum the score paths.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/4de53c4d84ee0c40ed75.png\" alt=\"ans25-q6: solution graph\"></figure><p>A0.35 then score 0.7/miss 0.3; B0.5 then 0.8/0.2; C0.15 then 0.6/0.4.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(B\\cap M)=0.5(0.2)=0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(S)=0.35(0.7)+0.5(0.8)+0.15(0.6)=0.735\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\mid M)=\\frac{0.15(0.4)}{1-0.735}=12/53\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.5/q7",
+      "status": "worked",
+      "method": "Let D denote a defective chip; use separate pass probabilities for D and D′.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/d7a58a0512c6fcf02a3f.png\" alt=\"ans25-q7: solution graph\"></figure><p>The source tree labels defects O: O0.05 and O′0.95. After O, pass 0.08/fail 0.92; after O′, pass 0.95/fail 0.05.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{pass})=0.95(0.95)+0.05(0.08)=0.9065\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D^\\prime\\mid\\text{fail})=\\frac{0.95(0.05)}{1-0.9065}=95/187\\approx0.508\"></span>"
+        },
+        {
+          "explanation": "<p>About 50.8% of rejected chips are actually defect-free, so a failure needs follow-up rather than automatic disposal. The test detects 92% of defective chips and passes 95% of good chips. Its usefulness depends on the costs of each error. The supplied 49% reverses the conditional percentage.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Let D denote a defective chip; use separate pass probabilities for D and D′.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/d7a58a0512c6fcf02a3f.png\" alt=\"ans25-q7: solution graph\"></figure><p>The source tree labels defects O: O0.05 and O′0.95. After O, pass 0.08/fail 0.92; after O′, pass 0.95/fail 0.05.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{pass})=0.95(0.95)+0.05(0.08)=0.9065\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(D^\\prime\\mid\\text{fail})=\\frac{0.95(0.05)}{1-0.9065}=95/187\\approx0.508\"></span></li><li><p>About 50.8% of rejected chips are actually defect-free, so a failure needs follow-up rather than automatic disposal. The test detects 92% of defective chips and passes 95% of good chips. Its usefulness depends on the costs of each error. The supplied 49% reverses the conditional percentage.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/2.5/q8",
+      "status": "worked",
+      "method": "A candidate may pass immediately, after one retest, or after two retests.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/8fb437fdcec1598bc1e5.png\" alt=\"ans25-q8: solution graph\"></figure><p>First and second attempts: pass 0.1,fail 0.4,retest 0.5. Third attempt: pass 0.2,fail 0.8.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{pass})=0.1+0.5(0.1)+0.5^2(0.2)=0.2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{retested}\\mid\\text{pass})=\\frac{0.5(0.1)+0.5^2(0.2)}{0.2}=0.5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>A candidate may pass immediately, after one retest, or after two retests.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/8fb437fdcec1598bc1e5.png\" alt=\"ans25-q8: solution graph\"></figure><p>First and second attempts: pass 0.1,fail 0.4,retest 0.5. Third attempt: pass 0.2,fail 0.8.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{pass})=0.1+0.5(0.1)+0.5^2(0.2)=0.2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{retested}\\mid\\text{pass})=\\frac{0.5(0.1)+0.5^2(0.2)}{0.2}=0.5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/problem-a/qbronze",
+      "status": "worked",
+      "method": "The transferred counter changes the composition of bag B to12counters.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/304da7ada0b386b78fd2.png\" alt=\"ans-ps-a-bronze: solution graph\"></figure><p>First black 7/16 or white 9/16. After black, bag B has 6 black and 6 white; after white, it has 5 black and 7 white.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{black from }B)=\\frac7{16}\\frac6{12}+\\frac9{16}\\frac5{12}=29/64\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(W_A\\mid W_B)=\\frac{(9/16)(7/12)}{(7/16)(6/12)+(9/16)(7/12)}=3/5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The transferred counter changes the composition of bag B to 12 counters.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/304da7ada0b386b78fd2.png\" alt=\"ans-ps-a-bronze: solution graph\"></figure><p>First black 7/16 or white 9/16. After black, bag B has 6 black and 6 white; after white, it has 5 black and 7 white.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{black from }B)=\\frac7{16}\\frac6{12}+\\frac9{16}\\frac5{12}=29/64\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(W_A\\mid W_B)=\\frac{(9/16)(7/12)}{(7/16)(6/12)+(9/16)(7/12)}=3/5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/problem-a/qsilver",
+      "status": "worked",
+      "method": "The blue die has five outcomes of probabilityp and outcome4of probability3p.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"5p+3p=1\\Rightarrow p=1/8,\\quad P(4\\mid B)=3/8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid4)=\\frac{(10/21)(3/8)}{(10/21)(3/8)+(11/21)(1/6)}=45/67\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The blue die has five outcomes of probabilityp and outcome 4 of probability 3 p.</p><span class=\"equation\" data-display=\"true\" data-math=\"5p+3p=1\\Rightarrow p=1/8,\\quad P(4\\mid B)=3/8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid4)=\\frac{(10/21)(3/8)}{(10/21)(3/8)+(11/21)(1/6)}=45/67\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/problem-a/qgold",
+      "status": "worked",
+      "method": "The colour probabilities are¼red and¾blue.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(1)=\\tfrac14\\tfrac1{15}+\\tfrac34\\tfrac3{15}=1/6\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid4)=\\frac{(3/4)a}{(3/4)a+(1/4)(4/15)}=\\frac{27}{43}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{3a/4}{3a/4+1/15}=\\frac{27}{43}\\Rightarrow12a=1.8\\Rightarrow a=0.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{3+2+1}{15}+a+b=1\\Rightarrow b=0.45\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The colour probabilities are¼red and¾blue.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(1)=\\tfrac14\\tfrac1{15}+\\tfrac34\\tfrac3{15}=1/6\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid4)=\\frac{(3/4)a}{(3/4)a+(1/4)(4/15)}=\\frac{27}{43}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{3a/4}{3a/4+1/15}=\\frac{27}{43}\\Rightarrow12a=1.8\\Rightarrow a=0.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\frac{3+2+1}{15}+a+b=1\\Rightarrow b=0.45\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/problem-b/qbronze",
+      "status": "worked",
+      "method": "Use the probability of neither, then inclusion–exclusion.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(Y\\cup Z)=1-0.75=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }0.25=0.15+P(Z)-0.05\\Rightarrow P(Z)=0.15\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y\\mid Z)=0.05/0.15=1/3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y)P(Z)=0.15^2=0.0225\\ne0.05=P(Y\\cap Z)\"></span><p>Not independent.</p>"
+        },
+        {
+          "explanation": "<p>The suspicion is supported as an association: Yvonne is more likely to miss her target in weeks when Zoe does. This does not establish causation. The final prompt’s reference to part(d) is self-referential; the relevant calculation is part(c).</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the probability of neither, then inclusion–exclusion.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(Y\\cup Z)=1-0.75=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }0.25=0.15+P(Z)-0.05\\Rightarrow P(Z)=0.15\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y\\mid Z)=0.05/0.15=1/3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Y)P(Z)=0.15^2=0.0225\\ne0.05=P(Y\\cap Z)\"></span><p>Not independent.</p></li><li><p>The suspicion is supported as an association: Yvonne is more likely to miss her target in weeks when Zoe does. This does not establish causation. The final prompt’s reference to part(d) is self-referential; the relevant calculation is part(c).</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/problem-b/qsilver",
+      "status": "worked",
+      "method": "Write P(B)=x and use independence to find the overlap.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A)=3x,\\quad P(A\\cap B)=3x^2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"4x-3x^2=7/12\\Rightarrow36x^2-48x+7=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(6x-1)(6x-7)=0\\Rightarrow x=1/6\\text{ or }7/6\"></span><p>Reject 7/6 as a probability, so P(B)=1/6.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=3(1/6)^2=1/12\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid A^\\prime)=\\frac{1/6-1/12}{1-1/2}=1/6\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Write P(B)=x and use independence to find the overlap.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A)=3x,\\quad P(A\\cap B)=3x^2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"4x-3x^2=7/12\\Rightarrow36x^2-48x+7=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(6x-1)(6x-7)=0\\Rightarrow x=1/6\\text{ or }7/6\"></span><p>Reject 7/6 as a probability, so P(B)=1/6.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=3(1/6)^2=1/12\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid A^\\prime)=\\frac{1/6-1/12}{1-1/2}=1/6\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/problem-b/qgold",
+      "status": "worked",
+      "method": "From the diagram, C lies inside A and all of A∩B is inside C.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid B)=\\frac{0.3}{0.3+z}=0.6\\Rightarrow z=0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x+y+0.3+0.2+0.2=1\\Rightarrow x+y=0.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\mid A)=\\frac{y+0.3}{x+y+0.3}=0.75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"y+0.3=0.75(0.6)=0.45\\Rightarrow y=0.15,\\quad x=0.15\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>From the diagram, C lies inside A and all of A∩B is inside C.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid B)=\\frac{0.3}{0.3+z}=0.6\\Rightarrow z=0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x+y+0.3+0.2+0.2=1\\Rightarrow x+y=0.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\mid A)=\\frac{y+0.3}{x+y+0.3}=0.75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"y+0.3=0.75(0.6)=0.45\\Rightarrow y=0.15,\\quad x=0.15\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/exam/q1",
+      "status": "worked",
+      "method": "Subtract readers from each gender total.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th></th><th>Reads</th><th>Cannot read</th><th>Total</th></tr></thead><tbody><tr><td>Women</td><td>10</td><td>8</td><td>18</td></tr><tr><td>Men</td><td>6</td><td>9</td><td>15</td></tr><tr><td>Total</td><td>16</td><td>17</td><td>33</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }16/33;\\qquad\\text{(ii) }8/18=4/9;\\qquad\\text{(iii) }6/16=3/8\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Subtract readers from each gender total.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><thead><tr><th></th><th>Reads</th><th>Cannot read</th><th>Total</th></tr></thead><tbody><tr><td>Women</td><td>10</td><td>8</td><td>18</td></tr><tr><td>Men</td><td>6</td><td>9</td><td>15</td></tr><tr><td>Total</td><td>16</td><td>17</td><td>33</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }16/33;\\qquad\\text{(ii) }8/18=4/9;\\qquad\\text{(iii) }6/16=3/8\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/exam/q5",
+      "status": "worked",
+      "method": "Let the common probability be p. The conditional equalities imply independence.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=p^2,\\quad P(A^\\prime\\cap B^\\prime)=(1-p)^2=p\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p^2-3p+1=0\\Rightarrow p=\\frac{3\\pm\\sqrt5}{2}\"></span><p>The plus root exceeds 1, so it cannot be a probability.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(A)=\\frac{3-\\sqrt5}{2}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Let the common probability be p. The conditional equalities imply independence.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=p^2,\\quad P(A^\\prime\\cap B^\\prime)=(1-p)^2=p\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p^2-3p+1=0\\Rightarrow p=\\frac{3\\pm\\sqrt5}{2}\"></span><p>The plus root exceeds 1, so it cannot be a probability.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(A)=\\frac{3-\\sqrt5}{2}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/exam/q9",
+      "status": "worked",
+      "method": "Find the intersection from the union before calculating conditionals.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=0.4+0.3-0.58=0.12\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B^\\prime\\mid A)=(0.4-0.12)/0.4=0.7\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid B)=0.12/0.3=0.4\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A)P(B)=0.4(0.3)=0.12=P(A\\cap B)\"></span><p>A and B are independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Find the intersection from the union before calculating conditionals.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=0.4+0.3-0.58=0.12\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B^\\prime\\mid A)=(0.4-0.12)/0.4=0.7\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\mid B)=0.12/0.3=0.4\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A)P(B)=0.4(0.3)=0.12=P(A\\cap B)\"></span><p>A and B are independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/exam/q12",
+      "status": "worked",
+      "method": "C∪S has probability1, so every foreign-film viewer, who cannot be in S, must be in C.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cup S)=0.85+0.6-0.45=1\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/411db36b57e5f0b8af5f.png\" alt=\"exam-ans12: solution graph\"></figure><p>CF0.3, CS0.45, C only 0.1, S only 0.15; other regions 0.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(F\\cup S)=0.3+0.6=0.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P((C\\cap S)\\cup(C\\cap F))=0.45+0.3=0.75\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(F^\\prime\\cap S)=P(S)=0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(F^\\prime)P(S)=0.7(0.6)=0.42\\ne0.6\"></span><p>F′ and S are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>C∪S has probability 1, so every foreign-film viewer, who cannot be in S, must be in C.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cup S)=0.85+0.6-0.45=1\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/411db36b57e5f0b8af5f.png\" alt=\"exam-ans12: solution graph\"></figure><p>CF0.3, CS0.45, C only 0.1, S only 0.15; other regions 0.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(F\\cup S)=0.3+0.6=0.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P((C\\cap S)\\cup(C\\cap F))=0.45+0.3=0.75\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(F^\\prime\\cap S)=P(S)=0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(F^\\prime)P(S)=0.7(0.6)=0.42\\ne0.6\"></span><p>F′ and S are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/exam/q16",
+      "status": "worked",
+      "method": "Fill the four diagnostic outcomes out of250components.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/d20a4e4090c0f2582512.png\" alt=\"exam-ans16: solution graph\"></figure><p>Defective and flagged 12; defective but missed 3; sound but flagged 4; sound and passed 231.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(M\\mid D)=12/15=0.8\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D^\\prime\\mid M)=4/16=0.25\"></span>"
+        },
+        {
+          "explanation": "<p>The machine identifies 80% of defective components but misses 20%;25% of flagged components are sound. It is a useful screen but should not be treated as a perfect check; the consequences of missed defects determine whether further testing is needed.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Fill the four diagnostic outcomes out of 250 components.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/d20a4e4090c0f2582512.png\" alt=\"exam-ans16: solution graph\"></figure><p>Defective and flagged 12; defective but missed 3; sound but flagged 4; sound and passed 231.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(M\\mid D)=12/15=0.8\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(D^\\prime\\mid M)=4/16=0.25\"></span></li><li><p>The machine identifies 80% of defective components but misses 20%;25% of flagged components are sound. It is a useful screen but should not be treated as a perfect check; the consequences of missed defects determine whether further testing is needed.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/exam/q18",
+      "status": "worked",
+      "method": "Multiply along paths and condition on the total probability of the observed outcome.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/43cb6d51478f7cdf3642.png\" alt=\"exam-ans18: solution graph\"></figure><p>First serve in 0.7/out 0.3; win conditional on in 0.6 and on out 0.3.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(W)=0.7(0.6)+0.3(0.3)=0.51\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(S\\mid W)=0.42/0.51=14/17\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(S^\\prime\\mid W^\\prime)=\\frac{0.3(0.7)}{1-0.51}=3/7\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.7,\\quad H_1:p\\ne0.7,\\quad X\\sim B(100,0.7)\"></span><p>Assume 100 independent serves with a constant probability of success. For the two-tailed 5% test, allocate 2.5% to each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le62)=\\sum_{k=0}^{62}\\binom{100}{k}0.7^k0.3^{100-k}\\approx0.0530456&gt;0.025\"></span><p>Do not reject H₀. There is insufficient evidence that the new racket has changed the first-serve probability.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Multiply along paths and condition on the total probability of the observed outcome.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/43cb6d51478f7cdf3642.png\" alt=\"exam-ans18: solution graph\"></figure><p>First serve in 0.7/out 0.3; win conditional on in 0.6 and on out 0.3.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(W)=0.7(0.6)+0.3(0.3)=0.51\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(S\\mid W)=0.42/0.51=14/17\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(S^\\prime\\mid W^\\prime)=\\frac{0.3(0.7)}{1-0.51}=3/7\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.7,\\quad H_1:p\\ne0.7,\\quad X\\sim B(100,0.7)\"></span><p>Assume 100 independent serves with a constant probability of success. For the two-tailed 5% test, allocate 2.5% to each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le62)=\\sum_{k=0}^{62}\\binom{100}{k}0.7^k0.3^{100-k}\\approx0.0530456&gt;0.025\"></span><p>Do not reject H₀. There is insufficient evidence that the new racket has changed the first-serve probability.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch2/exam/q20",
+      "status": "worked",
+      "method": "Use the region probabilities in the given diagram.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B)=0.1+0.1+0.2=0.4,\\quad P(A)=p+0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.1=P(A\\cap B)=0.4(p+0.1)\\Rightarrow p=0.15\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid C)=\\frac{0.2}{0.2+q}=\\frac4{11}\\Rightarrow q=0.35\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=1-(0.15+0.1+0.1+0.2+0.35)=0.1\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup C\\mid B)=(0.1+0.2)/0.4=0.75\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the region probabilities in the given diagram.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B)=0.1+0.1+0.2=0.4,\\quad P(A)=p+0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.1=P(A\\cap B)=0.4(p+0.1)\\Rightarrow p=0.15\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\mid C)=\\frac{0.2}{0.2+q}=\\frac4{11}\\Rightarrow q=0.35\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=1-(0.15+0.1+0.1+0.2+0.35)=0.1\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup C\\mid B)=(0.1+0.2)/0.4=0.75\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}

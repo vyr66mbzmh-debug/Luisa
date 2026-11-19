@@ -52,6 +52,7 @@ class PapersSelection(unittest.TestCase):
         self.context = self.browser.new_context(service_workers='block')
         self.page = self.context.new_page()
         self.page.route('**/papers-print.js', lambda route: route.fulfill(content_type='text/javascript', body='window.LUISA_PAPERS_PRINT={create:async rows=>{window.testPaperSnapshot=rows;return {warnings:[]}}};'))
+        self.page.route('**/practice-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.goto(self.url)
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('6,147')")
 
@@ -65,6 +66,81 @@ class PapersSelection(unittest.TestCase):
 
     def selection_ids(self):
         return self.page.locator('[data-remove]').evaluate_all('(nodes)=>nodes.map(node=>node.dataset.remove)')
+
+    def practice_fixture(self, incomplete=False):
+        descriptor = dict(id='practice/maths-a-level/maths-pure-year-1/ch1/1.1/q1',
+                          courseId='maths-a-level', bookId='maths-pure-year-1',
+                          chapterId='ch1', chapterNumber=1, chapterTitle='Algebraic expressions',
+                          subchapterId='1.1', subchapterTitle='1.1 Index laws', questionLabel='1',
+                          board='Edexcel', skillIds=['smq-1.01', 'smq-1.02'],
+                          dataPath='content/practice/pure-year-1/chapter-01.json')
+        question = dict(id=descriptor['id'], question='<p>Simplify the expression.</p>', contextHtml='<aside>Referenced model: x squared.</aside>',
+                        steps=[] if incomplete else ['<p>Apply the index law.</p>'],
+                        hints=['<p>Remember that powers add.</p>'])
+        self.page.route('**/practice-catalogue.json', lambda route: route.fulfill(
+            content_type='application/json', body=json.dumps({'version': 1, 'questions': [descriptor]})))
+        self.page.route('**/content/practice/pure-year-1/chapter-01.json', lambda route: route.fulfill(
+            content_type='application/json', body=json.dumps({'schemaVersion':1,'questions':[question]})))
+        self.page.reload()
+        self.page.wait_for_function("!document.querySelector('#papers-source').disabled")
+        return descriptor, question
+
+    def test_practice_source_union_hints_and_restore(self):
+        descriptor, question = self.practice_fixture()
+        self.page.locator('#papers-source').select_option('practice-booklet')
+        self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '1 questions in this pool')
+        self.page.locator('#papers-skills input[value$="/smq-1.01"]').check()
+        self.page.locator('#papers-skills input[value$="/smq-1.02"]').check()
+        self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '1 questions in this pool')
+        self.generate(1)
+        self.page.locator('#papers-selected summary').click()
+        self.assertNotIn('powers add', self.page.locator('#papers-selected').inner_text())
+        self.assertIn('Practice Booklet · Chapter 1 · 1.1 Index laws · Q1', self.page.locator('#papers-selected').inner_text())
+        self.page.locator('#papers-print').click()
+        self.page.wait_for_function('Boolean(window.testPaperSnapshot)')
+        row = self.page.evaluate('testPaperSnapshot[0]')
+        self.assertEqual(row['question'], question['question'])
+        self.assertEqual(row['contextHtml'], question['contextHtml'])
+        self.assertIn('Referenced model',self.page.locator('#papers-selected').inner_text())
+        self.assertEqual(row['hints'], question['hints'])
+        self.assertEqual(row['steps'], question['steps'])
+        self.assertEqual(row['source']['practiceBookletQuestionId'], descriptor['id'])
+        self.page.locator('#papers-source').select_option('luisa')
+        self.assertEqual(self.selection_ids(), [descriptor['id']])
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertEqual(self.page.locator('#papers-source').input_value(), 'luisa')
+        self.assertEqual(self.selection_ids(), [descriptor['id']])
+
+    def test_incomplete_practice_solution_keeps_previous_paper(self):
+        self.generate(1)
+        previous = self.selection_ids()
+        self.practice_fixture(incomplete=True)
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.page.locator('#papers-source').select_option('practice-booklet')
+        self.page.locator('#papers-count').fill('1')
+        self.page.locator('#papers-generate').click()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('incomplete content')")
+        self.assertEqual(self.selection_ids(), previous)
+
+    def test_wide_practice_table_scrolls_inside_mobile_preview(self):
+        descriptor, question = self.practice_fixture()
+        question['question'] = '<table class="practice-table"><tr>' + ''.join(
+            f'<td>{100000 + n}</td>' for n in range(12)) + '</tr></table>'
+        self.page.route('**/content/practice/pure-year-1/chapter-01.json', lambda route: route.fulfill(
+            content_type='application/json', body=json.dumps({'schemaVersion': 1, 'questions': [question]})))
+        self.page.set_viewport_size({'width': 390, 'height': 844})
+        self.page.locator('#papers-source').select_option('practice-booklet')
+        self.generate(1)
+        self.page.locator('#papers-selected summary').click()
+        table = self.page.locator('#papers-selected .math-table')
+        table.wait_for(state='visible')
+        self.assertEqual(table.locator('td').count(), 12)
+        self.assertTrue(self.page.evaluate('document.documentElement.scrollWidth <= innerWidth'))
+        self.assertTrue(table.evaluate('n=>n.scrollWidth>n.clientWidth'))
+        table.focus()
+        table.press('ArrowRight')
+        self.page.wait_for_function("document.querySelector('#papers-selected .math-table').scrollLeft > 0")
 
     def test_all_actual_questions_reference_exclusion_and_qualified_ids(self):
         self.assertEqual(self.page.locator('#papers-pool-count').inner_text(), '6,147 questions in this pool')

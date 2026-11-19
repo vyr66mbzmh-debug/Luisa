@@ -1,0 +1,48 @@
+{
+  "issue": 99,
+  "release": "0.58",
+  "chapter": "Pure Year 2 Chapter 6 — Trigonometric functions",
+  "questions": 47,
+  "workedSolutions": 47,
+  "originalQuestionIdsMatched": 47,
+  "sourceAnswerGraphs": 17,
+  "exactAndRoundingIndependentChecks": 220,
+  "browserQuestionsRendered": 47,
+  "browserHorizontalOverflows": 0,
+  "visualReview": "All 21 original diagrams inspected. Every paired question and solution rendered with strict KaTeX, loaded images and no horizontal overflow. Reciprocal graph, transformed inverse graph, impossible arccos and quadrant-restricted secant renders inspected. Top-level part counts match. Full Papers print integration remains separate.",
+  "suppliedPromptOrKeyDefects": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.2/q6",
+      "note": "Cot3x decreases from +∞ to −∞ on each of the three branches. The function is also undefined at x=0, although that exclusion is omitted from the printed domain."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.5/q4",
+      "note": "Translate arcsinx right by 1/2 and up by π/3. Its endpoints come from arguments −1 and 1."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/6.5/q7",
+      "note": "The principal range of arccos is [0,π], so the negative value −π/4 is impossible."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch6/exam/q21",
+      "note": "CotP is negative and π≤P≤2π, so P must lie in quadrant IV: sinP<0 and cosP>0."
+    }
+  ],
+  "solutionSha256": "c67cbf6bf53ce1cb461b6878396a01b9eb28996b9df34712518e2a4daa7ca109",
+  "sourcePdf": "resources/practice/pure-year-2/chapter-06.pdf",
+  "sourcePdfSha256": "c934b2475148fefd2d91afe5d3b8e7828bc3680ca98e4d95babbc2b8046c3d51",
+  "independentReview": "accepted: all original prompts and authored working independently reviewed; findings corrected",
+  "independentReviewEvidence": {
+    "reviewer": "practice_solutions",
+    "questionsReviewed": 47,
+    "solutionSha256": "c67cbf6bf53ce1cb461b6878396a01b9eb28996b9df34712518e2a4daa7ca109",
+    "sourceAndMathematicalScope": "Every original question and subpart compared with authored working. Independently assessed calculations, method requirements, domains, cases, rounding and source-discrepancy qualifications. Supplied figures inspected wherever present; independent check scripts rerun separately from authoring.",
+    "sourceAndAnswerFiguresInspected": 21,
+    "independentChecksRerun": 220,
+    "allRerunChecksPassed": true,
+    "findingsResolved": true,
+    "detail": "All 21 referenced original figures inspected; no unresolved mathematical findings.",
+    "integrationScope": "Acceptance covers source, worked mathematics and figures. Final combined Papers print and browser integration are recorded separately by the lead."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
+}

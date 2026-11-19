@@ -1,0 +1,56 @@
+{
+  "issue": 99,
+  "release": "0.58",
+  "chapter": "Pure Year 2 Chapter 3 — Sequences and series",
+  "questions": 90,
+  "workedSolutions": 90,
+  "originalQuestionIdsMatched": 90,
+  "sourceAnswerGraphs": 0,
+  "exactAndRoundingIndependentChecks": 248,
+  "strictBrowserMathExpressions": 550,
+  "browserQuestionsRendered": 90,
+  "browserHorizontalOverflows": 0,
+  "visualReview": "All 90 original prompts and supplied final answers compared. Every row rendered with strict KaTeX; two display adjustments rerendered and inspected. No mathematical failures or horizontal overflow remain. Representative geometric-sum, signed-ratio and discount-calculation renders inspected. Source/solution top-level part counts match throughout. Full Papers print integration remains separate.",
+  "suppliedPromptOrKeyDefects": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q2",
+      "note": "The printed fourth term breaks the geometric pattern. The displayed finite prefix alone cannot determine convergence. If the intended continuation multiplies by 3 (making the fourth term 2.7), it diverges because the terms do not tend to zero; this is the interpretation used by the supplied answer. This arithmetic series is divergent, since its terms do not tend to zero."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.5/q8",
+      "note": "Both ratios have magnitude below 1 and satisfy the stated condition. The supplied answer omits the negative possibility."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/3.7/q8",
+      "note": "This is an integer multiple of 4 if k is an integer (or more generally if 39k+38 is an integer). The question does not explicitly state that k is integral; without that assumption, the divisibility claim is not guaranteed."
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch3/exam/q76",
+      "note": "Both ratios satisfy part (a), whereas the supplied answer gives only the positive-ratio case. The existence of the bound in part (b) selects the positive ratio. For r=−2/3, all partial sums −243[1−(−2/3)^n] are negative, so none exceeds 1200."
+    }
+  ],
+  "sourceContextDependencies": [
+    {
+      "question": "3.3/q2",
+      "requires": "3.3/q1",
+      "reason": "Part (a) refers to the sequences in question 1."
+    }
+  ],
+  "solutionSha256": "41b3a63af5775d462551296fdf40d426b441a6703e0c689bb4207e83b9136fe2",
+  "sourcePdf": "resources/practice/pure-year-2/chapter-03.pdf",
+  "sourcePdfSha256": "dc9ce402920465094240a924360df720e2f42fc85dc35ffdf0a5ce080dd3a8ec",
+  "independentReview": "accepted: all original prompts and authored working independently reviewed; findings corrected",
+  "independentReviewEvidence": {
+    "reviewer": "practice_solutions",
+    "questionsReviewed": 90,
+    "solutionSha256": "41b3a63af5775d462551296fdf40d426b441a6703e0c689bb4207e83b9136fe2",
+    "sourceAndMathematicalScope": "Every original question and subpart compared with authored working. Independently assessed calculations, method requirements, domains, cases, rounding and source-discrepancy qualifications. Supplied figures inspected wherever present; independent check scripts rerun separately from authoring.",
+    "sourceAndAnswerFiguresInspected": 0,
+    "independentChecksRerun": 248,
+    "allRerunChecksPassed": true,
+    "findingsResolved": true,
+    "detail": "All 0 referenced original figures inspected; no unresolved mathematical findings.",
+    "integrationScope": "Acceptance covers source, worked mathematics and figures. Final combined Papers print and browser integration are recorded separately by the lead."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
+}

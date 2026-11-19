@@ -1,0 +1,1655 @@
+{
+  "schemaVersion": 1,
+  "sourceFamily": "applied-year-1",
+  "chapterNumber": 7,
+  "chapterTitle": "Hypothesis testing",
+  "sourcePdf": "resources/practice/applied-year-1/chapter-07.pdf",
+  "questions": [
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.1/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "1",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.1",
+      "subchapterTitle": "7.1 Hypothesis testing",
+      "number": "1",
+      "question": "Alice is testing whether a four-sided dice is biased towards the number three.\nShe rolls the dice 50 times and counts the number of threes she gets.\n<ol type=\"a\"><li value=\"1\">Describe the test statistic.</li><li value=\"2\">Write down a suitable null hypothesis.</li><li value=\"3\">Write down a suitable alternative hypothesis.</li></ol>",
+      "hints": [
+        "The null hypothesis is the hypothesis that you assume to be correct when making your calculations."
+      ],
+      "steps": [
+        "<p>Let p be the probability of rolling a three.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>X is the number of threes in 50 rolls; under the null hypothesis X~B(50,0.25).</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.25\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"H_1:p&gt;0.25\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "97786a6b99fa1164aaf466f9700055d19418042e7f1e466fcd38d2ba14a160c2",
+        "printedBookPage": "45",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            291.678,
+            68.247,
+            302.587
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.1 Hypothesis testing"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.1/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "2",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.1",
+      "subchapterTitle": "7.1 Hypothesis testing",
+      "number": "2",
+      "question": "For each of these hypotheses, state whether they describe a one-tailed or a two-tailed test.\n<ol type=\"a\"><li value=\"1\"><span data-math=\"\\mathrm{H}_0:p=0.7\"></span>, <span data-math=\"\\mathrm{H}_1:p&lt;0.7\"></span></li><li value=\"2\"><span data-math=\"\\mathrm{H}_0:p=0.5\"></span>, <span data-math=\"\\mathrm{H}_1:p&gt;0.5\"></span></li><li value=\"3\"><span data-math=\"\\mathrm{H}_0:p=0.4\"></span>, <span data-math=\"\\mathrm{H}_1:p\\ne0.4\"></span></li></ol>",
+      "hints": [
+        "To test whether <span data-math=\"p\"></span> is different from a given value you need to use a two-tailed test."
+      ],
+      "steps": [
+        "<p>A directional inequality gives one tail; “not equal” gives two.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>One-tailed, lower tail(p&lt;0.7).</p></li><li value=\"2\"><p>One-tailed, upper tail(p&gt;0.5).</p></li><li value=\"3\"><p>Two-tailed(p≠0.4).</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "c9d044ec0271002e1ad82ac69fce7d8a6f087b00e5f84db312e946737921ecaa",
+        "printedBookPage": "45",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            411.024,
+            68.247,
+            421.933
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.1 Hypothesis testing"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.1/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "3",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.1",
+      "subchapterTitle": "7.1 Hypothesis testing",
+      "number": "3",
+      "question": "<span class=\"practice-tag\">E/P</span>  A Member of Parliament has found that, from long experience, he gets support from 65% of the adult population of his constituency. A new sample of 50 people is taken and 24 people say that they support him. The Member of Parliament wants to test, at the 5% level of significance, whether or not his support has decreased.\n<ol type=\"a\"><li value=\"1\">Suggest a suitable test statistic. <span class=\"marks\">(1 mark)</span></li><li value=\"2\">Write down two suitable hypotheses. <span class=\"marks\">(2 marks)</span></li><li value=\"3\">Explain the condition under which the null hypothesis is rejected. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Let p be the population proportion supporting the MP.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>X is the number of supporters in the sample of 50.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.65;\\qquad H_1:p&lt;0.65\"></span></li><li value=\"3\"><p>Under H₀, calculate P(X≤24)with X~B(50,0.65). Reject H₀ when this lower-tail probability is at most 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 24)=\\sum_{r=0}^{24}\\binom{50}r(0.65)^r(1-0.65)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.010043644\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "39335e7a3044650ffd6ac1ba447ac94491b493135bf311869e0af8e7c67cb70f",
+        "printedBookPage": "45",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            516.815,
+            68.247,
+            527.724
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.1 Hypothesis testing"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.1/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "4",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.1",
+      "subchapterTitle": "7.1 Hypothesis testing",
+      "number": "4",
+      "question": "<span class=\"practice-tag\">E/P</span>  A cereal manufacturer places a prize in some packets of a type of cereal. The manufacturer claims that there are prizes in 5% of packets. A regular customer purchases 120 packets of the cereal and finds a prize in 15 packets. She wishes to test, at the 10% level of significance, whether the manufacturer is putting prizes in more than 5% of the packets.\n<ol type=\"a\"><li value=\"1\">Write down a suitable test statistic. <span class=\"marks\">(1 mark)</span></li><li value=\"2\">Write down suitable null and alternative hypotheses. <span class=\"marks\">(2 marks)</span></li><li value=\"3\">Explain the condition under which the null hypothesis would be accepted. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Let p be the probability that a cereal packet contains a prize.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>X is the number of prize-containing packets in the 120 purchased.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p&gt;0.05\"></span></li><li value=\"3\"><p>Do not reject H₀ if P(X≥15), under B(120,0.05), is greater than 0.10. “Accept” in the question means insufficient evidence against H₀, not proof of the claim.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "68733b15ca3a80b6465929450c957c1948c153bd17910b15ae86bb3ca0039e3d",
+        "printedBookPage": "45",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            625.607,
+            68.247,
+            636.516
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.1 Hypothesis testing"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.1/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "5",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.1",
+      "subchapterTitle": "7.1 Hypothesis testing",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E/P</span>  Georgia runs a car-servicing workshop. She claims that 60% of all services take less than two hours to complete. Gemma, her business partner, thinks that this proportion might be incorrect. She takes a sample of 50 services and finds that five take longer than two hours to complete. She wishes to test, at the 5% significance level, whether Georgia&#x27;s claim is incorrect.\n<ol type=\"a\"><li value=\"1\">Write down a suitable test statistic. <span class=\"marks\">(1 mark)</span></li><li value=\"2\">Write down suitable null and alternative hypotheses. <span class=\"marks\">(2 marks)</span></li><li value=\"3\">Explain the condition under which the null hypothesis is rejected. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Let p denote the proportion of services taking strictly less than two hours.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>X counts services taking less than two hours among 50. If none took exactly two hours, the observed count is 45; the statement “five take longer” alone does not rule out services taking exactly two hours.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.6;\\qquad H_1:p\\ne0.6\"></span></li><li value=\"3\"><p>With that no-exactly-two-hours assumption, reject H₀ if P(X≥45), under B(50,0.6), is at most 0.025: half of the two-tailed 5%level.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(45\\le X\\le 50)=\\sum_{r=45}^{50}\\binom{50}r(0.6)^r(1-0.6)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx2.6745317\\times10^{-6}\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "24a80097139c156718b8b3e96b1b154fd4f6e3948c506ea1e217c24ac4f051dd",
+        "printedBookPage": "45",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.1 Hypothesis testing"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "1",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.2",
+      "subchapterTitle": "7.2 Finding critical values",
+      "number": "1",
+      "question": "A test statistic has a distribution <span data-math=\"\\mathrm{B}(8,p)\"></span>. Given that <span data-math=\"\\mathrm{H}_0:p=0.6\"></span> and <span data-math=\"\\mathrm{H}_1:p&lt;0.6\"></span>,\n<ol type=\"a\"><li value=\"1\">find the critical region for the test using a 5% level of significance</li><li value=\"2\">write down the actual significance level of the test.</li></ol>",
+      "hints": [
+        "Assume that <span data-math=\"\\mathrm{H}_0\"></span> is true, so that <span data-math=\"X\\sim\\mathrm{B}(8,0.6)\"></span>. You need to find the largest value of <span data-math=\"x\"></span> such that <span data-math=\"\\mathrm{P}(X\\le x)&lt;0.05\"></span>."
+      ],
+      "steps": [
+        "<p>Use the binomial distribution under H₀ and check adjacent boundary values.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(8,0.6)\"></span><p>Use the lower tail with threshold 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)\\approx0.04980736\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)\\approx0.1736704\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le2\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.04980736\\approx4.981\\%\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "231944939209c604d12624b6b5506bcaef1f35146d12e97e07edcbf88ae12d9f",
+        "printedBookPage": "46",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            231.847,
+            68.247,
+            242.756
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.2 Finding critical values"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "2",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.2",
+      "subchapterTitle": "7.2 Finding critical values",
+      "number": "2",
+      "question": "A test statistic has a distribution <span data-math=\"\\mathrm{B}(15,p)\"></span>.\nGiven that <span data-math=\"\\mathrm{H}_0:p=0.3\"></span> and <span data-math=\"\\mathrm{H}_1:p&gt;0.3\"></span>,\n<ol type=\"a\"><li value=\"1\">find the critical region for the test using a 10% level of significance</li><li value=\"2\">write down the actual significance level of the test.</li></ol>",
+      "hints": [
+        "The actual significance level of the test is the probability that the test statistic is greater than or equal to the critical value. It is the probability of incorrectly rejecting the null hypothesis."
+      ],
+      "steps": [
+        "<p>Use the binomial distribution under H₀ and check adjacent boundary values.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.3)\"></span><p>Use the upper tail with threshold 0.1.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge8)\\approx0.05001254\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge7)\\approx0.13114257\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\ge8\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.05001254\\approx5.001\\%\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "0fba8b31cefd77fe0b0ff5934eb9d2cd2710423d655083463c51ca16bef94f67",
+        "printedBookPage": "46",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            335.065,
+            68.247,
+            345.974
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.2 Finding critical values"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "3",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.2",
+      "subchapterTitle": "7.2 Finding critical values",
+      "number": "3",
+      "question": "A test statistic has distribution <span data-math=\"\\mathrm{B}(25,p)\"></span>.\nGiven that <span data-math=\"\\mathrm{H}_0:p=0.42\"></span> and <span data-math=\"\\mathrm{H}_1:p\\ne0.42\"></span>,\n<ol type=\"a\"><li value=\"1\">find the critical region for the test using a 10% level of significance</li><li value=\"2\">write down the actual significance level of the test.</li></ol>",
+      "hints": [
+        "This is a two-tailed test so the critical region will have two ‘tails’, one at each end of the distribution."
+      ],
+      "steps": [
+        "<p>Use the binomial distribution under H₀ and check adjacent boundary values.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.42)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le6)\\approx0.04950892\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le7)\\approx0.11064858\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge16)\\approx0.022026163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge15)\\approx0.053460357\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le6\\quad\\text{or}\\quad X\\ge16\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.071535084\\approx7.154\\%\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "9f0af483c2c79df6c070f3da9662baf15257598c97a5f8aa131804bde119ca07",
+        "printedBookPage": "46",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            437.396,
+            68.247,
+            448.305
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.2 Finding critical values"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "4",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.2",
+      "subchapterTitle": "7.2 Finding critical values",
+      "number": "4",
+      "question": "<span class=\"practice-tag\">E/P</span>  A florist claims that 20% of hydrangeas will have blue flowers. A regular customer thinks that this proportion is overstated and decides to buy 30 plants in order to test the claim.\n<ol type=\"a\"><li value=\"1\">Describe the test statistic and write down suitable null and alternative hypotheses. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">Using a 5% level of significance, find the critical region for the customer&#x27;s test. <span class=\"marks\">(2 marks)</span></li><li value=\"3\">State the probability of incorrectly rejecting the null hypothesis using this critical region. <span class=\"marks\">(1 mark)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use independent trials with the same success probability p.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>X counts blue-flowered plants in the 30 purchased.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.2;\\qquad H_1:p&lt;0.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.2)\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.2)\"></span><p>Use the lower tail with threshold 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)\\approx0.044178985\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)\\approx0.12271081\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le2\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.044178985\\approx4.418\\%\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "e9df82c2464b09858d0b4473a74725ac6a67ed664bcc72f8541ab6493022e248",
+        "printedBookPage": "46",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            527.771,
+            68.247,
+            538.68
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.2 Finding critical values"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "5",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.2",
+      "subchapterTitle": "7.2 Finding critical values",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E/P</span>  A hotel typically gets 5-star reviews 60% of the time on a travel website. The hotel owner decides to make some improvements to try and increase this percentage. The owner takes a random sample of 20 reviews after the improvements have taken place.\n<ol type=\"a\"><li value=\"1\">Describe the test statistic and write down suitable null and alternative hypotheses. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">Using a 10% level of significance, find the critical region for the hotel owner&#x27;s test. <span class=\"marks\">(2 marks)</span></li><li value=\"3\">State the actual significance level of the test. <span class=\"marks\">(1 mark)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use independent trials with the same success probability p.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>X counts 5-star reviews among the 20 sampled.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.6;\\qquad H_1:p&gt;0.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.6)\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.6)\"></span><p>Use the upper tail with threshold 0.1.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge16)\\approx0.050951953\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge15)\\approx0.12559897\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\ge16\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.050951953\\approx5.095\\%\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "fc278a293ebb7b5bebb4558bb27687606bf1973398b4a8124bef02851f82c01d",
+        "printedBookPage": "46",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            623.014,
+            68.247,
+            633.923
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.2 Finding critical values"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "6",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.2",
+      "subchapterTitle": "7.2 Finding critical values",
+      "number": "6",
+      "question": "<span class=\"practice-tag\">E/P</span>  A manufacturer of electronic components finds that, over the long term, one component in every 20 of the components produced has a fault. The manufacturer decides to modify the production process and believes that this will change the proportion of components that have a fault.\n<ol type=\"a\"><li value=\"1\">Suggest a suitable model and write down suitable null and alternative hypotheses. <span class=\"marks\">(3 marks)</span></li></ol>\nThe manufacturer takes a random sample of 50 components.\n<ol type=\"a\"><li value=\"2\">Find, at the 20% level of significance, the critical region for a test to check the belief that the proportion of components with a fault has changed. <span class=\"marks\">(4 marks)</span></li><li value=\"3\">State the actual significance level of the test. <span class=\"marks\">(1 mark)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use independent trials with the same success probability p.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>X counts faulty components in a random sample of 50.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p\\ne0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.05)\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.05)\"></span><p>Use 0.1 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le0)\\approx0.076944975\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le1)\\approx0.27943175\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge6)\\approx0.037776173\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge5)\\approx0.10361681\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le0\\quad\\text{or}\\quad X\\ge6\"></span><p>The supplied answer instead chooses X=0 or X≥5, taking the upper tail closest to 0.10 even though it slightly exceeds that allocation.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge5)\\approx0.10361681\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.11472115\\approx11.47\\%\"></span><p>For that alternative, the total actual significance is:</p><span class=\"equation\" data-display=\"true\" data-math=\"0.07694497527671315+0.10361681=0.18056179\"></span><p>Both total rejection probabilities remain below 20%; state the convention used. The first region keeps each tail at or below 10%.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "083653f3880ed26dbab63506189ef8ed829b67aa466ab6d913273845fccde111",
+        "printedBookPage": "46",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.2 Finding critical values"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.2/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "7",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.2",
+      "subchapterTitle": "7.2 Finding critical values",
+      "number": "7",
+      "question": "<span class=\"practice-tag\">E/P</span>  A random variable has distribution <span data-math=\"\\mathrm{B}(25,p)\"></span>. A single observation is used to test <span data-math=\"\\mathrm{H}_0:p=0.3\"></span> against <span data-math=\"\\mathrm{H}_1:p\\ne0.3\"></span>.\n<ol type=\"a\"><li value=\"1\">Using a 5% level of significance, find the critical region for this test. The probability in each tail should be as close as possible to 0.025. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">Write down the actual significance level of the test. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use the explicitly requested closest-tail convention.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.3)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)\\approx0.033240517\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)\\approx0.090471919\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge13)\\approx0.017469741\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)\\approx0.044246497\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge13\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p><p>The support ends at 25; the supplied upper bound 50 is a typo.</p><p>Compare the neighbouring boundary on the other side of the target as well:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)\\approx0.00896052788\"></span><p>Its distance from 0.025 is greater than that of the selected tail, confirming the closest-tail choice.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.050710257\\approx5.071\\%\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "f5805ad46aadf32051b64ce777def02580a19101de0ec9fd61fe791868f554d8",
+        "printedBookPage": "46",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            176.681,
+            68.247,
+            187.59
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.2 Finding critical values"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "1",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.3",
+      "subchapterTitle": "7.3 One-tailed tests",
+      "number": "1",
+      "question": "A single observation, <span data-math=\"x\"></span>, is taken from a binomial distribution <span data-math=\"\\mathrm{B}(20,p)\"></span> and a value of 3 is obtained. Use this observation to test <span data-math=\"\\mathrm{H}_0:p=0.4\"></span> against <span data-math=\"\\mathrm{H}_1:p&lt;0.4\"></span> using a 2% level of significance.",
+      "hints": [
+        "Assume <span data-math=\"X\\sim\\mathrm{B}(20,0.4)\"></span> and calculate <span data-math=\"\\mathrm{P}(X\\le3)\"></span>, and compare this with 0.02."
+      ],
+      "steps": [
+        "<p>Calculate the probability of the observed count or something still smaller under the null.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.4;\\qquad H_1:p&lt;0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.4)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 3)=\\sum_{r=0}^{3}\\binom{20}r(0.4)^r(1-0.4)^{20-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.015961163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.015961163&lt;0.02\"></span><p>Reject H₀: there is evidence that p is less than 0.4.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "fd870d1bce25412f795f115cd0637cf6a1df87502ea957eba229afb05af1adf3",
+        "printedBookPage": "47",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            327.09,
+            68.247,
+            337.999
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.3 One-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "2",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.3",
+      "subchapterTitle": "7.3 One-tailed tests",
+      "number": "2",
+      "question": "A random variable <span data-math=\"X\"></span> has distribution <span data-math=\"\\mathrm{B}(25,p)\"></span>.\nA single observation of <span data-math=\"x=17\"></span> is taken from the distribution. Test, at the 1% level of significance, <span data-math=\"\\mathrm{H}_0:p=0.45\"></span> against <span data-math=\"\\mathrm{H}_1:p&gt;0.45\"></span>.",
+      "hints": [
+        "You could find <span data-math=\"\\mathrm{P}(X\\ge17)\"></span>, or you could start by finding the critical region for the test."
+      ],
+      "steps": [
+        "<p>Calculate the probability of the observed count or something still larger under the null.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.45;\\qquad H_1:p&gt;0.45\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.45)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(17\\le X\\le 25)=\\sum_{r=17}^{25}\\binom{25}r(0.45)^r(1-0.45)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.017356895\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.017356895&gt;0.01\"></span><p>Do not reject H₀: there is insufficient evidence that p is greater than 0.45. This does not prove the null hypothesis.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "b82bb2c3c1f2baa54625a7e23b663acdb04005241227032c73b627922de4121e",
+        "printedBookPage": "47",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            398.826,
+            68.247,
+            409.735
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.3 One-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "3",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.3",
+      "subchapterTitle": "7.3 One-tailed tests",
+      "number": "3",
+      "question": "<span class=\"practice-tag\">E</span> A magician claims to be able to fool a person by sleight of hand 90% of the time.\nIn a sample of <span data-math=\"n\"></span> people, <span data-math=\"X\"></span> is the number of people who are fooled.\n<ol type=\"a\"><li value=\"1\">Write down a suitable distribution to model <span data-math=\"X\"></span>. <span class=\"marks\">(1 mark)</span></li></ol>\nA random sample of 40 people is taken and it is found that 33 are fooled by the sleight of hand. It is believed that the magician&#x27;s claim of fooling people 90% of the time is overstated.\n<ol type=\"a\"><li value=\"2\">Test this claim at the 5% level of significance. State your hypotheses clearly. <span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Count people fooled, with independent outcomes and a common probability.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(n,0.9)\\quad\\text{under the claimed model}\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.9;\\qquad H_1:p&lt;0.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(40,0.9)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 33)=\\sum_{r=0}^{33}\\binom{40}r(0.9)^r(1-0.9)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.099516424\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.099516424&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that the magician’s claimed 90%success rate is overstated. This does not prove the null hypothesis.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "2a9dec4b3501f634636291d8338c1f922f4b5f4b6aa427157dc9dac2005e33bf",
+        "printedBookPage": "47",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            470.561,
+            68.247,
+            481.47
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.3 One-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "4",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.3",
+      "subchapterTitle": "7.3 One-tailed tests",
+      "number": "4",
+      "question": "<span class=\"practice-tag\">E/P</span>  Tia grows marrows and she finds that over time, 60% of the marrows are longer than 40 cm.\nTia uses a new fertiliser. The manufacturer claims the fertiliser will increase the proportion of marrows that are longer than 40 cm.\n\nTia takes a random sample of 30 marrows and carries out a hypothesis test, at the 5% level of significance, to test the manufacturer&#x27;s claim.\n<ol type=\"a\"><li value=\"1\">Write down Tia&#x27;s null and alternative hypotheses. <span class=\"marks\">(2 marks)</span></li><li value=\"2\">Find the critical region for Tia&#x27;s test. <span class=\"marks\">(3 marks)</span></li></ol>\nTia finds that 25 marrows in her sample are longer than 40 cm.\n<ol type=\"a\"><li value=\"3\">Comment on this observation in light of the critical region. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Let p be the proportion of marrows longer than 40 cm.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.6;\\qquad H_1:p&gt;0.6\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.6)\"></span><p>Use the upper tail with threshold 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge23)\\approx0.043524119\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge22)\\approx0.094011216\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\ge23\"></span></li><li value=\"3\"><p>25≥23, so the observation lies in the critical region. Reject H₀: there is evidence at 5%that the new fertiliser increases the proportion longer than 40 cm.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "6b099aba3b16d54c201606cdf1660dbe92c92784533a586f447885e3d1dc3f02",
+        "printedBookPage": "47",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            565.804,
+            68.247,
+            576.713
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.3 One-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "5",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.3",
+      "subchapterTitle": "7.3 One-tailed tests",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E/P</span>  Esha makes clay pots. She estimates that 10% of the pots fracture during the firing process in her kiln. She decides to change the type of clay she uses in order to try and reduce the proportion of pots that fracture. She takes a random sample of 50 pots made using the new clay and finds that only one has fractured in the kiln.\n\nStating your hypotheses clearly and using a 5% level of significance, test whether there is evidence that changing the type of clay has reduced the likelihood of the pots fracturing. <span class=\"marks\">(5 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Let p be the fracture probability with the new clay; X counts fractures in 50 pots.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.1;\\qquad H_1:p&lt;0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.1)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 1)=\\sum_{r=0}^{1}\\binom{50}r(0.1)^r(1-0.1)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.03378586\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.03378586&lt;0.05\"></span><p>Reject H₀: there is evidence that the new clay reduces the fracture probability.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "7b61ba471e2e51e791f21bfa1e3ea2738feaf66c7f6f36db6a7b83fbc1961533",
+        "printedBookPage": "47",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            703.687,
+            68.247,
+            714.596
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.3 One-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "6",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.3",
+      "subchapterTitle": "7.3 One-tailed tests",
+      "number": "6",
+      "question": "<span class=\"practice-tag\">E/P</span>  A random variable has distribution <span data-math=\"\\mathrm{B}(10,p)\"></span>. A single observation is taken and a value of 7 obtained.\n\nBriony decides to test <span data-math=\"\\mathrm{H}_0:p=0.3\"></span> against <span data-math=\"\\mathrm{H}_1:p&gt;0.3\"></span>, using a 1% level of significance.\n\nHer working is shown below.\n<div>Let <span data-math=\"X\\sim\\mathrm{B}(10,0.3)\"></span><br>\n<span data-math=\"\\mathrm{P}(X=7)=0.0090\"></span><br>\nSince <span data-math=\"0.0090&lt;0.01\"></span>, reject <span data-math=\"\\mathrm{H}_0\"></span><br>\nThere is evidence that <span data-math=\"p&gt;0.3\"></span></div>\nBriony has made a mistake in her working.\n\nExplain her mistake and determine the actual result of the test. <span class=\"marks\">(3 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>A one-point probability is not the upper-tail probability required for the test.</p><p>Briony omitted the possible outcomes 8,9 and 10. She must calculate P(X≥7), not P(X=7).</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.3;\\qquad H_1:p&gt;0.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(10,0.3)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(7\\le X\\le 10)=\\sum_{r=7}^{10}\\binom{10}r(0.3)^r(1-0.3)^{10-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.010592078\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.010592078&gt;0.01\"></span><p>Do not reject H₀: there is insufficient evidence that p exceeds 0.3. This does not prove the null hypothesis.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "4538ac70312b4a72dbd351bf7faebf8cae1b9f76bcd5461b0a5c75e2e12fa44a",
+        "printedBookPage": "47",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.3 One-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.3/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "7",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.3",
+      "subchapterTitle": "7.3 One-tailed tests",
+      "number": "7",
+      "question": "<span class=\"practice-tag\">E/P</span>  From experience, a door-to-door carpet salesman knows that the probability that he makes a sale is 0.05. He visits 15 houses in one day.\n<ol type=\"a\"><li value=\"1\">Calculate the probability that he makes at least one sale. <span class=\"marks\">(2 marks)</span></li></ol>\nHe decides to change his pitch to try and improve the likelihood of making a sale. On the day after changing his pitch, he visits 26 houses and makes 4 sales.\n<ol type=\"a\"><li value=\"2\">Test, at the 5% level of significance, the claim that he has increased his likelihood of making a sale. State your hypotheses clearly. <span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Assume independent household outcomes with the same sale probability.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{at least one sale})=1-0.95^{15}\\approx0.53670877\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p&gt;0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(26,0.05)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le X\\le 26)=\\sum_{r=4}^{26}\\binom{26}r(0.05)^r(1-0.05)^{26-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.038741396\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.038741396&lt;0.05\"></span><p>Reject H₀: there is evidence that the new pitch increases the chance of a sale.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "256d395c8052430a2f1a9bbf5a18fc76ba1ca6864befe7cc7b933ca50b0e6031",
+        "printedBookPage": "47",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            213.657,
+            68.247,
+            224.566
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.3 One-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "1",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.4",
+      "subchapterTitle": "7.4 Two-tailed tests",
+      "number": "1",
+      "question": "A single observation, <span data-math=\"x\"></span>, is taken from a binomial distribution <span data-math=\"X\\sim\\mathrm{B}(15,p)\"></span> and a value of 3 is obtained.\n\nUse this observation to test, at the 10% level of significance, <span data-math=\"\\mathrm{H}_0:p=0.4\"></span> against <span data-math=\"\\mathrm{H}_1:p\\ne0.4\"></span>.",
+      "hints": [
+        "Halve the significance level in each tail. You need to work out <span data-math=\"\\mathrm{P}(X\\le3)\"></span> and compare the answer with 0.05."
+      ],
+      "steps": [
+        "<p>Use the binomial model under H₀ and split the significance between the two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.4;\\qquad H_1:p\\ne0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.4)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 3)=\\sum_{r=0}^{3}\\binom{15}r(0.4)^r(1-0.4)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.090501902\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.090501902&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that p differs from 0.4. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "5056ed3d6eb28d689e1c47cce7cbf6d99f37c3cc3a968f412337d39ec98fc400",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            393.157,
+            68.247,
+            404.066
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.4 Two-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "2",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.4",
+      "subchapterTitle": "7.4 Two-tailed tests",
+      "number": "2",
+      "question": "A random variable has distribution <span data-math=\"X\\sim\\mathrm{B}(40,p)\"></span>.\nA single observation of <span data-math=\"x=34\"></span> is taken from the distribution. Test, at the 5% level of significance, <span data-math=\"\\mathrm{H}_0:p=0.7\"></span> against <span data-math=\"\\mathrm{H}_1:p\\ne0.7\"></span>.",
+      "hints": [
+        "Find the probability that <span data-math=\"X\"></span> is greater than or equal to 34 given the value of <span data-math=\"p\"></span>."
+      ],
+      "steps": [
+        "<p>Use the binomial model under H₀ and split the significance between the two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.7;\\qquad H_1:p\\ne0.7\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(40,0.7)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(34\\le X\\le 40)=\\sum_{r=34}^{40}\\binom{40}r(0.7)^r(1-0.7)^{40-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.023760946\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.023760946&lt;0.025\"></span><p>Reject H₀: there is evidence that p differs from 0.7.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "bea5bebbe2ee2a7201a959e8194ed2635e833b4b4bb049bfe8d82b11c1f98dc3",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            488.125,
+            68.247,
+            499.034
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.4 Two-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "3",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.4",
+      "subchapterTitle": "7.4 Two-tailed tests",
+      "number": "3",
+      "question": "<span class=\"practice-tag\">E/P</span>  The proportion of people diagnosed with a particular disease nationally is 0.05. A random sample of 200 people is taken from the south west. It is found that 16 people have the disease. Test, at the 5% level of significance, the hypothesis that the proportion of people in the south west who have the disease is different from the national average. State your hypotheses clearly. <span class=\"marks\">(5 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Use the binomial model under H₀ and split the significance between the two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.05;\\qquad H_1:p\\ne0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(200,0.05)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(16\\le X\\le 200)=\\sum_{r=16}^{200}\\binom{200}r(0.05)^r(1-0.05)^{200-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.044355629\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.044355629&gt;0.025\"></span><p>Do not reject H₀: there is insufficient evidence that the south-west disease proportion differs from the national proportion. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "4cdeb53ba114721fcbc367b38700f14e6403a092e57e97cabf1b0585c63507f9",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            558.974,
+            68.247,
+            569.883
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.4 Two-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "4",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.4",
+      "subchapterTitle": "7.4 Two-tailed tests",
+      "number": "4",
+      "question": "<span class=\"practice-tag\">E/P</span>  A nutritionist finds that, on average, 10% of her clients are overweight. She decides to introduce a new diet to her clients.\n\nShe takes a random sample of 50 clients who have used the new diet.\n<ol type=\"a\"><li value=\"1\">Find the critical regions, at the 10% level of significance, to test whether or not the proportion of her clients has changed. <span class=\"marks\">(4 marks)</span></li><li value=\"2\">State the actual significance level of the test. <span class=\"marks\">(1 mark)</span></li></ol>\nFrom the sample, she finds that 2 clients are overweight.\n<ol type=\"a\"><li value=\"3\">Comment on this finding in light of your critical regions. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Let X count overweight clients, with X~B(50,0.1)under the null.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.1;\\qquad H_1:p\\ne0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.1)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le1)\\approx0.03378586\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)\\approx0.11172876\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge10)\\approx0.024537936\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge9)\\approx0.057867206\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le1\\quad\\text{or}\\quad X\\ge10\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.058323795\\approx5.832\\%\"></span></li><li value=\"3\"><p>2 lies between the two critical tails: it is neither at most 1 nor at least 10. Do not reject H₀; there is insufficient evidence that the proportion changed.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "3733b356d28523cb45e9e13b1acbf0104861fc84629c76fb690096e14824d363",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            619.148,
+            68.247,
+            630.057
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.4 Two-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "5",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.4",
+      "subchapterTitle": "7.4 Two-tailed tests",
+      "number": "5",
+      "question": "<span class=\"practice-tag\">E/P</span>  Meghan rolls an eight-sided dice 120 times and finds that it lands on the number eight 25 times.\n\nUse a two-tailed test with a significance level of 5% to determine whether there is sufficient evidence to conclude that the dice is biased. State your hypotheses clearly. <span class=\"marks\">(5 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Let p be the probability of rolling an eight; fairness gives p=1/8.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.125;\\qquad H_1:p\\ne0.125\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(120,0.125)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(25\\le X\\le 120)=\\sum_{r=25}^{120}\\binom{120}r(0.125)^r(1-0.125)^{120-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0068461755\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.0068461755&lt;0.025\"></span><p>Reject H₀: there is evidence that the probability of an eight differs from 1/8, so the dice is biased.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "d4db45e089aa729920a36389040df8d9617a2b7408db506f4c67bdc5c92a5cfb",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            743.482,
+            68.247,
+            754.391
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.4 Two-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "6",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.4",
+      "subchapterTitle": "7.4 Two-tailed tests",
+      "number": "6",
+      "question": "<span class=\"practice-tag\">E/P</span>  A single observation, <span data-math=\"x\"></span>, is taken from a binomial distribution <span data-math=\"\\mathrm{B}(30,p)\"></span>.\nThis observation is used to test <span data-math=\"\\mathrm{H}_0:p=0.25\"></span> against <span data-math=\"\\mathrm{H}_1:p\\ne0.25\"></span>.\n<ol type=\"a\"><li value=\"1\">Using a 10% level of significance, find the critical region for this test. The probability in each tail should be as close as possible to 5%. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">State the actual significance level of this test. <span class=\"marks\">(2 marks)</span></li></ol>\nThe actual value of <span data-math=\"x\"></span> obtained is 11.\n<ol type=\"a\"><li value=\"3\">State a conclusion that can be drawn based on this value, giving a reason for your answer. <span class=\"marks\">(1 mark)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use the closest-tail convention explicitly stated in the question.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.25)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)\\approx0.037449326\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)\\approx0.0978696\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)\\approx0.05065828\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge11)\\approx0.10572812\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge12\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p><p>Compare the neighbouring boundary on the other side of the target as well:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge13)\\approx0.0215936409\"></span><p>Its distance from 0.05 is greater than that of the selected tail, confirming the closest-tail choice.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.088107606\\approx8.811\\%\"></span></li><li value=\"3\"><p>11 is not in X≤3 or X≥12. Do not reject H₀: there is insufficient evidence that p differs from 0.25.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "974e57065de4f957462ff0daaa5b11af3d4be9a67afed1a9e1ec5285a97afb14",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.4 Two-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/7.4/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "7",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "7.4",
+      "subchapterTitle": "7.4 Two-tailed tests",
+      "number": "7",
+      "question": "<span class=\"practice-tag\">E/P</span>  A chicken farmer knows from experience that one egg in every 50 has a double yolk. The farmer decides to change the type of feed that she uses. She wants to carry out a hypothesis test to determine whether the new feed has affected the chance of a double yolk.\n\nIn a random sample of 50 eggs produced by chickens using the new feed, she finds that 3 have double yolks.\n\nCarry out a hypothesis test, at the 10% level of significance, to assess whether the chance of a double yolk has changed. State your hypotheses clearly. <span class=\"marks\">(5 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Let p be the probability of a double yolk and X count such eggs among 50.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.02;\\qquad H_1:p\\ne0.02\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.02)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(3\\le X\\le 50)=\\sum_{r=3}^{50}\\binom{50}r(0.02)^r(1-0.02)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.078427748\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.078427748&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that the double-yolk probability has changed. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.57"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "618ce597c0780d226c6a8200d630916659c47d11e0a26931b7666d9012ebc47b",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            176.681,
+            68.247,
+            187.59
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "7.4 Two-tailed tests"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-a/qbronze",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "Bronze",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem set A",
+      "number": "Bronze",
+      "question": "A single observation, <span data-math=\"x\"></span>, is taken from a binomial distribution <span data-math=\"\\mathrm{B}(30,p)\"></span>, and is used to test <span data-math=\"\\mathrm{H}_0:p=0.36\"></span> against <span data-math=\"\\mathrm{H}_1:p\\ne0.36\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the critical region for a two-tailed test at the 5% level of significance. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">Write down the actual significance level of the test. <span class=\"marks\">(1 mark)</span></li></ol>\nThe value <span data-math=\"x=16\"></span> is observed.\n<ol type=\"a\"><li value=\"3\">Comment on this observation in light of your critical region. <span class=\"marks\">(1 mark)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>For the conventional equal-tail test, neither tail may exceed 0.025.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(30,0.36)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le5)\\approx0.017848535\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le6)\\approx0.046672671\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge17)\\approx0.016702265\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge16)\\approx0.039089053\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le5\\quad\\text{or}\\quad X\\ge17\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.034550801\\approx3.455\\%\"></span></li><li value=\"3\"><p>16 lies between the critical tails X≤5 and X≥17. Do not reject H₀; there is insufficient evidence of a change from p=0.36.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "9ca303447885259b0a2342c7e15873f3d5c0323bc7c461e9dff4b7fcc90741af",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            57.49,
+            70.96,
+            92.797,
+            80.923
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-a/qsilver",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "Silver",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem set A",
+      "number": "Silver",
+      "question": "A single observation, <span data-math=\"x\"></span>, is taken from a binomial distribution <span data-math=\"\\mathrm{B}(35,p)\"></span>, and is used to test <span data-math=\"\\mathrm{H}_0:p=0.45\"></span> against <span data-math=\"\\mathrm{H}_1:p\\ne0.45\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the critical region for a two-tailed test at the 10% level of significance. The probability in each tail should be as close as possible to 0.05. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">Write down the probability of incorrectly rejecting the null hypothesis in this test. <span class=\"marks\">(1 mark)</span></li></ol>\nThe value <span data-math=\"x=22\"></span> is observed.\n<ol type=\"a\"><li value=\"3\">Comment on this observation in light of your critical region. <span class=\"marks\">(1 mark)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Choose each tail as close as possible to 0.05, as requested.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(35,0.45)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le10)\\approx0.03540645\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le11)\\approx0.072939466\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge21)\\approx0.053599902\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge20)\\approx0.10160629\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le10\\quad\\text{or}\\quad X\\ge21\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p><p>Compare the neighbouring boundary on the other side of the target as well:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge22)\\approx0.0255442197\"></span><p>Its distance from 0.05 is greater than that of the selected tail, confirming the closest-tail choice.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.089006352\\approx8.901\\%\"></span></li><li value=\"3\"><p>22≥21 lies in the upper critical tail. Reject H₀: there is evidence that p differs from 0.45.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "2666b4aba3fe87857259368267c02832e3b0ee9d3f316a34044a790491ee35a9",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            57.49,
+            174.572,
+            85.923,
+            184.535
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-a/qgold",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "Gold",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem set A",
+      "number": "Gold",
+      "question": "The random variable <span data-math=\"X\"></span> is known to have the distribution <span data-math=\"\\mathrm{B}(20,p)\"></span>, where <span data-math=\"p\"></span> is unknown. Amy uses a single observation from <span data-math=\"X\"></span> to test <span data-math=\"\\mathrm{H}_0:p=0.4\"></span> against <span data-math=\"\\mathrm{H}_1:p\\ne0.4\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the critical region for Amy&#x27;s test at the 5% level of significance. <span class=\"marks\">(3 marks)</span></li></ol>\nAmy decides she will carry out her test 15 times. She will reject <span data-math=\"\\mathrm{H}_0\"></span> if more than a quarter of her observations lie in the critical region.\n<ol type=\"a\"><li value=\"2\">Find the probability that Amy will incorrectly reject <span data-math=\"\\mathrm{H}_0\"></span>. <span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>First find the actual rejection probability for one test, then model repeated independent tests.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(20,0.4)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)\\approx0.015961163\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)\\approx0.050951953\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge13)\\approx0.021028927\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)\\approx0.056526367\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge13\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.03699009\\approx3.699\\%\"></span></li><li value=\"2\"><p>Let Y count critical-region observations among 15 independent repetitions. More than one quarter of 15 means Y≥4.</p><span class=\"equation\" data-display=\"true\" data-math=\"Y\\sim\\mathrm{B}(15,q),\\qquad q\\approx0.03699009027\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(4\\le Y\\le 15)=\\sum_{r=4}^{15}\\binom{15}r(0.03699009)^r(1-0.03699009)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0018404132\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "7cc6ba553d0e358d15c68eac4a678fd9cee548fd908e7873cdaf25328b8831c9",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            57.49,
+            289.693,
+            81.769,
+            299.656
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-b/qbronze",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "Bronze",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem set B",
+      "number": "Bronze",
+      "question": "A juggler claims to be able to juggle five balls for over ten minutes 65% of the times she attempts it. A circus owner believes that this proportion is not correct. The juggler attempts to juggle five balls 15 times and juggles for over ten minutes on 13 occasions.\n\nTest, at the 10% level of significance, whether this provides evidence for the circus owner&#x27;s belief. State your hypotheses clearly. <span class=\"marks\">(5 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Let p be the probability of juggling for over ten minutes.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.65;\\qquad H_1:p\\ne0.65\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.65)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(13\\le X\\le 15)=\\sum_{r=13}^{15}\\binom{15}r(0.65)^r(1-0.65)^{15-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.061734095\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.061734095&gt;0.05\"></span><p>Do not reject H₀: there is insufficient evidence that the claimed 65%success rate is incorrect. This does not prove the null hypothesis.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "ec258318a9a5fc1a8555afbbe6c69268df61ee19685932414ee55bf401def275",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            57.49,
+            412.96,
+            92.797,
+            422.923
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-b/qsilver",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "Silver",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem set B",
+      "number": "Silver",
+      "question": "The outcome of rolling a biased four-sided dice is modelled as a discrete random variable, <span data-math=\"X\"></span>, with probability mass function\n<span data-math=\"\\mathrm{P}(X=x)=\\dfrac{x}{k},\\quad x=1,2,3,4\"></span>\n<ol type=\"a\"><li value=\"1\">Calculate <span data-math=\"\\mathrm{P}(X=4)\"></span>. <span class=\"marks\">(3 marks)</span></li></ol>\nDoreen claims that the model is incorrect and rolls the dice 50 times. She gets a 4 on 28 occasions.\n<ol type=\"a\"><li value=\"2\">Using a 5% level of significance and stating your hypotheses clearly, test Doreen&#x27;s claim. <span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>First normalise the model, then test the implied probability of a four.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"(1+2+3+4)/k=1\\Rightarrow k=10;\\quad P(X=4)=4/10=0.4\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.4;\\qquad H_1:p\\ne0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(50,0.4)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(28\\le X\\le 50)=\\sum_{r=28}^{50}\\binom{50}r(0.4)^r(1-0.4)^{50-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.016034764\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.016034764&lt;0.025\"></span><p>Reject H₀: there is evidence that the probability of a four differs from 0.4, contradicting the model.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "81e4b204db6304ec9bb28d00c33929e2ac70bfecfbcfa24c1f7d55e536cae429",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            57.49,
+            497.145,
+            85.923,
+            507.108
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/problem-b/qgold",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "Gold",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem set B",
+      "number": "Gold",
+      "question": "A paper company finds that, over time, defects occur at a rate of 1 in every 250 sheets of paper produced. After switching to recycled paper, the company examines a sample of 300 sheets of paper, and finds that it contains 5 defective sheets. An employee decides to carry out a hypothesis test, at the 5% level of significance, to assess the claim that the switch to recycled paper has affected the rate of defects. The employee&#x27;s working is shown below:\n<div>Let <span data-math=\"X\"></span> be the random variable ‘number of defects’ and <span data-math=\"X\\sim\\mathrm{B}(300,p)\"></span><br>\n<span data-math=\"\\mathrm{H}_0:p=0.004\"></span><br> <span data-math=\"\\mathrm{H}_1:p\\ne0.004\"></span><br>\n<span data-math=\"\\mathrm{P}(X\\le5\\mid p=0.004)=0.9985\"></span><br>\nSince <span data-math=\"0.9985&gt;0.05\"></span>, accept <span data-math=\"\\mathrm{H}_0\"></span><br>\nThere is no evidence that the rate of defects has changed.</div>\nThe employee has made two mistakes.\n\nExplain these mistakes and determine the correct conclusion to the hypothesis test. <span class=\"marks\">(5 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Use the tail in the direction of the observed deviation and half the two-sided significance level.</p><p>Mistake 1: use P(X≥5), not P(X≤5), because 5 exceeds the null mean 1.2. Mistake 2: compare that tail with 0.025, not 0.05.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.004;\\qquad H_1:p\\ne0.004\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(300,0.004)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(5\\le X\\le 300)=\\sum_{r=5}^{300}\\binom{300}r(0.004)^r(1-0.004)^{300-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.0076003472\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.0076003472&lt;0.025\"></span><p>Reject H₀: there is evidence that the defect rate has changed.</p><p>For this two-tailed test, compare the observed tail with half the stated significance level.</p>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "e40140e3188be965b9cc4fdf27d0717f670d48a568b8b8cba62ed519efa2df93",
+        "printedBookPage": "48",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            57.49,
+            593.376,
+            81.769,
+            603.339
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/exam/q23",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "23",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "23",
+      "question": "The traffic police in a town believe that 20% of impounded cars have illegal tyres.\nA random sample of 30 cars from an impound lot is taken.\n<ol type=\"a\"><li value=\"1\">Give two reasons to support the use of a binomial distribution to model the random variable <span data-math=\"X\"></span>, the number of cars in the sample that have illegal tyres. <span class=\"marks\">(2 marks)</span></li><li value=\"2\">Calculate the probability that the sample contains fewer than 4 cars with illegal tyres. <span class=\"marks\">(2 marks)</span></li></ol>\nThe Department for Transport disagrees with the belief of the police and claims that the percentage of impounded cars with illegal tyres is less than 20%.\n<ol type=\"a\"><li value=\"3\">Write down suitable null and alternative hypotheses that can be used to test this claim. <span class=\"marks\">(2 marks)</span></li></ol>\nThe Department for Transport tests its claim using a 10% level of significance.\n<ol type=\"a\"><li value=\"4\">Given that there were 3 cars in the sample that had illegal tyres, comment on the Department for Transport&#x27;s claim. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Treat each car as an independent trial with a common illegal-tyre probability.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>There are 30 fixed trials and two outcomes per car: illegal tyres or legal tyres. Assume independent cars and constant p=0.2; this supports a binomial model.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(0\\le X\\le 3)=\\sum_{r=0}^{3}\\binom{30}r(0.2)^r(1-0.2)^{30-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.12271081\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.2;\\qquad H_1:p&lt;0.2\"></span></li><li value=\"4\"><p>The lower-tail probability from part b is approximately 0.1227&gt;0.10. Do not reject H₀: insufficient evidence that the proportion is less than 20%.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "798022da63c21edb59067aee83b6870210647afcc3964971d022339e6cc3fca4",
+        "printedBookPage": null,
+        "marker": {
+          "page": 8,
+          "bbox": [
+            48.189,
+            80.251,
+            118.33,
+            92.206
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/exam/q27",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "27",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "27",
+      "question": "The head of sixth form suggests that the probability that Savannah is late to school is 0.3.\nSavannah does not believe this and, to test the claim, she records the number of days she is late over a random sample of 25 days.\n<ol type=\"a\"><li value=\"1\">Define the term ‘critical region’ in the context of hypothesis testing. <span class=\"marks\">(1 mark)</span></li><li value=\"2\">Find the critical region for a two-tailed test, at the 5% level of significance, to test whether the probability Savannah is late to school is 0.3. The probability of rejecting each tail should be as close as possible to 2.5%. <span class=\"marks\">(4 marks)</span></li><li value=\"3\">State the actual significance level of the test. <span class=\"marks\">(1 mark)</span></li></ol>\nFrom the sample, Savannah finds that she was late on 4 occasions.\n<ol type=\"a\"><li value=\"4\">Comment on whether Savannah should accept the head of sixth form&#x27;s claim in light of this evidence. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>The critical region consists of observations that trigger rejection of H₀.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>It is the set of values of the test statistic for which H₀is rejected.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.3;\\qquad H_1:p\\ne0.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(25,0.3)\"></span><p>Use 0.025 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)\\approx0.033240517\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le4)\\approx0.090471919\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge13)\\approx0.017469741\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge12)\\approx0.044246497\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le3\\quad\\text{or}\\quad X\\ge13\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p><p>Compare the neighbouring boundary on the other side of the target as well:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)\\approx0.00896052788\"></span><p>Its distance from 0.025 is greater than that of the selected tail, confirming the closest-tail choice.</p></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.050710257\\approx5.071\\%\"></span></li><li value=\"4\"><p>4 is outside both tails. Do not reject H₀: the data do not provide sufficient evidence against p=0.3. They do not establish that her probability is exactly 0.3.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "41f4ae25dd21616683821c2a9e4289632f096467ff7e2fb4724aef018b04dde4",
+        "printedBookPage": null,
+        "marker": {
+          "page": 8,
+          "bbox": [
+            48.189,
+            307.417,
+            118.33,
+            319.372
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/exam/q29",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "29",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "29",
+      "question": "A random variable <span data-math=\"X\"></span> has distribution <span data-math=\"\\mathrm{B}(15,p)\"></span>.\n\nAmy uses a single observation of <span data-math=\"X\"></span> to test <span data-math=\"\\mathrm{H}_0:p=0.34\"></span> against <span data-math=\"\\mathrm{H}_1:p\\ne0.34\"></span>.\n<ol type=\"a\"><li value=\"1\">Using a 10% level of significance, find the critical region for Amy&#x27;s test. The probability in each tail should be as close as possible to 0.05. <span class=\"marks\">(3 marks)</span></li><li value=\"2\">Write down the actual significance level of Amy&#x27;s test. <span class=\"marks\">(2 marks)</span></li></ol>\nDonna decides to take two independent observations of <span data-math=\"X\"></span> and reject <span data-math=\"\\mathrm{H}_0\"></span> only if both of her observations fall within the critical region.\n<ol type=\"a\"><li value=\"3\">State, with a reason, whether the actual significance level of Donna&#x27;s test is larger or smaller than Amy&#x27;s. <span class=\"marks\">(1 mark)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use the requested closest-tail boundaries; calculate the actual rejection probability.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(15,0.34)\"></span><p>Use 0.05 in each tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le2)\\approx0.071870155\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le3)\\approx0.19404319\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge9)\\approx0.03505124\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\ge8)\\approx0.097739676\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Critical region: }X\\le2\\quad\\text{or}\\quad X\\ge9\"></span><p>The question asks for each tail to be as close as possible to its target; this may make the actual significance slightly greater than the nominal level.</p><p>Compare the neighbouring boundary on the other side of the target as well:</p><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\le1)\\approx0.0171410563\"></span><p>Its distance from 0.05 is greater than that of the selected tail, confirming the closest-tail choice.</p></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{reject }H_0\\mid H_0)\\approx0.10692139\\approx10.69\\%\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{Donna rejects}\\mid H_0)=q^2\\approx(0.10692139)^2\\approx0.011432185\"></span><p>This is smaller than q: both independent observations must be in the critical region.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "d23ede090ca11424bda0b61e919073c046109e9c64e44c7aa0a71ec2c817fdac",
+        "printedBookPage": null,
+        "marker": {
+          "page": 8,
+          "bbox": [
+            48.189,
+            524.62,
+            118.33,
+            536.575
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/exam/q31",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "31",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "31",
+      "question": "Charlie is playing a game with her friend Mikhela. The probability of her winning any one game is 0.2. Charlie and Mikhela play the game 25 times.\n<ol type=\"a\"><li value=\"1\">Find the probability that Charlie wins exactly 6 of the games. <span class=\"marks\">(1 mark)</span></li><li value=\"2\">Find the probability that Charlie wins more than 8 games. <span class=\"marks\">(2 marks)</span></li></ol>\nCharlie claims that she has a trick that she can use to increase her probability of winning. To test the claim, Charlie and Mikhela play the game 25 more times and Charlie wins 9 times.\n<ol type=\"a\"><li value=\"3\">Write down suitable null and alternative hypotheses for this test. <span class=\"marks\">(2 marks)</span></li><li value=\"4\">Using a significance level of 5% and your answer to part <strong>b</strong>, state the outcome of the test.\nYou must justify your answer. <span class=\"marks\">(2 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Use X~B(25,0.2)under the original model.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><span class=\"equation\" data-display=\"true\" data-math=\"P(X=6)=\\binom{25}{6}(0.2)^{6}(1-0.2)^{19}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.16334592\"></span></li><li value=\"2\"><span class=\"equation\" data-display=\"true\" data-math=\"P(9\\le X\\le 25)=\\sum_{r=9}^{25}\\binom{25}r(0.2)^r(1-0.2)^{25-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.046774242\"></span></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.2;\\qquad H_1:p&gt;0.2\"></span></li><li value=\"4\"><p>P(X≥9)≈0.0468&lt;0.05, so reject H₀. There is evidence that Charlie’s trick increases the winning probability.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "6ff6cf377238cfe44c4289469b3bc29fb0eba75b6f159066d8e697bf0cd81a89",
+        "printedBookPage": null,
+        "marker": {
+          "page": 9,
+          "bbox": [
+            48.189,
+            51.504,
+            118.33,
+            63.459
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch7/exam/q34",
+      "courseId": "maths-a-level",
+      "bookId": "maths-statistics-year-1",
+      "chapterId": "ch7",
+      "chapterNumber": 7,
+      "questionLabel": "34",
+      "chapterTitle": "Hypothesis testing",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "34",
+      "question": "From the large data set, the probability of a randomly chosen day in Camborne in 1987 having 7 or 8 oktas of cloud cover is 0.36.\n\nMaedeh believes the likelihood getting 7 or 8 oktas of cloud cover increased in 2015. She decides to take a random sample of 42 days from the large data set for Camborne in 2015, stratified by month.\n<ol type=\"a\"><li value=\"1\">Explain briefly how Maedeh could take her sample. <span class=\"marks\">(2 marks)</span></li><li value=\"2\">State what is meant by a null hypothesis. <span class=\"marks\">(1 mark)</span></li><li value=\"3\">Write down two suitable hypotheses that Maedeh can use to test her belief. <span class=\"marks\">(1 mark)</span></li></ol>\nFrom her sample, she finds that there are 7 or 8 oktas of cloud cover on 22 days.\n<ol type=\"a\"><li value=\"4\">Using a 5% level of significance, test whether or not there is evidence supporting Maedeh&#x27;s belief. <span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Let p be the chance of 7 or 8 oktas on a sampled 2015 day.</p><ol class=\"parts\" type=\"a\"><li value=\"1\"><p>Divide the data into the six months and select days randomly without replacement within each month. About 7 days per month gives 42 days, as in the supplied answer. For exact proportional allocation, use 42×(days in that month)/(total available days), with integer rounding while keeping the total 42.</p></li><li value=\"2\"><p>The null hypothesis is the specified population claim used as the working assumption for calculating the distribution of the test statistic; it is not presumed proven.</p></li><li value=\"3\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.36;\\qquad H_1:p&gt;0.36\"></span></li><li value=\"4\"><span class=\"equation\" data-display=\"true\" data-math=\"H_0:p=0.36;\\qquad H_1:p&gt;0.36\"></span><span class=\"equation\" data-display=\"true\" data-math=\"X\\sim\\mathrm{B}(42,0.36)\"></span><p>Assume independent trials with a common probability p.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(22\\le X\\le 42)=\\sum_{r=22}^{42}\\binom{42}r(0.36)^r(1-0.36)^{42-r}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.021803632\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.021803632&lt;0.05\"></span><p>Reject H₀: there is evidence that the chance of 7 or 8 oktas increased in 2015.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-applied-year-1-ch7-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/applied-year-1/chapter-07.pdf",
+        "pdfSha256": "51acf47dbea410cdd0eca65e61371b3a28e5f6205abbf1e8a3908c8b98f880d6",
+        "nativeSha256": "2e76091aa00d319d3d9fc51b3a31a0b667683223c38446ac5cbdcbf11ba1830a",
+        "questionLatexSha256": "cf02c134c9bca0d87783f9d45f7926a48b9716f71beaf113daf104ae9c39a5fa",
+        "printedBookPage": null,
+        "marker": {
+          "page": 9,
+          "bbox": [
+            48.189,
+            241.609,
+            118.33,
+            253.564
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    }
+  ]
+}

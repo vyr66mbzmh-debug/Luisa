@@ -1,0 +1,38 @@
+{
+  "issue": 99,
+  "release": "0.58",
+  "chapter": "Pure Year 2 Chapter 4 — Binomial expansion",
+  "questions": 37,
+  "workedSolutions": 37,
+  "originalQuestionIdsMatched": 37,
+  "sourceAnswerGraphs": 0,
+  "exactAndRoundingIndependentChecks": 253,
+  "strictBrowserMathExpressions": 442,
+  "browserQuestionsRendered": 37,
+  "browserHorizontalOverflows": 0,
+  "visualReview": "All original prompts and supplied final answers compared. Coefficients independently checked by differentiation at zero, with separate partial-fraction identity, convergence-radius, substitution and percentage-error checks. Every row rendered in strict KaTeX without mathematical failures or horizontal overflow. Five product-parenthesis fixes rerendered. Representative factor-product and partial-fraction renders inspected; top-level subpart counts match throughout. Full Papers print integration remains separate.",
+  "suppliedPromptOrKeyDefects": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch4/4.1/q9",
+      "note": "Multiply the two binomial expansions. Their common validity interval is |x|<1/5, narrower than the |x|<1 printed in the question."
+    }
+  ],
+  "solutionSha256": "c9e880a17ba6f1ed4c25cc7061e98721c45b66fdb3b72f1976af05df0085d4de",
+  "sourcePdf": "resources/practice/pure-year-2/chapter-04.pdf",
+  "sourcePdfSha256": "c2ee3a33356fe217775cc1db3b35e10595716841655e24d72e3403a8fc4c1830",
+  "independentReview": "accepted: all original prompts and authored working independently reviewed; findings corrected",
+  "precisionReview": "Independent reviewer requested preserving trailing significant zeros in displayed approximations; numerical values unchanged.",
+  "independentReviewEvidence": {
+    "reviewer": "practice_solutions",
+    "questionsReviewed": 37,
+    "solutionSha256": "c9e880a17ba6f1ed4c25cc7061e98721c45b66fdb3b72f1976af05df0085d4de",
+    "sourceAndMathematicalScope": "Every original question and subpart compared with authored working. Independently assessed calculations, method requirements, domains, cases, rounding and source-discrepancy qualifications. Supplied figures inspected wherever present; independent check scripts rerun separately from authoring.",
+    "sourceAndAnswerFiguresInspected": 0,
+    "independentChecksRerun": 253,
+    "allRerunChecksPassed": true,
+    "findingsResolved": true,
+    "detail": "Verified the requested two-significant-figure display 0.10% in exam Q81(c). No source figures.",
+    "integrationScope": "Acceptance covers source, worked mathematics and figures. Final combined Papers print and browser integration are recorded separately by the lead."
+  },
+  "integratedPapersAcceptance": "All original question/solution mathematics, text, figures, part labels and hints passed the final 2475-question print identity and layout audit; see v058-papers-acceptance.json."
+}

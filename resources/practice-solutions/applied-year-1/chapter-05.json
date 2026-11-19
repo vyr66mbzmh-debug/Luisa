@@ -1,0 +1,618 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 5,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.1/q1",
+      "status": "worked",
+      "method": "Count equally likely letters, including repeated occurrences.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(N)=2/13\"></span>"
+        },
+        {
+          "explanation": "<p>The six vowels are I,E,O,A,I,O.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{vowel})=6/13\"></span>"
+        },
+        {
+          "explanation": "<p>Only R,T,T are not before Q.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{before Q})=(13-3)/13=10/13\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Count equally likely letters, including repeated occurrences.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(N)=2/13\"></span></li><li><p>The six vowels are I,E,O,A,I,O.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{vowel})=6/13\"></span></li><li><p>Only R,T,T are not before Q.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{before Q})=(13-3)/13=10/13\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.1/q2",
+      "status": "worked",
+      "method": "There are 6×4=24 equally likely ordered dice outcomes.",
+      "steps": [
+        {
+          "explanation": "<p>Only(5,3)has product 15.</p><span class=\"equation\" data-display=\"true\" data-math=\"P=1/24\"></span>"
+        },
+        {
+          "explanation": "<p>A product is odd only if both scores are odd.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{even})=1-(3/6)(2/4)=3/4\"></span>"
+        },
+        {
+          "explanation": "<p>For four-sided scores 1,2,3,4, the numbers of six-sided scores giving a product above 10 are 0,1,3,4.</p><span class=\"equation\" data-display=\"true\" data-math=\"P=(0+1+3+4)/24=1/3\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>There are 6×4=24 equally likely ordered dice outcomes.</p><ol class=\"parts\" type=\"a\"><li><p>Only(5,3)has product 15.</p><span class=\"equation\" data-display=\"true\" data-math=\"P=1/24\"></span></li><li><p>A product is odd only if both scores are odd.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{even})=1-(3/6)(2/4)=3/4\"></span></li><li><p>For four-sided scores 1,2,3,4, the numbers of six-sided scores giving a product above 10 are 0,1,3,4.</p><span class=\"equation\" data-display=\"true\" data-math=\"P=(0+1+3+4)/24=1/3\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.1/q3",
+      "status": "worked",
+      "method": "Use the class frequencies; interpolate only within the class containing178.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"n=7+22+35+16+9=89\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(h&lt;180)=(7+22+35)/89=64/89\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(h&gt;178)\\approx(\\tfrac2{10}35+16+9)/89=32/89\"></span>"
+        },
+        {
+          "explanation": "<p>Assume heights are uniformly distributed within the 170–180 cm class.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the class frequencies; interpolate only within the class containing 178.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"n=7+22+35+16+9=89\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(h&lt;180)=(7+22+35)/89=64/89\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(h&gt;178)\\approx(\\tfrac2{10}35+16+9)/89=32/89\"></span></li><li><p>Assume heights are uniformly distributed within the 170–180 cm class.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.1/q4",
+      "status": "worked",
+      "method": "Histogram frequency is class width multiplied by frequency density.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"n(m&lt;90)=20(0.35)+10(0.6)=13;\\quad P=13/60\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"n(m&gt;110)\\approx10(1)+30(0.5)=25;\\quad P=25/60=5/12\"></span>"
+        },
+        {
+          "explanation": "<p>Assume a uniform distribution of mass within the 105–120 kg class when splitting it at 110 kg.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Histogram frequency is class width multiplied by frequency density.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"n(m&lt;90)=20(0.35)+10(0.6)=13;\\quad P=13/60\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"n(m&gt;110)\\approx10(1)+30(0.5)=25;\\quad P=25/60=5/12\"></span></li><li><p>Assume a uniform distribution of mass within the 105–120 kg class when splitting it at 110 kg.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.1/q5",
+      "status": "worked",
+      "method": "List ordered outcomes; Nisha draws without replacement.",
+      "steps": [
+        {
+          "explanation": "<p>B4,B5,B6,B7,E4,E5,E6,E7,O4,O5,O6,O7.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(B4)=1/12;\\qquad\\text{(ii) }P=(2/3)(2/4)=1/3\"></span>"
+        },
+        {
+          "explanation": "<p>45,46,47,54,56,57,64,65,67,74,75,76.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P=(2/4)(1/3)=1/6\"></span><p>Totals below 12 occur for 45,46,47,54,56,64,65,74: eight outcomes.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P=8/12=2/3\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>List ordered outcomes; Nisha draws without replacement.</p><ol class=\"parts\" type=\"a\"><li><p>B4,B5,B6,B7,E4,E5,E6,E7,O4,O5,O6,O7.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(B4)=1/12;\\qquad\\text{(ii) }P=(2/3)(2/4)=1/3\"></span></li><li><p>45,46,47,54,56,57,64,65,67,74,75,76.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P=(2/4)(1/3)=1/6\"></span><p>Totals below 12 occur for 45,46,47,54,56,64,65,74: eight outcomes.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P=8/12=2/3\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.2/q1",
+      "status": "worked",
+      "method": "Add the counts of disjoint regions; there are15outcomes altogether.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A)=(6+5)/15=11/15\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=5/15=1/3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=(6+5+3)/15=14/15\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Add the counts of disjoint regions; there are 15 outcomes altogether.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A)=(6+5)/15=11/15\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=5/15=1/3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=(6+5+3)/15=14/15\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.2/q2",
+      "status": "worked",
+      "method": "Put the intersection in first, then subtract it from each total.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"T\\text{ only}=9-5=4;\\quad S\\text{ only}=14-5=9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{neither}=20-(4+5+9)=2\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/47c2cfcd8b80466db24d.png\" alt=\"ans52-q2: solution graph\"></figure>"
+        }
+      ],
+      "solutionHtml": "<p>Put the intersection in first, then subtract it from each total.</p><span class=\"equation\" data-display=\"true\" data-math=\"T\\text{ only}=9-5=4;\\quad S\\text{ only}=14-5=9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{neither}=20-(4+5+9)=2\"></span><figure class=\"practice-figure\"><img src=\"content/practice/assets/47c2cfcd8b80466db24d.png\" alt=\"ans52-q2: solution graph\"></figure>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.2/q3",
+      "status": "worked",
+      "method": "Let the B-only probability be t; the A-only probability is2t.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2t+t+0.2+0.5=1\\Rightarrow t=0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\text{ only})=2t=0.2\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Let the B-only probability be t; the A-only probability is 2 t.</p><span class=\"equation\" data-display=\"true\" data-math=\"2t+t+0.2+0.5=1\\Rightarrow t=0.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\text{ only})=2t=0.2\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.2/q4",
+      "status": "worked",
+      "method": "Use the addition rule, subtracting the overlap once.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(M\\cap N)=0.8+0.3-0.9=0.2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(N\\text{ only})=0.3-0.2=0.1\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the addition rule, subtracting the overlap once.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(M\\cap N)=0.8+0.3-0.9=0.2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(N\\text{ only})=0.3-0.2=0.1\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.2/q5",
+      "status": "worked",
+      "method": "All regions inside C sum to0.5; all regions in the rectangle sum to1.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x+0.35=0.5\\Rightarrow x=0.15\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"y=1-(0.1+0.2+0.35+0.15+0.02)=0.18\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>All regions inside C sum to 0.5; all regions in the rectangle sum to 1.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x+0.35=0.5\\Rightarrow x=0.15\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"y=1-(0.1+0.2+0.35+0.15+0.02)=0.18\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.2/q6",
+      "status": "worked",
+      "method": "Start with the triple overlap2, then remove it from each pairwise overlap.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(J)=30/70=3/7\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(J\\cup U)=(30+32-17)/70=45/70=9/14\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"F\\text{ only}=25-12-8+2=7;\\quad P=7/70=1/10\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"|J\\cup U\\cup F|=30+32+25-17-8-12+2=52\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{none})=(70-52)/70=9/35\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Start with the triple overlap 2, then remove it from each pairwise overlap.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(J)=30/70=3/7\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(J\\cup U)=(30+32-17)/70=45/70=9/14\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"F\\text{ only}=25-12-8+2=7;\\quad P=7/70=1/10\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"|J\\cup U\\cup F|=30+32+25-17-8-12+2=52\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{none})=(70-52)/70=9/35\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.2/q7",
+      "status": "worked",
+      "method": "Use the B total first, then the total probability of1.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=0.62-0.2-0.24=0.18\"></span><span class=\"equation\" data-display=\"true\" data-math=\"y=1-(0.21+0.18+0.2+0.24+0.06)=0.11\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P((A\\cup C)\\cap B^c)=0.21+0.11=0.32\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the B total first, then the total probability of 1.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x=0.62-0.2-0.24=0.18\"></span><span class=\"equation\" data-display=\"true\" data-math=\"y=1-(0.21+0.18+0.2+0.24+0.06)=0.11\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P((A\\cup C)\\cap B^c)=0.21+0.11=0.32\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.2/q8",
+      "status": "worked",
+      "method": "The six disjoint region counts sum to30.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{more than one})=(3+6)/30=3/10\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=(7+3+4+6)/30=2/3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\cap C)=6/30=1/5\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The six disjoint region counts sum to 30.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{more than one})=(3+6)/30=3/10\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=(7+3+4+6)/30=2/3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\cap C)=6/30=1/5\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.3/q1",
+      "status": "worked",
+      "method": "Mutually exclusive events have no overlap.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=0.3+0.45=0.75\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{neither})=1-0.75=0.25\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Mutually exclusive events have no overlap.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cup B)=0.3+0.45=0.75\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{neither})=1-0.75=0.25\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.3/q2",
+      "status": "worked",
+      "method": "For mutually exclusive events, add their probabilities.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A)=0.7-0.5=0.2\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{neither})=1-0.7=0.3\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>For mutually exclusive events, add their probabilities.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A)=0.7-0.5=0.2\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{neither})=1-0.7=0.3\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.3/q3",
+      "status": "worked",
+      "method": "Independent events satisfy P(A and B)=P(A)P(B).",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=0.6(0.4)=0.24\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Independent events satisfy P(A and B)=P(A)P(B).</p><span class=\"equation\" data-display=\"true\" data-math=\"P(A\\cap B)=0.6(0.4)=0.24\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.3/q4",
+      "status": "worked",
+      "method": "Divide the intersection probability by P(A).",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"0.12P(B)=0.0204\\Rightarrow P(B)=0.17\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Divide the intersection probability by P(A).</p><span class=\"equation\" data-display=\"true\" data-math=\"0.12P(B)=0.0204\\Rightarrow P(B)=0.17\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.3/q5",
+      "status": "worked",
+      "method": "First find the missing region; then test the multiplication rule.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=1-0.45-0.3-0.2=0.05\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A)P(B)=(0.45+0.05)(0.3+0.05)=0.175\\ne0.05\"></span><p>The events are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>First find the missing region; then test the multiplication rule.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x=1-0.45-0.3-0.2=0.05\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A)P(B)=(0.45+0.05)(0.3+0.05)=0.175\\ne0.05\"></span><p>The events are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.3/q6",
+      "status": "worked",
+      "method": "Calculate the overlap and the Z-only region before testing independence.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Y\\cap Z)=0.4-0.15=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(Z\\text{ only})=1-0.4-0.35=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(Y)P(Z)=0.4(0.25+0.25)=0.2\\ne0.25\"></span><p>Therefore the events are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate the overlap and the Z-only region before testing independence.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(Y\\cap Z)=0.4-0.15=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(Z\\text{ only})=1-0.4-0.35=0.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(Y)P(Z)=0.4(0.25+0.25)=0.2\\ne0.25\"></span><p>Therefore the events are not independent.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.3/q7",
+      "status": "worked",
+      "method": "Disjoint circles show mutually exclusive events; region totals find x and y.",
+      "steps": [
+        {
+          "explanation": "<p>C and D, or C and E: their circles do not overlap.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"0.3+0.2+x=0.65\\Rightarrow x=0.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"y=1-0.3-0.2-0.15-0.05=0.3\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(D)P(E)=(0.2+0.15)(0.15+0.3)=0.1575\\ne0.15\"></span><p>The claim is false: D and E are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Disjoint circles show mutually exclusive events; region totals find x and y.</p><ol class=\"parts\" type=\"a\"><li><p>C and D, or C and E: their circles do not overlap.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"0.3+0.2+x=0.65\\Rightarrow x=0.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"y=1-0.3-0.2-0.15-0.05=0.3\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(D)P(E)=(0.2+0.15)(0.15+0.3)=0.1575\\ne0.15\"></span><p>The claim is false: D and E are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.3/q8",
+      "status": "worked",
+      "method": "Use the F total and then independence of G and I.",
+      "steps": [
+        {
+          "explanation": "<p>F and I are mutually exclusive because their circles do not overlap.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=0.3-0.05=0.25;\\quad P(G)=0.05+0.15+0.2=0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.4(0.2+y)=0.2\\Rightarrow y=0.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z=1-(0.25+0.05+0.15+0.2+0.3)=0.05\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the F total and then independence of G and I.</p><ol class=\"parts\" type=\"a\"><li><p>F and I are mutually exclusive because their circles do not overlap.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"x=0.3-0.05=0.25;\\quad P(G)=0.05+0.15+0.2=0.4\"></span><span class=\"equation\" data-display=\"true\" data-math=\"0.4(0.2+y)=0.2\\Rightarrow y=0.3\"></span><span class=\"equation\" data-display=\"true\" data-math=\"z=1-(0.25+0.05+0.15+0.2+0.3)=0.05\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.4/q1",
+      "status": "worked",
+      "method": "Replacement means both draws have probabilities4/9and5/9.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/f6300db64ab674510c56.png\" alt=\"ans54-q1: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(RR)=(4/9)^2=16/81\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(RY\\text{ or }YR)=2(4/9)(5/9)=40/81\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Replacement means both draws have probabilities 4/9 and 5/9.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/f6300db64ab674510c56.png\" alt=\"ans54-q1: solution graph\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(RR)=(4/9)^2=16/81\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(RY\\text{ or }YR)=2(4/9)(5/9)=40/81\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.4/q2",
+      "status": "worked",
+      "method": "There are three winning tickets; drawing without replacement changes the second fractions.",
+      "steps": [
+        {
+          "explanation": "<p>After a win,2 winning and 12 losing tickets remain. After a loss,3 winning and 11 losing remain.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/b97563d01a5dcca536b2.png\" alt=\"ans54-q2: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(WW)=\\frac3{15}\\frac2{14}=\\frac1{35}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(WL)+P(LW)=\\frac3{15}\\frac{12}{14}+\\frac{12}{15}\\frac3{14}=\\frac{12}{35}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>There are three winning tickets; drawing without replacement changes the second fractions.</p><ol class=\"parts\" type=\"a\"><li><p>After a win,2 winning and 12 losing tickets remain. After a loss,3 winning and 11 losing remain.</p><figure class=\"practice-figure\"><img src=\"content/practice/assets/b97563d01a5dcca536b2.png\" alt=\"ans54-q2: solution graph\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }P(WW)=\\frac3{15}\\frac2{14}=\\frac1{35}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }P(WL)+P(LW)=\\frac3{15}\\frac{12}{14}+\\frac{12}{15}\\frac3{14}=\\frac{12}{35}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.4/q3",
+      "status": "worked",
+      "method": "Multiply along each route, then add disjoint routes.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/acfdada8eb4578d473a4.png\" alt=\"ans54-q3: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<p>Not independent: the chance of being on time is 0.9 via the motorway and 0.3 otherwise.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{late})=0.4(0.1)+0.6(0.7)=0.46\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Multiply along each route, then add disjoint routes.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/acfdada8eb4578d473a4.png\" alt=\"ans54-q3: solution graph\"></figure></li><li><p>Not independent: the chance of being on time is 0.9 via the motorway and 0.3 otherwise.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{late})=0.4(0.1)+0.6(0.7)=0.46\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.4/q4",
+      "status": "worked",
+      "method": "Assume separate dice rolls and repeated experiments are independent.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(OOO)=0.6^3=0.216\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{one odd})=3(0.6)(0.4)^2=0.288\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(OOO\\text{ or }EEE)=0.6^3+0.4^3=0.28\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{all three experiments})=0.28^3=343/15625\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Assume separate dice rolls and repeated experiments are independent.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P(OOO)=0.6^3=0.216\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{one odd})=3(0.6)(0.4)^2=0.288\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(OOO\\text{ or }EEE)=0.6^3+0.4^3=0.28\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{all three experiments})=0.28^3=343/15625\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.4/q5",
+      "status": "worked",
+      "method": "The overall non-cure rate is the weighted sum across the three treatments.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"0.2(0.05)+0.5(0.07)+0.3p=0.06\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p=(0.06-0.01-0.035)/0.3=0.05=5\\%\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(B\\cap N)=0.5(0.07)=0.035\\ne0.5(0.06)=P(B)P(N)\"></span><p>Therefore these events are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The overall non-cure rate is the weighted sum across the three treatments.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"0.2(0.05)+0.5(0.07)+0.3p=0.06\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p=(0.06-0.01-0.035)/0.3=0.05=5\\%\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(B\\cap N)=0.5(0.07)=0.035\\ne0.5(0.06)=P(B)P(N)\"></span><p>Therefore these events are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/5.4/q6",
+      "status": "worked",
+      "method": "Track the changed contents after each transfer, then multiply route probabilities.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/3d37f3845f8c5b5c7306.png\" alt=\"ans54-q6: solution graph\"></figure><p>After GG,GB,BG,BB transfers, bag B contains respectively 5,6,6,7 blue balls out of 10.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Q)=\\frac47\\frac36+\\frac37\\frac26=\\frac37\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(R)=\\frac47\\frac12\\frac12+\\frac47\\frac12\\frac35\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\phantom{P(R)=}+\\frac37\\frac23\\frac35+\\frac37\\frac13\\frac7{10}=\\frac{41}{70}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Q\\cap R)=\\frac47\\frac12\\frac12+\\frac37\\frac13\\frac7{10}=\\frac{17}{70}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(Q)P(R)=\\frac37\\frac{41}{70}=\\frac{123}{490}\\ne\\frac{119}{490}=P(Q\\cap R)\"></span><p>Therefore Q and R are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Track the changed contents after each transfer, then multiply route probabilities.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/3d37f3845f8c5b5c7306.png\" alt=\"ans54-q6: solution graph\"></figure><p>After GG,GB,BG,BB transfers, bag B contains respectively 5,6,6,7 blue balls out of 10.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Q)=\\frac47\\frac36+\\frac37\\frac26=\\frac37\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(R)=\\frac47\\frac12\\frac12+\\frac47\\frac12\\frac35\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\phantom{P(R)=}+\\frac37\\frac23\\frac35+\\frac37\\frac13\\frac7{10}=\\frac{41}{70}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Q\\cap R)=\\frac47\\frac12\\frac12+\\frac37\\frac13\\frac7{10}=\\frac{17}{70}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(Q)P(R)=\\frac37\\frac{41}{70}=\\frac{123}{490}\\ne\\frac{119}{490}=P(Q\\cap R)\"></span><p>Therefore Q and R are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/problem-a/qbronze",
+      "status": "worked",
+      "method": "Find missing regions from the A total and total probability.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x=0.55-0.25=0.3;\\quad y=1-0.25-0.3-0.15-0.2=0.1\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A)P(B)=0.55(0.3+0.1)=0.22\\ne0.3=P(A\\cap B)\"></span><p>The events are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Find missing regions from the A total and total probability.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"x=0.55-0.25=0.3;\\quad y=1-0.25-0.3-0.15-0.2=0.1\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A)P(B)=0.55(0.3+0.1)=0.22\\ne0.3=P(A\\cap B)\"></span><p>The events are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/problem-a/qsilver",
+      "status": "worked",
+      "method": "Independence makes the product of the two circle totals equal the overlap.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"(0.28+x)(2x-0.24)=x\"></span><span class=\"equation\" data-display=\"true\" data-math=\"2x^2+0.32x-0.0672=x\\Rightarrow2x^2-0.68x-0.0672=0\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"2(x-0.42)(x+0.08)=0\\Rightarrow x=0.42\\text{ or }-0.08\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=0.42;\\quad y=1-[0.28+0.42+(0.42-0.24)]=0.12\"></span>"
+        },
+        {
+          "explanation": "<p>Reject−0.08 because an overlap probability cannot be negative.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Independence makes the product of the two circle totals equal the overlap.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"(0.28+x)(2x-0.24)=x\"></span><span class=\"equation\" data-display=\"true\" data-math=\"2x^2+0.32x-0.0672=x\\Rightarrow2x^2-0.68x-0.0672=0\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"2(x-0.42)(x+0.08)=0\\Rightarrow x=0.42\\text{ or }-0.08\"></span><span class=\"equation\" data-display=\"true\" data-math=\"x=0.42;\\quad y=1-[0.28+0.42+(0.42-0.24)]=0.12\"></span></li><li><p>Reject−0.08 because an overlap probability cannot be negative.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/problem-a/qgold",
+      "status": "worked",
+      "method": "Use total probability to express y in terms of x, then apply independence.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"x+0.3+y+(x-0.1)=1\\Rightarrow y=0.8-2x\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(x+0.3)(y+0.3)=0.3\\Rightarrow2x^2-0.5x-0.03=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(x-0.3)(2x+0.1)=0\"></span><p>Reject x=−0.05 as a negative probability. Hence x=0.3 and y=0.2.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use total probability to express y in terms of x, then apply independence.</p><span class=\"equation\" data-display=\"true\" data-math=\"x+0.3+y+(x-0.1)=1\\Rightarrow y=0.8-2x\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(x+0.3)(y+0.3)=0.3\\Rightarrow2x^2-0.5x-0.03=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(x-0.3)(2x+0.1)=0\"></span><p>Reject x=−0.05 as a negative probability. Hence x=0.3 and y=0.2.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/problem-b/qbronze",
+      "status": "worked",
+      "method": "The token is replaced, so both draws use the same probabilities.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/2fa0ed9cf1edab79e012.png\" alt=\"ans-setB-bronze: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(OG\\text{ or }GO)=2\\frac69\\frac39=\\frac49\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The token is replaced, so both draws use the same probabilities.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/2fa0ed9cf1edab79e012.png\" alt=\"ans-setB-bronze: solution graph\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(OG\\text{ or }GO)=2\\frac69\\frac39=\\frac49\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/problem-b/qsilver",
+      "status": "worked",
+      "method": "Decrease the total and the count of the first colour for the second draw.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/371482f18fede0fdb715.png\" alt=\"ans-setB-silver: solution graph\"></figure>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{same})=\\frac6{11}\\frac5{10}+\\frac3{11}\\frac2{10}+\\frac2{11}\\frac1{10}=\\frac{19}{55}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Decrease the total and the count of the first colour for the second draw.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/371482f18fede0fdb715.png\" alt=\"ans-setB-silver: solution graph\"></figure></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{same})=\\frac6{11}\\frac5{10}+\\frac3{11}\\frac2{10}+\\frac2{11}\\frac1{10}=\\frac{19}{55}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/problem-b/qgold",
+      "status": "worked",
+      "method": "Exactly two oats can occur in three distinct orders; only oat selections reduce the total.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(OOG)=\\frac7{15}\\frac6{14}\\frac8{13}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(OGO)=\\frac7{15}\\frac8{14}\\frac6{14};\\quad P(GOO)=\\frac8{15}\\frac7{15}\\frac6{14}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{exactly two oats})=\\frac{2348}{6825}\\approx0.34403\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Exactly two oats can occur in three distinct orders; only oat selections reduce the total.</p><span class=\"equation\" data-display=\"true\" data-math=\"P(OOG)=\\frac7{15}\\frac6{14}\\frac8{13}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(OGO)=\\frac7{15}\\frac8{14}\\frac6{14};\\quad P(GOO)=\\frac8{15}\\frac7{15}\\frac6{14}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(\\text{exactly two oats})=\\frac{2348}{6825}\\approx0.34403\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/exam/q5",
+      "status": "worked",
+      "method": "Interpret “on one of the two days” as exactly one, as in the supplied answer.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P=\\frac4{20}\\frac{16}{19}+\\frac{16}{20}\\frac4{19}=\\frac{32}{95}\"></span><p>If “at least one” were intended, the result would instead be 35/95; the wording does not explicitly say exactly.</p>"
+        },
+        {
+          "explanation": "<p>The same day cannot be selected twice: sampling without replacement.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Interpret “on one of the two days” as exactly one, as in the supplied answer.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"P=\\frac4{20}\\frac{16}{19}+\\frac{16}{20}\\frac4{19}=\\frac{32}{95}\"></span><p>If “at least one” were intended, the result would instead be 35/95; the wording does not explicitly say exactly.</p></li><li><p>The same day cannot be selected twice: sampling without replacement.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/exam/q10",
+      "status": "worked",
+      "method": "Use disjoint circles and the sum of all regions.",
+      "steps": [
+        {
+          "explanation": "<p>A and C, or B and C, are mutually exclusive.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"0.3+x+x+0.2+0.15=1\\Rightarrow x=0.175\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(A)P(B)=(0.3+0.175)(2\\times0.175)=0.16625\\ne0.175\"></span><p>Therefore A and B are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use disjoint circles and the sum of all regions.</p><ol class=\"parts\" type=\"a\"><li><p>A and C, or B and C, are mutually exclusive.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"0.3+x+x+0.2+0.15=1\\Rightarrow x=0.175\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(A)P(B)=(0.3+0.175)(2\\times0.175)=0.16625\\ne0.175\"></span><p>Therefore A and B are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/exam/q25",
+      "status": "worked",
+      "method": "Weight each spoilage probability by its supplier’s share.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"0.2(0.03)+0.4(0.04)+0.4p=0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p=(0.05-0.006-0.016)/0.4=0.07=7\\%\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(X\\cap S)=0.2(0.03)=0.006\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X)P(S)=0.2(0.05)=0.01\\ne0.006\"></span><p>Thus these events are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Weight each spoilage probability by its supplier’s share.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"0.2(0.03)+0.4(0.04)+0.4p=0.05\"></span><span class=\"equation\" data-display=\"true\" data-math=\"p=(0.05-0.006-0.016)/0.4=0.07=7\\%\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(X\\cap S)=0.2(0.03)=0.006\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(X)P(S)=0.2(0.05)=0.01\\ne0.006\"></span><p>Thus these events are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/exam/q32",
+      "status": "worked",
+      "method": "Estimate from class midpoints; interpolate for the standard-deviation thresholds.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\sum fw=366;\\quad\\sum fw^2=4975.5;\\quad n=30\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{366}{30}=12.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{4975.5}{30}-\\left(\\frac{366}{30}\\right)^2}\\approx4.12432\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar w-\\sigma\\approx8.07568;\\quad\\bar w+\\sigma\\approx16.32432\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(|w-\\bar w|&gt;\\sigma)\\approx\\frac{7+5(0.07568/3)+4+8(0.67568/3)}{30}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.430932\"></span><p>Rounding the thresholds to 8.1 and 16.3 gives 13/30≈0.433, as in the supplied answer. “From the mean” is interpreted as either side, not just above.</p>"
+        },
+        {
+          "explanation": "<p>Assume observations are uniformly distributed within each class.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Estimate from class midpoints; interpolate for the standard-deviation thresholds.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\sum fw=366;\\quad\\sum fw^2=4975.5;\\quad n=30\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar x=\\frac{366}{30}=12.2\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\sigma=\\sqrt{\\frac{4975.5}{30}-\\left(\\frac{366}{30}\\right)^2}\\approx4.12432\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar w-\\sigma\\approx8.07568;\\quad\\bar w+\\sigma\\approx16.32432\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P(|w-\\bar w|&gt;\\sigma)\\approx\\frac{7+5(0.07568/3)+4+8(0.67568/3)}{30}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\approx0.430932\"></span><p>Rounding the thresholds to 8.1 and 16.3 gives 13/30≈0.433, as in the supplied answer. “From the mean” is interpreted as either side, not just above.</p></li><li><p>Assume observations are uniformly distributed within each class.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-1/ch5/exam/q35",
+      "status": "worked",
+      "method": "Use proportional random selection within strata, then the Venn region totals.",
+      "steps": [
+        {
+          "explanation": "<p>Allocate the 50 places in proportion to the numbers in each year group; choose the required students randomly within each year group.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"12+x+22+x=50\\Rightarrow x=8\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cup R)=(12+8+22)/50=0.84\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"P(C)P(R)=\\frac{20}{50}\\frac{30}{50}=0.24\\ne\\frac8{50}=0.16\"></span><p>The events are not independent.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use proportional random selection within strata, then the Venn region totals.</p><ol class=\"parts\" type=\"a\"><li><p>Allocate the 50 places in proportion to the numbers in each year group; choose the required students randomly within each year group.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"12+x+22+x=50\\Rightarrow x=8\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C\\cup R)=(12+8+22)/50=0.84\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"P(C)P(R)=\\frac{20}{50}\\frac{30}{50}=0.24\\ne\\frac8{50}=0.16\"></span><p>The events are not independent.</p></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}

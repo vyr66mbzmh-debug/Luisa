@@ -1,0 +1,146 @@
+{
+  "issue": 99,
+  "scope": "Independent solution and Papers integration review by extraction implementer",
+  "publicationPerformed": false,
+  "solutionReview": {
+    "pure2QuestionCount": 394,
+    "pure2MathChecksRerunPassed": 1649,
+    "chapters": [
+      {
+        "family": "pure-year-2",
+        "chapter": 7,
+        "status": "accepted",
+        "reviewer": "practice-extraction agent, independently of solution author",
+        "questionCount": 64,
+        "solutionPath": "resources/practice-solutions/pure-year-2/chapter-07.json",
+        "solutionDataSha256": "b7c512c160710c54d0813f354dc03a0429357fbd4f2afdc08ac0ece8a0aea1e6",
+        "allNativePromptAndWorkingRowsRead": true,
+        "referencedFiguresReviewed": 6,
+        "mathChecksRerunPassed": 153,
+        "mathCheckScript": "scripts/check_practice_pure2_ch07.py",
+        "review": "All addition/double-angle identities, trigonometric roots, amplitude and phase models, original-domain qualifications and source figures reviewed. No additional defect found."
+      },
+      {
+        "family": "pure-year-2",
+        "chapter": 8,
+        "status": "accepted",
+        "reviewer": "practice-extraction agent, independently of solution author",
+        "questionCount": 51,
+        "solutionPath": "resources/practice-solutions/pure-year-2/chapter-08.json",
+        "solutionDataSha256": "1c6806aab3e99f35c6eb0ce959dfb5abfddea6b3ee5defe08b84ba488acea9bf",
+        "allNativePromptAndWorkingRowsRead": true,
+        "referencedFiguresReviewed": 29,
+        "mathChecksRerunPassed": 150,
+        "mathCheckScript": "scripts/check_practice_pure2_ch08.py",
+        "review": "All parameter eliminations, branch restrictions, completed coordinate tables, intercepts, intersections and areas reviewed. Four replacement sketches inspected. Review corrected the source-labelled A/B intercepts in Problem B Gold; the area was unchanged."
+      },
+      {
+        "family": "pure-year-2",
+        "chapter": 9,
+        "status": "accepted",
+        "reviewer": "practice-extraction agent, independently of solution author",
+        "questionCount": 95,
+        "solutionPath": "resources/practice-solutions/pure-year-2/chapter-09.json",
+        "solutionDataSha256": "d2ef8d6c18b006118ecb36b9c881f203a3eb4bbb2c76b889472694fbfe228838",
+        "allNativePromptAndWorkingRowsRead": true,
+        "referencedFiguresReviewed": 6,
+        "mathChecksRerunPassed": 272,
+        "mathCheckScript": "scripts/check_practice_pure2_ch09.py",
+        "review": "All chain/product/quotient, implicit and parametric derivatives, tangent/normal equations, convexity intervals and rate models reviewed. Original invalid points and omitted inverse branches are explicitly qualified. No additional defect found."
+      },
+      {
+        "family": "pure-year-2",
+        "chapter": 10,
+        "status": "accepted",
+        "reviewer": "practice-extraction agent, independently of solution author",
+        "questionCount": 40,
+        "solutionPath": "resources/practice-solutions/pure-year-2/chapter-10.json",
+        "solutionDataSha256": "978d391c0b7c79ba4d9db9ff05cc865d5638ba00951117329fa1574c9c87e716",
+        "allNativePromptAndWorkingRowsRead": true,
+        "referencedFiguresReviewed": 22,
+        "mathChecksRerunPassed": 195,
+        "mathCheckScript": "scripts/check_practice_pure2_ch10.py",
+        "review": "All sign-change brackets, iteration sequences, convergence arguments, Newton steps and contextual models reviewed. The replacement graph correctly shows three exponential/parabola crossings. Four scientific-notation literals were corrected to powers of ten."
+      },
+      {
+        "family": "pure-year-2",
+        "chapter": 11,
+        "status": "accepted",
+        "reviewer": "practice-extraction agent, independently of solution author",
+        "questionCount": 99,
+        "solutionPath": "resources/practice-solutions/pure-year-2/chapter-11.json",
+        "solutionDataSha256": "0ae23fa0a3535144183ab50b5d2bef078fee47df4f62a97f17dbe30c8c527087",
+        "allNativePromptAndWorkingRowsRead": true,
+        "referencedFiguresReviewed": 20,
+        "mathChecksRerunPassed": 693,
+        "mathCheckScript": "scripts/check_practice_pure2_ch11.py",
+        "review": "All integrals, transformations, bounds, areas, trapezium estimates, differential equations and contextual initial conditions reviewed. Review added the requested rational logarithm form in 11.7 Q7(b), and distinguished the requested rounded approximation from the unrounded table estimate in 11.9 Q3(d). All original source-figure regions were inspected."
+      },
+      {
+        "family": "pure-year-2",
+        "chapter": 12,
+        "status": "accepted",
+        "reviewer": "practice-extraction agent, independently of solution author",
+        "questionCount": 45,
+        "solutionPath": "resources/practice-solutions/pure-year-2/chapter-12.json",
+        "solutionDataSha256": "5013cb4dfa6b81d21e866962594f5e8d7129496dc2477472abc58b634df6a9a3",
+        "allNativePromptAndWorkingRowsRead": true,
+        "referencedFiguresReviewed": 7,
+        "mathChecksRerunPassed": 186,
+        "mathCheckScript": "scripts/check_practice_pure2_ch12.py",
+        "review": "All vector differences, distances, angles, parallelism, midpoint proofs, forces and accelerations reviewed against native prompts and diagrams. The source force/acceleration discrepancy and limiting/domain qualifications are handled correctly. No additional defect found."
+      },
+      {
+        "family": "pure-year-1",
+        "chapter": 8,
+        "status": "accepted",
+        "reviewer": "practice-extraction agent, independently of solution author",
+        "questionCount": 51,
+        "solutionPath": "resources/practice-solutions/pure-year-1/chapter-08.json",
+        "solutionDataSha256": "74aa8dc3f740e94f4c755872b9f54ec441a551c48d5db78e27cadd2666cdc6fd",
+        "allNativePromptAndWorkingRowsRead": true,
+        "mathChecksRerunPassed": 80,
+        "review": "Earlier independent review covered all 51 source/working rows and 80 exact checks. Requested Pascal coefficient rows are now explicit within each part of 8.1 Q1 and linked to its evaluated term table. The original top-row convention in 8.2 Q4 is preserved and the supplied-key off-by-one is explained."
+      }
+    ]
+  },
+  "sharedIntegrationReview": {
+    "status": "accepted",
+    "reviewedBase": "67a5b93",
+    "reviewedThrough": "5a66dcf plus final mobile table containment change",
+    "files": [
+      "papers.js",
+      "papers-print.js",
+      "papers.css",
+      "papers-print.css",
+      "scripts/build_practice_catalogue.py",
+      "scripts/offline_manifest.py",
+      "scripts/luisa.py",
+      "tests/test_practice_catalogue.py",
+      "tests/test_papers_selection.py",
+      "tests/papers_print_browser.py",
+      "tests/test_offline.py"
+    ],
+    "review": "Checked stable source IDs, skill-union deduplication, source filtering, lazy chapter loading, saved selection, context dependency routing, hints confined to worked solutions, semantic print pagination, fail-closed solution joins, original part labels, public packaging and offline asset discovery. No unresolved functional defect found. Wide native tables now scroll within a labelled keyboard-focusable screen container, without modifying source or print content.",
+    "unitChecks": {
+      "catalogue": 6,
+      "offline": 5,
+      "extraction": 8,
+      "papersSelection": 11
+    },
+    "actualMobileWideTable": {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.1/q8",
+      "viewportWidthPx": 390,
+      "documentScrollWidthPx": 390,
+      "selectionWidthPx": 332,
+      "selectionScrollWidthPx": 332,
+      "tableWidthPx": 728.34375,
+      "tableContainerWidthPx": 300,
+      "arrowRightScrollLeftPx": 40,
+      "keyboardAccessibleLabelledRegion": true,
+      "formalRegressionPassed": true
+    },
+    "printAcceptance": "Lead independently audited all 2475 joined questions with no overflow, pagination warning or question/solution loss; five formal print regressions passed. Independent code review accepts the routing and pagination changes.",
+    "pending": []
+  }
+}

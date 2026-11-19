@@ -1,0 +1,2545 @@
+{
+  "schemaVersion": 1,
+  "sourceFamily": "pure-year-1",
+  "chapterNumber": 6,
+  "chapterTitle": "Circles",
+  "sourcePdf": "resources/practice/pure-year-1/chapter-06.pdf",
+  "questions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.1/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "1",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.1",
+      "subchapterTitle": "6.1 Midpoints and perpendicular bisectors",
+      "number": "1",
+      "question": "<div>Find the midpoint of the line segment joining each pair of points:\n<ol type=\"a\"><li value=\"1\"><span data-math=\"(2,-5)\"></span>, <span data-math=\"(-4,7)\"></span></li><li value=\"2\"><span data-math=\"(-3,9)\"></span>, <span data-math=\"(-1,-5)\"></span></li><li value=\"3\"><span data-math=\"(\\frac95,-\\frac38)\"></span>, <span data-math=\"(-\\frac35,-\\frac18)\"></span></li><li value=\"4\"><span data-math=\"(2\\sqrt3,-\\sqrt5)\"></span>, <span data-math=\"(-\\sqrt3,-3\\sqrt5)\"></span></li><li value=\"5\"><span data-math=\"(1+2\\sqrt2,3-\\sqrt2)\"></span>, <span data-math=\"(3+2\\sqrt2,1-3\\sqrt2)\"></span></li></ol></div>",
+      "hints": [
+        "The <strong>midpoint</strong> of the line segment with endpoints <span data-math=\"(x_1,y_1)\"></span> and <span data-math=\"(x_2,y_2)\"></span> is <span data-math=\"\\left(\\frac{x_1+x_2}2,\\frac{y_1+y_2}2\\right)\"></span>."
+      ],
+      "steps": [
+        "<p>Average the x-coordinates and the y-coordinates separately.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"M=(\\frac{2-4}2,\\frac{-5+7}2)=(-1,1)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"M=(\\frac{-3-1}2,\\frac{9-5}2)=(-2,2)\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"M=(\\frac{9/5-3/5}2,\\frac{-3/8-1/8}2)=(\\frac35,-\\frac14)\" data-display=\"true\"></span></li><li value=\"4\"><span data-math=\"M=(\\frac{2\\sqrt3-\\sqrt3}2,\\frac{-\\sqrt5-3\\sqrt5}2)=(\\frac{\\sqrt3}2,-2\\sqrt5)\" data-display=\"true\"></span></li><li value=\"5\"><span data-math=\"M=(\\frac{4+4\\sqrt2}2,\\frac{4-4\\sqrt2}2)=(2+2\\sqrt2,2-2\\sqrt2)\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "18b8fd129f8b108780295768183b0e609eb4432da7ac610854ff62326c11d185",
+        "printedBookPage": "46--47",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            309.212,
+            68.247,
+            320.121
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.1 Midpoints and perpendicular bisectors"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.1/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "2",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.1",
+      "subchapterTitle": "6.1 Midpoints and perpendicular bisectors",
+      "number": "2",
+      "question": "<div>Find the equation of the perpendicular bisector of the line segment joining each pair of points. Give your answer in the form <span data-math=\"ax+by+c=0\"></span>.\n<ol type=\"a\"><li value=\"1\"><span data-math=\"(-3,4)\"></span>, <span data-math=\"(1,-8)\"></span></li><li value=\"2\"><span data-math=\"(3,-5)\"></span>, <span data-math=\"(-7,15)\"></span></li><li value=\"3\"><span data-math=\"(2,-3)\"></span>, <span data-math=\"(-6,-9)\"></span></li></ol></div>",
+      "hints": [
+        "The <strong>perpendicular bisector</strong> of a line segment <span data-math=\"AB\"></span> is the straight line that is perpendicular to <span data-math=\"AB\"></span> and passes through the midpoint of <span data-math=\"AB\"></span>. To find its equation:\n<ul><li value=\"1\">find the coordinates of the midpoint <span data-math=\"(x_1,y_1)\"></span></li><li value=\"2\">find the gradient, <span data-math=\"M\"></span>, of the line segment <span data-math=\"AB\"></span> <span data-math=\"\\leftarrow\"></span> Section 5.1</li><li value=\"3\">find the gradient, <span data-math=\"m\"></span>, of the perpendicular to <span data-math=\"AB\"></span> using <span data-math=\"m=-\\frac1M\"></span> <span data-math=\"\\leftarrow\"></span> Section 5.3</li><li value=\"4\">use <span data-math=\"y-y_1=m(x-x_1)\"></span> <span data-math=\"\\leftarrow\"></span> Section 5.2</li></ul>"
+      ],
+      "steps": [
+        "<p>Find the midpoint, then use the negative reciprocal of the segment’s gradient through that midpoint.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"M=(-1,-2)\" data-display=\"true\"></span><span data-math=\"m=\\frac{-8-4}{1+3}=-3\" data-display=\"true\"></span><span data-math=\"m_\\perp=\\frac13\" data-display=\"true\"></span><span data-math=\"y+2=\\frac13(x+1)\" data-display=\"true\"></span><span data-math=\"x-3y-5=0\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"M=(-2,5)\" data-display=\"true\"></span><span data-math=\"m=\\frac{15+5}{-7-3}=-2\" data-display=\"true\"></span><span data-math=\"m_\\perp=\\frac12\" data-display=\"true\"></span><span data-math=\"y-5=\\frac12(x+2)\" data-display=\"true\"></span><span data-math=\"x-2y+12=0\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"M=(-2,-6)\" data-display=\"true\"></span><span data-math=\"m=\\frac{-9+3}{-6-2}=\\frac34\" data-display=\"true\"></span><span data-math=\"m_\\perp=-\\frac43\" data-display=\"true\"></span><span data-math=\"y+6=-\\frac43(x+2)\" data-display=\"true\"></span><span data-math=\"4x+3y+26=0\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "5bcab8c36ba3053779a3bbcb5c6201371c74372eea5ce68528aade0b46e11036",
+        "printedBookPage": "46--47",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            446.109,
+            68.247,
+            457.018
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.1 Midpoints and perpendicular bisectors"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.1/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "3",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.1",
+      "subchapterTitle": "6.1 Midpoints and perpendicular bisectors",
+      "number": "3",
+      "question": "<div>The line segment <span data-math=\"AB\"></span> is a diameter of a circle, where <span data-math=\"A\"></span> is <span data-math=\"(-3,4)\"></span> and <span data-math=\"B\"></span> is <span data-math=\"(5,8)\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the coordinates of the centre of the circle</li><li value=\"2\">the radius of the circle in the form <span data-math=\"k\\sqrt5\"></span>, where <span data-math=\"k\"></span> is a constant to be found.</li></ol></div>",
+      "hints": [
+        "For part <strong>b</strong> first find the diameter, <span data-math=\"d\"></span>, which is the length of the line segment joining the points <span data-math=\"(x_1,y_1)\"></span>, <span data-math=\"(x_2,y_2)\"></span> and is given by <span data-math=\"d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\"></span>. <span data-math=\"\\leftarrow\"></span> Section 5.4"
+      ],
+      "steps": [
+        "<p>The centre is the midpoint of a diameter. The radius is half the length of that diameter.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"C=(\\frac{-3+5}2,\\frac{4+8}2)=(1,6)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"r=\\frac12\\sqrt{(5+3)^2+(8-4)^2}=\\frac12\\sqrt{80}=2\\sqrt5\" data-display=\"true\"></span><span data-math=\"k=2\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "73529d06c97411587cae997097087907619c2c45be38e5c33aef4022c4a2c014",
+        "printedBookPage": "46--47",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            645.809,
+            68.247,
+            656.718
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.1 Midpoints and perpendicular bisectors"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.1/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "4",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.1",
+      "subchapterTitle": "6.1 Midpoints and perpendicular bisectors",
+      "number": "4",
+      "question": "<div>The line segment <span data-math=\"PQ\"></span> has endpoints <span data-math=\"P(3,-5)\"></span> and <span data-math=\"Q(a,b)\"></span>. The midpoint of <span data-math=\"PQ\"></span> is <span data-math=\"M(6,-3)\"></span>. Find the values of <span data-math=\"a\"></span> and <span data-math=\"b\"></span>.</div>",
+      "hints": [],
+      "steps": [
+        "<p>Set each midpoint coordinate equal to the given value and solve.</p><span data-math=\"\\frac{3+a}2=6\\Rightarrow a=9\" data-display=\"true\"></span><span data-math=\"\\frac{-5+b}2=-3\\Rightarrow b=-1\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "f05196884a741a7308cf207737c2b51a7731ecebb3a0f98139f15af082583162",
+        "printedBookPage": "46--47",
+        "marker": {
+          "page": 2,
+          "bbox": [
+            58.494,
+            745.062,
+            68.247,
+            755.971
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.1 Midpoints and perpendicular bisectors"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.1/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "5",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.1",
+      "subchapterTitle": "6.1 Midpoints and perpendicular bisectors",
+      "number": "5",
+      "question": "<div>Points <span data-math=\"P\"></span>, <span data-math=\"Q\"></span> and <span data-math=\"R\"></span> have coordinates <span data-math=\"(-1,-3)\"></span>, <span data-math=\"(5,7)\"></span> and <span data-math=\"(7,-5)\"></span> respectively. Find:\n<ol type=\"a\"><li value=\"1\">the equation of the perpendicular bisector of <span data-math=\"PQ\"></span></li><li value=\"2\">the equation of the perpendicular bisector of <span data-math=\"QR\"></span></li><li value=\"3\">the exact coordinates of the point of intersection of the two perpendicular bisectors.</li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Each perpendicular bisector passes through its segment’s midpoint with the negative reciprocal gradient. Solve the two bisector equations.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"M_{PQ}=(2,2)\" data-display=\"true\"></span><span data-math=\"m_{PQ}=\\frac{7+3}{5+1}=\\frac53\" data-display=\"true\"></span><span data-math=\"y-2=-\\frac35(x-2)\" data-display=\"true\"></span><span data-math=\"3x+5y=16\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"M_{QR}=(6,1)\" data-display=\"true\"></span><span data-math=\"m_{QR}=\\frac{-5-7}{7-5}=-6\" data-display=\"true\"></span><span data-math=\"y-1=\\frac16(x-6)\" data-display=\"true\"></span><span data-math=\"6y=x\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"3(6y)+5y=16\" data-display=\"true\"></span><span data-math=\"y=\\frac{16}{23}\" data-display=\"true\"></span><span data-math=\"x=\\frac{96}{23}\" data-display=\"true\"></span><span data-math=\"(\\frac{96}{23},\\frac{16}{23})\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "a5fee39c9932338939eedd4bed388010769499c746853b02ec8d38ec8f7f5d92",
+        "printedBookPage": "46--47",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.1 Midpoints and perpendicular bisectors"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.1/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "6",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.1",
+      "subchapterTitle": "6.1 Midpoints and perpendicular bisectors",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The line segment <span data-math=\"PQ\"></span>, where <span data-math=\"P\"></span> is <span data-math=\"(3,8)\"></span> and <span data-math=\"Q\"></span> is <span data-math=\"(-1,-4)\"></span>, is the diameter of a circle with centre <span data-math=\"C\"></span>.<br> The line <span data-math=\"l\"></span> is perpendicular to <span data-math=\"PQ\"></span> and passes through <span data-math=\"C\"></span>. Find an equation of <span data-math=\"l\"></span>.<span class=\"marks\">(7 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>The required line is the perpendicular bisector of the diameter.</p><span data-math=\"C=(\\frac{3-1}2,\\frac{8-4}2)=(1,2)\" data-display=\"true\"></span><span data-math=\"m_{PQ}=\\frac{-4-8}{-1-3}=3\" data-display=\"true\"></span><span data-math=\"m_\\perp=-\\frac13\" data-display=\"true\"></span><span data-math=\"y-2=-\\frac13(x-1)\" data-display=\"true\"></span><span data-math=\"x+3y-7=0\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "4c4f0dde7a87757d3e41a4ea9e2e8e785ce44fb7f03473e49758b0979772dc80",
+        "printedBookPage": "46--47",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            116.245,
+            68.247,
+            127.154
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.1 Midpoints and perpendicular bisectors"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.1/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "7",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.1",
+      "subchapterTitle": "6.1 Midpoints and perpendicular bisectors",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The line segment <span data-math=\"PQ\"></span> is a diameter of a circle, where <span data-math=\"P\"></span> is <span data-math=\"(-3,6)\"></span> and <span data-math=\"Q\"></span> is <span data-math=\"(5,-2)\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the coordinates of the centre of the circle<span class=\"marks\">(2 marks)</span></li><li value=\"2\">the radius of the circle in the form <span data-math=\"k\\sqrt2\"></span>, where <span data-math=\"k\"></span> is a constant to be found.<span class=\"marks\">(3 marks)</span></li></ol>\n<span data-math=\"R\"></span> and <span data-math=\"S\"></span> are the points where the perpendicular bisector of <span data-math=\"PQ\"></span> meets the circle.\n<ol type=\"a\"><li value=\"3\">Show that <span data-math=\"PR=RQ=QS=SP=8\"></span>.<span class=\"marks\">(4 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Find the centre and radius from the diameter. The second diameter is perpendicular to the first, giving right triangles with two equal radii.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"C=(\\frac{-3+5}2,\\frac{6-2}2)=(1,2)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"r=\\frac12\\sqrt{8^2+(-8)^2}=4\\sqrt2\" data-display=\"true\"></span><span data-math=\"k=4\" data-display=\"true\"></span></li><li value=\"3\"><p>At C, each pair of adjacent radii is perpendicular. Pythagoras therefore gives the same chord length for each of the four sides.</p><span data-math=\"PR=RQ=QS=SP=\\sqrt{(4\\sqrt2)^2+(4\\sqrt2)^2}=\\sqrt{64}=8\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "275fea0c6599b7a0bfae5b25f6c0df1f3e57002329113d71871e2e0dd78a5918",
+        "printedBookPage": "46--47",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            161.226,
+            68.247,
+            172.135
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.1 Midpoints and perpendicular bisectors"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.1/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "8",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.1",
+      "subchapterTitle": "6.1 Midpoints and perpendicular bisectors",
+      "number": "8",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The points <span data-math=\"A\"></span> and <span data-math=\"B\"></span> have coordinates <span data-math=\"(2k-1,-3)\"></span> and <span data-math=\"(3,3k+7)\"></span> respectively, where <span data-math=\"k\"></span> is a constant. The coordinates of the midpoint of <span data-math=\"AB\"></span> are <span data-math=\"(5,p)\"></span>, where <span data-math=\"p\"></span> is a constant.\n<ol type=\"a\"><li value=\"1\">Find the value of <span data-math=\"k\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">Find the value of <span data-math=\"p\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"3\">Find an equation of the perpendicular bisector of <span data-math=\"AB\"></span>, giving your answer in the form <span data-math=\"ax+by+c=0\"></span>, where <span data-math=\"a\"></span>, <span data-math=\"b\"></span> and <span data-math=\"c\"></span> are integers.<span class=\"marks\">(6 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Use both midpoint equations, then construct the perpendicular through the midpoint.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"\\frac{2k-1+3}2=5\" data-display=\"true\"></span><span data-math=\"k+1=5\" data-display=\"true\"></span><span data-math=\"k=4\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"p=\\frac{-3+(3(4)+7)}2=\\frac{16}2=8\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"A=(7,-3),\\ B=(3,19)\" data-display=\"true\"></span><span data-math=\"m_{AB}=\\frac{22}{-4}=-\\frac{11}2\" data-display=\"true\"></span><span data-math=\"m_\\perp=\\frac2{11}\" data-display=\"true\"></span><span data-math=\"y-8=\\frac2{11}(x-5)\" data-display=\"true\"></span><span data-math=\"2x-11y+78=0\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "6790ccd75e7e3c1572e8e1cdc0a8cc07ab6867d3ced637a7d95d88e3977ea4ce",
+        "printedBookPage": "46--47",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            241.276,
+            68.247,
+            252.185
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.1 Midpoints and perpendicular bisectors"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.2/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "1",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.2",
+      "subchapterTitle": "6.2 Equation of a circle",
+      "number": "1",
+      "question": "<div>Write down the equation of each circle:\n<ol type=\"a\"><li value=\"1\">Centre <span data-math=\"(-5,3)\"></span>, radius 8</li><li value=\"2\">Centre <span data-math=\"(7,-8)\"></span>, radius 10</li><li value=\"3\">Centre <span data-math=\"(-1,-4)\"></span>, radius <span data-math=\"3\\sqrt2\"></span></li></ol></div>",
+      "hints": [
+        "The equation of a circle with centre <span data-math=\"(a,b)\"></span> and radius <span data-math=\"r\"></span> is <span data-math=\"(x-a)^2+(y-b)^2=r^2\"></span>."
+      ],
+      "steps": [
+        "<p>A circle with centre (a,b) and radius r has equation (x−a)²+(y−b)²=r².</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(x+5)^2+(y-3)^2=8^2=64\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"(x-7)^2+(y+8)^2=10^2=100\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"(x+1)^2+(y+4)^2=(3\\sqrt2)^2=18\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "ed6dd4a22c7aa6cfcd6d8ffc9ae36b7f4712aa10a78166d5109190284a1c158b",
+        "printedBookPage": "47--48",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            403.059,
+            68.247,
+            413.968
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.2 Equation of a circle"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.2/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "2",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.2",
+      "subchapterTitle": "6.2 Equation of a circle",
+      "number": "2",
+      "question": "<div>Write down the coordinates of the centre and the radius of each circle:\n<ol type=\"a\"><li value=\"1\"><span data-math=\"(x+2)^2+(y-9)^2=144\"></span></li><li value=\"2\"><span data-math=\"(x-5)^2+(y+2)^2=32\"></span></li><li value=\"3\"><span data-math=\"(x+6)^2+y^2=45\"></span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Read the centre from the signs in the brackets; take the positive square root of the right-hand side for the radius.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"C=(-2,9),\\quad r=\\sqrt{144}=12\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"C=(5,-2),\\quad r=\\sqrt{32}=4\\sqrt2\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"C=(-6,0),\\quad r=\\sqrt{45}=3\\sqrt5\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "4bcfec1f5d1610d5a5a977320d931bf5651949de19d74da69bde2a9b442dc2bd",
+        "printedBookPage": "47--48",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            506.119,
+            68.247,
+            517.028
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.2 Equation of a circle"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.2/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "3",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.2",
+      "subchapterTitle": "6.2 Equation of a circle",
+      "number": "3",
+      "question": "<div>Find the centre and the radius of the circle with the equation <span data-math=\"x^2+y^2+8x-12y-15=0\"></span>.</div>",
+      "hints": [
+        "To find the coordinates of the centre and the radius, first complete the square for the terms in <span data-math=\"x\"></span> and for the terms in <span data-math=\"y\"></span> separately. <span data-math=\"\\leftarrow\"></span> Section 2.2"
+      ],
+      "steps": [
+        "<p>Complete the square in x and y.</p><span data-math=\"(x+4)^2-16+(y-6)^2-36-15=0\" data-display=\"true\"></span><span data-math=\"(x+4)^2+(y-6)^2=67\" data-display=\"true\"></span><span data-math=\"C=(-4,6),\\quad r=\\sqrt{67}\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "cb82452efcb869f64ee8ae21c0803926d341a16f9918b0afb592ffb148584841",
+        "printedBookPage": "47--48",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            571.541,
+            68.247,
+            582.45
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.2 Equation of a circle"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.2/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "4",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.2",
+      "subchapterTitle": "6.2 Equation of a circle",
+      "number": "4",
+      "question": "<div>The line segment <span data-math=\"PQ\"></span> is a diameter of a circle, where <span data-math=\"P\"></span> is <span data-math=\"(-1,8)\"></span> and <span data-math=\"Q\"></span> is <span data-math=\"(7,20)\"></span>.<br> Find the equation of the circle.</div>",
+      "hints": [
+        "Find the coordinates of the centre by finding the midpoint of <span data-math=\"PQ\"></span> using <span data-math=\"\\left(\\frac{x_1+x_2}2,\\frac{y_1+y_2}2\\right)\"></span>.<br> Find the radius of the circle by finding the diameter and dividing by 2."
+      ],
+      "steps": [
+        "<p>Use the midpoint of the diameter as the centre and its distance to one endpoint as the radius.</p><span data-math=\"C=(\\frac{-1+7}2,\\frac{8+20}2)=(3,14)\" data-display=\"true\"></span><span data-math=\"r^2=(-1-3)^2+(8-14)^2=52\" data-display=\"true\"></span><span data-math=\"(x-3)^2+(y-14)^2=52\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "436c721d0829e06cbc213afee4241c0009bd0e30af84d5ee6d4e5d8e99223bd6",
+        "printedBookPage": "47--48",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            636.288,
+            68.247,
+            647.197
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.2 Equation of a circle"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.2/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "5",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.2",
+      "subchapterTitle": "6.2 Equation of a circle",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The circle with equation <span data-math=\"(x-1)^2+(y-k)^2=50\"></span> passes through the point <span data-math=\"(2,3)\"></span>.<br> Find the possible values of <span data-math=\"k\"></span>.<span class=\"marks\">(5 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Substitute the stated point and keep both square-root signs.</p><span data-math=\"(2-1)^2+(3-k)^2=50\" data-display=\"true\"></span><span data-math=\"(3-k)^2=49\" data-display=\"true\"></span><span data-math=\"3-k=\\pm7\" data-display=\"true\"></span><span data-math=\"k=-4\\text{ or }10\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "4f257cf5759faf7b91c4f2dbf77b671511b486b3bc87da23772ad62be619a32e",
+        "printedBookPage": "47--48",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            717.242,
+            68.247,
+            728.151
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.2 Equation of a circle"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.2/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "6",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.2",
+      "subchapterTitle": "6.2 Equation of a circle",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  A circle has equation <span data-math=\"x^2+y^2-6x+10y-16=0\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the coordinates of the centre of the circle<span class=\"marks\">(3 marks)</span></li><li value=\"2\">the radius of the circle in the form <span data-math=\"k\\sqrt2\"></span>, where <span data-math=\"k\"></span> is an integer to be found.<span class=\"marks\">(3 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Complete the square to reveal the centre and radius.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(x-3)^2+(y+5)^2=16+9+25=50\" data-display=\"true\"></span><span data-math=\"C=(3,-5)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"r=\\sqrt{50}=5\\sqrt2\" data-display=\"true\"></span><span data-math=\"k=5\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "e0cfbc5af5c03c7dc973b5e7d301f6864c925ffdcfe6d8179c9c0103143e2ff4",
+        "printedBookPage": "47--48",
+        "marker": {
+          "page": 3,
+          "bbox": [
+            58.494,
+            749.587,
+            68.247,
+            760.496
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.2 Equation of a circle"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.2/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "7",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.2",
+      "subchapterTitle": "6.2 Equation of a circle",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E</span>  The circle <span data-math=\"C\"></span> has centre <span data-math=\"(1,6)\"></span> and passes through the point <span data-math=\"P(-3,4)\"></span>.\n<ol type=\"a\"><li value=\"1\">Find an equation for <span data-math=\"C\"></span>.<span class=\"marks\">(4 marks)</span></li></ol>\n<span data-math=\"C\"></span> crosses the <span data-math=\"y\"></span>-axis at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.\n<ol type=\"a\"><li value=\"2\">Find the coordinates of the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<span class=\"marks\">(3 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Calculate the squared radius from the centre to P. Put x=0 to find the y-axis intersections.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"r^2=(-3-1)^2+(4-6)^2=20\" data-display=\"true\"></span><span data-math=\"(x-1)^2+(y-6)^2=20\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"1+(y-6)^2=20\" data-display=\"true\"></span><span data-math=\"y=6\\pm\\sqrt{19}\" data-display=\"true\"></span><span data-math=\"(0,6+\\sqrt{19}),\\ (0,6-\\sqrt{19})\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "11813b3f37943be54f59bfa34eff38f51c59f53a31176e6bfc055e05951a1e83",
+        "printedBookPage": "47--48",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.2 Equation of a circle"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.2/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "8",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.2",
+      "subchapterTitle": "6.2 Equation of a circle",
+      "number": "8",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The midpoint of the line joining the points <span data-math=\"P(5,8)\"></span> and <span data-math=\"Q(p,q)\"></span> is <span data-math=\"M(-2,3)\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the values of <span data-math=\"p\"></span> and <span data-math=\"q\"></span>.<span class=\"marks\">(3 marks)</span></li></ol>\n<span data-math=\"PQ\"></span> is the diameter of a circle.\n<ol type=\"a\"><li value=\"2\">Find the radius of the circle.<span class=\"marks\">(2 marks)</span></li><li value=\"3\">Find the equation of the circle, giving your answer in the form <span data-math=\"x^2+y^2+ax+by+c=0\"></span>.<span class=\"marks\">(3 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Solve the midpoint equations. M is the circle’s centre and MP is its radius.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"\\frac{5+p}2=-2\\Rightarrow p=-9\" data-display=\"true\"></span><span data-math=\"\\frac{8+q}2=3\\Rightarrow q=-2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"r=\\sqrt{(5+2)^2+(8-3)^2}=\\sqrt{74}\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"(x+2)^2+(y-3)^2=74\" data-display=\"true\"></span><span data-math=\"x^2+y^2+4x-6y-61=0\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "f3885bd4621c68c1f80545c879aa66a4b860d0beecfd4bcf2df79f58b235ca02",
+        "printedBookPage": "47--48",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            116.856,
+            68.247,
+            127.765
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.2 Equation of a circle"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.2/q9",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "9",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.2",
+      "subchapterTitle": "6.2 Equation of a circle",
+      "number": "9",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The circle with equation <span data-math=\"x^2+y^2+4y-k=0\"></span> has radius 5.\n<ol type=\"a\"><li value=\"1\">Find the coordinates of the centre of the circle and the value of <span data-math=\"k\"></span>.<span class=\"marks\">(4 marks)</span></li></ol>\nThe points <span data-math=\"P(p,2)\"></span> and <span data-math=\"Q(-4,1)\"></span>, where <span data-math=\"p&gt;0\"></span>, lie on the circumference of the circle.\n<ol type=\"a\"><li value=\"2\">Calculate the length of <span data-math=\"PQ\"></span>, giving your answer in simplified surd form.<span class=\"marks\">(5 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Complete the square, compare the radius, then find the positive x-coordinate of P.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"x^2+(y+2)^2=k+4=25\" data-display=\"true\"></span><span data-math=\"C=(0,-2),\\quad k=21\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"p^2+(2+2)^2=25\" data-display=\"true\"></span><span data-math=\"p^2=9\" data-display=\"true\"></span><span data-math=\"p&gt;0\\Rightarrow p=3\" data-display=\"true\"></span><span data-math=\"PQ=\\sqrt{(3+4)^2+(2-1)^2}=\\sqrt{50}=5\\sqrt2\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "5061096c097ffc6cf209f55a132ff3249e717d32794b331198f061c23fd81dd0",
+        "printedBookPage": "47--48",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            211.368,
+            68.247,
+            222.277
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.2 Equation of a circle"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.3/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "1",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.3",
+      "subchapterTitle": "6.3 Intersections of straight lines and circles",
+      "number": "1",
+      "question": "<div>Find the coordinates of the points where the circle <span data-math=\"(x-2)^2+(y-4)^2=52\"></span> meets:\n<ol type=\"a\"><li value=\"1\">the <span data-math=\"x\"></span>-axis</li><li value=\"2\">the <span data-math=\"y\"></span>-axis</li></ol></div>",
+      "hints": [
+        "The circle meets the <span data-math=\"x\"></span>-axis when <span data-math=\"y=0\"></span> and meets the <span data-math=\"y\"></span>-axis when <span data-math=\"x=0\"></span>."
+      ],
+      "steps": [
+        "<p>Set the other coordinate to zero for each axis.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"y=0\\Rightarrow(x-2)^2+16=52\" data-display=\"true\"></span><span data-math=\"x-2=\\pm6\" data-display=\"true\"></span><span data-math=\"(8,0),\\ (-4,0)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"x=0\\Rightarrow4+(y-4)^2=52\" data-display=\"true\"></span><span data-math=\"y-4=\\pm\\sqrt{48}=\\pm4\\sqrt3\" data-display=\"true\"></span><span data-math=\"(0,4+4\\sqrt3),\\ (0,4-4\\sqrt3)\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "8d503849cccac799c360a78f621d6ce2b8755e3ae425a8a7690ae2ed07c5dd65",
+        "printedBookPage": "48--49",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            346.053,
+            68.247,
+            356.962
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.3 Intersections of straight lines and circles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.3/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "2",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.3",
+      "subchapterTitle": "6.3 Intersections of straight lines and circles",
+      "number": "2",
+      "question": "<div>The line with equation <span data-math=\"2x+y=7\"></span> meets the circle <span data-math=\"(x-1)^2+y^2=50\"></span> at points <span data-math=\"P\"></span> and <span data-math=\"Q\"></span>.<br> Find the coordinates of <span data-math=\"P\"></span> and <span data-math=\"Q\"></span>.</div>",
+      "hints": [
+        "A straight line may not intersect a circle, or can intersect once (by just touching the circle), or can intersect twice.<br> To find the points of intersection, solve simultaneously by substituting the linear equation into the equation for the circle and solving the resulting quadratic equation. <span data-math=\"\\leftarrow\"></span> Section 3.2"
+      ],
+      "steps": [
+        "<p>Eliminate y using the line, solve the quadratic, and substitute each root back.</p><span data-math=\"y=7-2x\" data-display=\"true\"></span><span data-math=\"(x-1)^2+(7-2x)^2=50\" data-display=\"true\"></span><span data-math=\"5x^2-30x=0\" data-display=\"true\"></span><span data-math=\"5x(x-6)=0\" data-display=\"true\"></span><span data-math=\"x=0\\text{ or }6\" data-display=\"true\"></span><span data-math=\"(x,y)=(0,7)\\text{ or }(6,-5)\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "6827f8bf4555ce7aafeb54b52069ef422e184efa40044a29340d397270cbc00e",
+        "printedBookPage": "48--49",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            432.62,
+            68.247,
+            443.529
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.3 Intersections of straight lines and circles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.3/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "3",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.3",
+      "subchapterTitle": "6.3 Intersections of straight lines and circles",
+      "number": "3",
+      "question": "<div><ol type=\"a\"><li value=\"1\">Show that the line <span data-math=\"2x+y-15=0\"></span> meets the circle with equation <span data-math=\"(x+2)^2+(y-4)^2=45\"></span> at exactly one point.</li><li value=\"2\">Find the coordinates of the point of intersection.</li></ol></div>",
+      "hints": [
+        "To find the number of points of intersection you can use the discriminant for the resulting quadratic equation <span data-math=\"ax^2+bx+c=0\"></span> where:\n<ul><li value=\"1\"><span data-math=\"b^2-4ac&gt;0\"></span> indicates 2 points of intersection – the line cuts the circle twice</li><li value=\"2\"><span data-math=\"b^2-4ac=0\"></span> indicates 1 point of intersection – the line is a tangent to the circle</li><li value=\"3\"><span data-math=\"b^2-4ac&lt;0\"></span> indicates 0 points of intersection – the line does not meet the circle. <span data-math=\"\\leftarrow\"></span> Section 2.5</li></ul>"
+      ],
+      "steps": [
+        "<p>Substitution gives a quadratic whose repeated root corresponds to one intersection.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"y=15-2x\" data-display=\"true\"></span><span data-math=\"(x+2)^2+(11-2x)^2=45\" data-display=\"true\"></span><span data-math=\"5x^2-40x+80=0\" data-display=\"true\"></span><span data-math=\"x^2-8x+16=0\" data-display=\"true\"></span><span data-math=\"\\Delta=(-8)^2-4(16)=0\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"(x-4)^2=0\\Rightarrow x=4\" data-display=\"true\"></span><span data-math=\"y=15-2(4)=7\" data-display=\"true\"></span><span data-math=\"(4,7)\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "898170f5dea97929ff22f9848079bb02918e1087ece0c5fb7a8abab99a62fc14",
+        "printedBookPage": "48--49",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            534.25,
+            68.247,
+            545.159
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.3 Intersections of straight lines and circles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.3/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "4",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.3",
+      "subchapterTitle": "6.3 Intersections of straight lines and circles",
+      "number": "4",
+      "question": "<div>Show that the line <span data-math=\"y=2x+6\"></span> does not meet the circle <span data-math=\"(x-5)^2+(y-2)^2=30\"></span>.</div>",
+      "hints": [],
+      "steps": [
+        "<p>Substitute the line and test the resulting quadratic for real roots.</p><p>There are no real roots, so the line and circle have no points of intersection.</p><span data-math=\"(x-5)^2+(2x+4)^2=30\" data-display=\"true\"></span><span data-math=\"5x^2+6x+11=0\" data-display=\"true\"></span><span data-math=\"\\Delta=6^2-4(5)(11)=-184&lt;0\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "8817055750ec78cf4ca7d0baac27f40a7a6325f2f7a3b0420d442156facb96c5",
+        "printedBookPage": "48--49",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            696.762,
+            68.247,
+            707.671
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.3 Intersections of straight lines and circles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.3/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "5",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.3",
+      "subchapterTitle": "6.3 Intersections of straight lines and circles",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E</span> <ol type=\"a\"><li value=\"1\">Describe completely the curve with equation <span data-math=\"x^2+y^2=100\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">Find the coordinates of the points of intersection of the curve <span data-math=\"x^2+y^2=100\"></span> and the line <span data-math=\"3x+y-10=0\"></span>.<span class=\"marks\">(6 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Identify the standard circle equation, then eliminate y to find its intersections with the line.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><p>A circle with centre (0,0) and radius 10.</p><span data-math=\"x^2+y^2=10^2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"y=10-3x\" data-display=\"true\"></span><span data-math=\"x^2+(10-3x)^2=100\" data-display=\"true\"></span><span data-math=\"10x^2-60x=0\" data-display=\"true\"></span><span data-math=\"10x(x-6)=0\" data-display=\"true\"></span><span data-math=\"(0,10),\\ (6,-8)\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "d85f8a92448d18831076b5f4c17666e86afb596234275157be1c848a80cc8295",
+        "printedBookPage": "48--49",
+        "marker": {
+          "page": 4,
+          "bbox": [
+            58.494,
+            716.289,
+            68.247,
+            727.198
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.3 Intersections of straight lines and circles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.3/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "6",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.3",
+      "subchapterTitle": "6.3 Intersections of straight lines and circles",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  A circle has equation <span data-math=\"x^2+y^2-6x-23=0\"></span>.<br> A line has equation <span data-math=\"y=x+k\"></span>, where <span data-math=\"k\"></span> is a constant.\n<ol type=\"a\"><li value=\"1\">Show that the <span data-math=\"x\"></span>-coordinate of any point of intersection of the line and the circle satisfies the equation <span data-math=\"2x^2+2(k-3)x+k^2-23=0\"></span>.<span class=\"marks\">(3 marks)</span></li><li value=\"2\">Find the values of <span data-math=\"k\"></span> for which the equation <span data-math=\"2x^2+2(k-3)x+k^2-23=0\"></span> has equal roots.<span class=\"marks\">(4 marks)</span></li><li value=\"3\">Describe the geometrical relationship between the line and the circle when <span data-math=\"k\"></span> takes either of the values found in part <strong>b</strong>.<span class=\"marks\">(1 mark)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Substitute y=x+k. Equal roots occur when the discriminant is zero; geometrically this means tangency.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"x^2+(x+k)^2-6x-23=0\" data-display=\"true\"></span><span data-math=\"2x^2+2(k-3)x+k^2-23=0\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"[2(k-3)]^2-8(k^2-23)=0\" data-display=\"true\"></span><span data-math=\"-4k^2-24k+220=0\" data-display=\"true\"></span><span data-math=\"k^2+6k-55=(k+11)(k-5)=0\" data-display=\"true\"></span><span data-math=\"k=-11\\text{ or }5\" data-display=\"true\"></span></li><li value=\"3\"><p>For either value, the line is tangent to the circle because there is exactly one point of intersection.</p></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "77ce007c19a72e44f8fb4ca18ccb4bd8c3a104d4ca4d4b7402bf7d06a8a23309",
+        "printedBookPage": "48--49",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.3 Intersections of straight lines and circles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.3/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "7",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.3",
+      "subchapterTitle": "6.3 Intersections of straight lines and circles",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The circle with equation <span data-math=\"(x-3)^2+(y-5)^2=61\"></span> meets the straight line with equation <span data-math=\"x+11y=119\"></span> at points <span data-math=\"P\"></span> and <span data-math=\"Q\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the coordinates of points <span data-math=\"P\"></span> and <span data-math=\"Q\"></span>.<span class=\"marks\">(5 marks)</span></li><li value=\"2\">Find an equation of the perpendicular bisector of line segment <span data-math=\"PQ\"></span>.<span class=\"marks\">(5 marks)</span></li><li value=\"3\">Show that the perpendicular bisector passes through the centre of the circle.<span class=\"marks\">(2 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Substitute x=119−11y. The perpendicular bisector runs through the chord’s midpoint with negative reciprocal gradient.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(116-11y)^2+(y-5)^2=61\" data-display=\"true\"></span><span data-math=\"122y^2-2562y+13420=0\" data-display=\"true\"></span><span data-math=\"(y-10)(y-11)=0\" data-display=\"true\"></span><span data-math=\"(x,y)=(9,10)\\text{ or }(-2,11)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"M=(\\frac{9-2}2,\\frac{10+11}2)=(\\frac72,\\frac{21}2)\" data-display=\"true\"></span><span data-math=\"m_{PQ}=-\\frac1{11}\" data-display=\"true\"></span><span data-math=\"m_\\perp=11\" data-display=\"true\"></span><span data-math=\"y-\\frac{21}2=11(x-\\frac72)\" data-display=\"true\"></span><span data-math=\"y=11x-28\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"C=(3,5)\" data-display=\"true\"></span><span data-math=\"11(3)-28=5\" data-display=\"true\"></span><span data-math=\"C\\text{ lies on the bisector}\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "f3a3e03f1eb0ac942e51e03152d2013fb9c26a18675ed0461cd878e777cac51b",
+        "printedBookPage": "48--49",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            171.966,
+            68.247,
+            182.875
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.3 Intersections of straight lines and circles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.3/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "8",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.3",
+      "subchapterTitle": "6.3 Intersections of straight lines and circles",
+      "number": "8",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The circle <span data-math=\"C\"></span> has equation <span data-math=\"x^2+y^2-10x+8y+25=0\"></span>. The line with equation <span data-math=\"y=kx\"></span>, where <span data-math=\"k\"></span> is a constant, cuts <span data-math=\"C\"></span> at two distinct points. Find the range of possible values for <span data-math=\"k\"></span>.<span class=\"marks\">(6 marks)</span></div>",
+      "hints": [],
+      "steps": [
+        "<p>Substitute y=kx and require a positive discriminant for two distinct intersections.</p><span data-math=\"(1+k^2)x^2+(8k-10)x+25=0\" data-display=\"true\"></span><span data-math=\"\\Delta=(8k-10)^2-100(1+k^2)&gt;0\" data-display=\"true\"></span><span data-math=\"-36k^2-160k&gt;0\" data-display=\"true\"></span><span data-math=\"k(9k+40)&lt;0\" data-display=\"true\"></span><span data-math=\"-\\frac{40}9&lt;k&lt;0\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "070dfbc12aa947575bd967b49f3fdd02690f35ee70a5ee781c040147b2732fbc",
+        "printedBookPage": "48--49",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            250.936,
+            68.247,
+            261.845
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.3 Intersections of straight lines and circles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.3/q9",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "9",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.3",
+      "subchapterTitle": "6.3 Intersections of straight lines and circles",
+      "number": "9",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The line <span data-math=\"x+3y=k\"></span> meets the circle with equation <span data-math=\"(x-p)^2+(y-4)^2=45\"></span> at the point <span data-math=\"(4,7)\"></span>.\n<ol type=\"a\"><li value=\"1\">Work out the value of <span data-math=\"k\"></span>.<span class=\"marks\">(1 mark)</span></li><li value=\"2\">Work out the two possible values of <span data-math=\"p\"></span>.<span class=\"marks\">(5 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Substitute the given point in the line and then in the circle.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"k=4+3(7)=25\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"(4-p)^2+(7-4)^2=45\" data-display=\"true\"></span><span data-math=\"(4-p)^2=36\" data-display=\"true\"></span><span data-math=\"4-p=\\pm6\" data-display=\"true\"></span><span data-math=\"p=-2\\text{ or }10\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "eea90470441c4163daf35d1ceca2f029c75d44cd99189301dfe1a68d3df747a9",
+        "printedBookPage": "48--49",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            283.282,
+            68.247,
+            294.191
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.3 Intersections of straight lines and circles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.4/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "1",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.4",
+      "subchapterTitle": "6.4 Use tangent and chord properties",
+      "number": "1",
+      "question": "<div>The circle <span data-math=\"C\"></span> has equation <span data-math=\"x^2+y^2-6x+4y-156=0\"></span>.\n<ol type=\"a\"><li value=\"1\">Verify that the point <span data-math=\"P(-2,10)\"></span> lies on <span data-math=\"C\"></span>.</li><li value=\"2\">Find an equation of the tangent to <span data-math=\"C\"></span> at the point <span data-math=\"P\"></span>, giving your answer in the form <span data-math=\"ax+by+c=0\"></span>.</li></ol></div>",
+      "hints": [
+        "A tangent to a circle is perpendicular to the radius of the circle at the point of intersection.<br> For part <strong>b</strong>, first find the gradient, <span data-math=\"M\"></span>, of the radius. The gradient of the tangent is <span data-math=\"m=-\\frac1M\"></span>.<br> The equation of the tangent at <span data-math=\"P(x_1,y_1)\"></span> can then be found using <span data-math=\"y-y_1=m(x-x_1)\"></span>."
+      ],
+      "steps": [
+        "<p>Check P by substitution. Complete the square for the centre; the tangent is perpendicular to the radius at P.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(-2)^2+10^2-6(-2)+4(10)-156=4+100+12+40-156=0\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"(x-3)^2+(y+2)^2=169\" data-display=\"true\"></span><span data-math=\"C=(3,-2)\" data-display=\"true\"></span><span data-math=\"m_{CP}=\\frac{10+2}{-2-3}=-\\frac{12}5\" data-display=\"true\"></span><span data-math=\"m_t=\\frac5{12}\" data-display=\"true\"></span><span data-math=\"y-10=\\frac5{12}(x+2)\" data-display=\"true\"></span><span data-math=\"5x-12y+130=0\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "1953dc2468368a465891ac23f5e1c185764d3eb0c1837e5cd88178e0cfd636b5",
+        "printedBookPage": "49--51",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            402.339,
+            68.247,
+            413.248
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.4 Use tangent and chord properties"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.4/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "2",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.4",
+      "subchapterTitle": "6.4 Use tangent and chord properties",
+      "number": "2",
+      "question": "<div>The point <span data-math=\"P(4,-6)\"></span> lies on the circle with centre <span data-math=\"(8,2)\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the equation of the circle.</li><li value=\"2\">Find an equation of the tangent to the circle at <span data-math=\"P\"></span>.</li></ol></div>",
+      "hints": [
+        "The radius of the circle is the distance between <span data-math=\"P\"></span> and the centre."
+      ],
+      "steps": [
+        "<p>Find the radius from the centre to P; the tangent has the negative reciprocal of the radius gradient.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"r^2=(4-8)^2+(-6-2)^2=80\" data-display=\"true\"></span><span data-math=\"(x-8)^2+(y-2)^2=80\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"m_{CP}=\\frac{-6-2}{4-8}=2\" data-display=\"true\"></span><span data-math=\"m_t=-\\frac12\" data-display=\"true\"></span><span data-math=\"y+6=-\\frac12(x-4)\" data-display=\"true\"></span><span data-math=\"x+2y+8=0\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "e68b906760bbf0293950c7d4985d96598bfdb35c07e4071d7ff0885a98fdff5c",
+        "printedBookPage": "49--51",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            524.104,
+            68.247,
+            535.013
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.4 Use tangent and chord properties"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.4/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "3",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.4",
+      "subchapterTitle": "6.4 Use tangent and chord properties",
+      "number": "3",
+      "question": "<div>The equation of a circle is <span data-math=\"x^2+y^2+6x-8y-16=0\"></span>.<br> The points <span data-math=\"A(2,8)\"></span> and <span data-math=\"B(-7,9)\"></span> lie on the circle.\n<ol type=\"a\"><li value=\"1\">Find an equation of the perpendicular bisector of the chord <span data-math=\"AB\"></span>, giving your answer in the form <span data-math=\"y=mx+c\"></span>.</li><li value=\"2\">Show that the perpendicular bisector of <span data-math=\"AB\"></span> passes through the centre of the circle.</li></ol></div>",
+      "hints": [
+        "The perpendicular bisector of a chord of a circle always passes through the centre of the circle. Start by finding both the midpoint and gradient of the chord <span data-math=\"AB\"></span>."
+      ],
+      "steps": [
+        "<p>Use the chord midpoint and perpendicular gradient, then complete the square for the circle centre.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"M=(-\\frac52,\\frac{17}2)\" data-display=\"true\"></span><span data-math=\"m_{AB}=\\frac{9-8}{-7-2}=-\\frac19\" data-display=\"true\"></span><span data-math=\"m_\\perp=9\" data-display=\"true\"></span><span data-math=\"y-\\frac{17}2=9(x+\\frac52)\" data-display=\"true\"></span><span data-math=\"y=9x+31\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"(x+3)^2+(y-4)^2=41\" data-display=\"true\"></span><span data-math=\"C=(-3,4)\" data-display=\"true\"></span><span data-math=\"9(-3)+31=4\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "b57a76b2c2308b641102584243603fbff588217adafe8f1987a8df16ab920b07",
+        "printedBookPage": "49--51",
+        "marker": {
+          "page": 5,
+          "bbox": [
+            58.494,
+            609.079,
+            68.247,
+            619.988
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.4 Use tangent and chord properties"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.4/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "4",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.4",
+      "subchapterTitle": "6.4 Use tangent and chord properties",
+      "number": "4",
+      "question": "<div>A circle has equation <span data-math=\"(x-p)^2+(y-3)^2=20\"></span>, where <span data-math=\"p\\ne0\"></span> is a constant.<br> The points <span data-math=\"P(-2,7)\"></span> and <span data-math=\"Q(-8,k)\"></span> lie on the circle.\n<ol type=\"a\"><li value=\"1\">Find the value of <span data-math=\"p\"></span> and the two possible values of <span data-math=\"k\"></span>.</li><li value=\"2\">For the greater possible value of <span data-math=\"k\"></span>, find the equation of the perpendicular bisector of <span data-math=\"PQ\"></span>, and show that it passes through the centre of the circle.</li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Substitute P, use p≠0 to choose the centre, then substitute Q. Use the greater k to find the bisector.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(-2-p)^2+16=20\" data-display=\"true\"></span><span data-math=\"p=0\\text{ or }-4\" data-display=\"true\"></span><span data-math=\"p\\ne0\\Rightarrow p=-4\" data-display=\"true\"></span><span data-math=\"(-8+4)^2+(k-3)^2=20\" data-display=\"true\"></span><span data-math=\"(k-3)^2=4\" data-display=\"true\"></span><span data-math=\"k=1\\text{ or }5\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"Q=(-8,5),\\quad M=(-5,6)\" data-display=\"true\"></span><span data-math=\"m_{PQ}=\\frac{5-7}{-8+2}=\\frac13\" data-display=\"true\"></span><span data-math=\"m_\\perp=-3\" data-display=\"true\"></span><span data-math=\"y-6=-3(x+5)\" data-display=\"true\"></span><span data-math=\"3x+y+9=0\" data-display=\"true\"></span><span data-math=\"C=(-4,3):\\ 3(-4)+3+9=0\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "63412c2eb891cdfaa80cae47ab10155c90498e757ef9f32037f8d63ab3ab9202",
+        "printedBookPage": "49--51",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.4 Use tangent and chord properties"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.4/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "5",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.4",
+      "subchapterTitle": "6.4 Use tangent and chord properties",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E</span>  The line joining the points <span data-math=\"A(4,p)\"></span> and <span data-math=\"B(q,-2)\"></span> has midpoint <span data-math=\"M(1,-4)\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the values of <span data-math=\"p\"></span> and <span data-math=\"q\"></span>.<span class=\"marks\">(3 marks)</span></li></ol>\n<span data-math=\"AB\"></span> is the diameter of a circle.\n<ol type=\"a\"><li value=\"2\">Find the radius of the circle.<span class=\"marks\">(2 marks)</span></li><li value=\"3\">Find the equation of the circle in the form <span data-math=\"x^2+y^2+ax+by+c=0\"></span>.<span class=\"marks\">(3 marks)</span></li><li value=\"4\">Find an equation of the tangent to the circle at the point <span data-math=\"(3,-9)\"></span>, giving your answer in the form <span data-math=\"ax+by+c=0\"></span>.<span class=\"marks\">(5 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Use the midpoint to find the endpoints, then the radius. The final part must be checked against this circle before applying the tangent rule.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"\\frac{p-2}2=-4\\Rightarrow p=-6\" data-display=\"true\"></span><span data-math=\"\\frac{4+q}2=1\\Rightarrow q=-2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"r^2=(4-1)^2+(-6+4)^2=13\" data-display=\"true\"></span><span data-math=\"r=\\sqrt{13}\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"(x-1)^2+(y+4)^2=13\" data-display=\"true\"></span><span data-math=\"x^2+y^2-2x+8y+4=0\" data-display=\"true\"></span></li><li value=\"4\"><p>The specified point (3,−9) is not on the circle, so there is no tangent to this circle at that point. The supplied line 2x−5y−51=0 is perpendicular to the centre-to-point direction but is not tangent: its distance from the centre is √29, greater than √13. The original prompt is retained; a different point would have to be supplied to make this part valid.</p><span data-math=\"(3-1)^2+(-9+4)^2=4+25=29\\ne13\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "c657dc6d940b34841a718ba42ec4db4feb526840bd0f80e8a63b6fc04e20ff30",
+        "printedBookPage": "49--51",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            127.932,
+            68.247,
+            138.841
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.4 Use tangent and chord properties"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.4/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "6",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.4",
+      "subchapterTitle": "6.4 Use tangent and chord properties",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  A circle <span data-math=\"C\"></span> with centre <span data-math=\"(-5,9)\"></span> passes through the point <span data-math=\"(8,14)\"></span>.\n<ol type=\"a\"><li value=\"1\">Show that the point <span data-math=\"(8,4)\"></span> also lies on <span data-math=\"C\"></span>.<span class=\"marks\">(3 marks)</span></li></ol>\nThe tangent to <span data-math=\"C\"></span> at the point <span data-math=\"(8,14)\"></span> meets the <span data-math=\"y\"></span>-axis at the point <span data-math=\"A\"></span> and the tangent to <span data-math=\"C\"></span> at the point <span data-math=\"(8,4)\"></span> meets the <span data-math=\"y\"></span>-axis at the point <span data-math=\"B\"></span>.\n<ol type=\"a\"><li value=\"2\">Work out the distance <span data-math=\"AB\"></span>.<span class=\"marks\">(7 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Compare squared distances to the centre. Find the two tangent gradients and their y-intercepts.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"r^2=(8+5)^2+(14-9)^2=194\" data-display=\"true\"></span><span data-math=\"(8+5)^2+(4-9)^2=169+25=194\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"m_{t_1}=-\\frac{13}5\" data-display=\"true\"></span><span data-math=\"y-14=-\\frac{13}5(x-8)\" data-display=\"true\"></span><span data-math=\"A=(0,\\frac{174}5)\" data-display=\"true\"></span><span data-math=\"m_{t_2}=\\frac{13}5\" data-display=\"true\"></span><span data-math=\"y-4=\\frac{13}5(x-8)\" data-display=\"true\"></span><span data-math=\"B=(0,-\\frac{84}5)\" data-display=\"true\"></span><span data-math=\"AB=\\frac{174}5+\\frac{84}5=\\frac{258}5=51.6\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "9bc9cf50526cad7f491e38f4b6bb511990ff2293dc4099381ffa3fc85c7dde49",
+        "printedBookPage": "49--51",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            237.073,
+            68.247,
+            247.982
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.4 Use tangent and chord properties"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.4/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "7",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.4",
+      "subchapterTitle": "6.4 Use tangent and chord properties",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The points <span data-math=\"P(1,10)\"></span> and <span data-math=\"Q(7,8)\"></span> lie on the circumference of a circle with centre <span data-math=\"C(3,k)\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the equation of the perpendicular bisector of <span data-math=\"PQ\"></span>.<span class=\"marks\">(5 marks)</span></li><li value=\"2\">Find the value of <span data-math=\"k\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"3\">Find the equation of the circle.<span class=\"marks\">(3 marks)</span></li><li value=\"4\">Find the exact coordinates of the points of intersection of the perpendicular bisector of <span data-math=\"PQ\"></span>, and the circle.<span class=\"marks\">(5 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Construct the chord’s perpendicular bisector; the centre lies on it. Substitute its equation into the circle for the final intersections.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"M=(4,9)\" data-display=\"true\"></span><span data-math=\"m_{PQ}=\\frac{8-10}{7-1}=-\\frac13\" data-display=\"true\"></span><span data-math=\"m_\\perp=3\" data-display=\"true\"></span><span data-math=\"y-9=3(x-4)\" data-display=\"true\"></span><span data-math=\"y=3x-3\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"k=3(3)-3=6\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"r^2=(1-3)^2+(10-6)^2=20\" data-display=\"true\"></span><span data-math=\"(x-3)^2+(y-6)^2=20\" data-display=\"true\"></span></li><li value=\"4\"><span data-math=\"y-6=3(x-3)\" data-display=\"true\"></span><span data-math=\"(x-3)^2+9(x-3)^2=20\" data-display=\"true\"></span><span data-math=\"x=3\\pm\\sqrt2\" data-display=\"true\"></span><span data-math=\"(3+\\sqrt2,6+3\\sqrt2),\\ (3-\\sqrt2,6-3\\sqrt2)\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "1d53fcc848f4774f150c6a1357ed01cc0b3ece50eb9caa3e04aaa13dfa12a184",
+        "printedBookPage": "49--51",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            315.13,
+            68.247,
+            326.039
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.4 Use tangent and chord properties"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.4/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "8",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.4",
+      "subchapterTitle": "6.4 Use tangent and chord properties",
+      "number": "8",
+      "question": "<div><span class=\"practice-tag\">E</span>  The points <span data-math=\"P(-2,3)\"></span> and <span data-math=\"Q(8,5)\"></span> lie on a circle with centre <span data-math=\"(4,-1)\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the equation of the circle.<span class=\"marks\">(3 marks)</span></li></ol>\nThe line <span data-math=\"l\"></span> passes through the centre of the circle and the midpoint of the chord <span data-math=\"PQ\"></span>.\n<ol type=\"a\"><li value=\"2\">Find an equation of <span data-math=\"l\"></span>.<span class=\"marks\">(5 marks)</span></li></ol>\nThe line <span data-math=\"l\"></span> crosses the <span data-math=\"y\"></span>-axis at <span data-math=\"A\"></span> and the <span data-math=\"x\"></span>-axis at <span data-math=\"B\"></span>.\n<ol type=\"a\"><li value=\"3\">Find the area of triangle <span data-math=\"AOB\"></span>, where <span data-math=\"O\"></span> is the origin.<span class=\"marks\">(4 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Calculate the radius and the chord midpoint. Use the centre and midpoint for the line, then its intercepts for the triangle area.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"r^2=(-2-4)^2+(3+1)^2=52\" data-display=\"true\"></span><span data-math=\"(x-4)^2+(y+1)^2=52\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"M=(\\frac{-2+8}2,\\frac{3+5}2)=(3,4)\" data-display=\"true\"></span><span data-math=\"m_l=\\frac{4+1}{3-4}=-5\" data-display=\"true\"></span><span data-math=\"y+1=-5(x-4)\" data-display=\"true\"></span><span data-math=\"y=19-5x\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"A=(0,19),\\quad B=(\\frac{19}5,0)\" data-display=\"true\"></span><span data-math=\"A_{\\triangle AOB}=\\frac12(19)(\\frac{19}5)=\\frac{361}{10}=36.1\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "4adc4d3369fdc93766b98a2bafc9ac9c7fe5eaac1222358f670c145b74e65d4d",
+        "printedBookPage": "49--51",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            408.729,
+            68.247,
+            419.638
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.4 Use tangent and chord properties"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.4/q9",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "9",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.4",
+      "subchapterTitle": "6.4 Use tangent and chord properties",
+      "number": "9",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The circle <span data-math=\"C\"></span> has equation <span data-math=\"x^2+y^2-2x+6y-30=0\"></span>.<br> The points <span data-math=\"P(3,3)\"></span> and <span data-math=\"Q(7,-5)\"></span> lie on <span data-math=\"C\"></span>.\n<ol type=\"a\"><li value=\"1\">Find an equation for the tangent to <span data-math=\"C\"></span> at <span data-math=\"Q\"></span>, giving your answer in the form <span data-math=\"ax+by+c=0\"></span>, where <span data-math=\"a\"></span>, <span data-math=\"b\"></span> and <span data-math=\"c\"></span> are integers.<span class=\"marks\">(5 marks)</span></li><li value=\"2\">Find an equation of the perpendicular bisector of <span data-math=\"PQ\"></span>.<span class=\"marks\">(5 marks)</span></li><li value=\"3\">Find the coordinates of the point of intersection of the tangent and the perpendicular bisector.<span class=\"marks\">(4 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Complete the square for the centre. Find the tangent and chord bisector separately, then solve simultaneously.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(x-1)^2+(y+3)^2=40\" data-display=\"true\"></span><span data-math=\"C=(1,-3)\" data-display=\"true\"></span><span data-math=\"m_{CQ}=\\frac{-5+3}{7-1}=-\\frac13\" data-display=\"true\"></span><span data-math=\"m_t=3\" data-display=\"true\"></span><span data-math=\"y+5=3(x-7)\" data-display=\"true\"></span><span data-math=\"3x-y-26=0\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"M=(5,-1)\" data-display=\"true\"></span><span data-math=\"m_{PQ}=\\frac{-5-3}{7-3}=-2\" data-display=\"true\"></span><span data-math=\"m_\\perp=\\frac12\" data-display=\"true\"></span><span data-math=\"y+1=\\frac12(x-5)\" data-display=\"true\"></span><span data-math=\"x-2y-7=0\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"y=3x-26\" data-display=\"true\"></span><span data-math=\"x-2(3x-26)-7=0\" data-display=\"true\"></span><span data-math=\"-5x+45=0\" data-display=\"true\"></span><span data-math=\"x=9,\\ y=1\" data-display=\"true\"></span><span data-math=\"(9,1)\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "d367c812392b7df9283f08cb5a3379ee459b68a3c5bd3b4c42d981f60e8380b6",
+        "printedBookPage": "49--51",
+        "marker": {
+          "page": 6,
+          "bbox": [
+            58.494,
+            505.234,
+            68.247,
+            516.143
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.4 Use tangent and chord properties"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.5/q1",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "1",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.5",
+      "subchapterTitle": "6.5 Circles and triangles",
+      "number": "1",
+      "question": "<div>The vertices of a triangle are <span data-math=\"A(-1,6)\"></span>, <span data-math=\"B(3,4)\"></span> and <span data-math=\"C(5,2)\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the equations of the perpendicular bisectors of <span data-math=\"AB\"></span>, <span data-math=\"BC\"></span> and <span data-math=\"AC\"></span> respectively.</li><li value=\"2\">Show that the perpendicular bisectors all meet at the same point.</li><li value=\"3\">Find the equation of the circle that passes through <span data-math=\"A\"></span>, <span data-math=\"B\"></span> and <span data-math=\"C\"></span>.</li></ol></div>",
+      "hints": [
+        "A unique circle, called the <strong>circumcircle</strong>, can be drawn through the three vertices of any triangle. The perpendicular bisectors of the three sides meet at the centre of the circle."
+      ],
+      "steps": [
+        "<p>Construct the three perpendicular bisectors. Their common point is the circumcentre; use its distance to A for the radius.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"M_{AB}=(1,5),\\ m_{AB}=-\\frac12\" data-display=\"true\"></span><span data-math=\"y-5=2(x-1)\\Rightarrow y=2x+3\" data-display=\"true\"></span><span data-math=\"M_{BC}=(4,3),\\ m_{BC}=-1\" data-display=\"true\"></span><span data-math=\"y-3=x-4\\Rightarrow y=x-1\" data-display=\"true\"></span><span data-math=\"M_{AC}=(2,4),\\ m_{AC}=-\\frac23\" data-display=\"true\"></span><span data-math=\"y-4=\\frac32(x-2)\\Rightarrow2y=3x+2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"2x+3=x-1\\Rightarrow x=-4,\\ y=-5\" data-display=\"true\"></span><span data-math=\"2(-5)=3(-4)+2\" data-display=\"true\"></span><span data-math=\"O=(-4,-5)\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"r^2=(-1+4)^2+(6+5)^2=130\" data-display=\"true\"></span><span data-math=\"(x+4)^2+(y+5)^2=130\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "513f327732bddc3953cab4840029f8ebf42b41d00ced804774ee242cf8501f4d",
+        "printedBookPage": "51--52",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            102.215,
+            68.247,
+            113.124
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.5 Circles and triangles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.5/q2",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "2",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.5",
+      "subchapterTitle": "6.5 Circles and triangles",
+      "number": "2",
+      "question": "<div>The points <span data-math=\"P(-12,1)\"></span>, <span data-math=\"Q(8,9)\"></span> and <span data-math=\"R(2,15)\"></span> lie on the circle as shown in the diagram.\n<div><img style=\"max-width:65mm\" class=\"practice-figure\"  src=\"content/practice/assets/f1c6f8f8817398f71887.png\" alt=\"Original question diagram\"></div>\n<ol type=\"a\"><li value=\"1\">Show that <span data-math=\"PQ\"></span> is a diameter of the circle.</li><li value=\"2\">Find an equation of the circle in the form <span data-math=\"(x-a)^2+(y-b)^2=c\"></span>, where <span data-math=\"a\"></span>, <span data-math=\"b\"></span> and <span data-math=\"c\"></span> are constants to be found.</li></ol></div>",
+      "hints": [
+        "Use Pythagoras’ theorem to determine whether a triangle is right-angled.<br> The angle in a semicircle is <span data-math=\"90^\\circ\"></span>, so the hypotenuse of a right-angled triangle is a diameter of the circumcircle. The centre of the circle is at the midpoint of the hypotenuse."
+      ],
+      "steps": [
+        "<p>Show that the angle at R is a right angle. The converse of the angle-in-a-semicircle theorem then makes PQ a diameter.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><p>By the converse of Pythagoras, PRQ is a right angle, so PQ is a diameter of the circle.</p><span data-math=\"PR^2=14^2+14^2=392\" data-display=\"true\"></span><span data-math=\"RQ^2=6^2+(-6)^2=72\" data-display=\"true\"></span><span data-math=\"PQ^2=20^2+8^2=464\" data-display=\"true\"></span><span data-math=\"PR^2+RQ^2=PQ^2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"C=(\\frac{-12+8}2,\\frac{1+9}2)=(-2,5)\" data-display=\"true\"></span><span data-math=\"r^2=\\frac{PQ^2}{4}=116\" data-display=\"true\"></span><span data-math=\"(x+2)^2+(y-5)^2=116\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "88cc37708f3a535fa493b7d210d4324d72b6d86ec530a9fef4f8143450106303",
+        "printedBookPage": "51--52",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            215.707,
+            68.247,
+            226.616
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.5 Circles and triangles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.5/q3",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "3",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.5",
+      "subchapterTitle": "6.5 Circles and triangles",
+      "number": "3",
+      "question": "<div>A triangle <span data-math=\"ABC\"></span> has vertices <span data-math=\"A(6,3)\"></span>, <span data-math=\"B(-2,1)\"></span> and <span data-math=\"C(0,-7)\"></span>.\n<ol type=\"a\"><li value=\"1\">Show that <span data-math=\"ABC\"></span> is an isosceles right-angled triangle.</li><li value=\"2\">Find the equation of the circumcircle of triangle <span data-math=\"ABC\"></span>.</li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Compare the three squared side lengths. The equal legs meet at the right angle B, making AC the diameter of the circumcircle.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><p>The triangle is isosceles and right-angled at B. The supplied explanation’s statement AB=AC is a typo; the equal lengths are AB and BC.</p><span data-math=\"AB^2=(-8)^2+(-2)^2=68\" data-display=\"true\"></span><span data-math=\"BC^2=2^2+(-8)^2=68\" data-display=\"true\"></span><span data-math=\"AC^2=(-6)^2+(-10)^2=136\" data-display=\"true\"></span><span data-math=\"AB=BC,\\quad AB^2+BC^2=AC^2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"M_{AC}=(\\frac{6+0}2,\\frac{3-7}2)=(3,-2)\" data-display=\"true\"></span><span data-math=\"r^2=\\frac{136}4=34\" data-display=\"true\"></span><span data-math=\"(x-3)^2+(y+2)^2=34\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "892891b9da07e68ff8c83345f075b1d785117fbb029317a3516676671ff2803d",
+        "printedBookPage": "51--52",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            459.35,
+            68.247,
+            470.259
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.5 Circles and triangles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.5/q4",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "4",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.5",
+      "subchapterTitle": "6.5 Circles and triangles",
+      "number": "4",
+      "question": "<div>The points <span data-math=\"A(6,14)\"></span>, <span data-math=\"B(14,10)\"></span> and <span data-math=\"C(-4,4)\"></span> lie on the circumference of a circle.<br> The equation of the perpendicular bisector of <span data-math=\"AC\"></span> is <span data-math=\"x+y=10\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the coordinates of the centre of the circle.</li><li value=\"2\">Find the equation of the circle.</li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Intersect the supplied bisector with the perpendicular bisector of AB to find the centre.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"M_{AB}=(10,12)\" data-display=\"true\"></span><span data-math=\"m_{AB}=\\frac{10-14}{14-6}=-\\frac12\" data-display=\"true\"></span><span data-math=\"y-12=2(x-10)\" data-display=\"true\"></span><span data-math=\"y=2x-8\" data-display=\"true\"></span><span data-math=\"x+(2x-8)=10\" data-display=\"true\"></span><span data-math=\"x=6,\\ y=4\" data-display=\"true\"></span><span data-math=\"O=(6,4)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"r^2=(6-6)^2+(14-4)^2=100\" data-display=\"true\"></span><span data-math=\"(x-6)^2+(y-4)^2=100\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "0a331c11009dfeebe47836765f34f92204f661f0867513be85ee264a91e27c8c",
+        "printedBookPage": "51--52",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            507.836,
+            68.247,
+            518.745
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.5 Circles and triangles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.5/q5",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "5",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.5",
+      "subchapterTitle": "6.5 Circles and triangles",
+      "number": "5",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  A circle with centre <span data-math=\"C\"></span> has equation <span data-math=\"x^2+y^2-10x+6y=91\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the coordinates of <span data-math=\"C\"></span>.<span class=\"marks\">(2 marks)</span></li></ol>\nThe points <span data-math=\"A(0,7)\"></span> and <span data-math=\"B(10,7)\"></span> lie on the circle.\n<ol type=\"a\"><li value=\"2\">Find the area of triangle <span data-math=\"ABC\"></span>.<span class=\"marks\">(4 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Complete the square. AB is a horizontal base, so the height is the vertical distance from C to AB.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(x-5)^2+(y+3)^2=91+25+9=125\" data-display=\"true\"></span><span data-math=\"C=(5,-3)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"AB=10\" data-display=\"true\"></span><span data-math=\"h=7-(-3)=10\" data-display=\"true\"></span><span data-math=\"A=\\frac12(10)(10)=50\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "ea0b964368adce099ddde66383a1fea3d2c9a57199e5e25bde30531b33e2e4ef",
+        "printedBookPage": "51--52",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            570.654,
+            68.247,
+            581.563
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.5 Circles and triangles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.5/q6",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "6",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.5",
+      "subchapterTitle": "6.5 Circles and triangles",
+      "number": "6",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The circle <span data-math=\"C\"></span> has equation <span data-math=\"x^2+y^2-4x+8y=33\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the centre and radius of <span data-math=\"C\"></span>.<span class=\"marks\">(5 marks)</span></li></ol>\nThe points <span data-math=\"P(-5,-2)\"></span> and <span data-math=\"Q(9,-6)\"></span> both lie on <span data-math=\"C\"></span>.\n<ol type=\"a\"><li value=\"2\">Show that <span data-math=\"PQ\"></span> is a diameter of <span data-math=\"C\"></span>.<span class=\"marks\">(2 marks)</span></li></ol>\nThe point <span data-math=\"R\"></span> lies on the positive <span data-math=\"y\"></span>-axis and the angle <span data-math=\"PRQ=90^\\circ\"></span>.\n<ol type=\"a\"><li value=\"3\">Find the coordinates of <span data-math=\"R\"></span>.<span class=\"marks\">(4 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Complete the square and check the midpoint of PQ. A right angle PRQ places R on the circle with diameter PQ.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(x-2)^2+(y+4)^2=33+4+16=53\" data-display=\"true\"></span><span data-math=\"C=(2,-4),\\quad r=\\sqrt{53}\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"M_{PQ}=(\\frac{-5+9}2,\\frac{-2-6}2)=(2,-4)=C\" data-display=\"true\"></span><span data-math=\"PQ\\text{ is a diameter}\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"x=0\\Rightarrow4+(y+4)^2=53\" data-display=\"true\"></span><span data-math=\"y+4=\\pm7\" data-display=\"true\"></span><span data-math=\"y=3\\text{ or }-11\" data-display=\"true\"></span><span data-math=\"y&gt;0\\Rightarrow R=(0,3)\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "80e7fd51c9173f7fd6ae39bd2f2275a1ba8c0444894b1752b6c88c2589b2d683",
+        "printedBookPage": "51--52",
+        "marker": {
+          "page": 7,
+          "bbox": [
+            58.494,
+            636.076,
+            68.247,
+            646.985
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.5 Circles and triangles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.5/q7",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "7",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.5",
+      "subchapterTitle": "6.5 Circles and triangles",
+      "number": "7",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  A circle has equation <span data-math=\"x^2+y^2+4x-6y-23=0\"></span>.\n<ol type=\"a\"><li value=\"1\">Find the coordinates of the centre of the circle.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">Show that the radius of the circle is 6.<span class=\"marks\">(2 marks)</span></li></ol>\nThe points <span data-math=\"A\"></span>, <span data-math=\"B\"></span> and <span data-math=\"C\"></span> lie on the circle. The length of <span data-math=\"AB\"></span> is 12 and the length of <span data-math=\"AC\"></span> is 5.\n<ol type=\"a\"><li value=\"3\">Find the length of <span data-math=\"BC\"></span>, giving your answer to 1 decimal place.<span class=\"marks\">(3 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Complete the square. Since AB equals the diameter, angle ACB is right; apply Pythagoras.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(x+2)^2+(y-3)^2=23+4+9=36\" data-display=\"true\"></span><span data-math=\"O=(-2,3)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"r=\\sqrt{36}=6\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"AB=2r=12\" data-display=\"true\"></span><span data-math=\"\\angle ACB=90^\\circ\" data-display=\"true\"></span><span data-math=\"BC^2=12^2-5^2=119\" data-display=\"true\"></span><span data-math=\"BO=\\sqrt{119}\\approx10.9\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "765d3b2d472f0b3e9a4553297f42d2fb905ff113c9e22f6d1054cb24f3a81443",
+        "printedBookPage": "51--52",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            52.347,
+            68.247,
+            63.256
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.5 Circles and triangles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.5/q8",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "8",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.5",
+      "subchapterTitle": "6.5 Circles and triangles",
+      "number": "8",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The points <span data-math=\"P\"></span>, <span data-math=\"Q\"></span> and <span data-math=\"R\"></span> have coordinates <span data-math=\"(-2,3)\"></span>, <span data-math=\"(5,-1)\"></span> and <span data-math=\"(-3,k)\"></span> respectively.<br> Given that <span data-math=\"PQ\"></span> is perpendicular to <span data-math=\"QR\"></span>,\n<ol type=\"a\"><li value=\"1\">find the value of <span data-math=\"k\"></span>.<span class=\"marks\">(4 marks)</span></li></ol>\n<span data-math=\"P\"></span>, <span data-math=\"Q\"></span> and <span data-math=\"R\"></span> lie on the circumference of a circle.\n<ol type=\"a\"><li value=\"2\">Find the coordinates of the centre of the circle.<span class=\"marks\">(3 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>Use perpendicular gradients to find k. The right angle at Q means PR is the diameter, so the centre is its midpoint.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"m_{PQ}=\\frac{-1-3}{5+2}=-\\frac47\" data-display=\"true\"></span><span data-math=\"m_{QR}=\\frac{k+1}{-3-5}=-\\frac{k+1}8\" data-display=\"true\"></span><span data-math=\"\\frac{k+1}{14}=-1\" data-display=\"true\"></span><span data-math=\"k=-15\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"C=M_{PR}=(\\frac{-2-3}2,\\frac{3-15}2)=(-\\frac52,-6)\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "60c4e5a5261209ef28b06ea567714c09b6ac6d87ce7e39cb1b56bfa07022fa8a",
+        "printedBookPage": "51--52",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            132.397,
+            68.247,
+            143.306
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.5 Circles and triangles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/6.5/q9",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "9",
+      "chapterTitle": "Circles",
+      "subchapterId": "6.5",
+      "subchapterTitle": "6.5 Circles and triangles",
+      "number": "9",
+      "question": "<div><span class=\"practice-tag\">E/P</span>  The points <span data-math=\"P(-4,4)\"></span>, <span data-math=\"Q(8,12)\"></span> and <span data-math=\"R(k,6)\"></span> lie on the circle <span data-math=\"C\"></span> as shown in the diagram.\n<div><img style=\"max-width:55mm\" class=\"practice-figure\"  src=\"content/practice/assets/f68ab13041924f883ca4.png\" alt=\"Original question diagram\"></div>\nGiven that <span data-math=\"PR\"></span> is a diameter of <span data-math=\"C\"></span>,\n<ol type=\"a\"><li value=\"1\">find the value of <span data-math=\"k\"></span><span class=\"marks\">(3 marks)</span></li><li value=\"2\">find an equation for <span data-math=\"C\"></span>.<span class=\"marks\">(5 marks)</span></li></ol></div>",
+      "hints": [],
+      "steps": [
+        "<p>A diameter subtends a right angle at Q, so QP and QR are perpendicular. Then find the diameter’s midpoint and radius.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"m_{QP}=\\frac{4-12}{-4-8}=\\frac23\" data-display=\"true\"></span><span data-math=\"m_{QR}=\\frac{6-12}{k-8}=-\\frac6{k-8}\" data-display=\"true\"></span><span data-math=\"-\\frac4{k-8}=-1\" data-display=\"true\"></span><span data-math=\"k=12\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"C=(\\frac{-4+12}2,\\frac{4+6}2)=(4,5)\" data-display=\"true\"></span><span data-math=\"r^2=(-4-4)^2+(4-5)^2=65\" data-display=\"true\"></span><span data-math=\"(x-4)^2+(y-5)^2=65\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "smq-1.12"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "abcaad68103561fab4e71a94b950af805a6c3bf2933cf9b26d86ab9dee260aca",
+        "printedBookPage": "51--52",
+        "marker": {
+          "page": 8,
+          "bbox": [
+            58.494,
+            210.455,
+            68.247,
+            221.364
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "6.5 Circles and triangles"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/problem-a/qbronze",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "Bronze",
+      "chapterTitle": "Circles",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem solving: Set A",
+      "number": "Bronze",
+      "question": "The circle <span data-math=\"C\"></span> has centre <span data-math=\"(0,5)\"></span> and radius 10.\n<ol type=\"a\"><li value=\"1\">Write down an equation of the circle.<span class=\"marks\">(3 marks)</span></li></ol>\nThe straight line with equation <span data-math=\"2x+y=1\"></span> intersects <span data-math=\"C\"></span> at the points <span data-math=\"P\"></span> and <span data-math=\"Q\"></span>.\n<ol type=\"a\"><li value=\"2\">Find the coordinates of <span data-math=\"P\"></span> and <span data-math=\"Q\"></span>.<span class=\"marks\">(6 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Write the standard circle equation. Eliminate y using the line and solve the quadratic.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"x^2+(y-5)^2=100\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"y=1-2x\" data-display=\"true\"></span><span data-math=\"x^2+(-4-2x)^2=100\" data-display=\"true\"></span><span data-math=\"5x^2+16x-84=0\" data-display=\"true\"></span><span data-math=\"(x+6)(5x-14)=0\" data-display=\"true\"></span><span data-math=\"x=-6\\text{ or }\\frac{14}5\" data-display=\"true\"></span><span data-math=\"(x,y)=(-6,13)\\text{ or }(\\frac{14}5,-\\frac{23}5)\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "85f633c02db5ed239d715740fa3083b3a4a0c856d9e87fda30ae2715b452c1fe",
+        "printedBookPage": "53",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            86.377,
+            90.19,
+            95.343
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/problem-a/qsilver",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "Silver",
+      "chapterTitle": "Circles",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem solving: Set A",
+      "number": "Silver",
+      "question": "Show that the line with equation <span data-math=\"4y+3x=44\"></span> is a tangent to the circle with centre <span data-math=\"(5,1)\"></span> and radius 5.<span class=\"marks\">(7 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>Substitute the line into the circle equation. A single repeated root proves that the line has exactly one point in common with the circle.</p><span data-math=\"(x-5)^2+(y-1)^2=25\" data-display=\"true\"></span><span data-math=\"y=\\frac{44-3x}4\" data-display=\"true\"></span><span data-math=\"16(x-5)^2+(40-3x)^2=400\" data-display=\"true\"></span><span data-math=\"25x^2-400x+1600=0\" data-display=\"true\"></span><span data-math=\"25(x-8)^2=0\" data-display=\"true\"></span><span data-math=\"x=8,\\ y=5\" data-display=\"true\"></span><span data-math=\"\\text{one intersection, hence a tangent}\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "4b62f37b30a336f6202bb55646bb825d66467ca7b5c6985f1926cffb8244207b",
+        "printedBookPage": "53",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            155.073,
+            83.833,
+            164.039
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/problem-a/qgold",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "Gold",
+      "chapterTitle": "Circles",
+      "subchapterId": "problem-a",
+      "subchapterTitle": "Problem solving: Set A",
+      "number": "Gold",
+      "question": "The line with equation <span data-math=\"5y-4x=k\"></span>, where <span data-math=\"k\"></span> is a constant, does not intersect the circle with equation <span data-math=\"(x-3)^2+(y+2)^2=41\"></span>. Find the range of possible values of <span data-math=\"k\"></span>.<span class=\"marks\">(9 marks)</span>",
+      "hints": [],
+      "steps": [
+        "<p>A line misses the circle when its perpendicular distance from the centre exceeds the radius.</p><span data-math=\"C=(3,-2),\\quad r=\\sqrt{41}\" data-display=\"true\"></span><span data-math=\"d=\\frac{|-4(3)+5(-2)-k|}{\\sqrt{(-4)^2+5^2}}=\\frac{|k+22|}{\\sqrt{41}}\" data-display=\"true\"></span><span data-math=\"d&gt;r\\Rightarrow|k+22|&gt;41\" data-display=\"true\"></span><span data-math=\"k+22&gt;41\\text{ or }k+22&lt;-41\" data-display=\"true\"></span><span data-math=\"k&gt;19\\text{ or }k&lt;-63\" data-display=\"true\"></span>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-problem-a"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "990baf0607d3c5802fce644593a5fca791befacc6bf0a3a52962689300424eb0",
+        "printedBookPage": "53",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            187.966,
+            79.978,
+            196.932
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set A"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/problem-b/qbronze",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "Bronze",
+      "chapterTitle": "Circles",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem solving: Set B",
+      "number": "Bronze",
+      "question": "<div>The diagram shows a sketch of the circle <span data-math=\"C\"></span> with centre <span data-math=\"P\"></span>.<br> The circle has equation <span data-math=\"(x-2)^2+(y+3)^2=25\"></span>.\n<ol type=\"a\"><li value=\"1\">Write down the coordinates of <span data-math=\"P\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">State the radius of <span data-math=\"C\"></span>.<span class=\"marks\">(1 mark)</span></li></ol>\nThe chord <span data-math=\"AB\"></span> of <span data-math=\"C\"></span> is parallel to the <span data-math=\"x\"></span>-axis, lies below the <span data-math=\"x\"></span>-axis and is of length 8.\n<ol type=\"a\"><li value=\"3\">Find the coordinates of points <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<span class=\"marks\">(5 marks)</span></li><li value=\"4\">Write down the coordinates of <span data-math=\"M\"></span>, the midpoint of <span data-math=\"AB\"></span>.<span class=\"marks\">(1 mark)</span></li><li value=\"5\">Show that angle <span data-math=\"APM=53.1^\\circ\"></span>, to one decimal place.<span class=\"marks\">(2 marks)</span></li></ol>\nThe tangents to <span data-math=\"C\"></span> at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span> meet at the point <span data-math=\"Q\"></span>.\n<ol type=\"a\"><li value=\"6\">Find the length of <span data-math=\"AQ\"></span>, giving your answer to 2 significant figures.<span class=\"marks\">(2 marks)</span></li></ol></div> <div><img style=\"max-width:100.0%\" class=\"practice-figure\"  src=\"content/practice/assets/199e76b0ac7f3a267ec6.png\" alt=\"Original question diagram\"></div>",
+      "hints": [],
+      "steps": [
+        "<p>The perpendicular from the centre bisects the horizontal chord. Use the right triangle APM, then the tangent–radius right angle to find AQ.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"P=(2,-3)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"r=\\sqrt{25}=5\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"AM=4\" data-display=\"true\"></span><span data-math=\"PM=\\sqrt{5^2-4^2}=3\" data-display=\"true\"></span><span data-math=\"y=-3\\pm3\" data-display=\"true\"></span><span data-math=\"y&lt;0\\Rightarrow y=-6\" data-display=\"true\"></span><span data-math=\"A=(2-4,-6)=(-2,-6)\" data-display=\"true\"></span><span data-math=\"B=(2+4,-6)=(6,-6)\" data-display=\"true\"></span></li><li value=\"4\"><span data-math=\"M=(2,-6)\" data-display=\"true\"></span></li><li value=\"5\"><span data-math=\"\\sin\\angle APM=\\frac{AM}{AP}=\\frac45\" data-display=\"true\"></span><span data-math=\"\\angle APM=\\sin^{-1}(\\frac45)\\approx53.1^\\circ\" data-display=\"true\"></span></li><li value=\"6\"><p>By symmetry, Q lies on the line PM, so angle APQ equals angle APM.</p><span data-math=\"AP\\perp AQ\" data-display=\"true\"></span><span data-math=\"\\tan\\angle APQ=\\frac43\" data-display=\"true\"></span><span data-math=\"AQ=AP\\tan\\angle APQ=5\\frac43=\\frac{20}3\\approx6.7\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "b46bcc4276c908515dce2af3d11ac813bc5aa09754ceebb003e85b64d456ba3e",
+        "printedBookPage": "53--54",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            277.861,
+            90.19,
+            286.827
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/problem-b/qsilver",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "Silver",
+      "chapterTitle": "Circles",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem solving: Set B",
+      "number": "Silver",
+      "question": "<div>The diagram shows a sketch of the circle <span data-math=\"C\"></span> with centre <span data-math=\"P\"></span>.<br> The circle has equation <span data-math=\"(x-4)^2+(y+5)^2=\\frac{625}4\"></span>\n<ol type=\"a\"><li value=\"1\">Write down the coordinates of <span data-math=\"P\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"2\">Find the radius of <span data-math=\"C\"></span>.<span class=\"marks\">(1 mark)</span></li></ol>\nThe chord <span data-math=\"AB\"></span> of <span data-math=\"C\"></span> is parallel to the <span data-math=\"x\"></span>-axis, lies below the <span data-math=\"x\"></span>-axis and has length 24.\n<ol type=\"a\"><li value=\"3\">Find the coordinates of <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<span class=\"marks\">(5 marks)</span></li><li value=\"4\">Show that angle <span data-math=\"APB=147.5^\\circ\"></span>, to the nearest <span data-math=\"0.1^\\circ\"></span>.<span class=\"marks\">(2 marks)</span></li><li value=\"5\">Find the length <span data-math=\"AQ\"></span>, giving your answer to 3 significant figures.<span class=\"marks\">(2 marks)</span></li></ol></div> <div><img style=\"max-width:100.0%\" class=\"practice-figure\"  src=\"content/practice/assets/140baaee4159d71de836.png\" alt=\"Original question diagram\"></div>",
+      "hints": [],
+      "steps": [
+        "<p>The chord midpoint is on the vertical line through the centre. Use half the chord and the radius in a right triangle; the diagram places the chord below P.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"P=(4,-5)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"r=\\sqrt{\\frac{625}4}=\\frac{25}2=12.5\" data-display=\"true\"></span></li><li value=\"3\"><p>The algebra also permits a horizontal chord at y=−1.5. The supplied diagram selects the lower chord, below the centre, giving the stated coordinates.</p><span data-math=\"AM=12\" data-display=\"true\"></span><span data-math=\"PM=\\sqrt{12.5^2-12^2}=3.5\" data-display=\"true\"></span><span data-math=\"y_M=-5-3.5=-8.5\" data-display=\"true\"></span><span data-math=\"A=(-8,-8.5),\\quad B=(16,-8.5)\" data-display=\"true\"></span></li><li value=\"4\"><span data-math=\"\\angle APB=2\\sin^{-1}(\\frac{12}{12.5})\\approx147.5^\\circ\" data-display=\"true\"></span></li><li value=\"5\"><p>The tangents shown in the diagram meet at Q on the chord’s perpendicular bisector; AP is perpendicular to AQ.</p><span data-math=\"AQ=AP\\frac{AM}{PM}=12.5\\frac{12}{3.5}=\\frac{300}7\\approx42.9\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "204b8de2fa15f46163ff975cd066c9017b9992f1f2c75af9bb863b85f7d25854",
+        "printedBookPage": "53--54",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            415.891,
+            83.833,
+            424.857
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/problem-b/qgold",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "Gold",
+      "chapterTitle": "Circles",
+      "subchapterId": "problem-b",
+      "subchapterTitle": "Problem solving: Set B",
+      "number": "Gold",
+      "question": "<div>The diagram shows a sketch of the circle <span data-math=\"C\"></span> with centre <span data-math=\"P\"></span>.<br> The circle has equation <span data-math=\"(x-3)^2+(y+2)^2=\\frac{289}4\"></span><br> The chord <span data-math=\"AB\"></span> of <span data-math=\"C\"></span> is parallel to the <span data-math=\"x\"></span>-axis, lies below the <span data-math=\"x\"></span>-axis and has length 15.\n<ol type=\"a\"><li value=\"1\">Find the coordinates of <span data-math=\"A\"></span> and <span data-math=\"B\"></span>.<span class=\"marks\">(8 marks)</span></li></ol>\nThe tangents to <span data-math=\"C\"></span> at the points <span data-math=\"A\"></span> and <span data-math=\"B\"></span> meet at the point <span data-math=\"Q\"></span>.\n<ol type=\"a\"><li value=\"2\">Find the length of <span data-math=\"AQ\"></span>, giving your answer to 3 significant figures.<span class=\"marks\">(4 marks)</span></li></ol></div> <div><img style=\"max-width:100.0%\" class=\"practice-figure\"  src=\"content/practice/assets/45109da74841d72047c4.png\" alt=\"Original question diagram\"></div>",
+      "hints": [],
+      "steps": [
+        "<p>Use half the chord and the radius to find its vertical distance from the centre. The tangent triangle gives AQ.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"P=(3,-2),\\quad r=\\frac{17}2=8.5\" data-display=\"true\"></span><span data-math=\"AM=\\frac{15}2=7.5\" data-display=\"true\"></span><span data-math=\"PM=\\sqrt{8.5^2-7.5^2}=4\" data-display=\"true\"></span><span data-math=\"y=-2\\pm4\" data-display=\"true\"></span><span data-math=\"y&lt;0\\Rightarrow y=-6\" data-display=\"true\"></span><span data-math=\"A=(-4.5,-6),\\quad B=(10.5,-6)\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"AQ=AP\\frac{AM}{PM}=8.5\\frac{7.5}{4}=\\frac{255}{16}\\approx15.9\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-problem-b"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "753dd363592072947c4a2086cb9b43233a1057869279bc61061f6ef51c831122",
+        "printedBookPage": "53--54",
+        "marker": {
+          "page": 9,
+          "bbox": [
+            57.49,
+            591.19,
+            79.978,
+            600.156
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Problem solving: Set B"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/exam/q28",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "28",
+      "chapterTitle": "Circles",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "28",
+      "question": "Two circles, <span data-math=\"C_1\"></span> and <span data-math=\"C_2\"></span>, have equations <span data-math=\"x^2+(y+2)^2=16\"></span> and <span data-math=\"x^2+(y+5)^2=16\"></span> respectively.\n<ol type=\"a\"><li value=\"1\">For each of these circles, state the radius and the coordinates of the centre.<span class=\"marks\">(3 marks)</span></li><li value=\"2\">Sketch the circles <span data-math=\"C_1\"></span> and <span data-math=\"C_2\"></span> on the same diagram.<span class=\"marks\">(2 marks)</span></li><li value=\"3\">Find the exact distance between the points of intersection of <span data-math=\"C_1\"></span> and <span data-math=\"C_2\"></span>.<span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Read the two centres and radii. Subtract the circle equations to locate their common chord.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"C_1:\\ (0,-2),\\ r=4\" data-display=\"true\"></span><span data-math=\"C_2:\\ (0,-5),\\ r=4\" data-display=\"true\"></span></li><li value=\"2\"><p>Draw equal-radius circles centred on the y-axis at (0,−2) and (0,−5). Their vertical extremes are 2 and −6 for C₁, and −1 and −9 for C₂; both extend horizontally from −4 to 4.</p><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/3711c28461d8decad477.png\" alt=\"Original question diagram\"></li><li value=\"3\"><span data-math=\"(y+2)^2-(y+5)^2=0\" data-display=\"true\"></span><span data-math=\"-6y-21=0\" data-display=\"true\"></span><span data-math=\"y=-\\frac72\" data-display=\"true\"></span><span data-math=\"x^2+(-\\frac32)^2=16\" data-display=\"true\"></span><span data-math=\"x=\\pm\\frac{\\sqrt{55}}2\" data-display=\"true\"></span><span data-math=\"\\text{distance}=\\frac{\\sqrt{55}}2-(-\\frac{\\sqrt{55}}2)=\\sqrt{55}\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "fa38d555e5ed30ad897288a6aed7516c67bb0e8f423077e123d07125b768e7ef",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            80.251,
+            118.33,
+            92.206
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/exam/q42",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "42",
+      "chapterTitle": "Circles",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "42",
+      "question": "The circle <span data-math=\"C\"></span> has centre <span data-math=\"(2,-1)\"></span> and passes through the point <span data-math=\"P(8,5)\"></span>.\n<ol type=\"a\"><li value=\"1\">Find an equation for <span data-math=\"C\"></span>.<span class=\"marks\">(4 marks)</span></li></ol>\nThe circle crosses the positive <span data-math=\"y\"></span>-axis at the point <span data-math=\"Q\"></span>.\n<ol type=\"a\"><li value=\"2\">Find the area of the triangle <span data-math=\"OPQ\"></span>, where <span data-math=\"O\"></span> is the origin, giving your answer in its simplest surd form.<span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Find the squared radius from P, then find the positive y-intercept. Use OQ as the vertical base of the triangle.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"r^2=(8-2)^2+(5+1)^2=72\" data-display=\"true\"></span><span data-math=\"(x-2)^2+(y+1)^2=72\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"x=0\\Rightarrow4+(y+1)^2=72\" data-display=\"true\"></span><span data-math=\"y=-1\\pm2\\sqrt{17}\" data-display=\"true\"></span><span data-math=\"Q=(0,-1+2\\sqrt{17})\" data-display=\"true\"></span><span data-math=\"A=\\frac12(-1+2\\sqrt{17})(8)=8\\sqrt{17}-4\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "5354772176d7d948a700cc10ea0283d4baf85cfdfba63e68496e989c2ec60234",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            190.655,
+            118.33,
+            202.61
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/exam/q58",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "58",
+      "chapterTitle": "Circles",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "58",
+      "question": "The circle <span data-math=\"C\"></span> has equation <span data-math=\"x^2+y^2-8x+12y+16=0\"></span>.\n<ol type=\"a\"><li value=\"1\">Find:<br><strong>i</strong>  the coordinates of the centre of <span data-math=\"C\"></span> <strong>ii</strong>  the radius of <span data-math=\"C\"></span><span class=\"marks\">(3 marks)</span></li></ol>\nThe line with equation <span data-math=\"y=kx\"></span>, where <span data-math=\"k\"></span> is a constant, does not intersect <span data-math=\"C\"></span>.\n<ol type=\"a\"><li value=\"2\">Find the range of possible values of <span data-math=\"k\"></span>.<span class=\"marks\">(6 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Complete the square. Substituting the line must give a quadratic with negative discriminant for no intersections.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(x-4)^2+(y+6)^2=16+36-16=36\" data-display=\"true\"></span><span data-math=\"C=(4,-6),\\quad r=6\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"(1+k^2)x^2+(12k-8)x+16=0\" data-display=\"true\"></span><span data-math=\"\\Delta=(12k-8)^2-64(1+k^2)&lt;0\" data-display=\"true\"></span><span data-math=\"16k(5k-12)&lt;0\" data-display=\"true\"></span><span data-math=\"0&lt;k&lt;\\frac{12}5=2.4\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "0e3b695863ff3f61f7340395960fa9e073cb7f9ed583b5460695e93f39be9c05",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            322.577,
+            118.33,
+            334.532
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/exam/q70",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "70",
+      "chapterTitle": "Circles",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "70",
+      "question": "A circle <span data-math=\"C_1\"></span> has equation <span data-math=\"x^2+y^2-10x+6y-11=0\"></span>.\n<ol type=\"a\"><li value=\"1\">Find:<br><strong>i</strong>  the coordinates of the centre of <span data-math=\"C_1\"></span> <strong>ii</strong>  the radius of <span data-math=\"C_1\"></span><span class=\"marks\">(3 marks)</span></li></ol>\nThe circle <span data-math=\"C_1\"></span> cuts the <span data-math=\"x\"></span>-axis at the points <span data-math=\"P\"></span> and <span data-math=\"Q\"></span>.\n<ol type=\"a\"><li value=\"2\">Find an equation of the circle <span data-math=\"C_2\"></span> with diameter <span data-math=\"PQ\"></span>.<span class=\"marks\">(6 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Complete the square for C₁. At y=0 its intercepts give the endpoints of the diameter of C₂.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(x-5)^2+(y+3)^2=11+25+9=45\" data-display=\"true\"></span><span data-math=\"C_1:\\ (5,-3),\\quad r=\\sqrt{45}=3\\sqrt5\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"y=0\\Rightarrow(x-5)^2+9=45\" data-display=\"true\"></span><span data-math=\"x=5\\pm6\" data-display=\"true\"></span><span data-math=\"P=(-1,0),\\ Q=(11,0)\" data-display=\"true\"></span><span data-math=\"C_2\\text{ centre}=(5,0),\\quad r_2=6\" data-display=\"true\"></span><span data-math=\"(x-5)^2+y^2=36\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "7721deda6394f50a3910c02fa8c8ea31e34987a052380458bab168f534acb483",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            454.5,
+            118.33,
+            466.455
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/exam/q82",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "82",
+      "chapterTitle": "Circles",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "82",
+      "question": "The circle <span data-math=\"C\"></span> has centre <span data-math=\"P(5,3)\"></span> and passes through the point <span data-math=\"Q(13,9)\"></span>.\n<ol type=\"a\"><li value=\"1\">Find an equation for <span data-math=\"C\"></span>.<span class=\"marks\">(4 marks)</span></li></ol>\nThe line <span data-math=\"l_1\"></span> is the tangent to <span data-math=\"C\"></span> at <span data-math=\"Q\"></span>.\n<ol type=\"a\"><li value=\"2\">Find an equation for <span data-math=\"l_1\"></span> in the form <span data-math=\"ax+by+c=0\"></span>, where <span data-math=\"a\"></span>, <span data-math=\"b\"></span> and <span data-math=\"c\"></span> are integers.<span class=\"marks\">(4 marks)</span></li></ol>\nThe line <span data-math=\"l_2\"></span> is parallel to <span data-math=\"l_1\"></span> and passes through the midpoint of <span data-math=\"PQ\"></span>.<br> Given that <span data-math=\"l_2\"></span> intersects <span data-math=\"C\"></span> at <span data-math=\"A\"></span> and <span data-math=\"B\"></span>,\n<ol type=\"a\"><li value=\"3\">find the length of <span data-math=\"AB\"></span>, giving your answer in its simplest surd form.<span class=\"marks\">(3 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>Find the circle and the perpendicular tangent. The parallel chord is half a radius from the centre, so use Pythagoras on half the chord.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"r^2=(13-5)^2+(9-3)^2=100\" data-display=\"true\"></span><span data-math=\"(x-5)^2+(y-3)^2=100\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"m_{PQ}=\\frac68=\\frac34\" data-display=\"true\"></span><span data-math=\"m_t=-\\frac43\" data-display=\"true\"></span><span data-math=\"y-9=-\\frac43(x-13)\" data-display=\"true\"></span><span data-math=\"4x+3y-79=0\" data-display=\"true\"></span></li><li value=\"3\"><p>M is the midpoint of PQ. Since l₂ is perpendicular to PQ at M, M also bisects chord AB.</p><span data-math=\"PM=\\frac{PQ}{2}=5\" data-display=\"true\"></span><span data-math=\"(\\frac{AB}{2})^2=10^2-5^2=75\" data-display=\"true\"></span><span data-math=\"AB=2\\sqrt{75}=10\\sqrt3\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "58f5d96c6ef497b1e2b7470b04fa43e54d36100a9b98c27cc97a9dda63029aa6",
+        "printedBookPage": null,
+        "marker": {
+          "page": 10,
+          "bbox": [
+            48.189,
+            586.423,
+            118.33,
+            598.378
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/exam/q87",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "87",
+      "chapterTitle": "Circles",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "87",
+      "question": "The points <span data-math=\"P\"></span> and <span data-math=\"Q\"></span> lie on a circle with centre <span data-math=\"N\"></span> as shown in the diagram.<br> The point <span data-math=\"P\"></span> has coordinates <span data-math=\"(2,-3)\"></span> and the midpoint <span data-math=\"M\"></span> of <span data-math=\"PQ\"></span> has coordinates <span data-math=\"(5,1)\"></span>.<br> The line <span data-math=\"l\"></span> passes through the points <span data-math=\"M\"></span> and <span data-math=\"N\"></span>.\n<div><img style=\"max-width:65mm\" class=\"practice-figure\"  src=\"content/practice/assets/c8485e67c9e0f9ef0cb9.png\" alt=\"Original question diagram\"></div>\n<ol type=\"a\"><li value=\"1\">Find an equation for <span data-math=\"l\"></span>.<span class=\"marks\">(4 marks)</span></li></ol>\nGiven that the <span data-math=\"x\"></span>-coordinate of <span data-math=\"N\"></span> is 13,\n<ol type=\"a\"><li value=\"2\">use your answer to part <strong>a</strong> to show that the <span data-math=\"y\"></span>-coordinate of <span data-math=\"N\"></span> is <span data-math=\"-5\"></span><span class=\"marks\">(1 mark)</span></li><li value=\"3\">find an equation for the circle.<span class=\"marks\">(4 marks)</span></li></ol>\nGiven that <span data-math=\"QR\"></span> is a diameter of the circle,\n<ol type=\"a\"><li value=\"4\">find the area of the triangle <span data-math=\"PQR\"></span>.<span class=\"marks\">(4 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>The line from the centre to the chord midpoint is perpendicular to the chord. Use this to find N, then the diameter endpoint R.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"m_{PM}=\\frac{1+3}{5-2}=\\frac43\" data-display=\"true\"></span><span data-math=\"m_l=-\\frac34\" data-display=\"true\"></span><span data-math=\"y-1=-\\frac34(x-5)\" data-display=\"true\"></span><span data-math=\"3x+4y=19\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"x=13\\Rightarrow39+4y=19\" data-display=\"true\"></span><span data-math=\"y=-5\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"r^2=(2-13)^2+(-3+5)^2=125\" data-display=\"true\"></span><span data-math=\"(x-13)^2+(y+5)^2=125\" data-display=\"true\"></span></li><li value=\"4\"><span data-math=\"Q=2M-P=(8,5)\" data-display=\"true\"></span><span data-math=\"R=2N-Q=(18,-15)\" data-display=\"true\"></span><span data-math=\"PQ=\\sqrt{6^2+8^2}=10\" data-display=\"true\"></span><span data-math=\"PR=\\sqrt{16^2+(-12)^2}=20\" data-display=\"true\"></span><span data-math=\"\\angle QPR=90^\\circ\" data-display=\"true\"></span><span data-math=\"A=\\frac12(10)(20)=100\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "599ccfa98ecb2bb5bde886a7f36d68f33aab404450280a3d4b26a21b3228ea04",
+        "printedBookPage": null,
+        "marker": {
+          "page": 11,
+          "bbox": [
+            48.189,
+            51.504,
+            118.33,
+            63.459
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch6/exam/q92",
+      "courseId": "maths-a-level",
+      "bookId": "maths-pure-year-1",
+      "chapterId": "ch6",
+      "chapterNumber": 6,
+      "questionLabel": "92",
+      "chapterTitle": "Circles",
+      "subchapterId": "exam",
+      "subchapterTitle": "Selected exam question bank questions",
+      "number": "92",
+      "question": "The points <span data-math=\"A(8,10)\"></span> and <span data-math=\"B(16,-2)\"></span> lie on the circle with centre <span data-math=\"C(3,k)\"></span>. Find:\n<ol type=\"a\"><li value=\"1\">the value of <span data-math=\"k\"></span><span class=\"marks\">(5 marks)</span></li><li value=\"2\">an equation for the circle<span class=\"marks\">(3 marks)</span></li><li value=\"3\">the area of triangle <span data-math=\"ABC\"></span>.<span class=\"marks\">(5 marks)</span></li></ol>",
+      "hints": [],
+      "steps": [
+        "<p>The distances from the centre to A and B are equal. Once the centre is known, use the radius and the coordinate area formula.</p><ol type=\"a\" class=\"parts\"><li value=\"1\"><span data-math=\"(8-3)^2+(10-k)^2=(16-3)^2+(-2-k)^2\" data-display=\"true\"></span><span data-math=\"25+100-20k+k^2=169+4+4k+k^2\" data-display=\"true\"></span><span data-math=\"-24k=48\" data-display=\"true\"></span><span data-math=\"k=-2\" data-display=\"true\"></span></li><li value=\"2\"><span data-math=\"C=(3,-2)\" data-display=\"true\"></span><span data-math=\"r^2=(16-3)^2+(-2+2)^2=169\" data-display=\"true\"></span><span data-math=\"(x-3)^2+(y+2)^2=169\" data-display=\"true\"></span></li><li value=\"3\"><span data-math=\"BC=16-3=13\" data-display=\"true\"></span><span data-math=\"h=10-(-2)=12\" data-display=\"true\"></span><span data-math=\"A=\\frac12(13)(12)=78\" data-display=\"true\"></span></li></ol>"
+      ],
+      "solutionStatus": "worked",
+      "skillIds": [
+        "practice-pure-year-1-ch6-exam"
+      ],
+      "topicIds": [],
+      "source": {
+        "kind": "practice-booklet",
+        "pdf": "resources/practice/pure-year-1/chapter-06.pdf",
+        "pdfSha256": "4fd40a67e5249c224516b0a315317514930d98eb444790ee7d6feac8c139f0b4",
+        "nativeSha256": "8a249555b0ec648e794fe94efc7388e35e861114466018a133a32ecd7ff13442",
+        "questionLatexSha256": "dd1f29ff2776b87175cd4bbc5234a8014010ae72703a65e8e8388347bf9edc53",
+        "printedBookPage": null,
+        "marker": {
+          "page": 11,
+          "bbox": [
+            48.189,
+            442.556,
+            118.33,
+            454.511
+          ]
+        },
+        "coordinateSystem": "PDF points, top-left origin",
+        "extraction": "native-latex",
+        "boundaryCheck": "all printed question markers match native sequence"
+      },
+      "contextHtml": "",
+      "subchapterLabel": "Selected exam question bank questions"
+    }
+  ]
+}

@@ -1,0 +1,1105 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-1",
+  "chapter": 10,
+  "sourcePdf": "resources/practice/pure-year-1/chapter-10.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.1/q1",
+      "status": "worked",
+      "method": "On the unit circle, cosine is the horizontal coordinate, sine the vertical coordinate and tangent their ratio.",
+      "steps": [
+        {
+          "latex": "\\sin\\theta=y>0",
+          "explanation": "Above the horizontal axis: quadrants I and II."
+        },
+        {
+          "latex": "\\cos\\theta=x>0",
+          "explanation": "To the right of the vertical axis: quadrants I and IV."
+        },
+        {
+          "latex": "\\tan\\theta=y/x>0",
+          "explanation": "Coordinates with the same sign: quadrants I and III."
+        },
+        {
+          "latex": "",
+          "explanation": "The two coordinates are both positive only in quadrant I, where their ratio is also positive."
+        }
+      ],
+      "solutionHtml": "<p>On the unit circle, cosine is the horizontal coordinate, sine the vertical coordinate and tangent their ratio.</p><ol class=\"parts\" type=\"a\"><li><p>Above the horizontal axis: quadrants I and II.</p><span data-math=\"\\sin\\theta=y&gt;0\" data-display=\"true\" class=\"equation\"></span></li><li><p>To the right of the vertical axis: quadrants I and IV.</p><span data-math=\"\\cos\\theta=x&gt;0\" data-display=\"true\" class=\"equation\"></span></li><li><p>Coordinates with the same sign: quadrants I and III.</p><span data-math=\"\\tan\\theta=y/x&gt;0\" data-display=\"true\" class=\"equation\"></span></li><li><p>The two coordinates are both positive only in quadrant I, where their ratio is also positive.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.1/q2",
+      "status": "worked",
+      "method": "Reduce angles modulo 360°, locate the quadrant and use the signs of the unit-circle coordinates.",
+      "steps": [
+        {
+          "latex": "90^\\circ<116^\\circ<180^\\circ",
+          "explanation": "Quadrant II: cosine is negative."
+        },
+        {
+          "latex": "180^\\circ<240^\\circ<270^\\circ",
+          "explanation": "Quadrant III: tangent is positive."
+        },
+        {
+          "latex": "420^\\circ-360^\\circ=60^\\circ",
+          "explanation": "Quadrant I: sine is positive."
+        },
+        {
+          "latex": "-100^\\circ+360^\\circ=260^\\circ",
+          "explanation": "Quadrant III: tangent is positive."
+        },
+        {
+          "latex": "270^\\circ<350^\\circ<360^\\circ",
+          "explanation": "Quadrant IV: sine is negative."
+        },
+        {
+          "latex": "-80^\\circ+360^\\circ=280^\\circ",
+          "explanation": "Quadrant IV: cosine is positive."
+        }
+      ],
+      "solutionHtml": "<p>Reduce angles modulo 360°, locate the quadrant and use the signs of the unit-circle coordinates.</p><ol class=\"parts\" type=\"a\"><li><p>Quadrant II: cosine is negative.</p><span data-math=\"90^\\circ&lt;116^\\circ&lt;180^\\circ\" data-display=\"true\" class=\"equation\"></span></li><li><p>Quadrant III: tangent is positive.</p><span data-math=\"180^\\circ&lt;240^\\circ&lt;270^\\circ\" data-display=\"true\" class=\"equation\"></span></li><li><p>Quadrant I: sine is positive.</p><span data-math=\"420^\\circ-360^\\circ=60^\\circ\" data-display=\"true\" class=\"equation\"></span></li><li><p>Quadrant III: tangent is positive.</p><span data-math=\"-100^\\circ+360^\\circ=260^\\circ\" data-display=\"true\" class=\"equation\"></span></li><li><p>Quadrant IV: sine is negative.</p><span data-math=\"270^\\circ&lt;350^\\circ&lt;360^\\circ\" data-display=\"true\" class=\"equation\"></span></li><li><p>Quadrant IV: cosine is positive.</p><span data-math=\"-80^\\circ+360^\\circ=280^\\circ\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.1/q3",
+      "status": "worked",
+      "method": "Use the axis coordinates of the unit circle and the exact 45° ratios; tangent is undefined when cosine is zero.",
+      "steps": [
+        {
+          "latex": "\\cos90^\\circ=0",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(-180^\\circ)=\\cos180^\\circ=-1",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin540^\\circ=\\sin180^\\circ=0",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin(-90^\\circ)=-\\sin90^\\circ=-1",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan135^\\circ=-\\tan45^\\circ=-1",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(-45^\\circ)=-\\tan45^\\circ=-1",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin225^\\circ=-\\sin45^\\circ=-1/\\sqrt2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(-45^\\circ)=\\cos45^\\circ=1/\\sqrt2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(-90^\\circ)=\\frac{\\sin(-90^\\circ)}{\\cos(-90^\\circ)}=\\frac{-1}0",
+          "explanation": "Division by zero is undefined."
+        }
+      ],
+      "solutionHtml": "<p>Use the axis coordinates of the unit circle and the exact 45° ratios; tangent is undefined when cosine is zero.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\cos90^\\circ=0\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\cos(-180^\\circ)=\\cos180^\\circ=-1\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\sin540^\\circ=\\sin180^\\circ=0\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\sin(-90^\\circ)=-\\sin90^\\circ=-1\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\tan135^\\circ=-\\tan45^\\circ=-1\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\tan(-45^\\circ)=-\\tan45^\\circ=-1\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\sin225^\\circ=-\\sin45^\\circ=-1/\\sqrt2\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\cos(-45^\\circ)=\\cos45^\\circ=1/\\sqrt2\" data-display=\"true\" class=\"equation\"></span></li><li><p>Division by zero is undefined.</p><span data-math=\"\\begin{aligned}&amp;\\tan(-90^\\circ)=\\frac{\\sin(-90^\\circ)}{\\cos(-90^\\circ)}=\\frac{-1}0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.1/q4",
+      "status": "worked",
+      "method": "Identify the reference angle and the quadrant sign, using sine and cosine period 360° and tangent period 180°.",
+      "steps": [
+        {
+          "latex": "\\sin(180^\\circ+\\theta)=-\\sin\\theta",
+          "explanation": "Quadrant III: sine is negative."
+        },
+        {
+          "latex": "\\cos(360^\\circ-\\theta)=\\cos\\theta",
+          "explanation": "Quadrant IV: cosine is positive."
+        },
+        {
+          "latex": "\\tan(180^\\circ-\\theta)=-\\tan\\theta",
+          "explanation": "Quadrant II: tangent is negative."
+        },
+        {
+          "latex": "\\sin(-\\theta)=-\\sin\\theta",
+          "explanation": "Reflection in the horizontal axis reverses sine."
+        },
+        {
+          "latex": "\\tan(180^\\circ+\\theta)=\\tan\\theta",
+          "explanation": "Tangent repeats after 180°."
+        },
+        {
+          "latex": "\\cos(\\theta-180^\\circ)=\\cos(180^\\circ+\\theta)=-\\cos\\theta",
+          "explanation": "Add 360°; the angle is then in quadrant III."
+        },
+        {
+          "latex": "\\sin(\\theta-360^\\circ)=\\sin\\theta",
+          "explanation": "Sine repeats after 360°."
+        },
+        {
+          "latex": "\\cos(540^\\circ-\\theta)=\\cos(180^\\circ-\\theta)=-\\cos\\theta",
+          "explanation": "Subtract 360°; the angle is then in quadrant II."
+        },
+        {
+          "latex": "\\tan(\\theta-180^\\circ)=\\tan\\theta",
+          "explanation": "Tangent repeats after 180°."
+        }
+      ],
+      "solutionHtml": "<p>Identify the reference angle and the quadrant sign, using sine and cosine period 360° and tangent period 180°.</p><ol class=\"parts\" type=\"a\"><li><p>Quadrant III: sine is negative.</p><span data-math=\"\\sin(180^\\circ+\\theta)=-\\sin\\theta\" data-display=\"true\" class=\"equation\"></span></li><li><p>Quadrant IV: cosine is positive.</p><span data-math=\"\\cos(360^\\circ-\\theta)=\\cos\\theta\" data-display=\"true\" class=\"equation\"></span></li><li><p>Quadrant II: tangent is negative.</p><span data-math=\"\\tan(180^\\circ-\\theta)=-\\tan\\theta\" data-display=\"true\" class=\"equation\"></span></li><li><p>Reflection in the horizontal axis reverses sine.</p><span data-math=\"\\sin(-\\theta)=-\\sin\\theta\" data-display=\"true\" class=\"equation\"></span></li><li><p>Tangent repeats after 180°.</p><span data-math=\"\\tan(180^\\circ+\\theta)=\\tan\\theta\" data-display=\"true\" class=\"equation\"></span></li><li><p>Add 360°; the angle is then in quadrant III.</p><span data-math=\"\\begin{aligned}&amp;\\cos(\\theta-180^\\circ)=\\cos(180^\\circ+\\theta)=-\\cos\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Sine repeats after 360°.</p><span data-math=\"\\sin(\\theta-360^\\circ)=\\sin\\theta\" data-display=\"true\" class=\"equation\"></span></li><li><p>Subtract 360°; the angle is then in quadrant II.</p><span data-math=\"\\begin{aligned}&amp;\\cos(540^\\circ-\\theta)=\\cos(180^\\circ-\\theta)=-\\cos\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Tangent repeats after 180°.</p><span data-math=\"\\tan(\\theta-180^\\circ)=\\tan\\theta\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.1/q5",
+      "status": "worked",
+      "method": "Reduce each angle to a reference angle between 0° and 90°, retaining its quadrant sign.",
+      "steps": [
+        {
+          "latex": "\\sin220^\\circ=\\sin(180^\\circ+40^\\circ)=-\\sin40^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos160^\\circ=\\cos(180^\\circ-20^\\circ)=-\\cos20^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan210^\\circ=\\tan(180^\\circ+30^\\circ)=\\tan30^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin(-100^\\circ)=\\sin260^\\circ=-\\sin80^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan130^\\circ=\\tan(180^\\circ-50^\\circ)=-\\tan50^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos280^\\circ=\\cos(360^\\circ-80^\\circ)=\\cos80^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin95^\\circ=\\sin(180^\\circ-85^\\circ)=\\sin85^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(-200^\\circ)=\\cos160^\\circ=-\\cos20^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(-115^\\circ)=\\tan65^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Reduce each angle to a reference angle between 0° and 90°, retaining its quadrant sign.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\sin220^\\circ=\\sin(180^\\circ+40^\\circ)=-\\sin40^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos160^\\circ=\\cos(180^\\circ-20^\\circ)=-\\cos20^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan210^\\circ=\\tan(180^\\circ+30^\\circ)=\\tan30^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin(-100^\\circ)=\\sin260^\\circ=-\\sin80^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan130^\\circ=\\tan(180^\\circ-50^\\circ)=-\\tan50^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos280^\\circ=\\cos(360^\\circ-80^\\circ)=\\cos80^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin95^\\circ=\\sin(180^\\circ-85^\\circ)=\\sin85^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos(-200^\\circ)=\\cos160^\\circ=-\\cos20^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\tan(-115^\\circ)=\\tan65^\\circ\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.2/q1",
+      "status": "worked",
+      "method": "Use the quadrant sign and the 30°, 45° and 60° values from special right triangles.",
+      "steps": [
+        {
+          "latex": "\\sin150^\\circ=\\sin30^\\circ=\\frac12",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin(-45^\\circ)=-\\sin45^\\circ=-\\frac1{\\sqrt2}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin315^\\circ=-\\sin45^\\circ=-\\frac1{\\sqrt2}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin240^\\circ=-\\sin60^\\circ=-\\frac{\\sqrt3}2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos150^\\circ=-\\cos30^\\circ=-\\frac{\\sqrt3}2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(-60^\\circ)=\\cos60^\\circ=\\frac12",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos(-135^\\circ)=-\\cos45^\\circ=-\\frac1{\\sqrt2}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos120^\\circ=-\\cos60^\\circ=-\\frac12",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan225^\\circ=\\tan45^\\circ=1",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(-150^\\circ)=\\tan30^\\circ=\\frac{\\sqrt3}3",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan405^\\circ=\\tan45^\\circ=1",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(-120^\\circ)=\\tan60^\\circ=\\sqrt3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the quadrant sign and the 30°, 45° and 60° values from special right triangles.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\sin150^\\circ=\\sin30^\\circ=\\frac12\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin(-45^\\circ)=-\\sin45^\\circ=-\\frac1{\\sqrt2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin315^\\circ=-\\sin45^\\circ=-\\frac1{\\sqrt2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin240^\\circ=-\\sin60^\\circ=-\\frac{\\sqrt3}2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos150^\\circ=-\\cos30^\\circ=-\\frac{\\sqrt3}2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\cos(-60^\\circ)=\\cos60^\\circ=\\frac12\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos(-135^\\circ)=-\\cos45^\\circ=-\\frac1{\\sqrt2}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\cos120^\\circ=-\\cos60^\\circ=-\\frac12\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\tan225^\\circ=\\tan45^\\circ=1\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan(-150^\\circ)=\\tan30^\\circ=\\frac{\\sqrt3}3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\tan405^\\circ=\\tan45^\\circ=1\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\tan(-120^\\circ)=\\tan60^\\circ=\\sqrt3\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.2/q2",
+      "status": "worked",
+      "method": "Use x=0° to determine b and x=90° to determine a, then evaluate at 45°.",
+      "steps": [
+        {
+          "latex": "3=a\\sin0^\\circ+b=b;\\quad5=a\\sin90^\\circ+3=a+3\\Rightarrow a=2;\\quad y(45^\\circ)=2\\left(\\frac1{\\sqrt2}\\right)+3=3+\\sqrt2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use x=0° to determine b and x=90° to determine a, then evaluate at 45°.</p><span data-math=\"\\begin{aligned}&amp;3=a\\sin0^\\circ+b=b\\\\&amp;5=a\\sin90^\\circ+3=a+3\\\\&amp;\\Rightarrow a=2\\\\&amp;y(45^\\circ)=2\\left(\\frac1{\\sqrt2}\\right)+3=3+\\sqrt2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.2/q3",
+      "status": "worked",
+      "method": "Apply the cosine rule in triangle ABC, using the included 30° angle between AB=x and AC=2x. Rationalise the denominator.",
+      "steps": [
+        {
+          "latex": "10^2=x^2+(2x)^2-2(x)(2x)\\cos30^\\circ;\\quad100=5x^2-4x^2\\frac{\\sqrt3}2=x^2(5-2\\sqrt3);\\quad x^2=\\frac{100}{5-2\\sqrt3}=\\frac{100(5+2\\sqrt3)}{25-12}=\\frac{100(5+2\\sqrt3)}{13}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply the cosine rule in triangle ABC, using the included 30° angle between AB=x and AC=2x. Rationalise the denominator.</p><span data-math=\"\\begin{aligned}&amp;10^2=x^2+(2x)^2-2(x)(2x)\\cos30^\\circ\\\\&amp;100=5x^2-4x^2\\frac{\\sqrt3}2=x^2(5-2\\sqrt3)\\\\&amp;x^2=\\frac{100}{5-2\\sqrt3}=\\frac{100(5+2\\sqrt3)}{25-12}=\\frac{100(5+2\\sqrt3)}{13}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.3/q1",
+      "status": "worked",
+      "method": "Use sin²θ+cos²θ=1; expand the two squares before collecting terms in (c).",
+      "steps": [
+        {
+          "latex": "2\\sin^2\\theta-(1-\\cos^2\\theta)+\\cos^2\\theta=\\sin^2\\theta+\\cos^2\\theta=1",
+          "explanation": ""
+        },
+        {
+          "latex": "6\\sin^2\\frac\\theta2+6\\cos^2\\frac\\theta2=6(1)=6",
+          "explanation": ""
+        },
+        {
+          "latex": "(1+\\cos x)^2+(1-\\cos x)^2+2\\sin^2x=2+2\\cos^2x+2\\sin^2x=4",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use sin²θ+cos²θ=1; expand the two squares before collecting terms in (c).</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2\\sin^2\\theta-(1-\\cos^2\\theta)+\\cos^2\\theta=\\sin^2\\theta+\\cos^2\\theta=1\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;6\\sin^2\\frac\\theta2+6\\cos^2\\frac\\theta2=6(1)=6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;(1+\\cos x)^2+(1-\\cos x)^2+2\\sin^2x=2+2\\cos^2x+2\\sin^2x=4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.3/q2",
+      "status": "worked",
+      "method": "Replace the complementary squared ratio using sin²x+cos²x=1, then use tan x=sin x/cos x. All original denominators must be nonzero.",
+      "steps": [
+        {
+          "latex": "\\frac{2\\sin x}{\\cos x}=2\\tan x",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sqrt{1-\\sin^2x}=\\sqrt{\\cos^2x}=|\\cos x|;\\quad\\frac{3\\sin x}{|\\cos x|}=\\begin{cases}3\\tan x&\\cos x>0\\\\-3\\tan x&\\cos x<0\\end{cases}",
+          "explanation": "The supplied 3 tan x assumes cos x>0 (for example an acute angle). No angle domain is given, so the sign qualification is required."
+        },
+        {
+          "latex": "\\frac{1-\\cos^2x}{1-\\sin^2x}=\\frac{\\sin^2x}{\\cos^2x}=\\tan^2x",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Replace the complementary squared ratio using sin²x+cos²x=1, then use tan x=sin x/cos x. All original denominators must be nonzero.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\frac{2\\sin x}{\\cos x}=2\\tan x\" data-display=\"true\" class=\"equation\"></span></li><li><p>The supplied 3 tan x assumes cos x&gt;0 (for example an acute angle). No angle domain is given, so the sign qualification is required.</p><span data-math=\"\\begin{aligned}&amp;\\sqrt{1-\\sin^2x}=\\sqrt{\\cos^2x}=|\\cos x|\\\\&amp;\\frac{3\\sin x}{|\\cos x|}=\\begin{cases}3\\tan x&amp;\\cos x&gt;0\\\\-3\\tan x&amp;\\cos x&lt;0\\end{cases}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\frac{1-\\cos^2x}{1-\\sin^2x}=\\frac{\\sin^2x}{\\cos^2x}=\\tan^2x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.3/q3",
+      "status": "worked",
+      "method": "Replace the denominator by cos²x and split the fraction; the identity holds wherever the original expression is defined.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sin^2x-\\cos^2x}{1-\\sin^2x}=\\frac{\\sin^2x-\\cos^2x}{\\cos^2x}=\\frac{\\sin^2x}{\\cos^2x}-1=\\tan^2x-1,\\quad\\cos x\\ne0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Replace the denominator by cos²x and split the fraction; the identity holds wherever the original expression is defined.</p><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin^2x-\\cos^2x}{1-\\sin^2x}\\\\&amp;=\\frac{\\sin^2x-\\cos^2x}{\\cos^2x}\\\\&amp;=\\frac{\\sin^2x}{\\cos^2x}-1\\\\&amp;=\\tan^2x-1,\\quad\\cos x\\ne0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.3/q4",
+      "status": "worked",
+      "method": "An obtuse angle is in quadrant II, so cosine and tangent are negative.",
+      "steps": [
+        {
+          "latex": "\\cos^2x=1-\\left(\\frac38\\right)^2=\\frac{55}{64}\\Rightarrow\\cos x=-\\frac{\\sqrt{55}}8",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan x=\\frac{3/8}{-\\sqrt{55}/8}=-\\frac3{\\sqrt{55}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>An obtuse angle is in quadrant II, so cosine and tangent are negative.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\cos^2x=1-\\left(\\frac38\\right)^2=\\frac{55}{64}\\\\&amp;\\Rightarrow \\cos x=-\\frac{\\sqrt{55}}8\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan x=\\frac{3/8}{-\\sqrt{55}/8}=-\\frac3{\\sqrt{55}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.3/q5",
+      "status": "worked",
+      "method": "Divide the given equality by cos θ in (a), and eliminate cos²θ in (b).",
+      "steps": [
+        {
+          "latex": "\\sin\\theta=6\\cos\\theta\\Rightarrow\\tan\\theta=6",
+          "explanation": "Cos θ cannot be zero here: that would also force sin θ=0, contradicting sin²θ+cos²θ=1."
+        },
+        {
+          "latex": "4\\cos^2\\theta-5\\sin^2\\theta=4(1-\\sin^2\\theta)-5\\sin^2\\theta=4-9\\sin^2\\theta",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Divide the given equality by cos θ in (a), and eliminate cos²θ in (b).</p><ol class=\"parts\" type=\"a\"><li><p>Cos θ cannot be zero here: that would also force sin θ=0, contradicting sin²θ+cos²θ=1.</p><span data-math=\"\\begin{aligned}&amp;\\sin\\theta=6\\cos\\theta\\\\&amp;\\Rightarrow \\tan\\theta=6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;4\\cos^2\\theta-5\\sin^2\\theta=4(1-\\sin^2\\theta)-5\\sin^2\\theta=4-9\\sin^2\\theta\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.3/q6",
+      "status": "worked",
+      "method": "Replace sin²x by 1−cos²x and collect the cosine terms.",
+      "steps": [
+        {
+          "latex": "4\\cos^2x-3(1-\\cos^2x)=2\\Rightarrow7\\cos^2x-3=2\\Rightarrow7\\cos^2x=5",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Replace sin²x by 1−cos²x and collect the cosine terms.</p><span data-math=\"\\begin{aligned}&amp;4\\cos^2x-3(1-\\cos^2x)=2\\\\&amp;\\Rightarrow 7\\cos^2x-3=2\\\\&amp;\\Rightarrow 7\\cos^2x=5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.3/q7",
+      "status": "worked",
+      "method": "Factor the numerator as a difference of squares and the denominator by its common cosine factor. Cancel only on the original domain.",
+      "steps": [
+        {
+          "latex": "\\frac{\\cos^2x-\\sin^2x}{\\cos^2x-\\sin x\\cos x}=\\frac{(\\cos x-\\sin x)(\\cos x+\\sin x)}{\\cos x(\\cos x-\\sin x)}=\\frac{\\cos x+\\sin x}{\\cos x}=1+\\tan x",
+          "explanation": "The original domain excludes cos x=0 and cos x=sin x."
+        }
+      ],
+      "solutionHtml": "<p>Factor the numerator as a difference of squares and the denominator by its common cosine factor. Cancel only on the original domain.</p><p>The original domain excludes cos x=0 and cos x=sin x.</p><span data-math=\"\\begin{aligned}&amp;\\frac{\\cos^2x-\\sin^2x}{\\cos^2x-\\sin x\\cos x}\\\\&amp;=\\frac{(\\cos x-\\sin x)(\\cos x+\\sin x)}{\\cos x(\\cos x-\\sin x)}\\\\&amp;=\\frac{\\cos x+\\sin x}{\\cos x}\\\\&amp;=1+\\tan x\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.3/q8",
+      "status": "worked",
+      "method": "Apply the cosine rule at B, opposite AC=9; the sine of an interior triangle angle is positive.",
+      "steps": [
+        {
+          "latex": "\\cos B=\\frac{7^2+12^2-9^2}{2(7)(12)}=\\frac{112}{168}=\\frac23",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin B=\\sqrt{1-\\left(\\frac23\\right)^2}=\\sqrt{\\frac59}=\\frac{\\sqrt5}3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Apply the cosine rule at B, opposite AC=9; the sine of an interior triangle angle is positive.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\cos B=\\frac{7^2+12^2-9^2}{2(7)(12)}=\\frac{112}{168}=\\frac23\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sin B=\\sqrt{1-\\left(\\frac23\\right)^2}=\\sqrt{\\frac59}=\\frac{\\sqrt5}3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.3/q9",
+      "status": "worked",
+      "method": "Use the sine rule with the opposite sides QR=10 and PR=9. Choose the negative cosine because P is obtuse.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sin P}{10}=\\frac{\\sin45^\\circ}9\\Rightarrow\\sin P=\\frac{10}{9\\sqrt2}=\\frac{5\\sqrt2}9",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos^2P=1-\\frac{50}{81}=\\frac{31}{81}\\Rightarrow\\cos P=-\\frac{\\sqrt{31}}9",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the sine rule with the opposite sides QR=10 and PR=9. Choose the negative cosine because P is obtuse.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin P}{10}=\\frac{\\sin45^\\circ}9\\\\&amp;\\Rightarrow \\sin P=\\frac{10}{9\\sqrt2}=\\frac{5\\sqrt2}9\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos^2P=1-\\frac{50}{81}=\\frac{31}{81}\\\\&amp;\\Rightarrow \\cos P=-\\frac{\\sqrt{31}}9\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.4/q1",
+      "status": "worked",
+      "method": "The inverse sine gives the principal angle; use the two sine branches for the full interval.",
+      "steps": [
+        {
+          "latex": "x=\\sin^{-1}(-0.6)\\approx-36.9^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": ";\\quad u=x,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=- \\frac{3}{5};\\quad \\alpha=\\sin^{-1}\\left(- \\frac{3}{5}\\right)\\approx-36.869898\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\216.8699&216.9\\\\323.1301&323.1\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>The inverse sine gives the principal angle; use the two sine branches for the full interval.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"x=\\sin^{-1}(-0.6)\\approx-36.9^\\circ\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=x,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=- \\frac{3}{5}\\\\&amp;\\alpha=\\sin^{-1}\\left(- \\frac{3}{5}\\right)\\approx-36.869898\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\216.8699&amp;216.9\\\\323.1301&amp;323.1\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.4/q2",
+      "status": "worked",
+      "method": "Cosine is positive in quadrants I and IV.",
+      "steps": [
+        {
+          "latex": ";\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=\\frac{\\sqrt{2}}{2};\\quad \\alpha=\\cos^{-1}\\left(\\frac{\\sqrt{2}}{2}\\right)=45^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\45&45\\\\315&315\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Cosine is positive in quadrants I and IV.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=\\frac{\\sqrt{2}}{2}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{\\sqrt{2}}{2}\\right)=45^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\45&amp;45\\\\315&amp;315\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.4/q3",
+      "status": "worked",
+      "method": "Divide by 4, then use both sine branches.",
+      "steps": [
+        {
+          "latex": "\\sin x=\\frac34;\\quad u=x,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=\\frac{3}{4};\\quad \\alpha=\\sin^{-1}\\left(\\frac{3}{4}\\right)\\approx48.590378\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\48.5904&48.6\\\\131.4096&131.4\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Divide by 4, then use both sine branches.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\sin x=\\frac34\\\\&amp;u=x,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=\\frac{3}{4}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{3}{4}\\right)\\approx48.590378\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\48.5904&amp;48.6\\\\131.4096&amp;131.4\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.4/q4",
+      "status": "worked",
+      "method": "Cosine cannot be zero in this equality. Divide by cos θ and use tangent’s 180° period.",
+      "steps": [
+        {
+          "latex": "\\tan\\theta=-10;\\quad u=\\theta,\\quad 0^\\circ< u \\le360^\\circ;\\quad \\tan u=-10;\\quad \\alpha=\\tan^{-1}\\left(-10\\right)\\approx-84.289407\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\95.7106&95.7\\\\275.7106&275.7\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Cosine cannot be zero in this equality. Divide by cos θ and use tangent’s 180° period.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan\\theta=-10\\\\&amp;u=\\theta,\\quad 0^\\circ&lt; u \\le360^\\circ\\\\&amp;\\tan u=-10\\\\&amp;\\alpha=\\tan^{-1}\\left(-10\\right)\\approx-84.289407\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\95.7106&amp;95.7\\\\275.7106&amp;275.7\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.4/q5",
+      "status": "worked",
+      "method": "Keep the zero factor when rearranging, and include both signs of an angle with the same cosine.",
+      "steps": [
+        {
+          "latex": "",
+          "explanation": "Dividing by sin x loses sin x=0, hence x=0°. Cosine is even, so the negative solution −56.3° is also in the interval and was omitted."
+        },
+        {
+          "latex": "\\sin x(5-9\\cos x)=0\\Rightarrow\\sin x=0\\ \\text{or}\\ \\cos x=\\frac59;\\quad u=x,\\quad -90^\\circ< u <90^\\circ;\\quad \\sin u=0;\\quad \\alpha=\\sin^{-1}\\left(0\\right)=0^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\0&0\\end{array};\\quad u=x,\\quad -90^\\circ< u <90^\\circ;\\quad \\cos u=\\frac{5}{9};\\quad \\alpha=\\cos^{-1}\\left(\\frac{5}{9}\\right)\\approx56.251011\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\-56.2510&-56.3\\\\56.2510&56.3\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Keep the zero factor when rearranging, and include both signs of an angle with the same cosine.</p><ol class=\"parts\" type=\"a\"><li><p>Dividing by sin x loses sin x=0, hence x=0°. Cosine is even, so the negative solution −56.3° is also in the interval and was omitted.</p></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\sin x(5-9\\cos x)=0\\\\&amp;\\Rightarrow \\sin x=0\\ \\text{or}\\ \\cos x=\\frac59\\\\&amp;u=x,\\quad -90^\\circ&lt; u &lt;90^\\circ\\\\&amp;\\sin u=0\\\\&amp;\\alpha=\\sin^{-1}\\left(0\\right)=0^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\0&amp;0\\end{array}\\\\&amp;u=x,\\quad -90^\\circ&lt; u &lt;90^\\circ\\\\&amp;\\cos u=\\frac{5}{9}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{5}{9}\\right)\\approx56.251011\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\-56.2510&amp;-56.3\\\\56.2510&amp;56.3\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.4/q6",
+      "status": "worked",
+      "method": "Divide by the nonzero cosine, then apply tangent’s periodic solutions.",
+      "steps": [
+        {
+          "latex": "3\\sin\\theta=5\\cos\\theta\\Rightarrow\\tan\\theta=\\frac53",
+          "explanation": ""
+        },
+        {
+          "latex": ";\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\tan u=\\frac{5}{3};\\quad \\alpha=\\tan^{-1}\\left(\\frac{5}{3}\\right)\\approx59.036243\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\59.0362&59.0\\\\239.0362&239.0\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Divide by the nonzero cosine, then apply tangent’s periodic solutions.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;3\\sin\\theta=5\\cos\\theta\\\\&amp;\\Rightarrow \\tan\\theta=\\frac53\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\tan u=\\frac{5}{3}\\\\&amp;\\alpha=\\tan^{-1}\\left(\\frac{5}{3}\\right)\\approx59.036243\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\59.0362&amp;59.0\\\\239.0362&amp;239.0\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.4/q7",
+      "status": "worked",
+      "method": "Take both square roots and use cosine symmetry in the stated half-open interval.",
+      "steps": [
+        {
+          "latex": "\\cos x=\\pm\\frac{\\sqrt3}2;\\quad u=x,\\quad -180^\\circ\\le u <180^\\circ;\\quad \\cos u=\\frac{\\sqrt{3}}{2};\\quad \\alpha=\\cos^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)=30^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\-30&-30\\\\30&30\\end{array};\\quad u=x,\\quad -180^\\circ\\le u <180^\\circ;\\quad \\cos u=- \\frac{\\sqrt{3}}{2};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{\\sqrt{3}}{2}\\right)=150^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\-150&-150\\\\150&150\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Take both square roots and use cosine symmetry in the stated half-open interval.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\cos x=\\pm\\frac{\\sqrt3}2\\\\&amp;u=x,\\quad -180^\\circ\\le u &lt;180^\\circ\\\\&amp;\\cos u=\\frac{\\sqrt{3}}{2}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)=30^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\-30&amp;-30\\\\30&amp;30\\end{array}\\\\&amp;u=x,\\quad -180^\\circ\\le u &lt;180^\\circ\\\\&amp;\\cos u=- \\frac{\\sqrt{3}}{2}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{\\sqrt{3}}{2}\\right)=150^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\-150&amp;-150\\\\150&amp;150\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.4/q8",
+      "status": "worked",
+      "method": "Eliminate sin²x, then take both signs of the square root.",
+      "steps": [
+        {
+          "latex": "4\\cos^2x-3(1-\\cos^2x)=1\\Rightarrow7\\cos^2x=4",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos x=\\pm\\frac2{\\sqrt7};\\quad u=x,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=\\frac{2 \\sqrt{7}}{7};\\quad \\alpha=\\cos^{-1}\\left(\\frac{2 \\sqrt{7}}{7}\\right)\\approx40.893395\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\40.8934&40.9\\\\319.1066&319.1\\end{array};\\quad u=x,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=- \\frac{2 \\sqrt{7}}{7};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{2 \\sqrt{7}}{7}\\right)\\approx139.106605\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\139.1066&139.1\\\\220.8934&220.9\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Eliminate sin²x, then take both signs of the square root.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;4\\cos^2x-3(1-\\cos^2x)=1\\\\&amp;\\Rightarrow 7\\cos^2x=4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\cos x=\\pm\\frac2{\\sqrt7}\\\\&amp;u=x,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=\\frac{2 \\sqrt{7}}{7}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{2 \\sqrt{7}}{7}\\right)\\approx40.893395\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\40.8934&amp;40.9\\\\319.1066&amp;319.1\\end{array}\\\\&amp;u=x,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=- \\frac{2 \\sqrt{7}}{7}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{2 \\sqrt{7}}{7}\\right)\\approx139.106605\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\139.1066&amp;139.1\\\\220.8934&amp;220.9\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.4/q9",
+      "status": "worked",
+      "method": "Set each factor equal to zero in (a). In (b), use tan x=sin x/cos x on the original domain.",
+      "steps": [
+        {
+          "latex": "\\tan\\theta=-2\\ \\text{or}\\ \\sin\\theta=\\frac14;\\quad u=\\theta,\\quad -180^\\circ\\le u <180^\\circ;\\quad \\tan u=-2;\\quad \\alpha=\\tan^{-1}\\left(-2\\right)\\approx-63.434949\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\-63.4349&-63.4\\\\116.5651&116.6\\end{array};\\quad u=\\theta,\\quad -180^\\circ\\le u <180^\\circ;\\quad \\sin u=\\frac{1}{4};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{4}\\right)\\approx14.477512\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\14.4775&14.5\\\\165.5225&165.5\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "\\frac{6\\sin x}{\\sin x/\\cos x}=6\\cos x=1,\\quad\\sin x\\ne0,\\ \\cos x\\ne0;\\quad u=x,\\quad 0^\\circ\\le u <360^\\circ;\\quad \\cos u=\\frac{1}{6};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{6}\\right)\\approx80.405932\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\80.4059&80.4\\\\279.5941&279.6\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Set each factor equal to zero in (a). In (b), use tan x=sin x/cos x on the original domain.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan\\theta=-2\\ \\text{or}\\ \\sin\\theta=\\frac14\\\\&amp;u=\\theta,\\quad -180^\\circ\\le u &lt;180^\\circ\\\\&amp;\\tan u=-2\\\\&amp;\\alpha=\\tan^{-1}\\left(-2\\right)\\approx-63.434949\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\-63.4349&amp;-63.4\\\\116.5651&amp;116.6\\end{array}\\\\&amp;u=\\theta,\\quad -180^\\circ\\le u &lt;180^\\circ\\\\&amp;\\sin u=\\frac{1}{4}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{4}\\right)\\approx14.477512\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\14.4775&amp;14.5\\\\165.5225&amp;165.5\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\frac{6\\sin x}{\\sin x/\\cos x}=6\\cos x=1,\\quad\\sin x\\ne0,\\ \\cos x\\ne0\\\\&amp;u=x,\\quad 0^\\circ\\le u &lt;360^\\circ\\\\&amp;\\cos u=\\frac{1}{6}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{6}\\right)\\approx80.405932\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\80.4059&amp;80.4\\\\279.5941&amp;279.6\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.5/q1",
+      "status": "worked",
+      "method": "Set u equal to the complete trigonometric argument; expand the interval before enumerating branches and divide back afterwards.",
+      "steps": [
+        {
+          "latex": ";\\quad u=3\\theta,\\quad 0^\\circ\\le u \\le1080^\\circ;\\quad \\cos u=\\frac{\\sqrt{3}}{2};\\quad \\alpha=\\cos^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)=30^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\30&10\\\\330&110\\\\390&130\\\\690&230\\\\750&250\\\\1050&350\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": ";\\quad u=0.5\\theta,\\quad 0^\\circ\\le u \\le180^\\circ;\\quad \\sin u=\\frac{\\sqrt{2}}{2};\\quad \\alpha=\\sin^{-1}\\left(\\frac{\\sqrt{2}}{2}\\right)=45^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\45&90\\\\135&270\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": ";\\quad u=2\\theta,\\quad 0^\\circ\\le u \\le720^\\circ;\\quad \\tan u=- \\sqrt{3};\\quad \\alpha=\\tan^{-1}\\left(- \\sqrt{3}\\right)=-60^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\120&60\\\\300&150\\\\480&240\\\\660&330\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Set u equal to the complete trigonometric argument; expand the interval before enumerating branches and divide back afterwards.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=3\\theta,\\quad 0^\\circ\\le u \\le1080^\\circ\\\\&amp;\\cos u=\\frac{\\sqrt{3}}{2}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)=30^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\30&amp;10\\\\330&amp;110\\\\390&amp;130\\\\690&amp;230\\\\750&amp;250\\\\1050&amp;350\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=0.5\\theta,\\quad 0^\\circ\\le u \\le180^\\circ\\\\&amp;\\sin u=\\frac{\\sqrt{2}}{2}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{\\sqrt{2}}{2}\\right)=45^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\45&amp;90\\\\135&amp;270\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=2\\theta,\\quad 0^\\circ\\le u \\le720^\\circ\\\\&amp;\\tan u=- \\sqrt{3}\\\\&amp;\\alpha=\\tan^{-1}\\left(- \\sqrt{3}\\right)=-60^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\120&amp;60\\\\300&amp;150\\\\480&amp;240\\\\660&amp;330\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.5/q2",
+      "status": "worked",
+      "method": "Transform the interval with the same shift or reflection as the angle, solve for u, then reverse that transformation.",
+      "steps": [
+        {
+          "latex": ";\\quad u=\\theta+30^\\circ,\\quad 30^\\circ\\le u \\le390^\\circ;\\quad \\sin u=\\frac{1}{5};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{5}\\right)\\approx11.536959\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\168.4630&138.5\\\\371.5370&341.5\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": ";\\quad u=-\\theta+60^\\circ,\\quad -120^\\circ\\le u \\le240^\\circ;\\quad \\cos u=- \\frac{2}{5};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{2}{5}\\right)\\approx113.578178\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\113.5782&-53.6\\\\-113.5782&173.6\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": ";\\quad u=\\theta-20^\\circ,\\quad -20^\\circ\\le u \\le340^\\circ;\\quad \\tan u=9;\\quad \\alpha=\\tan^{-1}\\left(9\\right)\\approx83.659808\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\83.6598&103.7\\\\263.6598&283.7\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Transform the interval with the same shift or reflection as the angle, solve for u, then reverse that transformation.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=\\theta+30^\\circ,\\quad 30^\\circ\\le u \\le390^\\circ\\\\&amp;\\sin u=\\frac{1}{5}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{5}\\right)\\approx11.536959\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\168.4630&amp;138.5\\\\371.5370&amp;341.5\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=-\\theta+60^\\circ,\\quad -120^\\circ\\le u \\le240^\\circ\\\\&amp;\\cos u=- \\frac{2}{5}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{2}{5}\\right)\\approx113.578178\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\113.5782&amp;-53.6\\\\-113.5782&amp;173.6\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=\\theta-20^\\circ,\\quad -20^\\circ\\le u \\le340^\\circ\\\\&amp;\\tan u=9\\\\&amp;\\alpha=\\tan^{-1}\\left(9\\right)\\approx83.659808\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\83.6598&amp;103.7\\\\263.6598&amp;283.7\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.5/q3",
+      "status": "worked",
+      "method": "Divide by the nonzero cosine to obtain tangent, then include every branch in the transformed interval.",
+      "steps": [
+        {
+          "latex": "\\tan3\\theta=\\frac1{\\sqrt3};\\quad u=3\\theta,\\quad -540^\\circ\\le u \\le540^\\circ;\\quad \\tan u=\\frac{\\sqrt{3}}{3};\\quad \\alpha=\\tan^{-1}\\left(\\frac{\\sqrt{3}}{3}\\right)=30^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\-510&-170\\\\-330&-110\\\\-150&-50\\\\30&10\\\\210&70\\\\390&130\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "\\tan4\\theta=\\frac52;\\quad u=4\\theta,\\quad 0^\\circ\\le u \\le1440^\\circ;\\quad \\tan u=\\frac{5}{2};\\quad \\alpha=\\tan^{-1}\\left(\\frac{5}{2}\\right)\\approx68.198591\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\68.1986&17.0\\\\248.1986&62.0\\\\428.1986&107.0\\\\608.1986&152.0\\\\788.1986&197.0\\\\968.1986&242.0\\\\1148.1986&287.0\\\\1328.1986&332.0\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "\\tan(\\theta+40^\\circ)=-\\frac85;\\quad u=\\theta+40^\\circ,\\quad -140^\\circ\\le u \\le220^\\circ;\\quad \\tan u=- \\frac{8}{5};\\quad \\alpha=\\tan^{-1}\\left(- \\frac{8}{5}\\right)\\approx-57.994617\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\-57.9946&-98\\\\122.0054&82\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Divide by the nonzero cosine to obtain tangent, then include every branch in the transformed interval.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan3\\theta=\\frac1{\\sqrt3}\\\\&amp;u=3\\theta,\\quad -540^\\circ\\le u \\le540^\\circ\\\\&amp;\\tan u=\\frac{\\sqrt{3}}{3}\\\\&amp;\\alpha=\\tan^{-1}\\left(\\frac{\\sqrt{3}}{3}\\right)=30^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\-510&amp;-170\\\\-330&amp;-110\\\\-150&amp;-50\\\\30&amp;10\\\\210&amp;70\\\\390&amp;130\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan4\\theta=\\frac52\\\\&amp;u=4\\theta,\\quad 0^\\circ\\le u \\le1440^\\circ\\\\&amp;\\tan u=\\frac{5}{2}\\\\&amp;\\alpha=\\tan^{-1}\\left(\\frac{5}{2}\\right)\\approx68.198591\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\68.1986&amp;17.0\\\\248.1986&amp;62.0\\\\428.1986&amp;107.0\\\\608.1986&amp;152.0\\\\788.1986&amp;197.0\\\\968.1986&amp;242.0\\\\1148.1986&amp;287.0\\\\1328.1986&amp;332.0\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan(\\theta+40^\\circ)=-\\frac85\\\\&amp;u=\\theta+40^\\circ,\\quad -140^\\circ\\le u \\le220^\\circ\\\\&amp;\\tan u=- \\frac{8}{5}\\\\&amp;\\alpha=\\tan^{-1}\\left(- \\frac{8}{5}\\right)\\approx-57.994617\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\-57.9946&amp;-98\\\\122.0054&amp;82\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.5/q4",
+      "status": "worked",
+      "method": "Solve for the entire angle first. Apply its scale and shift to the interval and reverse them for every solution.",
+      "steps": [
+        {
+          "latex": ";\\quad u=2x-30^\\circ,\\quad -30^\\circ\\le u \\le690^\\circ;\\quad \\sin u=\\frac{3}{4};\\quad \\alpha=\\sin^{-1}\\left(\\frac{3}{4}\\right)\\approx48.590378\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\48.5904&39.3\\\\131.4096&80.7\\\\408.5904&219.3\\\\491.4096&260.7\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": ";\\quad u=3x+20^\\circ,\\quad 20^\\circ\\le u \\le560^\\circ;\\quad \\cos u=- \\frac{2}{5};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{2}{5}\\right)\\approx113.578178\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\113.5782&31.2\\\\246.4218&75.5\\\\473.5782&151.2\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": ";\\quad u=4x-45^\\circ,\\quad -45^\\circ\\le u \\le675^\\circ;\\quad \\tan u=2;\\quad \\alpha=\\tan^{-1}\\left(2\\right)\\approx63.434949\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\63.4349&27.1\\\\243.4349&72.1\\\\423.4349&117.1\\\\603.4349&162.1\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "\\tan(2x+10^\\circ)=\\frac32;\\quad u=2x+10^\\circ,\\quad -350^\\circ\\le u \\le370^\\circ;\\quad \\tan u=\\frac{3}{2};\\quad \\alpha=\\tan^{-1}\\left(\\frac{3}{2}\\right)\\approx56.309932\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\-303.6901&-156.8\\\\-123.6901&-66.8\\\\56.3099&23.2\\\\236.3099&113.2\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Solve for the entire angle first. Apply its scale and shift to the interval and reverse them for every solution.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=2x-30^\\circ,\\quad -30^\\circ\\le u \\le690^\\circ\\\\&amp;\\sin u=\\frac{3}{4}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{3}{4}\\right)\\approx48.590378\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\48.5904&amp;39.3\\\\131.4096&amp;80.7\\\\408.5904&amp;219.3\\\\491.4096&amp;260.7\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=3x+20^\\circ,\\quad 20^\\circ\\le u \\le560^\\circ\\\\&amp;\\cos u=- \\frac{2}{5}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{2}{5}\\right)\\approx113.578178\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\113.5782&amp;31.2\\\\246.4218&amp;75.5\\\\473.5782&amp;151.2\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=4x-45^\\circ,\\quad -45^\\circ\\le u \\le675^\\circ\\\\&amp;\\tan u=2\\\\&amp;\\alpha=\\tan^{-1}\\left(2\\right)\\approx63.434949\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\63.4349&amp;27.1\\\\243.4349&amp;72.1\\\\423.4349&amp;117.1\\\\603.4349&amp;162.1\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan(2x+10^\\circ)=\\frac32\\\\&amp;u=2x+10^\\circ,\\quad -350^\\circ\\le u \\le370^\\circ\\\\&amp;\\tan u=\\frac{3}{2}\\\\&amp;\\alpha=\\tan^{-1}\\left(\\frac{3}{2}\\right)\\approx56.309932\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\-303.6901&amp;-156.8\\\\-123.6901&amp;-66.8\\\\56.3099&amp;23.2\\\\236.3099&amp;113.2\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.5/q5",
+      "status": "worked",
+      "method": "Use exact special-angle values, keeping the transformed interval’s endpoints.",
+      "steps": [
+        {
+          "latex": ";\\quad u=3x,\\quad 0^\\circ\\le u <1080^\\circ;\\quad \\cos u=- \\frac{1}{2};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{1}{2}\\right)=120^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\120&40\\\\240&80\\\\480&160\\\\600&200\\\\840&280\\\\960&320\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": ";\\quad u=x-20^\\circ,\\quad -20^\\circ\\le u <340^\\circ;\\quad \\sin u=- \\frac{\\sqrt{2}}{2};\\quad \\alpha=\\sin^{-1}\\left(- \\frac{\\sqrt{2}}{2}\\right)=-45^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\225&245\\\\315&335\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Use exact special-angle values, keeping the transformed interval’s endpoints.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=3x,\\quad 0^\\circ\\le u &lt;1080^\\circ\\\\&amp;\\cos u=- \\frac{1}{2}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{1}{2}\\right)=120^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\120&amp;40\\\\240&amp;80\\\\480&amp;160\\\\600&amp;200\\\\840&amp;280\\\\960&amp;320\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=x-20^\\circ,\\quad -20^\\circ\\le u &lt;340^\\circ\\\\&amp;\\sin u=- \\frac{\\sqrt{2}}{2}\\\\&amp;\\alpha=\\sin^{-1}\\left(- \\frac{\\sqrt{2}}{2}\\right)=-45^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\225&amp;245\\\\315&amp;335\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.5/q6",
+      "status": "worked",
+      "method": "Reduce the first equation to tangent. For both parts solve in the full argument interval.",
+      "steps": [
+        {
+          "latex": "\\tan2x=\\frac35;\\quad u=2x,\\quad 0^\\circ\\le u \\le720^\\circ;\\quad \\tan u=\\frac{3}{5};\\quad \\alpha=\\tan^{-1}\\left(\\frac{3}{5}\\right)\\approx30.963757\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\30.9638&15.5\\\\210.9638&105.5\\\\390.9638&195.5\\\\570.9638&285.5\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": ";\\quad u=3x-15^\\circ,\\quad -15^\\circ\\le u \\le525^\\circ;\\quad \\sin u=\\frac{\\sqrt{2}}{2};\\quad \\alpha=\\sin^{-1}\\left(\\frac{\\sqrt{2}}{2}\\right)=45^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\45&20\\\\135&50\\\\405&140\\\\495&170\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Reduce the first equation to tangent. For both parts solve in the full argument interval.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan2x=\\frac35\\\\&amp;u=2x,\\quad 0^\\circ\\le u \\le720^\\circ\\\\&amp;\\tan u=\\frac{3}{5}\\\\&amp;\\alpha=\\tan^{-1}\\left(\\frac{3}{5}\\right)\\approx30.963757\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\30.9638&amp;15.5\\\\210.9638&amp;105.5\\\\390.9638&amp;195.5\\\\570.9638&amp;285.5\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=3x-15^\\circ,\\quad -15^\\circ\\le u \\le525^\\circ\\\\&amp;\\sin u=\\frac{\\sqrt{2}}{2}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{\\sqrt{2}}{2}\\right)=45^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\45&amp;20\\\\135&amp;50\\\\405&amp;140\\\\495&amp;170\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.5/q7",
+      "status": "worked",
+      "method": "Divide by 5 in (a); in (b), include both square roots of 16.",
+      "steps": [
+        {
+          "latex": "\\sin(\\theta+30^\\circ)=\\frac45;\\quad u=\\theta+30^\\circ,\\quad 30^\\circ\\le u \\le390^\\circ;\\quad \\sin u=\\frac{4}{5};\\quad \\alpha=\\sin^{-1}\\left(\\frac{4}{5}\\right)\\approx53.130102\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\53.1301&23.1\\\\126.8699&96.9\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "\\tan\\frac\\theta2=\\pm4;\\quad u=0.5\\theta,\\quad 0^\\circ\\le u \\le180^\\circ;\\quad \\tan u=4;\\quad \\alpha=\\tan^{-1}\\left(4\\right)\\approx75.963757\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\75.9638&152\\end{array};\\quad u=0.5\\theta,\\quad 0^\\circ\\le u \\le180^\\circ;\\quad \\tan u=-4;\\quad \\alpha=\\tan^{-1}\\left(-4\\right)\\approx-75.963757\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\104.0362&208\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Divide by 5 in (a); in (b), include both square roots of 16.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\sin(\\theta+30^\\circ)=\\frac45\\\\&amp;u=\\theta+30^\\circ,\\quad 30^\\circ\\le u \\le390^\\circ\\\\&amp;\\sin u=\\frac{4}{5}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{4}{5}\\right)\\approx53.130102\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\53.1301&amp;23.1\\\\126.8699&amp;96.9\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan\\frac\\theta2=\\pm4\\\\&amp;u=0.5\\theta,\\quad 0^\\circ\\le u \\le180^\\circ\\\\&amp;\\tan u=4\\\\&amp;\\alpha=\\tan^{-1}\\left(4\\right)\\approx75.963757\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\75.9638&amp;152\\end{array}\\\\&amp;u=0.5\\theta,\\quad 0^\\circ\\le u \\le180^\\circ\\\\&amp;\\tan u=-4\\\\&amp;\\alpha=\\tan^{-1}\\left(-4\\right)\\approx-75.963757\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\104.0362&amp;208\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.5/q8",
+      "status": "worked",
+      "method": "Transform the open interval to −470°<u<430°, use tangent’s period and reverse u=5x−20°.",
+      "steps": [
+        {
+          "latex": ";\\quad u=5x-20^\\circ,\\quad -470^\\circ< u <430^\\circ;\\quad \\tan u=\\frac{5}{2};\\quad \\alpha=\\tan^{-1}\\left(\\frac{5}{2}\\right)\\approx68.198591\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\-291.8014&-54.4\\\\-111.8014&-18.4\\\\68.1986&17.6\\\\248.1986&53.6\\\\428.1986&89.6\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Transform the open interval to −470°&lt;u&lt;430°, use tangent’s period and reverse u=5x−20°.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=5x-20^\\circ,\\quad -470^\\circ&lt; u &lt;430^\\circ\\\\&amp;\\tan u=\\frac{5}{2}\\\\&amp;\\alpha=\\tan^{-1}\\left(\\frac{5}{2}\\right)\\approx68.198591\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\-291.8014&amp;-54.4\\\\-111.8014&amp;-18.4\\\\68.1986&amp;17.6\\\\248.1986&amp;53.6\\\\428.1986&amp;89.6\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.5/q9",
+      "status": "worked",
+      "method": "Multiply by cos 2x on the original domain and factor without cancelling sin 2x.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sin2x}{\\cos2x}=4\\sin2x\\Rightarrow\\sin2x=4\\sin2x\\cos2x\\Rightarrow(1-4\\cos2x)\\sin2x=0,\\quad\\cos2x\\ne0",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin2x=0\\ \\text{or}\\ \\cos2x=\\frac14;\\quad u=2x,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=0;\\quad \\alpha=\\sin^{-1}\\left(0\\right)=0^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\0&0\\\\180&90\\\\360&180\\end{array};\\quad u=2x,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=\\frac{1}{4};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{4}\\right)\\approx75.522488\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\75.5225&37.8\\\\284.4775&142.2\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Multiply by cos 2x on the original domain and factor without cancelling sin 2x.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin2x}{\\cos2x}=4\\sin2x\\\\&amp;\\Rightarrow \\sin2x=4\\sin2x\\cos2x\\\\&amp;\\Rightarrow (1-4\\cos2x)\\sin2x=0,\\quad\\cos2x\\ne0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\sin2x=0\\ \\text{or}\\ \\cos2x=\\frac14\\\\&amp;u=2x,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=0\\\\&amp;\\alpha=\\sin^{-1}\\left(0\\right)=0^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\0&amp;0\\\\180&amp;90\\\\360&amp;180\\end{array}\\\\&amp;u=2x,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=\\frac{1}{4}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{4}\\right)\\approx75.522488\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\75.5225&amp;37.8\\\\284.4775&amp;142.2\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.6/q1",
+      "status": "worked",
+      "method": "Factor or take both square roots, then solve each resulting trigonometric equation. Keep endpoint solutions; round non-exact answers to 3 significant figures.",
+      "steps": [
+        {
+          "latex": "\\sin\\theta=\\pm\\frac13;\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=\\frac{1}{3};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{3}\\right)\\approx19.471221\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\19.4712&19.5\\\\160.5288&161\\end{array};\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=- \\frac{1}{3};\\quad \\alpha=\\sin^{-1}\\left(- \\frac{1}{3}\\right)\\approx-19.471221\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\199.4712&199\\\\340.5288&341\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "\\cos\\theta=\\pm\\frac12;\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=\\frac{1}{2};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{2}\\right)=60^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\60&60\\\\300&300\\end{array};\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=- \\frac{1}{2};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{1}{2}\\right)=120^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\120&120\\\\240&240\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "\\sin\\theta(5\\sin\\theta-1)=0;\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=0;\\quad \\alpha=\\sin^{-1}\\left(0\\right)=0^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\0&0\\\\180&180\\\\360&360\\end{array};\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=\\frac{1}{5};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{5}\\right)\\approx11.536959\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\11.5370&11.5\\\\168.4630&168\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "(\\tan\\theta+4)(\\tan\\theta-3)=0;\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\tan u=-4;\\quad \\alpha=\\tan^{-1}\\left(-4\\right)\\approx-75.963757\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\104.0362&104\\\\284.0362&284\\end{array};\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\tan u=3;\\quad \\alpha=\\tan^{-1}\\left(3\\right)\\approx71.565051\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\71.5651&71.6\\\\251.5651&252\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "3\\cos\\theta-2=\\pm1\\Rightarrow\\cos\\theta=1\\ \\text{or}\\ \\frac13;\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=1;\\quad \\alpha=\\cos^{-1}\\left(1\\right)=0^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\0&0\\\\360&360\\end{array};\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=\\frac{1}{3};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{3}\\right)\\approx70.528779\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\70.5288&70.5\\\\289.4712&289\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "\\tan3\\theta=\\pm2;\\quad u=3\\theta,\\quad 0^\\circ\\le u \\le1080^\\circ;\\quad \\tan u=2;\\quad \\alpha=\\tan^{-1}\\left(2\\right)\\approx63.434949\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\63.4349&21.1\\\\243.4349&81.1\\\\423.4349&141\\\\603.4349&201\\\\783.4349&261\\\\963.4349&321\\end{array};\\quad u=3\\theta,\\quad 0^\\circ\\le u \\le1080^\\circ;\\quad \\tan u=-2;\\quad \\alpha=\\tan^{-1}\\left(-2\\right)\\approx-63.434949\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\116.5651&38.9\\\\296.5651&98.9\\\\476.5651&159\\\\656.5651&219\\\\836.5651&279\\\\1016.5651&339\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Factor or take both square roots, then solve each resulting trigonometric equation. Keep endpoint solutions; round non-exact answers to 3 significant figures.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\sin\\theta=\\pm\\frac13\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=\\frac{1}{3}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{3}\\right)\\approx19.471221\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\19.4712&amp;19.5\\\\160.5288&amp;161\\end{array}\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=- \\frac{1}{3}\\\\&amp;\\alpha=\\sin^{-1}\\left(- \\frac{1}{3}\\right)\\approx-19.471221\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\199.4712&amp;199\\\\340.5288&amp;341\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\cos\\theta=\\pm\\frac12\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=\\frac{1}{2}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{2}\\right)=60^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\60&amp;60\\\\300&amp;300\\end{array}\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=- \\frac{1}{2}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{1}{2}\\right)=120^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\120&amp;120\\\\240&amp;240\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\sin\\theta(5\\sin\\theta-1)=0\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=0\\\\&amp;\\alpha=\\sin^{-1}\\left(0\\right)=0^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\0&amp;0\\\\180&amp;180\\\\360&amp;360\\end{array}\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=\\frac{1}{5}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{5}\\right)\\approx11.536959\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\11.5370&amp;11.5\\\\168.4630&amp;168\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;(\\tan\\theta+4)(\\tan\\theta-3)=0\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\tan u=-4\\\\&amp;\\alpha=\\tan^{-1}\\left(-4\\right)\\approx-75.963757\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\104.0362&amp;104\\\\284.0362&amp;284\\end{array}\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\tan u=3\\\\&amp;\\alpha=\\tan^{-1}\\left(3\\right)\\approx71.565051\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\71.5651&amp;71.6\\\\251.5651&amp;252\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;3\\cos\\theta-2=\\pm1\\\\&amp;\\Rightarrow \\cos\\theta=1\\ \\text{or}\\ \\frac13\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=1\\\\&amp;\\alpha=\\cos^{-1}\\left(1\\right)=0^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\0&amp;0\\\\360&amp;360\\end{array}\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=\\frac{1}{3}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{3}\\right)\\approx70.528779\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\70.5288&amp;70.5\\\\289.4712&amp;289\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan3\\theta=\\pm2\\\\&amp;u=3\\theta,\\quad 0^\\circ\\le u \\le1080^\\circ\\\\&amp;\\tan u=2\\\\&amp;\\alpha=\\tan^{-1}\\left(2\\right)\\approx63.434949\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\63.4349&amp;21.1\\\\243.4349&amp;81.1\\\\423.4349&amp;141\\\\603.4349&amp;201\\\\783.4349&amp;261\\\\963.4349&amp;321\\end{array}\\\\&amp;u=3\\theta,\\quad 0^\\circ\\le u \\le1080^\\circ\\\\&amp;\\tan u=-2\\\\&amp;\\alpha=\\tan^{-1}\\left(-2\\right)\\approx-63.434949\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\116.5651&amp;38.9\\\\296.5651&amp;98.9\\\\476.5651&amp;159\\\\656.5651&amp;219\\\\836.5651&amp;279\\\\1016.5651&amp;339\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.6/q2",
+      "status": "worked",
+      "method": "Factor where possible and reject sine or cosine values outside [−1,1]. In (d), multiply by nonzero cosine without cancelling sine.",
+      "steps": [
+        {
+          "latex": "\\cos3\\theta=\\pm1;\\quad u=3\\theta,\\quad 0^\\circ\\le u \\le1080^\\circ;\\quad \\cos u=1;\\quad \\alpha=\\cos^{-1}\\left(1\\right)=0^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\0&0\\\\360&120\\\\720&240\\\\1080&360\\end{array};\\quad u=3\\theta,\\quad 0^\\circ\\le u \\le1080^\\circ;\\quad \\cos u=-1;\\quad \\alpha=\\cos^{-1}\\left(-1\\right)=180^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\180&60\\\\540&180\\\\900&300\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "\\tan\\theta(\\tan\\theta-5)=0;\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\tan u=0;\\quad \\alpha=\\tan^{-1}\\left(0\\right)=0^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\0&0\\\\180&180\\\\360&360\\end{array};\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\tan u=5;\\quad \\alpha=\\tan^{-1}\\left(5\\right)\\approx78.690068\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\78.6901&78.7\\\\258.6901&259\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "(\\sin\\theta-4)(\\sin\\theta+1)=0;\\quad\\sin\\theta=4\\text{ is impossible};\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=-1;\\quad \\alpha=\\sin^{-1}\\left(-1\\right)=-90^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\270&270\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "\\sin(\\theta+30^\\circ)[4\\cos(\\theta+30^\\circ)-1]=0;\\quad u=\\theta+30^\\circ,\\quad 30^\\circ\\le u \\le390^\\circ;\\quad \\sin u=0;\\quad \\alpha=\\sin^{-1}\\left(0\\right)=0^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\180&150\\\\360&330\\end{array};\\quad u=\\theta+30^\\circ,\\quad 30^\\circ\\le u \\le390^\\circ;\\quad \\cos u=\\frac{1}{4};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{4}\\right)\\approx75.522488\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\75.5225&45.5\\\\284.4775&254\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Factor where possible and reject sine or cosine values outside [−1,1]. In (d), multiply by nonzero cosine without cancelling sine.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\cos3\\theta=\\pm1\\\\&amp;u=3\\theta,\\quad 0^\\circ\\le u \\le1080^\\circ\\\\&amp;\\cos u=1\\\\&amp;\\alpha=\\cos^{-1}\\left(1\\right)=0^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\0&amp;0\\\\360&amp;120\\\\720&amp;240\\\\1080&amp;360\\end{array}\\\\&amp;u=3\\theta,\\quad 0^\\circ\\le u \\le1080^\\circ\\\\&amp;\\cos u=-1\\\\&amp;\\alpha=\\cos^{-1}\\left(-1\\right)=180^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\180&amp;60\\\\540&amp;180\\\\900&amp;300\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan\\theta(\\tan\\theta-5)=0\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\tan u=0\\\\&amp;\\alpha=\\tan^{-1}\\left(0\\right)=0^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\0&amp;0\\\\180&amp;180\\\\360&amp;360\\end{array}\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\tan u=5\\\\&amp;\\alpha=\\tan^{-1}\\left(5\\right)\\approx78.690068\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\78.6901&amp;78.7\\\\258.6901&amp;259\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;(\\sin\\theta-4)(\\sin\\theta+1)=0\\\\&amp;\\sin\\theta=4\\text{ is impossible}\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=-1\\\\&amp;\\alpha=\\sin^{-1}\\left(-1\\right)=-90^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\270&amp;270\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\sin(\\theta+30^\\circ)[4\\cos(\\theta+30^\\circ)-1]=0\\\\&amp;u=\\theta+30^\\circ,\\quad 30^\\circ\\le u \\le390^\\circ\\\\&amp;\\sin u=0\\\\&amp;\\alpha=\\sin^{-1}\\left(0\\right)=0^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\180&amp;150\\\\360&amp;330\\end{array}\\\\&amp;u=\\theta+30^\\circ,\\quad 30^\\circ\\le u \\le390^\\circ\\\\&amp;\\cos u=\\frac{1}{4}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{4}\\right)\\approx75.522488\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\75.5225&amp;45.5\\\\284.4775&amp;254\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.6/q3",
+      "status": "worked",
+      "method": "Replace sin²x by 1−cos²x, then factor the quadratic in cosine.",
+      "steps": [
+        {
+          "latex": "2\\cos^2x-(1-\\cos^2x)-4\\cos x+2=0\\Rightarrow3\\cos^2x-4\\cos x+1=0",
+          "explanation": ""
+        },
+        {
+          "latex": "(3\\cos x-1)(\\cos x-1)=0;\\quad u=x,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=\\frac{1}{3};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{3}\\right)\\approx70.528779\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\70.5288&70.5\\\\289.4712&289.5\\end{array};\\quad u=x,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=1;\\quad \\alpha=\\cos^{-1}\\left(1\\right)=0^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\0&0\\\\360&360\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Replace sin²x by 1−cos²x, then factor the quadratic in cosine.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2\\cos^2x-(1-\\cos^2x)-4\\cos x+2=0\\\\&amp;\\Rightarrow 3\\cos^2x-4\\cos x+1=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;(3\\cos x-1)(\\cos x-1)=0\\\\&amp;u=x,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=\\frac{1}{3}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{3}\\right)\\approx70.528779\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\70.5288&amp;70.5\\\\289.4712&amp;289.5\\end{array}\\\\&amp;u=x,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=1\\\\&amp;\\alpha=\\cos^{-1}\\left(1\\right)=0^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\0&amp;0\\\\360&amp;360\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.6/q4",
+      "status": "worked",
+      "method": "Use sin²θ+cos²θ=1 to form a quadratic in one ratio, factor it and enforce the ratio’s range.",
+      "steps": [
+        {
+          "latex": "5(1-\\sin^2\\theta)=6-6\\sin\\theta;\\quad5\\sin^2\\theta-6\\sin\\theta+1=(5\\sin\\theta-1)(\\sin\\theta-1)=0;\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=\\frac{1}{5};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{5}\\right)\\approx11.536959\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\11.5370&11.5\\\\168.4630&168.5\\end{array};\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=1;\\quad \\alpha=\\sin^{-1}\\left(1\\right)=90^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\90&90\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "8-7\\cos\\theta=6(1-\\cos^2\\theta);\\quad6\\cos^2\\theta-7\\cos\\theta+2=(3\\cos\\theta-2)(2\\cos\\theta-1)=0;\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=\\frac{2}{3};\\quad \\alpha=\\cos^{-1}\\left(\\frac{2}{3}\\right)\\approx48.189685\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\48.1897&48.2\\\\311.8103&311.8\\end{array};\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\cos u=\\frac{1}{2};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{2}\\right)=60^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\60&60\\\\300&300\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "3\\sin\\theta=2\\cos^2\\theta=2(1-\\sin^2\\theta);\\quad2\\sin^2\\theta+3\\sin\\theta-2=(2\\sin\\theta-1)(\\sin\\theta+2)=0;\\quad\\sin\\theta=-2\\text{ is impossible};\\quad u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=\\frac{1}{2};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{2}\\right)=30^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\30&30\\\\150&150\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Use sin²θ+cos²θ=1 to form a quadratic in one ratio, factor it and enforce the ratio’s range.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;5(1-\\sin^2\\theta)=6-6\\sin\\theta\\\\&amp;5\\sin^2\\theta-6\\sin\\theta+1=(5\\sin\\theta-1)(\\sin\\theta-1)=0\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=\\frac{1}{5}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{5}\\right)\\approx11.536959\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\11.5370&amp;11.5\\\\168.4630&amp;168.5\\end{array}\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=1\\\\&amp;\\alpha=\\sin^{-1}\\left(1\\right)=90^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\90&amp;90\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;8-7\\cos\\theta=6(1-\\cos^2\\theta)\\\\&amp;6\\cos^2\\theta-7\\cos\\theta+2=(3\\cos\\theta-2)(2\\cos\\theta-1)=0\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=\\frac{2}{3}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{2}{3}\\right)\\approx48.189685\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\48.1897&amp;48.2\\\\311.8103&amp;311.8\\end{array}\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\cos u=\\frac{1}{2}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{2}\\right)=60^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\60&amp;60\\\\300&amp;300\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;3\\sin\\theta=2\\cos^2\\theta=2(1-\\sin^2\\theta)\\\\&amp;2\\sin^2\\theta+3\\sin\\theta-2=(2\\sin\\theta-1)(\\sin\\theta+2)=0\\\\&amp;\\sin\\theta=-2\\text{ is impossible}\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=\\frac{1}{2}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{2}\\right)=30^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\30&amp;30\\\\150&amp;150\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.6/q5",
+      "status": "worked",
+      "method": "Replace cos²x, rearrange and retain both square roots.",
+      "steps": [
+        {
+          "latex": "2\\sin^2x-3(1-\\sin^2x)=1\\Rightarrow5\\sin^2x=4",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sin x=\\pm\\frac2{\\sqrt5};\\quad u=x,\\quad 0^\\circ\\le u <360^\\circ;\\quad \\sin u=\\frac{2 \\sqrt{5}}{5};\\quad \\alpha=\\sin^{-1}\\left(\\frac{2 \\sqrt{5}}{5}\\right)\\approx63.434949\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\63.4349&63.4\\\\116.5651&116.6\\end{array};\\quad u=x,\\quad 0^\\circ\\le u <360^\\circ;\\quad \\sin u=- \\frac{2 \\sqrt{5}}{5};\\quad \\alpha=\\sin^{-1}\\left(- \\frac{2 \\sqrt{5}}{5}\\right)\\approx-63.434949\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\243.4349&243.4\\\\296.5651&296.6\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Replace cos²x, rearrange and retain both square roots.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2\\sin^2x-3(1-\\sin^2x)=1\\\\&amp;\\Rightarrow 5\\sin^2x=4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\sin x=\\pm\\frac2{\\sqrt5}\\\\&amp;u=x,\\quad 0^\\circ\\le u &lt;360^\\circ\\\\&amp;\\sin u=\\frac{2 \\sqrt{5}}{5}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{2 \\sqrt{5}}{5}\\right)\\approx63.434949\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\63.4349&amp;63.4\\\\116.5651&amp;116.6\\end{array}\\\\&amp;u=x,\\quad 0^\\circ\\le u &lt;360^\\circ\\\\&amp;\\sin u=- \\frac{2 \\sqrt{5}}{5}\\\\&amp;\\alpha=\\sin^{-1}\\left(- \\frac{2 \\sqrt{5}}{5}\\right)\\approx-63.434949\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\243.4349&amp;243.4\\\\296.5651&amp;296.6\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.6/q6",
+      "status": "worked",
+      "method": "Eliminate sin²x, then take both cosine signs within the open interval.",
+      "steps": [
+        {
+          "latex": "2\\cos^2x+1-\\cos^2x=\\frac{10}9\\Rightarrow\\cos^2x=\\frac19;\\quad u=x,\\quad 0^\\circ< u <180^\\circ;\\quad \\cos u=\\frac{1}{3};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{3}\\right)\\approx70.528779\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\70.5288&70.5\\end{array};\\quad u=x,\\quad 0^\\circ< u <180^\\circ;\\quad \\cos u=- \\frac{1}{3};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{1}{3}\\right)\\approx109.471221\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\109.4712&109.5\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Eliminate sin²x, then take both cosine signs within the open interval.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;2\\cos^2x+1-\\cos^2x=\\frac{10}9\\\\&amp;\\Rightarrow \\cos^2x=\\frac19\\\\&amp;u=x,\\quad 0^\\circ&lt; u &lt;180^\\circ\\\\&amp;\\cos u=\\frac{1}{3}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{3}\\right)\\approx70.528779\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\70.5288&amp;70.5\\end{array}\\\\&amp;u=x,\\quad 0^\\circ&lt; u &lt;180^\\circ\\\\&amp;\\cos u=- \\frac{1}{3}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{1}{3}\\right)\\approx109.471221\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\109.4712&amp;109.5\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.6/q7",
+      "status": "worked",
+      "method": "Eliminate cosine squared, factor the quadratic and discard the inadmissible sine value.",
+      "steps": [
+        {
+          "latex": "2(1-\\sin^2x)+2=7\\sin x;\\quad2\\sin^2x+7\\sin x-4=(2\\sin x-1)(\\sin x+4)=0;\\quad\\sin x=-4\\text{ is impossible};\\quad u=x,\\quad 0^\\circ\\le u \\le360^\\circ;\\quad \\sin u=\\frac{1}{2};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{2}\\right)=30^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\30&30\\\\150&150\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Eliminate cosine squared, factor the quadratic and discard the inadmissible sine value.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;2(1-\\sin^2x)+2=7\\sin x\\\\&amp;2\\sin^2x+7\\sin x-4=(2\\sin x-1)(\\sin x+4)=0\\\\&amp;\\sin x=-4\\text{ is impossible}\\\\&amp;u=x,\\quad 0^\\circ\\le u \\le360^\\circ\\\\&amp;\\sin u=\\frac{1}{2}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{2}\\right)=30^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\30&amp;30\\\\150&amp;150\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.6/q8",
+      "status": "worked",
+      "method": "Multiply by nonzero cosine and replace sin²θ. Solve the quadratic by the formula and reject the root below −1.",
+      "steps": [
+        {
+          "latex": "\\frac{\\sin^2\\theta}{\\cos\\theta}=2\\cos\\theta+3\\Rightarrow1-\\cos^2\\theta=2\\cos^2\\theta+3\\cos\\theta\\Rightarrow3\\cos^2\\theta+3\\cos\\theta-1=0",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos\\theta=\\frac{-3\\pm\\sqrt{3^2-4(3)(-1)}}{2(3)}=\\frac{-3\\pm\\sqrt{21}}6;\\quad\\frac{-3-\\sqrt{21}}6<-1;\\quad u=\\theta,\\quad 0^\\circ\\le u <360^\\circ;\\quad \\cos u=- \\frac{1}{2} + \\frac{\\sqrt{21}}{6};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{1}{2} + \\frac{\\sqrt{21}}{6}\\right)\\approx74.706560\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\74.7066&74.7\\\\285.2934&285.3\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Multiply by nonzero cosine and replace sin²θ. Solve the quadratic by the formula and reject the root below −1.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{\\sin^2\\theta}{\\cos\\theta}=2\\cos\\theta+3\\\\&amp;\\Rightarrow 1-\\cos^2\\theta=2\\cos^2\\theta+3\\cos\\theta\\\\&amp;\\Rightarrow 3\\cos^2\\theta+3\\cos\\theta-1=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\cos\\theta=\\frac{-3\\pm\\sqrt{3^2-4(3)(-1)}}{2(3)}=\\frac{-3\\pm\\sqrt{21}}6\\\\&amp;\\frac{-3-\\sqrt{21}}6&lt;-1\\\\&amp;u=\\theta,\\quad 0^\\circ\\le u &lt;360^\\circ\\\\&amp;\\cos u=- \\frac{1}{2} + \\frac{\\sqrt{21}}{6}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{1}{2} + \\frac{\\sqrt{21}}{6}\\right)\\approx74.706560\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\74.7066&amp;74.7\\\\285.2934&amp;285.3\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/10.6/q9",
+      "status": "worked",
+      "method": "Replace sin²x and factor the resulting quadratic; use the interval in the second revolution.",
+      "steps": [
+        {
+          "latex": "15(1-\\cos^2x)+8\\cos x-16=0;\\quad15\\cos^2x-8\\cos x+1=(5\\cos x-1)(3\\cos x-1)=0;\\quad u=x,\\quad 360^\\circ\\le u <540^\\circ;\\quad \\cos u=\\frac{1}{5};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{5}\\right)\\approx78.463041\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\438.4630&438.5\\end{array};\\quad u=x,\\quad 360^\\circ\\le u <540^\\circ;\\quad \\cos u=\\frac{1}{3};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{3}\\right)\\approx70.528779\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\430.5288&430.5\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Replace sin²x and factor the resulting quadratic; use the interval in the second revolution.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;15(1-\\cos^2x)+8\\cos x-16=0\\\\&amp;15\\cos^2x-8\\cos x+1=(5\\cos x-1)(3\\cos x-1)=0\\\\&amp;u=x,\\quad 360^\\circ\\le u &lt;540^\\circ\\\\&amp;\\cos u=\\frac{1}{5}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{5}\\right)\\approx78.463041\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\438.4630&amp;438.5\\end{array}\\\\&amp;u=x,\\quad 360^\\circ\\le u &lt;540^\\circ\\\\&amp;\\cos u=\\frac{1}{3}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{3}\\right)\\approx70.528779\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\430.5288&amp;430.5\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/problem-a/qbronze",
+      "status": "worked",
+      "method": "Divide by the nonzero cosine, then solve after shifting the angle.",
+      "steps": [
+        {
+          "latex": "\\tan x=\\frac{\\sin x}{\\cos x}=\\frac52",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan(\\theta+20^\\circ)=\\frac52;\\quad u=\\theta+20^\\circ,\\quad 20^\\circ\\le u <380^\\circ;\\quad \\tan u=\\frac{5}{2};\\quad \\alpha=\\tan^{-1}\\left(\\frac{5}{2}\\right)\\approx68.198591\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\68.1986&48.2\\\\248.1986&228.2\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Divide by the nonzero cosine, then solve after shifting the angle.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\tan x=\\frac{\\sin x}{\\cos x}=\\frac52\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan(\\theta+20^\\circ)=\\frac52\\\\&amp;u=\\theta+20^\\circ,\\quad 20^\\circ\\le u &lt;380^\\circ\\\\&amp;\\tan u=\\frac{5}{2}\\\\&amp;\\alpha=\\tan^{-1}\\left(\\frac{5}{2}\\right)\\approx68.198591\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\68.1986&amp;48.2\\\\248.1986&amp;228.2\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/problem-a/qsilver",
+      "status": "worked",
+      "method": "Multiply by the original nonzero denominator and collect the sine terms.",
+      "steps": [
+        {
+          "latex": "\\sin3x+1=2(1-\\sin3x)\\Rightarrow3\\sin3x=1\\Rightarrow\\sin3x=\\frac13;\\quad u=3x,\\quad 0^\\circ\\le u \\le540^\\circ;\\quad \\sin u=\\frac{1}{3};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{3}\\right)\\approx19.471221\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\19.4712&6.5\\\\160.5288&53.5\\\\379.4712&126.5\\\\520.5288&173.5\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Multiply by the original nonzero denominator and collect the sine terms.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\sin3x+1=2(1-\\sin3x)\\\\&amp;\\Rightarrow 3\\sin3x=1\\\\&amp;\\Rightarrow \\sin3x=\\frac13\\\\&amp;u=3x,\\quad 0^\\circ\\le u \\le540^\\circ\\\\&amp;\\sin u=\\frac{1}{3}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{3}\\right)\\approx19.471221\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\19.4712&amp;6.5\\\\160.5288&amp;53.5\\\\379.4712&amp;126.5\\\\520.5288&amp;173.5\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/problem-a/qgold",
+      "status": "worked",
+      "method": "Rearrange for cosine and transform the interval before selecting all branches.",
+      "steps": [
+        {
+          "latex": "\\cos(2x-15^\\circ)=-\\frac34;\\quad u=2x-15^\\circ,\\quad -375^\\circ\\le u \\le345^\\circ;\\quad \\cos u=- \\frac{3}{4};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{3}{4}\\right)\\approx138.590378\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\-221.4096&-103.2\\\\-138.5904&-61.8\\\\138.5904&76.8\\\\221.4096&118.2\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Rearrange for cosine and transform the interval before selecting all branches.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\cos(2x-15^\\circ)=-\\frac34\\\\&amp;u=2x-15^\\circ,\\quad -375^\\circ\\le u \\le345^\\circ\\\\&amp;\\cos u=- \\frac{3}{4}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{3}{4}\\right)\\approx138.590378\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\-221.4096&amp;-103.2\\\\-138.5904&amp;-61.8\\\\138.5904&amp;76.8\\\\221.4096&amp;118.2\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/problem-b/qbronze",
+      "status": "worked",
+      "method": "Split the fraction to obtain a quadratic in tangent, then take both roots.",
+      "steps": [
+        {
+          "latex": "\\frac{3\\sin^2x+\\cos^2x}{\\cos^2x}=3\\tan^2x+1=5\\Rightarrow\\tan^2x=\\frac43",
+          "explanation": ""
+        },
+        {
+          "latex": "\\tan x=\\pm\\frac2{\\sqrt3};\\quad u=x,\\quad 0^\\circ\\le u <360^\\circ;\\quad \\tan u=\\frac{2 \\sqrt{3}}{3};\\quad \\alpha=\\tan^{-1}\\left(\\frac{2 \\sqrt{3}}{3}\\right)\\approx49.106605\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\49.1066&49.1\\\\229.1066&229.1\\end{array};\\quad u=x,\\quad 0^\\circ\\le u <360^\\circ;\\quad \\tan u=- \\frac{2 \\sqrt{3}}{3};\\quad \\alpha=\\tan^{-1}\\left(- \\frac{2 \\sqrt{3}}{3}\\right)\\approx-49.106605\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\130.8934&130.9\\\\310.8934&310.9\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Split the fraction to obtain a quadratic in tangent, then take both roots.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\frac{3\\sin^2x+\\cos^2x}{\\cos^2x}=3\\tan^2x+1=5\\\\&amp;\\Rightarrow \\tan^2x=\\frac43\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\tan x=\\pm\\frac2{\\sqrt3}\\\\&amp;u=x,\\quad 0^\\circ\\le u &lt;360^\\circ\\\\&amp;\\tan u=\\frac{2 \\sqrt{3}}{3}\\\\&amp;\\alpha=\\tan^{-1}\\left(\\frac{2 \\sqrt{3}}{3}\\right)\\approx49.106605\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\49.1066&amp;49.1\\\\229.1066&amp;229.1\\end{array}\\\\&amp;u=x,\\quad 0^\\circ\\le u &lt;360^\\circ\\\\&amp;\\tan u=- \\frac{2 \\sqrt{3}}{3}\\\\&amp;\\alpha=\\tan^{-1}\\left(- \\frac{2 \\sqrt{3}}{3}\\right)\\approx-49.106605\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\130.8934&amp;130.9\\\\310.8934&amp;310.9\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/problem-b/qsilver",
+      "status": "worked",
+      "method": "Replace cosine squared, factor the sine quadratic and include both revolutions.",
+      "steps": [
+        {
+          "latex": "4(1-\\sin^2x)+9\\sin x-6=0\\Rightarrow4\\sin^2x-9\\sin x+2=0",
+          "explanation": ""
+        },
+        {
+          "latex": "(4\\sin x-1)(\\sin x-2)=0;\\quad\\sin x=2\\text{ is impossible};\\quad u=x,\\quad 0^\\circ\\le u <720^\\circ;\\quad \\sin u=\\frac{1}{4};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{4}\\right)\\approx14.477512\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\14.4775&14.5\\\\165.5225&165.5\\\\374.4775&374.5\\\\525.5225&525.5\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Replace cosine squared, factor the sine quadratic and include both revolutions.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;4(1-\\sin^2x)+9\\sin x-6=0\\\\&amp;\\Rightarrow 4\\sin^2x-9\\sin x+2=0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;(4\\sin x-1)(\\sin x-2)=0\\\\&amp;\\sin x=2\\text{ is impossible}\\\\&amp;u=x,\\quad 0^\\circ\\le u &lt;720^\\circ\\\\&amp;\\sin u=\\frac{1}{4}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{4}\\right)\\approx14.477512\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\14.4775&amp;14.5\\\\165.5225&amp;165.5\\\\374.4775&amp;374.5\\\\525.5225&amp;525.5\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/problem-b/qgold",
+      "status": "worked",
+      "method": "Multiply by nonzero cos 3x, eliminate sin²3x and factor; do not divide by cos 3x−1.",
+      "steps": [
+        {
+          "latex": "5\\cos3x(\\cos3x-1)=3\\sin^23x;\\quad8\\cos^23x-5\\cos3x-3=(\\cos3x-1)(8\\cos3x+3)=0;\\quad u=3x,\\quad 0^\\circ\\le u <270^\\circ;\\quad \\cos u=1;\\quad \\alpha=\\cos^{-1}\\left(1\\right)=0^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\0&0\\end{array};\\quad u=3x,\\quad 0^\\circ\\le u <270^\\circ;\\quad \\cos u=- \\frac{3}{8};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{3}{8}\\right)\\approx112.024313\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\112.0243&37.3\\\\247.9757&82.7\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Multiply by nonzero cos 3x, eliminate sin²3x and factor; do not divide by cos 3x−1.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;5\\cos3x(\\cos3x-1)=3\\sin^23x\\\\&amp;8\\cos^23x-5\\cos3x-3=(\\cos3x-1)(8\\cos3x+3)=0\\\\&amp;u=3x,\\quad 0^\\circ\\le u &lt;270^\\circ\\\\&amp;\\cos u=1\\\\&amp;\\alpha=\\cos^{-1}\\left(1\\right)=0^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\0&amp;0\\end{array}\\\\&amp;u=3x,\\quad 0^\\circ\\le u &lt;270^\\circ\\\\&amp;\\cos u=- \\frac{3}{8}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{3}{8}\\right)\\approx112.024313\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\112.0243&amp;37.3\\\\247.9757&amp;82.7\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/exam/q7",
+      "status": "worked",
+      "method": "Replace 1 by sin²x+cos²x and split the numerator over the nonzero cosine squared.",
+      "steps": [
+        {
+          "latex": "\\frac{2\\sin^2x-1}{\\cos^2x}=\\frac{2\\sin^2x-(\\sin^2x+\\cos^2x)}{\\cos^2x}=\\frac{\\sin^2x}{\\cos^2x}-1=\\tan^2x-1,\\quad\\cos x\\ne0",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Replace 1 by sin²x+cos²x and split the numerator over the nonzero cosine squared.</p><span data-math=\"\\begin{aligned}&amp;\\frac{2\\sin^2x-1}{\\cos^2x}\\\\&amp;=\\frac{2\\sin^2x-(\\sin^2x+\\cos^2x)}{\\cos^2x}\\\\&amp;=\\frac{\\sin^2x}{\\cos^2x}-1\\\\&amp;=\\tan^2x-1,\\quad\\cos x\\ne0\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/exam/q47",
+      "status": "worked",
+      "method": "Move every term to one side, split the middle term and factor the tangent quadratic.",
+      "steps": [
+        {
+          "latex": "6\\tan^2x-11\\tan x-10=0;\\quad6t^2-15t+4t-10=3t(2t-5)+2(2t-5)=(3t+2)(2t-5),\\ t=\\tan x;\\quad u=x,\\quad 0^\\circ\\le u <360^\\circ;\\quad \\tan u=- \\frac{2}{3};\\quad \\alpha=\\tan^{-1}\\left(- \\frac{2}{3}\\right)\\approx-33.690068\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\146.3099&146.3\\\\326.3099&326.3\\end{array};\\quad u=x,\\quad 0^\\circ\\le u <360^\\circ;\\quad \\tan u=\\frac{5}{2};\\quad \\alpha=\\tan^{-1}\\left(\\frac{5}{2}\\right)\\approx68.198591\\ldots^\\circ;\\quad u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\68.1986&68.2\\\\248.1986&248.2\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Move every term to one side, split the middle term and factor the tangent quadratic.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;6\\tan^2x-11\\tan x-10=0\\\\&amp;6t^2-15t+4t-10=3t(2t-5)+2(2t-5)=(3t+2)(2t-5),\\ t=\\tan x\\\\&amp;u=x,\\quad 0^\\circ\\le u &lt;360^\\circ\\\\&amp;\\tan u=- \\frac{2}{3}\\\\&amp;\\alpha=\\tan^{-1}\\left(- \\frac{2}{3}\\right)\\approx-33.690068\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\146.3099&amp;146.3\\\\326.3099&amp;326.3\\end{array}\\\\&amp;u=x,\\quad 0^\\circ\\le u &lt;360^\\circ\\\\&amp;\\tan u=\\frac{5}{2}\\\\&amp;\\alpha=\\tan^{-1}\\left(\\frac{5}{2}\\right)\\approx68.198591\\ldots^\\circ\\\\&amp;u=\\alpha+180^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\68.1986&amp;68.2\\\\248.1986&amp;248.2\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/exam/q60",
+      "status": "worked",
+      "method": "Eliminate sine squared and complete the square, then take both square-root signs.",
+      "steps": [
+        {
+          "latex": "1-\\cos^2x=8\\cos^2x-6\\cos x\\Rightarrow9\\cos^2x-6\\cos x=1\\Rightarrow(3\\cos x-1)^2=2",
+          "explanation": ""
+        },
+        {
+          "latex": "3\\cos x-1=\\pm\\sqrt2\\Rightarrow\\cos x=\\frac{1\\pm\\sqrt2}3;\\quad u=x,\\quad 0^\\circ\\le u <360^\\circ;\\quad \\cos u=\\frac{1}{3} + \\frac{\\sqrt{2}}{3};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{3} + \\frac{\\sqrt{2}}{3}\\right)\\approx36.415054\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\36.4151&36.42\\\\323.5849&323.58\\end{array};\\quad u=x,\\quad 0^\\circ\\le u <360^\\circ;\\quad \\cos u=\\frac{1}{3} - \\frac{\\sqrt{2}}{3};\\quad \\alpha=\\cos^{-1}\\left(\\frac{1}{3} - \\frac{\\sqrt{2}}{3}\\right)\\approx97.936250\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\97.9362&97.94\\\\262.0638&262.06\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Eliminate sine squared and complete the square, then take both square-root signs.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;1-\\cos^2x=8\\cos^2x-6\\cos x\\\\&amp;\\Rightarrow 9\\cos^2x-6\\cos x=1\\\\&amp;\\Rightarrow (3\\cos x-1)^2=2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;3\\cos x-1=\\pm\\sqrt2\\\\&amp;\\Rightarrow \\cos x=\\frac{1\\pm\\sqrt2}3\\\\&amp;u=x,\\quad 0^\\circ\\le u &lt;360^\\circ\\\\&amp;\\cos u=\\frac{1}{3} + \\frac{\\sqrt{2}}{3}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{3} + \\frac{\\sqrt{2}}{3}\\right)\\approx36.415054\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\36.4151&amp;36.42\\\\323.5849&amp;323.58\\end{array}\\\\&amp;u=x,\\quad 0^\\circ\\le u &lt;360^\\circ\\\\&amp;\\cos u=\\frac{1}{3} - \\frac{\\sqrt{2}}{3}\\\\&amp;\\alpha=\\cos^{-1}\\left(\\frac{1}{3} - \\frac{\\sqrt{2}}{3}\\right)\\approx97.936250\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\97.9362&amp;97.94\\\\262.0638&amp;262.06\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/exam/q66",
+      "status": "worked",
+      "method": "Transform the interval for each complete argument, then use the exact special-angle values.",
+      "steps": [
+        {
+          "latex": ";\\quad u=x+15^\\circ,\\quad 15^\\circ\\le u \\le375^\\circ;\\quad \\sin u=\\frac{\\sqrt{3}}{2};\\quad \\alpha=\\sin^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)=60^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\60&45\\\\120&105\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": ";\\quad u=2x,\\quad 0^\\circ\\le u \\le720^\\circ;\\quad \\cos u=- \\frac{\\sqrt{2}}{2};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{\\sqrt{2}}{2}\\right)=135^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\135&67.5\\\\225&112.5\\\\495&247.5\\\\585&292.5\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Transform the interval for each complete argument, then use the exact special-angle values.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=x+15^\\circ,\\quad 15^\\circ\\le u \\le375^\\circ\\\\&amp;\\sin u=\\frac{\\sqrt{3}}{2}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)=60^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\60&amp;45\\\\120&amp;105\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=2x,\\quad 0^\\circ\\le u \\le720^\\circ\\\\&amp;\\cos u=- \\frac{\\sqrt{2}}{2}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{\\sqrt{2}}{2}\\right)=135^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\135&amp;67.5\\\\225&amp;112.5\\\\495&amp;247.5\\\\585&amp;292.5\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/exam/q76",
+      "status": "worked",
+      "method": "Use both cosine branches in the transformed interval −20°≤u<520°, then divide the shifted argument by 3.",
+      "steps": [
+        {
+          "latex": ";\\quad u=3x-20^\\circ,\\quad -20^\\circ\\le u <520^\\circ;\\quad \\cos u=- \\frac{3}{5};\\quad \\alpha=\\cos^{-1}\\left(- \\frac{3}{5}\\right)\\approx126.869898\\ldots^\\circ;\\quad u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\126.8699&49.0\\\\233.1301&84.4\\\\486.8699&169.0\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Use both cosine branches in the transformed interval −20°≤u&lt;520°, then divide the shifted argument by 3.</p><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;u=3x-20^\\circ,\\quad -20^\\circ\\le u &lt;520^\\circ\\\\&amp;\\cos u=- \\frac{3}{5}\\\\&amp;\\alpha=\\cos^{-1}\\left(- \\frac{3}{5}\\right)\\approx126.869898\\ldots^\\circ\\\\&amp;u=\\pm\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\126.8699&amp;49.0\\\\233.1301&amp;84.4\\\\486.8699&amp;169.0\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/exam/q84",
+      "status": "worked",
+      "method": "Divide by the supplied factor, factor the remaining quadratic and substitute sin y for x.",
+      "steps": [
+        {
+          "latex": "f(x)=(x+2)(6x^2-x-1);\\quad=(x+2)(6x^2+2x-3x-1);\\quad=(x+2)(2x-1)(3x+1)",
+          "explanation": "Polynomial division gives quotient 6x²−x−1 and remainder zero; grouping the middle terms gives the final two factors."
+        },
+        {
+          "latex": "(\\sin y+2)(2\\sin y-1)(3\\sin y+1)=0;\\quad\\sin y=-2\\text{ is impossible};\\quad u=y,\\quad 0^\\circ< u \\le360^\\circ;\\quad \\sin u=\\frac{1}{2};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{2}\\right)=30^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&y\\ ({}^\\circ)\\\\30&30\\\\150&150\\end{array};\\quad u=y,\\quad 0^\\circ< u \\le360^\\circ;\\quad \\sin u=- \\frac{1}{3};\\quad \\alpha=\\sin^{-1}\\left(- \\frac{1}{3}\\right)\\approx-19.471221\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&y\\ ({}^\\circ)\\\\199.4712&199.5\\\\340.5288&340.5\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>Divide by the supplied factor, factor the remaining quadratic and substitute sin y for x.</p><ol class=\"parts\" type=\"a\"><li><p>Polynomial division gives quotient 6x²−x−1 and remainder zero; grouping the middle terms gives the final two factors.</p><span data-math=\"\\begin{aligned}&amp;f(x)=(x+2)(6x^2-x-1)\\\\&amp;=(x+2)(6x^2+2x-3x-1)\\\\&amp;=(x+2)(2x-1)(3x+1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;(\\sin y+2)(2\\sin y-1)(3\\sin y+1)=0\\\\&amp;\\sin y=-2\\text{ is impossible}\\\\&amp;u=y,\\quad 0^\\circ&lt; u \\le360^\\circ\\\\&amp;\\sin u=\\frac{1}{2}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{2}\\right)=30^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;y\\ ({}^\\circ)\\\\30&amp;30\\\\150&amp;150\\end{array}\\\\&amp;u=y,\\quad 0^\\circ&lt; u \\le360^\\circ\\\\&amp;\\sin u=- \\frac{1}{3}\\\\&amp;\\alpha=\\sin^{-1}\\left(- \\frac{1}{3}\\right)\\approx-19.471221\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;y\\ ({}^\\circ)\\\\199.4712&amp;199.5\\\\340.5288&amp;340.5\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch10/exam/q85",
+      "status": "worked",
+      "method": "For (a), solve in the scaled and shifted interval. For (b), multiply by nonzero cosine and solve a quadratic in sine.",
+      "steps": [
+        {
+          "latex": "\\sin(2\\theta+60^\\circ)=\\frac45;\\quad u=2\\theta+60^\\circ,\\quad 60^\\circ\\le u <780^\\circ;\\quad \\sin u=\\frac{4}{5};\\quad \\alpha=\\sin^{-1}\\left(\\frac{4}{5}\\right)\\approx53.130102\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&\\theta\\ ({}^\\circ)\\\\126.8699&33.4\\\\413.1301&176.6\\\\486.8699&213.4\\\\773.1301&356.6\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        },
+        {
+          "latex": "8\\sin x=3\\cos^2x=3(1-\\sin^2x);\\quad3\\sin^2x+8\\sin x-3=(3\\sin x-1)(\\sin x+3)=0;\\quad\\sin x=-3\\text{ is impossible};\\quad u=x,\\quad 360^\\circ\\le u \\le540^\\circ;\\quad \\sin u=\\frac{1}{3};\\quad \\alpha=\\sin^{-1}\\left(\\frac{1}{3}\\right)\\approx19.471221\\ldots^\\circ;\\quad u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z;\\quad \\begin{array}{r|r}u\\ ({}^\\circ)&x\\ ({}^\\circ)\\\\379.4712&379.47\\\\520.5288&520.53\\end{array}",
+          "explanation": "Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column."
+        }
+      ],
+      "solutionHtml": "<p>For (a), solve in the scaled and shifted interval. For (b), multiply by nonzero cosine and solve a quadratic in sine.</p><ol class=\"parts\" type=\"a\"><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;\\sin(2\\theta+60^\\circ)=\\frac45\\\\&amp;u=2\\theta+60^\\circ,\\quad 60^\\circ\\le u &lt;780^\\circ\\\\&amp;\\sin u=\\frac{4}{5}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{4}{5}\\right)\\approx53.130102\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;\\theta\\ ({}^\\circ)\\\\126.8699&amp;33.4\\\\413.1301&amp;176.6\\\\486.8699&amp;213.4\\\\773.1301&amp;356.6\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Use every periodic branch in the original interval. Angles are in degrees; intermediate u-values are shown to 4 d.p., with unrounded values used to calculate the final column.</p><span data-math=\"\\begin{aligned}&amp;8\\sin x=3\\cos^2x=3(1-\\sin^2x)\\\\&amp;3\\sin^2x+8\\sin x-3=(3\\sin x-1)(\\sin x+3)=0\\\\&amp;\\sin x=-3\\text{ is impossible}\\\\&amp;u=x,\\quad 360^\\circ\\le u \\le540^\\circ\\\\&amp;\\sin u=\\frac{1}{3}\\\\&amp;\\alpha=\\sin^{-1}\\left(\\frac{1}{3}\\right)\\approx19.471221\\ldots^\\circ\\\\&amp;u=\\alpha+360^\\circ n\\ \\text{or}\\ 180^\\circ-\\alpha+360^\\circ n,\\quad n\\in\\mathbb Z\\\\&amp;\\begin{array}{r|r}u\\ ({}^\\circ)&amp;x\\ ({}^\\circ)\\\\379.4712&amp;379.47\\\\520.5288&amp;520.53\\end{array}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}

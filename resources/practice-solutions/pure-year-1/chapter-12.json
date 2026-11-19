@@ -1,0 +1,1717 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-1",
+  "chapter": 12,
+  "sourcePdf": "resources/practice/pure-year-1/chapter-12.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.1/q1",
+      "status": "worked",
+      "method": "Draw tangents and estimate rise divided by run. The derivative confirms the estimated pattern.",
+      "steps": [
+        {
+          "latex": "\\begin{array}{c|rrrr}x&0&1&1.5&2\\\\\\hline m&-1&2&5.75&11\\end{array}",
+          "explanation": "Approximate graphical estimates; small variations are expected.",
+          "graphs": []
+        },
+        {
+          "latex": "m(p)=3p^2-1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "m(0.5)=3(0.5)^2-1=-0.25",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Draw tangents and estimate rise divided by run. The derivative confirms the estimated pattern.</p><ol type=\"a\" class=\"parts\"><li><p>Approximate graphical estimates; small variations are expected.</p><span data-math=\"\\begin{array}{c|rrrr}x&amp;0&amp;1&amp;1.5&amp;2\\\\\\hline m&amp;-1&amp;2&amp;5.75&amp;11\\end{array}\" data-display=\"true\"></span></li><li><span data-math=\"m(p)=3p^2-1\" data-display=\"true\"></span></li><li><span data-math=\"m(0.5)=3(0.5)^2-1=-0.25\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.1/q2",
+      "status": "worked",
+      "method": "Use change in y divided by change in x. A chord slope approaches the tangent slope as its second point approaches A.",
+      "steps": [
+        {
+          "latex": "m_T=\\lim_{h\\to0}\\frac{(2+h)^2-4}{h}=\\lim_{h\\to0}(4+h)=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "m_{AP}=\\frac{x_P^2-4}{x_P-2}=x_P+2; \\text{i }5,\\quad\\text{ii }4.5,\\quad\\text{iii }4.1,\\quad\\text{iv }4.01,\\quad\\text{v }4+h",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use change in y divided by change in x. A chord slope approaches the tangent slope as its second point approaches A.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"m_T=\\lim_{h\\to0}\\frac{(2+h)^2-4}{h}=\\lim_{h\\to0}(4+h)=4\" data-display=\"true\"></span></li><li><span data-math=\"m_{AP}=\\frac{x_P^2-4}{x_P-2}=x_P+2\" data-display=\"true\"></span><span data-math=\"\\text{i }5,\\quad\\text{ii }4.5,\\quad\\text{iii }4.1,\\quad\\text{iv }4.01,\\quad\\text{v }4+h\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.2/q1",
+      "status": "worked",
+      "method": "Use the limit of the difference quotient, cancelling h before taking the limit.",
+      "steps": [
+        {
+          "latex": "f'(4)=\\lim_{h\\to0}\\frac{12(4+h)-12(4)}{h}; =\\lim_{h\\to0}12=12",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'(-2)=\\lim_{h\\to0}\\frac{12(-2+h)-12(-2)}{h}; =\\lim_{h\\to0}12=12",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'(0)=\\lim_{h\\to0}\\frac{12(0+h)-12(0)}{h}; =\\lim_{h\\to0}12=12",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the limit of the difference quotient, cancelling h before taking the limit.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;(4)=\\lim_{h\\to0}\\frac{12(4+h)-12(4)}{h}\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}12=12\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;(-2)=\\lim_{h\\to0}\\frac{12(-2+h)-12(-2)}{h}\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}12=12\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;(0)=\\lim_{h\\to0}\\frac{12(0+h)-12(0)}{h}\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}12=12\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.2/q2",
+      "status": "worked",
+      "method": "Expand the square in the difference quotient, cancel h, then take its limit.",
+      "steps": [
+        {
+          "latex": "f'(3)=\\lim_{h\\to0}\\frac{2(3+h)^2-2(3)^2}{h}; =\\lim_{h\\to0}(12+2h)=12",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'(-1)=\\lim_{h\\to0}\\frac{2(-1+h)^2-2(-1)^2}{h}; =\\lim_{h\\to0}(-4+2h)=-4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'(0)=\\lim_{h\\to0}\\frac{2(0+h)^2-2(0)^2}{h}; =\\lim_{h\\to0}(0+2h)=0",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand the square in the difference quotient, cancel h, then take its limit.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;(3)=\\lim_{h\\to0}\\frac{2(3+h)^2-2(3)^2}{h}\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}(12+2h)=12\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;(-1)=\\lim_{h\\to0}\\frac{2(-1+h)^2-2(-1)^2}{h}\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}(-4+2h)=-4\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;(0)=\\lim_{h\\to0}\\frac{2(0+h)^2-2(0)^2}{h}\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}(0+2h)=0\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.2/q3",
+      "status": "worked",
+      "method": "Use the definition of the derivative.",
+      "steps": [
+        {
+          "latex": "f'(x)=\\lim_{h\\to0}\\frac{8(x+h)-8x}h; =\\lim_{h\\to0}\\frac{8h}h=8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the definition of the derivative.</p><span data-math=\"f&#x27;(x)=\\lim_{h\\to0}\\frac{8(x+h)-8x}h\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}\\frac{8h}h=8\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.2/q4",
+      "status": "worked",
+      "method": "Expand before cancelling h; the remaining h term tends to zero.",
+      "steps": [
+        {
+          "latex": "f'(x)=\\lim_{h\\to0}\\frac{3(x+h)^2-3x^2}h; =\\lim_{h\\to0}\\frac{6xh+3h^2}h; =\\lim_{h\\to0}(6x+3h)=6x",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand before cancelling h; the remaining h term tends to zero.</p><span data-math=\"f&#x27;(x)=\\lim_{h\\to0}\\frac{3(x+h)^2-3x^2}h\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}\\frac{6xh+3h^2}h\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}(6x+3h)=6x\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.2/q5",
+      "status": "worked",
+      "method": "Expand the cube in the difference quotient.",
+      "steps": [
+        {
+          "latex": "f'(x)=\\lim_{h\\to0}\\frac{(x+h)^3-x^3}h; =\\lim_{h\\to0}\\frac{3x^2h+3xh^2+h^3}h; =\\lim_{h\\to0}(3x^2+3xh+h^2)=3x^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand the cube in the difference quotient.</p><span data-math=\"f&#x27;(x)=\\lim_{h\\to0}\\frac{(x+h)^3-x^3}h\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}\\frac{3x^2h+3xh^2+h^3}h\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}(3x^2+3xh+h^2)=3x^2\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.2/q6",
+      "status": "worked",
+      "method": "Apply the difference quotient at x=1 directly.",
+      "steps": [
+        {
+          "latex": "m=\\lim_{h\\to0}\\frac{[6-3(1+h)^2]-[6-3(1)^2]}h; =\\lim_{h\\to0}\\frac{-6h-3h^2}h; =\\lim_{h\\to0}(-6-3h)=-6",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Apply the difference quotient at x=1 directly.</p><span data-math=\"m=\\lim_{h\\to0}\\frac{[6-3(1+h)^2]-[6-3(1)^2]}h\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}\\frac{-6h-3h^2}h\" data-display=\"true\"></span><span data-math=\"=\\lim_{h\\to0}(-6-3h)=-6\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.3/q1",
+      "status": "worked",
+      "method": "Write roots as powers and use d(xⁿ)/dx=nxⁿ⁻¹.",
+      "steps": [
+        {
+          "latex": "f=x^5\\Rightarrow f'=5x^4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=x^{-6}\\Rightarrow f'=-6x^{-7}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=x^{1/2}\\Rightarrow f'=\\frac12x^{-1/2}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=x^{-1/4}\\Rightarrow f'=-\\frac14x^{-5/4}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Write roots as powers and use d(xⁿ)/dx=nxⁿ⁻¹.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f=x^5\\Rightarrow f&#x27;=5x^4\" data-display=\"true\"></span></li><li><span data-math=\"f=x^{-6}\\Rightarrow f&#x27;=-6x^{-7}\" data-display=\"true\"></span></li><li><span data-math=\"f=x^{1/2}\\Rightarrow f&#x27;=\\frac12x^{-1/2}\" data-display=\"true\"></span></li><li><span data-math=\"f=x^{-1/4}\\Rightarrow f&#x27;=-\\frac14x^{-5/4}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.3/q2",
+      "status": "worked",
+      "method": "Simplify to a constant times a power before differentiating.",
+      "steps": [
+        {
+          "latex": "y=5x^4\\Rightarrow y'=20x^3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=5x^{-2}\\Rightarrow y'=-10x^{-3}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=\\frac14x^{-3}\\Rightarrow y'=-\\frac34x^{-4}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=9x^{-2/3}\\Rightarrow y'=-6x^{-5/3}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Simplify to a constant times a power before differentiating.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y=5x^4\\Rightarrow y&#x27;=20x^3\" data-display=\"true\"></span></li><li><span data-math=\"y=5x^{-2}\\Rightarrow y&#x27;=-10x^{-3}\" data-display=\"true\"></span></li><li><span data-math=\"y=\\frac14x^{-3}\\Rightarrow y&#x27;=-\\frac34x^{-4}\" data-display=\"true\"></span></li><li><span data-math=\"y=9x^{-2/3}\\Rightarrow y&#x27;=-6x^{-5/3}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.3/q3",
+      "status": "worked",
+      "method": "Differentiate first, then substitute each x-coordinate.",
+      "steps": [
+        {
+          "latex": "y'=6x^2; m=6(3)^2=54",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=6x^2; m=6(-5)^2=150",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=6x^2; m=6(\\frac12)^2=\\frac32",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=6x^2; m=6(\\frac34)^2=\\frac{27}8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate first, then substitute each x-coordinate.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=6x^2\" data-display=\"true\"></span><span data-math=\"m=6(3)^2=54\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=6x^2\" data-display=\"true\"></span><span data-math=\"m=6(-5)^2=150\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=6x^2\" data-display=\"true\"></span><span data-math=\"m=6(\\frac12)^2=\\frac32\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=6x^2\" data-display=\"true\"></span><span data-math=\"m=6(\\frac34)^2=\\frac{27}8\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.3/q4",
+      "status": "worked",
+      "method": "Rewrite the reciprocal as a negative power.",
+      "steps": [
+        {
+          "latex": "y=5x^{-3}; y'=-15x^{-4}; m(2)=-\\frac{15}{2^4}=-\\frac{15}{16}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rewrite the reciprocal as a negative power.</p><span data-math=\"y=5x^{-3}\" data-display=\"true\"></span><span data-math=\"y&#x27;=-15x^{-4}\" data-display=\"true\"></span><span data-math=\"m(2)=-\\frac{15}{2^4}=-\\frac{15}{16}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.3/q5",
+      "status": "worked",
+      "method": "Rewrite the square-root denominator as a negative power.",
+      "steps": [
+        {
+          "latex": "y=-8x^{-1/2}; y'=4x^{-3/2}; m(16)=\\frac4{16^{3/2}}=\\frac1{16}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rewrite the square-root denominator as a negative power.</p><span data-math=\"y=-8x^{-1/2}\" data-display=\"true\"></span><span data-math=\"y&#x27;=4x^{-3/2}\" data-display=\"true\"></span><span data-math=\"m(16)=\\frac4{16^{3/2}}=\\frac1{16}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.3/q6",
+      "status": "worked",
+      "method": "Equate the derivative to the given gradient.",
+      "steps": [
+        {
+          "latex": "y'=8x^3; 8a^3=27; a=\\sqrt[3]{\\frac{27}8}=\\frac32",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Equate the derivative to the given gradient.</p><span data-math=\"y&#x27;=8x^3\" data-display=\"true\"></span><span data-math=\"8a^3=27\" data-display=\"true\"></span><span data-math=\"a=\\sqrt[3]{\\frac{27}8}=\\frac32\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.3/q7",
+      "status": "worked",
+      "method": "Express y explicitly and differentiate near the positive x-coordinate.",
+      "steps": [
+        {
+          "latex": "y^3=64x^2\\Rightarrow y=4x^{2/3}; y'=\\frac83x^{-1/3}; m(27)=\\frac8{3\\sqrt[3]{27}}=\\frac89",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Express y explicitly and differentiate near the positive x-coordinate.</p><span data-math=\"y^3=64x^2\\Rightarrow y=4x^{2/3}\" data-display=\"true\"></span><span data-math=\"y&#x27;=\\frac83x^{-1/3}\" data-display=\"true\"></span><span data-math=\"m(27)=\\frac8{3\\sqrt[3]{27}}=\\frac89\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.4/q1",
+      "status": "worked",
+      "method": "Differentiate each term; constants have derivative zero.",
+      "steps": [
+        {
+          "latex": "f'=3(2)x-7=6x-7",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=\\frac34(2)x+\\frac12=\\frac32x+\\frac12",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=0-5(2)x=-10x",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate each term; constants have derivative zero.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=3(2)x-7=6x-7\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=\\frac34(2)x+\\frac12=\\frac32x+\\frac12\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=0-5(2)x=-10x\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.4/q2",
+      "status": "worked",
+      "method": "Find the derivative and evaluate it at the given point.",
+      "steps": [
+        {
+          "latex": "y'=-8x+11; m(2)=-16+11=-5",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=6x; m(4)=24",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=\\frac72-\\frac12x; m(8)=\\frac72-4=-\\frac12",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the derivative and evaluate it at the given point.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=-8x+11\" data-display=\"true\"></span><span data-math=\"m(2)=-16+11=-5\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=6x\" data-display=\"true\"></span><span data-math=\"m(4)=24\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=\\frac72-\\frac12x\" data-display=\"true\"></span><span data-math=\"m(8)=\\frac72-4=-\\frac12\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.4/q3",
+      "status": "worked",
+      "method": "Solve the gradient equation and substitute x into the original curve.",
+      "steps": [
+        {
+          "latex": "y'=4x-3=9; x=3; y=2(3)^2-3(3)+4=13; (3,13)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Solve the gradient equation and substitute x into the original curve.</p><span data-math=\"y&#x27;=4x-3=9\" data-display=\"true\"></span><span data-math=\"x=3\" data-display=\"true\"></span><span data-math=\"y=2(3)^2-3(3)+4=13\" data-display=\"true\"></span><span data-math=\"(3,13)\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.4/q4",
+      "status": "worked",
+      "method": "Expand the difference of squares before differentiating.",
+      "steps": [
+        {
+          "latex": "y=4-x^2; y'=-2x; m(5)=-10",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand the difference of squares before differentiating.</p><span data-math=\"y=4-x^2\" data-display=\"true\"></span><span data-math=\"y&#x27;=-2x\" data-display=\"true\"></span><span data-math=\"m(5)=-10\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.4/q5",
+      "status": "worked",
+      "method": "Equate the derivative to −29.",
+      "steps": [
+        {
+          "latex": "y'=12x-5; 12p-5=-29; p=-2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Equate the derivative to −29.</p><span data-math=\"y&#x27;=12x-5\" data-display=\"true\"></span><span data-math=\"12p-5=-29\" data-display=\"true\"></span><span data-math=\"p=-2\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.4/q6",
+      "status": "worked",
+      "method": "Equate the curve and line for the intersections, then evaluate the derivative.",
+      "steps": [
+        {
+          "latex": "x^2-3x+1=2x-5; x^2-5x+6=(x-2)(x-3)=0; P=(2,-1),\\quad Q=(3,1)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=2x-3; m_P=1,\\quad m_Q=3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Equate the curve and line for the intersections, then evaluate the derivative.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"x^2-3x+1=2x-5\" data-display=\"true\"></span><span data-math=\"x^2-5x+6=(x-2)(x-3)=0\" data-display=\"true\"></span><span data-math=\"P=(2,-1),\\quad Q=(3,1)\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=2x-3\" data-display=\"true\"></span><span data-math=\"m_P=1,\\quad m_Q=3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.4/q7",
+      "status": "worked",
+      "method": "Set y=7, factorise, and differentiate the original curve.",
+      "steps": [
+        {
+          "latex": "5x^2-6x-8=(5x+4)(x-2)=0; A=(-\\frac45,7),\\quad B=(2,7)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=10x-6; m_A=-14,\\quad m_B=14",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Set y=7, factorise, and differentiate the original curve.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"5x^2-6x-8=(5x+4)(x-2)=0\" data-display=\"true\"></span><span data-math=\"A=(-\\frac45,7),\\quad B=(2,7)\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=10x-6\" data-display=\"true\"></span><span data-math=\"m_A=-14,\\quad m_B=14\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.5/q1",
+      "status": "worked",
+      "method": "Apply the power rule to each term.",
+      "steps": [
+        {
+          "latex": "y'=5-7(2)x=5-14x",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=8(\\frac52)x^{3/2}-6(4)x^3=20x^{3/2}-24x^3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=8(\\frac52)x^{3/2}-8x-6(\\frac13)x^{-2/3}; =20x^{3/2}-8x-2x^{-2/3}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Apply the power rule to each term.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=5-7(2)x=5-14x\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=8(\\frac52)x^{3/2}-6(4)x^3=20x^{3/2}-24x^3\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=8(\\frac52)x^{3/2}-8x-6(\\frac13)x^{-2/3}\" data-display=\"true\"></span><span data-math=\"=20x^{3/2}-8x-2x^{-2/3}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.5/q2",
+      "status": "worked",
+      "method": "Rewrite roots and reciprocals as powers, then differentiate.",
+      "steps": [
+        {
+          "latex": "f=x^{1/2}+x^{-1/2}; f'=\\frac12x^{-1/2}-\\frac12x^{-3/2}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=\\frac17x^{-2}+x^{1/4}; f'=-\\frac27x^{-3}+\\frac14x^{-3/4}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rewrite roots and reciprocals as powers, then differentiate.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f=x^{1/2}+x^{-1/2}\" data-display=\"true\"></span><span data-math=\"f&#x27;=\\frac12x^{-1/2}-\\frac12x^{-3/2}\" data-display=\"true\"></span></li><li><span data-math=\"f=\\frac17x^{-2}+x^{1/4}\" data-display=\"true\"></span><span data-math=\"f&#x27;=-\\frac27x^{-3}+\\frac14x^{-3/4}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.5/q3",
+      "status": "worked",
+      "method": "Expand or simplify the product first.",
+      "steps": [
+        {
+          "latex": "y=2x^3-6x^2+5x; y'=6x^2-12x+5",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=x^3+2x-2x-\\frac4x=x^3-4x^{-1}; y'=3x^2+4x^{-2}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=6x^2-8x; y'=12x-8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand or simplify the product first.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y=2x^3-6x^2+5x\" data-display=\"true\"></span><span data-math=\"y&#x27;=6x^2-12x+5\" data-display=\"true\"></span></li><li><span data-math=\"y=x^3+2x-2x-\\frac4x=x^3-4x^{-1}\" data-display=\"true\"></span><span data-math=\"y&#x27;=3x^2+4x^{-2}\" data-display=\"true\"></span></li><li><span data-math=\"y=6x^2-8x\" data-display=\"true\"></span><span data-math=\"y&#x27;=12x-8\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.5/q4",
+      "status": "worked",
+      "method": "Differentiate term by term and substitute the stated x-coordinate.",
+      "steps": [
+        {
+          "latex": "f'=2x^3-16x; f'(-2)=-16+32=16",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=-3x^{-3/2}-3-4x; f'(1)=-3-3-4=-10",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate term by term and substitute the stated x-coordinate.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=2x^3-16x\" data-display=\"true\"></span><span data-math=\"f&#x27;(-2)=-16+32=16\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=-3x^{-3/2}-3-4x\" data-display=\"true\"></span><span data-math=\"f&#x27;(1)=-3-3-4=-10\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.5/q5",
+      "status": "worked",
+      "method": "Divide each numerator term by x³ first.",
+      "steps": [
+        {
+          "latex": "f=4x^{-1}-8x^{-2}; f'=-4x^{-2}+16x^{-3}; f'(-2)=-1-2=-3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide each numerator term by x³ first.</p><span data-math=\"f=4x^{-1}-8x^{-2}\" data-display=\"true\"></span><span data-math=\"f&#x27;=-4x^{-2}+16x^{-3}\" data-display=\"true\"></span><span data-math=\"f&#x27;(-2)=-1-2=-3\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.5/q6",
+      "status": "worked",
+      "method": "Treat p as a constant when differentiating.",
+      "steps": [
+        {
+          "latex": "f'=2px-4px^{-1/2}; f'(4)=8p-2p=6p=15; p=\\frac52",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Treat p as a constant when differentiating.</p><span data-math=\"f&#x27;=2px-4px^{-1/2}\" data-display=\"true\"></span><span data-math=\"f&#x27;(4)=8p-2p=6p=15\" data-display=\"true\"></span><span data-math=\"p=\\frac52\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.5/q7",
+      "status": "worked",
+      "method": "Use the function value and derivative value to form simultaneous equations. The supplied p=9, q=−4 gives h′(−1)=75, so it does not meet the stated derivative condition.",
+      "steps": [
+        {
+          "latex": "h'=3px^2+4p-3qx^{-4}; h(-1)=-5p-q=-41; h'(-1)=7p-3q=67; 5p+q=41\\Rightarrow q=41-5p; 7p-3(41-5p)=67;22p=190; p=\\frac{95}{11},\\quad q=-\\frac{24}{11}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the function value and derivative value to form simultaneous equations. The supplied p=9, q=−4 gives h′(−1)=75, so it does not meet the stated derivative condition.</p><span data-math=\"h&#x27;=3px^2+4p-3qx^{-4}\" data-display=\"true\"></span><span data-math=\"h(-1)=-5p-q=-41\" data-display=\"true\"></span><span data-math=\"h&#x27;(-1)=7p-3q=67\" data-display=\"true\"></span><span data-math=\"5p+q=41\\Rightarrow q=41-5p\" data-display=\"true\"></span><span data-math=\"7p-3(41-5p)=67\" data-display=\"true\"></span><span data-math=\"22p=190\" data-display=\"true\"></span><span data-math=\"p=\\frac{95}{11},\\quad q=-\\frac{24}{11}\" data-display=\"true\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.5/q8",
+      "status": "worked",
+      "method": "Keep terms up to x² before differentiating; differentiation lowers their powers.",
+      "steps": [
+        {
+          "latex": "(1+2x)^6=1+6(2x)+\\binom62(2x)^2+\\cdots; =1+12x+60x^2+\\cdots",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'(x)\\approx12+120x; g(x)=1-12x+60x^2+\\cdots; g'(x)\\approx-12+120x",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Keep terms up to x² before differentiating; differentiation lowers their powers.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"(1+2x)^6=1+6(2x)+\\binom62(2x)^2+\\cdots\" data-display=\"true\"></span><span data-math=\"=1+12x+60x^2+\\cdots\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;(x)\\approx12+120x\" data-display=\"true\"></span><span data-math=\"g(x)=1-12x+60x^2+\\cdots\" data-display=\"true\"></span><span data-math=\"g&#x27;(x)\\approx-12+120x\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.6/q1",
+      "status": "worked",
+      "method": "Differentiate to find the tangent gradient and use y−y₀=m(x−x₀).",
+      "steps": [
+        {
+          "latex": "y'=3x^2-8x; m(2)=-4; y+8=-4(x-2); y=-4x",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=-4x^{-2}-6x; m(-2)=11; y+14=11(x+2); y=11x+8",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=9x^{1/2}-2x^{-1/2}; m(4)=17; y(4)=40; y-40=17(x-4); y=17x-28",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=6x^{-1}-\\frac x2; y'=-6x^{-2}-\\frac12; m(-3)=-\\frac76; y(-3)=-\\frac12; y+\\frac12=-\\frac76(x+3); y=-\\frac76x-4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate to find the tangent gradient and use y−y₀=m(x−x₀).</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=3x^2-8x\" data-display=\"true\"></span><span data-math=\"m(2)=-4\" data-display=\"true\"></span><span data-math=\"y+8=-4(x-2)\" data-display=\"true\"></span><span data-math=\"y=-4x\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=-4x^{-2}-6x\" data-display=\"true\"></span><span data-math=\"m(-2)=11\" data-display=\"true\"></span><span data-math=\"y+14=11(x+2)\" data-display=\"true\"></span><span data-math=\"y=11x+8\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=9x^{1/2}-2x^{-1/2}\" data-display=\"true\"></span><span data-math=\"m(4)=17\" data-display=\"true\"></span><span data-math=\"y(4)=40\" data-display=\"true\"></span><span data-math=\"y-40=17(x-4)\" data-display=\"true\"></span><span data-math=\"y=17x-28\" data-display=\"true\"></span></li><li><span data-math=\"y=6x^{-1}-\\frac x2\" data-display=\"true\"></span><span data-math=\"y&#x27;=-6x^{-2}-\\frac12\" data-display=\"true\"></span><span data-math=\"m(-3)=-\\frac76\" data-display=\"true\"></span><span data-math=\"y(-3)=-\\frac12\" data-display=\"true\"></span><span data-math=\"y+\\frac12=-\\frac76(x+3)\" data-display=\"true\"></span><span data-math=\"y=-\\frac76x-4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.6/q2",
+      "status": "worked",
+      "method": "The normal gradient is the negative reciprocal of the tangent gradient.",
+      "steps": [
+        {
+          "latex": "y'=x-6x^{-2}; m_T(3)=\\frac73; m_N=-\\frac37; y-\\frac{13}2=-\\frac37(x-3); y=-\\frac37x+\\frac{109}{14}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=-4x^{-2}-6x; m_T(4)=-\\frac{97}4; m_N=\\frac4{97}; y(4)=-47; y+47=\\frac4{97}(x-4); y=\\frac4{97}x-\\frac{4575}{97}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The normal gradient is the negative reciprocal of the tangent gradient.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=x-6x^{-2}\" data-display=\"true\"></span><span data-math=\"m_T(3)=\\frac73\" data-display=\"true\"></span><span data-math=\"m_N=-\\frac37\" data-display=\"true\"></span><span data-math=\"y-\\frac{13}2=-\\frac37(x-3)\" data-display=\"true\"></span><span data-math=\"y=-\\frac37x+\\frac{109}{14}\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=-4x^{-2}-6x\" data-display=\"true\"></span><span data-math=\"m_T(4)=-\\frac{97}4\" data-display=\"true\"></span><span data-math=\"m_N=\\frac4{97}\" data-display=\"true\"></span><span data-math=\"y(4)=-47\" data-display=\"true\"></span><span data-math=\"y+47=\\frac4{97}(x-4)\" data-display=\"true\"></span><span data-math=\"y=\\frac4{97}x-\\frac{4575}{97}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.6/q3",
+      "status": "worked",
+      "method": "Evaluate the point and gradient, then use the perpendicular gradient for the normal.",
+      "steps": [
+        {
+          "latex": "g(1)=7; g'=-2-2x; g'(1)=-4; y-7=-4(x-1); y=-4x+11",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "m_N=\\frac14; y-7=\\frac14(x-1); y=\\frac14x+\\frac{27}4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Evaluate the point and gradient, then use the perpendicular gradient for the normal.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"g(1)=7\" data-display=\"true\"></span><span data-math=\"g&#x27;=-2-2x\" data-display=\"true\"></span><span data-math=\"g&#x27;(1)=-4\" data-display=\"true\"></span><span data-math=\"y-7=-4(x-1)\" data-display=\"true\"></span><span data-math=\"y=-4x+11\" data-display=\"true\"></span></li><li><span data-math=\"m_N=\\frac14\" data-display=\"true\"></span><span data-math=\"y-7=\\frac14(x-1)\" data-display=\"true\"></span><span data-math=\"y=\\frac14x+\\frac{27}4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.6/q4",
+      "status": "worked",
+      "method": "Use f′(x)=2x−5 at each specified point, then solve the line equations.",
+      "steps": [
+        {
+          "latex": "f(5)=4; m_T=5; y-4=5(x-5); y=5x-21",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f(3)=-2; m_T=1; m_N=-1; y+2=-(x-3); y=-x+1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "5x-21=-x+1; x=\\frac{11}3; y=-\\frac83; P=(\\frac{11}3,-\\frac83)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use f′(x)=2x−5 at each specified point, then solve the line equations.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f(5)=4\" data-display=\"true\"></span><span data-math=\"m_T=5\" data-display=\"true\"></span><span data-math=\"y-4=5(x-5)\" data-display=\"true\"></span><span data-math=\"y=5x-21\" data-display=\"true\"></span></li><li><span data-math=\"f(3)=-2\" data-display=\"true\"></span><span data-math=\"m_T=1\" data-display=\"true\"></span><span data-math=\"m_N=-1\" data-display=\"true\"></span><span data-math=\"y+2=-(x-3)\" data-display=\"true\"></span><span data-math=\"y=-x+1\" data-display=\"true\"></span></li><li><span data-math=\"5x-21=-x+1\" data-display=\"true\"></span><span data-math=\"x=\\frac{11}3\" data-display=\"true\"></span><span data-math=\"y=-\\frac83\" data-display=\"true\"></span><span data-math=\"P=(\\frac{11}3,-\\frac83)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.6/q5",
+      "status": "worked",
+      "method": "Find the tangent, set its y-coordinate to zero, and check that point in the curve.",
+      "steps": [
+        {
+          "latex": "g'=3x^2-4; g'(-1)=-1; g(-1)=3; y-3=-(x+1); y=-x+2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "0=-x+2; A=(2,0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "g(2)=2^3-4(2)=0",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the tangent, set its y-coordinate to zero, and check that point in the curve.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"g&#x27;=3x^2-4\" data-display=\"true\"></span><span data-math=\"g&#x27;(-1)=-1\" data-display=\"true\"></span><span data-math=\"g(-1)=3\" data-display=\"true\"></span><span data-math=\"y-3=-(x+1)\" data-display=\"true\"></span><span data-math=\"y=-x+2\" data-display=\"true\"></span></li><li><span data-math=\"0=-x+2\" data-display=\"true\"></span><span data-math=\"A=(2,0)\" data-display=\"true\"></span></li><li><span data-math=\"g(2)=2^3-4(2)=0\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.6/q6",
+      "status": "worked",
+      "method": "Find the normal and solve its intersection with the curve, discarding the known point P.",
+      "steps": [
+        {
+          "latex": "P=(6,-24); y'=x-8; m_T=-2; m_N=\\frac12; y+24=\\frac12(x-6); y=\\frac12x-27; \\frac12x^2-8x+6=\\frac12x-27; x^2-17x+66=(x-6)(x-11)=0; Q=(11,-\\frac{43}2)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the normal and solve its intersection with the curve, discarding the known point P.</p><span data-math=\"P=(6,-24)\" data-display=\"true\"></span><span data-math=\"y&#x27;=x-8\" data-display=\"true\"></span><span data-math=\"m_T=-2\" data-display=\"true\"></span><span data-math=\"m_N=\\frac12\" data-display=\"true\"></span><span data-math=\"y+24=\\frac12(x-6)\" data-display=\"true\"></span><span data-math=\"y=\\frac12x-27\" data-display=\"true\"></span><span data-math=\"\\frac12x^2-8x+6=\\frac12x-27\" data-display=\"true\"></span><span data-math=\"x^2-17x+66=(x-6)(x-11)=0\" data-display=\"true\"></span><span data-math=\"Q=(11,-\\frac{43}2)\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.6/q7",
+      "status": "worked",
+      "method": "Use the derivative for the tangent, its negative reciprocal for the normal, then use the vertical intercept separation as the triangle’s base.",
+      "steps": [
+        {
+          "latex": "y'=\\frac12x^{-1/2}-\\frac12x^{-3/2}; m_T(4)=\\frac14-\\frac1{16}=\\frac3{16}; y-\\frac52=\\frac3{16}(x-4); 3x-16y+28=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "m_N=-\\frac{16}3; y-\\frac52=-\\frac{16}3(x-4);32x+6y-143=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A=(0,\\frac74),\\ B=(0,\\frac{143}6); AB=\\frac{143}6-\\frac74=\\frac{265}{12}; \\text{area}=\\frac12(\\frac{265}{12})(4)=\\frac{265}6",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the derivative for the tangent, its negative reciprocal for the normal, then use the vertical intercept separation as the triangle’s base.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=\\frac12x^{-1/2}-\\frac12x^{-3/2}\" data-display=\"true\"></span><span data-math=\"m_T(4)=\\frac14-\\frac1{16}=\\frac3{16}\" data-display=\"true\"></span><span data-math=\"y-\\frac52=\\frac3{16}(x-4)\" data-display=\"true\"></span><span data-math=\"3x-16y+28=0\" data-display=\"true\"></span></li><li><span data-math=\"m_N=-\\frac{16}3\" data-display=\"true\"></span><span data-math=\"y-\\frac52=-\\frac{16}3(x-4)\" data-display=\"true\"></span><span data-math=\"32x+6y-143=0\" data-display=\"true\"></span></li><li><span data-math=\"A=(0,\\frac74),\\ B=(0,\\frac{143}6)\" data-display=\"true\"></span><span data-math=\"AB=\\frac{143}6-\\frac74=\\frac{265}{12}\" data-display=\"true\"></span><span data-math=\"\\text{area}=\\frac12(\\frac{265}{12})(4)=\\frac{265}6\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.7/q1",
+      "status": "worked",
+      "method": "Stationary points have horizontal tangents. Read whether the curve rises or falls from left to right on each interval.",
+      "steps": [
+        {
+          "latex": "f'=2x^3-2x=2x(x-1)(x+1)=0; (-1,-\\frac12),\\ (0,0),\\ (1,-\\frac12)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "i Decreasing; ii increasing; iii decreasing; iv neither; v increasing; vi neither. The intervals spanning both a rising and a falling part are neither.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Stationary points have horizontal tangents. Read whether the curve rises or falls from left to right on each interval.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=2x^3-2x=2x(x-1)(x+1)=0\" data-display=\"true\"></span><span data-math=\"(-1,-\\frac12),\\ (0,0),\\ (1,-\\frac12)\" data-display=\"true\"></span></li><li><p>i Decreasing; ii increasing; iii decreasing; iv neither; v increasing; vi neither. The intervals spanning both a rising and a falling part are neither.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.7/q2",
+      "status": "worked",
+      "method": "Solve f′(x)≥0 to obtain each complete increasing interval, including its stationary endpoint.",
+      "steps": [
+        {
+          "latex": "f'=10x-8\\ge0; x\\ge\\frac45",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=-9-6x\\ge0; x\\le-\\frac32",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=3x^2-12=3(x-2)(x+2)\\ge0; x\\le-2\\text{ or }x\\ge2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=18-6x^2\\ge0; -\\sqrt3\\le x\\le\\sqrt3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Solve f′(x)≥0 to obtain each complete increasing interval, including its stationary endpoint.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=10x-8\\ge0\" data-display=\"true\"></span><span data-math=\"x\\ge\\frac45\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=-9-6x\\ge0\" data-display=\"true\"></span><span data-math=\"x\\le-\\frac32\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=3x^2-12=3(x-2)(x+2)\\ge0\" data-display=\"true\"></span><span data-math=\"x\\le-2\\text{ or }x\\ge2\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=18-6x^2\\ge0\" data-display=\"true\"></span><span data-math=\"-\\sqrt3\\le x\\le\\sqrt3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.7/q3",
+      "status": "worked",
+      "method": "Solve f′(x)≤0 for the decreasing intervals; isolated zero gradients do not prevent a function from decreasing across the point.",
+      "steps": [
+        {
+          "latex": "f'=6x+7\\le0; x\\le-\\frac76",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=-6-10x\\le0; x\\ge-\\frac35",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=-10x^4-24x^2=-2x^2(5x^2+12)\\le0; x\\in\\mathbb R",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=15x-5x^2; f'=15-10x\\le0; x\\ge\\frac32",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Solve f′(x)≤0 for the decreasing intervals; isolated zero gradients do not prevent a function from decreasing across the point.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=6x+7\\le0\" data-display=\"true\"></span><span data-math=\"x\\le-\\frac76\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=-6-10x\\le0\" data-display=\"true\"></span><span data-math=\"x\\ge-\\frac35\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=-10x^4-24x^2=-2x^2(5x^2+12)\\le0\" data-display=\"true\"></span><span data-math=\"x\\in\\mathbb R\" data-display=\"true\"></span></li><li><span data-math=\"f=15x-5x^2\" data-display=\"true\"></span><span data-math=\"f&#x27;=15-10x\\le0\" data-display=\"true\"></span><span data-math=\"x\\ge\\frac32\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.7/q4",
+      "status": "worked",
+      "method": "Every even-power term in the derivative is nonnegative.",
+      "steps": [
+        {
+          "latex": "f'=5x^4+6x^2+8; x^4\\ge0,\\quad x^2\\ge0; f'\\ge8>0\\text{ for all }x\\in\\mathbb R",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Every even-power term in the derivative is nonnegative.</p><span data-math=\"f&#x27;=5x^4+6x^2+8\" data-display=\"true\"></span><span data-math=\"x^4\\ge0,\\quad x^2\\ge0\" data-display=\"true\"></span><span data-math=\"f&#x27;\\ge8&gt;0\\text{ for all }x\\in\\mathbb R\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.7/q5",
+      "status": "worked",
+      "method": "Complete the square in the derivative.",
+      "steps": [
+        {
+          "latex": "g'=-6x^2-36x-54=-6(x+3)^2\\le0",
+          "explanation": "The gradient is negative except at the isolated point x=−3. Therefore the function decreases across the whole real line.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Complete the square in the derivative.</p><p>The gradient is negative except at the isolated point x=−3. Therefore the function decreases across the whole real line.</p><span data-math=\"g&#x27;=-6x^2-36x-54=-6(x+3)^2\\le0\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.7/q6",
+      "status": "worked",
+      "method": "The derivative has its smallest value at x=0.",
+      "steps": [
+        {
+          "latex": "h'=3x^2+q; h'(0)=q; h'\\ge0\\text{ for all }x\\iff q\\ge0",
+          "explanation": "When q=0 the function is x³, which is still increasing despite its isolated zero gradient.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The derivative has its smallest value at x=0.</p><p>When q=0 the function is x³, which is still increasing despite its isolated zero gradient.</p><span data-math=\"h&#x27;=3x^2+q\" data-display=\"true\"></span><span data-math=\"h&#x27;(0)=q\" data-display=\"true\"></span><span data-math=\"h&#x27;\\ge0\\text{ for all }x\\iff q\\ge0\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.7/q7",
+      "status": "worked",
+      "method": "Differentiate and use the sign of the factored quadratic.",
+      "steps": [
+        {
+          "latex": "y'=9x^2+4x-5",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "9x^2+4x-5=(x+1)(9x-5)\\ge0; x\\in(-\\infty,-1]\\cup[\\frac59,\\infty)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate and use the sign of the factored quadratic.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=9x^2+4x-5\" data-display=\"true\"></span></li><li><span data-math=\"9x^2+4x-5=(x+1)(9x-5)\\ge0\" data-display=\"true\"></span><span data-math=\"x\\in(-\\infty,-1]\\cup[\\frac59,\\infty)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.8/q1",
+      "status": "worked",
+      "method": "Apply the power rule twice.",
+      "steps": [
+        {
+          "latex": "f'=18x-6; f''=18",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=-3x^2-4x^{-2}; f''=-6x+8x^{-3}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=-2x^{-3/2}+12x^{1/2}; f''=3x^{-5/2}+6x^{-1/2}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Apply the power rule twice.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=18x-6\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;=18\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=-3x^2-4x^{-2}\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;=-6x+8x^{-3}\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=-2x^{-3/2}+12x^{1/2}\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;=3x^{-5/2}+6x^{-1/2}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.8/q2",
+      "status": "worked",
+      "method": "Express the function as a sum of powers before differentiating twice.",
+      "steps": [
+        {
+          "latex": "y=6x^{-3}-\\frac12x^4-9x; y'=-18x^{-4}-2x^3-9; y''=72x^{-5}-6x^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=8x^{-1/4}-x^{1/6}-7; y'=-2x^{-5/4}-\\frac16x^{-5/6}; y''=\\frac52x^{-9/4}+\\frac5{36}x^{-11/6}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=-x^5+3x^3+5x^2-15; y'=-5x^4+9x^2+10x; y''=-20x^3+18x+10",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Express the function as a sum of powers before differentiating twice.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y=6x^{-3}-\\frac12x^4-9x\" data-display=\"true\"></span><span data-math=\"y&#x27;=-18x^{-4}-2x^3-9\" data-display=\"true\"></span><span data-math=\"y&#x27;&#x27;=72x^{-5}-6x^2\" data-display=\"true\"></span></li><li><span data-math=\"y=8x^{-1/4}-x^{1/6}-7\" data-display=\"true\"></span><span data-math=\"y&#x27;=-2x^{-5/4}-\\frac16x^{-5/6}\" data-display=\"true\"></span><span data-math=\"y&#x27;&#x27;=\\frac52x^{-9/4}+\\frac5{36}x^{-11/6}\" data-display=\"true\"></span></li><li><span data-math=\"y=-x^5+3x^3+5x^2-15\" data-display=\"true\"></span><span data-math=\"y&#x27;=-5x^4+9x^2+10x\" data-display=\"true\"></span><span data-math=\"y&#x27;&#x27;=-20x^3+18x+10\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.8/q3",
+      "status": "worked",
+      "method": "First simplify h=4x⁴−x¹ᐟ³+x⁻³−x².",
+      "steps": [
+        {
+          "latex": "h'=16x^3-\\frac13x^{-2/3}-3x^{-4}-2x",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "h''=48x^2+\\frac29x^{-5/3}+12x^{-5}-2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>First simplify h=4x⁴−x¹ᐟ³+x⁻³−x².</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"h&#x27;=16x^3-\\frac13x^{-2/3}-3x^{-4}-2x\" data-display=\"true\"></span></li><li><span data-math=\"h&#x27;&#x27;=48x^2+\\frac29x^{-5/3}+12x^{-5}-2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.8/q4",
+      "status": "worked",
+      "method": "Differentiate twice before substituting −2.",
+      "steps": [
+        {
+          "latex": "f'=-x^{-2}-6-6x^2; f''=2x^{-3}-12x; f''(-2)=-\\frac14+24=\\frac{95}4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate twice before substituting −2.</p><span data-math=\"f&#x27;=-x^{-2}-6-6x^2\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;=2x^{-3}-12x\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;(-2)=-\\frac14+24=\\frac{95}4\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.8/q5",
+      "status": "worked",
+      "method": "Use the binomial expansion, then differentiate twice.",
+      "steps": [
+        {
+          "latex": "p=1-12x+48x^2-64x^3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "p'=-12+96x-192x^2; p''=96-384x",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the binomial expansion, then differentiate twice.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"p=1-12x+48x^2-64x^3\" data-display=\"true\"></span></li><li><span data-math=\"p&#x27;=-12+96x-192x^2\" data-display=\"true\"></span><span data-math=\"p&#x27;&#x27;=96-384x\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.8/q6",
+      "status": "worked",
+      "method": "Translate the two derivative conditions into simultaneous linear equations.",
+      "steps": [
+        {
+          "latex": "f'=3ax^2+2bx-8; f''=6ax+2b;12a+4b-8=-24\\Rightarrow3a+b=-4; -30a+2b=100\\Rightarrow-15a+b=50; -18a=54; a=-3,\\quad b=5",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Translate the two derivative conditions into simultaneous linear equations.</p><span data-math=\"f&#x27;=3ax^2+2bx-8\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;=6ax+2b\" data-display=\"true\"></span><span data-math=\"12a+4b-8=-24\\Rightarrow3a+b=-4\" data-display=\"true\"></span><span data-math=\"-30a+2b=100\\Rightarrow-15a+b=50\" data-display=\"true\"></span><span data-math=\"-18a=54\" data-display=\"true\"></span><span data-math=\"a=-3,\\quad b=5\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.8/q7",
+      "status": "worked",
+      "method": "Substitute the two stationary x-coordinates into g′.",
+      "steps": [
+        {
+          "latex": "g'=3px^2+2qx+6;12p-4q+6=0;\\frac{75}4p+5q+6=0;60p-20q=-30;75p+20q=-24;135p=-54; p=-\\frac25,\\quad q=\\frac3{10}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "g''=6px+2q=-\\frac{12}5x+\\frac35",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Substitute the two stationary x-coordinates into g′.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"g&#x27;=3px^2+2qx+6\" data-display=\"true\"></span><span data-math=\"12p-4q+6=0\" data-display=\"true\"></span><span data-math=\"\\frac{75}4p+5q+6=0\" data-display=\"true\"></span><span data-math=\"60p-20q=-30\" data-display=\"true\"></span><span data-math=\"75p+20q=-24\" data-display=\"true\"></span><span data-math=\"135p=-54\" data-display=\"true\"></span><span data-math=\"p=-\\frac25,\\quad q=\\frac3{10}\" data-display=\"true\"></span></li><li><span data-math=\"g&#x27;&#x27;=6px+2q=-\\frac{12}5x+\\frac35\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.9/q1",
+      "status": "worked",
+      "method": "Use the roots for the sketch and differentiate the expanded quadratic.",
+      "steps": [
+        {
+          "latex": "f=x^2-12x+32; f(0)=32",
+          "explanation": "The upward-opening parabola crosses at (4,0) and (8,0).",
+          "graphs": [
+            "a1291a"
+          ]
+        },
+        {
+          "latex": "",
+          "explanation": "Between the roots the curve changes from decreasing to increasing, so it has a local minimum.",
+          "graphs": []
+        },
+        {
+          "latex": "f'=2x-12",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "2x-12=0\\Rightarrow x=6",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f(6)=(6-4)(6-8)=-4; (6,-4)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the roots for the sketch and differentiate the expanded quadratic.</p><ol type=\"a\" class=\"parts\"><li><p>The upward-opening parabola crosses at (4,0) and (8,0).</p><span data-math=\"f=x^2-12x+32\" data-display=\"true\"></span><span data-math=\"f(0)=32\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/6ee88f065ab34c6e531e.png\" alt=\"Original question diagram\"></li><li><p>Between the roots the curve changes from decreasing to increasing, so it has a local minimum.</p></li><li><span data-math=\"f&#x27;=2x-12\" data-display=\"true\"></span></li><li><span data-math=\"2x-12=0\\Rightarrow x=6\" data-display=\"true\"></span></li><li><span data-math=\"f(6)=(6-4)(6-8)=-4\" data-display=\"true\"></span><span data-math=\"(6,-4)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.9/q2",
+      "status": "worked",
+      "method": "Set the first derivative to zero. A positive second derivative confirms a minimum.",
+      "steps": [
+        {
+          "latex": "y'=2x-6=0\\Rightarrow x=3; y(3)=-1; y''=2>0; (3,-1)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=2x-3=0\\Rightarrow x=\\frac32; y(\\frac32)=-\\frac{53}4; y''=2>0; (\\frac32,-\\frac{53}4)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=6x+2=0\\Rightarrow x=-\\frac13; y(-\\frac13)=\\frac23; y''=6>0; (-\\frac13,\\frac23)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Set the first derivative to zero. A positive second derivative confirms a minimum.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=2x-6=0\\Rightarrow x=3\" data-display=\"true\"></span><span data-math=\"y(3)=-1\" data-display=\"true\"></span><span data-math=\"y&#x27;&#x27;=2&gt;0\" data-display=\"true\"></span><span data-math=\"(3,-1)\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=2x-3=0\\Rightarrow x=\\frac32\" data-display=\"true\"></span><span data-math=\"y(\\frac32)=-\\frac{53}4\" data-display=\"true\"></span><span data-math=\"y&#x27;&#x27;=2&gt;0\" data-display=\"true\"></span><span data-math=\"(\\frac32,-\\frac{53}4)\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=6x+2=0\\Rightarrow x=-\\frac13\" data-display=\"true\"></span><span data-math=\"y(-\\frac13)=\\frac23\" data-display=\"true\"></span><span data-math=\"y&#x27;&#x27;=6&gt;0\" data-display=\"true\"></span><span data-math=\"(-\\frac13,\\frac23)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.9/q3",
+      "status": "worked",
+      "method": "Set the first derivative to zero. A negative second derivative confirms a maximum.",
+      "steps": [
+        {
+          "latex": "y'=-16-2x=0\\Rightarrow x=-8; y(-8)=72; y''=-2<0; (-8,72)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=12-8x=0\\Rightarrow x=\\frac32; y(\\frac32)=9; y''=-8<0; (\\frac32,9)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=-30-14x=0\\Rightarrow x=-\\frac{15}7; y(-\\frac{15}7)=\\frac{351}7; y''=-14<0; (-\\frac{15}7,\\frac{351}7)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Set the first derivative to zero. A negative second derivative confirms a maximum.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=-16-2x=0\\Rightarrow x=-8\" data-display=\"true\"></span><span data-math=\"y(-8)=72\" data-display=\"true\"></span><span data-math=\"y&#x27;&#x27;=-2&lt;0\" data-display=\"true\"></span><span data-math=\"(-8,72)\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=12-8x=0\\Rightarrow x=\\frac32\" data-display=\"true\"></span><span data-math=\"y(\\frac32)=9\" data-display=\"true\"></span><span data-math=\"y&#x27;&#x27;=-8&lt;0\" data-display=\"true\"></span><span data-math=\"(\\frac32,9)\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=-30-14x=0\\Rightarrow x=-\\frac{15}7\" data-display=\"true\"></span><span data-math=\"y(-\\frac{15}7)=\\frac{351}7\" data-display=\"true\"></span><span data-math=\"y&#x27;&#x27;=-14&lt;0\" data-display=\"true\"></span><span data-math=\"(-\\frac{15}7,\\frac{351}7)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.9/q4",
+      "status": "worked",
+      "method": "Find the stationary coordinates and classify each using the second derivative.",
+      "steps": [
+        {
+          "latex": "y'=-12x^2+12x+24=-12(x-2)(x+1)=0; x=-1,2; y(-1)=-11,\\ y(2)=43; (-1,-11),\\ (2,43)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y''=-24x+12",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y''(-1)=36>0\\Rightarrow(-1,-11)\\text{ local minimum}; y''(2)=-36<0\\Rightarrow(2,43)\\text{ local maximum}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the stationary coordinates and classify each using the second derivative.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=-12x^2+12x+24=-12(x-2)(x+1)=0\" data-display=\"true\"></span><span data-math=\"x=-1,2\" data-display=\"true\"></span><span data-math=\"y(-1)=-11,\\ y(2)=43\" data-display=\"true\"></span><span data-math=\"(-1,-11),\\ (2,43)\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;&#x27;=-24x+12\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;&#x27;(-1)=36&gt;0\\Rightarrow(-1,-11)\\text{ local minimum}\" data-display=\"true\"></span><span data-math=\"y&#x27;&#x27;(2)=-36&lt;0\\Rightarrow(2,43)\\text{ local maximum}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.9/q5",
+      "status": "worked",
+      "method": "Factor the derivative and inspect the change in concavity.",
+      "steps": [
+        {
+          "latex": "q'=-3x^2-12x-12=-3(x+2)^2=0; x=-2; q(-2)=2; (-2,2)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "q''=-6(x+2)",
+          "explanation": "The second derivative is positive to the left of −2 and negative to the right, so concavity changes: this is a stationary point of inflection.",
+          "graphs": []
+        },
+        {
+          "latex": "q=2-(x+2)^3; q(0)=-6; q=0\\Rightarrow x=\\sqrt[3]2-2",
+          "explanation": "A decreasing cubic with a horizontal inflection at (−2,2).",
+          "graphs": [
+            "a1295c"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>Factor the derivative and inspect the change in concavity.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"q&#x27;=-3x^2-12x-12=-3(x+2)^2=0\" data-display=\"true\"></span><span data-math=\"x=-2\" data-display=\"true\"></span><span data-math=\"q(-2)=2\" data-display=\"true\"></span><span data-math=\"(-2,2)\" data-display=\"true\"></span></li><li><p>The second derivative is positive to the left of −2 and negative to the right, so concavity changes: this is a stationary point of inflection.</p><span data-math=\"q&#x27;&#x27;=-6(x+2)\" data-display=\"true\"></span></li><li><p>A decreasing cubic with a horizontal inflection at (−2,2).</p><span data-math=\"q=2-(x+2)^3\" data-display=\"true\"></span><span data-math=\"q(0)=-6\" data-display=\"true\"></span><span data-math=\"q=0\\Rightarrow x=\\sqrt[3]2-2\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/66ae12cdcb7c8d1bf39d.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.9/q6",
+      "status": "worked",
+      "method": "Solve f′=0 and substitute both roots into f.",
+      "steps": [
+        {
+          "latex": "f'=6x^2-x-1=(3x+1)(2x-1)=0; x=-\\frac13,\\ \\frac12; f(-\\frac13)=\\frac{119}{54},\\quad f(\\frac12)=\\frac{13}8; (-\\frac13,\\frac{119}{54}),\\quad(\\frac12,\\frac{13}8)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Solve f′=0 and substitute both roots into f.</p><span data-math=\"f&#x27;=6x^2-x-1=(3x+1)(2x-1)=0\" data-display=\"true\"></span><span data-math=\"x=-\\frac13,\\ \\frac12\" data-display=\"true\"></span><span data-math=\"f(-\\frac13)=\\frac{119}{54},\\quad f(\\frac12)=\\frac{13}8\" data-display=\"true\"></span><span data-math=\"(-\\frac13,\\frac{119}{54}),\\quad(\\frac12,\\frac{13}8)\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.9/q7",
+      "status": "worked",
+      "method": "The domain is x>0. Solve the derivative equation and then use its second derivative.",
+      "steps": [
+        {
+          "latex": "g'=-54x^{-2}+2x^{-1/2}=0; 2x^{3/2}=54; x=27^{2/3}=9; g(9)=6+12=18; (9,18)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "g''=108x^{-3}-x^{-3/2}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "g''(9)=\\frac{108}{729}-\\frac1{27}=\\frac19>0; (9,18)\\text{ is a local minimum}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The domain is x&gt;0. Solve the derivative equation and then use its second derivative.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"g&#x27;=-54x^{-2}+2x^{-1/2}=0\" data-display=\"true\"></span><span data-math=\"2x^{3/2}=54\" data-display=\"true\"></span><span data-math=\"x=27^{2/3}=9\" data-display=\"true\"></span><span data-math=\"g(9)=6+12=18\" data-display=\"true\"></span><span data-math=\"(9,18)\" data-display=\"true\"></span></li><li><span data-math=\"g&#x27;&#x27;=108x^{-3}-x^{-3/2}\" data-display=\"true\"></span></li><li><span data-math=\"g&#x27;&#x27;(9)=\\frac{108}{729}-\\frac1{27}=\\frac19&gt;0\" data-display=\"true\"></span><span data-math=\"(9,18)\\text{ is a local minimum}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.9/q8",
+      "status": "worked",
+      "method": "There are two stationary points; use the second derivative to select the maximum.",
+      "steps": [
+        {
+          "latex": "f'=-6x^2+8x+8=-2(3x+2)(x-2)=0; x=-\\frac23,\\ 2; f''=-12x+8; f''(-\\frac23)=16>0; f''(2)=-16<0; f(2)=6; \\text{local maximum }(2,6)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>There are two stationary points; use the second derivative to select the maximum.</p><span data-math=\"f&#x27;=-6x^2+8x+8=-2(3x+2)(x-2)=0\" data-display=\"true\"></span><span data-math=\"x=-\\frac23,\\ 2\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;=-12x+8\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;(-\\frac23)=16&gt;0\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;(2)=-16&lt;0\" data-display=\"true\"></span><span data-math=\"f(2)=6\" data-display=\"true\"></span><span data-math=\"\\text{local maximum }(2,6)\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.9/q9",
+      "status": "worked",
+      "method": "Factor the derivative and check the sign of the second derivative on either side.",
+      "steps": [
+        {
+          "latex": "h'=3(x-1)^2=0\\Rightarrow x=1; h(1)=5; h''=6(x-1)",
+          "explanation": "Concavity changes from negative to positive at x=1; (1,5) is a stationary point of inflection.",
+          "graphs": []
+        },
+        {
+          "latex": "h=(x-1)^3+5; h(0)=4; h=0\\Rightarrow x=1-\\sqrt[3]5",
+          "explanation": "An increasing cubic with horizontal inflection at (1,5).",
+          "graphs": [
+            "a1299b"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>Factor the derivative and check the sign of the second derivative on either side.</p><ol type=\"a\" class=\"parts\"><li><p>Concavity changes from negative to positive at x=1; (1,5) is a stationary point of inflection.</p><span data-math=\"h&#x27;=3(x-1)^2=0\\Rightarrow x=1\" data-display=\"true\"></span><span data-math=\"h(1)=5\" data-display=\"true\"></span><span data-math=\"h&#x27;&#x27;=6(x-1)\" data-display=\"true\"></span></li><li><p>An increasing cubic with horizontal inflection at (1,5).</p><span data-math=\"h=(x-1)^3+5\" data-display=\"true\"></span><span data-math=\"h(0)=4\" data-display=\"true\"></span><span data-math=\"h=0\\Rightarrow x=1-\\sqrt[3]5\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/a04d4132dd90ee8fc830.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.10/q1",
+      "status": "worked",
+      "method": "The derivative is zero at horizontal tangents, positive where the curve rises and negative where it falls.",
+      "steps": [
+        {
+          "latex": "(1,0),\\quad(\\frac72,5)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "Positive for 1<x<7/2.",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "Negative for x<1.",
+          "graphs": []
+        },
+        {
+          "latex": "",
+          "explanation": "Negative for x>7/2.",
+          "graphs": []
+        },
+        {
+          "latex": "f'(1)=f'(\\frac72)=0",
+          "explanation": "The derivative crosses at (1,0) and (7/2,0), lies above the axis between them, and below outside.",
+          "graphs": [
+            "a12101e"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>The derivative is zero at horizontal tangents, positive where the curve rises and negative where it falls.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"(1,0),\\quad(\\frac72,5)\" data-display=\"true\"></span></li><li><p>Positive for 1&lt;x&lt;7/2.</p></li><li><p>Negative for x&lt;1.</p></li><li><p>Negative for x&gt;7/2.</p></li><li><p>The derivative crosses at (1,0) and (7/2,0), lies above the axis between them, and below outside.</p><span data-math=\"f&#x27;(1)=f&#x27;(\\frac72)=0\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/581ed3395a3436291268.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.10/q2",
+      "status": "worked",
+      "method": "Read the sign and limiting size of the slope from the original curve.",
+      "steps": [
+        {
+          "latex": "",
+          "explanation": "The slope is negative everywhere and tends to zero from below as x increases.",
+          "graphs": []
+        },
+        {
+          "latex": "y=0",
+          "explanation": "The gradient curve lies below the x-axis and approaches the horizontal asymptote y=0.",
+          "graphs": [
+            "a12102b"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>Read the sign and limiting size of the slope from the original curve.</p><ol type=\"a\" class=\"parts\"><li><p>The slope is negative everywhere and tends to zero from below as x increases.</p></li><li><p>The gradient curve lies below the x-axis and approaches the horizontal asymptote y=0.</p><span data-math=\"y=0\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/a2cae39e2d12f0a7783d.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.10/q3",
+      "status": "worked",
+      "method": "Horizontal tangents become zeros of the gradient function; steep branches determine its asymptotes and signs.",
+      "steps": [
+        {
+          "latex": "(-8,0),\\quad(0,0),\\quad(4,0)",
+          "explanation": "The gradient touches zero at −8 without changing sign, crosses from negative to positive at 0, and from positive to negative at 4. There are no indicated asymptotes.",
+          "graphs": [
+            "a12103a"
+          ]
+        },
+        {
+          "latex": "x=3,\\quad y=0",
+          "explanation": "Both branches of the original function increase, so the derivative is positive. It tends to positive infinity on either side of x=3 and tends to zero far away. No x-axis intercepts.",
+          "graphs": [
+            "a12103b"
+          ]
+        },
+        {
+          "latex": "(0,0);\\quad x=-1,\\quad x=1,\\quad y=0",
+          "explanation": "The derivative is negative for x<−1 and −1<x<0, and positive for 0<x<1 and x>1. Its vertical asymptotes are x=±1 and horizontal asymptote is y=0.",
+          "graphs": [
+            "a12103c"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>Horizontal tangents become zeros of the gradient function; steep branches determine its asymptotes and signs.</p><ol type=\"a\" class=\"parts\"><li><p>The gradient touches zero at −8 without changing sign, crosses from negative to positive at 0, and from positive to negative at 4. There are no indicated asymptotes.</p><span data-math=\"(-8,0),\\quad(0,0),\\quad(4,0)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/1c8f76e0f41d7dcada4a.png\" alt=\"Original question diagram\"></li><li><p>Both branches of the original function increase, so the derivative is positive. It tends to positive infinity on either side of x=3 and tends to zero far away. No x-axis intercepts.</p><span data-math=\"x=3,\\quad y=0\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/d35a587481ea059ce0ae.png\" alt=\"Original question diagram\"></li><li><p>The derivative is negative for x&lt;−1 and −1&lt;x&lt;0, and positive for 0&lt;x&lt;1 and x&gt;1. Its vertical asymptotes are x=±1 and horizontal asymptote is y=0.</p><span data-math=\"(0,0)\" data-display=\"true\"></span><span data-math=\"\\quad x=-1,\\quad x=1,\\quad y=0\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/b568cf1141ce547bde62.png\" alt=\"Original question diagram\"></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.10/q4",
+      "status": "worked",
+      "method": "The gradient is zero at the maximum and minimum of wave height; its sign follows whether wave height is rising or falling.",
+      "steps": [
+        {
+          "latex": "(\\text{March},0),\\quad(\\text{August/September},0)",
+          "explanation": "The maximum is around March and the minimum is between August and September in the supplied sketch. The gradient is positive before the maximum, negative until the minimum, and positive afterwards; the graph is qualitative.",
+          "graphs": [
+            "a12104"
+          ]
+        }
+      ],
+      "solutionHtml": "<p>The gradient is zero at the maximum and minimum of wave height; its sign follows whether wave height is rising or falling.</p><p>The maximum is around March and the minimum is between August and September in the supplied sketch. The gradient is positive before the maximum, negative until the minimum, and positive afterwards; the graph is qualitative.</p><span data-math=\"(\\text{March},0),\\quad(\\text{August/September},0)\" data-display=\"true\"></span><img style=\"max-width:80mm\" class=\"practice-figure\"  src=\"resources/practice-solutions/assets/de11a6fb7981b948eb3e.png\" alt=\"Original question diagram\">",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.11/q1",
+      "status": "worked",
+      "method": "Apply the power rule with respect to x.",
+      "steps": [
+        {
+          "latex": "\\frac{dA}{dx}=6(2)x=12x",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Apply the power rule with respect to x.</p><span data-math=\"\\frac{dA}{dx}=6(2)x=12x\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.11/q2",
+      "status": "worked",
+      "method": "Rewrite V as 20000t⁻² and differentiate.",
+      "steps": [
+        {
+          "latex": "\\frac{dV}{dt}=-40000t^{-3}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\left.\\frac{dV}{dt}\\right|_{t=10}=-\\frac{40000}{1000}=-40",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rewrite V as 20000t⁻² and differentiate.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{dV}{dt}=-40000t^{-3}\" data-display=\"true\"></span></li><li><span data-math=\"\\left.\\frac{dV}{dt}\\right|_{t=10}=-\\frac{40000}{1000}=-40\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.11/q3",
+      "status": "worked",
+      "method": "Set speed equal to zero to find the stopping time. Acceleration is the time derivative of speed.",
+      "steps": [
+        {
+          "latex": "8-\\sqrt t=0;\\sqrt t=8;t=64\\text{ s}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{dv}{dt}=-\\frac12t^{-1/2}\\quad(t>0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "a(9)=-\\frac1{2\\sqrt9}=-\\frac16\\text{ m s}^{-2}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Set speed equal to zero to find the stopping time. Acceleration is the time derivative of speed.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"8-\\sqrt t=0\" data-display=\"true\"></span><span data-math=\"\\sqrt t=8\" data-display=\"true\"></span><span data-math=\"t=64\\text{ s}\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{dv}{dt}=-\\frac12t^{-1/2}\\quad(t&gt;0)\" data-display=\"true\"></span></li><li><span data-math=\"a(9)=-\\frac1{2\\sqrt9}=-\\frac16\\text{ m s}^{-2}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.11/q4",
+      "status": "worked",
+      "method": "Differentiate with respect to radius, not time.",
+      "steps": [
+        {
+          "latex": "\\frac{dV}{dr}=\\frac43\\pi(3r^2)=4\\pi r^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\left.\\frac{dV}{dr}\\right|_{r=4}=64\\pi\\text{ cm}^3\\text{ per cm}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate with respect to radius, not time.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac{dV}{dr}=\\frac43\\pi(3r^2)=4\\pi r^2\" data-display=\"true\"></span></li><li><span data-math=\"\\left.\\frac{dV}{dr}\\right|_{r=4}=64\\pi\\text{ cm}^3\\text{ per cm}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.11/q5",
+      "status": "worked",
+      "method": "Each sloping roof side has length x√2. Add the rectangular and triangular areas, then differentiate.",
+      "steps": [
+        {
+          "latex": "2y+2x+2x\\sqrt2=80; y=40-x(1+\\sqrt2)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A=2xy+\\frac12(2x)(x); =2x[40-x(1+\\sqrt2)]+x^2; =80x-(1+2\\sqrt2)x^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A'=80-2(1+2\\sqrt2)x=0; x=\\frac{40}{1+2\\sqrt2}; A''=-2(1+2\\sqrt2)<0; A_{\\max}=\\frac{1600}{1+2\\sqrt2}=\\frac{1600(2\\sqrt2-1)}7\\text{ m}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Each sloping roof side has length x√2. Add the rectangular and triangular areas, then differentiate.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"2y+2x+2x\\sqrt2=80\" data-display=\"true\"></span><span data-math=\"y=40-x(1+\\sqrt2)\" data-display=\"true\"></span></li><li><span data-math=\"A=2xy+\\frac12(2x)(x)\" data-display=\"true\"></span><span data-math=\"=2x[40-x(1+\\sqrt2)]+x^2\" data-display=\"true\"></span><span data-math=\"=80x-(1+2\\sqrt2)x^2\" data-display=\"true\"></span></li><li><span data-math=\"A&#x27;=80-2(1+2\\sqrt2)x=0\" data-display=\"true\"></span><span data-math=\"x=\\frac{40}{1+2\\sqrt2}\" data-display=\"true\"></span><span data-math=\"A&#x27;&#x27;=-2(1+2\\sqrt2)&lt;0\" data-display=\"true\"></span><span data-math=\"A_{\\max}=\\frac{1600}{1+2\\sqrt2}=\\frac{1600(2\\sqrt2-1)}7\\text{ m}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.11/q6",
+      "status": "worked",
+      "method": "Eliminate radius using the volume; minimise the resulting surface area for h>0.",
+      "steps": [
+        {
+          "latex": "\\pi r^2h=1024\\pi; r=\\frac{32}{\\sqrt h}; S=2\\pi r^2+2\\pi rh; S=\\frac{2048\\pi}h+64\\pi\\sqrt h",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "S'=-2048\\pi h^{-2}+32\\pi h^{-1/2}=0; h^{3/2}=64;h=16;S''=4096\\pi h^{-3}-16\\pi h^{-3/2}; S''(16)=\\frac{3\\pi}4>0; S_{\\min}=128\\pi+256\\pi=384\\pi\\text{ cm}^2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Eliminate radius using the volume; minimise the resulting surface area for h&gt;0.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\pi r^2h=1024\\pi\" data-display=\"true\"></span><span data-math=\"r=\\frac{32}{\\sqrt h}\" data-display=\"true\"></span><span data-math=\"S=2\\pi r^2+2\\pi rh\" data-display=\"true\"></span><span data-math=\"S=\\frac{2048\\pi}h+64\\pi\\sqrt h\" data-display=\"true\"></span></li><li><span data-math=\"S&#x27;=-2048\\pi h^{-2}+32\\pi h^{-1/2}=0\" data-display=\"true\"></span><span data-math=\"h^{3/2}=64\" data-display=\"true\"></span><span data-math=\"h=16\" data-display=\"true\"></span><span data-math=\"S&#x27;&#x27;=4096\\pi h^{-3}-16\\pi h^{-3/2}\" data-display=\"true\"></span><span data-math=\"S&#x27;&#x27;(16)=\\frac{3\\pi}4&gt;0\" data-display=\"true\"></span><span data-math=\"S_{\\min}=128\\pi+256\\pi=384\\pi\\text{ cm}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.11/q7",
+      "status": "worked",
+      "method": "Let the box length be y. The two square ends and three rectangular faces determine y.",
+      "steps": [
+        {
+          "latex": "2x^2+3xy=608; y=\\frac{608-2x^2}{3x}; V=x^2y=\\frac{608x-2x^3}3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "V'=\\frac{608-6x^2}3=0; x=\\sqrt{\\frac{304}3}; V_{\\max}=\\frac{1216}9\\sqrt{\\frac{304}3}\\approx1360.1\\text{ cm}^3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "V''=-4x<0\\quad(x>0)\\Rightarrow\\text{maximum}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Let the box length be y. The two square ends and three rectangular faces determine y.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"2x^2+3xy=608\" data-display=\"true\"></span><span data-math=\"y=\\frac{608-2x^2}{3x}\" data-display=\"true\"></span><span data-math=\"V=x^2y=\\frac{608x-2x^3}3\" data-display=\"true\"></span></li><li><span data-math=\"V&#x27;=\\frac{608-6x^2}3=0\" data-display=\"true\"></span><span data-math=\"x=\\sqrt{\\frac{304}3}\" data-display=\"true\"></span><span data-math=\"V_{\\max}=\\frac{1216}9\\sqrt{\\frac{304}3}\\approx1360.1\\text{ cm}^3\" data-display=\"true\"></span></li><li><span data-math=\"V&#x27;&#x27;=-4x&lt;0\\quad(x&gt;0)\\Rightarrow\\text{maximum}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/12.11/q8",
+      "status": "worked",
+      "method": "The external area consists of the circular base, cylinder side and hemisphere. Eliminate h before maximising volume.",
+      "steps": [
+        {
+          "latex": "\\pi r^2+2\\pi rh+2\\pi r^2=800\\pi;h=\\frac{800-3r^2}{2r}; V=\\pi r^2h+\\frac23\\pi r^3;=400\\pi r-\\frac56\\pi r^3;=\\frac{\\pi r(2400-5r^2)}6",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "V'=400\\pi-\\frac52\\pi r^2=0;r^2=160;r=4\\sqrt{10};V''=-5\\pi r<0;V_{\\max}=\\frac{3200\\pi\\sqrt{10}}3\\approx1.06\\times10^4\\text{ cm}^3\\ (3\\text{ s.f.})",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The external area consists of the circular base, cylinder side and hemisphere. Eliminate h before maximising volume.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\pi r^2+2\\pi rh+2\\pi r^2=800\\pi\" data-display=\"true\"></span><span data-math=\"h=\\frac{800-3r^2}{2r}\" data-display=\"true\"></span><span data-math=\"V=\\pi r^2h+\\frac23\\pi r^3\" data-display=\"true\"></span><span data-math=\"=400\\pi r-\\frac56\\pi r^3\" data-display=\"true\"></span><span data-math=\"=\\frac{\\pi r(2400-5r^2)}6\" data-display=\"true\"></span></li><li><span data-math=\"V&#x27;=400\\pi-\\frac52\\pi r^2=0\" data-display=\"true\"></span><span data-math=\"r^2=160\" data-display=\"true\"></span><span data-math=\"r=4\\sqrt{10}\" data-display=\"true\"></span><span data-math=\"V&#x27;&#x27;=-5\\pi r&lt;0\" data-display=\"true\"></span><span data-math=\"V_{\\max}=\\frac{3200\\pi\\sqrt{10}}3\\approx1.06\\times10^4\\text{ cm}^3\\ (3\\text{ s.f.})\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/problem-a/qbronze",
+      "status": "worked",
+      "method": "A stationary point has derivative zero; use the second derivative to classify it.",
+      "steps": [
+        {
+          "latex": "h'=6-2x=0;x=3;h(3)=23;(3,23)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "h''=-2<0\\Rightarrow\\text{local maximum}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>A stationary point has derivative zero; use the second derivative to classify it.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"h&#x27;=6-2x=0\" data-display=\"true\"></span><span data-math=\"x=3\" data-display=\"true\"></span><span data-math=\"h(3)=23\" data-display=\"true\"></span><span data-math=\"(3,23)\" data-display=\"true\"></span></li><li><span data-math=\"h&#x27;&#x27;=-2&lt;0\\Rightarrow\\text{local maximum}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/problem-a/qsilver",
+      "status": "worked",
+      "method": "Factor the derivative, evaluate the stationary points, then factor the cubic using its repeated root.",
+      "steps": [
+        {
+          "latex": "g'=-3x^2-6x=-3x(x+2)=0;x=-2,0;g(-2)=0,g(0)=4;(-2,0),\\ (0,4)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "g=-(x+2)^2(x-1)=0;x=-2\\text{ or }1",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "g''=-6x-6;g''(-2)=6>0\\Rightarrow\\text{minimum};g''(0)=-6<0\\Rightarrow\\text{maximum}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor the derivative, evaluate the stationary points, then factor the cubic using its repeated root.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"g&#x27;=-3x^2-6x=-3x(x+2)=0\" data-display=\"true\"></span><span data-math=\"x=-2,0\" data-display=\"true\"></span><span data-math=\"g(-2)=0,g(0)=4\" data-display=\"true\"></span><span data-math=\"(-2,0),\\ (0,4)\" data-display=\"true\"></span></li><li><span data-math=\"g=-(x+2)^2(x-1)=0\" data-display=\"true\"></span><span data-math=\"x=-2\\text{ or }1\" data-display=\"true\"></span></li><li><span data-math=\"g&#x27;&#x27;=-6x-6\" data-display=\"true\"></span><span data-math=\"g&#x27;&#x27;(-2)=6&gt;0\\Rightarrow\\text{minimum}\" data-display=\"true\"></span><span data-math=\"g&#x27;&#x27;(0)=-6&lt;0\\Rightarrow\\text{maximum}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/problem-a/qgold",
+      "status": "worked",
+      "method": "Rewrite as powers; multiply the stationary equation by x³ᐟ², which is positive on the domain.",
+      "steps": [
+        {
+          "latex": "f=\\frac23x^{3/2}-10x^{1/2}-8x^{-1/2};f'=x^{1/2}-5x^{-1/2}+4x^{-3/2}=0;x^2-5x+4=(x-1)(x-4)=0;f(1)=-\\frac{52}3,\\quad f(4)=-\\frac{56}3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f''=\\frac12x^{-1/2}+\\frac52x^{-3/2}-6x^{-5/2};f''(1)=-3<0\\Rightarrow(1,-\\frac{52}3)\\text{ maximum};f''(4)=\\frac3{8}>0\\Rightarrow(4,-\\frac{56}3)\\text{ minimum}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rewrite as powers; multiply the stationary equation by x³ᐟ², which is positive on the domain.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f=\\frac23x^{3/2}-10x^{1/2}-8x^{-1/2}\" data-display=\"true\"></span><span data-math=\"f&#x27;=x^{1/2}-5x^{-1/2}+4x^{-3/2}=0\" data-display=\"true\"></span><span data-math=\"x^2-5x+4=(x-1)(x-4)=0\" data-display=\"true\"></span><span data-math=\"f(1)=-\\frac{52}3,\\quad f(4)=-\\frac{56}3\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;&#x27;=\\frac12x^{-1/2}+\\frac52x^{-3/2}-6x^{-5/2}\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;(1)=-3&lt;0\\Rightarrow(1,-\\frac{52}3)\\text{ maximum}\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;(4)=\\frac3{8}&gt;0\\Rightarrow(4,-\\frac{56}3)\\text{ minimum}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/problem-b/qbronze",
+      "status": "worked",
+      "method": "Read the ordered roots from the diagram; differentiate the expanded cubic and construct its tangents.",
+      "steps": [
+        {
+          "latex": "D=(-2,0),\\quad E=(1,0),\\quad F=(2,0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "h=x^3-x^2-4x+4;h'=3x^2-2x-4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "h'(1)=-3\\Rightarrow y=-3(x-1)=-3x+3;h'(2)=4\\Rightarrow y=4(x-2)=4x-8",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-3x+3=4x-8;x=\\frac{11}7;y=-\\frac{12}7;G=(\\frac{11}7,-\\frac{12}7)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Read the ordered roots from the diagram; differentiate the expanded cubic and construct its tangents.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"D=(-2,0),\\quad E=(1,0),\\quad F=(2,0)\" data-display=\"true\"></span></li><li><span data-math=\"h=x^3-x^2-4x+4\" data-display=\"true\"></span><span data-math=\"h&#x27;=3x^2-2x-4\" data-display=\"true\"></span></li><li><span data-math=\"h&#x27;(1)=-3\\Rightarrow y=-3(x-1)=-3x+3\" data-display=\"true\"></span><span data-math=\"h&#x27;(2)=4\\Rightarrow y=4(x-2)=4x-8\" data-display=\"true\"></span></li><li><span data-math=\"-3x+3=4x-8\" data-display=\"true\"></span><span data-math=\"x=\\frac{11}7\" data-display=\"true\"></span><span data-math=\"y=-\\frac{12}7\" data-display=\"true\"></span><span data-math=\"G=(\\frac{11}7,-\\frac{12}7)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/problem-b/qsilver",
+      "status": "worked",
+      "method": "The diagram gives P at the negative root and Q at the positive root; normal gradients are negative reciprocals.",
+      "steps": [
+        {
+          "latex": "g=x^3-x^2-2x;g'=3x^2-2x-2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "P=(-1,0);g'(-1)=3;y=-\\frac13(x+1);Q=(2,0);g'(2)=6;y=-\\frac16(x-2)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "-\\frac{x+1}3=-\\frac{x-2}6;2x+2=x-2;x=-4;y=1;R=(-4,1)",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The diagram gives P at the negative root and Q at the positive root; normal gradients are negative reciprocals.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"g=x^3-x^2-2x\" data-display=\"true\"></span><span data-math=\"g&#x27;=3x^2-2x-2\" data-display=\"true\"></span></li><li><span data-math=\"P=(-1,0)\" data-display=\"true\"></span><span data-math=\"g&#x27;(-1)=3\" data-display=\"true\"></span><span data-math=\"y=-\\frac13(x+1)\" data-display=\"true\"></span><span data-math=\"Q=(2,0)\" data-display=\"true\"></span><span data-math=\"g&#x27;(2)=6\" data-display=\"true\"></span><span data-math=\"y=-\\frac16(x-2)\" data-display=\"true\"></span></li><li><span data-math=\"-\\frac{x+1}3=-\\frac{x-2}6\" data-display=\"true\"></span><span data-math=\"2x+2=x-2\" data-display=\"true\"></span><span data-math=\"x=-4\" data-display=\"true\"></span><span data-math=\"y=1\" data-display=\"true\"></span><span data-math=\"R=(-4,1)\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/problem-b/qgold",
+      "status": "worked",
+      "method": "Find the nonzero intercepts, construct their normals and use AB as a horizontal base.",
+      "steps": [
+        {
+          "latex": "f=\\frac16x(x+4)(x-2);A=(-4,0),\\ B=(2,0);f'=\\frac12x^2+\\frac23x-\\frac43;f'(-4)=4,\\quad f'(2)=2;N_A:y=-\\frac14(x+4);N_B:y=-\\frac12(x-2);-x-4=-2x+4;x=8;y=-3;P=(8,-3);\\text{area}=\\frac12(6)(3)=9",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the nonzero intercepts, construct their normals and use AB as a horizontal base.</p><span data-math=\"f=\\frac16x(x+4)(x-2)\" data-display=\"true\"></span><span data-math=\"A=(-4,0),\\ B=(2,0)\" data-display=\"true\"></span><span data-math=\"f&#x27;=\\frac12x^2+\\frac23x-\\frac43\" data-display=\"true\"></span><span data-math=\"f&#x27;(-4)=4,\\quad f&#x27;(2)=2\" data-display=\"true\"></span><span data-math=\"N_A:y=-\\frac14(x+4)\" data-display=\"true\"></span><span data-math=\"N_B:y=-\\frac12(x-2)\" data-display=\"true\"></span><span data-math=\"-x-4=-2x+4\" data-display=\"true\"></span><span data-math=\"x=8\" data-display=\"true\"></span><span data-math=\"y=-3\" data-display=\"true\"></span><span data-math=\"P=(8,-3)\" data-display=\"true\"></span><span data-math=\"\\text{area}=\\frac12(6)(3)=9\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/exam/q11",
+      "status": "worked",
+      "method": "Set the derivative to −4 and solve a quadratic in √x.",
+      "steps": [
+        {
+          "latex": "f'=16x-40\\sqrt x+5=-4;16x-40\\sqrt x+9=0;u=\\sqrt x\\ge0;16u^2-40u+9=(4u-1)(4u-9)=0;u=\\frac14,\\frac94;x=\\frac1{16},\\frac{81}{16}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Set the derivative to −4 and solve a quadratic in √x.</p><span data-math=\"f&#x27;=16x-40\\sqrt x+5=-4\" data-display=\"true\"></span><span data-math=\"16x-40\\sqrt x+9=0\" data-display=\"true\"></span><span data-math=\"u=\\sqrt x\\ge0\" data-display=\"true\"></span><span data-math=\"16u^2-40u+9=(4u-1)(4u-9)=0\" data-display=\"true\"></span><span data-math=\"u=\\frac14,\\frac94\" data-display=\"true\"></span><span data-math=\"x=\\frac1{16},\\frac{81}{16}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/exam/q15",
+      "status": "worked",
+      "method": "Use fractional powers and the positive domain to solve the stationary equation.",
+      "steps": [
+        {
+          "latex": "f'=\\frac16x^{-1/2}-\\frac32x^{-3/2}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'=0\\Rightarrow x-9=0;x=9;f(9)=1+1=2;(9,2)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f''=-\\frac1{12}x^{-3/2}+\\frac94x^{-5/2};f''(9)=-\\frac1{324}+\\frac1{108}=\\frac1{162}>0;\\text{local minimum}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use fractional powers and the positive domain to solve the stationary equation.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=\\frac16x^{-1/2}-\\frac32x^{-3/2}\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;=0\\Rightarrow x-9=0\" data-display=\"true\"></span><span data-math=\"x=9\" data-display=\"true\"></span><span data-math=\"f(9)=1+1=2\" data-display=\"true\"></span><span data-math=\"(9,2)\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;&#x27;=-\\frac1{12}x^{-3/2}+\\frac94x^{-5/2}\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;(9)=-\\frac1{324}+\\frac1{108}=\\frac1{162}&gt;0\" data-display=\"true\"></span><span data-math=\"\\text{local minimum}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/exam/q27",
+      "status": "worked",
+      "method": "Use both gradient values and the second derivative value to form three simultaneous equations.",
+      "steps": [
+        {
+          "latex": "f'=3ax^2+2bx+c;f''=6ax+2b;3a-2b+c=7;12a+4b+c=5;6a+2b=2\\Rightarrow b=1-3a;9a+6b=-2;9a+6-18a=-2;a=\\frac89;b=-\\frac53;c=1",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use both gradient values and the second derivative value to form three simultaneous equations.</p><span data-math=\"f&#x27;=3ax^2+2bx+c\" data-display=\"true\"></span><span data-math=\"f&#x27;&#x27;=6ax+2b\" data-display=\"true\"></span><span data-math=\"3a-2b+c=7\" data-display=\"true\"></span><span data-math=\"12a+4b+c=5\" data-display=\"true\"></span><span data-math=\"6a+2b=2\\Rightarrow b=1-3a\" data-display=\"true\"></span><span data-math=\"9a+6b=-2\" data-display=\"true\"></span><span data-math=\"9a+6-18a=-2\" data-display=\"true\"></span><span data-math=\"a=\\frac89\" data-display=\"true\"></span><span data-math=\"b=-\\frac53\" data-display=\"true\"></span><span data-math=\"c=1\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/exam/q50",
+      "status": "worked",
+      "method": "Solve f′=0, then find the normal at P and its x-axis intercept.",
+      "steps": [
+        {
+          "latex": "f'=-x^{-1/2}+x=0;x^{3/2}=1;x=1;f(1)=\\frac52;(1,\\frac52)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f'(4)=-\\frac12+4=\\frac72;m_N=-\\frac27;y-8=-\\frac27(x-4);y=-\\frac27x+\\frac{64}7",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=0\\Rightarrow x=32;A=(32,0);\\text{area }OAP=\\frac12(32)(8)=128",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Solve f′=0, then find the normal at P and its x-axis intercept.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=-x^{-1/2}+x=0\" data-display=\"true\"></span><span data-math=\"x^{3/2}=1\" data-display=\"true\"></span><span data-math=\"x=1\" data-display=\"true\"></span><span data-math=\"f(1)=\\frac52\" data-display=\"true\"></span><span data-math=\"(1,\\frac52)\" data-display=\"true\"></span></li><li><span data-math=\"f&#x27;(4)=-\\frac12+4=\\frac72\" data-display=\"true\"></span><span data-math=\"m_N=-\\frac27\" data-display=\"true\"></span><span data-math=\"y-8=-\\frac27(x-4)\" data-display=\"true\"></span><span data-math=\"y=-\\frac27x+\\frac{64}7\" data-display=\"true\"></span></li><li><span data-math=\"y=0\\Rightarrow x=32\" data-display=\"true\"></span><span data-math=\"A=(32,0)\" data-display=\"true\"></span><span data-math=\"\\text{area }OAP=\\frac12(32)(8)=128\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/exam/q74",
+      "status": "worked",
+      "method": "The semicircles together form a circle of diameter x; eliminate the straight length y using the perimeter.",
+      "steps": [
+        {
+          "latex": "2y+\\pi x=300;y=150-\\frac\\pi2x;A=xy+\\frac\\pi4x^2;=x(150-\\frac\\pi2x)+\\frac\\pi4x^2;=150x-\\frac\\pi4x^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A'=150-\\frac\\pi2x=0;x=\\frac{300}\\pi;A''=-\\frac\\pi2<0;A_{\\max}=\\frac{22500}\\pi\\text{ m}^2",
+          "explanation": "This is the limiting circular case y=0. If the rectangular part must have positive length, the value is a supremum approached as y tends to zero.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The semicircles together form a circle of diameter x; eliminate the straight length y using the perimeter.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"2y+\\pi x=300\" data-display=\"true\"></span><span data-math=\"y=150-\\frac\\pi2x\" data-display=\"true\"></span><span data-math=\"A=xy+\\frac\\pi4x^2\" data-display=\"true\"></span><span data-math=\"=x(150-\\frac\\pi2x)+\\frac\\pi4x^2\" data-display=\"true\"></span><span data-math=\"=150x-\\frac\\pi4x^2\" data-display=\"true\"></span></li><li><p>This is the limiting circular case y=0. If the rectangular part must have positive length, the value is a supremum approached as y tends to zero.</p><span data-math=\"A&#x27;=150-\\frac\\pi2x=0\" data-display=\"true\"></span><span data-math=\"x=\\frac{300}\\pi\" data-display=\"true\"></span><span data-math=\"A&#x27;&#x27;=-\\frac\\pi2&lt;0\" data-display=\"true\"></span><span data-math=\"A_{\\max}=\\frac{22500}\\pi\\text{ m}^2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch12/exam/q90",
+      "status": "worked",
+      "method": "The folded box has height x and base (60−2x) by (36−2x), with 0<x<18.",
+      "steps": [
+        {
+          "latex": "V=x(60-2x)(36-2x);=x(2160-192x+4x^2);=4x^3-192x^2+2160x",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "V'=12x^2-384x+2160=0;x^2-32x+180=0;x=16\\pm2\\sqrt{19};0<x<18\\Rightarrow x=16-2\\sqrt{19};V''=24x-384;V''(16-2\\sqrt{19})=-48\\sqrt{19}<0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "V_{\\max}=1792+1216\\sqrt{19}\\approx7092.4\\text{ cm}^3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The folded box has height x and base (60−2x) by (36−2x), with 0&lt;x&lt;18.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"V=x(60-2x)(36-2x)\" data-display=\"true\"></span><span data-math=\"=x(2160-192x+4x^2)\" data-display=\"true\"></span><span data-math=\"=4x^3-192x^2+2160x\" data-display=\"true\"></span></li><li><span data-math=\"V&#x27;=12x^2-384x+2160=0\" data-display=\"true\"></span><span data-math=\"x^2-32x+180=0\" data-display=\"true\"></span><span data-math=\"x=16\\pm2\\sqrt{19}\" data-display=\"true\"></span><span data-math=\"0&lt;x&lt;18\\Rightarrow x=16-2\\sqrt{19}\" data-display=\"true\"></span><span data-math=\"V&#x27;&#x27;=24x-384\" data-display=\"true\"></span><span data-math=\"V&#x27;&#x27;(16-2\\sqrt{19})=-48\\sqrt{19}&lt;0\" data-display=\"true\"></span></li><li><span data-math=\"V_{\\max}=1792+1216\\sqrt{19}\\approx7092.4\\text{ cm}^3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}

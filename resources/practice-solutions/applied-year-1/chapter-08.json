@@ -1,0 +1,459 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 8,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q1",
+      "status": "worked",
+      "method": "Substitute the horizontal distance into h=0.6x−0.06x².",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }h(0)=0;\\quad\\text{(ii) }h(3)=1.8-0.54=1.26\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }h(6)=3.6-2.16=1.44\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h(15)=9-13.5=-4.5\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<p>This predicts a position 4.5 m below the ground. The free-flight model has already ended when the ball lands at x=10 m, so this prediction is not physically valid.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Substitute the horizontal distance into h=0.6 x−0.06 x².</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }h(0)=0;\\quad\\text{(ii) }h(3)=1.8-0.54=1.26\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }h(6)=3.6-2.16=1.44\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"h(15)=9-13.5=-4.5\\text{ m}\"></span></li><li><p>This predicts a position 4.5 m below the ground. The free-flight model has already ended when the ball lands at x=10 m, so this prediction is not physically valid.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q2",
+      "status": "worked",
+      "method": "Substitute time into the model; stop using it after water entry.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h(0)=8\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h(1)=-5+3+8=6\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h(3)=-45+9+8=-28\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<p>The diver enters the water at 1.6 s. Water resistance and buoyancy then change the motion. The prediction also lies below the 5 m-deep pool bottom, so the model is invalid at 3 s.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Substitute time into the model; stop using it after water entry.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"h(0)=8\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"h(1)=-5+3+8=6\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"h(3)=-45+9+8=-28\\text{ m}\"></span></li><li><p>The diver enters the water at 1.6 s. Water resistance and buoyancy then change the motion. The prediction also lies below the 5 m-deep pool bottom, so the model is invalid at 3 s.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q3",
+      "status": "worked",
+      "method": "The vertical reference is chest height, rather than ground level.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }h(2)=1.6-0.2=1.4\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }h(5)=4-1.25=2.75\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }h(10)=8-5=3\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h(20)=16-20=-4\\text{ m}\"></span><p>This is 4 m below chest height. For an ordinary standing throw that would be below ground, so it is beyond flight and invalid. Strictly, a negative height relative to the chest alone does not prove ground impact; the chest-to-ground height is not supplied.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The vertical reference is chest height, rather than ground level.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }h(2)=1.6-0.2=1.4\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }h(5)=4-1.25=2.75\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }h(10)=8-5=3\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"h(20)=16-20=-4\\text{ m}\"></span><p>This is 4 m below chest height. For an ordinary standing throw that would be below ground, so it is beyond flight and invalid. Strictly, a negative height relative to the chest alone does not prove ground impact; the chest-to-ground height is not supplied.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q4",
+      "status": "worked",
+      "method": "First find k from the supplied distance at2s.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"49.1=26.8(2)-4k\\Rightarrow k=1.125\"></span><span class=\"equation\" data-display=\"true\" data-math=\"d(8)=26.8(8)-1.125(8^2)=142.4\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"0\\le t\\le8\\text{ s}\"></span><p>This is the stated deceleration interval; do not assume the same model holds after the car reaches 20 mph.</p>"
+        }
+      ],
+      "solutionHtml": "<p>First find k from the supplied distance at 2 s.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"49.1=26.8(2)-4k\\Rightarrow k=1.125\"></span><span class=\"equation\" data-display=\"true\" data-math=\"d(8)=26.8(8)-1.125(8^2)=142.4\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"0\\le t\\le8\\text{ s}\"></span><p>This is the stated deceleration interval; do not assume the same model holds after the car reaches 20 mph.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q5",
+      "status": "worked",
+      "method": "Use the football model referenced in question1 and solve the strict positivity condition.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h=0.06x(10-x)&gt;0\\Rightarrow0&lt;x&lt;10\"></span><p>The endpoints x=0 and x=10 have h=0, so they are excluded by “positive”. If the flight including launch and landing is intended, use 0≤x≤10, as in the supplied answer.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the football model referenced in question 1 and solve the strict positivity condition.</p><span class=\"equation\" data-display=\"true\" data-math=\"h=0.06x(10-x)&gt;0\\Rightarrow0&lt;x&lt;10\"></span><p>The endpoints x=0 and x=10 have h=0, so they are excluded by “positive”. If the flight including launch and landing is intended, use 0≤x≤10, as in the supplied answer.</p>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q6",
+      "status": "worked",
+      "method": "Use the diver model referenced in question2 and solve h=0 for water entry.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"-5t^2+3t+8=0\\Rightarrow(5t-8)(t+1)=0\"></span><p>Reject the negative time t=−1. Water entry is at t=8/5=1.6 s.</p><span class=\"equation\" data-display=\"true\" data-math=\"0\\le t\\le1.6\\text{ s}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the diver model referenced in question 2 and solve h=0 for water entry.</p><span class=\"equation\" data-display=\"true\" data-math=\"-5t^2+3t+8=0\\Rightarrow(5t-8)(t+1)=0\"></span><p>Reject the negative time t=−1. Water entry is at t=8/5=1.6 s.</p><span class=\"equation\" data-display=\"true\" data-math=\"0\\le t\\le1.6\\text{ s}\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q7",
+      "status": "worked",
+      "method": "Use Rashid’s model from question3 and compare equal-height endpoints.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h=0.05x(16-x)&gt;0\\Rightarrow0&lt;x&lt;16\"></span><p>For the complete flight between the two chest-height endpoints, include 0 and 16. The strict phrase “positive” excludes them.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h=-0.05(x-8)^2+3.2\"></span><p>The squared term is non-negative, so the maximum is 3.2 m at x=8 m.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{Rashid: }0.8x-0.05x^2=0\\Rightarrow x=16\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Sam: }0.6x-0.04x^2=0\\Rightarrow x=15\\text{ m}\"></span><p>Use the nonzero roots. Under the specified equal starting and finishing heights, Rashid wins by 1 m.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use Rashid’s model from question 3 and compare equal-height endpoints.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"h=0.05x(16-x)&gt;0\\Rightarrow0&lt;x&lt;16\"></span><p>For the complete flight between the two chest-height endpoints, include 0 and 16. The strict phrase “positive” excludes them.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"h=-0.05(x-8)^2+3.2\"></span><p>The squared term is non-negative, so the maximum is 3.2 m at x=8 m.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Rashid: }0.8x-0.05x^2=0\\Rightarrow x=16\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Sam: }0.6x-0.04x^2=0\\Rightarrow x=15\\text{ m}\"></span><p>Use the nonzero roots. Under the specified equal starting and finishing heights, Rashid wins by 1 m.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.1/q8",
+      "status": "worked",
+      "method": "Use intersections with the required heights and the vertex of the quadratic.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h(0)=1.8\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1.8+1.2x-0.2x^2=3.4\\Rightarrow x^2-6x+8=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(x-2)(x-4)=0\\Rightarrow x=2,4\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1.8+1.2x-0.2x^2=2.8\\Rightarrow(x-1)(x-5)=0\"></span><p>The ball is descending at x=5(the vertex is at x=3), so k=5 and 0≤x≤5.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h=-0.2(x-3)^2+3.6\\Rightarrow h_{\\max}=3.6\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use intersections with the required heights and the vertex of the quadratic.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"h(0)=1.8\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1.8+1.2x-0.2x^2=3.4\\Rightarrow x^2-6x+8=0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"(x-2)(x-4)=0\\Rightarrow x=2,4\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1.8+1.2x-0.2x^2=2.8\\Rightarrow(x-1)(x-5)=0\"></span><p>The ball is descending at x=5(the vertex is at x=3), so k=5 and 0≤x≤5.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"h=-0.2(x-3)^2+3.6\\Rightarrow h_{\\max}=3.6\\text{ m}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.2/q1",
+      "status": "worked",
+      "method": "Each modelling assumption removes particular physical detail, without removing the forces needed for equilibrium.",
+      "steps": [
+        {
+          "explanation": "<p>Treat each child’s mass as concentrated at one point, ignoring their size, shape and rotation. Their weights still exert moments about the support; modelling the children as particles does not remove those moments.</p>"
+        },
+        {
+          "explanation": "<p>Treat the see-saw as a rigid thin rod with evenly distributed mass; its weight acts at its midpoint.</p>"
+        },
+        {
+          "explanation": "<p>Treat the support as small and fixed with no frictional force at contact; the contact reaction is perpendicular to the rod.</p>"
+        },
+        {
+          "explanation": "<p>Omit aerodynamic drag on the children and see-saw.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Each modelling assumption removes particular physical detail, without removing the forces needed for equilibrium.</p><ol class=\"parts\" type=\"a\"><li><p>Treat each child’s mass as concentrated at one point, ignoring their size, shape and rotation. Their weights still exert moments about the support; modelling the children as particles does not remove those moments.</p></li><li><p>Treat the see-saw as a rigid thin rod with evenly distributed mass; its weight acts at its midpoint.</p></li><li><p>Treat the support as small and fixed with no frictional force at contact; the contact reaction is perpendicular to the rod.</p></li><li><p>Omit aerodynamic drag on the children and see-saw.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.2/q2",
+      "status": "worked",
+      "method": "“Smooth” means no tangential frictional force at contact.",
+      "steps": [
+        {
+          "explanation": "<p>Ignore friction between the tyres and track, retaining the normal contact reaction.</p>"
+        },
+        {
+          "explanation": "<p>This is generally unsuitable for a race car: tyre-road friction supplies traction, braking and cornering forces. A smooth-track model cannot represent those effects.</p>"
+        }
+      ],
+      "solutionHtml": "<p>“Smooth” means no tangential frictional force at contact.</p><ol class=\"parts\" type=\"a\"><li><p>Ignore friction between the tyres and track, retaining the normal contact reaction.</p></li><li><p>This is generally unsuitable for a race car: tyre-road friction supplies traction, braking and cornering forces. A smooth-track model cannot represent those effects.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.2/q3",
+      "status": "worked",
+      "method": "An inextensible string has a fixed length.",
+      "steps": [
+        {
+          "explanation": "<p>A bungee cord must stretch and exert an elastic restoring force to slow the jumper. An inextensible string cannot model that changing extension and elastic energy; an elastic cord is more appropriate.</p>"
+        }
+      ],
+      "solutionHtml": "<p>An inextensible string has a fixed length.</p><p>A bungee cord must stretch and exert an elastic restoring force to slow the jumper. An inextensible string cannot model that changing extension and elastic energy; an elastic cord is more appropriate.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.2/q4",
+      "status": "worked",
+      "method": "Choose assumptions appropriate for straight-line translational motion.",
+      "steps": [
+        {
+          "explanation": "<p>Model the car and trailer as particles with constant masses; model the tow-bar as a light rigid rod that can transmit tension or compression. While connected rigidly they have equal acceleration. A level straight road and negligible air resistance may simplify the model; include tyre traction and any road resistance needed by the question.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Choose assumptions appropriate for straight-line translational motion.</p><p>Model the car and trailer as particles with constant masses; model the tow-bar as a light rigid rod that can transmit tension or compression. While connected rigidly they have equal acceleration. A level straight road and negligible air resistance may simplify the model; include tyre traction and any road resistance needed by the question.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.2/q5",
+      "status": "worked",
+      "method": "Start with a constant-gravity model, then identify its missing force.",
+      "steps": [
+        {
+          "explanation": "<p>Treat the stone as a particle, released from rest in uniform gravity with g≈9.8 m/s². Ignore air resistance and wind.</p>"
+        },
+        {
+          "explanation": "<p>(i) The same ideal model predicts identical motion for the feather and stone: both fall with acceleration g and reach the ground together.</p><p>(ii) In air, the feather usually falls more slowly and takes longer because drag is large compared with its weight.</p>"
+        },
+        {
+          "explanation": "<p>Include air resistance depending on speed, shape and cross-sectional area. The resulting acceleration need not remain g, and terminal speed may be reached.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Start with a constant-gravity model, then identify its missing force.</p><ol class=\"parts\" type=\"a\"><li><p>Treat the stone as a particle, released from rest in uniform gravity with g≈9.8 m/s². Ignore air resistance and wind.</p></li><li><p>(i) The same ideal model predicts identical motion for the feather and stone: both fall with acceleration g and reach the ground together.</p><p>(ii) In air, the feather usually falls more slowly and takes longer because drag is large compared with its weight.</p></li><li><p>Include air resistance depending on speed, shape and cross-sectional area. The resulting acceleration need not remain g, and terminal speed may be reached.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.3/q1",
+      "status": "worked",
+      "method": "Use1km=1000m,1h=3600s,1g=0.001kg and1cm³=10⁻⁶m³.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"45\\frac{1000}{3600}=12.5\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1800\\frac{10^{-3}}{60}=0.03\\mathrm{\\ kg\\,s^{-1}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"7\\frac{10^{-3}}{10^{-6}}=7000\\mathrm{\\ kg\\,m^{-3}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"540(10^{-3})=0.54\\mathrm{\\ kg\\,m^{-3}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1.2\\times10^{-4}\\times10^6=120\\mathrm{\\ kg\\,m^{-3}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"4.1\\times10^5\\frac{10^{-3}}{10^{-6}}=4.1\\times10^8\\mathrm{\\ kg\\,m^{-3}}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use 1 km=1000 m,1 h=3600 s,1 g=0.001 kg and 1 cm³=10⁻⁶m³.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"45\\frac{1000}{3600}=12.5\\mathrm{\\ m\\,s^{-1}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1800\\frac{10^{-3}}{60}=0.03\\mathrm{\\ kg\\,s^{-1}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"7\\frac{10^{-3}}{10^{-6}}=7000\\mathrm{\\ kg\\,m^{-3}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"540(10^{-3})=0.54\\mathrm{\\ kg\\,m^{-3}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1.2\\times10^{-4}\\times10^6=120\\mathrm{\\ kg\\,m^{-3}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"4.1\\times10^5\\frac{10^{-3}}{10^{-6}}=4.1\\times10^8\\mathrm{\\ kg\\,m^{-3}}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.3/q2",
+      "status": "worked",
+      "method": "Identify weight downwards, support forces upwards, and forces along the motion or tow-rope.",
+      "steps": [
+        {
+          "explanation": "<p>A: air resistance(drag)upwards. B: weight downwards.</p>"
+        },
+        {
+          "explanation": "<p>A: normal reaction. B: resistance such as drag or rolling resistance, opposite the leftward motion. C: weight. D: driving force(traction)to the left.</p>"
+        },
+        {
+          "explanation": "<p>A: buoyancy(upthrust). B: tension in the tow-rope. C: weight. D: water resistance(drag).</p>"
+        }
+      ],
+      "solutionHtml": "<p>Identify weight downwards, support forces upwards, and forces along the motion or tow-rope.</p><ol class=\"parts\" type=\"a\"><li><p>A: air resistance(drag)upwards. B: weight downwards.</p></li><li><p>A: normal reaction. B: resistance such as drag or rolling resistance, opposite the leftward motion. C: weight. D: driving force(traction)to the left.</p></li><li><p>A: buoyancy(upthrust). B: tension in the tow-rope. C: weight. D: water resistance(drag).</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.4/q1",
+      "status": "worked",
+      "method": "The positive direction is from home towards work; school is3miles from home and work is12miles from home.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=+42\\text{ mph}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=+12\\text{ miles}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=-28\\text{ mph}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"s=3-12=-9\\text{ miles}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"v=-34\\text{ mph}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The positive direction is from home towards work; school is 3 miles from home and work is 12 miles from home.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"v=+42\\text{ mph}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=+12\\text{ miles}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=-28\\text{ mph}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"s=3-12=-9\\text{ miles}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"v=-34\\text{ mph}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.4/q2",
+      "status": "worked",
+      "method": "Take upward as positive. Speed increases when velocity and acceleration have the same sign.",
+      "steps": [
+        {
+          "explanation": "<p>i→c: falling and speeding up means negative velocity and negative acceleration.</p>"
+        },
+        {
+          "explanation": "<p>ii→b: rising but slowing means positive velocity and negative acceleration.</p>"
+        },
+        {
+          "explanation": "<p>iii→a: rising and speeding up means positive velocity and positive acceleration.</p>"
+        },
+        {
+          "explanation": "<p>iv→d: descending but slowing means negative velocity and positive acceleration.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Take upward as positive. Speed increases when velocity and acceleration have the same sign.</p><ol class=\"parts\" type=\"i\"><li><p>i→c: falling and speeding up means negative velocity and negative acceleration.</p></li><li><p>ii→b: rising but slowing means positive velocity and negative acceleration.</p></li><li><p>iii→a: rising and speeding up means positive velocity and positive acceleration.</p></li><li><p>iv→d: descending but slowing means negative velocity and positive acceleration.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.4/q3",
+      "status": "worked",
+      "method": "The speed is the magnitude; the direction follows from the perpendicular components.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"|\\mathbf v|=\\sqrt{8^2+12^2}=\\sqrt{208}\\approx14.4\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\theta=\\tan^{-1}(12/8)\\approx56.3^\\circ\"></span><p>The direction is 56.3°above the positive i direction.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The speed is the magnitude; the direction follows from the perpendicular components.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"|\\mathbf v|=\\sqrt{8^2+12^2}=\\sqrt{208}\\approx14.4\\mathrm{\\ m\\,s^{-1}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\theta=\\tan^{-1}(12/8)\\approx56.3^\\circ\"></span><p>The direction is 56.3°above the positive i direction.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.4/q4",
+      "status": "worked",
+      "method": "The vector lies to the left of the positive j direction.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"|\\mathbf a|=\\sqrt{(-7)^2+5^2}=\\sqrt{74}\\approx8.60\\mathrm{\\ m\\,s^{-2}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\theta=\\tan^{-1}(7/5)\\approx54.5^\\circ\"></span><p>This is 54.5°towards negative i from positive j.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The vector lies to the left of the positive j direction.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"|\\mathbf a|=\\sqrt{(-7)^2+5^2}=\\sqrt{74}\\approx8.60\\mathrm{\\ m\\,s^{-2}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\theta=\\tan^{-1}(7/5)\\approx54.5^\\circ\"></span><p>This is 54.5°towards negative i from positive j.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.4/q5",
+      "status": "worked",
+      "method": "Add displacement vectors component by component.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\overrightarrow{AC}=(10+16)\\mathbf i+(5-13)\\mathbf j=26\\mathbf i-8\\mathbf j\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|\\overrightarrow{AC}|=\\sqrt{26^2+8^2}=\\sqrt{740}\\approx27.2\\text{ km}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\theta=\\tan^{-1}(8/26)\\approx17.1^\\circ\"></span><p>The displacement points 17.1°below positive i.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Add displacement vectors component by component.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\overrightarrow{AC}=(10+16)\\mathbf i+(5-13)\\mathbf j=26\\mathbf i-8\\mathbf j\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|\\overrightarrow{AC}|=\\sqrt{26^2+8^2}=\\sqrt{740}\\approx27.2\\text{ km}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\theta=\\tan^{-1}(8/26)\\approx17.1^\\circ\"></span><p>The displacement points 17.1°below positive i.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/8.4/q6",
+      "status": "worked",
+      "method": "Displacement is the vector sum; total distance is the sum of the two individual magnitudes.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\overrightarrow{PR}=690\\mathbf i-250\\mathbf j\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|\\overrightarrow{PR}|=\\sqrt{690^2+250^2}\\approx733.9\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"d=\\sqrt{240^2+600^2}+\\sqrt{450^2+350^2}\\approx1216.3\\text{ m}\"></span><p>To the nearest metre:1216 m.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\theta=\\cos^{-1}\\left(\\frac{-250}{\\sqrt{690^2+250^2}}\\right)\\approx109.9^\\circ\"></span><p>The angle with positive j is obtuse because the j component is negative.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Displacement is the vector sum; total distance is the sum of the two individual magnitudes.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\overrightarrow{PR}=690\\mathbf i-250\\mathbf j\"></span><span class=\"equation\" data-display=\"true\" data-math=\"|\\overrightarrow{PR}|=\\sqrt{690^2+250^2}\\approx733.9\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"d=\\sqrt{240^2+600^2}+\\sqrt{450^2+350^2}\\approx1216.3\\text{ m}\"></span><p>To the nearest metre:1216 m.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\theta=\\cos^{-1}\\left(\\frac{-250}{\\sqrt{690^2+250^2}}\\right)\\approx109.9^\\circ\"></span><p>The angle with positive j is obtuse because the j component is negative.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/problem-a/qbronze",
+      "status": "worked",
+      "method": "Substitute into h=1.4+0.5x−0.1x².",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }h(2)=1.4+1-0.4=2\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }h(4)=1.4+2-1.6=1.8\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }h(6)=1.4+3-3.6=0.8\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h(10)=1.4+5-10=-3.6\\text{ m}\"></span><p>This predicts a point below ground, so it is outside the model’s physical flight interval.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Substitute into h=1.4+0.5 x−0.1 x².</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(i) }h(2)=1.4+1-0.4=2\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(ii) }h(4)=1.4+2-1.6=1.8\\text{ m}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\text{(iii) }h(6)=1.4+3-3.6=0.8\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"h(10)=1.4+5-10=-3.6\\text{ m}\"></span><p>This predicts a point below ground, so it is outside the model’s physical flight interval.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/problem-a/qsilver",
+      "status": "worked",
+      "method": "Solve the height inequalities and locate the quadratic’s maximum.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h(0)=1.2\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h=-0.2(x-6)(x+1)&gt;0\\Rightarrow-1&lt;x&lt;6\"></span><p>Since x is distance travelled, x≥0; hence 0≤x&lt;6. The supplied answer includes landing at 6, where h=0, but that is not strictly positive.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"1.2+k-0.2k^2&gt;2\\Rightarrow(k-1)(k-4)&lt;0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"1&lt;k&lt;4\\text{ m}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h=-0.2(x-2.5)^2+2.45\\Rightarrow h_{\\max}=2.45\\text{ m}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Solve the height inequalities and locate the quadratic’s maximum.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"h(0)=1.2\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"h=-0.2(x-6)(x+1)&gt;0\\Rightarrow-1&lt;x&lt;6\"></span><p>Since x is distance travelled, x≥0; hence 0≤x&lt;6. The supplied answer includes landing at 6, where h=0, but that is not strictly positive.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"1.2+k-0.2k^2&gt;2\\Rightarrow(k-1)(k-4)&lt;0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"1&lt;k&lt;4\\text{ m}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"h=-0.2(x-2.5)^2+2.45\\Rightarrow h_{\\max}=2.45\\text{ m}\"></span></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/problem-a/qgold",
+      "status": "worked",
+      "method": "Use the launch and landing heights to find both constants, then complete the square.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"h(0)=25\\Rightarrow q=25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"h(60)=0\\Rightarrow60p-0.02(60)^2+25=0\\Rightarrow p=47/60\"></span><span class=\"equation\" data-display=\"true\" data-math=\"h=-0.02\\left(x-\\frac{235}{12}\\right)^2+\\frac{9409}{288}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"h_{\\max}=\\frac{9409}{288}\\approx32.7\\text{ m}\"></span><p>The vertex is inside 0≤x≤60, so this maximum is within the model’s interval.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the launch and landing heights to find both constants, then complete the square.</p><span class=\"equation\" data-display=\"true\" data-math=\"h(0)=25\\Rightarrow q=25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"h(60)=0\\Rightarrow60p-0.02(60)^2+25=0\\Rightarrow p=47/60\"></span><span class=\"equation\" data-display=\"true\" data-math=\"h=-0.02\\left(x-\\frac{235}{12}\\right)^2+\\frac{9409}{288}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"h_{\\max}=\\frac{9409}{288}\\approx32.7\\text{ m}\"></span><p>The vertex is inside 0≤x≤60, so this maximum is within the model’s interval.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/problem-b/qbronze",
+      "status": "worked",
+      "method": "Use Pythagoras and the component ratio.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"|\\mathbf v|=\\sqrt{5^2+6^2}=\\sqrt{61}\\approx7.81\\mathrm{\\ m\\,s^{-1}}\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\theta=\\tan^{-1}(6/5)\\approx50.2^\\circ\"></span><p>The motion is 50.2°above positive i.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use Pythagoras and the component ratio.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"|\\mathbf v|=\\sqrt{5^2+6^2}=\\sqrt{61}\\approx7.81\\mathrm{\\ m\\,s^{-1}}\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\theta=\\tan^{-1}(6/5)\\approx50.2^\\circ\"></span><p>The motion is 50.2°above positive i.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/problem-b/qsilver",
+      "status": "worked",
+      "method": "Add the outward displacements to find the return vector, but add leg magnitudes for fuel use.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\overrightarrow{AD}=(120+150-250)\\mathbf i+(-200+180+80)\\mathbf j\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=20\\mathbf i+60\\mathbf j;\\quad\\overrightarrow{DA}=-20\\mathbf i-60\\mathbf j\"></span><span class=\"equation\" data-display=\"true\" data-math=\"d=\\sqrt{120^2+200^2}+\\sqrt{150^2+180^2}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\phantom{d=}+\\sqrt{250^2+80^2}+\\sqrt{20^2+60^2}\\approx793.29\\text{ km}\"></span><p>793.29&lt;800, so there is enough fuel in this ideal model.</p>"
+        },
+        {
+          "explanation": "<p>Assuming i is east and j is north, the return direction is south-west.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{bearing}=180^\\circ+\\tan^{-1}(20/60)\\approx198.435^\\circ\"></span><p>The three-figure bearing is 198°.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Add the outward displacements to find the return vector, but add leg magnitudes for fuel use.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\overrightarrow{AD}=(120+150-250)\\mathbf i+(-200+180+80)\\mathbf j\"></span><span class=\"equation\" data-display=\"true\" data-math=\"=20\\mathbf i+60\\mathbf j;\\quad\\overrightarrow{DA}=-20\\mathbf i-60\\mathbf j\"></span><span class=\"equation\" data-display=\"true\" data-math=\"d=\\sqrt{120^2+200^2}+\\sqrt{150^2+180^2}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\phantom{d=}+\\sqrt{250^2+80^2}+\\sqrt{20^2+60^2}\\approx793.29\\text{ km}\"></span><p>793.29&lt;800, so there is enough fuel in this ideal model.</p></li><li><p>Assuming i is east and j is north, the return direction is south-west.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{bearing}=180^\\circ+\\tan^{-1}(20/60)\\approx198.435^\\circ\"></span><p>The three-figure bearing is 198°.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-mechanics-year-1/ch8/problem-b/qgold",
+      "status": "worked",
+      "method": "Use the displacement to find two possible values, then use the total distance to choose the consistent one.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\overrightarrow{PR}=400\\mathbf i+(a-400)\\mathbf j\"></span><span class=\"equation\" data-display=\"true\" data-math=\"400^2+(a-400)^2=412.3^2\\Rightarrow a\\approx300.04\\text{ or }499.96\"></span><span class=\"equation\" data-display=\"true\" data-math=\"d=\\sqrt{900^2+400^2}+\\sqrt{500^2+a^2}\"></span><p>With a≈300, this is approximately 1568 m; with a≈500 it is approximately 1692 m. The first fits the rounded stated distance.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=300\\text{ m to the nearest metre}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use the displacement to find two possible values, then use the total distance to choose the consistent one.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\overrightarrow{PR}=400\\mathbf i+(a-400)\\mathbf j\"></span><span class=\"equation\" data-display=\"true\" data-math=\"400^2+(a-400)^2=412.3^2\\Rightarrow a\\approx300.04\\text{ or }499.96\"></span><span class=\"equation\" data-display=\"true\" data-math=\"d=\\sqrt{900^2+400^2}+\\sqrt{500^2+a^2}\"></span><p>With a≈300, this is approximately 1568 m; with a≈500 it is approximately 1692 m. The first fits the rounded stated distance.</p><span class=\"equation\" data-display=\"true\" data-math=\"a=300\\text{ m to the nearest metre}\"></span>",
+      "answerCheck": "matches"
+    }
+  ]
+}

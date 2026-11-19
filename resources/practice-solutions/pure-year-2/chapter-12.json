@@ -1,0 +1,757 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-2",
+  "chapter": 12,
+  "sourcePdf": "resources/practice/pure-year-2/chapter-12.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.1/q1",
+      "status": "worked",
+      "method": "Apply Pythagoras first in the base rectangle, then in the right triangle containing the space diagonal.",
+      "steps": [
+        {
+          "latex": "\\text{i }OB^2=6^2+5^2=61\\Rightarrow OB=\\sqrt{61};\\quad\\text{ii }OF^2=OB^2+4^2=61+16=77\\Rightarrow OF=\\sqrt{77}",
+          "explanation": ""
+        },
+        {
+          "latex": "F=(6,5,4)\\Rightarrow p=6,\\ q=5,\\ r=4",
+          "explanation": ""
+        },
+        {
+          "latex": "\\sqrt{p^2+q^2+r^2}=\\sqrt{6^2+5^2+4^2}=\\sqrt{77}",
+          "explanation": ""
+        },
+        {
+          "latex": "",
+          "explanation": "The two answers agree because the 3D distance formula is obtained by applying Pythagoras twice."
+        }
+      ],
+      "solutionHtml": "<p>Apply Pythagoras first in the base rectangle, then in the right triangle containing the space diagonal.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\text{i }OB^2=6^2+5^2=61\\\\&amp;\\Rightarrow OB=\\sqrt{61}\\\\&amp;\\text{ii }OF^2=OB^2+4^2=61+16=77\\\\&amp;\\Rightarrow OF=\\sqrt{77}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"F=(6,5,4)\\Rightarrow p=6,\\ q=5,\\ r=4\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\sqrt{p^2+q^2+r^2}=\\sqrt{6^2+5^2+4^2}=\\sqrt{77}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The two answers agree because the 3D distance formula is obtained by applying Pythagoras twice.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.1/q2",
+      "status": "worked",
+      "method": "Square the three coordinate differences from the origin, add, and take the positive square root.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OA}=\\begin{pmatrix}4\\\\10\\\\3\\end{pmatrix}-\\begin{pmatrix}0\\\\0\\\\0\\end{pmatrix}=\\begin{pmatrix}4\\\\10\\\\3\\end{pmatrix};\\quad |OA|=\\sqrt{(4)^2+(10)^2+(3)^2}=5 \\sqrt{5}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{OB}=\\begin{pmatrix}6\\\\4\\\\-8\\end{pmatrix}-\\begin{pmatrix}0\\\\0\\\\0\\end{pmatrix}=\\begin{pmatrix}6\\\\4\\\\-8\\end{pmatrix};\\quad |OB|=\\sqrt{(6)^2+(4)^2+(-8)^2}=2 \\sqrt{29}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{OC}=\\begin{pmatrix}-2\\\\-4\\\\15\\end{pmatrix}-\\begin{pmatrix}0\\\\0\\\\0\\end{pmatrix}=\\begin{pmatrix}-2\\\\-4\\\\15\\end{pmatrix};\\quad |OC|=\\sqrt{(-2)^2+(-4)^2+(15)^2}=7 \\sqrt{5}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Square the three coordinate differences from the origin, add, and take the positive square root.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OA}\\\\&amp;=\\begin{pmatrix}4\\\\10\\\\3\\end{pmatrix}-\\begin{pmatrix}0\\\\0\\\\0\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}4\\\\10\\\\3\\end{pmatrix}\\\\&amp;|OA|=\\sqrt{(4)^2+(10)^2+(3)^2}=5 \\sqrt{5}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OB}\\\\&amp;=\\begin{pmatrix}6\\\\4\\\\-8\\end{pmatrix}-\\begin{pmatrix}0\\\\0\\\\0\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}6\\\\4\\\\-8\\end{pmatrix}\\\\&amp;|OB|=\\sqrt{(6)^2+(4)^2+(-8)^2}=2 \\sqrt{29}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OC}\\\\&amp;=\\begin{pmatrix}-2\\\\-4\\\\15\\end{pmatrix}-\\begin{pmatrix}0\\\\0\\\\0\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}-2\\\\-4\\\\15\\end{pmatrix}\\\\&amp;|OC|=\\sqrt{(-2)^2+(-4)^2+(15)^2}=7 \\sqrt{5}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.1/q3",
+      "status": "worked",
+      "method": "Subtract P from Q component by component, then calculate the length of the displacement.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{PQ}=\\begin{pmatrix}-4\\\\5\\\\4\\end{pmatrix}-\\begin{pmatrix}5\\\\3\\\\-2\\end{pmatrix}=\\begin{pmatrix}-9\\\\2\\\\6\\end{pmatrix};\\quad |PQ|=\\sqrt{(-9)^2+(2)^2+(6)^2}=11",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{PQ}=\\begin{pmatrix}9\\\\-14\\\\4\\end{pmatrix}-\\begin{pmatrix}-1\\\\-3\\\\6\\end{pmatrix}=\\begin{pmatrix}10\\\\-11\\\\-2\\end{pmatrix};\\quad |PQ|=\\sqrt{(10)^2+(-11)^2+(-2)^2}=15",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{PQ}=\\begin{pmatrix}7\\\\0\\\\4\\end{pmatrix}-\\begin{pmatrix}11\\\\-2\\\\-1\\end{pmatrix}=\\begin{pmatrix}-4\\\\2\\\\5\\end{pmatrix};\\quad |PQ|=\\sqrt{(-4)^2+(2)^2+(5)^2}=3 \\sqrt{5}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Subtract P from Q component by component, then calculate the length of the displacement.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PQ}\\\\&amp;=\\begin{pmatrix}-4\\\\5\\\\4\\end{pmatrix}-\\begin{pmatrix}5\\\\3\\\\-2\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}-9\\\\2\\\\6\\end{pmatrix}\\\\&amp;|PQ|=\\sqrt{(-9)^2+(2)^2+(6)^2}=11\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PQ}\\\\&amp;=\\begin{pmatrix}9\\\\-14\\\\4\\end{pmatrix}-\\begin{pmatrix}-1\\\\-3\\\\6\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}10\\\\-11\\\\-2\\end{pmatrix}\\\\&amp;|PQ|=\\sqrt{(10)^2+(-11)^2+(-2)^2}=15\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PQ}\\\\&amp;=\\begin{pmatrix}7\\\\0\\\\4\\end{pmatrix}-\\begin{pmatrix}11\\\\-2\\\\-1\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}-4\\\\2\\\\5\\end{pmatrix}\\\\&amp;|PQ|=\\sqrt{(-4)^2+(2)^2+(5)^2}=3 \\sqrt{5}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.1/q4",
+      "status": "worked",
+      "method": "Square the given distance and separate the unknown coordinate difference.",
+      "steps": [
+        {
+          "latex": "7^2=(3-6)^2+(5+1)^2+(k-3)^2=9+36+(k-3)^2\\Rightarrow(3-k)^2=4",
+          "explanation": ""
+        },
+        {
+          "latex": "k-3=\\pm2\\Rightarrow k=1\\text{ or }5",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Square the given distance and separate the unknown coordinate difference.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;7^2=(3-6)^2+(5+1)^2+(k-3)^2=9+36+(k-3)^2\\\\&amp;\\Rightarrow (3-k)^2=4\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"k-3=\\pm2\\Rightarrow k=1\\text{ or }5\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.1/q5",
+      "status": "worked",
+      "method": "Square the distance formula and solve both square-root branches.",
+      "steps": [
+        {
+          "latex": "3^2=(0+2)^2+(k-4)^2+(7-8)^2\\Rightarrow(k-4)^2=9-4-1=4;\\quad k-4=\\pm2\\Rightarrow k=2\\text{ or }6",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Square the distance formula and solve both square-root branches.</p><span data-math=\"\\begin{aligned}&amp;3^2=(0+2)^2+(k-4)^2+(7-8)^2\\\\&amp;\\Rightarrow (k-4)^2=9-4-1=4\\\\&amp;k-4=\\pm2\\\\&amp;\\Rightarrow k=2\\text{ or }6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.1/q6",
+      "status": "worked",
+      "method": "Square the distance formula and retain both signs of the unknown difference.",
+      "steps": [
+        {
+          "latex": "9^2=(-2-2)^2+(-1+5)^2+(3-k)^2\\Rightarrow(3-k)^2=81-16-16=49;\\quad3-k=\\pm7\\Rightarrow k=-4\\text{ or }10",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Square the distance formula and retain both signs of the unknown difference.</p><span data-math=\"\\begin{aligned}&amp;9^2=(-2-2)^2+(-1+5)^2+(3-k)^2\\\\&amp;\\Rightarrow (3-k)^2=81-16-16=49\\\\&amp;3-k=\\pm7\\\\&amp;\\Rightarrow k=-4\\text{ or }10\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.1/q7",
+      "status": "worked",
+      "method": "Square the given surd distance before solving for k.",
+      "steps": [
+        {
+          "latex": "(5\\sqrt3)^2=(8-k)^2+(-5+4)^2+(-1-6)^2;\\quad(8-k)^2=75-1-49=25\\Rightarrow8-k=\\pm5\\Rightarrow k=3\\text{ or }13",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Square the given surd distance before solving for k.</p><span data-math=\"\\begin{aligned}&amp;(5\\sqrt3)^2=(8-k)^2+(-5+4)^2+(-1-6)^2\\\\&amp;(8-k)^2=75-1-49=25\\\\&amp;\\Rightarrow 8-k=\\pm5\\\\&amp;\\Rightarrow k=3\\text{ or }13\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.1/q8",
+      "status": "worked",
+      "method": "Use the squared distance to isolate the squared x-coordinate difference.",
+      "steps": [
+        {
+          "latex": "(3\\sqrt{10})^2=(k-4)^2+(4+4)^2+(4-3)^2;\\quad(k-4)^2=90-64-1=25\\Rightarrow k=4\\pm5=-1\\text{ or }9",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the squared distance to isolate the squared x-coordinate difference.</p><span data-math=\"\\begin{aligned}&amp;(3\\sqrt{10})^2=(k-4)^2+(4+4)^2+(4-3)^2\\\\&amp;(k-4)^2=90-64-1=25\\\\&amp;\\Rightarrow k=4\\pm5=-1\\text{ or }9\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.2/q1",
+      "status": "worked",
+      "method": "A position vector records the displacement from O=(0,0,0), so its components are the point coordinates.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OA}=(4-0)\\mathbf i+(-3-0)\\mathbf j+(1-0)\\mathbf k=4\\mathbf i-3\\mathbf j+\\mathbf k",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{OB}=\\begin{pmatrix}-2\\\\6\\\\5\\end{pmatrix}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>A position vector records the displacement from O=(0,0,0), so its components are the point coordinates.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OA}\\\\&amp;=(4-0)\\mathbf i+(-3-0)\\mathbf j+(1-0)\\mathbf k\\\\&amp;=4\\mathbf i-3\\mathbf j+\\mathbf k\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OB}=\\begin{pmatrix}-2\\\\6\\\\5\\end{pmatrix}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.2/q2",
+      "status": "worked",
+      "method": "Find Q−P, calculate its magnitude, and divide by that magnitude to obtain the unit direction.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{PQ}=\\begin{pmatrix}3\\\\7\\\\-2\\end{pmatrix}-\\begin{pmatrix}5\\\\2\\\\1\\end{pmatrix}=\\begin{pmatrix}-2\\\\5\\\\-3\\end{pmatrix};\\quad\\text{i }-2\\mathbf i+5\\mathbf j-3\\mathbf k;\\quad\\text{ii }\\begin{pmatrix}-2\\\\5\\\\-3\\end{pmatrix}",
+          "explanation": ""
+        },
+        {
+          "latex": "|PQ|=\\sqrt{(-2)^2+5^2+(-3)^2}=\\sqrt{38}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\widehat{PQ}=\\frac{\\overrightarrow{PQ}}{|PQ|}=\\frac{-2\\mathbf i+5\\mathbf j-3\\mathbf k}{\\sqrt{38}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Find Q−P, calculate its magnitude, and divide by that magnitude to obtain the unit direction.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PQ}\\\\&amp;=\\begin{pmatrix}3\\\\7\\\\-2\\end{pmatrix}-\\begin{pmatrix}5\\\\2\\\\1\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}-2\\\\5\\\\-3\\end{pmatrix}\\\\&amp;\\text{i }-2\\mathbf i+5\\mathbf j-3\\mathbf k\\\\&amp;\\text{ii }\\begin{pmatrix}-2\\\\5\\\\-3\\end{pmatrix}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"|PQ|=\\sqrt{(-2)^2+5^2+(-3)^2}=\\sqrt{38}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\widehat{PQ}\\\\&amp;=\\frac{\\overrightarrow{PQ}}{|PQ|}\\\\&amp;=\\frac{-2\\mathbf i+5\\mathbf j-3\\mathbf k}{\\sqrt{38}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.2/q3",
+      "status": "worked",
+      "method": "Combine corresponding components. A nonzero scalar multiple has the same or opposite direction, so establishes parallelism.",
+      "steps": [
+        {
+          "latex": "\\text{i }\\mathbf m+2\\mathbf n=\\begin{pmatrix}2\\\\-2\\\\3\\end{pmatrix}+2\\begin{pmatrix}-4\\\\-5\\\\6\\end{pmatrix}=-6\\mathbf i-12\\mathbf j+15\\mathbf k;\\quad\\text{ii }-\\mathbf m-\\mathbf n=\\begin{pmatrix}-2\\\\2\\\\-3\\end{pmatrix}-\\begin{pmatrix}-4\\\\-5\\\\6\\end{pmatrix}=2\\mathbf i+7\\mathbf j-9\\mathbf k",
+          "explanation": ""
+        },
+        {
+          "latex": "4\\mathbf m-\\mathbf n=\\begin{pmatrix}8\\\\-8\\\\12\\end{pmatrix}-\\begin{pmatrix}-4\\\\-5\\\\6\\end{pmatrix}=\\begin{pmatrix}12\\\\-3\\\\6\\end{pmatrix}=3(4\\mathbf i-\\mathbf j+2\\mathbf k)",
+          "explanation": "The factor 3 is nonzero, so the two vectors are parallel."
+        }
+      ],
+      "solutionHtml": "<p>Combine corresponding components. A nonzero scalar multiple has the same or opposite direction, so establishes parallelism.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\text{i }\\mathbf m+2\\mathbf n\\\\&amp;=\\begin{pmatrix}2\\\\-2\\\\3\\end{pmatrix}+2\\begin{pmatrix}-4\\\\-5\\\\6\\end{pmatrix}\\\\&amp;=-6\\mathbf i-12\\mathbf j+15\\mathbf k\\\\&amp;\\text{ii }-\\mathbf m-\\mathbf n\\\\&amp;=\\begin{pmatrix}-2\\\\2\\\\-3\\end{pmatrix}-\\begin{pmatrix}-4\\\\-5\\\\6\\end{pmatrix}\\\\&amp;=2\\mathbf i+7\\mathbf j-9\\mathbf k\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The factor 3 is nonzero, so the two vectors are parallel.</p><span data-math=\"\\begin{aligned}&amp;4\\mathbf m-\\mathbf n\\\\&amp;=\\begin{pmatrix}8\\\\-8\\\\12\\end{pmatrix}-\\begin{pmatrix}-4\\\\-5\\\\6\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}12\\\\-3\\\\6\\end{pmatrix}\\\\&amp;=3(4\\mathbf i-\\mathbf j+2\\mathbf k)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.2/q4",
+      "status": "worked",
+      "method": "The magnitude is √(4+1+4)=3. The cosine with each positive axis is its signed component divided by 3.",
+      "steps": [
+        {
+          "latex": "\\cos\\theta_x=\\frac{2}{3\\times 1}=\\frac{2}{3};\\quad \\theta_x=\\arccos\\left(\\frac{2}{3}\\right)\\approx48.2^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos\\theta_y=\\frac{-1}{3\\times 1}=- \\frac{1}{3};\\quad \\theta_y=\\arccos\\left(- \\frac{1}{3}\\right)\\approx109.5^\\circ",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos\\theta_z=\\frac{-2}{3\\times 1}=- \\frac{2}{3};\\quad \\theta_z=\\arccos\\left(- \\frac{2}{3}\\right)\\approx131.8^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The magnitude is √(4+1+4)=3. The cosine with each positive axis is its signed component divided by 3.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\cos\\theta_x=\\frac{2}{3\\times 1}=\\frac{2}{3}\\\\&amp;\\theta_x=\\arccos\\left(\\frac{2}{3}\\right)\\approx48.2^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos\\theta_y=\\frac{-1}{3\\times 1}=- \\frac{1}{3}\\\\&amp;\\theta_y=\\arccos\\left(- \\frac{1}{3}\\right)\\approx109.5^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos\\theta_z=\\frac{-2}{3\\times 1}=- \\frac{2}{3}\\\\&amp;\\theta_z=\\arccos\\left(- \\frac{2}{3}\\right)\\approx131.8^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.2/q5",
+      "status": "worked",
+      "method": "Subtract the position vectors and compare all three squared side lengths.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{AB}=\\overrightarrow{OB}-\\overrightarrow{OA}=(-1-2)\\mathbf i+(4-3)\\mathbf j+(2+5)\\mathbf k=-3\\mathbf i+\\mathbf j+7\\mathbf k",
+          "explanation": ""
+        },
+        {
+          "latex": "|OA|^2=2^2+3^2+(-5)^2=38;\\quad|OB|^2=(-1)^2+4^2+2^2=21;\\quad|AB|^2=(-3)^2+1^2+7^2=59",
+          "explanation": "The three squared lengths, hence the three lengths, are distinct. Therefore OAB is scalene."
+        }
+      ],
+      "solutionHtml": "<p>Subtract the position vectors and compare all three squared side lengths.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AB}\\\\&amp;=\\overrightarrow{OB}-\\overrightarrow{OA}\\\\&amp;=(-1-2)\\mathbf i+(4-3)\\mathbf j+(2+5)\\mathbf k\\\\&amp;=-3\\mathbf i+\\mathbf j+7\\mathbf k\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The three squared lengths, hence the three lengths, are distinct. Therefore OAB is scalene.</p><span data-math=\"\\begin{aligned}&amp;|OA|^2=2^2+3^2+(-5)^2=38\\\\&amp;|OB|^2=(-1)^2+4^2+2^2=21\\\\&amp;|AB|^2=(-3)^2+1^2+7^2=59\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.2/q6",
+      "status": "worked",
+      "method": "Use BC=AC−AB, then normalise.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{BC}=(5-4)\\mathbf i+(-6-1)\\mathbf j+(-1-3)\\mathbf k=\\mathbf i-7\\mathbf j-4\\mathbf k;\\quad|BC|=\\sqrt{1+49+16}=\\sqrt{66};\\quad\\widehat{BC}=\\frac{\\mathbf i-7\\mathbf j-4\\mathbf k}{\\sqrt{66}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use BC=AC−AB, then normalise.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{BC}\\\\&amp;=(5-4)\\mathbf i+(-6-1)\\mathbf j+(-1-3)\\mathbf k\\\\&amp;=\\mathbf i-7\\mathbf j-4\\mathbf k\\\\&amp;|BC|=\\sqrt{1+49+16}=\\sqrt{66}\\\\&amp;\\widehat{BC}\\\\&amp;=\\frac{\\mathbf i-7\\mathbf j-4\\mathbf k}{\\sqrt{66}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.2/q7",
+      "status": "worked",
+      "method": "Subtract coordinates for each directed side, then compare their lengths.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{AB}=\\begin{pmatrix}7\\\\-1\\\\0\\end{pmatrix}-\\begin{pmatrix}4\\\\4\\\\-3\\end{pmatrix}=\\begin{pmatrix}3\\\\-5\\\\3\\end{pmatrix};\\quad\\overrightarrow{AC}=\\begin{pmatrix}-1\\\\1\\\\-6\\end{pmatrix}-\\begin{pmatrix}4\\\\4\\\\-3\\end{pmatrix}=\\begin{pmatrix}-5\\\\-3\\\\-3\\end{pmatrix};\\quad\\overrightarrow{BC}=\\begin{pmatrix}-1\\\\1\\\\-6\\end{pmatrix}-\\begin{pmatrix}7\\\\-1\\\\0\\end{pmatrix}=\\begin{pmatrix}-8\\\\2\\\\-6\\end{pmatrix}",
+          "explanation": ""
+        },
+        {
+          "latex": "|AB|=\\sqrt{9+25+9}=\\sqrt{43};\\quad|AC|=\\sqrt{25+9+9}=\\sqrt{43};\\quad|BC|=\\sqrt{64+4+36}=2\\sqrt{26}",
+          "explanation": ""
+        },
+        {
+          "latex": "",
+          "explanation": "AB=AC, while BC has a different length, so ABC is isosceles with its equal sides meeting at A."
+        }
+      ],
+      "solutionHtml": "<p>Subtract coordinates for each directed side, then compare their lengths.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AB}\\\\&amp;=\\begin{pmatrix}7\\\\-1\\\\0\\end{pmatrix}-\\begin{pmatrix}4\\\\4\\\\-3\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}3\\\\-5\\\\3\\end{pmatrix}\\\\&amp;\\overrightarrow{AC}\\\\&amp;=\\begin{pmatrix}-1\\\\1\\\\-6\\end{pmatrix}-\\begin{pmatrix}4\\\\4\\\\-3\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}-5\\\\-3\\\\-3\\end{pmatrix}\\\\&amp;\\overrightarrow{BC}\\\\&amp;=\\begin{pmatrix}-1\\\\1\\\\-6\\end{pmatrix}-\\begin{pmatrix}7\\\\-1\\\\0\\end{pmatrix}\\\\&amp;=\\begin{pmatrix}-8\\\\2\\\\-6\\end{pmatrix}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|AB|=\\sqrt{9+25+9}=\\sqrt{43}\\\\&amp;|AC|=\\sqrt{25+9+9}=\\sqrt{43}\\\\&amp;|BC|=\\sqrt{64+4+36}=2\\sqrt{26}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>AB=AC, while BC has a different length, so ABC is isosceles with its equal sides meeting at A.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.2/q8",
+      "status": "worked",
+      "method": "Calculate all side lengths, use the converse of Pythagoras, then apply the right-triangle tangent ratio at R.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{PQ}=\\begin{pmatrix}0\\\\0\\\\6\\end{pmatrix}\\Rightarrow|PQ|=6;\\quad\\overrightarrow{QR}=\\begin{pmatrix}-3\\\\-4\\\\-6\\end{pmatrix}\\Rightarrow|QR|=\\sqrt{9+16+36}=\\sqrt{61};\\quad\\overrightarrow{PR}=\\begin{pmatrix}-3\\\\-4\\\\0\\end{pmatrix}\\Rightarrow|PR|=\\sqrt{9+16}=5",
+          "explanation": ""
+        },
+        {
+          "latex": "|PQ|^2+|PR|^2=6^2+5^2=61=|QR|^2",
+          "explanation": "By the converse of Pythagoras, the angle between PQ and PR at P is 90°."
+        },
+        {
+          "latex": "\\tan\\angle PRQ=\\frac{|PQ|}{|PR|}=\\frac65\\Rightarrow\\angle PRQ=\\arctan(6/5)\\approx50.2^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Calculate all side lengths, use the converse of Pythagoras, then apply the right-triangle tangent ratio at R.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PQ}=\\begin{pmatrix}0\\\\0\\\\6\\end{pmatrix}\\\\&amp;\\Rightarrow |PQ|=6\\\\&amp;\\overrightarrow{QR}=\\begin{pmatrix}-3\\\\-4\\\\-6\\end{pmatrix}\\\\&amp;\\Rightarrow |QR|=\\sqrt{9+16+36}=\\sqrt{61}\\\\&amp;\\overrightarrow{PR}=\\begin{pmatrix}-3\\\\-4\\\\0\\end{pmatrix}\\\\&amp;\\Rightarrow |PR|=\\sqrt{9+16}=5\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>By the converse of Pythagoras, the angle between PQ and PR at P is 90°.</p><span data-math=\"|PQ|^2+|PR|^2=6^2+5^2=61=|QR|^2\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\tan\\angle PRQ=\\frac{|PQ|}{|PR|}=\\frac65\\\\&amp;\\Rightarrow \\angle PRQ=\\arctan(6/5)\\approx50.2^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.2/q9",
+      "status": "worked",
+      "method": "The angle at B is between BA and BC. Reverse AB before taking the scalar product.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{BA}=\\mathbf i-2\\mathbf j-\\mathbf k;\\quad\\overrightarrow{BC}=\\overrightarrow{AC}-\\overrightarrow{AB}=-7\\mathbf i+5\\mathbf j+\\mathbf k;\\quad\\overrightarrow{BA}\\cdot\\overrightarrow{BC}=-7-10-1=-18;\\quad|BA|=\\sqrt6,\\ |BC|=\\sqrt{75};\\quad\\cos B=\\frac{-18}{\\sqrt6\\sqrt{75}}=-\\frac{3\\sqrt2}5\\Rightarrow B\\approx148.1^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The angle at B is between BA and BC. Reverse AB before taking the scalar product.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{BA}=\\mathbf i-2\\mathbf j-\\mathbf k\\\\&amp;\\overrightarrow{BC}\\\\&amp;=\\overrightarrow{AC}-\\overrightarrow{AB}\\\\&amp;=-7\\mathbf i+5\\mathbf j+\\mathbf k\\\\&amp;\\overrightarrow{BA}\\cdot\\overrightarrow{BC}=-7-10-1=-18\\\\&amp;|BA|=\\sqrt6,\\ |BC|=\\sqrt{75}\\\\&amp;\\cos B=\\frac{-18}{\\sqrt6\\sqrt{75}}=-\\frac{3\\sqrt2}5\\\\&amp;\\Rightarrow B\\approx148.1^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.3/q1",
+      "status": "worked",
+      "method": "Read the cuboid vertices as sums of its three edge vectors. Use endpoint minus start point; midpoints have the mean of the endpoint position vectors.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OF}=\\mathbf a+\\mathbf b+\\mathbf c",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{OD}=\\mathbf a+\\mathbf b;\\quad\\overrightarrow{DC}=\\mathbf c-(\\mathbf a+\\mathbf b)=-\\mathbf a-\\mathbf b+\\mathbf c",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{OG}=\\mathbf b+\\mathbf c;\\quad\\overrightarrow{AG}=\\mathbf b+\\mathbf c-\\mathbf a",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{CF}=(\\mathbf a+\\mathbf b+\\mathbf c)-\\mathbf c=\\mathbf a+\\mathbf b",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{OM}=\\frac{\\overrightarrow{OC}+\\overrightarrow{OF}}2=\\frac12\\mathbf a+\\frac12\\mathbf b+\\mathbf c",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{AM}=\\overrightarrow{OM}-\\mathbf a=-\\frac12\\mathbf a+\\frac12\\mathbf b+\\mathbf c",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{AN}=\\frac12\\overrightarrow{AF}=\\frac12(\\mathbf b+\\mathbf c)",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{ON}=\\mathbf a+\\frac12\\mathbf b+\\frac12\\mathbf c;\\quad\\overrightarrow{NM}=\\overrightarrow{OM}-\\overrightarrow{ON}=-\\frac12\\mathbf a+\\frac12\\mathbf c",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Read the cuboid vertices as sums of its three edge vectors. Use endpoint minus start point; midpoints have the mean of the endpoint position vectors.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OF}=\\mathbf a+\\mathbf b+\\mathbf c\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OD}=\\mathbf a+\\mathbf b\\\\&amp;\\overrightarrow{DC}\\\\&amp;=\\mathbf c-(\\mathbf a+\\mathbf b)\\\\&amp;=-\\mathbf a-\\mathbf b+\\mathbf c\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OG}=\\mathbf b+\\mathbf c\\\\&amp;\\overrightarrow{AG}=\\mathbf b+\\mathbf c-\\mathbf a\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{CF}\\\\&amp;=(\\mathbf a+\\mathbf b+\\mathbf c)-\\mathbf c\\\\&amp;=\\mathbf a+\\mathbf b\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OM}\\\\&amp;=\\frac{\\overrightarrow{OC}+\\overrightarrow{OF}}2\\\\&amp;=\\frac12\\mathbf a+\\frac12\\mathbf b+\\mathbf c\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AM}\\\\&amp;=\\overrightarrow{OM}-\\mathbf a\\\\&amp;=-\\frac12\\mathbf a+\\frac12\\mathbf b+\\mathbf c\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AN}\\\\&amp;=\\frac12\\overrightarrow{AF}\\\\&amp;=\\frac12(\\mathbf b+\\mathbf c)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{ON}\\\\&amp;=\\mathbf a+\\frac12\\mathbf b+\\frac12\\mathbf c\\\\&amp;\\overrightarrow{NM}\\\\&amp;=\\overrightarrow{OM}-\\overrightarrow{ON}\\\\&amp;=-\\frac12\\mathbf a+\\frac12\\mathbf c\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.3/q2",
+      "status": "worked",
+      "method": "Subtract endpoint coordinates for each pair of opposite directed sides.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{PQ}=\\begin{pmatrix}4\\\\10\\\\-4\\end{pmatrix}-\\begin{pmatrix}7\\\\6\\\\3\\end{pmatrix}=-3\\mathbf i+4\\mathbf j-7\\mathbf k;\\quad\\overrightarrow{SR}=\\begin{pmatrix}3\\\\15\\\\-12\\end{pmatrix}-\\begin{pmatrix}6\\\\11\\\\-5\\end{pmatrix}=-3\\mathbf i+4\\mathbf j-7\\mathbf k",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{SP}=\\begin{pmatrix}7\\\\6\\\\3\\end{pmatrix}-\\begin{pmatrix}6\\\\11\\\\-5\\end{pmatrix}=\\mathbf i-5\\mathbf j+8\\mathbf k;\\quad\\overrightarrow{RQ}=\\begin{pmatrix}4\\\\10\\\\-4\\end{pmatrix}-\\begin{pmatrix}3\\\\15\\\\-12\\end{pmatrix}=\\mathbf i-5\\mathbf j+8\\mathbf k",
+          "explanation": ""
+        },
+        {
+          "latex": "",
+          "explanation": "Both pairs of opposite directed sides are equal, hence parallel and equal in length. PQRS is a parallelogram."
+        }
+      ],
+      "solutionHtml": "<p>Subtract endpoint coordinates for each pair of opposite directed sides.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{PQ}\\\\&amp;=\\begin{pmatrix}4\\\\10\\\\-4\\end{pmatrix}-\\begin{pmatrix}7\\\\6\\\\3\\end{pmatrix}\\\\&amp;=-3\\mathbf i+4\\mathbf j-7\\mathbf k\\\\&amp;\\overrightarrow{SR}\\\\&amp;=\\begin{pmatrix}3\\\\15\\\\-12\\end{pmatrix}-\\begin{pmatrix}6\\\\11\\\\-5\\end{pmatrix}\\\\&amp;=-3\\mathbf i+4\\mathbf j-7\\mathbf k\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{SP}\\\\&amp;=\\begin{pmatrix}7\\\\6\\\\3\\end{pmatrix}-\\begin{pmatrix}6\\\\11\\\\-5\\end{pmatrix}\\\\&amp;=\\mathbf i-5\\mathbf j+8\\mathbf k\\\\&amp;\\overrightarrow{RQ}\\\\&amp;=\\begin{pmatrix}4\\\\10\\\\-4\\end{pmatrix}-\\begin{pmatrix}3\\\\15\\\\-12\\end{pmatrix}\\\\&amp;=\\mathbf i-5\\mathbf j+8\\mathbf k\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>Both pairs of opposite directed sides are equal, hence parallel and equal in length. PQRS is a parallelogram.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.3/q3",
+      "status": "worked",
+      "method": "Equate i, j and k components and solve the first two simultaneous equations.",
+      "steps": [
+        {
+          "latex": "2q-3p=13,\\quad4q+p=5,\\quad r=2q-p;\\quad p=5-4q;\\quad2q-3(5-4q)=13\\Rightarrow14q=28\\Rightarrow q=2;\\quad p=-3,\\quad r=4+3=7",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Equate i, j and k components and solve the first two simultaneous equations.</p><span data-math=\"\\begin{aligned}&amp;2q-3p=13,\\quad4q+p=5,\\quad r=2q-p\\\\&amp;p=5-4q\\\\&amp;2q-3(5-4q)=13\\\\&amp;\\Rightarrow 14q=28\\\\&amp;\\Rightarrow q=2\\\\&amp;p=-3,\\quad r=4+3=7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.3/q4",
+      "status": "worked",
+      "method": "The side lengths are multiplied by 3 and 2, so the rectangular area is multiplied by their product.",
+      "steps": [
+        {
+          "latex": "A_{OPRQ}=|OP||OQ|=(3|OA|)(2|OB|)=6(20)=120",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The side lengths are multiplied by 3 and 2, so the rectangular area is multiplied by their product.</p><span data-math=\"\\begin{aligned}&amp;A_{OPRQ}=|OP||OQ|=(3|OA|)(2|OB|)=6(20)=120\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.3/q5",
+      "status": "worked",
+      "method": "Equate the three vector components, then substitute the first relation into the third.",
+      "steps": [
+        {
+          "latex": "-a=2b,\\quad bc=-6,\\quad3a+2b=8;\\quad a=-2b\\Rightarrow-6b+2b=8\\Rightarrow b=-2;\\quad a=4,\\quad c=(-6)/(-2)=3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Equate the three vector components, then substitute the first relation into the third.</p><span data-math=\"\\begin{aligned}&amp;-a=2b,\\quad bc=-6,\\quad3a+2b=8\\\\&amp;a=-2b\\\\&amp;\\Rightarrow -6b+2b=8\\\\&amp;\\Rightarrow b=-2\\\\&amp;a=4,\\quad c=(-6)/(-2)=3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.3/q6",
+      "status": "worked",
+      "method": "Use the adjacent side lengths and their included angle: area²=|u|²|v|²−(u·v)².",
+      "steps": [
+        {
+          "latex": "\\mathbf u=(1,10,-3),\\quad\\mathbf v=(8,3,2);\\quad|\\mathbf u|^2=1+100+9=110,\\quad|\\mathbf v|^2=64+9+4=77;\\quad\\mathbf u\\cdot\\mathbf v=8+30-6=32;\\quad A=|\\mathbf u||\\mathbf v|\\sin\\theta=\\sqrt{110\\cdot77-32^2}=\\sqrt{7446}\\approx86.3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the adjacent side lengths and their included angle: area²=|u|²|v|²−(u·v)².</p><span data-math=\"\\begin{aligned}&amp;\\mathbf u=(1,10,-3),\\quad\\mathbf v=(8,3,2)\\\\&amp;|\\mathbf u|^2=1+100+9=110,\\quad|\\mathbf v|^2=64+9+4=77\\\\&amp;\\mathbf u\\cdot\\mathbf v=8+30-6=32\\\\&amp;A\\\\&amp;=|\\mathbf u||\\mathbf v|\\sin\\theta\\\\&amp;=\\sqrt{110\\cdot77-32^2}\\\\&amp;=\\sqrt{7446}\\approx86.3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.3/q7",
+      "status": "worked",
+      "method": "An isosceles triangle can have any pair of equal sides. Test all three possibilities and then require a positive integer.",
+      "steps": [
+        {
+          "latex": "AB^2=4^2+(k-11)^2+(-10)^2=116+(k-11)^2;\\quad AC^2=10^2+(-5)^2+(-3)^2=134;\\quad BC^2=6^2+(6-k)^2+7^2=85+(k-6)^2;\\quad AB=AC\\Rightarrow(k-11)^2=18\\Rightarrow k=11\\pm3\\sqrt2;\\quad BC=AC\\Rightarrow(k-6)^2=49\\Rightarrow k=-1,13;\\quad AB=BC\\Rightarrow237-22k=121-12k\\Rightarrow k=58/5;\\quad k\\in\\mathbb Z_{>0}\\Rightarrow k=13",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>An isosceles triangle can have any pair of equal sides. Test all three possibilities and then require a positive integer.</p><span data-math=\"\\begin{aligned}&amp;AB^2=4^2+(k-11)^2+(-10)^2=116+(k-11)^2\\\\&amp;AC^2=10^2+(-5)^2+(-3)^2=134\\\\&amp;BC^2=6^2+(6-k)^2+7^2=85+(k-6)^2\\\\&amp;AB=AC\\\\&amp;\\Rightarrow (k-11)^2=18\\\\&amp;\\Rightarrow k=11\\pm3\\sqrt2\\\\&amp;BC=AC\\\\&amp;\\Rightarrow (k-6)^2=49\\\\&amp;\\Rightarrow k=-1,13\\\\&amp;AB=BC\\\\&amp;\\Rightarrow 237-22k=121-12k\\\\&amp;\\Rightarrow k=58/5\\\\&amp;k\\in\\mathbb Z_{&gt;0}\\\\&amp;\\Rightarrow k=13\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.3/q8",
+      "status": "worked",
+      "method": "One explicit counterexample disproves a universal claim. Use three alternating corners of a unit cube.",
+      "steps": [
+        {
+          "latex": "A=(0,0,0),\\quad B=(1,1,0),\\quad C=(0,1,1);\\quad AB^2=1^2+1^2+0^2=2;\\quad AC^2=0^2+1^2+1^2=2;\\quad BC^2=(-1)^2+0^2+1^2=2;\\quad AB=AC=BC=\\sqrt2",
+          "explanation": "All three vertices have integer coordinates and the triangle is equilateral, so the hypothesis is false."
+        }
+      ],
+      "solutionHtml": "<p>One explicit counterexample disproves a universal claim. Use three alternating corners of a unit cube.</p><p>All three vertices have integer coordinates and the triangle is equilateral, so the hypothesis is false.</p><span data-math=\"\\begin{aligned}&amp;A=(0,0,0),\\quad B=(1,1,0),\\quad C=(0,1,1)\\\\&amp;AB^2=1^2+1^2+0^2=2\\\\&amp;AC^2=0^2+1^2+1^2=2\\\\&amp;BC^2=(-1)^2+0^2+1^2=2\\\\&amp;AB=AC=BC=\\sqrt2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.4/q1",
+      "status": "worked",
+      "method": "Add the three forces component by component; then take the length of the resultant vector.",
+      "steps": [
+        {
+          "latex": "\\mathbf R=(-5+2+0)\\mathbf i+(3+0-4)\\mathbf j+(1-5+3)\\mathbf k=-3\\mathbf i-\\mathbf j-\\mathbf k\\ \\mathrm N",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf R|=\\sqrt{(-3)^2+(-1)^2+(-1)^2}=\\sqrt{11}\\ \\mathrm N",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Add the three forces component by component; then take the length of the resultant vector.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\mathbf R\\\\&amp;=(-5+2+0)\\mathbf i+(3+0-4)\\mathbf j+(1-5+3)\\mathbf k\\\\&amp;=-3\\mathbf i-\\mathbf j-\\mathbf k\\ \\mathrm N\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf R|=\\sqrt{(-3)^2+(-1)^2+(-1)^2}=\\sqrt{11}\\ \\mathrm N\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.4/q2",
+      "status": "worked",
+      "method": "Equilibrium means the resultant vector is zero, so each component sums to zero.",
+      "steps": [
+        {
+          "latex": "2b-4+a=0,\\quad-b+7+2a=0,\\quad5-8+3=0;\\quad a=4-2b;\\quad-b+7+2(4-2b)=0\\Rightarrow5b=15\\Rightarrow b=3;\\quad a=-2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Equilibrium means the resultant vector is zero, so each component sums to zero.</p><span data-math=\"\\begin{aligned}&amp;2b-4+a=0,\\quad-b+7+2a=0,\\quad5-8+3=0\\\\&amp;a=4-2b\\\\&amp;-b+7+2(4-2b)=0\\\\&amp;\\Rightarrow 5b=15\\\\&amp;\\Rightarrow b=3\\\\&amp;a=-2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.4/q3",
+      "status": "worked",
+      "method": "Use the length of the acceleration vector and the displacement formula s=ut+½at², with u=0.",
+      "steps": [
+        {
+          "latex": "|\\mathbf a|=\\sqrt{(-3)^2+6^2+(-1)^2}=\\sqrt{46}\\approx6.78\\ \\mathrm{m\\,s^{-2}}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\mathbf s=\\frac12\\mathbf a(2)^2=2\\mathbf a;\\quad|\\mathbf s|=2\\sqrt{46}\\ \\mathrm m",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use the length of the acceleration vector and the displacement formula s=ut+½at², with u=0.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf a|\\\\&amp;=\\sqrt{(-3)^2+6^2+(-1)^2}\\\\&amp;=\\sqrt{46}\\approx6.78\\ \\mathrm{m\\,s^{-2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\mathbf s=\\frac12\\mathbf a(2)^2=2\\mathbf a\\\\&amp;|\\mathbf s|=2\\sqrt{46}\\ \\mathrm m\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.4/q4",
+      "status": "worked",
+      "method": "Add the forces and use Newton’s second law R=ma.",
+      "steps": [
+        {
+          "latex": "\\mathbf R=(8-6)\\mathbf i+(-3+9)\\mathbf j+(6+4)\\mathbf k=2\\mathbf i+6\\mathbf j+10\\mathbf k\\ \\mathrm N",
+          "explanation": ""
+        },
+        {
+          "latex": "\\mathbf a=\\mathbf R/4=\\frac12\\mathbf i+\\frac32\\mathbf j+\\frac52\\mathbf k\\ \\mathrm{m\\,s^{-2}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Add the forces and use Newton’s second law R=ma.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\mathbf R\\\\&amp;=(8-6)\\mathbf i+(-3+9)\\mathbf j+(6+4)\\mathbf k\\\\&amp;=2\\mathbf i+6\\mathbf j+10\\mathbf k\\ \\mathrm N\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\mathbf a\\\\&amp;=\\mathbf R/4\\\\&amp;=\\frac12\\mathbf i+\\frac32\\mathbf j+\\frac52\\mathbf k\\ \\mathrm{m\\,s^{-2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.4/q5",
+      "status": "worked",
+      "method": "With zero initial velocity and constant acceleration, velocity=at and displacement=½at². The motion stays along one line without reversal.",
+      "steps": [
+        {
+          "latex": "|\\mathbf a|=\\sqrt{5^2+(-11)^2+2^2}=\\sqrt{150}=5\\sqrt6;\\quad\\mathbf v=4\\mathbf a\\Rightarrow|\\mathbf v|=20\\sqrt6\\ \\mathrm{m\\,s^{-1}}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\mathbf s=\\frac12\\mathbf a(4)^2=8\\mathbf a;\\quad\\text{distance}=|\\mathbf s|=40\\sqrt6\\ \\mathrm m",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>With zero initial velocity and constant acceleration, velocity=at and displacement=½at². The motion stays along one line without reversal.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf a|=\\sqrt{5^2+(-11)^2+2^2}=\\sqrt{150}=5\\sqrt6\\\\&amp;\\mathbf v=4\\mathbf a\\\\&amp;\\Rightarrow |\\mathbf v|=20\\sqrt6\\ \\mathrm{m\\,s^{-1}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\mathbf s=\\frac12\\mathbf a(4)^2=8\\mathbf a\\\\&amp;\\text{distance}=|\\mathbf s|=40\\sqrt6\\ \\mathrm m\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.4/q6",
+      "status": "worked",
+      "method": "Divide the force by the positive mass; the acceleration direction is the same as the force direction.",
+      "steps": [
+        {
+          "latex": "\\mathbf a=\\frac14(5\\mathbf i-6\\mathbf j+12\\mathbf k)=\\frac54\\mathbf i-\\frac32\\mathbf j+3\\mathbf k\\ \\mathrm{m\\,s^{-2}}",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf F|=\\sqrt{25+36+144}=\\sqrt{205};\\quad\\cos\\theta=\\frac5{\\sqrt{205}}\\Rightarrow\\theta\\approx69.6^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Divide the force by the positive mass; the acceleration direction is the same as the force direction.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\mathbf a\\\\&amp;=\\frac14(5\\mathbf i-6\\mathbf j+12\\mathbf k)\\\\&amp;=\\frac54\\mathbf i-\\frac32\\mathbf j+3\\mathbf k\\ \\mathrm{m\\,s^{-2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf F|=\\sqrt{25+36+144}=\\sqrt{205}\\\\&amp;\\cos\\theta=\\frac5{\\sqrt{205}}\\\\&amp;\\Rightarrow \\theta\\approx69.6^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.4/q7",
+      "status": "worked",
+      "method": "First set the total force to zero. Removing F₃ leaves a resultant equal to −F₃; divide by the mass to obtain acceleration.",
+      "steps": [
+        {
+          "latex": "2-2=0;\\quad3+a-5=0\\Rightarrow a=2;\\quad b+4+3=0\\Rightarrow b=-7",
+          "explanation": ""
+        },
+        {
+          "latex": "\\mathbf R=-\\mathbf F_3=2\\mathbf i+5\\mathbf j-3\\mathbf k\\ \\mathrm N",
+          "explanation": ""
+        },
+        {
+          "latex": "\\mathbf a=\\frac13\\mathbf R=\\frac23\\mathbf i+\\frac53\\mathbf j-\\mathbf k\\ \\mathrm{m\\,s^{-2}}",
+          "explanation": ""
+        },
+        {
+          "latex": "|\\mathbf a|=\\sqrt{(2/3)^2+(5/3)^2+(-1)^2}=\\frac{\\sqrt{38}}3\\ \\mathrm{m\\,s^{-2}}",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>First set the total force to zero. Removing F₃ leaves a resultant equal to −F₃; divide by the mass to obtain acceleration.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;2-2=0\\\\&amp;3+a-5=0\\\\&amp;\\Rightarrow a=2\\\\&amp;b+4+3=0\\\\&amp;\\Rightarrow b=-7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\mathbf R\\\\&amp;=-\\mathbf F_3\\\\&amp;=2\\mathbf i+5\\mathbf j-3\\mathbf k\\ \\mathrm N\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\mathbf a\\\\&amp;=\\frac13\\mathbf R\\\\&amp;=\\frac23\\mathbf i+\\frac53\\mathbf j-\\mathbf k\\ \\mathrm{m\\,s^{-2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|\\mathbf a|\\\\&amp;=\\sqrt{(2/3)^2+(5/3)^2+(-1)^2}\\\\&amp;=\\frac{\\sqrt{38}}3\\ \\mathrm{m\\,s^{-2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/12.4/q8",
+      "status": "worked",
+      "method": "Add the forces. Since the mass is 5 kg and acceleration magnitude is 5 m/s², the resultant force magnitude must be 25 N.",
+      "steps": [
+        {
+          "latex": "\\mathbf R=(p+3)\\mathbf i+(p+6)\\mathbf j+(1-p)\\mathbf k;\\quad|\\mathbf R|=m|\\mathbf a|=5(5)=25;\\quad(p+3)^2+(p+6)^2+(1-p)^2=625;\\quad3p^2+16p+46=625\\Rightarrow3p^2+16p-579=0;\\quad p=\\frac{-16\\pm\\sqrt{16^2+4(3)(579)}}6=\\frac{-8\\pm\\sqrt{1801}}3",
+          "explanation": "The printed values −3 and −7/3 give a force magnitude of 5 N, hence acceleration magnitude 1 m/s². They do not satisfy the stated 5 m/s² condition."
+        }
+      ],
+      "solutionHtml": "<p>Add the forces. Since the mass is 5 kg and acceleration magnitude is 5 m/s², the resultant force magnitude must be 25 N.</p><p>The printed values −3 and −7/3 give a force magnitude of 5 N, hence acceleration magnitude 1 m/s². They do not satisfy the stated 5 m/s² condition.</p><span data-math=\"\\begin{aligned}&amp;\\mathbf R=(p+3)\\mathbf i+(p+6)\\mathbf j+(1-p)\\mathbf k\\\\&amp;|\\mathbf R|=m|\\mathbf a|=5(5)=25\\\\&amp;(p+3)^2+(p+6)^2+(1-p)^2=625\\\\&amp;3p^2+16p+46=625\\\\&amp;\\Rightarrow 3p^2+16p-579=0\\\\&amp;p\\\\&amp;=\\frac{-16\\pm\\sqrt{16^2+4(3)(579)}}6\\\\&amp;=\\frac{-8\\pm\\sqrt{1801}}3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/problem-a/qbronze",
+      "status": "worked",
+      "method": "Square the given distance and isolate the unknown x-coordinate difference.",
+      "steps": [
+        {
+          "latex": "15^2=(k-8)^2+(-4+6)^2+(-7-4)^2;\\quad(k-8)^2=225-4-121=100\\Rightarrow k=8\\pm10=18\\text{ or }-2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Square the given distance and isolate the unknown x-coordinate difference.</p><span data-math=\"\\begin{aligned}&amp;15^2=(k-8)^2+(-4+6)^2+(-7-4)^2\\\\&amp;(k-8)^2=225-4-121=100\\\\&amp;\\Rightarrow k=8\\pm10=18\\text{ or }-2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/problem-a/qsilver",
+      "status": "worked",
+      "method": "Square the magnitude to remove the square root; include both signs when solving for p.",
+      "steps": [
+        {
+          "latex": "(10\\sqrt6)^2=(4p)^2+(-5p)^2+(3p)^2=50p^2;\\quad p^2=600/50=12\\Rightarrow p=\\pm2\\sqrt3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Square the magnitude to remove the square root; include both signs when solving for p.</p><span data-math=\"\\begin{aligned}&amp;(10\\sqrt6)^2=(4p)^2+(-5p)^2+(3p)^2=50p^2\\\\&amp;p^2=600/50=12\\\\&amp;\\Rightarrow p=\\pm2\\sqrt3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/problem-a/qgold",
+      "status": "worked",
+      "method": "The resultant force magnitude is mass×acceleration=6 N. Add components and solve the resulting quadratic.",
+      "steps": [
+        {
+          "latex": "\\mathbf R=(3-q)\\mathbf i+(q+5)\\mathbf j+(1-q)\\mathbf k;\\quad|\\mathbf R|=3(2)=6;\\quad(3-q)^2+(q+5)^2+(1-q)^2=36;\\quad3q^2+2q+35=36\\Rightarrow3q^2+2q-1=(3q-1)(q+1)=0;\\quad q=-1\\text{ or }1/3",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>The resultant force magnitude is mass×acceleration=6 N. Add components and solve the resulting quadratic.</p><span data-math=\"\\begin{aligned}&amp;\\mathbf R=(3-q)\\mathbf i+(q+5)\\mathbf j+(1-q)\\mathbf k\\\\&amp;|\\mathbf R|=3(2)=6\\\\&amp;(3-q)^2+(q+5)^2+(1-q)^2=36\\\\&amp;3q^2+2q+35=36\\\\&amp;\\Rightarrow 3q^2+2q-1=(3q-1)(q+1)=0\\\\&amp;q=-1\\text{ or }1/3\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/problem-b/qbronze",
+      "status": "worked",
+      "method": "Subtract endpoint coordinates and compare the two directed opposite sides.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{AB}=(11-7)\\mathbf i+(-2-4)\\mathbf j+(3+1)\\mathbf k=4\\mathbf i-6\\mathbf j+4\\mathbf k;\\quad\\overrightarrow{DC}=(6+2)\\mathbf i+(-15+3)\\mathbf j+(16-8)\\mathbf k=8\\mathbf i-12\\mathbf j+8\\mathbf k",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{DC}=2\\overrightarrow{AB}",
+          "explanation": "The nonzero scalar multiple proves parallelism."
+        },
+        {
+          "latex": "|DC|=2|AB|\\Rightarrow|AB|=\\frac12|DC|\\Rightarrow k=1/2",
+          "explanation": ""
+        },
+        {
+          "latex": "\\overrightarrow{AD}=(-9,-7,9),\\quad\\overrightarrow{BC}=(-5,-13,13)",
+          "explanation": "AB and DC form one parallel pair. AD and BC are not scalar multiples, so there is exactly one parallel pair: ABCD is a trapezium."
+        }
+      ],
+      "solutionHtml": "<p>Subtract endpoint coordinates and compare the two directed opposite sides.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AB}\\\\&amp;=(11-7)\\mathbf i+(-2-4)\\mathbf j+(3+1)\\mathbf k\\\\&amp;=4\\mathbf i-6\\mathbf j+4\\mathbf k\\\\&amp;\\overrightarrow{DC}\\\\&amp;=(6+2)\\mathbf i+(-15+3)\\mathbf j+(16-8)\\mathbf k\\\\&amp;=8\\mathbf i-12\\mathbf j+8\\mathbf k\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The nonzero scalar multiple proves parallelism.</p><span data-math=\"\\overrightarrow{DC}=2\\overrightarrow{AB}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;|DC|=2|AB|\\\\&amp;\\Rightarrow |AB|=\\frac12|DC|\\\\&amp;\\Rightarrow k=1/2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>AB and DC form one parallel pair. AD and BC are not scalar multiples, so there is exactly one parallel pair: ABCD is a trapezium.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AD}\\\\&amp;=(-9,-7,9),\\quad\\overrightarrow{BC}\\\\&amp;=(-5,-13,13)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/problem-b/qsilver",
+      "status": "worked",
+      "method": "Opposite sides of a parallelogram have equal directed vectors: AD=BC.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{BC}=(-7+3,9+4,-3-2)=(-4,13,-5);\\quad D=A+\\overrightarrow{BC}=(6,-8,4)+(-4,13,-5)=(2,5,-1)",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Opposite sides of a parallelogram have equal directed vectors: AD=BC.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{BC}=(-7+3,9+4,-3-2)=(-4,13,-5)\\\\&amp;D=A+\\overrightarrow{BC}=(6,-8,4)+(-4,13,-5)=(2,5,-1)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/problem-b/qgold",
+      "status": "worked",
+      "method": "Use the 4:1 division ratios to locate all four endpoints. Equal midpoint position vectors prove the two segments bisect one another.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OM}=\\frac45\\mathbf a;\\quad\\overrightarrow{ON}=\\mathbf a+\\frac45\\mathbf b;\\quad\\overrightarrow{OF}=\\mathbf a+\\mathbf b+\\mathbf c,\\quad\\overrightarrow{OG}=\\mathbf b+\\mathbf c;\\quad\\overrightarrow{OP}=\\overrightarrow{OF}+\\frac45\\overrightarrow{FG}=\\frac15\\mathbf a+\\mathbf b+\\mathbf c;\\quad\\overrightarrow{OQ}=\\overrightarrow{OG}+\\frac45\\overrightarrow{GC}=\\frac15\\mathbf b+\\mathbf c;\\quad\\frac{\\overrightarrow{OM}+\\overrightarrow{OP}}2=\\frac12(\\mathbf a+\\mathbf b+\\mathbf c);\\quad\\frac{\\overrightarrow{ON}+\\overrightarrow{OQ}}2=\\frac12(\\mathbf a+\\mathbf b+\\mathbf c)",
+          "explanation": "Thus the common point T has half the displacement along each segment. Both MP and NQ pass through T at their midpoints, proving mutual bisection."
+        }
+      ],
+      "solutionHtml": "<p>Use the 4:1 division ratios to locate all four endpoints. Equal midpoint position vectors prove the two segments bisect one another.</p><p>Thus the common point T has half the displacement along each segment. Both MP and NQ pass through T at their midpoints, proving mutual bisection.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OM}=\\frac45\\mathbf a\\\\&amp;\\overrightarrow{ON}=\\mathbf a+\\frac45\\mathbf b\\\\&amp;\\overrightarrow{OF}\\\\&amp;=\\mathbf a+\\mathbf b+\\mathbf c,\\quad\\overrightarrow{OG}\\\\&amp;=\\mathbf b+\\mathbf c\\\\&amp;\\overrightarrow{OP}\\\\&amp;=\\overrightarrow{OF}+\\frac45\\overrightarrow{FG}\\\\&amp;=\\frac15\\mathbf a+\\mathbf b+\\mathbf c\\\\&amp;\\overrightarrow{OQ}\\\\&amp;=\\overrightarrow{OG}+\\frac45\\overrightarrow{GC}\\\\&amp;=\\frac15\\mathbf b+\\mathbf c\\\\&amp;\\frac{\\overrightarrow{OM}+\\overrightarrow{OP}}2\\\\&amp;=\\frac12(\\mathbf a+\\mathbf b+\\mathbf c)\\\\&amp;\\frac{\\overrightarrow{ON}+\\overrightarrow{OQ}}2\\\\&amp;=\\frac12(\\mathbf a+\\mathbf b+\\mathbf c)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/exam/q1",
+      "status": "worked",
+      "method": "Square the distance formula and solve the two branches for the y-coordinate difference.",
+      "steps": [
+        {
+          "latex": "(5\\sqrt5)^2=(-4-6)^2+(k-3)^2+(0+3)^2;\\quad(k-3)^2=125-100-9=16\\Rightarrow k=3\\pm4=-1\\text{ or }7",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Square the distance formula and solve the two branches for the y-coordinate difference.</p><span data-math=\"\\begin{aligned}&amp;(5\\sqrt5)^2=(-4-6)^2+(k-3)^2+(0+3)^2\\\\&amp;(k-3)^2=125-100-9=16\\\\&amp;\\Rightarrow k=3\\pm4=-1\\text{ or }7\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/exam/q13",
+      "status": "worked",
+      "method": "Use AC=AB+BC. The angle at A lies between AB and AC.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{AC}=(5,2,-1)+(-7,-10,4)=(-2,-8,3);\\quad\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=-10-16-3=-29;\\quad|AB|=\\sqrt{25+4+1}=\\sqrt{30},\\quad|AC|=\\sqrt{4+64+9}=\\sqrt{77};\\quad\\cos\\angle BAC=\\frac{-29}{\\sqrt{30}\\sqrt{77}}\\Rightarrow\\angle BAC\\approx127.1^\\circ",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Use AC=AB+BC. The angle at A lies between AB and AC.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{AC}=(5,2,-1)+(-7,-10,4)=(-2,-8,3)\\\\&amp;\\overrightarrow{AB}\\cdot\\overrightarrow{AC}=-10-16-3=-29\\\\&amp;|AB|\\\\&amp;=\\sqrt{25+4+1}\\\\&amp;=\\sqrt{30},\\quad|AC|\\\\&amp;=\\sqrt{4+64+9}\\\\&amp;=\\sqrt{77}\\\\&amp;\\cos\\angle BAC=\\frac{-29}{\\sqrt{30}\\sqrt{77}}\\\\&amp;\\Rightarrow \\angle BAC\\approx127.1^\\circ\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/exam/q16",
+      "status": "worked",
+      "method": "Acceleration is force divided by mass. Use the signed y-component to find the angle with the positive y-axis.",
+      "steps": [
+        {
+          "latex": "\\mathbf a=\\mathbf F/3=-\\frac23\\mathbf i-\\frac83\\mathbf j+\\frac43\\mathbf k\\ \\mathrm{m\\,s^{-2}}",
+          "explanation": ""
+        },
+        {
+          "latex": "\\cos\\theta=\\frac{-8}{\\sqrt{(-2)^2+(-8)^2+4^2}}=-\\frac4{\\sqrt{21}};\\quad\\theta\\approx150.8^\\circ\\approx151^\\circ\\quad(3\\text{ s.f.})",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Acceleration is force divided by mass. Use the signed y-component to find the angle with the positive y-axis.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\mathbf a\\\\&amp;=\\mathbf F/3\\\\&amp;=-\\frac23\\mathbf i-\\frac83\\mathbf j+\\frac43\\mathbf k\\ \\mathrm{m\\,s^{-2}}\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><span data-math=\"\\begin{aligned}&amp;\\cos\\theta\\\\&amp;=\\frac{-8}{\\sqrt{(-2)^2+(-8)^2+4^2}}\\\\&amp;=-\\frac4{\\sqrt{21}}\\\\&amp;\\theta\\approx150.8^\\circ\\approx151^\\circ\\quad(3\\text{ s.f.})\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/exam/q19",
+      "status": "worked",
+      "method": "Square the vector magnitude and retain both signs of t.",
+      "steps": [
+        {
+          "latex": "(9\\sqrt6)^2=(2t)^2+(-4t)^2+(-2t)^2=24t^2;\\quad t^2=486/24=81/4\\Rightarrow t=\\pm9/2",
+          "explanation": ""
+        }
+      ],
+      "solutionHtml": "<p>Square the vector magnitude and retain both signs of t.</p><span data-math=\"\\begin{aligned}&amp;(9\\sqrt6)^2=(2t)^2+(-4t)^2+(-2t)^2=24t^2\\\\&amp;t^2=486/24=81/4\\\\&amp;\\Rightarrow t=\\pm9/2\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/exam/q65",
+      "status": "worked",
+      "method": "Find the included-angle sine from the scalar product and side lengths, then use half the parallelogram area. Scaling both sides by −2 multiplies area by 4.",
+      "steps": [
+        {
+          "latex": "\\mathbf u=\\overrightarrow{PQ}=(-3,6,1),\\quad\\mathbf v=\\overrightarrow{PR}=(11,7,-2);\\quad|\\mathbf u|^2=46,\\quad|\\mathbf v|^2=174,\\quad\\mathbf u\\cdot\\mathbf v=-33+42-2=7;\\quad A_{PQR}=\\frac12\\sqrt{46\\cdot174-7^2}=\\frac12\\sqrt{7955}\\approx44.6",
+          "explanation": ""
+        },
+        {
+          "latex": "A_{PST}=|-2||-2|A_{PQR}=4A_{PQR}=2\\sqrt{7955}\\approx178.382\\approx178\\quad(3\\text{ s.f.})",
+          "explanation": "The supplied 178.4 is valid to one decimal place, not to the printed 3 significant figures. Use the exact first-part area before multiplying."
+        }
+      ],
+      "solutionHtml": "<p>Find the included-angle sine from the scalar product and side lengths, then use half the parallelogram area. Scaling both sides by −2 multiplies area by 4.</p><ol class=\"parts\" type=\"a\"><li><span data-math=\"\\begin{aligned}&amp;\\mathbf u\\\\&amp;=\\overrightarrow{PQ}\\\\&amp;=(-3,6,1),\\quad\\mathbf v\\\\&amp;=\\overrightarrow{PR}\\\\&amp;=(11,7,-2)\\\\&amp;|\\mathbf u|^2\\\\&amp;=46,\\quad|\\mathbf v|^2\\\\&amp;=174,\\quad\\mathbf u\\cdot\\mathbf v\\\\&amp;=-33+42-2\\\\&amp;=7\\\\&amp;A_{PQR}\\\\&amp;=\\frac12\\sqrt{46\\cdot174-7^2}\\\\&amp;=\\frac12\\sqrt{7955}\\approx44.6\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li><li><p>The supplied 178.4 is valid to one decimal place, not to the printed 3 significant figures. Use the exact first-part area before multiplying.</p><span data-math=\"\\begin{aligned}&amp;A_{PST}\\\\&amp;=|-2||-2|A_{PQR}\\\\&amp;=4A_{PQR}\\\\&amp;=2\\sqrt{7955}\\approx178.382\\approx178\\quad(3\\text{ s.f.})\\end{aligned}\" data-display=\"true\" class=\"equation\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-2/ch12/exam/q84",
+      "status": "worked",
+      "method": "Use the 1:2 ratios to locate K,L,R,S. Compare the two midpoint position vectors.",
+      "steps": [
+        {
+          "latex": "\\overrightarrow{OK}=\\frac13\\mathbf a;\\quad\\overrightarrow{OL}=\\mathbf a+\\frac13\\mathbf b;\\quad\\overrightarrow{OR}=\\overrightarrow{OF}+\\frac13\\overrightarrow{FG}=\\frac23\\mathbf a+\\mathbf b+\\mathbf c;\\quad\\overrightarrow{OS}=\\overrightarrow{OG}+\\frac13\\overrightarrow{GC}=\\frac23\\mathbf b+\\mathbf c;\\quad\\frac{\\overrightarrow{OK}+\\overrightarrow{OR}}2=\\frac12(\\mathbf a+\\mathbf b+\\mathbf c);\\quad\\frac{\\overrightarrow{OL}+\\overrightarrow{OS}}2=\\frac12(\\mathbf a+\\mathbf b+\\mathbf c)",
+          "explanation": "The common midpoint is P. Thus KR and LS intersect at their respective midpoints, so the segments bisect one another."
+        }
+      ],
+      "solutionHtml": "<p>Use the 1:2 ratios to locate K,L,R,S. Compare the two midpoint position vectors.</p><p>The common midpoint is P. Thus KR and LS intersect at their respective midpoints, so the segments bisect one another.</p><span data-math=\"\\begin{aligned}&amp;\\overrightarrow{OK}=\\frac13\\mathbf a\\\\&amp;\\overrightarrow{OL}=\\mathbf a+\\frac13\\mathbf b\\\\&amp;\\overrightarrow{OR}\\\\&amp;=\\overrightarrow{OF}+\\frac13\\overrightarrow{FG}\\\\&amp;=\\frac23\\mathbf a+\\mathbf b+\\mathbf c\\\\&amp;\\overrightarrow{OS}\\\\&amp;=\\overrightarrow{OG}+\\frac13\\overrightarrow{GC}\\\\&amp;=\\frac23\\mathbf b+\\mathbf c\\\\&amp;\\frac{\\overrightarrow{OK}+\\overrightarrow{OR}}2\\\\&amp;=\\frac12(\\mathbf a+\\mathbf b+\\mathbf c)\\\\&amp;\\frac{\\overrightarrow{OL}+\\overrightarrow{OS}}2\\\\&amp;=\\frac12(\\mathbf a+\\mathbf b+\\mathbf c)\\end{aligned}\" data-display=\"true\" class=\"equation\"></span>",
+      "answerCheck": "matches"
+    }
+  ]
+}

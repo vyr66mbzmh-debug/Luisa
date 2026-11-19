@@ -1,0 +1,55 @@
+"""Independent exact checks for Practice Pure Year 1 Chapter 5; requires SymPy."""
+import sympy as s,json
+import argparse
+from pathlib import Path
+parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,required=True);args=parser.parse_args()
+checks=[]
+def ck(label,actual,expected):
+ ok=s.simplify(actual-expected)==0 if not isinstance(actual,bool) else actual==expected
+ checks.append({'check':label,'passed':bool(ok)})
+ if not ok:raise AssertionError((label,actual,expected))
+x,y,p,k,a=s.symbols('x y p k a')
+def slope(A,B):return (s.Rational(B[1])-A[1])/(s.Rational(B[0])-A[0])
+def line(label,A,B,m,c):
+ ck(label+' gradient',slope(A,B),m);ck(label+' first point',m*A[0]+c,A[1]);ck(label+' second point',m*B[0]+c,B[1])
+def point(label,eqs,X,Y):
+ for j,eq in enumerate(eqs):ck(label+' equation '+str(j),eq.subs({x:X,y:Y}),0)
+def dist(A,B):return s.sqrt((s.sympify(A[0])-B[0])**2+(s.sympify(A[1])-B[1])**2)
+line('5.1 q1a',(4,3),(8,6),s.Rational(3,4),0)
+# The first helper's c is irrelevant to q1a; its intercept is zero for this pair.
+line('5.1 q1b',(5,2),(7,-1),s.Rational(-3,2),s.Rational(19,2))
+ck('5.1 q1c',(-2*p+4*p)/(8*p-3*p),s.Rational(2,5))
+point('5.1 q6',[y-3+x/5,3*x-4*y+7],s.Rational(25,19),s.Rational(52,19))
+ck('5.1 q7 collinear',s.det(s.Matrix([[-18,10,1],[-24,0,1],[0,40,1]])),0)
+ck('5.1 q7 slope',slope((-24,0),(0,40)),s.Rational(5,3))
+line('5.1 q9',(-2,-9),(-32,6),-s.Rational(1,2),-10)
+for label,A,B,m,c in [('5.2 q2a',(4,-3),(-6,9),-s.Rational(6,5),s.Rational(9,5)),('5.2 q2b',(-1,3),(5,-2),-s.Rational(5,6),s.Rational(13,6)),('5.2 q2c',(s.Rational(1,2),-s.Rational(1,3)),(-s.Rational(3,4),s.Rational(2,3)),-s.Rational(4,5),s.Rational(1,15)),('5.2 q5',(3,-6),(-2,-10),s.Rational(4,5),-s.Rational(42,5)),('5.2 q6',(-6,3),(15,-4),-s.Rational(1,3),1),('5.2 q9',(-2,3),(4,-1),-s.Rational(2,3),s.Rational(5,3))]:line(label,A,B,m,c)
+point('5.2 q7',[y-x/3+5,x+2*y-10],12,-1);point('5.2 q8',[x-4*y-21,y+5*x],1,-5)
+point('5.3 q9',[y-x/2-4,y+2*x-24],8,8)
+for j,A,B,ans in [('a',(1,-2),(-5,6),10),('b',(-8,4),(16,-3),25),('c',(6,-5),(-10,-1),4*s.sqrt(17))]:ck('5.4 q1'+j,dist(A,B),ans)
+ck('5.4 q2',dist((-2,5),(3,1)),dist((3,1),(8,-3)))
+ck('5.4 q3 area',s.Rational(1,2)*7*3,s.Rational(21,2))
+for root in [5,-9]:ck('5.4 q4 root',dist((-2,11),(root,8)),s.sqrt(58))
+ck('5.4 q5 length',dist((2,-6),(-3,14)),5*s.sqrt(17))
+ck('5.4 q6 polynomial',4*((p-4)**2+(p/2-2)**2-36),5*p*p-40*p-64)
+ck('5.4 q7 length',dist((-6,1),(9,-4)),5*s.sqrt(10))
+ck('5.4 q8 area',s.Rational(1,2)*s.Rational(7,3)*s.Rational(7,4),s.Rational(49,24))
+point('5.4 q9',[y-3+x/2,y-2*x+7],4,1)
+ck('5.4 q9 length',dist((0,-7),(4,1)),4*s.sqrt(5));ck('5.4 q9 area',s.Rational(1,2)*dist((-2,4),(10,-2))*dist((0,-7),(4,1)),60)
+ck('5.5 q4 fit slope',(s.Rational('10.8')-s.Rational('24.8'))/100,-s.Rational('0.14'))
+ck('5.5 q6 slope',(s.Rational('10.71')-s.Rational('10.94'))/20,-s.Rational('0.0115'))
+ck('5.5 q6 forecast',s.Rational('33.894')-s.Rational('0.0115')*2020,s.Rational('10.664'))
+ck('5.5 q7 charge',s.Rational('3.6')*12+s.Rational('2.4'),s.Rational('45.6'))
+ck('5.5 q8 value',5475-1095*s.Rational('2.5'),s.Rational('2737.5'))
+ck('setA silver area',dist((2,3),(8,0))*dist((2,3),(0,-1))/2,15)
+ck('setA gold area',dist((2,9),(0,5))*dist((2,9),(20,0))/2,45)
+ck('setB bronze root',(1+s.sqrt(7))**2-2*(1+s.sqrt(7))-6,0)
+for root in [11,-5]:ck('setB silver root '+str(root),dist((3,-4),(root,2)),10)
+ck('setB gold root',dist((2+s.sqrt(14),2+s.sqrt(14)),(0,4)),6)
+ck('exam21 area',s.Rational(1,2)*(33+s.Rational(9,5))*12,s.Rational('208.8'))
+point('exam77 intersection',[y-3*x,y-4+x/3],s.Rational(6,5),s.Rational(18,5));ck('exam77 distance',dist((0,0),(s.Rational(6,5),s.Rational(18,5))),6*s.sqrt(10)/5)
+point('exam81 intersection',[y-2*x-5,4*x+3*y-35],2,9)
+for X,Y in [(4,-1),(-2,7),(-10,1)]:ck('exam86 circle '+str((X,Y)),(X+3)**2+Y**2,50)
+for K in [4,8]:ck('exam89 distance '+str(K),dist((6,2),(K,8)),2*dist((6,2),(9,3)))
+point('exam93 intersection',[y-s.Rational(11,10)*x-5,y-x/10-s.Rational(15,2)],s.Rational(5,2),s.Rational(31,4))
+args.output.write_text(json.dumps(checks,indent=2));print(len(checks),'exact independent checks passed')

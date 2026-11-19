@@ -1,0 +1,549 @@
+{
+  "schemaVersion": 1,
+  "chapterNumber": 1,
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.1/q1",
+      "status": "worked",
+      "method": "Use base10 logarithms to undo the coding.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log y=0.7+1.2x\\Rightarrow y=10^{0.7}(10^{1.2})^x\"></span><p>This is the exponential form y=kbˣ.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"k=10^{0.7}\\approx5.01,\\quad b=10^{1.2}\\approx15.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"y=10^{0.7+1.2x}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use base 10 logarithms to undo the coding.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log y=0.7+1.2x\\Rightarrow y=10^{0.7}(10^{1.2})^x\"></span><p>This is the exponential form y=kbˣ.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"k=10^{0.7}\\approx5.01,\\quad b=10^{1.2}\\approx15.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"y=10^{0.7+1.2x}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.1/q2",
+      "status": "worked",
+      "method": "A straight line in log x and log y represents a power law.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log y=1.5+0.8\\log x\\Rightarrow y=10^{1.5}x^{0.8}\"></span><p>This is the form y=axⁿ.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"a=10^{1.5}\\approx31.6,\\quad n=0.8\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>A straight line in log x and log y represents a power law.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log y=1.5+0.8\\log x\\Rightarrow y=10^{1.5}x^{0.8}\"></span><p>This is the form y=axⁿ.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"a=10^{1.5}\\approx31.6,\\quad n=0.8\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.1/q3",
+      "status": "worked",
+      "method": "Find the slope and intercept of the coded regression line.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"B=(11.1-7.6)/(18-11)=0.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"A=7.6-0.5(11)=2.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\log y=2.1+0.5x\\Rightarrow y=10^{2.1}(10^{0.5})^x\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k\\approx126,\\quad b=\\sqrt{10}\\approx3.16\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Find the slope and intercept of the coded regression line.</p><span class=\"equation\" data-display=\"true\" data-math=\"B=(11.1-7.6)/(18-11)=0.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"A=7.6-0.5(11)=2.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\log y=2.1+0.5x\\Rightarrow y=10^{2.1}(10^{0.5})^x\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k\\approx126,\\quad b=\\sqrt{10}\\approx3.16\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.1/q4",
+      "status": "worked",
+      "method": "Plot the base10 logs and interpret the resulting linear trend.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/7fc068305bba95eaa768.png\" alt=\"ans11-q4: solution graph\"></figure><table class=\"practice-table\"><thead><tr><th>R</th><th>log R</th><th>log P</th></tr></thead><tbody><tr><td>1</td><td>0.0000</td><td>3.0558</td></tr><tr><td>2</td><td>0.3010</td><td>2.8949</td></tr><tr><td>3</td><td>0.4771</td><td>2.7619</td></tr><tr><td>4</td><td>0.6021</td><td>2.7490</td></tr><tr><td>5</td><td>0.6990</td><td>2.7372</td></tr><tr><td>6</td><td>0.7782</td><td>2.7284</td></tr><tr><td>7</td><td>0.8451</td><td>2.7193</td></tr><tr><td>8</td><td>0.9031</td><td>2.6955</td></tr><tr><td>9</td><td>0.9542</td><td>2.6920</td></tr><tr><td>10</td><td>1.0000</td><td>2.6618</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<p>Strong negative linear correlation.</p>"
+        },
+        {
+          "explanation": "<p>Yes. Approximately linear log P against log R supports a power-law model for P against R.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log P=3-0.355\\log R\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P=10^3R^{-0.355}=1000R^{-0.355}\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Plot the base 10 logs and interpret the resulting linear trend.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/7fc068305bba95eaa768.png\" alt=\"ans11-q4: solution graph\"></figure><table class=\"practice-table\"><thead><tr><th>R</th><th>log R</th><th>log P</th></tr></thead><tbody><tr><td>1</td><td>0.0000</td><td>3.0558</td></tr><tr><td>2</td><td>0.3010</td><td>2.8949</td></tr><tr><td>3</td><td>0.4771</td><td>2.7619</td></tr><tr><td>4</td><td>0.6021</td><td>2.7490</td></tr><tr><td>5</td><td>0.6990</td><td>2.7372</td></tr><tr><td>6</td><td>0.7782</td><td>2.7284</td></tr><tr><td>7</td><td>0.8451</td><td>2.7193</td></tr><tr><td>8</td><td>0.9031</td><td>2.6955</td></tr><tr><td>9</td><td>0.9542</td><td>2.6920</td></tr><tr><td>10</td><td>1.0000</td><td>2.6618</td></tr></tbody></table></li><li><p>Strong negative linear correlation.</p></li><li><p>Yes. Approximately linear log P against log R supports a power-law model for P against R.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log P=3-0.355\\log R\"></span><span class=\"equation\" data-display=\"true\" data-math=\"P=10^3R^{-0.355}=1000R^{-0.355}\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.1/q5",
+      "status": "worked",
+      "method": "Keep temperature uncoded and take base10 logs of humidity.",
+      "steps": [
+        {
+          "explanation": "<figure class=\"practice-figure\"><img src=\"content/practice/assets/584d5ef3cd7fcbb19f46.png\" alt=\"ans11-q5: solution graph\"></figure><table class=\"practice-table\"><thead><tr><th>t (°C)</th><th>log h</th></tr></thead><tbody><tr><td>-40</td><td>-1.0000</td></tr><tr><td>-30</td><td>-0.5229</td></tr><tr><td>-20</td><td>-0.1249</td></tr><tr><td>-10</td><td>0.3010</td></tr><tr><td>0</td><td>0.5441</td></tr><tr><td>10</td><td>0.8451</td></tr><tr><td>20</td><td>1.1461</td></tr><tr><td>30</td><td>1.4232</td></tr><tr><td>40</td><td>1.6721</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<p>Strong positive linear correlation between t and log h.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log h=\\log k+t\\log b\"></span><p>This is linear in t, matching the approximately straight transformed scatter.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"k=10^{0.494}\\approx3.12,\\quad b=10^{0.0327}\\approx1.08\"></span><p>Retain the unrounded constants when making predictions.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Keep temperature uncoded and take base 10 logs of humidity.</p><ol class=\"parts\" type=\"a\"><li><figure class=\"practice-figure\"><img src=\"content/practice/assets/584d5ef3cd7fcbb19f46.png\" alt=\"ans11-q5: solution graph\"></figure><table class=\"practice-table\"><thead><tr><th>t (°C)</th><th>log h</th></tr></thead><tbody><tr><td>-40</td><td>-1.0000</td></tr><tr><td>-30</td><td>-0.5229</td></tr><tr><td>-20</td><td>-0.1249</td></tr><tr><td>-10</td><td>0.3010</td></tr><tr><td>0</td><td>0.5441</td></tr><tr><td>10</td><td>0.8451</td></tr><tr><td>20</td><td>1.1461</td></tr><tr><td>30</td><td>1.4232</td></tr><tr><td>40</td><td>1.6721</td></tr></tbody></table></li><li><p>Strong positive linear correlation between t and log h.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log h=\\log k+t\\log b\"></span><p>This is linear in t, matching the approximately straight transformed scatter.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"k=10^{0.494}\\approx3.12,\\quad b=10^{0.0327}\\approx1.08\"></span><p>Retain the unrounded constants when making predictions.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.1/q6",
+      "status": "worked",
+      "method": "Substitute the coding and exponentiate.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log E=1.02\\log W-1.22\"></span><span class=\"equation\" data-display=\"true\" data-math=\"E=10^{-1.22}W^{1.02}\\approx0.0603W^{1.02}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^{-1.22},\\quad n=1.02\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Substitute the coding and exponentiate.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\log E=1.02\\log W-1.22\"></span><span class=\"equation\" data-display=\"true\" data-math=\"E=10^{-1.22}W^{1.02}\\approx0.0603W^{1.02}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^{-1.22},\\quad n=1.02\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.1/q7",
+      "status": "worked",
+      "method": "The logarithm of mass is linear in length.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log m=3.27l+1.50\"></span><span class=\"equation\" data-display=\"true\" data-math=\"m=10^{1.50}(10^{3.27})^l\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k=10^{1.50}\\approx31.6,\\quad b=10^{3.27}\\approx1860\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>The logarithm of mass is linear in length.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\log m=3.27l+1.50\"></span><span class=\"equation\" data-display=\"true\" data-math=\"m=10^{1.50}(10^{3.27})^l\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k=10^{1.50}\\approx31.6,\\quad b=10^{3.27}\\approx1860\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.1/q8",
+      "status": "worked",
+      "method": "Interpret the intended power model in the original variables H and N.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log H=2.6+0.67\\log N\\Rightarrow H=10^{2.6}N^{0.67}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^{2.6}\\approx398,\\quad n=0.67\"></span><p>The printed y=axⁿ misuses the already coded symbols. The straight coded line is y=2.6+0.67 x; the power law applies to H and N.</p>"
+        },
+        {
+          "explanation": "<p>900 kg/ha lies outside the observed range 101–635 kg/ha. This would be extrapolation, for which the model has not been supported by the data.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Interpret the intended power model in the original variables H and N.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log H=2.6+0.67\\log N\\Rightarrow H=10^{2.6}N^{0.67}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^{2.6}\\approx398,\\quad n=0.67\"></span><p>The printed y=axⁿ misuses the already coded symbols. The straight coded line is y=2.6+0.67 x; the power law applies to H and N.</p></li><li><p>900 kg/ha lies outside the observed range 101–635 kg/ha. This would be extrapolation, for which the model has not been supported by the data.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.2/q1",
+      "status": "worked",
+      "method": "Estimate the strength and direction of each linear trend visually.",
+      "steps": [
+        {
+          "explanation": "<p>Approximately r=0.7: a clear positive trend with some scatter.</p>"
+        },
+        {
+          "explanation": "<p>Approximately r=0.3: a weak positive trend.</p>"
+        },
+        {
+          "explanation": "<p>Approximately r=−0.9: a strong negative trend. These are estimates, not exact calculated coefficients.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Estimate the strength and direction of each linear trend visually.</p><ol class=\"parts\" type=\"a\"><li><p>Approximately r=0.7: a clear positive trend with some scatter.</p></li><li><p>Approximately r=0.3: a weak positive trend.</p></li><li><p>Approximately r=−0.9: a strong negative trend. These are estimates, not exact calculated coefficients.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.2/q2",
+      "status": "worked",
+      "method": "Use centred sums in the PMCC formula.",
+      "steps": [
+        {
+          "explanation": "<p>PMCC measures the strength and direction of linear association between two variables.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx8294.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx102852.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx28573.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.978287\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Use centred sums in the PMCC formula.</p><ol class=\"parts\" type=\"a\"><li><p>PMCC measures the strength and direction of linear association between two variables.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx8294.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx102852.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx28573.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.978287\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.2/q3",
+      "status": "worked",
+      "method": "Calculate PMCC from the paired depth and velocity observations.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx11.19509\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx0.17816\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-1.32118\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.935498\"></span>"
+        },
+        {
+          "explanation": "<p>Strong negative correlation in this sample: greater depths tend to accompany lower current velocities.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate PMCC from the paired depth and velocity observations.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx11.19509\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx0.17816\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-1.32118\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.935498\"></span></li><li><p>Strong negative correlation in this sample: greater depths tend to accompany lower current velocities.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.2/q4",
+      "status": "worked",
+      "method": "Apply PMCC to the full-precision logarithms, not rounded table entries.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx0.9121103\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx0.1264823\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-0.324186\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.954456\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Apply PMCC to the full-precision logarithms, not rounded table entries.</p><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx0.9121103\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx0.1264823\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-0.324186\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.954456\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.2/q5",
+      "status": "worked",
+      "method": "Code only waste using base10 logarithms.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>P</th><th>W</th><th>log W</th></tr></thead><tbody><tr><td>87</td><td>95</td><td>1.9777</td></tr><tr><td>9</td><td>19</td><td>1.2788</td></tr><tr><td>73</td><td>58</td><td>1.7634</td></tr><tr><td>62</td><td>41</td><td>1.6128</td></tr><tr><td>7</td><td>14</td><td>1.1461</td></tr><tr><td>44</td><td>37</td><td>1.5682</td></tr><tr><td>53</td><td>47</td><td>1.6721</td></tr><tr><td>98</td><td>82</td><td>1.9138</td></tr><tr><td>29</td><td>24</td><td>1.3802</td></tr><tr><td>35</td><td>26</td><td>1.4150</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx8586.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx0.6585845\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx73.35517\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.975499\"></span>"
+        },
+        {
+          "explanation": "<p>The strong positive linear correlation between P and log W supports an exponential model for W against P within the observed range.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log W=1.15+0.0085P\\Rightarrow W=10^{1.15}(10^{0.0085})^P\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^{1.15}\\approx14.1,\\quad b=10^{0.0085}\\approx1.02\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Code only waste using base 10 logarithms.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><thead><tr><th>P</th><th>W</th><th>log W</th></tr></thead><tbody><tr><td>87</td><td>95</td><td>1.9777</td></tr><tr><td>9</td><td>19</td><td>1.2788</td></tr><tr><td>73</td><td>58</td><td>1.7634</td></tr><tr><td>62</td><td>41</td><td>1.6128</td></tr><tr><td>7</td><td>14</td><td>1.1461</td></tr><tr><td>44</td><td>37</td><td>1.5682</td></tr><tr><td>53</td><td>47</td><td>1.6721</td></tr><tr><td>98</td><td>82</td><td>1.9138</td></tr><tr><td>29</td><td>24</td><td>1.3802</td></tr><tr><td>35</td><td>26</td><td>1.4150</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx8586.1\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx0.6585845\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx73.35517\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.975499\"></span></li><li><p>The strong positive linear correlation between P and log W supports an exponential model for W against P within the observed range.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log W=1.15+0.0085P\\Rightarrow W=10^{1.15}(10^{0.0085})^P\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^{1.15}\\approx14.1,\\quad b=10^{0.0085}\\approx1.02\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.2/q6",
+      "status": "worked",
+      "method": "Take base10 logs of both original variables.",
+      "steps": [
+        {
+          "explanation": "<table class=\"practice-table\"><thead><tr><th>E</th><th>M</th><th>log E</th><th>log M</th></tr></thead><tbody><tr><td>3.2</td><td>24</td><td>0.5051</td><td>1.3802</td></tr><tr><td>3.2</td><td>26</td><td>0.5051</td><td>1.4150</td></tr><tr><td>2.8</td><td>26</td><td>0.4472</td><td>1.4150</td></tr><tr><td>2.5</td><td>27</td><td>0.3979</td><td>1.4314</td></tr><tr><td>2.8</td><td>26</td><td>0.4472</td><td>1.4150</td></tr><tr><td>1.8</td><td>29</td><td>0.2553</td><td>1.4624</td></tr><tr><td>5</td><td>21</td><td>0.6990</td><td>1.3222</td></tr><tr><td>6</td><td>19</td><td>0.7782</td><td>1.2788</td></tr><tr><td>2.3</td><td>30</td><td>0.3617</td><td>1.4771</td></tr><tr><td>3.5</td><td>23</td><td>0.5441</td><td>1.3617</td></tr></tbody></table>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx0.2136126\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx0.03393392\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-0.08187453\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.961653\"></span>"
+        },
+        {
+          "explanation": "<p>The strong negative linear correlation of log M against log E supports a power law M=kEⁿ. The printed y=kxⁿ uses the coded symbols incorrectly: the coded relationship itself is linear.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log M=1.59-0.383\\log E\\Rightarrow M=10^{1.59}E^{-0.383}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k=10^{1.59}\\approx38.9,\\quad n=-0.383\"></span>"
+        }
+      ],
+      "solutionHtml": "<p>Take base 10 logs of both original variables.</p><ol class=\"parts\" type=\"a\"><li><table class=\"practice-table\"><thead><tr><th>E</th><th>M</th><th>log E</th><th>log M</th></tr></thead><tbody><tr><td>3.2</td><td>24</td><td>0.5051</td><td>1.3802</td></tr><tr><td>3.2</td><td>26</td><td>0.5051</td><td>1.4150</td></tr><tr><td>2.8</td><td>26</td><td>0.4472</td><td>1.4150</td></tr><tr><td>2.5</td><td>27</td><td>0.3979</td><td>1.4314</td></tr><tr><td>2.8</td><td>26</td><td>0.4472</td><td>1.4150</td></tr><tr><td>1.8</td><td>29</td><td>0.2553</td><td>1.4624</td></tr><tr><td>5</td><td>21</td><td>0.6990</td><td>1.3222</td></tr><tr><td>6</td><td>19</td><td>0.7782</td><td>1.2788</td></tr><tr><td>2.3</td><td>30</td><td>0.3617</td><td>1.4771</td></tr><tr><td>3.5</td><td>23</td><td>0.5441</td><td>1.3617</td></tr></tbody></table></li><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx0.2136126\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx0.03393392\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-0.08187453\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.961653\"></span></li><li><p>The strong negative linear correlation of log M against log E supports a power law M=kEⁿ. The printed y=kxⁿ uses the coded symbols incorrectly: the coded relationship itself is linear.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log M=1.59-0.383\\log E\\Rightarrow M=10^{1.59}E^{-0.383}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k=10^{1.59}\\approx38.9,\\quad n=-0.383\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.2/q7",
+      "status": "worked",
+      "method": "Calculate PMCC and assess a linear model for this sample.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx10.75714\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx2.701429\\times10^{7}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-14518.57\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.851684\"></span>"
+        },
+        {
+          "explanation": "<p>The coefficient is fairly close to−1, indicating a strong negative linear association. A linear model may be useful within this sample range; PMCC alone does not establish causation or guarantee a good fit outside it.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate PMCC and assess a linear model for this sample.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx10.75714\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx2.701429\\times10^{7}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-14518.57\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.851684\"></span></li><li><p>The coefficient is fairly close to−1, indicating a strong negative linear association. A linear model may be useful within this sample range; PMCC alone does not establish causation or guarantee a good fit outside it.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.2/q8",
+      "status": "worked",
+      "method": "Keep only complete paired observations.",
+      "steps": [
+        {
+          "explanation": "<p>The maximum-gust observation is not available for that day.</p>"
+        },
+        {
+          "explanation": "<p>Omit the entire pair containing n/a, including its visibility 1300; do not replace n/a with zero.</p><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx94.83333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx4493333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-1133.333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.0549026\"></span>"
+        },
+        {
+          "explanation": "<p>Jamie’s conclusion is too strong. A value near zero indicates little linear association in this small sample; a nonlinear relationship may still exist.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Keep only complete paired observations.</p><ol class=\"parts\" type=\"a\"><li><p>The maximum-gust observation is not available for that day.</p></li><li><p>Omit the entire pair containing n/a, including its visibility 1300; do not replace n/a with zero.</p><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx94.83333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx4493333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-1133.333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.0549026\"></span></li><li><p>Jamie’s conclusion is too strong. A value near zero indicates little linear association in this small sample; a nonlinear relationship may still exist.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.3/q1",
+      "status": "worked",
+      "method": "Use a one-tailed test for positive population correlation.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=30. At the 5% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.3061\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=0.4125\"></span><p>Reject H₀: there is sufficient evidence of positive correlation between the test scores at the 5% level.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=30. At the 1% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.4226\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=0.4125\"></span><p>Do not reject H₀: there is insufficient evidence of positive correlation between the test scores at the 1% level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use a one-tailed test for positive population correlation.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=30. At the 5% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.3061\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=0.4125\"></span><p>Reject H₀: there is sufficient evidence of positive correlation between the test scores at the 5% level.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=30. At the 1% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.4226\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=0.4125\"></span><p>Do not reject H₀: there is insufficient evidence of positive correlation between the test scores at the 1% level.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.3/q2",
+      "status": "worked",
+      "method": "The question asks for correlation without specifying its sign, so use a two-tailed test.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=12. At the 10% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.4973\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=0.62\"></span><p>Reject H₀: there is sufficient evidence of correlation between otter mass and length at the 10% level.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=12. At the 2% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.6581\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=0.62\"></span><p>Do not reject H₀: there is insufficient evidence of correlation between otter mass and length at the 2% level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The question asks for correlation without specifying its sign, so use a two-tailed test.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=12. At the 10% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.4973\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=0.62\"></span><p>Reject H₀: there is sufficient evidence of correlation between otter mass and length at the 10% level.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=12. At the 2% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.6581\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=0.62\"></span><p>Do not reject H₀: there is insufficient evidence of correlation between otter mass and length at the 2% level.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.3/q3",
+      "status": "worked",
+      "method": "Use all six paired observations.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx8.848333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx31.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-12.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.727763\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx-0.728\\quad(3\\text{ s.f.})\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=6. At the 5% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.8114\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx-0.727763\"></span><p>Do not reject H₀: there is insufficient evidence of correlation between engine size and fuel economy at the 5% level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use all six paired observations.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx8.848333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx31.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-12.15\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.727763\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx-0.728\\quad(3\\text{ s.f.})\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=6. At the 5% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.8114\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx-0.727763\"></span><p>Do not reject H₀: there is insufficient evidence of correlation between engine size and fuel economy at the 5% level.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.3/q4",
+      "status": "worked",
+      "method": "Test the stated positive association using the eight pairs.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx324411.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx427.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx10139.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.860973\"></span><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=8. At the 1% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.7887\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.860973\"></span><p>Reject H₀: there is sufficient evidence of positive linear correlation between active wells and annual oil production at the 1% level.</p><p>This supports the association under the test assumptions. A correlation test does not by itself prove the model is appropriate or rule out a common time trend.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Test the stated positive association using the eight pairs.</p><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx324411.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx427.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx10139.25\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.860973\"></span><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=8. At the 1% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.7887\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.860973\"></span><p>Reject H₀: there is sufficient evidence of positive linear correlation between active wells and annual oil production at the 1% level.</p><p>This supports the association under the test assumptions. A correlation test does not by itself prove the model is appropriate or rule out a common time trend.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.3/q5",
+      "status": "worked",
+      "method": "The alternative is negative population correlation.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&lt;0\"></span><p>Here ρ is the population correlation; n=24. At the 1% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&lt;-0.4716\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=-0.51\"></span><p>Reject H₀: there is sufficient evidence of negative correlation between population density and distance from the centre at the 1% level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The alternative is negative population correlation.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&lt;0\"></span><p>Here ρ is the population correlation; n=24. At the 1% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&lt;-0.4716\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=-0.51\"></span><p>Reject H₀: there is sufficient evidence of negative correlation between population density and distance from the centre at the 1% level.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.3/q6",
+      "status": "worked",
+      "method": "Compare the positive sample correlation with the one-tailed critical values for n=12.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\quad H_1:\\rho&gt;0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"c_{1\\%}=0.6581&lt;0.7&lt;c_{0.5\\%}=0.7079\"></span><p>The least of the standard tabulated levels that rejects is 1%. If arbitrary levels are allowed, the one-tailed p-value is approximately 0.5629%; rejection requires a significance level at least this large.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Compare the positive sample correlation with the one-tailed critical values for n=12.</p><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\quad H_1:\\rho&gt;0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"c_{1\\%}=0.6581&lt;0.7&lt;c_{0.5\\%}=0.7079\"></span><p>The least of the standard tabulated levels that rejects is 1%. If arbitrary levels are allowed, the one-tailed p-value is approximately 0.5629%; rejection requires a significance level at least this large.</p>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.3/q7",
+      "status": "worked",
+      "method": "Use a negative one-tailed test and compare |r| with the0.5% positive thresholds.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"c_{n=8}=0.8343&gt;0.833\"></span><span class=\"equation\" data-display=\"true\" data-math=\"c_{n=9}=0.7977&lt;0.833\"></span><p>The critical magnitude decreases as n increases. The smallest possible sample size is 9.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use a negative one-tailed test and compare |r| with the 0.5% positive thresholds.</p><span class=\"equation\" data-display=\"true\" data-math=\"c_{n=8}=0.8343&gt;0.833\"></span><span class=\"equation\" data-display=\"true\" data-math=\"c_{n=9}=0.7977&lt;0.833\"></span><p>The critical magnitude decreases as n increases. The smallest possible sample size is 9.</p>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.3/q8",
+      "status": "worked",
+      "method": "The stated suggestion is correlation, without a direction: use two tails.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx12.875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx6.37875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx7.3625\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.812426\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.812\\quad(3\\text{ d.p.})\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=8. At the 1% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.8343\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.812426\"></span><p>Do not reject H₀: there is insufficient evidence of linear correlation between the two earthquake scales at the 1% level.</p><p>The supplied answer instead uses a positive one-tailed 1% test and rejects. That is a different alternative from the non-directional suggestion in the question.</p>"
+        }
+      ],
+      "solutionHtml": "<p>The stated suggestion is correlation, without a direction: use two tails.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx12.875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx6.37875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx7.3625\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.812426\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.812\\quad(3\\text{ d.p.})\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=8. At the 1% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.8343\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.812426\"></span><p>Do not reject H₀: there is insufficient evidence of linear correlation between the two earthquake scales at the 1% level.</p><p>The supplied answer instead uses a positive one-tailed 1% test and rejects. That is a different alternative from the non-directional suggestion in the question.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/1.3/q9",
+      "status": "worked",
+      "method": "Calculate r from the supplied pairs, then test the positive claim.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx67.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx343.875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx119.75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.786001\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=8. At the 2.5% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.7067\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.786001\"></span><p>Reject H₀: there is sufficient evidence of positive correlation between windspeed and maximum gust at the 2.5% level.</p><p>The table labels windspeed “Maximum” whereas the introduction calls it “daily mean”. The calculation uses the given numbers; the variable label should be checked before interpreting it as daily mean windspeed.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Calculate r from the supplied pairs, then test the positive claim.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx67.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx343.875\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx119.75\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.786001\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=8. At the 2.5% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.7067\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.786001\"></span><p>Reject H₀: there is sufficient evidence of positive correlation between windspeed and maximum gust at the 2.5% level.</p><p>The table labels windspeed “Maximum” whereas the introduction calls it “daily mean”. The calculation uses the given numbers; the variable label should be checked before interpreting it as daily mean windspeed.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/problem/qbronze",
+      "status": "worked",
+      "method": "A claim of a linear relationship without a specified sign requires two tails.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx236809.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx513656.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx303496\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.870195\"></span><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=7. At the 0.5% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.9056\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.870195\"></span><p>Do not reject H₀: there is insufficient evidence of linear correlation between body and brain weight at the 0.5% level.</p><p>The supplied answer uses a one-tailed alternative instead. The two-tailed test required by this wording also does not reject; neither result proves no relationship exists.</p>"
+        }
+      ],
+      "solutionHtml": "<p>A claim of a linear relationship without a specified sign requires two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx236809.6\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx513656.8\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx303496\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.870195\"></span><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=7. At the 0.5% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.9056\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.870195\"></span><p>Do not reject H₀: there is insufficient evidence of linear correlation between body and brain weight at the 0.5% level.</p><p>The supplied answer uses a one-tailed alternative instead. The two-tailed test required by this wording also does not reject; neither result proves no relationship exists.</p>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/problem/qsilver",
+      "status": "worked",
+      "method": "Assess the untransformed plot, then test correlation after coding.",
+      "steps": [
+        {
+          "explanation": "<p>The original points show an upward-curving trend, so a straight-line model of g against t may not be suitable.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx61.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx0.3721819\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx4.747915\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.992402\"></span><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=6. At the 5% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.7293\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.992402\"></span><p>Reject H₀: there is sufficient evidence of positive correlation between temperature and log growth rate at the 5% level.</p><p>Using the unrounded base 10 logs gives the coefficient above; the supplied 0.959 does not match these transformed observations.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Assess the untransformed plot, then test correlation after coding.</p><ol class=\"parts\" type=\"a\"><li><p>The original points show an upward-curving trend, so a straight-line model of g against t may not be suitable.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx61.5\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx0.3721819\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx4.747915\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.992402\"></span><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=6. At the 5% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.7293\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.992402\"></span><p>Reject H₀: there is sufficient evidence of positive correlation between temperature and log growth rate at the 5% level.</p><p>Using the unrounded base 10 logs gives the coefficient above; the supplied 0.959 does not match these transformed observations.</p></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/problem/qgold",
+      "status": "worked",
+      "method": "Check the outlier numerically, and change n when the pair is removed.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\bar y\\approx69.4286,\\quad\\sigma_y\\approx7.61309\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar y+2\\sigma_y\\approx84.6548&lt;86\"></span><p>E’s Spanish result is more than two population standard deviations above the mean.</p>"
+        },
+        {
+          "explanation": "<p>All seven observations:</p><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx677.7143\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx405.7143\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-121.2857\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.2313\"></span><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=7. At the 10% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.6694\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=-0.2313\"></span><p>Do not reject H₀: there is insufficient evidence of correlation between the test marks at the 10% level.</p><p>With E removed, six complete pairs remain:</p><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx434.8333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx85.33333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx157.6667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.818501\"></span><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=6. At the 10% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.7293\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.818501\"></span><p>Reject H₀: there is sufficient evidence of correlation between the test marks at the 10% level.</p><p>Removing E changes the conclusion.</p>"
+        },
+        {
+          "explanation": "<p>86 exceeds the Spanish test maximum 75, so the entry is invalid. Verify and correct it if possible; if it cannot be recovered, exclude the pair. The remaining data provide evidence of correlation at 10%, without proving a causal connection.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Check the outlier numerically, and change n when the pair is removed.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\bar y\\approx69.4286,\\quad\\sigma_y\\approx7.61309\"></span><span class=\"equation\" data-display=\"true\" data-math=\"\\bar y+2\\sigma_y\\approx84.6548&lt;86\"></span><p>E’s Spanish result is more than two population standard deviations above the mean.</p></li><li><p>All seven observations:</p><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx677.7143\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx405.7143\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-121.2857\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.2313\"></span><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=7. At the 10% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.6694\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=-0.2313\"></span><p>Do not reject H₀: there is insufficient evidence of correlation between the test marks at the 10% level.</p><p>With E removed, six complete pairs remain:</p><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx434.8333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx85.33333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx157.6667\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.818501\"></span><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho\\ne0\"></span><p>Here ρ is the population correlation; n=6. At the 10% significance level, use two tails.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }|r|&gt;0.7293\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.818501\"></span><p>Reject H₀: there is sufficient evidence of correlation between the test marks at the 10% level.</p><p>Removing E changes the conclusion.</p></li><li><p>86 exceeds the Spanish test maximum 75, so the entry is invalid. Verify and correct it if possible; if it cannot be recovered, exclude the pair. The remaining data provide evidence of correlation at 10%, without proving a causal connection.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/exam/q2",
+      "status": "worked",
+      "method": "Undo the base10 logarithmic coding.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log p=0.081+0.749\\log m\\Rightarrow p=10^{0.081}m^{0.749}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^{0.081}\\approx1.21,\\quad k=0.749\"></span>"
+        },
+        {
+          "explanation": "<p>50 g is outside the observed reactant range 3–30 g. The proposed prediction is extrapolation.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Undo the base 10 logarithmic coding.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log p=0.081+0.749\\log m\\Rightarrow p=10^{0.081}m^{0.749}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"a=10^{0.081}\\approx1.21,\\quad k=0.749\"></span></li><li><p>50 g is outside the observed reactant range 3–30 g. The proposed prediction is extrapolation.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/exam/q4",
+      "status": "worked",
+      "method": "Use all six pairs, retaining unrounded r for the close comparison.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx69.03333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx2420000\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx9450\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.73113\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=6. At the 5% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.7293\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.73113\"></span><p>Reject H₀: there is sufficient evidence of positive correlation between sunshine and visibility at the 5% level.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use all six pairs, retaining unrounded r for the close comparison.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx69.03333\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx2420000\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx9450\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.73113\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=6. At the 5% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.7293\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.73113\"></span><p>Reject H₀: there is sufficient evidence of positive correlation between sunshine and visibility at the 5% level.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/exam/q7",
+      "status": "worked",
+      "method": "Use the large-data-set location context, then analyse the Perth observations.",
+      "steps": [
+        {
+          "explanation": "<p>Jacksonville is a plausible northern-hemisphere location with these warm late-October temperatures. The supplied key also allows Beijing; the temperatures alone do not identify the site uniquely.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx4.757143\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx22.43714\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx1.377143\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.133298\"></span>"
+        },
+        {
+          "explanation": "<p>The coefficient is close to zero, indicating very weak positive linear association. A linear regression would have little explanatory value for this sample; other factors or nonlinear structure may matter.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the large-data-set location context, then analyse the Perth observations.</p><ol class=\"parts\" type=\"a\"><li><p>Jacksonville is a plausible northern-hemisphere location with these warm late-October temperatures. The supplied key also allows Beijing; the temperatures alone do not identify the site uniquely.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx4.757143\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx22.43714\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx1.377143\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.133298\"></span></li><li><p>The coefficient is close to zero, indicating very weak positive linear association. A linear regression would have little explanatory value for this sample; other factors or nonlinear structure may matter.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/exam/q10",
+      "status": "worked",
+      "method": "Use the same positive one-tailed10% test separately for each eight-pair sample.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx8.918875\\times10^{9}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx7.51224\\times10^{7}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx4.056\\times10^{8}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.495517\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.496\\quad(3\\text{ s.f.})\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=8. At the 10% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.5067\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.495517\"></span><p>Do not reject H₀: there is insufficient evidence of a positive linear relationship between water use and electricity output at the 10% level.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx6.475\\times10^{8}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx3485600\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx4.451\\times10^{7}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.936912\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.937\\quad(3\\text{ s.f.})\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=8. At the 10% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.5067\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.936912\"></span><p>Reject H₀: there is sufficient evidence of positive linear correlation for the single generator at the 10% level.</p>"
+        },
+        {
+          "explanation": "<p>Different generators may have different efficiencies and operating conditions. Using one generator removes some between-generator variation, making the relationship clearer.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use the same positive one-tailed 10% test separately for each eight-pair sample.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx8.918875\\times10^{9}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx7.51224\\times10^{7}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx4.056\\times10^{8}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.495517\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.496\\quad(3\\text{ s.f.})\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=8. At the 10% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.5067\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.495517\"></span><p>Do not reject H₀: there is insufficient evidence of a positive linear relationship between water use and electricity output at the 10% level.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx6.475\\times10^{8}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx3485600\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx4.451\\times10^{7}\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.936912\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.937\\quad(3\\text{ s.f.})\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\qquad H_1:\\rho&gt;0\"></span><p>Here ρ is the population correlation; n=8. At the 10% significance level, use one tail.</p><span class=\"equation\" data-display=\"true\" data-math=\"\\text{Reject }H_0\\text{ if }r&gt;0.5067\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r\\approx0.936912\"></span><p>Reject H₀: there is sufficient evidence of positive linear correlation for the single generator at the 10% level.</p></li><li><p>Different generators may have different efficiencies and operating conditions. Using one generator removes some between-generator variation, making the relationship clearer.</p></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/exam/q14",
+      "status": "worked",
+      "method": "Use an exponential model because diameter is uncoded and speed is logged.",
+      "steps": [
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"\\log v=0.0074d-0.412\\Rightarrow v=10^{-0.412}(10^{0.0074})^d\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k\\approx0.387,\\quad b\\approx1.02\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx21571.95\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx1.850583\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx159.6296\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.79894\"></span>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\quad H_1:\\rho&gt;0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"c_{1\\%}=0.7887&lt;r&lt;c_{0.5\\%}=0.8343\"></span><p>The least standard tabulated level that rejects is 1%. If any level is allowed, the one-tailed p-value is approximately 0.8689%.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Use an exponential model because diameter is uncoded and speed is logged.</p><ol class=\"parts\" type=\"a\"><li><span class=\"equation\" data-display=\"true\" data-math=\"\\log v=0.0074d-0.412\\Rightarrow v=10^{-0.412}(10^{0.0074})^d\"></span><span class=\"equation\" data-display=\"true\" data-math=\"k\\approx0.387,\\quad b\\approx1.02\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx21571.95\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx1.850583\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx159.6296\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx0.79894\"></span></li><li><span class=\"equation\" data-display=\"true\" data-math=\"H_0:\\rho=0,\\quad H_1:\\rho&gt;0\"></span><span class=\"equation\" data-display=\"true\" data-math=\"c_{1\\%}=0.7887&lt;r&lt;c_{0.5\\%}=0.8343\"></span><p>The least standard tabulated level that rejects is 1%. If any level is allowed, the one-tailed p-value is approximately 0.8689%.</p></li></ol>",
+      "answerCheck": "domain-qualified"
+    },
+    {
+      "id": "practice/maths-a-level/maths-statistics-year-2/ch1/exam/q17",
+      "status": "worked",
+      "method": "Apply the stated one-IQR rule to engine sizes, then analyse all ten pairs.",
+      "steps": [
+        {
+          "explanation": "<p>Sorted engine sizes:1.8,2.3,2.5,2.8,2.8,3.2,3.2,3.5,5,6. Using interpolated quartile positions(n+1)/4 and 3(n+1)/4:</p><span class=\"equation\" data-display=\"true\" data-math=\"Q_1=2.45,\\quad Q_3=3.875,\\quad Q_3-Q_1=1.425\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_3+(Q_3-Q_1)=5.3&lt;6\"></span><p>The circled 6 litre engine is an outlier. The median-of-halves convention also flags it: Q₁=2.5,Q₃=3.5 and upper boundary 4.5.</p>"
+        },
+        {
+          "explanation": "<p>A6 litre engine is physically plausible and follows the trend. Being an outlier does not by itself justify deleting a valid observation.</p>"
+        },
+        {
+          "explanation": "<span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx14.629\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx104.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-37.01\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.944765\"></span>"
+        },
+        {
+          "explanation": "<p>Larger engines often consume more fuel per mile; other vehicle characteristics may also contribute. This is a possible explanation, not a causal conclusion from correlation alone.</p>"
+        },
+        {
+          "explanation": "<p>The strong negative linear association supports a linear model within the observed range, subject to checking the scatter and residuals.</p>"
+        },
+        {
+          "explanation": "<p>The fitted slope must be negative to match the negative correlation. The reported+2.53 has the wrong sign; the corresponding line is approximately M=33.5−2.53 E.</p>"
+        }
+      ],
+      "solutionHtml": "<p>Apply the stated one-IQR rule to engine sizes, then analyse all ten pairs.</p><ol class=\"parts\" type=\"a\"><li><p>Sorted engine sizes:1.8,2.3,2.5,2.8,2.8,3.2,3.2,3.5,5,6. Using interpolated quartile positions(n+1)/4 and 3(n+1)/4:</p><span class=\"equation\" data-display=\"true\" data-math=\"Q_1=2.45,\\quad Q_3=3.875,\\quad Q_3-Q_1=1.425\"></span><span class=\"equation\" data-display=\"true\" data-math=\"Q_3+(Q_3-Q_1)=5.3&lt;6\"></span><p>The circled 6 litre engine is an outlier. The median-of-halves convention also flags it: Q₁=2.5,Q₃=3.5 and upper boundary 4.5.</p></li><li><p>A6 litre engine is physically plausible and follows the trend. Being an outlier does not by itself justify deleting a valid observation.</p></li><li><span class=\"equation\" data-display=\"true\" data-math=\"S_{xx}=\\sum x^2-\\frac{(\\sum x)^2}{n}\\approx14.629\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{yy}=\\sum y^2-\\frac{(\\sum y)^2}{n}\\approx104.9\"></span><span class=\"equation\" data-display=\"true\" data-math=\"S_{xy}=\\sum xy-\\frac{\\sum x\\sum y}{n}\\approx-37.01\"></span><span class=\"equation\" data-display=\"true\" data-math=\"r=\\frac{S_{xy}}{\\sqrt{S_{xx}S_{yy}}}\\approx-0.944765\"></span></li><li><p>Larger engines often consume more fuel per mile; other vehicle characteristics may also contribute. This is a possible explanation, not a causal conclusion from correlation alone.</p></li><li><p>The strong negative linear association supports a linear model within the observed range, subject to checking the scatter and residuals.</p></li><li><p>The fitted slope must be negative to match the negative correlation. The reported+2.53 has the wrong sign; the corresponding line is approximately M=33.5−2.53 E.</p></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}
