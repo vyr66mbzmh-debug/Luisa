@@ -248,3 +248,4 @@ Historical assertions are not current verification. See README.md in this folder
 | <a name='req-pap-057'></a>PAP-057 | Build printable papers from existing Luisa questions. | Owner Cloudflare and both authenticated ADA roles. | implemented | checked |
 | <a name='req-pap-058'></a>PAP-058 | Add Practice Booklet questions and checked worked solutions to Papers. | v0.58 owner Cloudflare and both authenticated ADA roles. | implemented | agent_checked |
 | <a name='req-pap-future-metadata'></a>PAP-FUTURE-METADATA | Extend paper metadata and future source coverage. | Future releases beyond Practice Booklet ingestion. | planned | not_checked |
+| <a name='req-pap-059'></a>PAP-059 | Exam bank source selection, marked past-paper pilot and flexible paper printing. | v0.59 Cloudflare owner and both authenticated ADA roles | implemented | agent_checked |

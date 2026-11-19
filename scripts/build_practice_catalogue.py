@@ -145,6 +145,9 @@ def build(root=ROOT):
     books={b['id']:b for b in textbook['books']}
     existing=textbook['skills']
     descriptors=[];extra={};seen=set();chapters=[]
+    classification=json.loads((root/'content/practice-classification.json').read_text())
+    classes={q['id']:q for q in classification['questions']}
+    if classification.get('version')!=1 or len(classes)!=len(classification['questions']):raise ValueError('Invalid source classification')
     for path in sorted((root/'content/practice').glob('*/chapter-*.json')):
         doc=json.loads(path.read_text());family=doc['sourceFamily'];number=doc['chapterNumber']
         authored=root/'resources/practice-solutions'/family/path.name
@@ -180,9 +183,12 @@ def build(root=ROOT):
             question['subchapterLabel']=title_label(question['subchapterTitle'])
             question.update(steps=[align_solution_parts(question['question'],solution['solutionHtml'])],solutionStatus='worked',skillIds=mapped)
             fields=('id','courseId','bookId','chapterId','chapterNumber','chapterTitle','subchapterId','subchapterTitle','questionLabel')
-            descriptors.append(dict(**{k:question[k] for k in fields},subchapterLabel=question['subchapterLabel'],board='Edexcel',skillIds=mapped,dataPath=path.relative_to(root).as_posix()))
+            category=classes.get(ident)
+            if not category or category['bank'] not in {'practice','exam'} or category['difficulty'] not in {None,'easy','medium','difficult'}:raise ValueError(f'Missing source classification: {ident}')
+            descriptors.append(dict(**{k:question[k] for k in fields},bank=category['bank'],examType=category['examType'],difficulty=category['difficulty'],subchapterLabel=question['subchapterLabel'],board='Edexcel',skillIds=mapped,dataPath=path.relative_to(root).as_posix()))
             changed.append(question)
         doc['questions']=changed;chapters.append((path,doc))
+    if set(classes)!=seen:raise ValueError('Classification/source ID mismatch')
     if len(chapters)!=45:raise ValueError(f'Expected45 practice booklets, found{len(chapters)}')
     # Write only after every source and solution passes the complete join.
     for path,doc in chapters:path.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n')

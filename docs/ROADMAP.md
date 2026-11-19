@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.59
+
+[Issue #101](https://github.com/vyr66mbzmh-debug/Luisa/issues/101) adds the five-paper June 2025 pilot: 47 original questions and matching schemes. Papers now has 8,669 questions, Practice questions / Exam bank selection, difficulty guides, flexible layouts, optional solutions, known marks and past-paper timing. The roots/complex-number corrections and release evidence are recorded in HANDOFF.md and `docs/evidence/v059-*.json`.
+
 ## Papers v0.58
 
 [Issue #99](https://github.com/vyr66mbzmh-debug/Luisa/issues/99) adds all 45 Maths Practice Booklets: 2,475 checked worked questions, for 8,622 Edexcel questions in Papers. Original prompts and PDFs are preserved; hints appear with solutions. Future past-paper, marks, difficulty and duration filters require source metadata under PAP-FUTURE-METADATA.

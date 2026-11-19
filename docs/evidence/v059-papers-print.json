@@ -1,0 +1,69 @@
+{
+  "release": "0.59",
+  "scope": "Paper print options and metadata, issue 101",
+  "api": {
+    "method": "LUISA_PAPERS_PRINT.create(rows, options)",
+    "layout": [
+      "one",
+      "two",
+      "condensed"
+    ],
+    "defaults": {
+      "layout": "two",
+      "includeAnswers": true
+    }
+  },
+  "acceptance": {
+    "browserTests": 10,
+    "browserWorkers": 1,
+    "browser": "Chromium via installed Chrome",
+    "resourceGuard": true,
+    "command": "python tests/papers_print_browser.py",
+    "result": "passed",
+    "durationSeconds": 26.652,
+    "longQuestionAudit": {
+      "questions": 271,
+      "layouts": [
+        "one",
+        "two",
+        "condensed"
+      ],
+      "checks": [
+        "exact prompt text, mathematics, part labels and image order",
+        "exact worked-solution text, mathematics, part labels and image order",
+        "loaded diagrams",
+        "no measured overflow"
+      ]
+    },
+    "options": [
+      "all three layouts with answers on and off in actual A4 PDFs",
+      "four short questions yield 4, 2 and 1 question pages respectively",
+      "excluded solution/hint markers absent from preview DOM and extracted PDF text",
+      "excluded malformed mathematics and unavailable answer/hint images are never prepared"
+    ],
+    "metadata": [
+      "source label and difficulty visible",
+      "marks shown per question",
+      "13 marks yield an 11-minute estimate",
+      "each question allocated once to its final continuation page",
+      "page totals sum to paper total",
+      "continuation accounting policy printed",
+      "mixed source or missing, string and fractional marks suppress totals and time"
+    ],
+    "metadataFixture": "Marks and past-exam labels in automated tests are synthetic test fixtures only; no question metadata was inferred or added to production content.",
+    "visualReview": [
+      "one-question page with handwriting space",
+      "two-question page with handwriting space",
+      "condensed four-question page",
+      "condensed continuation with diagrams and following short question",
+      "marked one-question final page",
+      "worked-solution page"
+    ],
+    "visualResult": "Readable; no observed clipping, overlaps, distorted diagrams or broken mathematics.",
+    "offlineShell": "Existing same-origin preview shell, closed-window handling and signed-out-shell rejection retained; regression tests pass."
+  },
+  "limits": [
+    "No per-part marks schema is assumed: whole-question marks are counted on the final continuation page.",
+    "Full integrated gate and release verification remain lead-owned; no deployment performed."
+  ]
+}

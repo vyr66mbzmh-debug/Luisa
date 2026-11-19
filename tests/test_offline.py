@@ -16,7 +16,7 @@ class OfflineInventory(unittest.TestCase):
                'content/test.json':json.dumps([{'question':'<img src="assets/diagram.svg">','steps':['Answer']}]),
                'assets/diagram.svg':'<svg xmlns="http://www.w3.org/2000/svg"><image href="detail.svg"/></svg>'}
         if not missing:files['assets/detail.svg']='<svg xmlns="http://www.w3.org/2000/svg"/>'
-        files['textbook-catalogue.json']=json.dumps({'books':[{'id':'test','title':'Test','course':'test','chapters':[{'id':'1','title':'One','resources':[]}]}],'questions':[{'skill':'test','targets':[{'book':'test','chapter':'1'}]}]})
+        files['textbook-catalogue.json']=json.dumps({'skills':{'test':{'course':'test','book':'test'}},'books':[{'id':'test','title':'Test','course':'test','chapters':[{'id':'1','title':'One','resources':[]}]}],'questions':[{'skill':'test','targets':[{'book':'test','chapter':'1'}]}]})
         entries={}
         for name,data in files.items():
             p=root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(data)
@@ -78,5 +78,66 @@ class OfflineInventory(unittest.TestCase):
             del entries['resources/practice-solutions/detail.svg']
             with self.assertRaisesRegex(ValueError,'Unresolved nested offline dependency'):
                 offline.generate(root,entries,'0.58')
+
+    def test_mapped_exam_payload_and_worked_diagrams_are_complete(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);entries=self.fixture(root)
+            additions={
+                'exam-catalogue.json':json.dumps({'questions':[
+                    {'id':'exam/test/q1','dataPath':'content/exams/test.json','skillMappings':[
+                        {'courseId':'test','bookId':'test','skillId':'test'},
+                        {'courseId':'test','bookId':'test','skillId':'test'}]}]}),
+                'content/exams/test.json':json.dumps({'questions':[{'question':'Prompt',
+                    'steps':['<img src="assets/exam.svg">']}]}),
+                'assets/exam.svg':'<svg><image href="exam-detail.svg"/></svg>',
+                'assets/exam-detail.svg':'<svg/>',
+            }
+            for name,data in additions.items():
+                p=root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(data)
+                entries[name]={'sha256':hashlib.sha256(data.encode()).hexdigest(),'bytes':len(data.encode())}
+            result=offline.generate(root,entries,'0.59');pack=result['packs'][0]
+            self.assertIn('exam-catalogue.json',result['shared'])
+            self.assertTrue({'content/exams/test.json','assets/exam.svg','assets/exam-detail.svg'} <= set(pack['files']))
+            self.assertEqual(pack['practiceEntries'],2)
+            # The library skill may belong to a different book from its Edexcel
+            # chapter target (Core1 hyperbolic skill -> Core2 chapter6).
+            cat = json.loads((root/'textbook-catalogue.json').read_text())
+            cat['skills']['test']['book'] = 'source-book'
+            (root/'textbook-catalogue.json').write_text(json.dumps(cat))
+            exam = json.loads((root/'exam-catalogue.json').read_text())
+            for m in exam['questions'][0]['skillMappings']:m['bookId']='source-book'
+            (root/'exam-catalogue.json').write_text(json.dumps(exam))
+            self.assertIn('content/exams/test.json', offline.generate(root,entries,'0.59')['packs'][0]['files'])
+            # Identical skill text in a different course must not cross-match.
+            for m in exam['questions'][0]['skillMappings']:m['courseId']='different-course'
+            (root/'exam-catalogue.json').write_text(json.dumps(exam))
+            with self.assertRaisesRegex(ValueError,'Offline exam mapping has no chapter pack'):
+                offline.generate(root,entries,'0.59')
+            cat['skills']['test']['book']='test'
+            (root/'textbook-catalogue.json').write_text(json.dumps(cat))
+            for m in exam['questions'][0]['skillMappings']:m.update(courseId='test',bookId='test')
+            (root/'exam-catalogue.json').write_text(json.dumps(exam))
+            # A practice-only skill also resolves to its chapter; payload/answer
+            # dependencies are not already referenced by the ordinary fixture.
+            practice={'questions':[{'bookId':'test','chapterNumber':1,
+                'skillIds':['practice-only'], 'dataPath':'content/practice/test.json'}]}
+            (root/'practice-catalogue.json').write_text(json.dumps(practice))
+            p=root/'content/practice/test.json';p.parent.mkdir(parents=True,exist_ok=True);p.write_text('{"questions":[]}')
+            entries['content/practice/test.json']={}
+            exam=json.loads((root/'exam-catalogue.json').read_text())
+            for m in exam['questions'][0]['skillMappings']:m['skillId']='practice-only'
+            (root/'exam-catalogue.json').write_text(json.dumps(exam))
+            result=offline.generate(root,entries,'0.59')
+            self.assertIn('assets/exam-detail.svg', result['packs'][0]['files'])
+            # Unresolvable mappings must fail closed, not silently lose content.
+            for m in exam['questions'][0]['skillMappings']:m['skillId']='unmapped'
+            (root/'exam-catalogue.json').write_text(json.dumps(exam))
+            with self.assertRaisesRegex(ValueError,'Offline exam mapping has no chapter pack'):
+                offline.generate(root,entries,'0.59')
+            for m in exam['questions'][0]['skillMappings']:m['skillId']='test'
+            (root/'exam-catalogue.json').write_text(json.dumps(exam))
+            del entries['content/exams/test.json']
+            with self.assertRaisesRegex(ValueError,'Offline exam questions missing'):
+                offline.generate(root,entries,'0.59')
 
 if __name__=='__main__':unittest.main()

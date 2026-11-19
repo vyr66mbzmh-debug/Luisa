@@ -1,0 +1,289 @@
+{
+  "release": "0.59",
+  "issue": 101,
+  "status": "Implementation and source/print acceptance complete; final release checks recorded in GitHub #101",
+  "catalogue": {
+    "totalSelectable": 8669,
+    "practiceQuestions": 8068,
+    "examBank": 601,
+    "examStyle": 290,
+    "bronzeEasy": 88,
+    "silverMedium": 88,
+    "goldDifficult": 88,
+    "existingQuestionPayloadsPreserved": 2475,
+    "pastPaperPilot": {
+      "papers": 5,
+      "questions": 47,
+      "marks": 350,
+      "printable": true,
+      "source": "Owner supplied all10 PDFs; independent source/maths review and six-mode print acceptance passed."
+    }
+  },
+  "papers": {
+    "selectionBrowserTests": 15,
+    "selectionResult": "passed",
+    "printBrowserTests": 10,
+    "printResult": "passed",
+    "longOriginalsCheckedInEachLayout": 271,
+    "layouts": [
+      "one",
+      "two",
+      "condensed"
+    ],
+    "answersOnOffVerifiedInPdf": true,
+    "actualCatalogueDesktopAndMobile": "passed; no horizontal document overflow",
+    "offlineMetadataTests": 9,
+    "offlineResult": "passed",
+    "offlineReview": "Qualified source skills mapped to textbook chapter targets, including Core1skills1.30/1.10 ->Core2chapters6/2. Independent review and wrong-course/wrong-book collision regressions pass. Unmapped questions fail closed.",
+    "independentReview": "Print agent reviewed integration; topic grouping, regeneration order, source prefix and supplemental offline mapping findings resolved.",
+    "actualPastPaperPrintEvidence": "docs/evidence/v059-import-print.json",
+    "actualOfflineBrowser": "Passed: download Core2chapter6, disconnect, select CP1June2025Q2 via libraryskill1.30, print full matching scheme and reload saved selection."
+  },
+  "mathematics": {
+    "skill": "1.01",
+    "question": 23,
+    "promptUnchanged": true,
+    "partsCorrected": [
+      "c",
+      "e"
+    ],
+    "independentReview": "All five real solution sets independently checked; corrected expansion and complete quintic imaginary-part roots verified.",
+    "chapter": "Core Pure 1 Chapter 4",
+    "changedSlides": [
+      25,
+      29,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      39,
+      40,
+      48
+    ],
+    "chapterReview": "Independent symbolic and numerical review of symmetric sums and transformed-root equations. Explicit Greek root definitions; cubic has three transformed roots.",
+    "interactions": [
+      {
+        "slide": 25,
+        "covers": 3,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      },
+      {
+        "slide": 29,
+        "covers": 0,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      },
+      {
+        "slide": 31,
+        "covers": 4,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      },
+      {
+        "slide": 32,
+        "covers": 2,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      },
+      {
+        "slide": 33,
+        "covers": 3,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      },
+      {
+        "slide": 34,
+        "covers": 4,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      },
+      {
+        "slide": 35,
+        "covers": 3,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      },
+      {
+        "slide": 36,
+        "covers": 1,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      },
+      {
+        "slide": 39,
+        "covers": 2,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      },
+      {
+        "slide": 40,
+        "covers": 2,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      },
+      {
+        "slide": 48,
+        "covers": 0,
+        "concealRevealReset": "passed",
+        "mathOverflow": 0
+      }
+    ],
+    "visualReview": "All changed solution panels and representative pupil panels checked; formulas complete and concealed answers omitted from pupil output. Slide 39 and 40 reviewed at 1440 by 900.",
+    "pdfs": [
+      {
+        "path": "resources/teaching/v003/core-pure-1/booklets/CorePure1_Ch04_Roots_Of_Polynomials.pdf",
+        "before": "376e2a5680b573a733d6bddd35d5712816f2f79d55f4ecb8fa5fde2f3761b310",
+        "after": "606d852399bb0023364c1cbb035f2f0788b6a0f54936d85bb632852671eabeec",
+        "pages": 24,
+        "changedPages": [
+          13,
+          15,
+          16,
+          17,
+          18,
+          20,
+          24
+        ],
+        "unchangedPagesVisuallyIdentical": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          19,
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "path": "resources/teaching/v003/core-pure-1/booklets/chapter-04.pdf",
+        "before": "376e2a5680b573a733d6bddd35d5712816f2f79d55f4ecb8fa5fde2f3761b310",
+        "after": "606d852399bb0023364c1cbb035f2f0788b6a0f54936d85bb632852671eabeec",
+        "pages": 24,
+        "changedPages": [
+          13,
+          15,
+          16,
+          17,
+          18,
+          20,
+          24
+        ],
+        "unchangedPagesVisuallyIdentical": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          19,
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "path": "resources/solutions/further-core-pure-1/CorePure1_Ch04_Roots_Of_Polynomials SOLUTIONS.pdf",
+        "before": "3d5b19674d81e39a71af722f56ef04d857672a1a81dfd7cf7c933248bc3afa64",
+        "after": "6f3955339e69c9682001d3228f880d35fa97ef0015d78b6c25a2c4516fc9f652",
+        "pages": 24,
+        "changedPages": [
+          13,
+          15,
+          16,
+          17,
+          18,
+          20,
+          24
+        ],
+        "unchangedPagesVisuallyIdentical": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14,
+          19,
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "path": "resources/skill-solutions/pure-core-1/1-01.pdf",
+        "before": "da27bd0f44c47e9681d23a70ab9862aff079bcb78339d5c9b4bfaab61085f49e",
+        "after": "3b94675f31fd240ee48175171115461f88ec7da97504c39f7d7abb46110b7549",
+        "pages": 21,
+        "changedPages": [
+          11
+        ],
+        "unchangedPagesVisuallyIdentical": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21
+        ]
+      }
+    ],
+    "reproduction": {
+      "editions": 2,
+      "pages": 48,
+      "status": "Both LaTeX wrappers compile; all48pages pixel-identical; owner PDF/TeX/reproduction assets installed with matching hashes."
+    },
+    "numbering": "All 96 teaching-panel numbers checked"
+  },
+  "pending": [
+    "Final exact-head CI/merge and both-host verification, account preservation, recovery and owner report: outcome in GitHub #101."
+  ],
+  "production": "Final deployed revision and account checks recorded in GitHub #101; build acceptance alone is not publication.",
+  "localGate": {
+    "command": "python scripts/luisa.py gate",
+    "result": "passed",
+    "pythonTests": 79,
+    "ownerBuildFiles": 10159,
+    "artifactStatus": "Full local gate passed; exact-head hosted CI and final production verification required.",
+    "initialFailure": "Historical booklet acceptance hashes required the verified v0.59 replacement overlay; historical evidence retained unchanged."
+  }
+}

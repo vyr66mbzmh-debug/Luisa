@@ -2,7 +2,8 @@
 (() => {
   'use strict';
   const macros = {'\\p':'\\mathrm P(#1)','\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
-  const source = row => row.sourceKind === 'practice-booklet'
+  const validMarks = row => Number.isInteger(row.marks) && row.marks >= 0;
+  const source = row => row.sourceKind === 'past-exam' ? `Source: ${(row.sourceLabel || 'Past exam').replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const context = row => [row.courseTitle, row.bookTitle, row.topicTitle].filter(Boolean).join(' · ');
@@ -32,6 +33,8 @@
   function heading(doc, row, number, continuation = false) {
     const head = element(doc, 'header', 'question-heading');
     head.append(element(doc, 'h2', '', `Question ${number}${continuation ? ' · continued' : ''}`), element(doc, 'p', 'source', source(row)), element(doc, 'p', 'context', context(row)));
+    if (validMarks(row)) head.append(element(doc, 'p', 'question-marks', `${row.marks} marks${continuation ? ' for the whole question' : ''}`));
+    if (row.difficulty) head.append(element(doc, 'p', 'question-difficulty', `Difficulty: ${row.difficulty}`));
     return head;
   }
   function content(doc, html) {
@@ -103,10 +106,16 @@
     const pieces = node.firstElementChild && splitBlock(node.firstElementChild);
     return pieces?.map(piece => { const wrapper = node.cloneNode(false); wrapper.append(piece); return wrapper; }) || null;
   }
-  async function create(rows) {
+  async function create(rows, options = {}) {
+    const layout = options.layout ?? 'two';
+    const includeAnswers = options.includeAnswers ?? true;
+    if (!['one', 'two', 'condensed'].includes(layout) || typeof includeAnswers !== 'boolean') throw Error('Choose a valid paper layout and answer option.');
     if (!Array.isArray(rows) || !rows.length) throw Error('Select at least one question first.');
     if (new Set(rows.map(row => row.id)).size !== rows.length) throw Error('A paper cannot contain duplicate questions.');
     if (rows.some(row => !row.id || !row.question || !Array.isArray(row.steps) || !row.steps.length)) throw Error('Every selected question needs its original prompt and worked solution.');
+    const completeMarks = rows.every(row => row.sourceKind === 'past-exam' && validMarks(row));
+    const totalMarks = completeMarks ? rows.reduce((sum, row) => sum + row.marks, 0) : null;
+    const estimatedMinutes = completeMarks ? Math.ceil(totalMarks * 5 / 6) : null;
     // A real same-origin document is controlled by the offline service worker;
     // an about:blank popup cannot retrieve its cached formatting and diagrams.
     const previewURL = new URL('paper-preview.html', document.baseURI);
@@ -130,12 +139,12 @@
     const base = element(doc, 'base'); base.href = document.baseURI; doc.head.append(base);
     const toolbar = element(doc, 'aside', 'print-toolbar');
     const title = element(doc, 'strong', '', 'Luisa · Paper preview');
-    const status = element(doc, 'p', 'print-status', 'Preparing complete questions, diagrams and worked solutions…');
+    const status = element(doc, 'p', 'print-status', includeAnswers ? 'Preparing complete questions, diagrams and worked solutions…' : 'Preparing complete questions and diagrams…');
     status.setAttribute('role', 'status');
     const print = element(doc, 'button', '', 'Print / Save PDF'); print.type = 'button'; print.disabled = true;
     const close = element(doc, 'button', 'secondary', 'Close preview'); close.type = 'button'; close.onclick = () => win.close();
     toolbar.append(title, status, print, close); doc.body.append(toolbar);
-    const pages = element(doc, 'main', 'print-pages'); pages.setAttribute('aria-label', 'Question paper and worked solutions'); doc.body.append(pages);
+    const pages = element(doc, 'main', 'print-pages'); pages.classList.add(`layout-${layout}`); pages.setAttribute('aria-label', includeAnswers ? 'Question paper and worked solutions' : 'Question paper'); doc.body.append(pages);
     let ready = false;
     win.addEventListener('beforeprint', () => doc.body.classList.toggle('not-ready', !ready));
     try {
@@ -143,9 +152,9 @@
       const rendered = rows.map((row, index) => {
         const question = element(doc, 'article', 'print-question'); question.dataset.questionId = row.id;
         question.append(heading(doc, row, index + 1), content(doc, (row.contextHtml || '') + row.question));
-        const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); question.append(working);
-        const solution = content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join(''));
-        if (row.hints?.length) {
+        const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); if (layout !== 'condensed') question.append(working);
+        const solution = includeAnswers ? content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join('')) : null;
+        if (includeAnswers && row.hints?.length) {
           const hints = element(doc, 'section', 'solution-hints');
           hints.append(element(doc, 'h3', '', 'Hints from the booklet'), content(doc, row.hints.map(html => `<div class="solution-step">${html}</div>`).join('')));
           solution.append(hints);
@@ -153,12 +162,13 @@
         return {row, question, solution};
       });
       const staging = element(doc, 'div', 'print-staging'); doc.body.append(staging);
-      rendered.forEach(item => staging.append(item.question, item.solution));
+      rendered.forEach(item => { staging.append(item.question); if (item.solution) staging.append(item.solution); });
       await whileOpen(win, prepare(win, staging, status), 120000);
       function page(kind) {
         const sheet = element(doc, 'section', `print-page ${kind}-page`);
         const banner = element(doc, 'header', 'page-banner');
         banner.append(element(doc, 'span', 'wordmark', 'Luisa'), element(doc, 'span', '', kind === 'questions' ? 'Question paper' : 'Worked solutions'));
+        if (kind === 'questions' && completeMarks) banner.append(element(doc, 'span', 'paper-marks', `Total: ${totalMarks} marks · Estimated time: ${estimatedMinutes} min`));
         const body = element(doc, 'div', 'page-content');
         const footer = element(doc, 'footer', 'page-footer');
         footer.append(element(doc, 'span', '', kind === 'questions' ? 'Show your working clearly.' : 'Matched to the questions in this paper.'), element(doc, 'span', 'page-number'));
@@ -175,16 +185,20 @@
           await new Promise(resolve => window.setTimeout(resolve, 0));
         }
         const item = rendered[i];
-        if (!questionBody || questionBody.children.length === 2) questionBody = page('questions');
+        if (!questionBody || (layout !== 'condensed' && questionBody.children.length === (layout === 'one' ? 1 : 2))) questionBody = page('questions');
         questionBody.append(item.question);
-        if (overflows(item.question) || wideContent(item.question.querySelector('.math-content'))) item.question.classList.add('compact');
-        if (overflows(item.question)) {
+        if (layout === 'condensed' && overflows(questionBody) && questionBody.children.length > 1) {
+          item.question.remove(); questionBody = page('questions'); questionBody.append(item.question);
+        }
+        const questionOverflows = () => overflows(item.question) || (layout === 'condensed' && overflows(questionBody));
+        if (questionOverflows() || wideContent(item.question.querySelector('.math-content'))) item.question.classList.add('compact');
+        if (questionOverflows()) {
           for (const list of item.question.querySelectorAll('.math-content > ol.parts, .math-content > ul.parts')) {
             list.classList.add('columns');
             if (list.scrollWidth > list.clientWidth + 1 || wideContent(list)) list.classList.remove('columns');
           }
         }
-        if (!overflows(item.question) && !wideContent(item.question.querySelector('.math-content'))) continue;
+        if (!questionOverflows() && !wideContent(item.question.querySelector('.math-content'))) continue;
         // Owner-approved exception: give the original question additional pages
         // at normal type size, preserving its position in the selected paper.
         extendedQuestions.push(source(item.row));
@@ -200,27 +214,42 @@
           const body = page('questions'); body.parentElement.classList.add('extended-page');
           section = element(doc, 'article', 'print-question extended-question'); section.dataset.questionId = item.row.id;
           section.append(heading(doc, item.row, i + 1, !first));
-          prompt = element(doc, 'div', 'math-content'); section.append(prompt, item.question.querySelector('.working-space').cloneNode(true)); body.append(section);
+          prompt = element(doc, 'div', 'math-content'); section.append(prompt);
+          if (layout !== 'condensed') section.append(item.question.querySelector('.working-space').cloneNode(true));
+          body.append(section);
+          if (layout === 'condensed') questionBody = body;
           first = false; hasContent = false;
         }
         extendedPage();
         while (queue.length) {
           const block = queue.shift(); prompt.append(block);
           if (wideContent(prompt)) block.nodeType === 1 && block.classList.add('compact');
-          if (!overflows(section) && !wideContent(prompt)) { hasContent = true; continue; }
+          if (!overflows(section) && !(layout === 'condensed' && overflows(questionBody)) && !wideContent(prompt)) { hasContent = true; continue; }
           block.remove();
           if (hasContent) { extendedPage(); queue.unshift(block); continue; }
           const pieces = block.nodeType === 1 && splitBlock(block);
           if (pieces?.length > 1) { queue.unshift(...pieces); continue; }
           if (block.nodeType === 1) block.classList.add('compact');
           prompt.append(block);
-          if (overflows(section) || wideContent(prompt)) warnings.push(`${source(item.row)} has an indivisible question expression or figure that does not fit a full page at readable size.`);
+          if (overflows(section) || (layout === 'condensed' && overflows(questionBody)) || wideContent(prompt)) warnings.push(`${source(item.row)} has an indivisible question expression or figure that does not fit a full page at readable size.`);
           hasContent = true;
+        }
+      }
+      // Assign each question's marks exactly once, on its final continuation page.
+      if (completeMarks) {
+        for (const item of rendered) {
+          const sections = [...pages.querySelectorAll('.print-question')].filter(node => node.dataset.questionId === item.row.id);
+          sections.at(-1).dataset.allocatedMarks = item.row.marks;
+        }
+        for (const sheet of pages.querySelectorAll('.questions-page')) {
+          const marks = [...sheet.querySelectorAll('[data-allocated-marks]')].reduce((sum, node) => sum + Number(node.dataset.allocatedMarks), 0);
+          sheet.querySelector('.page-footer > span').textContent = `Page total: ${marks} marks`;
+          if (extendedQuestions.length) sheet.querySelector('.page-banner').append(element(doc, 'span', 'marks-policy', 'Continued questions: all marks counted on their final page.'));
         }
       }
       // Solutions always begin on a fresh page, after every question.
       let body;
-      for (let index = 0; index < rendered.length; index++) {
+      for (let index = 0; includeAnswers && index < rendered.length; index++) {
         const item = rendered[index];
         if (index % 10 === 0) {
           if (win.closed) throw Error('Paper preview was closed.');
@@ -269,7 +298,7 @@
         return {window: win, pageCount: total, warnings: [...new Set(warnings)], extendedQuestions, ready: false};
       }
       ready = true;
-      status.textContent = `${rows.length} questions · ${total} A4 pages · worked solutions at the back.${extendedQuestions.length ? ` ${extendedQuestions.length} longer questions use extra space or continuation pages.` : ''} Choose A4, 100% scale and turn off browser headers and footers in the print dialog. Select Save as PDF to download.`;
+      status.textContent = `${rows.length} questions · ${total} A4 pages · ${includeAnswers ? 'worked solutions at the back' : 'questions only'}.${extendedQuestions.length ? ` ${extendedQuestions.length} longer questions use extra space or continuation pages.` : ''} Choose A4, 100% scale and turn off browser headers and footers in the print dialog. Select Save as PDF to download.`;
       print.disabled = false; print.onclick = () => win.print();
       return {window: win, pageCount: total, warnings: [], extendedQuestions, ready: true};
     } catch (error) {

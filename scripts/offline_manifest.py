@@ -15,12 +15,13 @@ def generate(root, entries, version):
     teaching = json.loads((root/'teaching-catalogue.js').read_text().split('=',1)[1].strip().rstrip(';'))
     catalogue = json.loads((root/'textbook-catalogue.json').read_text())
     practice_index = json.loads((root/'practice-catalogue.json').read_text()) if (root/'practice-catalogue.json').exists() else {'questions': []}
+    exam_index = json.loads((root/'exam-catalogue.json').read_text()) if (root/'exam-catalogue.json').exists() else {'questions': []}
     practice_files = {}; practice_counts = {}
     for question in practice_index['questions']:
         key = (question['bookId'], str(question['chapterNumber']))
         practice_files.setdefault(key, set()).add(question['dataPath'])
         practice_counts[key] = practice_counts.get(key, 0) + 1
-    shared = {n for n in entries if (len(Path(n).parts)==1 and Path(n).suffix in {'.html','.js','.css','.webmanifest'}) or n in {'textbook-catalogue.json','practice-catalogue.json','release.json','version-history.json'} or n.startswith('vendor/') or n.startswith('assets/luisa/') or (n.startswith('resources/') and (Path(n).suffix in {'.js','.css'} or Path(n).name=='index.json'))}
+    shared = {n for n in entries if (len(Path(n).parts)==1 and Path(n).suffix in {'.html','.js','.css','.webmanifest'}) or n in {'exam-catalogue.json','textbook-catalogue.json','practice-catalogue.json','release.json','version-history.json'} or n.startswith('vendor/') or n.startswith('assets/luisa/') or (n.startswith('resources/') and (Path(n).suffix in {'.js','.css'} or Path(n).name=='index.json'))}
     shared.discard('sw.js')
     def local(url, bases=('',)):
         p = urlsplit(url)
@@ -93,7 +94,7 @@ def generate(root, entries, version):
                         if not path:raise ValueError('Offline print PDF missing: '+url)
                         paths.add(library.get('printDownloads', {}).get(path, path))
                     print_by_skill[skill['id']]=paths
-    packs=[];warnings=[]
+    packs=[];warnings=[];covered_exams=set()
     for book in catalogue['books']:
         tk=BOOK_ALIASES.get(book['id'],book['id'])
         for ch in book['chapters']:
@@ -140,11 +141,31 @@ def generate(root, entries, version):
                 files.add(name)
                 files.update(refs(json.loads((root/name).read_text()), ('',)))
             practice=[q for q in catalogue['questions'] if any(t['book']==book['id'] and t['chapter']==ch['id'] for t in q['targets'])]
+            # Skill-library books and Edexcel textbook books differ: for example,
+            # skill 1.30 belongs to library Core1 but is taught in textbook Core2.
+            # Match the qualified source skill to its chapter target, not the
+            # target book to the source book.
+            skill_origins = catalogue.get('skills', {})
+            chapter_skills = {(skill_origins[q['skill']]['course'],
+                skill_origins[q['skill']]['book'], q['skill'])
+                for q in practice if q['skill'] in skill_origins}
+            chapter_skills.update((q.get('courseId', book['course']), q['bookId'], skill)
+                for q in practice_index['questions']
+                if q['bookId'] == book['id'] and str(q['chapterNumber']) == ch['id']
+                for skill in q.get('skillIds', []))
+            exams = [q for q in exam_index['questions'] if any(
+                (m['courseId'], m['bookId'], m['skillId']) in chapter_skills
+                for m in q['skillMappings'])]
+            covered_exams.update(q['id'] for q in exams)
+            for name in {q['dataPath'] for q in exams}:
+                if name not in entries:raise ValueError('Offline exam questions missing: '+name)
+                files.add(name)
+                files.update(refs(json.loads((root/name).read_text()), ('',)))
             for skill in {q['skill'] for q in practice}:
                 name='content/'+skill+'.json'
                 if name not in entries:raise ValueError('Offline practice missing: '+name)
                 files.add(name);files.update(refs(json.loads((root/name).read_text()),('',)));files.update(print_by_skill.get(skill,set()))
-            practice_count = len(practice) + practice_counts.get((book['id'], ch['id']), 0)
+            practice_count = len(practice) + practice_counts.get((book['id'], ch['id']), 0) + len({q['id'] for q in exams})
             if not practice_count:unavailable.append('Mapped practice questions (not yet available)')
             if not files:continue
             packs.append({'id':book['id']+':'+ch['id'],'book':book['title'],'chapter':ch['id'],'title':ch['title'],'course':book['course'],'bookId':book['id'],'links':links,'unavailable':unavailable,'practiceEntries':practice_count,'files':sorted(close_assets(files)-shared)})
@@ -159,8 +180,17 @@ def generate(root, entries, version):
                 if name not in entries:raise ValueError('Offline skill missing: '+name)
                 files.add(name);files.update(refs(json.loads((root/name).read_text()),('',)))
                 files.update(print_by_skill.get(skill['id'],set()))
+            exams = [q for q in exam_index['questions'] if any(
+                m['courseId'] == course['id'] and m['bookId'] == book['id']
+                and m['skillId'] in {s['id'] for s in extra} for m in q['skillMappings'])]
+            for name in {q['dataPath'] for q in exams}:
+                if name not in entries:raise ValueError('Offline exam questions missing: '+name)
+                files.add(name);files.update(refs(json.loads((root/name).read_text()), ('',)))
+            covered_exams.update(q['id'] for q in exams)
             if files:
-                packs.append({'id':book['id']+':additional-skills','book':book['title'],'chapter':'Additional','title':'Skill practice','skill':extra[0]['id'],'topic':next(t['id'] for t in book['topics'] if extra[0] in t['skills']),'course':course['id'],'bookId':book['id'],'links':{},'unavailable':[],'practiceEntries':sum(len(s['questions']) for s in extra),'files':sorted(close_assets(files)-shared)})
+                packs.append({'id':book['id']+':additional-skills','book':book['title'],'chapter':'Additional','title':'Skill practice','skill':extra[0]['id'],'topic':next(t['id'] for t in book['topics'] if extra[0] in t['skills']),'course':course['id'],'bookId':book['id'],'links':{},'unavailable':[],'practiceEntries':sum(len(s['questions']) for s in extra)+len({q['id'] for q in exams}),'files':sorted(close_assets(files)-shared)})
+    unmapped_exams = {q['id'] for q in exam_index['questions']} - covered_exams
+    if unmapped_exams:raise ValueError('Offline exam mapping has no chapter pack: '+', '.join(sorted(unmapped_exams)))
     used=shared|set().union(*(set(p['files']) for p in packs))
     inventory={k:entries[k] for k in sorted(used)}
     revision=hashlib.sha256(json.dumps(inventory,sort_keys=True,separators=(',',':')).encode()).hexdigest()

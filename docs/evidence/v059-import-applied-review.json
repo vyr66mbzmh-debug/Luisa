@@ -1,0 +1,179 @@
+{
+  "reviewer": "101-print independent reviewer",
+  "scope": "12 applied imports: supplied source wording, mathematics, marks, diagram fidelity, complete question-specific mark-scheme coverage and crop cut safety",
+  "papers": [
+    {
+      "paperId": "edexcel-9ma0-31-2025-june",
+      "payloadSha256": "8d9eed3f545f4ecb6aed8fe49a1ccd5843fbccd8a9d3676f3c8d5601f5258305",
+      "questions": [
+        {
+          "id": "exam/edexcel-9ma0-31-2025-june/q1",
+          "marks": 9,
+          "solutionSegments": 3,
+          "promptAssetCount": 1
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2025-june/q2",
+          "marks": 5,
+          "solutionSegments": 2,
+          "promptAssetCount": 0
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2025-june/q3",
+          "marks": 6,
+          "solutionSegments": 3,
+          "promptAssetCount": 0
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2025-june/q4",
+          "marks": 9,
+          "solutionSegments": 3,
+          "promptAssetCount": 0
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2025-june/q5",
+          "marks": 10,
+          "solutionSegments": 2,
+          "promptAssetCount": 0
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2025-june/q6",
+          "marks": 11,
+          "solutionSegments": 3,
+          "promptAssetCount": 0
+        }
+      ]
+    },
+    {
+      "paperId": "edexcel-9ma0-32-2025-june",
+      "payloadSha256": "7f86071e819daae32b8428dfaa0094aee2ce6bf803c4348c90656f391426478a",
+      "questions": [
+        {
+          "id": "exam/edexcel-9ma0-32-2025-june/q1",
+          "marks": 4,
+          "solutionSegments": 2,
+          "promptAssetCount": 1
+        },
+        {
+          "id": "exam/edexcel-9ma0-32-2025-june/q2",
+          "marks": 10,
+          "solutionSegments": 4,
+          "promptAssetCount": 1
+        },
+        {
+          "id": "exam/edexcel-9ma0-32-2025-june/q3",
+          "marks": 8,
+          "solutionSegments": 4,
+          "promptAssetCount": 0
+        },
+        {
+          "id": "exam/edexcel-9ma0-32-2025-june/q4",
+          "marks": 9,
+          "solutionSegments": 4,
+          "promptAssetCount": 0
+        },
+        {
+          "id": "exam/edexcel-9ma0-32-2025-june/q5",
+          "marks": 8,
+          "solutionSegments": 4,
+          "promptAssetCount": 1
+        },
+        {
+          "id": "exam/edexcel-9ma0-32-2025-june/q6",
+          "marks": 11,
+          "solutionSegments": 11,
+          "promptAssetCount": 2
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "edexcel-9ma0-31-2025-june": {
+      "questionPaperSha256": "8eac72b578073a4165908f906878d023ec56e63683b6d815a1efbc679ee48371",
+      "markSchemeSha256": "10b9abf91df4e5150331fe30f176e0e2e7378f11c8004f018541b8b1904dd8f1"
+    },
+    "edexcel-9ma0-32-2025-june": {
+      "questionPaperSha256": "6f563f46cc4b2bbc7884df8d2204b7a919182fc0be89caf6ce0beb44803ecb2b",
+      "markSchemeSha256": "85bd1b4b0f20b57413acbb2247519b46348b81e98d47183d9b20051745d91c37"
+    }
+  },
+  "checks": {
+    "nativePromptsPartsAndMarks": "All 12 checked against supplied QP text; visually checked notation where extraction was ambiguous (Mechanics Q4, Statistics Q2 and Q6).",
+    "questionDiagrams": "All six source crop regions visually inspected. Labels, arrows, rods, probability-tree blanks and captions intact.",
+    "markSchemePages": {
+      "edexcel-9ma0-31-2025-june": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "edexcel-9ma0-32-2025-june": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "markSchemeTextSpanCoverage": {
+      "checkedNonblankNonWatermarkSpans": 3204,
+      "spansNotWhollyContainedInExactlyOneCrop": 0
+    },
+    "markSchemeVisualReview": "All 19 source scheme pages visually inspected with actual crop boundaries overlaid; question working, alternatives, annotations and examiner guidance retained. Both Mechanics Q6 force diagrams lie wholly inside single segments.",
+    "assetHashes": {
+      "checked": 51,
+      "mismatches": 0
+    },
+    "answerSeparation": "Question HTML references only question-paper diagram assets; all supplied mark-scheme crops occur in steps.",
+    "refreshedPrintVisualReview": {
+      "layout": "two",
+      "answers": true,
+      "totalPdfPages": 35,
+      "inspectedPages": [
+        6,
+        7,
+        8,
+        9,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "finding": "No visible clipping or diagram splits on these refreshed rendered pages. Source instructions had not yet been added to this output."
+    }
+  },
+  "findings": [
+    {
+      "severity": "medium",
+      "status": "reported; lead implementing source instruction context",
+      "issue": "Standalone rows omit front-page numerical conventions. Mechanics requires g=9.8 and 2 or 3 significant figures; its scheme explicitly penalises g=9.81. Statistics requires three significant figures unless otherwise stated, plus full statistical-table values/equivalent calculator accuracy. Retain these source instructions visibly for standalone reuse."
+    }
+  ],
+  "limits": [
+    "Browser six-mode acceptance belongs to lead; this independent review did not run a browser.",
+    "Context instruction changes and their final print layout need follow-up after integration.",
+    "Cropped mark schemes are vector artwork; their text is not native searchable HTML."
+  ]
+}

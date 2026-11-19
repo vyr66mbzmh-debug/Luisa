@@ -14,6 +14,18 @@ class ChapterSolutions(unittest.TestCase):
     def test_chapters_use_accepted_solution_pdfs(self):
         teaching = catalogue()
         evidence = json.loads((ROOT / 'docs/evidence/v056-booklets.json').read_text())['chapters']
+        # Retain the historical v0.56 acceptance record. Apply only independently
+        # reviewed replacement PDFs. Check every current fingerprint, and the
+        # historical fingerprint/page count for matched canonical chapter records.
+        replacements = json.loads((ROOT / 'docs/evidence/v059-integration.json').read_text())['mathematics']['pdfs']
+        for replacement in replacements:
+            self.assertEqual(hashlib.sha256((ROOT / replacement['path']).read_bytes()).hexdigest(), replacement['after'])
+            for record in evidence.values():
+                for kind in ('booklet', 'solutions'):
+                    if record[kind]['file'] == replacement['path']:
+                        self.assertEqual(record[kind]['sha256'], replacement['before'])
+                        self.assertEqual(record[kind]['pages'], replacement['pages'])
+                        record[kind]['sha256'] = replacement['after']
         textbook = json.loads((ROOT / 'textbook-catalogue.json').read_text())
         progress = (ROOT / 'development-progress.html').read_text()
         seen = set()

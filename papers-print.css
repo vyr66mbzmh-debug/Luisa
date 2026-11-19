@@ -81,3 +81,13 @@ body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
 }
 .print-page li>.equation:first-child .katex-display,
 .print-staging li>.equation:first-child .katex-display {margin-top:0}
+
+/* Paper options retain measured A4 boundaries in every mode. */
+.layout-one .questions-page .page-content {grid-template-rows:minmax(0,1fr)}
+.layout-condensed .questions-page .page-content {display:block}
+.layout-condensed .print-question {display:block; margin-bottom:4mm; padding-bottom:2mm}
+.layout-condensed .extended-question {flex:none}
+.question-marks,.question-difficulty {font:600 8pt/1.3 system-ui,sans-serif; margin:.5mm 0 0}
+.page-banner:has(.paper-marks) {height:17mm; flex-wrap:wrap; column-gap:4mm}
+.paper-marks {font-size:9pt}
+.marks-policy {flex-basis:100%; font-size:7.5pt; text-align:right}

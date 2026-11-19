@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-13",
+  "asOf": "2026-11-19",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -4987,6 +4987,36 @@
       ],
       "evidence": [
         "GitHub issue #97"
+      ]
+    },
+    {
+      "id": "PAP-059",
+      "requirement": "Exam bank source selection, marked past-paper pilot and flexible paper printing.",
+      "scope": "v0.59 Cloudflare owner and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner v0.59 requirements and development authorisation; GitHub #101",
+      "acceptance": [
+        "Use exactly two source checkboxes: Practice questions and Exam bank; preserve stable source IDs, Edexcel eligibility and duplicate-free combined selection. Exam bank contains verified exam-style practice-bank questions, Bronze/Silver/Gold (Easy/Medium/Difficult), and past papers.",
+        "Import five supplied Summer 2025 papers with matching mark schemes from owner-provided originals. Preserve original prompts, diagrams, part labels and marks; map all relevant topics/skills. Past-paper order determines difficulty: first/last five for 15+ questions, thirds otherwise.",
+        "Show per-question/page/overall marks without double-counting continuations. Only complete actual-past-paper selections receive practice time at ceil(total marks × 5/6) minutes; never invent missing marks.",
+        "One question per page, two per page or condensed; with worked solutions at the back or questions only. Without answers excludes solutions, hints and marking guidance completely. Long questions retain readable continuation pages.",
+        "Replace question-pool heading with the dynamic eligible count followed by questions in the selection; remove redundant lower pool message.",
+        "Correct Core Pure 1 Ch4 root-list error and explicitly define S/T notation with original Greek root symbols; update corresponding slides/booklets. Correct skill1.01 Q23 working and all relevant solution outputs.",
+        "Verify source/maths/visual/interaction/print fidelity, both host profiles, offline dependencies, existing accounts, recovery archive, GitHub evidence, handoff and owner-only release report."
+      ],
+      "evidence": [
+        "GitHub issue #101",
+        "docs/evidence/v059-integration.json",
+        "docs/evidence/v059-papers-print.json",
+        "docs/evidence/v059-practice-classification.json",
+        "docs/evidence/v059-import-pure1.json",
+        "docs/evidence/v059-import-further.json",
+        "docs/evidence/v059-import-applied.json",
+        "docs/evidence/v059-import-applied-review.json",
+        "docs/evidence/v059-import-print.json",
+        "Final host/account/recovery and owner-report evidence in GitHub #101"
       ]
     }
   ]
