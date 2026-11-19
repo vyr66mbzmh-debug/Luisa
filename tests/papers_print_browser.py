@@ -38,6 +38,13 @@ def row(skill, number):
     return dict(question, **METADATA[skill])
 
 
+def practice_row(family, chapter, suffix):
+    document = json.loads((ROOT / f'content/practice/{family}/chapter-{chapter:02}.json').read_text())
+    question = next(q for q in document['questions'] if q['id'].endswith('/' + suffix))
+    return dict(question, sourceKind='practice-booklet', courseTitle='Mathematics A level',
+                bookTitle=family, topicTitle=question['chapterTitle'])
+
+
 class PapersPrintTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -167,6 +174,37 @@ class PapersPrintTests(unittest.TestCase):
             self.assertIn('closed', self.page.evaluate('window.failure'))
         finally:
             self.context.unroute('**/papers-print.css')
+
+    def test_practice_context_hints_portrait_and_part_labels_survive_print(self):
+        rows = [practice_row('pure-year-1', 9, '9.5/q4'),
+                practice_row('applied-year-2', 3, 'problem-a/qgold'),
+                practice_row('applied-year-2', 2, '2.2/q3'),
+                practice_row('pure-year-2', 10, '10.1/q6')]
+        preview, result = self.preview(rows)
+        self.assertTrue(result['ready'], result)
+        self.assertEqual(result['warnings'], [])
+        self.assertGreater(preview.locator('.practice-context').count(), 0)
+        self.assertEqual(preview.locator('.questions-page .solution-hints').count(), 0)
+        self.assertTrue(all(value <= 1 for value in preview.locator('.page-content,.print-question').evaluate_all(
+            'nodes=>nodes.flatMap(n=>[n.scrollHeight-n.clientHeight,n.scrollWidth-n.clientWidth])')))
+        for item in rows:
+            selector = '[data-question-id="' + item['id'] + '"]'
+            self.assertIn('Source: Practice Booklet', preview.locator('.print-question' + selector).first.inner_text())
+            self.assertIn('Source: Practice Booklet', preview.locator('.print-solution' + selector).first.inner_text())
+            self.assertTrue(preview.locator(selector + ' img').evaluate_all(
+                'nodes=>nodes.every(n=>n.complete&&n.naturalWidth>0)'))
+            expected = self.page.evaluate('html=>{const n=document.createElement("div");n.innerHTML=html;return [...n.querySelectorAll("[data-math]")].map(x=>x.dataset.math)}', ''.join(item['steps']))
+            actual = preview.locator('.print-solution' + selector + ' .solution-step [data-math]').evaluate_all(
+                'nodes=>nodes.map(n=>n.dataset.math)')
+            self.assertEqual(actual, expected)
+            if item.get('hints'):
+                self.assertGreater(preview.locator('.print-solution' + selector + ' .solution-hints').count(), 0)
+        # The tall photograph remains proportional and fits a readable full sheet.
+        self.assertTrue(preview.locator('.print-page img.practice-figure').evaluate_all(
+            'nodes=>nodes.every(n=>Math.abs(n.clientWidth/n.clientHeight-n.naturalWidth/n.naturalHeight)<.02)'))
+        # A multiline equation must align its part letter with the first line.
+        self.assertTrue(preview.locator('.print-solution li>.equation:first-child').evaluate_all(
+            'nodes=>nodes.length>0&&nodes.every(n=>getComputedStyle(n).verticalAlign==="top")'))
 
 
 if __name__ == '__main__':

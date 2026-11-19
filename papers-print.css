@@ -69,3 +69,15 @@ body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
 
 .practice-context {border-left:2px solid #bd9957; padding-left:1em; margin:0 0 1em}
 .practice-context-label {font:600 .85em/1.4 system-ui,sans-serif; color:#465b6d}
+
+/* Keep portrait source illustrations on A4 without changing their aspect ratio. */
+.print-page img.practice-figure,.print-page .practice-figure img,
+.print-staging img.practice-figure,.print-staging .practice-figure img {
+  display:block; width:auto; height:auto; max-width:100%; max-height:140mm; object-fit:contain;
+}
+/* An equation-led part aligns its letter with the first line, not the last one. */
+.print-page li>.equation:first-child,.print-staging li>.equation:first-child {
+  display:inline-block; vertical-align:top; width:100%; padding-top:0;
+}
+.print-page li>.equation:first-child .katex-display,
+.print-staging li>.equation:first-child .katex-display {margin-top:0}
