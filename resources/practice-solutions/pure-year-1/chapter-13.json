@@ -1,0 +1,1232 @@
+{
+  "schemaVersion": 1,
+  "family": "pure-year-1",
+  "chapter": 13,
+  "sourcePdf": "resources/practice/pure-year-1/chapter-13.pdf",
+  "solutions": [
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q1",
+      "status": "worked",
+      "method": "Increase the exponent by one and divide by that new exponent; add an arbitrary constant C.",
+      "steps": [
+        {
+          "latex": "f=\\frac93x^3+C=3x^3+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=\\frac{12}{-2}x^{-2}+C=-6x^{-2}+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=\\frac6{7/2}x^{7/2}+C=\\frac{12}7x^{7/2}+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=25x+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Increase the exponent by one and divide by that new exponent; add an arbitrary constant C.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f=\\frac93x^3+C=3x^3+C\" data-display=\"true\"></span></li><li><span data-math=\"f=\\frac{12}{-2}x^{-2}+C=-6x^{-2}+C\" data-display=\"true\"></span></li><li><span data-math=\"f=\\frac6{7/2}x^{7/2}+C=\\frac{12}7x^{7/2}+C\" data-display=\"true\"></span></li><li><span data-math=\"f=25x+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q2",
+      "status": "worked",
+      "method": "Write roots as powers, then integrate using ∫xⁿdx=xⁿ⁺¹/(n+1)+C.",
+      "steps": [
+        {
+          "latex": "y'=x^{1/2};y=\\frac23x^{3/2}+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=3x^{-1/3};y=\\frac3{2/3}x^{2/3}+C=\\frac92x^{2/3}+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=5x^{1/4};y=4x^{5/4}+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=-\\frac16x^{-1/2};y=-\\frac13x^{1/2}+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Write roots as powers, then integrate using ∫xⁿdx=xⁿ⁺¹/(n+1)+C.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=x^{1/2}\" data-display=\"true\"></span><span data-math=\"y=\\frac23x^{3/2}+C\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=3x^{-1/3}\" data-display=\"true\"></span><span data-math=\"y=\\frac3{2/3}x^{2/3}+C=\\frac92x^{2/3}+C\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=5x^{1/4}\" data-display=\"true\"></span><span data-math=\"y=4x^{5/4}+C\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=-\\frac16x^{-1/2}\" data-display=\"true\"></span><span data-math=\"y=-\\frac13x^{1/2}+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q3",
+      "status": "worked",
+      "method": "Integrate each power separately, dividing by its new exponent.",
+      "steps": [
+        {
+          "latex": "f=\\frac15x^5+\\frac14x^4-\\frac52x^2+6x+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=\\frac43x^3-\\frac13x^{-1}+\\frac52x^{-2}+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=\\frac3{3/4}x^{3/4}-\\frac2{1/4}x^{1/4}+C;=4x^{3/4}-8x^{1/4}+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate each power separately, dividing by its new exponent.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f=\\frac15x^5+\\frac14x^4-\\frac52x^2+6x+C\" data-display=\"true\"></span></li><li><span data-math=\"f=\\frac43x^3-\\frac13x^{-1}+\\frac52x^{-2}+C\" data-display=\"true\"></span></li><li><span data-math=\"f=\\frac3{3/4}x^{3/4}-\\frac2{1/4}x^{1/4}+C\" data-display=\"true\"></span><span data-math=\"=4x^{3/4}-8x^{1/4}+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q4",
+      "status": "worked",
+      "method": "Expand the square before integrating term by term.",
+      "steps": [
+        {
+          "latex": "f'=16x^2+24x+9;a=16,b=24,c=9",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=\\frac{16}3x^3+12x^2+9x+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand the square before integrating term by term.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=16x^2+24x+9\" data-display=\"true\"></span><span data-math=\"a=16,b=24,c=9\" data-display=\"true\"></span></li><li><span data-math=\"f=\\frac{16}3x^3+12x^2+9x+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q5",
+      "status": "worked",
+      "method": "Expand, then integrate each term.",
+      "steps": [
+        {
+          "latex": "f'=9x^2-30x+25;f=3x^3-15x^2+25x+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand, then integrate each term.</p><span data-math=\"f&#x27;=9x^2-30x+25\" data-display=\"true\"></span><span data-math=\"f=3x^3-15x^2+25x+C\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q6",
+      "status": "worked",
+      "method": "Expand, then integrate each term.",
+      "steps": [
+        {
+          "latex": "y'=1-6x+9x^2;y=x-3x^2+3x^3+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand, then integrate each term.</p><span data-math=\"y&#x27;=1-6x+9x^2\" data-display=\"true\"></span><span data-math=\"y=x-3x^2+3x^3+C\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q7",
+      "status": "worked",
+      "method": "Use the binomial coefficient of x³ to determine p; then expand and integrate.",
+      "steps": [
+        {
+          "latex": "\\binom43p(-5x)^3=-500px^3;-500p=-1000;p=2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "h'=(2-5x)^4=16-160x+600x^2-1000x^3+625x^4;h=16x-80x^2+200x^3-250x^4+125x^5+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the binomial coefficient of x³ to determine p; then expand and integrate.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\binom43p(-5x)^3=-500px^3\" data-display=\"true\"></span><span data-math=\"-500p=-1000\" data-display=\"true\"></span><span data-math=\"p=2\" data-display=\"true\"></span></li><li><span data-math=\"h&#x27;=(2-5x)^4=16-160x+600x^2-1000x^3+625x^4\" data-display=\"true\"></span><span data-math=\"h=16x-80x^2+200x^3-250x^4+125x^5+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q8",
+      "status": "worked",
+      "method": "Expand the square and integrate powers of x.",
+      "steps": [
+        {
+          "latex": "f'=16-16\\sqrt x+4x;a=16,b=-16,c=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=16x-\\frac{32}3x^{3/2}+2x^2+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand the square and integrate powers of x.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=16-16\\sqrt x+4x\" data-display=\"true\"></span><span data-math=\"a=16,b=-16,c=4\" data-display=\"true\"></span></li><li><span data-math=\"f=16x-\\frac{32}3x^{3/2}+2x^2+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.1/q9",
+      "status": "worked",
+      "method": "Use the first three binomial terms and integrate the resulting polynomial approximation.",
+      "steps": [
+        {
+          "latex": "g'=3^8+8(3^7)(-2x)+\\binom82(3^6)(-2x)^2+\\cdots;=6561-34992x+81648x^2+\\cdots",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "g(x)\\approx6561x-17496x^2+27216x^3+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the first three binomial terms and integrate the resulting polynomial approximation.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"g&#x27;=3^8+8(3^7)(-2x)+\\binom82(3^6)(-2x)^2+\\cdots\" data-display=\"true\"></span><span data-math=\"=6561-34992x+81648x^2+\\cdots\" data-display=\"true\"></span></li><li><span data-math=\"g(x)\\approx6561x-17496x^2+27216x^3+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q1",
+      "status": "worked",
+      "method": "Increase each exponent by one and divide by it; include the integration constant.",
+      "steps": [
+        {
+          "latex": "\\int x^4\\,dx=\\frac15x^5+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\int-7x^6\\,dx=-\\frac77x^7+C=-x^7+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\int4x^{-2}\\,dx=-4x^{-1}+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Increase each exponent by one and divide by it; include the integration constant.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\int x^4\\,dx=\\frac15x^5+C\" data-display=\"true\"></span></li><li><span data-math=\"\\int-7x^6\\,dx=-\\frac77x^7+C=-x^7+C\" data-display=\"true\"></span></li><li><span data-math=\"\\int4x^{-2}\\,dx=-4x^{-1}+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q2",
+      "status": "worked",
+      "method": "Integrate term by term using the power rule.",
+      "steps": [
+        {
+          "latex": "\\frac53x^3-\\frac92x^{-2}+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{3/4}6x^6+\\frac{-4}{-4}x^{-4}+\\frac82x^2+C;=\\frac18x^6+x^{-4}+4x^2+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac4{5/2}x^{5/2}-\\frac{10}{-1/2}x^{-1/2}+C;=\\frac85x^{5/2}+20x^{-1/2}+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate term by term using the power rule.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac53x^3-\\frac92x^{-2}+C\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{3/4}6x^6+\\frac{-4}{-4}x^{-4}+\\frac82x^2+C\" data-display=\"true\"></span><span data-math=\"=\\frac18x^6+x^{-4}+4x^2+C\" data-display=\"true\"></span></li><li><span data-math=\"\\frac4{5/2}x^{5/2}-\\frac{10}{-1/2}x^{-1/2}+C\" data-display=\"true\"></span><span data-math=\"=\\frac85x^{5/2}+20x^{-1/2}+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q3",
+      "status": "worked",
+      "method": "Expand or divide first, then integrate the individual powers.",
+      "steps": [
+        {
+          "latex": "(6-5\\sqrt x)^2=36-60x^{1/2}+25x;\\int=36x-40x^{3/2}+\\frac{25}2x^2+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{(3x-2)^2}{\\sqrt x}=9x^{3/2}-12x^{1/2}+4x^{-1/2};\\int=\\frac{18}5x^{5/2}-8x^{3/2}+8x^{1/2}+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\frac{5-7x^3+4x^{-3/2}}{x^2}=5x^{-2}-7x+4x^{-7/2};\\int=-5x^{-1}-\\frac72x^2-\\frac85x^{-5/2}+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand or divide first, then integrate the individual powers.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"(6-5\\sqrt x)^2=36-60x^{1/2}+25x\" data-display=\"true\"></span><span data-math=\"\\int=36x-40x^{3/2}+\\frac{25}2x^2+C\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{(3x-2)^2}{\\sqrt x}=9x^{3/2}-12x^{1/2}+4x^{-1/2}\" data-display=\"true\"></span><span data-math=\"\\int=\\frac{18}5x^{5/2}-8x^{3/2}+8x^{1/2}+C\" data-display=\"true\"></span></li><li><span data-math=\"\\frac{5-7x^3+4x^{-3/2}}{x^2}=5x^{-2}-7x+4x^{-7/2}\" data-display=\"true\"></span><span data-math=\"\\int=-5x^{-1}-\\frac72x^2-\\frac85x^{-5/2}+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q4",
+      "status": "worked",
+      "method": "Treat capital letters as constants and integrate each power of x.",
+      "steps": [
+        {
+          "latex": "\\int(Px^{-1/2}-Rx^{3/2})\\,dx=2Px^{1/2}-\\frac25Rx^{5/2}+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\int(Ax^{-3}+Bx^{-5})\\,dx=-\\frac12Ax^{-2}-\\frac14Bx^{-4}+C",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\int(Mx^{1/3}-Nx^{3/4})\\,dx=\\frac34Mx^{4/3}-\\frac47Nx^{7/4}+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Treat capital letters as constants and integrate each power of x.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\int(Px^{-1/2}-Rx^{3/2})\\,dx=2Px^{1/2}-\\frac25Rx^{5/2}+C\" data-display=\"true\"></span></li><li><span data-math=\"\\int(Ax^{-3}+Bx^{-5})\\,dx=-\\frac12Ax^{-2}-\\frac14Bx^{-4}+C\" data-display=\"true\"></span></li><li><span data-math=\"\\int(Mx^{1/3}-Nx^{3/4})\\,dx=\\frac34Mx^{4/3}-\\frac47Nx^{7/4}+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q5",
+      "status": "worked",
+      "method": "Square the given expression to find y, then integrate.",
+      "steps": [
+        {
+          "latex": "y=36x^{2/5}-60x^{1/5}+25;\\int y\\,dx=\\frac{180}7x^{7/5}-50x^{6/5}+25x+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Square the given expression to find y, then integrate.</p><span data-math=\"y=36x^{2/5}-60x^{1/5}+25\" data-display=\"true\"></span><span data-math=\"\\int y\\,dx=\\frac{180}7x^{7/5}-50x^{6/5}+25x+C\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q6",
+      "status": "worked",
+      "method": "Rewrite all roots and denominators as powers of x.",
+      "steps": [
+        {
+          "latex": "g=3x^3-7x^{1/2}+4x^{-1/3}-2x^{-2};\\int g\\,dx=\\frac34x^4-\\frac{14}3x^{3/2}+6x^{2/3}+2x^{-1}+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rewrite all roots and denominators as powers of x.</p><span data-math=\"g=3x^3-7x^{1/2}+4x^{-1/3}-2x^{-2}\" data-display=\"true\"></span><span data-math=\"\\int g\\,dx=\\frac34x^4-\\frac{14}3x^{3/2}+6x^{2/3}+2x^{-1}+C\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q7",
+      "status": "worked",
+      "method": "Differentiate the given antiderivative and compare coefficients.",
+      "steps": [
+        {
+          "latex": "abx^2+4bx^{-5}=6x^2+8x^{-5};4b=8\\Rightarrow b=2;ab=6\\Rightarrow a=3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Differentiate the given antiderivative and compare coefficients.</p><span data-math=\"abx^2+4bx^{-5}=6x^2+8x^{-5}\" data-display=\"true\"></span><span data-math=\"4b=8\\Rightarrow b=2\" data-display=\"true\"></span><span data-math=\"ab=6\\Rightarrow a=3\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.2/q8",
+      "status": "worked",
+      "method": "Expand to x² before multiplying by 1+2x and discard higher powers.",
+      "steps": [
+        {
+          "latex": "(4-3x)^8=65536-393216x+1032192x^2+\\cdots;g\\approx(1+2x)(65536-393216x+1032192x^2);g\\approx65536-262144x+245760x^2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\int g\\,dx\\approx65536x-131072x^2+81920x^3+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand to x² before multiplying by 1+2x and discard higher powers.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"(4-3x)^8=65536-393216x+1032192x^2+\\cdots\" data-display=\"true\"></span><span data-math=\"g\\approx(1+2x)(65536-393216x+1032192x^2)\" data-display=\"true\"></span><span data-math=\"g\\approx65536-262144x+245760x^2\" data-display=\"true\"></span></li><li><span data-math=\"\\int g\\,dx\\approx65536x-131072x^2+81920x^3+C\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q1",
+      "status": "worked",
+      "method": "Integrate, then use the given point to determine C.",
+      "steps": [
+        {
+          "latex": "y=x^4-\\frac{10}3x^3+C;6=81-90+C\\Rightarrow C=15;y=x^4-\\frac{10}3x^3+15",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=10\\sqrt x+\\frac16x^3+C;65=40+\\frac{4096}6+C;C=-\\frac{1973}3;y=10\\sqrt x+\\frac16x^3-\\frac{1973}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate, then use the given point to determine C.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y=x^4-\\frac{10}3x^3+C\" data-display=\"true\"></span><span data-math=\"6=81-90+C\\Rightarrow C=15\" data-display=\"true\"></span><span data-math=\"y=x^4-\\frac{10}3x^3+15\" data-display=\"true\"></span></li><li><span data-math=\"y=10\\sqrt x+\\frac16x^3+C\" data-display=\"true\"></span><span data-math=\"65=40+\\frac{4096}6+C\" data-display=\"true\"></span><span data-math=\"C=-\\frac{1973}3\" data-display=\"true\"></span><span data-math=\"y=10\\sqrt x+\\frac16x^3-\\frac{1973}3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q2",
+      "status": "worked",
+      "method": "Simplify or expand the derivative before integrating and applying the point.",
+      "steps": [
+        {
+          "latex": "y'=3x^{-4}-x^{-2};y=-x^{-3}+x^{-1}+C;4=1-1+C;C=4;y=-x^{-3}+x^{-1}+4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y'=x^2-10x+25;y=\\frac13x^3-5x^2+25x+C;18=\\frac83-20+50+C;C=-\\frac{44}3;y=\\frac13x^3-5x^2+25x-\\frac{44}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Simplify or expand the derivative before integrating and applying the point.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y&#x27;=3x^{-4}-x^{-2}\" data-display=\"true\"></span><span data-math=\"y=-x^{-3}+x^{-1}+C\" data-display=\"true\"></span><span data-math=\"4=1-1+C\" data-display=\"true\"></span><span data-math=\"C=4\" data-display=\"true\"></span><span data-math=\"y=-x^{-3}+x^{-1}+4\" data-display=\"true\"></span></li><li><span data-math=\"y&#x27;=x^2-10x+25\" data-display=\"true\"></span><span data-math=\"y=\\frac13x^3-5x^2+25x+C\" data-display=\"true\"></span><span data-math=\"18=\\frac83-20+50+C\" data-display=\"true\"></span><span data-math=\"C=-\\frac{44}3\" data-display=\"true\"></span><span data-math=\"y=\\frac13x^3-5x^2+25x-\\frac{44}3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q3",
+      "status": "worked",
+      "method": "Integrate each fractional power and substitute (9,−30).",
+      "steps": [
+        {
+          "latex": "y=16\\sqrt x-\\frac83x^{3/2}+C;-30=48-72+C;C=-6;y=16\\sqrt x-\\frac83x^{3/2}-6",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate each fractional power and substitute (9,−30).</p><span data-math=\"y=16\\sqrt x-\\frac83x^{3/2}+C\" data-display=\"true\"></span><span data-math=\"-30=48-72+C\" data-display=\"true\"></span><span data-math=\"C=-6\" data-display=\"true\"></span><span data-math=\"y=16\\sqrt x-\\frac83x^{3/2}-6\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q4",
+      "status": "worked",
+      "method": "Integrate the polynomial and use the stated value.",
+      "steps": [
+        {
+          "latex": "y=10x-3x^2-\\frac43x^3+C;-15=30-27-36+C;C=18;y=10x-3x^2-\\frac43x^3+18",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate the polynomial and use the stated value.</p><span data-math=\"y=10x-3x^2-\\frac43x^3+C\" data-display=\"true\"></span><span data-math=\"-15=30-27-36+C\" data-display=\"true\"></span><span data-math=\"C=18\" data-display=\"true\"></span><span data-math=\"y=10x-3x^2-\\frac43x^3+18\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q5",
+      "status": "worked",
+      "method": "Divide by x² before integrating.",
+      "steps": [
+        {
+          "latex": "f'=5x^{-3/2}-3x^{-1/2};f=-10x^{-1/2}-6x^{1/2}+C;7=-5-12+C;C=24;f=-10x^{-1/2}-6x^{1/2}+24",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Divide by x² before integrating.</p><span data-math=\"f&#x27;=5x^{-3/2}-3x^{-1/2}\" data-display=\"true\"></span><span data-math=\"f=-10x^{-1/2}-6x^{1/2}+C\" data-display=\"true\"></span><span data-math=\"7=-5-12+C\" data-display=\"true\"></span><span data-math=\"C=24\" data-display=\"true\"></span><span data-math=\"f=-10x^{-1/2}-6x^{1/2}+24\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q6",
+      "status": "worked",
+      "method": "Integrate, then substitute x=8 and y=112.",
+      "steps": [
+        {
+          "latex": "f=3x^2-6x^{2/3}+C;112=192-24+C;C=-56;f=3x^2-6x^{2/3}-56",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate, then substitute x=8 and y=112.</p><span data-math=\"f=3x^2-6x^{2/3}+C\" data-display=\"true\"></span><span data-math=\"112=192-24+C\" data-display=\"true\"></span><span data-math=\"C=-56\" data-display=\"true\"></span><span data-math=\"f=3x^2-6x^{2/3}-56\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q7",
+      "status": "worked",
+      "method": "Expand the numerator, divide each term by x³ᐟ² and integrate.",
+      "steps": [
+        {
+          "latex": "p'=\\frac{1-15x+75x^2-125x^3}{x^{3/2}};=x^{-3/2}-15x^{-1/2}+75x^{1/2}-125x^{3/2};a=1,b=-15,c=75,d=-125",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "p=-2x^{-1/2}-30x^{1/2}+50x^{3/2}-50x^{5/2}+C;-24=-2-30+50-50+C;C=8;p=-2x^{-1/2}-30x^{1/2}+50x^{3/2}-50x^{5/2}+8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand the numerator, divide each term by x³ᐟ² and integrate.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"p&#x27;=\\frac{1-15x+75x^2-125x^3}{x^{3/2}}\" data-display=\"true\"></span><span data-math=\"=x^{-3/2}-15x^{-1/2}+75x^{1/2}-125x^{3/2}\" data-display=\"true\"></span><span data-math=\"a=1,b=-15,c=75,d=-125\" data-display=\"true\"></span></li><li><span data-math=\"p=-2x^{-1/2}-30x^{1/2}+50x^{3/2}-50x^{5/2}+C\" data-display=\"true\"></span><span data-math=\"-24=-2-30+50-50+C\" data-display=\"true\"></span><span data-math=\"C=8\" data-display=\"true\"></span><span data-math=\"p=-2x^{-1/2}-30x^{1/2}+50x^{3/2}-50x^{5/2}+8\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.3/q8",
+      "status": "worked",
+      "method": "Find the antiderivative and use h(4) before evaluating h(2).",
+      "steps": [
+        {
+          "latex": "h=\\frac12x^3-\\frac12\\sqrt x+C;-10=32-1+C;C=-41;h(2)=4-\\frac12\\sqrt2-41=-37-\\frac12\\sqrt2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the antiderivative and use h(4) before evaluating h(2).</p><span data-math=\"h=\\frac12x^3-\\frac12\\sqrt x+C\" data-display=\"true\"></span><span data-math=\"-10=32-1+C\" data-display=\"true\"></span><span data-math=\"C=-41\" data-display=\"true\"></span><span data-math=\"h(2)=4-\\frac12\\sqrt2-41=-37-\\frac12\\sqrt2\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q1",
+      "status": "worked",
+      "method": "Evaluate an antiderivative at the upper limit minus its value at the lower limit.",
+      "steps": [
+        {
+          "latex": "[\\frac13x^3]_2^{10}=\\frac{1000-8}3=\\frac{992}3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "[\\frac92x^{4/3}]_1^8=\\frac92(16-1)=\\frac{135}2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "[-2x^{-2}]_2^4=-\\frac18+\\frac12=\\frac38",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "[10\\sqrt x]_4^9=30-20=10",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Evaluate an antiderivative at the upper limit minus its value at the lower limit.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"[\\frac13x^3]_2^{10}=\\frac{1000-8}3=\\frac{992}3\" data-display=\"true\"></span></li><li><span data-math=\"[\\frac92x^{4/3}]_1^8=\\frac92(16-1)=\\frac{135}2\" data-display=\"true\"></span></li><li><span data-math=\"[-2x^{-2}]_2^4=-\\frac18+\\frac12=\\frac38\" data-display=\"true\"></span></li><li><span data-math=\"[10\\sqrt x]_4^9=30-20=10\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q2",
+      "status": "worked",
+      "method": "Simplify the integrand, find an antiderivative, then subtract endpoint values.",
+      "steps": [
+        {
+          "latex": "[9x^2+2x^{-2}]_1^2=(36+\\frac12)-(9+2)=\\frac{51}2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\int_1^4(14x^{5/2}-5x^{3/2})\\,dx;=[4x^{7/2}-2x^{5/2}]_1^4;=(512-64)-(4-2)=446",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "(2\\sqrt x-\\frac6x)^2=4x-24x^{-1/2}+36x^{-2};[2x^2-48\\sqrt x-36x^{-1}]_1^{36};=(2592-288-1)-(2-48-36)=2385",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Simplify the integrand, find an antiderivative, then subtract endpoint values.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"[9x^2+2x^{-2}]_1^2=(36+\\frac12)-(9+2)=\\frac{51}2\" data-display=\"true\"></span></li><li><span data-math=\"\\int_1^4(14x^{5/2}-5x^{3/2})\\,dx\" data-display=\"true\"></span><span data-math=\"=[4x^{7/2}-2x^{5/2}]_1^4\" data-display=\"true\"></span><span data-math=\"=(512-64)-(4-2)=446\" data-display=\"true\"></span></li><li><span data-math=\"(2\\sqrt x-\\frac6x)^2=4x-24x^{-1/2}+36x^{-2}\" data-display=\"true\"></span><span data-math=\"[2x^2-48\\sqrt x-36x^{-1}]_1^{36}\" data-display=\"true\"></span><span data-math=\"=(2592-288-1)-(2-48-36)=2385\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q3",
+      "status": "worked",
+      "method": "Integrate the negative powers and subtract endpoint values.",
+      "steps": [
+        {
+          "latex": "[-5x^{-1}+x^{-3}]_1^2=(-\\frac52+\\frac18)-(-5+1)=\\frac{13}8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate the negative powers and subtract endpoint values.</p><span data-math=\"[-5x^{-1}+x^{-3}]_1^2=(-\\frac52+\\frac18)-(-5+1)=\\frac{13}8\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q4",
+      "status": "worked",
+      "method": "Integrate each power of x and use the limits.",
+      "steps": [
+        {
+          "latex": "[-2x^{-1}+\\frac83x^{3/2}]_1^{16};=(-\\frac18+\\frac{512}3)-(-2+\\frac83)=\\frac{1359}8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate each power of x and use the limits.</p><span data-math=\"[-2x^{-1}+\\frac83x^{3/2}]_1^{16}\" data-display=\"true\"></span><span data-math=\"=(-\\frac18+\\frac{512}3)-(-2+\\frac83)=\\frac{1359}8\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q5",
+      "status": "worked",
+      "method": "Integrate term by term and subtract the lower endpoint value.",
+      "steps": [
+        {
+          "latex": "[\\frac23x^4+6x^{-1}-4x^{1/2}]_1^4;=(\\frac{512}3+\\frac32-8)-(\\frac23+6-4)=\\frac{323}2=161.5",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate term by term and subtract the lower endpoint value.</p><span data-math=\"[\\frac23x^4+6x^{-1}-4x^{1/2}]_1^4\" data-display=\"true\"></span><span data-math=\"=(\\frac{512}3+\\frac32-8)-(\\frac23+6-4)=\\frac{323}2=161.5\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q6",
+      "status": "worked",
+      "method": "Use the antiderivative to form an equation for the upper limit.",
+      "steps": [
+        {
+          "latex": "[6x^{3/2}]_4^k=702;6(k^{3/2}-8)=702;k^{3/2}=125;k=125^{2/3}=25",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use the antiderivative to form an equation for the upper limit.</p><span data-math=\"[6x^{3/2}]_4^k=702\" data-display=\"true\"></span><span data-math=\"6(k^{3/2}-8)=702\" data-display=\"true\"></span><span data-math=\"k^{3/2}=125\" data-display=\"true\"></span><span data-math=\"k=125^{2/3}=25\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q7",
+      "status": "worked",
+      "method": "Square the expression, then integrate its three powers.",
+      "steps": [
+        {
+          "latex": "y=4x^{2/3}+\\frac14x^{-2/3}-2;a=4,b=\\frac14,c=-2",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "[\\frac{12}5x^{5/3}+\\frac34x^{1/3}-2x]_1^8;=\\frac{12}5(32-1)+\\frac34(2-1)-2(8-1);=\\frac{1223}{20}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Square the expression, then integrate its three powers.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y=4x^{2/3}+\\frac14x^{-2/3}-2\" data-display=\"true\"></span><span data-math=\"a=4,b=\\frac14,c=-2\" data-display=\"true\"></span></li><li><span data-math=\"[\\frac{12}5x^{5/3}+\\frac34x^{1/3}-2x]_1^8\" data-display=\"true\"></span><span data-math=\"=\\frac{12}5(32-1)+\\frac34(2-1)-2(8-1)\" data-display=\"true\"></span><span data-math=\"=\\frac{1223}{20}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.4/q8",
+      "status": "worked",
+      "method": "Factor out the constant a and evaluate the definite integral.",
+      "steps": [
+        {
+          "latex": "\\frac{2a}3[x^{3/2}]_4^9=-114;\\frac{2a}3(27-8)=-114;\\frac{38a}3=-114;a=-9",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor out the constant a and evaluate the definite integral.</p><span data-math=\"\\frac{2a}3[x^{3/2}]_4^9=-114\" data-display=\"true\"></span><span data-math=\"\\frac{2a}3(27-8)=-114\" data-display=\"true\"></span><span data-math=\"\\frac{38a}3=-114\" data-display=\"true\"></span><span data-math=\"a=-9\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q1",
+      "status": "worked",
+      "method": "The graph is above the x-axis between −1 and 1, so integrate over those limits.",
+      "steps": [
+        {
+          "latex": "A=\\int_{-1}^1(-x^3-x^2+x+1)\\,dx;=[-\\frac14x^4-\\frac13x^3+\\frac12x^2+x]_{-1}^1;=\\frac{11}{12}-(-\\frac5{12})=\\frac43",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The graph is above the x-axis between −1 and 1, so integrate over those limits.</p><span data-math=\"A=\\int_{-1}^1(-x^3-x^2+x+1)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac14x^4-\\frac13x^3+\\frac12x^2+x]_{-1}^1\" data-display=\"true\"></span><span data-math=\"=\\frac{11}{12}-(-\\frac5{12})=\\frac43\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q2",
+      "status": "worked",
+      "method": "Factor the quadratic to identify A, then use the shaded interval from −1 to A.",
+      "steps": [
+        {
+          "latex": "x^2-7x+10=(x-2)(x-5)=0;A=(2,0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=\\int_{-1}^2(x^2-7x+10)\\,dx;=[\\frac13x^3-\\frac72x^2+10x]_{-1}^2;=\\frac{26}3-(-\\frac{83}6)=\\frac{45}2",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor the quadratic to identify A, then use the shaded interval from −1 to A.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"x^2-7x+10=(x-2)(x-5)=0\" data-display=\"true\"></span><span data-math=\"A=(2,0)\" data-display=\"true\"></span></li><li><span data-math=\"A_R=\\int_{-1}^2(x^2-7x+10)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac13x^3-\\frac72x^2+10x]_{-1}^2\" data-display=\"true\"></span><span data-math=\"=\\frac{26}3-(-\\frac{83}6)=\\frac{45}2\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q3",
+      "status": "worked",
+      "method": "The curve is above the axis throughout the shaded interval; integrate between the given vertical boundaries.",
+      "steps": [
+        {
+          "latex": "A=\\int_{1/2}^2(5x^2+2x^{-3}-5)\\,dx;=[\\frac53x^3-x^{-2}-5x]_{1/2}^2;=\\frac{37}{12}-(-\\frac{151}{24})=\\frac{75}8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The curve is above the axis throughout the shaded interval; integrate between the given vertical boundaries.</p><span data-math=\"A=\\int_{1/2}^2(5x^2+2x^{-3}-5)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac53x^3-x^{-2}-5x]_{1/2}^2\" data-display=\"true\"></span><span data-math=\"=\\frac{37}{12}-(-\\frac{151}{24})=\\frac{75}8\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q4",
+      "status": "worked",
+      "method": "The printed domain x≥0 conflicts with the negative intercept A shown in the diagram. Both the literal-domain result and the illustrated intended region are given.",
+      "steps": [
+        {
+          "latex": "12+4x-x^2=-(x-6)(x+2)=0;x=-2,6;B=(6,0)",
+          "explanation": "For the full parabola A=(−2,0), but A is excluded by the stated domain. Thus the stated curve has only the intercept B.",
+          "graphs": []
+        },
+        {
+          "latex": "F(x)=12x+2x^2-\\frac13x^3;\\int_{-2}^6g(x)\\,dx=F(6)-F(-2)=72+\\frac{40}3=\\frac{256}3;\\int_0^6g(x)\\,dx=72",
+          "explanation": "The drawn region and supplied answer use the whole parabola, giving 256/3. If x≥0 is enforced, only the portion from 0 to 6 remains, with area 72.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The printed domain x≥0 conflicts with the negative intercept A shown in the diagram. Both the literal-domain result and the illustrated intended region are given.</p><ol type=\"a\" class=\"parts\"><li><p>For the full parabola A=(−2,0), but A is excluded by the stated domain. Thus the stated curve has only the intercept B.</p><span data-math=\"12+4x-x^2=-(x-6)(x+2)=0\" data-display=\"true\"></span><span data-math=\"x=-2,6\" data-display=\"true\"></span><span data-math=\"B=(6,0)\" data-display=\"true\"></span></li><li><p>The drawn region and supplied answer use the whole parabola, giving 256/3. If x≥0 is enforced, only the portion from 0 to 6 remains, with area 72.</p><span data-math=\"F(x)=12x+2x^2-\\frac13x^3\" data-display=\"true\"></span><span data-math=\"\\int_{-2}^6g(x)\\,dx=F(6)-F(-2)=72+\\frac{40}3=\\frac{256}3\" data-display=\"true\"></span><span data-math=\"\\int_0^6g(x)\\,dx=72\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q5",
+      "status": "worked",
+      "method": "The shaded region is between the roots 1 and 4, where h is nonnegative.",
+      "steps": [
+        {
+          "latex": "h=-x^3+6x^2-9x+4;A=\\int_1^4h(x)\\,dx;=[-\\frac14x^4+2x^3-\\frac92x^2+4x]_1^4;=8-\\frac54=\\frac{27}4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The shaded region is between the roots 1 and 4, where h is nonnegative.</p><span data-math=\"h=-x^3+6x^2-9x+4\" data-display=\"true\"></span><span data-math=\"A=\\int_1^4h(x)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac14x^4+2x^3-\\frac92x^2+4x]_1^4\" data-display=\"true\"></span><span data-math=\"=8-\\frac54=\\frac{27}4\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q6",
+      "status": "worked",
+      "method": "Solve the nonzero root, then integrate above the axis from 0 to that root.",
+      "steps": [
+        {
+          "latex": "8\\sqrt x-x^2=\\sqrt x(8-x^{3/2})=0;x^{3/2}=8\\Rightarrow x=4;A=(4,0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=\\int_0^4(8x^{1/2}-x^2)\\,dx;=[\\frac{16}3x^{3/2}-\\frac13x^3]_0^4;=\\frac{128}3-\\frac{64}3=\\frac{64}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Solve the nonzero root, then integrate above the axis from 0 to that root.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"8\\sqrt x-x^2=\\sqrt x(8-x^{3/2})=0\" data-display=\"true\"></span><span data-math=\"x^{3/2}=8\\Rightarrow x=4\" data-display=\"true\"></span><span data-math=\"A=(4,0)\" data-display=\"true\"></span></li><li><span data-math=\"A_R=\\int_0^4(8x^{1/2}-x^2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac{16}3x^{3/2}-\\frac13x^3]_0^4\" data-display=\"true\"></span><span data-math=\"=\\frac{128}3-\\frac{64}3=\\frac{64}3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.5/q7",
+      "status": "worked",
+      "method": "The integrand is positive, so integrate from 0 to k and equate to 27.",
+      "steps": [
+        {
+          "latex": "\\int_0^k(6x^2-12x+9)\\,dx=27;2k^3-6k^2+9k-27=0;(k-3)(2k^2+9)=0;2k^2+9>0\\Rightarrow k=3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The integrand is positive, so integrate from 0 to k and equate to 27.</p><span data-math=\"\\int_0^k(6x^2-12x+9)\\,dx=27\" data-display=\"true\"></span><span data-math=\"2k^3-6k^2+9k-27=0\" data-display=\"true\"></span><span data-math=\"(k-3)(2k^2+9)=0\" data-display=\"true\"></span><span data-math=\"2k^2+9&gt;0\\Rightarrow k=3\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q1",
+      "status": "worked",
+      "method": "Find the two roots and reverse the sign of the integral because the curve is below the axis.",
+      "steps": [
+        {
+          "latex": "x^2-x-6=(x+2)(x-3);A=-\\int_{-2}^3(x^2-x-6)\\,dx;=-[\\frac13x^3-\\frac12x^2-6x]_{-2}^3;=-(-\\frac{27}2-\\frac{22}3)=\\frac{125}6",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the two roots and reverse the sign of the integral because the curve is below the axis.</p><span data-math=\"x^2-x-6=(x+2)(x-3)\" data-display=\"true\"></span><span data-math=\"A=-\\int_{-2}^3(x^2-x-6)\\,dx\" data-display=\"true\"></span><span data-math=\"=-[\\frac13x^3-\\frac12x^2-6x]_{-2}^3\" data-display=\"true\"></span><span data-math=\"=-(-\\frac{27}2-\\frac{22}3)=\\frac{125}6\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q2",
+      "status": "worked",
+      "method": "The shaded region is below the axis between A and B.",
+      "steps": [
+        {
+          "latex": "x_A=2,\\quad x_B=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=x^3-5x^2+2x+8;A_R=-\\int_2^4y\\,dx;=-[\\frac14x^4-\\frac53x^3+x^2+8x]_2^4;=-\\left(\\frac{16}3-\\frac{32}3\\right)=\\frac{16}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The shaded region is below the axis between A and B.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"x_A=2,\\quad x_B=4\" data-display=\"true\"></span></li><li><span data-math=\"y=x^3-5x^2+2x+8\" data-display=\"true\"></span><span data-math=\"A_R=-\\int_2^4y\\,dx\" data-display=\"true\"></span><span data-math=\"=-[\\frac14x^4-\\frac53x^3+x^2+8x]_2^4\" data-display=\"true\"></span><span data-math=\"=-\\left(\\frac{16}3-\\frac{32}3\\right)=\\frac{16}3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q3",
+      "status": "worked",
+      "method": "The curve is below the axis on (0,2) and above it on (2,3); treat these regions separately.",
+      "steps": [
+        {
+          "latex": "F(x)=-\\frac14x^4+\\frac53x^3-3x^2;A_1=-[F(x)]_0^2=\\frac83",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_2=[F(x)]_2^3=-\\frac94+\\frac83=\\frac5{12}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_1+A_2=\\frac83+\\frac5{12}=\\frac{37}{12}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The curve is below the axis on (0,2) and above it on (2,3); treat these regions separately.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"F(x)=-\\frac14x^4+\\frac53x^3-3x^2\" data-display=\"true\"></span><span data-math=\"A_1=-[F(x)]_0^2=\\frac83\" data-display=\"true\"></span></li><li><span data-math=\"A_2=[F(x)]_2^3=-\\frac94+\\frac83=\\frac5{12}\" data-display=\"true\"></span></li><li><span data-math=\"A_1+A_2=\\frac83+\\frac5{12}=\\frac{37}{12}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q4",
+      "status": "worked",
+      "method": "Find the nonzero intercept; negate the integral where the curve is below the axis.",
+      "steps": [
+        {
+          "latex": "\\sqrt x(x^{3/2}-8)=0;x^{3/2}=8\\Rightarrow x=4;A=(4,0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=-\\int_0^4(-8\\sqrt x+x^2)\\,dx;=[\\frac{16}3x^{3/2}-\\frac13x^3]_0^4=\\frac{64}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the nonzero intercept; negate the integral where the curve is below the axis.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\sqrt x(x^{3/2}-8)=0\" data-display=\"true\"></span><span data-math=\"x^{3/2}=8\\Rightarrow x=4\" data-display=\"true\"></span><span data-math=\"A=(4,0)\" data-display=\"true\"></span></li><li><span data-math=\"A_R=-\\int_0^4(-8\\sqrt x+x^2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac{16}3x^{3/2}-\\frac13x^3]_0^4=\\frac{64}3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q5",
+      "status": "worked",
+      "method": "Factor the quadratic to get the limits, then take the negative of its integral.",
+      "steps": [
+        {
+          "latex": "2f=x^2-13x+30=(x-3)(x-10);A=(3,0),\\ B=(10,0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=-\\int_3^{10}(\\frac12x^2-\\frac{13}2x+15)\\,dx;=-[\\frac16x^3-\\frac{13}4x^2+15x]_3^{10};=-(-\\frac{25}3-\\frac{81}4)=\\frac{343}{12}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor the quadratic to get the limits, then take the negative of its integral.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"2f=x^2-13x+30=(x-3)(x-10)\" data-display=\"true\"></span><span data-math=\"A=(3,0),\\ B=(10,0)\" data-display=\"true\"></span></li><li><span data-math=\"A_R=-\\int_3^{10}(\\frac12x^2-\\frac{13}2x+15)\\,dx\" data-display=\"true\"></span><span data-math=\"=-[\\frac16x^3-\\frac{13}4x^2+15x]_3^{10}\" data-display=\"true\"></span><span data-math=\"=-(-\\frac{25}3-\\frac{81}4)=\\frac{343}{12}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q6",
+      "status": "worked",
+      "method": "Split at the origin: the left lobe is positive and the right lobe negative.",
+      "steps": [
+        {
+          "latex": "A=(-4,0),\\quad B=(1,0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y=x^3+3x^2-4x;F=\\frac14x^4+x^3-2x^2;A_R=[F]_{-4}^0-[F]_0^1=32-(-\\frac34)=\\frac{131}4",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Split at the origin: the left lobe is positive and the right lobe negative.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"A=(-4,0),\\quad B=(1,0)\" data-display=\"true\"></span></li><li><span data-math=\"y=x^3+3x^2-4x\" data-display=\"true\"></span><span data-math=\"F=\\frac14x^4+x^3-2x^2\" data-display=\"true\"></span><span data-math=\"A_R=[F]_{-4}^0-[F]_0^1=32-(-\\frac34)=\\frac{131}4\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.6/q7",
+      "status": "worked",
+      "method": "Factor using the given root, then split the signed integral at the middle root.",
+      "steps": [
+        {
+          "latex": "f(2)=8+24-8-24=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=(x-2)(x^2+8x+12)=(x-2)(x+2)(x+6)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "F=\\frac14x^4+2x^3-2x^2-24x;A=[F]_{-6}^{-2}-[F]_{-2}^2=64-(-64)=128",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor using the given root, then split the signed integral at the middle root.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f(2)=8+24-8-24=0\" data-display=\"true\"></span></li><li><span data-math=\"f=(x-2)(x^2+8x+12)=(x-2)(x+2)(x+6)\" data-display=\"true\"></span></li><li><span data-math=\"F=\\frac14x^4+2x^3-2x^2-24x\" data-display=\"true\"></span><span data-math=\"A=[F]_{-6}^{-2}-[F]_{-2}^2=64-(-64)=128\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q1",
+      "status": "worked",
+      "method": "Find the intersections, integrate the curve for R₁, and subtract from the bounding rectangle for R₂.",
+      "steps": [
+        {
+          "latex": "\\frac14x^2+2=6;x^2=16;A=(-4,6),\\ B=(4,6)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_{R_1}=\\int_{-4}^4(\\frac14x^2+2)\\,dx;=[\\frac1{12}x^3+2x]_{-4}^4;=\\frac{80}3",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_{ABCD}=8(6)=48",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_{R_2}=48-\\frac{80}3=\\frac{64}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the intersections, integrate the curve for R₁, and subtract from the bounding rectangle for R₂.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac14x^2+2=6\" data-display=\"true\"></span><span data-math=\"x^2=16\" data-display=\"true\"></span><span data-math=\"A=(-4,6),\\ B=(4,6)\" data-display=\"true\"></span></li><li><span data-math=\"A_{R_1}=\\int_{-4}^4(\\frac14x^2+2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac1{12}x^3+2x]_{-4}^4\" data-display=\"true\"></span><span data-math=\"=\\frac{80}3\" data-display=\"true\"></span></li><li><span data-math=\"A_{ABCD}=8(6)=48\" data-display=\"true\"></span></li><li><span data-math=\"A_{R_2}=48-\\frac{80}3=\\frac{64}3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q2",
+      "status": "worked",
+      "method": "Solve the intersections; subtract the triangle beneath the line from the area beneath the curve.",
+      "steps": [
+        {
+          "latex": "-x^2+4x=4-x;x^2-5x+4=(x-1)(x-4)=0;P=(1,3),\\ Q=(4,0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "\\int_1^4(-x^2+4x)\\,dx;=[-\\frac13x^3+2x^2]_1^4=\\frac{32}3-\\frac53=9",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "PM=3,\\ MQ=3;A_{PQM}=\\frac12(3)(3)=\\frac92",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=9-\\frac92=\\frac92",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Solve the intersections; subtract the triangle beneath the line from the area beneath the curve.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"-x^2+4x=4-x\" data-display=\"true\"></span><span data-math=\"x^2-5x+4=(x-1)(x-4)=0\" data-display=\"true\"></span><span data-math=\"P=(1,3),\\ Q=(4,0)\" data-display=\"true\"></span></li><li><span data-math=\"\\int_1^4(-x^2+4x)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac13x^3+2x^2]_1^4=\\frac{32}3-\\frac53=9\" data-display=\"true\"></span></li><li><span data-math=\"PM=3,\\ MQ=3\" data-display=\"true\"></span><span data-math=\"A_{PQM}=\\frac12(3)(3)=\\frac92\" data-display=\"true\"></span></li><li><span data-math=\"A_R=9-\\frac92=\\frac92\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q3",
+      "status": "worked",
+      "method": "Integrate the curve from 1 to 9, then subtract the area under the straight line on the same interval.",
+      "steps": [
+        {
+          "latex": "A_C=\\int_1^9(4x^{1/2}-\\frac12x^{3/2}+2)\\,dx;=[\\frac83x^{3/2}-\\frac15x^{5/2}+2x]_1^9;=\\frac{554}{15}",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "y_L=\\frac{49-5x}8;y_L(1)=\\frac{11}2,\\quad y_L(9)=\\frac12;A_L=\\frac12(\\frac{11}2+\\frac12)(9-1)=24;A_R=\\frac{554}{15}-24=\\frac{194}{15}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate the curve from 1 to 9, then subtract the area under the straight line on the same interval.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"A_C=\\int_1^9(4x^{1/2}-\\frac12x^{3/2}+2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac83x^{3/2}-\\frac15x^{5/2}+2x]_1^9\" data-display=\"true\"></span><span data-math=\"=\\frac{554}{15}\" data-display=\"true\"></span></li><li><span data-math=\"y_L=\\frac{49-5x}8\" data-display=\"true\"></span><span data-math=\"y_L(1)=\\frac{11}2,\\quad y_L(9)=\\frac12\" data-display=\"true\"></span><span data-math=\"A_L=\\frac12(\\frac{11}2+\\frac12)(9-1)=24\" data-display=\"true\"></span><span data-math=\"A_R=\\frac{554}{15}-24=\\frac{194}{15}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q4",
+      "status": "worked",
+      "method": "Equate line and curve, then integrate upper minus lower between the intersections.",
+      "steps": [
+        {
+          "latex": "-\\frac12x^2+\\frac92x-4=\\frac{13-x}2;x^2-10x+21=(x-3)(x-7)=0;A=(3,5),\\ B=(7,3)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=\\int_3^7(-\\frac12x^2+5x-\\frac{21}2)\\,dx;=[-\\frac16x^3+\\frac52x^2-\\frac{21}2x]_3^7=\\frac{16}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Equate line and curve, then integrate upper minus lower between the intersections.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"-\\frac12x^2+\\frac92x-4=\\frac{13-x}2\" data-display=\"true\"></span><span data-math=\"x^2-10x+21=(x-3)(x-7)=0\" data-display=\"true\"></span><span data-math=\"A=(3,5),\\ B=(7,3)\" data-display=\"true\"></span></li><li><span data-math=\"A_R=\\int_3^7(-\\frac12x^2+5x-\\frac{21}2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac16x^3+\\frac52x^2-\\frac{21}2x]_3^7=\\frac{16}3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q5",
+      "status": "worked",
+      "method": "The printed segment PG contains an undefined point G. The diagram and defined endpoints identify PQ; the following computes that illustrated region.",
+      "steps": [
+        {
+          "latex": "h=x^4-8x^3+16x^2;h-(7x+2)=x^4-8x^3+16x^2-7x-2;A=\\int_1^2[h(x)-(7x+2)]\\,dx;=[\\frac15x^5-2x^4+\\frac{16}3x^3-\\frac72x^2-2x]_1^2;=\\frac{31}{30}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>The printed segment PG contains an undefined point G. The diagram and defined endpoints identify PQ; the following computes that illustrated region.</p><span data-math=\"h=x^4-8x^3+16x^2\" data-display=\"true\"></span><span data-math=\"h-(7x+2)=x^4-8x^3+16x^2-7x-2\" data-display=\"true\"></span><span data-math=\"A=\\int_1^2[h(x)-(7x+2)]\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac15x^5-2x^4+\\frac{16}3x^3-\\frac72x^2-2x]_1^2\" data-display=\"true\"></span><span data-math=\"=\\frac{31}{30}\" data-display=\"true\"></span>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q6",
+      "status": "worked",
+      "method": "Eliminate y and factor using the known root. The line is above the positive branch between B and C.",
+      "steps": [
+        {
+          "latex": "5x+4(\\frac4{x^2})-21=0;5x^3-21x^2+16=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "(x-1)(5x^2-16x-16)=(x-1)(x-4)(5x+4)=0;x_C=4;C=(4,\\frac14)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=\\int_1^4(\\frac{21-5x}4-\\frac4{x^2})\\,dx;=[\\frac{21}4x-\\frac58x^2+\\frac4x]_1^4;=12-\\frac{69}8=\\frac{27}8",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Eliminate y and factor using the known root. The line is above the positive branch between B and C.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"5x+4(\\frac4{x^2})-21=0\" data-display=\"true\"></span><span data-math=\"5x^3-21x^2+16=0\" data-display=\"true\"></span></li><li><span data-math=\"(x-1)(5x^2-16x-16)=(x-1)(x-4)(5x+4)=0\" data-display=\"true\"></span><span data-math=\"x_C=4\" data-display=\"true\"></span><span data-math=\"C=(4,\\frac14)\" data-display=\"true\"></span></li><li><span data-math=\"A_R=\\int_1^4(\\frac{21-5x}4-\\frac4{x^2})\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac{21}4x-\\frac58x^2+\\frac4x]_1^4\" data-display=\"true\"></span><span data-math=\"=12-\\frac{69}8=\\frac{27}8\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/13.7/q7",
+      "status": "worked",
+      "method": "Use y=−3x−6 in the curve equation. The first subpart names C, but the third intersection is D as stated and drawn; C labels the turning point.",
+      "steps": [
+        {
+          "latex": "3(-3x-6)=-x^3-2x^2+16x+32;x^3+2x^2-25x-50=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "(x+2)(x^2-25)=(x+2)(x-5)(x+5)=0;x_D=5;y_D=-3(5)-6=-21;D=(5,-21)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=\\int_{-2}^5\\frac{-x^3-2x^2+25x+50}3\\,dx;=[-\\frac1{12}x^4-\\frac29x^3+\\frac{25}6x^2+\\frac{50}3x]_{-2}^5;=\\frac{4459}{36}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Use y=−3x−6 in the curve equation. The first subpart names C, but the third intersection is D as stated and drawn; C labels the turning point.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"3(-3x-6)=-x^3-2x^2+16x+32\" data-display=\"true\"></span><span data-math=\"x^3+2x^2-25x-50=0\" data-display=\"true\"></span></li><li><span data-math=\"(x+2)(x^2-25)=(x+2)(x-5)(x+5)=0\" data-display=\"true\"></span><span data-math=\"x_D=5\" data-display=\"true\"></span><span data-math=\"y_D=-3(5)-6=-21\" data-display=\"true\"></span><span data-math=\"D=(5,-21)\" data-display=\"true\"></span></li><li><span data-math=\"A_R=\\int_{-2}^5\\frac{-x^3-2x^2+25x+50}3\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac1{12}x^4-\\frac29x^3+\\frac{25}6x^2+\\frac{50}3x]_{-2}^5\" data-display=\"true\"></span><span data-math=\"=\\frac{4459}{36}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-a/qbronze",
+      "status": "worked",
+      "method": "Subtract exponents when dividing by √x, then integrate and use the supplied value.",
+      "steps": [
+        {
+          "latex": "f'=-5x^{3/2}+7x^{1/6};a=-5,b=7,m=\\frac32,n=\\frac16",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f=-2x^{5/2}+6x^{7/6}+C;-10=-2+6+C\\Rightarrow C=-14;f=-2x^{5/2}+6x^{7/6}-14",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Subtract exponents when dividing by √x, then integrate and use the supplied value.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=-5x^{3/2}+7x^{1/6}\" data-display=\"true\"></span><span data-math=\"a=-5,b=7,m=\\frac32,n=\\frac16\" data-display=\"true\"></span></li><li><span data-math=\"f=-2x^{5/2}+6x^{7/6}+C\" data-display=\"true\"></span><span data-math=\"-10=-2+6+C\\Rightarrow C=-14\" data-display=\"true\"></span><span data-math=\"f=-2x^{5/2}+6x^{7/6}-14\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-a/qsilver",
+      "status": "worked",
+      "method": "Expand the cube and integrate before determining the constant.",
+      "steps": [
+        {
+          "latex": "f'=1-6x^{1/3}+12x^{2/3}-8x;f=x-\\frac92x^{4/3}+\\frac{36}5x^{5/3}-4x^2+C;f(8)=-\\frac{448}5+C=24\\Rightarrow C=\\frac{568}5;f(1)=1-\\frac92+\\frac{36}5-4+\\frac{568}5=\\frac{1133}{10}=113.3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand the cube and integrate before determining the constant.</p><span data-math=\"f&#x27;=1-6x^{1/3}+12x^{2/3}-8x\" data-display=\"true\"></span><span data-math=\"f=x-\\frac92x^{4/3}+\\frac{36}5x^{5/3}-4x^2+C\" data-display=\"true\"></span><span data-math=\"f(8)=-\\frac{448}5+C=24\\Rightarrow C=\\frac{568}5\" data-display=\"true\"></span><span data-math=\"f(1)=1-\\frac92+\\frac{36}5-4+\\frac{568}5=\\frac{1133}{10}=113.3\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-a/qgold",
+      "status": "worked",
+      "method": "Integrate retaining both unknown constants, then use the two values to form simultaneous equations.",
+      "steps": [
+        {
+          "latex": "f=x^3+\\frac p2x^2-8x^{-1}+C;-85=-64+8p+2+C\\Rightarrow8p+C=-23;11=8+2p-4+C\\Rightarrow2p+C=7;6p=-30;p=-5,C=17;f=x^3-\\frac52x^2-8x^{-1}+17",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate retaining both unknown constants, then use the two values to form simultaneous equations.</p><span data-math=\"f=x^3+\\frac p2x^2-8x^{-1}+C\" data-display=\"true\"></span><span data-math=\"-85=-64+8p+2+C\\Rightarrow8p+C=-23\" data-display=\"true\"></span><span data-math=\"11=8+2p-4+C\\Rightarrow2p+C=7\" data-display=\"true\"></span><span data-math=\"6p=-30\" data-display=\"true\"></span><span data-math=\"p=-5,C=17\" data-display=\"true\"></span><span data-math=\"f=x^3-\\frac52x^2-8x^{-1}+17\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-b/qbronze",
+      "status": "worked",
+      "method": "Find the intersection limits, then integrate line minus curve.",
+      "steps": [
+        {
+          "latex": "\\frac12x^2+1=9;x^2=16;A=(-4,9),\\ B=(4,9)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=\\int_{-4}^4(8-\\frac12x^2)\\,dx;=[8x-\\frac16x^3]_{-4}^4=\\frac{128}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the intersection limits, then integrate line minus curve.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"\\frac12x^2+1=9\" data-display=\"true\"></span><span data-math=\"x^2=16\" data-display=\"true\"></span><span data-math=\"A=(-4,9),\\ B=(4,9)\" data-display=\"true\"></span></li><li><span data-math=\"A_R=\\int_{-4}^4(8-\\frac12x^2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[8x-\\frac16x^3]_{-4}^4=\\frac{128}3\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-b/qsilver",
+      "status": "worked",
+      "method": "Subtract the line from the curve and solve for its zeros.",
+      "steps": [
+        {
+          "latex": "-x^2-x+12=8-x;x^2=4;x=-2,2;A_R=\\int_{-2}^2(4-x^2)\\,dx;=[4x-\\frac13x^3]_{-2}^2=\\frac{32}3",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Subtract the line from the curve and solve for its zeros.</p><span data-math=\"-x^2-x+12=8-x\" data-display=\"true\"></span><span data-math=\"x^2=4\" data-display=\"true\"></span><span data-math=\"x=-2,2\" data-display=\"true\"></span><span data-math=\"A_R=\\int_{-2}^2(4-x^2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[4x-\\frac13x^3]_{-2}^2=\\frac{32}3\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/problem-b/qgold",
+      "status": "worked",
+      "method": "Equate the line and curve, then use the stated segment BC to select the integration interval.",
+      "steps": [
+        {
+          "latex": "3x+6=-x^3-2x^2+4x+8;x^3+2x^2-x-2=0",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "(x+2)(x^2-1)=0;x_A=-2,x_B=-1,x_C=1;A_{BC}=\\int_{-1}^1(-x^3-2x^2+x+2)\\,dx;=[-\\frac14x^4-\\frac23x^3+\\frac12x^2+2x]_{-1}^1;=\\frac83",
+          "explanation": "The shaded region bounded by BC has area 8/3. The supplied 37/12 also includes the separate A-to-B lobe of area 5/12, which is outside segment BC.",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Equate the line and curve, then use the stated segment BC to select the integration interval.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"3x+6=-x^3-2x^2+4x+8\" data-display=\"true\"></span><span data-math=\"x^3+2x^2-x-2=0\" data-display=\"true\"></span></li><li><p>The shaded region bounded by BC has area 8/3. The supplied 37/12 also includes the separate A-to-B lobe of area 5/12, which is outside segment BC.</p><span data-math=\"(x+2)(x^2-1)=0\" data-display=\"true\"></span><span data-math=\"x_A=-2,x_B=-1,x_C=1\" data-display=\"true\"></span><span data-math=\"A_{BC}=\\int_{-1}^1(-x^3-2x^2+x+2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac14x^4-\\frac23x^3+\\frac12x^2+2x]_{-1}^1\" data-display=\"true\"></span><span data-math=\"=\\frac83\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "source-discrepancy"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q6",
+      "status": "worked",
+      "method": "Rewrite the cube root and reciprocal as powers and integrate each term.",
+      "steps": [
+        {
+          "latex": "f=9x^{2/3}+4x^{-2}-3x^3+2;\\int f\\,dx=\\frac{27}5x^{5/3}-4x^{-1}-\\frac34x^4+2x+C",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Rewrite the cube root and reciprocal as powers and integrate each term.</p><span data-math=\"f=9x^{2/3}+4x^{-2}-3x^3+2\" data-display=\"true\"></span><span data-math=\"\\int f\\,dx=\\frac{27}5x^{5/3}-4x^{-1}-\\frac34x^4+2x+C\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q8",
+      "status": "worked",
+      "method": "Expand the cube, integrate, and subtract the endpoint values.",
+      "steps": [
+        {
+          "latex": "(4-3x)^3=64-144x+108x^2-27x^3;\\int_{1/2}^1(4-3x)^3\\,dx;=[64x-72x^2+36x^3-\\frac{27}4x^4]_{1/2}^1;=\\frac{85}4-\\frac{1157}{64}=\\frac{203}{64}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Expand the cube, integrate, and subtract the endpoint values.</p><span data-math=\"(4-3x)^3=64-144x+108x^2-27x^3\" data-display=\"true\"></span><span data-math=\"\\int_{1/2}^1(4-3x)^3\\,dx\" data-display=\"true\"></span><span data-math=\"=[64x-72x^2+36x^3-\\frac{27}4x^4]_{1/2}^1\" data-display=\"true\"></span><span data-math=\"=\\frac{85}4-\\frac{1157}{64}=\\frac{203}{64}\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q26",
+      "status": "worked",
+      "method": "Integrate and solve the equation for the upper limit.",
+      "steps": [
+        {
+          "latex": "[16\\sqrt x]_9^k=32;16(\\sqrt k-3)=32;\\sqrt k=5;k=25",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Integrate and solve the equation for the upper limit.</p><span data-math=\"[16\\sqrt x]_9^k=32\" data-display=\"true\"></span><span data-math=\"16(\\sqrt k-3)=32\" data-display=\"true\"></span><span data-math=\"\\sqrt k=5\" data-display=\"true\"></span><span data-math=\"k=25\" data-display=\"true\"></span>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q44",
+      "status": "worked",
+      "method": "Find the intersection points, then integrate curve minus line.",
+      "steps": [
+        {
+          "latex": "-x^2+2x+4=x+2;x^2-x-2=(x-2)(x+1)=0;A=(-1,1),\\ B=(2,4)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=\\int_{-1}^2(-x^2+x+2)\\,dx;=[-\\frac13x^3+\\frac12x^2+2x]_{-1}^2;=\\frac{10}3-(-\\frac76)=\\frac92",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Find the intersection points, then integrate curve minus line.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"-x^2+2x+4=x+2\" data-display=\"true\"></span><span data-math=\"x^2-x-2=(x-2)(x+1)=0\" data-display=\"true\"></span><span data-math=\"A=(-1,1),\\ B=(2,4)\" data-display=\"true\"></span></li><li><span data-math=\"A_R=\\int_{-1}^2(-x^2+x+2)\\,dx\" data-display=\"true\"></span><span data-math=\"=[-\\frac13x^3+\\frac12x^2+2x]_{-1}^2\" data-display=\"true\"></span><span data-math=\"=\\frac{10}3-(-\\frac76)=\\frac92\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q53",
+      "status": "worked",
+      "method": "Factor out √x and solve in u=√x≥0. The shaded curve is below the axis.",
+      "steps": [
+        {
+          "latex": "y=\\sqrt x(x+2\\sqrt x-8);u^2+2u-8=(u+4)(u-2)=0;u=2\\Rightarrow x_A=4",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=-\\int_0^4(x^{3/2}+2x-8x^{1/2})\\,dx;=-[\\frac25x^{5/2}+x^2-\\frac{16}3x^{3/2}]_0^4;=-(\\frac{64}5+16-\\frac{128}3)=\\frac{208}{15}",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>Factor out √x and solve in u=√x≥0. The shaded curve is below the axis.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"y=\\sqrt x(x+2\\sqrt x-8)\" data-display=\"true\"></span><span data-math=\"u^2+2u-8=(u+4)(u-2)=0\" data-display=\"true\"></span><span data-math=\"u=2\\Rightarrow x_A=4\" data-display=\"true\"></span></li><li><span data-math=\"A_R=-\\int_0^4(x^{3/2}+2x-8x^{1/2})\\,dx\" data-display=\"true\"></span><span data-math=\"=-[\\frac25x^{5/2}+x^2-\\frac{16}3x^{3/2}]_0^4\" data-display=\"true\"></span><span data-math=\"=-(\\frac{64}5+16-\\frac{128}3)=\\frac{208}{15}\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    },
+    {
+      "id": "practice/maths-a-level/maths-pure-year-1/ch13/exam/q79",
+      "status": "worked",
+      "method": "A is the maximum point: differentiate to locate it. Integrate the nonnegative curve between O and B for the area.",
+      "steps": [
+        {
+          "latex": "f'=6\\sqrt x-\\frac32x^2=\\frac32\\sqrt x(4-x^{3/2})=0;x_A^{3/2}=4;x_A=\\sqrt[3]{16};f(x_A)=4(4)-\\frac12(16)=8;A=(\\sqrt[3]{16},8);p=16,q=8",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "f(4)=4(8)-\\frac12(64)=0;B=(4,0)",
+          "explanation": "",
+          "graphs": []
+        },
+        {
+          "latex": "A_R=\\int_0^4(4x^{3/2}-\\frac12x^3)\\,dx;=[\\frac85x^{5/2}-\\frac18x^4]_0^4;=\\frac{256}5-32=\\frac{96}5",
+          "explanation": "",
+          "graphs": []
+        }
+      ],
+      "solutionHtml": "<p>A is the maximum point: differentiate to locate it. Integrate the nonnegative curve between O and B for the area.</p><ol type=\"a\" class=\"parts\"><li><span data-math=\"f&#x27;=6\\sqrt x-\\frac32x^2=\\frac32\\sqrt x(4-x^{3/2})=0\" data-display=\"true\"></span><span data-math=\"x_A^{3/2}=4\" data-display=\"true\"></span><span data-math=\"x_A=\\sqrt[3]{16}\" data-display=\"true\"></span><span data-math=\"f(x_A)=4(4)-\\frac12(16)=8\" data-display=\"true\"></span><span data-math=\"A=(\\sqrt[3]{16},8)\" data-display=\"true\"></span><span data-math=\"p=16,q=8\" data-display=\"true\"></span></li><li><span data-math=\"f(4)=4(8)-\\frac12(64)=0\" data-display=\"true\"></span><span data-math=\"B=(4,0)\" data-display=\"true\"></span></li><li><span data-math=\"A_R=\\int_0^4(4x^{3/2}-\\frac12x^3)\\,dx\" data-display=\"true\"></span><span data-math=\"=[\\frac85x^{5/2}-\\frac18x^4]_0^4\" data-display=\"true\"></span><span data-math=\"=\\frac{256}5-32=\\frac{96}5\" data-display=\"true\"></span></li></ol>",
+      "answerCheck": "matches"
+    }
+  ]
+}
