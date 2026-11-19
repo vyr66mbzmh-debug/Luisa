@@ -73,9 +73,9 @@ class PapersPrintTests(unittest.TestCase):
         for page in self.context.pages:
             page.close()
 
-    def preview(self, rows):
+    def preview(self, rows, **options):
         with self.page.expect_popup() as event:
-            self.page.evaluate('rows => { window.resultPromise = LUISA_PAPERS_PRINT.create(rows).then(r => window.result = {ready:r.ready,warnings:r.warnings,pageCount:r.pageCount}); }', rows)
+            self.page.evaluate('input => { window.resultPromise = LUISA_PAPERS_PRINT.create(input.rows,input.options).then(r => window.result = {ready:r.ready,warnings:r.warnings,pageCount:r.pageCount}); }', dict(rows=rows, options=options))
         preview = event.value
         self.page.evaluate('window.resultPromise')
         return preview, self.page.evaluate('window.result')
@@ -138,9 +138,9 @@ class PapersPrintTests(unittest.TestCase):
         allowed = {(r['skill'], r['question']) for r in json.loads((ROOT / 'textbook-catalogue.json').read_text())['questions']}
         rows = [row(skill, number) for skill, number in sorted(allowed) if row(skill, number)['id'] in rejected]
         self.assertEqual(len(rows), 271)
-        for offset in range(0, len(rows), 10):
+        for layout, offset in [(layout, offset) for layout in ('two', 'one', 'condensed') for offset in range(0, len(rows), 10)]:
             batch = rows[offset:offset + 10]
-            preview, result = self.preview(batch)
+            preview, result = self.preview(batch, layout=layout)
             self.assertTrue(result['ready'], result)
             self.assertFalse(preview.locator('.page-content,.print-question').evaluate_all('nodes=>nodes.some(n=>n.scrollHeight>n.clientHeight+1||n.scrollWidth>n.clientWidth+1)'))
             identities = preview.evaluate(r'''rows=>{
@@ -162,6 +162,88 @@ class PapersPrintTests(unittest.TestCase):
               });
             }''', batch)
             self.assertTrue(all(item['question'] and item['solution'] and item['imagesLoaded'] for item in identities), identities)
+            preview.close()
+
+    def test_layouts_and_optional_answers_are_complete_in_dom_and_pdf(self):
+        import fitz
+        rows = [dict(row('1.01', number), steps=['<p>ANSWER_SECRET_%s</p>' % number],
+                     hints=['<p>HINT_SECRET_%s</p>' % number]) for number in (1, 2, 3, 4)]
+        for layout, expected_pages in [('one', 4), ('two', 2), ('condensed', 1)]:
+            for include_answers in (False, True):
+                with self.subTest(layout=layout, include_answers=include_answers):
+                    preview, result = self.preview(rows, layout=layout, includeAnswers=include_answers)
+                    self.assertTrue(result['ready'], result)
+                    self.assertEqual(preview.locator('.questions-page').count(), expected_pages)
+                    self.assertEqual(preview.locator('.questions-page .print-question h2').all_text_contents(),
+                                     ['Question 1', 'Question 2', 'Question 3', 'Question 4'])
+                    self.assertFalse(preview.locator('.page-content,.print-question').evaluate_all(
+                        'nodes=>nodes.some(n=>n.scrollHeight>n.clientHeight+1||n.scrollWidth>n.clientWidth+1)'))
+                    if layout == 'condensed':
+                        self.assertEqual(preview.locator('.working-space').count(), 0)
+                    pdf_path = '/tmp/luisa59-print-%s-%s.pdf' % (layout, 'answers' if include_answers else 'questions')
+                    preview.pdf(path=pdf_path, prefer_css_page_size=True)
+                    with fitz.open(pdf_path) as pdf:
+                        self.assertEqual(len(pdf), result['pageCount'])
+                        pdf_text = ''.join(sheet.get_text() for sheet in pdf)
+                        pdf[0].get_pixmap(matrix=fitz.Matrix(1.2, 1.2)).save(pdf_path + '.png')
+                    for item in rows:
+                        for secret in ('ANSWER_SECRET_', 'HINT_SECRET_'):
+                            marker = secret + str(item['number'])
+                            self.assertEqual(marker in preview.content(), include_answers)
+                            self.assertEqual(marker in pdf_text, include_answers)
+                    self.assertEqual(preview.locator('.solutions-page').count() > 0, include_answers)
+                    preview.close()
+
+    def test_excluded_answers_are_never_prepared_or_loaded(self):
+        item = dict(row('1.01', 1), steps=['<p data-math="\\invalidAnswerCommand">UNAVAILABLE_ANSWER</p><img src="/missing-answer.png">'],
+                    hints=['<img src="/missing-hint.png">UNAVAILABLE_HINT'])
+        preview, result = self.preview([item], includeAnswers=False)
+        self.assertTrue(result['ready'], result)
+        self.assertNotIn('UNAVAILABLE_', preview.content())
+        self.assertEqual(preview.locator('img,.solution-step,.solution-hints').count(), 0)
+
+    def test_past_exam_marks_totals_time_and_continuations(self):
+        import fitz
+        rows = [dict(row('smq-1.53', 2), sourceKind='past-exam', sourceLabel='Exam fixture A Q2', marks=7, difficulty='Hard'),
+                dict(row('1.01', 1), sourceKind='past-exam', sourceLabel='Exam fixture B Q1', marks=6, difficulty='Easy')]
+        for layout in ('one', 'two', 'condensed'):
+            with self.subTest(layout=layout):
+                preview, result = self.preview(rows, layout=layout, includeAnswers=False)
+                self.assertTrue(result['ready'], result)
+                self.assertGreater(preview.locator('.extended-page').count(), 1)
+                self.assertTrue(all('Total: 13 marks' in t and 'Estimated time: 11 min' in t
+                                    for t in preview.locator('.paper-marks').all_text_contents()))
+                allocated = preview.locator('[data-allocated-marks]').evaluate_all(
+                    'nodes=>nodes.map(n=>({id:n.dataset.questionId,marks:Number(n.dataset.allocatedMarks),last:![...n.ownerDocument.querySelectorAll(".print-question")].some(x=>x.dataset.questionId===n.dataset.questionId&&(n.compareDocumentPosition(x)&Node.DOCUMENT_POSITION_FOLLOWING))}))')
+                self.assertEqual(sum(item['marks'] for item in allocated), 13)
+                self.assertEqual(len(allocated), 2)
+                self.assertTrue(all(item['last'] for item in allocated), allocated)
+                totals = preview.locator('.questions-page .page-footer>span:first-child').all_text_contents()
+                self.assertEqual(sum(int(text.split(': ')[1].split(' ')[0]) for text in totals), 13)
+                self.assertTrue(all('final page' in text for text in preview.locator('.marks-policy').all_text_contents()))
+                self.assertIn('Source: Exam fixture A Q2', preview.locator('.questions-page').first.inner_text())
+                self.assertIn('Difficulty: Hard', preview.locator('.questions-page').first.inner_text())
+                self.assertEqual(preview.locator('.print-question img').count(), 21)
+                self.assertFalse(preview.locator('.page-content,.print-question').evaluate_all(
+                    'nodes=>nodes.some(n=>n.scrollHeight>n.clientHeight+1||n.scrollWidth>n.clientWidth+1)'))
+                path = '/tmp/luisa59-print-marks-%s.pdf' % layout
+                preview.pdf(path=path, prefer_css_page_size=True)
+                with fitz.open(path) as pdf:
+                    self.assertEqual(len(pdf), result['pageCount'])
+                    pdf[-1].get_pixmap(matrix=fitz.Matrix(1.2, 1.2)).save(path + '.png')
+                preview.close()
+
+    def test_incomplete_or_mixed_metadata_never_invents_totals(self):
+        known = dict(row('1.01', 1), sourceKind='past-exam', sourceLabel='Exam fixture', marks=6)
+        for unknown in (row('1.01', 2), dict(row('1.01', 2), sourceKind='past-exam'),
+                        dict(row('1.01', 2), sourceKind='past-exam', marks='5'),
+                        dict(row('1.01', 2), sourceKind='past-exam', marks=2.5)):
+            preview, result = self.preview([known, unknown], includeAnswers=False)
+            self.assertTrue(result['ready'], result)
+            self.assertEqual(preview.locator('.paper-marks,.marks-policy,[data-allocated-marks]').count(), 0)
+            self.assertNotIn('Estimated time:', preview.locator('.print-pages').inner_text())
+            self.assertNotIn('Page total:', preview.locator('.print-pages').inner_text())
+            self.assertEqual(preview.locator('.question-marks').all_text_contents(), ['6 marks'])
             preview.close()
 
     def test_closed_loading_preview_releases_caller(self):
