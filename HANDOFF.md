@@ -1,5 +1,12 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.61 -->
+**Release 0.61 · GitHub #105.** Papers defaults to one question per page. Tick Condensed beneath Include worked solutions at the back to print without dedicated writing areas. Browser sessions saved with two questions per page now use the default. The existing assembled questions, source choices and answer preference still restore.
+
+**Printed layout.** Question paper is the bold page title. The footer has one rule, page numbering and a shared local creation timestamp such as 20/11/26 6:30pm. Paper-wide source instructions are omitted from the printout. Question-specific instructions, dependent Practice Booklet context, solutions, mark schemes and hints retain their original content. Question images preserve their aspect ratio within eight lines of text. The question and its solution use the same compact heading with provenance and known marks.
+
+**Evidence and release.** The print suite covers all four combinations, native PDFs, the timestamp and footer rule, larger figures, original prompts and solution matching. Keep owner offline printing and authenticated ADA roles working. The reviewed PR, live manifests, recovery ZIP and owner-only report outcome belong in GitHub #105. Legacy Maths has 3,423 / 3,423 questions (100%) and 132 / 132 sections.
+
 <!-- LUISA-REPORT-HANDOFF v0.60 -->
 **Release 0.60 · GitHub #103.** Papers uses Course → Book → Topics, with no separate skills picker. All 8,669 Edexcel questions resolve to the existing 62 chapters across eight books. The three pools contain 8,068 Practice questions, 554 Exam style booklet questions and 47 actual Past Papers questions. The past-paper dropdown uses catalogue IDs. Existing paper IDs, selection order and print settings survive migration. Old incompatible topic or skill restrictions reset with a notice.
 

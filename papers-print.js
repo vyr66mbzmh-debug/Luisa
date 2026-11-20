@@ -63,12 +63,11 @@
     if (validMarks(row) && !continuation) head.append(element(doc, 'strong', 'question-marks', '[' + row.marks + ' Marks]'));
     return head;
   }
-  function heading(doc, row, number, continuation = false) {
-    const head = element(doc, 'header', 'question-heading');
-    head.append(element(doc, 'h2', '', `Question ${number}${continuation ? ' · continued' : ''}`), element(doc, 'p', 'source', source(row)), element(doc, 'p', 'context', context(row)));
-    if (validMarks(row)) head.append(element(doc, 'p', 'question-marks', `${row.marks} marks${continuation ? ' for the whole question' : ''}`));
-    if (row.difficulty) head.append(element(doc, 'p', 'question-difficulty', `Difficulty: ${row.difficulty}`));
-    return head;
+  function creationStamp(created) {
+    const date = created.toLocaleDateString('en-GB', {day: '2-digit', month: '2-digit', year: '2-digit'});
+    const hours = created.getHours();
+    const minutes = String(created.getMinutes()).padStart(2, '0');
+    return date + ' ' + (hours % 12 || 12) + ':' + minutes + (hours < 12 ? 'am' : 'pm');
   }
   function content(doc, html) {
     const node = element(doc, 'div', 'math-content');
@@ -147,15 +146,14 @@
     return pieces?.map(piece => { const wrapper = node.cloneNode(false); wrapper.append(piece); return wrapper; }) || null;
   }
   async function create(rows, options = {}) {
-    const layout = options.layout ?? 'two';
+    const layout = options.layout ?? 'one';
     const includeAnswers = options.includeAnswers ?? true;
-    if (!['one', 'two', 'condensed'].includes(layout) || typeof includeAnswers !== 'boolean') throw Error('Choose a valid paper layout and answer option.');
+    if (!['one', 'condensed'].includes(layout) || typeof includeAnswers !== 'boolean') throw Error('Choose a valid paper layout and answer option.');
     if (!Array.isArray(rows) || !rows.length) throw Error('Select at least one question first.');
     if (new Set(rows.map(row => row.id)).size !== rows.length) throw Error('A paper cannot contain duplicate questions.');
     if (rows.some(row => !row.id || !row.question || !Array.isArray(row.steps) || !row.steps.length)) throw Error('Every selected question needs its original prompt and worked solution.');
-    const completeMarks = rows.every(row => row.sourceKind === 'past-exam' && validMarks(row));
-    const totalMarks = completeMarks ? rows.reduce((sum, row) => sum + row.marks, 0) : null;
-    const estimatedMinutes = completeMarks ? Math.ceil(totalMarks * 5 / 6) : null;
+    const created = new Date();
+    const stamp = creationStamp(created);
     // A real same-origin document is controlled by the offline service worker;
     // an about:blank popup cannot retrieve its cached formatting and diagrams.
     const previewURL = new URL('paper-preview.html', document.baseURI);
@@ -191,7 +189,8 @@
       await whileOpen(win, Promise.all([asset(doc, 'link', 'papers-print.css'), asset(doc, 'link', 'vendor/katex.min.css'), asset(doc, 'script', 'vendor/katex.min.js')]));
       const rendered = rows.map((row, index) => {
         const question = element(doc, 'article', 'print-question'); question.dataset.questionId = row.id;
-        question.append(questionHeading(doc, row, index + 1, false), content(doc, (row.contextHtml || '') + row.question));
+        const contextHtml = row.sourceKind === 'past-exam' ? '' : row.contextHtml || '';
+        question.append(questionHeading(doc, row, index + 1, false), content(doc, contextHtml + row.question));
         const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); if (layout !== 'condensed') question.append(working);
         const solution = includeAnswers ? content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join('')) : null;
         if (includeAnswers && row.hints?.length) {
@@ -207,11 +206,12 @@
       function page(kind) {
         const sheet = element(doc, 'section', `print-page ${kind}-page`);
         const banner = element(doc, 'header', 'page-banner');
-        banner.append(element(doc, 'span', 'wordmark', 'Luisa'), element(doc, 'span', '', kind === 'questions' ? 'Question paper' : 'Worked solutions'));
-        if (kind === 'questions' && completeMarks) banner.append(element(doc, 'span', 'paper-marks', `Total: ${totalMarks} marks · Estimated time: ${estimatedMinutes} min`));
+        banner.textContent = kind === 'questions' ? 'Question paper' : 'Worked solutions';
         const body = element(doc, 'div', 'page-content');
         const footer = element(doc, 'footer', 'page-footer');
-        footer.append(element(doc, 'span', '', kind === 'questions' ? 'Show your working clearly.' : 'Matched to the questions in this paper.'), element(doc, 'span', 'page-number'));
+        const time = element(doc, 'time', 'creation-time', stamp);
+        time.dateTime = created.toISOString();
+        footer.append(time, element(doc, 'span', 'page-number'));
         sheet.append(banner, body, footer); pages.append(sheet);
         return body;
       }
@@ -225,7 +225,7 @@
           await new Promise(resolve => window.setTimeout(resolve, 0));
         }
         const item = rendered[i];
-        if (!questionBody || (layout !== 'condensed' && questionBody.children.length === (layout === 'one' ? 1 : 2))) questionBody = page('questions');
+        if (!questionBody || layout === 'one') questionBody = page('questions');
         questionBody.append(item.question);
         fitQuestionHeading(item.question);
         if (layout === 'condensed' && overflows(questionBody) && questionBody.children.length > 1) {
@@ -277,18 +277,6 @@
           hasContent = true;
         }
       }
-      // Assign each question's marks exactly once, on its final continuation page.
-      if (completeMarks) {
-        for (const item of rendered) {
-          const sections = [...pages.querySelectorAll('.print-question')].filter(node => node.dataset.questionId === item.row.id);
-          sections.at(-1).dataset.allocatedMarks = item.row.marks;
-        }
-        for (const sheet of pages.querySelectorAll('.questions-page')) {
-          const marks = [...sheet.querySelectorAll('[data-allocated-marks]')].reduce((sum, node) => sum + Number(node.dataset.allocatedMarks), 0);
-          sheet.querySelector('.page-footer > span').textContent = `Page total: ${marks} marks`;
-          if (extendedQuestions.length) sheet.querySelector('.page-banner').append(element(doc, 'span', 'marks-policy', 'Continued questions: all marks counted on their final page.'));
-        }
-      }
       // Solutions always begin on a fresh page, after every question.
       let body;
       for (let index = 0; includeAnswers && index < rendered.length; index++) {
@@ -302,7 +290,9 @@
         let section;
         function newSection(continuation) {
           section = element(doc, 'article', 'print-solution'); section.dataset.questionId = item.row.id;
-          section.append(heading(doc, item.row, index + 1, continuation)); body.append(section);
+          section.append(questionHeading(doc, item.row, index + 1, continuation));
+          body.append(section);
+          fitQuestionHeading(section);
         }
         newSection(false);
         const queue = [...item.solution.children].map(node => node.cloneNode(true));

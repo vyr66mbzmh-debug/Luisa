@@ -31,13 +31,14 @@
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const contextLabel = row => `${row.courseTitle} · ${row.bookTitle} · ${row.topicTitle}`;
+  const printLayout = () => $('papers-condensed').checked ? 'condensed' : 'one';
   function persist() {
     if (!persistEnabled) return;
     try {
       sessionStorage.setItem(storageKey, JSON.stringify({
         version: 3, sources: Object.fromEntries(sources.map(source => [source, $('papers-source-' + source).checked])),
         pastPaper: $('papers-past-paper').value, difficulty: $('papers-difficulty').value,
-        layout: $('papers-layout').value, includeAnswers: $('papers-answers').checked, order: $('papers-order').value,
+        layout: printLayout(), includeAnswers: $('papers-answers').checked, order: $('papers-order').value,
         selected: selected.map(row => row.id), selectionOrder, course: $('papers-course').value,
         book: $('papers-book').value, chapters: [...chosenTopics], count: $('papers-count').value
       }));
@@ -379,7 +380,7 @@
     options('papers-past-paper', 'All past papers', paperChoices, saved?.pastPaper);
     $('papers-past-paper').disabled = !$('papers-source-past-papers').checked || !papers.size;
     if (['easy','medium','difficult','unclassified'].includes(saved?.difficulty)) $('papers-difficulty').value = saved.difficulty;
-    if (['one','two','condensed'].includes(saved?.layout)) $('papers-layout').value = saved.layout;
+    $('papers-condensed').checked = saved?.layout === 'condensed';
     if (typeof saved?.includeAnswers === 'boolean') $('papers-answers').checked = saved.includeAnswers;
     if (saved?.order === 'selection') $('papers-order').value = 'selection';
     options('papers-course', 'All courses', textbook.courses.map(c => [c.id, c.title]), saved?.course);
@@ -397,7 +398,7 @@
         refreshFilters();
       });
     }
-    for (const id of ['papers-layout','papers-answers']) $(id).addEventListener('change', persist);
+    for (const id of ['papers-condensed','papers-answers']) $(id).addEventListener('change', persist);
     $('papers-order').addEventListener('change', updateSelection);
     $('papers-course').addEventListener('change', () => { chosenTopics.clear(); refreshBooks(); refreshFilters(); });
     $('papers-book').addEventListener('change', () => { chosenTopics.clear(); refreshFilters(); });
@@ -436,7 +437,7 @@
       const snapshot = Object.freeze(ordered.map(row => Object.freeze({...row, printChapter: orderedChapter(row)})));
       printing = true; updateControls(); status('Preparing the print preview…');
       try {
-        const result = await window.LUISA_PAPERS_PRINT.create(snapshot, {layout: $('papers-layout').value, includeAnswers: $('papers-answers').checked});
+        const result = await window.LUISA_PAPERS_PRINT.create(snapshot, {layout: printLayout(), includeAnswers: $('papers-answers').checked});
         if (result?.ready === false) status(`The preview needs attention before printing. ${(result.warnings || []).join(' ')}`, true);
         else status(result?.warnings?.length ? `Print preview ready. ${result.warnings.join(' ')}` : 'Print preview ready in a new window. Use its Print / Save PDF button.');
       } catch (error) { status(error.message || 'The print preview could not be opened. Allow pop-ups for this site and try again.', true); }

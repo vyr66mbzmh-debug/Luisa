@@ -179,17 +179,38 @@ class PapersSelection(unittest.TestCase):
 
     def test_print_options_persist_and_reach_snapshot(self):
         self.generate(2)
-        self.page.locator('#papers-layout').select_option('condensed')
+        self.page.locator('#papers-condensed').check()
         self.page.locator('#papers-answers').uncheck()
         self.page.locator('#papers-order').select_option('selection')
         self.page.reload()
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
-        self.assertEqual(self.page.locator('#papers-layout').input_value(), 'condensed')
+        self.assertTrue(self.page.locator('#papers-condensed').is_checked())
         self.assertFalse(self.page.locator('#papers-answers').is_checked())
         self.assertEqual(self.page.locator('#papers-order').input_value(), 'selection')
         self.page.locator('#papers-print').click()
         self.page.wait_for_function('Boolean(window.testPrintOptions)')
         self.assertEqual(self.page.evaluate('testPrintOptions'), {'layout':'condensed','includeAnswers':False})
+
+    def test_default_and_migrated_two_per_page_use_one_question_per_page(self):
+        self.assertFalse(self.page.get_by_role('checkbox', name='Condensed').is_checked())
+        self.assertTrue(self.page.get_by_role('checkbox', name='Include worked solutions at the back').is_checked())
+        self.generate(1)
+        ids = self.selection_ids()
+        self.page.evaluate('''() => {
+          const key = 'luisa-papers-v1';
+          const saved = JSON.parse(sessionStorage.getItem(key));
+          saved.layout = 'two';
+          sessionStorage.setItem(key, JSON.stringify(saved));
+        }''')
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertEqual(self.selection_ids(), ids)
+        self.assertFalse(self.page.get_by_role('checkbox', name='Condensed').is_checked())
+        self.page.locator('#papers-print').click()
+        self.page.wait_for_function('Boolean(window.testPrintOptions)')
+        self.assertEqual(self.page.evaluate('testPrintOptions'), {'layout':'one','includeAnswers':True})
+        self.assertEqual(self.page.locator('#papers-answers').evaluate("node=>node.parentElement.nextElementSibling.querySelector('input').id"),
+                         'papers-condensed')
 
     def test_past_exam_loader_marks_timing_and_mixed_selection(self):
         q = dict(id='exam/test-paper/q1', sourceLabel='Source: Test paper · Q1',

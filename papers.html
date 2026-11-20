@@ -47,9 +47,11 @@
 </section>
 <section class="panel" aria-labelledby="selection-title"><div class="section-heading"><h2 id="selection-title">Your paper <span id="papers-selected-count" class="count-badge">0</span></h2><div class="button-row"><button id="papers-clear" type="button" disabled>Clear paper</button><button id="papers-print" class="primary" type="button" disabled>Preview &amp; print</button></div></div>
 <div class="print-options">
-<label class="field" for="papers-layout">Print layout<select id="papers-layout"><option value="one">One question per page</option><option value="two" selected>Two questions per page</option><option value="condensed">All questions without writing space</option></select></label>
 <label class="field" for="papers-order">Question order<select id="papers-order"><option value="topic">Group by topic</option><option value="selection">As selected</option></select></label>
+<div class="print-choices">
 <label class="source-choice"><input id="papers-answers" type="checkbox" checked> Include worked solutions at the back</label>
+<label class="source-choice"><input id="papers-condensed" type="checkbox"> Condensed</label>
+</div>
 </div>
 <p id="papers-summary" class="paper-summary" aria-live="polite"></p>
 <p id="papers-selection-note" class="help">Your selection stays in this browser tab for this session.</p><p id="papers-empty">No questions selected. Generate a paper or browse the questions below.</p><ol id="papers-selected" class="selected-list"></ol>
