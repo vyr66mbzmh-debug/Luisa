@@ -5,9 +5,12 @@
   const pageSize = 8;
   // Keep these identical to the question library renderer in app.js.
   const mathMacros = {"\\p":"\\mathrm P(#1)",'\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
-  const catalogue = [], skills = [], rows = new Map(), contentCache = new Map(), sourceCounts = new Map();
+  const catalogue = [], rows = new Map(), contentCache = new Map();
+  const sources = ['practice', 'exam-style', 'past-papers'];
+  const chapters = new Map(), books = new Map(), papers = new Map();
+  let textbook;
   let selectionOrder = [];
-  let selected = [], chosenSkills = new Set(), chosenTopics = new Set(), page = 0, browseOpen = false;
+  let selected = [], chosenTopics = new Set(), page = 0, browseOpen = false;
   let operation = null, browseOperation = null, printing = false, persistEnabled = false;
   function status(message, error = false) {
     $('papers-status').textContent = message;
@@ -31,60 +34,62 @@
   function persist() {
     if (!persistEnabled) return;
     try {
-      sessionStorage.setItem(storageKey, JSON.stringify({version: 2, sources: {practice: $('papers-source-practice').checked, exam: $('papers-source-exam').checked}, difficulty: $('papers-difficulty').value, layout: $('papers-layout').value, includeAnswers: $('papers-answers').checked, order: $('papers-order').value, selected: selected.map(row => row.id), selectionOrder, course: $('papers-course').value, book: $('papers-book').value, topics: [...chosenTopics], skills: [...chosenSkills], count: $('papers-count').value}));
+      sessionStorage.setItem(storageKey, JSON.stringify({
+        version: 3, sources: Object.fromEntries(sources.map(source => [source, $('papers-source-' + source).checked])),
+        pastPaper: $('papers-past-paper').value, difficulty: $('papers-difficulty').value,
+        layout: $('papers-layout').value, includeAnswers: $('papers-answers').checked, order: $('papers-order').value,
+        selected: selected.map(row => row.id), selectionOrder, course: $('papers-course').value,
+        book: $('papers-book').value, chapters: [...chosenTopics], count: $('papers-count').value
+      }));
     } catch (_) { $('papers-selection-note').textContent = 'Your selection is held on this page. Browser session storage is unavailable.'; }
   }
   function sourceMatches(row) {
-    const bank = row.bank || (row.sourceKind === 'past-exam' ? 'exam' : 'practice');
     const difficulty = $('papers-difficulty').value;
-    return $('papers-source-' + bank).checked && (!difficulty || (row.difficulty || 'unclassified') === difficulty);
+    const paper = $('papers-past-paper').value;
+    return $('papers-source-' + row.bank).checked &&
+      (!difficulty || (row.difficulty || 'unclassified') === difficulty) &&
+      (row.bank !== 'past-papers' || !paper || row.paperId === paper);
   }
-  function refreshSourceCounts() {
-    sourceCounts.clear();
-    for (const row of catalogue) if (sourceMatches(row)) for (const key of new Set(row.skillKeys)) {
-      sourceCounts.set(key, (sourceCounts.get(key) || 0) + 1);
-    }
+  function inHierarchy(chapter) {
+    const course = $('papers-course').value, book = $('papers-book').value;
+    return (!course || chapter.course === course) && (!book || chapter.bookKey === book);
   }
-  function skillCount(skill) { return sourceCounts.get(skill.key) || 0; }
-  function filteredSkills() {
-    return skills.filter(s => skillCount(s) > 0 && (!$('papers-course').value || s.courseId === $('papers-course').value) && (!$('papers-book').value || s.bookKey === $('papers-book').value) && (!chosenTopics.size || chosenTopics.has(s.topicKey)));
+  function matchingChapters(row) {
+    return row.chapterKeys.filter(key => inHierarchy(chapters.get(key)) && (!chosenTopics.size || chosenTopics.has(key)));
   }
   function pool() {
-    const included = new Set(filteredSkills().filter(s => !chosenSkills.size || chosenSkills.has(s.key)).map(s => s.key));
-    return catalogue.filter(row => sourceMatches(row) && row.skillKeys.some(key => included.has(key)));
+    return catalogue.filter(row => sourceMatches(row) && matchingChapters(row).length);
   }
   function options(id, label, choices, wanted = '') {
     const select = $(id);
     select.replaceChildren(new Option(label, ''), ...choices.map(([value, title]) => new Option(title, value)));
     select.value = choices.some(([value]) => value === wanted) ? wanted : '';
   }
-  function refreshFilters(wantedBook = '') {
-    refreshSourceCounts();
-    const courses = window.FMQ_LIBRARY.courses.filter(c => !$('papers-course').value || c.id === $('papers-course').value);
-    options('papers-book', 'All books', courses.flatMap(c => c.books.map(b => [`${c.id}/${b.id}`, b.title])), wantedBook);
-    const topicMap = new Map();
-    for (const skill of skills) {
-      if (!skillCount(skill) || ($('papers-course').value && skill.courseId !== $('papers-course').value) || ($('papers-book').value && skill.bookKey !== $('papers-book').value)) continue;
-      topicMap.set(skill.topicKey, {key: skill.topicKey, title: skill.topicTitle, bookTitle: skill.bookTitle});
+  function refreshFilters() {
+    const topics = [...chapters.values()].filter(inHierarchy);
+    const counts = new Map();
+    for (const row of catalogue) if (sourceMatches(row)) for (const key of row.chapterKeys) {
+      counts.set(key, (counts.get(key) || 0) + 1);
     }
-    const topics = [...topicMap.values()];
-    chosenTopics = new Set([...chosenTopics].filter(key => topics.some(t => t.key === key)));
     $('papers-topics').replaceChildren(...topics.map(t => {
       const label = element('label', undefined, 'topic-choice');
-      const input = document.createElement('input'); input.type = 'checkbox'; input.value = t.key; input.checked = chosenTopics.has(t.key);
-      const text = element('span', t.title); text.append(element('small', t.bookTitle));
-      label.append(input, text); return label;
-    }));
-    const visible = filteredSkills();
-    chosenSkills = new Set([...chosenSkills].filter(key => visible.some(s => s.key === key)));
-    $('papers-skills').replaceChildren(...visible.map(s => {
-      const label = element('label', undefined, 'skill-choice');
-      const input = document.createElement('input'); input.type = 'checkbox'; input.value = s.key; input.checked = chosenSkills.has(s.key);
-      const text = element('span', `${s.code} · ${s.title}`);
-      text.append(element('small', `${s.bookTitle} · ${skillCount(s)} questions`));
-      label.append(input, text); return label;
+      const input = document.createElement('input');
+      input.type = 'checkbox'; input.value = t.key; input.checked = chosenTopics.has(t.key);
+      const text = element('span', `${t.id}. ${t.title}`);
+      const count = `${(counts.get(t.key) || 0).toLocaleString()} questions`;
+      text.append(element('small', $('papers-book').value ? count : `${t.bookTitle} · ${count}`));
+      label.append(input, text);
+      return label;
     }));
     updatePool();
+  }
+  function refreshBooks(wanted) {
+    const course = $('papers-course').value;
+    const available = [...books].filter(([, book]) => !course || book.course === course);
+    options('papers-book', 'All books', available.map(([key, book]) => [key, book.title]), wanted);
+  }
+  function orderedChapter(row) {
+    return chapters.get(matchingChapters(row)[0] || row.chapterKeys[0]);
   }
   function updatePool() {
     cancelLoading();
@@ -109,6 +114,39 @@
     operation.abort(); operation = null; updateControls();
     if (announce) status('Loading cancelled. Your previous paper has been kept.');
   }
+  function practiceMarks(html) {
+    const prompt = document.createElement('template');
+    prompt.innerHTML = html;
+    const marks = [...prompt.content.querySelectorAll('.marks')];
+    if (!marks.length) return undefined;
+    const amounts = marks.map(mark => /^\((\d+) marks?\)$/i.exec(mark.textContent.trim()));
+    if (amounts.some(amount => !amount)) return undefined;
+    const total = amounts.reduce((sum, amount) => sum + Number(amount[1]), 0);
+    const table = marks[0].closest('.practice-layout-table');
+    if (table && marks.every(mark => mark.closest('.practice-layout-table') === table)) {
+      const cells = [...table.querySelectorAll('td')];
+      const complete = cells.length === marks.length && cells.every((cell, index) =>
+        marks[index].closest('td') === cell && cell.firstElementChild?.matches('strong') &&
+        cell.firstElementChild.textContent.trim() === String.fromCharCode(97 + index) + '.');
+      return complete ? total : undefined;
+    }
+    const parts = marks.map(mark => mark.closest('li'));
+    if (marks.length === 1 && !parts[0]) return Number(amounts[0][1]);
+    const marked = new Set(parts);
+    if (marked.has(null) || marked.size !== marks.length) return undefined;
+    // A part can carry a combined allocation for its children, or all children
+    // can carry their own allocations. A partially marked tree is ambiguous.
+    for (const part of marked) {
+      if ([...part.querySelectorAll('li')].some(child => marked.has(child))) return undefined;
+      for (let branch = part; branch; branch = branch.parentElement.closest('li')) {
+        const siblings = [...branch.parentElement.children].filter(sibling => sibling.matches('li'));
+        const covered = siblings.every(sibling => marked.has(sibling) ||
+          [...sibling.querySelectorAll('li')].some(child => marked.has(child)));
+        if (!covered) return undefined;
+      }
+    }
+    return total;
+  }
   async function loadRow(descriptor, signal) {
     if (rows.has(descriptor.id)) return rows.get(descriptor.id);
     if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
@@ -131,7 +169,8 @@
     if (!question?.question || (question.contextHtml !== undefined && typeof question.contextHtml !== 'string') || !Array.isArray(question.steps) || !question.steps.length || question.steps.some(step => typeof step !== 'string' || !step.trim()) || (question.hints !== undefined && (!Array.isArray(question.hints) || question.hints.some(hint => typeof hint !== 'string')))) {
       throw new Error(`${sourceLabel(descriptor)} has incomplete content. Your previous paper has been kept.`);
     }
-    const row = Object.freeze({...descriptor, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: descriptor.sourceKind === 'past-exam' ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
+    const marks = descriptor.sourceKind === 'practice-booklet' ? practiceMarks(question.question) : descriptor.marks;
+    const row = Object.freeze({...descriptor, marks, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: descriptor.sourceKind === 'past-exam' ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
     rows.set(row.id, row); return row;
   }
   function questionMetadata(row) {
@@ -156,13 +195,7 @@
     const ordered = new Set(selectionOrder);
     selectionOrder.push(...selected.filter(r => !ordered.has(r.id)).map(r => r.id));
     if ($('papers-order').value === 'selection') selected.sort((a,b) => selectionOrder.indexOf(a.id)-selectionOrder.indexOf(b.id));
-    if ($('papers-order').value === 'topic') {
-      selected.sort((a, b) => {
-        const ak = [a.courseTitle, a.bookTitle, a.topicTitle].join('/');
-        const bk = [b.courseTitle, b.bookTitle, b.topicTitle].join('/');
-        return ak.localeCompare(bk, 'en', {numeric: true});
-      });
-    }
+    if ($('papers-order').value === 'topic') selected.sort((a, b) => orderedChapter(a).rank - orderedChapter(b).rank);
     $('papers-selected-count').textContent = selected.length.toLocaleString();
     const known = selected.filter(r => Number.isInteger(r.marks) && r.marks > 0);
     const marks = known.reduce((n, r) => n + r.marks, 0);
@@ -238,7 +271,7 @@
     $('papers-next').disabled = page + 1 >= total;
     $('papers-page').textContent = total ? `Page ${page + 1} of ${total} · ${candidates.length.toLocaleString()} questions` : 'No questions in this pool';
     const target = $('papers-questions'); target.setAttribute('aria-busy', 'true');
-    target.replaceChildren(element('p', candidates.length ? 'Loading question previews…' : 'Choose another topic or skill to find questions.'));
+    target.replaceChildren(element('p', candidates.length ? 'Loading question previews…' : 'Change the source, difficulty or topics to find questions.'));
     try {
       const loaded = [];
       for (const row of candidates.slice(page * pageSize, (page + 1) * pageSize)) loaded.push(await loadRow(row, controller.signal));
@@ -264,88 +297,115 @@
     status('Loading the Edexcel question catalogue…');
     const response = await fetch(new URL('textbook-catalogue.json', document.baseURI));
     if (!response.ok) throw new Error('The Edexcel catalogue could not be loaded. Check your connection and reload.');
-    const textbook = await response.json();
+    textbook = await response.json();
     if (!Array.isArray(textbook.questions) || !textbook.questions.length) throw new Error('The Edexcel catalogue is unavailable. Reload the page to try again.');
-    // Reuse the question-level eligibility already used by By textbook. Some
-    // skills mix eligible and other-board questions, so a skill flag is insufficient.
-    const edexcelIds = new Set(textbook.questions.map(q => `${q.skill}/${q.question}`));
-    const ids = new Set(), skillIndex = new Map();
-    for (const course of window.FMQ_LIBRARY.courses) for (const book of course.books) for (const topic of book.topics) for (const skill of topic.skills) {
-      if (skill.reference || skill.available === false) continue;
-      const eligible = skill.questions.filter(q => !q.reference && edexcelIds.has(`${skill.id}/${q.number}`));
-      const key = `${course.id}/${book.id}/${topic.id}/${skill.id}`;
-      const metadata = {key, topicTitle: topic.title, courseId: course.id, bookKey: `${course.id}/${book.id}`, topicKey: `${course.id}/${book.id}/${topic.id}`, code: skill.code, title: skill.title, bookTitle: book.title, count: eligible.length};
-      skills.push(metadata); skillIndex.set(`${course.id}/${book.id}/${skill.id}`, {...metadata, courseTitle: course.title, bookId: book.id, topicId: topic.id, topicTitle: topic.title, skillId: skill.id});
-      for (const question of eligible) {
-        const id = `${key}/q${question.number}`;
-        if (ids.has(id)) continue;
-        ids.add(id);
-        catalogue.push(Object.freeze({id, sourceKind: 'luisa', bank: 'practice', difficulty: null, skillKeys: Object.freeze([key]), number: question.number, courseId: course.id, bookId: book.id, topicId: topic.id, skillId: skill.id, skillKey: key, courseTitle: course.title, bookTitle: book.title, topicTitle: topic.title, skillCode: skill.code, skillTitle: skill.title}));
+    const courseTitles = new Map(textbook.courses.map(course => [course.id, course.title]));
+    const bookKeys = new Map();
+    for (const book of textbook.books) {
+      const bookKey = book.course + '/' + book.id;
+      bookKeys.set(book.id, bookKey);
+      books.set(bookKey, book);
+      for (const chapter of book.chapters) {
+        const key = bookKey + '/' + chapter.id;
+        chapters.set(key, {...chapter, key, bookKey, rank: chapters.size, course: book.course,
+          courseTitle: courseTitles.get(book.course), bookTitle: book.title});
       }
     }
+    const ids = new Set();
+    function add(row, keys) {
+      if (ids.has(row.id) || !Array.isArray(keys) || !keys.length || keys.some(key => !chapters.has(key))) {
+        throw Error('Invalid chapter association for ' + row.id + '. Reload the page to retry.');
+      }
+      ids.add(row.id);
+      const chapterKeys = [...new Set(keys)].sort((a,b) => chapters.get(a).rank - chapters.get(b).rank);
+      catalogue.push(Object.freeze({...row, chapterKeys: Object.freeze(chapterKeys)}));
+    }
+    // The source skill retains its library identity, even for cross-book targets.
+    const eligible = new Map(textbook.questions.map(q => [q.skill + '/' + q.question, q.targets]));
+    for (const course of window.FMQ_LIBRARY.courses) for (const book of course.books) for (const topic of book.topics) for (const skill of topic.skills) {
+      if (skill.reference || skill.available === false) continue;
+      for (const question of skill.questions) {
+        const targets = eligible.get(skill.id + '/' + question.number);
+        if (question.reference || !targets) continue;
+        const id = [course.id,book.id,topic.id,skill.id,'q' + question.number].join('/');
+        add({id, sourceKind: 'luisa', bank: 'practice', difficulty: null, number: question.number,
+          courseId: course.id, bookId: book.id, topicId: topic.id, skillId: skill.id,
+          courseTitle: course.title, bookTitle: book.title, topicTitle: topic.title, skillCode: skill.code, skillTitle: skill.title},
+          targets.map(target => bookKeys.get(target.book) + '/' + target.chapter));
+      }
+    }
+    if (ids.size !== eligible.size) throw Error('Some Edexcel questions could not be found in the question library.');
     const practiceResponse = await fetch(new URL('practice-catalogue.json', document.baseURI));
     if (!practiceResponse.ok) throw new Error('The Practice Booklet catalogue could not be loaded. Check your connection and reload.');
     const practiceCatalogue = await practiceResponse.json();
     if (practiceCatalogue.version !== 1 || !Array.isArray(practiceCatalogue.questions)) throw new Error('The Practice Booklet catalogue is invalid.');
-    for (const item of practiceCatalogue.skills || []) {
-      const course = window.FMQ_LIBRARY.courses.find(c => c.id === item.courseId);
-      const book = course?.books.find(b => b.id === item.bookId);
-      const topic = book?.topics.find(t => t.id === item.topicId) || (book && item.topicId?.startsWith('practice-topic-') && item.topicTitle ? {id: item.topicId, title: item.topicTitle} : null);
-      const indexKey = `${item.courseId}/${item.bookId}/${item.id}`;
-      if (!topic || !item.id?.startsWith('practice-') || skillIndex.has(indexKey)) throw new Error('A Practice Booklet skill is invalid.');
-      const key = `${item.courseId}/${item.bookId}/${item.topicId}/${item.id}`;
-      const metadata = {key, courseId: course.id, bookId: book.id, bookKey: `${course.id}/${book.id}`, topicKey: `${course.id}/${book.id}/${topic.id}`, topicId: topic.id, topicTitle: topic.title, courseTitle: course.title, bookTitle: book.title, code: item.code, title: item.title};
-      skills.push(metadata); skillIndex.set(indexKey, metadata);
-    }
     for (const q of practiceCatalogue.questions) {
-      const mapped = Array.isArray(q.skillIds) && q.skillIds.map(id => skillIndex.get(`${q.courseId}/${q.bookId}/${id}`));
-      if (!q.id?.startsWith('practice/') || ids.has(q.id) || !mapped?.length || mapped.some(s => !s) || !/^content\/practice\/[a-z0-9/-]+\.json$/.test(q.dataPath) || !q.chapterNumber || !q.subchapterId || !q.subchapterTitle || !q.questionLabel || q.board !== 'Edexcel') throw new Error('A Practice Booklet source is incomplete or unverified.');
+      if (!q.id?.startsWith('practice/') || !/^content\/practice\/[a-z0-9/-]+\.json$/.test(q.dataPath) || !q.chapterNumber || !q.subchapterId || !q.subchapterTitle || !q.questionLabel || q.board !== 'Edexcel') throw new Error('A Practice Booklet source is incomplete or unverified.');
       if (!['practice','exam'].includes(q.bank || 'practice') || ![null,undefined,'easy','medium','difficult'].includes(q.difficulty)) throw new Error('A question classification is invalid.');
-      const first = mapped[0];
-      ids.add(q.id);
-      catalogue.push(Object.freeze({...q, bank: q.bank || 'practice', sourceKind: 'practice-booklet', skillKeys: Object.freeze(mapped.map(s => s.key)), courseTitle: first.courseTitle, bookTitle: first.bookTitle, topicTitle: first.topicTitle, skillTitle: q.subchapterTitle}));
+      const key = [q.courseId,q.bookId,q.chapterNumber].join('/');
+      const chapter = chapters.get(key);
+      if (chapter?.title !== q.chapterTitle) throw Error('Invalid Practice Booklet chapter for ' + q.id);
+      add({...q, bank: q.bank === 'exam' ? 'exam-style' : 'practice', sourceKind: 'practice-booklet',
+        courseTitle: chapter.courseTitle, bookTitle: chapter.bookTitle, topicTitle: chapter.title, skillTitle: q.subchapterTitle}, [key]);
     }
-
     const examResponse = await fetch(new URL('exam-catalogue.json', document.baseURI));
-    if (!examResponse.ok) throw new Error('The Exam bank catalogue could not be loaded. Check your connection and reload.');
+    if (!examResponse.ok) throw new Error('The past-paper catalogue could not be loaded. Check your connection and reload.');
     const examCatalogue = await examResponse.json();
-    if (examCatalogue.version !== 1 || !Array.isArray(examCatalogue.questions)) throw new Error('The Exam bank catalogue is invalid.');
+    if (examCatalogue.version !== 1 || !Array.isArray(examCatalogue.questions)) throw new Error('The past-paper catalogue is invalid.');
     for (const q of examCatalogue.questions) {
-      const mapped = Array.isArray(q.skillMappings) && q.skillMappings.map(m => skillIndex.get(`${m.courseId}/${m.bookId}/${m.skillId}`));
-      if (!q.id?.startsWith('exam/') || ids.has(q.id) || !mapped?.length || mapped.some(s => !s) || !/^content\/exams\/[a-z0-9-]+\.json$/.test(q.dataPath) || !q.sourceLabel || q.board !== 'Edexcel' || q.status !== 'checked' || !Number.isInteger(q.marks) || q.marks <= 0 || !['easy','medium','difficult'].includes(q.difficulty)) throw new Error('A past-exam question is incomplete or unverified.');
-      const first = mapped[0];
-      ids.add(q.id);
-      catalogue.push(Object.freeze({...q, sourceKind:'past-exam', bank:'exam', skillKeys:Object.freeze([...new Set(mapped.map(s => s.key))]), courseId:first.courseId, bookId:first.bookId, topicId:first.topicId, courseTitle:first.courseTitle, bookTitle:first.bookTitle, topicTitle:first.topicTitle, skillTitle:[...new Set(mapped.map(s=>s.title))].join(' · ')}));
+      if (!q.id?.startsWith('exam/') || !/^content\/exams\/[a-z0-9-]+\.json$/.test(q.dataPath) || !q.sourceLabel || !q.paperId || !q.paperCode || !q.session ||
+          q.board !== 'Edexcel' || q.status !== 'checked' || !Number.isInteger(q.marks) || q.marks <= 0 || !['easy','medium','difficult'].includes(q.difficulty)) throw Error('A past-exam question is incomplete or unverified.');
+      const chapter = chapters.get(q.chapterKeys?.[0]);
+      if (!chapter) throw Error('Invalid past-paper chapter for ' + q.id);
+      papers.set(q.paperId, {session: q.session, code: q.paperCode, date: q.examDate || ''});
+      add({...q, sourceKind: 'past-exam', bank: 'past-papers', courseTitle: chapter.courseTitle,
+        bookTitle: chapter.bookTitle, topicTitle: chapter.title, skillTitle: q.topicSummary || ''}, q.chapterKeys);
     }
     let saved = null;
     try { saved = JSON.parse(sessionStorage.getItem(storageKey)); } catch (_) { /* A new session or unavailable storage. */ }
-    if (![1, 2].includes(saved?.version)) saved = null;
-    for (const bank of ['practice', 'exam']) $('papers-source-' + bank).checked = saved?.version === 2 && typeof saved.sources?.[bank] === 'boolean' ? saved.sources[bank] : true;
+    if (![1, 2, 3].includes(saved?.version)) saved = null;
+    for (const source of sources) {
+      const key = saved?.version === 2 && source !== 'practice' ? 'exam' : source;
+      $('papers-source-' + source).checked = saved?.sources?.[key] ?? true;
+    }
+    const paperChoices = [...papers].sort(([,a],[,b]) => b.date.localeCompare(a.date) || a.code.localeCompare(b.code))
+      .map(([id, paper]) => {
+        const part = paper.code.split('/').at(-1);
+        const applied = {'31': '3 Statistics', '32': '3 Mechanics'};
+        const number = applied[part] || part.replace(/^0/, '');
+        const qualification = paper.code.startsWith('9FM') ? 'Further Maths' : 'Maths';
+        return [id, paper.session + ' Paper ' + number + ' (' + qualification + ' · ' + paper.code + ')'];
+      });
+    options('papers-past-paper', 'All past papers', paperChoices, saved?.pastPaper);
+    $('papers-past-paper').disabled = !$('papers-source-past-papers').checked || !papers.size;
     if (['easy','medium','difficult','unclassified'].includes(saved?.difficulty)) $('papers-difficulty').value = saved.difficulty;
     if (['one','two','condensed'].includes(saved?.layout)) $('papers-layout').value = saved.layout;
     if (typeof saved?.includeAnswers === 'boolean') $('papers-answers').checked = saved.includeAnswers;
     if (saved?.order === 'selection') $('papers-order').value = 'selection';
-    options('papers-course', 'All courses', window.FMQ_LIBRARY.courses.map(c => [c.id, c.title]), saved?.course);
-    chosenSkills = new Set(Array.isArray(saved?.skills) ? saved.skills : []);
-    chosenTopics = new Set(Array.isArray(saved?.topics) ? saved.topics : saved?.topic ? [saved.topic] : []);
+    options('papers-course', 'All courses', textbook.courses.map(c => [c.id, c.title]), saved?.course);
+    refreshBooks(saved?.book);
+    const migrated = saved && saved.version < 3 && (saved.topic || saved.topics?.length || saved.skills?.length);
+    if (migrated) $('papers-selection-note').textContent = 'The old topic or skill restriction has been reset for textbook topics. Your saved paper is kept.';
+    chosenTopics = new Set((Array.isArray(saved?.chapters) ? saved.chapters : [])
+      .filter(key => chapters.has(key) && inHierarchy(chapters.get(key))));
     if (saved?.count && /^\d+$/.test(saved.count)) $('papers-count').value = saved.count;
-    refreshFilters(saved?.book);
+    refreshFilters();
     persistEnabled = true;
-    for (const id of ['papers-source-practice', 'papers-source-exam', 'papers-difficulty']) $(id).addEventListener('change', () => { chosenSkills.clear(); chosenTopics.clear(); refreshFilters($('papers-book').value); });
+    for (const id of [...sources.map(source => 'papers-source-' + source), 'papers-past-paper', 'papers-difficulty']) {
+      $(id).addEventListener('change', () => {
+        $('papers-past-paper').disabled = !$('papers-source-past-papers').checked || !papers.size;
+        refreshFilters();
+      });
+    }
     for (const id of ['papers-layout','papers-answers']) $(id).addEventListener('change', persist);
     $('papers-order').addEventListener('change', updateSelection);
-    $('papers-course').addEventListener('change', () => { chosenSkills.clear(); chosenTopics.clear(); refreshFilters(); });
-    $('papers-book').addEventListener('change', () => { chosenSkills.clear(); chosenTopics.clear(); refreshFilters($('papers-book').value); });
+    $('papers-course').addEventListener('change', () => { chosenTopics.clear(); refreshBooks(); refreshFilters(); });
+    $('papers-book').addEventListener('change', () => { chosenTopics.clear(); refreshFilters(); });
     $('papers-topics').addEventListener('change', event => {
       if (event.target.checked) chosenTopics.add(event.target.value); else chosenTopics.delete(event.target.value);
-      chosenSkills.clear(); refreshFilters($('papers-book').value);
-    });
-    $('papers-all-topics').addEventListener('click', () => { chosenTopics.clear(); chosenSkills.clear(); refreshFilters($('papers-book').value); });
-    $('papers-skills').addEventListener('change', event => {
-      if (event.target.checked) chosenSkills.add(event.target.value); else chosenSkills.delete(event.target.value);
       updatePool();
     });
-    $('papers-all-skills').addEventListener('click', () => { chosenSkills.clear(); refreshFilters($('papers-book').value); });
+    $('papers-all-topics').addEventListener('click', () => { chosenTopics.clear(); refreshFilters(); });
     $('papers-count').addEventListener('change', persist);
     $('papers-generate-form').addEventListener('submit', event => { event.preventDefault(); generate(); });
     $('papers-regenerate').addEventListener('click', generate);
@@ -371,7 +431,9 @@
     $('papers-print').addEventListener('click', async () => {
       if (!selected.length || operation || printing) return;
       // Snapshot before opening: future edits cannot change this paper or its solutions.
-      const snapshot = Object.freeze([...selected]);
+      const ordered = [...selected];
+      if ($('papers-order').value === 'topic') ordered.sort((a,b) => orderedChapter(a).rank - orderedChapter(b).rank);
+      const snapshot = Object.freeze(ordered.map(row => Object.freeze({...row, printChapter: orderedChapter(row)})));
       printing = true; updateControls(); status('Preparing the print preview…');
       try {
         const result = await window.LUISA_PAPERS_PRINT.create(snapshot, {layout: $('papers-layout').value, includeAnswers: $('papers-answers').checked});
@@ -380,14 +442,14 @@
       } catch (error) { status(error.message || 'The print preview could not be opened. Allow pop-ups for this site and try again.', true); }
       finally { printing = false; updateControls(); }
     });
-    for (const id of ['papers-source-practice', 'papers-source-exam', 'papers-difficulty', 'papers-course', 'papers-book', 'papers-all-topics', 'papers-all-skills', 'papers-count', 'papers-generate', 'papers-browse']) $(id).disabled = false;
+    for (const id of [...sources.map(source => 'papers-source-' + source), 'papers-difficulty', 'papers-course', 'papers-book', 'papers-all-topics', 'papers-count', 'papers-generate', 'papers-browse']) $(id).disabled = false;
     updateControls();
     const savedIds = new Set(Array.isArray(saved?.selected) ? saved.selected : []);
     const byId = new Map(catalogue.map(row => [row.id, row]));
     const restored = [...savedIds].map(id => byId.get(id)).filter(Boolean);
     selectionOrder = Array.isArray(saved?.selectionOrder) ? [...new Set(saved.selectionOrder.filter(id => savedIds.has(id)))] : [...savedIds];
     if (restored.length) setSelection(restored, `${restored.length} questions restored from this browser session.`);
-    else status(`${catalogue.length.toLocaleString()} Edexcel-filtered worked questions available. Choose topics or skills to begin.`);
+    else { persist(); status(`${catalogue.length.toLocaleString()} Edexcel-filtered worked questions available. Choose topics to begin.`); }
   } catch (error) {
     status(error.message || 'The paper builder could not start. Reload the page to retry.', true);
     for (const id of ['papers-generate', 'papers-regenerate', 'papers-print', 'papers-browse']) $(id).disabled = true;

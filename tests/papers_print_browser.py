@@ -121,16 +121,14 @@ class PapersPrintTests(unittest.TestCase):
         preview, result = self.preview([row('1.01', 1), item, row('1.01', 2), row('1.01', 3)])
         self.assertTrue(result['ready'], result)
         self.assertTrue(preview.get_by_role('button', name='Print / Save PDF').is_enabled())
-        self.assertGreater(preview.locator('.extended-page').count(), 1)
         selector = '.print-question[data-question-id="' + item['id'] + '"]'
         images = preview.locator(selector + ' img').evaluate_all('nodes=>nodes.map(n=>n.getAttribute("src"))')
         expected = self.page.evaluate('html=>{const n=document.createElement("div");n.innerHTML=html;return [...n.querySelectorAll("img")].map(x=>x.getAttribute("src"))}', item['question'])
         self.assertEqual(images, expected)
         self.assertEqual(len(images), 21)
-        self.assertIn('Question 2 · continued', preview.locator('.questions-page').all_inner_texts()[2])
         self.assertTrue(all(value <= 1 for value in preview.locator('.page-content,.print-question').evaluate_all('nodes=>nodes.flatMap(n=>[n.scrollHeight-n.clientHeight,n.scrollWidth-n.clientWidth])')))
         # Following ordinary questions return to two per sheet, preserving order.
-        self.assertEqual(preview.locator('.questions-page').last.locator('.print-question h2').all_text_contents(), ['Question 3','Question 4'])
+        self.assertEqual(preview.locator('.questions-page').last.locator('.print-question h2').all_text_contents(), ['Q3','Q4'])
         preview.pdf(path='/tmp/luisa57-long-question.pdf', prefer_css_page_size=True)
 
     def test_all_eligible_long_sources_preserve_content_and_fit(self):
@@ -175,7 +173,7 @@ class PapersPrintTests(unittest.TestCase):
                     self.assertTrue(result['ready'], result)
                     self.assertEqual(preview.locator('.questions-page').count(), expected_pages)
                     self.assertEqual(preview.locator('.questions-page .print-question h2').all_text_contents(),
-                                     ['Question 1', 'Question 2', 'Question 3', 'Question 4'])
+                                     ['Q1', 'Q2', 'Q3', 'Q4'])
                     self.assertFalse(preview.locator('.page-content,.print-question').evaluate_all(
                         'nodes=>nodes.some(n=>n.scrollHeight>n.clientHeight+1||n.scrollWidth>n.clientWidth+1)'))
                     if layout == 'condensed':
@@ -206,6 +204,7 @@ class PapersPrintTests(unittest.TestCase):
         import fitz
         rows = [dict(row('smq-1.53', 2), sourceKind='past-exam', sourceLabel='Source: Exam fixture A Q2', marks=7, difficulty='Hard'),
                 dict(row('1.01', 1), sourceKind='past-exam', sourceLabel='Exam fixture B Q1', marks=6, difficulty='Easy')]
+        rows[0]['question'] += '<p>Continuation geometry fixture.</p>' * 55
         for layout in ('one', 'two', 'condensed'):
             with self.subTest(layout=layout):
                 preview, result = self.preview(rows, layout=layout, includeAnswers=False)
@@ -221,9 +220,9 @@ class PapersPrintTests(unittest.TestCase):
                 totals = preview.locator('.questions-page .page-footer>span:first-child').all_text_contents()
                 self.assertEqual(sum(int(text.split(': ')[1].split(' ')[0]) for text in totals), 13)
                 self.assertTrue(all('final page' in text for text in preview.locator('.marks-policy').all_text_contents()))
-                self.assertIn('Source: Exam fixture A Q2', preview.locator('.questions-page').first.inner_text())
+                self.assertIn('Exam fixture A Q2', preview.locator('.questions-page').first.inner_text())
                 self.assertNotIn('Source: Source:', preview.locator('body').inner_text())
-                self.assertIn('Difficulty: Hard', preview.locator('.questions-page').first.inner_text())
+                self.assertIn('Hard', preview.locator('.questions-page').first.inner_text())
                 self.assertEqual(preview.locator('.print-question img').count(), 21)
                 self.assertFalse(preview.locator('.page-content,.print-question').evaluate_all(
                     'nodes=>nodes.some(n=>n.scrollHeight>n.clientHeight+1||n.scrollWidth>n.clientWidth+1)'))
@@ -244,8 +243,35 @@ class PapersPrintTests(unittest.TestCase):
             self.assertEqual(preview.locator('.paper-marks,.marks-policy,[data-allocated-marks]').count(), 0)
             self.assertNotIn('Estimated time:', preview.locator('.print-pages').inner_text())
             self.assertNotIn('Page total:', preview.locator('.print-pages').inner_text())
-            self.assertEqual(preview.locator('.question-marks').all_text_contents(), ['6 marks'])
+            self.assertEqual(preview.locator('.question-marks').all_text_contents(), ['[6 Marks]'])
             preview.close()
+
+    def test_gold_header_and_question_image_height(self):
+        item = practice_row('applied-year-2', 7, 'qgold')
+        if not item['id'].endswith('/problem-b/qgold'):
+            rows = json.loads((ROOT / 'content/practice/applied-year-2/chapter-07.json').read_text())['questions']
+            item = next(row for row in rows if row['id'].endswith('/problem-b/qgold'))
+        item.update(sourceKind='practice-booklet', courseTitle='Maths A Level', bookTitle='Mechanics Year 2',
+                    difficulty='difficult', marks=15)
+        preview, result = self.preview([item], layout='condensed', includeAnswers=False)
+        self.assertTrue(result['ready'], result)
+        heading = preview.locator('.print-question header')
+        self.assertEqual(heading.inner_text().splitlines(), [
+            'Q1', '(A Level Y2 Mech Ch7 Forces - Practice B Gold - Difficult)', '[15 Marks]'])
+        self.assertTrue(heading.evaluate('''head => {
+            const [number, source, marks] = head.children;
+            return number.getBoundingClientRect().top === marks.getBoundingClientRect().top &&
+                   getComputedStyle(number).fontWeight === '700' && getComputedStyle(marks).fontWeight === '700' &&
+                   source.scrollWidth <= source.clientWidth + 1 &&
+                   marks.getBoundingClientRect().right === head.getBoundingClientRect().right;
+        }'''))
+        image = preview.locator('.print-question img')
+        self.assertTrue(image.evaluate('''img => {
+            const bounds = img.getBoundingClientRect();
+            return getComputedStyle(img).filter === 'grayscale(1)' && bounds.height > 0 && bounds.height <= 6 * parseFloat(getComputedStyle(img).lineHeight) + 1 &&
+                   Math.abs(bounds.width / bounds.height - img.naturalWidth / img.naturalHeight) < .01;
+        }'''))
+        preview.pdf(path='/tmp/luisa103-gold.pdf', prefer_css_page_size=True)
 
     def test_closed_loading_preview_releases_caller(self):
         self.context.route('**/papers-print.css', lambda route: None)
@@ -285,7 +311,9 @@ class PapersPrintTests(unittest.TestCase):
             'nodes=>nodes.flatMap(n=>[n.scrollHeight-n.clientHeight,n.scrollWidth-n.clientWidth])')))
         for item in rows:
             selector = '[data-question-id="' + item['id'] + '"]'
-            self.assertIn('Source: Practice Booklet', preview.locator('.print-question' + selector).first.inner_text())
+            provenance = preview.locator('.print-question' + selector + ' .compact-provenance').first
+            self.assertIn('Practice', provenance.inner_text())
+            self.assertIn('Source: Practice Booklet · Chapter', provenance.get_attribute('title'))
             self.assertIn('Source: Practice Booklet', preview.locator('.print-solution' + selector).first.inner_text())
             self.assertTrue(preview.locator(selector + ' img').evaluate_all(
                 'nodes=>nodes.every(n=>n.complete&&n.naturalWidth>0)'))

@@ -84,7 +84,7 @@ class OfflineInventory(unittest.TestCase):
             root=Path(d);entries=self.fixture(root)
             additions={
                 'exam-catalogue.json':json.dumps({'questions':[
-                    {'id':'exam/test/q1','dataPath':'content/exams/test.json','skillMappings':[
+                    {'id':'exam/test/q1','dataPath':'content/exams/test.json','chapterKeys':['test/test/1'],'skillMappings':[
                         {'courseId':'test','bookId':'test','skillId':'test'},
                         {'courseId':'test','bookId':'test','skillId':'test'}]}]}),
                 'content/exams/test.json':json.dumps({'questions':[{'question':'Prompt',
@@ -108,33 +108,12 @@ class OfflineInventory(unittest.TestCase):
             for m in exam['questions'][0]['skillMappings']:m['bookId']='source-book'
             (root/'exam-catalogue.json').write_text(json.dumps(exam))
             self.assertIn('content/exams/test.json', offline.generate(root,entries,'0.59')['packs'][0]['files'])
-            # Identical skill text in a different course must not cross-match.
-            for m in exam['questions'][0]['skillMappings']:m['courseId']='different-course'
+            # A chapter key from a different course cannot cross-match.
+            exam['questions'][0]['chapterKeys'].append('different-course/test/1')
             (root/'exam-catalogue.json').write_text(json.dumps(exam))
             with self.assertRaisesRegex(ValueError,'Offline exam mapping has no chapter pack'):
-                offline.generate(root,entries,'0.59')
-            cat['skills']['test']['book']='test'
-            (root/'textbook-catalogue.json').write_text(json.dumps(cat))
-            for m in exam['questions'][0]['skillMappings']:m.update(courseId='test',bookId='test')
-            (root/'exam-catalogue.json').write_text(json.dumps(exam))
-            # A practice-only skill also resolves to its chapter; payload/answer
-            # dependencies are not already referenced by the ordinary fixture.
-            practice={'questions':[{'bookId':'test','chapterNumber':1,
-                'skillIds':['practice-only'], 'dataPath':'content/practice/test.json'}]}
-            (root/'practice-catalogue.json').write_text(json.dumps(practice))
-            p=root/'content/practice/test.json';p.parent.mkdir(parents=True,exist_ok=True);p.write_text('{"questions":[]}')
-            entries['content/practice/test.json']={}
-            exam=json.loads((root/'exam-catalogue.json').read_text())
-            for m in exam['questions'][0]['skillMappings']:m['skillId']='practice-only'
-            (root/'exam-catalogue.json').write_text(json.dumps(exam))
-            result=offline.generate(root,entries,'0.59')
-            self.assertIn('assets/exam-detail.svg', result['packs'][0]['files'])
-            # Unresolvable mappings must fail closed, not silently lose content.
-            for m in exam['questions'][0]['skillMappings']:m['skillId']='unmapped'
-            (root/'exam-catalogue.json').write_text(json.dumps(exam))
-            with self.assertRaisesRegex(ValueError,'Offline exam mapping has no chapter pack'):
-                offline.generate(root,entries,'0.59')
-            for m in exam['questions'][0]['skillMappings']:m['skillId']='test'
+                offline.generate(root,entries,'0.60')
+            exam['questions'][0]['chapterKeys'].pop()
             (root/'exam-catalogue.json').write_text(json.dumps(exam))
             del entries['content/exams/test.json']
             with self.assertRaisesRegex(ValueError,'Offline exam questions missing'):

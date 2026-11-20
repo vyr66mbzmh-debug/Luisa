@@ -5018,6 +5018,28 @@
         "docs/evidence/v059-import-print.json",
         "Final host/account/recovery and owner-report evidence in GitHub #101"
       ]
+    },
+    {
+      "id": "PAP-060",
+      "requirement": "Build Papers by canonical Edexcel textbook topic, with separate exam sources and compact print headers.",
+      "scope": "v0.60 Cloudflare owner and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner v0.60 requirements; GitHub #103",
+      "acceptance": [
+        "List each canonical chapter once as a numbered topic, matching By textbook. Remove the separate skills picker. Reuse question-level and source chapter mappings, verify actual exam questions and deduplicate all pools.",
+        "Keep all 8,669 Edexcel questions, their original content and stable IDs. Retain difficulty, assembly, random/manual selection and saved settings. Split Exam bank into Practice Booklet Exam style and actual Past Papers, with a catalogue-based dropdown.",
+        "Use a single-line printed question header with bold number and verified marks. Sum complete subpart allocations once. Mechanics Year 2 Chapter 7 Set B Gold displays [15 Marks]. Keep question diagrams to six body lines and retain proportions.",
+        "Retain all six layout/solution combinations, long continuations, owner offline selection and printing, and authenticated ADA roles. Require independent review and verified deployment before release."
+      ],
+      "evidence": [
+        "GitHub issue #103",
+        "docs/evidence/v060-papers-mapping.json",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py",
+        "tests/test_offline.py"
+      ]
     }
   ]
 }

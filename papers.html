@@ -22,7 +22,7 @@
 </div></div>
 </header>
 <main id="papers-main" class="papers-main">
-<div class="page-heading"><h1>Build a paper</h1><p>Choose Edexcel topics and skills, then draw a random set or pick individual questions. Choose one or two questions per page, or a condensed layout, with or without worked solutions.</p></div>
+<div class="page-heading"><h1>Build a paper</h1><p>Choose Edexcel textbook topics, then generate a paper or pick individual questions.</p></div>
 <noscript><p class="notice">Enable JavaScript to choose questions and build a paper.</p></noscript>
 <p id="papers-status" class="notice" role="status" aria-live="polite">Loading the question library…</p>
 <div class="builder-grid">
@@ -30,14 +30,14 @@
 <h2 id="filter-title" aria-live="polite">Loading questions…</h2>
 <fieldset class="source-fieldset"><legend>Question sources</legend>
 <label class="source-choice"><input id="papers-source-practice" type="checkbox" checked disabled> Practice questions</label>
-<label class="source-choice"><input id="papers-source-exam" type="checkbox" checked disabled> Exam bank</label>
+<label class="source-choice"><input id="papers-source-exam-style" type="checkbox" checked disabled> Exam style</label>
+<div class="past-paper-source"><label class="source-choice"><input id="papers-source-past-papers" type="checkbox" checked disabled> Past Papers</label><select id="papers-past-paper" aria-label="Past paper" disabled><option value="">All past papers</option></select></div>
 </fieldset>
 <label class="field" for="papers-difficulty">Difficulty<select id="papers-difficulty" disabled><option value="">All difficulties</option><option value="easy">Easy</option><option value="medium">Medium</option><option value="difficult">Difficult</option><option value="unclassified">Not classified</option></select></label>
 <p class="help">Difficulty is a guide. Bronze, Silver and Gold correspond to Easy, Medium and Difficult; past papers use their original question order.</p>
 <label class="field" for="papers-course">Course<select id="papers-course" disabled><option value="">All courses</option></select></label>
 <label class="field" for="papers-book">Book<select id="papers-book" disabled><option value="">All books</option></select></label>
 <fieldset class="topic-fieldset"><legend>Topics</legend><p class="help">All listed topics are included until you tick specific topics.</p><button id="papers-all-topics" type="button" class="quiet" disabled>Use all listed topics</button><div id="papers-topics" class="topic-list"></div></fieldset>
-<fieldset class="skill-fieldset"><legend>Individual skills</legend><p class="help">All listed skills are included until you tick specific skills.</p><button id="papers-all-skills" type="button" class="quiet" disabled>Use all listed skills</button><div id="papers-skills" class="skill-list"></div></fieldset>
 </aside>
 <div class="builder-content">
 <section class="panel generate-panel" aria-labelledby="generate-title">
@@ -47,7 +47,7 @@
 </section>
 <section class="panel" aria-labelledby="selection-title"><div class="section-heading"><h2 id="selection-title">Your paper <span id="papers-selected-count" class="count-badge">0</span></h2><div class="button-row"><button id="papers-clear" type="button" disabled>Clear paper</button><button id="papers-print" class="primary" type="button" disabled>Preview &amp; print</button></div></div>
 <div class="print-options">
-<label class="field" for="papers-layout">Print layout<select id="papers-layout"><option value="one">One question per page</option><option value="two" selected>Two questions per page</option><option value="condensed">Condensed</option></select></label>
+<label class="field" for="papers-layout">Print layout<select id="papers-layout"><option value="one">One question per page</option><option value="two" selected>Two questions per page</option><option value="condensed">All questions without writing space</option></select></label>
 <label class="field" for="papers-order">Question order<select id="papers-order"><option value="topic">Group by topic</option><option value="selection">As selected</option></select></label>
 <label class="source-choice"><input id="papers-answers" type="checkbox" checked> Include worked solutions at the back</label>
 </div>
