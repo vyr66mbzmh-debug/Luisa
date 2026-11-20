@@ -1,3 +1,8 @@
+## Luisa v0.60
+
+- Papers selects Edexcel topics from the textbook chapter list. Separate Exam style and Past Papers controls include a past-paper dropdown.
+- Printed question headers use one line with verified marks, including 15 marks for Mechanics Year 2 Chapter 7 Set B Gold. Printed question diagrams use at most six lines of height.
+
 ## Luisa v0.22 — 27 October 2026
 
 Mechanics Year 1: 114 checked slides and 58 booklet pages across chapters 8–11. Master workspace migrated to _LUISA with complete source material and recovery package. ADA backup refreshed.

@@ -89,10 +89,9 @@ class PapersSelection(unittest.TestCase):
     def test_practice_source_union_hints_and_restore(self):
         descriptor, question = self.practice_fixture()
         self.page.locator('#papers-source-practice').uncheck()
-        self.page.locator('#papers-source-exam').check()
+        self.page.locator('#papers-source-exam-style').check()
         self.assertEqual(self.page.locator('#filter-title').inner_text(), '1 questions in the selection')
-        self.page.locator('#papers-skills input[value$="/smq-1.01"]').check()
-        self.page.locator('#papers-skills input[value$="/smq-1.02"]').check()
+        self.page.locator('#papers-topics input[value="maths-a-level/maths-pure-year-1/1"]').check()
         self.assertEqual(self.page.locator('#filter-title').inner_text(), '1 questions in the selection')
         self.generate(1)
         self.page.locator('#papers-selected summary').click()
@@ -108,12 +107,12 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(row['steps'], question['steps'])
         self.assertEqual(row['source']['practiceBookletQuestionId'], descriptor['id'])
         self.page.locator('#papers-source-practice').check()
-        self.page.locator('#papers-source-exam').uncheck()
+        self.page.locator('#papers-source-exam-style').uncheck()
         self.assertEqual(self.selection_ids(), [descriptor['id']])
         self.page.reload()
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
         self.assertTrue(self.page.locator('#papers-source-practice').is_checked())
-        self.assertFalse(self.page.locator('#papers-source-exam').is_checked())
+        self.assertFalse(self.page.locator('#papers-source-exam-style').is_checked())
         self.assertEqual(self.selection_ids(), [descriptor['id']])
 
     def test_incomplete_practice_solution_keeps_previous_paper(self):
@@ -122,7 +121,7 @@ class PapersSelection(unittest.TestCase):
         self.practice_fixture(incomplete=True)
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
         self.page.locator('#papers-source-practice').uncheck()
-        self.page.locator('#papers-source-exam').check()
+        self.page.locator('#papers-source-exam-style').check()
         self.page.locator('#papers-count').fill('1')
         self.page.locator('#papers-generate').click()
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('incomplete content')")
@@ -136,7 +135,7 @@ class PapersSelection(unittest.TestCase):
             content_type='application/json', body=json.dumps({'schemaVersion': 1, 'questions': [question]})))
         self.page.set_viewport_size({'width': 390, 'height': 844})
         self.page.locator('#papers-source-practice').uncheck()
-        self.page.locator('#papers-source-exam').check()
+        self.page.locator('#papers-source-exam-style').check()
         self.generate(1)
         self.page.locator('#papers-selected summary').click()
         table = self.page.locator('#papers-selected .math-table')
@@ -158,7 +157,7 @@ class PapersSelection(unittest.TestCase):
         self.page.locator('#papers-difficulty').select_option('easy')
         self.generate(1)
         self.assertEqual(self.selection_ids(), [descriptor['id']])
-        self.page.locator('#papers-source-exam').uncheck()
+        self.page.locator('#papers-source-exam-style').uncheck()
         self.assertEqual(self.page.locator('#filter-title').inner_text(), '0 questions in the selection')
         self.assertEqual(self.selection_ids(), [descriptor['id']])
         self.assertTrue(self.page.locator('#papers-generate').is_disabled())
@@ -166,7 +165,7 @@ class PapersSelection(unittest.TestCase):
 
     def test_full_pool_regeneration_uses_new_order(self):
         self.page.locator('#papers-course').select_option('further-maths-a-level')
-        self.page.locator('#papers-skills input[value$="/1.01"]').check()
+        self.page.locator('#papers-topics input[value="further-maths-a-level/pure-core-1/1"]').check()
         self.page.locator('#papers-order').select_option('selection')
         self.page.evaluate('Math.random=()=>0')
         count = int(self.page.locator('#papers-count').get_attribute('max'))
@@ -195,7 +194,8 @@ class PapersSelection(unittest.TestCase):
     def test_past_exam_loader_marks_timing_and_mixed_selection(self):
         q = dict(id='exam/test-paper/q1', sourceLabel='Source: Test paper · Q1',
                  board='Edexcel', status='checked', marks=7, difficulty='easy',
-                 dataPath='content/exams/test-paper.json',
+                 dataPath='content/exams/test-paper.json', paperId='test-paper', paperCode='9MA0/01', session='June 2025',
+                 chapterKeys=['maths-a-level/maths-pure-year-1/1'],
                  skillMappings=[dict(courseId='maths-a-level',bookId='maths-pure-year-1',skillId='smq-1.01')])
         self.page.route('**/exam-catalogue.json', lambda route: route.fulfill(
             content_type='application/json',body=json.dumps({'version':1,'questions':[q]})))
@@ -203,12 +203,12 @@ class PapersSelection(unittest.TestCase):
             content_type='application/json',body=json.dumps({'schemaVersion':1,'questions':[
                 dict(id=q['id'],question='<p>Evaluate 2 + 3.</p>',steps=['<p>5.</p>'])]})))
         self.page.reload()
-        self.page.wait_for_function("!document.querySelector('#papers-source-exam').disabled")
+        self.page.wait_for_function("!document.querySelector('#papers-source-past-papers').disabled")
         self.page.locator('#papers-source-practice').uncheck()
         self.generate(1)
         self.assertEqual(self.selection_ids(), [q['id']])
         self.assertEqual(self.page.locator('#papers-summary').inner_text(), '1 questions · 7 marks · Suggested practice time: 6 minutes')
-        self.page.locator('#papers-source-exam').uncheck()
+        self.page.locator('#papers-source-past-papers').uncheck()
         self.page.locator('#papers-source-practice').check()
         self.page.locator('#papers-browse').click()
         self.page.locator('[data-add]').first.click()
@@ -219,27 +219,65 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(self.page.locator('#filter-title').inner_text(), '6,147 questions in the selection')
         self.page.locator('#papers-course').select_option('maths-a-level')
         self.assertEqual(self.page.locator('#filter-title').inner_text(), '3,353 questions in the selection')
-        self.assertEqual(self.page.locator('#papers-skills input[value$="/smq-2.48"]').count(), 0)
+        self.assertEqual(self.page.locator('#papers-skills').count(), 0)
         self.page.locator('#papers-course').select_option('further-maths-a-level')
-        self.page.locator('#papers-skills input[value$="/2.04"]').check()
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), '34 questions in the selection')
-        self.generate(34)
-        ids = self.selection_ids()
-        self.assertEqual(len(ids), len(set(ids)))
-        self.assertTrue(all(i.startswith('further-maths-a-level/pure-core-2/') for i in ids))
-        self.assertTrue(any(i.endswith('/q34') for i in ids))
+        self.page.locator('#papers-book').select_option('further-maths-a-level/pure-core-2')
+        self.page.locator('#papers-topics input[value="further-maths-a-level/pure-core-2/6"]').check()
+        self.page.locator('#papers-browse').click()
+        self.page.locator('[data-add]').first.wait_for()
+        self.assertTrue(self.page.locator('[data-add]').evaluate_all(
+            'nodes=>nodes.some(n=>n.dataset.add.includes("/pure-core-1/") && n.dataset.add.includes("/1.30/"))'))
 
-    def test_edexcel_filter_excludes_skills_topics_and_saved_questions(self):
-        self.page.locator('#papers-course').select_option('further-maths-a-level')
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), '2,794 questions in the selection')
-        self.assertEqual(self.page.locator('#papers-skills input[value$="/1.16"]').count(), 0)
-        self.assertEqual(self.page.locator('#papers-topics input[value$="/further-algebra"]').count(), 0)
+    def test_live_catalogues_source_split_paper_filter_and_legacy_restore(self):
+        self.page.unroute('**/practice-catalogue.json')
+        self.page.unroute('**/exam-catalogue.json')
+        gold = 'practice/maths-a-level/maths-mechanics-year-2/ch7/problem-b/qgold'
+        self.page.evaluate('''id => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({
+          version:2, sources:{practice:false, exam:true}, selected:[id], order:'selection',
+          layout:'condensed', includeAnswers:false, topics:['old-topic'], skills:['old-skill']
+        }))''', gold)
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertEqual(self.selection_ids(), [gold])
+        self.assertIn('reset', self.page.locator('#papers-selection-note').inner_text())
+        self.assertIn('15 marks', self.page.locator('#papers-summary').inner_text())
+        self.assertFalse(self.page.locator('#papers-source-practice').is_checked())
+        self.assertTrue(self.page.locator('#papers-source-exam-style').is_checked())
+        self.assertTrue(self.page.locator('#papers-source-past-papers').is_checked())
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '601 questions in the selection')
+        self.page.locator('#papers-source-past-papers').uncheck()
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '554 questions in the selection')
+        self.assertTrue(self.page.locator('#papers-past-paper').is_disabled())
+        self.page.locator('#papers-source-exam-style').uncheck()
+        self.page.locator('#papers-source-past-papers').check()
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '47 questions in the selection')
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '16 questions in the selection')
+        self.page.locator('#papers-source-practice').check()
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '8,084 questions in the selection')
+        self.page.locator('#papers-source-practice').uncheck()
         self.page.locator('#papers-course').select_option('maths-a-level')
-        self.assertEqual(self.page.locator('#papers-skills input[value$="/smq-1.59"]').count(), 0)
-        self.page.locator('#papers-skills input[value$="/smq-1.51"]').check()
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), '2 questions in the selection')
-        self.generate(2)
-        self.assertEqual({i.rsplit('/', 1)[-1] for i in self.selection_ids()}, {'q1', 'q2'})
+        self.page.locator('#papers-book').select_option('maths-a-level/maths-pure-year-1')
+        for number in (2, 7):
+            self.page.locator(f'#papers-topics input[value="maths-a-level/maths-pure-year-1/{number}"]').check()
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '3 questions in the selection')
+        self.page.locator('#papers-browse').click()
+        self.page.wait_for_function("document.querySelectorAll('[data-add]').length === 3")
+        browsed = self.page.locator('[data-add]').evaluate_all('nodes=>nodes.map(n=>n.dataset.add)')
+        self.assertEqual(self.selection_ids(), [gold])
+        self.generate(3)
+        self.assertCountEqual(self.selection_ids(), browsed)
+        self.page.locator('#papers-order').select_option('topic')
+        self.page.locator('#papers-print').click()
+        self.page.wait_for_function('Boolean(window.testPaperSnapshot)')
+        snapshot = self.page.evaluate('testPaperSnapshot')
+        self.assertEqual([q['printChapter']['id'] for q in snapshot], ['2', '7', '7'])
+        question = next(q for q in snapshot if q['id'].endswith('/q4'))
+        path = ROOT / 'content/exams/edexcel-9ma0-01-2025-june.json'
+        source = next(q for q in json.loads(path.read_text())['questions'] if q['id'] == question['id'])
+        self.assertEqual(question['question'], source['question'])
+
+    def test_edexcel_filter_excludes_ineligible_saved_questions(self):
         self.page.evaluate("""() => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({
             version:1, selected:[
                 'further-maths-a-level/pure-core-1/further-algebra/1.16/q1',
@@ -273,6 +311,7 @@ class PapersSelection(unittest.TestCase):
         self.assertNotEqual(set(first), set(second))
 
     def test_manual_mixed_books_filter_retention_and_immutable_print(self):
+        self.page.locator('#papers-order').select_option('selection')
         self.page.locator('#papers-browse').click()
         self.page.locator('[data-add]').first.wait_for()
         self.page.locator('[data-add]').first.click()
@@ -326,11 +365,18 @@ class PapersSelection(unittest.TestCase):
         topics = self.page.locator('#papers-topics input').evaluate_all('(nodes) => nodes.slice(0, 2).map(node => node.value)')
         for topic in topics:
             self.page.locator(f'#papers-topics input[value="{topic}"]').check()
-        expected = self.page.evaluate("""async topics => { const eligible = new Set((await (await fetch('textbook-catalogue.json')).json()).questions.map(q => `${q.skill}/${q.question}`)); return FMQ_LIBRARY.courses.flatMap(c => c.books.flatMap(b => b.topics.filter(t => topics.includes(`${c.id}/${b.id}/${t.id}`)).flatMap(t => t.skills.flatMap(s => s.questions.filter(q => !q.reference && eligible.has(`${s.id}/${q.number}`)))))).length; }""", topics)
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{expected:,} questions in the selection')
+        book = 'maths-pure-year-1'
+        canonical = json.loads((ROOT / 'textbook-catalogue.json').read_text())
+        labels = [f"{c['id']}. {c['title']}" for b in canonical['books'] if b['id'] == book for c in b['chapters']]
+        self.assertEqual(len(labels), 14)
+        self.assertEqual(self.page.locator('#papers-topics label > span').evaluate_all(
+            'nodes=>nodes.map(n=>n.firstChild.textContent)'), labels)
+        expected = {(q['skill'], q['question']) for q in canonical['questions']
+                    if any('maths-a-level/' + t['book'] + '/' + t['chapter'] in topics for t in q['targets'])}
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{len(expected):,} questions in the selection')
         self.assertEqual(self.page.locator('#papers-topics input:checked').count(), 2)
         self.generate(12)
-        self.assertTrue(all(any(question.startswith(topic + '/') for topic in topics) for question in self.selection_ids()))
+        self.assertTrue(all((key.split('/')[-2], int(key.split('/')[-1][1:])) in expected for key in self.selection_ids()))
         self.page.reload()
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
         self.assertEqual(self.page.locator('#papers-topics input:checked').count(), 2)
@@ -346,7 +392,7 @@ class PapersSelection(unittest.TestCase):
 
     def test_loading_failure_and_cancellation_keep_previous_selection(self):
         self.page.locator('#papers-course').select_option('further-maths-a-level')
-        self.page.locator('#papers-skills input[value$="/1.01"]').check()
+        self.page.locator('#papers-topics input[value="further-maths-a-level/pure-core-1/1"]').check()
         self.generate(1)
         before = self.selection_ids()
         self.page.locator('#papers-course').select_option('maths-a-level')

@@ -1,5 +1,12 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.60 -->
+**Release candidate 0.60 · GitHub #103.** Papers uses Course → Book → Topics, with no separate skills picker. All 8,669 Edexcel questions resolve to the existing 62 chapters across eight books. The three pools contain 8,068 Practice questions, 554 Exam style booklet questions and 47 actual Past Papers questions. The past-paper dropdown uses catalogue IDs. Existing paper IDs, selection order and print settings survive migration. Old incompatible topic or skill restrictions reset with a notice.
+
+**Printing.** Single-line headers show a bold question number and verified marks in square brackets. Mechanics Year 2 Chapter 7 Set B Gold totals 4 + 8 + 3 = 15 marks. Question images keep their proportions within six lines of text. One question per page, two per page and all questions without writing space remain available with or without solutions. Preserve original question and solution bodies, hints, provenance, continuation pages and past-paper-only timing.
+
+**Evidence and release.** See `docs/evidence/v060-papers-mapping.json` for mapping coverage and the five explicit resolutions. Review shared print geometry independently before landing. Require green build, test and scan checks on the reviewed PR head, then verify actual Papers behaviour and release manifests for Cloudflare owner and both ADA roles. Verify owner offline operation, preserve accounts and credentials, follow recovery retention and submit the owner-only final SMTP report under FR-024. The live revision and release outcome belong in GitHub #103. Legacy Maths has 3,423 / 3,423 questions (100%) and 132 / 132 sections.
+
 <!-- LUISA-REPORT-HANDOFF v0.59 -->
 **Release 0.59 · GitHub #101.** Papers contains 8,669 Edexcel questions. Practice questions contains 8,068 entries; Exam bank contains 601, comprising 290 source-labelled exam-style booklet questions, 88 each Bronze/Silver/Gold and 47 actual questions from five June 2025 papers. The pilot covers Pure Mathematics 1, Statistics, Mechanics, Core Pure Mathematics 1 and Core Pure Mathematics 2, with 350 marks in total. Preserve exact original prompts, subparts, diagrams, question numbering and source labels. The original paper's working, rounding and gravity instructions accompany standalone questions. Question-specific official mark schemes retain alternatives and guidance as readable vector or high-resolution images; their image text is not searchable mathematics.
 

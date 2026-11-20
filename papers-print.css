@@ -91,3 +91,14 @@ body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
 .page-banner:has(.paper-marks) {height:17mm; flex-wrap:wrap; column-gap:4mm}
 .paper-marks {font-size:9pt}
 .marks-policy {flex-basis:100%; font-size:7.5pt; text-align:right}
+
+/* Keep the paper number, source, and verified total on one line. */
+.compact-heading {display:flex; align-items:baseline; gap:.5em; white-space:nowrap; font:9pt/1.25 system-ui,sans-serif; color:#102b43}
+.compact-heading h2,.compact-heading .question-marks {font:700 11pt/1.25 system-ui,sans-serif; margin:0; flex:none}
+.compact-provenance {flex:1; min-width:0}
+.print-question .math-content img {width:auto!important; height:auto!important; max-width:100%!important; max-height:6lh!important; object-fit:contain}
+.print-question .practice-context {border-color:#9baebe}
+.print-question .practice-tag {color:inherit}
+
+/* The pulley scan has a gold paper tint. Its labels and lines are monochrome. */
+.print-question img[src$="/7ea7147be878100dd263.png"] {filter:grayscale(1)}

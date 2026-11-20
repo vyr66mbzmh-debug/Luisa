@@ -30,6 +30,39 @@
       doc.head.append(node);
     });
   }
+  const shortBooks = {
+    'Pure Year 1': 'Y1 Pure', 'Pure Year 2': 'Y2 Pure',
+    'Mechanics Year 1': 'Y1 Mech', 'Mechanics Year 2': 'Y2 Mech',
+    'Statistics Year 1': 'Y1 Stats', 'Statistics Year 2': 'Y2 Stats',
+    'Pure Core 1': 'Core Pure 1', 'Pure Core 2': 'Core Pure 2'
+  };
+  function compactSource(row) {
+    if (row.sourceKind === 'practice-booklet') {
+      const section = row.subchapterLabel || row.subchapterTitle;
+      const set = /^Problem (?:solving: Set|set) (.+)$/i.exec(section);
+      const exercise = /^\d+(?:\.\d+)*/.exec(section);
+      const label = set?.[1] || exercise?.[0] || (/^(?:Exam[- ]style|Selected exam question bank questions)/i.test(section) ? 'Exam style' : section);
+      return ['Practice', label, /^\d/.test(row.questionLabel) ? 'Q' + row.questionLabel : row.questionLabel].join(' ');
+    }
+    if (row.sourceKind === 'past-exam') return source(row).replace(/^Source: Edexcel (?:A Level )?/i, 'Edexcel ').replace(/^Source: /, '');
+    return source(row);
+  }
+  function questionHeading(doc, row, number, continuation) {
+    const head = element(doc, 'header', 'question-heading compact-heading');
+    const chapter = row.printChapter;
+    const course = (chapter?.courseTitle || row.courseTitle || '').replace(/^Maths A Level$/, 'A Level').replace('Further Maths A Level', 'Further Maths');
+    const book = chapter?.bookTitle || row.bookTitle;
+    const title = chapter?.title || row.chapterTitle || row.topicTitle;
+    const chapterNumber = chapter?.id || row.chapterNumber;
+    const topic = title === 'Applications of forces' ? 'Forces' : title;
+    const place = [course, shortBooks[book] || book, chapterNumber && 'Ch' + chapterNumber, topic].filter(Boolean).join(' ');
+    const difficulty = row.difficulty && row.difficulty[0].toUpperCase() + row.difficulty.slice(1);
+    const detail = element(doc, 'span', 'compact-provenance', '(' + [place, compactSource(row), difficulty].filter(Boolean).join(' - ') + ')');
+    detail.title = [source(row), context(row)].filter(Boolean).join(' · ');
+    head.append(element(doc, 'h2', '', 'Q' + number + (continuation ? ' · continued' : '')), detail);
+    if (validMarks(row) && !continuation) head.append(element(doc, 'strong', 'question-marks', '[' + row.marks + ' Marks]'));
+    return head;
+  }
   function heading(doc, row, number, continuation = false) {
     const head = element(doc, 'header', 'question-heading');
     head.append(element(doc, 'h2', '', `Question ${number}${continuation ? ' · continued' : ''}`), element(doc, 'p', 'source', source(row)), element(doc, 'p', 'context', context(row)));
@@ -73,6 +106,13 @@
       }
     }
     await win.document.fonts.ready;
+  }
+  function fitQuestionHeading(question) {
+    const detail = question.querySelector('.compact-provenance');
+    for (const size of [9, 8.5, 8, 7.5]) {
+      detail.style.fontSize = size + 'pt';
+      if (detail.scrollWidth <= detail.clientWidth + 1) break;
+    }
   }
   function overflows(node) { return node.scrollHeight > node.clientHeight + 1 || node.scrollWidth > node.clientWidth + 1; }
   function wideContent(node) {
@@ -151,7 +191,7 @@
       await whileOpen(win, Promise.all([asset(doc, 'link', 'papers-print.css'), asset(doc, 'link', 'vendor/katex.min.css'), asset(doc, 'script', 'vendor/katex.min.js')]));
       const rendered = rows.map((row, index) => {
         const question = element(doc, 'article', 'print-question'); question.dataset.questionId = row.id;
-        question.append(heading(doc, row, index + 1), content(doc, (row.contextHtml || '') + row.question));
+        question.append(questionHeading(doc, row, index + 1, false), content(doc, (row.contextHtml || '') + row.question));
         const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); if (layout !== 'condensed') question.append(working);
         const solution = includeAnswers ? content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join('')) : null;
         if (includeAnswers && row.hints?.length) {
@@ -187,6 +227,7 @@
         const item = rendered[i];
         if (!questionBody || (layout !== 'condensed' && questionBody.children.length === (layout === 'one' ? 1 : 2))) questionBody = page('questions');
         questionBody.append(item.question);
+        fitQuestionHeading(item.question);
         if (layout === 'condensed' && overflows(questionBody) && questionBody.children.length > 1) {
           item.question.remove(); questionBody = page('questions'); questionBody.append(item.question);
         }
@@ -213,10 +254,11 @@
         function extendedPage() {
           const body = page('questions'); body.parentElement.classList.add('extended-page');
           section = element(doc, 'article', 'print-question extended-question'); section.dataset.questionId = item.row.id;
-          section.append(heading(doc, item.row, i + 1, !first));
+          section.append(questionHeading(doc, item.row, i + 1, !first));
           prompt = element(doc, 'div', 'math-content'); section.append(prompt);
           if (layout !== 'condensed') section.append(item.question.querySelector('.working-space').cloneNode(true));
           body.append(section);
+          fitQuestionHeading(section);
           if (layout === 'condensed') questionBody = body;
           first = false; hasContent = false;
         }
