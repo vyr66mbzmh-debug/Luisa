@@ -121,6 +121,15 @@
     if (!marks.length) return undefined;
     const amounts = marks.map(mark => /^\((\d+) marks?\)$/i.exec(mark.textContent.trim()));
     if (amounts.some(amount => !amount)) return undefined;
+    const total = amounts.reduce((sum, amount) => sum + Number(amount[1]), 0);
+    const table = marks[0].closest('.practice-layout-table');
+    if (table && marks.every(mark => mark.closest('.practice-layout-table') === table)) {
+      const cells = [...table.querySelectorAll('td')];
+      const complete = cells.length === marks.length && cells.every((cell, index) =>
+        marks[index].closest('td') === cell && cell.firstElementChild?.matches('strong') &&
+        cell.firstElementChild.textContent.trim() === String.fromCharCode(97 + index) + '.');
+      return complete ? total : undefined;
+    }
     const parts = marks.map(mark => mark.closest('li'));
     if (marks.length === 1 && !parts[0]) return Number(amounts[0][1]);
     const marked = new Set(parts);
@@ -136,7 +145,7 @@
         if (!covered) return undefined;
       }
     }
-    return amounts.reduce((sum, amount) => sum + Number(amount[1]), 0);
+    return total;
   }
   async function loadRow(descriptor, signal) {
     if (rows.has(descriptor.id)) return rows.get(descriptor.id);

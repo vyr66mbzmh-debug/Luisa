@@ -277,6 +277,24 @@ class PapersSelection(unittest.TestCase):
         source = next(q for q in json.loads(path.read_text())['questions'] if q['id'] == question['id'])
         self.assertEqual(question['question'], source['question'])
 
+    def test_practice_marks_include_all_labelled_table_parts(self):
+        self.page.unroute('**/practice-catalogue.json')
+        ident = 'practice/maths-a-level/maths-pure-year-1/ch11/11.3/q7'
+        self.page.evaluate('''id => sessionStorage.setItem('luisa-papers-v1',
+            JSON.stringify({version:3, selected:[id]}))''', ident)
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertEqual(self.selection_ids(), [ident])
+        self.assertIn('6 marks', self.page.locator('#papers-summary').inner_text())
+        payload_path = 'content/practice/pure-year-1/chapter-11.json'
+        payload = json.loads((ROOT / payload_path).read_text())
+        question = next(q for q in payload['questions'] if q['id'] == ident)
+        question['question'] = question['question'].replace('<span class="marks">(1 mark)</span>', '')
+        self.page.route('**/' + payload_path, lambda route: route.fulfill(json=payload))
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertEqual(self.page.locator('#papers-summary').inner_text(), '1 questions')
+
     def test_edexcel_filter_excludes_ineligible_saved_questions(self):
         self.page.evaluate("""() => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({
             version:1, selected:[
