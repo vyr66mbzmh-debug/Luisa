@@ -5040,6 +5040,26 @@
         "tests/papers_print_browser.py",
         "tests/test_offline.py"
       ]
+    },
+    {
+      "id": "PAP-061",
+      "requirement": "Simplify Papers print layout and matching question and solution headers.",
+      "scope": "v0.61 Cloudflare owner and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner v0.61 instruction; GitHub #105",
+      "acceptance": [
+        "Use only one question per page by default or Condensed. Place the Condensed checkbox below Include worked solutions at the back. Migrate saved two-per-page preferences to the default and retain saved papers and condensed choices.",
+        "Omit original paper-wide instructions from printed questions. Keep original question prompts, question-specific instructions, Practice Booklet context, marks, diagrams, solutions and hints.",
+        "Print a bold Question paper heading with no wordmark. Put a single, local creation timestamp such as 20/11/26 6:30pm on every footer with page numbering, and use one footer rule.",
+        "Limit printed question images to eight body-text lines with preserved proportions. Use the same compact one-line question header in worked solutions and mark schemes. Preserve owner offline printing and ADA role boundaries."
+      ],
+      "evidence": [
+        "GitHub issue #105",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
     }
   ]
 }

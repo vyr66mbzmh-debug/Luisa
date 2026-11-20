@@ -2,6 +2,7 @@
 
 One browser, one page at a time. No network services or new production dependencies.
 """
+from datetime import datetime, timezone
 import functools
 import http.server
 import json
@@ -52,7 +53,7 @@ class PapersPrintTests(unittest.TestCase):
         threading.Thread(target=cls.server.serve_forever, daemon=True).start()
         cls.playwright = sync_playwright().start()
         cls.browser = cls.playwright.chromium.launch(channel='chrome')
-        cls.context = cls.browser.new_context()
+        cls.context = cls.browser.new_context(timezone_id='Europe/London')
 
     @classmethod
     def tearDownClass(cls):
@@ -88,15 +89,15 @@ class PapersPrintTests(unittest.TestCase):
         self.assertTrue(preview.locator('.print-question img').evaluate_all('nodes=>nodes.length>0 && nodes.every(n=>n.complete&&n.naturalWidth>0)'))
         question_ids = preview.locator('.questions-page .print-question').evaluate_all('(nodes)=>nodes.map(n=>n.dataset.questionId)')
         self.assertEqual(question_ids, [r['id'] for r in rows])
-        self.assertEqual(preview.locator('.questions-page').count(), 2)
+        self.assertEqual(preview.locator('.questions-page').count(), 4)
         self.assertGreater(preview.locator('.solutions-page').count(), 1)
-        self.assertEqual(preview.locator('.print-page').evaluate_all("nodes=>nodes.map(n=>n.classList.contains('questions-page'))")[:2], [True, True])
+        self.assertEqual(preview.locator('.print-page').evaluate_all("nodes=>nodes.map(n=>n.classList.contains('questions-page'))")[:4], [True] * 4)
         for index, item in enumerate(rows):
             selector = '[data-question-id="' + item['id'] + '"]'
             source = self.page.evaluate('html=>{const n=document.createElement("div");n.innerHTML=html;return [...n.querySelectorAll("[data-math]")].map(x=>x.dataset.math)}', ''.join(item['steps']))
             actual = preview.locator('.print-solution' + selector + ' [data-math]').evaluate_all('nodes=>nodes.map(n=>n.dataset.math)')
             self.assertEqual(actual, source)
-            self.assertIn(f'Question {index + 1}', preview.locator('.print-solution' + selector).first.inner_text())
+            self.assertIn(f'Q{index + 1}', preview.locator('.print-solution' + selector).first.inner_text())
             self.assertIn(f'Source: Luisa {item["skillCode"]} Q{item["number"]}', preview.locator('.print-solution' + selector).first.inner_text())
         dimensions = preview.locator('.page-content,.print-question').evaluate_all('nodes=>nodes.map(n=>[n.scrollHeight-n.clientHeight,n.scrollWidth-n.clientWidth])')
         self.assertTrue(all(h <= 1 and w <= 1 for h, w in dimensions), dimensions)
@@ -111,10 +112,10 @@ class PapersPrintTests(unittest.TestCase):
                 self.assertAlmostEqual(sheet.rect.height, 841.89, delta=1)
                 self.assertIn(f'Page {index + 1} of {len(pdf)}', sheet.get_text())
             self.assertNotIn('Worked solutions', pdf[0].get_text())
-            self.assertIn('Worked solutions', pdf[2].get_text())
+            self.assertIn('Worked solutions', pdf[4].get_text())
             pdf[1].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save('/tmp/luisa57-verified-diagram-page.png')
             pdf[0].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save('/tmp/luisa57-verified-question-page.png')
-            pdf[2].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save('/tmp/luisa57-verified-solution-page.png')
+            pdf[4].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save('/tmp/luisa57-verified-solution-page.png')
 
     def test_long_original_continues_without_losing_any_diagrams(self):
         item = row('smq-1.53', 2)
@@ -127,8 +128,9 @@ class PapersPrintTests(unittest.TestCase):
         self.assertEqual(images, expected)
         self.assertEqual(len(images), 21)
         self.assertTrue(all(value <= 1 for value in preview.locator('.page-content,.print-question').evaluate_all('nodes=>nodes.flatMap(n=>[n.scrollHeight-n.clientHeight,n.scrollWidth-n.clientWidth])')))
-        # Following ordinary questions return to two per sheet, preserving order.
-        self.assertEqual(preview.locator('.questions-page').last.locator('.print-question h2').all_text_contents(), ['Q3','Q4'])
+        # Following ordinary questions return to one per sheet, preserving order.
+        self.assertEqual([sheet.locator('.print-question h2').inner_text() for sheet in
+                          preview.locator('.questions-page').all()[-2:]], ['Q3','Q4'])
         preview.pdf(path='/tmp/luisa57-long-question.pdf', prefer_css_page_size=True)
 
     def test_all_eligible_long_sources_preserve_content_and_fit(self):
@@ -136,7 +138,7 @@ class PapersPrintTests(unittest.TestCase):
         allowed = {(r['skill'], r['question']) for r in json.loads((ROOT / 'textbook-catalogue.json').read_text())['questions']}
         rows = [row(skill, number) for skill, number in sorted(allowed) if row(skill, number)['id'] in rejected]
         self.assertEqual(len(rows), 271)
-        for layout, offset in [(layout, offset) for layout in ('two', 'one', 'condensed') for offset in range(0, len(rows), 10)]:
+        for layout, offset in [(layout, offset) for layout in ('one', 'condensed') for offset in range(0, len(rows), 10)]:
             batch = rows[offset:offset + 10]
             preview, result = self.preview(batch, layout=layout)
             self.assertTrue(result['ready'], result)
@@ -166,7 +168,7 @@ class PapersPrintTests(unittest.TestCase):
         import fitz
         rows = [dict(row('1.01', number), steps=['<p>ANSWER_SECRET_%s</p>' % number],
                      hints=['<p>HINT_SECRET_%s</p>' % number]) for number in (1, 2, 3, 4)]
-        for layout, expected_pages in [('one', 4), ('two', 2), ('condensed', 1)]:
+        for layout, expected_pages in [('one', 4), ('condensed', 1)]:
             for include_answers in (False, True):
                 with self.subTest(layout=layout, include_answers=include_answers):
                     preview, result = self.preview(rows, layout=layout, includeAnswers=include_answers)
@@ -200,26 +202,20 @@ class PapersPrintTests(unittest.TestCase):
         self.assertNotIn('UNAVAILABLE_', preview.content())
         self.assertEqual(preview.locator('img,.solution-step,.solution-hints').count(), 0)
 
-    def test_past_exam_marks_totals_time_and_continuations(self):
+    def test_past_exam_marks_and_timestamp_on_continuations(self):
         import fitz
+        self.page.clock.set_fixed_time(datetime(2026, 11, 20, 18, 30, tzinfo=timezone.utc))
         rows = [dict(row('smq-1.53', 2), sourceKind='past-exam', sourceLabel='Source: Exam fixture A Q2', marks=7, difficulty='Hard'),
                 dict(row('1.01', 1), sourceKind='past-exam', sourceLabel='Exam fixture B Q1', marks=6, difficulty='Easy')]
         rows[0]['question'] += '<p>Continuation geometry fixture.</p>' * 55
-        for layout in ('one', 'two', 'condensed'):
+        for layout in ('one', 'condensed'):
             with self.subTest(layout=layout):
                 preview, result = self.preview(rows, layout=layout, includeAnswers=False)
                 self.assertTrue(result['ready'], result)
                 self.assertGreater(preview.locator('.extended-page').count(), 1)
-                self.assertTrue(all('Total: 13 marks' in t and 'Estimated time: 11 min' in t
-                                    for t in preview.locator('.paper-marks').all_text_contents()))
-                allocated = preview.locator('[data-allocated-marks]').evaluate_all(
-                    'nodes=>nodes.map(n=>({id:n.dataset.questionId,marks:Number(n.dataset.allocatedMarks),last:![...n.ownerDocument.querySelectorAll(".print-question")].some(x=>x.dataset.questionId===n.dataset.questionId&&(n.compareDocumentPosition(x)&Node.DOCUMENT_POSITION_FOLLOWING))}))')
-                self.assertEqual(sum(item['marks'] for item in allocated), 13)
-                self.assertEqual(len(allocated), 2)
-                self.assertTrue(all(item['last'] for item in allocated), allocated)
-                totals = preview.locator('.questions-page .page-footer>span:first-child').all_text_contents()
-                self.assertEqual(sum(int(text.split(': ')[1].split(' ')[0]) for text in totals), 13)
-                self.assertTrue(all('final page' in text for text in preview.locator('.marks-policy').all_text_contents()))
+                self.assertEqual(preview.locator('.question-marks').all_text_contents(), ['[7 Marks]', '[6 Marks]'])
+                self.assertEqual(preview.locator('.page-banner').all_text_contents(), ['Question paper'] * result['pageCount'])
+                self.assertEqual(preview.locator('.page-footer time').all_text_contents(), ['20/11/26 6:30pm'] * result['pageCount'])
                 self.assertIn('Exam fixture A Q2', preview.locator('.questions-page').first.inner_text())
                 self.assertNotIn('Source: Source:', preview.locator('body').inner_text())
                 self.assertIn('Hard', preview.locator('.questions-page').first.inner_text())
@@ -230,8 +226,45 @@ class PapersPrintTests(unittest.TestCase):
                 preview.pdf(path=path, prefer_css_page_size=True)
                 with fitz.open(path) as pdf:
                     self.assertEqual(len(pdf), result['pageCount'])
+                    for sheet in pdf:
+                        self.assertIn('20/11/26 6:30pm', sheet.get_text())
+                        if layout == 'one':
+                            rules = [path['rect'] for path in sheet.get_drawings()
+                                     if path['rect'].y0 > sheet.rect.height - 58 and
+                                        path['rect'].width > sheet.rect.width * .8 and path['rect'].height < 2]
+                            self.assertEqual(len(rules), 1, rules)
                     pdf[-1].get_pixmap(matrix=fitz.Matrix(1.2, 1.2)).save(path + '.png')
                 preview.close()
+
+    def test_original_instructions_omitted_and_exam_solution_heading_matches(self):
+        import fitz
+        pure = json.loads((ROOT / 'content/exams/edexcel-9ma0-01-2025-june.json').read_text())
+        core = json.loads((ROOT / 'content/exams/edexcel-9fm0-01-2025-june.json').read_text())
+        exam = json.loads((ROOT / 'exam-catalogue.json').read_text())['questions']
+        descriptors = {item['id']: item for item in exam}
+        rows = [dict(item, **{key: descriptors[item['id']][key] for key in ('marks', 'difficulty', 'sourceLabel')},
+                     sourceKind='past-exam') for item in (pure['questions'][6], core['questions'][8])]
+        preview, result = self.preview(rows)
+        self.assertTrue(result['ready'], result)
+        self.assertTrue(preview.locator('.page-banner').evaluate_all(
+            "nodes=>nodes.every(n=>getComputedStyle(n).fontWeight==='700')"))
+        self.assertEqual(preview.locator('.print-question .exam-instructions,.print-question .practice-context').count(), 0)
+        for item in rows:
+            selector = f'[data-question-id="{item["id"]}"] .compact-heading'
+            question = preview.locator('.print-question' + selector)
+            solution = preview.locator('.print-solution' + selector).first
+            self.assertIn(item['sourceLabel'], question.inner_text())
+            self.assertIn(f"[{item['marks']} Marks]", question.inner_text())
+            self.assertEqual(solution.inner_text(), question.inner_text())
+            self.assertTrue(solution.evaluate("n=>{const p=n.querySelector('.compact-provenance');return p.scrollWidth<=p.clientWidth+1}"))
+        with fitz.open(stream=preview.pdf(prefer_css_page_size=True), filetype='pdf') as pdf:
+            text = ''.join(sheet.get_text() for sheet in pdf)
+            self.assertNotIn('Original paper instructions', text)
+            self.assertNotIn('You should show sufficient working', text)
+            self.assertNotIn('Page total:', text)
+            self.assertIn('Worked solutions', text)
+            pdf[0].get_pixmap(matrix=fitz.Matrix(1.2,1.2)).save('/tmp/luisa61-exam-question.png')
+            pdf[len(rows)].get_pixmap(matrix=fitz.Matrix(1.2,1.2)).save('/tmp/luisa61-exam-solution.png')
 
     def test_incomplete_or_mixed_metadata_never_invents_totals(self):
         known = dict(row('1.01', 1), sourceKind='past-exam', sourceLabel='Exam fixture', marks=6)
@@ -268,7 +301,8 @@ class PapersPrintTests(unittest.TestCase):
         image = preview.locator('.print-question img')
         self.assertTrue(image.evaluate('''img => {
             const bounds = img.getBoundingClientRect();
-            return getComputedStyle(img).filter === 'grayscale(1)' && bounds.height > 0 && bounds.height <= 6 * parseFloat(getComputedStyle(img).lineHeight) + 1 &&
+            const line = parseFloat(getComputedStyle(img).lineHeight);
+            return getComputedStyle(img).filter === 'grayscale(1)' && bounds.height > 6 * line && bounds.height <= 8 * line + 1 &&
                    Math.abs(bounds.width / bounds.height - img.naturalWidth / img.naturalHeight) < .01;
         }'''))
         preview.pdf(path='/tmp/luisa103-gold.pdf', prefer_css_page_size=True)
@@ -314,7 +348,9 @@ class PapersPrintTests(unittest.TestCase):
             provenance = preview.locator('.print-question' + selector + ' .compact-provenance').first
             self.assertIn('Practice', provenance.inner_text())
             self.assertIn('Source: Practice Booklet · Chapter', provenance.get_attribute('title'))
-            self.assertIn('Source: Practice Booklet', preview.locator('.print-solution' + selector).first.inner_text())
+            solution = preview.locator('.print-solution' + selector + ' .compact-provenance').first
+            self.assertEqual(solution.inner_text(), provenance.inner_text())
+            self.assertEqual(solution.get_attribute('title'), provenance.get_attribute('title'))
             self.assertTrue(preview.locator(selector + ' img').evaluate_all(
                 'nodes=>nodes.every(n=>n.complete&&n.naturalWidth>0)'))
             expected = self.page.evaluate('html=>{const n=document.createElement("div");n.innerHTML=html;return [...n.querySelectorAll("[data-math]")].map(x=>x.dataset.math)}', ''.join(item['steps']))

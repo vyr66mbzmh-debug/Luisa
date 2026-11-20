@@ -1,6 +1,19 @@
 {
-  "current": "0.60",
+  "current": "0.61",
   "releases": [
+    {
+      "version": "0.61",
+      "previous": "0.60",
+      "date": "2026-11-20",
+      "changes": [
+        "Papers defaults to one question per page and offers a Condensed checkbox below the worked-solutions option.",
+        "Print a bold page title, a creation timestamp and page numbers. Omit original-paper instructions and page totals.",
+        "Print diagrams up to eight lines high and use matching compact headers on questions and solutions."
+      ],
+      "requirements": [
+        "PAP-061"
+      ]
+    },
     {
       "version": "0.60",
       "previous": "0.59",

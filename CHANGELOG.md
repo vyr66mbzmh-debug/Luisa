@@ -1,3 +1,9 @@
+## Luisa v0.61
+
+- Default Papers to one question per page and add a Condensed checkbox below the solutions checkbox.
+- Remove paper-wide source instructions from printouts. Use a bold page title, a single footer rule and a creation timestamp.
+- Allow eight lines for question diagrams and use matching compact headings in solutions and mark schemes.
+
 ## Luisa v0.60
 
 - Papers selects Edexcel topics from the textbook chapter list. Separate Exam style and Past Papers controls include a past-paper dropdown.

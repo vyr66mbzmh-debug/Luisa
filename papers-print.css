@@ -11,16 +11,12 @@ body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
 .print-page,.print-staging {font:11pt/1.35 Georgia,'Times New Roman',serif; color:#102b43}
 .print-page {box-sizing:border-box; width:210mm; height:297mm; padding:10mm 13mm 9mm; margin:8mm auto; background:white; box-shadow:0 2px 12px #102b4326; display:flex; flex-direction:column; gap:4mm; break-after:page; page-break-after:always}
 .print-page:last-child {break-after:auto; page-break-after:auto}
-.page-banner {height:12mm; flex:none; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #9baebe; font:10pt system-ui,sans-serif; color:#102b43}
-.wordmark {font:26pt Georgia,serif; letter-spacing:.055em}
+.page-banner {height:12mm; flex:none; display:flex; align-items:center; border-bottom:1px solid #9baebe; font:700 12pt system-ui,sans-serif; color:#102b43}
 .page-content {flex:1; min-height:0}
-.questions-page .page-content {display:grid; grid-template-rows:repeat(2,minmax(0,1fr)); gap:7mm}
+.questions-page .page-content {display:grid; grid-template-rows:minmax(0,1fr)}
 .page-footer {height:5mm; flex:none; display:flex; justify-content:space-between; align-items:end; border-top:1px solid #cad3db; padding-top:2mm; font:8pt system-ui,sans-serif}
-.print-question {display:flex; flex-direction:column; min-width:0; min-height:0; box-sizing:border-box; border-bottom:1px solid #cad3db}
+.print-question {display:flex; flex-direction:column; min-width:0; min-height:0; box-sizing:border-box}
 .question-heading {flex:none; margin:0 0 2mm}
-.question-heading h2 {font:700 12pt/1.2 system-ui,sans-serif; margin:0 0 1mm}
-.question-heading .source {font:600 8pt/1.3 system-ui,sans-serif; margin:0}
-.question-heading .context {font:8pt/1.3 system-ui,sans-serif; color:#465b6d; margin:.5mm 0 0}
 .math-content {min-width:0; line-height:1.35; overflow-wrap:break-word}
 .print-question>.math-content {flex:none}
 .print-page p,.print-staging p {margin:0 0 1.6mm}
@@ -44,7 +40,6 @@ body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
 .print-solution {margin:0 0 5mm; font-size:11pt; line-height:1.35; display:flow-root}
 .print-solution .solution-step {display:flow-root; margin:0 0 1.5mm}
 .print-page .compact {font-size:10pt; line-height:1.25}
-.print-question.compact .diagram img {max-height:48mm}
 .print-question.compact .working-space {min-height:12mm}
 .print-staging {position:absolute; left:-20000px; top:0; width:184mm; visibility:hidden}
 @page {size:A4 portrait; margin:0}
@@ -83,20 +78,16 @@ body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
 .print-staging li>.equation:first-child .katex-display {margin-top:0}
 
 /* Paper options retain measured A4 boundaries in every mode. */
-.layout-one .questions-page .page-content {grid-template-rows:minmax(0,1fr)}
 .layout-condensed .questions-page .page-content {display:block}
 .layout-condensed .print-question {display:block; margin-bottom:4mm; padding-bottom:2mm}
+.layout-condensed .print-question:not(:last-child) {border-bottom:1px solid #cad3db}
 .layout-condensed .extended-question {flex:none}
-.question-marks,.question-difficulty {font:600 8pt/1.3 system-ui,sans-serif; margin:.5mm 0 0}
-.page-banner:has(.paper-marks) {height:17mm; flex-wrap:wrap; column-gap:4mm}
-.paper-marks {font-size:9pt}
-.marks-policy {flex-basis:100%; font-size:7.5pt; text-align:right}
 
 /* Keep the paper number, source, and verified total on one line. */
 .compact-heading {display:flex; align-items:baseline; gap:.5em; white-space:nowrap; font:9pt/1.25 system-ui,sans-serif; color:#102b43}
 .compact-heading h2,.compact-heading .question-marks {font:700 11pt/1.25 system-ui,sans-serif; margin:0; flex:none}
 .compact-provenance {flex:1; min-width:0}
-.print-question .math-content img {width:auto!important; height:auto!important; max-width:100%!important; max-height:6lh!important; object-fit:contain}
+.print-question .math-content img {width:auto!important; height:auto!important; max-width:100%!important; max-height:8lh!important; object-fit:contain}
 .print-question .practice-context {border-color:#9baebe}
 .print-question .practice-tag {color:inherit}
 
