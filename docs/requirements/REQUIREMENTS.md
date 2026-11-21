@@ -251,3 +251,4 @@ Historical assertions are not current verification. See README.md in this folder
 | <a name='req-pap-059'></a>PAP-059 | Exam bank source selection, marked past-paper pilot and flexible paper printing. | v0.59 Cloudflare owner and both authenticated ADA roles | implemented | agent_checked |
 | <a name='req-pap-060'></a>PAP-060 | Build Papers by canonical Edexcel textbook topic, with separate exam sources and compact print headers. | v0.60 Cloudflare owner and both authenticated ADA roles | implemented | agent_checked |
 | <a name='req-pap-061'></a>PAP-061 | Simplify Papers print layout and matching question and solution headers. | v0.61 Cloudflare owner and both authenticated ADA roles | implemented | agent_checked |
+| <a name='req-pap-062'></a>PAP-062 | Add the June 2025 Edexcel Pure Mathematics Paper 2 (9MA0/02) and its official mark scheme to Papers to the Paper 1 standard. | v0.62 Cloudflare owner and both authenticated ADA roles | implemented | agent_checked |

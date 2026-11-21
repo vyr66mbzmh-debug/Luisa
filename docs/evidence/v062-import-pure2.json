@@ -1,0 +1,2380 @@
+{
+ "requirement": "PAP-062",
+ "issue": 107,
+ "paperId": "edexcel-9ma0-02-2025-june",
+ "paperCode": "9MA0/02",
+ "title": "Pure Mathematics 2",
+ "examDate": "2025-06-12",
+ "durationMinutes": 120,
+ "questionCount": 15,
+ "totalMarks": 100,
+ "sourceHashes": {
+  "questionPaperSha256": "3a96003a088b89a198288e8b7d1d836f6a4cef190e0768047bf856730840fd6e",
+  "markSchemeSha256": "000beb634c58b2bc03c724c98a1f18e65fa635dfb0214eacbd875bd3b4be2f58"
+ },
+ "sourceIdentity": {
+  "questionPaperPages": 48,
+  "markSchemePages": 42,
+  "questionPaperCover": "Pearson Edexcel Level 3 GCE, Thursday 12 June 2025, Afternoon (Time: 2 hours), 9MA0/02, Mathematics Advanced, Paper 2: Pure Mathematics 2; 15 questions, 100 marks.",
+  "markSchemeCover": "Mark Scheme (Results) Summer 2025, Pearson Edexcel GCE In Mathematics (9MA0), Paper 02 Pure Mathematics.",
+  "indexedCopies": "The linked question paper is byte-identical. The linked mark scheme adds one publisher information page (its page 2); the text of the other 42 pages is identical to the supplied copy."
+ },
+ "representation": {
+  "prompts": "Native HTML and KaTeX mathematics for all 15 prompts, with original wording, part labels, marks, bold emphasis, question-specific instructions and five faithful vector figure crops (Figures 1 to 5, captions and Not to scale labels retained).",
+  "solutions": "Every question-specific mark-scheme page (5 to 41) as ordered vector crops: working, marks, AOs, alternatives, special cases, examiner notes, helpful diagrams and reference tables. General marking pages 1 to 4 and the publisher page 42 are excluded."
+ },
+ "excludedMarkSchemePages": [
+  1,
+  2,
+  3,
+  4,
+  42
+ ],
+ "cropMethod": "PyMuPDF show_pdf_page clip to SVG with text as paths. Page bounds cover all text spans, vector drawings and embedded images. Breaks fall only in empty horizontal bands, preferring table rules and paragraph gaps; no crop exceeds 540 points.",
+ "markSchemeCoverage": {
+  "pages": 37,
+  "textSpans": 11530,
+  "result": "Every nonblank, non-watermark text span and every embedded image lies wholly inside exactly one crop; no span is bisected or duplicated."
+ },
+ "questions": [
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q1",
+   "questionNumber": 1,
+   "questionPages": [
+    2,
+    3
+   ],
+   "promptPage": 2,
+   "totalPrintedOnPage": 3,
+   "markSchemePages": [
+    5
+   ],
+   "marks": 3,
+   "partMarks": [
+    3
+   ],
+   "markSchemeTotal": 3,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "2x^3-24x^2+40x = 2x(x-2)(x-10); scheme B1M1A1 and alternative via (x-2) or (x-10) agree.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-1/1",
+    "maths-a-level/maths-pure-year-1/2"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q01-ms-p05-1.svg",
+     "sha256": "5d8f84198637fa9a19e39e85aef19ecd21afd3eb02336b708616372d3fffa5be",
+     "sourcePage": 5,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      399.471
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q01-ms-p05-2.svg",
+     "sha256": "efc93082024806fb3acbab4fc44eb7422e948fd0bed591f77700f7951e5837de",
+     "sourcePage": 5,
+     "boundsPoints": [
+      47.0,
+      399.471,
+      558.0,
+      779.6
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q2",
+   "questionNumber": 2,
+   "questionPages": [
+    4,
+    5
+   ],
+   "promptPage": 4,
+   "totalPrintedOnPage": 5,
+   "markSchemePages": [
+    6
+   ],
+   "marks": 4,
+   "partMarks": [
+    4
+   ],
+   "markSchemeTotal": 4,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "Integral = x^5/5 - 4x^(3/2) - 3x + c; scheme cao requires +c.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-1/13"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q02-ms-p06-1.svg",
+     "sha256": "94d93d82af93644115628806edf4b68a84e41f1e3599c575d183ae442972e7b1",
+     "sourcePage": 6,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      274.32
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q02-ms-p06-2.svg",
+     "sha256": "2fae13379daccf7c8f1e5c7b42ab79c5da36e8b3d3ca8b94ace030c9bb154442",
+     "sourcePage": 6,
+     "boundsPoints": [
+      47.0,
+      274.32,
+      558.0,
+      562.88
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q3",
+   "questionNumber": 3,
+   "questionPages": [
+    6,
+    7
+   ],
+   "promptPage": 6,
+   "totalPrintedOnPage": 7,
+   "markSchemePages": [
+    7
+   ],
+   "marks": 2,
+   "partMarks": [
+    2
+   ],
+   "markSchemeTotal": 2,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "x ln3 = y ln7 so x/y = ln7/ln3 = log_3 7 (about 1.7712).",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-1/14"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q03-ms-p07-1.svg",
+     "sha256": "ae78f56b469f49668d5e83e9c9f1f654b09c711f7a0e9a0a0a7525a152d87669",
+     "sourcePage": 7,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      315.994
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q03-ms-p07-2.svg",
+     "sha256": "78cc079a0957c54f2c092b6028779b6a915aa7f17589492b39e497704f152795",
+     "sourcePage": 7,
+     "boundsPoints": [
+      47.0,
+      315.994,
+      558.0,
+      589.64
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q4",
+   "questionNumber": 4,
+   "questionPages": [
+    8,
+    11
+   ],
+   "promptPage": 8,
+   "totalPrintedOnPage": 11,
+   "markSchemePages": [
+    8,
+    9
+   ],
+   "marks": 5,
+   "partMarks": [
+    2,
+    3
+   ],
+   "markSchemeTotal": 5,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "cos ABC = (8^2+13^2-6.4^2)/(2*8*13) gives 0.3943 rad; R = 52 sin0.394 - 32(0.394) = 7.359, inside scheme awrt 7.34 to 7.37.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-1/9",
+    "maths-a-level/maths-pure-year-2/5"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q04-figure.svg",
+     "sha256": "175b914ef74c40455480b55396aeb165117e375c1c8fe36bdadae2c83bc37b0e",
+     "sourcePage": 8,
+     "boundsPoints": [
+      100,
+      68,
+      500,
+      298
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q04-ms-p08-1.svg",
+     "sha256": "4c067ca416a3a9da1d1a9434df44849207c899154086208390784f2c1bb2e795",
+     "sourcePage": 8,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      413.874
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q04-ms-p08-2.svg",
+     "sha256": "1f40ffc57fde4aa4d60b32e6d6f67a876afb6ab8e6b834c76a171268eaa88d72",
+     "sourcePage": 8,
+     "boundsPoints": [
+      47.0,
+      413.874,
+      558.0,
+      812.24
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q04-ms-p09-1.svg",
+     "sha256": "4e4d9a17c4f4abbffc0baeb38a8869d6597c27548cb14579e7e9a980bb2f6236",
+     "sourcePage": 9,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      375.057
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q04-ms-p09-2.svg",
+     "sha256": "b62244261df8f82a81eb99db9f68aab37fcb0d3881f0a5cb124e60f4b29e7437",
+     "sourcePage": 9,
+     "boundsPoints": [
+      47.0,
+      375.057,
+      558.0,
+      746.044
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q5",
+   "questionNumber": 5,
+   "questionPages": [
+    12,
+    13
+   ],
+   "promptPage": 12,
+   "totalPrintedOnPage": 13,
+   "markSchemePages": [
+    10,
+    11
+   ],
+   "marks": 7,
+   "partMarks": [
+    2,
+    2,
+    3
+   ],
+   "markSchemeTotal": 7,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "t = -5 gives y = 405; y = 5(2x+3)^4; dy/dx = 40(2x+3)^3 = -1080 at x = -3.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-2/8",
+    "maths-a-level/maths-pure-year-2/9"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q05-ms-p10-1.svg",
+     "sha256": "1b6d8de33e69c6fccbc7f6d13f5b6543f66a798c7089a4f4180bee7c1dd0a6e9",
+     "sourcePage": 10,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      439.76
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q05-ms-p10-2.svg",
+     "sha256": "a1f2f71a2762745fc232343af7396540bcd209a35ff51525411b7430fdee1114",
+     "sourcePage": 10,
+     "boundsPoints": [
+      47.0,
+      439.76,
+      558.0,
+      784.04
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q05-ms-p11-1.svg",
+     "sha256": "1d0e98cd32f7e2cff2e658eb3a0fc22ed61bdd754035471b0587503b92875a9a",
+     "sourcePage": 11,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      240.923
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q05-ms-p11-2.svg",
+     "sha256": "5424eb8da3f68ff3a5188cd07936855ee381bfcf666bd1173d1bf6259850759c",
+     "sourcePage": 11,
+     "boundsPoints": [
+      47.0,
+      240.923,
+      558.0,
+      507.2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q6",
+   "questionNumber": 6,
+   "questionPages": [
+    14,
+    15
+   ],
+   "promptPage": 14,
+   "totalPrintedOnPage": 15,
+   "markSchemePages": [
+    12,
+    13
+   ],
+   "marks": 6,
+   "partMarks": [
+    2,
+    2,
+    2
+   ],
+   "markSchemeTotal": 6,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "1-(1-2x^2)^2 = 4x^2-4x^4; divided by (x/3)(x/2) gives 24-24x^2; exact limit as x->0 is 24.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-2/5"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q06-ms-p12-1.svg",
+     "sha256": "a19b3421e64e936e7351c9276614f7cc04e7bb491c4c723bb4d95af89b14bf94",
+     "sourcePage": 12,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      425.069
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q06-ms-p12-2.svg",
+     "sha256": "134f579a43e9a599b604c74e35429fb5bc644649385c0205697981a1c5108270",
+     "sourcePage": 12,
+     "boundsPoints": [
+      47.0,
+      425.069,
+      558.0,
+      786.44
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q06-ms-p13-1.svg",
+     "sha256": "6cd482e68cddee52ca22f7e84e1c7a817172432c73c0a32acf03116590dd3d80",
+     "sourcePage": 13,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      233.64
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q06-ms-p13-2.svg",
+     "sha256": "d079d90953613b83737842b5ca9bfb83bb13cf3f565012b5fcd547f202f71005",
+     "sourcePage": 13,
+     "boundsPoints": [
+      47.0,
+      233.64,
+      558.0,
+      610.04
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q7",
+   "questionNumber": 7,
+   "questionPages": [
+    16,
+    17
+   ],
+   "promptPage": 16,
+   "totalPrintedOnPage": 17,
+   "markSchemePages": [
+    14,
+    15,
+    16
+   ],
+   "marks": 4,
+   "partMarks": [
+    4
+   ],
+   "markSchemeTotal": 4,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "Quotient 3x-2, remainder -x-17; A=3, B=-2, C=4, D=-5.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-2/1"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p14-1.svg",
+     "sha256": "6961e346b3ddc7c37b1fe7849a322b49fcc7a16ca80c71a7a35d035ed0c21180",
+     "sourcePage": 14,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      390.472
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p14-2.svg",
+     "sha256": "526853a8ea46a225bd3ab770b5a877126c7ca96f816fc3a6a0112c7f1f727862",
+     "sourcePage": 14,
+     "boundsPoints": [
+      47.0,
+      390.472,
+      558.0,
+      816.56
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p15-1.svg",
+     "sha256": "f966a73f6913d0f0f5011403539e44d13dfb18f955495ae645c807ec27076082",
+     "sourcePage": 15,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      338.505
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p15-2.svg",
+     "sha256": "e5c4bc69101744c86194ffa42c7083ecbb292a183424c186ee47d9d53e97740a",
+     "sourcePage": 15,
+     "boundsPoints": [
+      47.0,
+      338.505,
+      558.0,
+      619.16
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p16-1.svg",
+     "sha256": "6d7db2998fed1ac44fd6bb8fd0c352c4e8b4cebdc85597b4b9d2c22368b2419b",
+     "sourcePage": 16,
+     "boundsPoints": [
+      33.56,
+      31.564,
+      558.0,
+      506.848
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p16-2.svg",
+     "sha256": "125b8f772382c4b78628913d68b710aef1e82f7953095d96156ac06282b427cc",
+     "sourcePage": 16,
+     "boundsPoints": [
+      33.56,
+      506.848,
+      558.0,
+      757.238
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q8",
+   "questionNumber": 8,
+   "questionPages": [
+    18,
+    21
+   ],
+   "promptPage": 18,
+   "totalPrintedOnPage": 21,
+   "markSchemePages": [
+    17,
+    18,
+    19,
+    20
+   ],
+   "marks": 9,
+   "partMarks": [
+    4,
+    1,
+    4
+   ],
+   "markSchemeTotal": 9,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "f'(-1/4)=0 gives a=-4; f(-1/4)=4735/768; other stationary values f(-2)=-5 and f(2)=-47/3, so {k: -5 < k < 4735/768}.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-1/4",
+    "maths-a-level/maths-pure-year-1/7",
+    "maths-a-level/maths-pure-year-1/12"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-figure.svg",
+     "sha256": "fc9ee711fc8192744c7ae9cf99caf2bf6c5c7ce573ebc3fa2b0f65b4d5c252e9",
+     "sourcePage": 18,
+     "boundsPoints": [
+      200,
+      68,
+      420,
+      349
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p17-1.svg",
+     "sha256": "333359a4c2c089d3be6cf72714f3efab26cd50384a781650cd4c79867699f20e",
+     "sourcePage": 17,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      375.989
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p17-2.svg",
+     "sha256": "f74b8f11ed9a347fc47de61976c7fe4398ef1c2b8a4e7631b404413027418d4f",
+     "sourcePage": 17,
+     "boundsPoints": [
+      47.0,
+      375.989,
+      558.0,
+      776.6
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p18-1.svg",
+     "sha256": "1925c7b5d557bc5d99d09bd4b090dca504e1e49deeda6dd3e3d0bc8fed3c0781",
+     "sourcePage": 18,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      237.34
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p18-2.svg",
+     "sha256": "33765d7da550b4fc9bf4279a9421512051b465a5cd775322d8b8be9be33c2690",
+     "sourcePage": 18,
+     "boundsPoints": [
+      47.0,
+      237.34,
+      558.0,
+      457.4
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p19-1.svg",
+     "sha256": "2029fda93536210ad462963e7b160710764477a7ca235092dc43283e6682fc32",
+     "sourcePage": 19,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      401.915
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p19-2.svg",
+     "sha256": "264de01f01bad8ef6bacdb2efbdf3aa431694059370f1c6d25d3f1adcb0a241b",
+     "sourcePage": 19,
+     "boundsPoints": [
+      47.0,
+      401.915,
+      558.0,
+      784.88
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p20-1.svg",
+     "sha256": "6cadb4015987b27ce26d40c186627a41f507d247894c9fdbae8e6545622b88c8",
+     "sourcePage": 20,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      348.399
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p20-2.svg",
+     "sha256": "d749d02fbbe4ca98cbfdfc7a419b92aa6e281568410e6e9eaa1642889f326b4d",
+     "sourcePage": 20,
+     "boundsPoints": [
+      47.0,
+      348.399,
+      558.0,
+      681.2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q9",
+   "questionNumber": 9,
+   "questionPages": [
+    22,
+    25
+   ],
+   "promptPage": 22,
+   "totalPrintedOnPage": 25,
+   "markSchemePages": [
+    21,
+    22
+   ],
+   "marks": 8,
+   "partMarks": [
+    2,
+    3,
+    2,
+    1
+   ],
+   "markSchemeTotal": 8,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "N(3) = 1007; T = ln(5/2)/0.075 = 12.22; dN/dt at t=3 = 299.4 cars per month; refinement replaces 5000 by 6500.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-1/14",
+    "maths-a-level/maths-pure-year-2/9"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q09-ms-p21-1.svg",
+     "sha256": "6b985cf8deec2bab77af9e27d4e99823ca1296743eaf59e50a659c958f953e73",
+     "sourcePage": 21,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      332.88
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q09-ms-p21-2.svg",
+     "sha256": "1907856752473280420eef21e811d2038e76bdc229b05675c7f8eb1c1a0d78bf",
+     "sourcePage": 21,
+     "boundsPoints": [
+      47.0,
+      332.88,
+      558.0,
+      806.72
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q09-ms-p22-1.svg",
+     "sha256": "64e08c8301ccb7d11f4f5268b288f4e9aeadda889ecec8bc4633ae3af247b26c",
+     "sourcePage": 22,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      410.0
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q10",
+   "questionNumber": 10,
+   "questionPages": [
+    26,
+    29
+   ],
+   "promptPage": 26,
+   "totalPrintedOnPage": 29,
+   "markSchemePages": [
+    23,
+    24,
+    25
+   ],
+   "marks": 9,
+   "partMarks": [
+    2,
+    5,
+    2
+   ],
+   "markSchemeTotal": 9,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "dV/dt = 0.45-0.3V gives 20dV/dt = 9-6V; with V(0)=0.25, V = 3/2 - (5/4)e^(-0.3t); V < 1.5 < 2, never full.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-2/11"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p23-1.svg",
+     "sha256": "97779daf80249876eb0ce40ced53fb97160c9207786c84c788c7b44811e4397c",
+     "sourcePage": 23,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      490.44
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p23-2.svg",
+     "sha256": "eeb83d14e8014ad6293b6cfbad37a3cbcc36e7e8d135eb8e9f32b407ffef2650",
+     "sourcePage": 23,
+     "boundsPoints": [
+      47.0,
+      490.44,
+      558.0,
+      803.96
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p24-1.svg",
+     "sha256": "0a83a9c2c377a941e25d3ddde71cfa152fce3bd3dc27d3bb80c900ed5d7d593a",
+     "sourcePage": 24,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      318.125
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p24-2.svg",
+     "sha256": "ec5aa6e3341044d8ebf223b7ad3e0ca789288e43faa9c07250090ea8bdb3412d",
+     "sourcePage": 24,
+     "boundsPoints": [
+      47.0,
+      318.125,
+      558.0,
+      737.6
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p25-1.svg",
+     "sha256": "2647232e05f048064d5272c82b406ca3442555e1ebd9e39cf8ea02302e41c645",
+     "sourcePage": 25,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      413.04
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p25-2.svg",
+     "sha256": "87671384a33b9f8fd7120eb27d384b1de04c9eaa89e281e4d42a0de056a435ba",
+     "sourcePage": 25,
+     "boundsPoints": [
+      47.0,
+      413.04,
+      558.0,
+      690.08
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q11",
+   "questionNumber": 11,
+   "questionPages": [
+    30,
+    33
+   ],
+   "promptPage": 30,
+   "totalPrintedOnPage": 33,
+   "markSchemePages": [
+    26,
+    27,
+    28
+   ],
+   "marks": 11,
+   "partMarks": [
+    3,
+    3,
+    2,
+    1,
+    2
+   ],
+   "markSchemeTotal": 11,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "y = 3300-60x; P = ((x-10)y-8000)/1000 = -0.06x^2+3.9x-41; P>0 for 13.19 < x < 51.81; maximum at £32.50; P(35)=22 vs 21.75.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-1/2",
+    "maths-a-level/maths-pure-year-1/3",
+    "maths-a-level/maths-pure-year-1/5"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q11-ms-p26-1.svg",
+     "sha256": "3d62d00d00d5aabd29609f80e3c6aed7c3336f6e445429801bdf481ed564e698",
+     "sourcePage": 26,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      432.96
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q11-ms-p26-2.svg",
+     "sha256": "ca3fd1c49e8f36255388aed8b332ad4dccf092ead2f5d15bae9705453b0d36ee",
+     "sourcePage": 26,
+     "boundsPoints": [
+      47.0,
+      432.96,
+      558.0,
+      810.44
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q11-ms-p27-1.svg",
+     "sha256": "36e7cb1e63af597740f50c203b2c62f3acc6235c5ac2a0c8a998903bc3e245f4",
+     "sourcePage": 27,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      407.707
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q11-ms-p27-2.svg",
+     "sha256": "a4bed34d5a722770974e9bf0421c2bdb81339a3a9daee70b9d581c2b7111430b",
+     "sourcePage": 27,
+     "boundsPoints": [
+      47.0,
+      407.707,
+      558.0,
+      757.88
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q11-ms-p28-1.svg",
+     "sha256": "86c129255df5e3f46dbbf38fae50b4df65e864c2439445507c55516dde00f557",
+     "sourcePage": 28,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      388.64
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q12",
+   "questionNumber": 12,
+   "questionPages": [
+    34,
+    37
+   ],
+   "promptPage": 34,
+   "totalPrintedOnPage": 37,
+   "markSchemePages": [
+    29,
+    30
+   ],
+   "marks": 8,
+   "partMarks": [
+    2,
+    2,
+    4
+   ],
+   "markSchemeTotal": 8,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "f(1)=3, f(-1)=11; gf(x) >= 7; no intersections for -4 <= k < -5/3 (vertex line k=-5/3; parallel branch k=-4).",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-2/2"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q12-figure.svg",
+     "sha256": "7d075473fd65b85dbd455b5f6b313178e0349e773bc883e7119953e3158b29d6",
+     "sourcePage": 34,
+     "boundsPoints": [
+      180,
+      70,
+      420,
+      339
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q12-ms-p29-1.svg",
+     "sha256": "ce45d5ecd310a01f808ae2e9fd165f7d087bac2f3b8f98895ddfae43ce8f5451",
+     "sourcePage": 29,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      386.282
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q12-ms-p29-2.svg",
+     "sha256": "ea4d035ab81247bffcc1537a43760a87c3959fba8e1802374cd44fa403016aec",
+     "sourcePage": 29,
+     "boundsPoints": [
+      47.0,
+      386.282,
+      558.0,
+      806.72
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q12-ms-p30-1.svg",
+     "sha256": "8da49b03348ace5433d3f6b78a7580df1a0abc3c9c3569ee2ffeacfa39ef8cc9",
+     "sourcePage": 30,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      392.441
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q12-ms-p30-2.svg",
+     "sha256": "5dc3bc0882c9f22dc1728c936ab36568f06e86c88aa913a45b478c194fd60ec2",
+     "sourcePage": 30,
+     "boundsPoints": [
+      47.0,
+      392.441,
+      558.0,
+      696.56
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q13",
+   "questionNumber": 13,
+   "questionPages": [
+    38,
+    39
+   ],
+   "promptPage": 38,
+   "totalPrintedOnPage": 39,
+   "markSchemePages": [
+    31,
+    32
+   ],
+   "marks": 3,
+   "partMarks": [
+    1,
+    2
+   ],
+   "markSchemeTotal": 3,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "Six solutions per 2pi requires n = 3; sin^2(3x)=k^2 has 6 solutions per pi, so 30 in 0 <= x < 5pi (numerically confirmed).",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-1/10",
+    "maths-a-level/maths-pure-year-2/5"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q13-ms-p31-1.svg",
+     "sha256": "7139cc51d93b020bbd8aa483ba620f0cf6f4f91451b1a72cea5e81ab8915af82",
+     "sourcePage": 31,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      402.465
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q13-ms-p31-2.svg",
+     "sha256": "b2e9034a03fd6f48aa2d9db824324e93e07e1fd3185e25ddcfbaa8f9f682b86c",
+     "sourcePage": 31,
+     "boundsPoints": [
+      47.0,
+      402.465,
+      558.0,
+      811.28
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q13-ms-p32-1.svg",
+     "sha256": "14ad49239cf3effc50a9d9fa2255470a48bde38beb9a0c62bfbfc02c8f927f2e",
+     "sourcePage": 32,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      372.267
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q13-ms-p32-2.svg",
+     "sha256": "a1c2df216a7deb9e8455586252d8b7862fa723368971af35b51915e8c676a69b",
+     "sourcePage": 32,
+     "boundsPoints": [
+      47.0,
+      372.267,
+      558.0,
+      657.44
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q14",
+   "questionNumber": 14,
+   "questionPages": [
+    40,
+    43
+   ],
+   "promptPage": 40,
+   "totalPrintedOnPage": 43,
+   "markSchemePages": [
+    33,
+    34,
+    35,
+    36
+   ],
+   "marks": 8,
+   "partMarks": [
+    3,
+    5
+   ],
+   "markSchemeTotal": 8,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "AD = 6a+(3-k)b parallel to 15a-5b gives k=5; solving 4lambda = -2+5mu, -5lambda = -3+2mu gives lambda=1/3, so BX:XD = 1:2.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-1/11"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-figure.svg",
+     "sha256": "efeee6bf236a2a4473689940dded026fc03e277360d6ff3fdbc615ba61e6448a",
+     "sourcePage": 40,
+     "boundsPoints": [
+      105,
+      68,
+      500,
+      234
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p33-1.svg",
+     "sha256": "d5b3ac070e7f7ce608ff82036aa917bdf719c4fe9ce7f0254ff20104faeabd92",
+     "sourcePage": 33,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      490.803
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p33-2.svg",
+     "sha256": "051970f8cf14cd6ee9e3931e2180e0ac76edfac10d4d3838d5f06ecceb370cb3",
+     "sourcePage": 33,
+     "boundsPoints": [
+      47.0,
+      490.803,
+      558.0,
+      815.72
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p34-1.svg",
+     "sha256": "d60479241f2c6a12f54fe8073c5dcb3c3bc0ac3c690547f7320f087090a79f75",
+     "sourcePage": 34,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      172.52
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p35-1.svg",
+     "sha256": "729944f1ab5b1a8d9956588fca46bfe64981a36a00e697345d3f545a79568066",
+     "sourcePage": 35,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      391.055
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p35-2.svg",
+     "sha256": "6c8745ad8907d75f5492c003be6a58e0955565a6e469d1af03e6b23f9165de78",
+     "sourcePage": 35,
+     "boundsPoints": [
+      47.0,
+      391.055,
+      558.0,
+      815.84
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p36-1.svg",
+     "sha256": "993ea6684b6e63f2406af2b7ad68106ba952bf6640bb357b14e9c721b88b7185",
+     "sourcePage": 36,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      266.35
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p36-2.svg",
+     "sha256": "5e767c34ce1c8acf4fa77a9e50017441a740e063dda57b437121490a4f2ed992",
+     "sourcePage": 36,
+     "boundsPoints": [
+      47.0,
+      266.35,
+      558.0,
+      570.56
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2025-june/q15",
+   "questionNumber": 15,
+   "questionPages": [
+    44,
+    48
+   ],
+   "promptPage": 44,
+   "totalPrintedOnPage": 48,
+   "markSchemePages": [
+    37,
+    38,
+    39,
+    40,
+    41
+   ],
+   "marks": 13,
+   "partMarks": [
+    5,
+    5,
+    3
+   ],
+   "markSchemeTotal": 13,
+   "promptSourceChecked": true,
+   "mathsAudit": "checked",
+   "visualAudit": "checked-source-and-rendered-svg",
+   "mathsCheckpoint": "f'(x) = 2x(x^2-3)/(1+x^2)^3; P = (-sqrt3, -1/8); x=tan(theta) gives cos2theta with alpha=-pi/4, beta=pi/4; area R = 1.",
+   "chapterKeys": [
+    "maths-a-level/maths-pure-year-2/7",
+    "maths-a-level/maths-pure-year-2/9",
+    "maths-a-level/maths-pure-year-2/11"
+   ],
+   "assets": [
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-figure.svg",
+     "sha256": "a3ac390fe3e9d0caf9e851d63d53983116f0741574a1e0b47e498a0c52b8bec6",
+     "sourcePage": 44,
+     "boundsPoints": [
+      75,
+      68,
+      520,
+      280
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p37-1.svg",
+     "sha256": "786c7ed1a4f2d2efeb62f30ab39678e65a50bc0b71890f0d0fa7b9c55324d193",
+     "sourcePage": 37,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      376.08
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p37-2.svg",
+     "sha256": "dbbba597625bf3fd9b081957db987be53b10ce42f66da4b16fa433da6772f48e",
+     "sourcePage": 37,
+     "boundsPoints": [
+      47.0,
+      376.08,
+      558.0,
+      790.64
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p38-1.svg",
+     "sha256": "0f24ba585d52c8c1986394a2e70daf86b29800a994d53ac1a37f9c392140919d",
+     "sourcePage": 38,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      395.899
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p38-2.svg",
+     "sha256": "34c41d1ebd897f948bdb0cc32ba2dadfc8c22474284cb07dfbbb6a3d9a03e4f3",
+     "sourcePage": 38,
+     "boundsPoints": [
+      47.0,
+      395.899,
+      558.0,
+      770.6
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p39-1.svg",
+     "sha256": "318149cac27b04b5f58f186ec75559402439949aabd683a28b532b0aa653e95a",
+     "sourcePage": 39,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      443.696
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p39-2.svg",
+     "sha256": "2d27d86685dff1a3aac34af439dfa5d5c91f4ddaed6a2b020d8bf3eb870b8a57",
+     "sourcePage": 39,
+     "boundsPoints": [
+      47.0,
+      443.696,
+      558.0,
+      799.4
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p40-1.svg",
+     "sha256": "32fe8ea6c4c1449c5cf0ef37f3d17320e5fe4c4284732a0186ab248f518ca7ce",
+     "sourcePage": 40,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      341.72
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p41-1.svg",
+     "sha256": "7ae816ed1799c1156da9f85ed3adb1f98893d7272f17f0d1fc7bcefda837fb44",
+     "sourcePage": 41,
+     "boundsPoints": [
+      47.0,
+      29.56,
+      558.0,
+      336.935
+     ]
+    },
+    {
+     "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p41-2.svg",
+     "sha256": "9a36a73b84e8bbb54296ef13f76858d519e30a234202fe8bef17e5f6a7910980",
+     "sourcePage": 41,
+     "boundsPoints": [
+      47.0,
+      336.935,
+      558.0,
+      618.2
+     ]
+    }
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "question": 1,
+   "kind": "mark-scheme",
+   "sourcePage": 5,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    399.471
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q01-ms-p05-1.svg",
+   "sha256": "5d8f84198637fa9a19e39e85aef19ecd21afd3eb02336b708616372d3fffa5be",
+   "bytes": 305432
+  },
+  {
+   "question": 1,
+   "kind": "mark-scheme",
+   "sourcePage": 5,
+   "boundsPoints": [
+    47.0,
+    399.471,
+    558.0,
+    779.6
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q01-ms-p05-2.svg",
+   "sha256": "efc93082024806fb3acbab4fc44eb7422e948fd0bed591f77700f7951e5837de",
+   "bytes": 309672
+  },
+  {
+   "question": 2,
+   "kind": "mark-scheme",
+   "sourcePage": 6,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    274.32
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q02-ms-p06-1.svg",
+   "sha256": "94d93d82af93644115628806edf4b68a84e41f1e3599c575d183ae442972e7b1",
+   "bytes": 199235
+  },
+  {
+   "question": 2,
+   "kind": "mark-scheme",
+   "sourcePage": 6,
+   "boundsPoints": [
+    47.0,
+    274.32,
+    558.0,
+    562.88
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q02-ms-p06-2.svg",
+   "sha256": "2fae13379daccf7c8f1e5c7b42ab79c5da36e8b3d3ca8b94ace030c9bb154442",
+   "bytes": 200848
+  },
+  {
+   "question": 3,
+   "kind": "mark-scheme",
+   "sourcePage": 7,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    315.994
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q03-ms-p07-1.svg",
+   "sha256": "ae78f56b469f49668d5e83e9c9f1f654b09c711f7a0e9a0a0a7525a152d87669",
+   "bytes": 217075
+  },
+  {
+   "question": 3,
+   "kind": "mark-scheme",
+   "sourcePage": 7,
+   "boundsPoints": [
+    47.0,
+    315.994,
+    558.0,
+    589.64
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q03-ms-p07-2.svg",
+   "sha256": "78cc079a0957c54f2c092b6028779b6a915aa7f17589492b39e497704f152795",
+   "bytes": 215941
+  },
+  {
+   "question": 4,
+   "kind": "question-figure",
+   "sourcePage": 8,
+   "boundsPoints": [
+    100,
+    68,
+    500,
+    298
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q04-figure.svg",
+   "sha256": "175b914ef74c40455480b55396aeb165117e375c1c8fe36bdadae2c83bc37b0e",
+   "bytes": 286197
+  },
+  {
+   "question": 4,
+   "kind": "mark-scheme",
+   "sourcePage": 8,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    413.874
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q04-ms-p08-1.svg",
+   "sha256": "4c067ca416a3a9da1d1a9434df44849207c899154086208390784f2c1bb2e795",
+   "bytes": 318992
+  },
+  {
+   "question": 4,
+   "kind": "mark-scheme",
+   "sourcePage": 8,
+   "boundsPoints": [
+    47.0,
+    413.874,
+    558.0,
+    812.24
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q04-ms-p08-2.svg",
+   "sha256": "1f40ffc57fde4aa4d60b32e6d6f67a876afb6ab8e6b834c76a171268eaa88d72",
+   "bytes": 322326
+  },
+  {
+   "question": 4,
+   "kind": "mark-scheme",
+   "sourcePage": 9,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    375.057
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q04-ms-p09-1.svg",
+   "sha256": "4e4d9a17c4f4abbffc0baeb38a8869d6597c27548cb14579e7e9a980bb2f6236",
+   "bytes": 304727
+  },
+  {
+   "question": 4,
+   "kind": "mark-scheme",
+   "sourcePage": 9,
+   "boundsPoints": [
+    47.0,
+    375.057,
+    558.0,
+    746.044
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q04-ms-p09-2.svg",
+   "sha256": "b62244261df8f82a81eb99db9f68aab37fcb0d3881f0a5cb124e60f4b29e7437",
+   "bytes": 306651
+  },
+  {
+   "question": 5,
+   "kind": "mark-scheme",
+   "sourcePage": 10,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    439.76
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q05-ms-p10-1.svg",
+   "sha256": "1b6d8de33e69c6fccbc7f6d13f5b6543f66a798c7089a4f4180bee7c1dd0a6e9",
+   "bytes": 264722
+  },
+  {
+   "question": 5,
+   "kind": "mark-scheme",
+   "sourcePage": 10,
+   "boundsPoints": [
+    47.0,
+    439.76,
+    558.0,
+    784.04
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q05-ms-p10-2.svg",
+   "sha256": "a1f2f71a2762745fc232343af7396540bcd209a35ff51525411b7430fdee1114",
+   "bytes": 268591
+  },
+  {
+   "question": 5,
+   "kind": "mark-scheme",
+   "sourcePage": 11,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    240.923
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q05-ms-p11-1.svg",
+   "sha256": "1d0e98cd32f7e2cff2e658eb3a0fc22ed61bdd754035471b0587503b92875a9a",
+   "bytes": 211143
+  },
+  {
+   "question": 5,
+   "kind": "mark-scheme",
+   "sourcePage": 11,
+   "boundsPoints": [
+    47.0,
+    240.923,
+    558.0,
+    507.2
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q05-ms-p11-2.svg",
+   "sha256": "5424eb8da3f68ff3a5188cd07936855ee381bfcf666bd1173d1bf6259850759c",
+   "bytes": 212639
+  },
+  {
+   "question": 6,
+   "kind": "mark-scheme",
+   "sourcePage": 12,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    425.069
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q06-ms-p12-1.svg",
+   "sha256": "a19b3421e64e936e7351c9276614f7cc04e7bb491c4c723bb4d95af89b14bf94",
+   "bytes": 264746
+  },
+  {
+   "question": 6,
+   "kind": "mark-scheme",
+   "sourcePage": 12,
+   "boundsPoints": [
+    47.0,
+    425.069,
+    558.0,
+    786.44
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q06-ms-p12-2.svg",
+   "sha256": "134f579a43e9a599b604c74e35429fb5bc644649385c0205697981a1c5108270",
+   "bytes": 268856
+  },
+  {
+   "question": 6,
+   "kind": "mark-scheme",
+   "sourcePage": 13,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    233.64
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q06-ms-p13-1.svg",
+   "sha256": "6cd482e68cddee52ca22f7e84e1c7a817172432c73c0a32acf03116590dd3d80",
+   "bytes": 276006
+  },
+  {
+   "question": 6,
+   "kind": "mark-scheme",
+   "sourcePage": 13,
+   "boundsPoints": [
+    47.0,
+    233.64,
+    558.0,
+    610.04
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q06-ms-p13-2.svg",
+   "sha256": "d079d90953613b83737842b5ca9bfb83bb13cf3f565012b5fcd547f202f71005",
+   "bytes": 275621
+  },
+  {
+   "question": 7,
+   "kind": "mark-scheme",
+   "sourcePage": 14,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    390.472
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p14-1.svg",
+   "sha256": "6961e346b3ddc7c37b1fe7849a322b49fcc7a16ca80c71a7a35d035ed0c21180",
+   "bytes": 331402
+  },
+  {
+   "question": 7,
+   "kind": "mark-scheme",
+   "sourcePage": 14,
+   "boundsPoints": [
+    47.0,
+    390.472,
+    558.0,
+    816.56
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p14-2.svg",
+   "sha256": "526853a8ea46a225bd3ab770b5a877126c7ca96f816fc3a6a0112c7f1f727862",
+   "bytes": 335917
+  },
+  {
+   "question": 7,
+   "kind": "mark-scheme",
+   "sourcePage": 15,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    338.505
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p15-1.svg",
+   "sha256": "f966a73f6913d0f0f5011403539e44d13dfb18f955495ae645c807ec27076082",
+   "bytes": 254666
+  },
+  {
+   "question": 7,
+   "kind": "mark-scheme",
+   "sourcePage": 15,
+   "boundsPoints": [
+    47.0,
+    338.505,
+    558.0,
+    619.16
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p15-2.svg",
+   "sha256": "e5c4bc69101744c86194ffa42c7083ecbb292a183424c186ee47d9d53e97740a",
+   "bytes": 256219
+  },
+  {
+   "question": 7,
+   "kind": "mark-scheme",
+   "sourcePage": 16,
+   "boundsPoints": [
+    33.56,
+    31.564,
+    558.0,
+    506.848
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p16-1.svg",
+   "sha256": "6d7db2998fed1ac44fd6bb8fd0c352c4e8b4cebdc85597b4b9d2c22368b2419b",
+   "bytes": 409496
+  },
+  {
+   "question": 7,
+   "kind": "mark-scheme",
+   "sourcePage": 16,
+   "boundsPoints": [
+    33.56,
+    506.848,
+    558.0,
+    757.238
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q07-ms-p16-2.svg",
+   "sha256": "125b8f772382c4b78628913d68b710aef1e82f7953095d96156ac06282b427cc",
+   "bytes": 414075
+  },
+  {
+   "question": 8,
+   "kind": "question-figure",
+   "sourcePage": 18,
+   "boundsPoints": [
+    200,
+    68,
+    420,
+    349
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-figure.svg",
+   "sha256": "fc9ee711fc8192744c7ae9cf99caf2bf6c5c7ce573ebc3fa2b0f65b4d5c252e9",
+   "bytes": 249429
+  },
+  {
+   "question": 8,
+   "kind": "mark-scheme",
+   "sourcePage": 17,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    375.989
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p17-1.svg",
+   "sha256": "333359a4c2c089d3be6cf72714f3efab26cd50384a781650cd4c79867699f20e",
+   "bytes": 248644
+  },
+  {
+   "question": 8,
+   "kind": "mark-scheme",
+   "sourcePage": 17,
+   "boundsPoints": [
+    47.0,
+    375.989,
+    558.0,
+    776.6
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p17-2.svg",
+   "sha256": "f74b8f11ed9a347fc47de61976c7fe4398ef1c2b8a4e7631b404413027418d4f",
+   "bytes": 251916
+  },
+  {
+   "question": 8,
+   "kind": "mark-scheme",
+   "sourcePage": 18,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    237.34
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p18-1.svg",
+   "sha256": "1925c7b5d557bc5d99d09bd4b090dca504e1e49deeda6dd3e3d0bc8fed3c0781",
+   "bytes": 176611
+  },
+  {
+   "question": 8,
+   "kind": "mark-scheme",
+   "sourcePage": 18,
+   "boundsPoints": [
+    47.0,
+    237.34,
+    558.0,
+    457.4
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p18-2.svg",
+   "sha256": "33765d7da550b4fc9bf4279a9421512051b465a5cd775322d8b8be9be33c2690",
+   "bytes": 176850
+  },
+  {
+   "question": 8,
+   "kind": "mark-scheme",
+   "sourcePage": 19,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    401.915
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p19-1.svg",
+   "sha256": "2029fda93536210ad462963e7b160710764477a7ca235092dc43283e6682fc32",
+   "bytes": 331648
+  },
+  {
+   "question": 8,
+   "kind": "mark-scheme",
+   "sourcePage": 19,
+   "boundsPoints": [
+    47.0,
+    401.915,
+    558.0,
+    784.88
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p19-2.svg",
+   "sha256": "264de01f01bad8ef6bacdb2efbdf3aa431694059370f1c6d25d3f1adcb0a241b",
+   "bytes": 337000
+  },
+  {
+   "question": 8,
+   "kind": "mark-scheme",
+   "sourcePage": 20,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    348.399
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p20-1.svg",
+   "sha256": "6cadb4015987b27ce26d40c186627a41f507d247894c9fdbae8e6545622b88c8",
+   "bytes": 248588
+  },
+  {
+   "question": 8,
+   "kind": "mark-scheme",
+   "sourcePage": 20,
+   "boundsPoints": [
+    47.0,
+    348.399,
+    558.0,
+    681.2
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q08-ms-p20-2.svg",
+   "sha256": "d749d02fbbe4ca98cbfdfc7a419b92aa6e281568410e6e9eaa1642889f326b4d",
+   "bytes": 252026
+  },
+  {
+   "question": 9,
+   "kind": "mark-scheme",
+   "sourcePage": 21,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    332.88
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q09-ms-p21-1.svg",
+   "sha256": "6b985cf8deec2bab77af9e27d4e99823ca1296743eaf59e50a659c958f953e73",
+   "bytes": 303686
+  },
+  {
+   "question": 9,
+   "kind": "mark-scheme",
+   "sourcePage": 21,
+   "boundsPoints": [
+    47.0,
+    332.88,
+    558.0,
+    806.72
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q09-ms-p21-2.svg",
+   "sha256": "1907856752473280420eef21e811d2038e76bdc229b05675c7f8eb1c1a0d78bf",
+   "bytes": 306167
+  },
+  {
+   "question": 9,
+   "kind": "mark-scheme",
+   "sourcePage": 22,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    410.0
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q09-ms-p22-1.svg",
+   "sha256": "64e08c8301ccb7d11f4f5268b288f4e9aeadda889ecec8bc4633ae3af247b26c",
+   "bytes": 183032
+  },
+  {
+   "question": 10,
+   "kind": "mark-scheme",
+   "sourcePage": 23,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    490.44
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p23-1.svg",
+   "sha256": "97779daf80249876eb0ce40ced53fb97160c9207786c84c788c7b44811e4397c",
+   "bytes": 255702
+  },
+  {
+   "question": 10,
+   "kind": "mark-scheme",
+   "sourcePage": 23,
+   "boundsPoints": [
+    47.0,
+    490.44,
+    558.0,
+    803.96
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p23-2.svg",
+   "sha256": "eeb83d14e8014ad6293b6cfbad37a3cbcc36e7e8d135eb8e9f32b407ffef2650",
+   "bytes": 258032
+  },
+  {
+   "question": 10,
+   "kind": "mark-scheme",
+   "sourcePage": 24,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    318.125
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p24-1.svg",
+   "sha256": "0a83a9c2c377a941e25d3ddde71cfa152fce3bd3dc27d3bb80c900ed5d7d593a",
+   "bytes": 303069
+  },
+  {
+   "question": 10,
+   "kind": "mark-scheme",
+   "sourcePage": 24,
+   "boundsPoints": [
+    47.0,
+    318.125,
+    558.0,
+    737.6
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p24-2.svg",
+   "sha256": "ec5aa6e3341044d8ebf223b7ad3e0ca789288e43faa9c07250090ea8bdb3412d",
+   "bytes": 305970
+  },
+  {
+   "question": 10,
+   "kind": "mark-scheme",
+   "sourcePage": 25,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    413.04
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p25-1.svg",
+   "sha256": "2647232e05f048064d5272c82b406ca3442555e1ebd9e39cf8ea02302e41c645",
+   "bytes": 296264
+  },
+  {
+   "question": 10,
+   "kind": "mark-scheme",
+   "sourcePage": 25,
+   "boundsPoints": [
+    47.0,
+    413.04,
+    558.0,
+    690.08
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q10-ms-p25-2.svg",
+   "sha256": "87671384a33b9f8fd7120eb27d384b1de04c9eaa89e281e4d42a0de056a435ba",
+   "bytes": 300658
+  },
+  {
+   "question": 11,
+   "kind": "mark-scheme",
+   "sourcePage": 26,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    432.96
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q11-ms-p26-1.svg",
+   "sha256": "3d62d00d00d5aabd29609f80e3c6aed7c3336f6e445429801bdf481ed564e698",
+   "bytes": 295873
+  },
+  {
+   "question": 11,
+   "kind": "mark-scheme",
+   "sourcePage": 26,
+   "boundsPoints": [
+    47.0,
+    432.96,
+    558.0,
+    810.44
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q11-ms-p26-2.svg",
+   "sha256": "ca3fd1c49e8f36255388aed8b332ad4dccf092ead2f5d15bae9705453b0d36ee",
+   "bytes": 297129
+  },
+  {
+   "question": 11,
+   "kind": "mark-scheme",
+   "sourcePage": 27,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    407.707
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q11-ms-p27-1.svg",
+   "sha256": "36e7cb1e63af597740f50c203b2c62f3acc6235c5ac2a0c8a998903bc3e245f4",
+   "bytes": 357053
+  },
+  {
+   "question": 11,
+   "kind": "mark-scheme",
+   "sourcePage": 27,
+   "boundsPoints": [
+    47.0,
+    407.707,
+    558.0,
+    757.88
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q11-ms-p27-2.svg",
+   "sha256": "a4bed34d5a722770974e9bf0421c2bdb81339a3a9daee70b9d581c2b7111430b",
+   "bytes": 360621
+  },
+  {
+   "question": 11,
+   "kind": "mark-scheme",
+   "sourcePage": 28,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    388.64
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q11-ms-p28-1.svg",
+   "sha256": "86c129255df5e3f46dbbf38fae50b4df65e864c2439445507c55516dde00f557",
+   "bytes": 190982
+  },
+  {
+   "question": 12,
+   "kind": "question-figure",
+   "sourcePage": 34,
+   "boundsPoints": [
+    180,
+    70,
+    420,
+    339
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q12-figure.svg",
+   "sha256": "7d075473fd65b85dbd455b5f6b313178e0349e773bc883e7119953e3158b29d6",
+   "bytes": 207717
+  },
+  {
+   "question": 12,
+   "kind": "mark-scheme",
+   "sourcePage": 29,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    386.282
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q12-ms-p29-1.svg",
+   "sha256": "ce45d5ecd310a01f808ae2e9fd165f7d087bac2f3b8f98895ddfae43ce8f5451",
+   "bytes": 326143
+  },
+  {
+   "question": 12,
+   "kind": "mark-scheme",
+   "sourcePage": 29,
+   "boundsPoints": [
+    47.0,
+    386.282,
+    558.0,
+    806.72
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q12-ms-p29-2.svg",
+   "sha256": "ea4d035ab81247bffcc1537a43760a87c3959fba8e1802374cd44fa403016aec",
+   "bytes": 329826
+  },
+  {
+   "question": 12,
+   "kind": "mark-scheme",
+   "sourcePage": 30,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    392.441
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q12-ms-p30-1.svg",
+   "sha256": "8da49b03348ace5433d3f6b78a7580df1a0abc3c9c3569ee2ffeacfa39ef8cc9",
+   "bytes": 230793
+  },
+  {
+   "question": 12,
+   "kind": "mark-scheme",
+   "sourcePage": 30,
+   "boundsPoints": [
+    47.0,
+    392.441,
+    558.0,
+    696.56
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q12-ms-p30-2.svg",
+   "sha256": "5dc3bc0882c9f22dc1728c936ab36568f06e86c88aa913a45b478c194fd60ec2",
+   "bytes": 232638
+  },
+  {
+   "question": 13,
+   "kind": "mark-scheme",
+   "sourcePage": 31,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    402.465
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q13-ms-p31-1.svg",
+   "sha256": "7139cc51d93b020bbd8aa483ba620f0cf6f4f91451b1a72cea5e81ab8915af82",
+   "bytes": 315369
+  },
+  {
+   "question": 13,
+   "kind": "mark-scheme",
+   "sourcePage": 31,
+   "boundsPoints": [
+    47.0,
+    402.465,
+    558.0,
+    811.28
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q13-ms-p31-2.svg",
+   "sha256": "b2e9034a03fd6f48aa2d9db824324e93e07e1fd3185e25ddcfbaa8f9f682b86c",
+   "bytes": 318977
+  },
+  {
+   "question": 13,
+   "kind": "mark-scheme",
+   "sourcePage": 32,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    372.267
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q13-ms-p32-1.svg",
+   "sha256": "14ad49239cf3effc50a9d9fa2255470a48bde38beb9a0c62bfbfc02c8f927f2e",
+   "bytes": 268928
+  },
+  {
+   "question": 13,
+   "kind": "mark-scheme",
+   "sourcePage": 32,
+   "boundsPoints": [
+    47.0,
+    372.267,
+    558.0,
+    657.44
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q13-ms-p32-2.svg",
+   "sha256": "a1c2df216a7deb9e8455586252d8b7862fa723368971af35b51915e8c676a69b",
+   "bytes": 271358
+  },
+  {
+   "question": 14,
+   "kind": "question-figure",
+   "sourcePage": 40,
+   "boundsPoints": [
+    105,
+    68,
+    500,
+    234
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-figure.svg",
+   "sha256": "efeee6bf236a2a4473689940dded026fc03e277360d6ff3fdbc615ba61e6448a",
+   "bytes": 283221
+  },
+  {
+   "question": 14,
+   "kind": "mark-scheme",
+   "sourcePage": 33,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    490.803
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p33-1.svg",
+   "sha256": "d5b3ac070e7f7ce608ff82036aa917bdf719c4fe9ce7f0254ff20104faeabd92",
+   "bytes": 315216
+  },
+  {
+   "question": 14,
+   "kind": "mark-scheme",
+   "sourcePage": 33,
+   "boundsPoints": [
+    47.0,
+    490.803,
+    558.0,
+    815.72
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p33-2.svg",
+   "sha256": "051970f8cf14cd6ee9e3931e2180e0ac76edfac10d4d3838d5f06ecceb370cb3",
+   "bytes": 318144
+  },
+  {
+   "question": 14,
+   "kind": "mark-scheme",
+   "sourcePage": 34,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    172.52
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p34-1.svg",
+   "sha256": "d60479241f2c6a12f54fe8073c5dcb3c3bc0ac3c690547f7320f087090a79f75",
+   "bytes": 108193
+  },
+  {
+   "question": 14,
+   "kind": "mark-scheme",
+   "sourcePage": 35,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    391.055
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p35-1.svg",
+   "sha256": "729944f1ab5b1a8d9956588fca46bfe64981a36a00e697345d3f545a79568066",
+   "bytes": 365206
+  },
+  {
+   "question": 14,
+   "kind": "mark-scheme",
+   "sourcePage": 35,
+   "boundsPoints": [
+    47.0,
+    391.055,
+    558.0,
+    815.84
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p35-2.svg",
+   "sha256": "6c8745ad8907d75f5492c003be6a58e0955565a6e469d1af03e6b23f9165de78",
+   "bytes": 369690
+  },
+  {
+   "question": 14,
+   "kind": "mark-scheme",
+   "sourcePage": 36,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    266.35
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p36-1.svg",
+   "sha256": "993ea6684b6e63f2406af2b7ad68106ba952bf6640bb357b14e9c721b88b7185",
+   "bytes": 201098
+  },
+  {
+   "question": 14,
+   "kind": "mark-scheme",
+   "sourcePage": 36,
+   "boundsPoints": [
+    47.0,
+    266.35,
+    558.0,
+    570.56
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q14-ms-p36-2.svg",
+   "sha256": "5e767c34ce1c8acf4fa77a9e50017441a740e063dda57b437121490a4f2ed992",
+   "bytes": 200859
+  },
+  {
+   "question": 15,
+   "kind": "question-figure",
+   "sourcePage": 44,
+   "boundsPoints": [
+    75,
+    68,
+    520,
+    280
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-figure.svg",
+   "sha256": "a3ac390fe3e9d0caf9e851d63d53983116f0741574a1e0b47e498a0c52b8bec6",
+   "bytes": 256657
+  },
+  {
+   "question": 15,
+   "kind": "mark-scheme",
+   "sourcePage": 37,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    376.08
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p37-1.svg",
+   "sha256": "786c7ed1a4f2d2efeb62f30ab39678e65a50bc0b71890f0d0fa7b9c55324d193",
+   "bytes": 244697
+  },
+  {
+   "question": 15,
+   "kind": "mark-scheme",
+   "sourcePage": 37,
+   "boundsPoints": [
+    47.0,
+    376.08,
+    558.0,
+    790.64
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p37-2.svg",
+   "sha256": "dbbba597625bf3fd9b081957db987be53b10ce42f66da4b16fa433da6772f48e",
+   "bytes": 245316
+  },
+  {
+   "question": 15,
+   "kind": "mark-scheme",
+   "sourcePage": 38,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    395.899
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p38-1.svg",
+   "sha256": "0f24ba585d52c8c1986394a2e70daf86b29800a994d53ac1a37f9c392140919d",
+   "bytes": 332367
+  },
+  {
+   "question": 15,
+   "kind": "mark-scheme",
+   "sourcePage": 38,
+   "boundsPoints": [
+    47.0,
+    395.899,
+    558.0,
+    770.6
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p38-2.svg",
+   "sha256": "34c41d1ebd897f948bdb0cc32ba2dadfc8c22474284cb07dfbbb6a3d9a03e4f3",
+   "bytes": 336810
+  },
+  {
+   "question": 15,
+   "kind": "mark-scheme",
+   "sourcePage": 39,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    443.696
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p39-1.svg",
+   "sha256": "318149cac27b04b5f58f186ec75559402439949aabd683a28b532b0aa653e95a",
+   "bytes": 276934
+  },
+  {
+   "question": 15,
+   "kind": "mark-scheme",
+   "sourcePage": 39,
+   "boundsPoints": [
+    47.0,
+    443.696,
+    558.0,
+    799.4
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p39-2.svg",
+   "sha256": "2d27d86685dff1a3aac34af439dfa5d5c91f4ddaed6a2b020d8bf3eb870b8a57",
+   "bytes": 278726
+  },
+  {
+   "question": 15,
+   "kind": "mark-scheme",
+   "sourcePage": 40,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    341.72
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p40-1.svg",
+   "sha256": "32fe8ea6c4c1449c5cf0ef37f3d17320e5fe4c4284732a0186ab248f518ca7ce",
+   "bytes": 160799
+  },
+  {
+   "question": 15,
+   "kind": "mark-scheme",
+   "sourcePage": 41,
+   "boundsPoints": [
+    47.0,
+    29.56,
+    558.0,
+    336.935
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p41-1.svg",
+   "sha256": "7ae816ed1799c1156da9f85ed3adb1f98893d7272f17f0d1fc7bcefda837fb44",
+   "bytes": 221552
+  },
+  {
+   "question": 15,
+   "kind": "mark-scheme",
+   "sourcePage": 41,
+   "boundsPoints": [
+    47.0,
+    336.935,
+    558.0,
+    618.2
+   ],
+   "asset": "resources/exams/edexcel-9ma0-02-2025-june/q15-ms-p41-2.svg",
+   "sha256": "9a36a73b84e8bbb54296ef13f76858d519e30a234202fe8bef17e5f6a7910980",
+   "bytes": 224114
+  }
+ ],
+ "mathsReview": "All 15 questions solved independently with SymPy and numeric checks (private script) and compared with the official scheme answers, including alternatives; no discrepancies and no source errors found.",
+ "status": "checked-pending-print-and-review"
+}

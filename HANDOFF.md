@@ -1,5 +1,12 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.62 -->
+**Release 0.62 · GitHub #107.** Past Papers includes June 2025 Paper 2 (Maths · 9MA0/02), Pure Mathematics 2, sat 12 June 2025 (2 hours). Its 15 original questions carry 3, 4, 2, 5, 7, 6, 4, 9, 8, 9, 11, 8, 3, 8 and 13 marks, totalling 100. Questions 1–5 are Easy, 6–10 Medium and 11–15 Difficult, following paper order. Papers now has six past papers with 62 questions and 450 marks, 554 Exam style questions and 8,068 Practice questions: 8,684 in total.
+
+**Content.** Prompts are native HTML and KaTeX with the original wording, part labels, marks, bold emphasis and question-specific instructions. Figures 1–5 are vector crops of the source diagrams. Each question prints only its own official mark-scheme pages (5–41) as ordered vector crops, including alternatives, special cases, examiner notes and helpful diagrams. General marking pages 1–4 and the publisher page 42 are excluded. Every question was solved independently and agrees with the scheme. Source hashes, page ranges, crop bounds, mathematical checkpoints and chapter mappings are in `docs/evidence/v062-import-pure2.json`.
+
+**Evidence and release.** Tests cover the paper dropdown, chapter filters, a whole paper added in source order that survives reload, all four print combinations as real PDFs and a mixed Paper 1/Paper 2 selection with overlapping question numbers. Earlier papers, saved IDs and v0.61 print layouts are unchanged. The reviewed PR, live manifests, recovery ZIP and owner-only report outcome belong in GitHub #107. Legacy Maths has 3,423 / 3,423 questions (100%) and 132 / 132 sections.
+
 <!-- LUISA-REPORT-HANDOFF v0.61 -->
 **Release 0.61 · GitHub #105.** Papers defaults to one question per page. Tick Condensed beneath Include worked solutions at the back to print without dedicated writing areas. Browser sessions saved with two questions per page now use the default. The existing assembled questions, source choices and answer preference still restore.
 
