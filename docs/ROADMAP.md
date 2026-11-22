@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.65
+
+[Issue #114](https://github.com/vyr66mbzmh-debug/Luisa/issues/114) adds bold right-aligned sub-question marks, the 6-minutes-per-5-marks paper time and the teacher-only exam paper.
+
 ## Papers v0.64
 
 [Issue #112](https://github.com/vyr66mbzmh-debug/Luisa/issues/112) adds the six June 2024 Edexcel papers with their official mark schemes. Further past papers need their own owner-supplied question paper and matching scheme.
