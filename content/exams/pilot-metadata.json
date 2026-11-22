@@ -4,8 +4,8 @@
   "printable": true,
   "contentStatus": "checked",
   "note": "Checked source metadata for the six owner-supplied June 2025 papers. Printable question payloads are joined by stable ID through exam-catalogue.json. Difficulty follows original paper order as a guide, not an empirical rating.",
-  "questionCount": 106,
-  "totalMarks": 800,
+  "questionCount": 121,
+  "totalMarks": 900,
   "papers": [
     {
       "id": "edexcel-9ma0-01-2025-june",
@@ -2585,6 +2585,438 @@
           ],
           "questionNumber": 15,
           "sourceLabel": "Edexcel June 2024 9MA0/01 Q15"
+        }
+      ],
+      "sourceVerification": {
+        "questionPaperAndMarkSchemeTotalsAgree": true,
+        "originalQuestionOrderPreserved": true,
+        "totalMarksChecked": 100
+      }
+    },
+    {
+      "id": "edexcel-9ma0-02-2024-june",
+      "board": "Edexcel",
+      "qualification": "A level",
+      "paperCode": "9MA0/02",
+      "title": "Pure Mathematics 2",
+      "examDate": "2024-06-11",
+      "session": "June 2024",
+      "questionCount": 15,
+      "totalMarks": 100,
+      "source": {
+        "questionPaperUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-2/QP/June%202024%20QP.pdf",
+        "markSchemeUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-2/MS/June%202024%20MS.pdf",
+        "questionPaperSha256": "bcdcad67874d8b3f8faed92cae7ee6fe874c97ac5e146457176e9fb2bb2aeabd",
+        "markSchemeSha256": "80b085269afe3df7ef5b0956604952350278dba6ab21d90f5077ada7a770a51a",
+        "indexedQuestionPaperSha256": "bcdcad67874d8b3f8faed92cae7ee6fe874c97ac5e146457176e9fb2bb2aeabd",
+        "indexedMarkSchemeSha256": "80b085269afe3df7ef5b0956604952350278dba6ab21d90f5077ada7a770a51a",
+        "basis": "Owner-supplied original PDF attachment"
+      },
+      "difficultyPolicy": {
+        "basis": "original-paper-order",
+        "easyQuestions": [
+          1,
+          5
+        ],
+        "mediumQuestions": [
+          6,
+          10
+        ],
+        "difficultQuestions": [
+          11,
+          15
+        ]
+      },
+      "questions": [
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q1",
+          "originalQuestionNumber": 1,
+          "originalQuestionLabel": "1",
+          "marks": 5,
+          "difficulty": "easy",
+          "topicSummary": "First and second derivatives of a cubic",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "differentiation",
+              "skillId": "smq-1.31"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "differentiation",
+              "skillId": "smq-2.20"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            2,
+            3
+          ],
+          "questionNumber": 1,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q1"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q2",
+          "originalQuestionNumber": 2,
+          "originalQuestionLabel": "2",
+          "marks": 5,
+          "difficulty": "easy",
+          "topicSummary": "Arithmetic series in a loan repayment",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "sequences-and-series",
+              "skillId": "smq-2.07"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            4,
+            5
+          ],
+          "questionNumber": 2,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q2"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q3",
+          "originalQuestionNumber": 3,
+          "originalQuestionLabel": "3",
+          "marks": 4,
+          "difficulty": "easy",
+          "topicSummary": "Graph transformations of a point",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "graphs-and-transformations",
+              "skillId": "smq-1.28"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "functions-and-transformations",
+              "skillId": "smq-2.11"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            6,
+            7
+          ],
+          "questionNumber": 3,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q3"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q4",
+          "originalQuestionNumber": 4,
+          "originalQuestionLabel": "4",
+          "marks": 5,
+          "difficulty": "easy",
+          "topicSummary": "Recurrence relation and a quadratic in k",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "sequences-and-series",
+              "skillId": "smq-2.06"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            8,
+            9
+          ],
+          "questionNumber": 4,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q4"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q5",
+          "originalQuestionNumber": 5,
+          "originalQuestionLabel": "5",
+          "marks": 3,
+          "difficulty": "easy",
+          "topicSummary": "Small angle approximations",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "trigonometry",
+              "skillId": "smq-2.19"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            10,
+            11
+          ],
+          "questionNumber": 5,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q5"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q6",
+          "originalQuestionNumber": 6,
+          "originalQuestionLabel": "6",
+          "marks": 7,
+          "difficulty": "medium",
+          "topicSummary": "Derivatives of exponential and logarithmic functions and iteration",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "differentiation",
+              "skillId": "smq-2.21"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "numerical-methods",
+              "skillId": "smq-2.28"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            12,
+            15
+          ],
+          "questionNumber": 6,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q6"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q7",
+          "originalQuestionNumber": 7,
+          "originalQuestionLabel": "7",
+          "marks": 5,
+          "difficulty": "medium",
+          "topicSummary": "3D vectors on a line and a distance ratio",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "vectors",
+              "skillId": "smq-1.46"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            16,
+            17
+          ],
+          "questionNumber": 7,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q7"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q8",
+          "originalQuestionNumber": 8,
+          "originalQuestionLabel": "8",
+          "marks": 7,
+          "difficulty": "medium",
+          "topicSummary": "Reciprocal trigonometric identity and equation",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "trigonometry",
+              "skillId": "smq-2.15"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            18,
+            21
+          ],
+          "questionNumber": 8,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q8"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q9",
+          "originalQuestionNumber": 9,
+          "originalQuestionLabel": "9",
+          "marks": 7,
+          "difficulty": "medium",
+          "topicSummary": "Quadratic model of a ball’s path",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "algebra-and-functions",
+              "skillId": "smq-1.11"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            22,
+            25
+          ],
+          "questionNumber": 9,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q9"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q10",
+          "originalQuestionNumber": 10,
+          "originalQuestionLabel": "10",
+          "marks": 6,
+          "difficulty": "medium",
+          "topicSummary": "Parametric differentiation and a tangent",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "parametric-equations",
+              "skillId": "smq-2.42"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            26,
+            27
+          ],
+          "questionNumber": 10,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q10"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q11",
+          "originalQuestionNumber": 11,
+          "originalQuestionLabel": "11",
+          "marks": 5,
+          "difficulty": "difficult",
+          "topicSummary": "Integration by parts and exact area",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "integration",
+              "skillId": "smq-2.36"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            28,
+            31
+          ],
+          "questionNumber": 11,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q11"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q12",
+          "originalQuestionNumber": 12,
+          "originalQuestionLabel": "12",
+          "marks": 12,
+          "difficulty": "difficult",
+          "topicSummary": "Partial fractions and a logistic differential equation",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "partial-fractions",
+              "skillId": "smq-2.37"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "integration",
+              "skillId": "smq-2.38"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "differential-equations",
+              "skillId": "smq-2.40"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            32,
+            35
+          ],
+          "questionNumber": 12,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q12"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q13",
+          "originalQuestionNumber": 13,
+          "originalQuestionLabel": "13",
+          "marks": 9,
+          "difficulty": "difficult",
+          "topicSummary": "Exponential model from a logarithmic graph",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "exponentials-and-logarithms",
+              "skillId": "smq-1.27"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            36,
+            39
+          ],
+          "questionNumber": 13,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q13"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q14",
+          "originalQuestionNumber": 14,
+          "originalQuestionLabel": "14",
+          "marks": 8,
+          "difficulty": "difficult",
+          "topicSummary": "Circles: centre, radius and intersecting circles",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "coordinate-geometry",
+              "skillId": "smq-1.12"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            40,
+            43
+          ],
+          "questionNumber": 14,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q14"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2024-june/q15",
+          "originalQuestionNumber": 15,
+          "originalQuestionLabel": "15",
+          "marks": 12,
+          "difficulty": "difficult",
+          "topicSummary": "Implicit differentiation, normal and proof",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "differentiation",
+              "skillId": "smq-2.26"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            44,
+            48
+          ],
+          "questionNumber": 15,
+          "sourceLabel": "Edexcel June 2024 9MA0/02 Q15"
         }
       ],
       "sourceVerification": {
