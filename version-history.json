@@ -1,6 +1,21 @@
 {
-  "current": "0.67",
+  "current": "0.68",
   "releases": [
+    {
+      "version": "0.68",
+      "previous": "0.67",
+      "date": "2026-11-22",
+      "changes": [
+        "The past paper dropdown lists only papers with a question in the chosen Course and Book (for example, no Further Maths papers under Maths A level); a chosen paper that drops out resets to All past papers.",
+        "Filter dropdowns set to anything other than All are highlighted with a navy border and pale-blue tint.",
+        "While Past Papers is unticked the paper dropdown is greyed out, reset to All and ignored."
+      ],
+      "requirements": [
+        "PAP-068-1",
+        "PAP-068-2",
+        "PAP-068-3"
+      ]
+    },
     {
       "version": "0.67",
       "previous": "0.66",

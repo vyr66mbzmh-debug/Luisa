@@ -1,3 +1,9 @@
+## Luisa v0.68
+
+- Papers: the specific past paper dropdown lists only papers with at least one question in the selected Course and Book; with Course and Book on All every paper is listed. A chosen paper that is no longer listed after a Course or Book change (or on restore) resets to All past papers.
+- Papers: Past paper, Difficulty, Course and Book dropdowns on anything other than All get an active style (Luisa navy border, pale-blue tint, semibold text; WCAG AA). Screen only.
+- Papers: while the Past Papers tickbox is unticked the paper dropdown is disabled, visibly greyed out, reset to All and never filters; a saved selection in that state restores the same way.
+
 ## Luisa v0.67
 
 - Teacher-only exam paper: one Print choice — Questions only (default), Mark scheme only, Questions and mark scheme. The scheme section follows the paper, takes each question's paired official scheme with all continuations (past papers) or its worked solution (practice and exam-style), heads each "Question N", starts with a title line naming the exam and numbers its own pages "Mark scheme page x of y". Mark scheme only has no front page and no lined pages.

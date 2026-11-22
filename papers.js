@@ -46,7 +46,7 @@
   }
   function sourceMatches(row) {
     const difficulty = $('papers-difficulty').value;
-    const paper = $('papers-past-paper').value;
+    const paper = $('papers-past-paper').disabled ? '' : $('papers-past-paper').value;
     return $('papers-source-' + row.bank).checked &&
       (!difficulty || (row.difficulty || 'unclassified') === difficulty) &&
       (row.bank !== 'past-papers' || !paper || row.paperId === paper);
@@ -82,12 +82,34 @@
       label.append(input, text);
       return label;
     }));
+    markActive();
     updatePool();
   }
   function refreshBooks(wanted) {
     const course = $('papers-course').value;
     const available = [...books].filter(([, book]) => !course || book.course === course);
     options('papers-book', 'All books', available.map(([key, book]) => [key, book.title]), wanted);
+  }
+  // The past-paper dropdown lists only papers with a question in the chosen course/book, and is
+  // disabled (and reset to All) while Past Papers is unticked (PAP-068-1, PAP-068-3).
+  let paperChoices = [];
+  function relevantPapers() {
+    const relevant = new Set();
+    for (const row of catalogue) if (row.bank === 'past-papers' && !relevant.has(row.paperId)
+      && row.chapterKeys.some(key => inHierarchy(chapters.get(key)))) relevant.add(row.paperId);
+    return relevant;
+  }
+  function refreshPapers(wanted = $('papers-past-paper').value) {
+    const ticked = $('papers-source-past-papers').checked, relevant = relevantPapers();
+    options('papers-past-paper', 'All past papers', paperChoices.filter(([id]) => relevant.has(id)), ticked ? wanted : '');
+    $('papers-past-paper').disabled = !ticked || !papers.size;
+  }
+  // Filter dropdowns on anything but "All" carry the active style (PAP-068-2).
+  function markActive() {
+    for (const id of ['papers-past-paper', 'papers-difficulty', 'papers-course', 'papers-book']) {
+      const select = $(id);
+      select.classList.toggle('filter-active', select.value !== '');
+    }
   }
   // "In paper order" exists only while one individual past paper is chosen (PAP-063).
   const singlePaper = () => ($('papers-source-past-papers').checked && $('papers-past-paper').value) || '';
@@ -436,7 +458,7 @@
       const key = saved?.version === 2 && source !== 'practice' ? 'exam' : source;
       $('papers-source-' + source).checked = saved?.sources?.[key] ?? true;
     }
-    const paperChoices = [...papers].sort(([,a],[,b]) => b.date.localeCompare(a.date) || a.code.localeCompare(b.code))
+    paperChoices = [...papers].sort(([,a],[,b]) => b.date.localeCompare(a.date) || a.code.localeCompare(b.code))
       .map(([id, paper]) => {
         const part = paper.code.split('/').at(-1);
         const applied = {'31': '3 Statistics', '32': '3 Mechanics'};
@@ -444,15 +466,14 @@
         const qualification = paper.code.startsWith('9FM') ? 'Further Maths' : 'Maths';
         return [id, paper.session + ' Paper ' + number + ' (' + qualification + ' · ' + paper.code + ')'];
       });
-    options('papers-past-paper', 'All past papers', paperChoices, saved?.pastPaper);
-    $('papers-past-paper').disabled = !$('papers-source-past-papers').checked || !papers.size;
     if (['easy','medium','difficult','unclassified'].includes(saved?.difficulty)) $('papers-difficulty').value = saved.difficulty;
     $('papers-condensed').checked = saved?.layout === 'condensed';
     if (typeof saved?.includeAnswers === 'boolean') $('papers-answers').checked = saved.includeAnswers;
-    refreshOrder();
-    if (saved?.order === 'selection' || (saved?.order === 'paper' && singlePaper())) $('papers-order').value = saved.order;
     options('papers-course', 'All courses', textbook.courses.map(c => [c.id, c.title]), saved?.course);
     refreshBooks(saved?.book);
+    refreshPapers(saved?.pastPaper);
+    refreshOrder();
+    if (saved?.order === 'selection' || (saved?.order === 'paper' && singlePaper())) $('papers-order').value = saved.order;
     const migrated = saved && saved.version < 3 && (saved.topic || saved.topics?.length || saved.skills?.length);
     if (migrated) $('papers-selection-note').textContent = 'The old topic or skill restriction has been reset for textbook topics. Your saved paper is kept.';
     chosenTopics = new Set((Array.isArray(saved?.chapters) ? saved.chapters : [])
@@ -462,7 +483,7 @@
     persistEnabled = true;
     for (const id of [...sources.map(source => 'papers-source-' + source), 'papers-past-paper', 'papers-difficulty']) {
       $(id).addEventListener('change', () => {
-        $('papers-past-paper').disabled = !$('papers-source-past-papers').checked || !papers.size;
+        refreshPapers();
         const order = $('papers-order').value;
         refreshOrder(); refreshFilters();
         if (order === 'paper') updateSelection();
@@ -470,8 +491,13 @@
     }
     for (const id of ['papers-condensed','papers-answers']) $(id).addEventListener('change', persist);
     $('papers-order').addEventListener('change', updateSelection);
-    $('papers-course').addEventListener('change', () => { chosenTopics.clear(); refreshBooks(); refreshFilters(); });
-    $('papers-book').addEventListener('change', () => { chosenTopics.clear(); refreshFilters(); });
+    const hierarchyChanged = () => {
+      const order = $('papers-order').value;
+      chosenTopics.clear(); refreshPapers(); refreshOrder(); refreshFilters();
+      if (order === 'paper') updateSelection();
+    };
+    $('papers-course').addEventListener('change', () => { refreshBooks(); hierarchyChanged(); });
+    $('papers-book').addEventListener('change', hierarchyChanged);
     $('papers-topics').addEventListener('change', event => {
       if (event.target.checked) chosenTopics.add(event.target.value); else chosenTopics.delete(event.target.value);
       updatePool();
