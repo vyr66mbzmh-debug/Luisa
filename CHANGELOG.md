@@ -1,3 +1,9 @@
+## Luisa v0.64
+
+- Add the six June 2024 Edexcel papers to Past Papers: 9MA0/01 Pure Mathematics 1, 9MA0/02 Pure Mathematics 2, 9MA0/31 Statistics, 9MA0/32 Mechanics, 9FM0/01 Core Pure Mathematics 1 and 9FM0/02 Core Pure Mathematics 2.
+- 59 original questions and 450 marks, with native mathematics, faithful vector figures and each question's complete official mark scheme.
+- Past Papers now has 12 papers, 121 questions and 900 marks; Papers has 8,743 questions in total.
+
 ## Luisa v0.63
 
 - When one past paper is chosen, Question order offers In paper order, printing that paper's questions in original question-number order. Other selected questions follow in the order they were added.

@@ -1,5 +1,39 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.64 -->
+**Release 0.64 · GitHub #112.** Past Papers adds the six June 2024 Edexcel papers. Each has its own Past Papers dropdown option, for example "June 2024 Paper 1 (Maths · 9MA0/01)".
+
+| Paper | Title | Date | Questions | Marks | Easy / Medium / Difficult |
+|---|---|---|---|---|---|
+| 9MA0/01 | Pure Mathematics 1 | 4 June 2024 | 15 | 100 | Q1–5 / Q6–10 / Q11–15 |
+| 9MA0/02 | Pure Mathematics 2 | 11 June 2024 | 15 | 100 | Q1–5 / Q6–10 / Q11–15 |
+| 9MA0/31 | Statistics | 20 June 2024 | 6 | 50 | Q1–2 / Q3–4 / Q5–6 |
+| 9MA0/32 | Mechanics | 20 June 2024 | 6 | 50 | Q1–2 / Q3–4 / Q5–6 |
+| 9FM0/01 | Core Pure Mathematics 1 | 22 May 2024 | 8 | 75 | Q1–2 / Q3–6 / Q7–8 |
+| 9FM0/02 | Core Pure Mathematics 2 | 3 June 2024 | 9 | 75 | Q1–3 / Q4–6 / Q7–9 |
+
+Difficulty follows paper order. Papers now has 12 past papers with 121 questions and 900 marks, 554 Exam style questions and 8,068 Practice questions: 8,743 in total.
+
+**Sources.** Each of the 12 owner-supplied PDFs was identified by its cover (board, code, paper, date, question and mark totals), and each question paper was paired with its scheme by cover. Every question's marks agree with its scheme. No paper was held.
+
+**Content.**
+- Prompts are native HTML and KaTeX with the original wording, part labels, marks, bold emphasis and question-specific instructions.
+- Figures are vector crops of the source diagrams, with their captions.
+- Each question prints only its own official mark-scheme pages as ordered vector crops, including alternatives, special cases, examiner notes and diagrams. General marking pages and publisher pages are excluded.
+- Every question was solved independently and agrees with its scheme.
+- Source hashes, page ranges, crop bounds, mathematical checkpoints, chapter mappings and two source notes are in `docs/evidence/v064-import-june2024.json`:
+  - the 9FM0/01 Q8 hours/days wording, kept verbatim
+  - an unembedded symbol glyph on 9MA0/01 scheme page 36, shown exactly as the supplied PDF shows it
+
+**Evidence and release.**
+- Metadata tests now key papers by ID, because 2024 and 2025 share paper codes.
+- A June 2024 identity test checks hashes, marks, scheme pages and every asset hash.
+- The selection tests check the 13 dropdown options and the new totals.
+- The 2025 papers, saved IDs, In paper order and v0.63 print layouts are unchanged.
+- The reviewed PR, live checks, recovery ZIP and owner report outcome are in GitHub #112.
+
+**Usage.** Up to the pull request this job used 37,335,770 tokens in the main session (input 330, cache creation 406,909, cache read 36,781,149, output 147,382; 165 calls), summed from per-call usage in the session transcript. The final figure, including the independent review, is in GitHub #112 and the owner report.
+
 <!-- LUISA-REPORT-HANDOFF v0.63 -->
 **Release 0.63 · GitHub #110.** On Papers, when one individual past paper is chosen in the Past Papers dropdown, Question order adds **In paper order** next to Group by topic and As selected. That paper's questions print in original question-number order, and any other selected questions follow in the order they were added. With All past papers (or Past Papers off) the option is removed and the order returns to Group by topic; otherwise behaviour is unchanged. The order is saved with the session (`order: 'paper'`) and restored only while a single paper is chosen. Print layouts, solution options, saved selections and question IDs are unchanged from v0.62.
 

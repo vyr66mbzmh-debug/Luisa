@@ -1,12 +1,12 @@
-# Checked June 2025 exam pilot
+# Checked June 2025 and June 2024 past papers
 
-The six owner-supplied Edexcel question papers and matching mark schemes provide 62 original questions and 450 marks. June 2025 Pure Mathematics 2 (9MA0/02) was added in v0.62. `pilot-metadata.json` records their source identity, original question order, marks and syllabus mappings. `exam-catalogue.json` joins checked descriptors to the five printable payloads by stable ID. Original PDFs remain outside the public artifact.
+The twelve owner-supplied Edexcel question papers and matching mark schemes provide 121 original questions and 900 marks. June 2025 Pure Mathematics 2 (9MA0/02) was added in v0.62, and the six June 2024 papers (59 questions, 450 marks) in v0.64. `pilot-metadata.json` records their source identity, original question order, marks and syllabus mappings. `exam-catalogue.json` joins checked descriptors to the five printable payloads by stable ID. Original PDFs remain outside the public artifact.
 
 Prompts use native HTML and LaTeX, with faithful source diagrams. The relevant original paper instructions accompany each standalone question, including rounding and mechanics gravity conventions. Solutions preserve the complete question-specific official mark schemes, alternative methods and guidance as ordered vector or high-resolution images. General marking-administration pages are omitted. Solution image text is not searchable mathematical text. Keep source diagrams and mathematical expressions intact at continuation boundaries.
 
 Each paper retains its printed code, title, date, original question numbers and source hashes. The supplied mark-scheme hashes are authoritative; earlier linked-copy fingerprints remain separate provenance. Fully qualified `skillMappings` may span books, and do not allocate marks among skills.
 
-Difficulty follows the requested paper order: 16 questions split 5/6/5, fifteen split 5/5/5, six split 2/2/2, ten split 3/4/3 and nine split 3/3/3. This is a guide rather than a measured difficulty rating. QP/MS totals agree for all 62 questions. Core Pure 1's general marking guidance mentions 100 marks; its paper and question totals establish 75.
+Difficulty follows the requested paper order: 16 questions split 5/6/5, fifteen split 5/5/5, six split 2/2/2, ten split 3/4/3, nine split 3/3/3 and eight split 2/4/2. This is a guide rather than a measured difficulty rating. QP/MS totals agree for all 121 questions. Core Pure 1's general marking guidance mentions 100 marks; its paper and question totals establish 75.
 
 The existing 2,475 booklet entries retain their IDs and original payloads. Classification in `content/practice-classification.json` places 290 source-labelled exam-style entries and 88 each Bronze/Silver/Gold in Exam bank, with Bronze/Silver/Gold mapped to Easy/Medium/Difficult. Other difficulty remains unknown. Exam bank therefore has 601 questions; Practice questions has 8,068. The combined pool has 8,669 questions.
 
