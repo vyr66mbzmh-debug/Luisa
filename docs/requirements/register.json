@@ -5119,7 +5119,8 @@
       "evidence": [
         "AGENTS.md",
         "GitHub issue #110",
-        "GitHub issue #116"
+        "GitHub issue #116",
+        "GitHub issue #118"
       ]
     },
     {
@@ -5201,7 +5202,8 @@
         "Front page per the owner template exam-front-page-template.png (owner-supplied, kept outside Git; SHA-256 19a733df98252125229a9a7adba3276bb76e08f1fc3bb5b496ab448dc63688de): A4, Arial-style; centred Name line and a full-width rule; large bold \"[Year group] [Title]\"; smaller bold month and year (default current, editable); optional \"Date:\" line hidden when empty; a rule; Time (rule PAP-065B) with non-bold (+X minutes extra time), X = 25% of the minutes rounded to the nearest minute; Total marks available; Total marks achieved with a blank; a third rule near the bottom; editable instruction paragraphs (owner defaults); the typeset g = 9.8 m s^-2 line when any question comes from Mechanics; and an editable automatic course map (one line per course in question order, bold course name), omitted when all questions share a course.",
         "Pupil edition: papers-exam.js, papers-exam.css and the builder controls are removed at build time; direct requests are denied (404) for pupils and redirect to sign-in when signed out; check-artifact fails a pupil artifact that exposes them or an owner/staff artifact that lacks them.",
         "Defaults applied without asking: the exam paper uses the same saved selections as the builder; v0.62+ print layouts and saved selections are unchanged; course groups are Pure (Pure Year 1/2, 9MA0/01-02), Core (Pure Core 1/2, 9FM0), Statistics and Mechanics; questions without known marks cannot go in an exam paper; question headings show only the number and total, without source provenance or difficulty; front-page fields are kept for the browser session.",
-        "Superseded in part by v0.66: the course map and its Regenerate control were removed (PAP-066-2, PAP-066-3), the front page uses the LaTeX-like typography of PAP-066-4 instead of Arial, and headings read 'Question N' (PAP-066-6)."
+        "Superseded in part by v0.66: the course map and its Regenerate control were removed (PAP-066-2, PAP-066-3), the front page uses the LaTeX-like typography of PAP-066-4 instead of Arial, and headings read 'Question N' (PAP-066-6).",
+        "Superseded in part by v0.67: optional mark scheme printing (PAP-067-2), new default instructions (PAP-067-3), helper texts and the g status removed (PAP-067-4, -5, -7) and a default Date (PAP-067-8)."
       ],
       "evidence": [
         "tests/papers_print_browser.py (PAP_065C)",
@@ -5225,7 +5227,8 @@
         "The generated paper's time floor(marks × 6/5) is within ±1 minute of the target; mark totals are tried nearest-first (32 minutes: 27, then 26 or 28 marks; 60 minutes: 50 or 51). Front page and builder show the extra time as round(25% of minutes).",
         "Priorities: (a) time within ±1 minute, then (b) the PAP-066-5 difficulty order, then (c) variety (new topics before repeated ones; no question twice). The best of up to 240 randomised attempts is kept.",
         "When the target or the difficulty order cannot be met, the page says so with the reason (for example the total marks available and their minutes, or the easy/difficult counts) and the closest paper's questions, marks and minutes; 'Use the closest paper' accepts it, or the teacher changes topics and generates again. Nothing is silently missed.",
-        "The result replaces the selection in 'As selected' order. The teacher can add and remove questions, use Move up/Move down on each selected question (teacher editions only) and see the builder and exam summaries (marks, time, extra time) update immediately. Manual selection, the normal generator and saved selections work as before."
+        "The result replaces the selection in 'As selected' order. The teacher can add and remove questions, use Move up/Move down on each selected question (teacher editions only) and see the builder and exam summaries (marks, time, extra time) update immediately. Manual selection, the normal generator and saved selections work as before.",
+        "Superseded in part by v0.67: the tolerance is now ±2 minutes (PAP-067-1) and the report no longer counts questions without marks (PAP-067-6)."
       ],
       "evidence": [
         "tests/papers_print_browser.py (PAP_066, PAP_065C)",
@@ -5330,6 +5333,172 @@
         "tests/test_papers_selection.py (PAP_066)",
         "tests/test_student_auth.py (PAP_065)",
         "GitHub issue #116"
+      ]
+    },
+    {
+      "id": "PAP-067-1",
+      "requirement": "Time-target tolerance: change from plus or minus 1 minute to plus or minus 2 minutes. Paper time = marks x 6 / 5 rounded down; extra time = 25% rounded to the nearest minute. Priorities unchanged (time target, then difficulty bands, then variety; report the closest achievable total if the topics cannot reach the target).",
+      "scope": "v0.67 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #118, 22 November 2026",
+      "acceptance": [
+        "Generate timed paper produces a paper whose time floor(marks × 6/5) is within ±2 minutes of the target; mark totals are tried nearest first (32 minutes: 27, 26, 28, 25, 29 marks; 60 minutes: 50, 51, 49, 52).",
+        "The 32-minute (+8) and 60-minute (+15) presets both meet the target on realistic pools; extra time is round(25% of the paper time).",
+        "Priorities are unchanged: (a) time within ±2 minutes, (b) PAP-066-5 difficulty bands, (c) variety. An unreachable target reports the closest achievable total, the reason and a Use the closest paper choice.",
+        "The panel help and target line say ±2 minutes. Supersedes the ±1 minute tolerance of PAP-066-1."
+      ],
+      "evidence": [
+        "papers-exam.js",
+        "papers.html",
+        "tests/papers_print_browser.py",
+        "tests/test_papers_selection.py",
+        "GitHub issue #118"
+      ]
+    },
+    {
+      "id": "PAP-067-2",
+      "requirement": "Mark scheme options: on the exam paper print/save controls, replace any solutions on/off control with ONE radio choice (single selection): \"Questions only\" (default), \"Mark scheme only\", \"Questions and mark scheme\". The scheme is the matching scheme for each selected question, in exam order, each headed \"Question N\". Past-paper questions use their paired official scheme with all continuations; practice and exam-style questions use their existing worked solutions. \"Questions and mark scheme\" prints the full exam paper first (front page, lined pages, totals, footer \"Page x of y\" unchanged) then the scheme section at the end. \"Mark scheme only\" prints just the scheme section, with no front page and no lined answer pages. The scheme section has its own footer numbering, \"Mark scheme page x of y\", and a short title line naming the exam. Mixed selections (e.g. Paper 1 and Paper 2 with overlapping question numbers) must give each question its own scheme.",
+      "scope": "v0.67 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #118, 22 November 2026",
+      "acceptance": [
+        "The Exam paper panel has one radio group (name papers-exam-content) labelled Print: Questions only (default, checked), Mark scheme only, Questions and mark scheme. The choice is kept for the browser session with the other exam fields.",
+        "Questions only prints exactly the v0.66 exam paper (front page, two pages per question, lines, totals, \"Page x of y\") and no scheme.",
+        "Questions and mark scheme prints the unchanged exam paper first, then the scheme section on new pages.",
+        "Mark scheme only prints only the scheme section: no front page, no lined answer pages, no totals; the preview title is Mark Scheme.",
+        "Scheme section: first page starts with the title line \"Mark scheme: [Year group] [Title], [Month and year]\"; one block per selected question in exam order, headed \"Question N\" (\"Question N (continued)\" on later pages); every step of the question's scheme (all official continuation segments for past papers; the existing worked solution for practice and exam-style questions); footer \"Mark scheme page x of y\" numbered within the section only.",
+        "Mixed selections (for example 9MA0/01 Q1 and Q7 with 9MA0/02 Q1 and Q7) give each question its own paper's scheme images, verified by question ID and image source in a real PDF."
+      ],
+      "evidence": [
+        "papers-exam.js",
+        "papers.html",
+        "tests/papers_print_browser.py",
+        "tests/test_papers_selection.py",
+        "GitHub issue #118"
+      ]
+    },
+    {
+      "id": "PAP-067-3",
+      "requirement": "Default instruction text on the front page (still editable), three paragraphs separated by blank lines: \"Calculators may be used and a formulae booklet is provided. Where specified, answers relying solely on technology will not receive credit.\" / \"Give exact answers where requested and approximate numerical answers to three significant figures unless otherwise stated.\" / \"Clearly label all answers, including those on additional paper, with the question number and part.\" The automatic mechanics g-value paragraph (g = 9.8 m s^-2, typeset as maths) is still added to the printed front page when any selected question is from a mechanics source.",
+      "scope": "v0.67 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #118, 22 November 2026",
+      "acceptance": [
+        "A new session's instruction box contains exactly the three paragraphs separated by blank lines; the teacher can edit it and the edit prints.",
+        "Without a mechanics question the front page prints exactly those three paragraphs; with one, the typeset g = 9.8 m s^-2 paragraph follows them.",
+        "Supersedes the v0.65 default instruction wording (PAP-065C)."
+      ],
+      "evidence": [
+        "papers-exam.js",
+        "papers.html",
+        "tests/papers_print_browser.py",
+        "tests/test_papers_selection.py",
+        "GitHub issue #118"
+      ]
+    },
+    {
+      "id": "PAP-067-4",
+      "requirement": "Remove the helper text \"Prints the paper above as a lined exam paper with a front page: one question per two pages, totals for each question and the paper, and no solutions\" and any now-inaccurate wording about \"no solutions\" on that control.",
+      "scope": "v0.67 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #118, 22 November 2026",
+      "acceptance": [
+        "The Exam paper panel contains neither that sentence nor the words \"no solutions\"."
+      ],
+      "evidence": [
+        "papers-exam.js",
+        "papers.html",
+        "tests/papers_print_browser.py",
+        "tests/test_papers_selection.py",
+        "GitHub issue #118"
+      ]
+    },
+    {
+      "id": "PAP-067-5",
+      "requirement": "Remove the helper note below the instruction box: \"The g = 9.8 m s⁻² instruction is added automatically when any question comes from Mechanics.\" (Behaviour unchanged.)",
+      "scope": "v0.67 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #118, 22 November 2026",
+      "acceptance": [
+        "The note is absent from the panel; the g paragraph still prints automatically for mechanics selections."
+      ],
+      "evidence": [
+        "papers-exam.js",
+        "papers.html",
+        "tests/papers_print_browser.py",
+        "tests/test_papers_selection.py",
+        "GitHub issue #118"
+      ]
+    },
+    {
+      "id": "PAP-067-6",
+      "requirement": "Remove the comment below \"Generate timed paper\" that reads like \"6147 questions without marks in the chosen sources were left out\" (any count). Questions without marks are still excluded from timed generation.",
+      "scope": "v0.67 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #118, 22 November 2026",
+      "acceptance": [
+        "After generating a timed paper from any pool (past papers, exam-style, practice including thousands of unmarked skill questions) the report never says \"without marks\" or \"were left out\" for unmarked questions.",
+        "Every question in a generated paper is a past-paper or Practice Booklet question with known positive whole marks. (A separate note for questions that failed to load is kept.)"
+      ],
+      "evidence": [
+        "papers-exam.js",
+        "papers.html",
+        "tests/papers_print_browser.py",
+        "tests/test_papers_selection.py",
+        "GitHub issue #118"
+      ]
+    },
+    {
+      "id": "PAP-067-7",
+      "requirement": "Remove the status text \"· g = 9.8 line included\" from the builder in every case. The printed g paragraph is unchanged.",
+      "scope": "v0.67 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #118, 22 November 2026",
+      "acceptance": [
+        "The exam summary reads \"N questions · M marks · Time: T minutes (+X minutes extra time)\" with and without a mechanics question and after generating a timed paper; \"g = 9.8\" never appears in the panel.",
+        "The printed front page still has the g paragraph for mechanics selections."
+      ],
+      "evidence": [
+        "papers-exam.js",
+        "papers.html",
+        "tests/papers_print_browser.py",
+        "tests/test_papers_selection.py",
+        "GitHub issue #118"
+      ]
+    },
+    {
+      "id": "PAP-067-8",
+      "requirement": "Default the front-page Date field to today's date in the teacher's local date (Europe/London, from the browser clock), in the front-page template style: weekday, day with superscripted ordinal suffix, month, no year, e.g. \"Sunday 22nd November\". The field stays editable and clearable; an empty field is hidden on the printed page.",
+      "scope": "v0.67 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #118, 22 November 2026",
+      "acceptance": [
+        "A new session's Date field holds today's date in Europe/London from the browser clock, as \"Weekday Dth Month\" (st, nd, rd, th; 11th–13th), with no year. Example: 22 November 2026 → \"Sunday 22nd November\"; 30 June 2026 23:30 UTC → \"Wednesday 1st July\".",
+        "On the printed front page the ordinal suffix after a day number is superscripted (sup element), as in the owner template.",
+        "The field can be edited or cleared; a cleared field stays empty for the session and no Date line prints. Saved selections and saved-paper IDs are unaffected."
+      ],
+      "evidence": [
+        "papers-exam.js",
+        "papers.html",
+        "tests/papers_print_browser.py",
+        "tests/test_papers_selection.py",
+        "GitHub issue #118"
       ]
     }
   ]

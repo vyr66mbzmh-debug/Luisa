@@ -595,7 +595,7 @@ class PapersPrintTests(unittest.TestCase):
     def exam_paper(self, rows, **options):
         self.page.add_script_tag(url='/papers-exam.js')
         with self.page.expect_popup() as event:
-            self.page.evaluate('input => { window.resultPromise = LUISA_PAPERS_EXAM.create(input.rows,input.options).then(r => window.result = {ready:r.ready,warnings:r.warnings,pageCount:r.pageCount}); }', dict(rows=rows, options=options))
+            self.page.evaluate('input => { window.resultPromise = LUISA_PAPERS_EXAM.create(input.rows,input.options).then(r => window.result = {ready:r.ready,warnings:r.warnings,pageCount:r.pageCount,schemePageCount:r.schemePageCount}); }', dict(rows=rows, options=options))
         preview = event.value
         self.page.evaluate('window.resultPromise')
         return preview, self.page.evaluate('window.result')
@@ -618,6 +618,9 @@ class PapersPrintTests(unittest.TestCase):
         self.assertEqual(front.locator('.exam-title').inner_text(), 'L6 Further Maths Assessment 1')
         self.assertEqual(front.locator('.exam-month').inner_text(), 'November 2026')
         self.assertEqual(front.locator('.exam-date').inner_text(), 'Date: Friday 20th November P4 & P5')
+        # PAP-067-8: the ordinal suffix is superscripted, as in the template.
+        self.assertEqual(front.locator('.exam-date sup').all_inner_texts(), ['th'])
+        self.assertGreater(front.locator('.exam-date sup').evaluate('n=>parseFloat(getComputedStyle(n).verticalAlign)'), 3)
         minutes = total * 6 // 5
         self.assertEqual(front.locator('.exam-time').inner_text(), f'Time: {minutes} minutes (+{int(minutes * 0.25 + 0.5)} minutes extra time)')
         self.assertEqual(front.locator('.exam-time strong').inner_text(), 'Time:')
@@ -632,20 +635,19 @@ class PapersPrintTests(unittest.TestCase):
         sizes = front.evaluate("n=>['.exam-title','.exam-month','.exam-instructions p'].map(s=>parseFloat(getComputedStyle(n.querySelector(s)).fontSize)*72/96)")
         self.assertEqual([round(v, 1) for v in sizes], [22.0, 13.0, 11.0])
         paragraphs = front.locator('.exam-instructions > p').all_inner_texts()
-        self.assertEqual(paragraphs[:4], ['Calculators may be used.',
-            'Mathematical formulae booklet is provided. Answer all questions and ensure that your answers to parts of questions are clearly labelled.',
-            'Should you use additional paper, make sure that question number is clearly labelled',
-            'Answers should be given to three significant figures unless otherwise stated.'])
-        self.assertIn('Unless otherwise indicated, wherever a value of', paragraphs[4])
+        # PAP-067-3: the three default paragraphs, then the automatic mechanics g paragraph.
+        self.assertEqual(paragraphs[:3], ['Calculators may be used and a formulae booklet is provided. Where specified, answers relying solely on technology will not receive credit.', 'Give exact answers where requested and approximate numerical answers to three significant figures unless otherwise stated.', 'Clearly label all answers, including those on additional paper, with the question number and part.'])
+        self.assertIn('Unless otherwise indicated, wherever a value of', paragraphs[3])
         self.assertEqual(front.locator('.exam-gravity [data-math]').evaluate_all('ns=>ns.map(n=>n.dataset.math)'), ['g', 'g = 9.8\\,\\mathrm{m\\,s^{-2}}'])
         self.assertEqual(front.locator('.exam-gravity .katex').count(), 2)
         # PAP-066-2: no course map, even for a mixed-course paper; instructions unchanged.
-        self.assertEqual(len(paragraphs), 5)
+        self.assertEqual(len(paragraphs), 4)
         self.assertEqual(front.locator('.exam-course-map').count(), 0)
         self.assertNotIn(' are from ', front.inner_text())
         self.assertEqual(front.evaluate('n=>n.scrollHeight-n.clientHeight'), 0)
-        # No header on any page; solutions never printed.
-        self.assertEqual(preview.locator('.page-banner, .print-solution, .solutions-page, .working-space').count(), 0)
+        # No header on any page; the default "Questions only" prints no mark scheme.
+        self.assertEqual(preview.locator('.page-banner, .print-solution, .solutions-page, .working-space, .exam-scheme-page').count(), 0)
+        self.assertEqual(result['schemePageCount'], 0)
         self.assertNotIn('-ms-', preview.content())
         pages = preview.locator('.exam-page')
         count = pages.count()
@@ -729,7 +731,7 @@ class PapersPrintTests(unittest.TestCase):
                     with self.subTest(pool=name, minutes=minutes, seed=seed):
                         plan = self.plan(pool, minutes, seed)
                         self.assertTrue(plan['ok'], plan['reasons'])
-                        self.assertLessEqual(abs(plan['minutes'] - minutes), 1)
+                        self.assertLessEqual(abs(plan['minutes'] - minutes), 2)  # PAP-067-1: ±2 minutes
                         self.assertEqual(plan['minutes'], sum(plan['marksList']) * 6 // 5)
                         self.assertEqual(plan['extra'], int(plan['minutes'] * 0.25 + 0.5))
                         self.assertEqual(plan['problems'], [])
@@ -742,8 +744,12 @@ class PapersPrintTests(unittest.TestCase):
                         self.assertEqual(plan['difficulties'][-1], 'difficult')
         # Reference presets: one period 32 minutes (+8), two periods 60 minutes (+15).
         self.assertEqual(self.page.evaluate('[32, 60].map(LUISA_PAPERS_EXAM.extraMinutes)'), [8, 15])
-        self.assertEqual(self.page.evaluate('LUISA_PAPERS_EXAM.targetMarks(32)'), [27, 26, 28])
-        self.assertEqual(self.page.evaluate('LUISA_PAPERS_EXAM.targetMarks(60)'), [50, 51])
+        # PAP-067-1: every mark total within ±2 minutes, nearest first.
+        self.assertEqual(self.page.evaluate('LUISA_PAPERS_EXAM.tolerance'), 2)
+        self.assertEqual(self.page.evaluate('LUISA_PAPERS_EXAM.targetMarks(32)'), [27, 26, 28, 25, 29])
+        self.assertEqual(self.page.evaluate('LUISA_PAPERS_EXAM.targetMarks(60)'), [50, 51, 49, 52])
+        self.assertTrue(all(abs(m * 6 // 5 - t) <= 2 for t in (32, 60) for m in self.page.evaluate(f'LUISA_PAPERS_EXAM.targetMarks({t})')))
+        self.assertTrue(all(abs(m * 6 // 5 - t) > 2 for t, ms in ((32, (24, 30)), (60, (48, 53))) for m in ms))
 
     def test_timed_selection_reports_unreachable_targets_PAP_066(self):
         paper = self.exam_rows('edexcel-9ma0-31-2024-june', [1, 2, 3])
@@ -756,7 +762,7 @@ class PapersPrintTests(unittest.TestCase):
         no_difficult = [r for r in self.all_exam_rows() if r['difficulty'] != 'difficult']
         plan = self.plan(no_difficult, 32)
         self.assertFalse(plan['ok'])
-        self.assertLessEqual(abs(plan['minutes'] - 32), 1)  # the time target still wins (priority a)
+        self.assertLessEqual(abs(plan['minutes'] - 32), 2)  # the time target still wins (priority a)
         self.assertIn('difficulty order cannot be met', ' '.join(plan['reasons']))
         # A teacher's manual order that breaks the rule is flagged; automatic ordering keeps every question.
         rows = self.exam_rows('edexcel-9ma0-02-2025-june', list(range(1, 16)))
@@ -788,12 +794,114 @@ class PapersPrintTests(unittest.TestCase):
         self.assertEqual(preview.locator('.question-heading h2').first.inner_text(), 'Question 1')
         self.assertEqual(preview.locator('.exam-title').inner_text(), 'Statistics Quiz')
         self.assertEqual(preview.locator('.exam-page').count(), 4)
+        # PAP-067-3: without a mechanics question, exactly the three default paragraphs.
+        self.assertEqual(preview.locator('.exam-instructions > p').all_inner_texts(), ['Calculators may be used and a formulae booklet is provided. Where specified, answers relying solely on technology will not receive credit.', 'Give exact answers where requested and approximate numerical answers to three significant figures unless otherwise stated.', 'Clearly label all answers, including those on additional paper, with the question number and part.'])
         preview.close()
         unknown = [dict(rows[0]), dict(row('1.01', 1))]
         unknown[1].pop('marks', None)
         self.page.add_script_tag(url='/papers-exam.js')
         error = self.page.evaluate('rows => LUISA_PAPERS_EXAM.create(rows, {}).then(() => null, e => e.message)', unknown)
         self.assertIn('needs the marks for every question', error)
+
+    def test_today_label_is_template_style_in_london_time_PAP_067(self):
+        self.page.add_script_tag(url='/papers-exam.js')
+        labels = self.page.evaluate("""() => ['2026-11-22T12:00:00Z', '2026-11-22T23:30:00Z', '2026-06-30T23:30:00Z', '2026-11-01T09:00:00Z', '2026-11-02T09:00:00Z',
+          '2026-11-03T09:00:00Z', '2026-11-11T09:00:00Z', '2026-11-12T09:00:00Z', '2026-11-13T09:00:00Z', '2026-12-21T09:00:00Z', '2026-12-31T09:00:00Z']
+          .map(t => LUISA_PAPERS_EXAM.todayLabel(new Date(t)))""")
+        self.assertEqual(labels, ['Sunday 22nd November', 'Sunday 22nd November', 'Wednesday 1st July', 'Sunday 1st November', 'Monday 2nd November',
+                                  'Tuesday 3rd November', 'Wednesday 11th November', 'Thursday 12th November', 'Friday 13th November', 'Monday 21st December', 'Thursday 31st December'])
+        # A cleared Date field prints no date line; a default-style date prints with a superscript ordinal.
+        rows = self.exam_rows('edexcel-9ma0-31-2024-june', [1])
+        preview, result = self.exam_paper(rows, date='')
+        self.assertTrue(result['ready'], result)
+        self.assertEqual(preview.locator('.exam-date').count(), 0)
+        preview.close()
+        preview, result = self.exam_paper(rows, date='Sunday 22nd November')
+        self.assertEqual(preview.locator('.exam-date').inner_text(), 'Date: Sunday 22nd November')
+        self.assertEqual(preview.locator('.exam-date sup').all_inner_texts(), ['nd'])
+        preview.close()
+
+    def test_exam_mark_scheme_print_options_PAP_067(self):
+        import fitz, re
+        # Mixed Paper 1 and Paper 2 with overlapping question numbers, plus an exam-style practice question.
+        mixed = [row for pair in zip(self.exam_rows('edexcel-9ma0-01-2025-june', (1, 7)), self.exam_rows('edexcel-9ma0-02-2025-june', (1, 7))) for row in pair]
+        practice = dict(practice_row('pure-year-1', 1, '1.6/q9'), id='practice/test/scheme', marks=4)
+        rows = mixed + [practice]
+        total = sum(r['marks'] for r in rows)
+        options = dict(yearGroup='L6', title='Maths Assessment', monthYear='November 2026')
+        self.page.add_script_tag(url='/papers-exam.js')
+        error = self.page.evaluate('rows => LUISA_PAPERS_EXAM.create(rows, {content: "solutions"}).then(() => null, e => e.message)', rows)
+        self.assertIn('Choose Questions only, Mark scheme only or Questions and mark scheme', error)
+
+        def scheme_checks(preview, result):
+            scheme = preview.locator('.exam-scheme-page')
+            n = scheme.count()
+            self.assertEqual(n, result['schemePageCount'])
+            self.assertGreater(n, 0)
+            self.assertEqual(scheme.locator('.page-footer').all_inner_texts(), [f'Mark scheme page {k} of {n}' for k in range(1, n + 1)])
+            self.assertEqual(preview.locator('.exam-scheme-title').all_inner_texts(), ['Mark scheme: L6 Maths Assessment, November 2026'])
+            self.assertEqual(scheme.first.locator('.exam-scheme-title').count(), 1)
+            heads = scheme.locator('.exam-scheme h2').all_inner_texts()
+            self.assertEqual([h for h in heads if 'continued' not in h], [f'Question {k}' for k in range(1, len(rows) + 1)])
+            # Each question has its own scheme, in exam order, with every step (all official continuations).
+            ids = scheme.locator('.exam-scheme').evaluate_all('ns=>ns.map(n=>n.dataset.questionId)')
+            self.assertEqual(list(dict.fromkeys(ids)), [r['id'] for r in rows])
+            steps = scheme.locator('.exam-scheme').evaluate_all('ns=>{const o={};for(const n of ns)o[n.dataset.questionId]=(o[n.dataset.questionId]||0)+n.querySelectorAll(":scope > .solution-step").length;return o}')
+            self.assertEqual(steps, {r['id']: len(r['steps']) for r in rows})
+            for r in mixed:
+                paper = r['id'].split('/')[1]
+                srcs = preview.locator(f'.exam-scheme[data-question-id="{r["id"]}"] img').evaluate_all('ns=>ns.map(n=>n.getAttribute("src"))')
+                self.assertTrue(srcs and all(f'resources/exams/{paper}/' in src and '-ms-' in src for src in srcs), (r['id'], srcs))
+                self.assertTrue(preview.locator(f'.exam-scheme[data-question-id="{r["id"]}"] img').evaluate_all('ns=>ns.every(n=>n.complete&&n.naturalWidth>0)'))
+            self.assertEqual(preview.locator('.exam-scheme-page .answer-lines, .exam-scheme-page .question-total').count(), 0)
+            self.assertTrue(scheme.locator('.page-content').evaluate_all('ns=>ns.every(n=>n.scrollHeight<=n.clientHeight+1)'))
+            return n
+
+        shots = {}
+        for choice in ('questions', 'scheme', 'both'):
+            with self.subTest(choice=choice):
+                preview, result = self.exam_paper(rows, content=choice, **options)
+                self.assertTrue(result['ready'], result)
+                exam_pages = preview.locator('.exam-page').count()
+                fronts = preview.locator('.exam-front-page').count()
+                if choice == 'questions':
+                    self.assertEqual((fronts, preview.locator('.exam-scheme-page, .print-solution').count()), (1, 0))
+                    self.assertEqual(preview.title(), 'Exam Paper')
+                    expected_pdf = 1 + exam_pages
+                elif choice == 'scheme':
+                    self.assertEqual((fronts, exam_pages, preview.locator('.answer-lines, .paper-total').count()), (0, 0, 0))
+                    self.assertEqual(preview.title(), 'Mark Scheme')
+                    expected_pdf = scheme_checks(preview, result)
+                else:
+                    self.assertEqual(fronts, 1)
+                    self.assertEqual(preview.locator('.print-page').first.get_attribute('class'), 'print-page exam-front-page')
+                    self.assertEqual(preview.locator('.exam-page .page-footer').all_inner_texts(), [f'Page {k} of {exam_pages}' for k in range(1, exam_pages + 1)])
+                    order = preview.locator('.print-page').evaluate_all('ns=>ns.map(n=>n.classList.contains("exam-scheme-page")?"s":n.classList.contains("exam-page")?"q":"f")')
+                    self.assertEqual(''.join(order), 'f' + 'q' * exam_pages + 's' * result['schemePageCount'])
+                    self.assertEqual(preview.locator('.exam-page').last.locator('.paper-total').inner_text(), f'TOTAL FOR PAPER IS {total} MARKS')
+                    expected_pdf = 1 + exam_pages + scheme_checks(preview, result)
+                with tempfile.TemporaryDirectory() as folder:
+                    path = f'{folder}/{choice}.pdf'
+                    preview.pdf(path=path, prefer_css_page_size=True)
+                    with fitz.open(path) as pdf:
+                        self.assertEqual(len(pdf), expected_pdf)
+                        texts = [page.get_text() for page in pdf]
+                        if choice != 'scheme':
+                            self.assertIn('Maths Assessment', texts[0]); self.assertIn(f'Total marks available: {total}', texts[0])
+                            self.assertEqual(re.findall(r'Page \d+ of \d+', texts[1]), [f'Page 1 of {exam_pages}'])
+                        if choice == 'questions':
+                            self.assertFalse(any('Mark scheme' in t for t in texts))
+                        else:
+                            first = 0 if choice == 'scheme' else 1 + exam_pages
+                            self.assertIn('Mark scheme: L6 Maths Assessment, November 2026', texts[first])
+                            self.assertIn('Question 1', texts[first])
+                            self.assertEqual([re.findall(r'Mark scheme page \d+ of \d+', t) for t in texts[first:]],
+                                             [[f'Mark scheme page {k} of {len(pdf) - first}'] for k in range(1, len(pdf) - first + 1)])
+                            self.assertFalse(any('Total marks available' in t for t in texts[first:]))
+                            shots[choice] = first
+                        for k in sorted({0, 1, len(pdf) - 1} | ({shots[choice]} if choice in shots else set())):
+                            pdf[k].get_pixmap(dpi=80).save(f'/tmp/luisa67-{choice}-p{k}.png')
+                preview.close()
 
 
 if __name__ == '__main__':

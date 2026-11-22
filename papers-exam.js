@@ -7,15 +7,34 @@
   const {element, whileOpen, asset, content, prepare, overflows, wideContent, splitBlock} = print.internals;
   const storageKey = 'luisa-papers-exam-v1';
   const defaultInstructions = [
-    'Calculators may be used.',
-    'Mathematical formulae booklet is provided. Answer all questions and ensure that your answers to parts of questions are clearly labelled.',
-    'Should you use additional paper, make sure that question number is clearly labelled',
-    'Answers should be given to three significant figures unless otherwise stated.'
+    'Calculators may be used and a formulae booklet is provided. Where specified, answers relying solely on technology will not receive credit.',
+    'Give exact answers where requested and approximate numerical answers to three significant figures unless otherwise stated.',
+    'Clearly label all answers, including those on additional paper, with the question number and part.'
   ].join('\n\n');
+  // PAP-067-1: paper time within ±2 minutes of the target.
+  const TOLERANCE = 2;
+  // PAP-067-2: one print choice; questions only is the default.
+  const CONTENTS = ['questions', 'scheme', 'both'];
   const gravityHtml = 'Unless otherwise indicated, wherever a value of <span data-math="g"></span> is required, take <span data-math="g = 9.8\\,\\mathrm{m\\,s^{-2}}"></span>';
   const extraMinutes = minutes => Math.round(minutes * 0.25);
   const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
   const monthYear = (date = new Date()) => date.toLocaleDateString('en-GB', {month: 'long', year: 'numeric'});
+  // PAP-067-8: today in the teacher's local date (Europe/London), template style "Sunday 22nd November".
+  function todayLabel(date = new Date()) {
+    const part = type => new Intl.DateTimeFormat('en-GB', {timeZone: 'Europe/London', [type]: type === 'day' ? 'numeric' : 'long'}).format(date);
+    const day = Number(part('day'));
+    const suffix = day % 10 === 1 && day !== 11 ? 'st' : day % 10 === 2 && day !== 12 ? 'nd' : day % 10 === 3 && day !== 13 ? 'rd' : 'th';
+    return `${part('weekday')} ${day}${suffix} ${part('month')}`;
+  }
+  // Printed date: ordinal suffixes after a day number are superscripted, as in the template.
+  function appendDate(doc, parent, text) {
+    let last = 0;
+    for (const match of text.matchAll(/\b(\d{1,2})(st|nd|rd|th)\b/gi)) {
+      parent.append(text.slice(last, match.index) + match[1], element(doc, 'sup', 'exam-ordinal', match[2]));
+      last = match.index + match[0].length;
+    }
+    parent.append(text.slice(last));
+  }
 
   function courseGroup(row) {
     if (row.sourceKind === 'past-exam' && row.paperCode) {
@@ -48,7 +67,8 @@
       element(doc, 'p', 'exam-month', (options.monthYear || '').trim() || monthYear()));
     if ((options.date || '').trim()) {
       const date = element(doc, 'p', 'exam-date');
-      date.append(element(doc, 'strong', '', 'Date:'), ' ' + options.date.trim());
+      date.append(element(doc, 'strong', '', 'Date:'), ' ');
+      appendDate(doc, date, options.date.trim());
       heading.append(date);
     }
     const time = element(doc, 'div', 'exam-time-block');
@@ -76,6 +96,10 @@
     if (!Array.isArray(rows) || !rows.length) throw Error('Select at least one question first.');
     if (new Set(rows.map(row => row.id)).size !== rows.length) throw Error('A paper cannot contain duplicate questions.');
     if (rows.some(row => !row.id || !row.question)) throw Error('Every selected question needs its original prompt.');
+    const choice = options.content ?? 'questions';
+    if (!CONTENTS.includes(choice)) throw Error('Choose Questions only, Mark scheme only or Questions and mark scheme.');
+    const withQuestions = choice !== 'scheme', withScheme = choice !== 'questions';
+    if (withScheme && rows.some(row => !Array.isArray(row.steps) || !row.steps.length)) throw Error('Every selected question needs its mark scheme or worked solution.');
     const totals = paperTotals(rows);
     if (totals.unknown.length) throw Error(`An exam paper needs the marks for every question. Remove the ${plural(totals.unknown.length, 'question')} without known marks, then try again.`);
     const previewURL = new URL('paper-preview.html', document.baseURI);
@@ -93,14 +117,14 @@
     }));
     const doc = win.document;
     doc.open();
-    doc.write('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Exam Paper</title></head><body></body></html>');
+    doc.write(`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${withQuestions ? 'Exam Paper' : 'Mark Scheme'}</title></head><body></body></html>`);
     doc.close();
     const base = element(doc, 'base'); base.href = document.baseURI; doc.head.append(base);
     const toolbar = element(doc, 'aside', 'print-toolbar');
-    const status = element(doc, 'p', 'print-status', 'Preparing the exam paper…'); status.setAttribute('role', 'status');
+    const status = element(doc, 'p', 'print-status', withQuestions ? 'Preparing the exam paper…' : 'Preparing the mark scheme…'); status.setAttribute('role', 'status');
     const printButton = element(doc, 'button', '', 'Print / Save PDF'); printButton.type = 'button'; printButton.disabled = true;
     const close = element(doc, 'button', 'secondary', 'Close preview'); close.type = 'button'; close.onclick = () => win.close();
-    toolbar.append(element(doc, 'strong', '', 'Luisa · Exam paper'), status, printButton, close); doc.body.append(toolbar);
+    toolbar.append(element(doc, 'strong', '', withQuestions ? 'Luisa · Exam paper' : 'Luisa · Mark scheme'), status, printButton, close); doc.body.append(toolbar);
     const pages = element(doc, 'main', 'print-pages exam-paper marks-pending'); pages.setAttribute('aria-label', 'Exam paper'); doc.body.append(pages);
     let ready = false;
     win.addEventListener('beforeprint', () => doc.body.classList.toggle('not-ready', !ready));
@@ -108,16 +132,23 @@
       await whileOpen(win, Promise.all([asset(doc, 'link', 'papers-print.css'), asset(doc, 'link', 'papers-exam.css'), asset(doc, 'link', 'vendor/katex.min.css'), asset(doc, 'script', 'vendor/katex.min.js')]));
       const front = frontPage(doc, rows, options, totals);
       const staging = element(doc, 'div', 'print-staging exam-staging marks-pending'); doc.body.append(staging);
-      const rendered = rows.map(row => {
+      const rendered = withQuestions ? rows.map(row => {
         const prompt = print.normaliseMarks(content(doc, (row.sourceKind === 'past-exam' ? '' : row.contextHtml || '') + row.question));
         staging.append(prompt);
         return {row, prompt};
-      });
-      staging.append(front);
+      }) : [];
+      if (withQuestions) staging.append(front);
+      // Past papers: the paired official scheme with all its continuations; practice and
+      // exam-style questions: their existing worked solutions.
+      const schemes = withScheme ? rows.map(row => {
+        const scheme = content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join(''));
+        staging.append(scheme);
+        return {row, scheme};
+      }) : [];
       await whileOpen(win, prepare(win, staging, status), 120000);
-      pages.append(front);
+      if (withQuestions) pages.append(front);
       const warnings = [];
-      if (overflows(front)) warnings.push('The front page instructions do not fit on one page. Shorten them, then create a new preview.');
+      if (withQuestions && overflows(front)) warnings.push('The front page instructions do not fit on one page. Shorten them, then create a new preview.');
       const questionPages = [];
       function newPage() {
         const sheet = element(doc, 'section', 'print-page exam-page');
@@ -196,6 +227,54 @@
           if (overflows(last)) warnings.push(`Question ${number} totals do not fit on its final page.`);
         }
       }
+      // PAP-067-2: the mark scheme section, after the whole paper, in exam order.
+      const schemePages = [];
+      const examName = [[options.yearGroup, options.title].map(v => (v || '').trim()).filter(Boolean).join(' '), (options.monthYear || '').trim() || monthYear()].filter(Boolean).join(', ');
+      function schemePage() {
+        const sheet = element(doc, 'section', 'print-page exam-scheme-page');
+        const body = element(doc, 'div', 'page-content');
+        const footer = element(doc, 'footer', 'page-footer exam-footer');
+        footer.append(element(doc, 'span', 'page-number'));
+        if (!schemePages.length) body.append(element(doc, 'h1', 'exam-scheme-title', `Mark scheme: ${examName}`));
+        sheet.append(body, footer); pages.append(sheet); schemePages.push(sheet);
+        return body;
+      }
+      let schemeBody = null;
+      for (let i = 0; i < schemes.length; i++) {
+        const {row, scheme} = schemes[i], number = i + 1;
+        if (win.closed) throw Error('Paper preview was closed.');
+        status.textContent = `Laying out the mark scheme: ${number} of ${rows.length}…`;
+        await new Promise(resolve => window.setTimeout(resolve, 0));
+        if (!schemeBody) schemeBody = schemePage();
+        let section;
+        const newSection = continuation => {
+          section = element(doc, 'article', 'print-solution exam-scheme'); section.dataset.questionId = row.id;
+          const head = element(doc, 'header', 'question-heading compact-heading exam-heading');
+          head.append(element(doc, 'h2', '', 'Question ' + number + (continuation ? ' (continued)' : '')));
+          section.append(head); schemeBody.append(section);
+        };
+        newSection(false);
+        const queue = [...scheme.children].map(node => node.cloneNode(true));
+        let hasContent = false;
+        while (queue.length) {
+          const block = queue.shift(); section.append(block);
+          if (wideContent(block)) {
+            block.classList.add('compact');
+            if (wideContent(block)) warnings.push(`Question ${number} (${row.sourceLabel || row.id}) has a mark scheme expression wider than the printable page.`);
+          }
+          if (!overflows(schemeBody)) { hasContent = true; continue; }
+          block.remove();
+          if (hasContent || schemeBody.children.length > 1) {
+            if (!hasContent) section.remove();
+            schemeBody = schemePage(); newSection(hasContent); hasContent = false; queue.unshift(block); continue;
+          }
+          const pieces = splitBlock(block);
+          if (pieces && pieces.length > 1) { queue.unshift(...pieces); continue; }
+          block.classList.add('compact'); section.append(block);
+          if (overflows(schemeBody)) warnings.push(`Question ${number} (${row.sourceLabel || row.id}) has a mark scheme block too tall for one page; no content has been removed.`);
+          hasContent = true;
+        }
+      }
       staging.remove();
       pages.classList.remove('marks-pending');
       print.placeMarks(pages);
@@ -204,18 +283,23 @@
         sheet.querySelector('.page-number').textContent = `Page ${index + 1} of ${total}`;
         sheet.setAttribute('aria-label', `Exam paper, page ${index + 1} of ${total}`);
       });
+      schemePages.forEach((sheet, index) => {
+        sheet.querySelector('.page-number').textContent = `Mark scheme page ${index + 1} of ${schemePages.length}`;
+        sheet.setAttribute('aria-label', `Mark scheme, page ${index + 1} of ${schemePages.length}`);
+      });
       if (warnings.length) {
         doc.body.classList.add('not-ready');
         status.textContent = 'This exam paper cannot be printed completely. Remove or replace the listed questions, then create a new preview.';
         const list = element(doc, 'ul', 'print-errors'); [...new Set(warnings)].forEach(warning => list.append(element(doc, 'li', '', warning))); toolbar.append(list);
-        return {window: win, pageCount: total, warnings: [...new Set(warnings)], ready: false};
+        return {window: win, pageCount: total, schemePageCount: schemePages.length, warnings: [...new Set(warnings)], ready: false};
       }
       ready = true;
-      status.textContent = `${rows.length} questions · ${totals.marks} marks · ${totals.minutes} minutes · front page and ${total} A4 pages. Choose A4, 100% scale and turn off browser headers and footers in the print dialog.`;
+      const parts = withQuestions ? `front page and ${total} A4 pages${withScheme ? `, then ${schemePages.length} mark scheme pages` : ''}` : `mark scheme only, ${schemePages.length} A4 pages`;
+      status.textContent = `${rows.length} questions · ${totals.marks} marks · ${totals.minutes} minutes · ${parts}. Choose A4, 100% scale and turn off browser headers and footers in the print dialog.`;
       printButton.disabled = false; printButton.onclick = () => win.print();
-      return {window: win, pageCount: total, warnings: [], ready: true};
+      return {window: win, pageCount: total, schemePageCount: schemePages.length, warnings: [], ready: true};
     } catch (error) {
-      if (!win.closed) { doc.body.classList.add('not-ready'); status.textContent = `Exam paper unavailable: ${error.message}`; }
+      if (!win.closed) { doc.body.classList.add('not-ready'); status.textContent = `${withQuestions ? 'Exam paper' : 'Mark scheme'} unavailable: ${error.message}`; }
       throw error;
     }
   }
@@ -225,12 +309,12 @@
   const bandOf = row => LABELS.includes(row.difficulty) ? row.difficulty : 'unrated';
   const topicOf = row => row.paperId ? `${row.paperId}:${(row.chapterKeys || [])[0] || ''}` : (row.chapterKeys || [])[0] || row.chapterId || row.skillId || row.bookId || row.id;
   const markedRows = rows => rows.filter(row => Number.isInteger(row.marks) && row.marks > 0);
-  // Mark totals whose paper time is within ±1 minute of the target, nearest first.
+  // Mark totals whose paper time is within ±2 minutes of the target, nearest first.
   function targetMarks(minutes) {
     const out = [];
-    for (let marks = 1; marks <= Math.ceil(minutes * 5 / 6) + 2; marks++) {
+    for (let marks = 1; marks <= Math.ceil(minutes * 5 / 6) + 3; marks++) {
       const off = Math.abs(print.paperMinutes(marks) - minutes);
-      if (off <= 1) out.push({marks, off});
+      if (off <= TOLERANCE) out.push({marks, off});
     }
     return out.sort((a, b) => a.off - b.off || a.marks - b.marks).map(item => item.marks);
   }
@@ -327,11 +411,11 @@
   function bandFill(rows, marks) { const out = []; let sum = 0; for (const row of rows) if (sum + row.marks / 2 < marks * 0.2 || !out.length) { if (sum + row.marks > marks * 0.45) continue; out.push(row); sum += row.marks; } return out; }
   function score(rows, minutes) {
     const marks = rows.reduce((sum, row) => sum + row.marks, 0), time = print.paperMinutes(marks) ?? 0;
-    return {rows, marks, minutes: time, timeMiss: Math.max(0, Math.abs(time - minutes) - 1), offBy: Math.abs(time - minutes), bandProblems: orderProblems(rows).length, variety: new Set(rows.map(topicOf)).size};
+    return {rows, marks, minutes: time, timeMiss: Math.max(0, Math.abs(time - minutes) - TOLERANCE), offBy: Math.abs(time - minutes), bandProblems: orderProblems(rows).length, variety: new Set(rows.map(topicOf)).size};
   }
   const compare = (a, b) => a.timeMiss - b.timeMiss || a.bandProblems - b.bandProblems || b.variety - a.variety || a.offBy - b.offBy;
   const better = (a, b) => !b || compare(a, b) < 0;
-  // Priorities when constraints conflict: (a) time within ±1 minute, (b) difficulty bands, (c) variety.
+  // Priorities when constraints conflict: (a) time within ±2 minutes, (b) difficulty bands, (c) variety.
   function planTimedPaper(pool, minutes, {attempts = 240, random = Math.random} = {}) {
     if (!Number.isInteger(minutes) || minutes < 2 || minutes > 600) throw Error('Choose a whole number of minutes from 2 to 600.');
     const rows = markedRows(pool), counts = {easy: 0, medium: 0, difficult: 0, unrated: 0}, marksBy = {easy: 0, medium: 0, difficult: 0, unrated: 0};
@@ -341,7 +425,7 @@
     const goals = targetMarks(minutes); let best = null;
     for (let attempt = 0; attempt < attempts; attempt++) {
       const order = shuffle(rows, random);
-      for (const marks of goals.slice(0, 3)) {
+      for (const marks of goals.slice(0, 5)) {
         const opening = bandFill(freshFirst(order.filter(row => bandOf(row) === 'easy'), []), marks);
         const closing = bandFill(freshFirst(order.filter(row => bandOf(row) === 'difficult' && !opening.includes(row)), opening.map(topicOf)), marks);
         const chosen = new Set([...opening, ...closing]), used = [...chosen].map(topicOf);
@@ -367,9 +451,9 @@
     if (best.bandProblems) { const repaired = score(orderByBands(best.rows), minutes); if (compare(repaired, best) < 0) best = repaired; }
     const reasons = [];
     if (best.timeMiss) {
-      reasons.push(report.availableMarks * 6 / 5 < minutes - 1
+      reasons.push(report.availableMarks * 6 / 5 < minutes - TOLERANCE
         ? `The chosen topics have ${plural(rows.length, 'question')} with known marks, ${report.availableMarks} marks in all, which is only ${print.paperMinutes(report.availableMarks)} minutes.`
-        : `No combination of whole questions in the chosen topics gives ${minutes} ± 1 minutes; the nearest is ${best.minutes} minutes (${best.marks} marks).`);
+        : `No combination of whole questions in the chosen topics gives ${minutes} ± ${TOLERANCE} minutes; the nearest is ${best.minutes} minutes (${best.marks} marks).`);
     }
     if (best.bandProblems) {
       reasons.push(`The difficulty order cannot be met: the chosen topics have ${plural(counts.easy, 'easy question')} (${marksBy.easy} marks) and ${plural(counts.difficult, 'difficult question')} (${marksBy.difficult} marks), and the paper needs about ${Math.ceil(best.marks * 0.2)} marks of each.`);
@@ -378,7 +462,7 @@
     return {...report, ok: !reasons.length, rows: best.rows, marks: best.marks, minutes: best.minutes, extra: extraMinutes(best.minutes), variety: best.variety, reasons};
   }
 
-  window.LUISA_PAPERS_EXAM = Object.freeze({create, courseGroup, extraMinutes, defaultInstructions, targetMarks, bandPositions, orderProblems, orderByBands, planTimedPaper});
+  window.LUISA_PAPERS_EXAM = Object.freeze({create, courseGroup, extraMinutes, defaultInstructions, todayLabel, tolerance: TOLERANCE, targetMarks, bandPositions, orderProblems, orderByBands, planTimedPaper});
 
   // Builder controls (present only in owner and staff papers.html).
   const $ = id => document.getElementById(id);
@@ -390,11 +474,15 @@
   $('papers-exam-title').value = saved.title ?? 'Maths Assessment';
   $('papers-exam-year').value = saved.yearGroup ?? '';
   $('papers-exam-month').value = saved.monthYear ?? monthYear();
-  $('papers-exam-date').value = saved.date ?? '';
+  $('papers-exam-date').value = saved.date ?? todayLabel();
   $('papers-exam-instructions').value = saved.instructions ?? defaultInstructions;
   $('papers-exam-minutes').value = saved.targetMinutes ?? '60';
+  const contentInputs = [...document.querySelectorAll('input[name="papers-exam-content"]')];
+  const chosenContent = () => contentInputs.find(input => input.checked)?.value || 'questions';
+  if (CONTENTS.includes(saved.printContent)) contentInputs.forEach(input => { input.checked = input.value === saved.printContent; });
   function save() {
     const state = Object.fromEntries(Object.entries(fields).map(([key, id]) => [key, $(id).value]));
+    state.printContent = chosenContent();
     try { sessionStorage.setItem(storageKey, JSON.stringify(state)); } catch (_) { /* Optional convenience only. */ }
   }
   let proposal = null;
@@ -403,7 +491,7 @@
   function targetPreview() {
     const minutes = Number($('papers-exam-minutes').value);
     $('papers-exam-target-help').textContent = Number.isInteger(minutes) && minutes > 0
-      ? `Target ${minutes} minutes (+${extraMinutes(minutes)} minutes extra time): about ${Math.ceil(minutes * 5 / 6)} marks, within ±1 minute.` : 'Enter a whole number of minutes.';
+      ? `Target ${minutes} minutes (+${extraMinutes(minutes)} minutes extra time): about ${Math.ceil(minutes * 5 / 6)} marks, within ±${TOLERANCE} minutes.` : 'Enter a whole number of minutes.';
   }
   function refresh() {
     const rows = builder.snapshot();
@@ -413,7 +501,7 @@
     $('papers-exam-order').disabled = busy || rows.length < 2 || Boolean(totals.unknown.length);
     $('papers-exam-summary').textContent = !rows.length ? 'Select questions to build an exam paper.'
       : totals.unknown.length ? `${plural(totals.unknown.length, 'selected question')} without known marks cannot go in an exam paper.`
-      : `${plural(rows.length, 'question')} · ${totals.marks} marks · Time: ${totals.minutes} minutes (+${totals.extra} minutes extra time)${hasMechanics(rows) ? ' · g = 9.8 line included' : ''}`;
+      : `${plural(rows.length, 'question')} · ${totals.marks} marks · Time: ${totals.minutes} minutes (+${totals.extra} minutes extra time)`;
     const problems = totals.unknown.length ? [] : orderProblems(rows);
     const warning = $('papers-exam-order-warning');
     warning.hidden = !problems.length;
@@ -444,6 +532,7 @@
     builder.arrange(rows, `Question moved to position ${to + 1}. Order is now As selected.`);
   });
   for (const id of Object.values(fields)) $(id).addEventListener('input', () => { save(); if (id === fields.targetMinutes) targetPreview(); });
+  contentInputs.forEach(input => input.addEventListener('change', save));
   document.querySelectorAll('[data-exam-preset]').forEach(button => button.addEventListener('click', () => {
     $('papers-exam-minutes').value = button.dataset.examPreset; save(); targetPreview();
   }));
@@ -459,17 +548,16 @@
     try {
       const work = await builder.exclusive(async () => {
         const before = signature();
+        // Questions without marks are excluded from timed generation (PAP-067-6 removed only the note).
         const descriptors = builder.pool().filter(row => ['practice-booklet', 'past-exam'].includes(row.sourceKind));
-        const skipped = builder.pool().length - descriptors.length;
         const pool = await builder.load(descriptors, count => showReport(`Loading the questions in the chosen topics… ${count} of ${descriptors.length}`));
         if (signature() !== before) return {stale: true};
-        return {plan: planTimedPaper(pool, minutes), skipped, failed: pool.failed};
+        return {plan: planTimedPaper(pool, minutes), failed: pool.failed};
       });
       if (!work) { showReport('Luisa is busy with another paper task. Wait for it to finish, then generate again.', true); return; }
       if (work.stale) { showReport('The sources or topics changed while the questions were loading. Generate the timed paper again.', true); return; }
-      const {plan, skipped, failed} = work;
-      const note = (skipped ? ` ${plural(skipped, 'question')} without marks in the chosen sources were left out.` : '')
-        + (failed ? ` ${plural(failed, 'question')} could not be loaded and were left out.` : '');
+      const {plan, failed} = work;
+      const note = failed ? ` ${plural(failed, 'question')} could not be loaded and were left out.` : '';
       const summary = plan.rows.length ? `${plural(plan.rows.length, 'question')} · ${plan.marks} marks · ${plan.minutes} minutes (+${plan.extra} minutes extra time)` : '';
       if (plan.ok) {
         if (!builder.arrange(plan.rows, `Timed exam paper selected: ${summary}. Review it, reorder if needed, or choose Preview exam paper.`)) {
@@ -478,7 +566,7 @@
         showReport(`Target ${minutes} minutes met: ${summary}, ordered easy to difficult.${note}`);
       } else {
         proposal = plan.rows;
-        const timeMet = plan.rows.length && Math.abs(plan.minutes - minutes) <= 1;
+        const timeMet = plan.rows.length && Math.abs(plan.minutes - minutes) <= TOLERANCE;
         showReport(`${timeMet ? `Target ${minutes} minutes met, but not every exam rule.` : `Target ${minutes} minutes cannot be met exactly with these topics.`} ${plan.reasons.join(' ')}${summary ? ` Closest paper: ${summary}.` : ''} Add or change topics and generate again${summary ? ', or use the closest paper' : ''}.${note}`, true);
         accept.hidden = !plan.rows.length;
       }
@@ -493,12 +581,13 @@
   document.addEventListener('luisa-papers-state', refresh);
   $('papers-exam-print').addEventListener('click', () => builder.run(async () => {
     const rows = builder.snapshot();
-    builder.status('Preparing the exam paper…');
+    const choice = chosenContent();
+    builder.status(choice === 'scheme' ? 'Preparing the mark scheme…' : 'Preparing the exam paper…');
     try {
-      const options = Object.fromEntries(Object.entries(fields).map(([key, id]) => [key, $(id).value]));
+      const options = {...Object.fromEntries(Object.entries(fields).map(([key, id]) => [key, $(id).value])), content: choice};
       const result = await create(rows, options);
       if (result.ready === false) builder.status(`The exam paper needs attention before printing. ${result.warnings.join(' ')}`, true);
-      else builder.status('Exam paper ready in a new window. Use its Print / Save PDF button.');
+      else builder.status(`${choice === 'scheme' ? 'Mark scheme' : choice === 'both' ? 'Exam paper and mark scheme' : 'Exam paper'} ready in a new window. Use its Print / Save PDF button.`);
     } catch (error) { builder.status(error.message || 'The exam paper could not be opened. Allow pop-ups for this site and try again.', true); }
   }));
   targetPreview();

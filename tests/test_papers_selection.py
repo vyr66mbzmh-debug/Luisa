@@ -367,12 +367,34 @@ class PapersSelection(unittest.TestCase):
         panel.locator('summary').click()
         self.assertEqual(self.page.locator('#papers-exam-title').input_value(), 'Maths Assessment')
         self.assertRegex(self.page.locator('#papers-exam-month').input_value(), r'^[A-Z][a-z]+ \d{4}$')
-        self.assertTrue(self.page.locator('#papers-exam-instructions').input_value().startswith('Calculators may be used.\n\nMathematical formulae booklet is provided.'))
+        # PAP-067-3: three default paragraphs separated by blank lines, still editable.
+        self.assertEqual(self.page.locator('#papers-exam-instructions').input_value(), '\n\n'.join(['Calculators may be used and a formulae booklet is provided. Where specified, answers relying solely on technology will not receive credit.', 'Give exact answers where requested and approximate numerical answers to three significant figures unless otherwise stated.', 'Clearly label all answers, including those on additional paper, with the question number and part.']))
+        # PAP-067-8: Date defaults to today (Europe/London) in the template style.
+        from datetime import datetime
+        from zoneinfo import ZoneInfo
+        now = datetime.now(ZoneInfo('Europe/London'))
+        suffix = 'th' if 11 <= now.day <= 13 else {1: 'st', 2: 'nd', 3: 'rd'}.get(now.day % 10, 'th')
+        self.assertEqual(self.page.locator('#papers-exam-date').input_value(), f"{now:%A} {now.day}{suffix} {now:%B}")
+        # PAP-067-2: one print choice, Questions only by default.
+        radios = self.page.locator('input[name="papers-exam-content"]')
+        self.assertEqual(radios.evaluate_all('ns=>ns.map(n=>[n.value,n.parentElement.textContent.trim(),n.checked,n.type])'),
+                         [['questions', 'Questions only', True, 'radio'], ['scheme', 'Mark scheme only', False, 'radio'], ['both', 'Questions and mark scheme', False, 'radio']])
+        # PAP-067-4/5: helper texts removed.
+        text = panel.inner_text()
+        for gone in ('Prints the paper above as a lined exam paper', 'no solutions', 'is added automatically when any question comes from Mechanics', 'g = 9.8'):
+            self.assertNotIn(gone, text)
         self.assertTrue(self.page.locator('#papers-exam-print').is_disabled())
         self.page.locator('#papers-source-practice').uncheck()
         self.page.locator('#papers-source-exam-style').uncheck()
-        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-32-2024-june')
+        # PAP-067-7: no g status text without a mechanics question.
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-31-2024-june')
         self.page.locator('#papers-browse').click()
+        self.page.wait_for_function("document.querySelectorAll('[data-add]').length >= 1")
+        self.page.locator('[data-add="exam/edexcel-9ma0-31-2024-june/q1"]').click()
+        self.assertNotIn('g = 9.8', self.page.locator('#papers-exam-summary').inner_text())
+        self.assertNotIn('g = 9.8', panel.inner_text())
+        self.page.locator('[data-remove]').first.click()
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-32-2024-june')
         self.page.wait_for_function("document.querySelectorAll('[data-add]').length === 6")
         for n in (1, 2):
             self.page.locator(f'[data-add="exam/edexcel-9ma0-32-2024-june/q{n}"]').click()
@@ -381,29 +403,51 @@ class PapersSelection(unittest.TestCase):
         self.page.locator('[data-add="exam/edexcel-9fm0-01-2024-june/q1"]').click()
         self.page.locator('#papers-order').select_option('selection')
         self.assertEqual(self.page.locator('#papers-summary').inner_text(), '3 questions · 20 marks · Time: 24 minutes')
-        self.assertEqual(self.page.locator('#papers-exam-summary').inner_text(), '3 questions · 20 marks · Time: 24 minutes (+6 minutes extra time) · g = 9.8 line included')
+        # PAP-067-7: with a mechanics question the status still has no g text.
+        self.assertEqual(self.page.locator('#papers-exam-summary').inner_text(), '3 questions · 20 marks · Time: 24 minutes (+6 minutes extra time)')
+        self.assertNotIn('g = 9.8', panel.inner_text())
         # PAP-066-2/3: no course map field and no Regenerate control.
         self.assertEqual(self.page.locator('#papers-exam-map, #papers-exam-map-reset').count(), 0)
         self.assertNotIn('course map', panel.inner_text().lower())
         self.page.locator('#papers-exam-year').fill('L6')
         self.page.locator('#papers-exam-date').fill('Friday 20th November P4 & P5')
+        self.page.locator('input[name="papers-exam-content"][value="both"]').check()
         self.assertTrue(self.page.locator('#papers-exam-print').is_enabled())
         with self.page.expect_popup() as event:
             self.page.locator('#papers-exam-print').click()
         preview = event.value
         preview.wait_for_function("document.querySelector('.print-status')?.textContent.includes('A4 pages')", timeout=60000)
+        # The chosen print option reaches the paper: the scheme follows the questions.
+        self.assertEqual(preview.locator('.exam-scheme').evaluate_all('ns=>[...new Set(ns.map(n=>n.dataset.questionId))]'),
+                         ['exam/edexcel-9ma0-32-2024-june/q1', 'exam/edexcel-9ma0-32-2024-june/q2', 'exam/edexcel-9fm0-01-2024-june/q1'])
+        self.assertEqual(preview.locator('.exam-date sup').all_inner_texts(), ['th'])
         self.assertEqual(preview.locator('.exam-title').inner_text(), 'L6 Maths Assessment')
         self.assertEqual(preview.locator('.exam-page .exam-question').evaluate_all('ns=>[...new Set(ns.map(n=>n.dataset.questionId))]'),
                          ['exam/edexcel-9ma0-32-2024-june/q1', 'exam/edexcel-9ma0-32-2024-june/q2', 'exam/edexcel-9fm0-01-2024-june/q1'])
         self.assertEqual(preview.locator('.paper-total').inner_text(), 'TOTAL FOR PAPER IS 20 MARKS')
         self.assertEqual(preview.locator('.exam-gravity').count(), 1)
         preview.close()
-        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('Exam paper ready')")
-        # Front-page fields and the selection are kept for the session.
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('Exam paper and mark scheme ready')")
+        # Front-page fields, the print option and the selection are kept for the session.
         self.page.reload()
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
         self.assertEqual(self.page.locator('#papers-exam-year').input_value(), 'L6')
         self.assertEqual(self.page.locator('#papers-exam-date').input_value(), 'Friday 20th November P4 & P5')
+        self.assertTrue(self.page.locator('input[name="papers-exam-content"][value="both"]').is_checked())
+        # The Date field can be cleared; it stays empty and prints no date line.
+        self.page.locator('#papers-exam summary').click()
+        self.page.locator('#papers-exam-date').fill('')
+        self.page.locator('input[name="papers-exam-content"][value="scheme"]').check()
+        with self.page.expect_popup() as event:
+            self.page.locator('#papers-exam-print').click()
+        preview = event.value
+        preview.wait_for_function("document.querySelector('.print-status')?.textContent.includes('A4 pages')", timeout=60000)
+        self.assertEqual(preview.locator('.exam-front-page, .exam-page, .exam-date').count(), 0)
+        self.assertGreater(preview.locator('.exam-scheme-page').count(), 0)
+        preview.close()
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertEqual(self.page.locator('#papers-exam-date').input_value(), '')
         self.assertEqual(self.selection_ids(), ['exam/edexcel-9ma0-32-2024-june/q1', 'exam/edexcel-9ma0-32-2024-june/q2', 'exam/edexcel-9fm0-01-2024-june/q1'])
 
     def exam_summary_minutes(self):
@@ -436,7 +480,14 @@ class PapersSelection(unittest.TestCase):
                 self.assertEqual(self.page.locator('#papers-exam-minutes').input_value(), str(preset))
                 self.assertIn(f'Target {preset} minutes met', report)
                 marks, minutes, extra = self.exam_summary_minutes()
-                self.assertLessEqual(abs(minutes - preset), 1)
+                self.assertLessEqual(abs(minutes - preset), 2)  # PAP-067-1
+                # PAP-067-6/7: no "without marks" note and no g status text after generating.
+                self.assertNotIn('without marks', report)
+                self.assertNotIn('left out', report)
+                self.assertNotIn('g = 9.8', self.page.locator('#papers-exam').inner_text())
+                # Questions without marks are still excluded from timed generation.
+                kinds = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => [r.sourceKind, Number.isInteger(r.marks) && r.marks > 0])')
+                self.assertTrue(all(kind in ('practice-booklet', 'past-exam') and marked for kind, marked in kinds), kinds)
                 self.assertEqual((minutes, extra), (marks * 6 // 5, int(minutes * 0.25 + 0.5)))
                 self.assertEqual(self.page.locator('#papers-order').input_value(), 'selection')
                 self.assertTrue(self.page.locator('#papers-exam-order-warning').is_hidden())
@@ -477,15 +528,21 @@ class PapersSelection(unittest.TestCase):
         self.page.locator('#papers-source-exam-style').check()
         report = self.timed(32)
         self.assertIn('Target 32 minutes met:', report)
-        self.assertLessEqual(abs(self.exam_summary_minutes()[1] - 32), 1)
+        self.assertLessEqual(abs(self.exam_summary_minutes()[1] - 32), 2)
         # Practice questions carry no difficulty labels, so the time is met and the missing bands are reported.
         self.page.locator('#papers-source-practice').check()
         self.page.locator('#papers-source-exam-style').uncheck()
+        # Practice questions include thousands of skill questions without marks: they are excluded, and no note is shown.
+        self.assertGreater(self.page.evaluate("LUISA_PAPERS_BUILDER.pool().filter(r => !['practice-booklet', 'past-exam'].includes(r.sourceKind)).length"), 1000)
         report = self.timed(32)
+        self.assertNotIn('without marks', report)
+        self.assertNotIn('were left out', report)
         self.assertIn('Target 32 minutes met, but not every exam rule.', report)
         self.assertIn('0 easy questions (0 marks) and 0 difficult questions', report)
         self.page.locator('#papers-exam-accept').click()
-        self.assertLessEqual(abs(self.exam_summary_minutes()[1] - 32), 1)
+        self.assertLessEqual(abs(self.exam_summary_minutes()[1] - 32), 2)
+        kinds = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => [r.sourceKind, Number.isInteger(r.marks) && r.marks > 0])')
+        self.assertTrue(all(kind in ('practice-booklet', 'past-exam') and marked for kind, marked in kinds), kinds)
         self.assertTrue(self.page.locator('#papers-exam-order-warning').is_visible())
         # The target survives a reload with the other exam fields.
         self.page.reload()
