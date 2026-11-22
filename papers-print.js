@@ -202,8 +202,14 @@
     });
     // Preserve every ancestor when reaching a nested table/list. This allows
     // table rows to continue on another sheet without flattening cells or labels.
+    // Any marks indicator grouped after that child travels with its last piece.
+    const trailing = groups[0]?.slice(1) || [];
     const pieces = node.firstElementChild && splitBlock(node.firstElementChild);
-    return pieces?.map(piece => { const wrapper = node.cloneNode(false); wrapper.append(piece); return wrapper; }) || null;
+    return pieces?.map((piece, index) => {
+      const wrapper = node.cloneNode(false); wrapper.append(piece);
+      if (index === pieces.length - 1) wrapper.append(...trailing.map(child => child.cloneNode(true)));
+      return wrapper;
+    }) || null;
   }
   async function create(rows, options = {}) {
     const layout = options.layout ?? 'one';

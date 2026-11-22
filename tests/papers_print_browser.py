@@ -578,6 +578,16 @@ class PapersPrintTests(unittest.TestCase):
                                 pdf[0].get_pixmap(dpi=110).save(f'/tmp/luisa65-marks-{layout}.png')
                         preview.close()
 
+    def test_split_keeps_marks_after_nested_parts_PAP_065A(self):
+        pieces = self.page.evaluate("""() => {
+          const li = document.createElement('li');
+          li.innerHTML = '<ol class="parts"><li>first</li><li>second</li></ol><span class="marks">(5)</span>';
+          return LUISA_PAPERS_PRINT.internals.splitBlock(li).map(piece => piece.outerHTML);
+        }""")
+        self.assertEqual(len(pieces), 2)
+        self.assertNotIn('marks', pieces[0])
+        self.assertTrue(pieces[1].endswith('<span class="marks">(5)</span></li>'), pieces[1])
+
     def test_paper_time_is_six_minutes_per_five_marks_rounded_down_PAP_065B(self):
         minutes = self.page.evaluate('[54, 100, 75, 50, 7, 61, 1, 4, 5, 0].map(LUISA_PAPERS_PRINT.paperMinutes)')
         self.assertEqual(minutes, [64, 120, 90, 60, 8, 73, 1, 4, 6, None])

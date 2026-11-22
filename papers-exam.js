@@ -57,7 +57,7 @@
     name.append('Name: ', element(doc, 'span', 'exam-blank exam-name-blank'));
     const heading = element(doc, 'div', 'exam-title-block');
     heading.append(element(doc, 'h1', 'exam-title', [options.yearGroup, options.title].map(v => (v || '').trim()).filter(Boolean).join(' ')),
-      element(doc, 'p', 'exam-month', (options.monthYear || '').trim()));
+      element(doc, 'p', 'exam-month', (options.monthYear || '').trim() || monthYear()));
     if ((options.date || '').trim()) {
       const date = element(doc, 'p', 'exam-date');
       date.append(element(doc, 'strong', '', 'Date:'), ' ' + options.date.trim());
