@@ -4,8 +4,8 @@
   "printable": true,
   "contentStatus": "checked",
   "note": "Checked source metadata for the six owner-supplied June 2025 papers. Printable question payloads are joined by stable ID through exam-catalogue.json. Difficulty follows original paper order as a guide, not an empirical rating.",
-  "questionCount": 62,
-  "totalMarks": 450,
+  "questionCount": 68,
+  "totalMarks": 500,
   "papers": [
     {
       "id": "edexcel-9ma0-01-2025-june",
@@ -2123,6 +2123,228 @@
         "questionPaperAndMarkSchemeTotalsAgree": true,
         "originalQuestionOrderPreserved": true,
         "totalMarksChecked": 75
+      }
+    },
+    {
+      "id": "edexcel-9ma0-31-2024-june",
+      "board": "Edexcel",
+      "qualification": "A level",
+      "paperCode": "9MA0/31",
+      "title": "Statistics",
+      "examDate": "2024-06-20",
+      "session": "June 2024",
+      "questionCount": 6,
+      "totalMarks": 50,
+      "source": {
+        "questionPaperUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-3/QP/June%202024%20QP%20%28Stats%29.pdf",
+        "markSchemeUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-3/MS/June%202024%20MS%20%28Stats%29.pdf",
+        "questionPaperSha256": "5f6c2c04e4090cce39d5e33d3794494915b6e97b0ef5afd4c47442a100a63ae6",
+        "markSchemeSha256": "e5af1a07c6da21b61ec3b03ab86d8248b3b1336074ad05a5654849e70207a50e",
+        "indexedQuestionPaperSha256": "5f6c2c04e4090cce39d5e33d3794494915b6e97b0ef5afd4c47442a100a63ae6",
+        "indexedMarkSchemeSha256": "e5af1a07c6da21b61ec3b03ab86d8248b3b1336074ad05a5654849e70207a50e",
+        "basis": "Owner-supplied original PDF attachment"
+      },
+      "difficultyPolicy": {
+        "basis": "original-paper-order",
+        "easyQuestions": [
+          1,
+          2
+        ],
+        "mediumQuestions": [
+          3,
+          4
+        ],
+        "difficultQuestions": [
+          5,
+          6
+        ]
+      },
+      "questions": [
+        {
+          "id": "exam/edexcel-9ma0-31-2024-june/q1",
+          "originalQuestionNumber": 1,
+          "originalQuestionLabel": "1",
+          "marks": 11,
+          "difficulty": "easy",
+          "topicSummary": "Binomial distribution and normal approximation",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-1.56"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-2",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-2.50"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            2,
+            5
+          ],
+          "questionNumber": 1,
+          "sourceLabel": "Edexcel June 2024 9MA0/31 Q1"
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2024-june/q2",
+          "originalQuestionNumber": 2,
+          "originalQuestionLabel": "2",
+          "marks": 6,
+          "difficulty": "easy",
+          "topicSummary": "Regression, PMCC hypothesis test and a non-linear model",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "sampling-and-data",
+              "skillId": "smq-1.50"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-2",
+              "topicId": "correlation-and-testing",
+              "skillId": "smq-2.46"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            6,
+            9
+          ],
+          "questionNumber": 2,
+          "sourceLabel": "Edexcel June 2024 9MA0/31 Q2"
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2024-june/q3",
+          "originalQuestionNumber": 3,
+          "originalQuestionLabel": "3",
+          "marks": 6,
+          "difficulty": "medium",
+          "topicSummary": "Large data set and summary statistics",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "large-data-sets",
+              "skillId": "smq-1.58"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "sampling-and-data",
+              "skillId": "smq-1.48"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            10,
+            11
+          ],
+          "questionNumber": 3,
+          "sourceLabel": "Edexcel June 2024 9MA0/31 Q3"
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2024-june/q4",
+          "originalQuestionNumber": 4,
+          "originalQuestionLabel": "4",
+          "marks": 6,
+          "difficulty": "medium",
+          "topicSummary": "Two-tailed binomial hypothesis test",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-1.57"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            12,
+            13
+          ],
+          "questionNumber": 4,
+          "sourceLabel": "Edexcel June 2024 9MA0/31 Q4"
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2024-june/q5",
+          "originalQuestionNumber": 5,
+          "originalQuestionLabel": "5",
+          "marks": 10,
+          "difficulty": "difficult",
+          "topicSummary": "Normal distribution, independence and finding the mean and standard deviation",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-2",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-2.50"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "probability",
+              "skillId": "smq-1.54"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            14,
+            17
+          ],
+          "questionNumber": 5,
+          "sourceLabel": "Edexcel June 2024 9MA0/31 Q5"
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2024-june/q6",
+          "originalQuestionNumber": 6,
+          "originalQuestionLabel": "6",
+          "marks": 11,
+          "difficulty": "difficult",
+          "topicSummary": "Venn diagrams, independence and conditional probability",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "probability",
+              "skillId": "smq-1.53"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "probability",
+              "skillId": "smq-1.54"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-2",
+              "topicId": "probability",
+              "skillId": "smq-2.49"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            18,
+            20
+          ],
+          "questionNumber": 6,
+          "sourceLabel": "Edexcel June 2024 9MA0/31 Q6"
+        }
+      ],
+      "sourceVerification": {
+        "questionPaperAndMarkSchemeTotalsAgree": true,
+        "originalQuestionOrderPreserved": true,
+        "totalMarksChecked": 50
       }
     }
   ]
