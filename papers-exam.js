@@ -364,7 +364,7 @@
       }
       if (best && !best.timeMiss && !best.bandProblems && attempt > 24) break;
     }
-    if (best.bandProblems) best = score(orderByBands(best.rows), minutes);
+    if (best.bandProblems) { const repaired = score(orderByBands(best.rows), minutes); if (compare(repaired, best) < 0) best = repaired; }
     const reasons = [];
     if (best.timeMiss) {
       reasons.push(report.availableMarks * 6 / 5 < minutes - 1
