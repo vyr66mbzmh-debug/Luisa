@@ -1,3 +1,8 @@
+## Luisa v0.63
+
+- When one past paper is chosen, Question order offers In paper order, printing that paper's questions in original question-number order. Other selected questions follow in the order they were added.
+- With All past papers the order options and behaviour are unchanged; print layouts, saved selections and saved paper IDs are preserved.
+
 ## Luisa v0.62
 
 - Add the June 2025 Edexcel Pure Mathematics Paper 2 (9MA0/02) to Past Papers: 15 original questions, 100 marks, native mathematics and the five source figures.

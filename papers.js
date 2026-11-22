@@ -89,6 +89,24 @@
     const available = [...books].filter(([, book]) => !course || book.course === course);
     options('papers-book', 'All books', available.map(([key, book]) => [key, book.title]), wanted);
   }
+  // "In paper order" exists only while one individual past paper is chosen (PAP-063).
+  const singlePaper = () => ($('papers-source-past-papers').checked && $('papers-past-paper').value) || '';
+  function refreshOrder() {
+    const select = $('papers-order'), paper = singlePaper();
+    let option = select.querySelector('option[value="paper"]');
+    if (paper && !option) {
+      option = document.createElement('option'); option.value = 'paper'; option.textContent = 'In paper order'; select.append(option);
+    } else if (!paper && option) {
+      if (select.value === 'paper') select.value = 'topic';
+      option.remove();
+    }
+  }
+  function paperOrder(a, b) {
+    const paper = singlePaper(), inA = a.paperId === paper, inB = b.paperId === paper;
+    if (inA && inB) return a.questionNumber - b.questionNumber;
+    if (inA !== inB) return inA ? -1 : 1;
+    return selectionOrder.indexOf(a.id) - selectionOrder.indexOf(b.id);
+  }
   function orderedChapter(row) {
     return chapters.get(matchingChapters(row)[0] || row.chapterKeys[0]);
   }
@@ -197,6 +215,7 @@
     selectionOrder.push(...selected.filter(r => !ordered.has(r.id)).map(r => r.id));
     if ($('papers-order').value === 'selection') selected.sort((a,b) => selectionOrder.indexOf(a.id)-selectionOrder.indexOf(b.id));
     if ($('papers-order').value === 'topic') selected.sort((a, b) => orderedChapter(a).rank - orderedChapter(b).rank);
+    if ($('papers-order').value === 'paper') selected.sort(paperOrder);
     $('papers-selected-count').textContent = selected.length.toLocaleString();
     const known = selected.filter(r => Number.isInteger(r.marks) && r.marks > 0);
     const marks = known.reduce((n, r) => n + r.marks, 0);
@@ -382,7 +401,8 @@
     if (['easy','medium','difficult','unclassified'].includes(saved?.difficulty)) $('papers-difficulty').value = saved.difficulty;
     $('papers-condensed').checked = saved?.layout === 'condensed';
     if (typeof saved?.includeAnswers === 'boolean') $('papers-answers').checked = saved.includeAnswers;
-    if (saved?.order === 'selection') $('papers-order').value = 'selection';
+    refreshOrder();
+    if (saved?.order === 'selection' || (saved?.order === 'paper' && singlePaper())) $('papers-order').value = saved.order;
     options('papers-course', 'All courses', textbook.courses.map(c => [c.id, c.title]), saved?.course);
     refreshBooks(saved?.book);
     const migrated = saved && saved.version < 3 && (saved.topic || saved.topics?.length || saved.skills?.length);
@@ -395,7 +415,9 @@
     for (const id of [...sources.map(source => 'papers-source-' + source), 'papers-past-paper', 'papers-difficulty']) {
       $(id).addEventListener('change', () => {
         $('papers-past-paper').disabled = !$('papers-source-past-papers').checked || !papers.size;
-        refreshFilters();
+        const order = $('papers-order').value;
+        refreshOrder(); refreshFilters();
+        if (order === 'paper') updateSelection();
       });
     }
     for (const id of ['papers-condensed','papers-answers']) $(id).addEventListener('change', persist);
@@ -434,6 +456,7 @@
       // Snapshot before opening: future edits cannot change this paper or its solutions.
       const ordered = [...selected];
       if ($('papers-order').value === 'topic') ordered.sort((a,b) => orderedChapter(a).rank - orderedChapter(b).rank);
+      if ($('papers-order').value === 'paper') ordered.sort(paperOrder);
       const snapshot = Object.freeze(ordered.map(row => Object.freeze({...row, printChapter: orderedChapter(row)})));
       printing = true; updateControls(); status('Preparing the print preview…');
       try {

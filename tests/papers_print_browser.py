@@ -349,6 +349,41 @@ class PapersPrintTests(unittest.TestCase):
                 preview.pdf(path=f'/tmp/luisa62-mixed-{layout}.pdf', prefer_css_page_size=True)
                 preview.close()
 
+    def test_in_paper_order_from_papers_page_prints_original_question_order(self):
+        import fitz
+        context = self.browser.new_context(timezone_id='Europe/London', service_workers='block', bypass_csp=True)
+        try:
+            page = context.new_page()
+            page.goto(f'http://127.0.0.1:{self.server.server_port}/papers.html')
+            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 7 && !document.querySelector('#papers-generate').disabled")
+            page.locator('#papers-source-practice').uncheck()
+            page.locator('#papers-source-exam-style').uncheck()
+            page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')
+            page.locator('#papers-count').fill('16')
+            page.locator('#papers-generate').click()
+            page.wait_for_function("document.querySelector('#papers-selected-count').textContent === '16' && document.querySelector('#papers-cancel').hidden")
+            page.locator('#papers-order').select_option('paper')
+            paper = self.exam_rows('edexcel-9ma0-01-2025-june', range(1, 17))
+            for layout, answers in (('one', True), ('condensed', False)):
+                with self.subTest(layout=layout, answers=answers):
+                    page.locator('#papers-condensed').set_checked(layout == 'condensed')
+                    page.locator('#papers-answers').set_checked(answers)
+                    with page.expect_popup() as event:
+                        page.locator('#papers-print').click()
+                    preview = event.value
+                    page.wait_for_function("document.querySelector('#papers-status').textContent.includes('Print preview ready')", timeout=60000)
+                    result = dict(ready=True, warnings=[])
+                    self.assert_exam_print(preview, result, paper, answers)
+                    path = f'/tmp/luisa63-paper-order-{layout}.pdf'
+                    preview.pdf(path=path, prefer_css_page_size=True)
+                    with fitz.open(path) as pdf:
+                        content = ''.join(sheet.get_text() for sheet in pdf)
+                    positions = [content.find(r['sourceLabel']) for r in paper]
+                    self.assertTrue(all(n >= 0 for n in positions) and positions == sorted(positions), positions)
+                    preview.close()
+        finally:
+            context.close()
+
     def test_incomplete_or_mixed_metadata_never_invents_totals(self):
         known = dict(row('1.01', 1), sourceKind='past-exam', sourceLabel='Exam fixture', marks=6)
         for unknown in (row('1.01', 2), dict(row('1.01', 2), sourceKind='past-exam'),
