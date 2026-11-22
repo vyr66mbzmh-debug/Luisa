@@ -54,6 +54,7 @@ class PilotMetadata(unittest.TestCase):
                  for b in c['books'] for t in b['topics'] for s in t['skills']}
         expected = {
             '9MA0/01': ([4,5,5,5,3,7,7,5,9,6,8,8,5,7,9,7], (5,6,5)),
+            '9MA0/02': ([3,4,2,5,7,6,4,9,8,9,11,8,3,8,13], (5,5,5)),
             '9MA0/32': ([4,10,8,9,8,11], (2,2,2)),
             '9MA0/31': ([9,5,6,9,10,11], (2,2,2)),
             '9FM0/01': ([6,5,5,8,5,5,8,12,9,12], (3,4,3)),
@@ -83,9 +84,9 @@ class PilotMetadata(unittest.TestCase):
                     self.assertIn(tuple(s[k] for k in ('courseId','bookId','topicId','skillId')), valid)
                 self.assertTrue(set(q).isdisjoint({'question','questionHtml','steps','solution','hints','assets'}))
         self.assertEqual(len(all_rows), data['questionCount'])
-        self.assertEqual(len({q['id'] for q in all_rows}), 47)
+        self.assertEqual(len({q['id'] for q in all_rows}), 62)
         self.assertEqual(sum(q['marks'] for q in all_rows), data['totalMarks'])
-        self.assertEqual(data['totalMarks'], 350)
+        self.assertEqual(data['totalMarks'], 450)
 
 
     def test_printable_payloads_and_assets_are_complete(self):
@@ -93,8 +94,8 @@ class PilotMetadata(unittest.TestCase):
         catalogue = read('exam-catalogue.json')['questions']
         metadata = {q['id']: q for p in read('content/exams/pilot-metadata.json')['papers'] for q in p['questions']}
         self.assertEqual({q['id'] for q in catalogue}, set(metadata))
-        self.assertEqual(len(catalogue), 47)
-        self.assertEqual(sum(q['marks'] for q in catalogue), 350)
+        self.assertEqual(len(catalogue), 62)
+        self.assertEqual(sum(q['marks'] for q in catalogue), 450)
         for row in catalogue:
             self.assertEqual(row['status'], 'checked')
             for key in ('marks','difficulty','sourceLabel','skillMappings'):
@@ -110,6 +111,29 @@ class PilotMetadata(unittest.TestCase):
                 self.assertTrue(src.startswith('resources/exams/'))
                 self.assertTrue((ROOT / src).is_file(), src)
             self.assertNotIn('-ms-', q['question'])
+
+    def test_pure_mathematics_2_source_identity_and_complete_schemes(self):
+        import re
+        paper = next(p for p in read('content/exams/pilot-metadata.json')['papers'] if p['paperCode'] == '9MA0/02')
+        self.assertEqual((paper['id'], paper['title'], paper['examDate'], paper['questionCount'], paper['totalMarks']),
+                         ('edexcel-9ma0-02-2025-june', 'Pure Mathematics 2', '2025-06-12', 15, 100))
+        self.assertEqual(paper['source']['questionPaperSha256'], '3a96003a088b89a198288e8b7d1d836f6a4cef190e0768047bf856730840fd6e')
+        self.assertEqual(paper['source']['markSchemeSha256'], '000beb634c58b2bc03c724c98a1f18e65fa635dfb0214eacbd875bd3b4be2f58')
+        evidence = read('docs/evidence/v062-import-pure2.json')
+        payload = {q['id']: q for q in read('content/exams/edexcel-9ma0-02-2025-june.json')['questions']}
+        self.assertEqual(list(payload), [f'exam/edexcel-9ma0-02-2025-june/q{n}' for n in range(1, 16)])
+        scheme_pages = []
+        for row, record in zip(paper['questions'], evidence['questions']):
+            q = payload[row['id']]
+            self.assertEqual(record['id'], row['id'])
+            self.assertEqual(sum(map(int, re.findall(r'class="marks">\((\d+)\)', q['question']))), row['marks'])
+            sources = re.findall(r'src="([^"]+-ms-p(\d+)-\d+\.svg)"', ''.join(q['steps']))
+            self.assertEqual(sorted({int(page) for _, page in sources}), record['markSchemePages'])
+            self.assertTrue(all(f'/q{row["originalQuestionNumber"]:02d}-ms-' in src for src, _ in sources))
+            scheme_pages += record['markSchemePages']
+            for asset in record['assets']:
+                self.assertEqual(hashlib.sha256((ROOT / asset['asset']).read_bytes()).hexdigest(), asset['sha256'])
+        self.assertEqual(scheme_pages, list(range(5, 42)))
 
 
 if __name__ == '__main__':

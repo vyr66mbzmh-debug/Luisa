@@ -1,3 +1,9 @@
+## Luisa v0.62
+
+- Add the June 2025 Edexcel Pure Mathematics Paper 2 (9MA0/02) to Past Papers: 15 original questions, 100 marks, native mathematics and the five source figures.
+- Pair every question with its complete official mark scheme, including alternatives, examiner notes and helpful diagrams.
+- Past Papers now has six papers, 62 questions and 450 marks; Papers has 8,684 questions in total.
+
 ## Luisa v0.61
 
 - Default Papers to one question per page and add a Condensed checkbox below the solutions checkbox.

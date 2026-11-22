@@ -5060,6 +5060,28 @@
         "tests/test_papers_selection.py",
         "tests/papers_print_browser.py"
       ]
+    },
+    {
+      "id": "PAP-062",
+      "requirement": "Add the June 2025 Edexcel Pure Mathematics Paper 2 (9MA0/02) and its official mark scheme to Papers to the Paper 1 standard.",
+      "scope": "v0.62 Cloudflare owner and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #107, 21 November 2026",
+      "acceptance": [
+        "Use only the owner-supplied question paper (SHA-256 3a96003a…40fd6e) and mark scheme (SHA-256 000beb63…2f58). Keep both PDFs outside Git and published artifacts.",
+        "Import all 15 questions with stable IDs exam/edexcel-9ma0-02-2025-june/q1–q15, original wording, part labels, marks 3, 4, 2, 5, 7, 6, 4, 9, 8, 9, 11, 8, 3, 8, 13 (100), question-specific instructions and faithful figures.",
+        "Pair each question with its complete official scheme, including alternatives and examiner guidance, and exclude other questions and general pages. Check each question mathematically and visually against the originals.",
+        "List June 2025 Paper 2 in the Past Papers dropdown, map questions to textbook chapters, and support whole-paper printing in order, mixed papers, saved selections, owner offline printing and both ADA roles. Expect 6 papers, 62 past-paper questions, 450 marks and 8,684 questions overall."
+      ],
+      "evidence": [
+        "GitHub issue #107",
+        "docs/evidence/v062-import-pure2.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
     }
   ]
 }

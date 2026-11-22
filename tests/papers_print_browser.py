@@ -266,6 +266,89 @@ class PapersPrintTests(unittest.TestCase):
             pdf[0].get_pixmap(matrix=fitz.Matrix(1.2,1.2)).save('/tmp/luisa61-exam-question.png')
             pdf[len(rows)].get_pixmap(matrix=fitz.Matrix(1.2,1.2)).save('/tmp/luisa61-exam-solution.png')
 
+    def exam_rows(self, paper, numbers):
+        payload = {q['id']: q for q in json.loads((ROOT / f'content/exams/{paper}.json').read_text())['questions']}
+        descriptors = {q['id']: q for q in json.loads((ROOT / 'exam-catalogue.json').read_text())['questions']}
+        return [dict(payload[f'exam/{paper}/q{n}'], **{key: descriptors[f'exam/{paper}/q{n}'][key] for key in
+                     ('marks', 'difficulty', 'sourceLabel', 'questionNumber', 'paperCode')}, sourceKind='past-exam')
+                for n in numbers]
+
+    def assert_exam_print(self, preview, result, rows, answers):
+        self.assertTrue(result['ready'], result)
+        self.assertEqual(result['warnings'], [])
+        ids = [r['id'] for r in rows]
+        self.assertEqual(preview.locator('.questions-page .print-question').evaluate_all(
+            'nodes=>[...new Set(nodes.map(n=>n.dataset.questionId))]'), ids)
+        self.assertEqual(preview.locator('.questions-page .question-marks').all_text_contents(), [f"[{r['marks']} Marks]" for r in rows])
+        self.assertEqual(preview.locator('.page-banner').all_text_contents()[:1], ['Question paper'])
+        self.assertEqual(preview.locator('.print-question .exam-instructions').count(), 0)
+        self.assertTrue(preview.locator('img').evaluate_all('nodes=>nodes.every(n=>n.complete&&n.naturalWidth>0)'))
+        self.assertFalse(preview.locator('.page-content,.print-question').evaluate_all(
+            'nodes=>nodes.some(n=>n.scrollHeight>n.clientHeight+1||n.scrollWidth>n.clientWidth+1)'))
+        self.assertTrue(preview.locator('.print-question img').evaluate_all(
+            'nodes=>nodes.every(img=>{const b=img.getBoundingClientRect(),line=parseFloat(getComputedStyle(img).lineHeight);'
+            'return b.height<=8*line+1&&Math.abs(b.width/b.height-img.naturalWidth/img.naturalHeight)<.02})'))
+        parse = ('html=>{const n=document.createElement("div");n.innerHTML=html;return [[...n.querySelectorAll("[data-math]")]'
+                 '.map(x=>x.dataset.math),[...n.querySelectorAll("img")].map(x=>x.getAttribute("src"))]}')
+        for item in rows:
+            selector = f'[data-question-id="{item["id"]}"]'
+            question = preview.locator('.print-question' + selector + ' .compact-heading').first.inner_text()
+            self.assertIn(item['sourceLabel'], question)
+            maths, images = self.page.evaluate(parse, item['question'])
+            self.assertEqual(preview.locator('.print-question' + selector + ' [data-math]').evaluate_all('nodes=>nodes.map(n=>n.dataset.math)'), maths)
+            self.assertEqual(preview.locator('.print-question' + selector + ' img').evaluate_all('nodes=>nodes.map(n=>n.getAttribute("src"))'), images)
+            scheme = preview.locator('.print-solution' + selector + ' img').evaluate_all('nodes=>nodes.map(n=>n.getAttribute("src"))')
+            if answers:
+                self.assertEqual(scheme, self.page.evaluate(parse, ''.join(item['steps']))[1])
+                self.assertEqual(preview.locator('.print-solution' + selector + ' .compact-heading').first.inner_text(), question)
+            else:
+                self.assertEqual(scheme, [])
+        if not answers:
+            self.assertEqual(preview.locator('.solutions-page,.print-solution').count(), 0)
+            self.assertNotIn('-ms-p', preview.content())
+
+    def test_pure_mathematics_2_complete_paper_and_mixed_overlap(self):
+        import fitz
+        self.page.clock.set_fixed_time(datetime(2026, 11, 21, 18, 30, tzinfo=timezone.utc))
+        paper = self.exam_rows('edexcel-9ma0-02-2025-june', range(1, 16))
+        self.assertEqual(sum(r['marks'] for r in paper), 100)
+        for layout in ('one', 'condensed'):
+            for answers in (False, True):
+                with self.subTest(layout=layout, answers=answers):
+                    preview, result = self.preview(paper, layout=layout, includeAnswers=answers)
+                    self.assert_exam_print(preview, result, paper, answers)
+                    text = ''.join(preview.locator('.questions-page').all_inner_texts())
+                    self.assertIn('In this question you must show detailed reasoning.', text)
+                    self.assertIn('Solutions relying entirely on calculator technology are not acceptable.', text)
+                    if answers:
+                        self.assertEqual(preview.locator('.print-solution img').count(), 70)
+                    path = f'/tmp/luisa62-pure2-{layout}-{"solutions" if answers else "questions"}.pdf'
+                    preview.pdf(path=path, prefer_css_page_size=True)
+                    with fitz.open(path) as pdf:
+                        self.assertEqual(len(pdf), result['pageCount'])
+                        content = ''.join(sheet.get_text() for sheet in pdf)
+                        self.assertNotIn('Original paper instructions', content)
+                        self.assertNotIn('You should show sufficient working', content)
+                        self.assertEqual('Worked solutions' in content, answers)
+                        for index, sheet in enumerate(pdf):
+                            self.assertIn(f'Page {index + 1} of {len(pdf)}', sheet.get_text())
+                            self.assertIn('21/11/26 6:30pm', sheet.get_text())
+                    preview.close()
+        # Overlapping original numbers from two papers keep separate prompts and schemes.
+        mixed = [row for pair in zip(self.exam_rows('edexcel-9ma0-01-2025-june', (1, 7)),
+                                     self.exam_rows('edexcel-9ma0-02-2025-june', (1, 7))) for row in pair]
+        for layout in ('one', 'condensed'):
+            with self.subTest(mixed=layout):
+                preview, result = self.preview(mixed, layout=layout, includeAnswers=True)
+                self.assert_exam_print(preview, result, mixed, True)
+                for item in mixed:
+                    paper_id = item['id'].split('/')[1]
+                    sources = preview.locator(f'.print-solution[data-question-id="{item["id"]}"] img').evaluate_all(
+                        'nodes=>nodes.map(n=>n.getAttribute("src"))')
+                    self.assertTrue(sources and all(f'/{paper_id}/q{item["questionNumber"]:02d}-ms-' in s for s in sources), sources)
+                preview.pdf(path=f'/tmp/luisa62-mixed-{layout}.pdf', prefer_css_page_size=True)
+                preview.close()
+
     def test_incomplete_or_mixed_metadata_never_invents_totals(self):
         known = dict(row('1.01', 1), sourceKind='past-exam', sourceLabel='Exam fixture', marks=6)
         for unknown in (row('1.01', 2), dict(row('1.01', 2), sourceKind='past-exam'),

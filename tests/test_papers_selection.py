@@ -265,13 +265,28 @@ class PapersSelection(unittest.TestCase):
         self.assertFalse(self.page.locator('#papers-source-practice').is_checked())
         self.assertTrue(self.page.locator('#papers-source-exam-style').is_checked())
         self.assertTrue(self.page.locator('#papers-source-past-papers').is_checked())
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), '601 questions in the selection')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '616 questions in the selection')
         self.page.locator('#papers-source-past-papers').uncheck()
         self.assertEqual(self.page.locator('#filter-title').inner_text(), '554 questions in the selection')
         self.assertTrue(self.page.locator('#papers-past-paper').is_disabled())
         self.page.locator('#papers-source-exam-style').uncheck()
         self.page.locator('#papers-source-past-papers').check()
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), '47 questions in the selection')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '62 questions in the selection')
+        options = self.page.locator('#papers-past-paper option').evaluate_all('nodes=>nodes.map(n=>[n.value,n.textContent])')
+        self.assertEqual(len(options), 7)
+        self.assertIn(['edexcel-9ma0-02-2025-june', 'June 2025 Paper 2 (Maths · 9MA0/02)'], options)
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-02-2025-june')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '15 questions in the selection')
+        self.page.locator('#papers-course').select_option('maths-a-level')
+        self.page.locator('#papers-book').select_option('maths-a-level/maths-pure-year-2')
+        self.page.locator('#papers-topics input[value="maths-a-level/maths-pure-year-2/11"]').check()
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '2 questions in the selection')
+        self.page.locator('#papers-browse').click()
+        self.page.wait_for_function("document.querySelectorAll('[data-add]').length === 2")
+        self.assertEqual(self.page.locator('[data-add]').evaluate_all('nodes=>nodes.map(n=>n.dataset.add)'),
+                         ['exam/edexcel-9ma0-02-2025-june/q10', 'exam/edexcel-9ma0-02-2025-june/q15'])
+        self.page.locator('#papers-topics input[value="maths-a-level/maths-pure-year-2/11"]').uncheck()
+        self.page.locator('#papers-course').select_option('')
         self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')
         self.assertEqual(self.page.locator('#filter-title').inner_text(), '16 questions in the selection')
         self.page.locator('#papers-source-practice').check()
@@ -297,6 +312,43 @@ class PapersSelection(unittest.TestCase):
         path = ROOT / 'content/exams/edexcel-9ma0-01-2025-june.json'
         source = next(q for q in json.loads(path.read_text())['questions'] if q['id'] == question['id'])
         self.assertEqual(question['question'], source['question'])
+
+    def test_whole_pure_mathematics_2_paper_in_source_order_survives_reload(self):
+        self.page.unroute('**/exam-catalogue.json')
+        self.page.reload()
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 7")
+        self.page.locator('#papers-source-practice').uncheck()
+        self.page.locator('#papers-source-exam-style').uncheck()
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-02-2025-june')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '15 questions in the selection')
+        expected = [f'exam/edexcel-9ma0-02-2025-june/q{n}' for n in range(1, 16)]
+        self.page.locator('#papers-browse').click()
+        for first, count in ((1, 8), (9, 7)):
+            self.page.wait_for_function(f"document.querySelectorAll('[data-add]').length === {count} && "
+                                        f"document.querySelector('[data-add]').dataset.add.endsWith('/q{first}')")
+            for ident in self.page.locator('[data-add]').evaluate_all('nodes=>nodes.map(n=>n.dataset.add)'):
+                self.page.locator(f'[data-add="{ident}"]').click()
+            if count == 8:
+                self.page.locator('#papers-next').click()
+        self.page.locator('#papers-order').select_option('selection')
+        self.assertEqual(self.selection_ids(), expected)
+        summary = self.page.locator('#papers-summary').inner_text()
+        self.assertIn('100 marks', summary)
+        self.assertIn('Suggested practice time: 84 minutes', summary)
+        self.page.locator('#papers-print').click()
+        self.page.wait_for_function('Boolean(window.testPaperSnapshot)')
+        snapshot = self.page.evaluate('testPaperSnapshot')
+        self.assertEqual([q['id'] for q in snapshot], expected)
+        self.assertEqual([q['marks'] for q in snapshot], [3, 4, 2, 5, 7, 6, 4, 9, 8, 9, 11, 8, 3, 8, 13])
+        payload = {q['id']: q for q in json.loads((ROOT / 'content/exams/edexcel-9ma0-02-2025-june.json').read_text())['questions']}
+        for item in snapshot:
+            self.assertEqual(item['question'], payload[item['id']]['question'])
+            self.assertEqual(item['steps'], payload[item['id']]['steps'])
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertEqual(self.selection_ids(), expected)
+        self.assertEqual(self.page.locator('#papers-past-paper').input_value(), 'edexcel-9ma0-02-2025-june')
+        self.assertEqual(self.page.locator('#papers-order').input_value(), 'selection')
 
     def test_practice_marks_include_all_labelled_table_parts(self):
         self.page.unroute('**/practice-catalogue.json')
