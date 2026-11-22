@@ -71,6 +71,15 @@ class PilotMetadata(unittest.TestCase):
             'edexcel-9ma0-31-2023-june': ([6,9,7,6,8,14], (2,2,2)),
             'edexcel-9fm0-01-2023-june': ([5,6,10,5,12,12,12,13], (2,4,2)),
             'edexcel-9fm0-02-2023-june': ([4,6,10,7,9,6,8,11,14], (3,3,3)),
+            'edexcel-9ma0-01-2019-june': ([3,5,5,6,10,8,7,10,5,6,7,10,11,7], (4,6,4)),
+            'edexcel-9ma0-02-2019-june': ([3,4,3,6,3,10,7,6,9,6,11,7,10,15], (4,6,4)),
+            'edexcel-9ma0-32-2019-june': ([6,8,12,11,13], (1,3,1)),
+            'edexcel-9ma0-31-2019-june': ([8,11,9,9,13], (1,3,1)),
+            'edexcel-9fm0-01-2019-june': ([9,7,10,5,13,6,7,18], (2,4,2)),
+            'edexcel-9fm0-02-2019-june': ([10,8,6,8,12,9,11,11], (2,4,2)),
+            'edexcel-9ma0-01-2018-june': ([3,7,4,4,5,10,7,5,10,8,10,10,7,10], (4,6,4)),
+            'edexcel-9ma0-02-2018-june': ([6,5,5,7,6,6,9,7,5,8,7,9,10,10], (4,6,4)),
+            'edexcel-9ma0-03-2018-june': ([5,7,11,13,14,6,8,8,13,15], (3,4,3)),
         }
         self.assertTrue(data['printable'])
         self.assertEqual([p['id'] for p in data['papers']], list(expected))
@@ -96,9 +105,9 @@ class PilotMetadata(unittest.TestCase):
                     self.assertIn(tuple(s[k] for k in ('courseId','bookId','topicId','skillId')), valid)
                 self.assertTrue(set(q).isdisjoint({'question','questionHtml','steps','solution','hints','assets'}))
         self.assertEqual(len(all_rows), data['questionCount'])
-        self.assertEqual(len({q['id'] for q in all_rows}), 180)
+        self.assertEqual(len({q['id'] for q in all_rows}), 272)
         self.assertEqual(sum(q['marks'] for q in all_rows), data['totalMarks'])
-        self.assertEqual(data['totalMarks'], 1350)
+        self.assertEqual(data['totalMarks'], 2100)
 
 
     def test_printable_payloads_and_assets_are_complete(self):
@@ -106,8 +115,8 @@ class PilotMetadata(unittest.TestCase):
         catalogue = read('exam-catalogue.json')['questions']
         metadata = {q['id']: q for p in read('content/exams/pilot-metadata.json')['papers'] for q in p['questions']}
         self.assertEqual({q['id'] for q in catalogue}, set(metadata))
-        self.assertEqual(len(catalogue), 180)
-        self.assertEqual(sum(q['marks'] for q in catalogue), 1350)
+        self.assertEqual(len(catalogue), 272)
+        self.assertEqual(sum(q['marks'] for q in catalogue), 2100)
         for row in catalogue:
             self.assertEqual(row['status'], 'checked')
             for key in ('marks','difficulty','sourceLabel','skillMappings'):
@@ -163,15 +172,53 @@ class PilotMetadata(unittest.TestCase):
         self.assertEqual(stats['questions'][4]['markSchemePages'], [11, 13])
         self.assertTrue(all('Agrees with scheme.' in q['mathsCheckpoint'] for p in evidence['papers'] for q in p['questions']))
 
-    def assert_session_evidence(self, path, session, strict_order=False):
+    def test_june_2018_and_2019_source_identity_and_complete_schemes(self):
+        ids = ['edexcel-9ma0-01-2019-june', 'edexcel-9ma0-02-2019-june', 'edexcel-9ma0-32-2019-june', 'edexcel-9ma0-31-2019-june',
+               'edexcel-9fm0-01-2019-june', 'edexcel-9fm0-02-2019-june', 'edexcel-9ma0-01-2018-june', 'edexcel-9ma0-02-2018-june',
+               'edexcel-9ma0-03-2018-june']
+        evidence = self.assert_session_evidence('docs/evidence/v070-import-june2018-2019.json', ['June 2019', 'June 2018'],
+                                                strict_order=True, shared_boundary_pages=True, counts=(9, 92, 750),
+                                                codes=('9MA0/01', '9MA0/02', '9MA0/32', '9MA0/31', '9FM0/01', '9FM0/02', '9MA0/01', '9MA0/02', '9MA0/03'))
+        self.assertEqual([p['paperId'] for p in evidence['papers']], ids)
+        self.assertEqual([p['session'] for p in evidence['papers']], ['June 2019'] * 6 + ['June 2018'] * 3)
+        hashes = {p['paperId']: (p['sourceHashes']['questionPaperSha256'][:12], p['sourceHashes']['markSchemeSha256'][:12]) for p in evidence['papers']}
+        self.assertEqual(hashes, {
+            'edexcel-9ma0-01-2019-june': ('89d654b995cc', '2434be9cf4c0'),
+            'edexcel-9ma0-02-2019-june': ('d094426b762d', '570335fc41ba'),
+            'edexcel-9ma0-32-2019-june': ('d73f786d6451', '1cea1a52fc62'),
+            'edexcel-9ma0-31-2019-june': ('b16d31919b74', 'a371cf9f3660'),
+            'edexcel-9fm0-01-2019-june': ('f158309912ea', 'c6f793847b4d'),
+            'edexcel-9fm0-02-2019-june': ('09b4c0fbeb7b', 'b20aa6b99f8e'),
+            'edexcel-9ma0-01-2018-june': ('4af4686ecb66', 'f9f093e7fa09'),
+            'edexcel-9ma0-02-2018-june': ('bcfbd7d2ba86', '4f0d162bae39'),
+            'edexcel-9ma0-03-2018-june': ('a37e940340d4', '2ccf29e3da8c')})
+        pages = {p['paperId']: (p['sourceIdentity']['questionPaperPages'], p['sourceIdentity']['markSchemePages']) for p in evidence['papers']}
+        self.assertEqual(pages, dict(zip(ids, [(44, 31), (48, 40), (20, 16), (20, 10), (32, 27), (28, 24), (44, 27), (44, 41), (36, 21)])))
+        blanks = {p['paperId']: p['blankMarkSchemePages'] for p in evidence['papers'] if p['blankMarkSchemePages']}
+        self.assertEqual(blanks, {'edexcel-9ma0-02-2018-june': [10, 22, 32], 'edexcel-9ma0-03-2018-june': [12]})
+        meta = {p['id']: p for p in read('content/exams/pilot-metadata.json')['papers']}
+        combined = meta['edexcel-9ma0-03-2018-june']
+        self.assertEqual((combined['paperCode'], combined['title'], combined['questionCount'], combined['totalMarks']),
+                         ('9MA0/03', 'Statistics and Mechanics', 10, 100))
+        books = [{s['bookId'] for s in q['skillMappings']} for q in combined['questions']]
+        self.assertTrue(all(any('statistics' in b for b in bs) for bs in books[:5]))
+        self.assertTrue(all(any('mechanics' in b for b in bs) for bs in books[5:]))
+        payload = read('content/exams/edexcel-9ma0-03-2018-june.json')['questions']
+        self.assertTrue(all('take' in q['contextHtml'] and '9.8' in q['contextHtml'] for q in payload[5:]))
+        self.assertTrue(all('9.8' not in q['contextHtml'] for q in payload[:5]))
+        self.assertTrue(all('Agrees with scheme.' in q['mathsCheckpoint'] for p in evidence['papers'] for q in p['questions']))
+
+    def assert_session_evidence(self, path, session, strict_order=False, shared_boundary_pages=False, counts=(6, 59, 450),
+                                codes=('9MA0/01', '9MA0/02', '9MA0/31', '9MA0/32', '9FM0/01', '9FM0/02')):
         import re
         evidence = read(path)
         meta = {p['id']: p for p in read('content/exams/pilot-metadata.json')['papers']}
-        self.assertEqual((evidence['paperCount'], evidence['questionCount'], evidence['totalMarks']), (6, 59, 450))
-        self.assertEqual([p['paperCode'] for p in evidence['papers']], ['9MA0/01', '9MA0/02', '9MA0/31', '9MA0/32', '9FM0/01', '9FM0/02'])
+        self.assertEqual((evidence['paperCount'], evidence['questionCount'], evidence['totalMarks']), counts)
+        self.assertEqual([p['paperCode'] for p in evidence['papers']], list(codes))
         for record in evidence['papers']:
             paper = meta[record['paperId']]
-            self.assertEqual(paper['session'], session)
+            self.assertEqual(paper['session'], record.get('session', session))
+            self.assertIn(paper['session'], [session] if isinstance(session, str) else session)
             self.assertEqual((paper['paperCode'], paper['title'], paper['examDate'], paper['questionCount'], paper['totalMarks']),
                              (record['paperCode'], record['title'], record['examDate'], record['questionCount'], record['totalMarks']))
             for key in ('questionPaperSha256', 'markSchemeSha256'):
@@ -190,8 +237,17 @@ class PilotMetadata(unittest.TestCase):
                 scheme_pages += q_record['markSchemePages']
                 for asset in q_record['assets']:
                     self.assertEqual(hashlib.sha256((ROOT / asset['asset']).read_bytes()).hexdigest(), asset['sha256'])
-            self.assertEqual(sorted(scheme_pages), record['markSchemePagesUsed'])
-            self.assertEqual(len(set(scheme_pages)), len(scheme_pages))
+            if shared_boundary_pages:
+                # A question may start mid-page: only the last page of one question may be the first page of the next.
+                self.assertEqual(sorted(set(scheme_pages)), record['markSchemePagesUsed'])
+                groups = [q['markSchemePages'] for q in record['questions']]
+                for before, after in zip(groups, groups[1:]):
+                    self.assertLessEqual(before[-1], after[0])
+                    self.assertTrue(set(before).isdisjoint(after) or set(before) & set(after) == {after[0]})
+            else:
+                self.assertEqual(sorted(scheme_pages), record['markSchemePagesUsed'])
+                self.assertEqual(len(set(scheme_pages)), len(scheme_pages))
+            self.assertTrue(set(record.get('blankMarkSchemePages', [])).isdisjoint(scheme_pages))
             if strict_order:
                 self.assertEqual(sorted(scheme_pages), scheme_pages)
         return evidence

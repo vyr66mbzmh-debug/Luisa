@@ -319,6 +319,18 @@ class PapersPrintTests(unittest.TestCase):
             'edexcel-9ma0-31-2023-june': (6, 50), 'edexcel-9ma0-32-2023-june': (6, 50),
             'edexcel-9fm0-01-2023-june': (8, 75), 'edexcel-9fm0-02-2023-june': (9, 75)})
 
+    def test_june_2019_complete_papers_print_in_every_layout(self):
+        self.assert_session_papers_print('June 2019', {
+            'edexcel-9ma0-01-2019-june': (14, 100), 'edexcel-9ma0-02-2019-june': (14, 100),
+            'edexcel-9ma0-31-2019-june': (5, 50), 'edexcel-9ma0-32-2019-june': (5, 50),
+            'edexcel-9fm0-01-2019-june': (8, 75), 'edexcel-9fm0-02-2019-june': (8, 75)})
+
+    def test_june_2018_complete_papers_print_in_every_layout(self):
+        # 9MA0/03 is one combined Statistics and Mechanics paper with its original numbering.
+        self.assert_session_papers_print('June 2018', {
+            'edexcel-9ma0-01-2018-june': (14, 100), 'edexcel-9ma0-02-2018-june': (14, 100),
+            'edexcel-9ma0-03-2018-june': (10, 100)})
+
     def assert_session_papers_print(self, session, papers):
         import fitz, tempfile
         with tempfile.TemporaryDirectory() as folder:
@@ -386,7 +398,7 @@ class PapersPrintTests(unittest.TestCase):
         try:
             page = context.new_page()
             page.goto(f'http://127.0.0.1:{self.server.server_port}/papers.html')
-            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 19 && !document.querySelector('#papers-generate').disabled")
+            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 28 && !document.querySelector('#papers-generate').disabled")
             page.locator('#papers-source-practice').uncheck()
             page.locator('#papers-source-exam-style').uncheck()
             page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')

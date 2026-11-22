@@ -5642,6 +5642,107 @@
         "tests/test_papers_selection.py",
         "tests/papers_print_browser.py"
       ]
+    },
+    {
+      "id": "PAP-070-1",
+      "requirement": "Import the remaining Edexcel A level past papers from the owner's TO_UPLOAD folder (June 2018, June 2019, the 2020 and 2021 folders, the June 2022 folder and the Sample folder) in three releases, each fully gated and published before the next starts: v0.70 June 2018 and June 2019; v0.71 the 2020 and 2021 papers; v0.72 the sample papers and any genuine 2022 material. Post the inventory before importing and a final summary after the last release.",
+      "acceptance": [
+        "The full inventory (every file with SHA-256, page count, cover identity, pairing, status and target release) is on GitHub #124 before any import, with the default decisions applied and reported.",
+        "v0.70 publishes the nine June 2018 and June 2019 papers (92 questions, 750 marks); v0.71 and v0.72 follow only after v0.70 is published and live-verified.",
+        "After the last release a GitHub summary lists papers imported per series, duplicates skipped, papers held and what the owner must supply."
+      ],
+      "scope": "v0.70 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124, 22 November 2026",
+      "evidence": [
+        "GitHub issue #124",
+        "docs/evidence/v070-import-june2018-2019.json"
+      ]
+    },
+    {
+      "id": "PAP-070-2",
+      "requirement": "Identify each file by its cover, never its name: record SHA-256 and page counts, pair each question paper with its mark scheme by cover, use the series printed on the cover, skip exact duplicates and report them, and hold any missing, incomplete or ambiguous paper with its blocker. Never guess or silently repair a question, never invent dates (samples use session \"sample\"), keep the PDFs read-only and outside Git and published artifacts, and ignore .DS_Store.",
+      "acceptance": [
+        "docs/evidence/v070-import-june2018-2019.json records, per paper, both source hashes, page counts, cover identity, pairing, the linked PMT copies and their relation to the supplied files, scheme pages used, blank pages and excluded pages.",
+        "Duplicates (15 files, including the Summer 2023 files in the June 2022 and June 2021 folders) are skipped and listed on #124; no 2018 or 2019 paper was held."
+      ],
+      "scope": "v0.70 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124, 22 November 2026",
+      "evidence": [
+        "GitHub issue #124",
+        "docs/evidence/v070-import-june2018-2019.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-070-3",
+      "requirement": "Import to the same standard as June 2025 and June 2023: one payload record per numbered question in the original wording with subparts, diagrams and marks; the complete official scheme per question; an independent maths check with a checkpoint; marks reconciled; faithful figure crops; book/chapter keys and skills by content; paper-order difficulty; metadata and catalogue joins; per-question evidence. A combined Statistics and Mechanics paper stays one paper with its original numbering, each question mapped to its own content.",
+      "acceptance": [
+        "92 questions with stable IDs exam/edexcel-<code>-<year>-june/q<n>, transcribed from the page images; printed part marks sum to each question total and the question totals equal the scheme totals and the cover total.",
+        "Each question carries only its own scheme as ordered vector crops; where a scheme question starts mid-page, the cut lies above that question's header row and only the boundary page is shared.",
+        "June 2018 9MA0/03 is one 10-question paper: Q1-5 map to Statistics books and Q6-10 to Mechanics books; Q6-10 carry the Section B instruction about g verbatim.",
+        "Every question has an independent SymPy/numeric checkpoint that agrees with the scheme; no content fell outside the existing chapters."
+      ],
+      "scope": "v0.70 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124, 22 November 2026",
+      "evidence": [
+        "GitHub issue #124",
+        "docs/evidence/v070-import-june2018-2019.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-070-4",
+      "requirement": "Verify each imported paper: selectable by name with the current dropdown behaviour; selects only its own questions; works with other filters, saved selections and mixed selections; prints in source order, one per page and condensed, with solutions on and off and the correct schemes. Preserve existing print layouts, saved selections, saved-paper IDs and the teacher-only exam paper and its gating.",
+      "acceptance": [
+        "The Past Papers dropdown lists 27 papers (28 options with All), newest exam date first; Maths A level lists 19 papers and Further Maths 8; Mechanics Year 2 includes June 2019 9MA0/32 and June 2018 9MA0/03.",
+        "Choosing any June 2018 or June 2019 paper selects only its own questions in source order; a whole-paper selection, a mixed selection and reload work.",
+        "Every June 2018 and June 2019 paper prints complete in both layouts with solutions on and off as real PDFs, and printed PDF pages are inspected."
+      ],
+      "scope": "v0.70 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124, 22 November 2026",
+      "evidence": [
+        "GitHub issue #124",
+        "docs/evidence/v070-import-june2018-2019.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-070-5",
+      "requirement": "Update counts and tests with positive assertions, and publish only papers that pass full verification and independent review.",
+      "acceptance": [
+        "Tests assert 27 papers, 272 past-paper questions, 2,100 marks, the dropdown contents and orders, the June 2018/2019 source hashes, page counts and blank scheme pages; 8,894 questions overall.",
+        "Only papers passing verification and independent review are published; held papers, if any, are listed with blockers in the issue, HANDOFF.md and the owner report."
+      ],
+      "scope": "v0.70 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124, 22 November 2026",
+      "evidence": [
+        "GitHub issue #124",
+        "docs/evidence/v070-import-june2018-2019.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
     }
   ]
 }
