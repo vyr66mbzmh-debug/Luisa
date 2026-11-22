@@ -474,7 +474,9 @@
   $('papers-exam-title').value = saved.title ?? 'Maths Assessment';
   $('papers-exam-year').value = saved.yearGroup ?? '';
   $('papers-exam-month').value = saved.monthYear ?? monthYear();
-  $('papers-exam-date').value = saved.date ?? todayLabel();
+  // PAP-067-8: today's date unless the teacher typed or cleared the field in this session.
+  let dateEdited = saved.dateEdited === true;
+  $('papers-exam-date').value = dateEdited ? saved.date ?? '' : todayLabel();
   $('papers-exam-instructions').value = saved.instructions ?? defaultInstructions;
   $('papers-exam-minutes').value = saved.targetMinutes ?? '60';
   const contentInputs = [...document.querySelectorAll('input[name="papers-exam-content"]')];
@@ -483,6 +485,7 @@
   function save() {
     const state = Object.fromEntries(Object.entries(fields).map(([key, id]) => [key, $(id).value]));
     state.printContent = chosenContent();
+    state.dateEdited = dateEdited;
     try { sessionStorage.setItem(storageKey, JSON.stringify(state)); } catch (_) { /* Optional convenience only. */ }
   }
   let proposal = null;
@@ -533,6 +536,7 @@
   });
   for (const id of Object.values(fields)) $(id).addEventListener('input', () => { save(); if (id === fields.targetMinutes) targetPreview(); });
   contentInputs.forEach(input => input.addEventListener('change', save));
+  $('papers-exam-date').addEventListener('input', () => { dateEdited = true; save(); });
   document.querySelectorAll('[data-exam-preset]').forEach(button => button.addEventListener('click', () => {
     $('papers-exam-minutes').value = button.dataset.examPreset; save(); targetPreview();
   }));
@@ -586,7 +590,7 @@
     try {
       const options = {...Object.fromEntries(Object.entries(fields).map(([key, id]) => [key, $(id).value])), content: choice};
       const result = await create(rows, options);
-      if (result.ready === false) builder.status(`The exam paper needs attention before printing. ${result.warnings.join(' ')}`, true);
+      if (result.ready === false) builder.status(`The ${choice === 'scheme' ? 'mark scheme' : 'exam paper'} needs attention before printing. ${result.warnings.join(' ')}`, true);
       else builder.status(`${choice === 'scheme' ? 'Mark scheme' : choice === 'both' ? 'Exam paper and mark scheme' : 'Exam paper'} ready in a new window. Use its Print / Save PDF button.`);
     } catch (error) { builder.status(error.message || 'The exam paper could not be opened. Allow pop-ups for this site and try again.', true); }
   }));

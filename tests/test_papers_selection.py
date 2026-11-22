@@ -375,6 +375,13 @@ class PapersSelection(unittest.TestCase):
         now = datetime.now(ZoneInfo('Europe/London'))
         suffix = 'th' if 11 <= now.day <= 13 else {1: 'st', 2: 'nd', 3: 'rd'}.get(now.day % 10, 'th')
         self.assertEqual(self.page.locator('#papers-exam-date').input_value(), f"{now:%A} {now.day}{suffix} {now:%B}")
+        # A stored automatic date (or a v0.66 session's empty date) never goes stale: only a typed or cleared value is kept.
+        self.page.evaluate("sessionStorage.setItem('luisa-papers-exam-v1', JSON.stringify({title: 'Maths Assessment', date: 'Friday 20th November'}))")
+        self.page.reload()
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 13")
+        self.assertEqual(self.page.locator('#papers-exam-date').input_value(), f"{now:%A} {now.day}{suffix} {now:%B}")
+        self.page.evaluate("sessionStorage.removeItem('luisa-papers-exam-v1')")
+        panel.locator('summary').click()
         # PAP-067-2: one print choice, Questions only by default.
         radios = self.page.locator('input[name="papers-exam-content"]')
         self.assertEqual(radios.evaluate_all('ns=>ns.map(n=>[n.value,n.parentElement.textContent.trim(),n.checked,n.type])'),

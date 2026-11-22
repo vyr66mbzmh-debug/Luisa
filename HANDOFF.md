@@ -10,7 +10,7 @@
 - **Tolerance (PAP-067-1).** Timed generation lands within ±2 minutes (constant `TOLERANCE` in papers-exam.js); paper time floor(marks × 6/5), extra round(25%), priorities time → difficulty bands → variety unchanged.
 - **Front page (PAP-067-3, PAP-067-8).** New three-paragraph default instructions (editable); the typeset Mechanics g = 9.8 m s⁻² paragraph is still added automatically. The Date field defaults to today in Europe/London (`todayLabel`, e.g. "Sunday 22nd November"); ordinal suffixes print superscripted; a cleared field prints no Date line.
 - **Removed builder text (PAP-067-4, 5, 6, 7).** The "Prints the paper above … no solutions" help, the g instruction note, the "N questions without marks … were left out" comment (unmarked questions are still excluded) and "· g = 9.8 line included".
-- **Code.** papers-exam.js (create: `content` option and scheme section; builder wiring), papers-exam.css, papers.css (`.exam-content`), the teacher block in papers.html between the luisa-teacher-exam markers. Nothing else changed: v0.66 print layouts, saved selections (session key luisa-papers-exam-v1, new field printContent) and question IDs are preserved.
+- **Code.** papers-exam.js (create: `content` option and scheme section; builder wiring), papers-exam.css, papers.css (`.exam-content`), the teacher block in papers.html between the luisa-teacher-exam markers. Nothing else changed: v0.66 print layouts, saved selections (session key luisa-papers-exam-v1, new fields printContent and dateEdited; an automatic date is never restored, so it always shows today) and question IDs are preserved.
 
 **Sources and requirements.**
 - **Question content:** content/practice, content/exams, practice-catalogue.json and exam-catalogue.json.
