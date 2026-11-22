@@ -234,8 +234,12 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(staff_page.count('<script defer src="papers-exam.js"></script>'), 1)
         for control in ('id="papers-exam"', 'id="papers-exam-print"', 'id="papers-exam-instructions"', 'id="papers-exam-minutes"', 'id="papers-exam-generate"', 'data-exam-preset="32"', 'data-exam-preset="60"'):
             self.assertIn(control, staff_page)
-        # PAP-066-3: the course map field and its Regenerate control are gone.
-        for removed in ('papers-exam-map', 'Regenerate course map'):
+        # PAP-067-2: the mark scheme print choice is a staff control.
+        for choice in ('value="questions"', 'value="scheme"', 'value="both"'):
+            self.assertIn(f'name="papers-exam-content" {choice}', staff_page)
+        self.assertNotIn('papers-exam-content', pupil_page)
+        # PAP-066-3 and PAP-067-4/5: removed controls and helper texts stay gone.
+        for removed in ('papers-exam-map', 'Regenerate course map', 'no solutions', 'is added automatically when any question comes from Mechanics'):
             self.assertNotIn(removed, staff_page)
         app = create_app(dict(self.app.config, STAFF_BUILD_DIR=str(staff_dir)))
         staff, pupil, anon = (app.test_client() for _ in range(3))

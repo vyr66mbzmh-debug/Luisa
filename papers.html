@@ -57,7 +57,6 @@
 <!--luisa-teacher-exam-->
 <details id="papers-exam" class="exam-panel">
 <summary>Exam paper <small>Teachers only</small></summary>
-<p class="help">Prints the paper above as a lined exam paper with a front page: one question per two pages, totals for each question and the paper, and no solutions.</p>
 <div class="exam-fields">
 <label class="field" for="papers-exam-year">Year group<input id="papers-exam-year" type="text" autocomplete="off" placeholder="e.g. L6"></label>
 <label class="field" for="papers-exam-title">Title<input id="papers-exam-title" type="text" autocomplete="off"></label>
@@ -65,9 +64,8 @@
 <label class="field" for="papers-exam-date">Date (optional)<input id="papers-exam-date" type="text" autocomplete="off" placeholder="e.g. Friday 20th November P4 &amp; P5"></label>
 </div>
 <label class="field" for="papers-exam-instructions">Instructions (leave a blank line between paragraphs)<textarea id="papers-exam-instructions" rows="7"></textarea></label>
-<p class="help">The g = 9.8 m s⁻² instruction is added automatically when any question comes from Mechanics.</p>
 <fieldset class="exam-timed"><legend>Timed paper from the chosen topics</legend>
-<p class="help">Uses the sources, difficulty and topics chosen above. Time is 6 minutes per 5 marks, rounded down; the paper is chosen to within ±1 minute and ordered easy (first 20% of marks) to difficult (last 20%).</p>
+<p class="help">Uses the sources, difficulty and topics chosen above. Time is 6 minutes per 5 marks, rounded down; the paper is chosen to within ±2 minutes and ordered easy (first 20% of marks) to difficult (last 20%).</p>
 <div class="button-row"><button type="button" class="quiet" data-exam-preset="32">1 period · 32 minutes (+8)</button><button type="button" class="quiet" data-exam-preset="60">2 periods · 60 minutes (+15)</button></div>
 <label class="field" for="papers-exam-minutes">Target time in minutes<input id="papers-exam-minutes" type="number" min="2" max="600" step="1" inputmode="numeric"></label>
 <p id="papers-exam-target-help" class="help"></p>
@@ -75,6 +73,11 @@
 <p id="papers-exam-target-report" class="help" aria-live="polite" hidden></p>
 </fieldset>
 <p id="papers-exam-order-warning" class="help error" aria-live="polite" hidden></p>
+<fieldset class="exam-content"><legend>Print</legend>
+<label><input type="radio" name="papers-exam-content" value="questions" checked> Questions only</label>
+<label><input type="radio" name="papers-exam-content" value="scheme"> Mark scheme only</label>
+<label><input type="radio" name="papers-exam-content" value="both"> Questions and mark scheme</label>
+</fieldset>
 <div class="button-row"><button id="papers-exam-order" type="button" class="quiet" disabled>Order by difficulty</button><button id="papers-exam-print" class="primary" type="button" disabled>Preview exam paper</button></div>
 <p id="papers-exam-summary" class="help" aria-live="polite"></p>
 </details>

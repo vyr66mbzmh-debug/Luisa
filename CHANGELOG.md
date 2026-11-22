@@ -1,3 +1,10 @@
+## Luisa v0.67
+
+- Teacher-only exam paper: one Print choice — Questions only (default), Mark scheme only, Questions and mark scheme. The scheme section follows the paper, takes each question's paired official scheme with all continuations (past papers) or its worked solution (practice and exam-style), heads each "Question N", starts with a title line naming the exam and numbers its own pages "Mark scheme page x of y". Mark scheme only has no front page and no lined pages.
+- Timed generation tolerance is ±2 minutes (was ±1).
+- New three-paragraph default instructions; the Mechanics g paragraph is still added automatically. The Date field defaults to today in Europe/London ("Sunday 22nd November", ordinal superscripted when printed) and can be cleared.
+- Removed builder notes: the "Prints the paper above … no solutions" help, the g instruction note, the "questions without marks … were left out" comment and "· g = 9.8 line included".
+
 ## Luisa v0.66
 
 - Teacher-only exam paper: generate a paper to a target time from the chosen topics (presets 32 and 60 minutes, or any whole number of minutes). Time is 6 minutes per 5 marks, rounded down, and lands within one minute of the target; otherwise Luisa reports the closest paper and why.

@@ -35,3 +35,8 @@
 .exam-front-page .katex {font-size:1em}
 @media print {.exam-front-page,.exam-page {print-color-adjust:exact; -webkit-print-color-adjust:exact}}
 .exam-gravity .katex {white-space:nowrap}
+.exam-front-page .exam-ordinal {font-size:.7em; line-height:0; vertical-align:.55em}
+/* Mark scheme section (PAP-067-2): after the paper, own footer numbering. */
+.exam-scheme-page .page-content {display:block}
+.exam-scheme-title {margin:0 0 4mm; padding-bottom:2mm; border-bottom:.5pt solid #000; font:700 13pt Arial,Helvetica,sans-serif; color:#000}
+.exam-scheme {margin:0 0 5mm}
