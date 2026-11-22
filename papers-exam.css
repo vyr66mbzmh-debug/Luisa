@@ -1,0 +1,36 @@
+/* Teacher-only exam paper (PAP-065C). Loaded after papers-print.css; pupil builds omit it. */
+.exam-paper .print-page {font-family:Georgia,'Times New Roman',serif}
+.exam-paper .page-footer.exam-footer {border-top:0; padding-top:0; justify-content:center; font:9pt Arial,Helvetica,sans-serif; color:#000}
+.exam-page .page-content {display:flex; flex-direction:column}
+.exam-question {flex:none}
+.exam-heading {font-family:Arial,Helvetica,sans-serif}
+.exam-heading .question-marks {margin-left:auto}
+.answer-lines {flex:1 1 0; min-height:0; overflow:hidden; margin-top:2mm}
+.answer-rules {display:block; width:100%; height:304mm; overflow:visible}
+.answer-line {stroke:#9a9a9a; stroke-width:.5px; shape-rendering:geometricPrecision}
+.question-total {flex:none; margin:2mm 0 0; text-align:right; font:700 11pt Arial,Helvetica,sans-serif; color:#000}
+.paper-end-rule {flex:none; width:100%; margin:3mm 0 1.5mm; border:0; border-top:1.2px solid #000}
+.paper-total {flex:none; margin:0; text-align:right; font:700 12pt Arial,Helvetica,sans-serif; letter-spacing:.02em; color:#000}
+
+/* Front page: owner template exam-front-page-template.png (A4, Arial-style, no footer). */
+.exam-paper .exam-front-page {padding:9mm 12mm 12mm; gap:0; font:15pt/1.3 Arial,Helvetica,sans-serif; color:#000}
+.exam-front-page p {margin:0}
+.exam-front-page .exam-name {text-align:center; font-size:18pt; margin:0 0 14mm}
+.exam-blank {display:inline-block; border-bottom:1.2px solid #000; vertical-align:baseline}
+.exam-name-blank {width:132mm}
+.exam-achieved-blank {width:26mm}
+.exam-rule {flex:none; width:100%; margin:0; border:0; border-top:1px solid #000}
+.exam-title-block {text-align:center; padding:9mm 0 10mm}
+.exam-title {margin:0 0 9mm; font:700 34pt/1.15 Arial,Helvetica,sans-serif}
+.exam-month {font-weight:700; font-size:22pt; margin:0 0 8mm!important}
+.exam-front-page .exam-date {font-size:17pt}
+.exam-time-block {padding-top:12mm; font-size:18pt}
+.exam-time-block p {margin:0 0 5mm}
+.exam-extra {font-weight:400}
+.exam-spacer {flex:1 1 0; min-height:4mm}
+.exam-instructions {padding-top:7mm}
+.exam-instructions>p {margin:0 0 1em}
+.exam-course-map p {margin:0}
+.exam-front-page .katex {font-size:1.05em}
+@media print {.exam-front-page,.exam-page {print-color-adjust:exact; -webkit-print-color-adjust:exact}}
+.exam-gravity .katex {white-space:nowrap}

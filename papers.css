@@ -4,9 +4,9 @@
 .topic-list{max-height:240px}.topic-choice{display:grid;grid-template-columns:20px 1fr;gap:8px;align-items:start;padding:8px 4px;font-size:.85rem;line-height:1.45}.topic-choice input{width:17px;height:17px;margin:2px 0;accent-color:#153b57}.topic-choice small{display:block;color:#536879}
 
 /* Practice Booklet native tables, diagrams and original question labels. */
-.math-content .practice-table{border-collapse:collapse;max-width:100%;margin:.8em 0}.practice-table td,.practice-table th{border:1px solid #aab9c4;padding:.3em .55em}.practice-figure{margin:.8em 0;max-width:100%}.practice-figure img{max-width:100%;height:auto}.practice-tag{font-size:.8em;font-weight:600}.marks{white-space:nowrap;font-size:.9em}.solution-hints{border-top:1px solid #c4d3de;margin-top:1em;padding-top:.5em}.solution-hints h3{font-size:1em;margin:.3em 0}
+.math-content .practice-table{border-collapse:collapse;max-width:100%;margin:.8em 0}.practice-table td,.practice-table th{border:1px solid #aab9c4;padding:.3em .55em}.practice-figure{margin:.8em 0;max-width:100%}.practice-figure img{max-width:100%;height:auto}.practice-tag{font-size:.8em;font-weight:600}.solution-hints{border-top:1px solid #c4d3de;margin-top:1em;padding-top:.5em}.solution-hints h3{font-size:1em;margin:.3em 0}
 
-.math-content .practice-layout-table{border-collapse:collapse;max-width:100%}.practice-layout-table td{border:0;padding:.25em .6em}.math-content .marks{float:none;display:inline-block;margin-left:.4em}
+.math-content .practice-layout-table{border-collapse:collapse;max-width:100%}.practice-layout-table td{border:0;padding:.25em .6em}
 
 .practice-context {border-left:2px solid #bd9957; padding-left:1em; margin:0 0 1em}
 .practice-context-label {font:600 .85em/1.4 system-ui,sans-serif; color:#465b6d}
@@ -17,3 +17,11 @@
 .source-fieldset{border:0;padding:0;margin:0 0 20px;min-width:0}.source-fieldset legend{font-weight:600;margin-bottom:8px}.source-choice{display:flex;align-items:center;gap:10px;min-height:44px;font-size:.9rem}.source-choice input{width:18px;height:18px;accent-color:#153b57;flex-shrink:0}.print-options{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin:18px 0}.print-options .field{margin:0;flex:1 1 190px}.print-choices{flex:1 1 265px}.paper-summary{font-weight:600;color:#153b57}.question-meta{font-size:.82rem;color:#536879;line-height:1.5}
 
 .past-paper-source{display:flex;flex-wrap:wrap;align-items:center;gap:0 10px}.past-paper-source select{max-width:100%;min-width:0;min-height:36px}
+
+/* v0.65 PAP-065A: sub-question marks are bold bracketed numbers, right-aligned in a
+   reserved margin on the last line of their part (positioned by placeMarks). */
+.math-content:has(.marks),.parts.columns>li:has(.marks),.math-content td:has(.marks) {position:relative; padding-right:2.6em}
+.math-content .marks {position:absolute; right:0; margin:0; font-weight:700; font-size:1em; line-height:1.35; white-space:nowrap; font-family:'Times New Roman',Times,serif; font-variant-numeric:lining-nums}
+
+/* Teacher-only exam paper controls (absent from the pupil edition). */
+.exam-panel{margin:14px 0;border:1px solid #d9cfbd;border-radius:8px;padding:10px 14px;background:#fcfaf6}.exam-panel summary{cursor:pointer;font-weight:700;padding:4px 0}.exam-panel summary small{font-weight:600;color:#7a5a24;margin-left:6px}.exam-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0 12px}.exam-panel input[type=text],.exam-panel textarea{font:inherit;font-weight:400;border:1px solid #aab9c4;border-radius:7px;padding:9px 11px;width:100%}.exam-panel textarea{resize:vertical;line-height:1.45}

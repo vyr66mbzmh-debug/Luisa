@@ -209,6 +209,52 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(pupil.get('/' + chapter + '?role=staff', base_url=host).status_code, 404)
         self.assertEqual(anon.get('/' + chapter, base_url=host).location, '/login')
 
+    def test_teacher_exam_paper_is_staff_only_and_denied_to_pupils_PAP_065(self):
+        import importlib.util
+        root = Path(__file__).resolve().parents[1]
+        spec = importlib.util.spec_from_file_location('luisa_build', root / 'scripts/luisa.py')
+        luisa = importlib.util.module_from_spec(spec); spec.loader.exec_module(luisa)
+        self.assertEqual(luisa.TEACHER_ONLY_FILES, {'papers-exam.js', 'papers-exam.css'})
+        source = (root / 'papers.html').read_bytes()
+        staff_dir = self.root / 'staff-library'
+        staff_dir.mkdir()
+        for directory, edition in ((self.build, 'student'), (staff_dir, 'staff')):
+            page = luisa.student_content('papers.html', source, set(), set(), root, staff=edition == 'staff').decode()
+            (directory / 'papers.html').write_text(page)
+            files = {'papers.html': {}}
+            if edition == 'staff':
+                for name in luisa.TEACHER_ONLY_FILES:
+                    (directory / name).write_bytes((root / name).read_bytes()); files[name] = {}
+            (directory / 'build-manifest.json').write_text(json.dumps({'edition': edition, 'files': files, 'revision': 'sample-release', 'version': '1'}))
+        pupil_page = (self.build / 'papers.html').read_text()
+        staff_page = (staff_dir / 'papers.html').read_text()
+        # The pupil edition carries no exam controls, script reference or marker.
+        for marker in ('papers-exam', 'luisa-teacher-exam', 'Exam paper', 'Teachers only'):
+            self.assertNotIn(marker, pupil_page)
+        self.assertEqual(staff_page.count('<script defer src="papers-exam.js"></script>'), 1)
+        for control in ('id="papers-exam"', 'id="papers-exam-print"', 'id="papers-exam-instructions"', 'id="papers-exam-map"'):
+            self.assertIn(control, staff_page)
+        app = create_app(dict(self.app.config, STAFF_BUILD_DIR=str(staff_dir)))
+        staff, pupil, anon = (app.test_client() for _ in range(3))
+        password = 'Sample-course-password'
+        encoded = PasswordHasher().hash(password)
+        self.add('02341')
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('UPDATE accounts SET password_hash=? WHERE school_number=?', (encoded, '02341'))
+            conn.execute('INSERT INTO staff_accounts(username,password_hash,force_change) VALUES(?,?,0)', ('sample.teacher', encoded))
+        host = 'https://ada.test'
+        for device, identity in ((staff, 'sample.teacher'), (pupil, '02341@marlboroughcollege.org')):
+            self.assertEqual(self.post_form(device, '/login', {'email': identity, 'password': password}).location, '/')
+        for name in sorted(luisa.TEACHER_ONLY_FILES):
+            with staff.get('/' + name, base_url=host) as response:
+                self.assertEqual(response.status_code, 200)
+                self.assertEqual(response.get_data(), (root / name).read_bytes())
+            self.assertEqual(pupil.get('/' + name, base_url=host).status_code, 404)
+            self.assertEqual(pupil.get('/' + name + '?role=staff', base_url=host).status_code, 404)
+            self.assertEqual(anon.get('/' + name, base_url=host).location, '/login')
+        self.assertIn('id="papers-exam"', staff.get('/papers.html', base_url=host).get_data(as_text=True))
+        self.assertNotIn('papers-exam', pupil.get('/papers.html', base_url=host).get_data(as_text=True))
+
     def test_private_preview_uses_only_its_bare_username_and_pupil_rights(self):
         self.add('00001')
         first = 'Private-first-secret'

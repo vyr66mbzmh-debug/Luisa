@@ -4983,7 +4983,7 @@
       "acceptance": [
         "Use genuine topic/skill/mark metadata for future past-paper imports. Do not invent marks or difficulty for current questions.",
         "Owner proposed original-paper position difficulty: first five easy, last five difficult, others medium. Resolve overlap for short papers before use.",
-        "Estimated duration uses six marks per five minutes when marks exist. Future scope includes IGCSE."
+        "Estimated duration uses six minutes per five marks, rounded down, when marks exist (PAP-065B). Future scope includes IGCSE."
       ],
       "evidence": [
         "GitHub issue #97"
@@ -5000,7 +5000,7 @@
       "acceptance": [
         "Use exactly two source checkboxes: Practice questions and Exam bank; preserve stable source IDs, Edexcel eligibility and duplicate-free combined selection. Exam bank contains verified exam-style practice-bank questions, Bronze/Silver/Gold (Easy/Medium/Difficult), and past papers.",
         "Import five supplied Summer 2025 papers with matching mark schemes from owner-provided originals. Preserve original prompts, diagrams, part labels and marks; map all relevant topics/skills. Past-paper order determines difficulty: first/last five for 15+ questions, thirds otherwise.",
-        "Show per-question/page/overall marks without double-counting continuations. Only complete actual-past-paper selections receive practice time at ceil(total marks × 5/6) minutes; never invent missing marks.",
+        "Show per-question/page/overall marks without double-counting continuations. Only complete actual-past-paper selections received practice time at ceil(total marks × 5/6) minutes (superseded by PAP-065B from v0.65); never invent missing marks.",
         "One question per page, two per page or condensed; with worked solutions at the back or questions only. Without answers excludes solutions, hints and marking guidance completely. Long questions retain readable continuation pages.",
         "Replace question-pool heading with the dynamic eligible count followed by questions in the selection; remove redundant lower pool message.",
         "Correct Core Pure 1 Ch4 root-list error and explicitly define S/T notation with original Greek root symbols; update corresponding slides/booklets. Correct skill1.01 Q23 working and all relevant solution outputs.",
@@ -5140,6 +5140,72 @@
         "tests/test_exam_metadata.py",
         "tests/test_papers_selection.py",
         "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-065A",
+      "requirement": "Show every sub-question mark indicator as a bold bracketed number, for example (4), right-aligned to the right margin on the last line of the part it scores.",
+      "scope": "v0.65 Papers on screen and in every print layout (one per page, condensed, with or without solutions) and the teacher exam paper, for practice, exam-style and past-paper questions",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #114, 22 November 2026",
+      "acceptance": [
+        "Each question total stays right-aligned on the heading line as [N Marks] and remains the sum of its part marks.",
+        "Every indicator is a bold number in normal brackets; Practice Booklet \"(N marks)\" displays as (N) without changing stored source text or computed totals.",
+        "The indicator sits in a reserved right margin on the last line of its part: its last line of text, displayed equation, figure or table. It never takes a line of its own unless the part ends there, never overlaps content and never starts a continuation page alone.",
+        "Verified in real PDFs for long parts, wrapped lines, displayed equations ending a part, a mark alone in its source paragraph, a part ending in a figure, a three-cell table and a multi-page question."
+      ],
+      "evidence": [
+        "tests/papers_print_browser.py (PAP_065A)",
+        "papers-print.js normaliseMarks/placeMarks",
+        "GitHub issue #114"
+      ]
+    },
+    {
+      "id": "PAP-065B",
+      "requirement": "The stated time for any paper with a mark total is six minutes per five marks, rounded down to the whole minute: minutes = floor(marks x 6 / 5), so 54 marks gives 64 minutes.",
+      "scope": "v0.65 every paper time or duration shown or stored",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #114, 22 November 2026",
+      "acceptance": [
+        "One shared rule (LUISA_PAPERS_PRINT.paperMinutes) feeds the Papers summary (\"Time: N minutes\", now for every selection with a complete mark total, not only past papers) and the exam paper front page and builder summary.",
+        "Replaces the v0.59 rule ceil(marks x 5/6) in PAP-059 and clarifies PAP-FUTURE-METADATA.",
+        "Board durations are kept only where explicitly labelled as the original exam duration: the import evidence field is renamed originalExamDurationMinutes in docs/evidence/v062-import-pure2.json and v064-import-june2024.json. docs/evidence/v059-import-pure1.json keeps its historical v0.59 print record unchanged.",
+        "Normal question-paper printouts and student booklets show no paper time, so they need no change."
+      ],
+      "evidence": [
+        "tests/papers_print_browser.py (PAP_065B)",
+        "tests/test_papers_selection.py",
+        "GitHub issue #114"
+      ]
+    },
+    {
+      "id": "PAP-065C",
+      "requirement": "Teacher-only exam paper option in the existing paper builder, using the same selection, chapter filters, single or mixed papers, ordering options and saved selections.",
+      "scope": "v0.65 Cloudflare owner edition and ADA staff; absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #114, 22 November 2026",
+      "acceptance": [
+        "One question per two pages: the question page then a lined blank page; longer questions round up to an even page count, so every question starts on an odd page.",
+        "Thin grey answer lines exactly 0.8 cm apart fill the remaining space on the question page and the whole following page(s).",
+        "Bottom right of each question's final page, bold: (Total for Question N is M marks), N the question number in this paper and M its summed marks.",
+        "After the last question, a drawn horizontal rule then bold capitals TOTAL FOR PAPER IS [n] MARKS.",
+        "No header on any page; footer only, no rule, exactly \"Page [page] of [total]\". Question pages number from 1 and the total excludes the front page, which has no footer. Solutions are never printed.",
+        "Front page per the owner template exam-front-page-template.png (owner-supplied, kept outside Git; SHA-256 19a733df98252125229a9a7adba3276bb76e08f1fc3bb5b496ab448dc63688de): A4, Arial-style; centred Name line and a full-width rule; large bold \"[Year group] [Title]\"; smaller bold month and year (default current, editable); optional \"Date:\" line hidden when empty; a rule; Time (rule PAP-065B) with non-bold (+X minutes extra time), X = 25% of the minutes rounded to the nearest minute; Total marks available; Total marks achieved with a blank; a third rule near the bottom; editable instruction paragraphs (owner defaults); the typeset g = 9.8 m s^-2 line when any question comes from Mechanics; and an editable automatic course map (one line per course in question order, bold course name), omitted when all questions share a course.",
+        "Pupil edition: papers-exam.js, papers-exam.css and the builder controls are removed at build time; direct requests are denied (404) for pupils and redirect to sign-in when signed out; check-artifact fails a pupil artifact that exposes them or an owner/staff artifact that lacks them.",
+        "Defaults applied without asking: the exam paper uses the same saved selections as the builder; v0.62+ print layouts and saved selections are unchanged; course groups are Pure (Pure Year 1/2, 9MA0/01-02), Core (Pure Core 1/2, 9FM0), Statistics and Mechanics; questions without known marks cannot go in an exam paper; question headings show only the number and total, without source provenance or difficulty; front-page fields are kept for the browser session."
+      ],
+      "evidence": [
+        "tests/papers_print_browser.py (PAP_065C)",
+        "tests/test_student_auth.py (PAP_065)",
+        "tests/test_papers_selection.py",
+        "scripts/luisa.py TEACHER_ONLY_FILES",
+        "GitHub issue #114"
       ]
     }
   ]

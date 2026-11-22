@@ -118,6 +118,21 @@
     page = 0; updateControls(); persist();
     if (browseOpen) renderBrowse();
   }
+  function printSnapshot() {
+    const ordered = [...selected];
+    if ($('papers-order').value === 'topic') ordered.sort((a,b) => orderedChapter(a).rank - orderedChapter(b).rank);
+    if ($('papers-order').value === 'paper') ordered.sort(paperOrder);
+    return Object.freeze(ordered.map(row => Object.freeze({...row, printChapter: orderedChapter(row)})));
+  }
+  // Narrow hook for the teacher-only exam paper (papers-exam.js), which uses the same selection.
+  window.LUISA_PAPERS_BUILDER = Object.freeze({
+    snapshot: printSnapshot, busy: () => Boolean(operation) || printing, status,
+    async run(task) {
+      if (!selected.length || operation || printing) return;
+      printing = true; updateControls();
+      try { return await task(); } finally { printing = false; updateControls(); }
+    }
+  });
   function updateControls() {
     const busy = Boolean(operation) || printing;
     $('papers-generate').disabled = busy || !pool().length;
@@ -127,6 +142,7 @@
     $('papers-cancel').hidden = !operation;
     $('papers-selected').setAttribute('aria-busy', String(Boolean(operation)));
     document.querySelectorAll('[data-add], [data-remove]').forEach(button => { button.disabled = busy; });
+    document.dispatchEvent(new CustomEvent('luisa-papers-state'));
   }
   function cancelLoading(announce = true) {
     if (!operation) return;
@@ -205,8 +221,12 @@
       scroll.setAttribute('aria-label', 'Question table; scroll horizontally if needed');
       table.before(scroll); scroll.append(table);
     });
+    window.LUISA_PAPERS_PRINT?.normaliseMarks?.(container);
     try { renderMath(container); }
     catch (_) { container.replaceChildren(element('p', 'This mathematical preview could not be rendered. Reload the page before printing.', 'preview-error')); }
+    // Re-align the marks margin whenever wrapping changes (width, fonts or images).
+    const placeMarks = window.LUISA_PAPERS_PRINT?.placeMarks;
+    if (typeof placeMarks === 'function' && container.querySelector('.marks')) new ResizeObserver(() => placeMarks(container)).observe(container);
   }
   function updateSelection() {
     const currentIds = new Set(selected.map(r => r.id));
@@ -221,7 +241,8 @@
     const marks = known.reduce((n, r) => n + r.marks, 0);
     let summary = selected.length ? `${selected.length} questions` : '';
     if (known.length) summary += known.length === selected.length ? ` · ${marks} marks` : ` · ${marks} known marks (${known.length} of ${selected.length} questions)`;
-    if (selected.length && known.length === selected.length && selected.every(r => r.sourceKind === 'past-exam')) summary += ` · Suggested practice time: ${Math.ceil(marks * 5 / 6)} minutes`;
+    // Owner rule B (v0.65): any paper with a complete mark total states 6 minutes per 5 marks, rounded down.
+    if (selected.length && known.length === selected.length && marks > 0) summary += ` · Time: ${Math.floor(marks * 6 / 5)} minutes`;
     $('papers-summary').textContent = summary;
     $('papers-empty').hidden = Boolean(selected.length);
     $('papers-selected').replaceChildren(...selected.map(row => {
@@ -454,10 +475,7 @@
     $('papers-print').addEventListener('click', async () => {
       if (!selected.length || operation || printing) return;
       // Snapshot before opening: future edits cannot change this paper or its solutions.
-      const ordered = [...selected];
-      if ($('papers-order').value === 'topic') ordered.sort((a,b) => orderedChapter(a).rank - orderedChapter(b).rank);
-      if ($('papers-order').value === 'paper') ordered.sort(paperOrder);
-      const snapshot = Object.freeze(ordered.map(row => Object.freeze({...row, printChapter: orderedChapter(row)})));
+      const snapshot = printSnapshot();
       printing = true; updateControls(); status('Preparing the print preview…');
       try {
         const result = await window.LUISA_PAPERS_PRINT.create(snapshot, {layout: printLayout(), includeAnswers: $('papers-answers').checked});

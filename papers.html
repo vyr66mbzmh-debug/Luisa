@@ -54,6 +54,24 @@
 </div>
 </div>
 <p id="papers-summary" class="paper-summary" aria-live="polite"></p>
+<!--luisa-teacher-exam-->
+<details id="papers-exam" class="exam-panel">
+<summary>Exam paper <small>Teachers only</small></summary>
+<p class="help">Prints the paper above as a lined exam paper with a front page: one question per two pages, totals for each question and the paper, and no solutions.</p>
+<div class="exam-fields">
+<label class="field" for="papers-exam-year">Year group<input id="papers-exam-year" type="text" autocomplete="off" placeholder="e.g. L6"></label>
+<label class="field" for="papers-exam-title">Title<input id="papers-exam-title" type="text" autocomplete="off"></label>
+<label class="field" for="papers-exam-month">Month and year<input id="papers-exam-month" type="text" autocomplete="off"></label>
+<label class="field" for="papers-exam-date">Date (optional)<input id="papers-exam-date" type="text" autocomplete="off" placeholder="e.g. Friday 20th November P4 &amp; P5"></label>
+</div>
+<label class="field" for="papers-exam-instructions">Instructions (leave a blank line between paragraphs)<textarea id="papers-exam-instructions" rows="7"></textarea></label>
+<p class="help">The g = 9.8 m s⁻² instruction is added automatically when any question comes from Mechanics.</p>
+<label class="field" for="papers-exam-map">Course map (automatic; edit if needed)<textarea id="papers-exam-map" rows="3"></textarea></label>
+<div class="button-row"><button id="papers-exam-map-reset" type="button" class="quiet">Regenerate course map</button><button id="papers-exam-print" class="primary" type="button" disabled>Preview exam paper</button></div>
+<p id="papers-exam-summary" class="help" aria-live="polite"></p>
+</details>
+<script defer src="papers-exam.js"></script>
+<!--/luisa-teacher-exam-->
 <p id="papers-selection-note" class="help">Your selection stays in this browser tab for this session.</p><p id="papers-empty">No questions selected. Generate a paper or browse the questions below.</p><ol id="papers-selected" class="selected-list"></ol>
 </section>
 <section class="panel" aria-labelledby="browse-title"><div class="section-heading"><h2 id="browse-title">Pick individual questions</h2><button id="papers-browse" type="button" disabled>Browse questions</button></div><p class="help">Preview the original question before adding it. You can combine questions from different topics and books.</p>

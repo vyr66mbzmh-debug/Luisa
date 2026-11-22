@@ -507,5 +507,197 @@ class PapersPrintTests(unittest.TestCase):
             'nodes=>nodes.length>0&&nodes.every(n=>getComputedStyle(n).verticalAlign==="top")'))
 
 
+    # PAP-065A: sub-question marks are bold bracketed numbers in the right margin, on the
+    # last line of their part (text, displayed equation or figure), in every layout.
+    MARK_GEOMETRY = """nodes => nodes.map(mark => {
+      const host = mark.offsetParent, box = host.getBoundingClientRect(), style = getComputedStyle(host);
+      const own = mark.getBoundingClientRect(), part = mark.parentElement.closest('li, td, .math-content');
+      const before = [];
+      const walk = node => { for (const child of node.childNodes) {
+        if (child === mark) return true;
+        if (child.nodeType === 3) { if (child.textContent.trim()) { const r = document.createRange(); r.selectNodeContents(child); before.push(...[...r.getClientRects()].filter(x => x.height)); } continue; }
+        if (child.nodeType !== 1 || child.matches('.marks')) continue;
+        if (child.contains(mark)) return walk(child);
+        if (child.matches('.katex, img, table, figure')) { before.push(child.getBoundingClientRect()); continue; }
+        if (walk(child)) return true; } return false; };
+      walk(part);
+      const middle = (own.top + own.bottom) / 2;
+      const content = [...host.querySelectorAll('.katex, img, table, p, li > :not(ol):not(ul):not(.marks)')].filter(n => !n.closest('.marks'));
+      return {text: mark.textContent, weight: getComputedStyle(mark).fontWeight,
+        rightGap: box.right - parseFloat(style.borderRightWidth) - own.right,
+        gutter: parseFloat(style.paddingRight), onLine: before.some(r => r.top - 1 <= middle && middle <= r.bottom + 1),
+        lowerBefore: before.filter(r => r.bottom > own.bottom + 3).length,
+        overlap: [...host.querySelectorAll('.katex-html, img')].filter(n => { const r = n.getBoundingClientRect(); return r.right > own.left + 1 && r.bottom > own.top + 1 && r.top < own.bottom - 1; }).length,
+        alone: mark.parentElement.matches('p') && mark.parentElement.textContent.trim() === mark.textContent.trim()};
+    })"""
+
+    def assert_marks_aligned(self, preview):
+        geometry = preview.locator('.print-page .marks').evaluate_all(self.MARK_GEOMETRY)
+        self.assertTrue(geometry)
+        for mark in geometry:
+            with self.subTest(mark=mark):
+                self.assertRegex(mark['text'], r'^\(\d+\)$')
+                self.assertEqual(mark['weight'], '700')
+                self.assertLessEqual(abs(mark['rightGap']), 1)
+                self.assertGreater(mark['gutter'], 20)
+                self.assertTrue(mark['onLine'])
+                self.assertEqual(mark['lowerBefore'], 0)
+                self.assertEqual(mark['overlap'], 0)
+                self.assertFalse(mark['alone'])
+        return geometry
+
+    def test_sub_question_marks_bold_right_aligned_on_last_line_in_every_layout_PAP_065A(self):
+        import fitz
+        rows = (self.exam_rows('edexcel-9fm0-01-2025-june', [9]) + self.exam_rows('edexcel-9fm0-01-2024-june', [6])
+                + self.exam_rows('edexcel-9ma0-32-2024-june', [5]) + self.exam_rows('edexcel-9ma0-02-2025-june', [15])
+                + [practice_row('pure-year-1', 1, '1.6/q9'), practice_row('pure-year-1', 13, '13.5/q7'), practice_row('pure-year-1', 11, '11.3/q7')])
+        for item in rows[4:]:
+            item['marks'] = sum(map(int, __import__('re').findall(r'class="marks">\((\d+)', item['question'])))
+        expected = sum(len(__import__('re').findall(r'class="marks"', r['question'])) for r in rows)
+        with tempfile.TemporaryDirectory() as folder:
+            for layout in ('one', 'condensed'):
+                for answers in (False, True):
+                    with self.subTest(layout=layout, answers=answers):
+                        preview, result = self.preview(rows, layout=layout, includeAnswers=answers)
+                        self.assertTrue(result['ready'], result)
+                        self.assertEqual(preview.locator('.questions-page .question-marks').all_text_contents(), [f"[{r['marks']} Marks]" for r in rows])
+                        self.assertEqual(len(self.assert_marks_aligned(preview)), expected)
+                        path = f'{folder}/{layout}-{int(answers)}.pdf'
+                        preview.pdf(path=path, prefer_css_page_size=True)
+                        with fitz.open(path) as pdf:
+                            spans = [span for sheet in pdf for block in sheet.get_text('dict')['blocks'] for line in block.get('lines', [])
+                                     for span in line['spans'] if __import__('re').fullmatch(r'\(\d+\)', span['text'].strip())]
+                            self.assertEqual(len(spans), expected)
+                            self.assertTrue(all(span['flags'] & 16 for span in spans))  # bold
+                            # Apart from per-cell marks in the three-part table and two-column parts, every
+                            # indicator ends at the same right margin of the page.
+                            rights = [span['bbox'][2] for span in spans]
+                            margin = max(rights)
+                            self.assertGreaterEqual(sum(abs(r - margin) < 1.5 for r in rights), len(rights) - 6)
+                            if layout == 'one' and not answers:
+                                pdf[0].get_pixmap(dpi=110).save(f'/tmp/luisa65-marks-{layout}.png')
+                        preview.close()
+
+    def test_paper_time_is_six_minutes_per_five_marks_rounded_down_PAP_065B(self):
+        minutes = self.page.evaluate('[54, 100, 75, 50, 7, 61, 1, 4, 5, 0].map(LUISA_PAPERS_PRINT.paperMinutes)')
+        self.assertEqual(minutes, [64, 120, 90, 60, 8, 73, 1, 4, 6, None])
+
+    def exam_paper(self, rows, **options):
+        self.page.add_script_tag(url='/papers-exam.js')
+        with self.page.expect_popup() as event:
+            self.page.evaluate('input => { window.resultPromise = LUISA_PAPERS_EXAM.create(input.rows,input.options).then(r => window.result = {ready:r.ready,warnings:r.warnings,pageCount:r.pageCount}); }', dict(rows=rows, options=options))
+        preview = event.value
+        self.page.evaluate('window.resultPromise')
+        return preview, self.page.evaluate('window.result')
+
+    def test_teacher_exam_paper_structure_front_page_and_pdf_PAP_065C(self):
+        import fitz, re
+        long_row = dict(practice_row('pure-year-1', 1, '1.6/q9'), id='practice/test/long', marks=25,
+                        question='<ol class="parts">' + ''.join(f'<li><p>{"Show that the long sequence term " * 6}{n}.</p><div class="equation" data-math="u_{{{n}}}=\\frac{{{n}}}{{{n}+1}}" data-display="true"></div><p>{"Explain each step clearly. " * 8}</p><span class="marks">(1)</span></li>' for n in range(1, 26)) + '</ol>')
+        rows = (self.exam_rows('edexcel-9fm0-01-2024-june', [1, 2]) + self.exam_rows('edexcel-9ma0-31-2024-june', [1, 2, 3])
+                + self.exam_rows('edexcel-9ma0-32-2024-june', [5]) + [long_row])
+        total = sum(r['marks'] for r in rows)
+        preview, result = self.exam_paper(rows, yearGroup='L6', title='Further Maths Assessment 1', monthYear='November 2026',
+                                          date='Friday 20th November P4 & P5')
+        self.assertTrue(result['ready'], result)
+        self.assertEqual(preview.title(), 'Exam Paper')
+        front = preview.locator('.exam-front-page')
+        self.assertEqual(front.count(), 1)
+        self.assertEqual(preview.locator('.print-page').first.get_attribute('class'), 'print-page exam-front-page')
+        self.assertEqual(front.locator('.page-footer').count(), 0)
+        self.assertEqual(front.locator('.exam-title').inner_text(), 'L6 Further Maths Assessment 1')
+        self.assertEqual(front.locator('.exam-month').inner_text(), 'November 2026')
+        self.assertEqual(front.locator('.exam-date').inner_text(), 'Date: Friday 20th November P4 & P5')
+        minutes = total * 6 // 5
+        self.assertEqual(front.locator('.exam-time').inner_text(), f'Time: {minutes} minutes (+{int(minutes * 0.25 + 0.5)} minutes extra time)')
+        self.assertEqual(front.locator('.exam-time strong').inner_text(), 'Time:')
+        self.assertEqual(front.locator('.exam-extra').evaluate('n=>getComputedStyle(n).fontWeight'), '400')
+        self.assertEqual(front.locator('.exam-marks-available').inner_text(), f'Total marks available: {total}')
+        self.assertEqual(front.locator('.exam-marks-achieved strong').inner_text(), 'Total marks achieved:')
+        self.assertEqual(front.locator('hr.exam-rule').count(), 3)
+        self.assertEqual(front.locator('.exam-name').inner_text().strip(), 'Name:')
+        self.assertTrue(front.evaluate("n=>getComputedStyle(n).fontFamily.startsWith('Arial')"))
+        paragraphs = front.locator('.exam-instructions > p').all_inner_texts()
+        self.assertEqual(paragraphs[:4], ['Calculators may be used.',
+            'Mathematical formulae booklet is provided. Answer all questions and ensure that your answers to parts of questions are clearly labelled.',
+            'Should you use additional paper, make sure that question number is clearly labelled',
+            'Answers should be given to three significant figures unless otherwise stated.'])
+        self.assertIn('Unless otherwise indicated, wherever a value of', paragraphs[4])
+        self.assertEqual(front.locator('.exam-gravity [data-math]').evaluate_all('ns=>ns.map(n=>n.dataset.math)'), ['g', 'g = 9.8\\,\\mathrm{m\\,s^{-2}}'])
+        self.assertEqual(front.locator('.exam-gravity .katex').count(), 2)
+        self.assertEqual(front.locator('.exam-course-map p').all_inner_texts(),
+                         ['Questions 1 and 2 are from Core', 'Questions 3, 4 and 5 are from Statistics', 'Question 6 is from Mechanics', 'Question 7 is from Pure'])
+        self.assertEqual(front.locator('.exam-course-map strong').all_inner_texts(), ['Core', 'Statistics', 'Mechanics', 'Pure'])
+        self.assertEqual(front.evaluate('n=>n.scrollHeight-n.clientHeight'), 0)
+        # No header on any page; solutions never printed.
+        self.assertEqual(preview.locator('.page-banner, .print-solution, .solutions-page, .working-space').count(), 0)
+        self.assertNotIn('-ms-', preview.content())
+        pages = preview.locator('.exam-page')
+        count = pages.count()
+        self.assertEqual(count, result['pageCount'])
+        self.assertEqual(pages.locator('.page-footer').all_inner_texts(), [f'Page {n} of {count}' for n in range(1, count + 1)])
+        self.assertTrue(pages.locator('.page-footer').evaluate_all("ns=>ns.every(n=>getComputedStyle(n).borderTopStyle==='none')"))
+        layout = pages.evaluate_all("""ns=>ns.map(n=>({q:[...new Set([...n.querySelectorAll('.exam-question')].map(x=>x.dataset.questionId))],
+            first:Boolean(n.querySelector('.exam-question .question-marks')), total:n.querySelector('.question-total')?.textContent||null,
+            lines:n.querySelectorAll('.answer-line').length, area:n.querySelector('.answer-lines')?.clientHeight||0}))""")
+        starts = [i + 1 for i, page in enumerate(layout) if page['first']]
+        self.assertEqual(len(starts), len(rows))
+        self.assertTrue(all(n % 2 == 1 for n in starts), starts)
+        spans = [b - a for a, b in zip(starts, starts[1:] + [count + 1])]
+        self.assertTrue(all(span >= 2 and span % 2 == 0 for span in spans), spans)
+        self.assertGreaterEqual(spans[-1], 4)  # the long question runs past two pages and rounds up to an even count
+        totals = [page['total'] for page in layout if page['total']]
+        self.assertEqual(totals, [f"(Total for Question {n} is {r['marks']} mark{'s' if r['marks'] != 1 else ''})" for n, r in enumerate(rows, 1)])
+        for start, span in zip(starts, spans):
+            self.assertTrue(layout[start + span - 2]['total'])
+            if span == 2:
+                self.assertGreater(layout[start]['area'], 600)  # the blank second page is fully lined
+        self.assertEqual(preview.locator('.question-total').evaluate_all("ns=>ns.map(n=>[getComputedStyle(n).fontWeight,getComputedStyle(n).textAlign])"), [['700', 'right']] * len(rows))
+        ys = preview.locator('.answer-rules').first.locator('.answer-line').evaluate_all('ns=>ns.map(n=>n.y1.baseVal.value)')
+        self.assertTrue(all(abs(b - a - 8 / 25.4 * 96) < .01 for a, b in zip(ys, ys[1:])), ys)
+        style = preview.locator('.answer-line').first.evaluate('n=>{const s=getComputedStyle(n);return [s.strokeWidth,s.stroke]}')
+        self.assertEqual(style[0], '0.5px')
+        r, g, b = map(int, re.findall(r'\d+', style[1])[:3])
+        self.assertTrue(r == g == b and 120 <= r <= 200, style)
+        self.assertEqual(pages.last.locator('hr.paper-end-rule').count(), 1)
+        self.assertEqual(pages.last.locator('.paper-total').inner_text(), f'TOTAL FOR PAPER IS {total} MARKS')
+        self.assertEqual(pages.last.locator('.paper-total').evaluate('n=>getComputedStyle(n).fontWeight'), '700')
+        self.assertEqual(preview.locator('.paper-total').count(), 1)
+        self.assert_marks_aligned(preview)
+        with tempfile.TemporaryDirectory() as folder:
+            path = f'{folder}/exam.pdf'
+            preview.pdf(path=path, prefer_css_page_size=True)
+            with fitz.open(path) as pdf:
+                self.assertEqual(len(pdf), count + 1)
+                self.assertNotIn('Page ', pdf[0].get_text())
+                self.assertIn('L6 Further Maths Assessment 1', pdf[0].get_text())
+                for n in range(1, count + 1):
+                    text = pdf[n].get_text()
+                    self.assertEqual(re.findall(r'Page \d+ of \d+', text), [f'Page {n} of {count}'])
+                    self.assertNotIn('Question paper', text)
+                self.assertIn(f'TOTAL FOR PAPER IS {total} MARKS', pdf[count].get_text())
+                # Grey ruled lines exactly 0.8 cm apart on a fully lined second page.
+                ys = sorted({round(d['rect'].y1, 2) for d in pdf[2].get_drawings() if d['rect'].width > 400 and d['rect'].height < 2})
+                gaps = [b - a for a, b in zip(ys, ys[1:])]
+                self.assertGreater(len(gaps), 25)
+                self.assertTrue(all(abs(gap - 8 / 25.4 * 72) < .05 for gap in gaps), gaps)
+                for n in (0, 1, 2, count):
+                    pdf[n].get_pixmap(dpi=90).save(f'/tmp/luisa65-exam-p{n}.png')
+
+    def test_exam_paper_single_course_has_no_map_or_gravity_and_requires_marks_PAP_065C(self):
+        rows = self.exam_rows('edexcel-9ma0-31-2024-june', [1, 2])
+        preview, result = self.exam_paper(rows, title='Statistics Quiz')
+        self.assertTrue(result['ready'], result)
+        self.assertEqual(preview.locator('.exam-course-map, .exam-gravity, .exam-date').count(), 0)
+        self.assertEqual(preview.locator('.exam-title').inner_text(), 'Statistics Quiz')
+        self.assertEqual(preview.locator('.exam-page').count(), 4)
+        preview.close()
+        unknown = [dict(rows[0]), dict(row('1.01', 1))]
+        unknown[1].pop('marks', None)
+        self.page.add_script_tag(url='/papers-exam.js')
+        error = self.page.evaluate('rows => LUISA_PAPERS_EXAM.create(rows, {}).then(() => null, e => e.message)', unknown)
+        self.assertIn('needs the marks for every question', error)
+
+
 if __name__ == '__main__':
     unittest.main()
