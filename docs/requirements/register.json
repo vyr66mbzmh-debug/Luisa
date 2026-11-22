@@ -5121,7 +5121,8 @@
         "GitHub issue #110",
         "GitHub issue #116",
         "GitHub issue #118",
-        "GitHub issue #120"
+        "GitHub issue #120",
+        "GitHub issue #122"
       ]
     },
     {
@@ -5556,6 +5557,90 @@
       "evidence": [
         "tests/test_papers_selection.py (PAP_068)",
         "GitHub issue #120"
+      ]
+    },
+    {
+      "id": "PAP-069-1",
+      "requirement": "Import the June 2023 Edexcel papers: Core Pure 1, Core Pure 2, Pure Mathematics 1, Pure Mathematics 2, Mech and Stats, each a question paper plus its official mark scheme. Identify each file by its cover and record SHA-256 hashes and page counts. Verify that the 167 KB Core Pure 1 question paper is complete. Hold any incomplete paper, record its blocker and continue with the rest; never guess or silently repair a question.",
+      "acceptance": [
+        "Each of the six papers is paired with its scheme by cover (code, paper and series), with SHA-256 hashes and page counts recorded in docs/evidence/v069-import-june2023.json; source PDFs stay read-only and outside Git and published artifacts.",
+        "The 9FM0/01 question paper (167,256 bytes) is checked complete: cover question count and total, page barcode sequence and every per-question total.",
+        "Any incomplete or ambiguous paper is held with its blocker recorded and is not published; any source error is recorded, not repaired."
+      ],
+      "scope": "v0.69 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (job 2 of the owner decision), GitHub #122, 22 November 2026",
+      "evidence": [
+        "GitHub issue #122",
+        "docs/evidence/v069-import-june2023.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-069-2",
+      "requirement": "Import to the same standard as June 2025/2024: one payload record per question in the original wording with its subparts, diagrams and marks; the complete official scheme for each question; an independent maths check with a checkpoint for every question; marks reconciled; faithful figure crops; mapping to book/chapter keys and skills; paper-order difficulty; metadata and catalogue joins; a per-question evidence record in docs/evidence/. Reuse the existing tooling and consult content/exams/README.md.",
+      "acceptance": [
+        "59 questions with stable IDs exam/edexcel-<code>-2023-june/q<n>, original wording transcribed from the page images, part labels, marks and question-specific instructions; printed part marks sum to each question total, and question totals equal the scheme totals.",
+        "Each question carries every question-specific scheme page as ordered vector crops covering every text span and image exactly once, and no other question's material.",
+        "Every question has an independent SymPy/numeric checkpoint compared with the official scheme answers.",
+        "pilot-metadata.json and exam-catalogue.json gain the six papers with chapter keys, skills, source hashes, source pages and paper-order difficulty; the evidence file has one record per question."
+      ],
+      "scope": "v0.69 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (job 2 of the owner decision), GitHub #122, 22 November 2026",
+      "evidence": [
+        "GitHub issue #122",
+        "docs/evidence/v069-import-june2023.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-069-3",
+      "requirement": "Verify each paper: selectable by name, including with the v0.68 dropdown behaviour; selects only its own questions; works with filters, saved selections and mixed selections; prints in source order, one per page and condensed, with solutions on and off and the correct schemes.",
+      "acceptance": [
+        "The Past Papers dropdown lists 18 papers (19 options with All); the 2023 papers follow Course and Book (Maths A level 12 papers, Further Maths 6).",
+        "Choosing a 2023 paper selects only its own questions; In paper order, saved selections, mixed selections and reload work.",
+        "Each 2023 paper prints complete in one-per-page and condensed layouts with solutions on and off, in source order, each question with only its own scheme; real PDF pages are inspected."
+      ],
+      "scope": "v0.69 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (job 2 of the owner decision), GitHub #122, 22 November 2026",
+      "evidence": [
+        "GitHub issue #122",
+        "docs/evidence/v069-import-june2023.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-069-4",
+      "requirement": "Update counts and tests with positive assertions. Publish only papers that pass full verification and review, and list any held papers with their blockers.",
+      "acceptance": [
+        "Tests assert 18 papers, 180 past-paper questions, 1,350 marks and the expected dropdown contents and orders; 8,802 questions overall.",
+        "Only papers passing verification and independent review are published; held papers, if any, are listed with blockers in the issue, HANDOFF.md and the owner report."
+      ],
+      "scope": "v0.69 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (job 2 of the owner decision), GitHub #122, 22 November 2026",
+      "evidence": [
+        "GitHub issue #122",
+        "docs/evidence/v069-import-june2023.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
       ]
     }
   ]

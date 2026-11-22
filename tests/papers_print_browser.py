@@ -308,10 +308,19 @@ class PapersPrintTests(unittest.TestCase):
             self.assertNotIn('-ms-p', preview.content())
 
     def test_june_2024_complete_papers_print_in_every_layout(self):
+        self.assert_session_papers_print('June 2024', {
+            'edexcel-9ma0-01-2024-june': (15, 100), 'edexcel-9ma0-02-2024-june': (15, 100),
+            'edexcel-9ma0-31-2024-june': (6, 50), 'edexcel-9ma0-32-2024-june': (6, 50),
+            'edexcel-9fm0-01-2024-june': (8, 75), 'edexcel-9fm0-02-2024-june': (9, 75)})
+
+    def test_june_2023_complete_papers_print_in_every_layout(self):
+        self.assert_session_papers_print('June 2023', {
+            'edexcel-9ma0-01-2023-june': (15, 100), 'edexcel-9ma0-02-2023-june': (15, 100),
+            'edexcel-9ma0-31-2023-june': (6, 50), 'edexcel-9ma0-32-2023-june': (6, 50),
+            'edexcel-9fm0-01-2023-june': (8, 75), 'edexcel-9fm0-02-2023-june': (9, 75)})
+
+    def assert_session_papers_print(self, session, papers):
         import fitz, tempfile
-        papers = {'edexcel-9ma0-01-2024-june': (15, 100), 'edexcel-9ma0-02-2024-june': (15, 100),
-                  'edexcel-9ma0-31-2024-june': (6, 50), 'edexcel-9ma0-32-2024-june': (6, 50),
-                  'edexcel-9fm0-01-2024-june': (8, 75), 'edexcel-9fm0-02-2024-june': (9, 75)}
         with tempfile.TemporaryDirectory() as folder:
             for paper_id, (count, marks) in papers.items():
                 paper = self.exam_rows(paper_id, range(1, count + 1))
@@ -321,7 +330,7 @@ class PapersPrintTests(unittest.TestCase):
                         with self.subTest(paper=paper_id, layout=layout, answers=answers):
                             preview, result = self.preview(paper, layout=layout, includeAnswers=answers)
                             self.assert_exam_print(preview, result, paper, answers)
-                            self.assertIn('Edexcel June 2024', preview.locator('.questions-page').first.inner_text())
+                            self.assertIn('Edexcel ' + session, preview.locator('.questions-page').first.inner_text())
                             path = f'{folder}/{paper_id}-{layout}-{int(answers)}.pdf'
                             preview.pdf(path=path, prefer_css_page_size=True)
                             with fitz.open(path) as pdf:
@@ -377,7 +386,7 @@ class PapersPrintTests(unittest.TestCase):
         try:
             page = context.new_page()
             page.goto(f'http://127.0.0.1:{self.server.server_port}/papers.html')
-            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 13 && !document.querySelector('#papers-generate').disabled")
+            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 19 && !document.querySelector('#papers-generate').disabled")
             page.locator('#papers-source-practice').uncheck()
             page.locator('#papers-source-exam-style').uncheck()
             page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')
