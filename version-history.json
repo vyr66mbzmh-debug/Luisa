@@ -1,6 +1,26 @@
 {
-  "current": "0.66",
+  "current": "0.67",
   "releases": [
+    {
+      "version": "0.67",
+      "previous": "0.66",
+      "date": "2026-11-22",
+      "changes": [
+        "The exam paper can print Questions only (default), Mark scheme only, or Questions and mark scheme: each question's official scheme (past papers) or worked solution, in exam order, headed \"Question N\", with its own \"Mark scheme page x of y\" numbering.",
+        "Timed exam papers now land within two minutes of the target time.",
+        "New default front-page instructions, the Date field defaults to today (for example \"Sunday 22nd November\"), and three builder notes are removed."
+      ],
+      "requirements": [
+        "PAP-067-1",
+        "PAP-067-2",
+        "PAP-067-3",
+        "PAP-067-4",
+        "PAP-067-5",
+        "PAP-067-6",
+        "PAP-067-7",
+        "PAP-067-8"
+      ]
+    },
     {
       "version": "0.66",
       "previous": "0.65",

@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.67
+
+[Issue #118](https://github.com/vyr66mbzmh-debug/Luisa/issues/118) adds mark scheme print options, a ±2 minute timed target, new default instructions, a default date and fewer builder notes to the teacher-only exam paper.
+
 ## Papers v0.66
 
 [Issue #116](https://github.com/vyr66mbzmh-debug/Luisa/issues/116) adds timed generation, difficulty order, Question N headings and a LaTeX-style front page to the teacher-only exam paper.
