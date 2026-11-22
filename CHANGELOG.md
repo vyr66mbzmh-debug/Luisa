@@ -1,3 +1,9 @@
+## Luisa v0.65
+
+- Sub-question marks are bold bracketed numbers, such as (4), right-aligned in the margin on the last line of the part they score, on screen and in every print layout. Question totals stay on the heading line.
+- One paper-time rule: 6 minutes per 5 marks, rounded down (54 marks: 64 minutes). The Papers summary shows it for any selection with a complete mark total.
+- Teacher-only exam paper in Papers (owner and ADA staff): an editable front page, one question per two lined pages, question and paper totals, page numbers only and no solutions. The pupil edition omits and denies it.
+
 ## Luisa v0.64
 
 - Add the six June 2024 Edexcel papers to Past Papers: 9MA0/01 Pure Mathematics 1, 9MA0/02 Pure Mathematics 2, 9MA0/31 Statistics, 9MA0/32 Mechanics, 9FM0/01 Core Pure Mathematics 1 and 9FM0/02 Core Pure Mathematics 2.

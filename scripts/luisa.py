@@ -194,6 +194,9 @@ def student_restricted_pdfs(root):
 
 
 LIBRARY_PAGES = {'index.html', 'textbook-view.html', 'teaching-chapters.html', 'papers.html'}
+# PAP-065C: the exam paper is a teacher-only feature; pupil builds omit its files and controls.
+TEACHER_ONLY_FILES = {'papers-exam.js', 'papers-exam.css'}
+TEACHER_ONLY_BLOCK = re.compile(r'<!--luisa-teacher-exam-->.*?<!--/luisa-teacher-exam-->\n?', re.S)
 
 TEACHING_VIEWERS = {
     'lesson-viewer.html',
@@ -303,6 +306,7 @@ def student_content(name, content, restricted_urls, restricted_hashes, root, *, 
                 owner_url = json.loads((root / 'release.json').read_text())['publicBaseUrl'].rstrip('/')
                 text = text.replace('href="offline.html"', f'href="{owner_url}/offline.html#ada-staff=__LUISA_OFFLINE_LOGOUT__" target="_blank" rel="noopener noreferrer"')
             else:
+                text = TEACHER_ONLY_BLOCK.sub('', text)
                 # The full owner handoff includes historical release and deployment routes.
                 text = re.sub(r'<section id="release-handoff">.*?</section>', '', text, flags=re.S)
                 text = re.sub(r'<a\b(?=[^>]*href=["\'][^"\']*offline\.html[^"\']*["\'])[^>]*>.*?</a\s*>', '', text, flags=re.I|re.S)
@@ -404,6 +408,8 @@ def build(root=ROOT, output=None, profile='owner'):
                 continue
             if path.name == 'offline.html' or path.name.startswith('offline') or path.name == 'manifest.webmanifest':
                 continue
+            if profile == 'student' and name in TEACHER_ONLY_FILES:
+                continue
             content = student_content(name, content, restricted_urls, restricted_hashes, root, staff=profile == 'staff')
         target = output / name
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -442,6 +448,12 @@ def check_artifact(directory, profile, root=ROOT):
         labels = re.findall(r'<a\b[^>]*>(.*?)</a>', navigation[1], re.S) if navigation else []
         if labels != ['By skill', 'By textbook', 'Resources', 'Papers']:
             raise ValueError('Incorrect library navigation order: ' + name)
+    papers_page = (directory / 'papers.html').read_text()
+    teacher_exam = TEACHER_ONLY_FILES & files or 'papers-exam' in papers_page or 'luisa-teacher-exam' in papers_page
+    if profile == 'student' and teacher_exam:
+        raise ValueError('Student artifact exposes the teacher-only exam paper')
+    if profile != 'student' and not (TEACHER_ONLY_FILES <= files and papers_page.count('<script defer src="papers-exam.js"></script>') == 1 and 'id="papers-exam"' in papers_page):
+        raise ValueError(profile + ' artifact lacks the teacher exam paper')
     for name in TEACHING_VIEWERS:
         page = (directory / name).read_text()
         if ('id="library" href="teaching-chapters.html"' not in page or

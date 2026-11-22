@@ -1,5 +1,30 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.65 -->
+**Release 0.65 · GitHub #114.** Three Papers changes.
+
+**A · PAP-065A, marks.** Every sub-question mark is a bold number in normal brackets, such as **(4)**, right-aligned in a reserved margin on the last line of the part it scores: its last text line, displayed equation, figure or table. A mark that had a paragraph of its own moves up onto the part's last line, and Practice Booklet "(3 marks)" now reads (3). Stored question text and question totals are unchanged; the heading still shows the summed total as [N Marks]. This applies on screen and in every print layout, and in the exam paper. `LUISA_PAPERS_PRINT.normaliseMarks` and `placeMarks` in papers-print.js do the work; continuation splitting keeps each mark with the content it ends.
+
+**B · PAP-065B, timing.** Paper time = floor(marks × 6 / 5) minutes (54 → 64, 100 → 120, 75 → 90). One function, `LUISA_PAPERS_PRINT.paperMinutes`, feeds every displayed time:
+- the Papers summary, now "Time: N minutes" for any selection with a complete mark total, not only past papers
+- the exam paper front page and its builder summary.
+Board durations are stored only as `originalExamDurationMinutes` in the v0.62 and v0.64 import evidence. The v0.59 evidence keeps its historical print record. PAP-059's old ceil(marks × 5/6) rule is marked as superseded. Normal printouts and booklets show no time.
+
+**C · PAP-065C, teacher-only exam paper.** In Papers, open **Exam paper · Teachers only** under Your paper. It uses the same selection, filters, ordering and saved session as the builder.
+- **Fields:** year group, title, month and year (default: the current month), optional date line, instruction paragraphs (owner defaults) and an automatic, editable course map.
+- **Front page:** follows the owner template (kept outside Git), with Name, title, month, date, Time with +25% extra time, marks available and achieved, instructions, the typeset g = 9.8 m s⁻² line when any question is Mechanics, and the course map. The course map is omitted when there is one course.
+- **Question pages:** one question per two pages, rounded up to an even count, so each question starts on an odd page. Grey lines 0.8 cm apart fill the rest of the question page and the whole blank page. The question's last page ends with "(Total for Question N is M marks)" in bold. The last page also has a rule and "TOTAL FOR PAPER IS n MARKS".
+- **Headers and footers:** no headers; the footer reads "Page x of y", with the front page excluded and unnumbered. Solutions are never printed.
+- **Defaults:** the exam paper needs known marks for every question, and headings show only the number and total.
+- **Pupil edition:** the build removes `papers-exam.js`, `papers-exam.css` and the builder block. ADA returns 404 to pupils, and `check-artifact` enforces both editions.
+
+**Evidence and release.**
+- **Tests:** `tests/papers_print_browser.py` has the PAP_065A/B/C PDF tests: mark geometry and bold right-margin text in all four layouts, the timing table, and exam paper structure with real PDF line spacing. `tests/test_papers_selection.py` covers the builder flow and session restore, and `tests/test_student_auth.py` covers pupil denial.
+- **Unchanged:** v0.62+ print layouts, saved selections and question IDs.
+- **Release records:** the reviewed PR, live checks, recovery ZIP and owner report outcome are in GitHub #114.
+
+**Usage.** Up to the pull request this job used 22,070,629 tokens in the main session (input 222, cache creation 240,906, cache read 21,715,225, output 114,276; 111 calls), summed from per-call usage in the session transcript. The final figure, including the independent review, is in GitHub #114 and the owner report.
+
 <!-- LUISA-REPORT-HANDOFF v0.64 -->
 **Release 0.64 · GitHub #112.** Past Papers adds the six June 2024 Edexcel papers. Each has its own Past Papers dropdown option, for example "June 2024 Paper 1 (Maths · 9MA0/01)".
 

@@ -7,6 +7,59 @@
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const context = row => [row.courseTitle, row.bookTitle, row.topicTitle].filter(Boolean).join(' · ');
+  // Owner rule B (v0.65): six minutes per five marks, rounded down to the whole minute.
+  const paperMinutes = marks => Number.isInteger(marks) && marks > 0 ? Math.floor(marks * 6 / 5) : null;
+  // Owner rule A (v0.65): every sub-question indicator is a bold bracketed number,
+  // right-aligned in a reserved margin on the last line of the part it scores.
+  function normaliseMarks(root) {
+    for (const mark of root.querySelectorAll('.marks')) {
+      const amount = /^\((\d+)(?:\s*marks?)?\)$/i.exec(mark.textContent.trim());
+      if (amount) mark.textContent = `(${amount[1]})`;
+      const parent = mark.parentElement;
+      // A paragraph holding only the indicator would add an empty line of its own.
+      if (parent?.matches('p') && [...parent.childNodes].every(node => node === mark || (node.nodeType === 3 && !node.textContent.trim()))) parent.replaceWith(mark);
+    }
+    return root;
+  }
+  const atomic = '.katex, img, svg, table, figure, br, hr';
+  function precedingRects(node, mark, out) {
+    for (const child of node.childNodes) {
+      if (child === mark) return true;
+      if (child.nodeType === 3) {
+        if (!child.textContent.trim()) continue;
+        const range = child.ownerDocument.createRange(); range.selectNodeContents(child);
+        out.push(...[...range.getClientRects()].filter(rect => rect.width || rect.height));
+        continue;
+      }
+      if (child.nodeType !== 1 || child.matches('.marks')) continue;
+      if (child.contains(mark)) return precedingRects(child, mark, out);
+      if (child.matches(atomic)) {
+        const rect = child.getBoundingClientRect();
+        if (rect.width || rect.height) out.push(rect);
+        continue;
+      }
+      if (precedingRects(child, mark, out)) return true;
+    }
+    return false;
+  }
+  function placeMarks(root) {
+    const placed = new Map();
+    for (const mark of root.querySelectorAll('.marks')) {
+      mark.style.top = '';
+      const host = mark.offsetParent;
+      const part = mark.parentElement?.closest('li, td, .math-content');
+      if (!host || !part) continue;
+      const rects = [];
+      precedingRects(part, mark, rects);
+      if (!rects.length) continue;
+      const line = rects.at(-1), box = host.getBoundingClientRect(), height = mark.getBoundingClientRect().height;
+      let top = line.bottom - box.top - host.clientTop - height;
+      // Never let a later indicator overprint an earlier one in the same margin.
+      if (placed.has(host)) top = Math.max(top, placed.get(host));
+      mark.style.top = top + 'px';
+      placed.set(host, top + height);
+    }
+  }
   function element(doc, tag, className, text) {
     const node = doc.createElement(tag);
     if (className) node.className = className;
@@ -114,11 +167,13 @@
     }
   }
   function overflows(node) { return node.scrollHeight > node.clientHeight + 1 || node.scrollWidth > node.clientWidth + 1; }
+  // The marks margin is reserved: question content may not run into it.
+  const contentRight = node => node.getBoundingClientRect().right - parseFloat(node.ownerDocument.defaultView.getComputedStyle(node).paddingRight || 0);
   function wideContent(node) {
-    const edge = node.getBoundingClientRect().right;
+    const edge = contentRight(node);
     return [...node.querySelectorAll('.katex-html, img, table')].some(child => {
       const cell = child.closest('.parts.columns > li');
-      return child.getBoundingClientRect().right > Math.min(edge, cell ? cell.getBoundingClientRect().right : edge) + 1;
+      return child.getBoundingClientRect().right > Math.min(edge, cell ? contentRight(cell) : edge) + 1;
     });
   }
   // Split only at semantic boundaries. A single mathematical expression or diagram
@@ -134,16 +189,27 @@
       });
     }
     const children = [...node.childNodes].filter(n => n.nodeType !== 3 || n.textContent.trim());
-    if (children.length > 1) return children.map((child, index) => {
+    // A marks indicator stays with the content it ends, so it never starts a sheet alone.
+    const groups = [];
+    for (const child of children) {
+      if (groups.length && child.nodeType === 1 && child.matches('.marks')) groups.at(-1).push(child); else groups.push([child]);
+    }
+    if (groups.length > 1) return groups.map((group, index) => {
       const wrapper = node.cloneNode(false);
       if (node.tagName === 'LI' && index) wrapper.style.listStyle = 'none';
-      wrapper.append(child.cloneNode(true));
+      wrapper.append(...group.map(child => child.cloneNode(true)));
       return wrapper;
     });
     // Preserve every ancestor when reaching a nested table/list. This allows
     // table rows to continue on another sheet without flattening cells or labels.
+    // Any marks indicator grouped after that child travels with its last piece.
+    const trailing = groups[0]?.slice(1) || [];
     const pieces = node.firstElementChild && splitBlock(node.firstElementChild);
-    return pieces?.map(piece => { const wrapper = node.cloneNode(false); wrapper.append(piece); return wrapper; }) || null;
+    return pieces?.map((piece, index) => {
+      const wrapper = node.cloneNode(false); wrapper.append(piece);
+      if (index === pieces.length - 1) wrapper.append(...trailing.map(child => child.cloneNode(true)));
+      return wrapper;
+    }) || null;
   }
   async function create(rows, options = {}) {
     const layout = options.layout ?? 'one';
@@ -182,7 +248,7 @@
     const print = element(doc, 'button', '', 'Print / Save PDF'); print.type = 'button'; print.disabled = true;
     const close = element(doc, 'button', 'secondary', 'Close preview'); close.type = 'button'; close.onclick = () => win.close();
     toolbar.append(title, status, print, close); doc.body.append(toolbar);
-    const pages = element(doc, 'main', 'print-pages'); pages.classList.add(`layout-${layout}`); pages.setAttribute('aria-label', includeAnswers ? 'Question paper and worked solutions' : 'Question paper'); doc.body.append(pages);
+    const pages = element(doc, 'main', 'print-pages marks-pending'); pages.classList.add(`layout-${layout}`); pages.setAttribute('aria-label', includeAnswers ? 'Question paper and worked solutions' : 'Question paper'); doc.body.append(pages);
     let ready = false;
     win.addEventListener('beforeprint', () => doc.body.classList.toggle('not-ready', !ready));
     try {
@@ -190,7 +256,7 @@
       const rendered = rows.map((row, index) => {
         const question = element(doc, 'article', 'print-question'); question.dataset.questionId = row.id;
         const contextHtml = row.sourceKind === 'past-exam' ? '' : row.contextHtml || '';
-        question.append(questionHeading(doc, row, index + 1, false), content(doc, contextHtml + row.question));
+        question.append(questionHeading(doc, row, index + 1, false), normaliseMarks(content(doc, contextHtml + row.question)));
         const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); if (layout !== 'condensed') question.append(working);
         const solution = includeAnswers ? content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join('')) : null;
         if (includeAnswers && row.hints?.length) {
@@ -200,7 +266,7 @@
         }
         return {row, question, solution};
       });
-      const staging = element(doc, 'div', 'print-staging'); doc.body.append(staging);
+      const staging = element(doc, 'div', 'print-staging marks-pending'); doc.body.append(staging);
       rendered.forEach(item => { staging.append(item.question); if (item.solution) staging.append(item.solution); });
       await whileOpen(win, prepare(win, staging, status), 120000);
       function page(kind) {
@@ -317,6 +383,9 @@
         }
       }
       staging.remove();
+      // Indicators stay out of measurement until pagination is final; they never change it.
+      pages.classList.remove('marks-pending');
+      placeMarks(pages);
       const total = pages.children.length;
       [...pages.children].forEach((sheet, index) => {
         sheet.querySelector('.page-number').textContent = `Page ${index + 1} of ${total}`;
@@ -338,5 +407,7 @@
       throw error;
     }
   }
-  window.LUISA_PAPERS_PRINT = Object.freeze({create});
+  window.LUISA_PAPERS_PRINT = Object.freeze({create, paperMinutes, normaliseMarks, placeMarks,
+    // Shared, unchanged print internals for the teacher-only exam paper (papers-exam.js).
+    internals: Object.freeze({macros, element, whileOpen, asset, content, prepare, overflows, wideContent, splitBlock})});
 })();
