@@ -1,5 +1,46 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.70 -->
+**Release 0.70 · GitHub #124.** Written for any successor agent or engine; it needs no earlier conversation.
+
+**Current state.** Luisa v0.70 is the published version on Cloudflare (owner edition) and on ADA (staff and pupil editions), all built from one merged revision recorded in GitHub #124. This release adds content only: the June 2019 and June 2018 Edexcel papers. Papers code, filters, print layouts and the teacher-only exam paper are unchanged. It is release 1 of 3 of the owner's TO_UPLOAD import.
+
+**What changed (PAP-070-1 … PAP-070-5 in docs/requirements/register.json, each with acceptance criteria).**
+- **Nine papers, 92 questions, 750 marks.** June 2019: 9MA0/01 Pure Mathematics 1 (14 questions), 9MA0/02 Pure Mathematics 2 (14), 9MA0/31 Statistics (5), 9MA0/32 Mechanics (5), 9FM0/01 Core Pure Mathematics 1 (8) and 9FM0/02 Core Pure Mathematics 2 (8). June 2018: 9MA0/01 (14), 9MA0/02 (14) and 9MA0/03 Statistics and Mechanics (10). IDs follow exam/edexcel-<code>-<year>-june/q<n>.
+- **Combined paper.** June 2018 9MA0/03 stays one paper with its original numbering: Statistics Q1-5 and Mechanics Q6-10, each mapped to its own content. Q6-10 carry the Section B instruction about g verbatim.
+- **Joins.** content/exams/pilot-metadata.json and exam-catalogue.json now hold 27 papers, 272 questions and 2,100 marks. Difficulty follows paper order (thirds). The dropdown sorts newest exam date first, so in June 2019 the Further Maths papers sit between Maths papers (by their real dates).
+- **Evidence.** docs/evidence/v070-import-june2018-2019.json holds, per question: source hashes, page counts, cover identity, the linked PMT copies, pages, printed mark groups, scheme pages, blank scheme pages, chapter keys, a maths checkpoint and asset hashes.
+- **Sources.** Every file was identified by its cover. The inventory on #124 lists every TO_UPLOAD file with its SHA-256, page count, status and target release. The linked PMT question papers are byte-identical; each linked PMT scheme has one extra front page and otherwise the same text. No 2018 or 2019 paper was held. Duplicates (the Summer 2023 files in the June 2022 and June 2021 folders) were skipped.
+- **Tests.** tests/test_exam_metadata.py (27 papers in order, marks and bands, 2018/2019 source identity, page counts, blank pages, combined-paper mapping), tests/test_papers_selection.py (28 dropdown options and orders, 272 past-paper questions, Course/Book lists, a new PAP-070 test for own-question selection, whole combined paper, mixed selection and reload) and tests/papers_print_browser.py (every 2018 and 2019 paper in both layouts, solutions on and off, as real PDFs).
+
+**How the import was done (private tooling, outside Git).** The per-paper pipeline is: cover check, then figure boxes, then vector assets (PyMuPDF to SVG), then prompts transcribed from page images, then payloads, then an independent SymPy check per question, then chapter/skill maps, then metadata and catalogue integration, then rendered visual checks, then evidence. v0.70 adds these crop-tool rules, documented in content/exams/README.md: mid-page scheme starts with the cut above the header row, blank pages, page clamp, thick and label-column table rules, figure clipping inside page frames, per-question instructions, and outlined-text papers transcribed from images.
+
+**Next jobs (same owner assignment, #124 has the inventory and decisions).** v0.71: the 2020 and 2021 papers. v0.72: the sample papers and any genuine 2022 material. Then a final GitHub summary: imports per series, duplicates skipped, held papers and what the owner must supply. Each release is fully gated and published before the next starts.
+
+**Sources and requirements.**
+- **Question content:** content/practice, content/exams, practice-catalogue.json and exam-catalogue.json.
+- **Requirements:** docs/requirements/register.json, with the generated REQUIREMENTS.md (`python3 scripts/luisa.py requirements`).
+- **Rules:** AGENTS.md and docs/agentic/LEAD-RULES.md. Standing rule OPS-063: record new owner requirements on GitHub and in the register while implementing; at the end of every job update this handoff and log the handoff and tokens on GitHub before reporting done. No automatic wakeup or report schedules.
+
+**Build, test and release.**
+1. **Gate:** `python3 scripts/luisa.py gate` runs the requirements check, unit tests, scan and owner build. It needs Python with requirements-dev.txt and requirements-auth.txt.
+2. **Browser suites:** `python -m unittest tests.test_papers_selection tests.papers_print_browser`. These need Playwright and PyMuPDF; set LUISA_BROWSER_CHANNEL=chrome to use the installed Chrome.
+3. **Land:** merge through a reviewed PR with green exact-head CI, using `python3 scripts/land.py <PR> --review-record <file>`.
+4. **Build:** build each edition with `python3 scripts/luisa.py build --profile owner|staff|student`, then run `check-artifact` on each.
+5. **Deploy:** Cloudflare deploys main automatically. ADA receives the same staff and student artifacts; its host details are in the private WORKSPACE.json (see "ADA is a required release target" below).
+6. **Verify and record:** verify live owner (including disconnected printing of a 2018 or 2019 paper), ADA staff and ADA pupil. Then make the recovery ZIP (the latest five are kept) and send the SMTP owner report.
+
+The per-release live QA helpers are private working copies, not in Git; the checks they perform are listed on GitHub #124.
+
+**Verified.**
+- **Local:** the gate (0 skips) and the Papers browser suites passed.
+- **Review:** an independent review-only agent checked the papers against the source PDFs.
+- **Live:** the live checks are recorded on #124.
+
+**Outstanding.** v0.71 and v0.72 of this assignment. Two owner notes from v0.65 still await the owner's view: the per-cell marks in the one three-cell table question, and the course label for a future 9FM0 Mechanics paper.
+
+**Usage.** Measured at PR time from the per-call API usage records in the Claude Code session transcript (cache reads included): 70,077,508 tokens over 312 calls for the main session since v0.69 was closed (input 662, cache creation 767,919, cache read 69,072,002, output 236,925). The final total, including the independent review and release, is logged on GitHub #124.
+
 <!-- LUISA-REPORT-HANDOFF v0.69 -->
 **Release 0.69 · GitHub #122.** Written for any successor agent or engine; it needs no earlier conversation.
 
