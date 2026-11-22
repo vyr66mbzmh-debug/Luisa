@@ -131,6 +131,33 @@
       if (!selected.length || operation || printing) return;
       printing = true; updateControls();
       try { return await task(); } finally { printing = false; updateControls(); }
+    },
+    // PAP-066: the timed exam generator draws from exactly the generator's pool.
+    pool: () => pool(),
+    // Runs a task with the builder locked (generate, add/remove and print disabled), even
+    // when nothing is selected yet. Returns undefined when the builder is already busy.
+    async exclusive(task) {
+      if (operation || printing) return undefined;
+      printing = true; updateControls();
+      try { return await task(); } finally { printing = false; updateControls(); }
+    },
+    // Loads descriptors that are complete; failures are counted rather than aborting the run.
+    async load(descriptors, progress) {
+      const loaded = []; let failed = 0;
+      for (const descriptor of descriptors) {
+        try { loaded.push(await loadRow(descriptor)); } catch (_) { failed++; }
+        if (progress && (loaded.length + failed) % 50 === 0) progress(loaded.length + failed);
+      }
+      return Object.assign(loaded, {failed});
+    },
+    // Replace or reorder the selection in an explicit order; printed "As selected".
+    arrange(rows, message) {
+      if (operation || printing) return false;
+      selected = [...rows]; selectionOrder = rows.map(row => row.id);
+      $('papers-order').value = 'selection';
+      updateSelection();
+      if (message) status(message);
+      return true;
     }
   });
   function updateControls() {

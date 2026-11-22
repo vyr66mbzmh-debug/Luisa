@@ -626,7 +626,11 @@ class PapersPrintTests(unittest.TestCase):
         self.assertEqual(front.locator('.exam-marks-achieved strong').inner_text(), 'Total marks achieved:')
         self.assertEqual(front.locator('hr.exam-rule').count(), 3)
         self.assertEqual(front.locator('.exam-name').inner_text().strip(), 'Name:')
-        self.assertTrue(front.evaluate("n=>getComputedStyle(n).fontFamily.startsWith('Arial')"))
+        # PAP-066-4: LaTeX-like Computer Modern serif (bundled KaTeX_Main), smaller sizes.
+        self.assertTrue(front.evaluate("n=>getComputedStyle(n).fontFamily.startsWith('KaTeX_Main')"))
+        self.assertTrue(preview.evaluate("document.fonts.check('11pt KaTeX_Main') && document.fonts.check('bold 22pt KaTeX_Main')"))
+        sizes = front.evaluate("n=>['.exam-title','.exam-month','.exam-instructions p'].map(s=>parseFloat(getComputedStyle(n.querySelector(s)).fontSize)*72/96)")
+        self.assertEqual([round(v, 1) for v in sizes], [22.0, 13.0, 11.0])
         paragraphs = front.locator('.exam-instructions > p').all_inner_texts()
         self.assertEqual(paragraphs[:4], ['Calculators may be used.',
             'Mathematical formulae booklet is provided. Answer all questions and ensure that your answers to parts of questions are clearly labelled.',
@@ -635,9 +639,10 @@ class PapersPrintTests(unittest.TestCase):
         self.assertIn('Unless otherwise indicated, wherever a value of', paragraphs[4])
         self.assertEqual(front.locator('.exam-gravity [data-math]').evaluate_all('ns=>ns.map(n=>n.dataset.math)'), ['g', 'g = 9.8\\,\\mathrm{m\\,s^{-2}}'])
         self.assertEqual(front.locator('.exam-gravity .katex').count(), 2)
-        self.assertEqual(front.locator('.exam-course-map p').all_inner_texts(),
-                         ['Questions 1 and 2 are from Core', 'Questions 3, 4 and 5 are from Statistics', 'Question 6 is from Mechanics', 'Question 7 is from Pure'])
-        self.assertEqual(front.locator('.exam-course-map strong').all_inner_texts(), ['Core', 'Statistics', 'Mechanics', 'Pure'])
+        # PAP-066-2: no course map, even for a mixed-course paper; instructions unchanged.
+        self.assertEqual(len(paragraphs), 5)
+        self.assertEqual(front.locator('.exam-course-map').count(), 0)
+        self.assertNotIn(' are from ', front.inner_text())
         self.assertEqual(front.evaluate('n=>n.scrollHeight-n.clientHeight'), 0)
         # No header on any page; solutions never printed.
         self.assertEqual(preview.locator('.page-banner, .print-solution, .solutions-page, .working-space').count(), 0)
@@ -651,6 +656,10 @@ class PapersPrintTests(unittest.TestCase):
             first:Boolean(n.querySelector('.exam-question .question-marks')), total:n.querySelector('.question-total')?.textContent||null,
             lines:n.querySelectorAll('.answer-line').length, area:n.querySelector('.answer-lines')?.clientHeight||0}))""")
         starts = [i + 1 for i, page in enumerate(layout) if page['first']]
+        # PAP-066-6: exam questions are headed "Question N".
+        headings = preview.locator('.exam-heading h2').all_inner_texts()
+        self.assertEqual([h for h in headings if 'continued' not in h], [f'Question {n}' for n in range(1, len(rows) + 1)])
+        self.assertTrue(all(re.fullmatch(r'Question \d+( \(continued\))?', h) for h in headings), headings)
         self.assertEqual(len(starts), len(rows))
         self.assertTrue(all(n % 2 == 1 for n in starts), starts)
         spans = [b - a for a, b in zip(starts, starts[1:] + [count + 1])]
@@ -681,6 +690,9 @@ class PapersPrintTests(unittest.TestCase):
                 self.assertEqual(len(pdf), count + 1)
                 self.assertNotIn('Page ', pdf[0].get_text())
                 self.assertIn('L6 Further Maths Assessment 1', pdf[0].get_text())
+                self.assertIn('Question 1', pdf[1].get_text())
+                fonts = {span['font'] for block in pdf[0].get_text('dict')['blocks'] for line in block.get('lines', []) for span in line['spans']}
+                self.assertTrue(fonts and all('KaTeX' in f for f in fonts), fonts)
                 for n in range(1, count + 1):
                     text = pdf[n].get_text()
                     self.assertEqual(re.findall(r'Page \d+ of \d+', text), [f'Page {n} of {count}'])
@@ -692,13 +704,88 @@ class PapersPrintTests(unittest.TestCase):
                 self.assertGreater(len(gaps), 25)
                 self.assertTrue(all(abs(gap - 8 / 25.4 * 72) < .05 for gap in gaps), gaps)
                 for n in (0, 1, 2, count):
-                    pdf[n].get_pixmap(dpi=90).save(f'/tmp/luisa65-exam-p{n}.png')
+                    pdf[n].get_pixmap(dpi=90).save(f'/tmp/luisa66-exam-p{n}.png')
 
-    def test_exam_paper_single_course_has_no_map_or_gravity_and_requires_marks_PAP_065C(self):
+    def all_exam_rows(self):
+        catalogue = json.loads((ROOT / 'exam-catalogue.json').read_text())['questions']
+        papers = sorted({q['paperId'] for q in catalogue})
+        return [r for paper in papers for r in self.exam_rows(paper, sorted(q['questionNumber'] for q in catalogue if q['paperId'] == paper))]
+
+    def plan(self, rows, minutes, seed=7):
+        self.page.add_script_tag(url='/papers-exam.js')
+        return self.page.evaluate("""input => { let s = input.seed; const random = () => (s = (s * 16807) % 2147483647) / 2147483647;
+          const plan = LUISA_PAPERS_EXAM.planTimedPaper(input.rows, input.minutes, {random});
+          return {...plan, ids: plan.rows.map(r => r.id), difficulties: plan.rows.map(r => r.difficulty), marksList: plan.rows.map(r => r.marks),
+                  problems: LUISA_PAPERS_EXAM.orderProblems(plan.rows), bands: LUISA_PAPERS_EXAM.bandPositions(plan.rows), rows: undefined}; }""",
+            dict(rows=rows, minutes=minutes, seed=seed))
+
+    def test_timed_selection_meets_target_and_difficulty_bands_PAP_066(self):
+        rows = self.all_exam_rows()
+        pure = [r for r in rows if r['paperCode'] in ('9MA0/01', '9MA0/02')]
+        applied = [r for r in rows if r['paperCode'] in ('9MA0/31', '9MA0/32')]
+        for name, pool in (('all past papers', rows), ('A level Pure papers', pure), ('Statistics and Mechanics papers', applied)):
+            for minutes in (32, 60, 45, 90):
+                for seed in (3, 11):
+                    with self.subTest(pool=name, minutes=minutes, seed=seed):
+                        plan = self.plan(pool, minutes, seed)
+                        self.assertTrue(plan['ok'], plan['reasons'])
+                        self.assertLessEqual(abs(plan['minutes'] - minutes), 1)
+                        self.assertEqual(plan['minutes'], sum(plan['marksList']) * 6 // 5)
+                        self.assertEqual(plan['extra'], int(plan['minutes'] * 0.25 + 0.5))
+                        self.assertEqual(plan['problems'], [])
+                        self.assertEqual(len(set(plan['ids'])), len(plan['ids']))
+                        # Opening band (midpoint mark below 20%) is easy; closing band (above 80%) is difficult.
+                        for band, difficulty in zip(plan['bands'], plan['difficulties']):
+                            if band == 'opening': self.assertEqual(difficulty, 'easy')
+                            if band == 'closing': self.assertEqual(difficulty, 'difficult')
+                        self.assertEqual(plan['difficulties'][0], 'easy')
+                        self.assertEqual(plan['difficulties'][-1], 'difficult')
+        # Reference presets: one period 32 minutes (+8), two periods 60 minutes (+15).
+        self.assertEqual(self.page.evaluate('[32, 60].map(LUISA_PAPERS_EXAM.extraMinutes)'), [8, 15])
+        self.assertEqual(self.page.evaluate('LUISA_PAPERS_EXAM.targetMarks(32)'), [27, 26, 28])
+        self.assertEqual(self.page.evaluate('LUISA_PAPERS_EXAM.targetMarks(60)'), [50, 51])
+
+    def test_timed_selection_reports_unreachable_targets_PAP_066(self):
+        paper = self.exam_rows('edexcel-9ma0-31-2024-june', [1, 2, 3])
+        total = sum(r['marks'] for r in paper)
+        plan = self.plan(paper, 120)
+        self.assertFalse(plan['ok'])
+        self.assertEqual(plan['marks'], total)  # closest achievable: every question
+        self.assertIn(f'{total} marks in all, which is only {total * 6 // 5} minutes', ' '.join(plan['reasons']))
+        # Too few difficult questions for the closing band is reported, not silently ignored.
+        no_difficult = [r for r in self.all_exam_rows() if r['difficulty'] != 'difficult']
+        plan = self.plan(no_difficult, 32)
+        self.assertFalse(plan['ok'])
+        self.assertLessEqual(abs(plan['minutes'] - 32), 1)  # the time target still wins (priority a)
+        self.assertIn('difficulty order cannot be met', ' '.join(plan['reasons']))
+        # A teacher's manual order that breaks the rule is flagged; automatic ordering keeps every question.
+        rows = self.exam_rows('edexcel-9ma0-02-2025-june', list(range(1, 16)))
+        self.page.add_script_tag(url='/papers-exam.js')
+        problems = self.page.evaluate('rows => LUISA_PAPERS_EXAM.orderProblems([...rows].reverse())', rows)
+        self.assertTrue(problems and problems[0].startswith('Question 1 is in the first 20% of marks'), problems)
+        ordered = self.page.evaluate('rows => LUISA_PAPERS_EXAM.orderByBands(rows).map(r => r.id)', rows)
+        self.assertEqual(sorted(ordered), sorted(r['id'] for r in rows))
+
+    def test_order_by_difficulty_finds_a_valid_order_when_one_exists_PAP_066(self):
+        self.page.add_script_tag(url='/papers-exam.js')
+        result = self.page.evaluate("""() => {
+          const E = LUISA_PAPERS_EXAM, L = {e: 'easy', m: 'medium', d: 'difficult'};
+          const make = spec => spec.split(' ').map((t, i) => ({id: 'r' + i + t, difficulty: L[t[0]], marks: Number(t.slice(1)), chapterKeys: ['t' + i]}));
+          const best = rows => { let min = Infinity; const go = (done, left) => { if (!left.length) { min = Math.min(min, E.orderProblems(done).length); return; } left.forEach((r, i) => go([...done, r], left.filter((_, j) => j !== i))); }; go([], rows); return min; };
+          const cases = ['m8 m7 d10 e5 d11 d10', 'd13 d8 m7 m6 e3 d10'].map(make);
+          let s = 42; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647, kinds = 'emd';
+          for (let n = 0; n < 300; n++) cases.push(make(Array.from({length: 3 + Math.floor(rnd() * 4)}, () => kinds[Math.floor(rnd() * 3)] + (2 + Math.floor(rnd() * 12))).join(' ')));
+          return cases.map(rows => [E.orderProblems(E.orderByBands(rows)).length, best(rows), E.orderByBands(rows).length === rows.length]);
+        }""")
+        self.assertEqual(result[:2], [[0, 0, True], [0, 0, True]])
+        self.assertTrue(all(got == best and same for got, best, same in result), [r for r in result if r[0] != r[1]])
+
+    def test_exam_paper_without_mechanics_has_no_gravity_and_requires_marks_PAP_065C(self):
         rows = self.exam_rows('edexcel-9ma0-31-2024-june', [1, 2])
         preview, result = self.exam_paper(rows, title='Statistics Quiz')
         self.assertTrue(result['ready'], result)
         self.assertEqual(preview.locator('.exam-course-map, .exam-gravity, .exam-date').count(), 0)
+        self.assertEqual(preview.locator('.question-heading h2').first.inner_text(), 'Question 1')
         self.assertEqual(preview.locator('.exam-title').inner_text(), 'Statistics Quiz')
         self.assertEqual(preview.locator('.exam-page').count(), 4)
         preview.close()

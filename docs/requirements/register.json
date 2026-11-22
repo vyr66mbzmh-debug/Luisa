@@ -5104,20 +5104,22 @@
     },
     {
       "id": "OPS-063",
-      "requirement": "At the end of every job, update HANDOFF.md and log the handoff and token usage to GitHub before reporting the job done.",
+      "requirement": "Whenever the owner gives new requirements, record them on GitHub and in the register before or while implementing; at the end of every job, update HANDOFF.md and log the handoff and token usage to GitHub before reporting the job done.",
       "scope": "All agents and providers, every job (standing)",
       "priority": "P1",
       "implementation": "implemented",
       "verification": "agent_checked",
       "origin": "Owner instruction, GitHub #110, 22 November 2026",
       "acceptance": [
+        "New owner requirements appear on the job's GitHub issue and in docs/requirements/register.json (with acceptance criteria) before or while they are implemented.",
         "HANDOFF.md carries the job's current state before the final report.",
         "The job's GitHub issue receives a non-secret handoff comment with the token usage and its source (for example, the session transcript's per-call usage); if the exact count is unavailable, say so.",
         "Usage start and end are recorded with scripts/usage.py."
       ],
       "evidence": [
         "AGENTS.md",
-        "GitHub issue #110"
+        "GitHub issue #110",
+        "GitHub issue #116"
       ]
     },
     {
@@ -5198,7 +5200,8 @@
         "No header on any page; footer only, no rule, exactly \"Page [page] of [total]\". Question pages number from 1 and the total excludes the front page, which has no footer. Solutions are never printed.",
         "Front page per the owner template exam-front-page-template.png (owner-supplied, kept outside Git; SHA-256 19a733df98252125229a9a7adba3276bb76e08f1fc3bb5b496ab448dc63688de): A4, Arial-style; centred Name line and a full-width rule; large bold \"[Year group] [Title]\"; smaller bold month and year (default current, editable); optional \"Date:\" line hidden when empty; a rule; Time (rule PAP-065B) with non-bold (+X minutes extra time), X = 25% of the minutes rounded to the nearest minute; Total marks available; Total marks achieved with a blank; a third rule near the bottom; editable instruction paragraphs (owner defaults); the typeset g = 9.8 m s^-2 line when any question comes from Mechanics; and an editable automatic course map (one line per course in question order, bold course name), omitted when all questions share a course.",
         "Pupil edition: papers-exam.js, papers-exam.css and the builder controls are removed at build time; direct requests are denied (404) for pupils and redirect to sign-in when signed out; check-artifact fails a pupil artifact that exposes them or an owner/staff artifact that lacks them.",
-        "Defaults applied without asking: the exam paper uses the same saved selections as the builder; v0.62+ print layouts and saved selections are unchanged; course groups are Pure (Pure Year 1/2, 9MA0/01-02), Core (Pure Core 1/2, 9FM0), Statistics and Mechanics; questions without known marks cannot go in an exam paper; question headings show only the number and total, without source provenance or difficulty; front-page fields are kept for the browser session."
+        "Defaults applied without asking: the exam paper uses the same saved selections as the builder; v0.62+ print layouts and saved selections are unchanged; course groups are Pure (Pure Year 1/2, 9MA0/01-02), Core (Pure Core 1/2, 9FM0), Statistics and Mechanics; questions without known marks cannot go in an exam paper; question headings show only the number and total, without source provenance or difficulty; front-page fields are kept for the browser session.",
+        "Superseded in part by v0.66: the course map and its Regenerate control were removed (PAP-066-2, PAP-066-3), the front page uses the LaTeX-like typography of PAP-066-4 instead of Arial, and headings read 'Question N' (PAP-066-6)."
       ],
       "evidence": [
         "tests/papers_print_browser.py (PAP_065C)",
@@ -5206,6 +5209,127 @@
         "tests/test_papers_selection.py",
         "scripts/luisa.py TEACHER_ONLY_FILES",
         "GitHub issue #114"
+      ]
+    },
+    {
+      "id": "PAP-066-1",
+      "requirement": "Target-time selection for the exam paper. In the exam paper builder, when the teacher chooses topics (same sources and filters as the existing generator), add an option to target a paper time in minutes. Time rule (already in the register): minutes = marks x 6 / 5, rounded DOWN. Extra time = 25% of minutes, rounded to the nearest minute. Reference targets: one lesson period = 32 minutes (+8 extra), two periods = 60 minutes (+15 extra); offer these as quick presets plus a free minutes field. Generation must produce a selection whose paper time is within plus or minus 1 minute of the target. Priorities when constraints conflict: (a) the time target, (b) the difficulty order in item 5, (c) variety of topics and questions. If the chosen topics cannot reach the target within tolerance, do not silently miss: report the closest achievable total, explain why, and let the teacher adjust topics or accept it. The teacher can still edit the result by adding, removing or reordering questions, and the displayed time/marks update live. Existing manual selection continues to work.",
+      "scope": "v0.66 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #116, 22 November 2026",
+      "acceptance": [
+        "The Exam paper panel has a 'Timed paper from the chosen topics' section: presets '1 period · 32 minutes (+8)' and '2 periods · 60 minutes (+15)', a whole-minutes field (2–600, kept for the browser session) and 'Generate timed paper'. It draws from exactly the builder's current pool (sources, past paper, course, book, topic and difficulty filters).",
+        "Only questions with known marks can be timed: past-paper questions (catalogue marks) and Practice Booklet questions whose marks are read from the question; skill questions without marks are left out and the report says how many.",
+        "The generated paper's time floor(marks × 6/5) is within ±1 minute of the target; mark totals are tried nearest-first (32 minutes: 27, then 26 or 28 marks; 60 minutes: 50 or 51). Front page and builder show the extra time as round(25% of minutes).",
+        "Priorities: (a) time within ±1 minute, then (b) the PAP-066-5 difficulty order, then (c) variety (new topics before repeated ones; no question twice). The best of up to 240 randomised attempts is kept.",
+        "When the target or the difficulty order cannot be met, the page says so with the reason (for example the total marks available and their minutes, or the easy/difficult counts) and the closest paper's questions, marks and minutes; 'Use the closest paper' accepts it, or the teacher changes topics and generates again. Nothing is silently missed.",
+        "The result replaces the selection in 'As selected' order. The teacher can add and remove questions, use Move up/Move down on each selected question (teacher editions only) and see the builder and exam summaries (marks, time, extra time) update immediately. Manual selection, the normal generator and saved selections work as before."
+      ],
+      "evidence": [
+        "tests/papers_print_browser.py (PAP_066, PAP_065C)",
+        "tests/test_papers_selection.py (PAP_066)",
+        "tests/test_student_auth.py (PAP_065)",
+        "GitHub issue #116"
+      ]
+    },
+    {
+      "id": "PAP-066-2",
+      "requirement": "Remove the Course map from the exam front page. Leave the instruction text exactly as it is, including the automatic mechanics g-value paragraph when any selected question is from a mechanics source. The instruction box stays editable so the teacher can add or change text.",
+      "scope": "v0.66 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #116, 22 November 2026",
+      "acceptance": [
+        "No course map is printed on the front page, for single- or mixed-course papers.",
+        "The instruction paragraphs and their four owner defaults are unchanged and editable; the typeset g = 9.8 m s^-2 paragraph is still added when any question comes from a Mechanics source (past paper 9MA0/32 or a Mechanics book)."
+      ],
+      "evidence": [
+        "tests/papers_print_browser.py (PAP_066, PAP_065C)",
+        "tests/test_papers_selection.py (PAP_066)",
+        "tests/test_student_auth.py (PAP_065)",
+        "GitHub issue #116"
+      ]
+    },
+    {
+      "id": "PAP-066-3",
+      "requirement": "Remove the \"Regenerate Course Map\" control (and its code, tests and documentation).",
+      "scope": "v0.66 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #116, 22 November 2026",
+      "acceptance": [
+        "The builder has no course map field and no 'Regenerate course map' button; papers-exam.js has no courseMap code or export; tests assert both are absent; handoff and release documentation no longer describe them (historical v0.65 records stay as history)."
+      ],
+      "evidence": [
+        "tests/papers_print_browser.py (PAP_066, PAP_065C)",
+        "tests/test_papers_selection.py (PAP_066)",
+        "tests/test_student_auth.py (PAP_065)",
+        "GitHub issue #116"
+      ]
+    },
+    {
+      "id": "PAP-066-4",
+      "requirement": "Front page typography. Make the font sizes smaller than in v0.65 and use an elegant LaTeX-like look: a Latin Modern or Computer Modern style serif font, bundled with the site (licence permitting) so it also prints offline and on every edition. Reference proportions to start from, to be tuned by looking at a real PDF page: title about 22 pt bold, month and year about 13 pt, body text 11 pt, generous whitespace; keep the existing layout (name line, three thin rules, time block, instructions low on the page, no footer on the front page). Layout reference: exam-front-page-template.png (owner-supplied, kept outside Git; SHA-256 19a733df98252125229a9a7adba3276bb76e08f1fc3bb5b496ab448dc63688de).",
+      "scope": "v0.66 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #116, 22 November 2026",
+      "acceptance": [
+        "The front page uses KaTeX_Main, the Computer Modern Roman face already bundled in vendor/fonts under the MIT licence (vendor/LICENSE-katex.txt) and loaded with KaTeX, so it prints offline in every edition; no new font files.",
+        "Sizes after tuning on a real PDF page: title 22 pt bold, month and year 13 pt bold, date and body text 11 pt, name line and time block 12 pt; thin 0.5 pt rules.",
+        "Layout kept: centred Name line, three rules, centred title block, time block, instructions low on the page, no footer; the PDF front page uses only KaTeX fonts."
+      ],
+      "evidence": [
+        "tests/papers_print_browser.py (PAP_066, PAP_065C)",
+        "tests/test_papers_selection.py (PAP_066)",
+        "tests/test_student_auth.py (PAP_065)",
+        "GitHub issue #116"
+      ]
+    },
+    {
+      "id": "PAP-066-5",
+      "requirement": "Difficulty order in exam papers (exam paper only). Starting from the first question, the first 20% of the paper's marks come from easy questions, the last 20% of the paper's marks come from difficult questions, and the middle 60% is a varied mix. Bands are measured by cumulative marks and allow for question granularity (state the tolerance you implement, e.g. a question that straddles the 20% boundary counts to the nearer band). Use the existing difficulty labels. This applies to the automatic ordering in the exam paper builder; the teacher can still reorder manually afterwards, and the page may warn when the order breaks the rule. If there are too few easy or difficult questions for the chosen topics, report it as in item 1.",
+      "scope": "v0.66 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #116, 22 November 2026",
+      "acceptance": [
+        "Tolerance implemented: each question belongs to the band containing its midpoint mark, measured cumulatively from Question 1; midpoint below 20% of the paper's marks = opening band (must be easy), above 80% = closing band (must be difficult). With two or more questions, Question 1 must also be easy and the last question difficult.",
+        "Labels are the existing easy/medium/difficult. Questions without a label (most Practice Booklet practice questions) count as unrated and may go only in the middle band.",
+        "The middle 60% draws from every difficulty and avoids the same topic or difficulty twice in a row where possible.",
+        "Timed generation orders its result this way; 'Order by difficulty' applies the same ordering to any selection with known marks. A manual order that breaks the rule shows a warning naming the questions, but printing is still allowed.",
+        "Too few easy or difficult questions are reported with their counts and marks, as in PAP-066-1."
+      ],
+      "evidence": [
+        "tests/papers_print_browser.py (PAP_066, PAP_065C)",
+        "tests/test_papers_selection.py (PAP_066)",
+        "tests/test_student_auth.py (PAP_065)",
+        "GitHub issue #116"
+      ]
+    },
+    {
+      "id": "PAP-066-6",
+      "requirement": "Exam paper only: at the top of each question print the words \"Question N\" (for example \"Question 2\") instead of \"Qn\". Practice, exam-style and past-paper printouts are unchanged. The existing \"(Total for Question N is M marks)\" line, the footer, the lined answer space and the 2-pages-per-question layout stay as in v0.65.",
+      "scope": "v0.66 Cloudflare owner edition and ADA staff (teacher-only exam paper); absent from the ADA pupil edition",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #116, 22 November 2026",
+      "acceptance": [
+        "Exam paper question headings read 'Question N' (continuation pages 'Question N (continued)') with [M Marks] on the right.",
+        "Normal printouts keep 'QN'; the question total line, footer, 0.8 cm lines and two-pages-per-question layout are unchanged from PAP-065C."
+      ],
+      "evidence": [
+        "tests/papers_print_browser.py (PAP_066, PAP_065C)",
+        "tests/test_papers_selection.py (PAP_066)",
+        "tests/test_student_auth.py (PAP_065)",
+        "GitHub issue #116"
       ]
     }
   ]

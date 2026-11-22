@@ -1,3 +1,9 @@
+## Luisa v0.66
+
+- Teacher-only exam paper: generate a paper to a target time from the chosen topics (presets 32 and 60 minutes, or any whole number of minutes). Time is 6 minutes per 5 marks, rounded down, and lands within one minute of the target; otherwise Luisa reports the closest paper and why.
+- Exam papers are ordered easy first (first 20% of marks) and difficult last (last 20%), with a varied middle. Move up/Move down and Order by difficulty are available; a warning shows when a manual order breaks the rule.
+- Exam paper questions are headed "Question N". The front page uses smaller, LaTeX-style Computer Modern type and no longer prints the course map; the Regenerate course map control is gone.
+
 ## Luisa v0.65
 
 - Sub-question marks are bold bracketed numbers, such as (4), right-aligned in the margin on the last line of the part they score, on screen and in every print layout. Question totals stay on the heading line.
