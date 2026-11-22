@@ -1,6 +1,19 @@
 {
-  "current": "0.62",
+  "current": "0.63",
   "releases": [
+    {
+      "version": "0.63",
+      "previous": "0.62",
+      "date": "2026-11-22",
+      "changes": [
+        "When one past paper is chosen, Question order offers In paper order: that paper's questions print in original question-number order.",
+        "With All past papers the order options are unchanged. Print layouts, saved selections and saved paper IDs are preserved."
+      ],
+      "requirements": [
+        "PAP-063",
+        "OPS-063"
+      ]
+    },
     {
       "version": "0.62",
       "previous": "0.61",

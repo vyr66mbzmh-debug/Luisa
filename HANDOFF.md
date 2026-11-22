@@ -1,5 +1,14 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.63 -->
+**Release 0.63 · GitHub #110.** On Papers, when one individual past paper is chosen in the Past Papers dropdown, Question order adds **In paper order** next to Group by topic and As selected. That paper's questions print in original question-number order, and any other selected questions follow in the order they were added. With All past papers (or Past Papers off) the option is removed and the order returns to Group by topic; otherwise behaviour is unchanged. The order is saved with the session (`order: 'paper'`) and restored only while a single paper is chosen. Print layouts, solution options, saved selections and question IDs are unchanged from v0.62.
+
+**Evidence.** `tests/test_papers_selection.py` covers the option appearing and disappearing, mixed-paper ordering, the print snapshot and reload. `tests/papers_print_browser.py` drives papers.html to a real PDF of Paper 1 in paper order (one per page with solutions, and condensed without). The PR, live checks on the owner site and both ADA roles, the recovery ZIP and the owner report outcome are in GitHub #110.
+
+**Standing rule OPS-063.** At the end of every job, update HANDOFF.md and log the handoff and token usage to the GitHub issue before reporting done.
+
+**Usage.** Measured from the per-call API usage records in this Claude Code session transcript (Claude Opus 5.5), up to the release commit: 2,034,262 tokens over 26 model calls, of which 1,974,683 were cache reads, 41,579 cache writes, 52 uncached input and 17,948 output. The final figure, through publication, is in GitHub #110 and the owner report.
+
 <!-- LUISA-REPORT-HANDOFF v0.62 -->
 **Release 0.62 · GitHub #107.** Past Papers includes June 2025 Paper 2 (Maths · 9MA0/02), Pure Mathematics 2, sat 12 June 2025 (2 hours). Its 15 original questions carry 3, 4, 2, 5, 7, 6, 4, 9, 8, 9, 11, 8, 3, 8 and 13 marks, totalling 100. Questions 1–5 are Easy, 6–10 Medium and 11–15 Difficult, following paper order. Papers now has six past papers with 62 questions and 450 marks, 554 Exam style questions and 8,068 Practice questions: 8,684 in total.
 

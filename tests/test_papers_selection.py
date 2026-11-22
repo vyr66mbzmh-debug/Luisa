@@ -350,6 +350,56 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(self.page.locator('#papers-past-paper').input_value(), 'edexcel-9ma0-02-2025-june')
         self.assertEqual(self.page.locator('#papers-order').input_value(), 'selection')
 
+    def test_in_paper_order_only_for_one_past_paper_and_survives_reload(self):
+        self.page.unroute('**/exam-catalogue.json')
+        self.page.reload()
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 7")
+        order_options = lambda: self.page.locator('#papers-order option').evaluate_all('nodes=>nodes.map(n=>[n.value,n.textContent])')
+        self.assertEqual(order_options(), [['topic', 'Group by topic'], ['selection', 'As selected']])
+        self.page.locator('#papers-source-practice').uncheck()
+        self.page.locator('#papers-source-exam-style').uncheck()
+        p1, p2 = 'exam/edexcel-9ma0-01-2025-june/', 'exam/edexcel-9ma0-02-2025-june/'
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-02-2025-june')
+        self.assertEqual(order_options(), [['topic', 'Group by topic'], ['selection', 'As selected'], ['paper', 'In paper order']])
+        self.page.locator('#papers-order').select_option('selection')
+        self.generate(15)
+        shuffled = self.selection_ids()
+        expected = [f'{p2}q{n}' for n in range(1, 16)]
+        self.assertCountEqual(shuffled, expected)
+        # Add one Paper 1 question after a randomly ordered Paper 2.
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')
+        self.page.locator('#papers-browse').click()
+        self.page.wait_for_function(f"document.querySelector('[data-add=\"{p1}q3\"]')")
+        self.page.locator(f'[data-add="{p1}q3"]').click()
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-02-2025-june')
+        self.assertEqual(self.selection_ids(), shuffled + [f'{p1}q3'])
+        self.page.locator('#papers-order').select_option('paper')
+        self.assertEqual(self.selection_ids(), expected + [f'{p1}q3'])
+        self.page.locator('#papers-print').click()
+        self.page.wait_for_function('Boolean(window.testPaperSnapshot)')
+        snapshot = self.page.evaluate('testPaperSnapshot')
+        self.assertEqual([q['id'] for q in snapshot], expected + [f'{p1}q3'])
+        self.assertEqual([q['marks'] for q in snapshot][:15], [3, 4, 2, 5, 7, 6, 4, 9, 8, 9, 11, 8, 3, 8, 13])
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertEqual(self.page.locator('#papers-order').input_value(), 'paper')
+        self.assertEqual(self.selection_ids(), expected + [f'{p1}q3'])
+        # Another single paper puts its own questions first; the rest keep the order they were added.
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')
+        self.assertEqual(self.page.locator('#papers-order').input_value(), 'paper')
+        self.assertEqual(self.selection_ids(), [f'{p1}q3'] + shuffled)
+        self.page.locator('#papers-order').select_option('selection')
+        self.assertEqual(self.selection_ids(), shuffled + [f'{p1}q3'])
+        self.page.locator('#papers-order').select_option('paper')
+        # All past papers removes the option and returns to the default order.
+        self.page.locator('#papers-past-paper').select_option('')
+        self.assertEqual(order_options(), [['topic', 'Group by topic'], ['selection', 'As selected']])
+        self.assertEqual(self.page.locator('#papers-order').input_value(), 'topic')
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertEqual(self.page.locator('#papers-order').input_value(), 'topic')
+        self.assertEqual(len(order_options()), 2)
+
     def test_practice_marks_include_all_labelled_table_parts(self):
         self.page.unroute('**/practice-catalogue.json')
         ident = 'practice/maths-a-level/maths-pure-year-1/ch11/11.3/q7'

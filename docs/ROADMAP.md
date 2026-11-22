@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.63
+
+[Issue #110](https://github.com/vyr66mbzmh-debug/Luisa/issues/110) adds the In paper order print option for a single past paper.
+
 ## Papers v0.62
 
 [Issue #107](https://github.com/vyr66mbzmh-debug/Luisa/issues/107) adds the June 2025 Pure Mathematics Paper 2 and its official mark scheme. Further past papers need their own owner-supplied question paper and matching scheme.

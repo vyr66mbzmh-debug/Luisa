@@ -5082,6 +5082,43 @@
         "tests/test_papers_selection.py",
         "tests/papers_print_browser.py"
       ]
+    },
+    {
+      "id": "PAP-063",
+      "requirement": "When exactly one individual past paper is chosen on Papers, offer an In paper order print option that prints that paper's questions in original question-number order.",
+      "scope": "v0.63 Cloudflare owner and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #110, 22 November 2026",
+      "acceptance": [
+        "Question order lists In paper order only while one past paper is chosen; otherwise it is removed and Group by topic applies.",
+        "The chosen paper's questions print in question-number order; other selected questions follow in the order they were added.",
+        "Preserve v0.62 print layouts (one per page, condensed, solutions on or off), saved selections and saved paper IDs; the order restores after reload."
+      ],
+      "evidence": [
+        "GitHub issue #110",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "OPS-063",
+      "requirement": "At the end of every job, update HANDOFF.md and log the handoff and token usage to GitHub before reporting the job done.",
+      "scope": "All agents and providers, every job (standing)",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner instruction, GitHub #110, 22 November 2026",
+      "acceptance": [
+        "HANDOFF.md carries the job's current state before the final report.",
+        "The job's GitHub issue receives a non-secret handoff comment with the token usage and its source (for example, the session transcript's per-call usage); if the exact count is unavailable, say so.",
+        "Usage start and end are recorded with scripts/usage.py."
+      ],
+      "evidence": [
+        "AGENTS.md",
+        "GitHub issue #110"
+      ]
     }
   ]
 }
