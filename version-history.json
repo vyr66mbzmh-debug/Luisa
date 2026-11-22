@@ -1,6 +1,24 @@
 {
-  "current": "0.65",
+  "current": "0.66",
   "releases": [
+    {
+      "version": "0.66",
+      "previous": "0.65",
+      "date": "2026-11-22",
+      "changes": [
+        "Teachers can generate an exam paper to a target time from the chosen topics, with one-period (32 minutes) and two-period (60 minutes) presets; the paper time lands within one minute of the target, or Luisa explains why not and offers the closest paper.",
+        "Exam papers open with easy questions (first 20% of marks) and close with difficult ones (last 20%), with a varied middle; questions can be moved up or down, and a warning shows when the order breaks the rule.",
+        "Exam papers head each question \"Question N\", and the front page uses a smaller LaTeX-style typeface without the course map."
+      ],
+      "requirements": [
+        "PAP-066-1",
+        "PAP-066-2",
+        "PAP-066-3",
+        "PAP-066-4",
+        "PAP-066-5",
+        "PAP-066-6"
+      ]
+    },
     {
       "version": "0.65",
       "previous": "0.64",

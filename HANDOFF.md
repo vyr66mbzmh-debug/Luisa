@@ -1,5 +1,42 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.66 -->
+**Release 0.66 · GitHub #116.** Written for any successor agent or engine; it needs no earlier conversation.
+
+**Current state.** Luisa v0.66 is the published version on Cloudflare (owner edition) and on ADA (staff and pupil editions), all built from one merged revision recorded in GitHub #116. This release changes only the teacher-only exam paper in Papers (owner and ADA staff editions; the pupil edition never contains it).
+
+**What changed (PAP-066-1 … PAP-066-6 in docs/requirements/register.json, each with acceptance criteria).**
+- **Timed generation (PAP-066-1).** The Exam paper panel has "Timed paper from the chosen topics": presets 1 period = 32 minutes (+8) and 2 periods = 60 minutes (+15), a whole-minutes field and Generate timed paper, drawing on the builder's current pool (sources and filters). Paper time = floor(marks × 6/5) (PAP-065B); extra time = round(25%). The result is within ±1 minute of the target; priorities are time, then difficulty order, then variety. When unmet, the panel states the reason and the closest paper, and Use the closest paper accepts it. Only questions with known marks are used (past papers; Practice Booklet questions whose marks are read from the question).
+- **Difficulty order (PAP-066-5).** By cumulative marks, each question belongs to the band holding its midpoint mark: below 20% must be easy, above 80% must be difficult, and Question 1 is easy and the last question difficult. Unlabelled questions are "unrated" and go only in the middle 60%, which mixes difficulties and topics. Order by difficulty applies the rule to any selection. Move up/Move down (teacher editions) reorder by hand, and a warning names the questions that break the rule.
+- **Headings (PAP-066-6).** Exam paper questions read "Question N"; normal printouts keep "QN".
+- **Front page (PAP-066-2/3/4).** The course map and its Regenerate control are removed. Instructions and the automatic Mechanics g = 9.8 m s⁻² paragraph are unchanged. The typeface is KaTeX_Main (Computer Modern Roman, already bundled in vendor/fonts, MIT licence in vendor/LICENSE-katex.txt), so the page prints offline in every edition. Sizes: title 22 pt bold, month 13 pt bold, body 11 pt, name line and time block 12 pt. The layout follows the owner template (kept outside Git; SHA-256 in PAP-066-4).
+- **Code.** papers-exam.js (planTimedPaper, orderByBands, orderProblems, bandPositions, targetMarks; builder wiring), papers-exam.css, the teacher block in papers.html between the luisa-teacher-exam markers, and papers.js (builder hook: pool, load, arrange). Nothing else changed: v0.65 print layouts, saved selections (session key luisa-papers-exam-v1) and question IDs are preserved.
+
+**Sources and requirements.**
+- **Question content:** content/practice, content/exams, practice-catalogue.json and exam-catalogue.json.
+- **Requirements:** docs/requirements/register.json, with the generated REQUIREMENTS.md (`python3 scripts/luisa.py requirements`).
+- **Rules:** AGENTS.md and docs/agentic/LEAD-RULES.md. Standing rule OPS-063: record new owner requirements on GitHub and in the register while implementing, and update this handoff and log the handoff and tokens on GitHub before reporting done.
+
+**Build, test and release.**
+1. **Gate:** `python3 scripts/luisa.py gate` runs the requirements check, unit tests, scan and owner build. It needs Python with requirements-dev.txt and requirements-auth.txt.
+2. **Browser suites:** `python -m unittest tests.test_papers_selection tests.papers_print_browser`. These need Playwright and PyMuPDF; set LUISA_BROWSER_CHANNEL=chrome to use the installed Chrome.
+3. **Land:** merge through a reviewed PR with green exact-head CI, using `python3 scripts/land.py <PR> --review-record <file>`.
+4. **Build:** build each edition with `python3 scripts/luisa.py build --profile owner|staff|student`, then run `check-artifact` on each.
+5. **Deploy:** Cloudflare deploys main automatically. ADA receives the same staff and student artifacts; its host details are in the private WORKSPACE.json (see "ADA is a required release target" below).
+6. **Verify and record:** verify live owner (including disconnected printing), ADA staff and ADA pupil absence. Then make the recovery ZIP (the latest five are kept) and send the SMTP owner report.
+
+The per-release live QA helpers are private working copies, not in Git; the checks they perform are listed on GitHub #116.
+
+**Verified.**
+- **Local:** the gate (0 skips) and the Papers browser suites passed. New tests cover timed selection on realistic pools (32, 60, 45 and 90 minutes), unreachable targets, difficulty bands, absence of the course map and Regenerate control, the g line, Question N, front-page fonts and sizes in a real PDF, and pupil denial.
+- **Audit:** all 12 past papers print as ready exam papers.
+- **Review:** an independent print review was done.
+- **Live:** the live checks are recorded on #116.
+
+**Outstanding.** No open work from this job. Two owner notes from v0.65 still await the owner's view: the per-cell marks in the one three-cell table question, and the course label for a future 9FM0 Mechanics paper.
+
+**Usage.** Measured from the Claude Code session transcript (per-call usage, cache reads included; model claude-opus-5-5): 11,090,476 tokens over 62 model calls up to opening the PR, excluding the independent review agent. The final total, including review and release, is on GitHub #116 and in the owner report.
+
 <!-- LUISA-REPORT-HANDOFF v0.65 -->
 **Release 0.65 · GitHub #114.** Three Papers changes.
 
