@@ -263,7 +263,7 @@
     }
     return out;
   }
-  function orderByBands(rows) {
+  function orderByBands(rows, {repair = true} = {}) {
     const total = rows.reduce((sum, row) => sum + row.marks, 0);
     if (rows.length < 2 || !total) return [...rows];
     const easy = rows.filter(row => bandOf(row) === 'easy').sort((a, b) => b.marks - a.marks);
@@ -287,7 +287,7 @@
     const last = middle.findIndex(row => tail + row.marks / 2 >= total * 0.2 && row !== middle[0]);
     if (last >= 0 && last !== middle.length - 1) middle = [...middle.filter((_, index) => index !== last), middle[last]];
     const greedy = [...opening, ...middle, ...closing];
-    return orderProblems(greedy).length ? repairOrder(greedy) : greedy;
+    return repair && orderProblems(greedy).length ? repairOrder(greedy) : greedy;
   }
   // When the greedy order breaks the rule, search for a better one: every order for up to
   // 8 questions, otherwise improving pairwise swaps. Fewest problems wins; ties keep the
@@ -357,12 +357,14 @@
         let paper = [...opening, ...middle, ...closing];
         let total = paper.reduce((sum, row) => sum + row.marks, 0);
         if (total < marks) { for (const row of order) if (!paper.includes(row) && total + row.marks <= goals.at(-1)) { paper.push(row); total += row.marks; } }
-        const candidate = score(orderByBands(paper), minutes);
+        // Attempts use the fast greedy order; the order search runs once on the chosen paper.
+        const candidate = score(orderByBands(paper, {repair: false}), minutes);
         if (better(candidate, best)) best = candidate;
         if (!best.timeMiss && !best.bandProblems && !best.offBy && best.variety === best.rows.length) break;
       }
       if (best && !best.timeMiss && !best.bandProblems && attempt > 24) break;
     }
+    if (best.bandProblems) best = score(orderByBands(best.rows), minutes);
     const reasons = [];
     if (best.timeMiss) {
       reasons.push(report.availableMarks * 6 / 5 < minutes - 1
