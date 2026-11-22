@@ -131,6 +131,25 @@
       if (!selected.length || operation || printing) return;
       printing = true; updateControls();
       try { return await task(); } finally { printing = false; updateControls(); }
+    },
+    // PAP-066: the timed exam generator draws from exactly the generator's pool.
+    pool: () => pool(),
+    async load(descriptors, progress) {
+      const loaded = [];
+      for (const descriptor of descriptors) {
+        loaded.push(await loadRow(descriptor));
+        if (progress && loaded.length % 50 === 0) progress(loaded.length);
+      }
+      return loaded;
+    },
+    // Replace or reorder the selection in an explicit order; printed "As selected".
+    arrange(rows, message) {
+      if (operation || printing) return false;
+      selected = [...rows]; selectionOrder = rows.map(row => row.id);
+      $('papers-order').value = 'selection';
+      updateSelection();
+      if (message) status(message);
+      return true;
     }
   });
   function updateControls() {

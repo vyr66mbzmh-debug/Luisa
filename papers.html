@@ -66,8 +66,16 @@
 </div>
 <label class="field" for="papers-exam-instructions">Instructions (leave a blank line between paragraphs)<textarea id="papers-exam-instructions" rows="7"></textarea></label>
 <p class="help">The g = 9.8 m s⁻² instruction is added automatically when any question comes from Mechanics.</p>
-<label class="field" for="papers-exam-map">Course map (automatic; edit if needed)<textarea id="papers-exam-map" rows="3"></textarea></label>
-<div class="button-row"><button id="papers-exam-map-reset" type="button" class="quiet">Regenerate course map</button><button id="papers-exam-print" class="primary" type="button" disabled>Preview exam paper</button></div>
+<fieldset class="exam-timed"><legend>Timed paper from the chosen topics</legend>
+<p class="help">Uses the sources, difficulty and topics chosen above. Time is 6 minutes per 5 marks, rounded down; the paper is chosen to within ±1 minute and ordered easy (first 20% of marks) to difficult (last 20%).</p>
+<div class="button-row"><button type="button" class="quiet" data-exam-preset="32">1 period · 32 minutes (+8)</button><button type="button" class="quiet" data-exam-preset="60">2 periods · 60 minutes (+15)</button></div>
+<label class="field" for="papers-exam-minutes">Target time in minutes<input id="papers-exam-minutes" type="number" min="2" max="600" step="1" inputmode="numeric"></label>
+<p id="papers-exam-target-help" class="help"></p>
+<div class="button-row"><button id="papers-exam-generate" type="button">Generate timed paper</button><button id="papers-exam-accept" type="button" class="quiet" hidden>Use the closest paper</button></div>
+<p id="papers-exam-target-report" class="help" aria-live="polite" hidden></p>
+</fieldset>
+<p id="papers-exam-order-warning" class="help error" aria-live="polite" hidden></p>
+<div class="button-row"><button id="papers-exam-order" type="button" class="quiet" disabled>Order by difficulty</button><button id="papers-exam-print" class="primary" type="button" disabled>Preview exam paper</button></div>
 <p id="papers-exam-summary" class="help" aria-live="polite"></p>
 </details>
 <script defer src="papers-exam.js"></script>

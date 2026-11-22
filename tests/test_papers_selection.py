@@ -382,7 +382,9 @@ class PapersSelection(unittest.TestCase):
         self.page.locator('#papers-order').select_option('selection')
         self.assertEqual(self.page.locator('#papers-summary').inner_text(), '3 questions · 20 marks · Time: 24 minutes')
         self.assertEqual(self.page.locator('#papers-exam-summary').inner_text(), '3 questions · 20 marks · Time: 24 minutes (+6 minutes extra time) · g = 9.8 line included')
-        self.assertEqual(self.page.locator('#papers-exam-map').input_value(), 'Questions 1 and 2 are from Mechanics\nQuestion 3 is from Core')
+        # PAP-066-2/3: no course map field and no Regenerate control.
+        self.assertEqual(self.page.locator('#papers-exam-map, #papers-exam-map-reset').count(), 0)
+        self.assertNotIn('course map', panel.inner_text().lower())
         self.page.locator('#papers-exam-year').fill('L6')
         self.page.locator('#papers-exam-date').fill('Friday 20th November P4 & P5')
         self.assertTrue(self.page.locator('#papers-exam-print').is_enabled())
@@ -403,6 +405,89 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(self.page.locator('#papers-exam-year').input_value(), 'L6')
         self.assertEqual(self.page.locator('#papers-exam-date').input_value(), 'Friday 20th November P4 & P5')
         self.assertEqual(self.selection_ids(), ['exam/edexcel-9ma0-32-2024-june/q1', 'exam/edexcel-9ma0-32-2024-june/q2', 'exam/edexcel-9fm0-01-2024-june/q1'])
+
+    def exam_summary_minutes(self):
+        import re
+        text = self.page.locator('#papers-exam-summary').inner_text()
+        match = re.search(r'(\d+) marks · Time: (\d+) minutes \(\+(\d+) minutes extra time\)', text)
+        self.assertTrue(match, text)
+        return tuple(map(int, match.groups()))
+
+    def timed(self, preset=None, minutes=None):
+        if preset: self.page.locator(f'[data-exam-preset="{preset}"]').click()
+        else: self.page.locator('#papers-exam-minutes').fill(str(minutes))
+        self.page.locator('#papers-exam-generate').click()
+        self.page.wait_for_function("(() => { const r = document.querySelector('#papers-exam-target-report'); return !r.hidden && !r.textContent.startsWith('Loading'); })()", timeout=60000)
+        return self.page.locator('#papers-exam-target-report').inner_text()
+
+    def test_timed_exam_paper_from_chosen_topics_PAP_066(self):
+        self.page.unroute('**/papers-print.js')
+        self.page.unroute('**/exam-catalogue.json')
+        self.page.unroute('**/practice-catalogue.json')
+        self.page.reload()
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 13")
+        self.page.locator('#papers-exam summary').click()
+        self.assertEqual(self.page.locator('[data-exam-preset]').all_inner_texts(), ['1 period · 32 minutes (+8)', '2 periods · 60 minutes (+15)'])
+        self.page.locator('#papers-source-practice').uncheck()
+        self.page.locator('#papers-source-exam-style').uncheck()
+        for preset in (32, 60):
+            with self.subTest(preset=preset):
+                report = self.timed(preset)
+                self.assertEqual(self.page.locator('#papers-exam-minutes').input_value(), str(preset))
+                self.assertIn(f'Target {preset} minutes met', report)
+                marks, minutes, extra = self.exam_summary_minutes()
+                self.assertLessEqual(abs(minutes - preset), 1)
+                self.assertEqual((minutes, extra), (marks * 6 // 5, int(minutes * 0.25 + 0.5)))
+                self.assertEqual(self.page.locator('#papers-order').input_value(), 'selection')
+                self.assertTrue(self.page.locator('#papers-exam-order-warning').is_hidden())
+                snapshot = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => r.difficulty)')
+                self.assertEqual((snapshot[0], snapshot[-1]), ('easy', 'difficult'))
+                self.assertIn(f'{marks} marks · Time: {minutes} minutes', self.page.locator('#papers-summary').inner_text())
+        # Manual edits: reorder and remove update the time live; a rule-breaking order is flagged.
+        ids = self.selection_ids()
+        self.page.locator('#papers-selected > li').last.locator('[data-exam-move="-1"]').click()
+        self.assertEqual(self.selection_ids(), ids[:-2] + [ids[-1], ids[-2]])
+        problems = self.page.evaluate('LUISA_PAPERS_EXAM.orderProblems(LUISA_PAPERS_BUILDER.snapshot())')
+        self.assertEqual(self.page.locator('#papers-exam-order-warning').is_visible(), bool(problems))
+        self.page.locator('#papers-selected > li').first.locator('[data-exam-move="1"]').click()
+        self.page.locator('#papers-selected > li').first.locator('[data-exam-move="1"]').click()
+        self.page.locator('#papers-selected > li').first.locator('[data-exam-move="1"]').click()
+        if self.page.evaluate('LUISA_PAPERS_EXAM.orderProblems(LUISA_PAPERS_BUILDER.snapshot()).length'):
+            self.assertIn('does not follow the exam difficulty order', self.page.locator('#papers-exam-order-warning').inner_text())
+        self.page.locator('#papers-exam-order').click()
+        self.assertTrue(self.page.locator('#papers-exam-order-warning').is_hidden())
+        before = self.exam_summary_minutes()
+        self.page.locator('[data-remove]').first.click()
+        self.assertLess(self.exam_summary_minutes()[0], before[0])
+        # A target the chosen topics cannot reach is reported with the closest paper, which the teacher may accept.
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-31-2024-june')
+        report = self.timed(minutes=120)
+        self.assertIn('Target 120 minutes cannot be met exactly', report)
+        self.assertIn('which is only 60 minutes', report)
+        self.assertTrue(self.page.locator('#papers-exam-accept').is_visible())
+        self.page.locator('#papers-exam-accept').click()
+        self.assertEqual(self.exam_summary_minutes()[:2], (50, 60))
+        self.assertTrue(self.page.locator('#papers-exam-accept').is_hidden())
+        # Realistic Practice Booklet exam-style topics (marks read from the questions) also meet 32 minutes.
+        self.page.locator('#papers-past-paper').select_option('')
+        self.page.locator('#papers-source-past-papers').uncheck()
+        self.page.locator('#papers-source-exam-style').check()
+        report = self.timed(32)
+        self.assertIn('Target 32 minutes met:', report)
+        self.assertLessEqual(abs(self.exam_summary_minutes()[1] - 32), 1)
+        # Practice questions carry no difficulty labels, so the time is met and the missing bands are reported.
+        self.page.locator('#papers-source-practice').check()
+        self.page.locator('#papers-source-exam-style').uncheck()
+        report = self.timed(32)
+        self.assertIn('Target 32 minutes met, but not every exam rule.', report)
+        self.assertIn('0 easy questions (0 marks) and 0 difficult questions', report)
+        self.page.locator('#papers-exam-accept').click()
+        self.assertLessEqual(abs(self.exam_summary_minutes()[1] - 32), 1)
+        self.assertTrue(self.page.locator('#papers-exam-order-warning').is_visible())
+        # The target survives a reload with the other exam fields.
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertEqual(self.page.locator('#papers-exam-minutes').input_value(), '32')
 
     def test_in_paper_order_only_for_one_past_paper_and_survives_reload(self):
         self.page.unroute('**/exam-catalogue.json')
