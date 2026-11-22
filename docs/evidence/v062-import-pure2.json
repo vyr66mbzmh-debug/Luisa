@@ -2376,5 +2376,53 @@
   }
  ],
  "mathsReview": "All 15 questions solved independently with SymPy and numeric checks (private script) and compared with the official scheme answers, including alternatives; no discrepancies and no source errors found.",
- "status": "checked-pending-print-and-review"
+ "status": "checked",
+ "tests": {
+  "browser": "Installed Chrome via Playwright",
+  "printModes": [
+   {
+    "file": "luisa62-mixed-condensed",
+    "pdfPages": 15,
+    "pdfSha256": "3c1dd949ad9c30d486e67e5856e0f32c637f8426e96882d11d7989953afa4eca"
+   },
+   {
+    "file": "luisa62-mixed-one",
+    "pdfPages": 17,
+    "pdfSha256": "ddf17debcda8a96cc803bccad003c62ac47c05629eadbc2c7dab468a5d564b2d"
+   },
+   {
+    "file": "luisa62-pure2-condensed-questions",
+    "pdfPages": 9,
+    "pdfSha256": "d7393a67690f8375ae9df197a53031a36222e4f8fe754ec2e8830e1afa8421d4"
+   },
+   {
+    "file": "luisa62-pure2-condensed-solutions",
+    "pdfPages": 66,
+    "pdfSha256": "a22a2f4495f42972d9f8e4d8ed288076b4cb19e63cdf4d7dec52a6b4b63fd067"
+   },
+   {
+    "file": "luisa62-pure2-one-questions",
+    "pdfPages": 15,
+    "pdfSha256": "d0bd693425636d140d44ffeb1bbab9368006beceea120ef7f11ca2beba9030d0"
+   },
+   {
+    "file": "luisa62-pure2-one-solutions",
+    "pdfPages": 72,
+    "pdfSha256": "a32a35a3a6dadb42aeb1d4db99d8ca6dc3e54d37e0aa78925f0b54e35f3bcf78"
+   }
+  ],
+  "printChecks": "Whole paper in source order in one-per-page and condensed layouts, with and without solutions: warnings none, no content overflow, all images loaded, prompt maths and images identical to payload, question images within eight lines with preserved proportions, 70 scheme images only when solutions are on, matching compact headings, page numbering and one shared timestamp on every sheet, no paper-wide instructions. Mixed Paper 1/Paper 2 Q1 and Q7 print each question with only its own paper scheme.",
+  "selectionChecks": "Dropdown lists June 2025 Paper 2 (Maths · 9MA0/02) among 7 options; Paper 2 filter gives 15 questions; Pure Year 2 chapter 11 with Paper 2 gives Q10 and Q15; whole paper added through Browse in source order prints in order (100 marks, 84 minutes suggested) and restores after reload; past-paper pool 62, Exam style plus Past Papers 616.",
+  "gate": "84 tests, 0 skipped; scan and build pass on 67463208d4ad. Full print suite 13/13.",
+  "offline": "Owner offline catalogue lists all 76 Paper 2 files in each mapped chapter pack without warnings; disconnected Pure Year 2 chapter 11 download prints Q15 with its 9 scheme crops."
+ },
+ "visualReview": {
+  "result": "All 15 rendered question pages and the solution section of the 72-page one-per-page PDF inspected; figures print as vector at legible size, masked equation images in the Q7 scheme render correctly, continuation pages are labelled, no clipping or mismatched schemes. All 70 scheme crops and 5 figures were inspected in Chrome against the source pages."
+ },
+ "independentReview": "Owner-authorised review-only agent at head 67463208d4ad: verdict ship. Independently solved all 15 questions (all agree with the scheme), compared every prompt with the rendered question paper (no transcription differences), confirmed scheme page mapping, crop contiguity and boundaries, marks, 5/5/5 difficulty and chapter mappings, and spot-checked real PDFs. Notes: indexed mark-scheme hash differs by design (see sourceIdentity); condensed part-mark placement is unchanged v0.61 layout.",
+ "limitations": [
+  "Official mark-scheme working and examiner guidance are faithful vector crops, not searchable native maths.",
+  "No source errors were found, so no prompt corrections or erratum notes were needed.",
+  "Live Cloudflare and ADA verification is recorded in GitHub #107 after publication."
+ ]
 }
