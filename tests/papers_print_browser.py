@@ -766,6 +766,20 @@ class PapersPrintTests(unittest.TestCase):
         ordered = self.page.evaluate('rows => LUISA_PAPERS_EXAM.orderByBands(rows).map(r => r.id)', rows)
         self.assertEqual(sorted(ordered), sorted(r['id'] for r in rows))
 
+    def test_order_by_difficulty_finds_a_valid_order_when_one_exists_PAP_066(self):
+        self.page.add_script_tag(url='/papers-exam.js')
+        result = self.page.evaluate("""() => {
+          const E = LUISA_PAPERS_EXAM, L = {e: 'easy', m: 'medium', d: 'difficult'};
+          const make = spec => spec.split(' ').map((t, i) => ({id: 'r' + i + t, difficulty: L[t[0]], marks: Number(t.slice(1)), chapterKeys: ['t' + i]}));
+          const best = rows => { let min = Infinity; const go = (done, left) => { if (!left.length) { min = Math.min(min, E.orderProblems(done).length); return; } left.forEach((r, i) => go([...done, r], left.filter((_, j) => j !== i))); }; go([], rows); return min; };
+          const cases = ['m8 m7 d10 e5 d11 d10', 'd13 d8 m7 m6 e3 d10'].map(make);
+          let s = 42; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647, kinds = 'emd';
+          for (let n = 0; n < 300; n++) cases.push(make(Array.from({length: 3 + Math.floor(rnd() * 4)}, () => kinds[Math.floor(rnd() * 3)] + (2 + Math.floor(rnd() * 12))).join(' ')));
+          return cases.map(rows => [E.orderProblems(E.orderByBands(rows)).length, best(rows), E.orderByBands(rows).length === rows.length]);
+        }""")
+        self.assertEqual(result[:2], [[0, 0, True], [0, 0, True]])
+        self.assertTrue(all(got == best and same for got, best, same in result), [r for r in result if r[0] != r[1]])
+
     def test_exam_paper_without_mechanics_has_no_gravity_and_requires_marks_PAP_065C(self):
         rows = self.exam_rows('edexcel-9ma0-31-2024-june', [1, 2])
         preview, result = self.exam_paper(rows, title='Statistics Quiz')

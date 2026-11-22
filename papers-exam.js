@@ -286,7 +286,32 @@
     if (first > 0) middle = [middle[first], ...vary(middle.filter((_, index) => index !== first))];
     const last = middle.findIndex(row => tail + row.marks / 2 >= total * 0.2 && row !== middle[0]);
     if (last >= 0 && last !== middle.length - 1) middle = [...middle.filter((_, index) => index !== last), middle[last]];
-    return [...opening, ...middle, ...closing];
+    const greedy = [...opening, ...middle, ...closing];
+    return orderProblems(greedy).length ? repairOrder(greedy) : greedy;
+  }
+  // When the greedy order breaks the rule, search for a better one: every order for up to
+  // 8 questions, otherwise improving pairwise swaps. Fewest problems wins; ties keep the
+  // greedy order (and its variety).
+  function repairOrder(rows) {
+    let best = rows, bestProblems = orderProblems(rows).length;
+    if (rows.length <= 8) {
+      const permute = (done, left) => {
+        if (!bestProblems) return;
+        if (!left.length) { const n = orderProblems(done).length; if (n < bestProblems) { best = done; bestProblems = n; } return; }
+        left.forEach((row, index) => permute([...done, row], left.filter((_, i) => i !== index)));
+      };
+      permute([], rows);
+      return best;
+    }
+    for (let improved = true; improved && bestProblems;) {
+      improved = false;
+      for (let i = 0; i < best.length && !improved; i++) for (let j = i + 1; j < best.length && !improved; j++) {
+        const trial = [...best]; [trial[i], trial[j]] = [trial[j], trial[i]];
+        const n = orderProblems(trial).length;
+        if (n < bestProblems) { best = trial; bestProblems = n; improved = true; }
+      }
+    }
+    return best;
   }
   const shuffle = (rows, random) => { const out = [...rows]; for (let i = out.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [out[i], out[j]] = [out[j], out[i]]; } return out; };
   // New topics first, then the rest, so every subset prefers variety (priority c).
@@ -428,16 +453,26 @@
     const minutes = Number($('papers-exam-minutes').value);
     if (!Number.isInteger(minutes) || minutes < 2 || minutes > 600) { showReport('Choose a whole number of minutes from 2 to 600.', true); $('papers-exam-minutes').focus(); return; }
     proposal = null; accept.hidden = true; showReport('Loading the questions in the chosen topics…');
-    $('papers-exam-generate').disabled = true;
+    const signature = () => builder.pool().map(row => row.id).join('|');
     try {
-      const descriptors = builder.pool().filter(row => ['practice-booklet', 'past-exam'].includes(row.sourceKind));
-      const skipped = builder.pool().length - descriptors.length;
-      const pool = await builder.load(descriptors, count => showReport(`Loading the questions in the chosen topics… ${count} of ${descriptors.length}`));
-      const plan = planTimedPaper(pool, minutes);
-      const note = skipped ? ` ${plural(skipped, 'question')} without marks in the chosen sources were left out.` : '';
+      const work = await builder.exclusive(async () => {
+        const before = signature();
+        const descriptors = builder.pool().filter(row => ['practice-booklet', 'past-exam'].includes(row.sourceKind));
+        const skipped = builder.pool().length - descriptors.length;
+        const pool = await builder.load(descriptors, count => showReport(`Loading the questions in the chosen topics… ${count} of ${descriptors.length}`));
+        if (signature() !== before) return {stale: true};
+        return {plan: planTimedPaper(pool, minutes), skipped, failed: pool.failed};
+      });
+      if (!work) { showReport('Luisa is busy with another paper task. Wait for it to finish, then generate again.', true); return; }
+      if (work.stale) { showReport('The sources or topics changed while the questions were loading. Generate the timed paper again.', true); return; }
+      const {plan, skipped, failed} = work;
+      const note = (skipped ? ` ${plural(skipped, 'question')} without marks in the chosen sources were left out.` : '')
+        + (failed ? ` ${plural(failed, 'question')} could not be loaded and were left out.` : '');
       const summary = plan.rows.length ? `${plural(plan.rows.length, 'question')} · ${plan.marks} marks · ${plan.minutes} minutes (+${plan.extra} minutes extra time)` : '';
       if (plan.ok) {
-        builder.arrange(plan.rows, `Timed exam paper selected: ${summary}. Review it, reorder if needed, or choose Preview exam paper.`);
+        if (!builder.arrange(plan.rows, `Timed exam paper selected: ${summary}. Review it, reorder if needed, or choose Preview exam paper.`)) {
+          showReport('Luisa is busy with another paper task, so the timed paper was not applied. Generate again when it finishes.', true); return;
+        }
         showReport(`Target ${minutes} minutes met: ${summary}, ordered easy to difficult.${note}`);
       } else {
         proposal = plan.rows;
@@ -450,7 +485,8 @@
   });
   accept.addEventListener('click', () => {
     if (!proposal) return;
-    if (builder.arrange(proposal, 'Closest timed paper selected. Review it or choose Preview exam paper.')) { proposal = null; accept.hidden = true; }
+    if (builder.arrange(proposal, 'Closest timed paper selected. Review it or choose Preview exam paper.')) { proposal = null; accept.hidden = true; showReport(''); }
+    else showReport('Luisa is busy with another paper task. Try again when it finishes.', true);
   });
   document.addEventListener('luisa-papers-state', refresh);
   $('papers-exam-print').addEventListener('click', () => builder.run(async () => {

@@ -134,13 +134,21 @@
     },
     // PAP-066: the timed exam generator draws from exactly the generator's pool.
     pool: () => pool(),
+    // Runs a task with the builder locked (generate, add/remove and print disabled), even
+    // when nothing is selected yet. Returns undefined when the builder is already busy.
+    async exclusive(task) {
+      if (operation || printing) return undefined;
+      printing = true; updateControls();
+      try { return await task(); } finally { printing = false; updateControls(); }
+    },
+    // Loads descriptors that are complete; failures are counted rather than aborting the run.
     async load(descriptors, progress) {
-      const loaded = [];
+      const loaded = []; let failed = 0;
       for (const descriptor of descriptors) {
-        loaded.push(await loadRow(descriptor));
-        if (progress && loaded.length % 50 === 0) progress(loaded.length);
+        try { loaded.push(await loadRow(descriptor)); } catch (_) { failed++; }
+        if (progress && (loaded.length + failed) % 50 === 0) progress(loaded.length + failed);
       }
-      return loaded;
+      return Object.assign(loaded, {failed});
     },
     // Replace or reorder the selection in an explicit order; printed "As selected".
     arrange(rows, message) {

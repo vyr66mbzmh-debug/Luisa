@@ -459,6 +459,9 @@ class PapersSelection(unittest.TestCase):
         before = self.exam_summary_minutes()
         self.page.locator('[data-remove]').first.click()
         self.assertLess(self.exam_summary_minutes()[0], before[0])
+        # While a timed paper loads, the builder is locked; a busy builder is reported, never silently ignored.
+        locked = self.page.evaluate("""async () => { let during; const r = await LUISA_PAPERS_BUILDER.exclusive(async () => { during = [LUISA_PAPERS_BUILDER.busy(), document.querySelector('#papers-generate').disabled, document.querySelector('[data-remove]').disabled, await LUISA_PAPERS_BUILDER.exclusive(async () => 'nested')]; return 'done'; }); return [r, during, LUISA_PAPERS_BUILDER.busy()]; }""")
+        self.assertEqual(locked, ['done', [True, True, True, None], False])
         # A target the chosen topics cannot reach is reported with the closest paper, which the teacher may accept.
         self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-31-2024-june')
         report = self.timed(minutes=120)
