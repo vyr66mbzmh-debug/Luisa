@@ -1,5 +1,40 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.68 -->
+**Release 0.68 · GitHub #120.** Written for any successor agent or engine; it needs no earlier conversation.
+
+**Current state.** Luisa v0.68 is the published version on Cloudflare (owner edition) and on ADA (staff and pupil editions), all built from one merged revision recorded in GitHub #120. This release changes only the Papers page filter dropdowns (all editions); the teacher-only exam paper (owner and ADA staff only) is unchanged from v0.67.
+
+**What changed (PAP-068-1 … PAP-068-3 in docs/requirements/register.json, each with acceptance criteria).**
+- **Paper dropdown follows Course/Book (PAP-068-1).** papers.js `relevantPapers()` keeps a paper when any of its catalogue rows has a chapter key inside the current Course/Book (`inHierarchy`); `refreshPapers(wanted)` rebuilds the options (sorted as before: newest date, then code) and keeps the chosen paper only if it is still listed, else All. It runs on restore, on Course/Book change (`hierarchyChanged`, which also refreshes In paper order) and on source-tickbox change.
+- **Active style (PAP-068-2).** `markActive()` (called from `refreshFilters`, so on every change and restore) toggles class `filter-active` on #papers-past-paper, #papers-difficulty, #papers-course and #papers-book when their value is not "" (All). papers.css: `select.filter-active` inside `@media screen` (border #153b57 plus inset 1px shadow, background #edf3f7, text #102b43 semibold) — existing Luisa navy and pale-blue tint; text 12.9:1 on the tint, border 11.7:1 on white; disabled text 4.7:1.
+- **Disabled paper dropdown (PAP-068-3).** Unticked Past Papers: `refreshPapers` forces the value to All and disables it; `sourceMatches` ignores the value of a disabled dropdown. papers.css `select:disabled` (background #eceeef, text #5f6b75, border #c9d1d7, not-allowed cursor) (screen only; other selects are disabled only while the page loads).
+- **Unchanged.** Print layouts, saved selections (session key luisa-papers-v1, no new fields), saved-paper IDs, single-paper selection and In paper order, and the teacher-only exam paper and its pupil gating.
+
+**Sources and requirements.**
+- **Question content:** content/practice, content/exams, practice-catalogue.json and exam-catalogue.json.
+- **Requirements:** docs/requirements/register.json, with the generated REQUIREMENTS.md (`python3 scripts/luisa.py requirements`).
+- **Rules:** AGENTS.md and docs/agentic/LEAD-RULES.md. Standing rule OPS-063: record new owner requirements on GitHub and in the register while implementing; at the end of every job update this handoff and log the handoff and tokens on GitHub before reporting done. No automatic wakeup or report schedules.
+
+**Build, test and release.**
+1. **Gate:** `python3 scripts/luisa.py gate` runs the requirements check, unit tests, scan and owner build. It needs Python with requirements-dev.txt and requirements-auth.txt.
+2. **Browser suites:** `python -m unittest tests.test_papers_selection tests.papers_print_browser`. These need Playwright and PyMuPDF; set LUISA_BROWSER_CHANNEL=chrome to use the installed Chrome.
+3. **Land:** merge through a reviewed PR with green exact-head CI, using `python3 scripts/land.py <PR> --review-record <file>`.
+4. **Build:** build each edition with `python3 scripts/luisa.py build --profile owner|staff|student`, then run `check-artifact` on each.
+5. **Deploy:** Cloudflare deploys main automatically. ADA receives the same staff and student artifacts; its host details are in the private WORKSPACE.json (see "ADA is a required release target" below).
+6. **Verify and record:** verify live owner (including disconnected printing), ADA staff and ADA pupil (filters present, teacher exam paper absent). Then make the recovery ZIP (the latest five are kept) and send the SMTP owner report.
+
+The per-release live QA helpers are private working copies, not in Git; the checks they perform are listed on GitHub #120.
+
+**Verified.**
+- **Local:** the gate (0 skips) and the Papers browser suites passed. `tests.test_papers_selection` PAP_068 covers Maths A level hiding every 9FM0 paper, a book narrowing the list, All restoring all 12, reset of a chosen paper that drops out, the active style present/absent with measured contrast, unticked = disabled, grey, reset and ignored (even with a forced value), ticking re-enabling, and three restore cases.
+- **Review:** an independent review-only agent reviewed the PR diff.
+- **Live:** the live checks, including screenshots of the dropdown states, are recorded on #120.
+
+**Outstanding.** Next job: v0.69, the June 2023 Edexcel import (its own issue and branch). Two owner notes from v0.65 still await the owner's view: the per-cell marks in the one three-cell table question, and the course label for a future 9FM0 Mechanics paper.
+
+**Usage.** Token figures are logged on GitHub #120 (OPS-063); see the final comment there for the total and its source.
+
 <!-- LUISA-REPORT-HANDOFF v0.67 -->
 **Release 0.67 · GitHub #118.** Written for any successor agent or engine; it needs no earlier conversation.
 

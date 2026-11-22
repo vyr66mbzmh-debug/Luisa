@@ -606,6 +606,133 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(self.page.locator('#papers-order').input_value(), 'topic')
         self.assertEqual(len(order_options()), 2)
 
+    def paper_options(self):
+        return self.page.locator('#papers-past-paper option').evaluate_all('nodes=>nodes.map(n=>n.value)')
+
+    def select_style(self, ident):
+        return self.page.locator(ident).evaluate("""node => { const s = getComputedStyle(node);
+          return {active: node.classList.contains('filter-active'), disabled: node.disabled, border: s.borderTopColor,
+                  background: s.backgroundColor, color: s.color, weight: s.fontWeight, shadow: s.boxShadow}; }""")
+
+    @staticmethod
+    def contrast(a, b):
+        def luminance(css):
+            channels = [int(v) / 255 for v in css[css.index('(') + 1:css.index(')')].split(',')[:3]]
+            lin = [c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4 for c in channels]
+            return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2]
+        hi, lo = sorted((luminance(a), luminance(b)), reverse=True)
+        return (hi + 0.05) / (lo + 0.05)
+
+    def test_paper_dropdown_follows_course_book_tickbox_and_active_style_PAP_068(self):
+        self.page.unroute('**/practice-catalogue.json')
+        self.page.unroute('**/exam-catalogue.json')
+        self.page.reload()
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 13")
+        filters = ['#papers-past-paper', '#papers-difficulty', '#papers-course', '#papers-book']
+        everything = self.paper_options()
+        self.assertEqual(len(everything), 13)
+        plain = {ident: self.select_style(ident) for ident in filters}
+        for ident in filters:
+            self.assertFalse(plain[ident]['active'], ident)
+            self.assertFalse(plain[ident]['disabled'], ident)
+            self.assertEqual(plain[ident]['background'], 'rgb(255, 255, 255)', ident)
+        # PAP-068-1: Maths A level hides every Further Maths paper; All shows all papers again.
+        self.page.locator('#papers-course').select_option('maths-a-level')
+        maths = self.paper_options()
+        self.assertEqual(len(maths), 9)
+        self.assertFalse([value for value in maths if '9fm0' in value])
+        self.assertIn('edexcel-9ma0-31-2024-june', maths)
+        # PAP-068-2: the active style is clearly different, readable and not the disabled look.
+        active = self.select_style('#papers-course')
+        self.assertTrue(active['active'])
+        self.assertEqual(active['border'], 'rgb(21, 59, 87)')
+        self.assertEqual(active['background'], 'rgb(237, 243, 247)')
+        self.assertNotEqual(active['background'], plain['#papers-course']['background'])
+        self.assertGreaterEqual(self.contrast(active['color'], active['background']), 4.5)
+        self.assertGreaterEqual(self.contrast(active['border'], 'rgb(255, 255, 255)'), 3)
+        self.assertFalse(self.select_style('#papers-book')['active'])
+        self.page.locator('#papers-book').select_option('maths-a-level/maths-mechanics-year-2')
+        self.assertEqual(self.paper_options(), ['', 'edexcel-9ma0-32-2025-june', 'edexcel-9ma0-32-2024-june'])
+        self.assertTrue(self.select_style('#papers-book')['active'])
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-32-2024-june')
+        self.assertTrue(self.select_style('#papers-past-paper')['active'])
+        self.assertIn(['paper', 'In paper order'], self.page.locator('#papers-order option').evaluate_all('n=>n.map(o=>[o.value,o.textContent])'))
+        # A chosen paper with no question in the new book is reset to All.
+        self.page.locator('#papers-book').select_option('maths-a-level/maths-pure-year-2')
+        self.assertEqual(self.paper_options(), ['', 'edexcel-9ma0-31-2025-june', 'edexcel-9ma0-02-2025-june', 'edexcel-9ma0-01-2025-june',
+                                                'edexcel-9ma0-02-2024-june', 'edexcel-9ma0-01-2024-june'])
+        self.assertEqual(self.page.locator('#papers-past-paper').input_value(), '')
+        self.assertFalse(self.select_style('#papers-past-paper')['active'])
+        self.assertNotIn('paper', self.page.locator('#papers-order option').evaluate_all('n=>n.map(o=>o.value)'))
+        self.page.locator('#papers-book').select_option('')
+        self.assertFalse(self.select_style('#papers-book')['active'])
+        self.assertEqual(len(self.paper_options()), 9)
+        self.page.locator('#papers-course').select_option('further-maths-a-level')
+        self.assertEqual(self.paper_options(), ['', 'edexcel-9fm0-02-2025-june', 'edexcel-9fm0-01-2025-june',
+                                                'edexcel-9fm0-02-2024-june', 'edexcel-9fm0-01-2024-june'])
+        self.page.locator('#papers-difficulty').select_option('medium')
+        self.assertTrue(self.select_style('#papers-difficulty')['active'])
+        self.page.locator('#papers-difficulty').select_option('')
+        self.assertFalse(self.select_style('#papers-difficulty')['active'])
+        self.page.locator('#papers-course').select_option('')
+        self.assertEqual(self.paper_options(), everything)
+        for ident in filters:
+            self.assertEqual(self.select_style(ident), plain[ident], ident)
+        # PAP-068-3: unticking resets a chosen paper, disables and greys the dropdown, and it filters nothing.
+        self.page.locator('#papers-source-practice').uncheck()
+        self.page.locator('#papers-past-paper').select_option('edexcel-9fm0-01-2024-june')
+        self.page.locator('#papers-source-past-papers').uncheck()
+        grey = self.select_style('#papers-past-paper')
+        self.assertTrue(grey['disabled'])
+        self.assertFalse(grey['active'])
+        self.assertEqual(self.page.locator('#papers-past-paper').input_value(), '')
+        self.assertEqual(grey['background'], 'rgb(236, 238, 239)')
+        self.assertEqual(grey['color'], 'rgb(95, 107, 117)')
+        self.assertNotEqual(grey['background'], active['background'])
+        self.assertNotEqual(grey['border'], active['border'])
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '554 questions in the selection')
+        self.page.evaluate("""() => { const s = document.querySelector('#papers-past-paper');
+          s.append(new Option('x', 'edexcel-9ma0-01-2025-june')); s.value = 'edexcel-9ma0-01-2025-june'; }""")
+        self.page.locator('#papers-difficulty').select_option('medium')
+        self.page.locator('#papers-difficulty').select_option('')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '554 questions in the selection')
+        self.assertNotIn('paper', self.page.locator('#papers-order option').evaluate_all('n=>n.map(o=>o.value)'))
+        self.page.locator('#papers-source-past-papers').check()
+        self.assertFalse(self.page.locator('#papers-past-paper').is_disabled())
+        self.assertEqual(self.page.locator('#papers-past-paper').input_value(), '')
+        self.assertEqual(self.paper_options(), everything)
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '675 questions in the selection')
+        # Restore: a paper saved with the tickbox unticked comes back on All and disabled.
+        saved = {'version': 3, 'sources': {'practice': False, 'exam-style': True, 'past-papers': False},
+                 'pastPaper': 'edexcel-9fm0-01-2024-june', 'selected': [], 'selectionOrder': [], 'course': '', 'book': '', 'chapters': []}
+        self.page.evaluate("s => sessionStorage.setItem('luisa-papers-v1', JSON.stringify(s))", saved)
+        self.page.reload()
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 13 && !document.querySelector('#papers-course').disabled")
+        restored = self.select_style('#papers-past-paper')
+        self.assertTrue(restored['disabled'])
+        self.assertFalse(restored['active'])
+        self.assertEqual(restored['background'], 'rgb(236, 238, 239)')
+        self.assertEqual(self.page.locator('#papers-past-paper').input_value(), '')
+        # A ticked saved paper inside the saved course is restored with the active style on every chosen filter.
+        saved.update(sources={'practice': False, 'exam-style': False, 'past-papers': True}, course='maths-a-level',
+                     difficulty='easy', pastPaper='edexcel-9ma0-01-2025-june', order='paper')
+        self.page.evaluate("s => sessionStorage.setItem('luisa-papers-v1', JSON.stringify(s))", saved)
+        self.page.reload()
+        self.page.wait_for_function("!document.querySelector('#papers-course').disabled")
+        self.assertEqual(self.page.locator('#papers-past-paper').input_value(), 'edexcel-9ma0-01-2025-june')
+        self.assertEqual(self.page.locator('#papers-order').input_value(), 'paper')
+        self.assertEqual(len(self.paper_options()), 9)
+        for ident in ('#papers-past-paper', '#papers-difficulty', '#papers-course'):
+            self.assertTrue(self.select_style(ident)['active'], ident)
+        self.assertFalse(self.select_style('#papers-book')['active'])
+        # A saved paper outside the saved course is reset to All.
+        saved.update(pastPaper='edexcel-9fm0-01-2024-june', order='topic')
+        self.page.evaluate("s => sessionStorage.setItem('luisa-papers-v1', JSON.stringify(s))", saved)
+        self.page.reload()
+        self.page.wait_for_function("!document.querySelector('#papers-course').disabled")
+        self.assertEqual(self.page.locator('#papers-past-paper').input_value(), '')
+        self.assertFalse(self.select_style('#papers-past-paper')['active'])
+
     def test_practice_marks_include_all_labelled_table_parts(self):
         self.page.unroute('**/practice-catalogue.json')
         ident = 'practice/maths-a-level/maths-pure-year-1/ch11/11.3/q7'

@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.68
+
+[Issue #120](https://github.com/vyr66mbzmh-debug/Luisa/issues/120) makes the past paper dropdown follow Course and Book, highlights active filters and greys out the paper dropdown while Past Papers is unticked.
+
 ## Papers v0.67
 
 [Issue #118](https://github.com/vyr66mbzmh-debug/Luisa/issues/118) adds mark scheme print options, a ±2 minute timed target, new default instructions, a default date and fewer builder notes to the teacher-only exam paper.

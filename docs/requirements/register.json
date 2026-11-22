@@ -5120,7 +5120,8 @@
         "AGENTS.md",
         "GitHub issue #110",
         "GitHub issue #116",
-        "GitHub issue #118"
+        "GitHub issue #118",
+        "GitHub issue #120"
       ]
     },
     {
@@ -5499,6 +5500,62 @@
         "tests/papers_print_browser.py",
         "tests/test_papers_selection.py",
         "GitHub issue #118"
+      ]
+    },
+    {
+      "id": "PAP-068-1",
+      "requirement": "Paper dropdown follows the course and book filters. The specific past paper dropdown lists only papers relevant to the current Course and Book selections. A paper is relevant if at least one of its questions belongs to the selected course and, if a book is selected, to that book's chapters (use the existing course/book/chapter mappings). Example: with Maths A level selected, no Further Maths papers appear. With Course and Book on All, all papers appear. Other filters keep their current behaviour. If the chosen paper is no longer in the filtered list after Course or Book changes, reset the paper dropdown to its \"All\" state. Saved selections, saved-paper IDs and the single-paper behaviour (a chosen paper selects only that paper) are unchanged.",
+      "scope": "v0.68 Papers page filters in all editions (Cloudflare owner, ADA staff, ADA pupil); screen only, print layouts unchanged",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #120, 22 November 2026",
+      "acceptance": [
+        "With Course and Book on All the dropdown lists all 12 published papers; with Maths A level selected it lists only the 8 9MA0 papers and no 9FM0 paper; with Further Maths A level only the 4 9FM0 papers.",
+        "A selected book narrows the list to papers with at least one question in that book's chapters (Maths Mechanics Year 2: only the two 9MA0/32 papers; Maths Pure Year 2: the five papers with a Pure Year 2 question).",
+        "A chosen paper that is no longer listed after a Course or Book change resets the dropdown to All (and removes In paper order); a chosen paper still listed is kept. A restored saved paper outside the saved course/book is reset to All.",
+        "Other filters, saved selections, saved-paper IDs and single-paper selection are unchanged; existing selection tests still pass."
+      ],
+      "evidence": [
+        "tests/test_papers_selection.py (PAP_068)",
+        "GitHub issue #120"
+      ]
+    },
+    {
+      "id": "PAP-068-2",
+      "requirement": "Visible active-filter state. For the filter dropdowns on the Papers page: on \"All\" they look exactly as now. When any other option is chosen, that dropdown gets a clearly active style in a colour that fits the Luisa style (existing palette/CSS variables, not a new arbitrary colour), e.g. accent border and tinted background with readable text. It must NOT look disabled or grayed out. Meet WCAG AA contrast in the existing themes. Screen only; print layouts unchanged. The style updates immediately on every change, after restoring a saved selection, and after a reset to \"All\".",
+      "scope": "v0.68 Papers page filters in all editions (Cloudflare owner, ADA staff, ADA pupil); screen only, print layouts unchanged",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #120, 22 November 2026",
+      "acceptance": [
+        "Past paper, Difficulty, Course and Book dropdowns on All keep the existing white style (computed styles identical before and after a round trip to All).",
+        "Any other choice adds class filter-active: Luisa navy #153b57 border (2px effect) on the existing pale-blue tint #edf3f7 with #102b43 semibold text; text contrast ≥ 4.5:1 and border contrast ≥ 3:1 (measured in the test), visibly different from the disabled style.",
+        "The style is applied on every change, after a saved selection is restored and after a reset to All; it is inside @media screen, so print is unaffected."
+      ],
+      "evidence": [
+        "tests/test_papers_selection.py (PAP_068)",
+        "GitHub issue #120"
+      ]
+    },
+    {
+      "id": "PAP-068-3",
+      "requirement": "Past paper dropdown follows the \"Past papers\" source tickbox. When the tickbox is NOT ticked, the paper dropdown is disabled and visibly grayed out (standard disabled styling, clearly different from the active style in item 2; the current code already stops it working but shows nothing, so add the visible styling). When ticked, it is enabled and behaves as in items 1 and 2. If the tickbox is unticked while a paper is chosen, reset the dropdown to \"All\". A disabled dropdown never filters or selects anything. A saved selection with a paper chosen and the tickbox unticked is restored with the dropdown on \"All\" and disabled. All of this updates immediately on every change, including restore.",
+      "scope": "v0.68 Papers page filters in all editions (Cloudflare owner, ADA staff, ADA pupil); screen only, print layouts unchanged",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #120, 22 November 2026",
+      "acceptance": [
+        "Unticked: the dropdown is disabled, grey (#eceeef background, #5f6b75 text, light border, not-allowed cursor), on All, without the active style.",
+        "Unticking with a paper chosen resets it to All; even a value forced onto the disabled dropdown never changes the question count or offers In paper order.",
+        "Ticking enables the dropdown on All, listing the papers relevant to the current Course/Book.",
+        "A saved selection with a paper chosen and the tickbox unticked restores on All and disabled."
+      ],
+      "evidence": [
+        "tests/test_papers_selection.py (PAP_068)",
+        "GitHub issue #120"
       ]
     }
   ]
