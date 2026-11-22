@@ -4,8 +4,8 @@
   "printable": true,
   "contentStatus": "checked",
   "note": "Checked source metadata for the six owner-supplied June 2025 papers. Printable question payloads are joined by stable ID through exam-catalogue.json. Difficulty follows original paper order as a guide, not an empirical rating.",
-  "questionCount": 121,
-  "totalMarks": 900,
+  "questionCount": 180,
+  "totalMarks": 1350,
   "papers": [
     {
       "id": "edexcel-9ma0-01-2025-june",
@@ -4025,6 +4025,1938 @@
           ],
           "questionNumber": 9,
           "sourceLabel": "Edexcel June 2024 9FM0/02 Q9"
+        }
+      ],
+      "sourceVerification": {
+        "questionPaperAndMarkSchemeTotalsAgree": true,
+        "originalQuestionOrderPreserved": true,
+        "totalMarksChecked": 75
+      }
+    },
+    {
+      "id": "edexcel-9ma0-01-2023-june",
+      "board": "Edexcel",
+      "qualification": "A level",
+      "paperCode": "9MA0/01",
+      "title": "Pure Mathematics 1",
+      "examDate": "2023-06-06",
+      "session": "June 2023",
+      "questionCount": 15,
+      "totalMarks": 100,
+      "source": {
+        "questionPaperUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-1/QP/June%202023%20QP.pdf",
+        "markSchemeUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-1/MS/June%202023%20MS.pdf",
+        "questionPaperSha256": "5dfb0d628e520c600a2f7b1dacd99f09c8a88d1429c6f5c896ac86e8096eff4a",
+        "markSchemeSha256": "1700fbd5b3e17ddb34263f30ba998f82123386357efe5ded289971a31e3930e2",
+        "indexedQuestionPaperSha256": "5dfb0d628e520c600a2f7b1dacd99f09c8a88d1429c6f5c896ac86e8096eff4a",
+        "indexedMarkSchemeSha256": "1700fbd5b3e17ddb34263f30ba998f82123386357efe5ded289971a31e3930e2",
+        "basis": "Owner-supplied original PDF attachment"
+      },
+      "difficultyPolicy": {
+        "basis": "original-paper-order",
+        "easyQuestions": [
+          1,
+          5
+        ],
+        "mediumQuestions": [
+          6,
+          10
+        ],
+        "difficultQuestions": [
+          11,
+          15
+        ]
+      },
+      "questions": [
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q1",
+          "originalQuestionNumber": 1,
+          "originalQuestionLabel": "1",
+          "marks": 4,
+          "difficulty": "easy",
+          "topicSummary": "Integrating powers of x after expanding",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "integration",
+              "skillId": "smq-1.36"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "algebra-and-functions",
+              "skillId": "smq-1.01"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            2,
+            3
+          ],
+          "questionNumber": 1,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q1"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q2",
+          "originalQuestionNumber": 2,
+          "originalQuestionLabel": "2",
+          "marks": 6,
+          "difficulty": "easy",
+          "topicSummary": "Factor theorem and solving a cubic equation",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "algebra-and-functions",
+              "skillId": "smq-1.14"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "algebra-and-functions",
+              "skillId": "smq-1.06"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            4,
+            5
+          ],
+          "questionNumber": 2,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q2"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q3",
+          "originalQuestionNumber": 3,
+          "originalQuestionLabel": "3",
+          "marks": 3,
+          "difficulty": "easy",
+          "topicSummary": "Magnitude of 3D position vectors",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "vectors",
+              "skillId": "smq-2.45"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            6,
+            7
+          ],
+          "questionNumber": 3,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q3"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q4",
+          "originalQuestionNumber": 4,
+          "originalQuestionLabel": "4",
+          "marks": 5,
+          "difficulty": "easy",
+          "topicSummary": "Small angle approximation for a stationary point and a tangent",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "trigonometry",
+              "skillId": "smq-2.19"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "differentiation",
+              "skillId": "smq-1.32"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            8,
+            9
+          ],
+          "questionNumber": 4,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q4"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q5",
+          "originalQuestionNumber": 5,
+          "originalQuestionLabel": "5",
+          "marks": 6,
+          "difficulty": "easy",
+          "topicSummary": "Trapezium rule with unknown table values",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "integration",
+              "skillId": "smq-2.30"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "algebra-and-functions",
+              "skillId": "smq-1.07"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            10,
+            11
+          ],
+          "questionNumber": 5,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q5"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q6",
+          "originalQuestionNumber": 6,
+          "originalQuestionLabel": "6",
+          "marks": 6,
+          "difficulty": "medium",
+          "topicSummary": "Laws of logarithms",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "exponentials-and-logarithms",
+              "skillId": "smq-1.22"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            12,
+            13
+          ],
+          "questionNumber": 6,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q6"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q7",
+          "originalQuestionNumber": 7,
+          "originalQuestionLabel": "7",
+          "marks": 8,
+          "difficulty": "medium",
+          "topicSummary": "Range, inverse and composite functions",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "functions-and-transformations",
+              "skillId": "smq-2.10"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "functions-and-transformations",
+              "skillId": "smq-2.12"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            14,
+            17
+          ],
+          "questionNumber": 7,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q7"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q8",
+          "originalQuestionNumber": 8,
+          "originalQuestionLabel": "8",
+          "marks": 10,
+          "difficulty": "medium",
+          "topicSummary": "Arc length, sector area and triangles in a stage plan",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "trigonometry",
+              "skillId": "smq-2.01"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "trigonometry",
+              "skillId": "smq-1.39"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            18,
+            21
+          ],
+          "questionNumber": 8,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q8"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q9",
+          "originalQuestionNumber": 9,
+          "originalQuestionLabel": "9",
+          "marks": 7,
+          "difficulty": "medium",
+          "topicSummary": "Geometric sequence, convergence and sum to infinity",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "sequences-and-series",
+              "skillId": "smq-2.08"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            22,
+            23
+          ],
+          "questionNumber": 9,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q9"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q10",
+          "originalQuestionNumber": 10,
+          "originalQuestionLabel": "10",
+          "marks": 9,
+          "difficulty": "medium",
+          "topicSummary": "Circle centre and radius, and the discriminant for intersection",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "coordinate-geometry",
+              "skillId": "smq-1.12"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "algebra-and-functions",
+              "skillId": "smq-1.10"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            24,
+            27
+          ],
+          "questionNumber": 10,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q10"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q11",
+          "originalQuestionNumber": 11,
+          "originalQuestionLabel": "11",
+          "marks": 7,
+          "difficulty": "difficult",
+          "topicSummary": "Exponential model from a log-linear graph",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "exponentials-and-logarithms",
+              "skillId": "smq-1.27"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "exponentials-and-logarithms",
+              "skillId": "smq-1.26"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            28,
+            31
+          ],
+          "questionNumber": 11,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q11"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q12",
+          "originalQuestionNumber": 12,
+          "originalQuestionLabel": "12",
+          "marks": 5,
+          "difficulty": "difficult",
+          "topicSummary": "Differentiating sin x from first principles",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "differentiation",
+              "skillId": "smq-1.30"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "trigonometry",
+              "skillId": "smq-2.16"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            32,
+            33
+          ],
+          "questionNumber": 12,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q12"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q13",
+          "originalQuestionNumber": 13,
+          "originalQuestionLabel": "13",
+          "marks": 7,
+          "difficulty": "difficult",
+          "topicSummary": "Quadratic and trigonometric models of a roller coaster",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "algebra-and-functions",
+              "skillId": "smq-1.11"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "trigonometry",
+              "skillId": "smq-1.43"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            34,
+            37
+          ],
+          "questionNumber": 13,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q13"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q14",
+          "originalQuestionNumber": 14,
+          "originalQuestionLabel": "14",
+          "marks": 4,
+          "difficulty": "difficult",
+          "topicSummary": "Algebraic proof that an expression is odd",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "proof",
+              "skillId": "smq-1.45"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            38,
+            39
+          ],
+          "questionNumber": 14,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q14"
+        },
+        {
+          "id": "exam/edexcel-9ma0-01-2023-june/q15",
+          "originalQuestionNumber": 15,
+          "originalQuestionLabel": "15",
+          "marks": 13,
+          "difficulty": "difficult",
+          "topicSummary": "Quotient and chain rule, iteration and change of sign",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "differentiation",
+              "skillId": "smq-2.25"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "numerical-methods",
+              "skillId": "smq-2.28"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "numerical-methods",
+              "skillId": "smq-2.27"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            40,
+            44
+          ],
+          "questionNumber": 15,
+          "sourceLabel": "Edexcel June 2023 9MA0/01 Q15"
+        }
+      ],
+      "sourceVerification": {
+        "questionPaperAndMarkSchemeTotalsAgree": true,
+        "originalQuestionOrderPreserved": true,
+        "totalMarksChecked": 100
+      }
+    },
+    {
+      "id": "edexcel-9ma0-02-2023-june",
+      "board": "Edexcel",
+      "qualification": "A level",
+      "paperCode": "9MA0/02",
+      "title": "Pure Mathematics 2",
+      "examDate": "2023-06-13",
+      "session": "June 2023",
+      "questionCount": 15,
+      "totalMarks": 100,
+      "source": {
+        "questionPaperUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-2/QP/June%202023%20QP.pdf",
+        "markSchemeUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-2/MS/June%202023%20MS.pdf",
+        "questionPaperSha256": "5af2f862c6a02db948148b30e9bf6ed77ce435eb3ce5d138b34432a074ab2537",
+        "markSchemeSha256": "299dd15026907752f98283a4781d7ce28fa84aa2fbf88144a5b82c74973ba57c",
+        "indexedQuestionPaperSha256": "5af2f862c6a02db948148b30e9bf6ed77ce435eb3ce5d138b34432a074ab2537",
+        "indexedMarkSchemeSha256": "299dd15026907752f98283a4781d7ce28fa84aa2fbf88144a5b82c74973ba57c",
+        "basis": "Owner-supplied original PDF attachment"
+      },
+      "difficultyPolicy": {
+        "basis": "original-paper-order",
+        "easyQuestions": [
+          1,
+          5
+        ],
+        "mediumQuestions": [
+          6,
+          10
+        ],
+        "difficultQuestions": [
+          11,
+          15
+        ]
+      },
+      "questions": [
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q1",
+          "originalQuestionNumber": 1,
+          "originalQuestionLabel": "1",
+          "marks": 4,
+          "difficulty": "easy",
+          "topicSummary": "Second derivative and concavity",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "differentiation",
+              "skillId": "smq-2.20"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            2,
+            3
+          ],
+          "questionNumber": 1,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q1"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q2",
+          "originalQuestionNumber": 2,
+          "originalQuestionLabel": "2",
+          "marks": 6,
+          "difficulty": "easy",
+          "topicSummary": "Periodic sequence defined by a recurrence and its sum",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "sequences-and-series",
+              "skillId": "smq-2.06"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            4,
+            5
+          ],
+          "questionNumber": 2,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q2"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q3",
+          "originalQuestionNumber": 3,
+          "originalQuestionLabel": "3",
+          "marks": 5,
+          "difficulty": "easy",
+          "topicSummary": "Logarithmic equation leading to a quadratic",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "exponentials-and-logarithms",
+              "skillId": "smq-1.22"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "algebra-and-functions",
+              "skillId": "smq-1.06"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            6,
+            7
+          ],
+          "questionNumber": 3,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q3"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q4",
+          "originalQuestionNumber": 4,
+          "originalQuestionLabel": "4",
+          "marks": 4,
+          "difficulty": "easy",
+          "topicSummary": "Exponential cooling model",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "exponentials-and-logarithms",
+              "skillId": "smq-1.26"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "differentiation",
+              "skillId": "smq-2.21"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            8,
+            9
+          ],
+          "questionNumber": 4,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q4"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q5",
+          "originalQuestionNumber": 5,
+          "originalQuestionLabel": "5",
+          "marks": 5,
+          "difficulty": "easy",
+          "topicSummary": "Turning point and integrating to find a curve",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "differentiation",
+              "skillId": "smq-1.34"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "integration",
+              "skillId": "smq-1.36"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            10,
+            11
+          ],
+          "questionNumber": 5,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q5"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q6",
+          "originalQuestionNumber": 6,
+          "originalQuestionLabel": "6",
+          "marks": 6,
+          "difficulty": "medium",
+          "topicSummary": "Parallel vectors and the perimeter of a running track",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "vectors",
+              "skillId": "smq-1.46"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            12,
+            15
+          ],
+          "questionNumber": 6,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q6"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q7",
+          "originalQuestionNumber": 7,
+          "originalQuestionLabel": "7",
+          "marks": 7,
+          "difficulty": "medium",
+          "topicSummary": "Implicit differentiation and a normal",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "differentiation",
+              "skillId": "smq-2.26"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "differentiation",
+              "skillId": "smq-1.32"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            16,
+            17
+          ],
+          "questionNumber": 7,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q7"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q8",
+          "originalQuestionNumber": 8,
+          "originalQuestionLabel": "8",
+          "marks": 6,
+          "difficulty": "medium",
+          "topicSummary": "Harmonic form and the maximum sum of an arithmetic series",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "trigonometry",
+              "skillId": "smq-2.18"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "sequences-and-series",
+              "skillId": "smq-2.07"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            18,
+            21
+          ],
+          "questionNumber": 8,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q8"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q9",
+          "originalQuestionNumber": 9,
+          "originalQuestionLabel": "9",
+          "marks": 7,
+          "difficulty": "medium",
+          "topicSummary": "Parametric to Cartesian conversion and a tangent",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "parametric-equations",
+              "skillId": "smq-2.41"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "parametric-equations",
+              "skillId": "smq-2.42"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            22,
+            25
+          ],
+          "questionNumber": 9,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q9"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q10",
+          "originalQuestionNumber": 10,
+          "originalQuestionLabel": "10",
+          "marks": 7,
+          "difficulty": "medium",
+          "topicSummary": "Partial fractions and a definite integral",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "partial-fractions",
+              "skillId": "smq-2.37"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "integration",
+              "skillId": "smq-2.38"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            26,
+            29
+          ],
+          "questionNumber": 10,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q10"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q11",
+          "originalQuestionNumber": 11,
+          "originalQuestionLabel": "11",
+          "marks": 10,
+          "difficulty": "difficult",
+          "topicSummary": "Differential equation for filling a tank",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "differential-equations",
+              "skillId": "smq-2.40"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "differentiation",
+              "skillId": "smq-2.23"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            30,
+            33
+          ],
+          "questionNumber": 11,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q11"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q12",
+          "originalQuestionNumber": 12,
+          "originalQuestionLabel": "12",
+          "marks": 10,
+          "difficulty": "difficult",
+          "topicSummary": "Modulus function models and an inequality",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "functions-and-transformations",
+              "skillId": "smq-2.13"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "algebra-and-functions",
+              "skillId": "smq-1.20"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            34,
+            37
+          ],
+          "questionNumber": 12,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q12"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q13",
+          "originalQuestionNumber": 13,
+          "originalQuestionLabel": "13",
+          "marks": 13,
+          "difficulty": "difficult",
+          "topicSummary": "Binomial series estimate and an exact integral by substitution",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "sequences-and-series",
+              "skillId": "smq-2.09"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "integration",
+              "skillId": "smq-2.35"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            38,
+            41
+          ],
+          "questionNumber": 13,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q13"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q14",
+          "originalQuestionNumber": 14,
+          "originalQuestionLabel": "14",
+          "marks": 7,
+          "difficulty": "difficult",
+          "topicSummary": "Trigonometric identities and solving an equation",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "trigonometry",
+              "skillId": "smq-2.17"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-1",
+              "topicId": "trigonometry",
+              "skillId": "smq-1.42"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            42,
+            45
+          ],
+          "questionNumber": 14,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q14"
+        },
+        {
+          "id": "exam/edexcel-9ma0-02-2023-june/q15",
+          "originalQuestionNumber": 15,
+          "originalQuestionLabel": "15",
+          "marks": 3,
+          "difficulty": "difficult",
+          "topicSummary": "Completing a proof by contradiction",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "proof",
+              "skillId": "smq-2.44"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            46,
+            48
+          ],
+          "questionNumber": 15,
+          "sourceLabel": "Edexcel June 2023 9MA0/02 Q15"
+        }
+      ],
+      "sourceVerification": {
+        "questionPaperAndMarkSchemeTotalsAgree": true,
+        "originalQuestionOrderPreserved": true,
+        "totalMarksChecked": 100
+      }
+    },
+    {
+      "id": "edexcel-9ma0-32-2023-june",
+      "board": "Edexcel",
+      "qualification": "A level",
+      "paperCode": "9MA0/32",
+      "title": "Mechanics",
+      "examDate": "2023-06-20",
+      "session": "June 2023",
+      "questionCount": 6,
+      "totalMarks": 50,
+      "source": {
+        "questionPaperUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-3/QP/June%202023%20QP%20%28Mech%29.pdf",
+        "markSchemeUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-3/MS/June%202023%20MS%20%28Mech%29.pdf",
+        "questionPaperSha256": "c8edd3050af7f0c9060f518dbc27cb69154fae2899a179f9e0a0dc8a0dae02b8",
+        "markSchemeSha256": "dcd6471bd55f5f1cef26915138007ff0fe90b32228a8a7e5a20e693f5d66671a",
+        "indexedQuestionPaperSha256": "c8edd3050af7f0c9060f518dbc27cb69154fae2899a179f9e0a0dc8a0dae02b8",
+        "indexedMarkSchemeSha256": "dcd6471bd55f5f1cef26915138007ff0fe90b32228a8a7e5a20e693f5d66671a",
+        "basis": "Owner-supplied original PDF attachment"
+      },
+      "difficultyPolicy": {
+        "basis": "original-paper-order",
+        "easyQuestions": [
+          1,
+          2
+        ],
+        "mediumQuestions": [
+          3,
+          4
+        ],
+        "difficultQuestions": [
+          5,
+          6
+        ]
+      },
+      "questions": [
+        {
+          "id": "exam/edexcel-9ma0-32-2023-june/q1",
+          "originalQuestionNumber": 1,
+          "originalQuestionLabel": "1",
+          "marks": 3,
+          "difficulty": "easy",
+          "topicSummary": "Constant acceleration from rest",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "kinematics",
+              "skillId": "smq-1.65"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            2,
+            3
+          ],
+          "questionNumber": 1,
+          "sourceLabel": "Edexcel June 2023 9MA0/32 Q1"
+        },
+        {
+          "id": "exam/edexcel-9ma0-32-2023-june/q2",
+          "originalQuestionNumber": 2,
+          "originalQuestionLabel": "2",
+          "marks": 4,
+          "difficulty": "easy",
+          "topicSummary": "Friction on a rough horizontal surface",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-2",
+              "topicId": "forces",
+              "skillId": "smq-2.53"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "forces",
+              "skillId": "smq-1.67"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            4,
+            5
+          ],
+          "questionNumber": 2,
+          "sourceLabel": "Edexcel June 2023 9MA0/32 Q2"
+        },
+        {
+          "id": "exam/edexcel-9ma0-32-2023-june/q3",
+          "originalQuestionNumber": 3,
+          "originalQuestionLabel": "3",
+          "marks": 9,
+          "difficulty": "medium",
+          "topicSummary": "Variable velocity in vector form",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-2",
+              "topicId": "kinematics",
+              "skillId": "smq-2.59"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            6,
+            7
+          ],
+          "questionNumber": 3,
+          "sourceLabel": "Edexcel June 2023 9MA0/32 Q3"
+        },
+        {
+          "id": "exam/edexcel-9ma0-32-2023-june/q4",
+          "originalQuestionNumber": 4,
+          "originalQuestionLabel": "4",
+          "marks": 10,
+          "difficulty": "medium",
+          "topicSummary": "Constant acceleration with vectors",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-2",
+              "topicId": "kinematics",
+              "skillId": "smq-2.57"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            8,
+            11
+          ],
+          "questionNumber": 4,
+          "sourceLabel": "Edexcel June 2023 9MA0/32 Q4"
+        },
+        {
+          "id": "exam/edexcel-9ma0-32-2023-june/q5",
+          "originalQuestionNumber": 5,
+          "originalQuestionLabel": "5",
+          "marks": 11,
+          "difficulty": "difficult",
+          "topicSummary": "Projectile passing through a point",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-2",
+              "topicId": "kinematics",
+              "skillId": "smq-2.58"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            12,
+            15
+          ],
+          "questionNumber": 5,
+          "sourceLabel": "Edexcel June 2023 9MA0/32 Q5"
+        },
+        {
+          "id": "exam/edexcel-9ma0-32-2023-june/q6",
+          "originalQuestionNumber": 6,
+          "originalQuestionLabel": "6",
+          "marks": 13,
+          "difficulty": "difficult",
+          "topicSummary": "Ladder in limiting equilibrium",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-2",
+              "topicId": "moments",
+              "skillId": "smq-2.61"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-2",
+              "topicId": "forces",
+              "skillId": "smq-2.53"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            16,
+            20
+          ],
+          "questionNumber": 6,
+          "sourceLabel": "Edexcel June 2023 9MA0/32 Q6"
+        }
+      ],
+      "sourceVerification": {
+        "questionPaperAndMarkSchemeTotalsAgree": true,
+        "originalQuestionOrderPreserved": true,
+        "totalMarksChecked": 50
+      }
+    },
+    {
+      "id": "edexcel-9ma0-31-2023-june",
+      "board": "Edexcel",
+      "qualification": "A level",
+      "paperCode": "9MA0/31",
+      "title": "Statistics",
+      "examDate": "2023-06-20",
+      "session": "June 2023",
+      "questionCount": 6,
+      "totalMarks": 50,
+      "source": {
+        "questionPaperUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-3/QP/June%202023%20QP%20%28Stats%29.pdf",
+        "markSchemeUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel/Paper-3/MS/June%202023%20MS%20%28Stats%29.pdf",
+        "questionPaperSha256": "4b5e3dc04ba1951026605f495a4127f4afbdc3746c03f4be366b3e1f8d7e5c64",
+        "markSchemeSha256": "152b5434487fa2445d1130159feffc05e9883ae7197f75fffe4ceffc785d4823",
+        "indexedQuestionPaperSha256": "4b5e3dc04ba1951026605f495a4127f4afbdc3746c03f4be366b3e1f8d7e5c64",
+        "indexedMarkSchemeSha256": "152b5434487fa2445d1130159feffc05e9883ae7197f75fffe4ceffc785d4823",
+        "basis": "Owner-supplied original PDF attachment"
+      },
+      "difficultyPolicy": {
+        "basis": "original-paper-order",
+        "easyQuestions": [
+          1,
+          2
+        ],
+        "mediumQuestions": [
+          3,
+          4
+        ],
+        "difficultQuestions": [
+          5,
+          6
+        ]
+      },
+      "questions": [
+        {
+          "id": "exam/edexcel-9ma0-31-2023-june/q1",
+          "originalQuestionNumber": 1,
+          "originalQuestionLabel": "1",
+          "marks": 6,
+          "difficulty": "easy",
+          "topicSummary": "Venn diagram, independence and conditional probability",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "probability",
+              "skillId": "smq-1.53"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "probability",
+              "skillId": "smq-1.54"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-2",
+              "topicId": "probability",
+              "skillId": "smq-2.49"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            2,
+            3
+          ],
+          "questionNumber": 1,
+          "sourceLabel": "Edexcel June 2023 9MA0/31 Q1"
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2023-june/q2",
+          "originalQuestionNumber": 2,
+          "originalQuestionLabel": "2",
+          "marks": 9,
+          "difficulty": "easy",
+          "topicSummary": "Binomial probabilities and a one-tailed binomial test",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-1.56"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-1.57"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            4,
+            7
+          ],
+          "questionNumber": 2,
+          "sourceLabel": "Edexcel June 2023 9MA0/31 Q2"
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2023-june/q3",
+          "originalQuestionNumber": 3,
+          "originalQuestionLabel": "3",
+          "marks": 7,
+          "difficulty": "medium",
+          "topicSummary": "Large data set cleaning, mean and standard deviation",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "large-data-sets",
+              "skillId": "smq-1.58"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "sampling-and-data",
+              "skillId": "smq-1.48"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            8,
+            9
+          ],
+          "questionNumber": 3,
+          "sourceLabel": "Edexcel June 2023 9MA0/31 Q3"
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2023-june/q4",
+          "originalQuestionNumber": 4,
+          "originalQuestionLabel": "4",
+          "marks": 6,
+          "difficulty": "medium",
+          "topicSummary": "Normal distribution and a sample mean hypothesis test",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-2",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-2.50"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-2",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-2.51"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            10,
+            11
+          ],
+          "questionNumber": 4,
+          "sourceLabel": "Edexcel June 2023 9MA0/31 Q4"
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2023-june/q5",
+          "originalQuestionNumber": 5,
+          "originalQuestionLabel": "5",
+          "marks": 8,
+          "difficulty": "difficult",
+          "topicSummary": "Discrete random variable from a proportional rule",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-1.55"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-2",
+              "topicId": "probability",
+              "skillId": "smq-2.49"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            12,
+            15
+          ],
+          "questionNumber": 5,
+          "sourceLabel": "Edexcel June 2023 9MA0/31 Q5"
+        },
+        {
+          "id": "exam/edexcel-9ma0-31-2023-june/q6",
+          "originalQuestionNumber": 6,
+          "originalQuestionLabel": "6",
+          "marks": 14,
+          "difficulty": "difficult",
+          "topicSummary": "Histogram, a continuous model by integration and the normal distribution",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "sampling-and-data",
+              "skillId": "smq-1.49"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-pure-year-2",
+              "topicId": "integration",
+              "skillId": "smq-2.36"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-2",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-2.50"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            16,
+            20
+          ],
+          "questionNumber": 6,
+          "sourceLabel": "Edexcel June 2023 9MA0/31 Q6"
+        }
+      ],
+      "sourceVerification": {
+        "questionPaperAndMarkSchemeTotalsAgree": true,
+        "originalQuestionOrderPreserved": true,
+        "totalMarksChecked": 50
+      }
+    },
+    {
+      "id": "edexcel-9fm0-01-2023-june",
+      "board": "Edexcel",
+      "qualification": "A level",
+      "paperCode": "9FM0/01",
+      "title": "Core Pure Mathematics 1",
+      "examDate": "2023-05-25",
+      "session": "June 2023",
+      "questionCount": 8,
+      "totalMarks": 75,
+      "source": {
+        "questionPaperUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel-Further/Core-Pure-1/QP/June%202023%20QP.pdf",
+        "markSchemeUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel-Further/Core-Pure-1/MS/June%202023%20MS.pdf",
+        "questionPaperSha256": "a9c5b3117e262a562936241a4350e25d829c181e00c667a80c16523939a79e8b",
+        "markSchemeSha256": "c0bf5000bafc38102a432a2d109541651f7e804225cb1cb0e567e331b69c44e5",
+        "indexedQuestionPaperSha256": "a9c5b3117e262a562936241a4350e25d829c181e00c667a80c16523939a79e8b",
+        "indexedMarkSchemeSha256": "c0bf5000bafc38102a432a2d109541651f7e804225cb1cb0e567e331b69c44e5",
+        "basis": "Owner-supplied original PDF attachment"
+      },
+      "difficultyPolicy": {
+        "basis": "original-paper-order",
+        "easyQuestions": [
+          1,
+          2
+        ],
+        "mediumQuestions": [
+          3,
+          6
+        ],
+        "difficultQuestions": [
+          7,
+          8
+        ]
+      },
+      "questions": [
+        {
+          "id": "exam/edexcel-9fm0-01-2023-june/q1",
+          "originalQuestionNumber": 1,
+          "originalQuestionLabel": "1",
+          "marks": 5,
+          "difficulty": "easy",
+          "topicSummary": "Roots of a cubic using a substitution",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "polynomials",
+              "skillId": "1.13"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            2,
+            3
+          ],
+          "questionNumber": 1,
+          "sourceLabel": "Edexcel June 2023 9FM0/01 Q1"
+        },
+        {
+          "id": "exam/edexcel-9fm0-01-2023-june/q2",
+          "originalQuestionNumber": 2,
+          "originalQuestionLabel": "2",
+          "marks": 6,
+          "difficulty": "easy",
+          "topicSummary": "Completing the square, inverse hyperbolic integral and mean value",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "further-calculus",
+              "skillId": "2.27"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "applications-of-integration",
+              "skillId": "2.34"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            4,
+            5
+          ],
+          "questionNumber": 2,
+          "sourceLabel": "Edexcel June 2023 9FM0/01 Q2"
+        },
+        {
+          "id": "exam/edexcel-9fm0-01-2023-june/q3",
+          "originalQuestionNumber": 3,
+          "originalQuestionLabel": "3",
+          "marks": 10,
+          "difficulty": "medium",
+          "topicSummary": "Modulus-argument form, division and powers, and a locus region",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "complex-numbers",
+              "skillId": "1.06"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "complex-numbers",
+              "skillId": "2.01"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "complex-numbers",
+              "skillId": "1.08"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            6,
+            9
+          ],
+          "questionNumber": 3,
+          "sourceLabel": "Edexcel June 2023 9FM0/01 Q3"
+        },
+        {
+          "id": "exam/edexcel-9fm0-01-2023-june/q4",
+          "originalQuestionNumber": 4,
+          "originalQuestionLabel": "4",
+          "marks": 5,
+          "difficulty": "medium",
+          "topicSummary": "Proof by induction for powers of a matrix",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "mathematical-induction",
+              "skillId": "1.46"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            10,
+            11
+          ],
+          "questionNumber": 4,
+          "sourceLabel": "Edexcel June 2023 9FM0/01 Q4"
+        },
+        {
+          "id": "exam/edexcel-9fm0-01-2023-june/q5",
+          "originalQuestionNumber": 5,
+          "originalQuestionLabel": "5",
+          "marks": 12,
+          "difficulty": "medium",
+          "topicSummary": "Lines and planes: intersection and reflection in a plane",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "vectors-lines-and-planes",
+              "skillId": "1.61"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "vectors-lines-and-planes",
+              "skillId": "1.60"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            12,
+            15
+          ],
+          "questionNumber": 5,
+          "sourceLabel": "Edexcel June 2023 9FM0/01 Q5"
+        },
+        {
+          "id": "exam/edexcel-9fm0-01-2023-june/q6",
+          "originalQuestionNumber": 6,
+          "originalQuestionLabel": "6",
+          "marks": 12,
+          "difficulty": "medium",
+          "topicSummary": "First-order differential equation with an integrating factor in a model",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "differential-equations",
+              "skillId": "2.39"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "differential-equations",
+              "skillId": "2.41"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            16,
+            19
+          ],
+          "questionNumber": 6,
+          "sourceLabel": "Edexcel June 2023 9FM0/01 Q6"
+        },
+        {
+          "id": "exam/edexcel-9fm0-01-2023-june/q7",
+          "originalQuestionNumber": 7,
+          "originalQuestionLabel": "7",
+          "marks": 12,
+          "difficulty": "difficult",
+          "topicSummary": "Sum of a series with alternating terms using standard results",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "series",
+              "skillId": "1.09"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            20,
+            23
+          ],
+          "questionNumber": 7,
+          "sourceLabel": "Edexcel June 2023 9FM0/01 Q7"
+        },
+        {
+          "id": "exam/edexcel-9fm0-01-2023-june/q8",
+          "originalQuestionNumber": 8,
+          "originalQuestionLabel": "8",
+          "marks": 13,
+          "difficulty": "difficult",
+          "topicSummary": "Matrix model of a population and its inverse",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "matrices",
+              "skillId": "1.45"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "matrices",
+              "skillId": "1.44"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            24,
+            28
+          ],
+          "questionNumber": 8,
+          "sourceLabel": "Edexcel June 2023 9FM0/01 Q8"
+        }
+      ],
+      "sourceVerification": {
+        "questionPaperAndMarkSchemeTotalsAgree": true,
+        "originalQuestionOrderPreserved": true,
+        "totalMarksChecked": 75
+      }
+    },
+    {
+      "id": "edexcel-9fm0-02-2023-june",
+      "board": "Edexcel",
+      "qualification": "A level",
+      "paperCode": "9FM0/02",
+      "title": "Core Pure Mathematics 2",
+      "examDate": "2023-06-05",
+      "session": "June 2023",
+      "questionCount": 9,
+      "totalMarks": 75,
+      "source": {
+        "questionPaperUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel-Further/Core-Pure-2/QP/June%202023%20QP.pdf",
+        "markSchemeUrl": "https://pmt.physicsandmathstutor.com/download/Maths/A-level/Papers/Edexcel-Further/Core-Pure-2/MS/June%202023%20MS.pdf",
+        "questionPaperSha256": "9d9d21ecb6c5575114f9551cddd608e25a656fc3f2e8a9680a2376b25ae71014",
+        "markSchemeSha256": "9b2e4eb389f7c16cc9f884a33039415a958f9da8630a22098c909d7defadd890",
+        "indexedQuestionPaperSha256": "9d9d21ecb6c5575114f9551cddd608e25a656fc3f2e8a9680a2376b25ae71014",
+        "indexedMarkSchemeSha256": "9b2e4eb389f7c16cc9f884a33039415a958f9da8630a22098c909d7defadd890",
+        "basis": "Owner-supplied original PDF attachment"
+      },
+      "difficultyPolicy": {
+        "basis": "original-paper-order",
+        "easyQuestions": [
+          1,
+          3
+        ],
+        "mediumQuestions": [
+          4,
+          6
+        ],
+        "difficultQuestions": [
+          7,
+          9
+        ]
+      },
+      "questions": [
+        {
+          "id": "exam/edexcel-9fm0-02-2023-june/q1",
+          "originalQuestionNumber": 1,
+          "originalQuestionLabel": "1",
+          "marks": 4,
+          "difficulty": "easy",
+          "topicSummary": "Area enclosed by a polar curve",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "polar-curves",
+              "skillId": "2.53"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "polar-curves",
+              "skillId": "1.28"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            2,
+            3
+          ],
+          "questionNumber": 1,
+          "sourceLabel": "Edexcel June 2023 9FM0/02 Q1"
+        },
+        {
+          "id": "exam/edexcel-9fm0-02-2023-june/q2",
+          "originalQuestionNumber": 2,
+          "originalQuestionLabel": "2",
+          "marks": 6,
+          "difficulty": "easy",
+          "topicSummary": "Maclaurin series of a composite exponential",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "series",
+              "skillId": "2.12"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            4,
+            5
+          ],
+          "questionNumber": 2,
+          "sourceLabel": "Edexcel June 2023 9FM0/02 Q2"
+        },
+        {
+          "id": "exam/edexcel-9fm0-02-2023-june/q3",
+          "originalQuestionNumber": 3,
+          "originalQuestionLabel": "3",
+          "marks": 10,
+          "difficulty": "easy",
+          "topicSummary": "Matrix equation and invariant lines",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "matrices",
+              "skillId": "1.42"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "matrices",
+              "skillId": "1.44"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            6,
+            9
+          ],
+          "questionNumber": 3,
+          "sourceLabel": "Edexcel June 2023 9FM0/02 Q3"
+        },
+        {
+          "id": "exam/edexcel-9fm0-02-2023-june/q4",
+          "originalQuestionNumber": 4,
+          "originalQuestionLabel": "4",
+          "marks": 7,
+          "difficulty": "medium",
+          "topicSummary": "Polar curve tangent parallel to the initial line",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "polar-curves",
+              "skillId": "2.54"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            10,
+            13
+          ],
+          "questionNumber": 4,
+          "sourceLabel": "Edexcel June 2023 9FM0/02 Q4"
+        },
+        {
+          "id": "exam/edexcel-9fm0-02-2023-june/q5",
+          "originalQuestionNumber": 5,
+          "originalQuestionLabel": "5",
+          "marks": 9,
+          "difficulty": "medium",
+          "topicSummary": "Vertices of a regular polygon from roots of a complex equation",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "complex-numbers",
+              "skillId": "2.07"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "complex-numbers",
+              "skillId": "2.06"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            14,
+            17
+          ],
+          "questionNumber": 5,
+          "sourceLabel": "Edexcel June 2023 9FM0/02 Q5"
+        },
+        {
+          "id": "exam/edexcel-9fm0-02-2023-june/q6",
+          "originalQuestionNumber": 6,
+          "originalQuestionLabel": "6",
+          "marks": 6,
+          "difficulty": "medium",
+          "topicSummary": "Proof by induction for repeated derivatives",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "mathematical-induction",
+              "skillId": "2.55"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            18,
+            19
+          ],
+          "questionNumber": 6,
+          "sourceLabel": "Edexcel June 2023 9FM0/02 Q6"
+        },
+        {
+          "id": "exam/edexcel-9fm0-02-2023-june/q7",
+          "originalQuestionNumber": 7,
+          "originalQuestionLabel": "7",
+          "marks": 8,
+          "difficulty": "difficult",
+          "topicSummary": "Volume of revolution in a modelling context",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "applications-of-integration",
+              "skillId": "2.35"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            20,
+            23
+          ],
+          "questionNumber": 7,
+          "sourceLabel": "Edexcel June 2023 9FM0/02 Q7"
+        },
+        {
+          "id": "exam/edexcel-9fm0-02-2023-june/q8",
+          "originalQuestionNumber": 8,
+          "originalQuestionLabel": "8",
+          "marks": 11,
+          "difficulty": "difficult",
+          "topicSummary": "Roots of complex polynomials and common roots",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "complex-numbers",
+              "skillId": "1.04"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-1",
+              "topicId": "polynomials",
+              "skillId": "1.12"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            24,
+            27
+          ],
+          "questionNumber": 8,
+          "sourceLabel": "Edexcel June 2023 9FM0/02 Q8"
+        },
+        {
+          "id": "exam/edexcel-9fm0-02-2023-june/q9",
+          "originalQuestionNumber": 9,
+          "originalQuestionLabel": "9",
+          "marks": 14,
+          "difficulty": "difficult",
+          "topicSummary": "Coupled first-order differential equations in a model",
+          "skillMappings": [
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "differential-equations",
+              "skillId": "2.50"
+            },
+            {
+              "courseId": "further-maths-a-level",
+              "bookId": "pure-core-2",
+              "topicId": "differential-equations",
+              "skillId": "2.43"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            28,
+            32
+          ],
+          "questionNumber": 9,
+          "sourceLabel": "Edexcel June 2023 9FM0/02 Q9"
         }
       ],
       "sourceVerification": {

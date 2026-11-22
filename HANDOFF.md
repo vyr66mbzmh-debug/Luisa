@@ -1,5 +1,44 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.69 -->
+**Release 0.69 · GitHub #122.** Written for any successor agent or engine; it needs no earlier conversation.
+
+**Current state.** Luisa v0.69 is the published version on Cloudflare (owner edition) and on ADA (staff and pupil editions), all built from one merged revision recorded in GitHub #122. This release adds content only: the six June 2023 Edexcel papers. Papers code, filters (v0.68), print layouts and the teacher-only exam paper are unchanged.
+
+**What changed (PAP-069-1 … PAP-069-4 in docs/requirements/register.json, each with acceptance criteria).**
+- **Six papers, 59 questions, 450 marks.** 9MA0/01 Pure Mathematics 1 (15 questions), 9MA0/02 Pure Mathematics 2 (15), 9MA0/31 Statistics (6), 9MA0/32 Mechanics (6), 9FM0/01 Core Pure Mathematics 1 (8) and 9FM0/02 Core Pure Mathematics 2 (9). IDs follow exam/edexcel-<code>-2023-june/q<n>. Payloads are in content/exams/edexcel-*-2023-june.json, and figures and scheme crops in resources/exams/edexcel-*-2023-june/.
+- **Joins.** content/exams/pilot-metadata.json and exam-catalogue.json now hold 18 papers, 180 questions and 1,350 marks. Session "June 2023"; difficulty follows paper order (thirds).
+- **Evidence.** docs/evidence/v069-import-june2023.json holds, per question: source hashes, page counts, pages, printed mark groups, scheme pages, chapter keys, a maths checkpoint and asset hashes.
+- **Sources.** The owner's folder named "June 2022 papers" actually holds the Summer 2023 files, so each file was identified by its cover. The linked PMT copies are byte-identical. The 167 KB Core Pure 1 question paper is complete. Nothing was held.
+- **Source error kept as published.** The official 9FM0/02 Q5 scheme total line prints "(11 marks)", but its parts sum to 9, the question paper total. The question keeps 9 marks and the scheme is reproduced as published; this is recorded in the evidence and content/exams/README.md.
+- **Tests.** tests/test_exam_metadata.py (18 papers in order, marks and bands, 2023 source identity and complete schemes), tests/test_papers_selection.py (19 dropdown options and orders, 180 past-paper questions, Course/Book lists including 2023) and tests/papers_print_browser.py (every 2023 paper in both layouts, solutions on and off, as real PDFs).
+
+**How the import was done (private tooling, outside Git).** The per-paper pipeline is: cover check, then figure boxes, then vector assets (PyMuPDF to SVG), then prompts transcribed from page images, then payloads, then an independent SymPy check per question, then chapter/skill maps, then metadata and catalogue integration, then rendered visual checks, then evidence. The text layer drops roots and fractions, so prompts are always transcribed from the page images. Two crop-tool changes, documented in content/exams/README.md: a thick vertical table border no longer blocks a page break, and a page that fits the crop allowance but has no safe break is kept whole.
+
+**Sources and requirements.**
+- **Question content:** content/practice, content/exams, practice-catalogue.json and exam-catalogue.json.
+- **Requirements:** docs/requirements/register.json, with the generated REQUIREMENTS.md (`python3 scripts/luisa.py requirements`).
+- **Rules:** AGENTS.md and docs/agentic/LEAD-RULES.md. Standing rule OPS-063: record new owner requirements on GitHub and in the register while implementing; at the end of every job update this handoff and log the handoff and tokens on GitHub before reporting done. No automatic wakeup or report schedules.
+
+**Build, test and release.**
+1. **Gate:** `python3 scripts/luisa.py gate` runs the requirements check, unit tests, scan and owner build. It needs Python with requirements-dev.txt and requirements-auth.txt.
+2. **Browser suites:** `python -m unittest tests.test_papers_selection tests.papers_print_browser`. These need Playwright and PyMuPDF; set LUISA_BROWSER_CHANNEL=chrome to use the installed Chrome.
+3. **Land:** merge through a reviewed PR with green exact-head CI, using `python3 scripts/land.py <PR> --review-record <file>`.
+4. **Build:** build each edition with `python3 scripts/luisa.py build --profile owner|staff|student`, then run `check-artifact` on each.
+5. **Deploy:** Cloudflare deploys main automatically. ADA receives the same staff and student artifacts; its host details are in the private WORKSPACE.json (see "ADA is a required release target" below).
+6. **Verify and record:** verify live owner (including disconnected printing of a 2023 paper), ADA staff and ADA pupil. Then make the recovery ZIP (the latest five are kept) and send the SMTP owner report.
+
+The per-release live QA helpers are private working copies, not in Git; the checks they perform are listed on GitHub #122.
+
+**Verified.**
+- **Local:** the gate (0 skips) and the Papers browser suites passed.
+- **Review:** an independent review-only agent checked the papers against the source PDFs.
+- **Live:** the live checks are recorded on #122.
+
+**Outstanding.** No open work from this job. Two owner notes from v0.65 still await the owner's view: the per-cell marks in the one three-cell table question, and the course label for a future 9FM0 Mechanics paper.
+
+**Usage.** Measured at PR time from the per-call API usage records in the Claude Code session transcript (scripts/usage.py start/end recorded; cache reads included): 14,697,420 tokens over 61 calls for the main session since v0.68 was closed. The June 2023 source checks, transcription and maths checks done earlier, while v0.68 QA was running, are counted in the v0.68 total on GitHub #120. The final total for this job, including the independent review agent, is logged on GitHub #122 and in the owner report.
+
 <!-- LUISA-REPORT-HANDOFF v0.68 -->
 **Release 0.68 · GitHub #120.** Written for any successor agent or engine; it needs no earlier conversation.
 

@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.69
+
+[Issue #122](https://github.com/vyr66mbzmh-debug/Luisa/issues/122) adds the six June 2023 Edexcel papers with their official mark schemes.
+
 ## Papers v0.68
 
 [Issue #120](https://github.com/vyr66mbzmh-debug/Luisa/issues/120) makes the past paper dropdown follow Course and Book, highlights active filters and greys out the paper dropdown while Past Papers is unticked.

@@ -1,3 +1,8 @@
+## Luisa v0.69
+
+- Papers: six June 2023 Edexcel papers with their official mark schemes: 9MA0/01 Pure Mathematics 1, 9MA0/02 Pure Mathematics 2, 9MA0/31 Statistics, 9MA0/32 Mechanics, 9FM0/01 Core Pure Mathematics 1 and 9FM0/02 Core Pure Mathematics 2. That is 59 questions and 450 marks in original wording with faithful figures, chapter and skill mappings, paper-order difficulty and per-question evidence (docs/evidence/v069-import-june2023.json).
+- Papers now has 18 past papers (180 questions, 1,350 marks).
+
 ## Luisa v0.68
 
 - Papers: the specific past paper dropdown lists only papers with at least one question in the selected Course and Book; with Course and Book on All every paper is listed. A chosen paper that is no longer listed after a Course or Book change (or on restore) resets to All past papers.
