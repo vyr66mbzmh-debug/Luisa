@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.64
+
+[Issue #112](https://github.com/vyr66mbzmh-debug/Luisa/issues/112) adds the six June 2024 Edexcel papers with their official mark schemes. Further past papers need their own owner-supplied question paper and matching scheme.
+
 ## Papers v0.63
 
 [Issue #110](https://github.com/vyr66mbzmh-debug/Luisa/issues/110) adds the In paper order print option for a single past paper.

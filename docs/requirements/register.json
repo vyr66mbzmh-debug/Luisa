@@ -5119,6 +5119,28 @@
         "AGENTS.md",
         "GitHub issue #110"
       ]
+    },
+    {
+      "id": "PAP-064",
+      "requirement": "Add the six June 2024 Edexcel papers (9MA0/01, 9MA0/02, 9MA0/31, 9MA0/32, 9FM0/01, 9FM0/02), each with its official mark scheme, to Papers to the June 2025 Pure standard.",
+      "scope": "v0.64 Cloudflare owner and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment, GitHub #112, 22 November 2026",
+      "acceptance": [
+        "Identify each owner-supplied PDF by its cover, pair each question paper with its scheme by cover, record SHA-256 hashes and keep the PDFs outside Git and published artifacts; hold any ambiguous paper.",
+        "Import all 59 questions with stable IDs exam/edexcel-<code>-2024-june/q<n>, original wording, part labels, marks reconciled with the scheme, question-specific instructions and faithful figures.",
+        "Pair each question with its complete official scheme, excluding other questions and general pages, and check each question mathematically and visually against the originals.",
+        "List each paper in the Past Papers dropdown, map questions to textbook chapters and support In paper order, mixed papers, saved selections, owner offline printing and both ADA roles. Expect 12 papers, 121 past-paper questions, 900 marks and 8,743 questions overall."
+      ],
+      "evidence": [
+        "GitHub issue #112",
+        "docs/evidence/v064-import-june2024.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
     }
   ]
 }
