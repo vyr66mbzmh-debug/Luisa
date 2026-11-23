@@ -1,0 +1,676 @@
+{
+ "pure-core-2-ch1": {
+  "1": {
+   "marks": 6,
+   "difficulty": "medium",
+   "reason": "Standard cube-root method: write the right-hand side in exponential form, then take three roots in the stated range.",
+   "summary": "Cube roots of a complex number",
+   "skills": [
+    "complex-numbers:2.06"
+   ]
+  },
+  "2": {
+   "marks": 8,
+   "difficulty": "medium",
+   "reason": "Signposted: sum a geometric series in e^{iθ}, then multiply by the conjugate and take the imaginary part; careful algebra.",
+   "summary": "C + iS geometric series",
+   "skills": [
+    "complex-numbers:2.08"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q4"
+  },
+  "3": {
+   "marks": 10,
+   "difficulty": "medium",
+   "reason": "Long de Moivre expansion, then one signposted non-routine step (substituting sin θ = x with sin 7θ = -1).",
+   "summary": "Multiple-angle identity and polynomial roots",
+   "skills": [
+    "complex-numbers:2.03"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2020-october/q4"
+  },
+  "4": {
+   "marks": 8,
+   "difficulty": "difficult",
+   "reason": "Separating the imaginary part of 1/(1 - z) with z = ½(cos θ + i sin θ) needs delicate conjugate algebra, and (ii) needs an unprompted argument.",
+   "summary": "Infinite geometric series with de Moivre",
+   "skills": [
+    "complex-numbers:2.08"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q9"
+  },
+  "5": {
+   "marks": 9,
+   "difficulty": "medium",
+   "reason": "Rotation by 2π/3 about the origin gives the other vertices; the midpoint triangle area needs a short geometric step.",
+   "summary": "Equilateral triangle on an Argand diagram",
+   "skills": [
+    "complex-numbers:2.07"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q6"
+  },
+  "6": {
+   "marks": 7,
+   "difficulty": "easy",
+   "reason": "Standard textbook result for z^n + z^{-n}, then the routine binomial expansion for cos^4 θ.",
+   "summary": "Powers of cos θ from z + 1/z",
+   "skills": [
+    "complex-numbers:2.04"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q4"
+  },
+  "7": {
+   "marks": 7,
+   "difficulty": "easy",
+   "reason": "Routine fourth roots in exponential form and a simple Argand sketch.",
+   "summary": "Fourth roots of a complex number",
+   "skills": [
+    "complex-numbers:2.06"
+   ]
+  },
+  "8": {
+   "marks": 10,
+   "difficulty": "medium",
+   "reason": "Standard multiple-angle expansion over several steps, then a direct integral of the resulting sines.",
+   "summary": "sin^5 θ in multiple angles and an integral",
+   "skills": [
+    "complex-numbers:2.04"
+   ]
+  },
+  "9": {
+   "marks": 11,
+   "difficulty": "medium",
+   "reason": "Rotating a vertex for a regular pentagon, then shading a circle and arg wedge and finding the exact area with a sector and triangle.",
+   "summary": "Regular pentagon and region area",
+   "skills": [
+    "complex-numbers:2.07"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q8"
+  },
+  "10": {
+   "marks": 10,
+   "difficulty": "medium",
+   "reason": "Standard modulus-argument conversion and half-line locus, then a routine perpendicular-distance step.",
+   "summary": "Modulus-argument form and distance to a half-line",
+   "skills": [
+    "complex-numbers:1.06",
+    "complex-numbers:1.07"
+   ],
+   "duplicateOf": "pmt/pure-core-1/ch2/q7",
+   "note": "Source slip kept as printed: the sheet prints \"r(cosθ θ+ isinθ)\" for the form r(cos θ + i sin θ), exactly as in the Core Pure 1 copy of this question."
+  },
+  "11": {
+   "marks": 6,
+   "difficulty": "medium",
+   "reason": "Routine exponential-form sum, then the least modulus on a half-line needs a perpendicular-distance argument.",
+   "summary": "Exponential form and least modulus on a half-line",
+   "skills": [
+    "complex-numbers:2.02"
+   ]
+  }
+ },
+ "pure-core-2-ch2": {
+  "1": {
+   "marks": 10,
+   "difficulty": "easy",
+   "reason": "Routine successive derivatives and the Maclaurin expansion, then a direct substitution.",
+   "summary": "Maclaurin series for ln(1/(1-2x))",
+   "skills": [
+    "series:2.12"
+   ]
+  },
+  "2": {
+   "marks": 12,
+   "difficulty": "difficult",
+   "reason": "Multi-concept: standard sums, a periodicity argument for tan(60r)° and then an unguided equation combining both.",
+   "summary": "Standard sums and a tan series",
+   "skills": [
+    "series:1.09"
+   ]
+  },
+  "3": {
+   "marks": 6,
+   "difficulty": "easy",
+   "reason": "Routine Maclaurin terms for arcsin x and a direct substitution.",
+   "summary": "Maclaurin series for arcsin x",
+   "skills": [
+    "series:2.12"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q3"
+  },
+  "4": {
+   "marks": 5,
+   "difficulty": "medium",
+   "reason": "Method of differences with three-factor partial fractions in a single unstructured part.",
+   "summary": "Method of differences, three linear factors",
+   "skills": [
+    "series:2.11"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q4"
+  },
+  "5": {
+   "marks": 10,
+   "difficulty": "medium",
+   "reason": "Repeated product-rule differentiation to reach the fourth derivative, then spotting the pattern for the nth term.",
+   "summary": "Maclaurin series for sin x sinh x",
+   "skills": [
+    "series:2.12"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q5",
+   "chapters": [
+    2,
+    6
+   ]
+  },
+  "6": {
+   "marks": 7,
+   "difficulty": "medium",
+   "reason": "Method of differences with logarithms, then reusing the result for a shifted range with a power.",
+   "summary": "Method of differences with logarithms",
+   "skills": [
+    "series:2.11"
+   ]
+  },
+  "7": {
+   "marks": 8,
+   "difficulty": "medium",
+   "reason": "Repeated differentiation of a power of cosh x with careful algebra, then Maclaurin terms.",
+   "summary": "Maclaurin series for cosh^n x",
+   "skills": [
+    "series:2.12",
+    "hyperbolic-functions:2.19"
+   ]
+  },
+  "8": {
+   "marks": 5,
+   "difficulty": "medium",
+   "reason": "Method of differences with non-adjacent cancellation in a single unstructured part.",
+   "summary": "Method of differences, terms two apart",
+   "skills": [
+    "series:2.11"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q1"
+  },
+  "9": {
+   "marks": 7,
+   "difficulty": "medium",
+   "reason": "Verify an identity, telescope it, then apply the result over the range n to 3n.",
+   "summary": "Method of differences with squares",
+   "skills": [
+    "series:2.11"
+   ]
+  },
+  "10": {
+   "marks": 10,
+   "difficulty": "difficult",
+   "reason": "Multi-concept: standard sums, the pattern of r cos(rπ/2) over 28 terms, then solving the resulting cubic; unguided.",
+   "summary": "Standard sums and a cosine series",
+   "skills": [
+    "series:1.09"
+   ]
+  },
+  "11": {
+   "marks": 7,
+   "difficulty": "medium",
+   "reason": "Verify a partial-fraction identity, then telescope with a polynomial part.",
+   "summary": "Method of differences with a polynomial part",
+   "skills": [
+    "series:2.11"
+   ]
+  }
+ },
+ "pure-core-2-ch3": {
+  "1": {
+   "marks": 6,
+   "difficulty": "easy",
+   "reason": "Routine derivative of arcsin x and a short argument that the derivative is never zero.",
+   "summary": "Derivative of arcsin x",
+   "skills": [
+    "further-calculus:2.24"
+   ]
+  },
+  "2": {
+   "marks": 7,
+   "difficulty": "medium",
+   "reason": "Partial fractions, logarithmic integration and a careful limit at infinity.",
+   "summary": "Improper integral with partial fractions",
+   "skills": [
+    "further-calculus:2.31",
+    "further-calculus:2.23"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q2"
+  },
+  "3": {
+   "marks": 5,
+   "difficulty": "easy",
+   "reason": "Routine chain rule with the arsinh derivative.",
+   "summary": "Derivative of arsinh(tanh x)",
+   "skills": [
+    "further-calculus:2.26"
+   ]
+  },
+  "4": {
+   "marks": 8,
+   "difficulty": "medium",
+   "reason": "Derivative of arccos for (a), then the normal, its intercepts and an exact triangle area.",
+   "summary": "Inverse cosine curve and a normal",
+   "skills": [
+    "further-calculus:2.24"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q5"
+  },
+  "5": {
+   "marks": 7,
+   "difficulty": "medium",
+   "reason": "Explain improperness, then partial fractions and a limit at infinity.",
+   "summary": "Improper integral with partial fractions",
+   "skills": [
+    "further-calculus:2.31",
+    "further-calculus:2.23"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q2"
+  },
+  "6": {
+   "marks": 9,
+   "difficulty": "easy",
+   "reason": "Split into standard log and arctan integrals, then direct mean-value calculations in signposted parts.",
+   "summary": "Mean value with logarithm and arctan",
+   "skills": [
+    "further-calculus:2.25",
+    "applications-of-integration:2.34"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q6",
+   "note": "Source slip kept as printed: part (c) reads \"in the form p + 1/6 ln q, p and q are constants\"; the original 9FM0/01 Sample paper has \"where p and q are constants\". The maths is unaffected."
+  },
+  "7": {
+   "marks": 7,
+   "difficulty": "medium",
+   "reason": "Partial fractions with a quadratic factor, then log and arctan integration to an exact form.",
+   "summary": "Partial fractions with a quadratic factor",
+   "skills": [
+    "further-calculus:2.23",
+    "further-calculus:2.25"
+   ]
+  }
+ },
+ "pure-core-2-ch4": {
+  "1": {
+   "marks": 8,
+   "difficulty": "medium",
+   "reason": "Eliminating the parameter needs a trigonometric identity, then a standard volume about the y-axis.",
+   "summary": "Volume of a parametric pendant",
+   "skills": [
+    "further-calculus:1.15",
+    "applications-of-integration:2.35"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q7"
+  },
+  "2": {
+   "marks": 7,
+   "difficulty": "easy",
+   "reason": "Expand the square and integrate exponentials directly to an exact volume.",
+   "summary": "Volume with exponentials about the x-axis",
+   "skills": [
+    "applications-of-integration:2.35"
+   ]
+  },
+  "3": {
+   "marks": 11,
+   "difficulty": "difficult",
+   "reason": "Long modelling question: fit the model, rearrange for x squared, volume to a variable depth, then connected rates of change.",
+   "summary": "Paddling pool volume model",
+   "skills": [
+    "applications-of-integration:2.35"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q8"
+  },
+  "4": {
+   "marks": 10,
+   "difficulty": "medium",
+   "reason": "Tangent to an exponential curve, then the volume as an integral of 9^x minus a cone (the formula is given).",
+   "summary": "Volume between a curve and a tangent",
+   "skills": [
+    "applications-of-integration:2.35"
+   ]
+  }
+ },
+ "pure-core-2-ch5": {
+  "1": {
+   "marks": 9,
+   "difficulty": "difficult",
+   "reason": "Unstructured: find the angle at A, then the polar area minus a triangle area, in one part.",
+   "summary": "Polar area minus a triangle",
+   "skills": [
+    "polar-curves:2.53"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q4"
+  },
+  "2": {
+   "marks": 8,
+   "difficulty": "medium",
+   "reason": "Standard polar area integral with a parameter, then solving for it.",
+   "summary": "Polar area with an unknown constant",
+   "skills": [
+    "polar-curves:2.53"
+   ]
+  },
+  "3": {
+   "marks": 10,
+   "difficulty": "medium",
+   "reason": "Polar differentiation for a vertical tangent, then a polar area minus a triangle using calculus.",
+   "summary": "Polar tangent and area",
+   "skills": [
+    "polar-curves:2.54",
+    "polar-curves:2.53"
+   ]
+  },
+  "4": {
+   "marks": 10,
+   "difficulty": "medium",
+   "reason": "Modelling: fit the constant from the length, then the polar area subtracted from the rectangle.",
+   "summary": "Polar table-top area",
+   "skills": [
+    "polar-curves:2.53"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q3"
+  },
+  "5": {
+   "marks": 9,
+   "difficulty": "difficult",
+   "reason": "Unstructured: intersection angles of two polar curves, then combining two polar areas exactly.",
+   "summary": "Area between two polar curves",
+   "skills": [
+    "polar-curves:2.53"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q3"
+  },
+  "6": {
+   "marks": 13,
+   "difficulty": "difficult",
+   "reason": "Multi-concept: converting a circle locus to a polar equation, then the area of a region bounded by an arg condition.",
+   "summary": "Circle locus in polar form and region area",
+   "skills": [
+    "complex-numbers:1.07",
+    "polar-curves:2.52",
+    "polar-curves:2.53"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q6"
+  }
+ },
+ "pure-core-2-ch6": {
+  "1": {
+   "marks": 5,
+   "difficulty": "easy",
+   "reason": "Routine chain rule with the arsinh derivative.",
+   "summary": "Derivative of arsinh(tanh x)",
+   "skills": [
+    "further-calculus:2.26"
+   ],
+   "duplicateOf": "pmt/pure-core-2/ch3/q3"
+  },
+  "2": {
+   "marks": 6,
+   "difficulty": "easy",
+   "reason": "Stated hyperbolic substitution to an arsinh integral, then a direct mean value.",
+   "summary": "Integral giving inverse sinh and a mean value",
+   "skills": [
+    "further-calculus:2.27",
+    "applications-of-integration:2.34"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q3",
+   "chapters": [
+    6,
+    3
+   ]
+  },
+  "3": {
+   "marks": 7,
+   "difficulty": "medium",
+   "reason": "Differentiate, use a double-angle identity and exponentials to reach a quadratic, then exact logarithms.",
+   "summary": "Stationary points of a hyperbolic curve",
+   "skills": [
+    "hyperbolic-functions:2.19",
+    "hyperbolic-functions:1.32"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2020-october/q1"
+  },
+  "4": {
+   "marks": 9,
+   "difficulty": "easy",
+   "reason": "Routine exponential proof of an identity, then a quadratic in cosh x solved with logarithms.",
+   "summary": "cosh 2x identity and an equation",
+   "skills": [
+    "hyperbolic-functions:2.14",
+    "hyperbolic-functions:2.16"
+   ]
+  },
+  "5": {
+   "marks": 10,
+   "difficulty": "medium",
+   "reason": "Prove the log form of artanh, then a signposted substitution leading to a quadratic.",
+   "summary": "Inverse tanh in log form and an equation",
+   "skills": [
+    "hyperbolic-functions:1.32",
+    "hyperbolic-functions:2.16"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q1"
+  },
+  "6": {
+   "marks": 4,
+   "difficulty": "easy",
+   "reason": "Quadratic in cosh^2 x, then the log form of arcosh to the required form.",
+   "summary": "Quartic in cosh x",
+   "skills": [
+    "hyperbolic-functions:2.16"
+   ]
+  },
+  "7": {
+   "marks": 9,
+   "difficulty": "medium",
+   "reason": "Find α from β, then a volume about the y-axis with sinh, in signposted parts.",
+   "summary": "Volume about the y-axis with arsinh",
+   "skills": [
+    "applications-of-integration:2.35",
+    "hyperbolic-functions:1.32"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q7",
+   "chapters": [
+    6,
+    4
+   ]
+  },
+  "8": {
+   "marks": 11,
+   "difficulty": "difficult",
+   "reason": "Long and delicate: a hyperbolic substitution integral, then integration by parts using it for an exact area.",
+   "summary": "Hyperbolic substitution and an area",
+   "skills": [
+    "further-calculus:2.30",
+    "further-calculus:2.27"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2021-november/q9"
+  },
+  "9": {
+   "marks": 6,
+   "difficulty": "medium",
+   "reason": "Improper and divergent integral of cosh x, then a short tanh-range argument for p.",
+   "summary": "Divergent integral and tanh range",
+   "skills": [
+    "further-calculus:2.31",
+    "hyperbolic-functions:2.15"
+   ]
+  }
+ },
+ "pure-core-2-ch7": {
+  "1": {
+   "marks": 11,
+   "difficulty": "medium",
+   "reason": "Integrating factor with trigonometric functions, then a particular solution and an exact value.",
+   "summary": "First-order linear DE with trigonometric coefficients",
+   "skills": [
+    "differential-equations:2.39"
+   ]
+  },
+  "2": {
+   "marks": 6,
+   "difficulty": "medium",
+   "reason": "Integrating factor to a general solution, then the smallest positive root of a trigonometric equation.",
+   "summary": "Integrating factor and a zero of the solution",
+   "skills": [
+    "differential-equations:2.39"
+   ]
+  },
+  "3": {
+   "marks": 13,
+   "difficulty": "medium",
+   "reason": "Long but standard: complementary function with a zero root, particular integral for a sine, then two initial conditions.",
+   "summary": "Second-order DE with a sine forcing term",
+   "skills": [
+    "differential-equations:2.43"
+   ]
+  }
+ },
+ "pure-core-2-ch8": {
+  "1": {
+   "marks": 14,
+   "difficulty": "medium",
+   "reason": "Verify a given resonance particular integral, then the general solution and initial conditions; signposted modelling.",
+   "summary": "Forced pendulum model",
+   "skills": [
+    "differential-equations:2.43",
+    "differential-equations:2.45"
+   ]
+  },
+  "2": {
+   "marks": 12,
+   "difficulty": "difficult",
+   "reason": "Damped oscillation: finding the maximum displacement needs differentiating the solution and solving delicately.",
+   "summary": "Damped diving board",
+   "skills": [
+    "differential-equations:2.48",
+    "differential-equations:2.45"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q5"
+  },
+  "3": {
+   "marks": 18,
+   "difficulty": "difficult",
+   "reason": "Long and delicate: coupled equations to a second-order DE, both general solutions, then solving for T.",
+   "summary": "Coupled crayfish populations",
+   "skills": [
+    "differential-equations:2.50",
+    "differential-equations:2.43"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q8",
+   "chapters": [
+    8,
+    7
+   ]
+  },
+  "4": {
+   "marks": 17,
+   "difficulty": "difficult",
+   "reason": "Long and delicate: coupled equations with complex auxiliary roots, then when the rabbits die out and interpretation.",
+   "summary": "Coupled foxes and rabbits",
+   "skills": [
+    "differential-equations:2.43",
+    "differential-equations:2.45"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q7",
+   "chapters": [
+    8,
+    7
+   ]
+  },
+  "5": {
+   "marks": 11,
+   "difficulty": "medium",
+   "reason": "Integrating factor with fractional powers and initial conditions, then a rate of change.",
+   "summary": "Bacteria growth with an integrating factor",
+   "skills": [
+    "differential-equations:2.39",
+    "differential-equations:2.41"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q7",
+   "chapters": [
+    8,
+    7
+   ]
+  },
+  "6": {
+   "marks": 10,
+   "difficulty": "medium",
+   "reason": "Forming the mixing model, then an integrating-factor solution with an initial condition.",
+   "summary": "Pond pollution mixing model",
+   "skills": [
+    "differential-equations:2.39",
+    "differential-equations:2.41"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q5",
+   "chapters": [
+    8,
+    7
+   ]
+  },
+  "7": {
+   "marks": 13,
+   "difficulty": "medium",
+   "reason": "Forming the mixing model, an integrating-factor solution, then solving for a concentration threshold.",
+   "summary": "Salt tank mixing model",
+   "skills": [
+    "differential-equations:2.39",
+    "differential-equations:2.41"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q5",
+   "chapters": [
+    8,
+    7
+   ]
+  },
+  "8": {
+   "marks": 12,
+   "difficulty": "medium",
+   "reason": "Signposted: explain m, verify a particular integral, then the general and particular solutions and a value.",
+   "summary": "Fairground ride oscillation",
+   "skills": [
+    "differential-equations:2.43",
+    "differential-equations:2.45"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q9",
+   "chapters": [
+    8,
+    7
+   ]
+  },
+  "9": {
+   "marks": 14,
+   "difficulty": "difficult",
+   "reason": "Damped model with initial conditions; the maximum concentration needs differentiating and solving delicately.",
+   "summary": "Antibody concentration model",
+   "skills": [
+    "differential-equations:2.43",
+    "differential-equations:2.45"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2020-october/q3",
+   "chapters": [
+    8,
+    7
+   ]
+  },
+  "10": {
+   "marks": 17,
+   "difficulty": "difficult",
+   "reason": "Long and delicate: coupled equations with complex auxiliary roots, both general and particular solutions, then interpretation.",
+   "summary": "Coupled chemical reaction model",
+   "skills": [
+    "differential-equations:2.50",
+    "differential-equations:2.43"
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q5",
+   "chapters": [
+    8,
+    7
+   ]
+  }
+ }
+}

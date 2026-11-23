@@ -18,7 +18,7 @@ class MarkSchemeFlagTests(unittest.TestCase):
         derived = mark_schemes.derive(ROOT)
         self.assertEqual({name: len(rows) for name, rows in derived.items()},
                          {'textbook-catalogue.json': 6147, 'practice-catalogue.json': 2475, 'exam-catalogue.json': 444,
-                          'pmt-catalogue.json': 73})
+                          'pmt-catalogue.json': 134})
 
     def test_counts_per_source(self):
         counts = {f'{source}|{value}': n for (source, value), n in mark_schemes.counts(ROOT).items()}
@@ -28,6 +28,7 @@ class MarkSchemeFlagTests(unittest.TestCase):
             'Practice questions (Practice Booklet)|worked': 1921,
             'Practice questions (Luisa skill questions)|worked': 6147,
             'PMT (pure-core-1)|source': 73,                            # PMT topic sheets with their source mark schemes
+            'PMT (pure-core-2)|source': 61,
         })
 
     def test_past_paper_official_only_when_every_step_is_an_official_crop_of_that_paper(self):

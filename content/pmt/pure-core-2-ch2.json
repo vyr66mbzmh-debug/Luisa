@@ -1,0 +1,188 @@
+{
+ "schemaVersion": 1,
+ "questions": [
+  {
+   "id": "pmt/pure-core-2/ch2/q1",
+   "question": "<div class=\"equation\" data-math=\"y=\\ln\\left(\\frac{1}{1-2x}\\right),\\qquad|x|&lt;\\frac12\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li>Find <span class=\"inline-math\" data-math=\"\\dfrac{\\mathrm dy}{\\mathrm dx}\"></span>, <span class=\"inline-math\" data-math=\"\\dfrac{\\mathrm d^2y}{\\mathrm dx^2}\"></span> and <span class=\"inline-math\" data-math=\"\\dfrac{\\mathrm d^3y}{\\mathrm dx^3}\"></span> <span class=\"marks\">(4)</span></li><li>Hence, or otherwise, find the series expansion of <span class=\"inline-math\" data-math=\"\\ln\\left(\\dfrac{1}{1-2x}\\right)\"></span> about <span class=\"inline-math\" data-math=\"x=0\"></span>, in ascending powers of <span class=\"inline-math\" data-math=\"x\"></span>, up to and including the term in <span class=\"inline-math\" data-math=\"x^3\"></span>. Give each coefficient in its simplest form. <span class=\"marks\">(3)</span></li><li>Use your expansion to find an approximate value for <span class=\"inline-math\" data-math=\"\\ln\\left(\\dfrac32\\right)\"></span>, giving your answer to 3 decimal places. <span class=\"marks\">(3)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q01-ms-p07-1.png\" width=\"938\" height=\"937\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q1; source page 7, segment 1 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q01-ms-p07-2.png\" width=\"938\" height=\"139\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q1; source page 7, segment 2 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q01-ms-p08-3.png\" width=\"935\" height=\"915\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q1; source page 8, segment 3 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     7,
+     8
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q2",
+   "question": "<ol class=\"parts\" type=\"a\"><li><p>Use the standard summation formulae to show that, for <span class=\"inline-math\" data-math=\"n\\in\\mathbb N\"></span>,</p><div class=\"equation\" data-math=\"\\sum_{r=1}^{n}(3r^2-17r-25)=n(n^2-An-B)\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"A\"></span> and <span class=\"inline-math\" data-math=\"B\"></span> are integers to be determined.</p><span class=\"marks\">(4)</span></li><li><p>Explain why, for <span class=\"inline-math\" data-math=\"k\\in\\mathbb N\"></span>,</p><div class=\"equation\" data-math=\"\\sum_{r=1}^{3k}r\\tan(60r)^\\circ=-k\\sqrt3\" data-display=\"true\"></div><span class=\"marks\">(2)</span></li></ol><p>Using the results from part (a) and part (b) and showing all your working,</p><ol class=\"parts\" type=\"a\" start=\"3\"><li><p>determine any value of <span class=\"inline-math\" data-math=\"n\"></span> that satisfies</p><div class=\"equation\" data-math=\"\\sum_{r=5}^{n}(3r^2-17r-25)=15\\left[\\sum_{r=6}^{3n}r\\tan(60r)^\\circ\\right]^2\" data-display=\"true\"></div><span class=\"marks\">(6)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q02-ms-p09-1.png\" width=\"889\" height=\"839\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q2; source page 9, segment 1 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q02-ms-p09-2.png\" width=\"889\" height=\"554\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q2; source page 9, segment 2 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q02-ms-p10-3.png\" width=\"867\" height=\"838\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q2; source page 10, segment 3 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     9,
+     10
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q3",
+   "question": "<div class=\"equation\" data-math=\"\\mathrm f(x)=\\arcsin x\\qquad-1\\leqslant x\\leqslant1\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li>Determine the first two non-zero terms, in ascending powers of <span class=\"inline-math\" data-math=\"x\"></span>, of the Maclaurin series for <span class=\"inline-math\" data-math=\"\\mathrm f(x)\"></span>, giving each coefficient in its simplest form. <span class=\"marks\">(4)</span></li><li>Substitute <span class=\"inline-math\" data-math=\"x=\\dfrac12\"></span> into the answer to part (a) and hence find an approximate value for <span class=\"inline-math\" data-math=\"\\pi\"></span><br>Give your answer in the form <span class=\"inline-math\" data-math=\"\\dfrac{p}{q}\"></span> where <span class=\"inline-math\" data-math=\"p\"></span> and <span class=\"inline-math\" data-math=\"q\"></span> are integers to be determined. <span class=\"marks\">(2)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q03-ms-p11-1.png\" width=\"917\" height=\"915\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q3; source page 11, segment 1 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q03-ms-p11-2.png\" width=\"917\" height=\"448\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q3; source page 11, segment 2 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q03-ms-p12-3.png\" width=\"925\" height=\"250\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q3; source page 12, segment 3 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     11,
+     12
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q4",
+   "question": "<p>Prove that, for <span class=\"inline-math\" data-math=\"n\\in\\mathbb Z,\\ n\\geqslant0\"></span></p><div class=\"equation\" data-math=\"\\sum_{r=0}^{n}\\frac{1}{(r+1)(r+2)(r+3)}=\\frac{(n+a)(n+b)}{c(n+2)(n+3)}\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"a\"></span>, <span class=\"inline-math\" data-math=\"b\"></span> and <span class=\"inline-math\" data-math=\"c\"></span> are integers to be found.</p>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q04-ms-p12-1.png\" width=\"877\" height=\"876\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q4; source page 12, segment 1 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q04-ms-p12-2.png\" width=\"877\" height=\"64\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q4; source page 12, segment 2 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q04-ms-p13-3.png\" width=\"877\" height=\"476\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q4; source page 13, segment 3 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     12,
+     13
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q5",
+   "question": "<div class=\"equation\" data-math=\"y=\\sin x\\sinh x\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li>Show that <span class=\"inline-math\" data-math=\"\\dfrac{\\mathrm d^4y}{\\mathrm dx^4}=-4y\"></span> <span class=\"marks\">(4)</span></li><li>Hence find the first three non-zero terms of the Maclaurin series for <span class=\"inline-math\" data-math=\"y\"></span>, giving each coefficient in its simplest form. <span class=\"marks\">(4)</span></li><li>Find an expression for the <span class=\"inline-math\" data-math=\"n\"></span>th non-zero term of the Maclaurin series for <span class=\"inline-math\" data-math=\"y\"></span>. <span class=\"marks\">(2)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q05-ms-p14-1.png\" width=\"870\" height=\"728\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q5; source page 14, segment 1 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q05-ms-p14-2.png\" width=\"870\" height=\"466\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q5; source page 14, segment 2 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     14
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q6",
+   "question": "<ol class=\"parts\" type=\"a\"><li><p>Use the method of differences to prove that for <span class=\"inline-math\" data-math=\"n&gt;2\"></span></p><div class=\"equation\" data-math=\"\\sum_{r=2}^{n}\\ln\\left(\\frac{r+1}{r-1}\\right)\\equiv\\ln\\left(\\frac{n(n+1)}{2}\\right)\" data-display=\"true\"></div><span class=\"marks\">(4)</span></li><li><p>Hence find the exact value of</p><div class=\"equation\" data-math=\"\\sum_{r=51}^{100}\\ln\\left(\\frac{r+1}{r-1}\\right)^{35}\" data-display=\"true\"></div><p>Give your answer in the form <span class=\"inline-math\" data-math=\"a\\ln\\left(\\dfrac{b}{c}\\right)\"></span> where <span class=\"inline-math\" data-math=\"a\"></span>, <span class=\"inline-math\" data-math=\"b\"></span> and <span class=\"inline-math\" data-math=\"c\"></span> are integers to be determined.</p><span class=\"marks\">(3)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q06-ms-p15-1.png\" width=\"867\" height=\"860\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q6; source page 15, segment 1 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q06-ms-p15-2.png\" width=\"867\" height=\"347\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q6; source page 15, segment 2 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     15
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q7",
+   "question": "<div class=\"equation\" data-math=\"y=\\cosh^nx\\qquad n\\geqslant5\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li><ol class=\"parts\" type=\"i\"><li><p>Show that</p><div class=\"equation\" data-math=\"\\frac{\\mathrm d^2y}{\\mathrm dx^2}=n^2\\cosh^nx-n(n-1)\\cosh^{n-2}x\" data-display=\"true\"></div><span class=\"marks\">(4)</span></li><li>Determine an expression for <span class=\"inline-math\" data-math=\"\\dfrac{\\mathrm d^4y}{\\mathrm dx^4}\"></span> <span class=\"marks\">(2)</span></li></ol></li><li>Hence determine the first three non-zero terms of the Maclaurin series for <span class=\"inline-math\" data-math=\"y\"></span>, giving each coefficient in simplest form. <span class=\"marks\">(2)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q07-ms-p16-1.png\" width=\"868\" height=\"840\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q7; source page 16, segment 1 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q07-ms-p16-2.png\" width=\"868\" height=\"375\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q7; source page 16, segment 2 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q07-ms-p17-3.png\" width=\"868\" height=\"850\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q7; source page 17, segment 3 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q07-ms-p17-4.png\" width=\"868\" height=\"358\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q7; source page 17, segment 4 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q07-ms-p18-5.png\" width=\"868\" height=\"862\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q7; source page 18, segment 5 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q07-ms-p18-6.png\" width=\"868\" height=\"394\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q7; source page 18, segment 6 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q07-ms-p19-7.png\" width=\"868\" height=\"397\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q7; source page 19, segment 7 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     16,
+     17,
+     18,
+     19
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q8",
+   "question": "<p>Prove that</p><div class=\"equation\" data-math=\"\\sum_{r=1}^{n}\\frac{1}{(r+1)(r+3)}=\\frac{n(an+b)}{12(n+2)(n+3)}\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"a\"></span> and <span class=\"inline-math\" data-math=\"b\"></span> are constants to be found. <span class=\"marks\">(5)</span></p>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q08-ms-p19-1.png\" width=\"883\" height=\"547\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q8; source page 19, segment 1 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q08-ms-p20-2.png\" width=\"883\" height=\"876\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q8; source page 20, segment 2 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q08-ms-p20-3.png\" width=\"883\" height=\"221\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q8; source page 20, segment 3 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     19,
+     20
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q9",
+   "question": "<ol class=\"parts\" type=\"a\"><li><p>Show that, for <span class=\"inline-math\" data-math=\"r&gt;0\"></span></p><div class=\"equation\" data-math=\"\\frac{1}{r^2}-\\frac{1}{(r+1)^2}\\equiv\\frac{2r+1}{r^2(r+1)^2}\" data-display=\"true\"></div><span class=\"marks\">(1)</span></li><li><p>Hence prove that, for <span class=\"inline-math\" data-math=\"n\\in\\mathbb N\"></span></p><div class=\"equation\" data-math=\"\\sum_{r=1}^{n}\\frac{2r+1}{r^2(r+1)^2}=\\frac{n(n+2)}{(n+1)^2}\" data-display=\"true\"></div><span class=\"marks\">(3)</span></li><li><p>Show that, for <span class=\"inline-math\" data-math=\"n\\in\\mathbb N\"></span>, <span class=\"inline-math\" data-math=\"n&gt;1\"></span></p><div class=\"equation\" data-math=\"\\sum_{r=n}^{3n}\\frac{6r+3}{r^2(r+1)^2}=\\frac{an^2+bn+c}{n^2(3n+1)^2}\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"a\"></span>, <span class=\"inline-math\" data-math=\"b\"></span> and <span class=\"inline-math\" data-math=\"c\"></span> are constants to be found.</p><span class=\"marks\">(3)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q09-ms-p21-1.png\" width=\"922\" height=\"875\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q9; source page 21, segment 1 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q09-ms-p21-2.png\" width=\"922\" height=\"547\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q9; source page 21, segment 2 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     21
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q10",
+   "question": "<ol class=\"parts\" type=\"a\"><li><p>Use the standard results for <span class=\"inline-math\" data-math=\"\\displaystyle\\sum_{r=1}^{n}r^2\"></span> and <span class=\"inline-math\" data-math=\"\\displaystyle\\sum_{r=1}^{n}r\"></span> to show that</p><div class=\"equation\" data-math=\"\\sum_{r=1}^{n}(3r-2)^2=\\frac12n\\left[6n^2-3n-1\\right]\" data-display=\"true\"></div><p>for all positive integers <span class=\"inline-math\" data-math=\"n\"></span>.</p><span class=\"marks\">(5)</span></li><li><p>Hence find any values of <span class=\"inline-math\" data-math=\"n\"></span> for which</p><div class=\"equation\" data-math=\"\\sum_{r=5}^{n}(3r-2)^2+103\\sum_{r=1}^{28}r\\cos\\left(\\frac{r\\pi}{2}\\right)=3n^3\" data-display=\"true\"></div><span class=\"marks\">(5)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q10-ms-p22-1.png\" width=\"860\" height=\"854\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q10; source page 22, segment 1 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q10-ms-p22-2.png\" width=\"860\" height=\"403\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q10; source page 22, segment 2 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     22
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q11",
+   "question": "<ol class=\"parts\" type=\"a\"><li><p>Show that, for <span class=\"inline-math\" data-math=\"r&gt;0\"></span></p><div class=\"equation\" data-math=\"r-3+\\frac{1}{r+1}-\\frac{1}{r+2}=\\frac{r^3-7r-5}{(r+1)(r+2)}\" data-display=\"true\"></div><span class=\"marks\">(2)</span></li><li><p>Hence prove, using the method of differences, that</p><div class=\"equation\" data-math=\"\\sum_{r=1}^{n}\\frac{r^3-7r-5}{(r+1)(r+2)}=\\frac{n(n^2+an+b)}{2(n+2)}\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"a\"></span> and <span class=\"inline-math\" data-math=\"b\"></span> are constants to be found.</p><span class=\"marks\">(5)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q11-ms-p23-1.png\" width=\"910\" height=\"870\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q11; source page 23, segment 1 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch2/q11-ms-p23-2.png\" width=\"910\" height=\"272\" alt=\"PMT mark scheme for Core Pure 2 Ch.2 Series Q11; source page 23, segment 2 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     23
+    ]
+   }
+  }
+ ]
+}
