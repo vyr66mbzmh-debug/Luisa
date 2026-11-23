@@ -22,7 +22,8 @@ EXPECTED = {
     'pure-core-2-ch3': (7, 49), 'pure-core-2-ch4': (4, 36), 'pure-core-2-ch5': (6, 59), 'pure-core-2-ch6': (9, 67),
     'pure-core-2-ch7': (3, 30), 'pure-core-2-ch8': (10, 138),
 }
-SOURCE_SLIPS = {'pmt/pure-core-1/ch2/q7', 'pmt/pure-core-1/ch6/q2', 'pmt/pure-core-1/ch6/q6'}
+SOURCE_SLIPS = {'pmt/pure-core-1/ch2/q7', 'pmt/pure-core-1/ch6/q2', 'pmt/pure-core-1/ch6/q3', 'pmt/pure-core-1/ch6/q6',
+                'pmt/pure-core-1/ch9/q10'}
 LEAKS = re.compile(r'PMT|PhysicsAndMathsTutor|Physics\s*&?\s*Maths\s*Tutor|Mark Scheme|Total for question|\bEdexcel\b|9FM0', re.I)
 
 
@@ -91,7 +92,7 @@ class PmtChapters(unittest.TestCase):
                 self.assertEqual(q['sourceScheme']['page'], row['schemePages'])
                 self.assertTrue(q['steps'])
                 for step in q['steps']:
-                    src = re.fullmatch(r'<figure class="exam-solution-source"[^>]*><img src="(resources/pmt/[a-z0-9-]+/q(\d+)-ms-p\d+-\d+\.png)"[^>]*alt="PMT mark scheme for [^"]+"[^>]*></figure>', step)
+                    src = re.fullmatch(r'<figure class="exam-solution-source"[^>]*><img src="(resources/pmt/[a-z0-9-]+/q(\d+)-ms-(?:from-[a-z0-9-]+-)?p\d+-\d+\.png)"[^>]*alt="PMT mark scheme for [^"]+"[^>]*></figure>', step)
                     self.assertIsNotNone(src, step[:120])
                     self.assertEqual(int(src.group(2)), row['questionNumber'])
                     w, h = png_size(ROOT / src.group(1))

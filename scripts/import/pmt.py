@@ -118,12 +118,15 @@ def content_boxes(page):
     return [b for b in boxes if b.y0 >= HEADER_Y - 1]
 
 
-def scheme_crops(doc, info):
-    """Tight crops of each question's scheme region; asserts every content box is in exactly one crop."""
+def scheme_crops(doc, info, moved=()):
+    """Tight crops of each question's scheme region; asserts every content box is in exactly one crop.
+    Pages in `moved` belong to another file's question (recorded in scheme-moves.json) and are left out here."""
     import pymupdf
     crops, used = {}, {}
     for q, regs in info['regions'].items():
         for reg in regs:
+            if reg['page'] in moved:
+                continue
             page = doc[reg['page'] - 1]
             inside = [b for b in content_boxes(page) if b.y0 >= reg['top'] - 2 and b.y1 <= reg['bottom'] + 2]
             if not inside:
@@ -137,6 +140,8 @@ def scheme_crops(doc, info):
                 key = (reg['page'], tuple(round(v, 1) for v in b))
                 used[key] = used.get(key, 0) + 1
     for pn in range(info['firstSchemePage'], doc.page_count + 1):
+        if pn in moved:
+            continue
         for b in content_boxes(doc[pn - 1]):
             key = (pn, tuple(round(v, 1) for v in b))
             if used.get(key) != 1:
@@ -222,12 +227,32 @@ def cmd_assets(ps, file_id):
         raise SystemExit(f'{file_id}: question totals differ from questions.json marks.')
     folder = f'resources/pmt/{file_id}'
     record = {'file': file_id, 'figures': {}, 'schemes': {}}
-    for q, crops in scheme_crops(doc, info).items():
+    moves = ps.data('scheme-moves.json', {})
+    moved = {pg for m in moves.get(file_id, []) for pg in m['pages']}
+    for q, crops in scheme_crops(doc, info, moved).items():
         crops = [dict(page=c['page'], rect=r) for c in crops for r in split_rect(doc, c['page'], c['rect'])]
         for k, c in enumerate(crops, 1):
             name = f'{folder}/q{q:02}-ms-p{c["page"]:02}-{k}.png'
             w, h = render(doc, c['page'], c['rect'], ps.repo / name, 150)
             record['schemes'].setdefault(str(q), []).append(dict(asset=name, page=c['page'], rect=c['rect'], width=w, height=h))
+    # Scheme pages another file misplaced, which belong to a question here: appended after its own scheme, in page order.
+    for src, entries in sorted(moves.items()):
+        for m in entries:
+            if m['to'] != file_id:
+                continue
+            sdoc = ps.pdf(src)
+            pieces = []
+            for pg in m['pages']:
+                boxes = content_boxes(sdoc[pg - 1])
+                rect = boxes[0]
+                for b in boxes[1:]:
+                    rect |= b
+                rect = [round(v, 2) for v in (rect.x0 - 2, rect.y0 - 2, rect.x1 + 2, rect.y1 + 2)]
+                pieces += [(pg, r) for r in split_rect(sdoc, pg, rect)]
+            for k, (pg, r) in enumerate(pieces, 1):
+                name = f'{folder}/q{m["q"]:02}-ms-from-{src}-p{pg:02}-{k}.png'
+                w, h = render(sdoc, pg, r, ps.repo / name, 150)
+                record['schemes'][str(m['q'])].append(dict(asset=name, page=pg, rect=r, width=w, height=h, sourceFile=src))
     for q, boxes in (ps.data('figs.json', {}).get(file_id) or {}).items():
         for k, (page, *rect) in enumerate(boxes, 1):
             name = f'{folder}/q{int(q):02}-fig-{k}.png'
@@ -243,7 +268,8 @@ def cmd_assets(ps, file_id):
 def scheme_html(spec, q, crops):
     out = []
     for k, c in enumerate(crops, 1):
-        alt = (f'PMT mark scheme for {spec["course"]} {spec["sheet"]} Q{q}; source page {c["page"]}, segment {k} of {len(crops)}. '
+        where = f'source page {c["page"]}' if 'sourceFile' not in c else f'appendix printed on page {c["page"]} of the {c["sourceFile"]} sheet'
+        alt = (f'PMT mark scheme for {spec["course"]} {spec["sheet"]} Q{q}; {where}, segment {k} of {len(crops)}. '
                'Includes the working, marks, alternative methods and notes in source order.')
         out.append(f'<figure class="exam-solution-source" style="margin:2mm 0"><img src="{c["asset"]}" width="{c["width"]}" height="{c["height"]}" '
                    f'alt="{html.escape(alt, quote=True)}" style="display:block;width:100%;height:auto;max-width:100%"></figure>')
@@ -263,7 +289,10 @@ def cmd_payload(ps, file_id):
         crops = record['schemes'][str(q)]
         questions.append({'id': f'pmt/{spec["book"]}/ch{spec["chapter"]}/q{q}', 'question': prompts[q],
                           'steps': scheme_html(spec, q, crops), 'contextHtml': '',
-                          'sourceScheme': {'kind': 'source', 'page': sorted({c['page'] for c in crops})}})
+                          'sourceScheme': dict({'kind': 'source', 'page': sorted({c['page'] for c in crops if 'sourceFile' not in c})},
+                                               **({'appendix': [{'file': f, 'page': sorted({c['page'] for c in crops if c.get('sourceFile') == f})}
+                                                                for f in sorted({c['sourceFile'] for c in crops if 'sourceFile' in c})]}
+                                                  if any('sourceFile' in c for c in crops) else {}))})
     path = ps.repo / 'content' / 'pmt' / f'{file_id}.json'
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({'schemaVersion': 1, 'questions': questions}, indent=1, ensure_ascii=False) + '\n')
@@ -319,7 +348,7 @@ def cmd_integrate(ps, file_id):
             'sourceLabel': f'PMT {spec["course"]} {spec["sheet"]} Q{n}', 'sheetId': file_id, 'sheetTitle': spec['title'],
             'board': 'PMT', 'status': 'checked', 'dataPath': f'content/pmt/{file_id}.json',
             'sourceSha256': spec['sha256'], 'sourceQuestionPages': list(range(starts[n], ends[n] + 1)),
-            'schemePages': sorted({c['page'] for c in record['schemes'][q]}), 'duplicateOf': m.get('duplicateOf'),
+            'schemePages': sorted({c['page'] for c in record['schemes'][q] if 'sourceFile' not in c}), 'duplicateOf': m.get('duplicateOf'),
             'sourceNote': m.get('note')})
     order = {fid: k for k, fid in enumerate(sorted(ps.files))}
     rows.sort(key=lambda r: (r['dataPath'], r['questionNumber']))
