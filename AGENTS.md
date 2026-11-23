@@ -24,6 +24,7 @@ Read HANDOFF.md, docs/agentic/LEAD-RULES.md and the assigned issue only. Consult
 - Chapter delivery includes checked slides, student booklet AND correct textbook chapter PDF, connected in both libraries and verified online.
 - Checked means source, maths, visual, interaction and print acceptance with evidence. Never replace these with a successful render. Invalidate affected approvals after edits.
 - Reuse questions across skill/chapter views; preserve edition-specific references. Do not publicly label practice by its upstream question-bank provider.
+- Keep the exact source wording of every question in Luisa Papers. Preserve question-specific instructions, givens, labels and marks, including apparent source errors. Put any errata outside the prompt. Use editorial discretion for slides or other material only with explicit owner authorization for that task. See PAP-073-WORDING.
 
 - Owner-authorised v0.26 PWA-001: installable across Apple, Windows and Android systems, explicitly including the iiyama smartboard, explicit offline downloads/readiness and real-device offline acceptance. Existing caching is not proof of compliance. The owner explicitly authorised implementation and checked publication in v0.26 on 2026-11-03, superseding the previous deferral.
 

@@ -73,6 +73,7 @@ The repository is public, so anything committed is visible to everyone. `python3
 **The ADA website address** is public. The owner site's offline page links pupils to it, and the auth app names it. The SSH host and server layout are private.
 
 ## Standing rules and authority
+- **Paper wording (PAP-073-WORDING, #133):** Keep every Luisa Papers question verbatim, including source errors and question-specific instructions. Record errata outside the question. Use discretion with teaching slides only when expressly authorized for that task.
 - **Rules:** AGENTS.md (mandatory standard), `docs/agentic/LEAD-RULES.md`, `docs/agentic/REVIEWER-RULES.md`, and the requirement register `docs/requirements/register.json` (generated `REQUIREMENTS.md`). New owner instructions take precedence; record them on GitHub and in the register while implementing (OPS-063).
 - **Release targets:** every release goes to Cloudflare (owner edition, deployed automatically from main) and to ADA (staff and pupil editions), all from the same checked artifact. Then the recovery ZIP and the SMTP owner report (FR-024, `docs/handoff/RELEASE-EMAIL.md`) follow.
 - **Report:** one handoff in every form (OPS-069). A release is complete only when `scripts/release/finish.py complete` passes (OPS-070).

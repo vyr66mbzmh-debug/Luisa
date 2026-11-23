@@ -6087,6 +6087,24 @@
         "tests/test_papers_selection.py",
         "tests/papers_print_browser.py"
       ]
+    },
+    {
+      "id": "PAP-073-WORDING",
+      "requirement": "Preserve the exact source wording of every question in Luisa Papers. Use editorial discretion on teaching slides or other material only when explicitly authorized by the owner for that task.",
+      "scope": "All existing and future Luisa Papers, including transcriptions, imports, revisions and print variants",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "needs_revalidation",
+      "origin": "Owner standing instruction, 23 November 2026, GitHub #133",
+      "acceptance": [
+        "Compare each question to the source. Preserve question-specific instructions, givens, printed labels and marks, including apparent source errors.",
+        "Maintain the exact source content when changing layout, typesetting mathematical notation or reproducing diagrams. Record ambiguities and errata outside the question prompt.",
+        "Treat explicit editorial permission for slides as task-specific and keep the standing Papers rule in force."
+      ],
+      "evidence": [
+        "AGENTS.md",
+        "GitHub issue #133"
+      ]
     }
   ]
 }
