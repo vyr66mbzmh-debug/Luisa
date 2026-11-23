@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-19",
+  "asOf": "2026-11-23",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -5841,6 +5841,108 @@
       "evidence": [
         "GitHub issue #126",
         "docs/evidence/v071-import-oct2020-oct2021-nov2021.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-072-1",
+      "requirement": "Release 3 of 3 of the TO_UPLOAD import: publish the Edexcel Sample Assessment Material papers and any genuine 2022 material with their official mark schemes, fully gated and live-verified, only after v0.71 is published; then post the final import summary on #124.",
+      "acceptance": [
+        "v0.72 publishes five papers (57 questions, 450 marks): Sample 9MA0/01, 9MA0/02, 9MA0/03 (combined Statistics and Mechanics), 9FM0/01 and 9FM0/02.",
+        "No genuine 2022 material exists: the 12 files in the June 2022 folder are byte-identical Summer 2023 duplicates and are skipped; this is recorded in the evidence, #128, HANDOFF.md, the owner report and the final #124 summary."
+      ],
+      "scope": "v0.72 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124 and #128, 23 November 2026",
+      "evidence": [
+        "GitHub issue #128",
+        "docs/evidence/v072-import-sample-papers.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-072-2",
+      "requirement": "Sample papers have session \"Sample\" and no invented date: examDate and seriesDate are null and the Past Papers dropdown lists them after every dated paper, ordered by code.",
+      "acceptance": [
+        "pilot-metadata.json has session Sample, examDate null and seriesDate null for the five papers; the evidence records each cover as Sample Assessment Material with no exam date printed.",
+        "The dropdown ends with Sample Paper 1 and 2 (Further Maths) then Sample Paper 1, 2 and 3 (Maths)."
+      ],
+      "scope": "v0.72 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124 and #128, 23 November 2026",
+      "evidence": [
+        "GitHub issue #128",
+        "docs/evidence/v072-import-sample-papers.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-072-3",
+      "requirement": "Import to the same standard as v0.70 (PAP-070-3): original wording, subparts, diagrams and marks; the complete official scheme per question; an independent maths check with a checkpoint; marks reconciled; faithful figure crops; content-based chapter and skill mapping; paper-order difficulty; metadata and catalogue joins; per-question evidence. Combined papers stay one paper and instructions are verbatim.",
+      "acceptance": [
+        "57 questions with stable IDs exam/edexcel-<code>-sample/q<n>; printed part marks sum to each question total, which equals the scheme total and the cover total.",
+        "Every question has an independent SymPy/numeric checkpoint that agrees with the scheme; the Sample Assessment Materials page footer is excluded from scheme crops.",
+        "Every question carries the cover's show-working and three-significant-figure lines; 9MA0/03 Q6-Q10 carry the Section B g instruction verbatim and Q1-Q5 do not; source wording such as \"respectably\" in 9MA0/03 Q1 is kept and noted."
+      ],
+      "scope": "v0.72 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124 and #128, 23 November 2026",
+      "evidence": [
+        "GitHub issue #128",
+        "docs/evidence/v072-import-sample-papers.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-072-4",
+      "requirement": "Verify each imported paper: selectable by name; selects only its own questions; works with other filters, saved and mixed selections; prints in source order in both layouts with solutions on and off. Preserve existing print layouts, saved selections, saved-paper IDs and the teacher-only exam paper and its gating.",
+      "acceptance": [
+        "The Past Papers dropdown lists 44 papers (45 options with All); Maths A level lists 30 papers (31 options) and Further Maths 14; Mechanics Year 2 includes Sample 9MA0/03.",
+        "Choosing any of the five papers selects only its own questions in source order; a whole-paper selection of the combined 9MA0/03, a mixed selection and reload work.",
+        "Every one of the five papers prints complete in both layouts with solutions on and off as real PDFs, and printed PDF pages are inspected."
+      ],
+      "scope": "v0.72 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124 and #128, 23 November 2026",
+      "evidence": [
+        "GitHub issue #128",
+        "docs/evidence/v072-import-sample-papers.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-072-5",
+      "requirement": "Update counts and tests with positive assertions, and publish only papers that pass full verification and independent review.",
+      "acceptance": [
+        "Tests assert 44 papers, 444 past-paper questions, 3,450 marks, the dropdown contents and orders, and the source hashes, page counts and sessions of the five papers; 9,066 questions overall (8,068 practice, 554 exam-style, 444 past-paper).",
+        "No v0.72 paper was held; held papers, if any, would be listed with blockers in the issue, HANDOFF.md and the owner report."
+      ],
+      "scope": "v0.72 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124 and #128, 23 November 2026",
+      "evidence": [
+        "GitHub issue #128",
+        "docs/evidence/v072-import-sample-papers.json",
         "tests/test_exam_metadata.py",
         "tests/test_papers_selection.py",
         "tests/papers_print_browser.py"

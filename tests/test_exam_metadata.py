@@ -92,6 +92,12 @@ class PilotMetadata(unittest.TestCase):
             'edexcel-9ma0-01-2018-june': ([3,7,4,4,5,10,7,5,10,8,10,10,7,10], (4,6,4)),
             'edexcel-9ma0-02-2018-june': ([6,5,5,7,6,6,9,7,5,8,7,9,10,10], (4,6,4)),
             'edexcel-9ma0-03-2018-june': ([5,7,11,13,14,6,8,8,13,15], (3,4,3)),
+            # PAP-072: Sample Assessment Materials (no date) follow all dated papers, ordered by code.
+            'edexcel-9fm0-01-sample': ([5,6,9,9,10,9,8,7,12], (3,3,3)),
+            'edexcel-9fm0-02-sample': ([8,8,12,7,10,13,17], (2,3,2)),
+            'edexcel-9ma0-01-sample': ([7,5,4,4,3,7,5,6,5,5,9,9,13,10,8], (5,5,5)),
+            'edexcel-9ma0-02-sample': ([3,3,4,5,4,6,5,7,5,4,6,8,9,9,10,12], (5,6,5)),
+            'edexcel-9ma0-03-sample': ([13,6,12,10,9,6,8,10,13,13], (3,4,3)),
         }
         self.assertTrue(data['printable'])
         self.assertEqual([p['id'] for p in data['papers']], list(expected))
@@ -117,9 +123,9 @@ class PilotMetadata(unittest.TestCase):
                     self.assertIn(tuple(s[k] for k in ('courseId','bookId','topicId','skillId')), valid)
                 self.assertTrue(set(q).isdisjoint({'question','questionHtml','steps','solution','hints','assets'}))
         self.assertEqual(len(all_rows), data['questionCount'])
-        self.assertEqual(len({q['id'] for q in all_rows}), 387)
+        self.assertEqual(len({q['id'] for q in all_rows}), 444)
         self.assertEqual(sum(q['marks'] for q in all_rows), data['totalMarks'])
-        self.assertEqual(data['totalMarks'], 3000)
+        self.assertEqual(data['totalMarks'], 3450)
 
 
     def test_printable_payloads_and_assets_are_complete(self):
@@ -127,8 +133,8 @@ class PilotMetadata(unittest.TestCase):
         catalogue = read('exam-catalogue.json')['questions']
         metadata = {q['id']: q for p in read('content/exams/pilot-metadata.json')['papers'] for q in p['questions']}
         self.assertEqual({q['id'] for q in catalogue}, set(metadata))
-        self.assertEqual(len(catalogue), 387)
-        self.assertEqual(sum(q['marks'] for q in catalogue), 3000)
+        self.assertEqual(len(catalogue), 444)
+        self.assertEqual(sum(q['marks'] for q in catalogue), 3450)
         for row in catalogue:
             self.assertEqual(row['status'], 'checked')
             for key in ('marks','difficulty','sourceLabel','skillMappings'):
@@ -268,6 +274,51 @@ class PilotMetadata(unittest.TestCase):
             payload = read(f'content/exams/{pid}.json')['questions']
             if '-32-' not in pid:
                 self.assertTrue(all('Inexact answers should be given to three significant figures' in q['contextHtml'] for q in payload), pid)
+        self.assertTrue(all('Agrees with scheme.' in q['mathsCheckpoint'] for p in evidence['papers'] for q in p['questions']))
+
+    def test_sample_assessment_materials_source_identity_and_complete_schemes(self):
+        ids = ['edexcel-9fm0-01-sample', 'edexcel-9fm0-02-sample', 'edexcel-9ma0-01-sample', 'edexcel-9ma0-02-sample', 'edexcel-9ma0-03-sample']
+        evidence = self.assert_session_evidence('docs/evidence/v072-import-sample-papers.json', 'Sample', strict_order=True,
+                                                shared_boundary_pages=True, counts=(5, 57, 450),
+                                                codes=('9FM0/01', '9FM0/02', '9MA0/01', '9MA0/02', '9MA0/03'))
+        self.assertEqual((evidence['requirement'], evidence['issue']), ('PAP-072', 128))
+        self.assertEqual([p['paperId'] for p in evidence['papers']], ids)
+        self.assertEqual([p['session'] for p in evidence['papers']], ['Sample'] * 5)
+        hashes = {p['paperId']: (p['sourceHashes']['questionPaperSha256'][:12], p['sourceHashes']['markSchemeSha256'][:12]) for p in evidence['papers']}
+        self.assertEqual(hashes, {
+            'edexcel-9fm0-01-sample': ('c52ca71952d7', '75adbba38a00'),
+            'edexcel-9fm0-02-sample': ('912b1f5d5f93', '8737ed77a9a8'),
+            'edexcel-9ma0-01-sample': ('dfb3d5e84c96', '0aea6a31199c'),
+            'edexcel-9ma0-02-sample': ('2bc25b62b1b8', 'fc838ce639b8'),
+            'edexcel-9ma0-03-sample': ('b22c0b36290c', '702bd8368771')})
+        pages = {p['paperId']: (p['sourceIdentity']['questionPaperPages'], p['sourceIdentity']['markSchemePages']) for p in evidence['papers']}
+        self.assertEqual(pages, dict(zip(ids, [(25, 12), (17, 11), (32, 18), (26, 16), (26, 15)])))
+        covers = {p['paperId']: p['sourceIdentity'] for p in evidence['papers']}
+        self.assertTrue(all('Sample Assessment Material' in c['questionPaperCover'] and 'no exam date printed' in c['questionPaperCover'] for c in covers.values()))
+        self.assertIn('paper reference S54261A', covers['edexcel-9ma0-03-sample']['questionPaperCover'])
+        self.assertTrue(any('June 2022' in note and 'byte-identical' in note for note in evidence['sourceNotes']))
+        self.assertTrue(any('respectably' in note for note in evidence['sourceNotes']))
+        meta = {p['id']: p for p in read('content/exams/pilot-metadata.json')['papers']}
+        self.assertEqual({k: (meta[k]['session'], meta[k]['examDate'], meta[k]['seriesDate']) for k in ids}, {k: ('Sample', None, None) for k in ids})
+        self.assertEqual(list(meta)[-5:], ids)
+        for pid in ids:
+            self.assertTrue(meta[pid]['source']['questionPaperUrl'].endswith('/QP/Sample%20QP.pdf'))
+            self.assertEqual(meta[pid]['source']['questionPaperSha256'], meta[pid]['source']['indexedQuestionPaperSha256'])
+            payload = read(f'content/exams/{pid}.json')['questions']
+            self.assertTrue(all('Answers should be given to three significant figures unless otherwise stated.' in q['contextHtml'] for q in payload), pid)
+        combined = meta['edexcel-9ma0-03-sample']
+        self.assertEqual((combined['paperCode'], combined['title'], combined['questionCount'], combined['totalMarks']),
+                         ('9MA0/03', 'Statistics and Mechanics', 10, 100))
+        books = [{s['bookId'] for s in q['skillMappings']} for q in combined['questions']]
+        self.assertTrue(all(any('statistics' in b for b in bs) for bs in books[:5]))
+        self.assertTrue(all(any('mechanics' in b for b in bs) for bs in books[5:]))
+        payload = read('content/exams/edexcel-9ma0-03-sample.json')['questions']
+        self.assertTrue(all('Section B: Mechanics' in q['contextHtml'] and '9.8' in q['contextHtml'] for q in payload[5:]))
+        self.assertTrue(all('9.8' not in q['contextHtml'] for q in payload[:5]))
+        self.assertIn('respectably', payload[0]['question'])
+        table = read('content/exams/edexcel-9ma0-02-sample.json')['questions'][5]['question']
+        self.assertIn('Always True', table)
+        self.assertEqual(table.count('class="marks">(2)'), 3)
         self.assertTrue(all('Agrees with scheme.' in q['mathsCheckpoint'] for p in evidence['papers'] for q in p['questions']))
 
     def assert_session_evidence(self, path, session, strict_order=False, shared_boundary_pages=False, counts=(6, 59, 450),

@@ -347,6 +347,12 @@ class PapersPrintTests(unittest.TestCase):
             'edexcel-9ma0-31-2020-october': (5, 50), 'edexcel-9ma0-32-2020-october': (5, 50),
             'edexcel-9fm0-01-2020-october': (7, 75), 'edexcel-9fm0-02-2020-october': (7, 75)})
 
+    def test_sample_assessment_material_papers_print_in_every_layout(self):
+        # PAP-072: undated Sample Assessment Materials; 9MA0/03 is one combined Statistics and Mechanics paper.
+        self.assert_session_papers_print('Sample', {
+            'edexcel-9fm0-01-sample': (9, 75), 'edexcel-9fm0-02-sample': (7, 75), 'edexcel-9ma0-01-sample': (15, 100),
+            'edexcel-9ma0-02-sample': (16, 100), 'edexcel-9ma0-03-sample': (10, 100)})
+
     def assert_session_papers_print(self, session, papers):
         import fitz, tempfile
         with tempfile.TemporaryDirectory() as folder:
@@ -414,7 +420,7 @@ class PapersPrintTests(unittest.TestCase):
         try:
             page = context.new_page()
             page.goto(f'http://127.0.0.1:{self.server.server_port}/papers.html')
-            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40 && !document.querySelector('#papers-generate').disabled")
+            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 45 && !document.querySelector('#papers-generate').disabled")
             page.locator('#papers-source-practice').uncheck()
             page.locator('#papers-source-exam-style').uncheck()
             page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')
