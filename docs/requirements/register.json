@@ -5130,8 +5130,8 @@
       "requirement": "Release-critical tooling lives in Git. Every script, config template, test and document needed to import papers, build, test, land, deploy, verify live, archive and report a release is in the repository. Nothing release-critical exists only in /tmp, a private state folder or an agent's memory.",
       "scope": "All agents, engines and releases (standing); first delivered in v0.73",
       "priority": "P1",
-      "implementation": "in_progress",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner brief \"Release tooling in Git, agent-neutral, single handoff\", GitHub #130, 23 November 2026 (numbered v0.73 by owner decision)",
       "acceptance": [
         "The inventory of every private or temporary tool used by past releases is on #130 with purpose, inputs, outputs, secrets touched and new location.",
@@ -5139,10 +5139,11 @@
         "v0.73 is released using only the in-repo tooling plus the private configuration."
       ],
       "evidence": [
-        "GitHub issue #130",
+        "GitHub issue #130 (inventory, release evidence)",
         "scripts/import/README.md",
         "scripts/release/README.md",
-        "docs/agentic/RELEASE-RUNBOOK.md"
+        "docs/agentic/RELEASE-RUNBOOK.md",
+        "tests/test_release_tooling.py"
       ]
     },
     {
@@ -5150,8 +5151,8 @@
       "requirement": "Private data stays private. Credentials, tokens, server hosts and addresses (including ADA and SMTP), mail sender and recipient, personal paths and contact data, account databases, owner source PDFs and unpublished corrections are never in Git, logs, reports or chat. Scripts read them at run time from the private state (~/.local/share/luisa-agent-state/WORKSPACE.json, overridable with LUISA_STATE_DIR) and never print their values. Repo code uses $HOME or configured keys, never an absolute personal path.",
       "scope": "All agents, engines and releases (standing); first delivered in v0.73",
       "priority": "P1",
-      "implementation": "in_progress",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner brief \"Release tooling in Git, agent-neutral, single handoff\", GitHub #130, 23 November 2026 (numbered v0.73 by owner decision)",
       "acceptance": [
         "`python3 scripts/luisa.py privacy` (part of the gate) fails on credentials, personal absolute paths, private hosts and addresses (by committed hashes, plus exact WORKSPACE values when the private state is present), and on any committed file whose SHA-256 equals a recorded owner source PDF.",
@@ -5161,6 +5162,7 @@
         "GitHub issue #130",
         "scripts/luisa.py",
         "scripts/release/private.py",
+        "docs/security/private-hashes.json",
         "tests/test_privacy_gate.py"
       ]
     },
@@ -5169,8 +5171,8 @@
       "requirement": "Agent-neutral. All documentation and scripts work for any competent AI agent or human, on any vendor's engine. No step requires a vendor-specific feature (named subagents, slash commands, memory files, plugins, special permission modes). Where a role is needed (independent reviewer), it is specified as a role with inputs, outputs and a schema, so any engine can fill it. Vendor pointer files (CLAUDE.md, etc.) only point to AGENTS.md.",
       "scope": "All agents, engines and releases (standing); first delivered in v0.73",
       "priority": "P1",
-      "implementation": "in_progress",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner brief \"Release tooling in Git, agent-neutral, single handoff\", GitHub #130, 23 November 2026 (numbered v0.73 by owner decision)",
       "acceptance": [
         "AGENTS.md starts with a quick start for any AI agent; the runbook uses neutral wording and plain commands.",
@@ -5178,10 +5180,12 @@
         "A reviewer with no prior context completed a cold-start dry run from the repository and private configuration only; gaps found were fixed (#130)."
       ],
       "evidence": [
-        "GitHub issue #130",
+        "GitHub issue #130 (cold-start proof)",
         "AGENTS.md",
         "docs/agentic/RELEASE-RUNBOOK.md",
-        "docs/agentic/review-record.schema.json"
+        "docs/agentic/REVIEWER-RULES.md",
+        "docs/agentic/review-record.schema.json",
+        "tests/test_release_tooling.py"
       ]
     },
     {
@@ -5189,8 +5193,8 @@
       "requirement": "Reproducible environment. One documented bootstrap command creates the working environment (Python with requirements-dev.txt and requirements-auth.txt, Playwright and a browser, PyMuPDF, the tools the gate needs, Node if required) at a stable location under the private state folder, not /tmp, with pinned versions. Scripts never assume optional tools: no dependence on rg (use grep or Python), no Node assumption, no string-evaluated browser waits that ADA's CSP blocks (use CSP-safe locator waits).",
       "scope": "All agents, engines and releases (standing); first delivered in v0.73",
       "priority": "P1",
-      "implementation": "in_progress",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner brief \"Release tooling in Git, agent-neutral, single handoff\", GitHub #130, 23 November 2026 (numbered v0.73 by owner decision)",
       "acceptance": [
         "`python3 scripts/bootstrap.py` creates <state>/env with exact pins from requirements-tools.txt (Playwright, PyMuPDF, SymPy, Node via nodejs-wheel) and a browser (installed Chrome or Playwright Chromium).",
@@ -5209,15 +5213,15 @@
       "requirement": "Cold-start check. A command (name it scripts/luisa.py doctor) verifies, read-only and without printing secrets, that a fresh agent has everything: tools and versions, GitHub CLI login, Cloudflare Pages integration, ADA access, recovery storage, mail adapter, private config keys present, source-folder access. It prints PASS/MISSING per item with the exact human action needed for each MISSING item.",
       "scope": "All agents, engines and releases (standing); first delivered in v0.73",
       "priority": "P1",
-      "implementation": "in_progress",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner brief \"Release tooling in Git, agent-neutral, single handoff\", GitHub #130, 23 November 2026 (numbered v0.73 by owner decision)",
       "acceptance": [
         "`python3 scripts/luisa.py doctor` prints one PASS or MISSING line per item, with the human action for each MISSING item, and never prints private values.",
         "Doctor reports PASS on the owner's Mac."
       ],
       "evidence": [
-        "GitHub issue #130",
+        "GitHub issue #130 (doctor 17/17 PASS)",
         "scripts/luisa.py",
         "scripts/release/doctor.py",
         "tests/test_release_tooling.py"
@@ -5228,8 +5232,8 @@
       "requirement": "One handoff per release report. Every release report, in every form (HTML page, text, email), contains exactly ONE handoff: the full current handoff from HANDOFF.md, headed with the actual release version taken from release.json (never hard-coded), with no duplicate \"Handoff\" heading, and the marker comment showing the same version. The separate short \"[LUISA-HANDOFF vX]\" paragraph is removed (if its facts are not already in HANDOFF.md, move them into the release block there). The staff and pupil editions keep stripping the release-handoff section as now.",
       "scope": "All agents, engines and releases (standing); first delivered in v0.73",
       "priority": "P1",
-      "implementation": "in_progress",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner brief \"Release tooling in Git, agent-neutral, single handoff\", GitHub #130, 23 November 2026 (numbered v0.73 by owner decision)",
       "acceptance": [
         "scripts/release/report.py builds the page, text and email from release.json and HANDOFF.md; tests with fixtures assert exactly one handoff block, heading version equal to release.json, marker version equal, no \"[LUISA-HANDOFF\" paragraph and no private values.",
@@ -5237,7 +5241,7 @@
         "The v0.73 owner report (page, text, email) contains exactly one correctly titled handoff."
       ],
       "evidence": [
-        "GitHub issue #130",
+        "GitHub issue #130 (published report and owner email checked)",
         "scripts/release/report.py",
         "tests/test_release_report.py"
       ]
@@ -5247,15 +5251,15 @@
       "requirement": "A release is not complete until HANDOFF.md, the register and the job's GitHub issue are updated and tokens are logged with their source. Extend the release verification so a report or release with a missing or inconsistent handoff fails the check.",
       "scope": "All agents, engines and releases (standing); first delivered in v0.73",
       "priority": "P1",
-      "implementation": "in_progress",
-      "verification": "not_checked",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner brief \"Release tooling in Git, agent-neutral, single handoff\", GitHub #130, 23 November 2026 (numbered v0.73 by owner decision)",
       "acceptance": [
         "scripts/release/finish.py refuses to send the owner report unless the published report passes the single-handoff check, HANDOFF.md carries the release block for release.json's version, the register has entries naming the release issue, and a token-log comment exists on the issue.",
         "The gate fails when HANDOFF.md's current marker or the report's handoff disagrees with release.json."
       ],
       "evidence": [
-        "GitHub issue #130",
+        "GitHub issue #130 (finish.py complete passed)",
         "scripts/release/finish.py",
         "scripts/release/report.py",
         "tests/test_release_report.py"
