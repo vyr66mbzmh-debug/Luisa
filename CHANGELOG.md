@@ -1,3 +1,12 @@
+## Luisa v0.73
+
+- Tooling: release scripts in scripts/release/ and the past-paper import pipeline in scripts/import/ (reference set: the v0.72 Sample papers), each with a README; numbered runbook in docs/agentic/RELEASE-RUNBOOK.md; quick start for any AI agent at the top of AGENTS.md.
+- Privacy: `python3 scripts/luisa.py privacy` (in the gate) blocks personal paths, private hosts and addresses, stray emails and owner source PDFs; legacy lesson files no longer record a personal path.
+- Environment: `python3 scripts/bootstrap.py` (pinned, in the private state folder) and `python3 scripts/luisa.py doctor` (PASS/MISSING with the human action).
+- Reports: exactly one handoff in every form, headed with the release.json version; the separate short handoff paragraph is removed; HANDOFF.md holds only the current release block (history in docs/handoff/HISTORY.md).
+- Releases are complete only when `scripts/release/finish.py complete` passes (HANDOFF.md, register, issue evidence, token log with its source, SMTP record).
+- No user-visible feature changes.
+
 ## Luisa v0.72
 
 - Papers: the five Edexcel Sample Assessment Material papers with their official mark schemes: 9MA0/01 Pure Mathematics 1, 9MA0/02 Pure Mathematics 2, 9MA0/03 Statistics and Mechanics (one combined paper), 9FM0/01 Core Pure Mathematics 1 and 9FM0/02 Core Pure Mathematics 2. That is 57 questions and 450 marks.

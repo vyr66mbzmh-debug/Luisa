@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/vyr66mbzmh-debug/Luisa/docs/agentic/review-record.schema.json",
+  "title": "Luisa independent review record",
+  "description": "Output of the independent reviewer role (docs/agentic/RELEASE-RUNBOOK.md, steps 12-13). scripts/land.py refuses to land without a valid record whose head is the PR head and whose verdict is ship.",
+  "type": "object",
+  "required": ["head", "base", "verdict", "findings", "review"],
+  "properties": {
+    "head": {"type": "string", "pattern": "^[0-9a-f]{40}$", "description": "Full SHA of the reviewed PR head."},
+    "base": {"type": "string", "pattern": "^[0-9a-f]{40}$", "description": "Full SHA of the base (main) the PR was reviewed against."},
+    "verdict": {"enum": ["ship", "fix"]},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["severity", "where", "issue"],
+        "properties": {
+          "severity": {"enum": ["high", "medium", "low"]},
+          "where": {"type": "string"},
+          "issue": {"type": "string"},
+          "evidence": {"type": "string"},
+          "resolution": {"type": "string", "description": "Filled by the implementer: fixed in <sha>, or why no change."}
+        }
+      }
+    },
+    "review": {"type": "string", "minLength": 40, "description": "What was checked and how, by every reviewer and round."},
+    "reviewers": {"type": "array", "items": {"type": "string"}, "description": "Neutral role names, e.g. 'reviewer A (papers)'; never personal data."}
+  },
+  "additionalProperties": true
+}

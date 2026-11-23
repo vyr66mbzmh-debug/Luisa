@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 import functools
 import http.server
 import json
+import os
 import pathlib
 import tempfile
 import threading
@@ -52,7 +53,7 @@ class PapersPrintTests(unittest.TestCase):
         cls.server = BrowserTestServer(('127.0.0.1', 0), functools.partial(QuietServer, directory=str(ROOT)))
         threading.Thread(target=cls.server.serve_forever, daemon=True).start()
         cls.playwright = sync_playwright().start()
-        cls.browser = cls.playwright.chromium.launch(channel='chrome')
+        cls.browser = cls.playwright.chromium.launch(channel=os.environ.get('LUISA_BROWSER_CHANNEL') or None)
         cls.context = cls.browser.new_context(timezone_id='Europe/London')
 
     @classmethod

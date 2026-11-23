@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Tooling v0.73
+
+[Issue #130](https://github.com/vyr66mbzmh-debug/Luisa/issues/130) moves release-critical tooling into Git with an agent-neutral runbook, a pinned bootstrap, a cold-start doctor, a privacy gate and a single handoff in every report (OPS-064 to OPS-070). No user-visible feature changes.
+
 ## Papers v0.72
 
 [Issue #128](https://github.com/vyr66mbzmh-debug/Luisa/issues/128) adds the five Edexcel Sample Assessment Material papers with their official mark schemes (release 3 of 3; no genuine 2022 material was supplied). The final import summary is on #124.

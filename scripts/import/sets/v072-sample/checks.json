@@ -1,0 +1,69 @@
+{
+ "edexcel-9ma0-01-sample": {
+  "1": "dy/dx = 12x^3 - 24x^2, d2y/dx2 = 36x^2 - 48x; at x = 2 dy/dx = 0 and d2y/dx2 = 48 > 0, a minimum. Agrees with scheme.",
+  "2": "OD = 3/0.4 = 7.5 cm; AOB has radius 4.5 and angle pi - 0.4, area 27.8 cm^2. Agrees with scheme.",
+  "3": "(x-2)^2 + (y+5)^2 = k + 29: centre (2, -5), k > -29. Agrees with scheme.",
+  "4": "Integral of 1 + 1/t from a to 2a is a + ln 2 = ln 7, so a = ln(7/2), k = 7/2. Agrees with scheme.",
+  "5": "t = (x+1)/2 gives y(x+1) = 2x^2 - 3x + 1, so a = -3, b = 1. Agrees with scheme.",
+  "6": "Model A: V = 16000 - 1750t gives 10750 at t = 3; model B: V = 16000e^(-kt), k = ln(16/9)/4 = 0.1438, V(3) = 10400 (awrt). Agrees with scheme.",
+  "7": "AC = AB + BC = 3i - 6j + 4k; cos BAC = AB.AC/(|AB||AC|) gives BAC = 105.9 degrees. Agrees with scheme.",
+  "8": "f(3.5) = -4.81 < 0, f(4) = 3.10 > 0 (sign change); x1 = 4 - 3.099/16.67 = 3.81; f'(x) > 0 for x > 2.5 so f is increasing and alpha is the only root. Agrees with scheme.",
+  "9": "tan + cot = 1/(sin cos) = 2/sin 2theta (identity checked numerically); = 1 would need sin 2theta = 2, impossible. Agrees with scheme.",
+  "10": "Limit of (sin(theta+h) - sin theta)/h as h -> 0 is cos theta. Agrees with scheme.",
+  "11": "H = 0 at d = 204 m (positive root); 1.8 is the launch height; H = 21.8 - 0.002(d - 100)^2; adapted max 22.1 m at d = 100 m. Agrees with scheme.",
+  "12": "log N = log a + b log T so m = b, c = log a; reading a = 10^1.8 (about 63), b = 2.3 gives N(3) about 800 (scheme allows 800 +/- 150). Agrees with scheme.",
+  "13": "dy/dx = 2 sqrt3 cos t; P = (-1, -sqrt3/2), normal 2x - 2sqrt3 y - 1 = 0 checked; second intersection Q = (5/3, 7sqrt3/18). Agrees with scheme.",
+  "14": "Trapezium rule gives 4.393; exact area 28/27 + ln 27 (a = 28, b = 27, c = 27). Agrees with scheme.",
+  "15": "f'(x) = 0 when 8cos2x = 4sqrt2 sin2x, i.e. tan 2x = sqrt2; P at x = 0.478, Q at x = 2.05; y = f(2x) minimum at x = 1.02; y = 3 - 2f(x) minimum at P, x = 0.478. Agrees with scheme."
+ },
+ "edexcel-9ma0-02-sample": {
+  "1": "f(-2) = 0 gives -16 - 20 - 2a + a = 0, a = -36. Agrees with scheme.",
+  "2": "Student A should have tan theta = 1/2; cos(-26.6) = 0.894 but 2sin(-26.6) = -0.896, so -26.6 is not a solution and arose from squaring. Agrees with scheme.",
+  "3": "dy/dx = (2x+1)^3(10x+1): n = 3, A = 10, B = 1. Agrees with scheme.",
+  "4": "gf(x) = 3x, fg(x) = x^3; x^3 = 3x with x > 0 has the single root sqrt3. Agrees with scheme.",
+  "5": "m(0.5) = 25e^-0.025 = 24.4 g; dm/dt = -0.05m, k = -0.05. Agrees with scheme.",
+  "6": "(i) (x-3)^2 + 1 > 0 always true; (ii) sometimes true (fails for a < 0); (iii) (n+1)^2 - n^2 = 2n + 1, always true. Agrees with scheme.",
+  "7": "sqrt(4-x) = 2 - x/4 - x^2/64 + ..., k = -1/64; valid for |x| < 4 so x = 1 is valid. Agrees with scheme.",
+  "8": "A = (0, 2), B = (5, 0); AD perpendicular to AB gives 2y - 5x = 4, D = (-0.8, 0); area = |AB||AD| = 11.6. Agrees with scheme.",
+  "9": "Integral = 14 + 3A = 2A^2 gives A = -2 or 7/2 (discriminant 121 > 0). Agrees with scheme.",
+  "10": "1 = (8/7)(1 - r^6) gives r^6 = 1/8, r = +/- 1/sqrt2, k = 2. Agrees with scheme.",
+  "11": "Range f(x) >= 5; f(x) = x/2 + 30 gives x = 62/3 only; two roots for 5 < k <= 11. Agrees with scheme.",
+  "12": "12 sin^2 x + sin x - 1 = 0: sin x = 1/4 or -1/3, x = 14.48, 165.52, -19.47, -160.53; (b) 2theta - 30 = -19.47 gives theta = 5.26. Agrees with scheme.",
+  "13": "R = sqrt109, alpha = 16.70; a = 11, H = 11 - sqrt109 cos(80t + 16.70), max 21.44 m; second max at 80t + 16.70 = 540, t = 6.54 min = 6 min 32 s. Agrees with scheme.",
+  "14": "pi r^2 h = 500 gives S = 2 pi r^2 + 1000/r; dS/dr = 0 gives r = 4.30 cm, h = 8.60 cm. Agrees with scheme.",
+  "15": "dy/dx at x = 4 is 6, tangent y = 6x - 9; area of R = integral from 0 to 4 of (C - l) = 24. Agrees with scheme.",
+  "16": "1/(P(11-2P)) = 1/(11P) + 2/(11(11-2P)); P(t) = 11/(2 + 9e^(-t/2)) satisfies the ODE with P(0) = 1 (A = 11, B = 2, C = 9); P = 2 at t = 2 ln(18/7) = 1.89 years. Agrees with scheme."
+ },
+ "edexcel-9ma0-03-sample": {
+  "1": "Frequency density scale gives width 2.5 cm and height 7.2 cm; mean 6.63 and sd 3.69 (3 s.f.); about 7 days above mean + sd (interpolation); N(6.6, 3.7^2) predicts 31 x 0.1587 = 4.9 days. Agrees with scheme.",
+  "2": "Critical value for n = 9 at 5% one-tail is 0.5822; r = 0.609 > 0.5822 so reject H0. Agrees with scheme.",
+  "3": "mu = 50.98 - 1.96 x 0.5 = 50; P(49 < L < 50.75) = 0.910; S ~ B(10, 0.090), P(S <= 3) = 0.991; X-bar ~ N(50.1, 0.6^2/15), P(X-bar > 50.4) = 0.0264 > 0.01, not significant. Agrees with scheme.",
+  "4": "P(A'|B') = 0.33/0.55 = 0.6; P(A)P(B) = 0.1575 != 0.13; P(B n C) = 0.09; P((B u C)') = 0.44. Agrees with scheme.",
+  "5": "P(tray >= 15) = 0.299 under B(24, 0.55); P(T >= 5) for T ~ B(10, 0.299) = 0.149; normal approximation N(132, 59.4) with continuity gives P(X >= 149.5) = 0.0116. Agrees with scheme.",
+  "6": "v = (20 + 2.5t^2) i - 10t^(3/2) j; v(4) = 60i - 80j, speed 100 m/s. Agrees with scheme.",
+  "7": "Deceleration g(sin a + mu cos a) = 4g/5 with sin a = 3/5, cos a = 4/5 gives mu = 1/4; mu < tan a = 3/4 so the particle slides back down. Agrees with scheme.",
+  "8": "a = ((10.5i - 0.9j) - 0.6j)/15 = 0.7i - 0.1j; r = 0.35t^2 i + (0.6t - 0.05t^2) j; north-east of O when components equal, t = 1.5; moving north-east when velocity components equal, t = 0.75. Agrees with scheme.",
+  "9": "Moments about A with tan a = 5/2 give S = 3W; R = 8W, F max = 2W, so W <= P <= 5W. Agrees with scheme.",
+  "10": "36 = (4U/5)T and -18 = (3U/5)T - 5T^2 give T = 3, U = 15; at 10.8 m above sea level (7.2 m below O) speed = sqrt(225 + 144) = 19 m/s (2 s.f.). Agrees with scheme."
+ },
+ "edexcel-9fm0-01-sample": {
+  "1": "Partial fractions and differences give n(5n + 13)/(12(n + 2)(n + 3)), a = 5, b = 13 (identity checked symbolically). Agrees with scheme.",
+  "2": "f(1) = 391 = 17 x 23; f(k+1) - 8f(k) = 255 x 5^(2k) = 17 x 3 x 5^(2k+1), so divisibility passes from k to k+1 (f(n) mod 17 = 0 checked for n = 1..7). Agrees with scheme.",
+  "3": "Conjugate 3 - 2i gives factor z^2 - 6z + 13; f(z) = (z^2 - 6z + 13)(z^2 + 2z + 5), roots 3 +/- 2i and -1 +/- 2i (a = -4, b = -4). Agrees with scheme.",
+  "4": "r = 9/2 at theta = pi/6; sector area from 0 to pi/6 minus triangle ONA gives 11pi/8 - 3sqrt3/2, p = 11/8, q = -3/2. Agrees with scheme.",
+  "5": "Volume 1000 + 5t, outflow 20x/(1000 + 5t), inflow 50 g/day give the ODE; with x(0) = 0 the solution gives x(8) = 370 g. Agrees with scheme.",
+  "6": "Integral = (1/2)ln(x^2 + 9) + (2/3)arctan(x/3) + c; mean on [0, 3] = (1/6)ln2 + pi/18; adding ln k gives (pi/18) + (1/6)ln(2k^6). Agrees with scheme.",
+  "7": "x^2 + y^4 + 2y^3 = 0 on the curve (checked numerically); V = pi times integral from -2 to 0 of -(y^4 + 2y^3) dy = 8pi/5 = 5.03 cm^3. Agrees with scheme.",
+  "8": "l1 meets the plane at (10, 0, -4); the reflection of (2, 4, -6) is (8, -8, 0); l2: r = (10, 0, -4) + k(1, 4, -2). Agrees with scheme.",
+  "9": "m = 30000/10/1000 = 3; 40 sin t - 20 cos t is a PI; with x(0) = 0, x'(0) = 0, x = 50e^-t - 30e^(-t/3) + 40 sin t - 20 cos t, x(9) = 33 m. Agrees with scheme."
+ },
+ "edexcel-9fm0-02-sample": {
+  "1": "Sum 8, pair sum 28, product 32: (i) 28/32 = 7/8, (ii) 32 + 2(28) + 4(8) + 8 = 128, (iii) 8^2 - 2(28) = 8 (checked from numeric roots). Agrees with scheme.",
+  "2": "Distance |18 - 8 + 24 - 5|/sqrt29 = sqrt29; (-1, -3, 1) is perpendicular to both direction vectors; acute angle between normals 51.98, i.e. 52 degrees. Agrees with scheme.",
+  "3": "det M = 2(a + 5), so M is invertible for a != -5; M^-1 = adj(M)/(2a + 10) with adj rows (3, a+8, 4-a), (2, 2, 6), (1, -a-4, -a-2); matrix power formula checked for n = 1..7. Agrees with scheme.",
+  "4": "z^n + z^-n = 2cos n theta; (z + 1/z)^4 expansion gives cos^4 theta = (cos 4theta + 4cos 2theta + 3)/8 (identity checked). Agrees with scheme.",
+  "5": "y'''' = -4y; Maclaurin series x^2 - x^6/90 + x^10/113400; nth non-zero term 2(-4)^(n-1) x^(4n-2)/(4n-2)!. Agrees with scheme.",
+  "6": "r = 8cos theta + 6sin theta is the circle |z - 4 - 3i| = 5; area of A = integral from 0 to pi/3 of r^2/2 = 25pi/3 + 18 + 7sqrt3/4. Agrees with scheme.",
+  "7": "Eliminating r gives f'' - 0.6f' + 0.1f = 0, m = 0.3 +/- 0.1i; with f(0) = 6, r(0) = 20: f = e^(0.3t)(6cos 0.1t + 14sin 0.1t), r = e^(0.3t)(20cos 0.1t + 8sin 0.1t); r = 0 when tan 0.1t = -2.5, t = 19.5 (2019), f = 3750. Agrees with scheme."
+ }
+}
