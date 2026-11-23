@@ -23,6 +23,7 @@ import sqlite3
 import subprocess
 import sys
 import tarfile
+import threading
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -70,14 +71,19 @@ print('\\n'.join(hits))"""
 
 def upload(dest, files):
     p = subprocess.Popen(private.ssh_command() + ['umask 077; tar xzf - -C ' + dest], stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+    errors = []
+    reader = threading.Thread(target=lambda: errors.append(p.stderr.read()), daemon=True)  # drain stderr while streaming
+    reader.start()
     try:
         with tarfile.open(fileobj=p.stdin, mode='w|gz', compresslevel=1) as archive:
             for name, path in files:
                 archive.add(path, arcname=name, recursive=False)
     finally:
         p.stdin.close()
-    error = p.stderr.read().decode(errors='replace')
-    if p.wait():
+    code = p.wait()
+    reader.join()
+    error = b''.join(errors).decode(errors='replace')
+    if code:
         raise private.RemoteError('Upload to ADA failed: ' + private.redact(error.strip())[-600:])
 
 

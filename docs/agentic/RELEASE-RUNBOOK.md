@@ -98,6 +98,8 @@ These steps work for any AI agent, any engine or any person, and need no earlier
 - A docs-only follow-up PR may change only files that no edition ships: `docs/` (including the register) and `CHANGELOG.md`.
 - It needs its own review record and `land_build.py --pr <N> --review-record <file>`. land_build keeps the recorded release revision and notes the follow-up separately.
 - Then rerun `finish.py complete` from the new main head.
+- Expect Cloudflare to show the follow-up revision and ADA the release revision afterwards; their shipped content is identical. `finish.py check-published` then checks the follow-up's live report.
+- Restarting a release under the same version after a rollback is a normal landing: land_build replaces the recorded revision whenever the change is not docs-only.
 - `HANDOFF.md` changes alter the published report in every edition. A HANDOFF correction after release therefore goes on the issue as a comment and into the next release's block; it is not a separate redeploy.
 
 ## Usage limits

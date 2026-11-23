@@ -74,10 +74,13 @@ def main():
     run(['git', 'merge', '--ff-only', 'origin/main'], main_dir)
     version = json.loads((main_dir / 'release.json').read_text())['version']
     record = private.work_dir(version) / 'merged-revision'
-    if record.exists() and record.read_text().strip() != merge:
+    old = record.read_text().strip() if record.exists() else None
+    changed = out(['git', 'diff', '--name-only', old, merge], main_dir).split() if old and old != merge else []
+    docs_only = bool(changed) and all(f == 'CHANGELOG.md' or f.startswith('docs/') for f in changed)
+    if old and old != merge and docs_only:
         # A later landing for an already-released version (a docs-only follow-up): keep the release revision.
         (private.work_dir(version) / 'followup-revision').write_text(merge + '\n')
-        print('Release revision kept; follow-up merge recorded separately.', flush=True)
+        print('Release revision kept; docs-only follow-up merge recorded separately.', flush=True)
     else:
         record.write_text(merge + '\n')
     for profile in ('owner', 'staff', 'student'):
