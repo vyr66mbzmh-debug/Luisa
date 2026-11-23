@@ -1,3 +1,10 @@
+## Luisa v0.75
+
+- Papers: PMT Core Pure 1 topic-sheet questions (73, 625 marks) in `pmt-catalogue.json` and `content/pmt/`, imported by `scripts/import/pmt.py` (set `v075-pmt-cp1`) with source scheme crops, `markScheme: source`, difficulty with reason, skills and `duplicateOf`.
+- Papers: "PMT" source tickbox (default off); generation drops a duplicate copy when its original is in the pool; a hand-picked pair shows a note.
+- Exam paper: question pages strip every context label for all sources; the scheme names the exact source and ID.
+- Offline packs, the mark-scheme flag check and live QA cover PMT; evidence in `docs/evidence/v075-import-pmt-core-pure-1.json`.
+
 ## Luisa v0.74
 
 - Papers: internal `markScheme` flag (official | source | worked | none) on every catalogue row, derived by `scripts/mark_schemes.py` and checked in the gate; counts per source on #135 (444 official, 8,622 worked, 0 none).

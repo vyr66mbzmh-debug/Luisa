@@ -1,29 +1,27 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.74 -->
-**Release 0.74 · GitHub #135.** Written for any successor agent, engine or person; it needs no earlier conversation.
+<!-- LUISA-REPORT-HANDOFF v0.75 -->
+**Release 0.75 · GitHub #137.** Written for any successor agent, engine or person; it needs no earlier conversation.
 
-**Current state.** Luisa v0.74 is the published version on Cloudflare (owner edition) and ADA (staff and pupil editions), all built from one merged revision recorded on GitHub #135. Papers holds 44 past papers (444 questions, 3,450 marks) and 9,066 questions in all. This release is the first of three owner-assigned releases; v0.75 (PMT Core Pure 1) and v0.76 (PMT Core Pure 2) follow.
+**Current state.** Luisa v0.75 is the published version on Cloudflare (owner edition) and ADA (staff and pupil editions), all built from one merged revision recorded on GitHub #137. Papers holds 44 past papers (444 questions) and 73 PMT Core Pure 1 questions (625 marks), 9,139 questions in all. v0.76 (PMT Core Pure 2, #138) is next.
 
-**What changed (PAP-074-1 … PAP-074-4 in docs/requirements/register.json, each with acceptance criteria).**
-- **Mark-scheme flag (PAP-074-1).** Every catalogue row (`textbook-catalogue.json`, `practice-catalogue.json`, `exam-catalogue.json`) has `markScheme`:
-  - `official`: the paired official exam-board scheme. A past paper qualifies only when every step is an official `-ms-` crop of that same paper.
-  - `source`: a marking scheme printed in the question's own source, recorded with its kind and source page in `sourceScheme`. It is reserved for PMT.
-  - `worked`: Luisa worked solutions only.
-  - `none`: neither.
+**What changed (PAP-075-1 … PAP-075-8 in docs/requirements/register.json, each with acceptance criteria).**
+- **Import (PAP-075-1, 2).** The nine owner PDFs "PMT further maths questions/Year 1/Ch.N …" were identified by content and hash (inventory on #137, hashes and pages in `docs/evidence/v075-import-pmt-core-pure-1.json`). `scripts/import/pmt.py` with the set `scripts/import/sets/v075-pmt-cp1/` (prompts transcribed from rendered pages, `questions.json` metadata, `figs.json`, `scheme-moves.json`) writes `content/pmt/*.json`, `resources/pmt/*/` and `pmt-catalogue.json`. Source PDFs stay outside Git.
+- **Schemes (PAP-075-3).** Each question's scheme is its own page-image crops from the sheet; rows carry `markScheme: source` and `sourceScheme` pages. The Ch.6 sheet prints Ch.9 Q10's "Appendix: Alternatives to (b)" after Ch.6 Q3; it is attached to Ch.9 Q10 and both rows carry a source note.
+- **Difficulty (PAP-075-4).** Rubric: easy = routine, a standard result applied directly in short structured parts; medium = standard methods over several steps or one signposted non-routine step; difficult (the brief's "hard") = unstructured, multi-concept, method unguided, or long and delicate work. Each row has a one-line reason. Reviewer re-rate of 11 (15%): 6 of 11 agreed blind, 10 of 11 after resolution by the rubric.
+- **Tickbox (PAP-075-5).** "PMT" in the Papers sources, off by default; saved sessions without it restore unticked.
+- **Duplicates (PAP-075-6).** 15 copies carry `duplicateOf` (13 past paper, 2 PMT). Generation drops the copy when its original is in the pool; nothing is deleted.
+- **Tests and evidence (PAP-075-7, 8).** `tests/test_pmt.py` (per chapter: counts, marks, fields, crops, figures, no source in text, part marks, duplicates, offline packs), selection and print browser tests including a mixed past-paper + PMT exam with no source on question pages.
 
-  `scripts/mark_schemes.py` derives the values (`apply`, `check`, `counts`), and `luisa.py check` fails on any mismatch. Current counts: 444 official (past papers) and 8,622 worked (554 exam style, 1,921 Practice Booklet, 6,147 skill questions). The Practice Booklet PDFs contain no mark schemes.
-- **Exam paper eligibility (PAP-074-2).** Only `official` and `source` questions can go in the teacher-only exam paper: timed generation draws only on them, and `create()` refuses any other row for every print option. The panel shows "N of M questions in the chosen sources and topics have an official mark scheme…", and Generate is disabled when N is 0. A worked-solution question added by hand is labelled "No mark scheme" and blocks Preview until it is removed. Questions without marks stay excluded.
-- **Sources (PAP-074-3).** The front page and question pages print no source, paper, series, original question number, context line or ID. Each scheme entry prints "Source: <exact source> · ID <bank id>". Other printouts are unchanged.
-- **Tests (PAP-074-4).** `tests/test_mark_schemes.py` covers the derivation, tampering and unchanged IDs. The browser tests cover timed generation over mixed sources, a manual flag-false question, and sources absent from question pages and present in the scheme (DOM and real PDF text) for mixed papers and a mixed source.
+**Source slips kept as printed (for owner review).** Ch.2 Q7 "r(cosθ θ+ isinθ)"; Ch.6 Q2 has no lead-in before its bullet list; Ch.6 Q6 "4x x + 3y + 8z = 3"; the Ch.6/Ch.9 appendix placement. Ch.4 Q4–5 and Ch.8 Q3–4 print only question totals.
 
-**Next jobs.** v0.75 imports the PMT Core Pure 1 revision questions and v0.76 the Core Pure 2 ones. The source is the owner's OneDrive folder "PMT further maths questions" (Year 1 and Year 2, 17 PDFs). The work adds a "PMT" source tickbox, per-question difficulty using a written rubric, duplicate links to existing past-paper questions, and the mark-scheme flag from each PDF. PMT chapters without a scheme are imported with the flag `worked` or `none` and are listed as needing a scheme.
+**Next jobs.** v0.76 imports PMT Core Pure 2 (8 sheets, 61 questions, 558 marks) by the same process (#138). Year 2 Ch.1 Q10 repeats Year 1 Ch.2 Q7, and Year 2 Ch.3 Q2 is June 2019 9FM0/01 Q2.
 
-**Verified.** The gate passed with 0 skips, and the full Papers browser and print suites passed. Exact-head CI and the independent review are recorded on #135, as are the live checks: owner, disconnected use, ADA staff and pupil, the published report's single handoff, accounts unchanged, and the recovery ZIP.
+**Verified.** The gate, the PMT tests and the full Papers browser and print suites passed; exact-head CI, the independent code review and the live checks (owner, disconnected use, ADA staff and pupil, accounts unchanged, the published report's single handoff, recovery ZIP) are recorded on #137.
 
 **Outstanding.** Two owner notes from v0.65 still await the owner's view: the per-cell marks in the one three-cell table question, and the course label for a future 9FM0 Mechanics paper.
 
-**Usage.** About 6.7 million tokens in the lead session up to the pull request (35 API calls; per-call transcript usage via scripts/release/tokens.py), plus the independent reviewer; final totals are in the token log on #135.
+**Usage.** v0.75 used 12,503,346 tokens up to the release build (main session since the v0.75 baseline plus the independent maths reviewer); the final count is on #137.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

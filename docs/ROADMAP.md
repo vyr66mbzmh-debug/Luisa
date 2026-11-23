@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.75
+
+[Issue #137](https://github.com/vyr66mbzmh-debug/Luisa/issues/137) imports the 73 PMT Core Pure 1 topic-sheet questions with their own mark schemes, a PMT source tickbox, rubric difficulty and duplicate links (PAP-075-1 to PAP-075-8). Core Pure 2 follows in v0.76 (#138).
+
 ## Papers v0.74
 
 [Issue #135](https://github.com/vyr66mbzmh-debug/Luisa/issues/135) adds a derived mark-scheme flag to every question. The teacher-only exam paper uses only questions with an official mark scheme, hides sources on question pages and names them in the scheme (PAP-074-1 to PAP-074-4). PMT Core Pure 1 and 2 follow in v0.75 and v0.76.

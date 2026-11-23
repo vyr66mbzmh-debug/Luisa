@@ -60,7 +60,9 @@ def dropdown_order(meta):
 
 def default_qa_papers():
     files = sorted(glob.glob(str(ROOT / 'docs/evidence/v*-import-*.json')), key=lambda f: [int(x) for x in re.findall(r'v(\d+)', Path(f).name)[:1]])
-    return [p['paperId'] for p in json.loads(Path(files[-1]).read_text())['papers']]
+    # The newest past-paper import (PMT topic-sheet evidence lists questions, not papers).
+    papers = [json.loads(Path(f).read_text()).get('papers') for f in files]
+    return [p['paperId'] for p in [x for x in papers if x][-1]]
 
 
 def local_totals(browser):
