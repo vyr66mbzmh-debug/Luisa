@@ -331,6 +331,22 @@ class PapersPrintTests(unittest.TestCase):
             'edexcel-9ma0-01-2018-june': (14, 100), 'edexcel-9ma0-02-2018-june': (14, 100),
             'edexcel-9ma0-03-2018-june': (10, 100)})
 
+    def test_november_2021_complete_papers_print_in_every_layout(self):
+        # PAP-071: no exam date is printed on these covers; the session follows the official mark scheme.
+        self.assert_session_papers_print('November 2021', {
+            'edexcel-9fm0-01-2021-november': (9, 75), 'edexcel-9fm0-02-2021-november': (9, 75)})
+
+    def test_october_2021_complete_papers_print_in_every_layout(self):
+        self.assert_session_papers_print('October 2021', {
+            'edexcel-9ma0-01-2021-october': (15, 100), 'edexcel-9ma0-02-2021-october': (15, 100),
+            'edexcel-9ma0-31-2021-october': (6, 50), 'edexcel-9ma0-32-2021-october': (5, 50)})
+
+    def test_october_2020_complete_papers_print_in_every_layout(self):
+        self.assert_session_papers_print('October 2020', {
+            'edexcel-9ma0-01-2020-october': (16, 100), 'edexcel-9ma0-02-2020-october': (16, 100),
+            'edexcel-9ma0-31-2020-october': (5, 50), 'edexcel-9ma0-32-2020-october': (5, 50),
+            'edexcel-9fm0-01-2020-october': (7, 75), 'edexcel-9fm0-02-2020-october': (7, 75)})
+
     def assert_session_papers_print(self, session, papers):
         import fitz, tempfile
         with tempfile.TemporaryDirectory() as folder:
@@ -398,7 +414,7 @@ class PapersPrintTests(unittest.TestCase):
         try:
             page = context.new_page()
             page.goto(f'http://127.0.0.1:{self.server.server_port}/papers.html')
-            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 28 && !document.querySelector('#papers-generate').disabled")
+            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40 && !document.querySelector('#papers-generate').disabled")
             page.locator('#papers-source-practice').uncheck()
             page.locator('#papers-source-exam-style').uncheck()
             page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')

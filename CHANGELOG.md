@@ -1,3 +1,10 @@
+## Luisa v0.71
+
+- Papers: twelve Edexcel papers with their official mark schemes. October 2020: 9MA0/01 Pure Mathematics 1, 9MA0/02 Pure Mathematics 2, 9MA0/31 Statistics, 9MA0/32 Mechanics, 9FM0/01 Core Pure Mathematics 1 and 9FM0/02 Core Pure Mathematics 2. October 2021: 9MA0/01, 9MA0/02, 9MA0/31 and 9MA0/32. November 2021: 9FM0/01 and 9FM0/02. That is 115 questions and 900 marks.
+- The undated Core Pure papers (October 2020 and November 2021) follow the official mark scheme series and are ordered by series in the Past Papers list.
+- Fix: June 2019 9MA0/01 Q3's worked solution no longer ends with an empty scheme header row.
+- Papers now has 39 past papers (387 questions, 3,000 marks). This is release 2 of 3 for the remaining past papers; the sample papers and any genuine 2022 material (v0.72) follow.
+
 ## Luisa v0.70
 
 - Papers: nine Edexcel papers with their official mark schemes. June 2019: 9MA0/01 Pure Mathematics 1, 9MA0/02 Pure Mathematics 2, 9MA0/31 Statistics, 9MA0/32 Mechanics, 9FM0/01 Core Pure Mathematics 1 and 9FM0/02 Core Pure Mathematics 2. June 2018: 9MA0/01 Pure Mathematics 1, 9MA0/02 Pure Mathematics 2 and 9MA0/03 Statistics and Mechanics (one combined paper). That is 92 questions and 750 marks.

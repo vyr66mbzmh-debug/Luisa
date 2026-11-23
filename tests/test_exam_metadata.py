@@ -71,6 +71,18 @@ class PilotMetadata(unittest.TestCase):
             'edexcel-9ma0-31-2023-june': ([6,9,7,6,8,14], (2,2,2)),
             'edexcel-9fm0-01-2023-june': ([5,6,10,5,12,12,12,13], (2,4,2)),
             'edexcel-9fm0-02-2023-june': ([4,6,10,7,9,6,8,11,14], (3,3,3)),
+            'edexcel-9fm0-01-2021-november': ([6,7,6,9,7,12,8,9,11], (3,3,3)),
+            'edexcel-9fm0-02-2021-november': ([5,5,6,9,8,14,9,11,8], (3,3,3)),
+            'edexcel-9ma0-01-2021-october': ([3,4,6,9,6,5,9,9,11,8,8,9,3,4,6], (5,5,5)),
+            'edexcel-9ma0-02-2021-october': ([4,5,3,3,7,5,9,9,3,6,10,7,6,12,11], (5,5,5)),
+            'edexcel-9ma0-32-2021-october': ([4,12,10,10,14], (1,3,1)),
+            'edexcel-9ma0-31-2021-october': ([7,6,8,11,11,7], (2,2,2)),
+            'edexcel-9ma0-01-2020-october': ([5,3,4,5,6,7,5,2,9,10,8,8,7,10,7,4], (5,6,5)),
+            'edexcel-9ma0-02-2020-october': ([5,3,5,3,4,7,10,6,6,8,7,11,6,7,8,4], (5,6,5)),
+            'edexcel-9ma0-32-2020-october': ([9,8,12,10,11], (1,3,1)),
+            'edexcel-9ma0-31-2020-october': ([8,7,10,10,15], (1,3,1)),
+            'edexcel-9fm0-01-2020-october': ([10,7,9,9,17,12,11], (2,3,2)),
+            'edexcel-9fm0-02-2020-october': ([7,9,14,10,10,14,11], (2,3,2)),
             'edexcel-9ma0-01-2019-june': ([3,5,5,6,10,8,7,10,5,6,7,10,11,7], (4,6,4)),
             'edexcel-9ma0-02-2019-june': ([3,4,3,6,3,10,7,6,9,6,11,7,10,15], (4,6,4)),
             'edexcel-9ma0-32-2019-june': ([6,8,12,11,13], (1,3,1)),
@@ -105,9 +117,9 @@ class PilotMetadata(unittest.TestCase):
                     self.assertIn(tuple(s[k] for k in ('courseId','bookId','topicId','skillId')), valid)
                 self.assertTrue(set(q).isdisjoint({'question','questionHtml','steps','solution','hints','assets'}))
         self.assertEqual(len(all_rows), data['questionCount'])
-        self.assertEqual(len({q['id'] for q in all_rows}), 272)
+        self.assertEqual(len({q['id'] for q in all_rows}), 387)
         self.assertEqual(sum(q['marks'] for q in all_rows), data['totalMarks'])
-        self.assertEqual(data['totalMarks'], 2100)
+        self.assertEqual(data['totalMarks'], 3000)
 
 
     def test_printable_payloads_and_assets_are_complete(self):
@@ -115,8 +127,8 @@ class PilotMetadata(unittest.TestCase):
         catalogue = read('exam-catalogue.json')['questions']
         metadata = {q['id']: q for p in read('content/exams/pilot-metadata.json')['papers'] for q in p['questions']}
         self.assertEqual({q['id'] for q in catalogue}, set(metadata))
-        self.assertEqual(len(catalogue), 272)
-        self.assertEqual(sum(q['marks'] for q in catalogue), 2100)
+        self.assertEqual(len(catalogue), 387)
+        self.assertEqual(sum(q['marks'] for q in catalogue), 3000)
         for row in catalogue:
             self.assertEqual(row['status'], 'checked')
             for key in ('marks','difficulty','sourceLabel','skillMappings'):
@@ -206,6 +218,56 @@ class PilotMetadata(unittest.TestCase):
         payload = read('content/exams/edexcel-9ma0-03-2018-june.json')['questions']
         self.assertTrue(all('take' in q['contextHtml'] and '9.8' in q['contextHtml'] for q in payload[5:]))
         self.assertTrue(all('9.8' not in q['contextHtml'] for q in payload[:5]))
+        self.assertTrue(all('Agrees with scheme.' in q['mathsCheckpoint'] for p in evidence['papers'] for q in p['questions']))
+
+    def test_october_2020_october_2021_and_november_2021_source_identity_and_complete_schemes(self):
+        ids = ['edexcel-9fm0-01-2021-november', 'edexcel-9fm0-02-2021-november', 'edexcel-9ma0-01-2021-october', 'edexcel-9ma0-02-2021-october',
+               'edexcel-9ma0-32-2021-october', 'edexcel-9ma0-31-2021-october', 'edexcel-9ma0-01-2020-october', 'edexcel-9ma0-02-2020-october',
+               'edexcel-9ma0-32-2020-october', 'edexcel-9ma0-31-2020-october', 'edexcel-9fm0-01-2020-october', 'edexcel-9fm0-02-2020-october']
+        evidence = self.assert_session_evidence('docs/evidence/v071-import-oct2020-oct2021-nov2021.json', ['November 2021', 'October 2021', 'October 2020'],
+                                                strict_order=True, shared_boundary_pages=True, counts=(12, 115, 900),
+                                                codes=('9FM0/01', '9FM0/02', '9MA0/01', '9MA0/02', '9MA0/32', '9MA0/31',
+                                                       '9MA0/01', '9MA0/02', '9MA0/32', '9MA0/31', '9FM0/01', '9FM0/02'))
+        self.assertEqual((evidence['requirement'], evidence['issue']), ('PAP-071', 126))
+        self.assertEqual([p['paperId'] for p in evidence['papers']], ids)
+        self.assertEqual([p['session'] for p in evidence['papers']], ['November 2021'] * 2 + ['October 2021'] * 4 + ['October 2020'] * 6)
+        self.assertEqual([p['examDate'] for p in evidence['papers']],
+                         [None, None, '2021-10-06', '2021-10-13', '2021-10-18', '2021-10-18', '2020-10-07', '2020-10-14', '2020-10-19', '2020-10-19', None, None])
+        hashes = {p['paperId']: (p['sourceHashes']['questionPaperSha256'][:12], p['sourceHashes']['markSchemeSha256'][:12]) for p in evidence['papers']}
+        self.assertEqual(hashes, {
+            'edexcel-9fm0-01-2021-november': ('5181985f57b0', 'c5205673ae27'),
+            'edexcel-9fm0-02-2021-november': ('647a11a9c3dd', '47deaa607e62'),
+            'edexcel-9ma0-01-2021-october': ('c224c59b8b60', 'd1cc4be8f2bd'),
+            'edexcel-9ma0-02-2021-october': ('5456d81cfe94', 'de806a7b524f'),
+            'edexcel-9ma0-32-2021-october': ('1b8f4a64c837', 'b3022e7fc2a1'),
+            'edexcel-9ma0-31-2021-october': ('475acbd43a85', '390d014d74a7'),
+            'edexcel-9ma0-01-2020-october': ('e24c394b8917', 'e480deba960f'),
+            'edexcel-9ma0-02-2020-october': ('28c3089d47d2', '58cc5ec8242c'),
+            'edexcel-9ma0-32-2020-october': ('f2aee6b076e5', '93c9e0ba4797'),
+            'edexcel-9ma0-31-2020-october': ('7e3d73972f48', 'a7ebc141d7ab'),
+            'edexcel-9fm0-01-2020-october': ('82cb92edc5c1', 'a22236727a84'),
+            'edexcel-9fm0-02-2020-october': ('9919535f5ee7', '92e1f107d6c3')})
+        pages = {p['paperId']: (p['sourceIdentity']['questionPaperPages'], p['sourceIdentity']['markSchemePages']) for p in evidence['papers']}
+        self.assertEqual(pages, dict(zip(ids, [(36, 18), (32, 23), (52, 26), (48, 27), (20, 14), (20, 11), (52, 29), (52, 28), (20, 14), (20, 10), (28, 20), (28, 17)])))
+        covers = {p['paperId']: p['sourceIdentity'] for p in evidence['papers']}
+        self.assertIn('printed date Monday 11 May 2020', covers['edexcel-9fm0-01-2020-october']['questionPaperCover'])
+        self.assertIn('printed date Thursday 14 May 2020', covers['edexcel-9fm0-02-2020-october']['questionPaperCover'])
+        self.assertIn('no exam date printed (series November 2021)', covers['edexcel-9fm0-01-2021-november']['questionPaperCover'])
+        self.assertIn('November 2021', covers['edexcel-9ma0-01-2021-october']['markSchemeCover'])
+        self.assertIn('Autumn 2020', covers['edexcel-9ma0-02-2020-october']['markSchemeCover'])
+        meta = {p['id']: p for p in read('content/exams/pilot-metadata.json')['papers']}
+        self.assertEqual({k: (meta[k]['examDate'], meta[k]['seriesDate']) for k in ids if meta[k]['examDate'] is None},
+                         {'edexcel-9fm0-01-2021-november': (None, '2021-11'), 'edexcel-9fm0-02-2021-november': (None, '2021-11'),
+                          'edexcel-9fm0-01-2020-october': (None, '2020-10'), 'edexcel-9fm0-02-2020-october': (None, '2020-10')})
+        for pid in ('edexcel-9ma0-32-2020-october', 'edexcel-9ma0-32-2021-october'):
+            payload = read(f'content/exams/{pid}.json')['questions']
+            self.assertTrue(all('9.8' in q['contextHtml'] and 'Inexact' not in q['contextHtml'] for q in payload))
+        mech = read('content/exams/edexcel-9ma0-32-2021-october.json')['questions']
+        self.assertIn('The acceleration due to gravity is modelled as having magnitude', mech[3]['question'])
+        for pid in ids:
+            payload = read(f'content/exams/{pid}.json')['questions']
+            if '-32-' not in pid:
+                self.assertTrue(all('Inexact answers should be given to three significant figures' in q['contextHtml'] for q in payload), pid)
         self.assertTrue(all('Agrees with scheme.' in q['mathsCheckpoint'] for p in evidence['papers'] for q in p['questions']))
 
     def assert_session_evidence(self, path, session, strict_order=False, shared_boundary_pages=False, counts=(6, 59, 450),

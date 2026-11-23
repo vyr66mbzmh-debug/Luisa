@@ -1,5 +1,48 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.71 -->
+**Release 0.71 · GitHub #126.** Written for any successor agent or engine; it needs no earlier conversation.
+
+**Current state.** Luisa v0.71 is the published version on Cloudflare (owner edition) and on ADA (staff and pupil editions), all built from one merged revision recorded in GitHub #126. This release adds content: the October 2020, October 2021 and November 2021 Edexcel papers, plus one crop fix in a v0.70 paper. Papers code changes only in one line (undated papers sort by their series date); filters, print layouts and the teacher-only exam paper are unchanged. It is release 2 of 3 of the owner's TO_UPLOAD import (inventory and decisions on #124 and #126).
+
+**What changed (PAP-071-1 … PAP-071-5 in docs/requirements/register.json, each with acceptance criteria).**
+- **Twelve papers, 115 questions, 900 marks.** October 2020: 9MA0/01 (16 questions), 9MA0/02 (16), 9MA0/31 (5), 9MA0/32 (5), 9FM0/01 (7), 9FM0/02 (7). October 2021: 9MA0/01 (15), 9MA0/02 (15), 9MA0/31 (6), 9MA0/32 (5). November 2021: 9FM0/01 (9), 9FM0/02 (9). IDs follow exam/edexcel-<code>-<year>-<october|november>/q<n>.
+- **Sessions and dates (decisions, no owner question asked).** The PMT folder names call these June 2020/June 2021; covers and schemes were used instead. The October 2020 Core Pure covers print Mon 11 May 2020 and Thu 14 May 2020 and the November 2021 Core Pure covers print no date: both take the official mark scheme series, have examDate null and a seriesDate (2020-10, 2021-11), and the printed cover dates are recorded verbatim in the evidence. The October 2021 9MA0/01 and 9MA0/32 schemes are titled November 2021 and the October 2020 9MA0/02 scheme Autumn 2020; they pair by code, paper and content and the session follows the question paper.
+- **Dropdown.** papers.js now uses seriesDate when examDate is absent. The list stays newest first, ties by code: November 2021 Core Pure sits above October 2021; October 2020 Core Pure sits below the dated October 2020 Maths papers.
+- **Instructions.** Each question carries its cover instructions verbatim. October 2021 9MA0/32 Q4 keeps its own bold instruction that g is modelled as 10 m s⁻².
+- **Crop fixes.** Real-PDF inspection found empty "Question | Scheme | Marks | AOs" header rows printed at the end of the previous question's scheme when a question's header sat at a page foot. October 2020 9MA0/02 uses mid-page starts for Q3, Q6, Q7 and Q8, and a scan of all imported papers found one published case, June 2019 9MA0/01 Q4, now fixed (its v0.70 evidence regenerated; only that boundary changed). Bézier figure bounds now use the drawn extent (October 2021 9MA0/32 Q4); every earlier figure crop is unchanged.
+- **Joins and evidence.** pilot-metadata.json and exam-catalogue.json hold 39 papers, 387 questions and 3,000 marks. docs/evidence/v071-import-oct2020-oct2021-nov2021.json holds, per question: source hashes, page counts, cover identity and dates, scheme titles, pages, printed mark groups, chapter keys, a maths checkpoint and asset hashes.
+- **Held and skipped.** No 2020/2021 paper was held. The duplicate Summer 2023 files were already skipped in v0.70.
+- **Tests.** tests/test_exam_metadata.py (39 papers, 2020/2021 source identity, dates, page counts, instructions), tests/test_papers_selection.py (40 dropdown options and orders, 387 past-paper questions, Course/Book lists, a PAP-071 own-question, whole-paper, mixed-selection and reload test) and tests/papers_print_browser.py (every 2020/2021 paper in both layouts, solutions on and off, as real PDFs).
+
+**How the import was done (private tooling, outside Git).** The same per-paper pipeline as v0.70 (cover check, figure boxes, vector assets, prompts transcribed from page images, payloads, independent SymPy check, maps, integration, rendered checks, evidence). New rules are documented in content/exams/README.md: curve bounds, figures on continuation pages, and header rows at page feet.
+
+**Next jobs (same owner assignment).** v0.72: the five sample papers (session "sample", no date) and any genuine 2022 material. Then the final GitHub summary on #124: imports per series, duplicates skipped, held papers and what the owner must supply.
+
+**Sources and requirements.**
+- **Question content:** content/practice, content/exams, practice-catalogue.json and exam-catalogue.json.
+- **Requirements:** docs/requirements/register.json, with the generated REQUIREMENTS.md (`python3 scripts/luisa.py requirements`).
+- **Rules:** AGENTS.md and docs/agentic/LEAD-RULES.md. Standing rule OPS-063: record new owner requirements on GitHub and in the register while implementing; at the end of every job update this handoff and log the handoff and tokens on GitHub before reporting done. No automatic wakeup or report schedules.
+
+**Build, test and release.**
+1. **Gate:** `python3 scripts/luisa.py gate` runs the requirements check, unit tests, scan and owner build. It needs Python with requirements-dev.txt and requirements-auth.txt.
+2. **Browser suites:** `python -m unittest tests.test_papers_selection tests.papers_print_browser`. These need Playwright and PyMuPDF; set LUISA_BROWSER_CHANNEL=chrome to use the installed Chrome.
+3. **Land:** merge through a reviewed PR with green exact-head CI, using `python3 scripts/land.py <PR> --review-record <file>`.
+4. **Build:** build each edition with `python3 scripts/luisa.py build --profile owner|staff|student`, then run `check-artifact` on each.
+5. **Deploy:** Cloudflare deploys main automatically. ADA receives the same staff and student artifacts; its host details are in the private WORKSPACE.json (see "ADA is a required release target" below).
+6. **Verify and record:** verify live owner (including disconnected printing of a 2020 or 2021 paper), ADA staff and ADA pupil. Then make the recovery ZIP (the latest five are kept) and send the SMTP owner report.
+
+The per-release live QA helpers are private working copies, not in Git; the checks they perform are listed on GitHub #126.
+
+**Verified.**
+- **Local:** the gate (0 skips) and the Papers browser suites passed.
+- **Review:** an independent review-only agent checked the papers against the source PDFs.
+- **Live:** the live checks are recorded on #126.
+
+**Outstanding.** v0.72 of this assignment and the final #124 summary. Two owner notes from v0.65 still await the owner's view: the per-cell marks in the one three-cell table question, and the course label for a future 9FM0 Mechanics paper.
+
+**Usage.** Measured at PR time from the per-call API usage records in the Claude Code session transcript (cache reads included): 75,371,086 tokens over 334 calls for the main session since v0.70 was closed (input 716, cache creation 973,326, cache read 74,155,659, output 241,385). The final total, including the independent review and release, is logged on GitHub #126.
+
 <!-- LUISA-REPORT-HANDOFF v0.70 -->
 **Release 0.70 · GitHub #124.** Written for any successor agent or engine; it needs no earlier conversation.
 

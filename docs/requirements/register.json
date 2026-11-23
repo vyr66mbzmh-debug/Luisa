@@ -5743,6 +5743,108 @@
         "tests/test_papers_selection.py",
         "tests/papers_print_browser.py"
       ]
+    },
+    {
+      "id": "PAP-071-1",
+      "requirement": "Release 2 of 3 of the TO_UPLOAD import: publish the October 2020, October 2021 and November 2021 Edexcel papers with their official mark schemes, fully gated and live-verified, only after v0.70 is published.",
+      "acceptance": [
+        "v0.71 publishes twelve papers (115 questions, 900 marks): October 2020 9MA0/01, 9MA0/02, 9MA0/31, 9MA0/32, 9FM0/01 and 9FM0/02; October 2021 9MA0/01, 9MA0/02, 9MA0/31 and 9MA0/32; November 2021 9FM0/01 and 9FM0/02.",
+        "v0.72 (sample papers and any genuine 2022 material) starts only after v0.71 is published and live-verified."
+      ],
+      "scope": "v0.71 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124 and #126, 22 November 2026",
+      "evidence": [
+        "GitHub issue #126",
+        "docs/evidence/v071-import-oct2020-oct2021-nov2021.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-071-2",
+      "requirement": "Take each paper's session from the official sources and never invent a date: the October 2020 Core Pure papers (covers print May 2020 dates) and the November 2021 Core Pure papers (covers print no date) take the series from the official mark scheme title and have no exam date; scheme titles that differ from the question paper series (November 2021 for October 2021 9MA0/01 and 9MA0/32, Autumn 2020 for October 2020 9MA0/02) are recorded and the question paper series is used.",
+      "acceptance": [
+        "pilot-metadata.json has examDate null and seriesDate 2020-10 or 2021-11 for the four Core Pure papers; the evidence records the printed cover dates verbatim and every scheme cover title.",
+        "The Past Papers dropdown orders the undated papers by series then code (November 2021 papers above October 2021; October 2020 Core Pure below the dated October 2020 Maths papers)."
+      ],
+      "scope": "v0.71 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124 and #126, 22 November 2026",
+      "evidence": [
+        "GitHub issue #126",
+        "docs/evidence/v071-import-oct2020-oct2021-nov2021.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-071-3",
+      "requirement": "Import to the same standard as v0.70 (PAP-070-3): original wording, subparts, diagrams and marks; the complete official scheme per question; an independent maths check with a checkpoint; marks reconciled; faithful figure crops; content-based chapter and skill mapping; paper-order difficulty; metadata and catalogue joins; per-question evidence. Paper instructions are taken verbatim from each cover.",
+      "acceptance": [
+        "115 questions with stable IDs exam/edexcel-<code>-<year>-<october|november>/q<n>; printed part marks sum to each question total, which equals the scheme total and the cover total.",
+        "Every question has an independent SymPy/numeric checkpoint that agrees with the scheme; mid-page scheme starts (October 2020 9MA0/02, October 2021 9MA0/32 Q5) are cut above the question header row.",
+        "Pure, Core Pure and Statistics questions carry the cover's three-significant-figure line; Mechanics questions carry the cover's g instruction; October 2021 9MA0/32 Q4 keeps its own bold instruction that g is modelled as 10."
+      ],
+      "scope": "v0.71 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124 and #126, 22 November 2026",
+      "evidence": [
+        "GitHub issue #126",
+        "docs/evidence/v071-import-oct2020-oct2021-nov2021.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-071-4",
+      "requirement": "Verify each imported paper: selectable by name; selects only its own questions; works with other filters, saved and mixed selections; prints in source order in both layouts with solutions on and off. Preserve existing print layouts, saved selections, saved-paper IDs and the teacher-only exam paper and its gating.",
+      "acceptance": [
+        "The Past Papers dropdown lists 39 papers (40 options with All); Maths A level lists 27 papers and Further Maths 12; Mechanics Year 2 includes October 2021 and October 2020 9MA0/32.",
+        "Choosing any of the twelve papers selects only its own questions in source order; a whole-paper selection, a mixed selection and reload work.",
+        "Every one of the twelve papers prints complete in both layouts with solutions on and off as real PDFs, and printed PDF pages are inspected."
+      ],
+      "scope": "v0.71 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124 and #126, 22 November 2026",
+      "evidence": [
+        "GitHub issue #126",
+        "docs/evidence/v071-import-oct2020-oct2021-nov2021.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-071-5",
+      "requirement": "Update counts and tests with positive assertions, and publish only papers that pass full verification and independent review.",
+      "acceptance": [
+        "Tests assert 39 papers, 387 past-paper questions, 3,000 marks, the dropdown contents and orders, and the source hashes, page counts, sessions and dates of the twelve papers; 9,009 questions overall (8,068 practice, 554 exam-style, 387 past-paper).",
+        "No v0.71 paper was held; held papers, if any, would be listed with blockers in the issue, HANDOFF.md and the owner report."
+      ],
+      "scope": "v0.71 Cloudflare owner (including disconnected use) and both authenticated ADA roles",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (import the remaining TO_UPLOAD past papers in three releases), GitHub #124 and #126, 22 November 2026",
+      "evidence": [
+        "GitHub issue #126",
+        "docs/evidence/v071-import-oct2020-oct2021-nov2021.json",
+        "tests/test_exam_metadata.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
     }
   ]
 }
