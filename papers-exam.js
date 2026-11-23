@@ -18,6 +18,10 @@
   const gravityHtml = 'Unless otherwise indicated, wherever a value of <span data-math="g"></span> is required, take <span data-math="g = 9.8\\,\\mathrm{m\\,s^{-2}}"></span>';
   const extraMinutes = minutes => Math.round(minutes * 0.25);
   const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
+  // PAP-074-2: only questions with an official (or equivalent source) mark scheme may go in an exam paper.
+  const hasMarkScheme = row => row.markScheme === 'official' || row.markScheme === 'source';
+  // PAP-074-3: the scheme section names each question's exact source and bank ID; question pages never do.
+  const schemeSource = row => `${print.sourceLabel(row)} · ID ${row.id}`;
   const monthYear = (date = new Date()) => date.toLocaleDateString('en-GB', {month: 'long', year: 'numeric'});
   // PAP-067-8: today in the teacher's local date (Europe/London), template style "Sunday 22nd November".
   function todayLabel(date = new Date()) {
@@ -52,9 +56,10 @@
   const hasMechanics = rows => rows.some(row => courseGroup(row) === 'Mechanics');
   function paperTotals(rows) {
     const unknown = rows.filter(row => !Number.isInteger(row.marks) || row.marks <= 0);
+    const noScheme = rows.filter(row => !hasMarkScheme(row));
     const marks = rows.reduce((sum, row) => sum + (Number.isInteger(row.marks) ? row.marks : 0), 0);
     const minutes = print.paperMinutes(marks);
-    return {unknown, marks, minutes, extra: minutes === null ? null : extraMinutes(minutes)};
+    return {unknown, noScheme, marks, minutes, extra: minutes === null ? null : extraMinutes(minutes)};
   }
 
   function frontPage(doc, rows, options, totals) {
@@ -99,9 +104,10 @@
     const choice = options.content ?? 'questions';
     if (!CONTENTS.includes(choice)) throw Error('Choose Questions only, Mark scheme only or Questions and mark scheme.');
     const withQuestions = choice !== 'scheme', withScheme = choice !== 'questions';
-    if (withScheme && rows.some(row => !Array.isArray(row.steps) || !row.steps.length)) throw Error('Every selected question needs its mark scheme or worked solution.');
     const totals = paperTotals(rows);
     if (totals.unknown.length) throw Error(`An exam paper needs the marks for every question. Remove the ${plural(totals.unknown.length, 'question')} without known marks, then try again.`);
+    if (totals.noScheme.length) throw Error(`Every question in an exam paper needs an official mark scheme. Remove the ${plural(totals.noScheme.length, 'question')} marked "No mark scheme", then try again.`);
+    if (withScheme && rows.some(row => !Array.isArray(row.steps) || !row.steps.length)) throw Error('Every selected question needs its mark scheme.');
     const previewURL = new URL('paper-preview.html', document.baseURI);
     const win = window.open(previewURL.href, '_blank');
     if (!win) throw Error('Allow pop-ups for Luisa to open the paper preview.');
@@ -138,8 +144,7 @@
         return {row, prompt};
       }) : [];
       if (withQuestions) staging.append(front);
-      // Past papers: the paired official scheme with all its continuations; practice and
-      // exam-style questions: their existing worked solutions.
+      // The paired official (or source) scheme with all its continuations (PAP-074-2).
       const schemes = withScheme ? rows.map(row => {
         const scheme = content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join(''));
         staging.append(scheme);
@@ -251,7 +256,9 @@
           section = element(doc, 'article', 'print-solution exam-scheme'); section.dataset.questionId = row.id;
           const head = element(doc, 'header', 'question-heading compact-heading exam-heading');
           head.append(element(doc, 'h2', '', 'Question ' + number + (continuation ? ' (continued)' : '')));
-          section.append(head); schemeBody.append(section);
+          section.append(head);
+          if (!continuation) section.append(element(doc, 'p', 'exam-scheme-source', schemeSource(row)));
+          schemeBody.append(section);
         };
         newSection(false);
         const queue = [...scheme.children].map(node => node.cloneNode(true));
@@ -462,7 +469,7 @@
     return {...report, ok: !reasons.length, rows: best.rows, marks: best.marks, minutes: best.minutes, extra: extraMinutes(best.minutes), variety: best.variety, reasons};
   }
 
-  window.LUISA_PAPERS_EXAM = Object.freeze({create, courseGroup, extraMinutes, defaultInstructions, todayLabel, tolerance: TOLERANCE, targetMarks, bandPositions, orderProblems, orderByBands, planTimedPaper});
+  window.LUISA_PAPERS_EXAM = Object.freeze({create, hasMarkScheme, schemeSource, courseGroup, extraMinutes, defaultInstructions, todayLabel, tolerance: TOLERANCE, targetMarks, bandPositions, orderProblems, orderByBands, planTimedPaper});
 
   // Builder controls (present only in owner and staff papers.html).
   const $ = id => document.getElementById(id);
@@ -499,10 +506,14 @@
   function refresh() {
     const rows = builder.snapshot();
     const totals = paperTotals(rows), busy = builder.busy();
-    $('papers-exam-print').disabled = busy || !rows.length || Boolean(totals.unknown.length);
-    $('papers-exam-generate').disabled = busy || !builder.pool().length;
+    const eligible = builder.pool().filter(hasMarkScheme).length;
+    $('papers-exam-print').disabled = busy || !rows.length || Boolean(totals.unknown.length) || Boolean(totals.noScheme.length);
+    $('papers-exam-generate').disabled = busy || !eligible;
+    const total = builder.pool().length;
+    $('papers-exam-eligible').textContent = `${eligible.toLocaleString()} of ${total.toLocaleString()} question${total === 1 ? '' : 's'} in the chosen sources and topics ${eligible === 1 ? 'has' : 'have'} an official mark scheme and can go in an exam paper.`;
     $('papers-exam-order').disabled = busy || rows.length < 2 || Boolean(totals.unknown.length);
     $('papers-exam-summary').textContent = !rows.length ? 'Select questions to build an exam paper.'
+      : totals.noScheme.length ? `${plural(totals.noScheme.length, 'selected question')} without an official mark scheme cannot go in an exam paper. Remove ${totals.noScheme.length === 1 ? 'it' : 'them'} or generate a timed paper.`
       : totals.unknown.length ? `${plural(totals.unknown.length, 'selected question')} without known marks cannot go in an exam paper.`
       : `${plural(rows.length, 'question')} · ${totals.marks} marks · Time: ${totals.minutes} minutes (+${totals.extra} minutes extra time)`;
     const problems = totals.unknown.length ? [] : orderProblems(rows);
@@ -518,6 +529,8 @@
       if (li.querySelector('.exam-move')) return;
       const id = rows[index]?.id; if (!id) return;
       const group = document.createElement('span'); group.className = 'exam-move';
+      // Shown in the same grid cell as the move buttons so the selection layout is unchanged.
+      if (!hasMarkScheme(rows[index])) group.append(Object.assign(document.createElement('span'), {className: 'exam-no-scheme', textContent: 'No mark scheme'}));
       for (const [label, delta] of [['Move up', -1], ['Move down', 1]]) {
         const button = document.createElement('button'); button.type = 'button'; button.className = 'quiet'; button.textContent = label;
         button.dataset.examMove = String(delta); button.dataset.id = id; button.disabled = builder.busy() || (delta < 0 ? index === 0 : index === rows.length - 1);
@@ -552,8 +565,8 @@
     try {
       const work = await builder.exclusive(async () => {
         const before = signature();
-        // Questions without marks are excluded from timed generation (PAP-067-6 removed only the note).
-        const descriptors = builder.pool().filter(row => ['practice-booklet', 'past-exam'].includes(row.sourceKind));
+        // Only questions with an official mark scheme (PAP-074-2); questions without marks are excluded as before.
+        const descriptors = builder.pool().filter(hasMarkScheme);
         const pool = await builder.load(descriptors, count => showReport(`Loading the questions in the chosen topics… ${count} of ${descriptors.length}`));
         if (signature() !== before) return {stale: true};
         return {plan: planTimedPaper(pool, minutes), failed: pool.failed};

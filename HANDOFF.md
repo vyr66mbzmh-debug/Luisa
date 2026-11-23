@@ -1,33 +1,29 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.73 -->
-**Release 0.73 · GitHub #130.** Written for any successor agent, engine or person; it needs no earlier conversation.
+<!-- LUISA-REPORT-HANDOFF v0.74 -->
+**Release 0.74 · GitHub #135.** Written for any successor agent, engine or person; it needs no earlier conversation.
 
-**Current state.** Luisa v0.73 is the published version on Cloudflare (owner edition) and ADA (staff and pupil editions), all built from one merged revision recorded on GitHub #130. This is a tooling release with no user-visible feature changes. Papers holds 44 past papers (444 questions, 3,450 marks), as in v0.72. Numbering: the owner decided that the Sample papers import is v0.72 (#128) and this tooling job is v0.73.
+**Current state.** Luisa v0.74 is the published version on Cloudflare (owner edition) and ADA (staff and pupil editions), all built from one merged revision recorded on GitHub #135. Papers holds 44 past papers (444 questions, 3,450 marks) and 9,066 questions in all. This release is the first of three owner-assigned releases; v0.75 (PMT Core Pure 1) and v0.76 (PMT Core Pure 2) follow.
 
-**What changed (OPS-064 … OPS-070 in docs/requirements/register.json, each with acceptance criteria).**
-- **Release tooling in Git (OPS-064).** Everything needed to import, build, test, land, deploy, verify, archive and report is in `scripts/release/` and `scripts/import/`, each with a README, and in the runbook `docs/agentic/RELEASE-RUNBOOK.md`. The v0.72 Sample papers are the reference import set; their figures, payloads and catalogue rows regenerate byte-for-byte. v0.73 itself was released with this tooling. The old private and /tmp copies are kept, each with a pointer note to the new location.
-- **Private data stays private (OPS-065).** Scripts read private values only through `scripts/release/private.py` (WORKSPACE.json, `LUISA_STATE_DIR`) and never print them. `python3 scripts/luisa.py privacy`, which is in the gate, blocks:
-  - personal absolute paths;
-  - private hosts and addresses, matched by committed hashes (and by exact private values when the private configuration is present);
-  - stray email addresses in documentation and scripts;
-  - owner source PDFs.
+**What changed (PAP-074-1 … PAP-074-4 in docs/requirements/register.json, each with acceptance criteria).**
+- **Mark-scheme flag (PAP-074-1).** Every catalogue row (`textbook-catalogue.json`, `practice-catalogue.json`, `exam-catalogue.json`) has `markScheme`:
+  - `official`: the paired official exam-board scheme. A past paper qualifies only when every step is an official `-ms-` crop of that same paper.
+  - `source`: a marking scheme printed in the question's own source, recorded with its kind and source page in `sourceScheme`. It is reserved for PMT.
+  - `worked`: Luisa worked solutions only.
+  - `none`: neither.
 
-  The 30 legacy lesson files that recorded a personal OneDrive path in an unused `source` field now record `owner materials/…`.
-- **Agent-neutral (OPS-066).** AGENTS.md starts with a quick start for any AI agent. The independent reviewer is a role with inputs and a JSON schema (`docs/agentic/review-record.schema.json`), which `scripts/land.py` validates. CLAUDE.md is only a pointer.
-- **Reproducible environment (OPS-067).** `python3 scripts/bootstrap.py` builds `<state>/env` from exact pins in `requirements-tools.txt`. It includes Node through nodejs-wheel, and uses the installed Chrome or else Playwright's Chromium. Tooling under `scripts/` uses no ripgrep, does not call Node and has no string-evaluated browser waits; a test enforces this. The local browser suites still use string waits against a local server without ADA's CSP (decision: they are not run against ADA).
-- **Cold-start check (OPS-068).** `python3 scripts/luisa.py doctor` prints PASS or MISSING per item, with the human action for each MISSING item, and never prints private values.
-- **One handoff per report (OPS-069).** `scripts/release/report.py` builds development-progress.html, the release report and both email bodies. Each contains HANDOFF.md exactly once, under "Luisa v<version> handoff", using the version from release.json. The separate short bracketed handoff paragraph used up to v0.72 is gone. The gate (`luisa.py report`) and tests check this, and the pupil edition still strips the section. Earlier reports are left as published.
-- **Completion check (OPS-070).** `scripts/release/finish.py` refuses to send the owner report, and `finish.py complete` refuses to finish, unless all of these are present: HANDOFF.md and the report agree with release.json, the register names the issue, the issue has evidence and a token log with its source, and an SMTP record exists.
-- **HANDOFF.md layout.** This file now holds only the current release block plus the standing sections "Tooling, access and where everything lives" and "Standing rules and authority". Earlier blocks and the historical notes (v0.51–v0.72, the foundation record, ADA and PWA history) moved verbatim to `docs/handoff/HISTORY.md`; `scripts/release/docs.py` moves each superseded block there.
+  `scripts/mark_schemes.py` derives the values (`apply`, `check`, `counts`), and `luisa.py check` fails on any mismatch. Current counts: 444 official (past papers) and 8,622 worked (554 exam style, 1,921 Practice Booklet, 6,147 skill questions). The Practice Booklet PDFs contain no mark schemes.
+- **Exam paper eligibility (PAP-074-2).** Only `official` and `source` questions can go in the teacher-only exam paper: timed generation draws only on them, and `create()` refuses any other row for every print option. The panel shows "N of M questions in the chosen sources and topics have an official mark scheme…", and Generate is disabled when N is 0. A worked-solution question added by hand is labelled "No mark scheme" and blocks Preview until it is removed. Questions without marks stay excluded.
+- **Sources (PAP-074-3).** The front page and question pages print no source, paper, series, original question number, context line or ID. Each scheme entry prints "Source: <exact source> · ID <bank id>". Other printouts are unchanged.
+- **Tests (PAP-074-4).** `tests/test_mark_schemes.py` covers the derivation, tampering and unchanged IDs. The browser tests cover timed generation over mixed sources, a manual flag-false question, and sources absent from question pages and present in the scheme (DOM and real PDF text) for mixed papers and a mixed source.
 
-**Next jobs.** None assigned. A later import of genuine June 2022 papers needs the owner to supply them (see #124).
+**Next jobs.** v0.75 imports the PMT Core Pure 1 revision questions and v0.76 the Core Pure 2 ones. The source is the owner's OneDrive folder "PMT further maths questions" (Year 1 and Year 2, 17 PDFs). The work adds a "PMT" source tickbox, per-question difficulty using a written rubric, duplicate links to existing past-paper questions, and the mark-scheme flag from each PDF. PMT chapters without a scheme are imported with the flag `worked` or `none` and are listed as needing a scheme.
 
-**Verified.** The gate passed with 0 skips (including the privacy and report checks), and the Papers browser suites passed from a freshly bootstrapped environment after the old /tmp environment was set aside. Doctor reported PASS. A no-context reviewer did a cold-start dry run, and its gaps were fixed. Exact-head CI and the independent review are recorded on #130, as are the live checks: owner, disconnected use, ADA staff and pupil, the published report's single handoff, accounts unchanged, and the recovery ZIP.
+**Verified.** The gate passed with 0 skips, and the full Papers browser and print suites passed. Exact-head CI and the independent review are recorded on #135, as are the live checks: owner, disconnected use, ADA staff and pupil, the published report's single handoff, accounts unchanged, and the recovery ZIP.
 
 **Outstanding.** Two owner notes from v0.65 still await the owner's view: the per-cell marks in the one three-cell table question, and the course label for a future 9FM0 Mechanics paper.
 
-**Usage.** v0.73 implementation used about 29.4 million tokens in the main session up to the pull request (132 API calls, mostly cached context reads; source: the session transcript's per-call usage, summed with scripts/release/tokens.py). Review and release totals, with their source, are logged on GitHub #130.
+**Usage.** About 6.7 million tokens in the lead session up to the pull request (35 API calls; per-call transcript usage via scripts/release/tokens.py), plus the independent reviewer; final totals are in the token log on #135.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

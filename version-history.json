@@ -1,6 +1,28 @@
 {
-  "current": "0.73",
+  "current": "0.74",
   "releases": [
+    {
+      "version": "0.74",
+      "previous": "0.73",
+      "date": "2026-11-23",
+      "issue": 135,
+      "changes": [
+        "Every question in the Papers bank now carries an internal mark-scheme flag derived from its data: official (444 past-paper questions with their paired Edexcel schemes), worked solutions only (8,622 practice, exam-style and skill questions) or none.",
+        "The teacher-only exam paper (manual selection and timed generation) includes only questions with an official mark scheme; the panel shows how many of the chosen questions qualify, and a question without one is labelled and must be removed before printing.",
+        "Exam question pages show no source; the mark scheme section names each question's exact source and bank ID so any issue can be traced.",
+        "Practice, exam-style and past-paper printouts outside the exam paper are unchanged."
+      ],
+      "reportIntro": [
+        "Luisa v0.74 makes the teacher-only exam paper rely only on genuine mark schemes. Every question now records whether an official mark scheme exists; today that is the 444 past-paper questions, and the exam builder (manual and timed) uses only those. Practice and exam-style questions keep their worked solutions everywhere else.",
+        "Exam question pages no longer reveal where a question came from, while the mark scheme names each question's exact source and bank ID for tracing. PMT Core Pure questions follow in v0.75 and v0.76."
+      ],
+      "requirements": [
+        "PAP-074-1",
+        "PAP-074-2",
+        "PAP-074-3",
+        "PAP-074-4"
+      ]
+    },
     {
       "version": "0.73",
       "previous": "0.72",

@@ -399,6 +399,10 @@ def exam_checks(p, role, out, expected24):
     assert ex.locator('.exam-course-map').count() == 0
     assert ex.locator('.exam-heading h2').first.inner_text() == 'Question 1'
     assert ex.locator('.exam-date sup').count() == 1 and ex.locator('.exam-scheme-page').count() == 0
+    # PAP-074-3: no source, paper, series or ID anywhere on the front page or question pages.
+    shown = ' '.join(ex.locator('.exam-front-page, .exam-page').all_inner_texts())
+    for leak in ('Source', 'Edexcel', '9FM0', 'June 2024', 'exam/'):
+        assert leak not in shown, leak
     ex.pdf(path=str(out / f'live-{role}-exam.pdf'), prefer_css_page_size=True)
     ex.close()
     ok(f'{role} teacher exam paper passed')
@@ -411,6 +415,9 @@ def exam_checks(p, role, out, expected24):
     assert ex.locator('.exam-scheme').evaluate_all('ns=>[...new Set(ns.map(n=>n.dataset.questionId))]') == expected24
     srcs = ex.locator('.exam-scheme img').evaluate_all('ns=>ns.map(n=>n.getAttribute("src"))')
     assert srcs and all('/edexcel-9fm0-02-2024-june/' in x and '-ms-' in x for x in srcs)
+    # PAP-074-3: each scheme names its exact source and bank ID.
+    sources = ex.locator('.exam-scheme-source').all_inner_texts()
+    assert sources == [f'Source: Edexcel June 2024 9FM0/02 Q{q.rsplit("/q", 1)[1]} · ID {q}' for q in expected24], sources
     ex.pdf(path=str(out / f'live-{role}-scheme.pdf'), prefer_css_page_size=True)
     ex.close()
     ok(f'{role} mark scheme only passed')
@@ -424,6 +431,10 @@ def exam_checks(p, role, out, expected24):
     assert abs(minutes - 60) <= 2 and minutes == marks * 6 // 5 and extra == int(minutes * .25 + .5), m.groups()
     diffs = p.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r=>r.difficulty)')
     assert diffs[0] == 'easy' and diffs[-1] == 'difficult', diffs
+    # PAP-074-2: timed generation uses only questions with an official mark scheme; the count is shown.
+    assert set(p.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r=>r.markScheme)')) == {'official'}
+    pool = p.evaluate("[LUISA_PAPERS_BUILDER.pool().filter(r=>r.markScheme==='official'||r.markScheme==='source').length, LUISA_PAPERS_BUILDER.pool().length]")
+    expect(p.locator('#papers-exam-eligible')).to_have_text(f'{pool[0]:,} of {pool[1]:,} questions in the chosen sources and topics have an official mark scheme and can go in an exam paper.')
     ex = popup()
     expect(ex.locator('.exam-time')).to_have_text(f'Time: {minutes} minutes (+{extra} minutes extra time)')
     expect(ex.locator('.paper-total')).to_have_text(f'TOTAL FOR PAPER IS {marks} MARKS')

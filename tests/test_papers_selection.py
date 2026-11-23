@@ -69,7 +69,7 @@ class PapersSelection(unittest.TestCase):
         return self.page.locator('[data-remove]').evaluate_all('(nodes)=>nodes.map(node=>node.dataset.remove)')
 
     def practice_fixture(self, incomplete=False):
-        descriptor = dict(id='practice/maths-a-level/maths-pure-year-1/ch1/1.1/q1',
+        descriptor = dict(id='practice/maths-a-level/maths-pure-year-1/ch1/1.1/q1', markScheme='worked',
                           courseId='maths-a-level', bookId='maths-pure-year-1',
                           chapterId='ch1', chapterNumber=1, chapterTitle='Algebraic expressions',
                           subchapterId='1.1', subchapterTitle='1.1 Index laws', questionLabel='1',
@@ -213,7 +213,7 @@ class PapersSelection(unittest.TestCase):
                          'papers-condensed')
 
     def test_past_exam_loader_marks_timing_and_mixed_selection(self):
-        q = dict(id='exam/test-paper/q1', sourceLabel='Source: Test paper · Q1',
+        q = dict(id='exam/test-paper/q1', markScheme='official', sourceLabel='Source: Test paper · Q1',
                  board='Edexcel', status='checked', marks=7, difficulty='easy',
                  dataPath='content/exams/test-paper.json', paperId='test-paper', paperCode='9MA0/01', session='June 2025',
                  chapterKeys=['maths-a-level/maths-pure-year-1/1'],
@@ -661,8 +661,8 @@ class PapersSelection(unittest.TestCase):
                 self.assertNotIn('left out', report)
                 self.assertNotIn('g = 9.8', self.page.locator('#papers-exam').inner_text())
                 # Questions without marks are still excluded from timed generation.
-                kinds = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => [r.sourceKind, Number.isInteger(r.marks) && r.marks > 0])')
-                self.assertTrue(all(kind in ('practice-booklet', 'past-exam') and marked for kind, marked in kinds), kinds)
+                kinds = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => [r.markScheme, Number.isInteger(r.marks) && r.marks > 0])')
+                self.assertTrue(all(scheme == 'official' and marked for scheme, marked in kinds), kinds)  # PAP-074-2
                 self.assertEqual((minutes, extra), (marks * 6 // 5, int(minutes * 0.25 + 0.5)))
                 self.assertEqual(self.page.locator('#papers-order').input_value(), 'selection')
                 self.assertTrue(self.page.locator('#papers-exam-order-warning').is_hidden())
@@ -697,28 +697,37 @@ class PapersSelection(unittest.TestCase):
         self.page.locator('#papers-exam-accept').click()
         self.assertEqual(self.exam_summary_minutes()[:2], (50, 60))
         self.assertTrue(self.page.locator('#papers-exam-accept').is_hidden())
-        # Realistic Practice Booklet exam-style topics (marks read from the questions) also meet 32 minutes.
+        # PAP-074-2: exam-style and practice questions have worked solutions only, so none can enter an exam paper.
         self.page.locator('#papers-past-paper').select_option('')
         self.page.locator('#papers-source-past-papers').uncheck()
         self.page.locator('#papers-source-exam-style').check()
-        report = self.timed(32)
-        self.assertIn('Target 32 minutes met:', report)
-        self.assertLessEqual(abs(self.exam_summary_minutes()[1] - 32), 2)
-        # Practice questions carry no difficulty labels, so the time is met and the missing bands are reported.
+        eligible = self.page.locator('#papers-exam-eligible').inner_text()
+        pool = self.page.evaluate('LUISA_PAPERS_BUILDER.pool().length')
+        self.assertGreater(pool, 500)
+        self.assertEqual(eligible, f'0 of {pool:,} questions in the chosen sources and topics have an official mark scheme and can go in an exam paper.')
+        self.assertTrue(self.page.locator('#papers-exam-generate').is_disabled())
         self.page.locator('#papers-source-practice').check()
-        self.page.locator('#papers-source-exam-style').uncheck()
-        # Practice questions include thousands of skill questions without marks: they are excluded, and no note is shown.
-        self.assertGreater(self.page.evaluate("LUISA_PAPERS_BUILDER.pool().filter(r => !['practice-booklet', 'past-exam'].includes(r.sourceKind)).length"), 1000)
-        report = self.timed(32)
-        self.assertNotIn('without marks', report)
-        self.assertNotIn('were left out', report)
-        self.assertIn('Target 32 minutes met, but not every exam rule.', report)
-        self.assertIn('0 easy questions (0 marks) and 0 difficult questions', report)
-        self.page.locator('#papers-exam-accept').click()
-        self.assertLessEqual(abs(self.exam_summary_minutes()[1] - 32), 2)
-        kinds = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => [r.sourceKind, Number.isInteger(r.marks) && r.marks > 0])')
-        self.assertTrue(all(kind in ('practice-booklet', 'past-exam') and marked for kind, marked in kinds), kinds)
-        self.assertTrue(self.page.locator('#papers-exam-order-warning').is_visible())
+        self.assertTrue(self.page.locator('#papers-exam-generate').is_disabled())
+        # Mixed sources: the count is exact and timed generation draws only flagged (past-paper) questions.
+        self.page.locator('#papers-source-past-papers').check()
+        counts = self.page.evaluate("[LUISA_PAPERS_BUILDER.pool().length, LUISA_PAPERS_BUILDER.pool().filter(r => r.markScheme === 'official').length, LUISA_PAPERS_BUILDER.pool().filter(r => r.sourceKind === 'past-exam').length]")
+        self.assertEqual(counts[1], counts[2])
+        self.assertEqual(self.page.locator('#papers-exam-eligible').inner_text(), f'{counts[1]:,} of {counts[0]:,} questions in the chosen sources and topics have an official mark scheme and can go in an exam paper.')
+        for seed in range(3):
+            with self.subTest(mixed_seed=seed):
+                report = self.timed(32)
+                self.assertIn('Target 32 minutes met', report)
+                kinds = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => [r.sourceKind, r.markScheme, Number.isInteger(r.marks) && r.marks > 0])')
+                self.assertTrue(kinds and all(k == ['past-exam', 'official', True] for k in kinds), kinds)
+        # A manually added worked-solution question is labelled and blocks the exam paper until removed.
+        self.page.evaluate("""async () => { const extra = await LUISA_PAPERS_BUILDER.load(LUISA_PAPERS_BUILDER.pool().filter(r => r.sourceKind === 'practice-booklet').slice(0, 1));
+          LUISA_PAPERS_BUILDER.arrange([...LUISA_PAPERS_BUILDER.snapshot(), ...extra]); }""")
+        self.assertEqual(self.page.locator('#papers-selected .exam-no-scheme').all_inner_texts(), ['No mark scheme'])
+        self.assertTrue(self.page.locator('#papers-exam-print').is_disabled())
+        self.assertIn('1 selected question without an official mark scheme cannot go in an exam paper.', self.page.locator('#papers-exam-summary').inner_text())
+        self.page.locator('[data-remove]').last.click()
+        self.assertEqual(self.page.locator('#papers-selected .exam-no-scheme').count(), 0)
+        self.assertTrue(self.page.locator('#papers-exam-print').is_enabled())
         # The target survives a reload with the other exam fields.
         self.page.reload()
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
