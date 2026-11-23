@@ -1,5 +1,48 @@
 # Current Luisa handoff
 
+<!-- LUISA-REPORT-HANDOFF v0.72 -->
+**Release 0.72 · GitHub #128.** Written for any successor agent or engine; it needs no earlier conversation.
+
+**Current state.** Luisa v0.72 is the published version on Cloudflare (owner edition) and on ADA (staff and pupil editions), all built from one merged revision recorded in GitHub #128. This release adds content only: the five Edexcel Sample Assessment Material papers. Papers code is unchanged; filters, print layouts and the teacher-only exam paper are unchanged. It is release 3 of 3 of the owner's TO_UPLOAD import, which is now complete (inventory, decisions and the final summary on #124).
+
+**What changed (PAP-072-1 … PAP-072-5 in docs/requirements/register.json, each with acceptance criteria).**
+- **Five papers, 57 questions, 450 marks.** Sample 9MA0/01 (15 questions), 9MA0/02 (16), 9MA0/03 Statistics and Mechanics (10; one combined paper, Section A Q1-5 and Section B Q6-10), 9FM0/01 (9) and 9FM0/02 (7). IDs follow exam/edexcel-<code>-sample/q<n>.
+- **Session and dates (decisions, no owner question asked).** Session "Sample"; examDate and seriesDate are null and no date is invented. The dropdown lists them after every dated paper, ordered by code ("Sample Paper 1 (Further Maths · 9FM0/01)" … "Sample Paper 3 (Maths · 9MA0/03)").
+- **2022.** The June 2022 folder's 12 files are byte-identical to the Summer 2023 papers imported in v0.69, so they are skipped. No genuine 2022 paper was supplied; the owner would need to supply genuine June 2022 question papers and mark schemes for a later import.
+- **Instructions.** Each question carries its cover instructions verbatim (show working; three significant figures). Sample 9MA0/03 Q6-10 carry the Section B instruction about g verbatim. Source wording is kept as printed (9MA0/03 Q1 "respectably").
+- **Crops.** Sample pages carry a footer band, which is excluded from scheme crops. A drawing item lying wholly off the page no longer blocks a break. The question papers and the 9FM0/01 scheme have no readable text layer: prompts were transcribed from page images and every crop was checked by eye. Rules are in content/exams/README.md.
+- **Joins and evidence.** pilot-metadata.json and exam-catalogue.json hold 44 papers, 444 questions and 3,450 marks. docs/evidence/v072-import-sample-papers.json holds, per question: source hashes, page counts, cover identity, scheme pages, printed mark groups, chapter keys, a maths checkpoint and asset hashes.
+- **Held and skipped.** No Sample paper was held. Skipped: the 12 June 2022 duplicates (this release) and the Summer 2023 duplicates noted in v0.70.
+- **Tests.** tests/test_exam_metadata.py (44 papers, Sample source identity, sessions, page counts, instructions), tests/test_papers_selection.py (45 dropdown options and orders, 444 past-paper questions, Course/Book lists, a PAP-072 own-question, whole-paper, mixed-selection and reload test) and tests/papers_print_browser.py (every Sample paper in both layouts, solutions on and off, as real PDFs).
+
+**How the import was done (private tooling, outside Git).** The same per-paper pipeline as v0.70/v0.71 (cover check, figure boxes, vector assets, prompts transcribed from page images, payloads, independent SymPy check, maps, integration, rendered checks, evidence).
+
+**Next jobs.** None remain from the TO_UPLOAD assignment; the final summary is on #124. A later import of genuine June 2022 papers needs the owner to supply them.
+
+**Sources and requirements.**
+- **Question content:** content/practice, content/exams, practice-catalogue.json and exam-catalogue.json.
+- **Requirements:** docs/requirements/register.json, with the generated REQUIREMENTS.md (`python3 scripts/luisa.py requirements`).
+- **Rules:** AGENTS.md and docs/agentic/LEAD-RULES.md. Standing rule OPS-063: record new owner requirements on GitHub and in the register while implementing; at the end of every job update this handoff and log the handoff and tokens on GitHub before reporting done. No automatic wakeup or report schedules.
+
+**Build, test and release.**
+1. **Gate:** `python3 scripts/luisa.py gate` runs the requirements check, unit tests, scan and owner build. It needs Python with requirements-dev.txt and requirements-auth.txt.
+2. **Browser suites:** `python -m unittest tests.test_papers_selection tests.papers_print_browser`. These need Playwright and PyMuPDF; set LUISA_BROWSER_CHANNEL=chrome to use the installed Chrome.
+3. **Land:** merge through a reviewed PR with green exact-head CI, using `python3 scripts/land.py <PR> --review-record <file>`.
+4. **Build:** build each edition with `python3 scripts/luisa.py build --profile owner|staff|student`, then run `check-artifact` on each.
+5. **Deploy:** Cloudflare deploys main automatically. ADA receives the same staff and student artifacts; its host details are in the private WORKSPACE.json (see "ADA is a required release target" below).
+6. **Verify and record:** verify live owner (including disconnected printing of a Sample paper), ADA staff and ADA pupil. Then make the recovery ZIP (the latest five are kept) and send the SMTP owner report.
+
+The per-release live QA helpers are private working copies, not in Git; the checks they perform are listed on GitHub #128.
+
+**Verified.**
+- **Local:** the gate (0 skips) and the Papers browser suites passed.
+- **Review:** an independent review-only agent checked the papers against the source PDFs.
+- **Live:** the live checks are recorded on #128.
+
+**Outstanding.** Nothing from this assignment. Two owner notes from v0.65 still await the owner's view: the per-cell marks in the one three-cell table question, and the course label for a future 9FM0 Mechanics paper.
+
+**Usage.** v0.72 implementation used 48,621,366 tokens in the main session up to the pull request (198 API calls, mostly cached context reads); review and release totals are logged on GitHub #128.
+
 <!-- LUISA-REPORT-HANDOFF v0.71 -->
 **Release 0.71 · GitHub #126.** Written for any successor agent or engine; it needs no earlier conversation.
 

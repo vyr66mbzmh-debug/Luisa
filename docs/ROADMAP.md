@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.72
+
+[Issue #128](https://github.com/vyr66mbzmh-debug/Luisa/issues/128) adds the five Edexcel Sample Assessment Material papers with their official mark schemes (release 3 of 3; no genuine 2022 material was supplied). The final import summary is on #124.
+
 ## Papers v0.71
 
 [Issue #126](https://github.com/vyr66mbzmh-debug/Luisa/issues/126) adds the October 2020, October 2021 and November 2021 Edexcel papers with their official mark schemes (release 2 of 3). Next: v0.72 the sample papers and any genuine 2022 material, then the final summary on #124.
