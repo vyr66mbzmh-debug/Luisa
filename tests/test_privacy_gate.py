@@ -58,6 +58,13 @@ class PrivacyGateTests(unittest.TestCase):
             'hashed private host': ('scripts/x.py', f'HOST = "{SECRET_HOST.upper()}"'),
             'email in docs': ('docs/notes.md', 'write to owner' + '@school.org.uk'),
             'local private value': ('data.json', '{"x": "an-exact-private-value"}'),
+            'subdomain of a hashed host': ('index.html', f'<a href="https://ada.{SECRET_HOST}/">x</a>'),
+            'email at a hashed host in shipped js': ('app.js', f'const to = "owner@{SECRET_HOST}";'),
+            'hashed host in a .cjs file': ('x.cjs', f'module.exports = "{SECRET_HOST}";'),
+            'hashed host in a shell script': ('run.sh', f'ssh {SECRET_HOST}'),
+            'hashed host in .gitignore': ('.gitignore', f'{SECRET_HOST}/'),
+            'personal path in an extensionless file': ('Makefile', 'cd /' + 'Users/someone/x'),
+            'bare home path': ('notes.md', 'cd /' + 'Users/someone'),
         }
         for name, (path, text) in cases.items():
             with self.subTest(name):
@@ -71,6 +78,23 @@ class PrivacyGateTests(unittest.TestCase):
                 self.assertNotIn('an-exact-private-value', output)
                 target.unlink()
         self.assertTrue(self.gate({'an-exact-private-value'})[0])
+
+    def test_unreadable_private_configuration_fails_instead_of_passing(self):
+        import os
+        state = self.root / 'state'
+        state.mkdir()
+        (state / 'WORKSPACE.json').write_text('{not json')
+        old = os.environ.get('LUISA_STATE_DIR')
+        os.environ['LUISA_STATE_DIR'] = str(state)
+        try:
+            with contextlib.redirect_stdout(io.StringIO()) as out, self.assertRaises(SystemExit):
+                luisa.privacy(self.root)
+            self.assertIn('private configuration unreadable', out.getvalue())
+        finally:
+            if old is None:
+                os.environ.pop('LUISA_STATE_DIR')
+            else:
+                os.environ['LUISA_STATE_DIR'] = old
 
     def test_committed_and_untracked_source_pdfs_are_blocked(self):
         (self.root / 'docs').mkdir(exist_ok=True)

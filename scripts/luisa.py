@@ -581,7 +581,19 @@ PRIVATE_HASHES = 'docs/security/private-hashes.json'
 EMAIL_SCOPE = re.compile(r'(?:\.md$|^scripts/|^docs/(?!evidence/)|^\.github/|^HANDOFF|^CHANGELOG|^AGENTS|^CLAUDE)')
 ALLOWED_EMAIL = re.compile(r'(?:noreply@[\w.]+|[\w.+-]+@users\.noreply\.github\.com|[\w.+-]+@example\.(?:com|org)|[\w.+-]+@[\w.-]+\.test)$')
 TOKEN = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|(?<![\w.-])(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}(?![\w-])|\b(?:\d{1,3}\.){3}\d{1,3}\b')
-PERSONAL_PATH = re.compile(r'(?:/Users|/home)/(?!runner/|<|\$|\{)[A-Za-z0-9._-]+/|[A-Z]:\\{1,2}Users\\{1,2}[A-Za-z0-9._-]+')
+PERSONAL_PATH = re.compile(r'(?:/Users|/home)/(?!runner\b|Shared\b|<|\$|\{)[A-Za-z0-9._-]+(?![A-Za-z0-9._-])|[A-Z]:\\{1,2}Users\\{1,2}[A-Za-z0-9._-]+')
+BINARY_SUFFIXES = {'.pdf', '.png', '.jpg', '.jpeg', '.gif', '.webp', '.ico', '.woff', '.woff2', '.ttf', '.otf', '.zip', '.gz',
+                   '.pptx', '.docx', '.xlsx', '.sqlite', '.mp4', '.mp3'}
+
+
+def token_variants(token):
+    """A host, address or email and every parent domain (sub.host.example.org -> host.example.org, example.org)."""
+    token = token.lower()
+    out = {token}
+    host = token.rsplit('@', 1)[-1]
+    parts = host.split('.')
+    out.update('.'.join(parts[i:]) for i in range(len(parts) - 1))
+    return out
 
 
 def private_token_hashes(root=ROOT):
@@ -605,23 +617,28 @@ def privacy(root=ROOT, workspace_values=None):
     errors = []
     hashes = private_token_hashes(root)
     if workspace_values is None:
+        sys.path.insert(0, str(root / 'scripts' / 'release'))
+        import private as private_config
         try:
-            sys.path.insert(0, str(root / 'scripts' / 'release'))
-            import private as private_config
             workspace_values = private_config.private_values()
-        except Exception:
-            workspace_values = set()
+        except private_config.MissingPrivateConfig:
+            workspace_values = set()  # no private state here (CI): hash checks only
+        except Exception as error:  # private state present but unreadable: never pass silently
+            emit('privacy_failure', file='WORKSPACE.json', kind='private configuration unreadable', message=type(error).__name__)
+            raise SystemExit(1)
     count = 0
-    for name, content in source_files(root, text_only=True):
-        count += 1
+    for name, content in source_files(root):
+        if Path(name).suffix.lower() in BINARY_SUFFIXES:
+            continue
         try:
             text = content.decode('utf-8')
         except UnicodeError:
-            continue
+            continue  # binary file of another type
+        count += 1
         if PERSONAL_PATH.search(text):
             errors.append((name, 'personal absolute path'))
         for token in set(TOKEN.findall(text)):
-            if hashlib.sha256(token.lower().encode()).hexdigest() in hashes:
+            if any(hashlib.sha256(v.encode()).hexdigest() in hashes for v in token_variants(token)):
                 errors.append((name, 'private host or address'))
                 break
         if EMAIL_SCOPE.search(name):

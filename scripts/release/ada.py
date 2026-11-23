@@ -22,6 +22,7 @@ import os
 import sqlite3
 import subprocess
 import sys
+import shlex
 import tarfile
 import threading
 from pathlib import Path
@@ -38,6 +39,9 @@ ACCOUNT_QUERIES = [
     'select * from teacher_directory order by username',
 ]
 
+
+
+q = shlex.quote  # every path in a remote shell command is quoted (supervisorCommand is a trusted command line)
 
 
 def label(folder):
@@ -70,7 +74,7 @@ print('\\n'.join(hits))"""
 
 
 def upload(dest, files):
-    p = subprocess.Popen(private.ssh_command() + ['umask 077; tar xzf - -C ' + dest], stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+    p = subprocess.Popen(private.ssh_command() + ['umask 077; tar xzf - -C ' + q(dest)], stdin=subprocess.PIPE, stderr=subprocess.PIPE)
     errors = []
     reader = threading.Thread(target=lambda: errors.append(p.stderr.read()), daemon=True)  # drain stderr while streaming
     reader.start()
@@ -94,7 +98,7 @@ def stage():
         raise SystemExit('This revision is already the live ADA release.')
     lock = open(private.work_dir(v) / 'staging.lock', 'a')
     fcntl.flock(lock, fcntl.LOCK_EX)
-    private.remote('umask 077; mkdir -p ' + new + '/src ' + new + '/content ' + new + '/staff')
+    private.remote('umask 077; mkdir -p ' + ' '.join(q(new + d) for d in ('/src', '/content', '/staff')))
     for profile, dirname in [('student', 'content'), ('staff', 'staff')]:
         local = ROOT / ('dist-' + profile)
         dest = new + '/' + dirname
@@ -145,7 +149,7 @@ assert {str(p.relative_to(d)) for p in d.rglob('*') if p.is_file()}==set(files)|
 for n in ['launch','start','nginx.conf']:
  a=Path({old!r})/n;b=Path({new!r})/n;b.write_bytes(a.read_bytes().replace({old.encode()!r},{new.encode()!r}));b.chmod(a.stat().st_mode&0o777)
 """)
-    private.remote(private.layout('nginx') + ' -t -c ' + new + '/nginx.conf')
+    private.remote(q(private.layout('nginx')) + ' -t -c ' + q(new + '/nginx.conf'))
     (private.work_dir(v) / 'ada-previous-folder').write_text(old)
     print('Staged ADA', label(new), 'beside the live', label(old), flush=True)
 
@@ -161,7 +165,7 @@ def activate(allow_server_change=False):
     if subprocess.check_output(['git', 'ls-remote', 'origin', 'refs/heads/main'], cwd=ROOT, text=True).split()[0] != rev:
         raise SystemExit('Activate only the revision at the tip of origin/main.')
     old, new = live_folder(), folder(rev)
-    live_rev = json.loads(private.remote('cat ' + old + '/staff/build-manifest.json'))['revision']
+    live_rev = json.loads(private.remote('cat ' + q(old + '/staff/build-manifest.json')))['revision']
     changed = subprocess.check_output(['git', 'diff', '--name-only', f'{live_rev}..{rev}', '--', 'student_server', 'requirements-auth.txt'],
                                       cwd=ROOT, text=True).strip()
     if changed and not allow_server_change:
@@ -174,13 +178,13 @@ src=sqlite3.connect({data + '/accounts.sqlite'!r});dst=sqlite3.connect({back!r})
 """)
     target = snapshot_path(rev)
     with open(target, 'wb', opener=lambda p, f: os.open(p, f, 0o600)) as f:
-        f.write(private.remote('cat ' + back))
+        f.write(private.remote('cat ' + q(back)))
     if sqlite3.connect(target).execute('pragma integrity_check').fetchone() != ('ok',):
         raise SystemExit('Private account snapshot failed its integrity check.')
-    private.remote('rm ' + back)
+    private.remote('rm ' + q(back))
     start = private.layout('startScript')
-    restart = private.layout('supervisorCommand') + ' restart ' + private.layout('serviceName')
-    private.remote(f'cmp {start} {old}/start && install -m 700 {new}/start {start}.luisa-next && mv {start}.luisa-next {start} && {restart}')
+    restart = private.layout('supervisorCommand') + ' restart ' + q(private.layout('serviceName'))
+    private.remote(f'cmp {q(start)} {q(old + "/start")} && install -m 700 {q(new + "/start")} {q(start + ".luisa-next")} && mv {q(start + ".luisa-next")} {q(start)} && {restart}')
     print('Activated ADA', label(new), '(account snapshot kept privately)', flush=True)
 
 
@@ -189,8 +193,8 @@ def rollback():
     previous = (private.work_dir(v) / 'ada-previous-folder').read_text().strip()
     new = folder(revision())
     start = private.layout('startScript')
-    restart = private.layout('supervisorCommand') + ' restart ' + private.layout('serviceName')
-    private.remote(f'cmp {start} {new}/start && install -m 700 {previous}/start {start}.luisa-rollback && mv {start}.luisa-rollback {start} && {restart}')
+    restart = private.layout('supervisorCommand') + ' restart ' + q(private.layout('serviceName'))
+    private.remote(f'cmp {q(start)} {q(new + "/start")} && install -m 700 {q(previous + "/start")} {q(start + ".luisa-rollback")} && mv {q(start + ".luisa-rollback")} {q(start)} && {restart}')
     print('Rolled ADA back to', label(previous), flush=True)
 
 
@@ -247,7 +251,7 @@ def cleanup():
     previous = previous_path.read_text().strip() if previous_path.exists() else None
     if previous:
         saved = private.state_dir() / 'ada-student' / f'gateway-{Path(previous).name}-before-v{v}.tar.gz'
-        saved.write_bytes(private.remote(f'tar czf - -C {previous} launch start nginx.conf src content/build-manifest.json staff/build-manifest.json'))
+        saved.write_bytes(private.remote(f'tar czf - -C {q(previous)} launch start nginx.conf src content/build-manifest.json staff/build-manifest.json'))
         with tarfile.open(saved) as tf:
             assert 'start' in tf.getnames()
     data = private.layout('dataDir')
@@ -270,9 +274,9 @@ for p in root.glob('.stage-*'):
 
 def status():
     old = live_folder()
-    restart = private.layout('supervisorCommand') + ' status ' + private.layout('serviceName')
+    restart = private.layout('supervisorCommand') + ' status ' + q(private.layout('serviceName'))
     state = private.remote(restart, check=False).decode()
-    m = json.loads(private.remote('cat ' + old + '/staff/build-manifest.json'))
+    m = json.loads(private.remote('cat ' + q(old + '/staff/build-manifest.json')))
     print(json.dumps({'liveFolder': label(old), 'revision': m['revision'], 'version': m['version'],
                       'running': 'RUNNING' in state}))
 

@@ -80,7 +80,7 @@ These steps work for any AI agent, any engine or any person, and need no earlier
     - the live checks: owner, offline, ADA staff and pupil, and accounts;
     - the archive name and the report status;
     - every decision applied.
-24. Log tokens in a second comment that contains the word "tokens" and states the **source**.
+24. Log tokens in a second comment headed `## Token log`. It gives the totals (for example `31,234,567 tokens`) or the words `token counts unavailable`, and a line starting `Source:` that names where the numbers came from (`finish.py complete` checks this format).
     - **Transcript format:** engines that write a JSON Lines transcript, with per-call records carrying `message.id`, `message.usage` (integer token fields) and `timestamp`, can use `python3 scripts/release/tokens.py since --transcript <file> --state <state>/v<vv>/tokens-baseline.json`, or `tokens.py total --transcript <file> --after <start time>`. Reviewers' transcripts use `tokens.py total`.
     - **Other engines:** use their own per-call counter.
     - **No counter available:** write "token counts unavailable", and name the source used instead, such as `scripts/usage.py` account percentages, which are estimates.

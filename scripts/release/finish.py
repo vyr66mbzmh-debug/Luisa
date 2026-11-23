@@ -30,6 +30,7 @@ import report as report_tool  # noqa: E402
 import ada as ada_tool  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
+TOKEN_LOG = re.compile(r'^#+\s*Token log\b[\s\S]*?(?:\d[\d,]{3,}\s*tokens|token counts unavailable)', re.M | re.I)
 ARCHIVE = re.compile(r'(?:Luisa-|luisa-)?v\d+\.\d+-[0-9a-f]{7,40}-website\.zip')
 
 
@@ -59,7 +60,9 @@ def context(allow_docs_followup=False):
 def archive():
     release, version, rev, work, _ = context()
     backups = Path(private.get('master')) / 'backups'
-    subprocess.run([sys.executable, 'scripts/archive_release.py', str(backups)], cwd=ROOT, check=True)
+    result = subprocess.run([sys.executable, 'scripts/archive_release.py', str(backups)], cwd=ROOT, capture_output=True, text=True)
+    if result.returncode:  # never echo the private backups path
+        raise SystemExit('Recovery archive failed: ' + private.redact((result.stderr or result.stdout).strip())[-600:])
     path = backups / f'v{version}-{rev[:12]}-website.zip'
     assert path.is_file() and path.with_suffix('.zip.sha256').is_file()
     kept = [p for p in backups.iterdir() if p.is_file() and ARCHIVE.fullmatch(p.name)]
@@ -143,8 +146,8 @@ def complete():
         bodies = [c['body'] for c in comments]
         if not any(rev in b for b in bodies):
             errors.append(f'issue #{issue} has no evidence comment naming the merged revision')
-        if not any(re.search(r'\btokens?\b', b, re.I) and re.search(r'\bsource\b', b, re.I) for b in bodies):
-            errors.append(f'issue #{issue} has no token-log comment stating its source')
+        if not any(TOKEN_LOG.search(b) and re.search(r'^\s*(?:[-*]\s*)?\**Source:?\**:?\s*\S', b, re.M | re.I) for b in bodies):
+            errors.append(f'issue #{issue} has no token-log comment (a "## Token log" heading with token totals or "unavailable", and a "Source:" line)')
     if errors:
         raise SystemExit('Release not complete: ' + '; '.join(errors))
     print(f'Release v{version} complete: HANDOFF.md, register, issue #{issue} evidence and token log, report and SMTP record all present.')
