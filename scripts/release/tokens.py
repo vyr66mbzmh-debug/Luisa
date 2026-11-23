@@ -53,6 +53,7 @@ def main():
     args = parser.parse_args()
     found = calls(args.transcript, args.after)
     if args.command == 'baseline':
+        args.state.parent.mkdir(parents=True, exist_ok=True)
         args.state.write_text(json.dumps(sorted(found)))
         print(json.dumps({'baselineCalls': len(found)}))
     elif args.command == 'since':

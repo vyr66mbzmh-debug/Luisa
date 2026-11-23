@@ -11,7 +11,7 @@ These steps work for any AI agent, any engine or any person, and need no earlier
 
 **Interpreter and shell.**
 - Commands assume the bootstrapped interpreter: `python3` means `<state>/env/bin/python`, with `<state>/env/bin` first on `PATH`.
-- The `export` lines that bootstrap prints are for POSIX shells (sh, bash, zsh). In csh or tcsh, use `setenv PATH "$HOME/.local/share/luisa-agent-state/env/bin:$PATH"` and `setenv LUISA_BROWSER_CHANNEL chrome` instead (or the channel bootstrap printed).
+- The `export` lines that bootstrap prints are for POSIX shells (sh, bash, zsh). In csh or tcsh, use `setenv PATH "<state>/env/bin:$PATH"` and `setenv LUISA_BROWSER_CHANNEL <channel>`, with the folder and channel bootstrap printed.
 
 **When to stop.** Stop only for a genuine blocker: an expired login, a macOS permission only the owner can grant, a doctor MISSING line that needs a human, or a usage limit. Never stop because of repository state (an open PR, an odd version number, a missing or duplicate file). Decide using the defaults in the brief, record the decision in the issue and in HANDOFF.md, and continue.
 
@@ -92,7 +92,13 @@ These steps work for any AI agent, any engine or any person, and need no earlier
     - the issue has the evidence and token-log comments;
     - the SMTP record exists.
 
-    Then close the issue with `gh issue close <issue>`. If live verification changed a fact in HANDOFF.md or the register, fix it in a small docs-only PR. That PR needs its own review record and `land_build.py --pr <N> --review-record <file>`, and Cloudflare redeploys the updated report. Then rerun `finish.py check-published` and `finish.py complete` from the new main head, which `complete` accepts when only documentation changed.
+    Then close the issue with `gh issue close <issue>`.
+
+**Corrections after the release.**
+- A docs-only follow-up PR may change only files that no edition ships: `docs/` (including the register) and `CHANGELOG.md`.
+- It needs its own review record and `land_build.py --pr <N> --review-record <file>`. land_build keeps the recorded release revision and notes the follow-up separately.
+- Then rerun `finish.py complete` from the new main head.
+- `HANDOFF.md` changes alter the published report in every edition. A HANDOFF correction after release therefore goes on the issue as a comment and into the next release's block; it is not a separate redeploy.
 
 ## Usage limits
 On a usage limit, stop. Write the exact resume point to `<state>/v<vv>/PROGRESS.md` (branch, worktree, last completed step number, next command), and do not schedule wakeups or timers. The owner restarts the work. The next agent resumes from PROGRESS.md and this runbook.

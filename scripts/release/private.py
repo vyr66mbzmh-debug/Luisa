@@ -128,12 +128,32 @@ def redact(text):
         values = set(private_values())
         ada = workspace().get('ada', {})
         values |= {str(v) for v in ada.get('layout', {}).values() if isinstance(v, str) and len(v) > 3}  # all server layout
-        values |= {str(ada.get('sshHost', '')), str(ada.get('sshHost', '')).split('@')[-1]}
+        values |= {str(ada.get('sshHost', '')), str(ada.get('sshHost', '')).split('@')[-1]} | _ssh_resolved()
     except MissingPrivateConfig:
         values = {str(Path.home())}
     for value in sorted((v for v in values if len(v) > 3), key=len, reverse=True):
         text = text.replace(value, '<private>')
+    try:
+        port = str(workspace()['ada']['sshPort'])
+        text = re.sub(rf'(port\s+){re.escape(port)}\b', r'\1<private>', text, flags=re.I)
+    except (MissingPrivateConfig, KeyError):
+        pass
     return text
+
+
+def _ssh_resolved():
+    """Real host name and user behind an ssh-config alias (ssh names the real host in its errors)."""
+    try:
+        ada = workspace()['ada']
+        out = subprocess.run(['ssh', '-G', '-p', str(ada['sshPort']), ada['sshHost']], capture_output=True, text=True, timeout=10).stdout
+    except Exception:
+        return set()
+    found = set()
+    for line in out.splitlines():
+        key, _, value = line.partition(' ')
+        if key in ('hostname', 'user') and len(value) > 3:
+            found.add(value)
+    return found
 
 
 def remote(command, data=None, check=True):

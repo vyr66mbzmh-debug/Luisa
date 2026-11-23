@@ -33,7 +33,7 @@ ROOT = Path(__file__).resolve().parents[2]
 ARCHIVE = re.compile(r'(?:Luisa-|luisa-)?v\d+\.\d+-[0-9a-f]{7,40}-website\.zip')
 
 
-DOCS_ONLY = re.compile(r'(?:HANDOFF\.md|CHANGELOG\.md|docs/.*|development-progress\.html|release-report-[\d.]+\.html)')
+DOCS_ONLY = re.compile(r'(?:CHANGELOG\.md|docs/.*)')  # files no edition ships (HANDOFF.md changes the shipped report)
 
 
 def context(allow_docs_followup=False):

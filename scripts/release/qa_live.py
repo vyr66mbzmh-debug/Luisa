@@ -491,6 +491,15 @@ def remove_qa_accounts(pending):
         return
     made = json.loads(pending.read_text())
     staff, pupil = made['staff'], made['pupil']
+    if not made.get('created'):
+        # Interrupted between recording and confirming: delete only if the rows exist with this tool's exact identities
+        # and were not there before (the names were checked unused just before; a pupil row is removed only together
+        # with its paired, freshly created qa staff row).
+        exists = ada_fixture(f"print(bool(c.execute('select 1 from staff_accounts where username=?',({staff!r},)).fetchone()))").strip()
+        if exists != b'True':
+            pending.unlink()
+            print('no temporary QA accounts were created', flush=True)
+            return
     ada_fixture(f"c.execute('delete from sessions where staff_username=? or school_number=?',({staff!r},{pupil!r}))\n"
                 f"c.execute('delete from staff_accounts where username=?',({staff!r},))\n"
                 f"c.execute('delete from accounts where school_number=?',({pupil!r},));c.commit()")
@@ -530,17 +539,19 @@ def main():
                 raise SystemExit('Temporary QA accounts from an earlier run still exist; run: qa_live.py ada-cleanup')
             for _ in range(20):  # identities that do not exist yet; created together in one transaction
                 staff, pupil = 'qa' + secrets.token_hex(5), '0' + str(secrets.randbelow(10000)).zfill(4)
-                created = ada_fixture(f"assert not c.execute('select 1 from staff_accounts where username=?',({staff!r},)).fetchone()\n"
-                                      f"if c.execute('select 1 from accounts where school_number=?',({pupil!r},)).fetchone(): print('taken'); raise SystemExit\n"
+                pending.write_text(json.dumps({'staff': staff, 'pupil': pupil, 'created': False}))  # before the insert
+                os.chmod(pending, 0o600)
+                created = ada_fixture(f"if c.execute('select 1 from staff_accounts where username=?',({staff!r},)).fetchone() or "
+                                      f"c.execute('select 1 from accounts where school_number=?',({pupil!r},)).fetchone(): print('taken'); raise SystemExit\n"
                                       f"h=PasswordHasher().hash({pw!r})\n"
                                       f"c.execute('insert into staff_accounts(username,password_hash,force_change)values(?,?,0)',({staff!r},h))\n"
                                       f"c.execute('insert into accounts(school_number,password_hash)values(?,?)',({pupil!r},h));c.commit();print('created')").strip()
                 if created == b'created':
+                    pending.write_text(json.dumps({'staff': staff, 'pupil': pupil, 'created': True}))
                     break
+                pending.unlink()
             else:
-                raise SystemExit('Could not find an unused temporary pupil number')
-            pending.write_text(json.dumps({'staff': staff, 'pupil': pupil}))
-            os.chmod(pending, 0o600)
+                raise SystemExit('Could not find unused temporary QA identities')
             try:
                 for role, ident in [('student', pupil + '@' + private.get('ada.pupilEmailDomain')), ('staff', staff)]:
                     c = browser.new_context(service_workers='block', viewport={'width': 1440, 'height': 1000})

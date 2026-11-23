@@ -73,7 +73,13 @@ def main():
         raise SystemExit('The main checkout must be clean and on main.')
     run(['git', 'merge', '--ff-only', 'origin/main'], main_dir)
     version = json.loads((main_dir / 'release.json').read_text())['version']
-    (private.work_dir(version) / 'merged-revision').write_text(merge + '\n')
+    record = private.work_dir(version) / 'merged-revision'
+    if record.exists() and record.read_text().strip() != merge:
+        # A later landing for an already-released version (a docs-only follow-up): keep the release revision.
+        (private.work_dir(version) / 'followup-revision').write_text(merge + '\n')
+        print('Release revision kept; follow-up merge recorded separately.', flush=True)
+    else:
+        record.write_text(merge + '\n')
     for profile in ('owner', 'staff', 'student'):
         run([sys.executable, 'scripts/luisa.py', 'build', '--profile', profile], main_dir)
         directory = 'dist' if profile == 'owner' else 'dist-' + profile
