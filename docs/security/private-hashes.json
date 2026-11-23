@@ -1,0 +1,8 @@
+{
+ "description": "SHA-256 of lower-cased private hosts, addresses and domains (OPS-065). scripts/luisa.py privacy fails if any committed text contains a token with one of these hashes. Values are never stored here. Add a hash with: python3 -c \"import hashlib;print(hashlib.sha256(input().strip().lower().encode()).hexdigest())\"",
+ "sha256": [
+  "018712d5f5f3fb6a5ddc2d92a65a1503dac5a6529dfe04c86d0988c7f4ab4fa5",
+  "5a045ca6875601c88d4082646abdc2136cd888a7a49d3cbedab8ffd9a7778e47",
+  "72b6a8ef42a4f6e55ac50c6a5f66a33fccdba74b916190ee66fd5b37539c967f"
+ ]
+}

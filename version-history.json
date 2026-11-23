@@ -1,6 +1,32 @@
 {
-  "current": "0.72",
+  "current": "0.73",
   "releases": [
+    {
+      "version": "0.73",
+      "previous": "0.72",
+      "date": "2026-11-23",
+      "issue": 130,
+      "changes": [
+        "Release tooling moved into Git: scripts/release/ (land, build, deploy to ADA, live and offline verification, archive, report, completion) and scripts/import/ (the past-paper pipeline with the v0.72 Sample papers as its reference set), each with a README, plus docs/agentic/RELEASE-RUNBOOK.md.",
+        "Private values are read only through scripts/release/private.py and never printed; a new privacy check in the gate blocks personal paths, private hosts and addresses, stray emails and owner source PDFs.",
+        "One bootstrap command (scripts/bootstrap.py) builds the pinned environment in the private state folder; scripts/luisa.py doctor checks a fresh agent has everything it needs.",
+        "Every release report form now carries exactly one handoff (the whole of HANDOFF.md, headed with the release version); HANDOFF.md keeps only the current release block, with earlier blocks in docs/handoff/HISTORY.md.",
+        "No user-visible feature changes."
+      ],
+      "reportIntro": [
+        "Luisa v0.73 moves all release tooling into the repository, so any AI agent or person can import, release, deploy, verify and report from a fresh checkout and the private configuration alone. There are no user-visible feature changes; Papers still holds 44 past papers (444 questions, 3,450 marks).",
+        "Every report now carries exactly one handoff: the whole of HANDOFF.md under a single heading with the release version. New checks in the gate keep private data out of the public repository and fail a release whose handoff is missing or inconsistent."
+      ],
+      "requirements": [
+        "OPS-064",
+        "OPS-065",
+        "OPS-066",
+        "OPS-067",
+        "OPS-068",
+        "OPS-069",
+        "OPS-070"
+      ]
+    },
     {
       "version": "0.72",
       "previous": "0.71",

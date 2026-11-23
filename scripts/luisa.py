@@ -577,6 +577,86 @@ def scan(root=ROOT):
     emit('scan_pass', files=count, limitation='Pattern scan only; full-history GitHub secret scanning is separate')
 
 
+PRIVATE_HASHES = 'docs/security/private-hashes.json'
+EMAIL_SCOPE = re.compile(r'(?:\.md$|^scripts/|^docs/(?!evidence/)|^\.github/|^HANDOFF|^CHANGELOG|^AGENTS|^CLAUDE)')
+ALLOWED_EMAIL = re.compile(r'(?:noreply@[\w.]+|[\w.+-]+@users\.noreply\.github\.com|[\w.+-]+@example\.(?:com|org)|[\w.+-]+@[\w.-]+\.test)$')
+TOKEN = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|(?<![\w.-])(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}(?![\w-])|\b(?:\d{1,3}\.){3}\d{1,3}\b')
+PERSONAL_PATH = re.compile(r'(?:/Users|/home)/(?!runner/|<|\$|\{)[A-Za-z0-9._-]+/|[A-Z]:\\{1,2}Users\\{1,2}[A-Za-z0-9._-]+')
+
+
+def private_token_hashes(root=ROOT):
+    data = json.loads((root / PRIVATE_HASHES).read_text())
+    return set(data['sha256'])
+
+
+def source_pdf_hashes(root=ROOT):
+    """SHA-256 of every owner source PDF recorded in the past-paper metadata (they must never be committed)."""
+    meta = json.loads((root / 'content/exams/pilot-metadata.json').read_text())
+    keys = ('questionPaperSha256', 'markSchemeSha256', 'indexedQuestionPaperSha256', 'indexedMarkSchemeSha256')
+    return {p['source'][k] for p in meta['papers'] for k in keys if p['source'].get(k)}
+
+
+def privacy(root=ROOT, workspace_values=None):
+    """OPS-065: fail on personal paths, private hosts/addresses, stray email addresses and owner source PDFs.
+
+    Works without private configuration (CI): private hosts and addresses are matched by committed SHA-256
+    hashes. When WORKSPACE.json is available locally, its exact values are checked as well (never printed).
+    """
+    errors = []
+    hashes = private_token_hashes(root)
+    if workspace_values is None:
+        try:
+            sys.path.insert(0, str(root / 'scripts' / 'release'))
+            import private as private_config
+            workspace_values = private_config.private_values()
+        except Exception:
+            workspace_values = set()
+    count = 0
+    for name, content in source_files(root, text_only=True):
+        count += 1
+        try:
+            text = content.decode('utf-8')
+        except UnicodeError:
+            continue
+        if PERSONAL_PATH.search(text):
+            errors.append((name, 'personal absolute path'))
+        for token in set(TOKEN.findall(text)):
+            if hashlib.sha256(token.lower().encode()).hexdigest() in hashes:
+                errors.append((name, 'private host or address'))
+                break
+        if EMAIL_SCOPE.search(name):
+            for email in set(re.findall(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', text)):
+                if not ALLOWED_EMAIL.fullmatch(email):
+                    errors.append((name, 'email address'))
+                    break
+        if any(v in text for v in workspace_values):
+            errors.append((name, 'value from the private configuration'))
+    tracked = subprocess.check_output(['git', '-C', str(root), 'ls-files', '-z', '--cached', '--others', '--exclude-standard'], text=True).split('\0')
+    pdfs = source_pdf_hashes(root)
+    for name in tracked:
+        if name.lower().endswith('.pdf') and (root / name).is_file():
+            if digest(root / name) in pdfs:
+                errors.append((name, 'owner source PDF'))
+            elif re.match(r'(?:content|resources)/exams/', name):
+                errors.append((name, 'PDF in past-paper content'))
+    if errors:
+        for name, kind in sorted(set(errors)):
+            emit('privacy_failure', file=name, kind=kind, message='value withheld')
+        raise SystemExit(1)
+    emit('privacy_pass', files=count, private_hashes=len(hashes), source_pdf_hashes=len(pdfs), local_values=bool(workspace_values))
+
+
+def release_report_check(root=ROOT):
+    sys.path.insert(0, str(root / 'scripts' / 'release'))
+    import report as report_tool
+    errors = report_tool.check(root)
+    if errors:
+        for error in errors:
+            emit('report_failure', message=error)
+        raise SystemExit(1)
+    emit('report_pass', version=report_tool.version(root))
+
+
 def serve(directory, port):
     directory = Path(directory).resolve()
     if not directory.is_dir():
@@ -594,7 +674,7 @@ def serve(directory, port):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('command', choices=['requirements', 'check', 'build', 'check-artifact', 'test', 'scan', 'gate', 'serve'])
+    parser.add_argument('command', choices=['requirements', 'check', 'build', 'check-artifact', 'test', 'scan', 'privacy', 'report', 'gate', 'serve', 'doctor'])
     parser.add_argument('--output')
     parser.add_argument('--profile', choices=['owner', 'student', 'staff'], default='owner')
     parser.add_argument('--directory', default='dist')
@@ -606,10 +686,18 @@ def main():
         emit('requirements_generated')
     if args.command in ('check', 'gate'):
         check()
+    if args.command in ('report', 'gate'):
+        release_report_check()
     if args.command in ('test', 'gate'):
         subprocess.run([sys.executable, '-m', 'unittest', 'discover', '-s', 'tests', '-v'], cwd=ROOT, check=True)
     if args.command in ('scan', 'gate'):
         scan()
+    if args.command in ('privacy', 'gate'):
+        privacy()
+    if args.command == 'doctor':
+        sys.path.insert(0, str(ROOT / 'scripts' / 'release'))
+        import doctor
+        raise SystemExit(doctor.main())
     if args.command in ('build', 'gate'):
         build(output=args.output, profile=args.profile)
     if args.command == 'serve':

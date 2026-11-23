@@ -1,0 +1,27 @@
+from sympy import *
+x, t, d, th, h = symbols('x t d theta h', real=True)
+y = 3*x**4 - 8*x**3 - 3; d1, d2 = diff(y, x), diff(y, x, 2)
+print('Q1', d1, d2, d1.subs(x, 2), d2.subs(x, 2))
+OD = Rational(3) / Rational(2, 5); print('Q2 OD', OD, 'area', N(Rational(1, 2) * (12 - OD)**2 * (pi - Rational(2, 5)), 4))
+print('Q3 centre (2,-5), k>', -(2**2 + 5**2))
+a = symbols('a', positive=True); print('Q4', solve(Eq(integrate(1 + 1/t, (t, a, 2*a)), log(7)), a))
+print('Q5', factor(simplify((4*t - 7 + 3/t).subs(t, (x + 1)/2) * (x + 1))))
+k = log(Rational(16, 9))/4; print('Q6 A', 16000 - 1750*3, 'k', N(k, 4), 'B(3)', N(16000*exp(-3*k), 5))
+AB, BC = Matrix([2, 3, 1]), Matrix([1, -9, 3]); AC = AB + BC
+print('Q7', N(deg(acos(AB.dot(AC)/(AB.norm()*AC.norm()))), 5))
+f = log(2*x - 5) + 2*x**2 - 30; print('Q8 f(3.5)', N(f.subs(x, 3.5), 4), 'f(4)', N(f.subs(x, 4), 4), "x1", N(4 - Rational(3099, 1000)/Rational(1667, 100), 4), "f' =", simplify(diff(f, x)))
+print('Q9', simplify(tan(th) + cot(th) - 2/sin(2*th)), 'cosec2θ=1/2 impossible')
+print('Q10', limit((sin(th + h) - sin(th))/h, h, 0))
+H = Rational(18, 10) + Rational(4, 10)*d - Rational(2, 1000)*d**2
+print('Q11 d', [N(r, 5) for r in solve(H, d)], 'completed', expand(Rational(218, 10) - Rational(2, 1000)*(d - 100)**2 - H), 'adapted max', Rational(218, 10) + Rational(3, 10), 'at d=100')
+print('Q12 m=b, c=log10 a; at log10 3 with c~1.8-1.9, m~2.3:', N(10**(Rational(185, 100) + Rational(23, 10)*log(3, 10)), 4))
+X, Y = 2*cos(t), sqrt(3)*cos(2*t); g = simplify(diff(Y, t)/diff(X, t)); P = (X.subs(t, 2*pi/3), Y.subs(t, 2*pi/3))
+print('Q13 dy/dx', g, 'P', P, 'normal check', simplify(2*P[0] - 2*sqrt(3)*P[1] - 1))
+xx = symbols('xx'); sols = solve(Eq(sqrt(3)*(xx**2/2 - 1), (2*xx - 1)/(2*sqrt(3))), xx); print('Q13 Q', [(s_, simplify((2*s_ - 1)/(2*sqrt(3)))) for s_ in sols])
+ys = [3, 2.3041, 1.9242, 1.9089, 2.2958]; print('Q14 trap', round(0.25*(ys[0] + ys[-1] + 2*sum(ys[1:-1])), 3), 'exact', nsimplify(simplify(integrate(x**2*log(x)/3 - 2*x + 5, (x, 1, 3)))))
+F = 4*sin(2*x)/exp(sqrt(2)*x - 1); print('Q15 f\' numerator', simplify(diff(F, x)*exp(sqrt(2)*x - 1)))
+xP, xQ = atan(sqrt(2))/2, (pi + atan(sqrt(2)))/2; print('Q15 P', N(xP, 4), 'Q', N(xQ, 4), '(i) f(2x) min at', N(xQ/2, 4), '(ii) 3-2f min at P', N(xP, 4))
+a = symbols('a', positive=True)
+I4 = expand_log(integrate(1 + 1/t, (t, a, 2*a)), force=True); print('Q4 integral', I4, '-> a = ln7 - ln2 = ln(7/2), k = 7/2')
+import random
+print('Q9 numeric max error', max(abs(N((tan(v) + cot(v) - 2/sin(2*v)))) for v in [0.3, 0.7, 1.1, 2.0, 2.9]))

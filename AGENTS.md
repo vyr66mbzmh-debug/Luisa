@@ -1,5 +1,14 @@
 # Luisa agent instructions
 
+## Quick start for any AI agent
+These steps work with any engine or person, and need no earlier conversation:
+1. Read this file, then `HANDOFF.md` (current state, "Tooling, access and where everything lives") and the assigned GitHub issue.
+2. Run `python3 scripts/bootstrap.py`, which builds the pinned environment in the private state folder. Then use `<state>/env/bin/python` with `env/bin` first on `PATH` and `LUISA_BROWSER_CHANNEL` as printed.
+3. Run `python3 scripts/luisa.py doctor`. Every line must say PASS. A MISSING line names the human action; that is a genuine blocker, so report it.
+4. Follow `docs/agentic/RELEASE-RUNBOOK.md` for any import, release, deployment or owner report. Its numbered steps use only tooling in this repository.
+5. Private values come only from `WORKSPACE.json` through `scripts/release/private.py`. Never print, commit or paste them.
+Vendor files (CLAUDE.md and similar) only point here.
+
 ## Privacy and authority
 Never commit credentials, account usage snapshots, personal paths/contact data, unpublished source corrections or owner documents. Source materials remain read-only outside this public Git repository. Respect runtime permissions; never disguise a denied operation. Preserve unrelated changes.
 

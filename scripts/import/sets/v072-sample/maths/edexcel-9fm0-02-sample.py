@@ -1,0 +1,16 @@
+from sympy import *
+x, a, th, t, n = symbols('x a theta t n', real=True)
+rts = Poly(x**3 - 8*x**2 + 28*x - 32, x).all_roots(); al, be, ga = rts
+print('Q1', nsimplify(N(sum(1/r for r in rts), 15)), nsimplify(N(prod([r + 2 for r in rts]), 15)), nsimplify(N(sum(r**2 for r in rts), 15)))
+nv = Matrix([3, -4, 2]); print('Q2 dist', (nv.dot(Matrix([6, 2, 12])) - 5)/nv.norm(), 'perp', Matrix([-1, -3, 1]).dot(Matrix([2, 1, 5])), Matrix([-1, -3, 1]).dot(Matrix([1, -1, -2])))
+n2 = Matrix([-1, -3, 1]); print('Q2 angle', N(deg(acos(abs(nv.dot(n2))/(nv.norm()*n2.norm()))), 4))
+M = Matrix([[2, a, 4], [1, -1, -1], [-1, 2, -1]]); print('Q3 det', factor(M.det()), 'inverse', simplify(M.inv()*(M.det())))
+A = Matrix([[3, 0], [6, 1]]); print('Q3(ii)', all(A**k == Matrix([[3**k, 0], [3*(3**k - 1), 1]]) for k in range(1, 8)))
+print('Q4', simplify(cos(th)**4 - (cos(4*th) + 4*cos(2*th) + 3)/8))
+y = sin(x)*sinh(x); print('Q5', simplify(diff(y, x, 4) + 4*y), series(y, x, 0, 11))
+r = 8*cos(th) + 6*sin(th); print('Q6 r^2 = 8x + 6y circle check', simplify((r*cos(th) - 4)**2 + (r*sin(th) - 3)**2))
+Ar = integrate(r**2/2, (th, 0, pi/3)); print('Q6 area', nsimplify(simplify(Ar)), N(Ar, 5))
+f, rr = Function('f'), Function('r'); sol = dsolve([Eq(f(t).diff(t), Rational(1, 5)*f(t) + Rational(1, 10)*rr(t)), Eq(rr(t).diff(t), -Rational(1, 5)*f(t) + Rational(2, 5)*rr(t))], [f(t), rr(t)], ics={f(0): 6, rr(0): 20})
+F, R = [simplify(s.rhs) for s in sol]; print('Q7 f', F, 'r', R); T = nsolve(R, t, 15); print('Q7 r=0 at t', T, 'year', 2000 + floor(T), 'foxes', N(F.subs(t, T), 5))
+T = 10*(pi - atan(Rational(5, 2))); print('Q7 first positive r=0 at t', N(T, 5), 'year', 2000 + floor(N(T)), 'foxes', N(F.subs(t, T), 5))
+print('Q5 nth term', 'term n: (-1)^(n+1) 2^(2n-1) x^(4n-2)/(4n-2)! check n=1..3', [(-1)**(k + 1)*2**(2*k - 1)/factorial(4*k - 2) for k in (1, 2, 3)])

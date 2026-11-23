@@ -1,2 +1,9 @@
 # Reviewer rules
 Review assigned branch against base SHA, issue and requirement IDs. Check real outcomes, not only passing tests. Probe broken links, HTML returned as JSON/PDF, traversal/symlink cases in tooling, partial answer concealment, keyboard reveal order, geometry, hanging indents and writing space. Verify source and mathematical completeness and matching booklet. For tooling-only changes, test build exclusion, hashes and refusal on missing checks. Do not edit code or post public source corrections. Write concise findings, severity, reproduction and ship/fix-first verdict. No runtime secrets or owner data in fixtures.
+
+## Reviewer role (any engine, OPS-066)
+The independent reviewer is a role, not a product. Any engine or person with no stake in the change may take it: a fresh agent session, another provider's model, or a human. It must not have written the change.
+- **Inputs:** the PR number, the exact head SHA and base SHA, the issue and requirement IDs, and the release spec `docs/releases/v<version>.json`. The reviewer gets read access to the repository and may run `python3 scripts/luisa.py gate` and the browser suites. It gets no private configuration, credentials or owner data.
+- **Output:** one JSON record that is valid against `docs/agentic/review-record.schema.json`. Fields: `head`, `base` (full SHAs), `verdict` (`ship` or `fix`), `findings` (a list of `{severity: high|medium|low, where, issue, evidence?, resolution?}`; an empty list is allowed), `review` (what was checked), and optional `reviewers`. `scripts/land.py` refuses a record that is invalid, names a different head, or says `fix`.
+- **Fix round:** the lead fixes the findings, records each `resolution`, pushes, and asks for a new review of the new head. Never edit a review record to change its verdict.
+

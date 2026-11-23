@@ -11,12 +11,36 @@ ROOT = Path(__file__).resolve().parents[1]
 def run(*args):
     return subprocess.check_output(args, cwd=ROOT, text=True).strip()
 
+def review_errors(review):
+    """Validate a review record against docs/agentic/review-record.schema.json (stdlib only)."""
+    import re
+    errors = []
+    for key in ('head', 'base', 'verdict', 'findings', 'review'):
+        if key not in review:
+            errors.append('missing ' + key)
+    for key in ('head', 'base'):
+        if key in review and not re.fullmatch(r'[0-9a-f]{40}', str(review[key])):
+            errors.append(key + ' must be a full 40-character SHA')
+    if review.get('verdict') not in ('ship', 'fix'):
+        errors.append('verdict must be ship or fix')
+    if not isinstance(review.get('findings', []), list) or any(
+            not isinstance(f, dict) or f.get('severity') not in ('high', 'medium', 'low') or not f.get('where') or not f.get('issue')
+            for f in review.get('findings', [])):
+        errors.append('findings must be a list of {severity, where, issue}')
+    if len(str(review.get('review', ''))) < 40:
+        errors.append('review must describe what was checked')
+    return errors
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('pr', type=int)
     parser.add_argument('--review-record', required=True, type=Path)
     args = parser.parse_args()
     review = json.loads(args.review_record.read_text())
+    problems = review_errors(review)
+    if problems:
+        raise SystemExit('Invalid review record: ' + '; '.join(problems))
     head = run('git', 'rev-parse', 'HEAD')
     if review.get('head') != head or review.get('verdict') != 'ship':
         raise SystemExit('A ship verdict for the current HEAD is required')

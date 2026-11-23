@@ -1,0 +1,38 @@
+{
+  "version": "0.73",
+  "previous": "0.72",
+  "date": "2026-11-23",
+  "issue": 130,
+  "note": "Release tooling in Git, agent-neutral runbook, cold-start doctor, privacy gate and a single handoff in every report.",
+  "changes": [
+    "Release tooling moved into Git: scripts/release/ (land, build, deploy to ADA, live and offline verification, archive, report, completion) and scripts/import/ (the past-paper pipeline with the v0.72 Sample papers as its reference set), each with a README, plus docs/agentic/RELEASE-RUNBOOK.md.",
+    "Private values are read only through scripts/release/private.py and never printed; a new privacy check in the gate blocks personal paths, private hosts and addresses, stray emails and owner source PDFs.",
+    "One bootstrap command (scripts/bootstrap.py) builds the pinned environment in the private state folder; scripts/luisa.py doctor checks a fresh agent has everything it needs.",
+    "Every release report form now carries exactly one handoff (the whole of HANDOFF.md, headed with the release version); HANDOFF.md keeps only the current release block, with earlier blocks in docs/handoff/HISTORY.md.",
+    "No user-visible feature changes."
+  ],
+  "reportIntro": [
+    "Luisa v0.73 moves all release tooling into the repository, so any AI agent or person can import, release, deploy, verify and report from a fresh checkout and the private configuration alone. There are no user-visible feature changes; Papers still holds 44 past papers (444 questions, 3,450 marks).",
+    "Every report now carries exactly one handoff: the whole of HANDOFF.md under a single heading with the release version. New checks in the gate keep private data out of the public repository and fail a release whose handoff is missing or inconsistent."
+  ],
+  "requirements": [
+    "OPS-064",
+    "OPS-065",
+    "OPS-066",
+    "OPS-067",
+    "OPS-068",
+    "OPS-069",
+    "OPS-070"
+  ],
+  "changelog": [
+    "Tooling: release scripts in scripts/release/ and the past-paper import pipeline in scripts/import/ (reference set: the v0.72 Sample papers), each with a README; numbered runbook in docs/agentic/RELEASE-RUNBOOK.md; quick start for any AI agent at the top of AGENTS.md.",
+    "Privacy: `python3 scripts/luisa.py privacy` (in the gate) blocks personal paths, private hosts and addresses, stray emails and owner source PDFs; legacy lesson files no longer record a personal path.",
+    "Environment: `python3 scripts/bootstrap.py` (pinned, in the private state folder) and `python3 scripts/luisa.py doctor` (PASS/MISSING with the human action).",
+    "Reports: exactly one handoff in every form, headed with the release.json version; the separate short handoff paragraph is removed; HANDOFF.md holds only the current release block (history in docs/handoff/HISTORY.md).",
+    "Releases are complete only when `scripts/release/finish.py complete` passes (HANDOFF.md, register, issue evidence, token log with its source, SMTP record).",
+    "No user-visible feature changes."
+  ],
+  "roadmapHeading": "Tooling v0.73",
+  "roadmap": "[Issue #130](https://github.com/vyr66mbzmh-debug/Luisa/issues/130) moves release-critical tooling into Git with an agent-neutral runbook, a pinned bootstrap, a cold-start doctor, a privacy gate and a single handoff in every report (OPS-064 to OPS-070). No user-visible feature changes.",
+  "handoff": "docs/releases/v0.73-handoff.md"
+}
