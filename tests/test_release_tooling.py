@@ -34,9 +34,11 @@ class ReleaseToolingTests(unittest.TestCase):
     def test_scripts_do_not_need_ripgrep_node_or_string_waits(self):
         for path, text in script_sources():
             with self.subTest(str(path.relative_to(ROOT))):
-                self.assertNotRegex(text, r"""['"]rg['"]|\brg -""", 'ripgrep is not part of the environment')
-                self.assertNotRegex(text, r"""\[\s*['"](?:node|npx|npm)['"]""", 'Node is not assumed by tooling')
-                self.assertNotRegex(text, r'wait_for_function\(\s*f?[\'"]', 'string-evaluated waits break under CSP; use locators')
+                for pattern, why in ((r"""['"]rg['"]|\brg -""", 'ripgrep is not part of the environment'),
+                                     (r"""\[\s*['"](?:node|npx|npm)['"]""", 'Node is not assumed by tooling'),
+                                     (r'wait_for_function\(\s*f?[\'"]', 'string-evaluated waits break under CSP; use locators')):
+                    found = re.search(pattern, text)
+                    self.assertIsNone(found, f'{why}: {found and text[max(0, found.start() - 40):found.end() + 20]!r}')
 
     def test_repository_code_has_no_personal_absolute_paths(self):
         for path, text in script_sources():

@@ -36,6 +36,12 @@ def ok(message):
     print(message, flush=True)
 
 
+def clear(p):
+    """Clear the current paper selection (the button is disabled when nothing is selected)."""
+    if p.locator('#papers-clear').is_enabled():
+        p.locator('#papers-clear').click()
+
+
 def printed(p, out, name, check=None):
     with p.expect_popup() as pop:
         p.locator('#papers-print').click()
@@ -83,16 +89,18 @@ def run(url, out, channel):
             ids = [q['id'] for q in cat if q['paperId'] == pid and CP2_6 in q['chapterKeys']]
             if not ids:
                 continue
-            p.locator('#papers-clear').click()
+            clear(p)
             p.locator('#papers-past-paper').select_option(pid)
             expect(p.locator('#filter-title')).to_have_text(f'{len(ids)} questions in the selection')
             p.locator('#papers-browse').click()
+            expect(p.locator('[data-add]')).to_have_count(min(len(ids), 8))
+            expect(p.locator('[data-add]').first).to_have_attribute('data-add', ids[0])
             shown = p.locator('[data-add]').evaluate_all('ns=>ns.map(n=>n.dataset.add)')
             assert shown == ids[:8], (pid, shown)
             for x in shown:
                 p.locator(f'[data-add="{x}"]').click()
             expect(p.locator('#papers-selected-count')).to_have_text(str(len(shown)))
-            prefixes = tuple(f'{pid}/q{int(x.rsplit("/q", 1)[1]):02d}-ms-' for x in shown)
+            prefixes = tuple(f'{pid}/q{z}{int(x.rsplit("/q", 1)[1])}-ms-' for x in shown for z in ('', '0'))  # q6-ms- (older) or q06-ms-
 
             def own_schemes(q, prefixes=prefixes, pid=pid):
                 srcs = q.locator('.solutions-page img').evaluate_all('ns=>ns.map(n=>n.getAttribute("src"))')
@@ -100,7 +108,7 @@ def run(url, out, channel):
             printed(p, out, pid, own_schemes)
             ok(f'Offline {pid} Core Pure 2 chapter 6 print with its own schemes passed')
         # Teacher exam paper offline (questions only; then questions and mark scheme).
-        p.locator('#papers-clear').click()
+        clear(p)
         p.locator('#papers-past-paper').select_option('edexcel-9fm0-02-2024-june')
         p.locator('#papers-browse').click()
         p.locator('[data-add="exam/edexcel-9fm0-02-2024-june/q1"]').click()
@@ -130,7 +138,7 @@ def run(url, out, channel):
         q.close()
         ok('Offline teacher exam paper print passed (questions only, and questions and mark scheme)')
         # Cross-book pack: Pure Year 2 chapter 11, In paper order.
-        p.locator('#papers-clear').click()
+        clear(p)
         p.locator(f'#papers-topics input[value="{CP2_6}"]').uncheck()
         p.locator('#papers-course').select_option('maths-a-level')
         p.locator('#papers-book').select_option('maths-a-level/maths-pure-year-2')

@@ -37,6 +37,7 @@ from playwright.sync_api import sync_playwright, expect  # noqa: E402
 ROOT = Path(__file__).resolve().parents[2]
 expect.set_options(timeout=45000)
 PASSED = []
+DRY_RUN = False
 
 
 def ok(message):
@@ -203,7 +204,7 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
                 if qid.startswith('exam/'):
                     pid, number = qid.split('/')[1], int(qid.rsplit('/q', 1)[1])
                     srcs = preview.locator(f'.print-solution[data-question-id="{qid}"] img').evaluate_all('ns=>ns.map(n=>n.getAttribute("src"))')
-                    assert srcs and all(f'{pid}/q{number:02d}-ms-' in x for x in srcs), (qid, srcs)
+                    assert srcs and all(re.search(rf'{re.escape(pid)}/q0?{number}-ms-', x) for x in srcs), (qid, srcs)  # older papers: q6-ms-, newer: q06-ms-
         if layout == 'condensed':
             assert preview.locator('.working-space').count() == 0
             if label == 'gold':
@@ -215,7 +216,8 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
     def select_whole(pid):
         n = sum(1 for q in cat if q['paperId'] == pid)
         marks = sum(q['marks'] for q in cat if q['paperId'] == pid)
-        p.locator('#papers-clear').click()
+        if p.locator('#papers-clear').is_enabled():
+            p.locator('#papers-clear').click()
         p.locator('#papers-past-paper').select_option(pid)
         expect(p.locator('#filter-title')).to_have_text(f'{n} questions in the selection')
         p.locator('#papers-count').fill(str(n))
@@ -284,8 +286,13 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
     other_last = [q['id'] for q in cat if q['paperId'] == other][-1]
     p.locator('#papers-past-paper').select_option(other)
     p.locator('#papers-browse').click()
+    first_add = p.locator('[data-add]').first
+    expect(first_add).to_have_attribute('data-add', re.compile(f'^exam/{re.escape(other)}/q'))
     while not p.locator(f'[data-add="{other_last}"]').count():
+        shown = first_add.get_attribute('data-add')
+        expect(p.locator('#papers-next')).to_be_enabled()
         p.locator('#papers-next').click()
+        expect(first_add).not_to_have_attribute('data-add', shown)
     p.locator(f'[data-add="{other_last}"]').click()
     p.locator('#papers-order').select_option('selection')
     mixed = p.locator('[data-remove]').evaluate_all('ns=>ns.map(n=>n.dataset.remove)')
@@ -439,7 +446,10 @@ def manifest_checks(p, url, role, rev, version):
         directory = ada_tool.folder(rev)
         assert ada_tool.live_folder() == directory
         manifest = json.loads(private.remote('cat ' + directory + '/' + {'staff': 'staff', 'student': 'content'}[role] + '/build-manifest.json'))
-    assert (manifest['revision'], manifest['edition'], manifest['version'], manifest['dirty']) == (rev, role, version, False)
+    if DRY_RUN:  # local build of a working tree: it must be this build, but may be uncommitted
+        assert (manifest['revision'], manifest['edition'], manifest['version']) == (local['revision'], role, version)
+    else:
+        assert (manifest['revision'], manifest['edition'], manifest['version'], manifest['dirty']) == (rev, role, version, False)
     paths = ['release.json', 'papers.html', 'papers.js', 'papers.css', 'paper-preview.html', 'papers-print.js', 'papers-print.css',
              'exam-catalogue.json', 'practice-catalogue.json', 'textbook-catalogue.json']
     paths += [path for path in local['files'] if path.startswith('content/exams/')]
@@ -474,6 +484,8 @@ def main():
     parser.add_argument('--papers', help='comma-separated paper ids to exercise in depth')
     parser.add_argument('--channel', default=os.environ.get('LUISA_BROWSER_CHANNEL') or 'chromium', help='Playwright browser channel (chrome, or chromium for the bundled browser)')
     args = parser.parse_args()
+    global DRY_RUN
+    DRY_RUN = bool(args.url)
     release = json.loads((ROOT / 'release.json').read_text())
     version = release['version']
     rev = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()

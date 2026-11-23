@@ -62,7 +62,8 @@ def run():
         if have != want:
             wrong.append(f'{name} {have or "absent"} (pinned {want})')
     item('Pinned Python packages (requirements-tools.txt)', not wrong, f'{len(pins())} pinned' if not wrong else '; '.join(wrong[:4]), bootstrap)
-    code, out = quiet(['node', '--version'])
+    node = shutil.which('node')  # presence check only; tooling never depends on Node
+    code, out = quiet([node, '--version']) if node else (127, '')
     item('Node.js for the lesson renderer test', code == 0, out, bootstrap + ' (it provides node in env/bin); put env/bin first on PATH')
     env_record = private.state_dir() / 'env' / 'luisa-env.json'
     channel = os.environ.get('LUISA_BROWSER_CHANNEL') or (json.loads(env_record.read_text())['browserChannel'] if env_record.exists() else 'chromium')
@@ -102,8 +103,12 @@ def run():
         return
     code = subprocess.run(private.ssh_command() + ['test -f ' + private.layout('startScript')], capture_output=True, timeout=40).returncode
     item('ADA SSH access', code == 0, '', 'ask the owner to authorise this machine\'s SSH key for the ADA host (and accept its host key)')
-    try:
-        status = urllib.request.urlopen(urllib.request.Request(private.get('ada.url').rstrip('/') + '/login', headers={'User-Agent': 'luisa-doctor'}), timeout=15).status
+    try:  # Playwright's HTTP stack, as used by the live QA (some Python OpenSSL builds cannot negotiate with this host)
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as p:
+            request = p.request.new_context()
+            status = request.get(private.get('ada.url').rstrip('/') + '/login', timeout=20000, max_redirects=0).status
+            request.dispose()
         item('ADA website', status == 200, '')
     except Exception:
         item('ADA website', False, '', 'check the ADA host is up (owner)')
@@ -122,7 +127,7 @@ def run():
         pdfs = sum(1 for _ in source.rglob('*.pdf'))
         item('Past-paper source folder', True, f'readable; {pdfs} PDFs present' + ('' if pdfs else ' (the owner supplies papers before an import)'))
     else:
-        item('Past-paper source folder', False, '', 'ask the owner to create the folder named by "pastPaperSource" (macOS may need Files and Folders permission for the terminal)')
+        item('Past-paper source folder', False, '', 'create the folder named by "pastPaperSource" (default <state>/past-paper-source) or point the key at the folder of new papers; macOS may need Files and Folders permission for the terminal')
     item('Tesseract OCR (import aid only)', bool(shutil.which('tesseract')), '', 'optional: brew install tesseract', optional=True)
 
 
