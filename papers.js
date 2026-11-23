@@ -403,6 +403,8 @@
     }
     const ids = new Set();
     function add(row, keys) {
+      // PAP-074-1: every question carries its derived mark-scheme flag.
+      if (!['official', 'source', 'worked', 'none'].includes(row.markScheme)) throw Error('A question has no mark-scheme classification: ' + row.id + '. Reload the page to retry.');
       if (ids.has(row.id) || !Array.isArray(keys) || !keys.length || keys.some(key => !chapters.has(key))) {
         throw Error('Invalid chapter association for ' + row.id + '. Reload the page to retry.');
       }
@@ -411,14 +413,14 @@
       catalogue.push(Object.freeze({...row, chapterKeys: Object.freeze(chapterKeys)}));
     }
     // The source skill retains its library identity, even for cross-book targets.
-    const eligible = new Map(textbook.questions.map(q => [q.skill + '/' + q.question, q.targets]));
+    const eligible = new Map(textbook.questions.map(q => [q.skill + '/' + q.question, q]));
     for (const course of window.FMQ_LIBRARY.courses) for (const book of course.books) for (const topic of book.topics) for (const skill of topic.skills) {
       if (skill.reference || skill.available === false) continue;
       for (const question of skill.questions) {
-        const targets = eligible.get(skill.id + '/' + question.number);
+        const entry = eligible.get(skill.id + '/' + question.number), targets = entry?.targets;
         if (question.reference || !targets) continue;
         const id = [course.id,book.id,topic.id,skill.id,'q' + question.number].join('/');
-        add({id, sourceKind: 'luisa', bank: 'practice', difficulty: null, number: question.number,
+        add({id, sourceKind: 'luisa', bank: 'practice', difficulty: null, number: question.number, markScheme: entry.markScheme,
           courseId: course.id, bookId: book.id, topicId: topic.id, skillId: skill.id,
           courseTitle: course.title, bookTitle: book.title, topicTitle: topic.title, skillCode: skill.code, skillTitle: skill.title},
           targets.map(target => bookKeys.get(target.book) + '/' + target.chapter));

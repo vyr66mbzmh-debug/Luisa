@@ -407,7 +407,7 @@
       throw error;
     }
   }
-  window.LUISA_PAPERS_PRINT = Object.freeze({create, paperMinutes, normaliseMarks, placeMarks,
+  window.LUISA_PAPERS_PRINT = Object.freeze({create, paperMinutes, normaliseMarks, placeMarks, sourceLabel: source,
     // Shared, unchanged print internals for the teacher-only exam paper (papers-exam.js).
     internals: Object.freeze({macros, element, whileOpen, asset, content, prepare, overflows, wideContent, splitBlock})});
 })();

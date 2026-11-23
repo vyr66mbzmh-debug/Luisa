@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.74
+
+[Issue #135](https://github.com/vyr66mbzmh-debug/Luisa/issues/135) adds a derived mark-scheme flag to every question. The teacher-only exam paper uses only questions with an official mark scheme, hides sources on question pages and names them in the scheme (PAP-074-1 to PAP-074-4). PMT Core Pure 1 and 2 follow in v0.75 and v0.76.
+
 ## Tooling v0.73
 
 [Issue #130](https://github.com/vyr66mbzmh-debug/Luisa/issues/130) moves release-critical tooling into Git with an agent-neutral runbook, a pinned bootstrap, a cold-start doctor, a privacy gate and a single handoff in every report (OPS-064 to OPS-070). No user-visible feature changes.

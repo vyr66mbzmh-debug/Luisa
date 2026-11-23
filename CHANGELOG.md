@@ -1,3 +1,10 @@
+## Luisa v0.74
+
+- Papers: internal `markScheme` flag (official | source | worked | none) on every catalogue row, derived by `scripts/mark_schemes.py` and checked in the gate; counts per source on #135 (444 official, 8,622 worked, 0 none).
+- Exam paper: only questions with an official (or source) mark scheme in manual selection, timed generation and every print option; the panel shows the eligible count; a flag-false question is labelled "No mark scheme" and blocks Preview.
+- Exam paper: no source on the front page or question pages; each scheme entry shows "Source: … · ID …".
+- Other printouts unchanged.
+
 ## Luisa v0.73
 
 - Tooling: release scripts in scripts/release/ and the past-paper import pipeline in scripts/import/ (reference set: the v0.72 Sample papers), each with a README; numbered runbook in docs/agentic/RELEASE-RUNBOOK.md; quick start for any AI agent at the top of AGENTS.md.

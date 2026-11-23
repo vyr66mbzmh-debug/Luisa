@@ -64,8 +64,9 @@
 <label class="field" for="papers-exam-date">Date (optional)<input id="papers-exam-date" type="text" autocomplete="off" placeholder="e.g. Friday 20th November P4 &amp; P5"></label>
 </div>
 <label class="field" for="papers-exam-instructions">Instructions (leave a blank line between paragraphs)<textarea id="papers-exam-instructions" rows="7"></textarea></label>
+<p id="papers-exam-eligible" class="help" aria-live="polite"></p>
 <fieldset class="exam-timed"><legend>Timed paper from the chosen topics</legend>
-<p class="help">Uses the sources, difficulty and topics chosen above. Time is 6 minutes per 5 marks, rounded down; the paper is chosen to within ±2 minutes and ordered easy (first 20% of marks) to difficult (last 20%).</p>
+<p class="help">Uses the sources, difficulty and topics chosen above, and only questions with an official mark scheme. Time is 6 minutes per 5 marks, rounded down; the paper is chosen to within ±2 minutes and ordered easy (first 20% of marks) to difficult (last 20%).</p>
 <div class="button-row"><button type="button" class="quiet" data-exam-preset="32">1 period · 32 minutes (+8)</button><button type="button" class="quiet" data-exam-preset="60">2 periods · 60 minutes (+15)</button></div>
 <label class="field" for="papers-exam-minutes">Target time in minutes<input id="papers-exam-minutes" type="number" min="2" max="600" step="1" inputmode="numeric"></label>
 <p id="papers-exam-target-help" class="help"></p>

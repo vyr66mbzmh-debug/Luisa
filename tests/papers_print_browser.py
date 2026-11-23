@@ -271,7 +271,7 @@ class PapersPrintTests(unittest.TestCase):
         payload = {q['id']: q for q in json.loads((ROOT / f'content/exams/{paper}.json').read_text())['questions']}
         descriptors = {q['id']: q for q in json.loads((ROOT / 'exam-catalogue.json').read_text())['questions']}
         return [dict(payload[f'exam/{paper}/q{n}'], **{key: descriptors[f'exam/{paper}/q{n}'][key] for key in
-                     ('marks', 'difficulty', 'sourceLabel', 'questionNumber', 'paperCode')}, sourceKind='past-exam')
+                     ('markScheme', 'marks', 'difficulty', 'sourceLabel', 'questionNumber', 'paperCode')}, sourceKind='past-exam')
                 for n in numbers]
 
     def assert_exam_print(self, preview, result, rows, answers):
@@ -646,7 +646,8 @@ class PapersPrintTests(unittest.TestCase):
 
     def test_teacher_exam_paper_structure_front_page_and_pdf_PAP_065C(self):
         import fitz, re
-        long_row = dict(practice_row('pure-year-1', 1, '1.6/q9'), id='practice/test/long', marks=25,
+        # Layout fixture: a long question flagged as having a scheme, to exercise splitting across pages.
+        long_row = dict(practice_row('pure-year-1', 1, '1.6/q9'), id='practice/test/long', marks=25, markScheme='source',
                         question='<ol class="parts">' + ''.join(f'<li><p>{"Show that the long sequence term " * 6}{n}.</p><div class="equation" data-math="u_{{{n}}}=\\frac{{{n}}}{{{n}+1}}" data-display="true"></div><p>{"Explain each step clearly. " * 8}</p><span class="marks">(1)</span></li>' for n in range(1, 26)) + '</ol>')
         rows = (self.exam_rows('edexcel-9fm0-01-2024-june', [1, 2]) + self.exam_rows('edexcel-9ma0-31-2024-june', [1, 2, 3])
                 + self.exam_rows('edexcel-9ma0-32-2024-june', [5]) + [long_row])
@@ -865,17 +866,50 @@ class PapersPrintTests(unittest.TestCase):
         self.assertEqual(preview.locator('.exam-date sup').all_inner_texts(), ['nd'])
         preview.close()
 
+    def test_exam_mixed_sources_hide_source_on_questions_and_name_it_in_scheme_PAP_074(self):
+        import fitz
+        # Two papers and a non-past-paper source with its own marking scheme (fixture; PMT uses this shape in later releases).
+        own = dict(practice_row('pure-year-2', 2, '2.1/q1'), id='practice/test/own-scheme', marks=3, markScheme='source',
+                   sourceKind='practice-booklet', chapterNumber=2, subchapterLabel='2.1 Fixture exercise', questionLabel='1')
+        rows = self.exam_rows('edexcel-9fm0-01-2019-june', [2]) + [own] + self.exam_rows('edexcel-9ma0-32-2024-june', [1])
+        self.page.add_script_tag(url='/papers-exam.js')
+        expected = self.page.evaluate('rows => rows.map(LUISA_PAPERS_EXAM.schemeSource)', rows)
+        self.assertEqual(expected, ['Source: Edexcel June 2019 9FM0/01 Q2 · ID exam/edexcel-9fm0-01-2019-june/q2',
+                                    'Source: Practice Booklet · Chapter 2 · 2.1 Fixture exercise · Q1 · ID practice/test/own-scheme',
+                                    'Source: Edexcel June 2024 9MA0/32 Q1 · ID exam/edexcel-9ma0-32-2024-june/q1'])
+        preview, result = self.exam_paper(rows, content='both', title='Mixed')
+        self.assertTrue(result['ready'], result)
+        questions = ' '.join(preview.locator('.exam-front-page, .exam-page').all_inner_texts())
+        for leak in ('Source', 'Edexcel', 'June 2019', 'June 2024', '9FM0', '9MA0', 'Practice Booklet', 'Fixture exercise', 'ID ', 'Q2', 'exam/'):
+            self.assertNotIn(leak, questions)
+        self.assertEqual(preview.locator('.exam-page .exam-scheme-source, .exam-page .question-source, .exam-page .question-context').count(), 0)
+        self.assertEqual(preview.locator('.exam-scheme-source').all_inner_texts(), expected)
+        with tempfile.TemporaryDirectory() as folder:
+            preview.pdf(path=f'{folder}/mixed.pdf', prefer_css_page_size=True)
+            with fitz.open(f'{folder}/mixed.pdf') as pdf:
+                texts = [page.get_text().replace('\n', ' ') for page in pdf]
+        first_scheme = next(i for i, t in enumerate(texts) if 'Mark scheme: Mixed' in t)
+        self.assertFalse(any(leak in t for t in texts[:first_scheme] for leak in ('Source:', 'Edexcel', '9FM0', '9MA0', 'Practice Booklet')))
+        scheme_text = ' '.join(texts[first_scheme:])
+        for r in rows:
+            self.assertIn(r['id'], scheme_text)
+        preview.close()
+
     def test_exam_mark_scheme_print_options_PAP_067(self):
         import fitz, re
         # Mixed Paper 1 and Paper 2 with overlapping question numbers, plus an exam-style practice question.
         mixed = [row for pair in zip(self.exam_rows('edexcel-9ma0-01-2025-june', (1, 7)), self.exam_rows('edexcel-9ma0-02-2025-june', (1, 7))) for row in pair]
-        practice = dict(practice_row('pure-year-1', 1, '1.6/q9'), id='practice/test/scheme', marks=4)
-        rows = mixed + [practice]
-        total = sum(r['marks'] for r in rows)
+        practice = dict(practice_row('pure-year-1', 1, '1.6/q9'), id='practice/test/scheme', marks=4, markScheme='worked')
         options = dict(yearGroup='L6', title='Maths Assessment', monthYear='November 2026')
         self.page.add_script_tag(url='/papers-exam.js')
-        error = self.page.evaluate('rows => LUISA_PAPERS_EXAM.create(rows, {content: "solutions"}).then(() => null, e => e.message)', rows)
+        error = self.page.evaluate('rows => LUISA_PAPERS_EXAM.create(rows, {content: "solutions"}).then(() => null, e => e.message)', mixed)
         self.assertIn('Choose Questions only, Mark scheme only or Questions and mark scheme', error)
+        # PAP-074-2: a question with worked solutions only never enters an exam paper, in any print choice.
+        for choice in ('questions', 'scheme', 'both'):
+            error = self.page.evaluate('input => LUISA_PAPERS_EXAM.create(input.rows, {content: input.choice}).then(() => null, e => e.message)', dict(rows=mixed + [practice], choice=choice))
+            self.assertEqual(error, 'Every question in an exam paper needs an official mark scheme. Remove the 1 question marked "No mark scheme", then try again.')
+        rows = mixed
+        total = sum(r['marks'] for r in rows)
 
         def scheme_checks(preview, result):
             scheme = preview.locator('.exam-scheme-page')
@@ -898,6 +932,11 @@ class PapersPrintTests(unittest.TestCase):
                 self.assertTrue(srcs and all(f'resources/exams/{paper}/' in src and '-ms-' in src for src in srcs), (r['id'], srcs))
                 self.assertTrue(preview.locator(f'.exam-scheme[data-question-id="{r["id"]}"] img').evaluate_all('ns=>ns.every(n=>n.complete&&n.naturalWidth>0)'))
             self.assertEqual(preview.locator('.exam-scheme-page .answer-lines, .exam-scheme-page .question-total').count(), 0)
+            # PAP-074-3: each question's exact source (paper, series, original question) and bank ID, once, in the scheme.
+            for r in rows:
+                label = r['sourceLabel'].removeprefix('Source: ')
+                self.assertEqual(preview.locator(f'.exam-scheme[data-question-id="{r["id"]}"] .exam-scheme-source').all_inner_texts(),
+                                 [f'Source: {label} · ID {r["id"]}'])
             self.assertTrue(scheme.locator('.page-content').evaluate_all('ns=>ns.every(n=>n.scrollHeight<=n.clientHeight+1)'))
             return n
 
@@ -933,6 +972,15 @@ class PapersPrintTests(unittest.TestCase):
                         if choice != 'scheme':
                             self.assertIn('Maths Assessment', texts[0]); self.assertIn(f'Total marks available: {total}', texts[0])
                             self.assertEqual(re.findall(r'Page \d+ of \d+', texts[1]), [f'Page 1 of {exam_pages}'])
+                        question_texts = texts[1:1 + exam_pages] if choice != 'scheme' else []
+                        for r in rows:  # PAP-074-3: no source, paper, series, original number or ID on question pages
+                            for leak in (r['sourceLabel'].removeprefix('Source: '), r['paperCode'], r['id'], 'Source:', 'June 2025'):
+                                self.assertFalse(any(leak in t for t in [texts[0]] + question_texts if choice != 'scheme'), (choice, leak))
+                        if choice != 'questions':
+                            first_scheme = 0 if choice == 'scheme' else 1 + exam_pages
+                            joined = ' '.join(texts[first_scheme:]).replace('\n', ' ')
+                            for r in rows:
+                                self.assertIn(r['id'], joined)
                         if choice == 'questions':
                             self.assertFalse(any('Mark scheme' in t for t in texts))
                         else:

@@ -156,6 +156,10 @@ def check(root=ROOT):
                         errors.append('PDF destination is not PDF: ' + url)
         except ValueError:
             errors.append('Unsafe catalogue destination: ' + url)
+    # PAP-074-1: every question's mark-scheme flag equals its derivation from the payloads.
+    sys.path.insert(0, str(root / 'scripts'))
+    import mark_schemes
+    errors.extend(mark_schemes.errors(root))
     for path in public_files(root):
         if path.stat().st_size > 25 * 1024 * 1024:
             errors.append('Cloudflare file exceeds 25MiB: ' + str(path.relative_to(root)))

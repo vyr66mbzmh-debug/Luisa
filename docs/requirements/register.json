@@ -6087,6 +6087,84 @@
         "tests/test_papers_selection.py",
         "tests/papers_print_browser.py"
       ]
+    },
+    {
+      "id": "PAP-074-1",
+      "requirement": "Add an internal flag on every question in the bank: whether an official mark scheme (or equivalent source marking scheme) is available, versus worked solutions only or neither. Derive it from the existing data for all questions (past-paper questions with paired official schemes; exam-style and practice questions: flag only where a mark scheme genuinely exists, not for worked solutions alone). Report counts per source in the issue.",
+      "acceptance": [
+        "Every catalogue row (9,066) carries markScheme official|source|worked|none, derived by scripts/mark_schemes.py from the payloads and checked in luisa.py check.",
+        "Past papers are official only when every scheme step is an official mark-scheme crop of the same paper; worked solutions are never flagged as a mark scheme.",
+        "Counts per source are on #135: 444 official (past papers), 8,622 worked (554 exam style, 1,921 Practice Booklet, 6,147 skill questions), 0 none."
+      ],
+      "scope": "v0.74 teacher-only exam paper: Cloudflare owner (including disconnected use) and ADA staff; pupils never see the exam paper",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #135, 23 November 2026",
+      "evidence": [
+        "GitHub issue #135",
+        "scripts/mark_schemes.py",
+        "tests/test_mark_schemes.py"
+      ]
+    },
+    {
+      "id": "PAP-074-2",
+      "requirement": "The teacher-only exam paper (builder, automatic timed generation and manual selection) may ONLY include questions with the flag true. Questions are not limited to past papers: any source (past paper, exam style, PMT, others) qualifies if it has a mark scheme. Keep excluding questions without marks as now. Counts shown to the teacher stay accurate. The \"Mark scheme\" print option (questions only / mark scheme only / both) uses the matching scheme for each question.",
+      "acceptance": [
+        "Timed generation draws only official/source questions; a manually added flag-false question is labelled No mark scheme and blocks Preview; LUISA_PAPERS_EXAM.create refuses it for every print option.",
+        "The exam panel states N of M questions in the chosen sources and topics with an official mark scheme, equal to the pool counts; Generate is disabled at 0.",
+        "Questions without marks stay excluded; every print option uses each question's own paired scheme."
+      ],
+      "scope": "v0.74 teacher-only exam paper: Cloudflare owner (including disconnected use) and ADA staff; pupils never see the exam paper",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #135, 23 November 2026",
+      "evidence": [
+        "GitHub issue #135",
+        "papers-exam.js",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-074-3",
+      "requirement": "The exam question paper must NOT show the source of any question (no paper name, series, original question number, source label or skill/context line). The mark scheme section MUST show, for each question, its exact source (for example paper, series and original question number, or source and bank ID) so that any issue can be traced. Practice, exam-style and past-paper printouts outside the exam paper are unchanged.",
+      "acceptance": [
+        "Front page and question pages (DOM and real PDF text) contain no source label, paper code, series, original question number, context line or bank ID.",
+        "Each scheme entry shows Source: <exact source> · ID <bank id> once, under its Question N heading.",
+        "Other printouts keep their existing source and context lines (existing print tests unchanged)."
+      ],
+      "scope": "v0.74 teacher-only exam paper: Cloudflare owner (including disconnected use) and ADA staff; pupils never see the exam paper",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #135, 23 November 2026",
+      "evidence": [
+        "GitHub issue #135",
+        "papers-exam.js",
+        "papers-exam.css",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-074-4",
+      "requirement": "Tests: flag derivation, the exam builder never selecting a flag-false question (including timed generation), source absent in the exam question pages and present in the scheme pages, mixed sources and mixed papers. Preserve all print layouts, saved selections and saved-paper IDs.",
+      "acceptance": [
+        "tests/test_mark_schemes.py covers derivation, tampering and unchanged IDs; browser tests cover timed generation over mixed sources, manual flag-false selection, and source absent/present in DOM and PDF for mixed papers and a mixed source.",
+        "The full print suite (every past paper in every layout) and the saved-selection tests pass unchanged."
+      ],
+      "scope": "v0.74 teacher-only exam paper: Cloudflare owner (including disconnected use) and ADA staff; pupils never see the exam paper",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #135, 23 November 2026",
+      "evidence": [
+        "GitHub issue #135",
+        "tests/test_mark_schemes.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
     }
   ]
 }
