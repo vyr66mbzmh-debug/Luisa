@@ -447,7 +447,7 @@
           q.board !== 'Edexcel' || q.status !== 'checked' || !Number.isInteger(q.marks) || q.marks <= 0 || !['easy','medium','difficult'].includes(q.difficulty)) throw Error('A past-exam question is incomplete or unverified.');
       const chapter = chapters.get(q.chapterKeys?.[0]);
       if (!chapter) throw Error('Invalid past-paper chapter for ' + q.id);
-      papers.set(q.paperId, {session: q.session, code: q.paperCode, date: q.examDate || ''});
+      papers.set(q.paperId, {session: q.session, code: q.paperCode, date: q.examDate || q.seriesDate || ''});
       add({...q, sourceKind: 'past-exam', bank: 'past-papers', courseTitle: chapter.courseTitle,
         bookTitle: chapter.bookTitle, topicTitle: chapter.title, skillTitle: q.topicSummary || ''}, q.chapterKeys);
     }

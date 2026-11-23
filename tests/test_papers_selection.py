@@ -265,15 +265,15 @@ class PapersSelection(unittest.TestCase):
         self.assertFalse(self.page.locator('#papers-source-practice').is_checked())
         self.assertTrue(self.page.locator('#papers-source-exam-style').is_checked())
         self.assertTrue(self.page.locator('#papers-source-past-papers').is_checked())
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), '826 questions in the selection')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '941 questions in the selection')
         self.page.locator('#papers-source-past-papers').uncheck()
         self.assertEqual(self.page.locator('#filter-title').inner_text(), '554 questions in the selection')
         self.assertTrue(self.page.locator('#papers-past-paper').is_disabled())
         self.page.locator('#papers-source-exam-style').uncheck()
         self.page.locator('#papers-source-past-papers').check()
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), '272 questions in the selection')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '387 questions in the selection')
         options = self.page.locator('#papers-past-paper option').evaluate_all('nodes=>nodes.map(n=>[n.value,n.textContent])')
-        self.assertEqual(len(options), 28)
+        self.assertEqual(len(options), 40)
         self.assertIn(['edexcel-9ma0-02-2025-june', 'June 2025 Paper 2 (Maths · 9MA0/02)'], options)
         self.assertEqual(options[7:13], [
             ['edexcel-9ma0-31-2024-june', 'June 2024 Paper 3 Statistics (Maths · 9MA0/31)'],
@@ -289,6 +289,19 @@ class PapersSelection(unittest.TestCase):
             ['edexcel-9ma0-01-2023-june', 'June 2023 Paper 1 (Maths · 9MA0/01)'],
             ['edexcel-9fm0-02-2023-june', 'June 2023 Paper 2 (Further Maths · 9FM0/02)'],
             ['edexcel-9fm0-01-2023-june', 'June 2023 Paper 1 (Further Maths · 9FM0/01)'],
+            # PAP-071: papers with no printed exam date sort by their series (November 2021, October 2020), then by code.
+            ['edexcel-9fm0-01-2021-november', 'November 2021 Paper 1 (Further Maths · 9FM0/01)'],
+            ['edexcel-9fm0-02-2021-november', 'November 2021 Paper 2 (Further Maths · 9FM0/02)'],
+            ['edexcel-9ma0-31-2021-october', 'October 2021 Paper 3 Statistics (Maths · 9MA0/31)'],
+            ['edexcel-9ma0-32-2021-october', 'October 2021 Paper 3 Mechanics (Maths · 9MA0/32)'],
+            ['edexcel-9ma0-02-2021-october', 'October 2021 Paper 2 (Maths · 9MA0/02)'],
+            ['edexcel-9ma0-01-2021-october', 'October 2021 Paper 1 (Maths · 9MA0/01)'],
+            ['edexcel-9ma0-31-2020-october', 'October 2020 Paper 3 Statistics (Maths · 9MA0/31)'],
+            ['edexcel-9ma0-32-2020-october', 'October 2020 Paper 3 Mechanics (Maths · 9MA0/32)'],
+            ['edexcel-9ma0-02-2020-october', 'October 2020 Paper 2 (Maths · 9MA0/02)'],
+            ['edexcel-9ma0-01-2020-october', 'October 2020 Paper 1 (Maths · 9MA0/01)'],
+            ['edexcel-9fm0-01-2020-october', 'October 2020 Paper 1 (Further Maths · 9FM0/01)'],
+            ['edexcel-9fm0-02-2020-october', 'October 2020 Paper 2 (Further Maths · 9FM0/02)'],
             # PAP-070: newest exam date first, so the June 2019 Further Maths papers sit between Maths papers.
             ['edexcel-9ma0-31-2019-june', 'June 2019 Paper 3 Statistics (Maths · 9MA0/31)'],
             ['edexcel-9ma0-32-2019-june', 'June 2019 Paper 3 Mechanics (Maths · 9MA0/32)'],
@@ -340,7 +353,7 @@ class PapersSelection(unittest.TestCase):
     def test_whole_pure_mathematics_2_paper_in_source_order_survives_reload(self):
         self.page.unroute('**/exam-catalogue.json')
         self.page.reload()
-        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 28")
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40")
         self.page.locator('#papers-source-practice').uncheck()
         self.page.locator('#papers-source-exam-style').uncheck()
         self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-02-2025-june')
@@ -377,7 +390,7 @@ class PapersSelection(unittest.TestCase):
     def test_june_2018_and_2019_papers_select_only_their_own_questions_PAP_070(self):
         self.page.unroute('**/exam-catalogue.json')
         self.page.reload()
-        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 28")
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40")
         self.page.locator('#papers-source-practice').uncheck()
         self.page.locator('#papers-source-exam-style').uncheck()
         papers = {'edexcel-9ma0-31-2019-june': 5, 'edexcel-9ma0-32-2019-june': 5, 'edexcel-9ma0-02-2019-june': 14,
@@ -418,11 +431,56 @@ class PapersSelection(unittest.TestCase):
         self.assertCountEqual(self.selection_ids(), expected + ['exam/edexcel-9fm0-01-2019-june/q1'])
         self.assertEqual(self.page.locator('#papers-past-paper').input_value(), 'edexcel-9fm0-01-2019-june')
 
+    def test_october_2020_and_2021_and_november_2021_papers_select_only_their_own_questions_PAP_071(self):
+        self.page.unroute('**/exam-catalogue.json')
+        self.page.reload()
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40")
+        self.page.locator('#papers-source-practice').uncheck()
+        self.page.locator('#papers-source-exam-style').uncheck()
+        papers = {'edexcel-9fm0-01-2021-november': 9, 'edexcel-9fm0-02-2021-november': 9, 'edexcel-9ma0-31-2021-october': 6,
+                  'edexcel-9ma0-32-2021-october': 5, 'edexcel-9ma0-02-2021-october': 15, 'edexcel-9ma0-01-2021-october': 15,
+                  'edexcel-9ma0-31-2020-october': 5, 'edexcel-9ma0-32-2020-october': 5, 'edexcel-9ma0-02-2020-october': 16,
+                  'edexcel-9ma0-01-2020-october': 16, 'edexcel-9fm0-01-2020-october': 7, 'edexcel-9fm0-02-2020-october': 7}
+        for paper, count in papers.items():
+            self.page.locator('#papers-past-paper').select_option(paper)
+            self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{count} questions in the selection')
+            self.page.locator('#papers-browse').click()
+            self.page.wait_for_function(f"document.querySelectorAll('[data-add]').length === {min(count, 8)} && "
+                                        f"document.querySelector('[data-add]').dataset.add === 'exam/{paper}/q1'")
+            shown = self.page.locator('[data-add]').evaluate_all('nodes=>nodes.map(n=>n.dataset.add)')
+            self.assertEqual(shown, [f'exam/{paper}/q{n}' for n in range(1, min(count, 8) + 1)])
+        # A whole undated November 2021 Core Pure paper keeps its source order and its own schemes.
+        self.page.locator('#papers-past-paper').select_option('edexcel-9fm0-02-2021-november')
+        self.generate(9)
+        expected = [f'exam/edexcel-9fm0-02-2021-november/q{n}' for n in range(1, 10)]
+        self.assertCountEqual(self.selection_ids(), expected)
+        self.page.locator('#papers-order').select_option('paper')
+        self.assertIn('75 marks', self.page.locator('#papers-summary').inner_text())
+        self.page.locator('#papers-print').click()
+        self.page.wait_for_function('Boolean(window.testPaperSnapshot)')
+        snapshot = self.page.evaluate('testPaperSnapshot')
+        self.assertEqual([q['id'] for q in snapshot], expected)
+        self.assertEqual([q['marks'] for q in snapshot], [5, 5, 6, 9, 8, 14, 9, 11, 8])
+        payload = {q['id']: q for q in json.loads((ROOT / 'content/exams/edexcel-9fm0-02-2021-november.json').read_text())['questions']}
+        for item in snapshot:
+            self.assertEqual(item['question'], payload[item['id']]['question'])
+            self.assertEqual(item['steps'], payload[item['id']]['steps'])
+        # A mixed selection adds an October 2020 Mechanics question and keeps both after reload.
+        self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-32-2020-october')
+        self.page.locator('#papers-browse').click()
+        self.page.wait_for_function("document.querySelector('[data-add]')?.dataset.add === 'exam/edexcel-9ma0-32-2020-october/q1'")
+        self.page.locator('[data-add="exam/edexcel-9ma0-32-2020-october/q1"]').click()
+        self.assertCountEqual(self.selection_ids(), expected + ['exam/edexcel-9ma0-32-2020-october/q1'])
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertCountEqual(self.selection_ids(), expected + ['exam/edexcel-9ma0-32-2020-october/q1'])
+        self.assertEqual(self.page.locator('#papers-past-paper').input_value(), 'edexcel-9ma0-32-2020-october')
+
     def test_teacher_exam_paper_uses_builder_selection_and_defaults_PAP_065C(self):
         self.page.unroute('**/papers-print.js')
         self.page.unroute('**/exam-catalogue.json')
         self.page.reload()
-        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 28")
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40")
         panel = self.page.locator('#papers-exam')
         self.assertIn('Teachers only', panel.locator('summary').inner_text())
         panel.locator('summary').click()
@@ -439,7 +497,7 @@ class PapersSelection(unittest.TestCase):
         # A stored automatic date (or a v0.66 session's empty date) never goes stale: only a typed or cleared value is kept.
         self.page.evaluate("sessionStorage.setItem('luisa-papers-exam-v1', JSON.stringify({title: 'Maths Assessment', date: 'Friday 20th November'}))")
         self.page.reload()
-        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 28")
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40")
         self.assertEqual(self.page.locator('#papers-exam-date').input_value(), f"{now:%A} {now.day}{suffix} {now:%B}")
         self.page.evaluate("sessionStorage.removeItem('luisa-papers-exam-v1')")
         panel.locator('summary').click()
@@ -537,7 +595,7 @@ class PapersSelection(unittest.TestCase):
         self.page.unroute('**/exam-catalogue.json')
         self.page.unroute('**/practice-catalogue.json')
         self.page.reload()
-        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 28")
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40")
         self.page.locator('#papers-exam summary').click()
         self.assertEqual(self.page.locator('[data-exam-preset]').all_inner_texts(), ['1 period · 32 minutes (+8)', '2 periods · 60 minutes (+15)'])
         self.page.locator('#papers-source-practice').uncheck()
@@ -620,7 +678,7 @@ class PapersSelection(unittest.TestCase):
     def test_in_paper_order_only_for_one_past_paper_and_survives_reload(self):
         self.page.unroute('**/exam-catalogue.json')
         self.page.reload()
-        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 28")
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40")
         order_options = lambda: self.page.locator('#papers-order option').evaluate_all('nodes=>nodes.map(n=>[n.value,n.textContent])')
         self.assertEqual(order_options(), [['topic', 'Group by topic'], ['selection', 'As selected']])
         self.page.locator('#papers-source-practice').uncheck()
@@ -688,10 +746,10 @@ class PapersSelection(unittest.TestCase):
         self.page.unroute('**/practice-catalogue.json')
         self.page.unroute('**/exam-catalogue.json')
         self.page.reload()
-        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 28")
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40")
         filters = ['#papers-past-paper', '#papers-difficulty', '#papers-course', '#papers-book']
         everything = self.paper_options()
-        self.assertEqual(len(everything), 28)
+        self.assertEqual(len(everything), 40)
         plain = {ident: self.select_style(ident) for ident in filters}
         for ident in filters:
             self.assertFalse(plain[ident]['active'], ident)
@@ -700,7 +758,7 @@ class PapersSelection(unittest.TestCase):
         # PAP-068-1: Maths A level hides every Further Maths paper; All shows all papers again.
         self.page.locator('#papers-course').select_option('maths-a-level')
         maths = self.paper_options()
-        self.assertEqual(len(maths), 20)
+        self.assertEqual(len(maths), 28)
         self.assertFalse([value for value in maths if '9fm0' in value])
         self.assertIn('edexcel-9ma0-31-2024-june', maths)
         # PAP-068-2: the active style is clearly different, readable and not the disabled look.
@@ -714,6 +772,7 @@ class PapersSelection(unittest.TestCase):
         self.assertFalse(self.select_style('#papers-book')['active'])
         self.page.locator('#papers-book').select_option('maths-a-level/maths-mechanics-year-2')
         self.assertEqual(self.paper_options(), ['', 'edexcel-9ma0-32-2025-june', 'edexcel-9ma0-32-2024-june', 'edexcel-9ma0-32-2023-june',
+                                                'edexcel-9ma0-32-2021-october', 'edexcel-9ma0-32-2020-october',
                                                 'edexcel-9ma0-32-2019-june', 'edexcel-9ma0-03-2018-june'])
         self.assertTrue(self.select_style('#papers-book')['active'])
         self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-32-2024-june')
@@ -724,17 +783,21 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(self.paper_options(), ['', 'edexcel-9ma0-31-2025-june', 'edexcel-9ma0-02-2025-june', 'edexcel-9ma0-01-2025-june',
                                                 'edexcel-9ma0-02-2024-june', 'edexcel-9ma0-01-2024-june',
                                                 'edexcel-9ma0-31-2023-june', 'edexcel-9ma0-02-2023-june', 'edexcel-9ma0-01-2023-june',
+                                                'edexcel-9ma0-02-2021-october', 'edexcel-9ma0-01-2021-october',
+                                                'edexcel-9ma0-02-2020-october', 'edexcel-9ma0-01-2020-october',
                                                 'edexcel-9ma0-02-2019-june', 'edexcel-9ma0-01-2019-june', 'edexcel-9ma0-02-2018-june', 'edexcel-9ma0-01-2018-june'])
         self.assertEqual(self.page.locator('#papers-past-paper').input_value(), '')
         self.assertFalse(self.select_style('#papers-past-paper')['active'])
         self.assertNotIn('paper', self.page.locator('#papers-order option').evaluate_all('n=>n.map(o=>o.value)'))
         self.page.locator('#papers-book').select_option('')
         self.assertFalse(self.select_style('#papers-book')['active'])
-        self.assertEqual(len(self.paper_options()), 20)
+        self.assertEqual(len(self.paper_options()), 28)
         self.page.locator('#papers-course').select_option('further-maths-a-level')
         self.assertEqual(self.paper_options(), ['', 'edexcel-9fm0-02-2025-june', 'edexcel-9fm0-01-2025-june',
                                                 'edexcel-9fm0-02-2024-june', 'edexcel-9fm0-01-2024-june',
                                                 'edexcel-9fm0-02-2023-june', 'edexcel-9fm0-01-2023-june',
+                                                'edexcel-9fm0-01-2021-november', 'edexcel-9fm0-02-2021-november',
+                                                'edexcel-9fm0-01-2020-october', 'edexcel-9fm0-02-2020-october',
                                                 'edexcel-9fm0-02-2019-june', 'edexcel-9fm0-01-2019-june'])
         self.page.locator('#papers-difficulty').select_option('medium')
         self.assertTrue(self.select_style('#papers-difficulty')['active'])
@@ -767,13 +830,13 @@ class PapersSelection(unittest.TestCase):
         self.assertFalse(self.page.locator('#papers-past-paper').is_disabled())
         self.assertEqual(self.page.locator('#papers-past-paper').input_value(), '')
         self.assertEqual(self.paper_options(), everything)
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), '826 questions in the selection')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '941 questions in the selection')
         # Restore: a paper saved with the tickbox unticked comes back on All and disabled.
         saved = {'version': 3, 'sources': {'practice': False, 'exam-style': True, 'past-papers': False},
                  'pastPaper': 'edexcel-9fm0-01-2024-june', 'selected': [], 'selectionOrder': [], 'course': '', 'book': '', 'chapters': []}
         self.page.evaluate("s => sessionStorage.setItem('luisa-papers-v1', JSON.stringify(s))", saved)
         self.page.reload()
-        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 28 && !document.querySelector('#papers-course').disabled")
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 40 && !document.querySelector('#papers-course').disabled")
         restored = self.select_style('#papers-past-paper')
         self.assertTrue(restored['disabled'])
         self.assertFalse(restored['active'])
@@ -787,7 +850,7 @@ class PapersSelection(unittest.TestCase):
         self.page.wait_for_function("!document.querySelector('#papers-course').disabled")
         self.assertEqual(self.page.locator('#papers-past-paper').input_value(), 'edexcel-9ma0-01-2025-june')
         self.assertEqual(self.page.locator('#papers-order').input_value(), 'paper')
-        self.assertEqual(len(self.paper_options()), 20)
+        self.assertEqual(len(self.paper_options()), 28)
         for ident in ('#papers-past-paper', '#papers-difficulty', '#papers-course'):
             self.assertTrue(self.select_style(ident)['active'], ident)
         self.assertFalse(self.select_style('#papers-book')['active'])
