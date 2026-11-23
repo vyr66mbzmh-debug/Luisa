@@ -3,7 +3,7 @@
   'use strict';
   const macros = {'\\p':'\\mathrm P(#1)','\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
   const validMarks = row => Number.isInteger(row.marks) && row.marks >= 0;
-  const source = row => row.sourceKind === 'past-exam' ? `Source: ${(row.sourceLabel || 'Past exam').replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
+  const source = row => ['past-exam', 'pmt'].includes(row.sourceKind) ? `Source: ${(row.sourceLabel || 'Past exam').replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const context = row => [row.courseTitle, row.bookTitle, row.topicTitle].filter(Boolean).join(' · ');
@@ -98,6 +98,7 @@
       return ['Practice', label, /^\d/.test(row.questionLabel) ? 'Q' + row.questionLabel : row.questionLabel].join(' ');
     }
     if (row.sourceKind === 'past-exam') return source(row).replace(/^Source: Edexcel (?:A Level )?/i, 'Edexcel ').replace(/^Source: /, '');
+    if (row.sourceKind === 'pmt') return source(row).replace(/^Source: /, '');
     return source(row);
   }
   function questionHeading(doc, row, number, continuation) {

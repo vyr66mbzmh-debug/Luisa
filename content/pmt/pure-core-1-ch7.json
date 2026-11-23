@@ -1,0 +1,169 @@
+{
+ "schemaVersion": 1,
+ "questions": [
+  {
+   "id": "pmt/pure-core-1/ch7/q1",
+   "question": "<div class=\"equation\" data-math=\"\\mathbf A=\\begin{pmatrix}-\\dfrac12&amp;-\\dfrac{\\sqrt3}{2}\\\\[4pt]\\dfrac{\\sqrt3}{2}&amp;-\\dfrac12\\end{pmatrix}\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li>Describe fully the single geometrical transformation <span class=\"inline-math\" data-math=\"U\"></span> represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf A\"></span>. <span class=\"marks\">(3)</span></li></ol><p>The transformation <span class=\"inline-math\" data-math=\"V\"></span>, represented by the <span class=\"inline-math\" data-math=\"2\\times2\"></span> matrix <span class=\"inline-math\" data-math=\"\\mathbf B\"></span>, is a reflection in the line <span class=\"inline-math\" data-math=\"y=-x\"></span></p><ol class=\"parts\" type=\"a\" start=\"2\"><li>Write down the matrix <span class=\"inline-math\" data-math=\"\\mathbf B\"></span>. <span class=\"marks\">(1)</span></li></ol><p>Given that <span class=\"inline-math\" data-math=\"U\"></span> followed by <span class=\"inline-math\" data-math=\"V\"></span> is the transformation <span class=\"inline-math\" data-math=\"T\"></span>, which is represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf C\"></span>,</p><ol class=\"parts\" type=\"a\" start=\"3\"><li>find the matrix <span class=\"inline-math\" data-math=\"\\mathbf C\"></span>. <span class=\"marks\">(2)</span></li><li>Show that there is a real number <span class=\"inline-math\" data-math=\"k\"></span> for which the point <span class=\"inline-math\" data-math=\"(1,k)\"></span> is invariant under <span class=\"inline-math\" data-math=\"T\"></span>. <span class=\"marks\">(4)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q01-ms-p08-1.png\" width=\"860\" height=\"854\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q1; source page 8, segment 1 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q01-ms-p08-2.png\" width=\"860\" height=\"398\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q1; source page 8, segment 2 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q01-ms-p09-3.png\" width=\"860\" height=\"557\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q1; source page 9, segment 3 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     8,
+     9
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q2",
+   "question": "<ol class=\"parts\" type=\"i\"><li><div class=\"equation\" data-math=\"\\mathbf A=\\begin{pmatrix}2&amp;a\\\\a-4&amp;b\\end{pmatrix}\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"a\"></span> and <span class=\"inline-math\" data-math=\"b\"></span> are non-zero constants.<br>Given that the matrix <span class=\"inline-math\" data-math=\"\\mathbf A\"></span> is self-inverse,</p><ol class=\"parts\" type=\"a\"><li>determine the value of <span class=\"inline-math\" data-math=\"b\"></span> and the possible values for <span class=\"inline-math\" data-math=\"a\"></span>. <span class=\"marks\">(5)</span></li></ol><p>The matrix <span class=\"inline-math\" data-math=\"\\mathbf A\"></span> represents a linear transformation <span class=\"inline-math\" data-math=\"M\"></span>.<br>Using the smaller value of <span class=\"inline-math\" data-math=\"a\"></span> from part (a),</p><ol class=\"parts\" type=\"a\" start=\"2\"><li>show that the invariant points of the linear transformation <span class=\"inline-math\" data-math=\"M\"></span> form a line, stating the equation of this line. <span class=\"marks\">(3)</span></li></ol></li><li><div class=\"equation\" data-math=\"\\mathbf P=\\begin{pmatrix}p&amp;2p\\\\-1&amp;3p\\end{pmatrix}\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"p\"></span> is a positive constant.<br>The matrix <span class=\"inline-math\" data-math=\"\\mathbf P\"></span> represents a linear transformation <span class=\"inline-math\" data-math=\"U\"></span>.<br>The triangle <span class=\"inline-math\" data-math=\"T\"></span> has vertices at the points with coordinates (1, 2), (3, 2) and (2, 5).<br>The area of the image of <span class=\"inline-math\" data-math=\"T\"></span> under the linear transformation <span class=\"inline-math\" data-math=\"U\"></span> is 15</p><ol class=\"parts\" type=\"a\"><li>Determine the value of <span class=\"inline-math\" data-math=\"p\"></span>. <span class=\"marks\">(4)</span></li></ol><p>The transformation <span class=\"inline-math\" data-math=\"V\"></span> consists of a stretch scale factor 3 parallel to the <span class=\"inline-math\" data-math=\"x\"></span>-axis with the <span class=\"inline-math\" data-math=\"y\"></span>-axis invariant followed by a stretch scale factor <span class=\"inline-math\" data-math=\"-2\"></span> parallel to the <span class=\"inline-math\" data-math=\"y\"></span>-axis with the <span class=\"inline-math\" data-math=\"x\"></span>-axis invariant. The transformation <span class=\"inline-math\" data-math=\"V\"></span> is represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf Q\"></span>.</p><ol class=\"parts\" type=\"a\" start=\"2\"><li>Write down the matrix <span class=\"inline-math\" data-math=\"\\mathbf Q\"></span>. <span class=\"marks\">(2)</span></li></ol><p>Given that <span class=\"inline-math\" data-math=\"U\"></span> followed by <span class=\"inline-math\" data-math=\"V\"></span> is the transformation <span class=\"inline-math\" data-math=\"W\"></span>, which is represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf R\"></span>,</p><ol class=\"parts\" type=\"a\" start=\"3\"><li>find the matrix <span class=\"inline-math\" data-math=\"\\mathbf R\"></span>. <span class=\"marks\">(2)</span></li></ol></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q02-ms-p09-1.png\" width=\"864\" height=\"671\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q2; source page 9, segment 1 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q02-ms-p10-2.png\" width=\"864\" height=\"562\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q2; source page 10, segment 2 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q02-ms-p10-3.png\" width=\"864\" height=\"401\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q2; source page 10, segment 3 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q02-ms-p11-4.png\" width=\"864\" height=\"765\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q2; source page 11, segment 4 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q02-ms-p11-5.png\" width=\"864\" height=\"286\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q2; source page 11, segment 5 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q02-ms-p12-6.png\" width=\"864\" height=\"864\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q2; source page 12, segment 6 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q02-ms-p12-7.png\" width=\"864\" height=\"147\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q2; source page 12, segment 7 of 7. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     9,
+     10,
+     11,
+     12
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q3",
+   "question": "<p>The transformation <span class=\"inline-math\" data-math=\"P\"></span> is an enlargement, centre the origin, with scale factor <span class=\"inline-math\" data-math=\"k\"></span>, where <span class=\"inline-math\" data-math=\"k&gt;0\"></span></p><p>The transformation <span class=\"inline-math\" data-math=\"Q\"></span> is a rotation through angle <span class=\"inline-math\" data-math=\"\\theta\"></span> degrees anticlockwise about the origin.</p><p>The transformation <span class=\"inline-math\" data-math=\"P\"></span> followed by the transformation <span class=\"inline-math\" data-math=\"Q\"></span> is represented by the matrix</p><div class=\"equation\" data-math=\"\\mathbf M=\\begin{pmatrix}-4&amp;-4\\sqrt3\\\\4\\sqrt3&amp;-4\\end{pmatrix}\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li>Determine<ol class=\"parts\" type=\"i\"><li>the value of <span class=\"inline-math\" data-math=\"k\"></span>,</li><li>the smallest value of <span class=\"inline-math\" data-math=\"\\theta\"></span></li></ol><span class=\"marks\">(4)</span></li></ol><p>A square <span class=\"inline-math\" data-math=\"S\"></span> has vertices at the points with coordinates (0, 0), <span class=\"inline-math\" data-math=\"(a,-a)\"></span>, <span class=\"inline-math\" data-math=\"(2a,0)\"></span> and <span class=\"inline-math\" data-math=\"(a,a)\"></span> where <span class=\"inline-math\" data-math=\"a\"></span> is a constant.</p><p>The square <span class=\"inline-math\" data-math=\"S\"></span> is transformed to the square <span class=\"inline-math\" data-math=\"S&#x27;\"></span> by the transformation represented by <span class=\"inline-math\" data-math=\"\\mathbf M\"></span>.</p><ol class=\"parts\" type=\"a\" start=\"2\"><li>Determine, in terms of <span class=\"inline-math\" data-math=\"a\"></span>, the area of <span class=\"inline-math\" data-math=\"S&#x27;\"></span> <span class=\"marks\">(2)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q03-ms-p13-1.png\" width=\"867\" height=\"864\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q3; source page 13, segment 1 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q03-ms-p13-2.png\" width=\"867\" height=\"462\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q3; source page 13, segment 2 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     13
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q4",
+   "question": "<div class=\"equation\" data-math=\"\\mathbf M=\\begin{pmatrix}4&amp;-5\\\\2&amp;-7\\end{pmatrix}\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li>Show that the matrix <span class=\"inline-math\" data-math=\"\\mathbf M\"></span> is non-singular. <span class=\"marks\">(2)</span></li></ol><p>The transformation <span class=\"inline-math\" data-math=\"T\"></span> of the plane is represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf M\"></span>.</p><p>The triangle <span class=\"inline-math\" data-math=\"R\"></span> is transformed to the triangle <span class=\"inline-math\" data-math=\"S\"></span> by the transformation <span class=\"inline-math\" data-math=\"T\"></span>.</p><p>Given that the area of <span class=\"inline-math\" data-math=\"S\"></span> is 63 square units,</p><ol class=\"parts\" type=\"a\" start=\"2\"><li>find the area of <span class=\"inline-math\" data-math=\"R\"></span>. <span class=\"marks\">(2)</span></li><li>Show that the line <span class=\"inline-math\" data-math=\"y=2x\"></span> is invariant under the transformation <span class=\"inline-math\" data-math=\"T\"></span>. <span class=\"marks\">(2)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q04-ms-p14-1.png\" width=\"893\" height=\"607\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q4; source page 14, segment 1 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q04-ms-p14-2.png\" width=\"893\" height=\"652\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q4; source page 14, segment 2 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q04-ms-p15-3.png\" width=\"890\" height=\"864\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q4; source page 15, segment 3 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q04-ms-p15-4.png\" width=\"890\" height=\"172\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q4; source page 15, segment 4 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     14,
+     15
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q5",
+   "question": "<div class=\"equation\" data-math=\"\\mathbf A=\\begin{pmatrix}4&amp;-2\\\\5&amp;3\\end{pmatrix}\" data-display=\"true\"></div><p>The matrix <span class=\"inline-math\" data-math=\"\\mathbf A\"></span> represents the linear transformation <span class=\"inline-math\" data-math=\"M\"></span>.</p><p>Prove that, for the linear transformation <span class=\"inline-math\" data-math=\"M\"></span>, there are no invariant lines. <span class=\"marks\">(5)</span></p>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q05-ms-p16-1.png\" width=\"868\" height=\"855\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q5; source page 16, segment 1 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q05-ms-p16-2.png\" width=\"868\" height=\"564\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q5; source page 16, segment 2 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     16
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q6",
+   "question": "<blockquote><p><em>With respect to the <strong>right-hand rule</strong>, a rotation through <span class=\"inline-math\" data-math=\"\\theta^\\circ\"></span> anticlockwise about the <span class=\"inline-math\" data-math=\"y\"></span>-axis is represented by the matrix</em></p><div class=\"equation\" data-math=\"\\begin{pmatrix}\\cos\\theta&amp;0&amp;\\sin\\theta\\\\0&amp;1&amp;0\\\\-\\sin\\theta&amp;0&amp;\\cos\\theta\\end{pmatrix}\" data-display=\"true\"></div></blockquote><p>The point <span class=\"inline-math\" data-math=\"P\"></span> has coordinates (8, 3, 2)</p><p>The point <span class=\"inline-math\" data-math=\"Q\"></span> is the image of <span class=\"inline-math\" data-math=\"P\"></span> under the transformation reflection in the plane <span class=\"inline-math\" data-math=\"y=0\"></span></p><ol class=\"parts\" type=\"a\"><li>Write down the coordinates of <span class=\"inline-math\" data-math=\"Q\"></span> <span class=\"marks\">(1)</span></li></ol><p>The point <span class=\"inline-math\" data-math=\"R\"></span> is the image of <span class=\"inline-math\" data-math=\"P\"></span> under the transformation rotation through <span class=\"inline-math\" data-math=\"120^\\circ\"></span> anticlockwise about the <span class=\"inline-math\" data-math=\"y\"></span>-axis, with respect to the <strong>right-hand rule</strong>.</p><ol class=\"parts\" type=\"a\" start=\"2\"><li>Determine the exact coordinates of <span class=\"inline-math\" data-math=\"R\"></span> <span class=\"marks\">(2)</span></li><li>Hence find <span class=\"inline-math\" data-math=\"|\\overrightarrow{PR}|\"></span> giving your answer as a simplified surd. <span class=\"marks\">(2)</span></li><li>Show that <span class=\"inline-math\" data-math=\"\\overrightarrow{PR}\"></span> and <span class=\"inline-math\" data-math=\"\\overrightarrow{PQ}\"></span> are perpendicular. <span class=\"marks\">(1)</span></li><li>Hence determine the exact area of triangle <span class=\"inline-math\" data-math=\"PQR\"></span>, giving your answer as a surd in simplest form. <span class=\"marks\">(2)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q06-ms-p17-1.png\" width=\"867\" height=\"857\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q6; source page 17, segment 1 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q06-ms-p17-2.png\" width=\"867\" height=\"528\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q6; source page 17, segment 2 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q06-ms-p18-3.png\" width=\"867\" height=\"867\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q6; source page 18, segment 3 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q06-ms-p18-4.png\" width=\"867\" height=\"301\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q6; source page 18, segment 4 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     17,
+     18
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q7",
+   "question": "<div class=\"equation\" data-math=\"\\mathbf P=\\begin{pmatrix}0&amp;-1\\\\1&amp;0\\end{pmatrix}\\qquad\\mathbf Q=\\begin{pmatrix}1&amp;0\\\\0&amp;3\\end{pmatrix}\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li><ol class=\"parts\" type=\"i\"><li>Describe fully the single geometrical transformation <span class=\"inline-math\" data-math=\"P\"></span> represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf P\"></span>.</li><li>Describe fully the single geometrical transformation <span class=\"inline-math\" data-math=\"Q\"></span> represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf Q\"></span>.</li></ol><span class=\"marks\">(4)</span></li></ol><p>The transformation <span class=\"inline-math\" data-math=\"P\"></span> followed by the transformation <span class=\"inline-math\" data-math=\"Q\"></span> is the transformation <span class=\"inline-math\" data-math=\"R\"></span>, which is represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf R\"></span>.</p><ol class=\"parts\" type=\"a\" start=\"2\"><li>Determine <span class=\"inline-math\" data-math=\"\\mathbf R\"></span>. <span class=\"marks\">(1)</span></li><li><ol class=\"parts\" type=\"i\"><li>Evaluate the determinant of <span class=\"inline-math\" data-math=\"\\mathbf R\"></span>.</li><li>Explain how the value obtained in (c)(i) relates to the transformation <span class=\"inline-math\" data-math=\"R\"></span>.</li></ol><span class=\"marks\">(2)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q07-ms-p19-1.png\" width=\"898\" height=\"860\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q7; source page 19, segment 1 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q07-ms-p19-2.png\" width=\"898\" height=\"56\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q7; source page 19, segment 2 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     19
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q8",
+   "question": "<div class=\"equation\" data-math=\"\\mathbf A=\\begin{pmatrix}2&amp;-1\\\\4&amp;3\\end{pmatrix},\\quad\\mathbf P=\\begin{pmatrix}3&amp;6\\\\11&amp;-8\\end{pmatrix}\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li>Find <span class=\"inline-math\" data-math=\"\\mathbf A^{-1}\"></span> <span class=\"marks\">(2)</span></li></ol><p>The transformation represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf B\"></span> followed by the transformation represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf A\"></span> is equivalent to the transformation represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf P\"></span>.</p><ol class=\"parts\" type=\"a\" start=\"2\"><li>Find <span class=\"inline-math\" data-math=\"\\mathbf B\"></span>, giving your answer in its simplest form. <span class=\"marks\">(3)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q08-ms-p20-1.png\" width=\"900\" height=\"775\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q8; source page 20, segment 1 of 1. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     20
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q9",
+   "question": "<ol class=\"parts\" type=\"i\"><li><div class=\"equation\" data-math=\"\\mathbf A=\\begin{pmatrix}p&amp;2\\\\3&amp;p\\end{pmatrix},\\quad\\mathbf B=\\begin{pmatrix}-5&amp;4\\\\6&amp;-5\\end{pmatrix}\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"p\"></span> is a constant.</p><ol class=\"parts\" type=\"a\"><li>Find, in terms of <span class=\"inline-math\" data-math=\"p\"></span>, the matrix <span class=\"inline-math\" data-math=\"\\mathbf{AB}\"></span> <span class=\"marks\">(2)</span></li></ol><p>Given that</p><div class=\"equation\" data-math=\"\\mathbf{AB}+2\\mathbf A=k\\mathbf I\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"k\"></span> is a constant and <span class=\"inline-math\" data-math=\"\\mathbf I\"></span> is the <span class=\"inline-math\" data-math=\"2\\times2\"></span> identity matrix,</p><ol class=\"parts\" type=\"a\" start=\"2\"><li>find the value of <span class=\"inline-math\" data-math=\"p\"></span> and the value of <span class=\"inline-math\" data-math=\"k\"></span>. <span class=\"marks\">(4)</span></li></ol></li><li><div class=\"equation\" data-math=\"\\mathbf M=\\begin{pmatrix}a&amp;-9\\\\1&amp;2\\end{pmatrix},\\quad\\text{where }a\\text{ is a real constant}\" data-display=\"true\"></div><p>Triangle <span class=\"inline-math\" data-math=\"T\"></span> has an area of 15 square units.<br>Triangle <span class=\"inline-math\" data-math=\"T\"></span> is transformed to the triangle <span class=\"inline-math\" data-math=\"T&#x27;\"></span> by the transformation represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf M\"></span>.<br>Given that the area of triangle <span class=\"inline-math\" data-math=\"T&#x27;\"></span> is 270 square units, find the possible values of <span class=\"inline-math\" data-math=\"a\"></span>. <span class=\"marks\">(5)</span></p></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q09-ms-p21-1.png\" width=\"903\" height=\"903\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q9; source page 21, segment 1 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q09-ms-p21-2.png\" width=\"903\" height=\"187\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q9; source page 21, segment 2 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     21
+    ]
+   }
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q10",
+   "question": "<div class=\"equation\" data-math=\"\\mathbf M=\\begin{pmatrix}1&amp;-\\sqrt3\\\\\\sqrt3&amp;1\\end{pmatrix}\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li>Show that <span class=\"inline-math\" data-math=\"\\mathbf M\"></span> is non-singular. <span class=\"marks\">(2)</span></li></ol><p>The hexagon <span class=\"inline-math\" data-math=\"R\"></span> is transformed to the hexagon <span class=\"inline-math\" data-math=\"S\"></span> by the transformation represented by the matrix <span class=\"inline-math\" data-math=\"\\mathbf M\"></span>.</p><p>Given that the area of hexagon <span class=\"inline-math\" data-math=\"R\"></span> is 5 square units,</p><ol class=\"parts\" type=\"a\" start=\"2\"><li>find the area of hexagon <span class=\"inline-math\" data-math=\"S\"></span>. <span class=\"marks\">(1)</span></li></ol><p>The matrix <span class=\"inline-math\" data-math=\"\\mathbf M\"></span> represents an enlargement, with centre (0, 0) and scale factor <span class=\"inline-math\" data-math=\"k\"></span>, where <span class=\"inline-math\" data-math=\"k&gt;0\"></span>, followed by a rotation anti-clockwise through an angle <span class=\"inline-math\" data-math=\"\\theta\"></span> about (0, 0).</p><ol class=\"parts\" type=\"a\" start=\"3\"><li>Find the value of <span class=\"inline-math\" data-math=\"k\"></span>. <span class=\"marks\">(2)</span></li><li>Find the value of <span class=\"inline-math\" data-math=\"\\theta\"></span>. <span class=\"marks\">(2)</span></li></ol>",
+   "steps": [
+    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-1-ch7/q10-ms-p22-1.png\" width=\"880\" height=\"783\" alt=\"PMT mark scheme for Core Pure 1 Ch.7 Linear Transformations Q10; source page 22, segment 1 of 1. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
+   ],
+   "contextHtml": "",
+   "sourceScheme": {
+    "kind": "source",
+    "page": [
+     22
+    ]
+   }
+  }
+ ]
+}

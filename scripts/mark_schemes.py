@@ -27,6 +27,7 @@ CATALOGUES = {  # file -> (json dump options)
     'textbook-catalogue.json': dict(separators=(',', ':'), ensure_ascii=False),
     'practice-catalogue.json': dict(indent=2, ensure_ascii=False),
     'exam-catalogue.json': dict(indent=2, ensure_ascii=False),
+    'pmt-catalogue.json': dict(indent=2, ensure_ascii=False),
 }
 # Every historical import stores the official scheme as figures cropped from the board's mark-scheme PDF,
 # named resources/exams/<paper>/q<N>-ms-..., with alt text starting "Official" or "Original".
@@ -78,6 +79,10 @@ def derive(root=ROOT):
         if q['dataPath'] not in payloads:
             payloads[q['dataPath']] = {x['id']: x for x in _json(root / q['dataPath'])['questions']}
         out['practice-catalogue.json'][q['id']] = source_kind(payloads[q['dataPath']][q['id']])
+    for q in _json(root / 'pmt-catalogue.json')['questions']:
+        if q['dataPath'] not in payloads:
+            payloads[q['dataPath']] = {x['id']: x for x in _json(root / q['dataPath'])['questions']}
+        out['pmt-catalogue.json'][q['id']] = source_kind(payloads[q['dataPath']][q['id']])
     for q in _json(root / 'exam-catalogue.json')['questions']:
         if q['dataPath'] not in payloads:
             payloads[q['dataPath']] = {x['id']: x for x in _json(root / q['dataPath'])['questions']}
@@ -132,6 +137,8 @@ def counts(root=ROOT):
                 source = 'Practice questions (Luisa skill questions)'
             elif name == 'exam-catalogue.json':
                 source = 'Past Papers'
+            elif name == 'pmt-catalogue.json':
+                source = 'PMT (' + q['sheetId'].split('-ch')[0] + ')'
             else:
                 source = q.get('sourceLabel') or ('Exam style (Practice Booklet)' if practice[q['id']].get('bank') == 'exam' else 'Practice questions (Practice Booklet)')
             table[(source, q['markScheme'])] += 1

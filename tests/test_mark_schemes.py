@@ -17,7 +17,8 @@ class MarkSchemeFlagTests(unittest.TestCase):
         self.assertEqual(mark_schemes.errors(ROOT), [])
         derived = mark_schemes.derive(ROOT)
         self.assertEqual({name: len(rows) for name, rows in derived.items()},
-                         {'textbook-catalogue.json': 6147, 'practice-catalogue.json': 2475, 'exam-catalogue.json': 444})
+                         {'textbook-catalogue.json': 6147, 'practice-catalogue.json': 2475, 'exam-catalogue.json': 444,
+                          'pmt-catalogue.json': 73})
 
     def test_counts_per_source(self):
         counts = {f'{source}|{value}': n for (source, value), n in mark_schemes.counts(ROOT).items()}
@@ -26,6 +27,7 @@ class MarkSchemeFlagTests(unittest.TestCase):
             'Exam style (Practice Booklet)|worked': 554,               # Luisa worked solutions only
             'Practice questions (Practice Booklet)|worked': 1921,
             'Practice questions (Luisa skill questions)|worked': 6147,
+            'PMT (pure-core-1)|source': 73,                            # PMT topic sheets with their source mark schemes
         })
 
     def test_past_paper_official_only_when_every_step_is_an_official_crop_of_that_paper(self):
@@ -54,7 +56,7 @@ class MarkSchemeFlagTests(unittest.TestCase):
     def test_check_detects_a_hand_edited_or_missing_flag(self):
         root = Path(tempfile.mkdtemp())
         self.addCleanup(shutil.rmtree, root)
-        for name in ('textbook-catalogue.json', 'practice-catalogue.json', 'exam-catalogue.json'):
+        for name in ('textbook-catalogue.json', 'practice-catalogue.json', 'exam-catalogue.json', 'pmt-catalogue.json'):
             shutil.copy(ROOT / name, root / name)
         (root / 'content').symlink_to(ROOT / 'content')
         (root / 'resources').symlink_to(ROOT / 'resources')

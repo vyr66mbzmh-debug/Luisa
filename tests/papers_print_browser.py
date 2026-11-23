@@ -8,6 +8,7 @@ import http.server
 import json
 import os
 import pathlib
+import re
 import tempfile
 import threading
 import unittest
@@ -890,6 +891,57 @@ class PapersPrintTests(unittest.TestCase):
                 texts = [page.get_text().replace('\n', ' ') for page in pdf]
         first_scheme = next(i for i, t in enumerate(texts) if 'Mark scheme: Mixed' in t)
         self.assertFalse(any(leak in t for t in texts[:first_scheme] for leak in ('Source:', 'Edexcel', '9FM0', '9MA0', 'Practice Booklet')))
+        scheme_text = ' '.join(texts[first_scheme:])
+        for r in rows:
+            self.assertIn(r['id'], scheme_text)
+        preview.close()
+
+    def pmt_rows(self, ids):
+        descriptors = {q['id']: q for q in json.loads((ROOT / 'pmt-catalogue.json').read_text())['questions']}
+        out = []
+        for qid in ids:
+            d = descriptors[qid]
+            payload = {q['id']: q for q in json.loads((ROOT / d['dataPath']).read_text())['questions']}
+            out.append(dict(payload[qid], **{key: d[key] for key in ('markScheme', 'marks', 'difficulty', 'sourceLabel', 'questionNumber')}, sourceKind='pmt'))
+        return out
+
+    def test_exam_past_paper_and_pmt_mixed_hide_source_on_questions_PAP_075(self):
+        import fitz
+        # PAP-075-8: past papers mixed with PMT questions (one with figures) and a source-scheme row whose context names
+        # its original question (the v0.74 review case). Question pages name no source; the scheme names each exactly.
+        labelled = dict(practice_row('pure-year-2', 2, '2.1/q1'), id='practice/test/labelled', marks=3, markScheme='source',
+                        sourceKind='practice-booklet', chapterNumber=2, subchapterLabel='2.1 Fixture exercise', questionLabel='1',
+                        contextHtml='<aside class="practice-context"><p class="practice-context-label">Reference from 9.5 Q1</p><p>Use the diagram from the previous question.</p></aside>')
+        rows = (self.exam_rows('edexcel-9fm0-01-2019-june', [2]) + self.pmt_rows(['pmt/pure-core-1/ch2/q8', 'pmt/pure-core-1/ch6/q2'])
+                + [labelled] + self.exam_rows('edexcel-9ma0-32-2024-june', [1]) + self.pmt_rows(['pmt/pure-core-1/ch9/q4']))
+        self.page.add_script_tag(url='/papers-exam.js')
+        expected = self.page.evaluate('rows => rows.map(LUISA_PAPERS_EXAM.schemeSource)', rows)
+        self.assertEqual(expected, ['Source: Edexcel June 2019 9FM0/01 Q2 · ID exam/edexcel-9fm0-01-2019-june/q2',
+                                    'Source: PMT Core Pure 1 Ch.2 Argand Diagrams Q8 · ID pmt/pure-core-1/ch2/q8',
+                                    'Source: PMT Core Pure 1 Ch.6 Matrices Q2 · ID pmt/pure-core-1/ch6/q2',
+                                    'Source: Practice Booklet · Chapter 2 · 2.1 Fixture exercise · Q1 · ID practice/test/labelled',
+                                    'Source: Edexcel June 2024 9MA0/32 Q1 · ID exam/edexcel-9ma0-32-2024-june/q1',
+                                    'Source: PMT Core Pure 1 Ch.9 Vectors Q4 · ID pmt/pure-core-1/ch9/q4'])
+        preview, result = self.exam_paper(rows, content='both', title='Mixed sources')
+        self.assertTrue(result['ready'], result)
+        questions = ' '.join(preview.locator('.exam-front-page, .exam-page').all_inner_texts())
+        for leak in ('Source', 'PMT', 'Physics', 'Core Pure', 'Ch.', 'Edexcel', 'June 2019', '9FM0', '9MA0', 'Reference from', '9.5 Q1', 'ID ', 'pmt/', 'exam/'):
+            self.assertNotIn(leak, questions)
+        self.assertIn('Use the diagram from the previous question.', questions)  # the context itself stays
+        self.assertEqual(preview.locator('.exam-page .practice-context-label, .exam-page .exam-scheme-source').count(), 0)
+        self.assertTrue(preview.locator('.exam-page img').evaluate_all('ns=>ns.length>=2&&ns.every(n=>n.complete&&n.naturalWidth>0)'))
+        self.assertEqual(preview.locator('.exam-scheme-source').all_inner_texts(), expected)
+        for r in rows:
+            if r['sourceKind'] == 'pmt':
+                srcs = preview.locator(f'.exam-scheme[data-question-id="{r["id"]}"] img').evaluate_all('ns=>ns.map(n=>n.getAttribute("src"))')
+                self.assertEqual(srcs, re.findall(r'src="([^"]+)"', ''.join(r['steps'])))
+                self.assertTrue(preview.locator(f'.exam-scheme[data-question-id="{r["id"]}"] img').evaluate_all('ns=>ns.every(n=>n.complete&&n.naturalWidth>0)'))
+        with tempfile.TemporaryDirectory() as folder:
+            preview.pdf(path=f'{folder}/mixed.pdf', prefer_css_page_size=True)
+            with fitz.open(f'{folder}/mixed.pdf') as pdf:
+                texts = [page.get_text().replace('\n', ' ') for page in pdf]
+        first_scheme = next(i for i, t in enumerate(texts) if 'Mark scheme: Mixed sources' in t)
+        self.assertFalse(any(leak in t for t in texts[:first_scheme] for leak in ('Source:', 'PMT', 'Edexcel', '9FM0', 'Reference from')))
         scheme_text = ' '.join(texts[first_scheme:])
         for r in rows:
             self.assertIn(r['id'], scheme_text)
