@@ -33,14 +33,24 @@ ROOT = Path(__file__).resolve().parents[2]
 ARCHIVE = re.compile(r'(?:Luisa-|luisa-)?v\d+\.\d+-[0-9a-f]{7,40}-website\.zip')
 
 
-def context():
+DOCS_ONLY = re.compile(r'(?:HANDOFF\.md|CHANGELOG\.md|docs/.*|development-progress\.html|release-report-[\d.]+\.html)')
+
+
+def context(allow_docs_followup=False):
+    """Release facts. Normally HEAD must be the merged release revision recorded by land_build.py. With
+    allow_docs_followup (finish.py complete), HEAD may also be a later main commit that changes only documentation."""
     release = json.loads((ROOT / 'release.json').read_text())
     version = release['version']
-    rev = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     work = private.work_dir(version)
     merged = (work / 'merged-revision').read_text().strip() if (work / 'merged-revision').exists() else None
-    if merged != rev:
-        raise SystemExit('Run from the main checkout at the merged revision recorded by land_build.py.')
+    rev = merged
+    if merged != head:
+        ok = allow_docs_followup and merged and subprocess.run(['git', 'merge-base', '--is-ancestor', merged, head], cwd=ROOT).returncode == 0
+        changed = subprocess.check_output(['git', 'diff', '--name-only', merged, head], cwd=ROOT, text=True).split() if ok else []
+        if not ok or not all(DOCS_ONLY.fullmatch(f) for f in changed):
+            raise SystemExit('Run from the main checkout at the merged revision recorded by land_build.py'
+                             + (' (or a later main commit that changes documentation only).' if allow_docs_followup else '.'))
     history = json.loads((ROOT / 'version-history.json').read_text())
     entry = next(r for r in history['releases'] if r['version'] == version)
     return release, version, rev, work, entry
@@ -59,12 +69,16 @@ def archive():
 
 
 def check_published(quiet=False):
-    release, version, rev, work, _ = context()
-    manifest = json.loads((work / 'live-owner-manifest.json').read_text())
-    url = release['publicBaseUrl'].rstrip('/') + f'/release-report-{version}.html'
-    data = urllib.request.urlopen(urllib.request.Request(url, headers={'Cache-Control': 'no-cache', 'User-Agent': 'luisa-release'}), timeout=15).read()
-    if manifest['revision'] != rev or hashlib.sha256(data).hexdigest() != manifest['files'][f'release-report-{version}.html']['sha256']:
-        raise SystemExit('The published release report does not match the owner manifest for this revision.')
+    release, version, rev, work, _ = context(allow_docs_followup=True)
+    head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    base = release['publicBaseUrl'].rstrip('/') + '/'
+    fetch = lambda path: urllib.request.urlopen(urllib.request.Request(base + path, headers={'Cache-Control': 'no-cache', 'User-Agent': 'luisa-release'}), timeout=15).read()
+    manifest = json.loads(fetch(f'build-manifest.json?revision={head}'))
+    data = fetch(f'release-report-{version}.html?revision={head}')
+    if manifest['revision'] != head:
+        raise SystemExit('Cloudflare is not serving this checkout\'s revision yet; wait for its deployment and retry.')
+    if hashlib.sha256(data).hexdigest() != manifest['files'][f'release-report-{version}.html']['sha256']:
+        raise SystemExit('The published release report does not match the live owner manifest.')
     errors = report_tool.page_errors(data.decode(), version, (ROOT / 'HANDOFF.md').read_text())
     if errors:
         raise SystemExit('Published report fails the single-handoff check: ' + '; '.join(errors))
@@ -119,7 +133,7 @@ def report(intro):
 
 
 def complete():
-    release, version, rev, work, entry = context()
+    release, version, rev, work, entry = context(allow_docs_followup=True)
     errors = closing_errors(version, entry)
     if not (private.state_dir() / 'reports' / f'v{version}' / 'smtp-accepted.json').exists():
         errors.append('no SMTP acceptance record for this version (finish.py report)')

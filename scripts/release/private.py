@@ -118,9 +118,32 @@ def ssh_command():
             '-p', str(ada['sshPort']), ada['sshHost']]
 
 
+class RemoteError(RuntimeError):
+    """A remote command failed; the message is redacted (no host, port or server paths)."""
+
+
+def redact(text):
+    """Replace every identifying private value in text with <private>."""
+    try:
+        values = set(private_values())
+        ada = workspace().get('ada', {})
+        values |= {str(v) for v in ada.get('layout', {}).values() if isinstance(v, str) and len(v) > 3}  # all server layout
+        values |= {str(ada.get('sshHost', '')), str(ada.get('sshHost', '')).split('@')[-1]}
+    except MissingPrivateConfig:
+        values = {str(Path.home())}
+    for value in sorted((v for v in values if len(v) > 3), key=len, reverse=True):
+        text = text.replace(value, '<private>')
+    return text
+
+
 def remote(command, data=None, check=True):
-    """Run a shell command on the ADA host and return stdout bytes."""
-    result = subprocess.run(ssh_command() + [command], input=data, stdout=subprocess.PIPE, check=check)
+    """Run a shell command on the ADA host and return stdout bytes.
+
+    stderr is captured, never shown raw: on failure a RemoteError carries the exit status and a redacted excerpt."""
+    result = subprocess.run(ssh_command() + [command], input=data, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if check and result.returncode:
+        detail = redact(result.stderr.decode(errors='replace').strip())[-600:]
+        raise RemoteError(f'remote command failed with status {result.returncode}' + (f': {detail}' if detail else '')) from None
     return result.stdout
 
 

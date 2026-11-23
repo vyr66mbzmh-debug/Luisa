@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/vyr66mbzmh-debug/Luisa/docs/agentic/review-record.schema.json",
   "title": "Luisa independent review record",
-  "description": "Output of the independent reviewer role (docs/agentic/RELEASE-RUNBOOK.md, step 5). scripts/land.py refuses to land without a valid record whose head is the PR head and whose verdict is ship.",
+  "description": "Output of the independent reviewer role (docs/agentic/RELEASE-RUNBOOK.md, steps 12-13). scripts/land.py refuses to land without a valid record whose head is the PR head and whose verdict is ship.",
   "type": "object",
   "required": ["head", "base", "verdict", "findings", "review"],
   "properties": {

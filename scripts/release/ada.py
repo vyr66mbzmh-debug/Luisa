@@ -38,6 +38,12 @@ ACCOUNT_QUERIES = [
 ]
 
 
+
+def label(folder):
+    """Printable name of a release folder: its revision part only (the folder prefix is private server layout)."""
+    name, prefix = Path(folder).name, private.layout('releasePrefix')
+    return 'release ' + name[len(prefix):] if name.startswith(prefix) else 'release (name withheld)'
+
 def revision():
     return subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
 
@@ -134,7 +140,7 @@ for n in ['launch','start','nginx.conf']:
 """)
     private.remote(private.layout('nginx') + ' -t -c ' + new + '/nginx.conf')
     (private.work_dir(v) / 'ada-previous-folder').write_text(old)
-    print('Staged ADA release', Path(new).name, 'beside the live release', Path(old).name, flush=True)
+    print('Staged ADA', label(new), 'beside the live', label(old), flush=True)
 
 
 def snapshot_path(rev):
@@ -168,7 +174,7 @@ src=sqlite3.connect({data + '/accounts.sqlite'!r});dst=sqlite3.connect({back!r})
     start = private.layout('startScript')
     restart = private.layout('supervisorCommand') + ' restart ' + private.layout('serviceName')
     private.remote(f'cmp {start} {old}/start && install -m 700 {new}/start {start}.luisa-next && mv {start}.luisa-next {start} && {restart}')
-    print('Activated ADA release', Path(new).name, '(account snapshot kept privately)', flush=True)
+    print('Activated ADA', label(new), '(account snapshot kept privately)', flush=True)
 
 
 def rollback():
@@ -178,7 +184,7 @@ def rollback():
     start = private.layout('startScript')
     restart = private.layout('supervisorCommand') + ' restart ' + private.layout('serviceName')
     private.remote(f'cmp {start} {new}/start && install -m 700 {previous}/start {start}.luisa-rollback && mv {start}.luisa-rollback {start} && {restart}')
-    print('Rolled ADA back to', Path(previous).name, flush=True)
+    print('Rolled ADA back to', label(previous), flush=True)
 
 
 def accounts_check(allow_first_signin=False):
@@ -260,7 +266,7 @@ def status():
     restart = private.layout('supervisorCommand') + ' status ' + private.layout('serviceName')
     state = private.remote(restart, check=False).decode()
     m = json.loads(private.remote('cat ' + old + '/staff/build-manifest.json'))
-    print(json.dumps({'liveFolder': Path(old).name, 'revision': m['revision'], 'version': m['version'],
+    print(json.dumps({'liveFolder': label(old), 'revision': m['revision'], 'version': m['version'],
                       'running': 'RUNNING' in state}))
 
 

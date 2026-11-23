@@ -4,6 +4,7 @@
 Usage (from the main checkout at the merged revision, after the editions are built):
   python3 scripts/release/qa_live.py owner [--url URL] [--papers id,id]
   python3 scripts/release/qa_live.py ada   [--papers id,id]
+  python3 scripts/release/qa_live.py ada-cleanup              # remove temporary accounts left by an interrupted run
 
 Expectations are derived, not hard-coded: question totals are read from the locally built owner
 artifact (dist/); the past-paper dropdown order, labels and course/book lists come from
@@ -477,9 +478,29 @@ def manifest_checks(p, url, role, rev, version):
         ok('owner published release report has exactly one correctly titled handoff')
 
 
+def ada_fixture(script):
+    """Run a short script against the ADA account database on the server (private paths come from WORKSPACE)."""
+    db = private.layout('dataDir') + '/accounts.sqlite'
+    head = f"import sqlite3\nfrom argon2 import PasswordHasher\nc=sqlite3.connect({db!r});c.execute('pragma foreign_keys=on')\n"
+    return private.remote(private.layout('runtimePython') + ' -', (head + script).encode())
+
+
+def remove_qa_accounts(pending):
+    """Delete only the temporary QA identities this tool created (recorded privately in the work folder)."""
+    if not pending.exists():
+        return
+    made = json.loads(pending.read_text())
+    staff, pupil = made['staff'], made['pupil']
+    ada_fixture(f"c.execute('delete from sessions where staff_username=? or school_number=?',({staff!r},{pupil!r}))\n"
+                f"c.execute('delete from staff_accounts where username=?',({staff!r},))\n"
+                f"c.execute('delete from accounts where school_number=?',({pupil!r},));c.commit()")
+    pending.unlink()
+    print('temporary QA accounts removed', flush=True)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument('target', choices=['owner', 'ada'])
+    parser.add_argument('target', choices=['owner', 'ada', 'ada-cleanup'])
     parser.add_argument('--url', help='owner edition URL (default: release.json publicBaseUrl); a local server URL for a dry run')
     parser.add_argument('--papers', help='comma-separated paper ids to exercise in depth')
     parser.add_argument('--channel', default=os.environ.get('LUISA_BROWSER_CHANNEL') or 'chromium', help='Playwright browser channel (chrome, or chromium for the bundled browser)')
@@ -491,6 +512,9 @@ def main():
     rev = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
     out = private.work_dir(version)
     qa_papers = args.papers.split(',') if args.papers else default_qa_papers()
+    if args.target == 'ada-cleanup':  # after an interrupted ADA run
+        remove_qa_accounts(out / 'ada-qa-accounts.json')
+        return
     with sync_playwright() as w:
         browser = w.chromium.launch(channel=None if args.channel == 'chromium' else args.channel, args=['--disable-http2', '--disable-quic'])
         totals = local_totals(browser)
@@ -500,14 +524,23 @@ def main():
             paper(c.new_page(), url, 'owner', totals, qa_papers, out, rev, version)
         else:
             url = private.get('ada.url').rstrip('/') + '/'
-            staff = 'qa' + secrets.token_hex(5)
-            pupil = '0' + str(secrets.randbelow(10000)).zfill(4)
             pw = secrets.token_urlsafe(24)
-            db = private.layout('dataDir') + '/accounts.sqlite'
-            fixture = lambda script: private.remote(private.layout('runtimePython') + ' -', (
-                f"import sqlite3\nfrom argon2 import PasswordHasher\nc=sqlite3.connect({db!r});c.execute('pragma foreign_keys=on')\n" + script).encode())
-            fixture(f"h=PasswordHasher().hash({pw!r});c.execute('insert into staff_accounts(username,password_hash,force_change)values(?,?,0)',({staff!r},h));"
-                    f"c.execute('insert into accounts(school_number,password_hash)values(?,?)',({pupil!r},h));c.commit()")
+            pending = out / 'ada-qa-accounts.json'
+            if pending.exists():
+                raise SystemExit('Temporary QA accounts from an earlier run still exist; run: qa_live.py ada-cleanup')
+            for _ in range(20):  # identities that do not exist yet; created together in one transaction
+                staff, pupil = 'qa' + secrets.token_hex(5), '0' + str(secrets.randbelow(10000)).zfill(4)
+                created = ada_fixture(f"assert not c.execute('select 1 from staff_accounts where username=?',({staff!r},)).fetchone()\n"
+                                      f"if c.execute('select 1 from accounts where school_number=?',({pupil!r},)).fetchone(): print('taken'); raise SystemExit\n"
+                                      f"h=PasswordHasher().hash({pw!r})\n"
+                                      f"c.execute('insert into staff_accounts(username,password_hash,force_change)values(?,?,0)',({staff!r},h))\n"
+                                      f"c.execute('insert into accounts(school_number,password_hash)values(?,?)',({pupil!r},h));c.commit();print('created')").strip()
+                if created == b'created':
+                    break
+            else:
+                raise SystemExit('Could not find an unused temporary pupil number')
+            pending.write_text(json.dumps({'staff': staff, 'pupil': pupil}))
+            os.chmod(pending, 0o600)
             try:
                 for role, ident in [('student', pupil + '@' + private.get('ada.pupilEmailDomain')), ('staff', staff)]:
                     c = browser.new_context(service_workers='block', viewport={'width': 1440, 'height': 1000})
@@ -529,8 +562,7 @@ def main():
                 assert live_get(guest, url + 'admin', max_redirects=0).status in (302, 403)
                 ok('ada signed-out guests are redirected from Papers and exam assets')
             finally:
-                fixture(f"c.execute('delete from sessions where staff_username=? or school_number=?',({staff!r},{pupil!r}));"
-                        f"c.execute('delete from staff_accounts where username=?',({staff!r},));c.execute('delete from accounts where school_number=?',({pupil!r},));c.commit()")
+                remove_qa_accounts(pending)
         browser.close()
     target = 'owner' if args.target == 'owner' and not args.url else ('dry-run' if args.url else 'ada')
     (out / f'qa-{target}.json').write_text(json.dumps({'revision': rev, 'version': version, 'papers': qa_papers, 'passed': PASSED}, indent=1))
