@@ -1,0 +1,110 @@
+# 1
+$f(z) = z^3 + pz^2 + qz - 15$
+where $p$ and $q$ are real constants.
+Given that the equation $f(z) = 0$ has roots
+$\alpha, \frac{5}{\alpha}$ and $\left(\alpha + \frac{5}{\alpha} - 1\right)$
+(a) solve completely the equation $f(z) = 0$
+[5]
+(b) Hence find the value of $p$.
+[2]
+
+# 2
+The plane $\Pi$ passes through the point $A$ and is perpendicular to the vector $\mathbf n$
+Given that
+$$\overrightarrow{OA} = \begin{pmatrix} 5 \\ -3 \\ -4 \end{pmatrix} \quad \text{and} \quad \mathbf n = \begin{pmatrix} 3 \\ -1 \\ 2 \end{pmatrix}$$
+where $O$ is the origin,
+(a) find a Cartesian equation of $\Pi$.
+[2]
+With respect to the fixed origin $O$, the line $l$ is given by the equation
+$$\mathbf{r} = \begin{pmatrix} 7 \\ 3 \\ -2 \end{pmatrix} + \lambda \begin{pmatrix} -1 \\ -5 \\ 3 \end{pmatrix}$$
+The line $l$ intersects the plane $\Pi$ at the point $X$.
+(b) Show that the acute angle between the plane $\Pi$ and the line $l$ is $21.2^\circ$ correct to one decimal place.
+[4]
+(c) Find the coordinates of the point $X$.
+[4]
+
+# 3
+Tyler invested a total of £5000 across three different accounts; a savings account, a property bond account and a share dealing account.
+Tyler invested £400 more in the property bond account than in the savings account.
+After one year
+• the savings account had increased in value by 1.5%
+• the property bond account had increased in value by 3.5%
+• the share dealing account had decreased in value by 2.5%
+• the total value across Tyler’s three accounts had increased by £79
+Form and solve a matrix equation to find out how much money was invested by Tyler in each account.
+[7]
+
+# 4
+The cubic equation
+$$x^3 + 3x^2 - 8x + 6 = 0$$
+has roots $\alpha, \beta$ and $\gamma$.
+Without solving the equation, find the cubic equation whose roots are $(\alpha - 1), (\beta - 1)$ and $(\gamma - 1)$, giving your answer in the form $w^3 + pw^2 + qw + r = 0$, where $p, q$ and $r$ are integers to be found.
+[5]
+
+# 5
+$\mathbf M = \begin{pmatrix} 1 & -\sqrt{3} \\ \sqrt{3} & 1 \end{pmatrix}$
+(a) Show that $\mathbf M$ is non-singular.
+[2]
+The hexagon $R$ is transformed to the hexagon $S$ by the transformation represented by the matrix $\mathbf M$.
+Given that the area of hexagon $R$ is 5 square units,
+(b) find the area of hexagon $S$.
+[1]
+The matrix $\mathbf M$ represents an enlargement, with centre $(0, 0)$ and scale factor $k$, where $k > 0$, followed by a rotation anti-clockwise through an angle $\theta$ about $(0, 0)$.
+(c) Find the value of $k$.
+[2]
+(d) Find the value of $\theta$.
+[2]
+
+# 6
+(a) Prove by induction that for all positive integers $n$,
+$$\sum_{r=1}^{n} r^2 = \frac{1}{6} n(n+1)(2n+1)$$
+[6]
+(b) Use the standard results for $\sum_{r=1}^{n} r^3$ and $\sum_{r=1}^{n} r$ to show that for all positive integers $n$,
+$$\sum_{r=1}^{n} r(r+6)(r-6) = \frac{1}{4} n(n+1)(n-8)(n+9)$$
+[4]
+(c) Hence find the value of $n$ that satisfies
+$$\sum_{r=1}^{n} r(r+6)(r-6) = 17 \sum_{r=1}^{n} r^2$$
+[5]
+
+# 7
+Diagrams not drawn to scale
+@figure 154 Figures 1 and 2. Bird bath cross-section and dimensions of the model.
+Figure 1 shows the central cross-section $AOBCD$ of a circular bird bath, which is made of concrete. Measurements of the height and diameter of the bird bath, and the depth of the bowl of the bird bath have been taken in order to estimate the amount of concrete that was required to make this bird bath.
+Using these measurements, the cross-sectional curve $CD$, shown in Figure 2, is modelled as a curve with equation
+$$y = 1 + kx^2 \quad -0.2 \leq x \leq 0.2$$
+where $k$ is a constant and where $O$ is the fixed origin.
+The height of the bird bath measured $1.16\text{ m}$ and the diameter, $AB$, of the base of the bird bath measured $0.40\text{ m}$, as shown in Figure 1.
+(a) Suggest the maximum depth of the bird bath.
+[1]
+(b) Find the value of $k$.
+[2]
+(c) Hence find the volume of concrete that was required to make the bird bath according to this model. Give your answer, in $m^3$, correct to 3 significant figures.
+[7]
+(d) State a limitation of the model.
+[1]
+It was later discovered that the volume of concrete used to make the bird bath was $0.127\text{ m}^3$ correct to 3 significant figures.
+(e) Using this information and the answer to part (c), evaluate the model, explaining your reasoning.
+[1]
+
+# 8
+(a) Shade on an Argand diagram the set of points
+$$\left\{ z \in \mathbb{C} : |z - 4i| \leq 3 \right\} \cap \left\{ z \in \mathbb{C} : -\frac{\pi}{2} < \arg(z + 3 - 4i) \leq \frac{\pi}{4} \right\}$$
+[6]
+The complex number $w$ satisfies
+$$|w - 4i| = 3$$
+(b) Find the maximum value of $\arg w$ in the interval $(-\pi, \pi]$.
+Give your answer in radians correct to 2 decimal places.
+[2]
+
+# 9
+An octopus is able to catch any fish that swim within a distance of 2 m from the octopus’s position.
+A fish $F$ swims from a point $A$ to a point $B$.
+The octopus is modelled as a fixed particle at the origin $O$.
+Fish $F$ is modelled as a particle moving in a straight line from $A$ to $B$.
+Relative to $O$, the coordinates of $A$ are $(-3, 1, -7)$ and the coordinates of $B$ are $(9, 4, 11)$, where the unit of distance is metres.
+(a) Use the model to determine whether or not the octopus is able to catch fish $F$.
+[7]
+(b) Criticise the model in relation to fish $F$.
+[1]
+(c) Criticise the model in relation to the octopus.
+[1]

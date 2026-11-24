@@ -170,10 +170,12 @@ class GateFailsOnDuplicates(unittest.TestCase):
 
     def test_an_undecided_candidate_fails_the_gate(self):
         dec = json.loads((self.tmp / duplicates.DECISIONS).read_text())
-        dec['notDuplicates'] = [d for d in dec['notDuplicates'] if d['id'] != 'pmt/pure-core-1/ch4/q3']
+        pair = {'exam/edexcel-8fm0-01-2019-june/q3', 'luisa/1.48:7'}
+        dec['notDuplicates'] = [d for d in dec['notDuplicates']
+                                if {d['id'], d['checkedAgainst']} != pair]
         (self.tmp / duplicates.DECISIONS).write_text(json.dumps(dec))
         errors = duplicates.errors(self.tmp)
-        self.assertTrue(any('possible duplicate pmt/pure-core-1/ch4/q3' in e for e in errors), errors)
+        self.assertTrue(any('possible duplicate' in e and all(qid in e for qid in pair) for e in errors), errors)
 
     def test_remove_carries_over_deletes_and_migrates(self):
         # As if a new official paper had copied PMT Core Pure 1 Ch.3 Q3 (itself the survivor of Ch.8 Q5).

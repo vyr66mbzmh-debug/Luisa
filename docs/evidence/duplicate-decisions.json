@@ -62,7 +62,7 @@
   },
   {
    "removed": "pmt/pure-core-1/ch8/q8",
-   "retained": "pmt/pure-core-1/ch3/q6",
+   "retained": "exam/edexcel-8fm0-01-sample/q6",
    "reason": "Copy of the earlier PMT question PMT Core Pure 1 Ch.3 Series Q6: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
    "similarity": 1.0
   },
@@ -501,6 +501,41 @@
    "removed": "pmt/pure-core-1/ch9/q3",
    "retained": "exam/edexcel-8fm0-01-2021-november/q6",
    "reason": "Source verified against 8FM0 June 2021 QP, Q6, in the v0.77 PMT original-exam evidence. Official paper and subparts checked for the AS import."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch1/q6",
+   "retained": "exam/edexcel-8fm0-01-sample/q1",
+   "reason": "Source verified against 8FM0 Sample QP, Q1, in the v0.77 PMT original-exam evidence. Official paper and subparts checked for the AS import."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch3/q6",
+   "retained": "exam/edexcel-8fm0-01-sample/q6",
+   "reason": "Source verified against 8FM0 Sample QP, Q6, in the v0.77 PMT original-exam evidence. Official paper and subparts checked for the AS import."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch5/q1",
+   "retained": "exam/edexcel-8fm0-01-sample/q7",
+   "reason": "Source verified against 8FM0 Sample QP, Q7, in the v0.77 PMT original-exam evidence. Official paper and subparts checked for the AS import."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch9/q6",
+   "retained": "exam/edexcel-8fm0-01-sample/q9",
+   "reason": "Source verified against 8FM0 Sample QP, Q9, in the v0.77 PMT original-exam evidence. Official paper and subparts checked for the AS import."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch4/q3",
+   "retained": "exam/edexcel-8fm0-01-sample/q4",
+   "reason": "The cubic, all three shifted roots, required monic form and five marks agree with the official sample Q4."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch2/q3",
+   "retained": "exam/edexcel-8fm0-01-sample/q8",
+   "reason": "The disc and argument sector, maximum argument of w, rounding and both mark allocations agree with official sample Q8."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch7/q10",
+   "retained": "exam/edexcel-8fm0-01-sample/q5",
+   "reason": "The four matrix entries, hexagon area, transformation questions and all four mark allocations agree with official sample Q5."
   }
  ],
  "notDuplicates": [
@@ -760,6 +795,12 @@
    "id": "exam/edexcel-8ma0-22-2025-june/q4",
    "checkedAgainst": "exam/edexcel-8ma0-22-2022-june/q3",
    "why": "Both describe motion along a straight line. The 2025 paper gives displacement 2t³−12t²+18t and asks for maximum speed in part (c). The 2022 paper gives t³/3−5t²/2+6t and has two parts.",
+   "decided": "v0.79"
+  },
+  {
+   "id": "exam/edexcel-8fm0-01-sample/q4",
+   "checkedAgainst": "exam/edexcel-8fm0-01-2018-june/q2",
+   "why": "The sample transforms roots by subtracting 1 from each. The 2018 paper transforms a different cubic by doubling each root and adding 1.",
    "decided": "v0.79"
   }
  ]
