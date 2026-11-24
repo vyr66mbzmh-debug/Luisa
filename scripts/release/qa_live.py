@@ -144,7 +144,7 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
     for i in ('#papers-past-paper', '#papers-difficulty', '#papers-course', '#papers-book'):
         assert look(i) == white, (i, look(i))
     shot('all')
-    maths = [x['id'] for x in order if x['paperCode'].startswith('9MA')]
+    maths = [x['id'] for x in order if x['paperCode'].startswith(('8MA', '9MA'))]
     p.locator('#papers-course').select_option('maths-a-level')
     assert opts() == [''] + maths, opts()
     assert look('#papers-course') == [True, False, 'rgb(237, 243, 247)', 'rgb(21, 59, 87)'], look('#papers-course')
