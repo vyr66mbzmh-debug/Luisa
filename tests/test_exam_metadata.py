@@ -22,7 +22,8 @@ class PracticeClassification(unittest.TestCase):
         self.assertEqual(len(by_id), len(rows))
         originals = [q for p in (ROOT / 'content/practice').glob('*/chapter-*.json')
                      for q in json.loads(p.read_text())['questions']]
-        self.assertEqual(set(by_id), {q['id'] for q in originals})
+        retired = set(read('practice-catalogue.json')['migrations'])
+        self.assertEqual(set(by_id) - retired, {q['id'] for q in originals})
         for q in originals:
             mapped = by_id[q['id']]
             tier = q['questionLabel'].lower()
@@ -42,8 +43,11 @@ class PracticeClassification(unittest.TestCase):
         self.assertEqual(collections.Counter(q['bank'] for q in rows),
                          {'practice': 1921, 'exam': 554})
         for chapter in read('docs/evidence/v059-practice-classification.json')['chapters']:
-            self.assertEqual(hashlib.sha256((ROOT / chapter['path']).read_bytes()).hexdigest(),
-                             chapter['sha256'])
+            expected_hash = chapter['sha256']
+            if chapter['path'] == 'content/practice/pure-year-1/chapter-12.json':
+                # v0.79 retired two first-principles copies in favour of their official sources.
+                expected_hash = 'c4b51ba6c7193777b68639614db937536981edecb9ef23753b65f40511e9f9ca'
+            self.assertEqual(hashlib.sha256((ROOT / chapter['path']).read_bytes()).hexdigest(), expected_hash)
 
 
 class PilotMetadata(unittest.TestCase):
@@ -100,7 +104,15 @@ class PilotMetadata(unittest.TestCase):
             'edexcel-9ma0-03-sample': ([13,6,12,10,9,6,8,10,13,13], (3,4,3)),
         }
         self.assertTrue(data['printable'])
-        self.assertEqual([p['id'] for p in data['papers']], list(expected))
+        legacy = [p for p in data['papers'] if p['qualification'] != 'AS']
+        self.assertEqual([p['id'] for p in legacy], list(expected))
+        as_marks = read('scripts/import/sets/v079-as/marks.json')
+        sources = read('scripts/import/sets/v079-as/sources.json')
+        self.assertEqual({p['id'] for p in data['papers'] if p['qualification'] == 'AS'}, set(as_marks))
+        self.assertEqual((len(as_marks), sum(map(len, as_marks.values())), sum(map(sum, as_marks.values()))), (37, 322, 2320))
+        for pid, marks in as_marks.items():
+            third = len(marks) // 3
+            expected[pid] = marks, (third, len(marks)-2*third, third)
         all_rows = []
         for paper in data['papers']:
             rows = paper['questions']; marks, bands = expected[paper['id']]
@@ -111,7 +123,11 @@ class PilotMetadata(unittest.TestCase):
             self.assertEqual(paper['totalMarks'], sum(marks))
             self.assertEqual([q['difficulty'] for q in rows],
                              ['easy']*bands[0] + ['medium']*bands[1] + ['difficult']*bands[2])
-            for field in ('questionPaperUrl', 'markSchemeUrl'):
+            if paper['qualification'] == 'AS':
+                for key, source_key in [('questionPaperSha256', 'qpsha'), ('markSchemeSha256', 'mssha')]:
+                    self.assertEqual(paper['source'][key], sources[paper['id']][source_key])
+                    self.assertRegex(paper['source'][key], '^[0-9a-f]{64}$')
+            for field in (() if paper['qualification'] == 'AS' else ('questionPaperUrl', 'markSchemeUrl')):
                 self.assertTrue(paper['source'][field].startswith('https://pmt.physicsandmathstutor.com/'))
             for q in rows:
                 self.assertTrue(q['printable'])
@@ -123,9 +139,9 @@ class PilotMetadata(unittest.TestCase):
                     self.assertIn(tuple(s[k] for k in ('courseId','bookId','topicId','skillId')), valid)
                 self.assertTrue(set(q).isdisjoint({'question','questionHtml','steps','solution','hints','assets'}))
         self.assertEqual(len(all_rows), data['questionCount'])
-        self.assertEqual(len({q['id'] for q in all_rows}), 444)
+        self.assertEqual(len({q['id'] for q in all_rows}), 766)
         self.assertEqual(sum(q['marks'] for q in all_rows), data['totalMarks'])
-        self.assertEqual(data['totalMarks'], 3450)
+        self.assertEqual(data['totalMarks'], 5770)
 
 
     def test_printable_payloads_and_assets_are_complete(self):
@@ -133,8 +149,8 @@ class PilotMetadata(unittest.TestCase):
         catalogue = read('exam-catalogue.json')['questions']
         metadata = {q['id']: q for p in read('content/exams/pilot-metadata.json')['papers'] for q in p['questions']}
         self.assertEqual({q['id'] for q in catalogue}, set(metadata))
-        self.assertEqual(len(catalogue), 444)
-        self.assertEqual(sum(q['marks'] for q in catalogue), 3450)
+        self.assertEqual(len(catalogue), 766)
+        self.assertEqual(sum(q['marks'] for q in catalogue), 5770)
         for row in catalogue:
             self.assertEqual(row['status'], 'checked')
             for key in ('marks','difficulty','sourceLabel','skillMappings'):
@@ -300,7 +316,7 @@ class PilotMetadata(unittest.TestCase):
         self.assertTrue(any('respectably' in note for note in evidence['sourceNotes']))
         meta = {p['id']: p for p in read('content/exams/pilot-metadata.json')['papers']}
         self.assertEqual({k: (meta[k]['session'], meta[k]['examDate'], meta[k]['seriesDate']) for k in ids}, {k: ('Sample', None, None) for k in ids})
-        self.assertEqual(list(meta)[-5:], ids)
+        self.assertEqual([k for k in meta if meta[k]["qualification"] != "AS"][-5:], ids)
         for pid in ids:
             self.assertTrue(meta[pid]['source']['questionPaperUrl'].endswith('/QP/Sample%20QP.pdf'))
             self.assertEqual(meta[pid]['source']['questionPaperSha256'], meta[pid]['source']['indexedQuestionPaperSha256'])

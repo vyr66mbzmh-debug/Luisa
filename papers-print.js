@@ -109,10 +109,11 @@
     const title = chapter?.title || row.chapterTitle || row.topicTitle;
     const chapterNumber = chapter?.id || row.chapterNumber;
     const topic = title === 'Applications of forces' ? 'Forces' : title;
-    const place = row.sourceKind === 'madas' ? '' : [course, shortBooks[book] || book, chapterNumber && 'Ch' + chapterNumber, topic].filter(Boolean).join(' ');
-    const difficulty = row.difficulty && (row.difficulty === 'very-hard' ? 'Very Hard' : row.difficulty[0].toUpperCase() + row.difficulty.slice(1));
+    const showChapter = row.sourceKind !== 'madas' && !(row.sourceKind === 'past-exam' && row.paperCode?.startsWith('8'));
+    const place = !showChapter ? '' : [course, shortBooks[book] || book, chapterNumber && 'Ch' + chapterNumber, topic].filter(Boolean).join(' ');
+    const difficulty = row.difficulty && (row.difficulty[0].toUpperCase() + row.difficulty.slice(1).replace('-', ' '));
     const detail = element(doc, 'span', 'compact-provenance', '(' + [place, compactSource(row), difficulty].filter(Boolean).join(' - ') + ')');
-    detail.title = [source(row), row.sourceKind === 'madas' ? '' : context(row)].filter(Boolean).join(' · ');
+    detail.title = [source(row), showChapter ? context(row) : ''].filter(Boolean).join(' · ');
     head.append(element(doc, 'h2', '', 'Q' + number + (continuation ? ' · continued' : '')), detail);
     if (validMarks(row) && !continuation) head.append(element(doc, 'strong', 'question-marks', '[' + row.marks + ' Marks]'));
     return head;
@@ -260,6 +261,7 @@
         question.append(questionHeading(doc, row, index + 1, false), normaliseMarks(content(doc, contextHtml + row.question)));
         const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); if (layout !== 'condensed') question.append(working);
         const solution = includeAnswers ? content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join('')) : null;
+        if (solution && row.schemeNote) solution.prepend(element(doc, 'p', 'exam-scheme-note', row.schemeNote));
         if (solution && row.sourceKind === 'madas') solution.querySelector('.madas-total').textContent = `Total mark for question ${index + 1} is ${row.marks} marks.`;
         if (includeAnswers && row.hints?.length) {
           const hints = element(doc, 'section', 'solution-hints');

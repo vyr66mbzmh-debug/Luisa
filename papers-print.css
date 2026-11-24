@@ -102,3 +102,8 @@ body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
 
 .madas-excerpt {margin:0 0 3mm; break-inside:avoid}
 .madas-excerpt img, .print-question .math-content .madas-excerpt img {display:block; width:var(--madas-width)!important; height:auto!important; max-width:100%!important; max-height:none!important; object-fit:contain}
+
+.exam-subpart { padding-inline-start: 1.8em; text-indent: -1.8em; }
+
+/* Leave space on A4 for the heading and footer above and below tall official scheme diagrams. */
+.exam-solution-source img { max-height: 220mm; object-fit: contain; }

@@ -1,0 +1,131 @@
+# 1
+The cubic equation
+$$2x^3 - 3x^2 + 5x + 7 = 0$$
+has roots $\alpha, \beta$ and $\gamma$.
+Without solving the equation, determine the exact value of
+(i) $\alpha^2 + \beta^2 + \gamma^2$
+[3]
+(ii) $\frac{3}{\alpha} + \frac{3}{\beta} + \frac{3}{\gamma}$
+[3]
+(iii) $(5 - \alpha)(5 - \beta)(5 - \gamma)$
+
+[3]
+
+# 2
+With respect to the right-hand rule, a rotation through $\theta^\circ$ anticlockwise about the $z$-axis is represented by the matrix
+$$\begin{pmatrix} \cos \theta & -\sin \theta & 0 \\ \sin \theta & \cos \theta & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
+Given that the matrix $\mathbf M$, where
+$$\mathbf M = \begin{pmatrix} -\frac{\sqrt{3}}{2} & \frac{1}{2} & 0 \\ -\frac{1}{2} & -\frac{\sqrt{3}}{2} & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
+represents a rotation through $\alpha^\circ$ anticlockwise about the $z$-axis with respect to the right-hand rule,
+(a) determine the value of $\alpha$.
+[1]
+(b) Hence determine the smallest possible positive integer value of $k$ for which $\mathbf M^k = \mathbf I$
+[2]
+The $3 \times 3$ matrix $\mathbf N$ represents a reflection in the plane with equation $y = 0$
+(c) Write down the matrix $\mathbf N$.
+[1]
+The point $A$ has coordinates $(-2, 4, 3)$
+The point $B$ is the image of the point $A$ under the transformation represented by matrix $\mathbf M$ followed by the transformation represented by matrix $\mathbf N$.
+(d) Show that the coordinates of $B$ are $(2 + \sqrt{3}, 2\sqrt{3} - 1, 3)$
+[2]
+Given that $O$ is the origin,
+(e) show that, to 3 significant figures, the size of angle $AOB$ is $66.9^\circ$
+[2]
+(f) Hence determine the area of triangle $AOB$, giving your answer to 3 significant figures.
+[2]
+
+# 3
+(a) Use the standard results for summations to show that, for all positive integers $n$,
+$$\sum_{r=1}^{n} r^2(r+1) = \frac{1}{12}n(n+1)(n+2)(an+b)$$
+where $a$ and $b$ are integers to be determined.
+[4]
+(b) Hence show that, for all positive integers $k$,
+$$\sum_{r=k+1}^{3k} r^2(r+1) = \frac{1}{3}k(3k+1)(Ak^2+Bk+C)$$
+where $A, B$ and $C$ are integers to be determined.
+[3]
+(c) Hence, using algebra and making your method clear, determine the value of $k$ for which
+$$25\sum_{r=k+1}^{3k} r^2(r+1) = 192k^3(3k+1)$$
+[3]
+
+# 4
+$$\mathbf{A} = \begin{pmatrix} -1 & -2 & -7 \\ 3 & k & 2 \\ 1 & 1 & 4 \end{pmatrix}$$
+$$\mathbf{B} = \begin{pmatrix} 4k - 2 & 1 & 7k - 4 \\ -10 & 3 & -19 \\ 3 - k & -1 & 6 - k \end{pmatrix}$$
+where $k$ is a constant.
+(a) Determine the value of the constant $c$ for which
+$$\mathbf{AB} = (3k + c)\mathbf{I}$$
+[2]
+(b) Hence determine the value of $k$ for which $\mathbf{A}^{-1}$ does not exist.
+[2]
+Given that $\mathbf{A}^{-1}$ does exist,
+(c) write down $\mathbf{A}^{-1}$ in terms of $k$.
+[1]
+(d) Use the answer to part (c) to solve the simultaneous equations
+$$-x - 2y - 7z = 10$$
+$$3x + ky + 2z = 3$$
+$$x + y + 4z = 1$$
+giving the values of $x, y$ and $z$ in simplest form in terms of $k$.
+[3]
+
+# 5
+Given that on an Argand diagram the locus of points defined by $|z + 5 - 12i| = 10$ is a circle,
+(a) write down,
+(i) the coordinates of the centre of this circle,
+(ii) the radius of this circle.
+[2]
+(b) Show, by shading on an Argand diagram, the set of points defined by
+$$|z + 5 - 12i| \leq 10$$
+[1]
+(c) For the set of points defined in part (b), determine the maximum value of $|z|$
+[3]
+The set of points $A$ is defined by
+$$A = \{ z : 0 \leq \arg(z + 5 - 20i) \leq \pi \} \cap \{ z : |z + 5 - 12i| \leq 10 \}$$
+(d) Determine the area of the region defined by $A$, giving your answer to 3 significant figures.
+[4]
+
+# 6
+The drainage system for a sports field consists of underground pipes.
+This situation is modelled with respect to a fixed origin $O$.
+According to the model,
+• the surface of the sports field is a plane with equation $z = 0$
+• the pipes are straight lines
+• one of the pipes, $P_1$, passes through the points $A(3, 4, -2)$ and $B(-2, -8, -3)$
+• a different pipe, $P_2$, has equation $\frac{x-1}{2} = \frac{y-3}{4} = \frac{z+1}{-2}$
+• the units are metres
+(a) Determine a vector equation of the line representing the pipe $P_1$
+[2]
+(b) Determine the coordinates of the point at which the pipe $P_1$ meets the surface of the playing field, according to the model.
+[2]
+Determine, according to the model,
+(c) the acute angle between pipes $P_1$ and $P_2$, giving your answer in degrees to 3 significant figures,
+[3]
+(d) the shortest distance between pipes $P_1$ and $P_2$
+[5]
+
+# 7
+(i) Prove by induction that, for all positive integers $n$,
+$$\sum_{r=1}^{n} \frac{1}{r(r+1)} = \frac{n}{n+1}$$
+[5]
+(ii) Prove by induction that, for all positive integers $n$,
+$$f(n) = 3^{2n+4} - 2^{2n}$$
+is divisible by 5
+[5]
+
+# 8
+@figure 154 Figures 1 and 2. Central cross-section of the ornament and the shaded region R.
+Figure 1 shows the central vertical cross-section, $OABCDEO$, of the design for a solid glass ornament.
+Figure 2 shows the finite region, $R$, which is bounded by the $y$-axis, the horizontal line $CB$, the vertical line $BA$, and the curve $AO$.
+The ornament is formed by rotating the region $R$ through $360^\circ$ about the $y$-axis.
+The curve $AO$ is modelled by the equation
+$$x = ky^2 + \sqrt{y} \quad 0 \leqslant y \leqslant 4$$
+where $k$ is a constant.
+The point $A$ has coordinates $(0.4, 4)$ and the point $B$ has coordinates $(0.4, 4.5)$.
+The units are centimetres.
+(a) Determine the value of $k$ according to this model.
+[2]
+(b) Use algebraic integration to determine the exact volume of glass that would be required to make the ornament, according to the model.
+[7]
+(c) State a limitation of the model.
+[1]
+When the ornament was manufactured, $9\text{ cm}^3$ of glass was required.
+(d) Use this information and your answer to part (b) to evaluate the model, explaining your reasoning.
+[1]

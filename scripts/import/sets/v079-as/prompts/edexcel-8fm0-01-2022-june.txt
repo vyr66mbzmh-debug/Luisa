@@ -1,0 +1,125 @@
+# 1
+$$\mathbf{A} = \begin{pmatrix} 4 & -1 \\ 7 & 2 \\ -5 & 8 \end{pmatrix}$$
+$$\mathbf{B} = \begin{pmatrix} 2 & 3 & 2 \\ -1 & 6 & 5 \end{pmatrix}$$
+$$\mathbf{C} = \begin{pmatrix} -5 & 2 & 1 \\ 4 & 3 & 8 \\ -6 & 11 & 2 \end{pmatrix}$$
+Given that $\mathbf{I}$ is the $3 \times 3$ identity matrix,
+(a) (i) show that there is an integer $k$ for which
+$$\mathbf{AB} - 3\mathbf{C} + k\mathbf{I} = \mathbf{0}$$
+stating the value of $k$
+(ii) explain why there can be no constant $m$ such that
+$$\mathbf{BA} - 3\mathbf{C} + m\mathbf{I} = \mathbf{0}$$
+[4]
+(b) (i) Show how the matrix $\mathbf{C}$ can be used to solve the simultaneous equations
+$$-5x + 2y + z = -14$$
+$$4x + 3y + 8z = 3$$
+$$-6x + 11y + 2z = 7$$
+(ii) Hence use your calculator to solve these equations.
+[3]
+
+# 2
+(a) Express the complex number $w = 4\sqrt{3} - 4i$ in the form $r(\cos \theta + i \sin \theta)$ where $r > 0$ and $-\pi < \theta \leq \pi$
+[4]
+(b) Show, on a single Argand diagram,
+(i) the point representing $w$
+(ii) the locus of points defined by $\arg(z + 10i) = \frac{\pi}{3}$
+[3]
+(c) Hence determine the minimum distance of $w$ from the locus $\arg(z + 10i) = \frac{\pi}{3}$
+[3]
+
+# 3
+With respect to the right-hand rule, a rotation through $\theta^\circ$ anticlockwise about the y-axis is represented by the matrix
+$$\begin{pmatrix} \cos \theta & 0 & \sin \theta \\ 0 & 1 & 0 \\ -\sin \theta & 0 & \cos \theta \end{pmatrix}$$
+The point $P$ has coordinates (8, 3, 2)
+The point $Q$ is the image of $P$ under the transformation reflection in the plane $y = 0$
+(a) Write down the coordinates of $Q$
+[1]
+The point $R$ is the image of $P$ under the transformation rotation through $120^\circ$ anticlockwise about the y-axis, with respect to the right-hand rule.
+(b) Determine the exact coordinates of $R$
+[2]
+(c) Hence find $|\overrightarrow{PR}|$ giving your answer as a simplified surd.
+[2]
+(d) Show that $\overrightarrow{PR}$ and $\overrightarrow{PQ}$ are perpendicular.
+[1]
+(e) Hence determine the exact area of triangle $PQR$, giving your answer as a surd in simplest form.
+[2]
+
+# 4
+The roots of the quartic equation
+$$3x^4 + 5x^3 - 7x + 6 = 0$$
+are $\alpha, \beta, \gamma$ and $\delta$
+Making your method clear and without solving the equation, determine the exact value of
+(i) $\alpha^2 + \beta^2 + \gamma^2 + \delta^2$
+[3]
+(ii) $\frac{2}{\alpha} + \frac{2}{\beta} + \frac{2}{\gamma} + \frac{2}{\delta}$
+[3]
+(iii) $(3 - \alpha)(3 - \beta)(3 - \gamma)(3 - \delta)$
+[3]
+
+# 5
+(a) Use the standard summation formulae to show that, for $n \in \mathbb{N}$,
+$$\sum_{r=1}^{n} \left(3r^2 - 17r - 25\right) = n\left(n^2 - An - B\right)$$
+where $A$ and $B$ are integers to be determined.
+[4]
+(b) Explain why, for $k \in \mathbb{N}$,
+$$\sum_{r=1}^{3k} r \tan(60r)^\circ = -k\sqrt{3}$$
+[2]
+Using the results from part (a) and part (b) and showing all your working,
+(c) determine any value of $n$ that satisfies
+$$\sum_{r=5}^{n} \left(3r^2 - 17r - 25\right) = 15\left[\sum_{r=6}^{3n} r \tan(60r)^\circ\right]^2$$
+[6]
+
+# 6
+The surface of a horizontal tennis court is modelled as part of a horizontal plane, with the origin on the ground at the centre of the court, and
+• $\mathbf i$ and $\mathbf j$ are unit vectors directed across the width and length of the court respectively
+• $\mathbf k$ is a unit vector directed vertically upwards
+• units are metres
+After being hit, a tennis ball, modelled as a particle, moves along the path with equation
+$$\mathbf{r} = (-4.1 + 9\lambda - 2.3\lambda^2)\mathbf{i} + (-10.25 + 15\lambda)\mathbf{j} + (0.84 + 0.8\lambda - \lambda^2)\mathbf{k}$$
+where $\lambda$ is a scalar parameter with $\lambda \geq 0$
+Assuming that the tennis ball continues on this path until it hits the ground,
+(a) find the value of $\lambda$ at the point where the ball hits the ground.
+[2]
+The direction in which the tennis ball is moving at a general point on its path is given by
+$$(9 - 4.6\lambda)\mathbf{i} + 15\mathbf{j} + (0.8 - 2\lambda)\mathbf{k}$$
+(b) Write down the direction in which the tennis ball is moving as it hits the ground.
+[1]
+(c) Hence find the acute angle at which the tennis ball hits the ground, giving your answer in degrees to one decimal place.
+[4]
+The net of the tennis court lies in the plane $\mathbf{r} \cdot \mathbf{j} = 0$
+(d) Find the position of the tennis ball at the point where it is in the same plane as the net.
+[3]
+The maximum height above the court of the top of the net is $0.9\text{ m}$.
+Modelling the top of the net as a horizontal straight line,
+(e) state whether the tennis ball will pass over the net according to the model, giving a reason for your answer.
+[1]
+With reference to the model,
+(f) decide whether the tennis ball will actually pass over the net, giving a reason for your answer.
+[2]
+
+# 7
+Prove by mathematical induction that, for $n \in \mathbb{N}$
+$$\begin{pmatrix} -5 & 9 \\ -4 & 7 \end{pmatrix}^n = \begin{pmatrix} 1 - 6n & 9n \\ -4n & 1 + 6n \end{pmatrix}$$
+[6]
+
+# 8
+@figure 154 Figures 1 and 2. Dimensions of the vase and the cross-section used to model it.
+Figure 1 shows a sketch of a 16 cm tall vase which has a flat circular base with diameter 8 cm and a circular opening of diameter 8 cm at the top.
+A student measures the circular cross-section halfway up the vase to be 8 cm in diameter.
+The student models the shape of the vase by rotating a curve, shown in Figure 2, through 360° about the x-axis.
+(a) State the value of $a$ that should be used when setting up the model.
+[1]
+Two possible equations are suggested for the curve in the model.
+Model A $y = a - 2 \sin \left( \frac{45}{2} x \right)^\circ$
+Model B $y = a + \frac{x(x - 8)(x + 8)}{100}$
+For each model,
+(b) (i) find the distance from the base at which the widest part of the vase occurs,
+(ii) find the diameter of the vase at this widest point.
+[7]
+The widest part of the vase has diameter 12 cm and is just over 3 cm from the base.
+(c) Using this information and making your reasoning clear, suggest which model is more appropriate.
+[1]
+(d) Using algebraic integration, find the volume for the vase predicted by Model B. You must make your method clear.
+[5]
+The student pours water from a full one litre jug into the vase and finds that there is 100 ml left in the jug when the vase is full.
+(e) Comment on the suitability of Model B in light of this information.
+[1]

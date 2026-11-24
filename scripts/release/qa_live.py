@@ -254,10 +254,10 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
     p.locator('#papers-source-past-papers').uncheck()
     p.locator('#papers-source-madas').check()
     madas = p.evaluate("LUISA_PAPERS_BUILDER.pool().map(r=>[r.id,r.sourceLabel,r.difficulty,r.markScheme])")
-    assert len(madas) == 1021 and all(row[3] == 'worked' for row in madas)
+    assert len(madas) == 1018 and all(row[3] == 'worked' for row in madas)
     assert {row[1].split(' Paper ')[0] for row in madas} == {'MADAS AS Pure', 'MADAS A-level Pure', 'MADAS A-level Applied'}
-    p.locator('#papers-difficulty').select_option('very-hard')
-    assert p.evaluate("LUISA_PAPERS_BUILDER.pool().every(r=>r.difficulty==='very-hard')") and len(p.evaluate("LUISA_PAPERS_BUILDER.pool()")) == 290
+    p.locator('#papers-difficulty').select_option('very-difficult')
+    assert p.evaluate("LUISA_PAPERS_BUILDER.pool().every(r=>r.difficulty==='very-difficult')") and len(p.evaluate("LUISA_PAPERS_BUILDER.pool()")) == 289
     p.locator('#papers-difficulty').select_option('')
     if p.locator('#papers-exam-madas').count():
         exam_open = p.locator('#papers-exam').evaluate('node => node.open')
@@ -270,7 +270,7 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
             p.locator('#papers-exam > summary').click()
     p.locator('#papers-source-madas').uncheck()
     p.locator('#papers-source-past-papers').check()
-    ok(f'{role} MADAS collections, adapted marking and Very Hard filter')
+    ok(f'{role} MADAS collections, adapted marking and Very difficult filter')
     # Stable regression: a whole June 2025 paper selected by browsing, then generated in paper order.
     p.locator('#papers-past-paper').select_option('edexcel-9ma0-02-2025-june')
     expect(p.locator('#filter-title')).to_have_text('15 questions in the selection')

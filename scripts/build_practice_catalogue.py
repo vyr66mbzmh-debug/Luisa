@@ -146,6 +146,8 @@ def build(root=ROOT):
     existing=textbook['skills']
     descriptors=[];extra={};seen=set();chapters=[]
     classification=json.loads((root/'content/practice-classification.json').read_text())
+    decisions=json.loads((root/'docs/evidence/duplicate-decisions.json').read_text())
+    migrations={d['removed']:d['retained'] for d in decisions['duplicates'] if d['removed'].startswith('practice/')}
     classes={q['id']:q for q in classification['questions']}
     if classification.get('version')!=1 or len(classes)!=len(classification['questions']):raise ValueError('Invalid source classification')
     for path in sorted((root/'content/practice').glob('*/chapter-*.json')):
@@ -155,11 +157,12 @@ def build(root=ROOT):
         solutions=json.loads(authored.read_text())['solutions']
         by_id={r['id']:r for r in solutions}
         if len(by_id)!=len(solutions):raise ValueError(f'Duplicate worked solutions: {authored}')
-        if set(by_id)!={q['id'] for q in doc['questions']}:raise ValueError(f'Source/solution mismatch: {authored}')
+        if set(by_id)-migrations.keys()!={q['id'] for q in doc['questions']}-migrations.keys():raise ValueError(f'Source/solution mismatch: {authored}')
         changed=[]
         source_by_id={q['id']:q for q in doc['questions']}
         for question in doc['questions']:
             ident=question['id'];book=question['bookId'];course=question['courseId'];section=question['subchapterId']
+            if ident in migrations:continue
             if ident in seen:raise ValueError(f'Duplicate source question: {ident}')
             seen.add(ident)
             mapped=[]
@@ -188,11 +191,12 @@ def build(root=ROOT):
             descriptors.append(dict(**{k:question[k] for k in fields},bank=category['bank'],examType=category['examType'],difficulty=category['difficulty'],subchapterLabel=question['subchapterLabel'],board='Edexcel',skillIds=mapped,dataPath=path.relative_to(root).as_posix()))
             changed.append(question)
         doc['questions']=changed;chapters.append((path,doc))
-    if set(classes)!=seen:raise ValueError('Classification/source ID mismatch')
+    if set(classes)-migrations.keys()!=seen:raise ValueError('Classification/source ID mismatch')
     if len(chapters)!=45:raise ValueError(f'Expected45 practice booklets, found{len(chapters)}')
     # Write only after every source and solution passes the complete join.
     for path,doc in chapters:path.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n')
     index=dict(version=1,questions=descriptors,skills=list(extra.values()))
+    if migrations:index['migrations']=dict(sorted(migrations.items()))
     (root/'practice-catalogue.json').write_text(json.dumps(index,ensure_ascii=False,indent=2)+'\n')
     return len(descriptors)
 

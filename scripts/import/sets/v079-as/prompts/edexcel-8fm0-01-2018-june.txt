@@ -1,0 +1,91 @@
+# 1
+$$\mathbf{M} = \begin{pmatrix} 2 & 1 & -3 \\ 4 & -2 & 1 \\ 3 & 5 & -2 \end{pmatrix}$$
+(a) Find $\mathbf M^{-1}$ giving each element in exact form.
+[2]
+(b) Solve the simultaneous equations
+$$2x + y - 3z = -4$$
+$$4x - 2y + z = 9$$
+$$3x + 5y - 2z = 5$$
+[2]
+(c) Interpret the answer to part (b) geometrically.
+[1]
+
+# 2
+The cubic equation
+$$z^3 - 3z^2 + z + 5 = 0$$
+has roots $\alpha, \beta$ and $\gamma$.
+Without solving the equation, find the cubic equation whose roots are $(2\alpha + 1), (2\beta + 1)$ and $(2\gamma + 1)$, giving your answer in the form $w^3 + pw^2 + qw + r = 0$, where $p, q$ and $r$ are integers to be found.
+[5]
+
+# 3
+(a) Shade on an Argand diagram the set of points
+$$\{z \in \mathbb{C} : |z - 1 - i| \leq 3\} \cap \left\{z \in \mathbb{C} : \frac{\pi}{4} \leq \arg(z - 2) \leq \frac{3\pi}{4}\right\}$$
+[5]
+The complex number $w$ satisfies
+$$|w - 1 - i| = 3 \text{ and } \arg(w - 2) = \frac{\pi}{4}$$
+(b) Find, in simplest form, the exact value of $|w|^2$
+[4]
+
+# 4
+Part of the mains water system for a housing estate consists of water pipes buried beneath the ground surface. The water pipes are modelled as straight line segments. One water pipe, $W$, is buried beneath a particular road. With respect to a fixed origin $O$, the road surface is modelled as a plane with equation $3x - 5y - 18z = 7$, and $W$ passes through the points $A(-1, -1, -3)$ and $B(1, 2, -3)$. The units are in metres.
+(a) Use the model to calculate the acute angle between $W$ and the road surface.
+[5]
+A point $C(-1, -2, 0)$ lies on the road. A section of water pipe needs to be connected to $W$ from $C$.
+(b) Using the model, find, to the nearest cm, the shortest length of pipe needed to connect $C$ to $W$.
+[6]
+
+# 5
+$$\mathbf{A} = \begin{pmatrix} -\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2} \end{pmatrix}$$
+(a) Describe fully the single geometrical transformation $U$ represented by the matrix $\mathbf{A}$.
+[3]
+The transformation $V$, represented by the $2 \times 2$ matrix $\mathbf{B}$, is a reflection in the line $y = -x$
+(b) Write down the matrix $\mathbf{B}$.
+[1]
+Given that $U$ followed by $V$ is the transformation $T$, which is represented by the matrix $\mathbf{C}$,
+(c) find the matrix $\mathbf{C}$.
+[2]
+(d) Show that there is a real number $k$ for which the point $(1, k)$ is invariant under $T$.
+[4]
+
+# 6
+(a) Use the standard results for $\sum_{r=1}^{n} r^2$ and $\sum_{r=1}^{n} r$ to show that
+$$\sum_{r=1}^{n} (3r - 2)^2 = \frac{1}{2} n \left[ 6n^2 - 3n - 1 \right]$$
+for all positive integers $n$.
+[5]
+(b) Hence find any values of $n$ for which
+$$\sum_{r=5}^{n} (3r - 2)^2 + 103 \sum_{r=1}^{28} r \cos \left( \frac{r\pi}{2} \right) = 3n^3$$
+[5]
+
+# 7
+$$f(z) = z^3 + z^2 + pz + q$$
+where $p$ and $q$ are real constants.
+The equation $f(z) = 0$ has roots $z_1, z_2$ and $z_3$.
+When plotted on an Argand diagram, the points representing $z_1, z_2$ and $z_3$ form the vertices of a triangle of area 35
+Given that $z_1 = 3$, find the values of $p$ and $q$.
+[7]
+
+# 8
+(i) Prove by induction that for $n \in \mathbb{Z}^+$
+$$\begin{pmatrix} 5 & -8 \\ 2 & -3 \end{pmatrix}^n = \begin{pmatrix} 4n + 1 & -8n \\ 2n & 1 - 4n \end{pmatrix}$$
+[6]
+(ii) Prove by induction that for $n \in \mathbb{Z}^+$
+$$f(n) = 4^{n+1} + 5^{2n-1}$$
+is divisible by 21
+[6]
+
+# 9
+@figure 145 Figures 1 and 2. The bottle cross-section, dimensions and curve GF.
+A mathematics student is modelling the profile of a glass bottle of water. Figure 1 shows a sketch of a central vertical cross-section ABCDEFGHA of the bottle with the measurements taken by the student.
+The horizontal cross-section between CF and DE is a circle of diameter 8 cm and the horizontal cross-section between BG and AH is a circle of diameter 2 cm.
+The student thinks that the curve GF could be modelled as a curve with equation
+$$y = ax^2 + b \quad 1 \leq x \leq 4$$
+where $a$ and $b$ are constants and $O$ is the fixed origin, as shown in Figure 2.
+(a) Find the value of $a$ and the value of $b$ according to the model.
+[2]
+(b) Use the model to find the volume of water that the bottle can contain.
+[7]
+(c) State a limitation of the model.
+[1]
+The label on the bottle states that the bottle holds approximately $750\text{ cm}^3$ of water.
+(d) Use this information and your answer to part (b) to evaluate the model, explaining your reasoning.
+[1]

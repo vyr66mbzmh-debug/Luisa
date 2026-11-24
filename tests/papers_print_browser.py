@@ -383,6 +383,26 @@ class PapersPrintTests(unittest.TestCase):
             'edexcel-9fm0-01-sample': (9, 75), 'edexcel-9fm0-02-sample': (7, 75), 'edexcel-9ma0-01-sample': (15, 100),
             'edexcel-9ma0-02-sample': (16, 100), 'edexcel-9ma0-03-sample': (10, 100)})
 
+    def test_as_chapter_mapping_stays_out_of_printed_questions_and_schemes(self):
+        rows = self.exam_rows('edexcel-8ma0-01-2025-june', [1])
+        rows[0].update(bookTitle='Pure Year 1', topicTitle='Graph transformations',
+                       printChapter={'id': '4', 'title': 'Graph transformations'})
+        preview, result = self.preview(rows, includeAnswers=True)
+        self.assertTrue(result['ready'], result)
+        details = preview.locator('.compact-provenance')
+        self.assertGreaterEqual(details.count(), 2)
+        for text, title in details.evaluate_all('nodes => nodes.map(n => [n.innerText, n.title])'):
+            for value in (text, title):
+                self.assertIn(rows[0]['sourceLabel'], value)
+                self.assertNotRegex(value, 'Ch4|Pure Year 1|Y1 Pure|Graph transformations')
+        preview.close()
+
+    def test_official_as_complete_papers_print_in_every_layout(self):
+        sources = json.loads((ROOT / 'scripts/import/sets/v079-as/sources.json').read_text())
+        self.assertEqual(len(sources), 37)
+        for pid, source in sources.items():
+            self.assert_session_papers_print(source['session'], {pid: (source['nq'], source['total'])})
+
     def assert_session_papers_print(self, session, papers):
         import fitz, tempfile
         with tempfile.TemporaryDirectory() as folder:
@@ -450,7 +470,8 @@ class PapersPrintTests(unittest.TestCase):
         try:
             page = context.new_page()
             page.goto(f'http://127.0.0.1:{self.server.server_port}/papers.html')
-            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 45 && !document.querySelector('#papers-generate').disabled")
+            paper_count = len(json.loads((ROOT / 'content/exams/pilot-metadata.json').read_text())['papers'])
+            page.wait_for_function("count => document.querySelectorAll('#papers-past-paper option').length === count && !document.querySelector('#papers-generate').disabled", arg=1 + paper_count)
             page.locator('#papers-source-practice').uncheck()
             page.locator('#papers-source-exam-style').uncheck()
             page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')
@@ -941,12 +962,12 @@ class PapersPrintTests(unittest.TestCase):
         labelled = dict(practice_row('pure-year-2', 2, '2.1/q1'), id='practice/test/labelled', marks=3, markScheme='source',
                         sourceKind='practice-booklet', chapterNumber=2, subchapterLabel='2.1 Fixture exercise', questionLabel='1',
                         contextHtml='<aside class="practice-context"><p class="practice-context-label">Reference from 9.5 Q1</p><p>Use the diagram from the previous question.</p></aside>')
-        rows = (self.exam_rows('edexcel-9fm0-01-2019-june', [2]) + self.pmt_rows(['pmt/pure-core-1/ch2/q8', 'pmt/pure-core-1/ch6/q2'])
+        rows = (self.exam_rows('edexcel-9fm0-01-2019-june', [2]) + self.exam_rows('edexcel-8fm0-01-2021-november', [5]) + self.pmt_rows(['pmt/pure-core-1/ch6/q2'])
                 + [labelled] + self.exam_rows('edexcel-9ma0-32-2024-june', [1]) + self.pmt_rows(['pmt/pure-core-1/ch9/q4']))
         self.page.add_script_tag(url='/papers-exam.js')
         expected = self.page.evaluate('rows => rows.map(LUISA_PAPERS_EXAM.schemeSource)', rows)
         self.assertEqual(expected, ['Source: Edexcel June 2019 9FM0/01 Q2 · ID exam/edexcel-9fm0-01-2019-june/q2',
-                                    'Source: PMT Core Pure 1 Ch.2 Argand Diagrams Q8 · Original: Edexcel 8FM0/01 2021 Q5 · ID pmt/pure-core-1/ch2/q8',
+                                    'Source: Edexcel November 2021 8FM0/01 Q5 · ID exam/edexcel-8fm0-01-2021-november/q5',
                                     'Source: PMT Core Pure 1 Ch.6 Matrices Q2 · Original: Edexcel 9FM0/02 2022 Q2 · ID pmt/pure-core-1/ch6/q2',
                                     'Source: Practice Booklet · Chapter 2 · 2.1 Fixture exercise · Q1 · ID practice/test/labelled',
                                     'Source: Edexcel June 2024 9MA0/32 Q1 · ID exam/edexcel-9ma0-32-2024-june/q1',

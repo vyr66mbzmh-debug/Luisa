@@ -61,12 +61,14 @@ class BankHasNoDuplicates(unittest.TestCase):
 
     def test_counts_after_removal(self):
         items = duplicates.bank(ROOT)
-        self.assertEqual(len([i for i in items if i['kind'] != 'madas']), 9149)
+        removed = read('docs/evidence/v079-pmt-duplicates.json')['removed']
+        imported = sum(p['questionCount'] for p in read('content/exams/pilot-metadata.json')['papers'] if p.get('qualification') == 'AS')
+        self.assertEqual(len([i for i in items if i['kind'] != 'madas']), 9149 + imported - len(removed) - len(read('practice-catalogue.json').get('migrations', {})))
         self.assertEqual(sum(i['kind'] == 'madas' for i in items), 1018)
         pmt = [i for i in items if i['kind'] == 'pmt']
-        self.assertEqual(len(pmt), 83)
-        self.assertEqual(sum(i['id'].startswith('pmt/pure-core-1/') for i in pmt), 58)
-        self.assertEqual(sum(i['id'].startswith('pmt/pure-core-2/') for i in pmt), 25)
+        self.assertEqual(len(pmt) + len(removed), 83)
+        self.assertEqual(sum(i['id'].startswith('pmt/pure-core-1/') for i in pmt) + sum('/pure-core-1/' in r['removed'] for r in removed), 58)
+        self.assertEqual(sum(i['id'].startswith('pmt/pure-core-2/') for i in pmt) + sum('/pure-core-2/' in r['removed'] for r in removed), 25)
 
     def test_no_row_carries_a_copy_link(self):
         for name in ('pmt-catalogue.json', 'exam-catalogue.json', 'practice-catalogue.json'):
@@ -75,18 +77,20 @@ class BankHasNoDuplicates(unittest.TestCase):
 
     def test_every_removal_is_recorded_and_migrated(self):
         decisions = read(duplicates.DECISIONS)['duplicates']
-        self.assertEqual(len(decisions), 51)
-        self.assertEqual(sum(d['retained'].startswith('exam/') for d in decisions), 47)
-        self.assertEqual(sum(d['retained'].startswith('pmt/') for d in decisions), 4)
-        self.assertEqual(read('pmt-catalogue.json')['migrations'], {d['removed']: d['retained'] for d in decisions})
-        pmt_to_pmt = {d['removed']: d['retained'] for d in decisions if d['retained'].startswith('pmt/')}
-        self.assertEqual(pmt_to_pmt, {'pmt/pure-core-1/ch8/q5': 'pmt/pure-core-1/ch3/q3',
-                                      'pmt/pure-core-1/ch8/q8': 'pmt/pure-core-1/ch3/q6',
-                                      'pmt/pure-core-2/ch1/q10': 'pmt/pure-core-1/ch2/q7',
-                                      'pmt/pure-core-2/ch6/q1': 'pmt/pure-core-2/ch3/q3'})
-        trace = read('docs/evidence/v077-duplicates-removed.json')
-        self.assertEqual({(r['removed'], r['retained']) for r in trace['removed']},
-                         {(d['removed'], d['retained']) for d in decisions})
+        old_trace = read('docs/evidence/v077-duplicates-removed.json')['removed']
+        new_trace = read('docs/evidence/v079-pmt-duplicates.json')['removed']
+        self.assertEqual(len(old_trace), 51)
+        self.assertEqual(sum(d['retained'].startswith('exam/') for d in old_trace), 47)
+        practice_moves = read('practice-catalogue.json').get('migrations', {})
+        migrations = duplicates.migrations(ROOT)
+        self.assertEqual(migrations, {d['removed']: d['retained'] for d in decisions})
+        self.assertEqual(set(migrations), {d['removed'] for d in old_trace + new_trace} | set(practice_moves))
+        self.assertFalse(set(migrations.values()) & set(migrations))
+        for entry in old_trace + new_trace:
+            target = entry['retained']
+            self.assertEqual(migrations[entry['removed']], migrations.get(target, target))
+        for entry in new_trace:
+            self.assertTrue(entry['retained'].startswith('exam/'))
 
     def test_no_removed_id_is_left_anywhere_in_shipped_data_or_tests(self):
         removed = [d['removed'] for d in read(duplicates.DECISIONS)['duplicates']]
@@ -95,7 +99,7 @@ class BankHasNoDuplicates(unittest.TestCase):
                  *[str(p.relative_to(ROOT)) for p in (ROOT / 'content/pmt').glob('*.json')],
                  *[str(p.relative_to(ROOT)) for p in (ROOT / 'tests').glob('*.py') if p.name != 'test_duplicates.py']]
         for name in files:
-            text = (ROOT / name).read_text()
+            text = json.dumps(read(name)['questions']) if name == 'practice-catalogue.json' else (ROOT / name).read_text()
             for qid in removed:
                 self.assertIsNone(re.search(rf'{qid}(?![0-9])', text), f'{qid} in {name}')
         pmt = json.loads((ROOT / 'pmt-catalogue.json').read_text())
@@ -103,14 +107,16 @@ class BankHasNoDuplicates(unittest.TestCase):
         for qid in removed:
             self.assertNotIn(f'"{qid}"', text)
         for qid in removed:
+            if not qid.startswith('pmt/'):
+                continue
             sheet, q = qid.split('/')[1:3], int(qid.rsplit('/q', 1)[1])
             folder = ROOT / 'resources/pmt' / f'{sheet[0]}-{sheet[1]}'
             self.assertEqual(list(folder.glob(f'q{q:02}-*')), [], qid)
 
     def test_survivors_gained_the_copies_chapters_and_skills(self):
         rows = {r['id']: r for n in ('exam-catalogue.json', 'pmt-catalogue.json') for r in read(n)['questions']}
-        self.assertIn('further-maths-a-level/pure-core-1/8', rows['pmt/pure-core-1/ch3/q3']['chapterKeys'])
-        self.assertEqual(rows['pmt/pure-core-1/ch3/q3']['chapterKeys'][0], 'further-maths-a-level/pure-core-1/3')
+        self.assertIn('further-maths-a-level/pure-core-1/8', rows['exam/edexcel-8fm0-01-2021-november/q8']['chapterKeys'])
+        self.assertIn('further-maths-a-level/pure-core-1/3', rows['exam/edexcel-8fm0-01-2021-november/q8']['chapterKeys'])
         self.assertIn('further-maths-a-level/pure-core-2/2', rows['exam/edexcel-9fm0-01-sample/q1']['chapterKeys'])
         self.assertIn('1.43', [s['skillId'] for s in rows['exam/edexcel-9fm0-02-2019-june/q7']['skillMappings']])
         meta = {q['id']: q for p in read('content/exams/pilot-metadata.json')['papers'] for q in p['questions']}
@@ -126,9 +132,9 @@ class ImportersRefuseDuplicates(unittest.TestCase):
             duplicates.guard_import([dict(original, id='pmt/pure-core-1/ch2/q99')], ROOT)
 
     def test_a_later_pmt_copy_of_a_pmt_question_is_skipped(self):
-        original = payload_question('pmt/pure-core-1/ch3/q3')
+        original = payload_question('pmt/pure-core-2/ch3/q3')
         skip, _, _ = duplicates.incoming([dict(original, id='pmt/pure-core-2/ch9/q1')], ROOT)
-        self.assertEqual([s['existing'] for s in skip], ['pmt/pure-core-1/ch3/q3'])
+        self.assertEqual([s['existing'] for s in skip], ['pmt/pure-core-2/ch3/q3'])
 
     def test_an_official_paper_imported_twice_is_skipped(self):
         paper = read('content/exams/edexcel-9fm0-02-2021-november.json')['questions']
@@ -148,7 +154,7 @@ class ImportersRefuseDuplicates(unittest.TestCase):
 
     def test_known_copies_score_above_the_threshold(self):
         # Each removed copy's retained question, re-imported under a PMT ID, is caught (recall on the 51 pairs).
-        decisions = read(duplicates.DECISIONS)['duplicates']
+        decisions = read('docs/evidence/v077-duplicates-removed.json')['removed']
         for d in decisions:
             self.assertGreaterEqual(d['similarity'], duplicates.IMPORTED, d['removed'])
 
@@ -167,32 +173,34 @@ class GateFailsOnDuplicates(unittest.TestCase):
 
     def test_an_undecided_candidate_fails_the_gate(self):
         dec = json.loads((self.tmp / duplicates.DECISIONS).read_text())
-        dec['notDuplicates'] = [d for d in dec['notDuplicates'] if d['id'] != 'pmt/pure-core-1/ch4/q3']
+        pair = {'exam/edexcel-8fm0-01-2019-june/q3', 'luisa/1.48:7'}
+        dec['notDuplicates'] = [d for d in dec['notDuplicates']
+                                if {d['id'], d['checkedAgainst']} != pair]
         (self.tmp / duplicates.DECISIONS).write_text(json.dumps(dec))
         errors = duplicates.errors(self.tmp)
-        self.assertTrue(any('possible duplicate pmt/pure-core-1/ch4/q3' in e for e in errors), errors)
+        self.assertTrue(any('possible duplicate' in e and all(qid in e for qid in pair) for e in errors), errors)
 
     def test_remove_carries_over_deletes_and_migrates(self):
         # As if a new official paper had copied PMT Core Pure 1 Ch.3 Q3 (itself the survivor of Ch.8 Q5).
-        result = duplicates.remove(self.tmp, 'pmt/pure-core-1/ch3/q3', 'exam/edexcel-9fm0-02-2021-november/q4', 'test')
-        self.assertIn('further-maths-a-level/pure-core-1/8', result['chapterKeysAdded'])
+        result = duplicates.remove(self.tmp, 'pmt/pure-core-2/ch3/q3', 'exam/edexcel-9fm0-02-2021-november/q4', 'test')
+        self.assertIn('further-maths-a-level/pure-core-2/6', result['chapterKeysAdded'])
         self.assertGreater(result['filesDeleted'], 0)
         cat = json.loads((self.tmp / 'pmt-catalogue.json').read_text())
-        self.assertNotIn('pmt/pure-core-1/ch3/q3', {r['id'] for r in cat['questions']})
-        self.assertEqual(cat['migrations']['pmt/pure-core-1/ch3/q3'], 'exam/edexcel-9fm0-02-2021-november/q4')
-        self.assertEqual(cat['migrations']['pmt/pure-core-1/ch8/q5'], 'exam/edexcel-9fm0-02-2021-november/q4')  # chain resolved
-        self.assertFalse(list((self.tmp / 'resources/pmt/pure-core-1-ch3').glob('q03-*')))
-        self.assertTrue(list((ROOT / 'resources/pmt/pure-core-1-ch3').glob('q03-*')), 'the repository is untouched')
+        self.assertNotIn('pmt/pure-core-2/ch3/q3', {r['id'] for r in cat['questions']})
+        self.assertEqual(cat['migrations']['pmt/pure-core-2/ch3/q3'], 'exam/edexcel-9fm0-02-2021-november/q4')
+        self.assertEqual(cat['migrations']['pmt/pure-core-2/ch6/q1'], 'exam/edexcel-9fm0-02-2021-november/q4')  # chain resolved
+        self.assertFalse(list((self.tmp / 'resources/pmt/pure-core-2-ch3').glob('q03-*')))
+        self.assertTrue(list((ROOT / 'resources/pmt/pure-core-2-ch3').glob('q03-*')), 'the repository is untouched')
         exam = {r['id']: r for r in json.loads((self.tmp / 'exam-catalogue.json').read_text())['questions']}
-        self.assertIn('further-maths-a-level/pure-core-1/8', exam['exam/edexcel-9fm0-02-2021-november/q4']['chapterKeys'])
+        self.assertIn('further-maths-a-level/pure-core-2/6', exam['exam/edexcel-9fm0-02-2021-november/q4']['chapterKeys'])
         errors = [e for e in duplicates.errors(self.tmp) if 'possible duplicate' not in e]
         self.assertEqual(errors, [])
 
     def test_the_earlier_pmt_question_is_kept(self):
         with self.assertRaises(SystemExit):
-            duplicates.remove(self.tmp, 'pmt/pure-core-1/ch3/q3', 'pmt/pure-core-2/ch3/q3', 'test')
+            duplicates.remove(self.tmp, 'pmt/pure-core-2/ch3/q3', 'pmt/pure-core-2/ch7/q1', 'test')
         with self.assertRaises(SystemExit):
-            duplicates.remove(self.tmp, 'exam/edexcel-9fm0-02-2021-november/q4', 'pmt/pure-core-1/ch3/q3', 'test')
+            duplicates.remove(self.tmp, 'exam/edexcel-9fm0-02-2021-november/q4', 'pmt/pure-core-2/ch3/q3', 'test')
 
 
 if __name__ == '__main__':

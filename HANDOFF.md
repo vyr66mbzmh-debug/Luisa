@@ -1,15 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.78 -->
-**Release 0.78 · GitHub #143.**
+<!-- LUISA-REPORT-HANDOFF v0.79 -->
+**Release 0.79 · GitHub #145.**
 
-Papers includes 1,021 MADAS question appearances in 75 papers, with 1,018 distinct problems across AS Pure, A-level Pure and A-level Applied. Three repeated problems retain their original paper references and marking variants.
+Papers adds 322 official Edexcel AS questions worth 2,320 marks from 36 question papers and their mark schemes. The two independently numbered specimen applied sections are listed separately.
 
-The Madas source beside Exam style uses Standard for A–I, Hard for J–R and Very Hard for S–Z. The original difficulty guidance stays in the catalogue.
+Teachers and pupils can filter questions by Easy, Medium, Difficult, Very difficult and Unclassified. Standard joins Medium, Hard joins Difficult, and Very Hard joins Very difficult.
 
-Teachers can select Include MADAS questions when generating an exam. The adapted schemes identify the collection, paper and question and show editorial marks. Textbook mappings support selection and are omitted from the question and answer pages.
+The official question and scheme take precedence when sources repeat a problem. This release retires 45 PMT questions, two practice booklet questions and three repeated MADAS copies. Saved selections resolve to the retained questions.
 
-The catalogue and per-paper content are in `madas-catalogue.json` and `content/madas/`. The importer reads private prepared files. The bank contains 10,167 distinct problems. Release verification and usage are tracked on #143. The next requested release is v0.79 for official AS papers.
+The official bank now contains 766 questions worth 5,770 marks. AS source checksums, page ranges, skill assignments and printed mark allocations are in `scripts/import/sets/v079-as/`. Duplicate decisions and retained IDs are in `docs/evidence/duplicate-decisions.json`. Release verification and usage are tracked on issue #145.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

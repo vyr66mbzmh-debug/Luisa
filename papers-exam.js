@@ -47,8 +47,9 @@
   function courseGroup(row) {
     if (row.sourceKind === 'past-exam' && row.paperCode) {
       const part = row.paperCode.split('/').at(-1);
-      if (row.paperCode.startsWith('9FM0')) return 'Core';
-      return {'31': 'Statistics', '32': 'Mechanics'}[part] || 'Pure';
+      if (row.paperCode.includes('FM0')) return 'Core';
+      if (row.paperCode.startsWith('8MA0/02')) return row.bookTitle?.includes('Mechanics') ? 'Mechanics' : 'Statistics';
+      return {'21': 'Statistics', '22': 'Mechanics', '31': 'Statistics', '32': 'Mechanics'}[part] || 'Pure';
     }
     const book = row.printChapter?.bookTitle || row.bookTitle || '';
     if (/mechanic/i.test(book)) return 'Mechanics';
@@ -151,6 +152,7 @@
       // The paired official (or source) scheme with all its continuations (PAP-074-2).
       const schemes = withScheme ? rows.map((row, index) => {
         const scheme = content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join(''));
+        if (scheme && row.schemeNote) scheme.prepend(element(doc, 'p', 'exam-scheme-note', row.schemeNote));
         if (row.sourceKind === 'madas') scheme.querySelector('.madas-total').textContent = `Total mark for question ${index + 1} is ${row.marks} marks.`;
         staging.append(scheme);
         return {row, scheme};
@@ -317,8 +319,8 @@
   }
 
   // ---- PAP-066-1 and PAP-066-5: timed selection and difficulty order (exam paper only) ----
-  const LABELS = ['easy', 'medium', 'difficult'];
-  const bandOf = row => row.difficulty === 'standard' ? 'medium' : ['hard', 'very-hard'].includes(row.difficulty) ? 'difficult' : LABELS.includes(row.difficulty) ? row.difficulty : 'unrated';
+  const bandOf = row => row.difficulty || 'unclassified';
+  const closingBand = row => ['difficult', 'very-difficult'].includes(bandOf(row));
   const topicOf = row => row.paperId ? `${row.paperId}:${(row.chapterKeys || [])[0] || ''}` : (row.chapterKeys || [])[0] || row.chapterId || row.skillId || row.bookId || row.id;
   const markedRows = rows => rows.filter(row => Number.isInteger(row.marks) && row.marks > 0);
   // Mark totals whose paper time is within ±2 minutes of the target, nearest first.
@@ -344,7 +346,7 @@
     rows.forEach((row, index) => {
       const opening = bands[index] === 'opening' || index === 0, closing = bands[index] === 'closing' || index === rows.length - 1;
       if (opening && bandOf(row) !== 'easy') problems.push(`Question ${index + 1} is in the first 20% of marks but is ${bandOf(row)}, not easy.`);
-      else if (closing && bandOf(row) !== 'difficult') problems.push(`Question ${index + 1} is in the last 20% of marks but is ${bandOf(row)}, not difficult.`);
+      else if (closing && !closingBand(row)) problems.push(`Question ${index + 1} is in the last 20% of marks but is ${bandOf(row)}, not difficult.`);
     });
     return problems;
   }
@@ -363,7 +365,7 @@
     const total = rows.reduce((sum, row) => sum + row.marks, 0);
     if (rows.length < 2 || !total) return [...rows];
     const easy = rows.filter(row => bandOf(row) === 'easy').sort((a, b) => b.marks - a.marks);
-    const hard = rows.filter(row => bandOf(row) === 'difficult').sort((a, b) => b.marks - a.marks);
+    const hard = rows.filter(row => closingBand(row)).sort((a, b) => b.marks - a.marks);
     const opening = [], closing = []; let head = 0, tail = 0;
     // Fill the opening band with easy questions until the next question's midpoint passes 20%.
     while (easy.length && (!opening.length || head + Math.min(...rows.filter(row => !opening.includes(row)).map(row => row.marks)) / 2 < total * 0.2)) {
@@ -430,7 +432,7 @@
   // Priorities when constraints conflict: (a) time within ±2 minutes, (b) difficulty bands, (c) variety.
   function planTimedPaper(pool, minutes, {attempts = 240, random = Math.random} = {}) {
     if (!Number.isInteger(minutes) || minutes < 2 || minutes > 600) throw Error('Choose a whole number of minutes from 2 to 600.');
-    const rows = markedRows(pool), counts = {easy: 0, medium: 0, difficult: 0, unrated: 0}, marksBy = {easy: 0, medium: 0, difficult: 0, unrated: 0};
+    const rows = markedRows(pool), counts = {easy: 0, medium: 0, difficult: 0, 'very-difficult': 0, unclassified: 0}, marksBy = {easy: 0, medium: 0, difficult: 0, 'very-difficult': 0, unclassified: 0};
     for (const row of rows) { counts[bandOf(row)]++; marksBy[bandOf(row)] += row.marks; }
     const report = {target: minutes, extraTarget: extraMinutes(minutes), available: rows.length, availableMarks: rows.reduce((sum, row) => sum + row.marks, 0), counts, marksBy, excluded: pool.length - rows.length};
     if (!rows.length) return {...report, ok: false, rows: [], reasons: ['None of the questions in the chosen topics has known marks, so no exam paper can be timed from them. Add Practice Booklet or past-paper sources.']};
@@ -439,7 +441,7 @@
       const order = shuffle(rows, random);
       for (const marks of goals.slice(0, 5)) {
         const opening = bandFill(freshFirst(order.filter(row => bandOf(row) === 'easy'), []), marks);
-        const closing = bandFill(freshFirst(order.filter(row => bandOf(row) === 'difficult' && !opening.includes(row)), opening.map(topicOf)), marks);
+        const closing = bandFill(freshFirst(order.filter(row => closingBand(row) && !opening.includes(row)), opening.map(topicOf)), marks);
         const chosen = new Set([...opening, ...closing]), used = [...chosen].map(topicOf);
         const rest = marks - [...chosen].reduce((sum, row) => sum + row.marks, 0);
         const others = order.filter(row => !chosen.has(row));
@@ -468,7 +470,7 @@
         : `No combination of whole questions in the chosen topics gives ${minutes} ± ${TOLERANCE} minutes; the nearest is ${best.minutes} minutes (${best.marks} marks).`);
     }
     if (best.bandProblems) {
-      reasons.push(`The difficulty order cannot be met: the chosen topics have ${plural(counts.easy, 'easy question')} (${marksBy.easy} marks) and ${plural(counts.difficult, 'difficult question')} (${marksBy.difficult} marks), and the paper needs about ${Math.ceil(best.marks * 0.2)} marks of each.`);
+      reasons.push(`The difficulty order cannot be met: the chosen topics have ${plural(counts.easy, 'easy question')} (${marksBy.easy} marks) and ${plural(counts.difficult + counts['very-difficult'], 'difficult or very difficult question')} (${marksBy.difficult + marksBy['very-difficult']} marks), and the paper needs about ${Math.ceil(best.marks * 0.2)} marks of each.`);
       reasons.push(...orderProblems(best.rows));
     }
     return {...report, ok: !reasons.length, rows: best.rows, marks: best.marks, minutes: best.minutes, extra: extraMinutes(best.minutes), variety: best.variety, reasons};

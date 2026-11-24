@@ -1,0 +1,20 @@
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage{newtxtext,newtxmath}
+\begin{document}
+\begin{tikzpicture}[x=1bp,y=-1bp,inner sep=0pt,line width=.8bp,
+                    every node/.style={font=\fontsize{23bp}{25bp}\selectfont}]
+  \path[use as bounding box] (0,0) rectangle (490,252);
+  \coordinate (P) at (112,188);
+  \coordinate (X) at (290,188);
+  \coordinate (M) at (290,40);
+  \draw (22,188) -- (365,188);
+  \draw (P) -- (M);
+  \draw[dash pattern=on 3bp off 3bp] (M) -- (X);
+  \node at (143,177) {$\theta$};
+  \node at (116,201) {$P$};
+  \node at (289,202) {$X$};
+  \node at (378,190) {$l$};
+  \node at (118,228) {$(-300,400,-150)$};
+  \node[anchor=west] at (295,33) {$M\,(100,200,100)$};
+\end{tikzpicture}
+\end{document}

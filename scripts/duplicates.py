@@ -208,8 +208,12 @@ def removed_ids(root=ROOT):
 
 
 def migrations(root=ROOT):
-    path = Path(root) / 'pmt-catalogue.json'
-    return _json(path).get('migrations', {}) if path.exists() else {}
+    result = {}
+    for name in ('pmt', 'practice'):
+        path = Path(root) / f'{name}-catalogue.json'
+        if path.exists():
+            result.update(_json(path).get('migrations', {}))
+    return result
 
 
 def unresolved(root=ROOT, items=None):
@@ -237,11 +241,12 @@ def errors(root=ROOT):
         errs.append(f'possible duplicate {drop["id"]} of {keep["id"]} (similarity {score}); confirm it and run '
                     f'"scripts/duplicates.py remove", or record it under notDuplicates in {DECISIONS}')
     removed = {d['removed'] for d in known.get('duplicates', [])}
-    for old, new in migrations(root).items():
+    moves = migrations(root)
+    for old, new in moves.items():
         if old in ids or new not in ids or old not in removed:
             errs.append(f'question migration {old} -> {new} is stale or unrecorded')
     for d in known.get('duplicates', []):
-        if d['removed'].startswith('pmt/') and migrations(root).get(d['removed']) != d['retained']:
+        if d['removed'].startswith(('pmt/', 'practice/')) and moves.get(d['removed']) != d['retained']:
             errs.append(f'removed {d["removed"]} has no migration to {d["retained"]}')
     return errs
 
@@ -276,7 +281,7 @@ def incoming(new, root=ROOT):
         entry = {'new': new_q['id'], 'existing': old_q['id'], 'similarity': score}
         if old_q['kind'] in IMPORT_KINDS and not (new_q['kind'] == 'official' and old_q['kind'] == 'pmt'):
             skip.append(entry)
-        elif new_q['kind'] == 'official' and old_q['kind'] == 'pmt':
+        elif new_q['kind'] == 'official' and old_q['kind'] in ('pmt', 'practice'):
             replace.append(entry)
         else:
             decide.append(entry)
@@ -292,7 +297,7 @@ def guard_import(new, root=ROOT, label='import'):
                                                'set\'s skip list (or, for an official paper imported twice, drop the paper). '
                                                f'A pair that is not a copy goes under notDuplicates in {DECISIONS}.'}, indent=1))
     for r in replace:
-        print(json.dumps({'event': 'duplicate_replaces_pmt', 'import': label, **r,
+        print(json.dumps({'event': 'duplicate_replaces_' + r['existing'].split('/')[0], 'import': label, **r,
                           'action': f'after integrating, confirm visually and run: python3 scripts/duplicates.py remove '
                                     f'--removed {r["existing"]} --retained {r["new"]} --reason "..."'}))
     return replace
@@ -307,20 +312,21 @@ def _assets(question):
 
 
 def remove(root, removed, retained, reason, similarity=None):
-    """Delete PMT question `removed` in favour of `retained` (PAP-077-1/2).
+    """Delete the PMT or practice question `removed` in favour of `retained` (PAP-077-1/2).
 
     The survivor gains the copy's chapter keys and skill mappings it lacks (never its wording, marks, scheme or
     difficulty); the copy leaves the PMT catalogue, its payload and its own image files; copies of the copy and
     earlier migrations to it move to the survivor; the migration and the decision are recorded."""
     root = Path(root)
-    if not removed.startswith('pmt/'):
-        raise SystemExit('Only PMT questions are removed: an official past-paper question always wins (PAP-077-2).')
-    cat_path = root / 'pmt-catalogue.json'
+    family = removed.split('/')[0]
+    if family not in ('pmt', 'practice') or (family == 'practice' and not retained.startswith('exam/')):
+        raise SystemExit('A practice copy requires an official survivor. Official questions cannot be removed here.')
+    cat_path = root / f'{family}-catalogue.json'
     cat = _json(cat_path)
     rows = {r['id']: r for r in cat['questions']}
     copy = rows.get(removed)
     if copy is None:
-        raise SystemExit(f'{removed} is not in the PMT catalogue')
+        raise SystemExit(f'{removed} is not in the {family} catalogue')
     exam_path, meta_path = root / 'exam-catalogue.json', root / 'content/exams/pilot-metadata.json'
     exam = _json(exam_path)
     exam_rows = {r['id']: r for r in exam['questions']}
@@ -330,6 +336,13 @@ def remove(root, removed, retained, reason, similarity=None):
     if retained.startswith('pmt/') and pmt_order(retained) > pmt_order(removed):
         raise SystemExit(f'{retained} is later than {removed}; the earlier PMT question is kept (PAP-077-2)')
     skill = lambda s: (s['courseId'], s['bookId'], s['topicId'], s['skillId'])
+    if family == 'practice':
+        source_skills = _json(root / 'textbook-catalogue.json')['skills']
+        topics = {s['id']: s['topicId'] for s in cat['skills']}
+        topics.update({sid: entry['topic'] for sid, entry in source_skills.items()})
+        copy['chapterKeys'] = [f"{copy['courseId']}/{copy['bookId']}/{copy['chapterNumber']}"]
+        copy['skillMappings'] = [dict(courseId=copy['courseId'], bookId=copy['bookId'],
+                                      topicId=topics[sid], skillId=sid) for sid in copy['skillIds']]
     keys = [k for k in copy['chapterKeys'] if k not in survivor['chapterKeys']]
     skills = [s for s in copy['skillMappings'] if skill(s) not in {skill(x) for x in survivor['skillMappings']}]
     survivor['chapterKeys'] = survivor['chapterKeys'] + keys
@@ -347,12 +360,12 @@ def remove(root, removed, retained, reason, similarity=None):
     payload = _json(payload_path)
     gone = next(q for q in payload['questions'] if q['id'] == removed)
     payload['questions'] = [q for q in payload['questions'] if q['id'] != removed]
-    _dump(payload_path, payload, indent=1)
+    _dump(payload_path, payload, indent=2 if family == 'practice' else 1)
     still = set()
-    for f in (root / 'content/pmt').glob('*.json'):
+    for f in (root / 'content/pmt').glob('*.json') if family == 'pmt' else ():
         for q in _json(f)['questions']:
             still |= _assets(q)
-    deleted = sorted(a for a in _assets(gone) - still if (root / a).is_file())
+    deleted = sorted(a for a in _assets(gone) - still if a.startswith('resources/pmt/') and (root / a).is_file())
     for a in deleted:
         (root / a).unlink()
     cat['questions'] = [r for r in cat['questions'] if r['id'] != removed]
