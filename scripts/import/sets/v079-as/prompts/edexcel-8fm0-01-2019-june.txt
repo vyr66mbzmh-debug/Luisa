@@ -1,0 +1,116 @@
+# 1
+$$\mathbf{M} = \begin{pmatrix} 4 & -5 \\ 2 & -7 \end{pmatrix}$$
+(a) Show that the matrix $\mathbf{M}$ is non-singular.
+[2]
+The transformation $T$ of the plane is represented by the matrix $\mathbf{M}$.
+The triangle $R$ is transformed to the triangle $S$ by the transformation $T$.
+Given that the area of $S$ is 63 square units,
+(b) find the area of $R$.
+[2]
+(c) Show that the line $y = 2x$ is invariant under the transformation $T$.
+[2]
+
+# 2
+The cubic equation
+$$2x^3 + 6x^2 - 3x + 12 = 0$$
+has roots $\alpha, \beta$ and $\gamma$.
+Without solving the equation, find the cubic equation whose roots are $(\alpha + 3), (\beta + 3)$ and $(\gamma + 3)$, giving your answer in the form $pw^3 + qw^2 + rw + s = 0$, where $p, q, r$ and $s$ are integers to be found.
+[5]
+
+# 3
+Prove by mathematical induction that, for $n \in \mathbb{N}$
+$$\sum_{r=1}^{n} \frac{1}{(2r-1)(2r+1)} = \frac{n}{2n+1}$$
+[6]
+
+# 4
+The line $l$ has equation
+$$\frac{x+2}{1} = \frac{y-5}{-1} = \frac{z-4}{-3}$$
+The plane $\Pi$ has equation
+$$\mathbf{r}\boldsymbol{\cdot}(\mathbf{i}-2\mathbf{j}+\mathbf{k}) = -7$$
+Determine whether the line $l$ intersects $\Pi$ at a single point, or lies in $\Pi$, or is parallel to $\Pi$ without intersecting it.
+[5]
+
+# 5
+@figure 82 Figure 1. Complex numbers plotted on an Argand diagram.
+The complex numbers $z_1 = -2$, $z_2 = -1 + 2i$ and $z_3 = 1 + i$ are plotted in Figure 1, on an Argand diagram for the complex plane with $z = x + iy$
+(a) Explain why $z_1$, $z_2$ and $z_3$ cannot all be roots of a quartic polynomial equation with real coefficients.
+[2]
+(b) Show that $\arg\left(\frac{z_2 - z_1}{z_3 - z_1}\right) = \frac{\pi}{4}$
+[3]
+(c) Hence show that $\arctan(2) - \arctan\left(\frac{1}{3}\right) = \frac{\pi}{4}$
+[2]
+A copy of Figure 1, labelled Diagram 1, is given on page 12.
+(d) Shade, on Diagram 1, the set of points of the complex plane that satisfy the inequality
+$$|z + 2| \leq |z - 1 - i|$$
+[2]
+@figure 82 Diagram 1. Argand diagram for shading in part (d).
+
+# 6
+An art display consists of an arrangement of $n$ marbles.
+When arranged in ascending order of mass, the mass of the first marble is 10 grams. The mass of each subsequent marble is 3 grams more than the mass of the previous one, so that the $r$th marble has mass $(7 + 3r)$ grams.
+(a) Show that the mean mass, in grams, of the marbles in the display is given by
+$$\frac{1}{2}(3n + 17)$$
+[3]
+Given that there are 85 marbles in the display,
+(b) use the standard summation formulae to find the standard deviation of the mass of the marbles in the display, giving your answer, in grams, to one decimal place.
+[6]
+
+# 7
+$f(z) = z^3 - 8z^2 + pz - 24$
+where $p$ is a real constant.
+Given that the equation $f(z) = 0$ has distinct roots
+$\alpha, \beta$ and $\left( \alpha + \frac{12}{\alpha} - \beta \right)$
+(a) solve completely the equation $f(z) = 0$
+[6]
+(b) Hence find the value of $p$.
+[2]
+
+# 8
+A gas company maintains a straight pipeline that passes under a mountain.
+The pipeline is modelled as a straight line and one side of the mountain is modelled as a plane.
+There are accessways from a control centre to two access points on the pipeline.
+Modelling the control centre as the origin $O$, the two access points on the pipeline have coordinates $P(-300, 400, -150)$ and $Q(300, 300, -50)$, where the units are metres.
+(a) Find a vector equation for the line $PQ$, giving your answer in the form $\mathbf r=\mathbf a+\lambda\mathbf b$, where $\lambda$ is a scalar parameter.
+[2]
+The equation of the plane modelling the side of the mountain is $2x + 3y - 5z = 300$
+The company wants to create a new accessway from this side of the mountain to the pipeline.
+The accessway will consist of a tunnel of shortest possible length between the pipeline and the point $M(100, k, 100)$ on this side of the mountain, where $k$ is a constant.
+(b) Using the model, find
+(i) the coordinates of the point at which this tunnel will meet the pipeline,
+(ii) the length of this tunnel.
+[7]
+It is only practical to construct the new accessway if it will be significantly shorter than both of the existing accessways, $OP$ and $OQ$.
+(c) Determine whether the company should build the new accessway.
+[2]
+(d) Suggest one limitation of the model.
+[1]
+
+# 9
+$f(x) = 2x^{\frac{1}{3}} + x^{-\frac{2}{3}} \quad x > 0$
+The finite region bounded by the curve $y = f(x)$, the line $x = \frac{1}{8}$, the $x$-axis and the line $x = 8$ is rotated through $\theta$ radians about the $x$-axis to form a solid of revolution.
+Given that the volume of the solid formed is $\frac{461}{2}$ units cubed, use algebraic integration to find the angle $\theta$ through which the region is rotated.
+[8]
+
+# 10
+The population of chimpanzees in a particular country consists of juveniles and adults. Juvenile chimpanzees do not reproduce.
+In a study, the numbers of juvenile and adult chimpanzees were estimated at the start of each year. A model for the population satisfies the matrix system
+$$\begin{pmatrix} J_{n+1} \\ A_{n+1} \end{pmatrix} = \begin{pmatrix} a & 0.15 \\ 0.08 & 0.82 \end{pmatrix} \begin{pmatrix} J_n \\ A_n \end{pmatrix} \quad n = 0, 1, 2, \ldots$$
+where $a$ is a constant, and $J_n$ and $A_n$ are the respective numbers of juvenile and adult chimpanzees $n$ years after the start of the study.
+(a) Interpret the meaning of the constant $a$ in the context of the model.
+[1]
+At the start of the study, the total number of chimpanzees in the country was estimated to be 64 000
+According to the model, after one year the number of juvenile chimpanzees is 15 360 and the number of adult chimpanzees is 43 008
+(b) (i) Find, in terms of $a$
+$$\begin{pmatrix} a & 0.15 \\ 0.08 & 0.82 \end{pmatrix}^{-1}$$
+[3]
+(ii) Hence, or otherwise, find the value of $a$.
+[3]
+(iii) Calculate the change in the number of juvenile chimpanzees in the first year of the study, according to this model.
+[2]
+Given that the number of juvenile chimpanzees is known to be in decline in the country,
+(c) comment on the short-term suitability of this model.
+[1]
+A study of the population revealed that adult chimpanzees stop reproducing at the age of 40 years.
+(d) Refine the matrix system for the model to reflect this information, giving a reason for your answer.
+(There is no need to estimate any unknown values for the refined model, but any known values should be made clear.)
+[2]

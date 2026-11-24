@@ -15,6 +15,7 @@ args = common.parser(__doc__).parse_args()
 SET = common.ImportSet(args)
 PID = args.paper
 lib.load(json.loads(SET.assets_path(PID).read_text()))
+sys.path.insert(0, str(SET.dir))
 mod = SET.prompts(PID)
 P = SET.papers[PID]
 assert sorted(mod.Q) == list(range(1, P['nq'] + 1)), 'prompts must cover every question'

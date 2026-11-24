@@ -311,6 +311,46 @@
    "retained": "exam/edexcel-9fm0-01-2020-october/q5",
    "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/01 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
    "similarity": 0.604
+  },
+  {
+   "removed": "pmt/pure-core-1/ch7/q4",
+   "retained": "exam/edexcel-8fm0-01-2019-june/q1",
+   "reason": "Same non-singular matrix, area 63 and invariant line. Compared with Pearson June 2019 AS Core Pure Q1."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch4/q4",
+   "retained": "exam/edexcel-8fm0-01-2019-june/q2",
+   "reason": "Identical cubic coefficients and shift of all three roots by 3. Compared with Pearson June 2019 AS Core Pure Q2."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q2",
+   "retained": "exam/edexcel-8fm0-01-2019-june/q3",
+   "reason": "Same induction identity and 6 marks. Compared with Pearson June 2019 AS Core Pure Q3."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch2/q6",
+   "retained": "exam/edexcel-8fm0-01-2019-june/q5",
+   "reason": "Same three complex numbers, Argand diagram, arguments and shading inequality. Compared with Pearson June 2019 AS Core Pure Q5."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch1/q5",
+   "retained": "exam/edexcel-8fm0-01-2019-june/q7",
+   "reason": "Same cubic, three distinct root expressions, and both subparts. Compared with Pearson June 2019 AS Core Pure Q7."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch9/q10",
+   "retained": "exam/edexcel-8fm0-01-2019-june/q8",
+   "reason": "Same pipeline coordinates, plane, tunnel and both modelling questions. Compared with Pearson June 2019 AS Core Pure Q8."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch5/q2",
+   "retained": "exam/edexcel-8fm0-01-2019-june/q9",
+   "reason": "Same fractional powers, bounds, volume and angle of revolution. Compared with Pearson June 2019 AS Core Pure Q9."
+  },
+  {
+   "removed": "pmt/pure-core-1/ch6/q3",
+   "retained": "exam/edexcel-8fm0-01-2019-june/q10",
+   "reason": "Same chimpanzee projection matrix, counts, age threshold and subparts. Compared with Pearson June 2019 AS Core Pure Q10."
   }
  ],
  "notDuplicates": [
@@ -559,6 +599,12 @@
    "checkedAgainst": "madas/alevel-applied-n/q12",
    "why": "Different mass, incline and rope conditions.",
    "decided": "v0.78"
+  },
+  {
+   "id": "exam/edexcel-8fm0-01-2019-june/q3",
+   "checkedAgainst": "luisa/1.48:7",
+   "why": "Different induction identities. The official summand has denominator (2r−1)(2r+1); the Luisa summand has denominator (r+1)(r+2).",
+   "decided": "v0.79"
   }
  ]
 }

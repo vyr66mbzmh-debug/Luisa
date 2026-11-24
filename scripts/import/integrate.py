@@ -27,7 +27,8 @@ MAPS = SET.maps()
 P = PAPERS[PID]; SESSION = P['session']; MAP = MAPS[PID]; nq = P['nq']
 marks = SET.data('marks.json')[PID]; assert len(marks) == nq and sum(marks) == P['total']
 ends = SET.data('qpends.json')[PID]
-pages = [[(ends[n - 2] + 1) if n > 1 else 2, ends[n - 1]] for n in range(1, nq + 1)]
+starts = [P.get('firstQuestionPage', 2)] + [min(previous + 1, current) for previous, current in zip(ends, ends[1:])]
+pages = [list(pair) for pair in zip(starts, ends)]
 band = nq // 3; easy, diff = band, band
 level = lambda n: 'easy' if n <= easy else 'difficult' if n > nq - diff else 'medium'
 lib = json.loads((ROOT / 'data.js').read_text().removeprefix('window.FMQ_LIBRARY=').rstrip(';\n'))
@@ -36,7 +37,7 @@ textbook = json.loads((ROOT / 'textbook-catalogue.json').read_text())
 targets = {}
 for q in textbook['questions']:
     targets.setdefault(q['skill'], set()).update(t['book'] + '/' + str(t['chapter']) for t in q['targets'])
-course = 'further-maths-a-level' if P['code'].startswith('9FM') else 'maths-a-level'
+course = 'further-maths-a-level' if 'FM0/' in P['code'] else 'maths-a-level'
 rank = {b['id'] + '/' + c['id']: i for i, (b, c) in enumerate((b, c) for b in textbook['books'] for c in b['chapters'])}
 short = P['code'].replace('/', '')
 rows = []
@@ -60,9 +61,9 @@ for r in rows:  # keep what a removed duplicate added to this question (PAP-077-
     if old:
         r['skillMappings'] += [s for s in old['skillMappings'] if skill_key(s) not in {skill_key(x) for x in r['skillMappings']}]
         r['_chapterKeys'] += [k for k in old['chapterKeys'] if k not in r['_chapterKeys']]
-source = {'questionPaperUrl': P['qpurl'], 'markSchemeUrl': P['msurl'], 'questionPaperSha256': P['qpsha'], 'markSchemeSha256': P['mssha'],
-          'indexedQuestionPaperSha256': P['idxqp'], 'indexedMarkSchemeSha256': P['idxms'], 'basis': 'Owner-supplied original PDF attachment'}
-paper = {'id': PID, 'board': 'Edexcel', 'qualification': 'A level', 'paperCode': P['code'], 'title': P['title'], 'examDate': P['date'],
+source = {'questionPaperUrl': P.get('qpurl'), 'markSchemeUrl': P.get('msurl'), 'questionPaperSha256': P['qpsha'], 'markSchemeSha256': P['mssha'],
+          'indexedQuestionPaperSha256': P.get('idxqp'), 'indexedMarkSchemeSha256': P.get('idxms'), 'basis': 'Owner-supplied original PDF attachment'}
+paper = {'id': PID, 'board': 'Edexcel', 'qualification': P.get('qualification', 'A level'), 'paperCode': P['code'], 'title': P['title'], 'examDate': P['date'],
          'seriesDate': P['series'], 'session': SESSION, 'questionCount': nq, 'totalMarks': P['total'], 'source': source,
          'difficultyPolicy': {'basis': 'original-paper-order', 'easyQuestions': [1, easy], 'mediumQuestions': [easy + 1, nq - diff],
                               'difficultQuestions': [nq - diff + 1, nq]},
