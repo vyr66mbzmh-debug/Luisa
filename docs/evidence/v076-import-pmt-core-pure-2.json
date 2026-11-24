@@ -1,0 +1,1857 @@
+{
+ "requirement": "PAP-076",
+ "issue": 138,
+ "course": "Core Pure 2 (PMT topic sheets, owner folder Year 2)",
+ "questionCount": 61,
+ "totalMarks": 558,
+ "difficultyCounts": {
+  "medium": 36,
+  "easy": 13,
+  "difficult": 12
+ },
+ "representation": [
+  "prompts (native HTML and LaTeX)",
+  "figure crops with printed captions",
+  "scheme page-image crops"
+ ],
+ "cropMethod": "Scheme regions run from each \"Qn.\" label to the next label (labels tightened to their own text line); every content box on every scheme page is assigned to exactly one question (asserted). Crops are split only at blank rows or table rules so no crop is taller than it is wide, and each cut leaves at least 20 pt. Figures are 200 dpi crops including their printed captions.",
+ "rubric": {
+  "easy": "Routine: a standard result or procedure applied directly, in short structured parts; no insight or choice of method needed.",
+  "medium": "Standard methods combined over several steps, or one signposted non-routine step; moderate algebra; guided modelling.",
+  "difficult": "Problem-solving: unstructured or multi-concept, the method must be chosen without guidance, or long and delicate algebra, geometry or extended modelling. (The brief calls this level \"hard\"; Luisa stores it as \"difficult\".)"
+ },
+ "rerate": {
+  "seed": 76,
+  "sample": [
+   "pmt/pure-core-2/ch1/q4",
+   "pmt/pure-core-2/ch2/q2",
+   "pmt/pure-core-2/ch2/q5",
+   "pmt/pure-core-2/ch2/q8",
+   "pmt/pure-core-2/ch2/q9",
+   "pmt/pure-core-2/ch3/q2",
+   "pmt/pure-core-2/ch3/q3",
+   "pmt/pure-core-2/ch3/q5",
+   "pmt/pure-core-2/ch4/q1",
+   "pmt/pure-core-2/ch8/q3"
+  ],
+  "reviewer": [
+   {
+    "id": "pmt/pure-core-2/ch1/q4",
+    "myRating": "medium",
+    "importRating": "difficult",
+    "agree": false
+   },
+   {
+    "id": "pmt/pure-core-2/ch2/q2",
+    "myRating": "medium",
+    "importRating": "difficult",
+    "agree": false
+   },
+   {
+    "id": "pmt/pure-core-2/ch2/q5",
+    "myRating": "medium",
+    "importRating": "medium",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-2/ch2/q8",
+    "myRating": "medium",
+    "importRating": "medium",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-2/ch2/q9",
+    "myRating": "easy",
+    "importRating": "medium",
+    "agree": false
+   },
+   {
+    "id": "pmt/pure-core-2/ch3/q2",
+    "myRating": "medium",
+    "importRating": "medium",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-2/ch3/q3",
+    "myRating": "easy",
+    "importRating": "easy",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-2/ch3/q5",
+    "myRating": "medium",
+    "importRating": "medium",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-2/ch4/q1",
+    "myRating": "medium",
+    "importRating": "medium",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-2/ch8/q3",
+    "myRating": "difficult",
+    "importRating": "difficult",
+    "agree": true
+   }
+  ],
+  "initialAgreement": "7/10 (0.7); all 3 disagreements one level apart",
+  "resolutions": [
+   {
+    "id": "pmt/pure-core-2/ch1/q4",
+    "final": "medium",
+    "why": "Every part names its method (use part (a), de Moivre); one signposted non-routine step plus a 2-mark reason. Same rule as v0.75: long but fully signposted work is medium."
+   },
+   {
+    "id": "pmt/pure-core-2/ch2/q2",
+    "final": "difficult",
+    "why": "Multi-concept (summation formulae plus tan periodicity) and part (c) sets up and solves a cubic, rejecting a root, for 6 marks; kept."
+   },
+   {
+    "id": "pmt/pure-core-2/ch2/q9",
+    "final": "easy",
+    "why": "Standard method of differences in three short signposted parts, 7 marks."
+   }
+  ],
+  "finalAgreement": "9/10 (0.9): the reviewer rating was adopted for ch1/q4 (medium) and ch2/q9 (easy) by the rubric; for ch2/q2 the rubric supports the import rating (difficult)."
+ },
+ "mathsReview": "An independent agent compared all 61 rendered app questions with the rendered source pages (zooming into maths where needed): 0 discrepancies in wording, numbers, signs, exponents, part labels or marks; both source slips below are real and no other slip was repaired. All 12 figures are whole with captions as printed. Its scheme sample (12 questions over all 8 chapters, including all three sampled totals-only questions) found every scheme complete with nothing from another question; every sheet's scheme pages are contiguous to its last page, so Year 2 has no appendix or misplaced block (also confirmed by an OCR scan of every scheme page). It compared all 61 against 578 bank questions and found no missed duplicates.",
+ "schemeMoves": {},
+ "sourceNotes": [
+  {
+   "id": "pmt/pure-core-2/ch1/q10",
+   "note": "Source slip kept as printed: the sheet prints \"r(cosθ θ+ isinθ)\" for the form r(cos θ + i sin θ), exactly as in the Core Pure 1 copy of this question."
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q6",
+   "note": "Source slip kept as printed: part (c) reads \"in the form p + 1/6 ln q, p and q are constants\"; the original 9FM0/01 Sample paper has \"where p and q are constants\". The maths is unaffected."
+  }
+ ],
+ "duplicates": [
+  {
+   "id": "pmt/pure-core-2/ch1/q2",
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q4"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q3",
+   "duplicateOf": "exam/edexcel-9fm0-02-2020-october/q4"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q4",
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q9"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q5",
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q6"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q6",
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q4"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q9",
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q8"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q10",
+   "duplicateOf": "pmt/pure-core-1/ch2/q7"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q3",
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q3"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q4",
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q4"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q5",
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q5"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q8",
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q1"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q2",
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q2"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q4",
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q5"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q5",
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q2"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q6",
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q6"
+  },
+  {
+   "id": "pmt/pure-core-2/ch4/q1",
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q7"
+  },
+  {
+   "id": "pmt/pure-core-2/ch4/q3",
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q8"
+  },
+  {
+   "id": "pmt/pure-core-2/ch5/q1",
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q4"
+  },
+  {
+   "id": "pmt/pure-core-2/ch5/q4",
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q3"
+  },
+  {
+   "id": "pmt/pure-core-2/ch5/q5",
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q3"
+  },
+  {
+   "id": "pmt/pure-core-2/ch5/q6",
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q6"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q1",
+   "duplicateOf": "pmt/pure-core-2/ch3/q3"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q2",
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q3"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q3",
+   "duplicateOf": "exam/edexcel-9fm0-02-2020-october/q1"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q5",
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q1"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q7",
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q7"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q8",
+   "duplicateOf": "exam/edexcel-9fm0-01-2021-november/q9"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q2",
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q5"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q3",
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q8"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q4",
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q7"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q5",
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q7"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q6",
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q5"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q7",
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q5"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q8",
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q9"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q9",
+   "duplicateOf": "exam/edexcel-9fm0-02-2020-october/q3"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q10",
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q5"
+  }
+ ],
+ "notDuplicates": [
+  {
+   "id": "pmt/pure-core-2/ch6/q6",
+   "checkedAgainst": "exam/edexcel-9fm0-01-2025-june/q2",
+   "why": "Different equation (64cosh^4 x - 64cosh^2 x - 9 = 0 against sinh 2x = 3 sinh x); only the boilerplate instruction lines are shared."
+  }
+ ],
+ "duplicateRule": "The copy keeps a duplicateOf link and neither copy is deleted. A generated exam paper or booklet drops the copy whenever its original is in the pool; a hand-picked selection containing both shows a note.",
+ "partMarks": "Ch.2 Q4, Ch.3 Q2, Ch.5 Q5, Ch.6 Q3 and Ch.6 Q6 print only the question total; no part marks were added.",
+ "coreOneCopiesUpdated": "In this release the six Core Pure 1 copies whose originals cover several Core Pure 1 chapters gained those chapter keys (ch2/q9, ch6/q7, ch7/q3, ch8/q5, ch8/q8, ch8/q9), following the v0.75 review.",
+ "printInspection": "Real Chrome PDFs inspected page by page: a Core Pure 2 practice paper (figures, long display equations) one per page and condensed with solutions on and off, and a mixed past-paper + Core Pure 1 + Core Pure 2 exam paper (no source on question pages; exact source and ID in the scheme). No warnings and no element wider than its page.",
+ "files": [
+  {
+   "sheetId": "pure-core-2-ch1",
+   "source": "PMT further maths questions/Year 2/Ch.1 Complex Numbers.pdf",
+   "sha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "pages": 30,
+   "questionCount": 11,
+   "totalMarks": 92
+  },
+  {
+   "sheetId": "pure-core-2-ch2",
+   "source": "PMT further maths questions/Year 2/Ch.2 Series.pdf",
+   "sha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "pages": 23,
+   "questionCount": 11,
+   "totalMarks": 87
+  },
+  {
+   "sheetId": "pure-core-2-ch3",
+   "source": "PMT further maths questions/Year 2/Ch.3 Methods in Calculus.pdf",
+   "sha256": "0d14a9e5c42c95c5e5d56b4c8030f4fc3f004bf82b28719d4ac2340b8b4b47fc",
+   "pages": 13,
+   "questionCount": 7,
+   "totalMarks": 49
+  },
+  {
+   "sheetId": "pure-core-2-ch4",
+   "source": "PMT further maths questions/Year 2/Ch.4 Volumes of Revolution.pdf",
+   "sha256": "c75a8b2bbd1ffe14c5ac31dabbeebd20cb8ec61b01732a994fc66affd435a49f",
+   "pages": 13,
+   "questionCount": 4,
+   "totalMarks": 36
+  },
+  {
+   "sheetId": "pure-core-2-ch5",
+   "source": "PMT further maths questions/Year 2/Ch.5 Polar Coordinates.pdf",
+   "sha256": "a8aa5b65a772d5177d5265bd9e019380df9e680178b07e5363ee22df8107c376",
+   "pages": 18,
+   "questionCount": 6,
+   "totalMarks": 59
+  },
+  {
+   "sheetId": "pure-core-2-ch6",
+   "source": "PMT further maths questions/Year 2/Ch.6 Hyperbolic Functions.pdf",
+   "sha256": "0e29896408619cc8ea6b2fcbddddd0c9082f3503d6524a98c427c177ba0aeb9b",
+   "pages": 19,
+   "questionCount": 9,
+   "totalMarks": 67
+  },
+  {
+   "sheetId": "pure-core-2-ch7",
+   "source": "PMT further maths questions/Year 2/Ch.7 Methods in Differential Equations.pdf",
+   "sha256": "0bd78ee6fc7a2f95bb36c59b2dca05a009c302b0e08be1a9f3b95799d3a21968",
+   "pages": 5,
+   "questionCount": 3,
+   "totalMarks": 30
+  },
+  {
+   "sheetId": "pure-core-2-ch8",
+   "source": "PMT further maths questions/Year 2/Ch.8 Modelling with Differential Equations.pdf",
+   "sha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "pages": 30,
+   "questionCount": 10,
+   "totalMarks": 138
+  }
+ ],
+ "questions": [
+  {
+   "id": "pmt/pure-core-2/ch1/q1",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    1
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:2.06"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard cube-root method: write the right-hand side in exponential form, then take three roots in the stated range.",
+   "markScheme": "source",
+   "schemePages": [
+    6
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q2",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    1
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:2.08"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Signposted: sum a geometric series in e^{iθ}, then multiply by the conjugate and take the imaginary part; careful algebra.",
+   "markScheme": "source",
+   "schemePages": [
+    7,
+    8
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q4",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q3",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    2
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:2.03"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Long de Moivre expansion, then one signposted non-routine step (substituting sin θ = x with sin 7θ = -1).",
+   "markScheme": "source",
+   "schemePages": [
+    9,
+    10
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2020-october/q4",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q4",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    2
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:2.08"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Infinite geometric sum, then de Moivre with conjugate algebra as signposted by the parts, and a short reasoned conclusion.",
+   "markScheme": "source",
+   "schemePages": [
+    11,
+    12,
+    13
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q9",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q5",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    3
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:2.07"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Rotation by 2π/3 about the origin gives the other vertices; the midpoint triangle area needs a short geometric step.",
+   "markScheme": "source",
+   "schemePages": [
+    14,
+    15,
+    16,
+    17
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q6",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q6",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    3
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:2.04"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Standard textbook result for z^n + z^{-n}, then the routine binomial expansion for cos^4 θ.",
+   "markScheme": "source",
+   "schemePages": [
+    17
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q4",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q7",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    4
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:2.06"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine fourth roots in exponential form and a simple Argand sketch.",
+   "markScheme": "source",
+   "schemePages": [
+    18
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q8",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    4
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:2.04"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard multiple-angle expansion over several steps, then a direct integral of the resulting sines.",
+   "markScheme": "source",
+   "schemePages": [
+    19,
+    20,
+    21
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q9",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    4
+   ],
+   "marks": 11,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:2.07"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Rotating a vertex for a regular pentagon, then shading a circle and arg wedge and finding the exact area with a sector and triangle.",
+   "markScheme": "source",
+   "schemePages": [
+    21,
+    22,
+    23
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q8",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q10",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    5
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:1.06",
+    "complex-numbers:1.07"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard modulus-argument conversion and half-line locus, then a routine perpendicular-distance step.",
+   "markScheme": "source",
+   "schemePages": [
+    24,
+    25,
+    26
+   ],
+   "duplicateOf": "pmt/pure-core-1/ch2/q7",
+   "sourceNote": "Source slip kept as printed: the sheet prints \"r(cosθ θ+ isinθ)\" for the form r(cos θ + i sin θ), exactly as in the Core Pure 1 copy of this question.",
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch1/q11",
+   "sourceSha256": "e0ddaee125e29d3a7128dff8f1ef2f8110dc30262b20202982429224655c1ea2",
+   "questionPages": [
+    5
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/1"
+   ],
+   "skills": [
+    "complex-numbers:2.02"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Routine exponential-form sum, then the least modulus on a half-line needs a perpendicular-distance argument.",
+   "markScheme": "source",
+   "schemePages": [
+    27,
+    28,
+    29,
+    30
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q1",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    1
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2"
+   ],
+   "skills": [
+    "series:2.12"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine successive derivatives and the Maclaurin expansion, then a direct substitution.",
+   "markScheme": "source",
+   "schemePages": [
+    7,
+    8
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q2",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    1,
+    2
+   ],
+   "marks": 12,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2"
+   ],
+   "skills": [
+    "series:1.09"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Multi-concept: standard sums, a periodicity argument for tan(60r)° and then an unguided equation combining both.",
+   "markScheme": "source",
+   "schemePages": [
+    9,
+    10
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q3",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    2
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2"
+   ],
+   "skills": [
+    "series:2.12"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine Maclaurin terms for arcsin x and a direct substitution.",
+   "markScheme": "source",
+   "schemePages": [
+    11,
+    12
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q3",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q4",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    2
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2"
+   ],
+   "skills": [
+    "series:2.11"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Method of differences with three-factor partial fractions in a single unstructured part.",
+   "markScheme": "source",
+   "schemePages": [
+    12,
+    13
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q4",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q5",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    3
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2",
+    "further-maths-a-level/pure-core-2/6"
+   ],
+   "skills": [
+    "series:2.12"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Repeated product-rule differentiation to reach the fourth derivative, then spotting the pattern for the nth term.",
+   "markScheme": "source",
+   "schemePages": [
+    14
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q5",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q6",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    3
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2"
+   ],
+   "skills": [
+    "series:2.11"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Method of differences with logarithms, then reusing the result for a shifted range with a power.",
+   "markScheme": "source",
+   "schemePages": [
+    15
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q7",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    4
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2"
+   ],
+   "skills": [
+    "series:2.12",
+    "hyperbolic-functions:2.19"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Repeated differentiation of a power of cosh x with careful algebra, then Maclaurin terms.",
+   "markScheme": "source",
+   "schemePages": [
+    16,
+    17,
+    18,
+    19
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q8",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    4
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2"
+   ],
+   "skills": [
+    "series:2.11"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Method of differences with non-adjacent cancellation in a single unstructured part.",
+   "markScheme": "source",
+   "schemePages": [
+    19,
+    20
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q1",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q9",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    5
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2"
+   ],
+   "skills": [
+    "series:2.11"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine method of differences in three short signposted parts: verify the identity, telescope, then apply over n to 3n.",
+   "markScheme": "source",
+   "schemePages": [
+    21
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q10",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    5
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2"
+   ],
+   "skills": [
+    "series:1.09"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Multi-concept: standard sums, the pattern of r cos(rπ/2) over 28 terms, then solving the resulting cubic; unguided.",
+   "markScheme": "source",
+   "schemePages": [
+    22
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch2/q11",
+   "sourceSha256": "67885cf41baa542ece246c423a06e891cbc1f3b4a5c27dcc9c049c2be20e91cf",
+   "questionPages": [
+    6
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/2"
+   ],
+   "skills": [
+    "series:2.11"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Verify a partial-fraction identity, then telescope with a polynomial part.",
+   "markScheme": "source",
+   "schemePages": [
+    23
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q1",
+   "sourceSha256": "0d14a9e5c42c95c5e5d56b4c8030f4fc3f004bf82b28719d4ac2340b8b4b47fc",
+   "questionPages": [
+    1
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/3"
+   ],
+   "skills": [
+    "further-calculus:2.24"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine derivative of arcsin x and a short argument that the derivative is never zero.",
+   "markScheme": "source",
+   "schemePages": [
+    5
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q2",
+   "sourceSha256": "0d14a9e5c42c95c5e5d56b4c8030f4fc3f004bf82b28719d4ac2340b8b4b47fc",
+   "questionPages": [
+    1
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/3"
+   ],
+   "skills": [
+    "further-calculus:2.31",
+    "further-calculus:2.23"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Partial fractions, logarithmic integration and a careful limit at infinity.",
+   "markScheme": "source",
+   "schemePages": [
+    6
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q2",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q3",
+   "sourceSha256": "0d14a9e5c42c95c5e5d56b4c8030f4fc3f004bf82b28719d4ac2340b8b4b47fc",
+   "questionPages": [
+    2
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/3"
+   ],
+   "skills": [
+    "further-calculus:2.26"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine chain rule with the arsinh derivative.",
+   "markScheme": "source",
+   "schemePages": [
+    7
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q4",
+   "sourceSha256": "0d14a9e5c42c95c5e5d56b4c8030f4fc3f004bf82b28719d4ac2340b8b4b47fc",
+   "questionPages": [
+    2
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/3"
+   ],
+   "skills": [
+    "further-calculus:2.24"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Derivative of arccos for (a), then the normal, its intercepts and an exact triangle area.",
+   "markScheme": "source",
+   "schemePages": [
+    8,
+    9
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q5",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q5",
+   "sourceSha256": "0d14a9e5c42c95c5e5d56b4c8030f4fc3f004bf82b28719d4ac2340b8b4b47fc",
+   "questionPages": [
+    3
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/3"
+   ],
+   "skills": [
+    "further-calculus:2.31",
+    "further-calculus:2.23"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Explain improperness, then partial fractions and a limit at infinity.",
+   "markScheme": "source",
+   "schemePages": [
+    10,
+    11
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q2",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q6",
+   "sourceSha256": "0d14a9e5c42c95c5e5d56b4c8030f4fc3f004bf82b28719d4ac2340b8b4b47fc",
+   "questionPages": [
+    3
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/3"
+   ],
+   "skills": [
+    "further-calculus:2.25",
+    "applications-of-integration:2.34"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Split into standard log and arctan integrals, then direct mean-value calculations in signposted parts.",
+   "markScheme": "source",
+   "schemePages": [
+    12
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q6",
+   "sourceNote": "Source slip kept as printed: part (c) reads \"in the form p + 1/6 ln q, p and q are constants\"; the original 9FM0/01 Sample paper has \"where p and q are constants\". The maths is unaffected.",
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch3/q7",
+   "sourceSha256": "0d14a9e5c42c95c5e5d56b4c8030f4fc3f004bf82b28719d4ac2340b8b4b47fc",
+   "questionPages": [
+    4
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/3"
+   ],
+   "skills": [
+    "further-calculus:2.23",
+    "further-calculus:2.25"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Partial fractions with a quadratic factor, then log and arctan integration to an exact form.",
+   "markScheme": "source",
+   "schemePages": [
+    13
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch4/q1",
+   "sourceSha256": "c75a8b2bbd1ffe14c5ac31dabbeebd20cb8ec61b01732a994fc66affd435a49f",
+   "questionPages": [
+    1
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/4"
+   ],
+   "skills": [
+    "further-calculus:1.15",
+    "applications-of-integration:2.35"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Eliminating the parameter needs a trigonometric identity, then a standard volume about the y-axis.",
+   "markScheme": "source",
+   "schemePages": [
+    5
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q7",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch4/q2",
+   "sourceSha256": "c75a8b2bbd1ffe14c5ac31dabbeebd20cb8ec61b01732a994fc66affd435a49f",
+   "questionPages": [
+    2
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/4"
+   ],
+   "skills": [
+    "applications-of-integration:2.35"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Expand the square and integrate exponentials directly to an exact volume.",
+   "markScheme": "source",
+   "schemePages": [
+    6,
+    7
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch4/q3",
+   "sourceSha256": "c75a8b2bbd1ffe14c5ac31dabbeebd20cb8ec61b01732a994fc66affd435a49f",
+   "questionPages": [
+    3
+   ],
+   "marks": 11,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/4"
+   ],
+   "skills": [
+    "applications-of-integration:2.35"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Long modelling question: fit the model, rearrange for x squared, volume to a variable depth, then connected rates of change.",
+   "markScheme": "source",
+   "schemePages": [
+    8,
+    9
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q8",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch4/q4",
+   "sourceSha256": "c75a8b2bbd1ffe14c5ac31dabbeebd20cb8ec61b01732a994fc66affd435a49f",
+   "questionPages": [
+    4
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/4"
+   ],
+   "skills": [
+    "applications-of-integration:2.35"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Tangent to an exponential curve, then the volume as an integral of 9^x minus a cone (the formula is given).",
+   "markScheme": "source",
+   "schemePages": [
+    10,
+    11,
+    12,
+    13
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch5/q1",
+   "sourceSha256": "a8aa5b65a772d5177d5265bd9e019380df9e680178b07e5363ee22df8107c376",
+   "questionPages": [
+    1
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/5"
+   ],
+   "skills": [
+    "polar-curves:2.53"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Unstructured: find the angle at A, then the polar area minus a triangle area, in one part.",
+   "markScheme": "source",
+   "schemePages": [
+    7
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q4",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch5/q2",
+   "sourceSha256": "a8aa5b65a772d5177d5265bd9e019380df9e680178b07e5363ee22df8107c376",
+   "questionPages": [
+    2
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/5"
+   ],
+   "skills": [
+    "polar-curves:2.53"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard polar area integral with a parameter, then solving for it.",
+   "markScheme": "source",
+   "schemePages": [
+    8
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch5/q3",
+   "sourceSha256": "a8aa5b65a772d5177d5265bd9e019380df9e680178b07e5363ee22df8107c376",
+   "questionPages": [
+    3
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/5"
+   ],
+   "skills": [
+    "polar-curves:2.54",
+    "polar-curves:2.53"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Polar differentiation for a vertical tangent, then a polar area minus a triangle using calculus.",
+   "markScheme": "source",
+   "schemePages": [
+    9,
+    10,
+    11
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch5/q4",
+   "sourceSha256": "a8aa5b65a772d5177d5265bd9e019380df9e680178b07e5363ee22df8107c376",
+   "questionPages": [
+    4
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/5"
+   ],
+   "skills": [
+    "polar-curves:2.53"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Modelling: fit the constant from the length, then the polar area subtracted from the rectangle.",
+   "markScheme": "source",
+   "schemePages": [
+    12,
+    13
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q3",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch5/q5",
+   "sourceSha256": "a8aa5b65a772d5177d5265bd9e019380df9e680178b07e5363ee22df8107c376",
+   "questionPages": [
+    5
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/5"
+   ],
+   "skills": [
+    "polar-curves:2.53"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Unstructured: intersection angles of two polar curves, then combining two polar areas exactly.",
+   "markScheme": "source",
+   "schemePages": [
+    14,
+    15
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q3",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch5/q6",
+   "sourceSha256": "a8aa5b65a772d5177d5265bd9e019380df9e680178b07e5363ee22df8107c376",
+   "questionPages": [
+    6
+   ],
+   "marks": 13,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/5"
+   ],
+   "skills": [
+    "complex-numbers:1.07",
+    "polar-curves:2.52",
+    "polar-curves:2.53"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Multi-concept: converting a circle locus to a polar equation, then the area of a region bounded by an arg condition.",
+   "markScheme": "source",
+   "schemePages": [
+    15,
+    16,
+    17,
+    18
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q6",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q1",
+   "sourceSha256": "0e29896408619cc8ea6b2fcbddddd0c9082f3503d6524a98c427c177ba0aeb9b",
+   "questionPages": [
+    1
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/6"
+   ],
+   "skills": [
+    "further-calculus:2.26"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine chain rule with the arsinh derivative.",
+   "markScheme": "source",
+   "schemePages": [
+    6
+   ],
+   "duplicateOf": "pmt/pure-core-2/ch3/q3",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q2",
+   "sourceSha256": "0e29896408619cc8ea6b2fcbddddd0c9082f3503d6524a98c427c177ba0aeb9b",
+   "questionPages": [
+    1
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/6",
+    "further-maths-a-level/pure-core-2/3"
+   ],
+   "skills": [
+    "further-calculus:2.27",
+    "applications-of-integration:2.34"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Stated hyperbolic substitution to an arsinh integral, then a direct mean value.",
+   "markScheme": "source",
+   "schemePages": [
+    7,
+    8
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q3",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q3",
+   "sourceSha256": "0e29896408619cc8ea6b2fcbddddd0c9082f3503d6524a98c427c177ba0aeb9b",
+   "questionPages": [
+    1,
+    2
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/6"
+   ],
+   "skills": [
+    "hyperbolic-functions:2.19",
+    "hyperbolic-functions:1.32"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Differentiate, use a double-angle identity and exponentials to reach a quadratic, then exact logarithms.",
+   "markScheme": "source",
+   "schemePages": [
+    9,
+    10
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2020-october/q1",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q4",
+   "sourceSha256": "0e29896408619cc8ea6b2fcbddddd0c9082f3503d6524a98c427c177ba0aeb9b",
+   "questionPages": [
+    2
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/6"
+   ],
+   "skills": [
+    "hyperbolic-functions:2.14",
+    "hyperbolic-functions:2.16"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine exponential proof of an identity, then a quadratic in cosh x solved with logarithms.",
+   "markScheme": "source",
+   "schemePages": [
+    10,
+    11
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q5",
+   "sourceSha256": "0e29896408619cc8ea6b2fcbddddd0c9082f3503d6524a98c427c177ba0aeb9b",
+   "questionPages": [
+    2
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/6"
+   ],
+   "skills": [
+    "hyperbolic-functions:1.32",
+    "hyperbolic-functions:2.16"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Prove the log form of artanh, then a signposted substitution leading to a quadratic.",
+   "markScheme": "source",
+   "schemePages": [
+    12,
+    13
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q1",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q6",
+   "sourceSha256": "0e29896408619cc8ea6b2fcbddddd0c9082f3503d6524a98c427c177ba0aeb9b",
+   "questionPages": [
+    2
+   ],
+   "marks": 4,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/6"
+   ],
+   "skills": [
+    "hyperbolic-functions:2.16"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Quadratic in cosh^2 x, then the log form of arcosh to the required form.",
+   "markScheme": "source",
+   "schemePages": [
+    14,
+    15
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q7",
+   "sourceSha256": "0e29896408619cc8ea6b2fcbddddd0c9082f3503d6524a98c427c177ba0aeb9b",
+   "questionPages": [
+    3
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/6",
+    "further-maths-a-level/pure-core-2/4"
+   ],
+   "skills": [
+    "applications-of-integration:2.35",
+    "hyperbolic-functions:1.32"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Find α from β, then a volume about the y-axis with sinh, in signposted parts.",
+   "markScheme": "source",
+   "schemePages": [
+    16,
+    17
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q7",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q8",
+   "sourceSha256": "0e29896408619cc8ea6b2fcbddddd0c9082f3503d6524a98c427c177ba0aeb9b",
+   "questionPages": [
+    4
+   ],
+   "marks": 11,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/6"
+   ],
+   "skills": [
+    "further-calculus:2.30",
+    "further-calculus:2.27"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Long and delicate: a hyperbolic substitution integral, then integration by parts using it for an exact area.",
+   "markScheme": "source",
+   "schemePages": [
+    17,
+    18
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2021-november/q9",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q9",
+   "sourceSha256": "0e29896408619cc8ea6b2fcbddddd0c9082f3503d6524a98c427c177ba0aeb9b",
+   "questionPages": [
+    5
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/6"
+   ],
+   "skills": [
+    "further-calculus:2.31",
+    "hyperbolic-functions:2.15"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Improper and divergent integral of cosh x, then a short tanh-range argument for p.",
+   "markScheme": "source",
+   "schemePages": [
+    19
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch7/q1",
+   "sourceSha256": "0bd78ee6fc7a2f95bb36c59b2dca05a009c302b0e08be1a9f3b95799d3a21968",
+   "questionPages": [
+    1
+   ],
+   "marks": 11,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.39"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Integrating factor with trigonometric functions, then a particular solution and an exact value.",
+   "markScheme": "source",
+   "schemePages": [
+    3
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch7/q2",
+   "sourceSha256": "0bd78ee6fc7a2f95bb36c59b2dca05a009c302b0e08be1a9f3b95799d3a21968",
+   "questionPages": [
+    1
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.39"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Integrating factor to a general solution, then the smallest positive root of a trigonometric equation.",
+   "markScheme": "source",
+   "schemePages": [
+    4
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch7/q3",
+   "sourceSha256": "0bd78ee6fc7a2f95bb36c59b2dca05a009c302b0e08be1a9f3b95799d3a21968",
+   "questionPages": [
+    2
+   ],
+   "marks": 13,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.43"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Long but standard: complementary function with a zero root, particular integral for a sine, then two initial conditions.",
+   "markScheme": "source",
+   "schemePages": [
+    5
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q1",
+   "sourceSha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "questionPages": [
+    1,
+    2
+   ],
+   "marks": 14,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/8"
+   ],
+   "skills": [
+    "differential-equations:2.43",
+    "differential-equations:2.45"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Verify a given resonance particular integral, then the general solution and initial conditions; signposted modelling.",
+   "markScheme": "source",
+   "schemePages": [
+    10,
+    11
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q2",
+   "sourceSha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "questionPages": [
+    2
+   ],
+   "marks": 12,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/8"
+   ],
+   "skills": [
+    "differential-equations:2.48",
+    "differential-equations:2.45"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Damped oscillation: finding the maximum displacement needs differentiating the solution and solving delicately.",
+   "markScheme": "source",
+   "schemePages": [
+    12,
+    13
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q5",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q3",
+   "sourceSha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "questionPages": [
+    3
+   ],
+   "marks": 18,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/8",
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.50",
+    "differential-equations:2.43"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Long and delicate: coupled equations to a second-order DE, both general solutions, then solving for T.",
+   "markScheme": "source",
+   "schemePages": [
+    14,
+    15
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q8",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q4",
+   "sourceSha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "questionPages": [
+    4
+   ],
+   "marks": 17,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/8",
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.43",
+    "differential-equations:2.45"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Long and delicate: coupled equations with complex auxiliary roots, then when the rabbits die out and interpretation.",
+   "markScheme": "source",
+   "schemePages": [
+    16,
+    17
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q7",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q5",
+   "sourceSha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "questionPages": [
+    5
+   ],
+   "marks": 11,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/8",
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.39",
+    "differential-equations:2.41"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Integrating factor with fractional powers and initial conditions, then a rate of change.",
+   "markScheme": "source",
+   "schemePages": [
+    18,
+    19
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q7",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q6",
+   "sourceSha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "questionPages": [
+    5
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/8",
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.39",
+    "differential-equations:2.41"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Forming the mixing model, then an integrating-factor solution with an initial condition.",
+   "markScheme": "source",
+   "schemePages": [
+    20
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q5",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q7",
+   "sourceSha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "questionPages": [
+    6
+   ],
+   "marks": 13,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/8",
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.39",
+    "differential-equations:2.41"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Forming the mixing model, an integrating-factor solution, then solving for a concentration threshold.",
+   "markScheme": "source",
+   "schemePages": [
+    21,
+    22,
+    23
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q5",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q8",
+   "sourceSha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "questionPages": [
+    7
+   ],
+   "marks": 12,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/8",
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.43",
+    "differential-equations:2.45"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Signposted: explain m, verify a particular integral, then the general and particular solutions and a value.",
+   "markScheme": "source",
+   "schemePages": [
+    24,
+    25
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q9",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q9",
+   "sourceSha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "questionPages": [
+    8
+   ],
+   "marks": 14,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/8",
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.43",
+    "differential-equations:2.45"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Damped model with initial conditions; the maximum concentration needs differentiating and solving delicately.",
+   "markScheme": "source",
+   "schemePages": [
+    26,
+    27
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2020-october/q3",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-2/ch8/q10",
+   "sourceSha256": "37c66393985aef63ee43daae09f632fbe52d7e754036f480873a5a8f202a01d2",
+   "questionPages": [
+    9
+   ],
+   "marks": 17,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-2/8",
+    "further-maths-a-level/pure-core-2/7"
+   ],
+   "skills": [
+    "differential-equations:2.50",
+    "differential-equations:2.43"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Long and delicate: coupled equations with complex auxiliary roots, both general and particular solutions, then interpretation.",
+   "markScheme": "source",
+   "schemePages": [
+    28,
+    29,
+    30
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2020-october/q5",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  }
+ ],
+ "status": "verified"
+}

@@ -6310,6 +6310,146 @@
         "docs/evidence/v075-import-pmt-core-pure-1.json",
         "tests/papers_print_browser.py"
       ]
+    },
+    {
+      "id": "PAP-076-1",
+      "requirement": "Inspect every PDF: structure, question count, marks per question, whether each includes a mark scheme, and any source reference printed with each question (paper, series, question number). Identify each file by its content, not only its name. Record an inventory in the GitHub issue before importing.",
+      "acceptance": [
+        "All 8 Year 2 PDFs identified by content (title page, running header, question list, scheme section) with SHA-256, page count, question count, marks per question and scheme pages; inventory posted on #138 before importing.",
+        "No question prints a paper, series or original question number; every file prints a scheme for every question."
+      ],
+      "scope": "v0.76 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #138, 23 November 2026",
+      "evidence": [
+        "GitHub issue #138",
+        "docs/evidence/v076-import-pmt-core-pure-2.json"
+      ]
+    },
+    {
+      "id": "PAP-076-2",
+      "requirement": "Import every question into the question bank, mapped to the existing Further Maths Core Pure 1 / Core Pure 2 book and chapter keys and the qualified skills behind the topic picker (the PMT chapter names map one-to-one to the existing chapters; where a question fits several, use multiple chapters as the existing mapping supports). Preserve the original wording exactly: do NOT change, correct or paraphrase any question. Transcribe maths as native HTML/LaTeX, keep part labels, marks, given equations, tables and diagram labels, and use faithful figure crops. If a source error affects the maths, document it for review and never repair it silently.",
+      "acceptance": [
+        "61 Core Pure 2 questions (558 marks) imported, matching the printed totals of all 8 sheets (tests/test_pmt.py, per chapter).",
+        "Every row maps to existing further-maths-a-level/pure-core-2 chapter keys (plus the extra chapters of a duplicated original) and validated taxonomy skills.",
+        "Wording, part labels and marks as printed, maths in native LaTeX, 12 figures as source crops with captions; an independent agent compared all 61 rendered questions with the rendered source pages and found 0 discrepancies.",
+        "Two source slips are kept verbatim and recorded in sourceNote (Ch.1 Q10, Ch.3 Q6); none was repaired."
+      ],
+      "scope": "v0.76 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #138, 23 November 2026",
+      "evidence": [
+        "GitHub issue #138",
+        "docs/evidence/v076-import-pmt-core-pure-2.json"
+      ]
+    },
+    {
+      "id": "PAP-076-3",
+      "requirement": "Mark schemes: where the PDF contains an official mark scheme, pair each question with its complete scheme (method/accuracy marks, alternatives, notes) and set the mark-scheme flag true. Where a PDF has no scheme, import the questions anyway with the flag false (they will not be eligible for the exam paper) and list that chapter in the report as needing a scheme. Never invent or generate a mark scheme and present it as official.",
+      "acceptance": [
+        "Every question is paired with its own scheme crops (all alternatives and notes) from its PDF and flagged markScheme \"source\" with its scheme pages; nothing is generated.",
+        "mark_schemes.py check itself rejects a PMT row whose steps are not crops of its own question's scheme.",
+        "No Core Pure 2 chapter lacks a scheme, and Year 2 has no misplaced appendix."
+      ],
+      "scope": "v0.76 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #138, 23 November 2026",
+      "evidence": [
+        "GitHub issue #138",
+        "docs/evidence/v076-import-pmt-core-pure-2.json"
+      ]
+    },
+    {
+      "id": "PAP-076-4",
+      "requirement": "Difficulty: assign every PMT question one of easy / medium / hard, question by question. Write the rubric in the register and docs (for example: marks, number of distinct steps or techniques, whether it is routine recall, standard application, or multi-concept problem solving, and the level expected within Core Pure). Record the rating and a one-line reason per question in the evidence file. Ratings must be consistent within a chapter (spread across easy/medium/hard where the content allows). Have the independent reviewer re-rate a random 15% sample and resolve disagreements by the rubric; record agreement.",
+      "acceptance": [
+        "The v0.75 rubric applies unchanged (easy / medium / difficult = \"hard\").",
+        "Every question has a rating and a one-line reason (13 easy, 36 medium, 12 difficult).",
+        "The independent reviewer re-rated a random 15% sample (10 of 61, seed 76) blind: 7 of 10 agreed; the 3 one-level disagreements were resolved by the rubric (2 changed), giving 9 of 10."
+      ],
+      "scope": "v0.76 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #138, 23 November 2026",
+      "evidence": [
+        "GitHub issue #138",
+        "docs/evidence/v076-import-pmt-core-pure-2.json"
+      ]
+    },
+    {
+      "id": "PAP-076-5",
+      "requirement": "Source tickbox: add \"PMT\" as a source tickbox in the Papers and question-selection controls alongside the existing sources, so a teacher can select only PMT questions. PMT questions appear only when PMT is ticked, work with the chapter, skill, difficulty and course/book filters, saved selections and all print layouts, and are eligible for the exam paper only if the mark-scheme flag is true (Release 1 rule). Existing source tickboxes, the Past papers tickbox behaviour and saved selections are unchanged.",
+      "acceptance": [
+        "Core Pure 2 questions use the v0.75 PMT tickbox (off by default) with chapter, skill, difficulty and course filters, saved selections and all print layouts.",
+        "A version-2 saved session restores its single exam box to exam-style and past papers only, never to PMT."
+      ],
+      "scope": "v0.76 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #138, 23 November 2026",
+      "evidence": [
+        "GitHub issue #138",
+        "docs/evidence/v076-import-pmt-core-pure-2.json"
+      ]
+    },
+    {
+      "id": "PAP-076-6",
+      "requirement": "Duplicates: PMT questions are often real past-paper questions. Detect any that already exist in the bank (for example June 2019-2023 and Sample Core Pure papers) by source reference and by text comparison. Default: keep the PMT copy with a \"duplicateOf\" link to the existing question, never place both copies in the same generated exam paper or booklet by default, record the list in the evidence file, and do not delete either.",
+      "acceptance": [
+        "36 duplicates confirmed against the rendered pages: 34 of past-paper questions in the bank and 2 of earlier PMT questions (one in Core Pure 1); each copy carries duplicateOf and neither is deleted; Ch.6 Q6 is confirmed not a copy.",
+        "Generated exam papers and booklets drop a copy whenever its original is in the pool; the selection title states how many copies a generated paper skips and the count box is capped accordingly."
+      ],
+      "scope": "v0.76 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #138, 23 November 2026",
+      "evidence": [
+        "GitHub issue #138",
+        "docs/evidence/v076-import-pmt-core-pure-2.json"
+      ]
+    },
+    {
+      "id": "PAP-076-7",
+      "requirement": "Counts, metadata, catalogue joins, tests with positive assertions for each chapter, per-question verification evidence in docs/evidence/ (source file hash, page, marks, chapter keys, difficulty and reason, scheme page if any, duplicate status, maths checkpoint). Independent maths and wording check of every imported question against the source page images (rendered, not only text), plus real PDF page inspection for print layouts (one per page and condensed, solutions on and off).",
+      "acceptance": [
+        "Counts, metadata and catalogue joins are tested per chapter (tests/test_pmt.py), including offline packs carrying every PMT question and asset.",
+        "Per-question evidence in docs/evidence/v076-import-pmt-core-pure-2.json (hash, pages, marks, chapter keys, skills, difficulty and reason, scheme pages, duplicate status, maths checkpoint).",
+        "Real PDF print inspection: one per page and condensed, solutions on and off; no warnings and nothing wider than the page."
+      ],
+      "scope": "v0.76 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #138, 23 November 2026",
+      "evidence": [
+        "GitHub issue #138",
+        "docs/evidence/v076-import-pmt-core-pure-2.json"
+      ]
+    },
+    {
+      "id": "PAP-076-8",
+      "requirement": "Combining with later work: where the exam paper's Release 1 source rule applies, verify a mixed exam paper (past paper plus PMT) shows no source on the question pages and the exact source in the scheme section.",
+      "acceptance": [
+        "A mixed exam paper (past paper plus Core Pure 1 and Core Pure 2 PMT, with a figure) shows no source on its question pages or in the PDF text before the scheme, and the exact source with ID in the scheme (tests/papers_print_browser.py, PAP_076; live owner and ADA QA)."
+      ],
+      "scope": "v0.76 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner assignment (three releases: mark-scheme flag, PMT Core Pure 1, PMT Core Pure 2), GitHub #138, 23 November 2026",
+      "evidence": [
+        "GitHub issue #138",
+        "docs/evidence/v076-import-pmt-core-pure-2.json"
+      ]
     }
   ]
 }
