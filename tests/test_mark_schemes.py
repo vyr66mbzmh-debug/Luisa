@@ -15,20 +15,24 @@ import mark_schemes  # noqa: E402
 AS_QUESTIONS = sum(p['questionCount'] for p in json.loads((ROOT / 'content/exams/pilot-metadata.json').read_text())['papers'] if p.get('qualification') == 'AS')
 PMT_REMOVED = [r['removed'] for r in json.loads((ROOT / 'docs/evidence/v079-pmt-duplicates.json').read_text())['removed']]
 
+PRACTICE_REMOVED = json.loads((ROOT / 'practice-catalogue.json').read_text()).get('migrations', {})
+SOURCE_CLASSES = json.loads((ROOT / 'content/practice-classification.json').read_text())['questions']
+REMOVED_EXAM = sum(q['id'] in PRACTICE_REMOVED and q['bank'] == 'exam' for q in SOURCE_CLASSES)
+
 class MarkSchemeFlagTests(unittest.TestCase):
     def test_every_question_has_its_derived_flag(self):
         self.assertEqual(mark_schemes.errors(ROOT), [])
         derived = mark_schemes.derive(ROOT)
         self.assertEqual({name: len(rows) for name, rows in derived.items()},
-                         {'textbook-catalogue.json': 6147, 'practice-catalogue.json': 2475, 'exam-catalogue.json': 444 + AS_QUESTIONS,
+                         {'textbook-catalogue.json': 6147, 'practice-catalogue.json': 2475 - len(PRACTICE_REMOVED), 'exam-catalogue.json': 444 + AS_QUESTIONS,
                           'pmt-catalogue.json': 83 - len(PMT_REMOVED)})
 
     def test_counts_per_source(self):
         counts = {f'{source}|{value}': n for (source, value), n in mark_schemes.counts(ROOT).items()}
         self.assertEqual(counts, {
             'Past Papers|official': 444 + AS_QUESTIONS,                               # paired official Edexcel schemes
-            'Exam style (Practice Booklet)|worked': 554,               # Luisa worked solutions only
-            'Practice questions (Practice Booklet)|worked': 1921,
+            'Exam style (Practice Booklet)|worked': 554 - REMOVED_EXAM,               # Luisa worked solutions only
+            'Practice questions (Practice Booklet)|worked': 1921 - len(PRACTICE_REMOVED) + REMOVED_EXAM,
             'Practice questions (Luisa skill questions)|worked': 6147,
             'PMT (pure-core-1)|source': 58 - sum('/pure-core-1/' in key for key in PMT_REMOVED),                            # PMT topic sheets with their source mark schemes
             'PMT (pure-core-2)|source': 25 - sum('/pure-core-2/' in key for key in PMT_REMOVED),

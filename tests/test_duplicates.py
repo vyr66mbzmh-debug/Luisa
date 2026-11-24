@@ -63,7 +63,7 @@ class BankHasNoDuplicates(unittest.TestCase):
         items = duplicates.bank(ROOT)
         removed = read('docs/evidence/v079-pmt-duplicates.json')['removed']
         imported = sum(p['questionCount'] for p in read('content/exams/pilot-metadata.json')['papers'] if p.get('qualification') == 'AS')
-        self.assertEqual(len([i for i in items if i['kind'] != 'madas']), 9149 + imported - len(removed))
+        self.assertEqual(len([i for i in items if i['kind'] != 'madas']), 9149 + imported - len(removed) - len(read('practice-catalogue.json').get('migrations', {})))
         self.assertEqual(sum(i['kind'] == 'madas' for i in items), 1018)
         pmt = [i for i in items if i['kind'] == 'pmt']
         self.assertEqual(len(pmt) + len(removed), 83)
@@ -81,9 +81,10 @@ class BankHasNoDuplicates(unittest.TestCase):
         new_trace = read('docs/evidence/v079-pmt-duplicates.json')['removed']
         self.assertEqual(len(old_trace), 51)
         self.assertEqual(sum(d['retained'].startswith('exam/') for d in old_trace), 47)
-        migrations = read('pmt-catalogue.json')['migrations']
+        practice_moves = read('practice-catalogue.json').get('migrations', {})
+        migrations = duplicates.migrations(ROOT)
         self.assertEqual(migrations, {d['removed']: d['retained'] for d in decisions})
-        self.assertEqual(set(migrations), {d['removed'] for d in old_trace + new_trace})
+        self.assertEqual(set(migrations), {d['removed'] for d in old_trace + new_trace} | set(practice_moves))
         self.assertFalse(set(migrations.values()) & set(migrations))
         for entry in old_trace + new_trace:
             target = entry['retained']
@@ -98,7 +99,7 @@ class BankHasNoDuplicates(unittest.TestCase):
                  *[str(p.relative_to(ROOT)) for p in (ROOT / 'content/pmt').glob('*.json')],
                  *[str(p.relative_to(ROOT)) for p in (ROOT / 'tests').glob('*.py') if p.name != 'test_duplicates.py']]
         for name in files:
-            text = (ROOT / name).read_text()
+            text = json.dumps(read(name)['questions']) if name == 'practice-catalogue.json' else (ROOT / name).read_text()
             for qid in removed:
                 self.assertIsNone(re.search(rf'{qid}(?![0-9])', text), f'{qid} in {name}')
         pmt = json.loads((ROOT / 'pmt-catalogue.json').read_text())
@@ -106,6 +107,8 @@ class BankHasNoDuplicates(unittest.TestCase):
         for qid in removed:
             self.assertNotIn(f'"{qid}"', text)
         for qid in removed:
+            if not qid.startswith('pmt/'):
+                continue
             sheet, q = qid.split('/')[1:3], int(qid.rsplit('/q', 1)[1])
             folder = ROOT / 'resources/pmt' / f'{sheet[0]}-{sheet[1]}'
             self.assertEqual(list(folder.glob(f'q{q:02}-*')), [], qid)

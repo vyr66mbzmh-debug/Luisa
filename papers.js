@@ -508,7 +508,7 @@
     // A copy may point at a past-paper question or at another PMT question; both must exist once everything is loaded.
     for (const q of pmtCatalogue.questions) if (q.duplicateOf && !ids.has(q.duplicateOf)) throw Error('A PMT question is marked as a copy of a missing question.');
     // PAP-077-1: a removed duplicate maps to the question kept in its place (an official past paper or the earlier PMT question).
-    const migrations = new Map(Object.entries({...pmtCatalogue.migrations, ...madas.migrations}).filter(([from, to]) => !ids.has(from) && ids.has(to)));
+    const migrations = new Map(Object.entries({...practiceCatalogue.migrations, ...pmtCatalogue.migrations, ...madas.migrations}).filter(([from, to]) => !ids.has(from) && ids.has(to)));
     let saved = null;
     try { saved = JSON.parse(sessionStorage.getItem(storageKey)); } catch (_) { /* A new session or unavailable storage. */ }
     if (![1, 2, 3].includes(saved?.version)) saved = null;

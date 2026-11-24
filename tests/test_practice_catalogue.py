@@ -52,8 +52,10 @@ class CompletePracticeBank(unittest.TestCase):
         root=Path(__file__).resolve().parents[1]
         index=json.loads((root/'practice-catalogue.json').read_text())
         descriptors={q['id']:q for q in index['questions']}
-        self.assertEqual(len(descriptors),2475)
-        self.assertEqual(len(index['questions']),2475)
+        removed=index.get('migrations', {})
+        self.assertFalse(set(removed) & set(descriptors))
+        self.assertEqual(len(descriptors)+len(removed),2475)
+        self.assertEqual(len(index['questions'])+len(removed),2475)
         counts=Counter();seen=set();chapters=list((root/'content/practice').glob('*/chapter-*.json'))
         self.assertEqual(len(chapters),45)
         for path in chapters:
@@ -61,7 +63,8 @@ class CompletePracticeBank(unittest.TestCase):
             authored=json.loads((root/'resources/practice-solutions'/path.parent.name/path.name).read_text())
             working={q['id']:q for q in authored['solutions']}
             self.assertEqual(len(working),len(authored['solutions']))
-            self.assertEqual(set(working),{q['id'] for q in doc['questions']})
+            self.assertEqual(set(working)-removed.keys(),{q['id'] for q in doc['questions']})
+            counts[doc['sourceFamily']]+=len(set(working) & removed.keys())
             pdf_hash=hashlib.sha256((root/doc['sourcePdf']).read_bytes()).hexdigest()
             for q in doc['questions']:
                 self.assertNotIn(q['id'],seen);seen.add(q['id']);counts[doc['sourceFamily']]+=1

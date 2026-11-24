@@ -536,6 +536,11 @@
    "removed": "pmt/pure-core-1/ch7/q10",
    "retained": "exam/edexcel-8fm0-01-sample/q5",
    "reason": "The four matrix entries, hexagon area, transformation questions and all four mark allocations agree with official sample Q5."
+  },
+  {
+   "removed": "practice/maths-a-level/maths-pure-year-1/ch12/12.2/q5",
+   "retained": "exam/edexcel-8ma0-01-2018-june/q10",
+   "reason": "Both ask verbatim for the derivative of x cubed from first principles, with the same required result and four marks. Keep the June 2018 official question and scheme."
   }
  ],
  "notDuplicates": [
@@ -813,6 +818,18 @@
    "id": "exam/edexcel-8fm0-01-2025-june/q6",
    "checkedAgainst": "luisa/1.10:24",
    "why": "The AS question specifically requires induction. The textbook starts with a fourth-power difference identity and specifically requires the method of differences. Only the final sum of cubes agrees.",
+   "decided": "v0.79"
+  },
+  {
+   "id": "exam/edexcel-8ma0-01-2018-june/q2",
+   "checkedAgainst": "practice/maths-a-level/maths-pure-year-1/ch3/exam/q71",
+   "why": "The official second assertion adds 3 before squaring. The booklet adds 2.",
+   "decided": "v0.79"
+  },
+  {
+   "id": "exam/edexcel-8ma0-01-2018-june/q10",
+   "checkedAgainst": "practice/maths-a-level/maths-pure-year-1/ch12/12.2/q4",
+   "why": "The booklet differentiates 3x squared; the official prompt differentiates x cubed.",
    "decided": "v0.79"
   }
  ]
