@@ -401,7 +401,7 @@ class PapersSelection(unittest.TestCase):
         self.page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')
         self.assertEqual(self.page.locator('#filter-title').inner_text(), '16 questions in the selection')
         self.page.locator('#papers-source-practice').check()
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), '8,084 questions in the selection')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), '8,082 questions in the selection')
         self.page.locator('#papers-source-practice').uncheck()
         self.page.locator('#papers-course').select_option('maths-a-level')
         self.page.locator('#papers-book').select_option('maths-a-level/maths-pure-year-1')

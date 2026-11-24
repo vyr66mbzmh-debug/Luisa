@@ -2,6 +2,17 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.78 -->
+**Release 0.78 · GitHub #143.**
+
+Papers includes 1,021 MADAS question appearances in 75 papers, with 1,018 distinct problems across AS Pure, A-level Pure and A-level Applied. Three repeated problems retain their original paper references and marking variants.
+
+The Madas source beside Exam style uses Standard for A–I, Hard for J–R and Very Hard for S–Z. The original difficulty guidance stays in the catalogue.
+
+Teachers can select Include MADAS questions when generating an exam. The adapted schemes identify the collection, paper and question and show editorial marks. Textbook mappings support selection and are omitted from the question and answer pages.
+
+The catalogue and per-paper content are in `madas-catalogue.json` and `content/madas/`. The importer reads private prepared files. The bank contains 10,167 distinct problems. Release verification and usage are tracked on #143. The next requested release is v0.79 for official AS papers.
+
 <!-- LUISA-REPORT-HANDOFF v0.77 -->
 **Release 0.77 · GitHub #141.** Written for any successor agent, engine or person; it needs no earlier conversation.
 

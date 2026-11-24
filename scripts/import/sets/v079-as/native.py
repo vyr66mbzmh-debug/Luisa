@@ -10,7 +10,8 @@ def inline(text):
     fields = text.split('$')
     if len(fields) % 2 == 0:
         raise ValueError(f'Unclosed maths in {text}')
-    return ''.join(m(part) if i % 2 else html.escape(part) for i, part in enumerate(fields))
+    rendered = ''.join(m(part) if i % 2 else html.escape(part) for i, part in enumerate(fields))
+    return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', rendered)
 
 def read_questions(path):
     questions = {}
@@ -35,12 +36,15 @@ def read_questions(path):
                     blocks.append(p(mk(int(line[1:-1]))))
                 elif line.startswith('$$') and line.endswith('$$'):
                     blocks.append(eq(line[2:-2]))
-                elif line.startswith('• '):
+                elif line.startswith(('• ', '- ')):
                     blocks.append(ul([inline(line[2:])]))
                 else:
                     text, mark = re.fullmatch(r'(.*?)(?: \[(\d+)\])?', line).groups()
                     content = inline(text) + (' ' + mk(int(mark)) if mark else '')
-                    blocks.append(p(content))
+                    if re.match(r'^\([a-zivx]+\)\s', text):
+                        blocks.append(f'<p class="exam-subpart">{content}</p>')
+                    else:
+                        blocks.append(p(content))
         if number in questions:
             raise ValueError(f'Duplicate question {number}')
         questions[number] = ''.join(blocks)

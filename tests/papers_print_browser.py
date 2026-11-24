@@ -383,6 +383,12 @@ class PapersPrintTests(unittest.TestCase):
             'edexcel-9fm0-01-sample': (9, 75), 'edexcel-9fm0-02-sample': (7, 75), 'edexcel-9ma0-01-sample': (15, 100),
             'edexcel-9ma0-02-sample': (16, 100), 'edexcel-9ma0-03-sample': (10, 100)})
 
+    def test_official_as_complete_papers_print_in_every_layout(self):
+        sources = json.loads((ROOT / 'scripts/import/sets/v079-as/sources.json').read_text())
+        self.assertEqual(len(sources), 37)
+        for pid, source in sources.items():
+            self.assert_session_papers_print(source['session'], {pid: (source['nq'], source['total'])})
+
     def assert_session_papers_print(self, session, papers):
         import fitz, tempfile
         with tempfile.TemporaryDirectory() as folder:

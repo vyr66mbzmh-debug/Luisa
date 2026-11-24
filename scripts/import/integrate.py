@@ -68,7 +68,7 @@ paper = {'id': PID, 'board': 'Edexcel', 'qualification': P.get('qualification', 
          'difficultyPolicy': {'basis': 'original-paper-order', 'easyQuestions': [1, easy], 'mediumQuestions': [easy + 1, nq - diff],
                               'difficultQuestions': [nq - diff + 1, nq]},
          'questions': [{k: v for k, v in r.items() if k != '_chapterKeys'} for r in rows],
-         'sourceVerification': {'questionPaperAndMarkSchemeTotalsAgree': True, 'originalQuestionOrderPreserved': True, 'totalMarksChecked': P['total']}}
+         'sourceVerification': {'questionPaperAndMarkSchemeTotalsAgree': P.get('printedSchemeTotalAgrees', True), 'originalQuestionOrderPreserved': True, 'totalMarksChecked': P['total']}}
 meta_path = ROOT / 'content/exams/pilot-metadata.json'; meta = json.loads(meta_path.read_text())
 meta['papers'] = [p for p in meta['papers'] if p['id'] != PID]
 present = [p['id'] for p in meta['papers']]

@@ -1,3 +1,9 @@
+## Luisa v0.79
+
+- Papers adds 322 official Edexcel AS questions worth 2,320 marks from 36 question papers and their mark schemes. The two independently numbered specimen applied sections are listed separately.
+- Teachers and pupils can filter questions by Easy, Medium, Difficult, Very difficult and Unclassified. Standard joins Medium, Hard joins Difficult, and Very Hard joins Very difficult.
+- The official question and scheme take precedence when sources repeat a problem. This release retires 45 PMT questions, two practice booklet questions and three repeated MADAS copies. Saved selections resolve to the retained questions.
+
 ## Luisa v0.78
 
 - Papers includes 1,021 MADAS question appearances in 75 papers, with 1,018 distinct problems across AS Pure, A-level Pure and A-level Applied. Three repeated problems retain their original paper references and marking variants.

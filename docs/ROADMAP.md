@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.79
+
+Official AS papers, unified difficulty and duplicate removal. [Issue #145](https://github.com/vyr66mbzmh-debug/Luisa/issues/145).
+
 ## Papers v0.78
 
 MADAS practice and teacher exam papers across three collections. [Issue #143](https://github.com/vyr66mbzmh-debug/Luisa/issues/143).

@@ -6571,7 +6571,7 @@
       "requirement": "Include all supplied official Edexcel AS papers and their official schemes in Papers and teacher exams, with relevant Year 1 topics and difficulty ratings.",
       "scope": "Luisa Papers",
       "priority": "P1",
-      "implementation": "planned",
+      "implementation": "implemented",
       "verification": "pending",
       "origin": "Owner brief for v0.79, GitHub #145",
       "acceptance": [
@@ -6580,7 +6580,12 @@
         "Apply PAP-077-2 to each incoming AS paper. Keep the official question and scheme when another source duplicates it. Physically remove confirmed PMT copies, merge their additional mappings, and migrate saved selections to the official ID. Record the source comparison and both IDs."
       ],
       "evidence": [
-        "GitHub issue #145"
+        "GitHub issue #145",
+        "docs/evidence/v079-official-as.json",
+        "docs/evidence/v079-pmt-duplicates.json",
+        "docs/evidence/duplicate-decisions.json",
+        "tests/test_exam_metadata.py",
+        "tests/papers_print_browser.py"
       ]
     },
     {
@@ -6588,7 +6593,7 @@
       "requirement": "Use one five-bucket difficulty scale throughout Luisa Papers, including the teacher exam selector.",
       "scope": "All question sources and editions",
       "priority": "P1",
-      "implementation": "planned",
+      "implementation": "implemented",
       "verification": "pending",
       "origin": "Owner addition to v0.79, GitHub #145",
       "acceptance": [
@@ -6596,7 +6601,8 @@
         "Migrate saved filters and preserve original source guidance."
       ],
       "evidence": [
-        "GitHub issue #145"
+        "GitHub issue #145",
+        "tests/test_papers_selection.py"
       ]
     },
     {
