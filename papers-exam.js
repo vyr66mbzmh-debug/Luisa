@@ -569,7 +569,8 @@
     $('papers-exam-minutes').value = button.dataset.examPreset; save(); targetPreview();
   }));
   $('papers-exam-order').addEventListener('click', () => {
-    const rows = orderByBands(builder.snapshot());
+    const orderedExam = orderByBands(examSelection())[Symbol.iterator]();
+    const rows = builder.snapshot().map(row => row.sourceKind === 'madas' && !madas.checked ? row : orderedExam.next().value);
     builder.arrange(rows, 'Questions ordered for the exam: easy questions first, a varied mix in the middle and difficult questions last.');
   });
   $('papers-exam-generate').addEventListener('click', async () => {

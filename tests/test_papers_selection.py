@@ -90,6 +90,24 @@ class PapersSelection(unittest.TestCase):
         self.assertTrue(self.page.locator('#papers-exam-madas').is_checked())
         self.assertEqual(self.page.locator('#papers-difficulty').input_value(), 'very-hard')
 
+    def test_exam_order_preserves_excluded_madas_positions(self):
+        for url in ('**/madas-catalogue.json', '**/exam-catalogue.json', '**/papers-print.js'):
+            self.page.unroute(url)
+        self.page.reload()
+        self.page.wait_for_selector('#papers-source-madas:enabled')
+        self.page.locator('#papers-source-madas').check()
+        self.page.locator('#papers-exam > summary').click()
+        ids = ['exam/edexcel-9ma0-02-2021-october/q7', 'exam/edexcel-9ma0-01-2018-june/q1',
+               'exam/edexcel-9fm0-01-2021-november/q6', 'exam/edexcel-9fm0-01-2024-june/q8',
+               'madas/as-pure-x/q2']
+        self.page.evaluate("""async ids => {
+            const builder = LUISA_PAPERS_BUILDER;
+            builder.arrange(await builder.load(ids.map(id => builder.pool().find(row => row.id === id))));
+        }""", ids)
+        self.page.locator('#papers-exam-order').click()
+        self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().at(-1).id'), ids[-1])
+        self.assertTrue(self.page.locator('#papers-exam-order-warning').is_hidden())
+
     def generate(self, count):
         self.page.locator('#papers-count').fill(str(count))
         self.page.locator('#papers-generate').click()
