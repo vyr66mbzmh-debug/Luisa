@@ -1,0 +1,87 @@
+# 1
+@figure 141 Figure 1. Histogram of crossword completion times.
+The histogram in Figure 1 shows the times taken to complete a crossword by a random sample of students.
+The number of students who completed the crossword in more than 15 minutes is 78
+Estimate the percentage of students who took less than 11 minutes to complete the crossword.
+[4]
+
+# 2
+Jerry is studying visibility for Camborne using the large data set June 1987.
+The table below contains two extracts from the large data set.
+It shows the daily maximum relative humidity and the daily mean visibility.
+| Date | Daily Maximum Relative Humidity | Daily Mean Visibility |
+| :--- | :--- | :--- |
+| Units | % | |
+| 10/06/1987 | 90 | 5300 |
+| 28/06/1987 | 100 | 0 |
+(The units for Daily Mean Visibility are deliberately omitted.)
+Given that daily mean visibility is given to the nearest 100,
+(a) write down the range of distances in metres that corresponds to the recorded value 0 for the daily mean visibility.
+[1]
+Jerry drew the following scatter diagram, Figure 2, and calculated some statistics using the June 1987 data for Camborne from the large data set.
+@figure 172 Figure 2. Scatter diagram and table of quartiles for visibility and relative humidity.
+Jerry defines an outlier as a value that is more than 1.5 times the interquartile range above $Q_3$ or more than 1.5 times the interquartile range below $Q_1$.
+(b) Show that the point circled on the scatter diagram is an outlier for visibility.
+[2]
+(c) Interpret the correlation between the daily mean visibility and the daily maximum relative humidity.
+[1]
+Jerry drew the following scatter diagram, Figure 3, using the June 1987 data for Camborne from the large data set, but forgot to label the $x$–axis.
+@figure 114 Figure 3. Scatter diagram of visibility against the variable with the missing label.
+(d) Using your knowledge of the large data set, suggest which variable the $x$-axis on this scatter diagram represents.
+[1]
+
+# 3
+In a game, a player can score 0, 1, 2, 3 or 4 points each time the game is played.
+The random variable $S$, representing the player’s score, has the following probability distribution where $a, b$ and $c$ are constants.
+$$\begin{array}{c|c|c|c|c|c} s & 0 & 1 & 2 & 3 & 4 \\ P(S = s) & a & b & c & 0.1 & 0.15 \\ \end{array}$$
+The probability of scoring less than 2 points is twice the probability of scoring at least 2 points.
+Each game played is independent of previous games played.
+John plays the game twice and adds the two scores together to get a total.
+Calculate the probability that the total is 6 points.
+[6]
+
+# 4
+A lake contains three different types of carp.
+There are an estimated 450 mirror carp, 300 leather carp and 850 common carp.
+Tim wishes to investigate the health of the fish in the lake.
+He decides to take a sample of 160 fish.
+(a) Give a reason why stratified random sampling cannot be used.
+[1]
+(b) Explain how a sample of size 160 could be taken to ensure that the estimated populations of each type of carp are fairly represented.
+You should state the name of the sampling method used.
+[2]
+As part of the health check, Tim weighed the fish.
+His results are given in the table below.
+| Weight ($w$ kg) | Frequency ($f$) | Midpoint ($m$ kg) |
+| :--- | :--- | :--- |
+| $2 \leqslant w < 3.5$ | 8 | 2.75 |
+| $3.5 \leqslant w < 4$ | 32 | 3.75 |
+| $4 \leqslant w < 4.5$ | 64 | 4.25 |
+| $4.5 \leqslant w < 5$ | 40 | 4.75 |
+| $5 \leqslant w < 6$ | 16 | 5.5 |
+(You may use $\sum fm = 692$ and $\sum fm^2 = 3053$)
+(c) Calculate an estimate for the standard deviation of the weight of the carp.
+[2]
+Tim realised that he had transposed the figures for 2 of the weights of the fish.
+He had recorded in the table 2.3 instead of 3.2 and 4.6 instead of 6.4
+(d) Without calculating a new estimate for the standard deviation, state what effect
+(i) using the correct figure of 3.2 instead of 2.3
+(ii) using the correct figure of 6.4 instead of 4.6
+would have on your estimated standard deviation.
+Give a reason for each of your answers.
+[2]
+
+# 5
+Afrika works in a call centre.
+She assumes that calls are independent and knows, from past experience, that on each sales call that she makes there is a probability of $\frac{1}{6}$ that it is successful.
+Afrika makes 9 sales calls.
+(a) Calculate the probability that at least 3 of these sales calls will be successful.
+[2]
+The probability of Afrika making a successful sales call is the same each day.
+Afrika makes 9 sales calls on each of 5 different days.
+(b) Calculate the probability that at least 3 of the sales calls will be successful on exactly 1 of these days.
+[2]
+Rowan works in the same call centre as Afrika and believes he is a more successful salesperson.
+To check Rowan’s belief, Afrika monitors the next 35 sales calls Rowan makes and finds that 11 of the sales calls are successful.
+(c) Stating your hypotheses clearly test, at the 5% level of significance, whether or not there is evidence to support Rowan’s belief.
+[4]
