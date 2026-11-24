@@ -470,7 +470,8 @@ class PapersPrintTests(unittest.TestCase):
         try:
             page = context.new_page()
             page.goto(f'http://127.0.0.1:{self.server.server_port}/papers.html')
-            page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 45 && !document.querySelector('#papers-generate').disabled")
+            paper_count = len(json.loads((ROOT / 'content/exams/pilot-metadata.json').read_text())['papers'])
+            page.wait_for_function("count => document.querySelectorAll('#papers-past-paper option').length === count && !document.querySelector('#papers-generate').disabled", arg=1 + paper_count)
             page.locator('#papers-source-practice').uncheck()
             page.locator('#papers-source-exam-style').uncheck()
             page.locator('#papers-past-paper').select_option('edexcel-9ma0-01-2025-june')
