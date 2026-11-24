@@ -1,0 +1,21 @@
+"""PMT Core Pure 1 topic sheets (owner folder "PMT further maths questions/Year 1"), identified by content and hash (#137)."""
+FILES = {
+    'pure-core-1-ch1': dict(rel='PMT further maths questions/Year 1/Ch.1 Complex Numbers.pdf', sha256='a2621eb2df3de8a78a63c164d276a1e078cb18c250a5824cbcef7891c8f1982f', pages=16,
+        book='pure-core-1', chapter=1, title='Complex Numbers', course='Core Pure 1', sheet='Ch.1 Complex Numbers'),
+    'pure-core-1-ch2': dict(rel='PMT further maths questions/Year 1/Ch.2 Argand Diagrams.pdf', sha256='89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8', pages=28,
+        book='pure-core-1', chapter=2, title='Argand Diagrams', course='Core Pure 1', sheet='Ch.2 Argand Diagrams'),
+    'pure-core-1-ch3': dict(rel='PMT further maths questions/Year 1/Ch.3 Series.pdf', sha256='a990e83732e1503860eafb0089fa53a64b814694efaa672db731ca4723e0964d', pages=12,
+        book='pure-core-1', chapter=3, title='Series', course='Core Pure 1', sheet='Ch.3 Series'),
+    'pure-core-1-ch4': dict(rel='PMT further maths questions/Year 1/Ch.4 Roots of Polynomials.pdf', sha256='4e3e39305344257755cca3f8b5955eaa00780aa1c70dab5fd09d38cd48d3a1c3', pages=10,
+        book='pure-core-1', chapter=4, title='Roots of Polynomials', course='Core Pure 1', sheet='Ch.4 Roots of Polynomials'),
+    'pure-core-1-ch5': dict(rel='PMT further maths questions/Year 1/Ch.5 Volumes of Revolution.pdf', sha256='923920583347ebe76241206336c8e231b510f2ea41eb9ed81f7efd63c8ede11b', pages=16,
+        book='pure-core-1', chapter=5, title='Volumes of Revolution', course='Core Pure 1', sheet='Ch.5 Volumes of Revolution'),
+    'pure-core-1-ch6': dict(rel='PMT further maths questions/Year 1/Ch.6 Matrices.pdf', sha256='37ec3ed87449fd30d3d9b0bdca1c4f7403e07f8666f1a49f8725c57a0f160fe5', pages=22,
+        book='pure-core-1', chapter=6, title='Matrices', course='Core Pure 1', sheet='Ch.6 Matrices'),
+    'pure-core-1-ch7': dict(rel='PMT further maths questions/Year 1/Ch.7 Linear Transformations.pdf', sha256='135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693', pages=22,
+        book='pure-core-1', chapter=7, title='Linear Transformations', course='Core Pure 1', sheet='Ch.7 Linear Transformations'),
+    'pure-core-1-ch8': dict(rel='PMT further maths questions/Year 1/Ch.8 Proof by Induction.pdf', sha256='bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21', pages=23,
+        book='pure-core-1', chapter=8, title='Proof by Induction', course='Core Pure 1', sheet='Ch.8 Proof by Induction'),
+    'pure-core-1-ch9': dict(rel='PMT further maths questions/Year 1/Ch.9 Vectors.pdf', sha256='a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710', pages=39,
+        book='pure-core-1', chapter=9, title='Vectors', course='Core Pure 1', sheet='Ch.9 Vectors'),
+}

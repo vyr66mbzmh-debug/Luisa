@@ -54,6 +54,7 @@ class PapersSelection(unittest.TestCase):
         self.page.route('**/papers-print.js', lambda route: route.fulfill(content_type='text/javascript', body='window.LUISA_PAPERS_PRINT={create:async (rows,opts)=>{window.testPaperSnapshot=rows;window.testPrintOptions=opts;return {warnings:[]}}};'))
         self.page.route('**/practice-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.route('**/exam-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
+        self.page.route('**/pmt-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.goto(self.url)
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('6,147')")
 
@@ -732,6 +733,51 @@ class PapersSelection(unittest.TestCase):
         self.page.reload()
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
         self.assertEqual(self.page.locator('#papers-exam-minutes').input_value(), '32')
+
+    def test_pmt_source_tickbox_counts_and_duplicates_PAP_075(self):
+        # PAP-075-5/6: the PMT tickbox is off by default; its questions count exactly; a copy and its original never
+        # both enter a generated paper, and a manual selection of both is reported.
+        pmt = json.loads((ROOT / 'pmt-catalogue.json').read_text())['questions']
+        copies = [r for r in pmt if r['duplicateOf']]
+        self.page.unroute('**/pmt-catalogue.json')
+        self.page.unroute('**/papers-print.js')
+        self.page.unroute('**/exam-catalogue.json')
+        self.page.unroute('**/practice-catalogue.json')
+        self.page.reload()
+        self.page.wait_for_function("!document.querySelector('#papers-source-pmt').disabled && document.querySelectorAll('#papers-past-paper option').length === 45")
+        self.assertFalse(self.page.locator('#papers-source-pmt').is_checked())
+        self.assertIn('PMT', self.page.locator('label[for="papers-source-pmt"], #papers-source-pmt >> xpath=..').first.inner_text())
+        for source in ('practice', 'exam-style', 'past-papers'):
+            self.page.locator('#papers-source-' + source).uncheck()
+        self.page.locator('#papers-source-pmt').check()
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{len(pmt)} questions in the selection')
+        self.page.locator('#papers-source-past-papers').check()
+        total = 444 + len(pmt)
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{total} questions in the selection')
+        self.page.locator('#papers-exam summary').click()
+        self.assertEqual(self.page.locator('#papers-exam-eligible').inner_text(),
+                         f'{total} of {total} questions in the chosen sources and topics have an official mark scheme and can go in an exam paper.')
+        deduped = self.page.evaluate('LUISA_PAPERS_BUILDER.withoutDuplicateCopies(LUISA_PAPERS_BUILDER.pool()).length')
+        self.assertEqual(deduped, total - len(copies))
+        for seed in range(4):
+            with self.subTest(seed=seed):
+                self.assertIn('minutes', self.timed(60))
+                rows = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => [r.id, r.duplicateOf || null, r.markScheme])')
+                ids = {r[0] for r in rows}
+                self.assertFalse([r for r in rows if r[1] and r[1] in ids], rows)
+                self.assertTrue(all(r[2] in ('official', 'source') for r in rows))
+        # Manual choice of a copy and its original: both stay (nothing is deleted) and the summary says so.
+        pair = ['exam/edexcel-9fm0-01-2019-june/q1', 'pmt/pure-core-1/ch2/q9']
+        self.page.evaluate('''async ids => { const rows = await LUISA_PAPERS_BUILDER.load(LUISA_PAPERS_BUILDER.pool().filter(r => ids.includes(r.id)));
+          LUISA_PAPERS_BUILDER.arrange(rows); }''', pair)
+        self.assertEqual(sorted(self.selection_ids()), sorted(pair))
+        self.assertIn('One selected PMT question is a copy of another selected question (PMT Core Pure 1 Ch.2 Argand Diagrams Q9).',
+                      self.page.locator('#papers-summary').inner_text())
+        # Older saved sessions (no PMT entry) restore with PMT unticked.
+        self.page.evaluate('''() => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({version:3, sources:{practice:true, 'exam-style':true, 'past-papers':true}, selected:[], order:'selection', layout:'condensed', includeAnswers:false}))''')
+        self.page.reload()
+        self.page.wait_for_function("!document.querySelector('#papers-source-pmt').disabled")
+        self.assertFalse(self.page.locator('#papers-source-pmt').is_checked())
 
     def test_in_paper_order_only_for_one_past_paper_and_survives_reload(self):
         self.page.unroute('**/exam-catalogue.json')

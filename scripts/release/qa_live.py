@@ -60,7 +60,9 @@ def dropdown_order(meta):
 
 def default_qa_papers():
     files = sorted(glob.glob(str(ROOT / 'docs/evidence/v*-import-*.json')), key=lambda f: [int(x) for x in re.findall(r'v(\d+)', Path(f).name)[:1]])
-    return [p['paperId'] for p in json.loads(Path(files[-1]).read_text())['papers']]
+    # The newest past-paper import (PMT topic-sheet evidence lists questions, not papers).
+    papers = [json.loads(Path(f).read_text()).get('papers') for f in files]
+    return [p['paperId'] for p in [x for x in papers if x][-1]]
 
 
 def local_totals(browser):
@@ -445,6 +447,24 @@ def exam_checks(p, role, out, expected24):
     ex.pdf(path=str(out / f'live-{role}-timed.pdf'), prefer_css_page_size=True)
     ex.close()
     ok(f'{role} timed exam paper with mark scheme passed ({len(diffs)} questions, {marks} marks, {minutes} minutes)')
+    # PAP-075: PMT questions (off by default) mix with past papers; question pages name no source, the scheme names each.
+    assert not p.locator('#papers-source-pmt').is_checked()
+    p.locator('#papers-source-pmt').check()
+    pmt = p.evaluate("LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='pmt'&&!r.duplicateOf).slice(0,3).map(r=>r.id)")
+    past = p.evaluate("LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='past-exam').slice(0,1).map(r=>r.id)")
+    assert len(pmt) == 3 and len(past) == 1, (pmt, past)
+    p.evaluate("async ids => LUISA_PAPERS_BUILDER.arrange(await LUISA_PAPERS_BUILDER.load(LUISA_PAPERS_BUILDER.pool().filter(r=>ids.includes(r.id))))", past + pmt)
+    ex = popup()
+    shown = ' '.join(ex.locator('.exam-front-page, .exam-page').all_inner_texts())
+    for leak in ('Source', 'PMT', 'Physics', 'Core Pure', 'Edexcel', 'pmt/', 'exam/'):
+        assert leak not in shown, leak
+    sources = ex.locator('.exam-scheme-source').all_inner_texts()
+    assert len(sources) == 4 and sum(x.startswith('Source: PMT Core Pure 1 Ch.') for x in sources) == 3, sources
+    assert ex.locator('.exam-scheme img').evaluate_all('ns=>ns.length>0&&ns.every(n=>n.complete&&n.naturalWidth>0)')
+    ex.pdf(path=str(out / f'live-{role}-pmt.pdf'), prefer_css_page_size=True)
+    ex.close()
+    p.locator('#papers-source-pmt').uncheck()
+    ok(f'{role} past paper and PMT exam paper passed')
 
 
 def manifest_checks(p, url, role, rev, version):

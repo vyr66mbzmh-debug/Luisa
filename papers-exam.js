@@ -20,6 +20,9 @@
   const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
   // PAP-074-2: only questions with an official (or equivalent source) mark scheme may go in an exam paper.
   const hasMarkScheme = row => row.markScheme === 'official' || row.markScheme === 'source';
+  // PAP-074-3 / PAP-075: a question page names no source. A context block keeps its content but loses its source label
+  // (for example "Reference from 9.5 Q1"), whatever source the row comes from.
+  const withoutSourceLabels = node => { node.querySelectorAll('.practice-context-label').forEach(label => label.remove()); return node; };
   // PAP-074-3: the scheme section names each question's exact source and bank ID; question pages never do.
   const schemeSource = row => `${print.sourceLabel(row)} · ID ${row.id}`;
   const monthYear = (date = new Date()) => date.toLocaleDateString('en-GB', {month: 'long', year: 'numeric'});
@@ -139,7 +142,7 @@
       const front = frontPage(doc, rows, options, totals);
       const staging = element(doc, 'div', 'print-staging exam-staging marks-pending'); doc.body.append(staging);
       const rendered = withQuestions ? rows.map(row => {
-        const prompt = print.normaliseMarks(content(doc, (row.sourceKind === 'past-exam' ? '' : row.contextHtml || '') + row.question));
+        const prompt = print.normaliseMarks(withoutSourceLabels(content(doc, (row.sourceKind === 'past-exam' ? '' : row.contextHtml || '') + row.question)));
         staging.append(prompt);
         return {row, prompt};
       }) : [];
@@ -566,7 +569,7 @@
       const work = await builder.exclusive(async () => {
         const before = signature();
         // Only questions with an official mark scheme (PAP-074-2); questions without marks are excluded as before.
-        const descriptors = builder.pool().filter(hasMarkScheme);
+        const descriptors = builder.withoutDuplicateCopies(builder.pool()).filter(hasMarkScheme);
         const pool = await builder.load(descriptors, count => showReport(`Loading the questions in the chosen topics… ${count} of ${descriptors.length}`));
         if (signature() !== before) return {stale: true};
         return {plan: planTimedPaper(pool, minutes), failed: pool.failed};

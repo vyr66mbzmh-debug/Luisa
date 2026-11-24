@@ -1,0 +1,2137 @@
+{
+ "requirement": "PAP-075",
+ "issue": 137,
+ "course": "Core Pure 1 (PMT topic sheets, owner folder Year 1)",
+ "questionCount": 73,
+ "totalMarks": 625,
+ "difficultyCounts": {
+  "easy": 26,
+  "medium": 36,
+  "difficult": 11
+ },
+ "representation": [
+  "prompts (native HTML and LaTeX)",
+  "figure crops with printed captions",
+  "scheme page-image crops"
+ ],
+ "cropMethod": "Scheme regions run from each \"Qn.\" label to the next label (labels tightened to their own text line); every content box on every scheme page is assigned to exactly one question (asserted). Crops are split only at blank rows or table rules so no crop is taller than it is wide, and each cut leaves at least 20 pt. Figures are 200 dpi crops including their printed captions.",
+ "rubric": {
+  "easy": "Routine: a standard result or procedure applied directly, in short structured parts; no insight or choice of method needed.",
+  "medium": "Standard methods combined over several steps, or one signposted non-routine step; moderate algebra; guided modelling.",
+  "difficult": "Problem-solving: unstructured or multi-concept, the method must be chosen without guidance, or long and delicate algebra, geometry or extended modelling. (The brief calls this level \"hard\"; Luisa stores it as \"difficult\".)"
+ },
+ "rerate": {
+  "seed": 75,
+  "sample": [
+   "pmt/pure-core-1/ch1/q6",
+   "pmt/pure-core-1/ch2/q4",
+   "pmt/pure-core-1/ch2/q6",
+   "pmt/pure-core-1/ch6/q6",
+   "pmt/pure-core-1/ch7/q2",
+   "pmt/pure-core-1/ch7/q6",
+   "pmt/pure-core-1/ch8/q3",
+   "pmt/pure-core-1/ch8/q5",
+   "pmt/pure-core-1/ch8/q6",
+   "pmt/pure-core-1/ch8/q8",
+   "pmt/pure-core-1/ch9/q4"
+  ],
+  "reviewer": [
+   {
+    "id": "pmt/pure-core-1/ch1/q6",
+    "myRating": "medium",
+    "importRating": "medium",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-1/ch2/q4",
+    "myRating": "difficult",
+    "importRating": "difficult",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-1/ch2/q6",
+    "myRating": "easy",
+    "importRating": "medium",
+    "agree": false
+   },
+   {
+    "id": "pmt/pure-core-1/ch6/q6",
+    "myRating": "easy",
+    "importRating": "medium",
+    "agree": false
+   },
+   {
+    "id": "pmt/pure-core-1/ch7/q2",
+    "myRating": "medium",
+    "importRating": "difficult",
+    "agree": false
+   },
+   {
+    "id": "pmt/pure-core-1/ch7/q6",
+    "myRating": "easy",
+    "importRating": "medium",
+    "agree": false
+   },
+   {
+    "id": "pmt/pure-core-1/ch8/q3",
+    "myRating": "medium",
+    "importRating": "easy",
+    "agree": false
+   },
+   {
+    "id": "pmt/pure-core-1/ch8/q5",
+    "myRating": "medium",
+    "importRating": "medium",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-1/ch8/q6",
+    "myRating": "medium",
+    "importRating": "medium",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-1/ch8/q8",
+    "myRating": "medium",
+    "importRating": "medium",
+    "agree": true
+   },
+   {
+    "id": "pmt/pure-core-1/ch9/q4",
+    "myRating": "difficult",
+    "importRating": "difficult",
+    "agree": true
+   }
+  ],
+  "initialAgreement": "6/11 (0.545); all 5 disagreements one level apart, in both directions",
+  "resolutions": [
+   {
+    "id": "pmt/pure-core-1/ch2/q6",
+    "import": "medium",
+    "reviewer": "easy",
+    "final": "easy",
+    "rule": "easy: short structured parts, standard result applied directly"
+   },
+   {
+    "id": "pmt/pure-core-1/ch6/q6",
+    "import": "medium",
+    "reviewer": "easy",
+    "final": "easy",
+    "rule": "easy: routine procedures, no choice of method"
+   },
+   {
+    "id": "pmt/pure-core-1/ch7/q6",
+    "import": "medium",
+    "reviewer": "easy",
+    "final": "easy",
+    "rule": "easy: short signposted parts"
+   },
+   {
+    "id": "pmt/pure-core-1/ch7/q2",
+    "import": "difficult",
+    "reviewer": "medium",
+    "final": "medium",
+    "rule": "medium: standard methods combined over several steps, all signposted; not unstructured or delicate"
+   },
+   {
+    "id": "pmt/pure-core-1/ch8/q3",
+    "import": "easy",
+    "reviewer": "medium",
+    "final": "easy",
+    "rule": "easy: a standard divisibility induction applied directly; the index step is the standard one"
+   }
+  ],
+  "finalAgreement": "10/11 (0.91): the reviewer rating was adopted for 4 questions by the rubric; for ch8/q3 the rubric supports the import rating (easy).",
+  "consistencyPass": "All 73 rows re-read against the rubric after resolution; no further changes."
+ },
+ "mathsReview": "An independent agent compared all 73 rendered app questions with the rendered source pages (zooming into maths embedded as images): 0 discrepancies; the source slips recorded below are real and no other slip was repaired. Its scheme sample (14 questions over all 9 chapters, including Ch.6 Q3 and Ch.9 Q10) found every scheme complete with nothing from another question. An OCR scan of all 135 Core Pure 1 scheme pages found one misplaced block (below) and no other appendix or cross-reference.",
+ "schemeMoves": {
+  "pure-core-1-ch6": [
+   {
+    "pages": [
+     13,
+     14
+    ],
+    "to": "pure-core-1-ch9",
+    "q": 10,
+    "reason": "The Ch.6 Matrices PDF places 'Appendix: Alternatives to (b)' (the gas pipeline tunnel, M(100, 200, 100), P(-300, 400, -150)) after Q3's scheme. It belongs to Ch.9 Vectors Q10, whose scheme ends 'See Appendix for some alternatives to part (b)' and has no appendix in its own PDF."
+   }
+  ]
+ },
+ "sourceNotes": [
+  {
+   "id": "pmt/pure-core-1/ch2/q7",
+   "note": "Source typo kept verbatim: part (a) prints \"r(cosθ θ+ isinθ)\" with a repeated θ; the intended form is r(cosθ + i sinθ). Recorded for review, not repaired."
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q2",
+   "note": "Source omission kept verbatim: there is no lead-in sentence before the bullet list (the change from 2019 to 2020 is implied). Recorded for review, not repaired."
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q3",
+   "note": "Source compilation slip, recorded not repaired: the Ch.6 sheet prints an \"Appendix: Alternatives to (b)\" for the gas pipeline question (Ch.9 Q10) on scheme pages 13-14, after this question's scheme. Those pages are not part of this question's scheme and are attached to Ch.9 Q10 instead (scheme-moves.json)."
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q6",
+   "note": "Source typo kept verbatim: part (b)(i) prints \"4x x + 3y + 8z = 3\"; the second row of C shows the intended equation 4x + 3y + 8z = 3. Recorded for review, not repaired."
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q10",
+   "note": "Source compilation slip, recorded not repaired: this question's scheme ends \"See Appendix for some alternatives to part (b)\", but the appendix is printed in the Ch.6 Matrices sheet (pages 13-14). It is attached after this scheme, unchanged, and marked as coming from that sheet."
+  }
+ ],
+ "duplicates": [
+  {
+   "id": "pmt/pure-core-1/ch2/q9",
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q1"
+  },
+  {
+   "id": "pmt/pure-core-1/ch3/q1",
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q4"
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q7",
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q7"
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q8",
+   "duplicateOf": "exam/edexcel-9fm0-01-2021-november/q4"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q3",
+   "duplicateOf": "exam/edexcel-9fm0-01-2021-november/q1"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q5",
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q2"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q3",
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q6"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q5",
+   "duplicateOf": "pmt/pure-core-1/ch3/q3"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q7",
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q2"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q8",
+   "duplicateOf": "pmt/pure-core-1/ch3/q6"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q9",
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q3"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q1",
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q2"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q2",
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q8"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q8",
+   "duplicateOf": "exam/edexcel-9fm0-01-2021-november/q7"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q9",
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q7"
+  }
+ ],
+ "duplicateRule": "The copy keeps a duplicateOf link and neither copy is deleted. A generated exam paper or booklet drops the copy whenever its original is in the pool; a hand-picked selection containing both shows a note.",
+ "partMarks": "Ch.4 Q4 and Q5 and Ch.8 Q3 and Q4 print only the question total; no part marks were added.",
+ "printInspection": "Real Chrome PDFs inspected page by page: practice paper one per page and condensed with solutions on and off, and a mixed past-paper + PMT exam paper (no source on question pages; exact source and ID in the scheme). No warnings and no element wider than its page.",
+ "files": [
+  {
+   "sheetId": "pure-core-1-ch1",
+   "source": "PMT further maths questions/Year 1/Ch.1 Complex Numbers.pdf",
+   "sha256": "a2621eb2df3de8a78a63c164d276a1e078cb18c250a5824cbcef7891c8f1982f",
+   "pages": 16,
+   "questionCount": 7,
+   "totalMarks": 52
+  },
+  {
+   "sheetId": "pure-core-1-ch2",
+   "source": "PMT further maths questions/Year 1/Ch.2 Argand Diagrams.pdf",
+   "sha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "pages": 28,
+   "questionCount": 11,
+   "totalMarks": 89
+  },
+  {
+   "sheetId": "pure-core-1-ch3",
+   "source": "PMT further maths questions/Year 1/Ch.3 Series.pdf",
+   "sha256": "a990e83732e1503860eafb0089fa53a64b814694efaa672db731ca4723e0964d",
+   "pages": 12,
+   "questionCount": 6,
+   "totalMarks": 56
+  },
+  {
+   "sheetId": "pure-core-1-ch4",
+   "source": "PMT further maths questions/Year 1/Ch.4 Roots of Polynomials.pdf",
+   "sha256": "4e3e39305344257755cca3f8b5955eaa00780aa1c70dab5fd09d38cd48d3a1c3",
+   "pages": 10,
+   "questionCount": 6,
+   "totalMarks": 35
+  },
+  {
+   "sheetId": "pure-core-1-ch5",
+   "source": "PMT further maths questions/Year 1/Ch.5 Volumes of Revolution.pdf",
+   "sha256": "923920583347ebe76241206336c8e231b510f2ea41eb9ed81f7efd63c8ede11b",
+   "pages": 16,
+   "questionCount": 5,
+   "totalMarks": 53
+  },
+  {
+   "sheetId": "pure-core-1-ch6",
+   "source": "PMT further maths questions/Year 1/Ch.6 Matrices.pdf",
+   "sha256": "37ec3ed87449fd30d3d9b0bdca1c4f7403e07f8666f1a49f8725c57a0f160fe5",
+   "pages": 22,
+   "questionCount": 8,
+   "totalMarks": 65
+  },
+  {
+   "sheetId": "pure-core-1-ch7",
+   "source": "PMT further maths questions/Year 1/Ch.7 Linear Transformations.pdf",
+   "sha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "pages": 22,
+   "questionCount": 10,
+   "totalMarks": 81
+  },
+  {
+   "sheetId": "pure-core-1-ch8",
+   "source": "PMT further maths questions/Year 1/Ch.8 Proof by Induction.pdf",
+   "sha256": "bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21",
+   "pages": 23,
+   "questionCount": 9,
+   "totalMarks": 84
+  },
+  {
+   "sheetId": "pure-core-1-ch9",
+   "source": "PMT further maths questions/Year 1/Ch.9 Vectors.pdf",
+   "sha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "pages": 39,
+   "questionCount": 11,
+   "totalMarks": 110
+  }
+ ],
+ "questions": [
+  {
+   "id": "pmt/pure-core-1/ch1/q1",
+   "sourceSha256": "a2621eb2df3de8a78a63c164d276a1e078cb18c250a5824cbcef7891c8f1982f",
+   "questionPages": [
+    1
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/1"
+   ],
+   "skills": [
+    "complex-numbers:1.01",
+    "complex-numbers:1.06"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Two routine parts (division by a complex number and argument; modulus of a product) over several standard steps.",
+   "markScheme": "source",
+   "schemePages": [
+    8
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch1/q2",
+   "sourceSha256": "a2621eb2df3de8a78a63c164d276a1e078cb18c250a5824cbcef7891c8f1982f",
+   "questionPages": [
+    2
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/1"
+   ],
+   "skills": [
+    "complex-numbers:1.04"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine recall: conjugate root then expand three linear factors and compare coefficients.",
+   "markScheme": "source",
+   "schemePages": [
+    9
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch1/q3",
+   "sourceSha256": "a2621eb2df3de8a78a63c164d276a1e078cb18c250a5824cbcef7891c8f1982f",
+   "questionPages": [
+    3
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/1"
+   ],
+   "skills": [
+    "complex-numbers:1.04"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard application of conjugate pairs and sums of roots for a quartic, with a routine substitution in (d).",
+   "markScheme": "source",
+   "schemePages": [
+    10,
+    11
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch1/q4",
+   "sourceSha256": "a2621eb2df3de8a78a63c164d276a1e078cb18c250a5824cbcef7891c8f1982f",
+   "questionPages": [
+    4
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/1"
+   ],
+   "skills": [
+    "complex-numbers:1.01"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Multi-concept: z/z* must be rewritten using zz* and solved simultaneously; non-routine algebra for the level.",
+   "markScheme": "source",
+   "schemePages": [
+    12,
+    13
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch1/q5",
+   "sourceSha256": "a2621eb2df3de8a78a63c164d276a1e078cb18c250a5824cbcef7891c8f1982f",
+   "questionPages": [
+    5
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/1"
+   ],
+   "skills": [
+    "complex-numbers:1.04"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Non-standard root relationships require forming and solving equations from the product and sum of roots before solving the cubic.",
+   "markScheme": "source",
+   "schemePages": [
+    13,
+    14
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch1/q6",
+   "sourceSha256": "a2621eb2df3de8a78a63c164d276a1e078cb18c250a5824cbcef7891c8f1982f",
+   "questionPages": [
+    6
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/1"
+   ],
+   "skills": [
+    "complex-numbers:1.04"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard product-of-roots step gives the real root, then a routine quadratic; guided structure.",
+   "markScheme": "source",
+   "schemePages": [
+    15
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch1/q7",
+   "sourceSha256": "a2621eb2df3de8a78a63c164d276a1e078cb18c250a5824cbcef7891c8f1982f",
+   "questionPages": [
+    7
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/1"
+   ],
+   "skills": [
+    "complex-numbers:1.01",
+    "complex-numbers:1.02"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine recall: rationalise, square, and use sum and product of conjugate roots.",
+   "markScheme": "source",
+   "schemePages": [
+    16
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q1",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    1
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.07",
+    "complex-numbers:1.08"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard loci shading (circle and arg region) then a routine intersection to find |w|^2.",
+   "markScheme": "source",
+   "schemePages": [
+    9,
+    10
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q2",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    1
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.07"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Unstructured problem: condition for a half-line to cut a circle twice needs a distance argument and both boundary cases.",
+   "markScheme": "source",
+   "schemePages": [
+    11,
+    12
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q3",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    2
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.08",
+    "complex-numbers:1.06"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard shading of a circle and an arg wedge, then a routine tangent-angle calculation.",
+   "markScheme": "source",
+   "schemePages": [
+    13
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q4",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    2
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.04",
+    "complex-numbers:1.03"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Multi-concept: triangle area on the Argand diagram must be linked to conjugate roots and the coefficient condition; unstructured.",
+   "markScheme": "source",
+   "schemePages": [
+    14,
+    15
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q5",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    3
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.04",
+    "complex-numbers:1.03"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine recall: conjugate root, quadratic factor, real root and a simple Argand plot.",
+   "markScheme": "source",
+   "schemePages": [
+    16
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q6",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    4
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.06",
+    "complex-numbers:1.08",
+    "complex-numbers:1.04"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Short structured parts, each a standard step: conjugate-pair argument, argument of a quotient, a signposted arctan identity and a perpendicular-bisector region.",
+   "markScheme": "source",
+   "schemePages": [
+    17,
+    18
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q7",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    5
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.06",
+    "complex-numbers:1.07"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard modulus-argument conversion and half-line locus, then a routine perpendicular-distance step.",
+   "markScheme": "source",
+   "schemePages": [
+    19,
+    20,
+    21
+   ],
+   "duplicateOf": null,
+   "sourceNote": "Source typo kept verbatim: part (a) prints \"r(cosθ θ+ isinθ)\" with a repeated θ; the intended form is r(cosθ + i sinθ). Recorded for review, not repaired.",
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q8",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    6
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.07",
+    "complex-numbers:1.08"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Reading an annulus from a diagram then intersecting with a perpendicular-bisector half-plane; exact area needs segment geometry.",
+   "markScheme": "source",
+   "schemePages": [
+    22
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q9",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    7
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.04",
+    "complex-numbers:1.03"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine recall: two conjugate pairs plotted, then expand two quadratic factors.",
+   "markScheme": "source",
+   "schemePages": [
+    23,
+    24,
+    25
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q1",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q10",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    7
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.04",
+    "complex-numbers:1.03"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "One idea (square centred at the origin gives the other roots by rotation) then routine expansion.",
+   "markScheme": "source",
+   "schemePages": [
+    26
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch2/q11",
+   "sourceSha256": "89e47fac6b7357050d4a4842709f2a64937fff52cab075bf6e23749518540da8",
+   "questionPages": [
+    8
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/2"
+   ],
+   "skills": [
+    "complex-numbers:1.06"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Routine modulus-argument form, then dividing moduli and subtracting arguments over several steps.",
+   "markScheme": "source",
+   "schemePages": [
+    27,
+    28
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch3/q1",
+   "sourceSha256": "a990e83732e1503860eafb0089fa53a64b814694efaa672db731ca4723e0964d",
+   "questionPages": [
+    1
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/3"
+   ],
+   "skills": [
+    "series:1.09"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Needs the idea of subtracting even cubes (or summing (2r-1)^3), then a short algebraic search for the starting odd number.",
+   "markScheme": "source",
+   "schemePages": [
+    4,
+    5
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q4",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch3/q2",
+   "sourceSha256": "a990e83732e1503860eafb0089fa53a64b814694efaa672db731ca4723e0964d",
+   "questionPages": [
+    1
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/3"
+   ],
+   "skills": [
+    "series:1.09"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine expansion with standard sums, then solving a simple quadratic in k.",
+   "markScheme": "source",
+   "schemePages": [
+    6
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch3/q3",
+   "sourceSha256": "a990e83732e1503860eafb0089fa53a64b814694efaa672db731ca4723e0964d",
+   "questionPages": [
+    2
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/3"
+   ],
+   "skills": [
+    "series:1.09",
+    "mathematical-induction:1.48"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard induction proof, then a two-term difference of sums needing careful factorising.",
+   "markScheme": "source",
+   "schemePages": [
+    7,
+    8
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch3/q4",
+   "sourceSha256": "a990e83732e1503860eafb0089fa53a64b814694efaa672db731ca4723e0964d",
+   "questionPages": [
+    2
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/3"
+   ],
+   "skills": [
+    "series:1.09"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Routine standard-sum algebra, then combining with a geometric series sum to find k.",
+   "markScheme": "source",
+   "schemePages": [
+    9
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch3/q5",
+   "sourceSha256": "a990e83732e1503860eafb0089fa53a64b814694efaa672db731ca4723e0964d",
+   "questionPages": [
+    3
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/3"
+   ],
+   "skills": [
+    "series:1.09"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Direct substitution into the standard formula and one subtraction of sums.",
+   "markScheme": "source",
+   "schemePages": [
+    10
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch3/q6",
+   "sourceSha256": "a990e83732e1503860eafb0089fa53a64b814694efaa672db731ca4723e0964d",
+   "questionPages": [
+    3
+   ],
+   "marks": 15,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/3"
+   ],
+   "skills": [
+    "series:1.09",
+    "mathematical-induction:1.48"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Three standard steps: induction proof, standard-sum algebra and solving the resulting equation; long but structured.",
+   "markScheme": "source",
+   "schemePages": [
+    11,
+    12
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch4/q1",
+   "sourceSha256": "4e3e39305344257755cca3f8b5955eaa00780aa1c70dab5fd09d38cd48d3a1c3",
+   "questionPages": [
+    1
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/4"
+   ],
+   "skills": [
+    "polynomials:1.13"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine single-step substitution w = 2z + 1 into a cubic.",
+   "markScheme": "source",
+   "schemePages": [
+    4
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch4/q2",
+   "sourceSha256": "4e3e39305344257755cca3f8b5955eaa00780aa1c70dab5fd09d38cd48d3a1c3",
+   "questionPages": [
+    1
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/4"
+   ],
+   "skills": [
+    "polynomials:1.12",
+    "polynomials:1.13"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine use of root relations for a reciprocal sum and the reciprocal-root cubic.",
+   "markScheme": "source",
+   "schemePages": [
+    5
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch4/q3",
+   "sourceSha256": "4e3e39305344257755cca3f8b5955eaa00780aa1c70dab5fd09d38cd48d3a1c3",
+   "questionPages": [
+    2
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/4"
+   ],
+   "skills": [
+    "polynomials:1.13"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine single-step substitution w = x − 1 into a cubic.",
+   "markScheme": "source",
+   "schemePages": [
+    6
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch4/q4",
+   "sourceSha256": "4e3e39305344257755cca3f8b5955eaa00780aa1c70dab5fd09d38cd48d3a1c3",
+   "questionPages": [
+    2
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/4"
+   ],
+   "skills": [
+    "polynomials:1.13"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine single-step substitution w = x − 3 into a cubic.",
+   "markScheme": "source",
+   "schemePages": [
+    7
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch4/q5",
+   "sourceSha256": "4e3e39305344257755cca3f8b5955eaa00780aa1c70dab5fd09d38cd48d3a1c3",
+   "questionPages": [
+    3
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/4"
+   ],
+   "skills": [
+    "polynomials:1.13"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Substitution with a scaling and a shift, so the fractional expansion needs care to clear to integer coefficients.",
+   "markScheme": "source",
+   "schemePages": [
+    8
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch4/q6",
+   "sourceSha256": "4e3e39305344257755cca3f8b5955eaa00780aa1c70dab5fd09d38cd48d3a1c3",
+   "questionPages": [
+    3
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/4"
+   ],
+   "skills": [
+    "polynomials:1.12"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Three root-relation evaluations for a quartic; part (iii) needs the idea of evaluating f(3) or expanding a product.",
+   "markScheme": "source",
+   "schemePages": [
+    9,
+    10
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch5/q1",
+   "sourceSha256": "923920583347ebe76241206336c8e231b510f2ea41eb9ed81f7efd63c8ede11b",
+   "questionPages": [
+    1,
+    2
+   ],
+   "marks": 12,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/5"
+   ],
+   "skills": [
+    "further-calculus:1.15"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Modelling context with several short parts; the volume needs a cylinder minus a rotated quadratic, a standard method.",
+   "markScheme": "source",
+   "schemePages": [
+    7,
+    8
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch5/q2",
+   "sourceSha256": "923920583347ebe76241206336c8e231b510f2ea41eb9ed81f7efd63c8ede11b",
+   "questionPages": [
+    2
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/5"
+   ],
+   "skills": [
+    "further-calculus:1.15"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard volume integral after expanding a square with fractional powers; the twist is a rotation through θ rather than 2π.",
+   "markScheme": "source",
+   "schemePages": [
+    9,
+    10
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch5/q3",
+   "sourceSha256": "923920583347ebe76241206336c8e231b510f2ea41eb9ed81f7efd63c8ede11b",
+   "questionPages": [
+    3
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/5"
+   ],
+   "skills": [
+    "further-calculus:1.15"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine derivation of the sphere volume by rotating a semicircle.",
+   "markScheme": "source",
+   "schemePages": [
+    11
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch5/q4",
+   "sourceSha256": "923920583347ebe76241206336c8e231b510f2ea41eb9ed81f7efd63c8ede11b",
+   "questionPages": [
+    4
+   ],
+   "marks": 13,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/5"
+   ],
+   "skills": [
+    "further-calculus:1.15"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Rotation about the y-axis of two curves, so both must be rearranged for x squared; long multi-step modelling with an exact answer.",
+   "markScheme": "source",
+   "schemePages": [
+    12,
+    13
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch5/q5",
+   "sourceSha256": "923920583347ebe76241206336c8e231b510f2ea41eb9ed81f7efd63c8ede11b",
+   "questionPages": [
+    5,
+    6
+   ],
+   "marks": 15,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/5"
+   ],
+   "skills": [
+    "further-calculus:1.15"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Two competing models need calculus to find maxima, then a volume integral of a squared cubic and an evaluation; long and unstructured in places.",
+   "markScheme": "source",
+   "schemePages": [
+    14,
+    15,
+    16
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q1",
+   "sourceSha256": "37ec3ed87449fd30d3d9b0bdca1c4f7403e07f8666f1a49f8725c57a0f160fe5",
+   "questionPages": [
+    1
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/6"
+   ],
+   "skills": [
+    "matrices:1.44"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Calculator inverse, a direct matrix solve and a one-line geometric interpretation.",
+   "markScheme": "source",
+   "schemePages": [
+    7
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q2",
+   "sourceSha256": "37ec3ed87449fd30d3d9b0bdca1c4f7403e07f8666f1a49f8725c57a0f160fe5",
+   "questionPages": [
+    2
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/6"
+   ],
+   "skills": [
+    "matrices:1.45",
+    "matrices:1.44"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Forming three equations from a worded percentage context needs care; the matrix solve itself is routine.",
+   "markScheme": "source",
+   "schemePages": [
+    8,
+    9,
+    10
+   ],
+   "duplicateOf": null,
+   "sourceNote": "Source omission kept verbatim: there is no lead-in sentence before the bullet list (the change from 2019 to 2020 is implied). Recorded for review, not repaired.",
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q3",
+   "sourceSha256": "37ec3ed87449fd30d3d9b0bdca1c4f7403e07f8666f1a49f8725c57a0f160fe5",
+   "questionPages": [
+    3
+   ],
+   "marks": 12,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/6"
+   ],
+   "skills": [
+    "matrices:1.45",
+    "matrices:1.44"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Long modelling question: inverse in terms of a, working backwards to find a, then interpretation and refining the model.",
+   "markScheme": "source",
+   "schemePages": [
+    11,
+    12
+   ],
+   "duplicateOf": null,
+   "sourceNote": "Source compilation slip, recorded not repaired: the Ch.6 sheet prints an \"Appendix: Alternatives to (b)\" for the gas pipeline question (Ch.9 Q10) on scheme pages 13-14, after this question's scheme. Those pages are not part of this question's scheme and are attached to Ch.9 Q10 instead (scheme-moves.json).",
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q4",
+   "sourceSha256": "37ec3ed87449fd30d3d9b0bdca1c4f7403e07f8666f1a49f8725c57a0f160fe5",
+   "questionPages": [
+    4
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/6"
+   ],
+   "skills": [
+    "matrices:1.43",
+    "matrices:1.44"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Determinant as a quadratic in a shown positive, then an algebraic inverse with a parameter.",
+   "markScheme": "source",
+   "schemePages": [
+    15
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q5",
+   "sourceSha256": "37ec3ed87449fd30d3d9b0bdca1c4f7403e07f8666f1a49f8725c57a0f160fe5",
+   "questionPages": [
+    4
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/6"
+   ],
+   "skills": [
+    "matrices:1.34",
+    "matrices:1.44"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine matrix product, reading off the inverse from MN = kI and a direct solve.",
+   "markScheme": "source",
+   "schemePages": [
+    16
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q6",
+   "sourceSha256": "37ec3ed87449fd30d3d9b0bdca1c4f7403e07f8666f1a49f8725c57a0f160fe5",
+   "questionPages": [
+    5
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/6"
+   ],
+   "skills": [
+    "matrices:1.34",
+    "matrices:1.44"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine matrix products and an order argument, then a direct solve using the inverse.",
+   "markScheme": "source",
+   "schemePages": [
+    17,
+    18
+   ],
+   "duplicateOf": null,
+   "sourceNote": "Source typo kept verbatim: part (b)(i) prints \"4x x + 3y + 8z = 3\"; the second row of C shows the intended equation 4x + 3y + 8z = 3. Recorded for review, not repaired.",
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q7",
+   "sourceSha256": "37ec3ed87449fd30d3d9b0bdca1c4f7403e07f8666f1a49f8725c57a0f160fe5",
+   "questionPages": [
+    5,
+    6
+   ],
+   "marks": 11,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/6"
+   ],
+   "skills": [
+    "matrices:1.43",
+    "matrices:1.44"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard determinant and parametric solve, then a consistency condition and its geometric meaning.",
+   "markScheme": "source",
+   "schemePages": [
+    19,
+    20
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2019-june/q7",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch6/q8",
+   "sourceSha256": "37ec3ed87449fd30d3d9b0bdca1c4f7403e07f8666f1a49f8725c57a0f160fe5",
+   "questionPages": [
+    6
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/6"
+   ],
+   "skills": [
+    "matrices:1.34",
+    "matrices:1.43",
+    "matrices:1.44"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Short standard parts, then a trigonometric determinant equation that needs double-angle work on a restricted interval.",
+   "markScheme": "source",
+   "schemePages": [
+    21,
+    22
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2021-november/q4",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q1",
+   "sourceSha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "questionPages": [
+    1
+   ],
+   "marks": 10,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/7"
+   ],
+   "skills": [
+    "matrices:1.37",
+    "matrices:1.38",
+    "matrices:1.40",
+    "matrices:1.42"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard rotation and reflection matrices and a product, then an invariant-point condition solved for k.",
+   "markScheme": "source",
+   "schemePages": [
+    8,
+    9
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q2",
+   "sourceSha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "questionPages": [
+    1,
+    2
+   ],
+   "marks": 16,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/7"
+   ],
+   "skills": [
+    "matrices:1.42",
+    "matrices:1.36",
+    "matrices:1.40",
+    "matrices:1.43"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Long but fully signposted: self-inverse condition as simultaneous equations, invariant points, area scale factor and combined stretches, all standard methods.",
+   "markScheme": "source",
+   "schemePages": [
+    9,
+    10,
+    11,
+    12
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q3",
+   "sourceSha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "questionPages": [
+    2
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/7"
+   ],
+   "skills": [
+    "matrices:1.36",
+    "matrices:1.37",
+    "matrices:1.40",
+    "matrices:1.43"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine reading of scale factor and angle from a matrix, then area scale factor.",
+   "markScheme": "source",
+   "schemePages": [
+    13
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2021-november/q1",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q4",
+   "sourceSha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "questionPages": [
+    3
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/7"
+   ],
+   "skills": [
+    "matrices:1.43",
+    "matrices:1.42"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Determinant, area scale factor and a direct invariant-line check.",
+   "markScheme": "source",
+   "schemePages": [
+    14,
+    15
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q5",
+   "sourceSha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "questionPages": [
+    3
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/7"
+   ],
+   "skills": [
+    "matrices:1.42"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Unstructured proof: set up y = mx + c, form a quadratic in m and show it has no real roots.",
+   "markScheme": "source",
+   "schemePages": [
+    16
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-2021-november/q2",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q6",
+   "sourceSha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "questionPages": [
+    4
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/7"
+   ],
+   "skills": [
+    "matrices:1.41"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Short, signposted parts applying a given rotation matrix and a reflection, then modulus, scalar product and a right-angled triangle area.",
+   "markScheme": "source",
+   "schemePages": [
+    17,
+    18
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q7",
+   "sourceSha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "questionPages": [
+    5
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/7"
+   ],
+   "skills": [
+    "matrices:1.37",
+    "matrices:1.36",
+    "matrices:1.40",
+    "matrices:1.43"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine recognition of a rotation and a stretch, a product and the meaning of the determinant.",
+   "markScheme": "source",
+   "schemePages": [
+    19
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q8",
+   "sourceSha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "questionPages": [
+    5
+   ],
+   "marks": 5,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/7"
+   ],
+   "skills": [
+    "matrices:1.44",
+    "matrices:1.40"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Inverse of a 2 by 2 matrix and one matrix equation with the order of transformations.",
+   "markScheme": "source",
+   "schemePages": [
+    20
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q9",
+   "sourceSha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "questionPages": [
+    6
+   ],
+   "marks": 11,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/7"
+   ],
+   "skills": [
+    "matrices:1.34",
+    "matrices:1.43"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Matrix algebra with a parameter compared entry by entry, then a modulus determinant equation for an area scale factor.",
+   "markScheme": "source",
+   "schemePages": [
+    21
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch7/q10",
+   "sourceSha256": "135bf4ab76513dffd034446253187c93e2f6862c7acaed45f211b8d51f5a5693",
+   "questionPages": [
+    6,
+    7
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/7"
+   ],
+   "skills": [
+    "matrices:1.43",
+    "matrices:1.36",
+    "matrices:1.37",
+    "matrices:1.40"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Determinant, area scale factor and reading k and θ from an enlargement-rotation matrix.",
+   "markScheme": "source",
+   "schemePages": [
+    22
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q1",
+   "sourceSha256": "bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21",
+   "questionPages": [
+    1
+   ],
+   "marks": 12,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/8"
+   ],
+   "skills": [
+    "mathematical-induction:1.49",
+    "mathematical-induction:1.47"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Two standard induction proofs; the second-order recurrence needs two base cases and a strong-induction step.",
+   "markScheme": "source",
+   "schemePages": [
+    5,
+    6
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q2",
+   "sourceSha256": "bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21",
+   "questionPages": [
+    1
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/8"
+   ],
+   "skills": [
+    "mathematical-induction:1.48"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine induction proof for a standard telescoping-type sum.",
+   "markScheme": "source",
+   "schemePages": [
+    7
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q3",
+   "sourceSha256": "bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21",
+   "questionPages": [
+    2
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/8"
+   ],
+   "skills": [
+    "mathematical-induction:1.47"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine divisibility induction with a single substitution step.",
+   "markScheme": "source",
+   "schemePages": [
+    8,
+    9,
+    10,
+    11,
+    12
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q6",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q4",
+   "sourceSha256": "bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21",
+   "questionPages": [
+    2
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/8"
+   ],
+   "skills": [
+    "mathematical-induction:1.47"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine divisibility induction with a single substitution step.",
+   "markScheme": "source",
+   "schemePages": [
+    13,
+    14
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q5",
+   "sourceSha256": "bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21",
+   "questionPages": [
+    2
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/8"
+   ],
+   "skills": [
+    "mathematical-induction:1.48",
+    "series:1.09"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard induction proof, then a two-term difference of sums needing careful factorising.",
+   "markScheme": "source",
+   "schemePages": [
+    15,
+    16
+   ],
+   "duplicateOf": "pmt/pure-core-1/ch3/q3",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q6",
+   "sourceSha256": "bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21",
+   "questionPages": [
+    3
+   ],
+   "marks": 12,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/8"
+   ],
+   "skills": [
+    "mathematical-induction:1.46",
+    "mathematical-induction:1.47"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Two standard induction proofs (matrix power and divisibility by 21) with routine algebra.",
+   "markScheme": "source",
+   "schemePages": [
+    16,
+    17,
+    18,
+    19
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q7",
+   "sourceSha256": "bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21",
+   "questionPages": [
+    3
+   ],
+   "marks": 6,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/8"
+   ],
+   "skills": [
+    "mathematical-induction:1.47"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Divisibility induction with two different exponential terms that must be combined to expose the factor 17.",
+   "markScheme": "source",
+   "schemePages": [
+    19
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q2",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q8",
+   "sourceSha256": "bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21",
+   "questionPages": [
+    4
+   ],
+   "marks": 15,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/8"
+   ],
+   "skills": [
+    "mathematical-induction:1.48",
+    "series:1.09"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Three standard steps: induction proof, standard-sum algebra and solving the resulting equation; long but structured.",
+   "markScheme": "source",
+   "schemePages": [
+    20,
+    21
+   ],
+   "duplicateOf": "pmt/pure-core-1/ch3/q6",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q9",
+   "sourceSha256": "bca17d936b8ab2ed631dbcace32a1cfeee8853e8ed9f9f9fe751158c18da3d21",
+   "questionPages": [
+    4
+   ],
+   "marks": 12,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/8"
+   ],
+   "skills": [
+    "matrices:1.43",
+    "matrices:1.44",
+    "mathematical-induction:1.46"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Determinant condition and an algebraic 3 by 3 inverse, then a standard matrix-power induction.",
+   "markScheme": "source",
+   "schemePages": [
+    22,
+    23
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q3",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q1",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    1
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.63",
+    "vectors-lines-and-planes:1.59",
+    "vectors-lines-and-planes:1.61"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine point-to-plane distance, a perpendicularity check and an angle between normals.",
+   "markScheme": "source",
+   "schemePages": [
+    10
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-02-sample/q2",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q2",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    1
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.61",
+    "vectors-lines-and-planes:1.55"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Unstructured: needs the intersection point and the reflection of a second point in the plane before forming the line.",
+   "markScheme": "source",
+   "schemePages": [
+    11
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-sample/q8",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q3",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    2
+   ],
+   "marks": 11,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.53",
+    "vectors-lines-and-planes:1.58",
+    "vectors-lines-and-planes:1.61"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Standard plane through three points, angle between planes and a vertical distance in a modelling context.",
+   "markScheme": "source",
+   "schemePages": [
+    12,
+    13
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q4",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    3
+   ],
+   "marks": 11,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.53",
+    "vectors-lines-and-planes:1.61"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Several line-plane intersections, a cross-product area and a volume found as the difference of two tetrahedra.",
+   "markScheme": "source",
+   "schemePages": [
+    14,
+    15,
+    16,
+    17
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q5",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    4
+   ],
+   "marks": 13,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.52",
+    "vectors-lines-and-planes:1.54",
+    "vectors-lines-and-planes:1.63"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Angle condition gives a quadratic in a, then an intersection check and a point-to-plane distance; long but standard.",
+   "markScheme": "source",
+   "schemePages": [
+    18,
+    19,
+    20
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q6",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    5
+   ],
+   "marks": 9,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.62",
+    "vectors-lines-and-planes:1.54"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Shortest distance from a point to a line segment via the scalar product, with interpretation.",
+   "markScheme": "source",
+   "schemePages": [
+    21,
+    22,
+    23
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q7",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    5
+   ],
+   "marks": 11,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.61",
+    "vectors-lines-and-planes:1.62"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Angle between a line and a plane, then shortest distance from a point to a line, both standard methods.",
+   "markScheme": "source",
+   "schemePages": [
+    24,
+    25,
+    26
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q8",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    6
+   ],
+   "marks": 8,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.57",
+    "vectors-lines-and-planes:1.59",
+    "vectors-lines-and-planes:1.63"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Normal check and Cartesian form are routine; the final part needs a distance equation with two solutions.",
+   "markScheme": "source",
+   "schemePages": [
+    27,
+    28
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2021-november/q7",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q9",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    7
+   ],
+   "marks": 7,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.55",
+    "vectors-lines-and-planes:1.59",
+    "vectors-lines-and-planes:1.52"
+   ],
+   "difficulty": "easy",
+   "difficultyReason": "Routine intersection of two lines, writing a plane equation and an angle between direction vectors.",
+   "markScheme": "source",
+   "schemePages": [
+    29,
+    30,
+    31,
+    32,
+    33
+   ],
+   "duplicateOf": "exam/edexcel-9fm0-01-2019-june/q7",
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q10",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    8
+   ],
+   "marks": 12,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.54",
+    "vectors-lines-and-planes:1.62"
+   ],
+   "difficulty": "difficult",
+   "difficultyReason": "Long modelling question: find k from the plane, then the foot of the perpendicular from a point to a line and compare lengths.",
+   "markScheme": "source",
+   "schemePages": [
+    34,
+    35
+   ],
+   "duplicateOf": null,
+   "sourceNote": "Source compilation slip, recorded not repaired: this question's scheme ends \"See Appendix for some alternatives to part (b)\", but the appendix is printed in the Ch.6 Matrices sheet (pages 13-14). It is attached after this scheme, unchanged, and marked as coming from that sheet.",
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match; scheme crops sampled and complete"
+  },
+  {
+   "id": "pmt/pure-core-1/ch9/q11",
+   "sourceSha256": "a74fb3bec3673120163c74759ff8b56ced1ca88d8bfc4f88771286304e854710",
+   "questionPages": [
+    9
+   ],
+   "marks": 13,
+   "chapterKeys": [
+    "further-maths-a-level/pure-core-1/9"
+   ],
+   "skills": [
+    "vectors-lines-and-planes:1.54",
+    "vectors-lines-and-planes:1.52",
+    "vectors-lines-and-planes:1.62"
+   ],
+   "difficulty": "medium",
+   "difficultyReason": "Five standard line calculations: intersection, angle, distance, foot of perpendicular and points at a given ratio.",
+   "markScheme": "source",
+   "schemePages": [
+    36,
+    37,
+    38,
+    39
+   ],
+   "duplicateOf": null,
+   "sourceNote": null,
+   "mathsCheckpoint": "Independent check of the rendered app question against the rendered source page: wording, maths, part labels and marks match"
+  }
+ ],
+ "status": "verified"
+}

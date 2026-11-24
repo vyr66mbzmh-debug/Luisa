@@ -1,6 +1,33 @@
 {
-  "current": "0.74",
+  "current": "0.75",
   "releases": [
+    {
+      "version": "0.75",
+      "previous": "0.74",
+      "date": "2026-11-23",
+      "issue": 137,
+      "changes": [
+        "Papers gains 73 Core Pure 1 questions (625 marks) from the PMT topic sheets, one sheet per chapter, with wording, maths, figures and marks exactly as printed and each question's own mark scheme.",
+        "A new PMT source tickbox (off by default) adds them to browsing, practice papers, booklets and the teacher exam paper; they work with every existing filter, saved selection and print layout.",
+        "Each PMT question has an easy, medium or difficult rating with a one-line reason, set by a written rubric and checked by an independent reviewer.",
+        "15 PMT questions are copies of past-paper or other PMT questions; both are kept, and a generated paper or booklet never includes both.",
+        "Exam question pages never show a source, for any mix of past-paper and PMT questions; the mark scheme names each exact source."
+      ],
+      "reportIntro": [
+        "Luisa v0.75 adds the PMT Core Pure 1 revision questions: 73 questions over the nine Core Pure 1 chapters, each with the mark scheme printed in its sheet. Tick \"PMT\" in Papers to include them; it is off by default, so existing selections are unchanged.",
+        "Every question was checked against the source pages by an independent review, which found no transcription differences. Five printing slips in the sheets are kept exactly as printed and noted for review, including a Ch.6 sheet page that belongs to a Ch.9 question's mark scheme. Fifteen questions repeat past-paper or other PMT questions; a generated paper never uses both copies. Core Pure 2 follows in v0.76 (#138)."
+      ],
+      "requirements": [
+        "PAP-075-1",
+        "PAP-075-2",
+        "PAP-075-3",
+        "PAP-075-4",
+        "PAP-075-5",
+        "PAP-075-6",
+        "PAP-075-7",
+        "PAP-075-8"
+      ]
+    },
     {
       "version": "0.74",
       "previous": "0.73",

@@ -6,7 +6,9 @@
   // Keep these identical to the question library renderer in app.js.
   const mathMacros = {"\\p":"\\mathrm P(#1)",'\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
   const catalogue = [], rows = new Map(), contentCache = new Map();
-  const sources = ['practice', 'exam-style', 'past-papers'];
+  const sources = ['practice', 'exam-style', 'past-papers', 'pmt'];
+  // PAP-075-5: PMT is a new opt-in source; it starts unticked so existing default pools are unchanged.
+  const sourceDefault = source => source !== 'pmt';
   const chapters = new Map(), books = new Map(), papers = new Map();
   let textbook;
   let selectionOrder = [];
@@ -27,7 +29,7 @@
       window.katex.render(node.dataset.math, node, {displayMode: node.dataset.display === 'true', throwOnError: true, strict: 'error', macros: {...mathMacros}});
     }
   }
-  const sourceLabel = row => row.sourceKind === 'past-exam' ? `Source: ${row.sourceLabel.replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
+  const sourceLabel = row => ['past-exam', 'pmt'].includes(row.sourceKind) ? `Source: ${row.sourceLabel.replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const contextLabel = row => `${row.courseTitle} · ${row.bookTitle} · ${row.topicTitle}`;
@@ -132,6 +134,16 @@
   function orderedChapter(row) {
     return chapters.get(matchingChapters(row)[0] || row.chapterKeys[0]);
   }
+  // PAP-075-6: drop the PMT copy of any question whose original is also in these rows.
+  function withoutDuplicateCopies(rows) {
+    const ids = new Set(rows.map(row => row.id));
+    return rows.filter(row => !(row.duplicateOf && ids.has(row.duplicateOf)));
+  }
+  function duplicateNote() {
+    const ids = new Set(selected.map(row => row.id));
+    const pairs = selected.filter(row => row.duplicateOf && ids.has(row.duplicateOf));
+    return pairs.length ? ` ${pairs.length === 1 ? 'One selected PMT question is a copy' : `${pairs.length} selected PMT questions are copies`} of another selected question (${pairs.map(row => sourceLabel(row).replace(/^Source: /, '')).join('; ')}).` : '';
+  }
   function updatePool() {
     cancelLoading();
     const count = pool().length;
@@ -156,6 +168,7 @@
     },
     // PAP-066: the timed exam generator draws from exactly the generator's pool.
     pool: () => pool(),
+    withoutDuplicateCopies,
     // Runs a task with the builder locked (generate, add/remove and print disabled), even
     // when nothing is selected yet. Returns undefined when the builder is already busy.
     async exclusive(task) {
@@ -234,7 +247,7 @@
   async function loadRow(descriptor, signal) {
     if (rows.has(descriptor.id)) return rows.get(descriptor.id);
     if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
-    const practice = ['practice-booklet', 'past-exam'].includes(descriptor.sourceKind);
+    const practice = ['practice-booklet', 'past-exam', 'pmt'].includes(descriptor.sourceKind);
     const dataPath = practice ? descriptor.dataPath : `content/${encodeURIComponent(descriptor.skillId)}.json`;
     let content = contentCache.get(dataPath);
     if (!content) {
@@ -254,7 +267,7 @@
       throw new Error(`${sourceLabel(descriptor)} has incomplete content. Your previous paper has been kept.`);
     }
     const marks = descriptor.sourceKind === 'practice-booklet' ? practiceMarks(question.question) : descriptor.marks;
-    const row = Object.freeze({...descriptor, marks, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: descriptor.sourceKind === 'past-exam' ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
+    const row = Object.freeze({...descriptor, marks, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: ['past-exam', 'pmt'].includes(descriptor.sourceKind) ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
     rows.set(row.id, row); return row;
   }
   function questionMetadata(row) {
@@ -292,7 +305,7 @@
     if (known.length) summary += known.length === selected.length ? ` · ${marks} marks` : ` · ${marks} known marks (${known.length} of ${selected.length} questions)`;
     // Owner rule B (v0.65): any paper with a complete mark total states 6 minutes per 5 marks, rounded down.
     if (selected.length && known.length === selected.length && marks > 0) summary += ` · Time: ${Math.floor(marks * 6 / 5)} minutes`;
-    $('papers-summary').textContent = summary;
+    $('papers-summary').textContent = summary + duplicateNote();
     $('papers-empty').hidden = Boolean(selected.length);
     $('papers-selected').replaceChildren(...selected.map(row => {
       const li = element('li', undefined, 'selected-item');
@@ -337,7 +350,8 @@
   }
   function generate() {
     if (operation || printing) return;
-    const candidates = pool(), count = Number($('papers-count').value);
+    // PAP-075-6: a PMT copy is never generated alongside its original (the original is kept).
+    const candidates = withoutDuplicateCopies(pool()), count = Number($('papers-count').value);
     if (!Number.isInteger(count) || count < 1 || count > candidates.length) {
       status(`Choose a whole number from 1 to ${candidates.length.toLocaleString()} for this question pool.`, true);
       $('papers-count').focus(); return;
@@ -453,12 +467,28 @@
       add({...q, sourceKind: 'past-exam', bank: 'past-papers', courseTitle: chapter.courseTitle,
         bookTitle: chapter.bookTitle, topicTitle: chapter.title, skillTitle: q.topicSummary || ''}, q.chapterKeys);
     }
+    // PAP-075: PMT Core Pure revision questions (topic sheets with their source mark schemes).
+    const pmtResponse = await fetch(new URL('pmt-catalogue.json', document.baseURI));
+    if (!pmtResponse.ok) throw new Error('The PMT catalogue could not be loaded. Check your connection and reload.');
+    const pmtCatalogue = await pmtResponse.json();
+    if (pmtCatalogue.version !== 1 || !Array.isArray(pmtCatalogue.questions)) throw new Error('The PMT catalogue is invalid.');
+    for (const q of pmtCatalogue.questions) if (q.duplicateOf && q.duplicateOf === q.id) throw Error('A PMT question is marked as a copy of itself.');
+    for (const q of pmtCatalogue.questions) {
+      if (!q.id?.startsWith('pmt/') || !/^content\/pmt\/[a-z0-9-]+\.json$/.test(q.dataPath) || !q.sourceLabel || q.board !== 'PMT' || q.status !== 'checked' ||
+          !Number.isInteger(q.marks) || q.marks <= 0 || !['easy','medium','difficult'].includes(q.difficulty)) throw Error('A PMT question is incomplete or unverified.');
+      const chapter = chapters.get(q.chapterKeys?.[0]);
+      if (!chapter) throw Error('Invalid PMT chapter for ' + q.id);
+      add({...q, sourceKind: 'pmt', bank: 'pmt', courseTitle: chapter.courseTitle,
+        bookTitle: chapter.bookTitle, topicTitle: chapter.title, skillTitle: q.topicSummary || ''}, q.chapterKeys);
+    }
+    // A copy may point at a past-paper question or at another PMT question; both must exist once everything is loaded.
+    for (const q of pmtCatalogue.questions) if (q.duplicateOf && !ids.has(q.duplicateOf)) throw Error('A PMT question is marked as a copy of a missing question.');
     let saved = null;
     try { saved = JSON.parse(sessionStorage.getItem(storageKey)); } catch (_) { /* A new session or unavailable storage. */ }
     if (![1, 2, 3].includes(saved?.version)) saved = null;
     for (const source of sources) {
       const key = saved?.version === 2 && source !== 'practice' ? 'exam' : source;
-      $('papers-source-' + source).checked = saved?.sources?.[key] ?? true;
+      $('papers-source-' + source).checked = saved?.sources?.[key] ?? sourceDefault(source);
     }
     paperChoices = [...papers].sort(([,a],[,b]) => b.date.localeCompare(a.date) || a.code.localeCompare(b.code))
       .map(([id, paper]) => {

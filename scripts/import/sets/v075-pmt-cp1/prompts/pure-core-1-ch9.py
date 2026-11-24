@@ -1,0 +1,92 @@
+# PMT Core Pure 1, Ch.9 Vectors: transcribed from the rendered page images. Wording, part labels and marks exactly as printed.
+from lib import *
+Q = {}
+B = lambda s: f'<strong>{s}</strong>'
+v = lambda *xs: r'\begin{pmatrix}' + r'\\'.join(xs) + r'\end{pmatrix}'
+Q[1] = (p(f'The plane {m(r"\Pi_1")} has vector equation') + eq(r'\mathbf r\cdot(3\mathbf i-4\mathbf j+2\mathbf k)=5')
+        + parts([f'Find the perpendicular distance from the point (6, 2, 12) to the plane {m(r"\Pi_1")} {mk(3)}'], kind='a')
+        + p(f'The plane {m(r"\Pi_2")} has vector equation') + eq(r'\mathbf r=\lambda(2\mathbf i+\mathbf j+5\mathbf k)+\mu(\mathbf i-\mathbf j-2\mathbf k)')
+        + p(f'where {m(r"\lambda")} and {m(r"\mu")} are scalar parameters.')
+        + parts([f'Show that the vector {m(r"-\mathbf i-3\mathbf j+\mathbf k")} is perpendicular to {m(r"\Pi_2")} {mk(2)}',
+                 f'Show that the acute angle between {m(r"\Pi_1")} and {m(r"\Pi_2")} is {m(r"52^\circ")} to the nearest degree. {mk(3)}'], start=2, kind='a'))
+Q[2] = (p(f'The line {m("l_1")} has equation {m(r"\dfrac{x-2}{4}=\dfrac{y-4}{-2}=\dfrac{z+6}{1}")}')
+        + p(f'The plane {m(r"\Pi")} has equation {m("x-2y+z=6")}')
+        + p(f'The line {m("l_2")} is the reflection of the line {m("l_1")} in the plane {m(r"\Pi")}.')
+        + p(f'Find a vector equation of the line {m("l_2")} {mk(7)}'))
+Q[3] = (p('A mining company has identified a mineral layer below ground.')
+        + p('The mining company wishes to drill down to reach the mineral layer and models the situation as follows.')
+        + p(f'With respect to a fixed origin {m("O")},')
+        + ul([f'the ground is modelled as a horizontal plane with equation {m("z=0")}',
+              f'the mineral layer is modelled as part of the plane containing the points {m("A(10,5,-50)")}, {m("B(15,30,-45)")} and {m("C(-5,20,-60)")}, where the units are in metres'])
+        + parts([f'Determine an equation for the plane containing {m("A")}, {m("B")} and {m("C")}, giving your answer in the form {m(r"\mathbf r\cdot\mathbf n=d")} {mk(5)}',
+                 f'Determine, according to the model, the acute angle between the ground and the plane containing the mineral layer. Give your answer to the nearest degree. {mk(3)}'], kind='a')
+        + p('The mining company plans to drill vertically downwards from the point (5, 12, 0) on the ground to reach the mineral layer.')
+        + parts([f'Using the model, determine, in metres to 1 decimal place, the distance the mining company will need to drill in order to reach the mineral layer. {mk(2)}',
+                 f'State a limitation of the assumption that the mineral layer can be modelled as a plane. {mk(1)}'], start=3, kind='a'))
+Q[4] = (fig(4, 70, 'Figure 1: tetrahedron ABCD with vertex A below a horizontal plane z = 0 (drawn dashed) and B, C, D above it; the edges AB, AC and AD cross the plane at M, N and P, and triangle MNP is drawn dashed in the plane')
+        + p(f'The points {m("A(3,2,-4)")}, {m("B(9,-4,2)")}, {m("C(-6,-10,8)")} and {m("D(-4,-5,10)")} are the vertices of a tetrahedron.')
+        + p(f'The plane with equation {m("z=0")} cuts the tetrahedron into two pieces, one on each side of the plane.')
+        + p(f'The edges {m("AB")}, {m("AC")} and {m("AD")} of the tetrahedron intersect the plane at the points {m("M")}, {m("N")} and {m("P")} respectively, as shown in Figure 1.')
+        + p('Determine')
+        + parts([f'the coordinates of the points {m("M")}, {m("N")} and {m("P")}, {mk(3)}', f'the area of triangle {m("MNP")}, {mk(2)}',
+                 f'the exact volume of the solid {m("BCDPNM")}. {mk(6)}'], kind='a'))
+Q[5] = (p('Two birds are flying towards their nest, which is in a tree.')
+        + p('Relative to a fixed origin, the flight path of each bird is modelled by a straight line.')
+        + p('In the model, the equation for the flight path of the first bird is') + eq(r'\mathbf r_1=' + v('-1', '5', '2') + r'+\lambda' + v('2', 'a', '0'))
+        + p('and the equation for the flight path of the second bird is') + eq(r'\mathbf r_2=' + v('4', '-1', '3') + r'+\mu' + v('0', '1', '-1'))
+        + p(f'where {m(r"\lambda")} and {m(r"\mu")} are scalar parameters and {m("a")} is a constant.')
+        + p(f"In the model, the angle between the birds' flight paths is {m(r'120^\circ')}")
+        + parts([f'Determine the value of {m("a")}. {mk(4)}',
+                 f'Verify that, according to the model, there is a common point on the flight paths of the two birds and find the coordinates of this common point. {mk(5)}'], kind='a')
+        + p('The position of the nest is modelled as being at this common point.') + p('The tree containing the nest is in a park.')
+        + p('The ground level of the park is modelled by the plane with equation') + eq(r'2x-3y+z=2')
+        + parts([f'Hence determine the shortest distance from the nest to the ground level of the park. {mk(3)}',
+                 f'By considering the model, comment on whether your answer to part (c) is reliable, giving a reason for your answer. {mk(1)}'], start=3, kind='a'))
+Q[6] = (p("An octopus is able to catch any fish that swim within a distance of 2 m from the octopus's position.")
+        + p(f'A fish {m("F")} swims from a point {m("A")} to a point {m("B")}.')
+        + p(f'The octopus is modelled as a fixed particle at the origin {m("O")}.')
+        + p(f'Fish {m("F")} is modelled as a particle moving in a straight line from {m("A")} to {m("B")}.')
+        + p(f'Relative to {m("O")}, the coordinates of {m("A")} are {m("(-3,1,-7)")} and the coordinates of {m("B")} are {m("(9,4,11)")}, where the unit of distance is metres.')
+        + parts([f'Use the model to determine whether or not the octopus is able to catch fish {m("F")}. {mk(7)}',
+                 f'Criticise the model in relation to fish {m("F")}. {mk(1)}', f'Criticise the model in relation to the octopus. {mk(1)}'], kind='a'))
+Q[7] = (p(f'Part of the mains water system for a housing estate consists of water pipes buried beneath the ground surface. The water pipes are modelled as straight line segments. One water pipe, {m("W")}, is buried beneath a particular road. '
+          f'With respect to a fixed origin {m("O")}, the road surface is modelled as a plane with equation {m("3x-5y-18z=7")}, and {m("W")} passes through the points {m("A(-1,-1,-3)")} and {m("B(1,2,-3)")}. The units are in metres.')
+        + parts([f'Use the model to calculate the acute angle between {m("W")} and the road surface. {mk(5)}'], kind='a')
+        + p(f'A point {m("C(-1,-2,0)")} lies on the road. A section of water pipe needs to be connected to {m("W")} from {m("C")}.')
+        + parts([f'Using the model, find, to the nearest cm, the shortest length of pipe needed to connect {m("C")} to {m("W")}. {mk(6)}'], start=2, kind='a'))
+Q[8] = (p(f'The plane {m(r"\Pi")} has equation') + eq(r'\mathbf r=' + v('3', '3', '2') + r'+\lambda' + v('-1', '2', '1') + r'+\mu' + v('2', '0', '1'))
+        + p(f'where {m(r"\lambda")} and {m(r"\mu")} are scalar parameters.')
+        + parts([f'Show that vector {m(r"2\mathbf i+3\mathbf j-4\mathbf k")} is perpendicular to {m(r"\Pi")}. {mk(2)}', f'Hence find a Cartesian equation of {m(r"\Pi")}. {mk(2)}'], kind='a')
+        + p(f'The line {m("l")} has equation') + eq(r'\mathbf r=' + v('4', '-5', '2') + '+t' + v('1', '6', '-3'))
+        + p(f'where {m("t")} is a scalar parameter.') + p(f'The point {m("A")} lies on {m("l")}.')
+        + p(f'Given that the shortest distance between {m("A")} and {m(r"\Pi")} is {m(r"2\sqrt{29}")}')
+        + parts([f'determine the possible coordinates of {m("A")}. {mk(4)}'], start=3, kind='a'))
+Q[9] = (p(f'The line {m("l_1")} has equation') + eq(r'\frac{x-1}{2}=\frac{y+1}{-1}=\frac{z-4}{3}')
+        + p(f'The line {m("l_2")} has equation') + eq(r'\mathbf r=\mathbf i+3\mathbf k+t(\mathbf i-\mathbf j+2\mathbf k)')
+        + p(f'where {m("t")} is a scalar parameter.')
+        + parts([f'Show that {m("l_1")} and {m("l_2")} lie in the same plane. {mk(3)}',
+                 f'Write down a vector equation for the plane containing {m("l_1")} and {m("l_2")} {mk(1)}',
+                 f'Find, to the nearest degree, the acute angle between {m("l_1")} and {m("l_2")} {mk(3)}'], kind='a'))
+Q[10] = (p('A gas company maintains a straight pipeline that passes under a mountain.')
+         + p('The pipeline is modelled as a straight line and one side of the mountain is modelled as a plane.')
+         + p('There are accessways from a control centre to two access points on the pipeline.')
+         + p(f'Modelling the control centre as the origin {m("O")}, the two access points on the pipeline have coordinates {m("P(-300,400,-150)")} and {m("Q(300,300,-50)")}, where the units are metres.')
+         + parts([f'Find a vector equation for the line {m("PQ")}, giving your answer in the form {m(r"\mathbf r=\mathbf a+\lambda\mathbf b")},<br>where {m(r"\lambda")} is a scalar parameter. {mk(2)}'], kind='a')
+         + p(f'The equation of the plane modelling the side of the mountain is {m("2x+3y-5z=300")}')
+         + p('The company wants to create a new accessway from this side of the mountain to the pipeline.')
+         + p(f'The accessway will consist of a tunnel of shortest possible length between the pipeline and the point {m("M(100,k,100)")} on this side of the mountain, where {m("k")} is a constant.')
+         + parts(['Using the model, find' + parts(['the coordinates of the point at which this tunnel will meet the pipeline,', 'the length of this tunnel.'], kind='i') + mk(7)], start=2, kind='a')
+         + p(f'It is only practical to construct the new accessway if it will be significantly shorter than both of the existing accessways, {m("OP")} and {m("OQ")}.')
+         + parts([f'Determine whether the company should build the new accessway. {mk(2)}', f'Suggest one limitation of the model. {mk(1)}'], start=3, kind='a'))
+Q[11] = (p(f'With respect to a fixed origin {m("O")}, the lines {m("l_1")} and {m("l_2")} are given by the equations')
+         + eq(r'l_1:\mathbf r=' + v('4', '28', '4') + r'+\lambda' + v('-1', '-5', '1') + r',\qquad l_2:\mathbf r=' + v('5', '3', '1') + r'+\mu' + v('3', '0', '-4'))
+         + p(f'where {m(r"\lambda")} and {m(r"\mu")} are scalar parameters.')
+         + p(f'The lines {m("l_1")} and {m("l_2")} intersect at the point {m("X")}.')
+         + parts([f'Find the coordinates of the point {m("X")}. {mk(3)}',
+                  f'Find the size of the acute angle between {m("l_1")} and {m("l_2")}, giving your answer in degrees to 2 decimal places. {mk(3)}'], kind='a')
+         + p(f'The point {m("A")} lies on {m("l_1")} and has position vector {m(v("2", "18", "6"))}')
+         + parts([f'Find the distance {m("AX")}, giving your answer as a surd in its simplest form. {mk(2)}'], start=3, kind='a')
+         + p(f'The point {m("Y")} lies on {m("l_2")}. Given that the vector {m(r"\overrightarrow{YA}")} is perpendicular to the line {m("l_1")}')
+         + parts([f'find the distance {m("YA")}, giving your answer to one decimal place. {mk(2)}'], start=4, kind='a')
+         + p(f'The point {m("B")} lies on {m("l_1")} where {m(r"|\overrightarrow{AX}|=2|\overrightarrow{AB}|")}.')
+         + parts([f'Find the two possible position vectors of {m("B")}. {mk(3)}'], start=5, kind='a'))
