@@ -13,7 +13,12 @@ Commands (always `python3 -I`):
 
 Set layout (scripts/import/sets/<S>/): files.py (FILES: id -> rel, sha256, book, chapter, title,
 course label), questions.json (per question: marks, difficulty, reason, chapters, skills,
-duplicateOf, summary), figs.json (per question figure boxes), prompts/<FILE>.py (Q dict, lib helpers).
+summary), figs.json (per question figure boxes), prompts/<FILE>.py (Q dict, lib helpers).
+
+No duplicates (PAP-077-2, standing from v0.77): `payload` compares the new questions with the whole bank
+(scripts/duplicates.py) and stops while any candidate is unconfirmed. A confirmed copy of an official question or of
+an earlier PMT question is not imported: list it under "skip" for its file in the set's skip.json. Questions removed as
+duplicates (docs/evidence/duplicate-decisions.json) are never rendered, written or integrated again.
 """
 import html
 import json
@@ -24,6 +29,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common  # noqa: E402
 import lib  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+import duplicates  # noqa: E402
 
 HEADER_Y, FOOTER_Y = 30, 815          # page furniture (running header) is above HEADER_Y
 LABEL = re.compile(r'^\s*Q(\d+)\.?\s*$')
@@ -55,6 +62,13 @@ class PmtSet:
     def data(self, name, default=None):
         path = self.dir / name
         return json.loads(path.read_text()) if path.exists() else default
+
+    def skipped(self, file_id):
+        """Question numbers of this file that stay out of the bank: removed duplicates and confirmed copies (PAP-077-2)."""
+        spec = self.files[file_id]
+        prefix = f'pmt/{spec["book"]}/ch{spec["chapter"]}/q'
+        removed = {int(i[len(prefix):]) for i in duplicates.removed_ids(self.repo) if i.startswith(prefix)}
+        return removed | set(self.data('skip.json', {}).get(file_id, []))
 
 
 def text_blocks(page):
@@ -229,7 +243,10 @@ def cmd_assets(ps, file_id):
     record = {'file': file_id, 'figures': {}, 'schemes': {}}
     moves = ps.data('scheme-moves.json', {})
     moved = {pg for m in moves.get(file_id, []) for pg in m['pages']}
+    skipped = ps.skipped(file_id)
     for q, crops in scheme_crops(doc, info, moved).items():
+        if q in skipped:
+            continue
         crops = [dict(page=c['page'], rect=r) for c in crops for r in split_rect(doc, c['page'], c['rect'])]
         for k, c in enumerate(crops, 1):
             name = f'{folder}/q{q:02}-ms-p{c["page"]:02}-{k}.png'
@@ -238,7 +255,7 @@ def cmd_assets(ps, file_id):
     # Scheme pages another file misplaced, which belong to a question here: appended after its own scheme, in page order.
     for src, entries in sorted(moves.items()):
         for m in entries:
-            if m['to'] != file_id:
+            if m['to'] != file_id or m['q'] in skipped:
                 continue
             sdoc = ps.pdf(src)
             pieces = []
@@ -254,6 +271,8 @@ def cmd_assets(ps, file_id):
                 w, h = render(sdoc, pg, r, ps.repo / name, 150)
                 record['schemes'][str(m['q'])].append(dict(asset=name, page=pg, rect=r, width=w, height=h, sourceFile=src))
     for q, boxes in (ps.data('figs.json', {}).get(file_id) or {}).items():
+        if int(q) in skipped:
+            continue
         for k, (page, *rect) in enumerate(boxes, 1):
             name = f'{folder}/q{int(q):02}-fig-{k}.png'
             w, h = render(doc, page, rect, ps.repo / name, 200)
@@ -282,10 +301,12 @@ def cmd_payload(ps, file_id):
     lib.load(record)
     prompts = common.module(ps.dir / 'prompts' / f'{file_id}.py', 'pmt_prompts_' + file_id.replace('-', '_')).Q
     meta = ps.data('questions.json')[file_id]
-    if sorted(prompts) != sorted(int(q) for q in meta) or sorted(prompts) != sorted(int(q) for q in record['schemes']):
+    skipped = ps.skipped(file_id)
+    kept = sorted(q for q in prompts if q not in skipped)
+    if sorted(prompts) != sorted(int(q) for q in meta) or kept != sorted(int(q) for q in record['schemes'] if int(q) not in skipped):
         raise SystemExit(f'{file_id}: prompts, questions.json and scheme crops cover different questions.')
     questions = []
-    for q in sorted(prompts):
+    for q in kept:
         crops = record['schemes'][str(q)]
         questions.append({'id': f'pmt/{spec["book"]}/ch{spec["chapter"]}/q{q}', 'question': prompts[q],
                           'steps': scheme_html(spec, q, crops), 'contextHtml': '',
@@ -293,6 +314,7 @@ def cmd_payload(ps, file_id):
                                                **({'appendix': [{'file': f, 'page': sorted({c['page'] for c in crops if c.get('sourceFile') == f})}
                                                                 for f in sorted({c['sourceFile'] for c in crops if 'sourceFile' in c})]}
                                                   if any('sourceFile' in c for c in crops) else {}))})
+    duplicates.guard_import(questions, ps.repo, file_id)
     path = ps.repo / 'content' / 'pmt' / f'{file_id}.json'
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({'schemaVersion': 1, 'questions': questions}, indent=1, ensure_ascii=False) + '\n')
@@ -332,11 +354,15 @@ def cmd_integrate(ps, file_id):
     prefix = f'pmt/{spec["book"]}/ch{spec["chapter"]}/'
     rows = [r for r in catalogue['questions'] if not r['id'].startswith(prefix)]
     library = skill_library(ps.repo)
+    skipped = ps.skipped(file_id)
+    meta = {q: m for q, m in meta.items() if int(q) not in skipped}
     for q, m in meta.items():
         if m['difficulty'] not in ('easy', 'medium', 'difficult') or not m['reason'].strip():
             raise SystemExit(f'{file_id} Q{q}: difficulty needs easy/medium/difficult and a reason')
         if m['marks'] != info['totals'][int(q) - 1]['marks']:
             raise SystemExit(f'{file_id} Q{q}: marks {m["marks"]} differ from the printed total')
+        if m.get('duplicateOf'):
+            raise SystemExit(f'{file_id} Q{q}: a copy of {m["duplicateOf"]} is not imported (PAP-077-2); add it to skip.json')
     for q in sorted(meta, key=int):
         m, n = meta[q], int(q)
         # A chapter is a number in this book, or 'book/number' for another book (a copy keeps its original's chapters).
@@ -350,10 +376,18 @@ def cmd_integrate(ps, file_id):
             'sourceLabel': f'PMT {spec["course"]} {spec["sheet"]} Q{n}', 'sheetId': file_id, 'sheetTitle': spec['title'],
             'board': 'PMT', 'status': 'checked', 'dataPath': f'content/pmt/{file_id}.json',
             'sourceSha256': spec['sha256'], 'sourceQuestionPages': list(range(starts[n], ends[n] + 1)),
-            'schemePages': sorted({c['page'] for c in record['schemes'][q] if 'sourceFile' not in c}), 'duplicateOf': m.get('duplicateOf'),
+            'schemePages': sorted({c['page'] for c in record['schemes'][q] if 'sourceFile' not in c}),
             'sourceNote': m.get('note')})
     order = {fid: k for k, fid in enumerate(sorted(ps.files))}
     rows.sort(key=lambda r: (r['dataPath'], r['questionNumber']))
+    # Keep what removed duplicates added to a question here (PAP-077-1), and the migration map.
+    earlier = {r['id']: r for r in catalogue['questions']}
+    skill_key = lambda s: (s['courseId'], s['bookId'], s['topicId'], s['skillId'])
+    for r in rows:
+        old = earlier.get(r['id'])
+        if old:
+            r['chapterKeys'] += [k for k in old['chapterKeys'] if k not in r['chapterKeys']]
+            r['skillMappings'] += [s for s in old['skillMappings'] if skill_key(s) not in {skill_key(x) for x in r['skillMappings']}]
     catalogue['questions'] = rows
     path.write_text(json.dumps(catalogue, indent=2, ensure_ascii=False) + '\n')
     print(json.dumps({'event': 'pmt_integrated', 'file': file_id, 'questions': len(meta), 'catalogue': len(rows)}))

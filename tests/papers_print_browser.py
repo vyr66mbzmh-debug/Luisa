@@ -902,13 +902,14 @@ class PapersPrintTests(unittest.TestCase):
         for qid in ids:
             d = descriptors[qid]
             payload = {q['id']: q for q in json.loads((ROOT / d['dataPath']).read_text())['questions']}
-            out.append(dict(payload[qid], **{key: d[key] for key in ('markScheme', 'marks', 'difficulty', 'sourceLabel', 'questionNumber')}, sourceKind='pmt'))
+            out.append(dict(payload[qid], **{key: d[key] for key in ('markScheme', 'marks', 'difficulty', 'sourceLabel', 'questionNumber', 'originalExam') if key in d}, sourceKind='pmt'))
         return out
 
     def test_exam_past_paper_and_pmt_mixed_hide_source_on_questions_PAP_075(self):
         import fitz
         # PAP-075-8: past papers mixed with PMT questions (one with figures) and a source-scheme row whose context names
-        # its original question (the v0.74 review case). Question pages name no source; the scheme names each exactly.
+        # its original question (the v0.74 review case). Question pages name no source; the scheme names each exactly,
+        # including a PMT question's confirmed original exam (PAP-077-5); unconfirmed ones (ch9/q4) name none.
         labelled = dict(practice_row('pure-year-2', 2, '2.1/q1'), id='practice/test/labelled', marks=3, markScheme='source',
                         sourceKind='practice-booklet', chapterNumber=2, subchapterLabel='2.1 Fixture exercise', questionLabel='1',
                         contextHtml='<aside class="practice-context"><p class="practice-context-label">Reference from 9.5 Q1</p><p>Use the diagram from the previous question.</p></aside>')
@@ -917,15 +918,15 @@ class PapersPrintTests(unittest.TestCase):
         self.page.add_script_tag(url='/papers-exam.js')
         expected = self.page.evaluate('rows => rows.map(LUISA_PAPERS_EXAM.schemeSource)', rows)
         self.assertEqual(expected, ['Source: Edexcel June 2019 9FM0/01 Q2 · ID exam/edexcel-9fm0-01-2019-june/q2',
-                                    'Source: PMT Core Pure 1 Ch.2 Argand Diagrams Q8 · ID pmt/pure-core-1/ch2/q8',
-                                    'Source: PMT Core Pure 1 Ch.6 Matrices Q2 · ID pmt/pure-core-1/ch6/q2',
+                                    'Source: PMT Core Pure 1 Ch.2 Argand Diagrams Q8 · Original: Edexcel 8FM0/01 2021 Q5 · ID pmt/pure-core-1/ch2/q8',
+                                    'Source: PMT Core Pure 1 Ch.6 Matrices Q2 · Original: Edexcel 9FM0/02 2022 Q2 · ID pmt/pure-core-1/ch6/q2',
                                     'Source: Practice Booklet · Chapter 2 · 2.1 Fixture exercise · Q1 · ID practice/test/labelled',
                                     'Source: Edexcel June 2024 9MA0/32 Q1 · ID exam/edexcel-9ma0-32-2024-june/q1',
                                     'Source: PMT Core Pure 1 Ch.9 Vectors Q4 · ID pmt/pure-core-1/ch9/q4'])
         preview, result = self.exam_paper(rows, content='both', title='Mixed sources')
         self.assertTrue(result['ready'], result)
         questions = ' '.join(preview.locator('.exam-front-page, .exam-page').all_inner_texts())
-        for leak in ('Source', 'PMT', 'Physics', 'Core Pure', 'Ch.', 'Edexcel', 'June 2019', '9FM0', '9MA0', 'Reference from', '9.5 Q1', 'ID ', 'pmt/', 'exam/'):
+        for leak in ('Source', 'Original', '8FM0', 'PMT', 'Physics', 'Core Pure', 'Ch.', 'Edexcel', 'June 2019', '9FM0', '9MA0', 'Reference from', '9.5 Q1', 'ID ', 'pmt/', 'exam/'):
             self.assertNotIn(leak, questions)
         self.assertIn('Use the diagram from the previous question.', questions)  # the context itself stays
         self.assertEqual(preview.locator('.exam-page .practice-context-label, .exam-page .exam-scheme-source').count(), 0)
@@ -950,11 +951,11 @@ class PapersPrintTests(unittest.TestCase):
     def test_exam_past_paper_and_both_pmt_books_hide_source_on_questions_PAP_076(self):
         import fitz
         # PAP-076-8: a past paper mixed with Core Pure 1 and Core Pure 2 PMT questions (one with a figure).
-        rows = (self.pmt_rows(['pmt/pure-core-2/ch5/q1']) + self.exam_rows('edexcel-9fm0-02-2024-june', [2])
+        rows = (self.pmt_rows(['pmt/pure-core-2/ch5/q2']) + self.exam_rows('edexcel-9fm0-02-2024-june', [2])
                 + self.pmt_rows(['pmt/pure-core-1/ch1/q1', 'pmt/pure-core-2/ch7/q3']))
         self.page.add_script_tag(url='/papers-exam.js')
         expected = self.page.evaluate('rows => rows.map(LUISA_PAPERS_EXAM.schemeSource)', rows)
-        self.assertEqual(expected, ['Source: PMT Core Pure 2 Ch.5 Polar Coordinates Q1 · ID pmt/pure-core-2/ch5/q1',
+        self.assertEqual(expected, ['Source: PMT Core Pure 2 Ch.5 Polar Coordinates Q2 · ID pmt/pure-core-2/ch5/q2',
                                     'Source: Edexcel June 2024 9FM0/02 Q2 · ID exam/edexcel-9fm0-02-2024-june/q2',
                                     'Source: PMT Core Pure 1 Ch.1 Complex Numbers Q1 · ID pmt/pure-core-1/ch1/q1',
                                     'Source: PMT Core Pure 2 Ch.7 Methods in Differential Equations Q3 · ID pmt/pure-core-2/ch7/q3'])

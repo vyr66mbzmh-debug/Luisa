@@ -2,55 +2,6 @@
  "schemaVersion": 1,
  "questions": [
   {
-   "id": "pmt/pure-core-2/ch6/q1",
-   "question": "<p>Given that <span class=\"inline-math\" data-math=\"y=\\operatorname{arsinh}(\\tanh x)\"></span>, show that</p><div class=\"equation\" data-math=\"\\frac{\\mathrm dy}{\\mathrm dx}=\\frac{\\operatorname{sech}^2x}{\\sqrt{1+\\tanh^2x}}\" data-display=\"true\"></div><p><span class=\"marks\">(5)</span></p>",
-   "steps": [
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q01-ms-p06-1.png\" width=\"938\" height=\"886\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q1; source page 6, segment 1 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q01-ms-p06-2.png\" width=\"938\" height=\"443\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q1; source page 6, segment 2 of 2. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
-   ],
-   "contextHtml": "",
-   "sourceScheme": {
-    "kind": "source",
-    "page": [
-     6
-    ]
-   }
-  },
-  {
-   "id": "pmt/pure-core-2/ch6/q2",
-   "question": "<div class=\"equation\" data-math=\"\\mathrm f(x)=\\frac{1}{\\sqrt{4x^2+9}}\" data-display=\"true\"></div><ol class=\"parts\" type=\"a\"><li><p>Using a substitution, that should be stated clearly, show that</p><div class=\"equation\" data-math=\"\\int\\mathrm f(x)\\,\\mathrm dx=A\\sinh^{-1}(Bx)+c\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"c\"></span> is an arbitrary constant and <span class=\"inline-math\" data-math=\"A\"></span> and <span class=\"inline-math\" data-math=\"B\"></span> are constants to be found.</p><span class=\"marks\">(4)</span></li><li>Hence find, in exact form in terms of natural logarithms, the mean value of <span class=\"inline-math\" data-math=\"\\mathrm f(x)\"></span> over the interval <span class=\"inline-math\" data-math=\"[0,3]\"></span>. <span class=\"marks\">(2)</span></li></ol>",
-   "steps": [
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q02-ms-p07-1.png\" width=\"919\" height=\"843\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q2; source page 7, segment 1 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q02-ms-p07-2.png\" width=\"919\" height=\"387\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q2; source page 7, segment 2 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q02-ms-p08-3.png\" width=\"917\" height=\"485\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q2; source page 8, segment 3 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
-   ],
-   "contextHtml": "",
-   "sourceScheme": {
-    "kind": "source",
-    "page": [
-     7,
-     8
-    ]
-   }
-  },
-  {
-   "id": "pmt/pure-core-2/ch6/q3",
-   "question": "<p>The curve <span class=\"inline-math\" data-math=\"C\"></span> has equation</p><div class=\"equation\" data-math=\"y=31\\sinh x-2\\sinh2x\\qquad x\\in\\mathbb R\" data-display=\"true\"></div><p>Determine, in terms of natural logarithms, the exact <span class=\"inline-math\" data-math=\"x\"></span> coordinates of the stationary points of <span class=\"inline-math\" data-math=\"C\"></span>.</p>",
-   "steps": [
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q03-ms-p09-1.png\" width=\"886\" height=\"885\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q3; source page 9, segment 1 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q03-ms-p09-2.png\" width=\"886\" height=\"251\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q3; source page 9, segment 2 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q03-ms-p10-3.png\" width=\"886\" height=\"535\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q3; source page 10, segment 3 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
-   ],
-   "contextHtml": "",
-   "sourceScheme": {
-    "kind": "source",
-    "page": [
-     9,
-     10
-    ]
-   }
-  },
-  {
    "id": "pmt/pure-core-2/ch6/q4",
    "question": "<ol class=\"parts\" type=\"a\"><li><p>Using the definition for <span class=\"inline-math\" data-math=\"\\cosh x\"></span> in terms of exponentials, show that</p><div class=\"equation\" data-math=\"\\cosh2x\\equiv2\\cosh^2x-1\" data-display=\"true\"></div><span class=\"marks\">(3)</span></li><li><p>Find the exact values of <span class=\"inline-math\" data-math=\"x\"></span> for which</p><div class=\"equation\" data-math=\"29\\cosh x-3\\cosh2x=38\" data-display=\"true\"></div><p>giving your answers in terms of natural logarithms.</p><span class=\"marks\">(6)</span></li></ol>",
    "steps": [
@@ -68,24 +19,6 @@
    }
   },
   {
-   "id": "pmt/pure-core-2/ch6/q5",
-   "question": "<ol class=\"parts\" type=\"a\"><li><p>Prove that</p><div class=\"equation\" data-math=\"\\tanh^{-1}(x)=\\frac12\\ln\\left(\\frac{1+x}{1-x}\\right)\\qquad-k&lt;x&lt;k\" data-display=\"true\"></div><p>stating the value of the constant <span class=\"inline-math\" data-math=\"k\"></span>.</p><span class=\"marks\">(5)</span></li><li><p>Hence, or otherwise, solve the equation</p><div class=\"equation\" data-math=\"2x=\\tanh\\left(\\ln\\sqrt{2-3x}\\right)\" data-display=\"true\"></div><span class=\"marks\">(5)</span></li></ol>",
-   "steps": [
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q05-ms-p12-1.png\" width=\"800\" height=\"730\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q5; source page 12, segment 1 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q05-ms-p12-2.png\" width=\"800\" height=\"512\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q5; source page 12, segment 2 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q05-ms-p13-3.png\" width=\"797\" height=\"797\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q5; source page 13, segment 3 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q05-ms-p13-4.png\" width=\"797\" height=\"195\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q5; source page 13, segment 4 of 4. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
-   ],
-   "contextHtml": "",
-   "sourceScheme": {
-    "kind": "source",
-    "page": [
-     12,
-     13
-    ]
-   }
-  },
-  {
    "id": "pmt/pure-core-2/ch6/q6",
    "question": "<p><strong>In this question you must show all stages of your working.</strong></p><p><strong>Solutions relying entirely on calculator technology are not acceptable.</strong></p><p>Determine the values of <span class=\"inline-math\" data-math=\"x\"></span> for which</p><div class=\"equation\" data-math=\"64\\cosh^4x-64\\cosh^2x-9=0\" data-display=\"true\"></div><p>Give your answers in the form <span class=\"inline-math\" data-math=\"q\\ln2\"></span> where <span class=\"inline-math\" data-math=\"q\"></span> is rational and in simplest form.</p>",
    "steps": [
@@ -99,40 +32,6 @@
     "page": [
      14,
      15
-    ]
-   }
-  },
-  {
-   "id": "pmt/pure-core-2/ch6/q7",
-   "question": "<p><strong>Solutions based entirely on graphical or numerical methods are not acceptable.</strong></p><figure class=\"practice-figure\" style=\"max-width:80mm;margin:2mm auto\"><img src=\"resources/pmt/pure-core-2-ch6/q07-fig-1.png\" alt=\"Figure 1: axes x and y with origin O; the curve y = arsinh x rising from O and levelling off; a dashed horizontal line y = β; the region R between the y-axis, the curve and the line y = β is shaded\"></figure><p>Figure 1 shows a sketch of part of the curve with equation</p><div class=\"equation\" data-math=\"y=\\operatorname{arsinh}x\\qquad x\\geqslant0\" data-display=\"true\"></div><p>and the straight line with equation <span class=\"inline-math\" data-math=\"y=\\beta\"></span></p><p>The line and the curve intersect at the point with coordinates <span class=\"inline-math\" data-math=\"(\\alpha,\\beta)\"></span></p><p>Given that <span class=\"inline-math\" data-math=\"\\beta=\\dfrac12\\ln3\"></span></p><ol class=\"parts\" type=\"a\"><li>show that <span class=\"inline-math\" data-math=\"\\alpha=\\dfrac{1}{\\sqrt3}\"></span> <span class=\"marks\">(3)</span></li></ol><p>The finite region <span class=\"inline-math\" data-math=\"R\"></span>, shown shaded in Figure 1, is bounded by the curve with equation <span class=\"inline-math\" data-math=\"y=\\operatorname{arsinh}x\"></span>, the <span class=\"inline-math\" data-math=\"y\"></span>-axis and the line with equation <span class=\"inline-math\" data-math=\"y=\\beta\"></span></p><p>The region <span class=\"inline-math\" data-math=\"R\"></span> is rotated through <span class=\"inline-math\" data-math=\"2\\pi\"></span> radians about the <span class=\"inline-math\" data-math=\"y\"></span>-axis.</p><ol class=\"parts\" type=\"a\" start=\"2\"><li>Use calculus to find the exact value of the volume of the solid generated. <span class=\"marks\">(6)</span></li></ol>",
-   "steps": [
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q07-ms-p16-1.png\" width=\"867\" height=\"858\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q7; source page 16, segment 1 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q07-ms-p16-2.png\" width=\"867\" height=\"471\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q7; source page 16, segment 2 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q07-ms-p17-3.png\" width=\"867\" height=\"372\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q7; source page 17, segment 3 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
-   ],
-   "contextHtml": "",
-   "sourceScheme": {
-    "kind": "source",
-    "page": [
-     16,
-     17
-    ]
-   }
-  },
-  {
-   "id": "pmt/pure-core-2/ch6/q8",
-   "question": "<ol class=\"parts\" type=\"a\"><li><p>Use a hyperbolic substitution and calculus to show that</p><div class=\"equation\" data-math=\"\\int\\frac{x^2}{\\sqrt{x^2-1}}\\,\\mathrm dx=\\frac12\\left[x\\sqrt{x^2-1}+\\operatorname{arcosh}x\\right]+k\" data-display=\"true\"></div><p>where <span class=\"inline-math\" data-math=\"k\"></span> is an arbitrary constant.</p><span class=\"marks\">(6)</span></li></ol><figure class=\"practice-figure\" style=\"max-width:70mm;margin:2mm auto\"><img src=\"resources/pmt/pure-core-2-ch6/q08-fig-1.png\" alt=\"Figure 1: axes x and y with origin O; the curve C rising from the x-axis to the right of O; the region R under C between the curve, the x-axis and the vertical line x = 3 is shaded\"></figure><p>Figure 1 shows a sketch of part of the curve <span class=\"inline-math\" data-math=\"C\"></span> with equation</p><div class=\"equation\" data-math=\"y=\\frac{4}{15}x\\operatorname{arcosh}x\\qquad x\\geqslant1\" data-display=\"true\"></div><p>The finite region <span class=\"inline-math\" data-math=\"R\"></span>, shown shaded in Figure 1, is bounded by the curve <span class=\"inline-math\" data-math=\"C\"></span>, the <span class=\"inline-math\" data-math=\"x\"></span>-axis and the line with equation <span class=\"inline-math\" data-math=\"x=3\"></span></p><ol class=\"parts\" type=\"a\" start=\"2\"><li><p>Using algebraic integration and the result from part (a), show that the area of <span class=\"inline-math\" data-math=\"R\"></span> is given by</p><div class=\"equation\" data-math=\"\\frac{1}{15}\\left[17\\ln\\left(3+2\\sqrt2\\right)-6\\sqrt2\\right]\" data-display=\"true\"></div><span class=\"marks\">(5)</span></li></ol>",
-   "steps": [
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q08-ms-p17-1.png\" width=\"931\" height=\"655\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q8; source page 17, segment 1 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q08-ms-p18-2.png\" width=\"867\" height=\"844\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q8; source page 18, segment 2 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>",
-    "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/pmt/pure-core-2-ch6/q08-ms-p18-3.png\" width=\"867\" height=\"413\" alt=\"PMT mark scheme for Core Pure 2 Ch.6 Hyperbolic Functions Q8; source page 18, segment 3 of 3. Includes the working, marks, alternative methods and notes in source order.\" style=\"display:block;width:100%;height:auto;max-width:100%\"></figure>"
-   ],
-   "contextHtml": "",
-   "sourceScheme": {
-    "kind": "source",
-    "page": [
-     17,
-     18
     ]
    }
   },

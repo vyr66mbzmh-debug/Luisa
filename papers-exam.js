@@ -24,7 +24,8 @@
   // (for example "Reference from 9.5 Q1"), whatever source the row comes from.
   const withoutSourceLabels = node => { node.querySelectorAll('.practice-context-label').forEach(label => label.remove()); return node; };
   // PAP-074-3: the scheme section names each question's exact source and bank ID; question pages never do.
-  const schemeSource = row => `${print.sourceLabel(row)} · ID ${row.id}`;
+  // PAP-077-5: a PMT question whose original exam was confirmed by sight names that exam in the scheme only.
+  const schemeSource = row => `${print.sourceLabel(row)}${row.originalExam ? ` · Original: ${row.originalExam}` : ''} · ID ${row.id}`;
   const monthYear = (date = new Date()) => date.toLocaleDateString('en-GB', {month: 'long', year: 'numeric'});
   // PAP-067-8: today in the teacher's local date (Europe/London), template style "Sunday 22nd November".
   function todayLabel(date = new Date()) {

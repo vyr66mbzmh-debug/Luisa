@@ -734,60 +734,74 @@ class PapersSelection(unittest.TestCase):
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
         self.assertEqual(self.page.locator('#papers-exam-minutes').input_value(), '32')
 
-    def test_pmt_source_tickbox_counts_and_duplicates_PAP_075(self):
-        # PAP-075-5/6: the PMT tickbox is off by default; its questions count exactly; a copy and its original never
-        # both enter a generated paper, and a manual selection of both is reported.
-        pmt = json.loads((ROOT / 'pmt-catalogue.json').read_text())['questions']
-        copies = [r for r in pmt if r['duplicateOf']]
+    def test_pmt_questions_are_exam_style_with_no_tickbox_PAP_077(self):
+        # PAP-077-1/3/4: no PMT tickbox in any edition; the 83 remaining PMT questions are exam-style questions, count
+        # exactly, can go in a timed exam paper (they have their source schemes), and no copies are skipped.
+        pmt = json.loads((ROOT / 'pmt-catalogue.json').read_text())
+        rows, migrations = pmt['questions'], pmt['migrations']
+        self.assertEqual((len(rows), len(migrations)), (83, 51))
+        self.assertFalse([r for r in rows if r.get('duplicateOf')])
         self.page.unroute('**/pmt-catalogue.json')
         self.page.unroute('**/papers-print.js')
         self.page.unroute('**/exam-catalogue.json')
         self.page.unroute('**/practice-catalogue.json')
         self.page.reload()
-        self.page.wait_for_function("!document.querySelector('#papers-source-pmt').disabled && document.querySelectorAll('#papers-past-paper option').length === 45")
-        self.assertFalse(self.page.locator('#papers-source-pmt').is_checked())
-        self.assertIn('PMT', self.page.locator('label[for="papers-source-pmt"], #papers-source-pmt >> xpath=..').first.inner_text())
-        for source in ('practice', 'exam-style', 'past-papers'):
+        self.page.wait_for_function("document.querySelectorAll('#papers-past-paper option').length === 45")
+        self.assertEqual(self.page.locator('#papers-source-pmt').count(), 0)
+        self.assertNotIn('PMT', self.page.locator('.source-fieldset').inner_text())
+        self.assertEqual(self.page.locator('.source-fieldset input[type=checkbox]').evaluate_all('n => n.map(x => x.id)'),
+                         ['papers-source-practice', 'papers-source-exam-style', 'papers-source-past-papers'])
+        for source in ('practice', 'past-papers'):
             self.page.locator('#papers-source-' + source).uncheck()
-        self.page.locator('#papers-source-pmt').check()
-        ids = {r['id'] for r in pmt}
-        within = sum(r['duplicateOf'] in ids for r in copies)  # PMT copies of other PMT questions
-        skipped = lambda n: f' · a generated paper skips {n} duplicate {"copy" if n == 1 else "copies"}' if n else ''
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{len(pmt)} questions in the selection' + skipped(within))
-        self.page.locator('#papers-source-past-papers').check()
-        total = 444 + len(pmt)
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{total} questions in the selection' + skipped(len(copies)))
-        self.assertEqual(self.page.locator('#papers-count').get_attribute('max'), str(total - len(copies)))
+        pool = self.page.evaluate("(() => { const p = LUISA_PAPERS_BUILDER.pool(); return [p.length, p.filter(r => r.sourceKind === 'pmt').length, p.filter(r => r.sourceKind === 'pmt' && r.bank !== 'exam-style').length]; })()")
+        self.assertEqual(pool[1:], [83, 0])
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{pool[0]:,} questions in the selection')
+        self.assertEqual(self.page.locator('#papers-count').get_attribute('max'), str(pool[0]))
         self.page.locator('#papers-exam summary').click()
         self.assertEqual(self.page.locator('#papers-exam-eligible').inner_text(),
-                         f'{total} of {total} questions in the chosen sources and topics have an official mark scheme and can go in an exam paper.')
-        deduped = self.page.evaluate('LUISA_PAPERS_BUILDER.withoutDuplicateCopies(LUISA_PAPERS_BUILDER.pool()).length')
-        self.assertEqual(deduped, total - len(copies))
-        for seed in range(4):
+                         f'83 of {pool[0]:,} questions in the chosen sources and topics have an official mark scheme and can go in an exam paper.')
+        # Drawn from the selected course, book and chapters: Core Pure 1 alone holds the 58 Core Pure 1 questions and any
+        # Core Pure 2 question that also carries a Core Pure 1 chapter.
+        self.page.locator('#papers-course').select_option('further-maths-a-level')
+        self.page.locator('#papers-book').select_option('further-maths-a-level/pure-core-1')
+        cp1 = [r for r in rows if any('/pure-core-1/' in k for k in r['chapterKeys'])]
+        self.assertEqual(sum(r['id'].startswith('pmt/pure-core-1/') for r in cp1), 58)
+        self.assertEqual(self.page.evaluate("LUISA_PAPERS_BUILDER.pool().filter(r => r.sourceKind === 'pmt').length"), len(cp1))
+        self.page.locator('#papers-source-past-papers').check()
+        for seed in range(3):
             with self.subTest(seed=seed):
                 self.assertIn('minutes', self.timed(60))
-                rows = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => [r.id, r.duplicateOf || null, r.markScheme])')
-                ids = {r[0] for r in rows}
-                self.assertFalse([r for r in rows if r[1] and r[1] in ids], rows)
-                self.assertTrue(all(r[2] in ('official', 'source') for r in rows))
-        # Manual choice of a copy and its original: both stay (nothing is deleted) and the summary says so.
-        pair = ['exam/edexcel-9fm0-01-2019-june/q1', 'pmt/pure-core-1/ch2/q9']
-        self.page.evaluate('''async ids => { const rows = await LUISA_PAPERS_BUILDER.load(LUISA_PAPERS_BUILDER.pool().filter(r => ids.includes(r.id)));
-          LUISA_PAPERS_BUILDER.arrange(rows); }''', pair)
-        self.assertEqual(sorted(self.selection_ids()), sorted(pair))
-        self.assertIn('One selected PMT question is a copy of another selected question (PMT Core Pure 1 Ch.2 Argand Diagrams Q9).',
-                      self.page.locator('#papers-summary').inner_text())
-        # Older saved sessions (no PMT entry) restore with PMT unticked.
-        self.page.evaluate('''() => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({version:3, sources:{practice:true, 'exam-style':true, 'past-papers':true}, selected:[], order:'selection', layout:'condensed', includeAnswers:false}))''')
+                picked = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => [r.id, r.markScheme])')
+                self.assertTrue(picked and all(scheme in ('official', 'source') for _, scheme in picked), picked)
+                self.assertEqual(len({i for i, _ in picked}), len(picked))
+        self.assertNotIn('skips', self.page.locator('#filter-title').inner_text())
+        self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.withoutDuplicateCopies(LUISA_PAPERS_BUILDER.pool()).length'),
+                         self.page.evaluate('LUISA_PAPERS_BUILDER.pool().length'))
+        # PAP-077-1: a saved selection holding removed copies is migrated once (positions kept, a question chosen twice
+        # kept once), and an old saved 'pmt' source box is ignored without error.
+        official = 'exam/edexcel-9fm0-01-2019-june/q1'
+        copy_of_official = next(k for k, v in migrations.items() if v == official)
+        copy_of_pmt = next(k for k, v in migrations.items() if v == 'pmt/pure-core-1/ch3/q3')
+        saved = [copy_of_official, 'pmt/pure-core-1/ch1/q1', official, copy_of_pmt]
+        self.page.evaluate("""ids => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({version:3, sources:{practice:false, 'exam-style':true, 'past-papers':true, pmt:true}, selected:ids, selectionOrder:ids, order:'selection', layout:'condensed', includeAnswers:false}))""", saved)
         self.page.reload()
-        self.page.wait_for_function("!document.querySelector('#papers-source-pmt').disabled")
-        self.assertFalse(self.page.locator('#papers-source-pmt').is_checked())
-        # A version-2 session's single 'exam' box maps to exam-style and past papers only, never to PMT (v0.75 review).
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertIn('2 duplicate questions were replaced by the same question from its original source.', self.page.locator('#papers-status').inner_text())
+        self.assertEqual(self.selection_ids(), [official, 'pmt/pure-core-1/ch1/q1', 'pmt/pure-core-1/ch3/q3'])
+        self.assertEqual([self.page.locator(f'#papers-source-{s}').is_checked() for s in ('practice', 'exam-style', 'past-papers')], [False, True, True])
+        stored = self.page.evaluate("JSON.parse(sessionStorage.getItem('luisa-papers-v1'))")
+        self.assertEqual(stored['selected'], [official, 'pmt/pure-core-1/ch1/q1', 'pmt/pure-core-1/ch3/q3'])
+        self.assertNotIn('pmt', stored['sources'])
+        self.page.reload()
+        self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
+        self.assertNotIn('replaced', self.page.locator('#papers-status').inner_text())
+        self.assertEqual(self.selection_ids(), [official, 'pmt/pure-core-1/ch1/q1', 'pmt/pure-core-1/ch3/q3'])
+        # A version-2 session's single 'exam' box still maps to exam-style and past papers.
         self.page.evaluate('''() => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({version:2, sources:{practice:false, exam:true}, selected:[], order:'selection', layout:'condensed', includeAnswers:false}))''')
         self.page.reload()
-        self.page.wait_for_function("!document.querySelector('#papers-source-pmt').disabled")
-        self.assertEqual([self.page.locator(f'#papers-source-{s}').is_checked() for s in ('practice', 'exam-style', 'past-papers', 'pmt')],
-                         [False, True, True, False])
+        self.page.wait_for_function("!document.querySelector('#papers-source-exam-style').disabled")
+        self.assertEqual([self.page.locator(f'#papers-source-{s}').is_checked() for s in ('practice', 'exam-style', 'past-papers')],
+                         [False, True, True])
 
     def test_in_paper_order_only_for_one_past_paper_and_survives_reload(self):
         self.page.unroute('**/exam-catalogue.json')

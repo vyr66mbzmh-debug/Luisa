@@ -241,6 +241,16 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
     for (value, label), x in zip(options[1:], order):
         assert value == x['id'] and x['paperCode'] in label and x['session'] in label, (value, label)
     ok(f'{role} every past paper listed in date order with its session and code ({len(order)} papers)')
+    # PAP-077-3/4: no PMT tickbox in any edition; the PMT questions are exam-style questions and no copies remain.
+    pmt_count = len(json.loads((ROOT / 'pmt-catalogue.json').read_text())['questions'])
+    assert p.locator('#papers-source-pmt').count() == 0
+    p.locator('#papers-source-exam-style').check()
+    got = p.evaluate("[LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='pmt'&&r.bank==='exam-style'&&!r.duplicateOf).length, LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='pmt').length]")
+    assert got == [pmt_count, pmt_count], (got, pmt_count)
+    assert 'skips' not in p.locator('#filter-title').inner_text()
+    p.locator('#papers-source-exam-style').uncheck()
+    expect(p.locator('#filter-title')).to_have_text(f'{len(cat):,} questions in the selection')
+    ok(f'{role} no PMT tickbox; {pmt_count} PMT questions in Exam style, no duplicates')
     # Stable regression: a whole June 2025 paper selected by browsing, then generated in paper order.
     p.locator('#papers-past-paper').select_option('edexcel-9ma0-02-2025-june')
     expect(p.locator('#filter-title')).to_have_text('15 questions in the selection')
@@ -447,11 +457,11 @@ def exam_checks(p, role, out, expected24):
     ex.pdf(path=str(out / f'live-{role}-timed.pdf'), prefer_css_page_size=True)
     ex.close()
     ok(f'{role} timed exam paper with mark scheme passed ({len(diffs)} questions, {marks} marks, {minutes} minutes)')
-    # PAP-075: PMT questions (off by default) mix with past papers; question pages name no source, the scheme names each.
-    assert not p.locator('#papers-source-pmt').is_checked()
-    p.locator('#papers-source-pmt').check()
-    # Three non-duplicate PMT rows, drawn from both Core Pure books when both are imported.
-    pmt = p.evaluate("""() => { const rows = LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='pmt'&&!r.duplicateOf);
+    # PAP-075/PAP-077-4: PMT questions (in Exam style) mix with past papers; question pages name no source, the scheme names each.
+    assert p.locator('#papers-source-pmt').count() == 0
+    p.locator('#papers-source-exam-style').check()
+    # Three PMT rows, drawn from both Core Pure books.
+    pmt = p.evaluate("""() => { const rows = LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='pmt');
       const cp2 = rows.filter(r=>r.id.startsWith('pmt/pure-core-2/')).slice(0,1);
       return [...rows.filter(r=>!cp2.includes(r)).slice(0, 3 - cp2.length), ...cp2].map(r=>r.id); }""")
     past = p.evaluate("LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='past-exam').slice(0,1).map(r=>r.id)")
@@ -466,7 +476,7 @@ def exam_checks(p, role, out, expected24):
     assert ex.locator('.exam-scheme img').evaluate_all('ns=>ns.length>0&&ns.every(n=>n.complete&&n.naturalWidth>0)')
     ex.pdf(path=str(out / f'live-{role}-pmt.pdf'), prefer_css_page_size=True)
     ex.close()
-    p.locator('#papers-source-pmt').uncheck()
+    p.locator('#papers-source-exam-style').uncheck()
     ok(f'{role} past paper and PMT exam paper passed')
 
 

@@ -6,9 +6,8 @@
   // Keep these identical to the question library renderer in app.js.
   const mathMacros = {"\\p":"\\mathrm P(#1)",'\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
   const catalogue = [], rows = new Map(), contentCache = new Map();
-  const sources = ['practice', 'exam-style', 'past-papers', 'pmt'];
-  // PAP-075-5: PMT is a new opt-in source; it starts unticked so existing default pools are unchanged.
-  const sourceDefault = source => source !== 'pmt';
+  // PAP-077-3: there is no separate PMT source; PMT questions are exam-style questions.
+  const sources = ['practice', 'exam-style', 'past-papers'];
   const chapters = new Map(), books = new Map(), papers = new Map();
   let textbook;
   let selectionOrder = [];
@@ -134,7 +133,8 @@
   function orderedChapter(row) {
     return chapters.get(matchingChapters(row)[0] || row.chapterKeys[0]);
   }
-  // PAP-075-6: drop the PMT copy of any question whose original is also in these rows.
+  // PAP-075-6 safety net: drop a copy whose original is also in these rows. Since v0.77 (PAP-077-1/2) the bank
+  // holds no copies, so this removes nothing and the "skips N copies" note does not appear.
   function withoutDuplicateCopies(rows) {
     const ids = new Set(rows.map(row => row.id));
     return rows.filter(row => !(row.duplicateOf && ids.has(row.duplicateOf)));
@@ -142,7 +142,7 @@
   function duplicateNote() {
     const ids = new Set(selected.map(row => row.id));
     const pairs = selected.filter(row => row.duplicateOf && ids.has(row.duplicateOf));
-    return pairs.length ? ` ${pairs.length === 1 ? 'One selected PMT question is a copy' : `${pairs.length} selected PMT questions are copies`} of another selected question (${pairs.map(row => sourceLabel(row).replace(/^Source: /, '')).join('; ')}).` : '';
+    return pairs.length ? ` ${pairs.length === 1 ? 'One selected question is a copy' : `${pairs.length} selected questions are copies`} of another selected question (${pairs.map(row => sourceLabel(row).replace(/^Source: /, '')).join('; ')}).` : '';
   }
   function updatePool() {
     cancelLoading();
@@ -469,7 +469,8 @@
       add({...q, sourceKind: 'past-exam', bank: 'past-papers', courseTitle: chapter.courseTitle,
         bookTitle: chapter.bookTitle, topicTitle: chapter.title, skillTitle: q.topicSummary || ''}, q.chapterKeys);
     }
-    // PAP-075: PMT Core Pure revision questions (topic sheets with their source mark schemes).
+    // PAP-075/PAP-077-3: PMT Core Pure revision questions (topic sheets with their source mark schemes) are
+    // exam-style questions; there is no separate source box.
     const pmtResponse = await fetch(new URL('pmt-catalogue.json', document.baseURI));
     if (!pmtResponse.ok) throw new Error('The PMT catalogue could not be loaded. Check your connection and reload.');
     const pmtCatalogue = await pmtResponse.json();
@@ -480,18 +481,20 @@
           !Number.isInteger(q.marks) || q.marks <= 0 || !['easy','medium','difficult'].includes(q.difficulty)) throw Error('A PMT question is incomplete or unverified.');
       const chapter = chapters.get(q.chapterKeys?.[0]);
       if (!chapter) throw Error('Invalid PMT chapter for ' + q.id);
-      add({...q, sourceKind: 'pmt', bank: 'pmt', courseTitle: chapter.courseTitle,
+      add({...q, sourceKind: 'pmt', bank: 'exam-style', courseTitle: chapter.courseTitle,
         bookTitle: chapter.bookTitle, topicTitle: chapter.title, skillTitle: q.topicSummary || ''}, q.chapterKeys);
     }
     // A copy may point at a past-paper question or at another PMT question; both must exist once everything is loaded.
     for (const q of pmtCatalogue.questions) if (q.duplicateOf && !ids.has(q.duplicateOf)) throw Error('A PMT question is marked as a copy of a missing question.');
+    // PAP-077-1: a removed duplicate maps to the question kept in its place (an official past paper or the earlier PMT question).
+    const migrations = new Map(Object.entries(pmtCatalogue.migrations || {}).filter(([from, to]) => !ids.has(from) && ids.has(to)));
     let saved = null;
     try { saved = JSON.parse(sessionStorage.getItem(storageKey)); } catch (_) { /* A new session or unavailable storage. */ }
     if (![1, 2, 3].includes(saved?.version)) saved = null;
     for (const source of sources) {
-      // A version-2 session had one 'exam' box for exam-style and past papers; it never covered PMT (PAP-075-5).
+      // A version-2 session had one 'exam' box for exam-style and past papers. A saved 'pmt' box (v0.75-v0.76) is ignored (PAP-077-3).
       const key = saved?.version === 2 && ['exam-style', 'past-papers'].includes(source) ? 'exam' : source;
-      $('papers-source-' + source).checked = saved?.sources?.[key] ?? sourceDefault(source);
+      $('papers-source-' + source).checked = saved?.sources?.[key] ?? true;
     }
     paperChoices = [...papers].sort(([,a],[,b]) => b.date.localeCompare(a.date) || a.code.localeCompare(b.code))
       .map(([id, paper]) => {
@@ -574,11 +577,17 @@
     });
     for (const id of [...sources.map(source => 'papers-source-' + source), 'papers-difficulty', 'papers-course', 'papers-book', 'papers-all-topics', 'papers-count', 'papers-generate', 'papers-browse']) $(id).disabled = false;
     updateControls();
-    const savedIds = new Set(Array.isArray(saved?.selected) ? saved.selected : []);
+    // PAP-077-1: a saved selection is migrated once: each removed duplicate becomes the question kept in its place,
+    // keeping its position, and a question chosen twice this way is kept once. The new IDs are saved on restore.
+    const migrate = id => migrations.get(id) || id;
+    const savedList = Array.isArray(saved?.selected) ? saved.selected.filter(id => typeof id === 'string') : [];
+    const replaced = savedList.filter(id => migrations.has(id)).length;
+    const savedIds = new Set(savedList.map(migrate));
     const byId = new Map(catalogue.map(row => [row.id, row]));
     const restored = [...savedIds].map(id => byId.get(id)).filter(Boolean);
-    selectionOrder = Array.isArray(saved?.selectionOrder) ? [...new Set(saved.selectionOrder.filter(id => savedIds.has(id)))] : [...savedIds];
-    if (restored.length) setSelection(restored, `${restored.length} questions restored from this browser session.`);
+    selectionOrder = Array.isArray(saved?.selectionOrder) ? [...new Set(saved.selectionOrder.map(migrate).filter(id => savedIds.has(id)))] : [...savedIds];
+    if (restored.length) setSelection(restored, `${restored.length} questions restored from this browser session.` +
+      (replaced ? ` ${replaced === 1 ? 'One duplicate question was' : `${replaced} duplicate questions were`} replaced by the same question from its original source.` : ''));
     else { persist(); status(`${catalogue.length.toLocaleString()} Edexcel-filtered worked questions available. Choose topics to begin.`); }
   } catch (error) {
     status(error.message || 'The paper builder could not start. Reload the page to retry.', true);

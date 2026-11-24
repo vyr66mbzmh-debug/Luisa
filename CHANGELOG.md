@@ -1,3 +1,11 @@
+## Luisa v0.77
+
+- Papers: 51 duplicate PMT questions removed from `pmt-catalogue.json`, `content/pmt/` and `resources/pmt/` (survivor: the official paper, else the earliest PMT question); chapter keys and skills carried to the survivor; `migrations` in `pmt-catalogue.json` maps each removed ID to its survivor for saved selections. Traceability in `docs/evidence/v077-duplicates-removed.json`.
+- No-duplicates rule: `scripts/duplicates.py` (candidates, check, incoming, remove) with decisions in `docs/evidence/duplicate-decisions.json`; `scripts/luisa.py check` fails on any copy, undecided candidate or stale migration; `scripts/import/pmt.py` and `scripts/import/integrate.py` refuse copies; the generator's copy safety net stays.
+- Papers: the PMT tickbox, its state key and its tests are removed; PMT rows are in the exam-style bank; a saved `pmt` key is ignored.
+- Mark scheme: a PMT question with a visually confirmed original exam (`originalExam`, 56 of 83) names it after its source; evidence in `docs/evidence/v077-pmt-original-exams.json`.
+- Tests: `tests/test_duplicates.py` (bank, importers, gate), PMT counts 83/58/25, the no-tickbox and migration browser test, live check that PMT questions are exam-style in every edition.
+
 ## Luisa v0.76
 
 - Papers: PMT Core Pure 2 topic-sheet questions (61, 558 marks) in `pmt-catalogue.json` and `content/pmt/`, imported by `scripts/import/pmt.py` (set `v076-pmt-cp2`) with source scheme crops, `markScheme: source`, difficulty with reason, skills and `duplicateOf`.

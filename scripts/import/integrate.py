@@ -4,12 +4,20 @@ Usage: python3 -I scripts/import/integrate.py --set <set> <paperId>
 Inputs from the set: papers.py (PAPERS, ORDER = metadata order of every paper, newest session first), maps.py
 (MAPS {pid: {n: (topic summary, skill ids, chapter keys or [])}}), marks.json {pid: [marks per question]} and
 qpends.json {pid: [last question-paper page per question]}. Difficulty follows the original paper order in thirds.
+
+PAP-077-2 (standing): before anything is written, the paper's payload is compared with the whole bank
+(scripts/duplicates.py). A question that copies an official question already in the bank (the same paper imported
+twice) stops the import; a question that copies a PMT question is imported and the PMT question is then removed with
+`scripts/duplicates.py remove`. Chapter keys and skill mappings a question gained from a removed duplicate are kept
+when the paper is integrated again.
 """
 import json
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import common  # noqa: E402
+import duplicates  # noqa: E402
 
 args = common.parser(__doc__).parse_args()
 SET = common.ImportSet(args)
@@ -42,6 +50,16 @@ for n in range(1, nq + 1):
                  'difficulty': level(n), 'topicSummary': summary, 'skillMappings': mappings, 'printable': True, 'contentStatus': 'checked',
                  'sourceQuestionPages': pages[n - 1], 'questionNumber': n, 'sourceLabel': f'Edexcel {SESSION} {P["code"]} Q{n}',
                  '_chapterKeys': [course + '/' + k for k in keys]})
+payload = json.loads((ROOT / f'content/exams/{PID}.json').read_text())
+duplicates.guard_import(payload['questions'], ROOT, PID)
+cat_path = ROOT / 'exam-catalogue.json'; cat = json.loads(cat_path.read_text())
+earlier = {q['id']: q for q in cat['questions'] if q.get('paperId') == PID}
+skill_key = lambda s: (s['courseId'], s['bookId'], s['topicId'], s['skillId'])
+for r in rows:  # keep what a removed duplicate added to this question (PAP-077-1)
+    old = earlier.get(r['id'])
+    if old:
+        r['skillMappings'] += [s for s in old['skillMappings'] if skill_key(s) not in {skill_key(x) for x in r['skillMappings']}]
+        r['_chapterKeys'] += [k for k in old['chapterKeys'] if k not in r['_chapterKeys']]
 source = {'questionPaperUrl': P['qpurl'], 'markSchemeUrl': P['msurl'], 'questionPaperSha256': P['qpsha'], 'markSchemeSha256': P['mssha'],
           'indexedQuestionPaperSha256': P['idxqp'], 'indexedMarkSchemeSha256': P['idxms'], 'basis': 'Owner-supplied original PDF attachment'}
 paper = {'id': PID, 'board': 'Edexcel', 'qualification': 'A level', 'paperCode': P['code'], 'title': P['title'], 'examDate': P['date'],
@@ -58,7 +76,6 @@ at = present.index(later[0]) if later else len(meta['papers'])
 meta['papers'].insert(at, paper)
 meta['questionCount'] = sum(p['questionCount'] for p in meta['papers']); meta['totalMarks'] = sum(p['totalMarks'] for p in meta['papers'])
 meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2) + '\n')
-cat_path = ROOT / 'exam-catalogue.json'; cat = json.loads(cat_path.read_text())
 cat['questions'] = [q for q in cat['questions'] if q.get('paperId') != PID]
 new = [dict({k: v for k, v in r.items() if k != '_chapterKeys'}, board='Edexcel', paperId=PID, paperCode=P['code'], examDate=P['date'],
             seriesDate=P['series'], session=SESSION, status='checked', dataPath=f'content/exams/{PID}.json', chapterKeys=r['_chapterKeys']) for r in rows]
