@@ -2,8 +2,9 @@
 import html
 import re
 from pathlib import Path
+from itertools import groupby
 
-from lib import eq, fig, m, mk, p, ul
+from lib import eq, fig, m, mk, p, table, ul
 
 def inline(text):
     fields = text.split('$')
@@ -18,24 +19,28 @@ def read_questions(path):
         number = int(heading)
         blocks = []
         figure_number = 0
-        for line in body.splitlines():
-            line = line.strip()
-            if not line:
+        lines = [line.strip() for line in body.splitlines() if line.strip()]
+        for is_table, group in groupby(lines, key=lambda line: line.startswith('|')):
+            if is_table:
+                cells = [[inline(cell.strip()) for cell in line.strip('|').split('|')]
+                         for line in group if not re.fullmatch(r'[ |:\-]+', line)]
+                blocks.append(table(cells, head=1))
                 continue
-            if line.startswith('@figure '):
-                width, alt = line.removeprefix('@figure ').split(' ', 1)
-                figure_number += 1
-                blocks.append(fig(number, int(width), alt, figure_number))
-            elif re.fullmatch(r'\[\d+\]', line):
-                blocks.append(p(mk(int(line[1:-1]))))
-            elif line.startswith('$$') and line.endswith('$$'):
-                blocks.append(eq(line[2:-2]))
-            elif line.startswith('• '):
-                blocks.append(ul([inline(line[2:])]))
-            else:
-                text, mark = re.fullmatch(r'(.*?)(?: \[(\d+)\])?', line).groups()
-                content = inline(text) + (' ' + mk(int(mark)) if mark else '')
-                blocks.append(p(content))
+            for line in group:
+                if line.startswith('@figure '):
+                    width, alt = line.removeprefix('@figure ').split(' ', 1)
+                    figure_number += 1
+                    blocks.append(fig(number, int(width), alt, figure_number))
+                elif re.fullmatch(r'\[\d+\]', line):
+                    blocks.append(p(mk(int(line[1:-1]))))
+                elif line.startswith('$$') and line.endswith('$$'):
+                    blocks.append(eq(line[2:-2]))
+                elif line.startswith('• '):
+                    blocks.append(ul([inline(line[2:])]))
+                else:
+                    text, mark = re.fullmatch(r'(.*?)(?: \[(\d+)\])?', line).groups()
+                    content = inline(text) + (' ' + mk(int(mark)) if mark else '')
+                    blocks.append(p(content))
         if number in questions:
             raise ValueError(f'Duplicate question {number}')
         questions[number] = ''.join(blocks)

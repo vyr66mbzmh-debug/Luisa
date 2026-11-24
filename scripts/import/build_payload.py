@@ -31,5 +31,7 @@ for n in range(1, P['nq'] + 1):
               'style="display:block;width:100%;height:auto;max-width:100%"></figure>') for r in rows]
     questions.append({'id': f'exam/{PID}/q{n}', 'question': mod.Q[n], 'steps': steps,
                       'contextHtml': mod.CONTEXT[n] if isinstance(mod.CONTEXT, dict) else mod.CONTEXT})
+    if note := P.get('schemeNotes', {}).get(str(n)):
+        questions[-1]['schemeNote'] = note
 (SET.repo / 'content/exams' / f'{PID}.json').write_text(json.dumps({'schemaVersion': 1, 'questions': questions}, ensure_ascii=False, indent=2) + '\n')
 print('wrote', PID, len(questions), 'questions,', sum(len(q['steps']) for q in questions), 'scheme images')

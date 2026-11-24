@@ -260,6 +260,7 @@
         question.append(questionHeading(doc, row, index + 1, false), normaliseMarks(content(doc, contextHtml + row.question)));
         const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); if (layout !== 'condensed') question.append(working);
         const solution = includeAnswers ? content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join('')) : null;
+        if (solution && row.schemeNote) solution.prepend(element(doc, 'p', 'exam-scheme-note', row.schemeNote));
         if (solution && row.sourceKind === 'madas') solution.querySelector('.madas-total').textContent = `Total mark for question ${index + 1} is ${row.marks} marks.`;
         if (includeAnswers && row.hints?.length) {
           const hints = element(doc, 'section', 'solution-hints');

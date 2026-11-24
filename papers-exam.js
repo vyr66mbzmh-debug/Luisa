@@ -152,6 +152,7 @@
       // The paired official (or source) scheme with all its continuations (PAP-074-2).
       const schemes = withScheme ? rows.map((row, index) => {
         const scheme = content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join(''));
+        if (scheme && row.schemeNote) scheme.prepend(element(doc, 'p', 'exam-scheme-note', row.schemeNote));
         if (row.sourceKind === 'madas') scheme.querySelector('.madas-total').textContent = `Total mark for question ${index + 1} is ${row.marks} marks.`;
         staging.append(scheme);
         return {row, scheme};
