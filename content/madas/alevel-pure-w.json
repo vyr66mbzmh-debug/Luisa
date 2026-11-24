@@ -1,0 +1,168 @@
+[
+  {
+    "id": "madas/alevel-pure-w/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q1-question-1.svg\" alt=\"Prove by first principles, and by using the small angle approximations for sin x and cos x , that d ( sec x ) = sec tan x x . ( ) 7 dx\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q1-solution-1.svg\" alt=\"Start with f′(x) = lim h→0[f(x + h) −f(x)]/h. For cos x̸ = 0, the difference quotient is sec(x + h) −sec x = cos x −cos(x + h) h h cos x cos(x + h) [B1] [M1] [A1] = cos x(1 −cos h) + sin x sin h . h cos x cos(x + h) The source uses cos A −cos B = −2 sin((A + B)/2) sin((A −B)/2). Substituting A = x, B = x + h gives −2 sin(x + h/2) sin(−h/2). The difference quotient is therefore sin(x + h/2) sin(h/2) . cos x cos(x + h) h/2\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q1-solution-2.svg\" alt=\"The handwritten small-angle step is sin(−h/2) = −h/2 + O(h3); dividing by h gives −1/2 + O(h2). The limits of the factors are sin x/ cos2 x and 1. Equivalently, using the expanded cosine above, as h →0 in radians, (1 −cos h)/h →0 from the quadratic approximation, and sin h/h →1. [M1] [A1] The limit is sin x/ cos2 x = sec x tan x . [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 7 marks.</p>"
+    ],
+    "promptText": "Prove by first principles, and by using the small angle approximations for sin x and cos x , that d ( sec x ) = sec tan x x . ( ) 7 dx"
+  },
+  {
+    "id": "madas/alevel-pure-w/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q2-question-1.svg\" alt=\"2 By considering ( 2 ) , or otherwise, prove that an irrational number raised to the power of an irrational number can be a rational number. ( ) 4\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q2-solution-1.svg\" alt=\"√ √ Let u = ( 2) 2. [M1] If u is rational, this itself is the required example: [A1] If u is irrational, then use √ √ the law (ab)c = abc: the exponent is 2 2 = 2. Thus √ √ 2 = ( u 2)2 , [A1] = 2 √ so u and 2 are irrational numbers producing a rational result . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 4 marks.</p>"
+    ],
+    "promptText": "2 By considering ( 2 ) , or otherwise, prove that an irrational number raised to the power of an irrational number can be a rational number. ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-w/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q3-question-1.svg\" alt=\"A curve has implicit equation 2 sin x y + 2cos2 y = ,   0 1 ≤ y ≤ 2 π . Determine the equations of the two straight lines, which are parallel to the y axis, and are tangents to the above curve. ( ) 9\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q3-solution-1.svg\" alt=\"The source differentiates 2x sin y + 2 cos 2y = 1 implicitly: 2 sin y + 2x cos y dy dx −4 sin 2y dy dx = 0 2 sin y = 4 sin 2y dy dx −2x cos y dy dx sin y = 2 sin 2y dy dx −x cos y dy dx sin y = (2 sin 2y −x cos y)dy dx dy sin y dx = 2 sin 2y −x cos y A vertical tangent requires a vanishing denominator: 2 sin 2y −x cos y = 0 4 sin y cos y −x cos y = 0\" style=\"--madas-width:457.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q3-solution-2.svg\" alt=\"cos y[4 sin y −x] = 0 If cos y = 0, substitution at y = π/2, 3π/2 gives 2x −2 = 1 or −2x −2 = 1. If x = 4 sin y, substitution gives 2(4 sin y) sin y + 2 cos 2y = 1 8 sin2 y + 2(1 −2 sin2 y) = 1 4 sin2 y = −1 sin2 y = −1 4 This second case has no real solution. The same points follow by differentiating x in y. On the curve, sin y̸ = 0. [B1] Using cos 2y = 1 −2 sin2 y [A1] gives x = 2 sin y −1/(2 sin y). [A1] A vertical tangent occurs at dx/dy = 0, and\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q3-solution-3.svg\" alt=\"dx 1   dy = cos y 2 + . [M1] [A1] 2 sin2 y The bracket is positive, so cos y = 0 [A1] at y = π/2, 3π/2. [A1] Substituting gives the two lines x = 3/2, x = −3/2 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 9 marks.</p>"
+    ],
+    "promptText": "A curve has implicit equation 2 sin x y + 2cos2 y = ,   0 1 ≤ y ≤ 2 π . Determine the equations of the two straight lines, which are parallel to the y axis, and are tangents to the above curve. ( ) 9"
+  },
+  {
+    "id": "madas/alevel-pure-w/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q4-question-1.svg\" alt=\"The radius r of a circle is changing so that dr 1 = . dt 2 r Show that the rate at which the area of the circle A changes satisfies the equation 3 dA 4 π = . ( ) 6 dt A\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q4-solution-1.svg\" alt=\"A = πr2, [B1] [A1] hence dA/dt = 2πr(1/r2) . [M1] [A1] = 2π/r Alternatively square the rate: (dA/dt)2 = 4π2/r2\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q4-solution-2.svg\" alt=\"= 4π3/(πr2) . = 4π3/A Since dr/dt &gt; 0, the area increases and the positive square root is required: Since the radius is positive, substitute r = p A/π [M1] to obtain q 4π3/A . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 6 marks.</p>"
+    ],
+    "promptText": "The radius r of a circle is changing so that dr 1 = . dt 2 r Show that the rate at which the area of the circle A changes satisfies the equation 3 dA 4 π = . ( ) 6 dt A"
+  },
+  {
+    "id": "madas/alevel-pure-w/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q5-question-1.svg\" alt=\"1 1 f x ( ) ≡ ( 1 8 − x ) 4 , x &lt; . 8 ( ) a) Find the first four terms in the binomial series expansion of f x . ( ) 3 The term of lowest degree in the series expansion of 5 2 ( 1 + ax )( 1 + bx ) − f x ( ) , 3 is the term in x . b) Determine the value of each of the constants a and b , and hence state the\" style=\"--madas-width:574.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q5-question-2.svg\" alt=\"3 coefficient of x . ( ) 7\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q5-solution-1.svg\" alt=\"4z + [(1/4)(−3/4)/2!]z2 + [(1/4)(−3/4)(−7/4)/3!]z3 + · · ·. (a) For exponent 1/4 substitute z = −8x in 1 + 1 The binomial series gives f(x) = 1 −2x −6x2 −28x3 + O(x4) . [M1] [M1] [A1] (b) The product has expansion 1 + ax + 5bx2 + 5abx3 + O(x4). [B1] [A1] Here (1 + bx2)5 = 1 + 5bx2 + O(x4), multiplied by 1 + ax. The difference has coefficients a + 2, 5b + 6, 5ab + 28 for x, x2, x3. Subtract f and set the coefficients of x, x2 to zero, giving a = −2, b = −6/5. [M1] [A1] The coefficient of x3 is 5ab + 28 = 40 . [M1] [M1] [A1]\" style=\"--madas-width:680.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 10 marks.</p>"
+    ],
+    "promptText": "1 1 f x ( ) ≡ ( 1 8 − x ) 4 , x < . 8 ( ) a) Find the first four terms in the binomial series expansion of f x . ( ) 3 The term of lowest degree in the series expansion of 5 2 ( 1 + ax )( 1 + bx ) − f x ( ) , 3 is the term in x . b) Determine the value of each of the constants a and b , and hence state the 3 coefficient of x . ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-w/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q6-question-1.svg\" alt=\"The points ( ) and ( ) A x y z , , B x , y z , are referred relative to a fixed origin O . 1 1 1 2 2 2   If the point P is such so that AP PB : = λ : µ , use vector algebra to show that  ( µ x + λ x ) i + ( µ y + λ y ) j + ( µ z + λ z ) k OP = 1 2 1 2 1 2 . ( ) 6 λ + µ\" style=\"--madas-width:588.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q6-solution-1.svg\" alt=\"Starting with a diagram: Let a = −→ OA and b = −−→ OB. [B1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q6-solution-2.svg\" alt=\"Internal division gives −→ AP = λ(b −a)/(λ + µ). [M1] [A1] Adding a yields −−→ OP = (µa + λb)/(λ + µ), [A1] since (λ + µ)a + λ(b −a) = µa + λb. Splitting into components gives µx1 + λx2 , µy1 + λy2 , µz1 + λz2  . [A1] λ + µ λ + µ λ + µ\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 6 marks.</p>"
+    ],
+    "promptText": "The points ( ) and ( ) A x y z , , B x , y z , are referred relative to a fixed origin O . 1 1 1 2 2 2   If the point P is such so that AP PB : = λ : µ , use vector algebra to show that  ( µ x + λ x ) i + ( µ y + λ y ) j + ( µ z + λ z ) k OP = 1 2 1 2 1 2 . ( ) 6 λ + µ"
+  },
+  {
+    "id": "madas/alevel-pure-w/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q7-question-1.svg\" alt=\"f x  has domain x∈ , 1 ( ) The function −≤ x ≤ 5 . It is further given that f ′ ( ) x &gt; 0 and f ′′ ( ) x &lt; 0 f x , which does not contain exponentials. Find a possible equation of ( ) ( ) 3\" style=\"--madas-width:596.1px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q7-solution-1.svg\" alt=\"The source starts from reciprocal powers, whose derivatives alternate in sign: On the positive half-line −1/x has first derivative 1/x2 &gt; 0, second derivative −2/x3 &lt; 0. Translating left two units avoids the pole on the required interval: f(x) = −1/(x + 2), f′(x) = 1/(x + 2)2 &gt; 0, f′′(x) = −2/(x + 2)3 &lt; 0, since 1 ≤x + 2 ≤7. A polynomial also works: For example f(x) = −(x −6)2 [M1] on [−1, 5]. Its first derivative is 2(6 −x) ≥2 &gt; 0, [A1] and its second derivative is −2 &lt; 0 . [A1]\" style=\"--madas-width:617.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 3 marks.</p>"
+    ],
+    "promptText": "f x  has domain x∈ , 1 ( ) The function −≤ x ≤ 5 . It is further given that f ′ ( ) x > 0 and f ′′ ( ) x < 0 f x , which does not contain exponentials. Find a possible equation of ( ) ( ) 3"
+  },
+  {
+    "id": "madas/alevel-pure-w/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q8-question-1.svg\" alt=\"A sequence 1 u , u , u , u , … is given by 2 3 4 ( ) u + = f n u , . n 1 n The first few terms of the sequence are 2, − 1, 5, − 4, 8, − 7,... Find an expression for u + , in the form u + = f n u ( , ) . ( ) 4 n 1 n 1 n\" style=\"--madas-width:593.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q8-solution-1.svg\" alt=\"The successive differences are −3, +6, −9, +12, −15. [B1] [A1] Successive substitutions give 2 −3 = −1, −1 + 6 = 5, 5 −9 = −4, −4 + 12 = 8, 8 −15 = −7. The differences have magnitude 3n and are negative for odd n, positive for even n. They fit 3n(−1)n, so one possible recurrence is un+1 = un + 3n(−1)n, u1 = 2 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 4 marks.</p>"
+    ],
+    "promptText": "A sequence 1 u , u , u , u , … is given by 2 3 4 ( ) u + = f n u , . n 1 n The first few terms of the sequence are 2, − 1, 5, − 4, 8, − 7,... Find an expression for u + , in the form u + = f n u ( , ) . ( ) 4 n 1 n 1 n"
+  },
+  {
+    "id": "madas/alevel-pure-w/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q9-question-1.svg\" alt=\"The functions f and g are defined as ∈ f x ( ) ≡ 3 x + a + b x , ∈ , g x ( ) ≡ 2 x + 5, x where a and b are positive constants. The graph of f meets the graph of g at the points P and Q . Given that the coordinates of P are ( 0,5 , find the coordinates of Q in terms of a . ) ( ) 7\" style=\"--madas-width:576.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q9-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:588.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q9-solution-1.svg\" alt=\"At x = 0, a + b = 5. [M1] Since a &gt; 0, |a| = a, so b = 5 −a. Setting |3x + a| + 5 −a = 2x + 5 gives the intersection equation becomes |3x + a| = 2x + a. [M1] When 3x + a ≥0 it gives x = 0. [A1] On the other branch, −3x −a = 2x + a, [A1] so x = −2a/5 &lt; −a/3 [A1] since a &gt; 0. [A1] The second branch gives 5x = −2a, hence x = −2a/5. The ordinate is 2x + 5, giving Q = (−2a/5, 5 −4a/5) . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 7 marks.</p>"
+    ],
+    "promptText": "The functions f and g are defined as ∈ f x ( ) ≡ 3 x + a + b x , ∈ , g x ( ) ≡ 2 x + 5, x where a and b are positive constants. The graph of f meets the graph of g at the points P and Q . Given that the coordinates of P are ( 0,5 , find the coordinates of Q in terms of a . ) ( ) 7 "
+  },
+  {
+    "id": "madas/alevel-pure-w/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q10-question-1.svg\" alt=\"Liquid is kept in containers, which due to evaporation and ongoing chemical reactions, at the end of each month the volume of the liquid in these containers reduces by 4% compared with the volume at the start of the same month. At the start of each month a new container is filled up with 200 litres of liquid, so that at the end of thirty months there are 30 containers with liquid. Calculate the total amount of liquid in the 30 containers at the end of 30 months. ( ) 7\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q10-solution-1.svg\" alt=\"Single container Start of month (litres) End of month (litres)\" style=\"--madas-width:566.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q10-solution-2.svg\" alt=\"1 200 200(0.96) 2 200(0.96) 200(0.96)2 200(0.96)2 200(0.96)3 3 200(0.96)3 200(0.96)4 4 200(0.96)k−1 200(0.96)k k The newest container has lost volume once: [B1] [A1] The oldest has lost volume thirty times: [M1] [A1] The volumes in reverse time order are 200(0.96), 200(0.96)2, . . . , 200(0.96)30. With first term 192, ratio 0.96, and 30 terms, use Sn = a(1 −rn)/(1 −r). The total is 30 (0.96)k = 192(1 −0.9630) X 200 1 −0.96 [M1] [M1] [A1] k=1 = 4800(1 −0.9630) ≈3389.48 litres .\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q10-solution-3.svg\" alt=\"To the nearest litre, the total is 3389 litres:\" style=\"--madas-width:280.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 7 marks.</p>"
+    ],
+    "promptText": "Liquid is kept in containers, which due to evaporation and ongoing chemical reactions, at the end of each month the volume of the liquid in these containers reduces by 4% compared with the volume at the start of the same month. At the start of each month a new container is filled up with 200 litres of liquid, so that at the end of thirty months there are 30 containers with liquid. Calculate the total amount of liquid in the 30 containers at the end of 30 months. ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-w/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q11-question-1.svg\" alt=\"The figure below shows the plan of three identical circular cylinders of radius 6 cm , that fit snugly inside a larger cylinder.\" style=\"--madas-width:549.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q11-question-2.svg\" alt=\"Show that the radius of the larger cylinder is  6 + 4 3 cm . ( ) 6\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q11-solution-1.svg\" alt=\"Start with a diagram:\" style=\"--madas-width:425.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q11-solution-2.svg\" alt=\"The small-cylinder centres are vertices of an equilateral triangle of side 12. [B1] [A1] Its circumradius is √ √ 3, [A1] from the 30◦-60◦-90◦triangles formed by its perpendicular bisectors: [A1] In the source 12/ 3 = 4 triangle 6 |AO| = cos 30◦ √ 6 3 |AO| = 2 √ 3|AO| = 12 √ 3|AO| = 12 3 √ |AO| = 4 3 Add the small radius 6 to obtain √ 6 + 4 3 cm . [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 6 marks.</p>"
+    ],
+    "promptText": "The figure below shows the plan of three identical circular cylinders of radius 6 cm , that fit snugly inside a larger cylinder. Show that the radius of the larger cylinder is  6 + 4 3 cm . ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-w/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q12-question-1.svg\" alt=\"The curve with equation xy = 3 is traced by the following parametric equations 4tp 4 ,   ,t p∈ , t x = + , y = + ≠ p t p t p where t and p are parameters. Find the relationship between t and p , giving the answer in the form p = f t ( ) . ( ) 6\" style=\"--madas-width:592.1px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q12-solution-1.svg\" alt=\"Multiplying x and y gives 16tp/(t + p)2 = 3. [B1] [A1] Clear the denominator and expand: 4tp 4 t + p × t + p = 3 16tp (t + p)2 = 3 16tp = 3(t + p)2 16tp = 3(t2 + 2tp + p2) 16tp = 3t2 + 6tp + 3p2 0 = 3t2 −10tp + 3p2 0 = (3t −p)(t −3p) The final row factors the quadratic: [M1] Hence p = 3t or p = t/3, t̸ = 0 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q12-solution-2.svg\" alt=\"Both relations meet the parameter restrictions for t̸ = 0. [A1]\" style=\"--madas-width:397.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 6 marks.</p>"
+    ],
+    "promptText": "The curve with equation xy = 3 is traced by the following parametric equations 4tp 4 ,   ,t p∈ , t x = + , y = + ≠ p t p t p where t and p are parameters. Find the relationship between t and p , giving the answer in the form p = f t ( ) . ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-w/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q13-question-1.svg\" alt=\"The diagram below shows a right angled triangle OBC where OC = x and the point A on OB so that OA = 8 , AB = 4 . The angles OAC , OBC and ACB are denoted by θ , ϕ and ψ respectively. B ϕ 4 A θ 8 ψ C O x\" style=\"--madas-width:561.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q13-question-2.svg\" alt=\"By considering a relationship between the angles θ , ϕ and ψ , show that 4 x tan ψ = . ( ) 7 2 96 + x\" style=\"--madas-width:598.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q13-solution-1.svg\" alt=\"Looking at the diagram:\" style=\"--madas-width:513.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q13-solution-2.svg\" alt=\"The exterior-angle theorem for ABC gives θ = ϕ + ψ. [B1] [A1] In detail the third interior angle is 180◦−θ, so ϕ + (180◦−θ) + ψ = 180◦gives ψ = θ −ϕ. Since tan θ = x/8 and tan ϕ = x/12, [M1] [A1] tan ψ = tan θ −tan ϕ 1 + tan θ tan ϕ = x/8 −x/12 1 + x2/96 [M1] [M1] [A1] = 12x −8x 96 + x2 4x = 96 + x2 .\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 7 marks.</p>"
+    ],
+    "promptText": "The diagram below shows a right angled triangle OBC where OC = x and the point A on OB so that OA = 8 , AB = 4 . The angles OAC , OBC and ACB are denoted by θ , ϕ and ψ respectively. B ϕ 4 A θ 8 ψ C O x By considering a relationship between the angles θ , ϕ and ψ , show that 4 x tan ψ = . ( ) 7 2 96 + x"
+  },
+  {
+    "id": "madas/alevel-pure-w/q14",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q14-question-1.svg\" alt=\"The curve C has equation x + 1 x + 1 y = 4 8 × − 2 . Show that an equation of the tangent to the curve, at the point where C crosses the x axis is given by y = ( x + 2 ln2 ) . ( ) 7\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q14-solution-1.svg\" alt=\"The direct method differentiates to give y′ = 4 · 8x+1 ln 8 −2x+1 ln 2. At a zero, 32 · 8x = 2 · 2x, so 4x = 1/16 = 4−2 . Then the gradient is (1/2) ln 8 −(1/2) ln 2 = (1/2) ln 4 . = ln 2 Equivalently, set u = 2x+1. [M1] [A1] Then 4 · 8x+1 = 4u3, [A1] so the zero of 4u3 −u, with u &gt; 0, is u = 1/2, [A1] or x = −2. [A1] Since u′ = u ln 2, the gradient there is (12u2 −1)u ln 2 = ln 2. [A1] Through (−2, 0) this gives y = (x + 2) ln 2 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 14 is 7 marks.</p>"
+    ],
+    "promptText": "The curve C has equation x + 1 x + 1 y = 4 8 × − 2 . Show that an equation of the tangent to the curve, at the point where C crosses the x axis is given by y = ( x + 2 ln2 ) . ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-w/q15",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q15-question-1.svg\" alt=\"It is given that 2 1 − x 2 u = , x ≠± . 1 2 ( 1 − x ) a) Show clearly that … 2 u − 1 i. … x = . ( ) 3 2 u + 1 2 4 u 2 ( ) 3 ii. … 1 − x = 2 2 ( u + 1 )\" style=\"--madas-width:574.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q15-question-2.svg\" alt=\"dx 4 u iii. … = . ( ) 3 2 du ( 2 ) u + 1 b) Hence show further that  3 2 1 − x dx = + constant . ( ) 9 − x − + x ( x + ) − x 2 − ( − x 2 ) 1 3 1 4 5 1 3 1\" style=\"--madas-width:590.8px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q15-solution-1.svg\" alt=\"(i) Since u2 = (1 + x)/(1 −x), clearing the denominator gives (a) u2 −xu2 = 1 + x, u2 −1 = x(u2 + 1). Thus solving for x gives (u2 −1)/(u2 + 1) . [M1] [M1] [A1] (ii) Subtract the square numerators: (u4 + 2u2 + 1) −(u4 −2u2 + 1) = 4u2. Thus 1 −x2 = 1 −(u2 −1)2/(u2 + 1)2 = 4u2/(u2 + 1)2 . [M1] [M1] [A1] (iii) Differentiating x = 1 −2/(u2 + 1) [M1] [A1] gives dx/du = 4u/(u2 + 1)2 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q15-solution-2.svg\" alt=\"(b) With u &gt; 0, 1 −x2 = 2u/(u2 + 1) p [B1] [A1] and 4x + 5 = (9u2 + 1)/(u2 + 1). [A1] Before cancelling, the transformed integrand is 12u/{(9u2 + 1)2u −12u2}. Divide top and bottom by 2u. Substitution gives Z 6 Z 6 2 9u2 −6u + 1 du = (3u −1)2 du = 1 −3u + C. [M1] [A1] 2√1 −x Replace u by √1 + x/√1 −x [A1] to obtain √1 −x −3√1 + x + C, multiplying numerator and denominator by √1 −x. [A1] The antiderivative is valid on either side of the interior singularity x = −4/5, [A1] with separate constants: [M1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 15 is 18 marks.</p>"
+    ],
+    "promptText": "It is given that 2 1 − x 2 u = , x ≠± . 1 2 ( 1 − x ) a) Show clearly that … 2 u − 1 i. … x = . ( ) 3 2 u + 1 2 4 u 2 ( ) 3 ii. … 1 − x = 2 2 ( u + 1 ) dx 4 u iii. … = . ( ) 3 2 du ( 2 ) u + 1 b) Hence show further that  3 2 1 − x dx = + constant . ( ) 9 − x − + x ( x + ) − x 2 − ( − x 2 ) 1 3 1 4 5 1 3 1"
+  },
+  {
+    "id": "madas/alevel-pure-w/q16",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q16-question-1.svg\" alt=\"Solve the differential equation 2 d y dy + 2 = , 1 2 dx dx dy 1 given that y = − and dx =  at 1 x = 0 , giving the  answer in the form y = f x ( ) . ( 10 ) 4\" style=\"--madas-width:590.8px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q16-solution-1.svg\" alt=\"Put z = y′. [B1] [A1] Then z′ + 2z = 1, [A1] so 2)′ = −2(z −1 (z −1 2). [A1] Separation and integration give dz dz dx = 1 −2z, 1 −2z = dx, dz Z Z −1 1 −2z = dx, 2 ln |1 −2z| = x + C1, |1 −2z| = eC2e−2x. ln |1 −2z| = −2x + C2, Allowing for the sign, 1 −2z = C3e−2x, so 2z = 1 −C3e−2x. Rename the coefficient to obtain z = 1 2 + C4e−2x. Since z(0) = 1, 1 = 1 2 + C4, hence C4 = 1 2 and\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q16-solution-2.svg\" alt=\"z = 1 2 + 1 2e−2x. [A1] 4e0 + C, Integrating gives y = x/2 −e−2x/4 + C. [M1] From y(0) = −1/4 [A1] substitution gives −1 4 = 0 −1 hence C = 0, [A1] hence y = x/2 −e−2x/4 . [M1] [A1]\" style=\"--madas-width:680.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 16 is 10 marks.</p>"
+    ],
+    "promptText": "Solve the differential equation 2 d y dy + 2 = , 1 2 dx dx dy 1 given that y = − and dx =  at 1 x = 0 , giving the  answer in the form y = f x ( ) . ( 10 ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-w/q17",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q17-question-1.svg\" alt=\"y = x y B y = x + cos x x O A\" style=\"--madas-width:513.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q17-question-2.svg\" alt=\"The figure above shows the graph of the curve C with equation y = x + cos x , x∈ and the straight line L with equation y = x , x∈ . ( ) 8 Show that the area of the finite region bounded by C and L is 2 square units.\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q17-solution-1.svg\" alt=\"The labelled intersections satisfy cos x = 0 [B1] [A1] at x = −π/2, π/2. [M1] [A1] The curve lies above the line on that interval. [M1] [A1] By symmetry the integral of the difference is Z π/2 2 cos x dx = 2 sin(π/2) −2 sin 0 = 2. 0\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-w/q17-solution-2.svg\" alt=\"The source also translates both graphs upwards by π/2. R (x + cos x + π/2) dx = 0 + 2 + π2/2 using these Over [−π/2, π/2] the area under the translated curve is bounds: The translated line forms a triangle of base and height π, area π2/2. Their difference is again 2. Thus the shaded area is Z π/2 [(x + cos x) −x] dx = [sin x]π/2 −π/2 = 2 . [M1] [A1] −π/2\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 17 is 8 marks.</p>"
+    ],
+    "promptText": "y = x y B y = x + cos x x O A The figure above shows the graph of the curve C with equation y = x + cos x , x∈ and the straight line L with equation y = x , x∈ . ( ) 8 Show that the area of the finite region bounded by C and L is 2 square units."
+  }
+]

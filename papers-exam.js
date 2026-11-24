@@ -19,13 +19,13 @@
   const extraMinutes = minutes => Math.round(minutes * 0.25);
   const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
   // PAP-074-2: only questions with an official (or equivalent source) mark scheme may go in an exam paper.
-  const hasMarkScheme = row => row.markScheme === 'official' || row.markScheme === 'source';
+  const hasMarkScheme = row => row.markScheme === 'official' || row.markScheme === 'source' || (row.sourceKind === 'madas' && row.markScheme === 'worked');
   // PAP-074-3 / PAP-075: a question page names no source. A context block keeps its content but loses its source label
   // (for example "Reference from 9.5 Q1"), whatever source the row comes from.
   const withoutSourceLabels = node => { node.querySelectorAll('.practice-context-label').forEach(label => label.remove()); return node; };
   // PAP-074-3: the scheme section names each question's exact source and bank ID; question pages never do.
   // PAP-077-5: a PMT question whose original exam was confirmed by sight names that exam in the scheme only.
-  const schemeSource = row => `${print.sourceLabel(row)}${row.originalExam ? ` · Original: ${row.originalExam}` : ''} · ID ${row.id}`;
+  const schemeSource = row => `${print.sourceLabel(row)}${row.sourceKind === 'madas' ? ' · Adapted mark scheme · editorial mark allocations' : ''}${row.originalExam ? ` · Original: ${row.originalExam}` : ''} · ID ${row.id}`;
   const monthYear = (date = new Date()) => date.toLocaleDateString('en-GB', {month: 'long', year: 'numeric'});
   // PAP-067-8: today in the teacher's local date (Europe/London), template style "Sunday 22nd November".
   function todayLabel(date = new Date()) {
@@ -149,8 +149,9 @@
       }) : [];
       if (withQuestions) staging.append(front);
       // The paired official (or source) scheme with all its continuations (PAP-074-2).
-      const schemes = withScheme ? rows.map(row => {
+      const schemes = withScheme ? rows.map((row, index) => {
         const scheme = content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join(''));
+        if (row.sourceKind === 'madas') scheme.querySelector('.madas-total').textContent = `Total mark for question ${index + 1} is ${row.marks} marks.`;
         staging.append(scheme);
         return {row, scheme};
       }) : [];
@@ -317,7 +318,7 @@
 
   // ---- PAP-066-1 and PAP-066-5: timed selection and difficulty order (exam paper only) ----
   const LABELS = ['easy', 'medium', 'difficult'];
-  const bandOf = row => LABELS.includes(row.difficulty) ? row.difficulty : 'unrated';
+  const bandOf = row => row.difficulty === 'standard' ? 'medium' : ['hard', 'very-hard'].includes(row.difficulty) ? 'difficult' : LABELS.includes(row.difficulty) ? row.difficulty : 'unrated';
   const topicOf = row => row.paperId ? `${row.paperId}:${(row.chapterKeys || [])[0] || ''}` : (row.chapterKeys || [])[0] || row.chapterId || row.skillId || row.bookId || row.id;
   const markedRows = rows => rows.filter(row => Number.isInteger(row.marks) && row.marks > 0);
   // Mark totals whose paper time is within ±2 minutes of the target, nearest first.
@@ -490,11 +491,16 @@
   $('papers-exam-date').value = dateEdited ? saved.date ?? '' : todayLabel();
   $('papers-exam-instructions').value = saved.instructions ?? defaultInstructions;
   $('papers-exam-minutes').value = saved.targetMinutes ?? '60';
+  const madas = $('papers-exam-madas');
+  madas.checked = saved.includeMadas === true;
+  const examPool = () => builder.withoutDuplicateCopies(builder.pool(madas.checked));
+  const examSelection = () => builder.snapshot().filter(row => madas.checked || row.sourceKind !== 'madas');
   const contentInputs = [...document.querySelectorAll('input[name="papers-exam-content"]')];
   const chosenContent = () => contentInputs.find(input => input.checked)?.value || 'questions';
   if (CONTENTS.includes(saved.printContent)) contentInputs.forEach(input => { input.checked = input.value === saved.printContent; });
   function save() {
     const state = Object.fromEntries(Object.entries(fields).map(([key, id]) => [key, $(id).value]));
+    state.includeMadas = madas.checked;
     state.printContent = chosenContent();
     state.dateEdited = dateEdited;
     try { sessionStorage.setItem(storageKey, JSON.stringify(state)); } catch (_) { /* Optional convenience only. */ }
@@ -508,23 +514,27 @@
       ? `Target ${minutes} minutes (+${extraMinutes(minutes)} minutes extra time): about ${Math.ceil(minutes * 5 / 6)} marks, within ±${TOLERANCE} minutes.` : 'Enter a whole number of minutes.';
   }
   function refresh() {
-    const rows = builder.snapshot();
+    const rows = examSelection();
     const totals = paperTotals(rows), busy = builder.busy();
-    const eligible = builder.pool().filter(hasMarkScheme).length;
+    const candidates = examPool();
+    const eligible = candidates.filter(hasMarkScheme).length;
+    madas.disabled = busy;
     $('papers-exam-print').disabled = busy || !rows.length || Boolean(totals.unknown.length) || Boolean(totals.noScheme.length);
     $('papers-exam-generate').disabled = busy || !eligible;
-    const total = builder.pool().length;
-    $('papers-exam-eligible').textContent = `${eligible.toLocaleString()} of ${total.toLocaleString()} question${total === 1 ? '' : 's'} in the chosen sources and topics ${eligible === 1 ? 'has' : 'have'} an official mark scheme and can go in an exam paper.`;
+    const total = candidates.length;
+    $('papers-exam-eligible').textContent = `${eligible.toLocaleString()} of ${total.toLocaleString()} question${total === 1 ? '' : 's'} in the chosen sources and topics ${eligible === 1 ? 'has' : 'have'} ${madas.checked ? 'an eligible mark scheme (including MADAS editorial marks)' : 'an official mark scheme'} and can go in an exam paper.`;
     $('papers-exam-order').disabled = busy || rows.length < 2 || Boolean(totals.unknown.length);
     $('papers-exam-summary').textContent = !rows.length ? 'Select questions to build an exam paper.'
       : totals.noScheme.length ? `${plural(totals.noScheme.length, 'selected question')} without an official mark scheme cannot go in an exam paper. Remove ${totals.noScheme.length === 1 ? 'it' : 'them'} or generate a timed paper.`
       : totals.unknown.length ? `${plural(totals.unknown.length, 'selected question')} without known marks cannot go in an exam paper.`
       : `${plural(rows.length, 'question')} · ${totals.marks} marks · Time: ${totals.minutes} minutes (+${totals.extra} minutes extra time)`;
+    const excludedMadas = builder.snapshot().length - rows.length;
+    if (excludedMadas) $('papers-exam-summary').textContent += ` Select “Include MADAS questions” to add ${excludedMadas === 1 ? 'the selected MADAS question' : 'the ' + excludedMadas + ' selected MADAS questions'}.`;
     const problems = totals.unknown.length ? [] : orderProblems(rows);
     const warning = $('papers-exam-order-warning');
     warning.hidden = !problems.length;
     warning.textContent = problems.length ? `This order does not follow the exam difficulty order (easy first 20% of marks, difficult last 20%). ${problems.join(' ')}` : '';
-    decorate(rows);
+    decorate(builder.snapshot());
   }
   // Manual reordering: Move up/down on each selected question (teacher editions only).
   function decorate(rows) {
@@ -552,25 +562,27 @@
     builder.arrange(rows, `Question moved to position ${to + 1}. Order is now As selected.`);
   });
   for (const id of Object.values(fields)) $(id).addEventListener('input', () => { save(); if (id === fields.targetMinutes) targetPreview(); });
+  madas.addEventListener('change', () => { proposal = null; accept.hidden = true; save(); refresh(); });
   contentInputs.forEach(input => input.addEventListener('change', save));
   $('papers-exam-date').addEventListener('input', () => { dateEdited = true; save(); });
   document.querySelectorAll('[data-exam-preset]').forEach(button => button.addEventListener('click', () => {
     $('papers-exam-minutes').value = button.dataset.examPreset; save(); targetPreview();
   }));
   $('papers-exam-order').addEventListener('click', () => {
-    const rows = orderByBands(builder.snapshot());
+    const orderedExam = orderByBands(examSelection())[Symbol.iterator]();
+    const rows = builder.snapshot().map(row => row.sourceKind === 'madas' && !madas.checked ? row : orderedExam.next().value);
     builder.arrange(rows, 'Questions ordered for the exam: easy questions first, a varied mix in the middle and difficult questions last.');
   });
   $('papers-exam-generate').addEventListener('click', async () => {
     const minutes = Number($('papers-exam-minutes').value);
     if (!Number.isInteger(minutes) || minutes < 2 || minutes > 600) { showReport('Choose a whole number of minutes from 2 to 600.', true); $('papers-exam-minutes').focus(); return; }
     proposal = null; accept.hidden = true; showReport('Loading the questions in the chosen topics…');
-    const signature = () => builder.pool().map(row => row.id).join('|');
+    const signature = () => examPool().map(row => row.id).join('|');
     try {
       const work = await builder.exclusive(async () => {
         const before = signature();
         // Only questions with an official mark scheme (PAP-074-2); questions without marks are excluded as before.
-        const descriptors = builder.withoutDuplicateCopies(builder.pool()).filter(hasMarkScheme);
+        const descriptors = examPool().filter(hasMarkScheme);
         const pool = await builder.load(descriptors, count => showReport(`Loading the questions in the chosen topics… ${count} of ${descriptors.length}`));
         if (signature() !== before) return {stale: true};
         return {plan: planTimedPaper(pool, minutes), failed: pool.failed};
@@ -601,7 +613,7 @@
   });
   document.addEventListener('luisa-papers-state', refresh);
   $('papers-exam-print').addEventListener('click', () => builder.run(async () => {
-    const rows = builder.snapshot();
+    const rows = examSelection();
     const choice = chosenContent();
     builder.status(choice === 'scheme' ? 'Preparing the mark scheme…' : 'Preparing the exam paper…');
     try {

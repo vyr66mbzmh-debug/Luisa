@@ -7,7 +7,7 @@
   const mathMacros = {"\\p":"\\mathrm P(#1)",'\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
   const catalogue = [], rows = new Map(), contentCache = new Map();
   // PAP-077-3: there is no separate PMT source; PMT questions are exam-style questions.
-  const sources = ['practice', 'exam-style', 'past-papers'];
+  const sources = ['practice', 'exam-style', 'madas', 'past-papers'];
   const chapters = new Map(), books = new Map(), papers = new Map();
   let textbook;
   let selectionOrder = [];
@@ -28,7 +28,7 @@
       window.katex.render(node.dataset.math, node, {displayMode: node.dataset.display === 'true', throwOnError: true, strict: 'error', macros: {...mathMacros}});
     }
   }
-  const sourceLabel = row => ['past-exam', 'pmt'].includes(row.sourceKind) ? `Source: ${row.sourceLabel.replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
+  const sourceLabel = row => ['past-exam', 'pmt', 'madas'].includes(row.sourceKind) ? `Source: ${row.sourceLabel.replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const contextLabel = row => `${row.courseTitle} · ${row.bookTitle} · ${row.topicTitle}`;
@@ -45,10 +45,10 @@
       }));
     } catch (_) { $('papers-selection-note').textContent = 'Your selection is held on this page. Browser session storage is unavailable.'; }
   }
-  function sourceMatches(row) {
+  function sourceMatches(row, includeMadas) {
     const difficulty = $('papers-difficulty').value;
     const paper = $('papers-past-paper').disabled ? '' : $('papers-past-paper').value;
-    return $('papers-source-' + row.bank).checked &&
+    return (row.bank === 'madas' && includeMadas !== undefined ? includeMadas : $('papers-source-' + row.bank).checked) &&
       (!difficulty || (row.difficulty || 'unclassified') === difficulty) &&
       (row.bank !== 'past-papers' || !paper || row.paperId === paper);
   }
@@ -59,8 +59,8 @@
   function matchingChapters(row) {
     return row.chapterKeys.filter(key => inHierarchy(chapters.get(key)) && (!chosenTopics.size || chosenTopics.has(key)));
   }
-  function pool() {
-    return catalogue.filter(row => sourceMatches(row) && matchingChapters(row).length);
+  function pool(includeMadas) {
+    return catalogue.filter(row => sourceMatches(row, includeMadas) && matchingChapters(row).length);
   }
   function options(id, label, choices, wanted = '') {
     const select = $(id);
@@ -137,7 +137,13 @@
   // holds no copies, so this removes nothing and the "skips N copies" note does not appear.
   function withoutDuplicateCopies(rows) {
     const ids = new Set(rows.map(row => row.id));
-    return rows.filter(row => !(row.duplicateOf && ids.has(row.duplicateOf)));
+    const seen = new Set();
+    return rows.filter(row => {
+      const key = row.canonicalId || row.id;
+      if (seen.has(key) || (row.duplicateOf && ids.has(row.duplicateOf))) return false;
+      seen.add(key);
+      return true;
+    });
   }
   function duplicateNote() {
     const ids = new Set(selected.map(row => row.id));
@@ -169,7 +175,7 @@
       try { return await task(); } finally { printing = false; updateControls(); }
     },
     // PAP-066: the timed exam generator draws from exactly the generator's pool.
-    pool: () => pool(),
+    pool: includeMadas => pool(includeMadas),
     withoutDuplicateCopies,
     // Runs a task with the builder locked (generate, add/remove and print disabled), even
     // when nothing is selected yet. Returns undefined when the builder is already busy.
@@ -249,7 +255,7 @@
   async function loadRow(descriptor, signal) {
     if (rows.has(descriptor.id)) return rows.get(descriptor.id);
     if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
-    const practice = ['practice-booklet', 'past-exam', 'pmt'].includes(descriptor.sourceKind);
+    const practice = ['practice-booklet', 'past-exam', 'pmt', 'madas'].includes(descriptor.sourceKind);
     const dataPath = practice ? descriptor.dataPath : `content/${encodeURIComponent(descriptor.skillId)}.json`;
     let content = contentCache.get(dataPath);
     if (!content) {
@@ -269,11 +275,11 @@
       throw new Error(`${sourceLabel(descriptor)} has incomplete content. Your previous paper has been kept.`);
     }
     const marks = descriptor.sourceKind === 'practice-booklet' ? practiceMarks(question.question) : descriptor.marks;
-    const row = Object.freeze({...descriptor, marks, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: ['past-exam', 'pmt'].includes(descriptor.sourceKind) ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
+    const row = Object.freeze({...descriptor, marks, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: ['past-exam', 'pmt', 'madas'].includes(descriptor.sourceKind) ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
     rows.set(row.id, row); return row;
   }
   function questionMetadata(row) {
-    return [Number.isInteger(row.marks) && row.marks > 0 ? `${row.marks} marks` : '', row.difficulty ? `${row.difficulty[0].toUpperCase()}${row.difficulty.slice(1)} · difficulty guide` : ''].filter(Boolean).join(' · ');
+    return [Number.isInteger(row.marks) && row.marks > 0 ? `${row.marks} marks` : '', row.difficulty ? `${(row.difficulty === 'very-hard' ? 'Very Hard' : row.difficulty[0].toUpperCase() + row.difficulty.slice(1))} · difficulty guide` : ''].filter(Boolean).join(' · ');
   }
   function fillPreview(container, row) {
     container.innerHTML = (row.contextHtml || '') + row.question;
@@ -313,7 +319,7 @@
       const li = element('li', undefined, 'selected-item');
       const details = document.createElement('details');
       const summary = element('summary', sourceLabel(row));
-      summary.append(element('small', `${contextLabel(row)} · ${row.skillTitle}`));
+      if (row.sourceKind !== 'madas') summary.append(element('small', `${contextLabel(row)} · ${row.skillTitle}`));
       summary.append(element('small', questionMetadata(row), 'question-meta'));
       const preview = element('div', undefined, 'math-content selected-preview');
       details.append(summary, preview);
@@ -384,7 +390,8 @@
       if (browseOperation !== controller) return;
       if (loaded.length) target.replaceChildren(...loaded.map(row => {
         const card = element('article', undefined, 'question-card');
-        card.append(element('h3', sourceLabel(row), 'source-label'), element('p', `${contextLabel(row)} · ${row.skillTitle}`, 'question-context'));
+        card.append(element('h3', sourceLabel(row), 'source-label'));
+        if (row.sourceKind !== 'madas') card.append(element('p', `${contextLabel(row)} · ${row.skillTitle}`, 'question-context'));
         card.append(element('p', questionMetadata(row), 'question-meta'));
         const preview = element('div', undefined, 'math-content'); fillPreview(preview, row);
         const add = element('button', 'Add to paper'); add.type = 'button'; add.dataset.add = row.id;
@@ -484,6 +491,17 @@
       add({...q, sourceKind: 'pmt', bank: 'exam-style', courseTitle: chapter.courseTitle,
         bookTitle: chapter.bookTitle, topicTitle: chapter.title, skillTitle: q.topicSummary || ''}, q.chapterKeys);
     }
+    const madasResponse = await fetch(new URL('madas-catalogue.json', document.baseURI));
+    if (!madasResponse.ok) throw Error('The MADAS catalogue could not be loaded.');
+    const madas = await madasResponse.json();
+    if (madas.version !== 1 || !Array.isArray(madas.questions)) throw Error('Invalid MADAS catalogue.');
+    for (const q of madas.questions.flatMap(primary => [primary, ...(primary.editions || []).map(edition => ({...edition, canonicalId: primary.id}))])) {
+      const chapter = chapters.get(q.chapterKeys?.[0]);
+      if (!chapter || !q.id.startsWith('madas/') || !/^content\/madas\/[a-z-]+\.json$/.test(q.dataPath) ||
+          !Number.isInteger(q.marks) || q.marks < 1 || !['standard', 'hard', 'very-hard'].includes(q.difficulty)) throw Error('Invalid MADAS question: ' + q.id);
+      add({...q, sourceKind: 'madas', bank: 'madas', courseTitle: chapter.courseTitle, bookTitle: chapter.bookTitle,
+        topicTitle: chapter.title, skillTitle: q.topicSummary}, q.chapterKeys);
+    }
     // A copy may point at a past-paper question or at another PMT question; both must exist once everything is loaded.
     for (const q of pmtCatalogue.questions) if (q.duplicateOf && !ids.has(q.duplicateOf)) throw Error('A PMT question is marked as a copy of a missing question.');
     // PAP-077-1: a removed duplicate maps to the question kept in its place (an official past paper or the earlier PMT question).
@@ -494,7 +512,7 @@
     for (const source of sources) {
       // A version-2 session had one 'exam' box for exam-style and past papers. A saved 'pmt' box (v0.75-v0.76) is ignored (PAP-077-3).
       const key = saved?.version === 2 && ['exam-style', 'past-papers'].includes(source) ? 'exam' : source;
-      $('papers-source-' + source).checked = saved?.sources?.[key] ?? true;
+      $('papers-source-' + source).checked = saved?.sources?.[key] ?? (source !== 'madas');
     }
     paperChoices = [...papers].sort(([,a],[,b]) => b.date.localeCompare(a.date) || a.code.localeCompare(b.code))
       .map(([id, paper]) => {
@@ -504,7 +522,7 @@
         const qualification = paper.code.startsWith('9FM') ? 'Further Maths' : 'Maths';
         return [id, paper.session + ' Paper ' + number + ' (' + qualification + ' · ' + paper.code + ')'];
       });
-    if (['easy','medium','difficult','unclassified'].includes(saved?.difficulty)) $('papers-difficulty').value = saved.difficulty;
+    if (['easy','medium','difficult','standard','hard','very-hard','unclassified'].includes(saved?.difficulty)) $('papers-difficulty').value = saved.difficulty;
     $('papers-condensed').checked = saved?.layout === 'condensed';
     if (typeof saved?.includeAnswers === 'boolean') $('papers-answers').checked = saved.includeAnswers;
     options('papers-course', 'All courses', textbook.courses.map(c => [c.id, c.title]), saved?.course);
@@ -552,7 +570,7 @@
     $('papers-questions').addEventListener('click', event => {
       const button = event.target.closest('[data-add]'); if (!button || operation || printing) return;
       const row = rows.get(button.dataset.add); if (!row) return;
-      if (selected.some(q => q.id === row.id)) selected = selected.filter(q => q.id !== row.id); else selected = [...selected, row];
+      if (selected.some(q => q.id === row.id)) selected = selected.filter(q => q.id !== row.id); else selected = [...selected.filter(q => (q.canonicalId || q.id) !== (row.canonicalId || row.id)), row];
       updateSelection(); status(`${selected.length} questions selected.`);
     });
     $('papers-selected').addEventListener('click', event => {
@@ -588,7 +606,7 @@
     selectionOrder = Array.isArray(saved?.selectionOrder) ? [...new Set(saved.selectionOrder.map(migrate).filter(id => savedIds.has(id)))] : [...savedIds];
     if (restored.length) setSelection(restored, `${restored.length} questions restored from this browser session.` +
       (replaced ? ` ${replaced === 1 ? 'One duplicate question was' : `${replaced} duplicate questions were`} replaced by the same question from its original source.` : ''));
-    else { persist(); status(`${catalogue.length.toLocaleString()} Edexcel-filtered worked questions available. Choose topics to begin.`); }
+    else { persist(); status(`${withoutDuplicateCopies(catalogue).length.toLocaleString()} Edexcel-filtered worked questions available. Choose topics to begin.`); }
   } catch (error) {
     status(error.message || 'The paper builder could not start. Reload the page to retry.', true);
     for (const id of ['papers-generate', 'papers-regenerate', 'papers-print', 'papers-browse']) $(id).disabled = true;

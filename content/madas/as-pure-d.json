@@ -1,0 +1,134 @@
+[
+  {
+    "id": "madas/as-pure-d/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q1-question-1.svg\" alt=\"a) Evaluate the following indicial expression, giving the final answers as an exact simplified fraction. 5 1 4 4 8 − 3 . × 2 + The answer to this part of the question must be fully supported by a detailed method, justifying each step in the evaluation. 3 ( ) b) Simplify fully the following expression 4 2 pq 2 5 p q 6 . 3 × ( ) ( )\" style=\"--madas-width:544.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q1-solution-1.svg\" alt=\"(a) Use the definitions of fractional powers: 1 4 × 45/2 + 8−1/3 = 4(41/2)5 + [M1] 81/3 √ 4)5 + 1 = 4( 3√ 8 = 4 × 25 + 1 2 = 4 × 32 + 1 [A1] 2 = 128 + 1 2 = 256+1 257 [A1] = . 2 2 (b) Switch to indices: (2𝑝𝑞2)4 × 5𝑝√𝑞6 = 16𝑝4𝑞8 × 5𝑝(𝑞6)1/2 [M1]\" style=\"--madas-width:557.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q1-solution-2.svg\" alt=\"= 16𝑝4𝑞8 × 5𝑝|𝑞|3 [A1] = 80𝑝5|𝑞|11 . [A1] For non-negative 𝑞, this is the manuscript’s 80𝑝5𝑞11. The printed question gives no sign restriction, and the principal square root of 𝑞6 is |𝑞|3.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 6 marks.</p>"
+    ],
+    "promptText": "a) Evaluate the following indicial expression, giving the final answers as an exact simplified fraction. 5 1 4 4 8 − 3 . × 2 + The answer to this part of the question must be fully supported by a detailed method, justifying each step in the evaluation. 3 ( ) b) Simplify fully the following expression 4 2 pq 2 5 p q 6 . 3 × ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q2-question-1.svg\" alt=\"Show that the quadratic equation 2 k 1 x 2 kx k 1 ( + ) + + = has two distinct real roots for all real values of the constant k , except for one value which must be stated. 5 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q2-solution-1.svg\" alt=\"Obtain an expression for the discriminant: (𝑘+ 1)𝑥2 + 2𝑘𝑥+ 𝑘= 1 (𝑘+ 1)𝑥2 + 2𝑘𝑥+ (𝑘−1) = 0. The coefficients are 𝑎= 𝑘+ 1, 𝑏= 2𝑘, 𝑐= 𝑘−1. [B1] 𝑏2 −4𝑎𝑐= (2𝑘)2 −4(𝑘+ 1)(𝑘−1) [M1] = 4𝑘2 −4(𝑘2 −1) = 4𝑘2 −4𝑘2 + 4 [A1] = 4 &gt; 0. There are two distinct real roots whenever the equation is quadratic, hence for 𝑘≠−1 . [A1] At 𝑘= −1 it reduces to −2𝑥−2 = 0, so there is just one root, 𝑥= −1. [B1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 5 marks.</p>"
+    ],
+    "promptText": "Show that the quadratic equation 2 k 1 x 2 kx k 1 ( + ) + + = has two distinct real roots for all real values of the constant k , except for one value which must be stated. 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q3-question-1.svg\" alt=\"A curve is defined as f x 4 x x 3 , x∈ℝ, ( ) ≡ ( − )( + ) a) Sketch the graph of f x , clearly indicating the coordinates of its vertex and ( ) the coordinates of any points where the graph meets the coordinate axes. 5 ( ) The graph of the curve with equation y f kx , where k is a constant, passes = ( ) through the point with coordinates ( 1,0 . ) b) Determine the two possible values of k . 2 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q3-solution-1.svg\" alt=\"(a) Collect the information. The leading term is −𝑥2, so the curve opens downwards. [B1] When 𝑥= 0, 𝑦= 12, giving (0, 12). [B1] When 𝑦= 0, (4 −𝑥)(𝑥+ 3) = 0, giving (4, 0) and (−3, 0). [B1] The line of symmetry lies midway between −3 and 4, so 𝑥= 1 2. At this point 𝑦= (4 −1 2)(1 2 + 3) = 7 2 × 7 2 = 49 4 . The vertex is (1 4 ). [A1] 2, 49 𝑦 (1 2, 49 4 ) (0, 12) 𝑥 (−3, 0) (4, 0) [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q3-solution-2.svg\" alt=\"(b) The transformation 𝑦= 𝑓(𝑘𝑥) divides each horizontal coordinate by 𝑘. To take (4, 0) to (1, 0), use 𝑓(4𝑥), so 𝑘= 4. [M1] Alternatively, reflecting (−3, 0) in the vertical axis gives (3, 0), and dividing the new coordinate by three gives (1, 0). This is 𝑓(−3𝑥). Thus 𝑘= 4 or −3 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 7 marks.</p>"
+    ],
+    "promptText": "A curve is defined as f x 4 x x 3 , x∈ℝ, ( ) ≡ ( − )( + ) a) Sketch the graph of f x , clearly indicating the coordinates of its vertex and ( ) the coordinates of any points where the graph meets the coordinate axes. 5 ( ) The graph of the curve with equation y f kx , where k is a constant, passes = ( ) through the point with coordinates ( 1,0 . ) b) Determine the two possible values of k . 2 ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q4-question-1.svg\" alt=\"𝑦 𝐿 𝑦= √𝑥 𝑃 𝑅 𝑥 𝑂 4 The figure above shows the graph of the curve C with equation y x , x ≥ 0 . =\" style=\"--madas-width:425.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q4-question-2.svg\" alt=\"The point P lies on C where x = 4 . The straight line L is the tangent to C at P . a) Find an equation of L . 5 ( ) The finite region R , shown shaded in the figure, is bounded by C , L and the x axis. b) Find the exact area of R . 5 ( )\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q4-solution-1.svg\" alt=\"(a) Find the gradient function: 𝑦= √𝑥= 𝑥1/2 𝑑𝑦 1 𝑑𝑥= 1 2𝑥−1/2 = [M1] [A1] 2√𝑥 𝑑𝑦 1 = 1 [A1] 𝑑𝑥∣ = √ 4. 2 4 𝑥=4 At 𝑃(4, 2) the tangent has equation 𝑦−𝑦0 = 𝑚(𝑥−𝑥0) [M1] 𝑦−2 = 1 4(𝑥−4) [A1] 4𝑦−8 = 𝑥−4, 4𝑦= 𝑥+ 4 .\" style=\"--madas-width:533.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q4-solution-2.svg\" alt=\"(b) Find where the tangent meets the horizontal axis. Putting 𝑦= 0 gives 0 = 𝑥+ 4, so 𝑄= (−4, 0). [B1] 𝑦 𝑃 𝑥 𝑄 4 Triangle area = 1 [B1] 2 × 8 × 2 = 8. 4 √𝑥𝑑𝑥= ∫ 4 4 𝑥1/2 𝑑𝑥= [ 2 [M1] ∫ 3𝑥3/2] 0 0 0 [A1] = ( 2 3 × 8) −0 = 16 3 .\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q4-solution-3.svg\" alt=\"Required area = 8 −16 [A1] 8 3 = 3 .\" style=\"--madas-width:544.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 10 marks.</p>"
+    ],
+    "promptText": "𝑦 𝐿 𝑦= √𝑥 𝑃 𝑅 𝑥 𝑂 4 The figure above shows the graph of the curve C with equation y x , x ≥ 0 . = The point P lies on C where x = 4 . The straight line L is the tangent to C at P . a) Find an equation of L . 5 ( ) The finite region R , shown shaded in the figure, is bounded by C , L and the x axis. b) Find the exact area of R . 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q5-question-1.svg\" alt=\"It is given that 2 4 2 1 2 x 2 kx A Bx 104 x ... , ( − ) ( + ) ≡ + − + where k , A and B are non zero constants. Determine the possible values of B . 10 ( )\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q5-solution-1.svg\" alt=\"Expand the two factors, retaining terms through 𝑥2. (1 −2𝑥)2(2 + 𝑘𝑥)4 ≡𝐴+ 𝐵𝑥−104𝑥2 + ⋯ (1 −2𝑥)2 = 1 −4𝑥+ 4𝑥2 [B1] (2 + 𝑘𝑥)4 = (4 0)24(𝑘𝑥)0 + (4 1)23(𝑘𝑥) + (4 2)22(𝑘𝑥)2 + ⋯ [M1] = 16 + 32𝑘𝑥+ 24𝑘2𝑥2 + ⋯. [A1] Multiply out through 𝑥2. (1 −4𝑥+ 4𝑥2)(16 + 32𝑘𝑥+ 24𝑘2𝑥2 + ⋯) = 16 + 32𝑘𝑥+ 24𝑘2𝑥2 + ⋯\" style=\"--madas-width:610.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q5-solution-2.svg\" alt=\"−64𝑥−128𝑘𝑥2 + ⋯ + 64𝑥2 + ⋯ [M1] = 16 + (32𝑘−64)𝑥+ (24𝑘2 −128𝑘+ 64)𝑥2 + ⋯. [A1] Comparison gives 𝐴= 16, although this is not required. For the quadratic coefficient: 24𝑘2 −128𝑘+ 64 = −104 [M1] 24𝑘2 −128𝑘+ 168 = 0 3𝑘2 −16𝑘+ 21 = 0 [M1] (3𝑘−7)(𝑘−3) = 0 or [A1] 𝑘= 3 𝑘= 7 3. The linear coefficient is 𝐵= 32𝑘−64. [M1] Substitution gives 32×3−64 = 32 or 32× 7 3 −64 = 32 3 . Hence 𝐵= 32 or 32 3 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 10 marks.</p>"
+    ],
+    "promptText": "It is given that 2 4 2 1 2 x 2 kx A Bx 104 x ... , ( − ) ( + ) ≡ + − + where k , A and B are non zero constants. Determine the possible values of B . 10 ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q6-question-1.svg\" alt=\"An area is to be replanted with eucalyptus trees after a large fire. The height, H m , of one such tree is given by the formula 0.1 t H 25 24e , t ≥ 0 , − = − where t is the time in years since the tree was planted. a) State the height of a newly planted tree. 1 ( ) b) Find the height of a tree, after 2 years. 1 ( ) c) Calculate, to the nearest integer, the value of t when the height of a tree has reached 80% of its eventual height. 5 ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q6-solution-1.svg\" alt=\"𝐻= 25 −24𝑒−0.1𝑡, where 𝐻is the height in metres and 𝑡is time in years since planting. (a) When 𝑡= 0. 𝐻= 25 −24𝑒−0.1×0 = 25 −24𝑒0 = 25 −24 = 1 m . [B1] (b) When 𝑡= 2. 𝐻= 25 −24𝑒−0.1×2 = 25 −24𝑒−0.2 = 25 −19.6495 … = 5.35 m . [B1] (c) The eventual height is the limiting height as the tree matures. As 𝑡→∞, 𝑒−0.1𝑡→0, hence 24𝑒−0.1𝑡→0 and 𝐻→25. [B1] Eighty per cent of 25 is 20 metres. [B1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q6-solution-2.svg\" alt=\"[M1] 20 = 25 −24𝑒−0.1𝑡, 24𝑒−0.1𝑡= 5 𝑒−0.1𝑡= 5 𝑒0.1𝑡= 24 24, 5 0.1𝑡= ln(4.8) [M1] 𝑡= 10 ln(4.8) = 15.69 … ≈16 years . [A1]\" style=\"--madas-width:553.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 7 marks.</p>"
+    ],
+    "promptText": "An area is to be replanted with eucalyptus trees after a large fire. The height, H m , of one such tree is given by the formula 0.1 t H 25 24e , t ≥ 0 , − = − where t is the time in years since the tree was planted. a) State the height of a newly planted tree. 1 ( ) b) Find the height of a tree, after 2 years. 1 ( ) c) Calculate, to the nearest integer, the value of t when the height of a tree has reached 80% of its eventual height. 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q7-question-1.svg\" alt=\"27 y 3 x , x ≠ 0 . = + x Find the range of values of x for which y is increasing. 7 ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q7-solution-1.svg\" alt=\"Write the cube root in index notation before differentiating: 3√𝑥+ 27 𝑥= 𝑥1/3 + 27𝑥−1 𝑦= 𝑑𝑦 𝑑𝑥= 1 3𝑥−2/3 −27𝑥−2. [M1] [A1] For the increasing ranges, seek 𝑑𝑦/𝑑𝑥&gt; 0. 1 3𝑥−2/3 −27𝑥−2 &gt; 0 [M1] 3𝑥2/3 −27 1 𝑥2 &gt; 0 3𝑥2/3 &gt; 27 1 𝑥2 . 𝑥2 (𝑥2 &gt; 0) [M1] 3𝑥2/3 &gt; 27 𝑥4/3 &gt; 81. [A1]\" style=\"--madas-width:541.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q7-solution-2.svg\" alt=\"4√ The manuscript takes the positive fourth root and cubes it, giving 𝑥&gt; ( 81)3 = 27. For the printed 3√𝑥. Then 𝑢4 &gt; 81 gives 𝑢&lt; −3 or domain 𝑥≠0, the negative branch must also be retained. Write 𝑢= 𝑢&gt; 3. [M1] Cubing yields 𝑥&lt; −27 or 𝑥&gt; 27 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 7 marks.</p>"
+    ],
+    "promptText": "27 y 3 x , x ≠ 0 . = + x Find the range of values of x for which y is increasing. 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q8-question-1.svg\" alt=\"Differentiate from first principles 1 , x ≠ 0 . 6 ( ) x 2\" style=\"--madas-width:562.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q8-solution-1.svg\" alt=\"Let 𝑓(𝑥) = 1/𝑥2. Then 𝑓(𝑥+ ℎ) = 1/(𝑥+ ℎ)2. Form the difference: (𝑥+ ℎ)2 −1 1 𝑓(𝑥+ ℎ) −𝑓(𝑥) = 𝑥2 = 𝑥2 −(𝑥+ ℎ)2 [M1] 𝑥2(𝑥+ ℎ)2 = 𝑥2 −(𝑥2 + 2𝑥ℎ+ ℎ2) 𝑥2(𝑥2 + 2𝑥ℎ+ ℎ2) −2𝑥ℎ−ℎ2 [A1] = 𝑥4 + 2𝑥3ℎ+ 𝑥2ℎ2 . Using the formal definition of the derivative: 𝑓(𝑥+ ℎ) −𝑓(𝑥) 𝑓′(𝑥) = lim [M1] ℎ→0 ℎ\" style=\"--madas-width:549.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q8-solution-2.svg\" alt=\"𝑥4 + 2𝑥3ℎ+ 𝑥2ℎ2 × 1 −2𝑥ℎ−ℎ2 = lim [M1] ℎ→0 [ ℎ] 𝑥4 + 2𝑥3ℎ+ 𝑥2ℎ2 × 1 −ℎ(2𝑥+ ℎ) = lim ℎ→0 [ ℎ] −(2𝑥+ ℎ) = lim [A1] 𝑥4 + 2𝑥3ℎ+ 𝑥2ℎ2 . ℎ→0 Taking the limit gives 𝑓′(𝑥) = −2𝑥/𝑥4 = −2/𝑥3 , as required. [A1]\" style=\"--madas-width:544.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 6 marks.</p>"
+    ],
+    "promptText": "Differentiate from first principles 1 , x ≠ 0 . 6 ( ) x 2"
+  },
+  {
+    "id": "madas/as-pure-d/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q9-question-1.svg\" alt=\"14 x 6 2 , x ≠ 0 . − = x Solve the above equation giving the answers in the form p 2 , where p is a constant. Detailed working must be shown in this question 6 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q9-solution-1.svg\" alt=\"Start by multiplying by the non-zero value of 𝑥. √ 𝑥−14 𝑥= 6 2 √ 𝑥2 −14 = 6 [M1] 2 𝑥 √ 𝑥2 −6 [A1] 2 𝑥−14 = 0. Use the quadratic formula: √ √ 2)2 −4 × 1 × (−14) 6 2 ± √(6 [M1] 𝑥= 2 × 1 √ √ √ √ = 6 2 ± 72 + 56 = 6 2 ± 128 [A1] 2 2 √ √ = 6 2 ± 8 2 [M1] . 2\" style=\"--madas-width:544.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q9-solution-2.svg\" alt=\"√ √ √ √ √ √ The positive sign gives (6 2. The negative sign gives (6 2. Thus 2 + 8 2)/2 = 7 2 −8 2)/2 = − √ √ 2 or − 2 . [A1] 𝑥= 7 Alternatively, complete the square: √ 𝑥2 −6 2 𝑥−14 = 0 √ √ 2)2 −(3 2)2 −14 = 0 (𝑥−3 √ 2)2 −18 −14 = 0 (𝑥−3 √ 2)2 = 32 (𝑥−3 √ √ √ √ √ or 𝑥−3 2 = 32 = 4 2 − 32 = −4 2 √ √ √ √ √ √ or 𝑥= 3 2 + 4 2 = 7 2 3 2 −4 2 = − 2.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 6 marks.</p>"
+    ],
+    "promptText": "14 x 6 2 , x ≠ 0 . − = x Solve the above equation giving the answers in the form p 2 , where p is a constant. Detailed working must be shown in this question 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q10-question-1.svg\" alt=\"𝑦 𝑥 𝐴 𝑂 𝐵 𝐶 𝐷 The figure above shows the graph of a cubic polynomial f x given by ( ) 3 2 f x x 5 x 17 x 21 , x∈ℝ. =− ( ) + + −\" style=\"--madas-width:468.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q10-question-2.svg\" alt=\"The graph meets the coordinate axes at four distinct points, labelled A , B , C and D . Given that the coordinates of the point A are ( 3,0 , determine the coordinates of − ) the points B , C and D . 6 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q10-solution-1.svg\" alt=\"As 𝐴= (−3, 0), 𝑥+ 3 must be a factor. [B1] 𝑓(𝑥) = −𝑥3 + 5𝑥2 + 17𝑥−21 −𝑓(𝑥) = 𝑥3 −5𝑥2 −17𝑥+ 21. By long division, or by grouping terms: −𝑓(𝑥) = 𝑥2(𝑥+ 3) −8𝑥(𝑥+ 3) + 7(𝑥+ 3) [M1] = (𝑥+ 3)(𝑥2 −8𝑥+ 7) [A1] [M1] = (𝑥+ 3)(𝑥−1)(𝑥−7) 𝑓(𝑥) = (𝑥+ 3)(1 −𝑥)(𝑥−7). Thus the horizontal intercepts are 𝐴(−3, 0), 𝐵(1, 0), 𝐶(7, 0) . [A1] When 𝑥= 0, 𝑦= −21, giving 𝐷(0, −21) . [B1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 6 marks.</p>"
+    ],
+    "promptText": "𝑦 𝑥 𝐴 𝑂 𝐵 𝐶 𝐷 The figure above shows the graph of a cubic polynomial f x given by ( ) 3 2 f x x 5 x 17 x 21 , x∈ℝ. =− ( ) + + − The graph meets the coordinate axes at four distinct points, labelled A , B , C and D . Given that the coordinates of the point A are ( 3,0 , determine the coordinates of − ) the points B , C and D . 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q11-question-1.svg\" alt=\"2 CT 2 C T 1 − + − a) Write the above expression as a product of two linear factors. 2 ( ) b) Hence solve the trigonometric equation 2cos 2cos tan tan = , 1 θ θ − θ + θ for 0 360 ° . 5 °≤ θ &lt; ( )\" style=\"--madas-width:544.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q11-solution-1.svg\" alt=\"(a) Factorise by inspection: [M1] 2𝐶𝑇−2𝐶+ 𝑇−1 = 2𝐶(𝑇−1) + (𝑇−1) [A1] = (𝑇−1)(2𝐶+ 1) . (b) Use the result of part (a): 2 cos 𝜃tan 𝜃−2 cos 𝜃+ tan 𝜃= 1 2 cos 𝜃tan 𝜃−2 cos 𝜃+ tan 𝜃−1 = 0 2 cos 𝜃(tan 𝜃−1) + (tan 𝜃−1) = 0 [M1] (tan 𝜃−1)(2 cos 𝜃+ 1) = 0. [A1] Solve each factor:\" style=\"--madas-width:553.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q11-solution-2.svg\" alt=\"tan 𝜃= 1 cos 𝜃= −1 2 arctan(1) = 45∘ arccos(−1 2) = 120∘ 𝜃= 120∘+ 360∘𝑛or 240∘+ 360∘𝑛, [M1] [A1] 𝜃= 45∘+ 180∘𝑛 𝑛∈ℤ. The two families give 45∘, 225∘and 120∘, 240∘. Collecting them gives 45∘, 120∘, 225∘, 240∘. [A1]\" style=\"--madas-width:648.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 7 marks.</p>"
+    ],
+    "promptText": "2 CT 2 C T 1 − + − a) Write the above expression as a product of two linear factors. 2 ( ) b) Hence solve the trigonometric equation 2cos 2cos tan tan = , 1 θ θ − θ + θ for 0 360 ° . 5 °≤ θ < ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q12-question-1.svg\" alt=\"A straight line L and a curve C have the following equations. 1 1 ⎛ ⎞ L : ⎛ 1 ⎞ 1 1 and C : xy + 2 0 . + + = = ⎜ x ⎟ ⎜ y ⎟ ⎝ ⎠⎝ ⎠ a) Find the coordinates of the points of intersection between L and C . 6 ( ) b) Sketch the graphs of L and C in the same set of axes. 4 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q12-solution-1.svg\" alt=\"(a) Rearrange the second equation and substitute into the first: [M1] 𝑥𝑦= −2, 𝑦= −2 𝑥 [M1] ( 1 𝑥+ 1) (−𝑥 2 + 1) = 1 −1 2 + 1 𝑥−𝑥 2 + 1 = 1 −1 2 + 1 𝑥−𝑥 2 = 0 −1 + 2 𝑥−𝑥= 0 −𝑥+ 2 −𝑥2 = 0 [A1] 0 = 𝑥2 + 𝑥−2 = (𝑥+ 2)(𝑥−1). [M1] Thus 𝑥= −2 gives 𝑦= 1, and 𝑥= 1 gives 𝑦= −2. [A1] The intersections are (−2, 1) and (1, −2) . [A1] (b) Write each equation in a form suitable for sketching:\" style=\"--madas-width:672.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q12-solution-2.svg\" alt=\"𝑦= −2 [B1] 𝐶∶ 𝑥𝑦+ 2 = 0, 𝑥. 𝐿∶ (1/𝑥+ 1)(1/𝑦+ 1) = 1 𝑥𝑦+ 1 1 𝑥+ 1 𝑦+ 1 = 1 𝑥𝑦+ 1 1 𝑥+ 1 𝑦= 0 [M1] 1 + 𝑦+ 𝑥= 0, 𝑦= −𝑥−1. The original reciprocal equation excludes points on either axis. These intercepts of the extended straight line are shown as open circles. 𝑦 𝐿 (−2, 1) 𝑥 𝐶 (1, −2) [A1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 10 marks.</p>"
+    ],
+    "promptText": "A straight line L and a curve C have the following equations. 1 1 ⎛ ⎞ L : ⎛ 1 ⎞ 1 1 and C : xy + 2 0 . + + = = ⎜ x ⎟ ⎜ y ⎟ ⎝ ⎠⎝ ⎠ a) Find the coordinates of the points of intersection between L and C . 6 ( ) b) Sketch the graphs of L and C in the same set of axes. 4 ( )"
+  },
+  {
+    "id": "madas/as-pure-d/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q13-question-1.svg\" alt=\"A circle C has equation 1 2 2 x y 10 x 4 y 71 . + − + = a) Find the coordinates of the centre of C and the size of its radius. 3 1 ( ) Another circle C is centred at the point with coordinates ( 4,10 and has radius 5. − 2 ) b) Show that C and C touch each other. 3 1 2 ( ) The two circles touch each other at the point P and the straight line L is the common tangent of C and C . 1 2\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q13-question-2.svg\" alt=\"c) Determine the coordinates of P . 3 ( ) d) Show that an equation of L is y x 4 3 27 . 4 = + ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q13-solution-1.svg\" alt=\"(a) Complete the square: 𝑥2 + 𝑦2 −10𝑥+ 4𝑦= 71 𝑥2 −10𝑥+ 𝑦2 + 4𝑦= 71 (𝑥−5)2 −25 + (𝑦+ 2)2 −4 = 71 [M1] (𝑥−5)2 + (𝑦+ 2)2 = 100. The centre is (5, −2) [A1] and the radius is 10 . [A1] (b) Look at the diagram: (−4, 10) tangent 𝑃 (5, −2)\" style=\"--madas-width:538.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q13-solution-2.svg\" alt=\"𝑑= √(−4 −5)2 + (10 + 2)2 [M1] √ [A1] = 81 + 144 = 15. The sum of the radii, 10 + 5 = 15, equals the distance between the centres. Hence the circles touch externally. [A1] (c) The point of contact divides the line of centres in the ratio 5 ∶10. [M1] By inspection, a third of the displacement (9, −12) is (3, −4). [A1] Starting at (−4, 10) gives 𝑃(−1, 6) . [A1] 5 2 −1 −4 𝑥 −3 −3 −3 +4 +4 +4 𝑦 −2 2 6 10 (d) Calculate the gradient of the line joining the centres:\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q13-solution-3.svg\" alt=\"𝑚= 𝑦2 −𝑦1 = 10 −(−2) = 12 −9 = −4 [M1] 3. 𝑥2 −𝑥1 −4 −5 The required perpendicular gradient is 3 4. [A1] Using (−1, 6). 𝑦−𝑦0 = 𝑚(𝑥−𝑥0) [M1] 𝑦−6 = 3 4(𝑥+ 1) [A1] 4𝑦−24 = 3𝑥+ 3, 4𝑦= 3𝑥+ 27 .\" style=\"--madas-width:549.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q13-solution-4.svg\" alt=\"Alternative algebraic method for part (d). Expand the two circle equations: 𝑥2 + 𝑦2 −10𝑥+ 4𝑦= 71, (𝑥+ 4)2 + (𝑦−10)2 = 25 𝑥2 + 𝑦2 −10𝑥+ 4𝑦= 71, 𝑥2 + 𝑦2 + 8𝑥−20𝑦= −91. Subtracting gives −18𝑥+ 24𝑦= 162, hence −3𝑥+ 4𝑦= 27 and 4𝑦= 3𝑥+ 27. To obtain 𝑃as in part (c), substitute back: (𝑥+ 4)2 + (𝑦−10)2 = 25 16(𝑥+ 4)2 + 16(𝑦−10)2 = 400 16(𝑥+ 4)2 + (4𝑦−40)2 = 400 16(𝑥+ 4)2 + (3𝑥+ 27 −40)2 = 400 16(𝑥+ 4)2 + (3𝑥−13)2 = 400\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-d/q13-solution-5.svg\" alt=\"16𝑥2 + 128𝑥+ 256 + 9𝑥2 −78𝑥+ 169 = 400 25𝑥2 + 50𝑥+ 25 = 0 𝑥2 + 2𝑥+ 1 = 0 (𝑥+ 1)2 = 0, 𝑥= −1. Using 4𝑦= 3𝑥+ 27 gives 𝑦= 6, again giving 𝑃(−1, 6).\" style=\"--madas-width:516.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 13 marks.</p>"
+    ],
+    "promptText": "A circle C has equation 1 2 2 x y 10 x 4 y 71 . + − + = a) Find the coordinates of the centre of C and the size of its radius. 3 1 ( ) Another circle C is centred at the point with coordinates ( 4,10 and has radius 5. − 2 ) b) Show that C and C touch each other. 3 1 2 ( ) The two circles touch each other at the point P and the straight line L is the common tangent of C and C . 1 2 c) Determine the coordinates of P . 3 ( ) d) Show that an equation of L is y x 4 3 27 . 4 = + ( )"
+  }
+]

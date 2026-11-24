@@ -6544,6 +6544,27 @@
         "docs/evidence/v077-pmt-original-exams.json",
         "tests/test_pmt.py"
       ]
+    },
+    {
+      "id": "PAP-078-1",
+      "requirement": "Offer all supplied AS and A-level MADAS questions and worked solutions under a Madas source beside Exam style. Teachers can opt in with Include MADAS questions. Preserve source wording and textbook mappings.",
+      "scope": "Papers in owner, staff and pupil editions",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "acceptance": [
+        "A–I are Standard, J–R are Hard, and S–Z are Very Hard. Preserve the original difficulty notes.",
+        "Teachers can generate and print eligible MADAS questions with editorial marks. AS maps to Year 1.",
+        "Remove textbook chapter references from question and solution pages. Identify the qualification, Pure or Applied collection, paper and question in source references. Label adapted mark schemes and retain official-paper source, mathematical, print and interaction checks."
+      ],
+      "origin": "Owner brief for v0.78, GitHub #143",
+      "evidence": [
+        "GitHub issue #143",
+        "docs/evidence/v078-madas.json",
+        "tests/test_madas.py",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
     }
   ]
 }

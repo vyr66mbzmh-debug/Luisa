@@ -99,3 +99,6 @@ body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
 .math-content:has(.marks),.parts.columns>li:has(.marks),.math-content td:has(.marks) {position:relative; padding-right:2.6em}
 .marks-pending .marks {display:none}
 .math-content .marks {position:absolute; right:0; margin:0; font-weight:700; font-size:1em; line-height:1.35; white-space:nowrap; font-family:'Times New Roman',Times,serif; font-variant-numeric:lining-nums}
+
+.madas-excerpt {margin:0 0 3mm; break-inside:avoid}
+.madas-excerpt img, .print-question .math-content .madas-excerpt img {display:block; width:var(--madas-width)!important; height:auto!important; max-width:100%!important; max-height:none!important; object-fit:contain}

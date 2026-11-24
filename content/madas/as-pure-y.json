@@ -1,0 +1,95 @@
+[
+  {
+    "id": "madas/as-pure-y/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q1-question-1.svg\" alt=\"A trigonometric curve is defined by the equation f x 3 4sin 2 x k ° , 0 x 360 ( ) = − ( + ) ≤ ≤ where k is a constant such that 90 k 90 . − &lt; &lt; The curve passes through the point with coordinates ( 15,5 and further satisfies ) A f x B , ≤ ( ) ≤ for some constants A and B . a) State the value of A and the value of B . 2 ( )\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q1-question-2.svg\" alt=\"b) Show that k =− 60 . 4 ( ) c) Solve the equation f x =−. 1 5 ( ) ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q1-solution-1.svg\" alt=\"(a) Since sine ranges from −1 to 1, the minimum is 3 −4 = 𝐴= −1 [B1] and the maximum is 3 + 4 = 𝐵= 7 . [B1] (b) Substituting (15, 5) gives 5 = 3 −4 sin(30 + 𝑘)∘, so sin(30 + 𝑘)∘= −1/2. [M1] [A1] Thus 30 + 𝑘= −30 + 360𝑛or 210 + 360𝑛, giving 𝑘= −60 + 360𝑛or 180 + 360𝑛. [M1] The restriction −90 &lt; 𝑘&lt; 90 gives 𝑘= −60 . [A1] (c) 3 −4 sin(2𝑥−60)∘= −1, so 4 = 4 sin(2𝑥−60)∘. [M1] Hence sin(2𝑥−60)∘= 1. [A1] This occurs when 2𝑥−60 = 90 + 360𝑛. [M1] Thus 2𝑥= 150 + 360𝑛, or 𝑥= 75 + 180𝑛. [A1] In the printed interval, 𝑥= 75, 255 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 11 marks.</p>"
+    ],
+    "promptText": "A trigonometric curve is defined by the equation f x 3 4sin 2 x k ° , 0 x 360 ( ) = − ( + ) ≤ ≤ where k is a constant such that 90 k 90 . − < < The curve passes through the point with coordinates ( 15,5 and further satisfies ) A f x B , ≤ ( ) ≤ for some constants A and B . a) State the value of A and the value of B . 2 ( ) b) Show that k =− 60 . 4 ( ) c) Solve the equation f x =−. 1 5 ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-y/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q2-question-1.svg\" alt=\"a) Given that c is a non zero constant, determine the first four terms, in 6 ascending powers of x , in the binomial expansion of ( cx 1 . 2 + ) ( ) It is further given that b 4 6 ⎛ a ⎞ 1 cx 74 576 x ... , ≡− + ( + ) + − + ⎜ x ⎟ x ⎝ ⎠ where a and b are non zero constants. b) Show that one of the two possible values of c is −, and find the other. 3 9 ( )\" style=\"--madas-width:566.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q2-solution-1.svg\" alt=\"[M1] Thus the first terms are (a) The first coefficients of the sixth binomial power are 1, 6, 15, 20. 1 + 6𝑐𝑥+ 15𝑐2𝑥2 + 20𝑐3𝑥3 . [A1] (b) Multiply the series by each term in 𝑎+ 𝑏/𝑥. 𝑎+ 6𝑎𝑐𝑥+ 15𝑎𝑐2𝑥2 + ⋯+ 𝑏/𝑥+ 6𝑏𝑐+ 15𝑏𝑐2𝑥+ 20𝑏𝑐3𝑥2 + ⋯. [M1] Group like powers. Comparing 1/𝑥gives 𝑏= −4. [A1] The constant and linear terms give 𝑎+ 6𝑏𝑐= 74 and 6𝑎𝑐+ 15𝑏𝑐2 = −576. [M1] [A1] Substitute 𝑏= −4. 𝑎= 74 + 24𝑐and 𝑎𝑐−10𝑐2 = −96. [M1] (74 + 24𝑐)𝑐−10𝑐2 = −96 [M1] 14𝑐2 + 74𝑐+ 96 = 0, 7𝑐2 + 37𝑐+ 48 = 0 [A1] [A1] (7𝑐+ 16)(𝑐+ 3) = 0. Hence 𝑐= −3 or −16/7 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 11 marks.</p>"
+    ],
+    "promptText": "a) Given that c is a non zero constant, determine the first four terms, in 6 ascending powers of x , in the binomial expansion of ( cx 1 . 2 + ) ( ) It is further given that b 4 6 ⎛ a ⎞ 1 cx 74 576 x ... , ≡− + ( + ) + − + ⎜ x ⎟ x ⎝ ⎠ where a and b are non zero constants. b) Show that one of the two possible values of c is −, and find the other. 3 9 ( )"
+  },
+  {
+    "id": "madas/as-pure-y/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q3-question-1.svg\" alt=\"1 f x , x∈ℝ, x ≠ 0 . ( ) = x 1 g x , x∈ℝ, x ≠−. 2 2 ( ) = + x 2 + a) Describe mathematically the two transformations that map the graph of f x ( ) g x . 2 onto the graph of ( ) ( ) b) Sketch the graph of g x . ( ) The sketch must include the … … coordinates of all the points where the curve meet the coordinate •\" style=\"--madas-width:546.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q3-question-2.svg\" alt=\"axes. … equations of any asymptotes of the curve. 4 • ( ) c) Find the coordinates of the points of intersection of g x and the line with ( ) equation y x 5 3 8 . + = ( )\" style=\"--madas-width:544.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q3-solution-1.svg\" alt=\"(a) Translate 𝑦= 1/𝑥two units left [B1] and two units up, giving the combined vector (−2 2 ). [B1] (b) The asymptotes are 𝑥= −2 and 𝑦= 2. [B1] For 𝑥= 0, 𝑦= 1/2 + 2 = 5/2. [B1] For 𝑦= 0, 1 + 2(𝑥+ 2) = 0, giving 𝑥= −5/2. [B1] 𝑦 𝑥= −2 (0, 5/2) 𝑦= 2 𝑥 (−5/2, 0) [A1] (c) Solve 3[1/(𝑥+ 2) + 2] + 𝑥= 8, giving 3/(𝑥+ 2) + 𝑥−2 = 0. [M1] Multiply by 𝑥+ 2.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q3-solution-2.svg\" alt=\"3 + 𝑥2 + 2𝑥−2𝑥−4 = 0, 𝑥2 −1 = 0. [M1] [A1] 3 + 𝑥(𝑥+ 2) −2(𝑥+ 2) = 0, For 𝑥= 1, 𝑦= (8 −1)/3 = 7/3. For 𝑥= −1, 𝑦= (8 + 1)/3 = 3. [M1] The points are (1, 7/3), (−1, 3) . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 11 marks.</p>"
+    ],
+    "promptText": "1 f x , x∈ℝ, x ≠ 0 . ( ) = x 1 g x , x∈ℝ, x ≠−. 2 2 ( ) = + x 2 + a) Describe mathematically the two transformations that map the graph of f x ( ) g x . 2 onto the graph of ( ) ( ) b) Sketch the graph of g x . ( ) The sketch must include the … … coordinates of all the points where the curve meet the coordinate • axes. … equations of any asymptotes of the curve. 4 • ( ) c) Find the coordinates of the points of intersection of g x and the line with ( ) equation y x 5 3 8 . + = ( )"
+  },
+  {
+    "id": "madas/as-pure-y/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q4-question-1.svg\" alt=\"A circle C has equation 2 2 x y 2 x 4 y 1 0 + + − + = The straight line L with equation y mx is a tangent to C . = Find the possible values of m and hence determine the possible coordinates at which L meets C . 10 ( )\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q4-solution-1.svg\" alt=\"Substitute 𝑦= 𝑚𝑥in the circle: 𝑥2 + 𝑚2𝑥2 + 2𝑥−4𝑚𝑥+ 1 = 0, (1 + 𝑚2)𝑥2 + (2 −4𝑚)𝑥+ 1 = 0. [M1] [A1] At tangency this quadratic has a repeated root. [B1] (2 −4𝑚)2 −4(1 + 𝑚2) = 0 [M1] (1 −2𝑚)2 −(1 + 𝑚2) = 0 [A1] 1 −4𝑚+ 4𝑚2 −1 −𝑚2 = 0, [A1] 𝑚(3𝑚−4) = 0. Thus 𝑚= 0 or 4/3 . [A1] For 𝑚= 0, 𝑦= 0 and (𝑥+ 1)2 = 0, giving (−1, 0) . [A1] For 𝑚= 4/3, the equation is 25 9 𝑥2 −10 3 𝑥+ 1 = 0, hence 25𝑥2 −30𝑥+ 9 = (5𝑥−3)2 = 0. [M1] Thus 𝑥= 3/5, 𝑦= (4/3)(3/5) = 4/5, giving (3/5, 4/5) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 10 marks.</p>"
+    ],
+    "promptText": "A circle C has equation 2 2 x y 2 x 4 y 1 0 + + − + = The straight line L with equation y mx is a tangent to C . = Find the possible values of m and hence determine the possible coordinates at which L meets C . 10 ( )"
+  },
+  {
+    "id": "madas/as-pure-y/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q5-question-1.svg\" alt=\"𝐵 𝑥+ 3 𝐹 15 𝑦 𝑥 𝐷 𝐸 10 𝐴 𝐶 The figure above shows the triangle ABC . The point D lies on AC so that the straight line BD meets AC at right angles.\" style=\"--madas-width:514.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q5-question-2.svg\" alt=\"The point E lies on AC and the point F lies on BC , so that the straight line DF is parallel to AB and the straight line EF is parallel to BD . It is further given that the lengths, in cm, of CE , CF , DE , BF and AD are 10, 15, x , x + 3 and y , respectively. a) Determine the value of x . 2 ( ) b) Show clearly that y = 9.6 . 3 ( ) c) Find, correct to three significant figures, the area of the triangle ABC . 5 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q5-solution-1.svg\" alt=\"𝐵 𝑥+ 3 𝐹 15 𝑦 𝑥 𝐷 𝐸 10 𝐴 𝐶 (a) Parallel segments give 𝐷𝐸/𝐸𝐶= 𝐵𝐹/𝐹𝐶, so 𝑥/10 = (𝑥+ 3)/15. [M1] Hence 10𝑥+ 30 = 15𝑥, 5𝑥= 𝑥= 6 . [A1] 30, (b) Since 𝐷𝐹∥𝐴𝐵, 𝐵𝐹/𝐹𝐶= 𝐴𝐷/𝐷𝐶. [M1] Therefore (𝑥+ 3)/15 = 𝑦/(𝑥+ 10), i.e. 9/15 = 𝑦/16. [A1] Thus 15𝑦= 144, 𝑦= 9.6 . [A1] √ (c) By Pythagoras, 𝐹𝐸2 + 102 = 152, so 𝐹𝐸2 = 125, 𝐹𝐸= 5 5. [M1] [A1] By similarity 𝐵𝐷/𝐹𝐸= √ √ √ 𝐵𝐶/𝐹𝐶= 24/15, giving 𝐵𝐷= 8 5. [M1] [A1] Hence the area is 1 2(9.6 + 6 + 10)(8 5) = 102.4 5 = 229 cm2 to three significant figures. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 10 marks.</p>"
+    ],
+    "promptText": "𝐵 𝑥+ 3 𝐹 15 𝑦 𝑥 𝐷 𝐸 10 𝐴 𝐶 The figure above shows the triangle ABC . The point D lies on AC so that the straight line BD meets AC at right angles. The point E lies on AC and the point F lies on BC , so that the straight line DF is parallel to AB and the straight line EF is parallel to BD . It is further given that the lengths, in cm, of CE , CF , DE , BF and AD are 10, 15, x , x + 3 and y , respectively. a) Determine the value of x . 2 ( ) b) Show clearly that y = 9.6 . 3 ( ) c) Find, correct to three significant figures, the area of the triangle ABC . 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-y/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q6-question-1.svg\" alt=\"3 2000 If x = , show clearly that 4000 x 2 3 300 4 . 5 + = × ( ) x\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q6-solution-1.svg\" alt=\"Use a common denominator: 𝑥2 + 4000/𝑥= (𝑥3 + 4000)/𝑥= (2000 + 4000)/20001/3 [M1] = 6000/20001/3 = 6000 ⋅20002/3 = 3 ⋅20002/3. [M1] [A1] 2000 3√ 3√ Since 2000 = 2 ⋅1000, this equals 3(22/3)(10002/3) = 3( 2)2(102). [M1] Hence 300 4 , as required. [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 5 marks.</p>"
+    ],
+    "promptText": "3 2000 If x = , show clearly that 4000 x 2 3 300 4 . 5 + = × ( ) x"
+  },
+  {
+    "id": "madas/as-pure-y/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q7-question-1.svg\" alt=\"Consider the following inequalities 5 x 13 4 x 2 + &gt; ( + ) 2 x 2 k x 2 x 3 0 , − − − )( + &lt; ( ) ( ) where k is a non zero constant. The common solution interval of both these inequalities is 17 5 x x m , &lt;− ∪ − &lt; 4 &gt;\" style=\"--madas-width:390.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q7-question-2.svg\" alt=\"where m is a non zero constant. Determine in any order the value of k and the value of m . 10 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q7-solution-1.svg\" alt=\"The first inequality simplifies to 5𝑥+ 13 &gt; 4𝑥+ 8, or 𝑥&gt; −5. [M1] [A1] The other finite endpoint −17/4 must therefore be a critical value of the second inequality. [B1] Substitute it into the boundary equation: (−25/4)2 −𝑘(−25/4)(−5/4) = 0, [M1] [A1] 625/16 −125𝑘/16 = 0. Thus 125𝑘= 625, 𝑘= 5 . [A1] Substitute back: [M1] (𝑥−2)[(𝑥−2) −5(𝑥+ 3)] &lt; 0, (𝑥−2)(−4𝑥−17) &lt; 0. Critical values are −17/4 and 2. [A1] The product is negative outside the critical values, so 𝑥&lt; −17/4 or 𝑥&gt; 2. [M1] Intersect with 𝑥&gt; −5, giving the stated interval with 𝑚= 2 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 10 marks.</p>"
+    ],
+    "promptText": "Consider the following inequalities 5 x 13 4 x 2 + > ( + ) 2 x 2 k x 2 x 3 0 , − − − )( + < ( ) ( ) where k is a non zero constant. The common solution interval of both these inequalities is 17 5 x x m , <− ∪ − < 4 > where m is a non zero constant. Determine in any order the value of k and the value of m . 10 ( )"
+  },
+  {
+    "id": "madas/as-pure-y/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q8-question-1.svg\" alt=\"𝑦 2𝑥 The figure above shows the design of a window which is the shape of a semicircle attached to rectangle. The diameter of the semicircle is 2x m and is attached to one side of the rectangle also measuring 2x m . The other side of the rectangle is y m .\" style=\"--madas-width:558.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q8-question-2.svg\" alt=\"The perimeter of the window is 6 m . 2 a) Show that the total area of the window, A m , is given by 1 2 4 A 6 x 4 x . = − + π ( ) 2 ( ) b) Given that the measurements of the window are such so that A is maximum, show by a method involving differentiation that this maximum value of A is 18 . 7 ( ) 4 + π\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q8-solution-1.svg\" alt=\"𝑦 2𝑥 (a) The outside perimeter is 2𝑦+ 2𝑥+ 𝜋𝑥= 6, [M1] so 𝑦= 3 −𝑥−𝜋𝑥/2. [A1] Add the rectangle and semicircle areas: 2𝜋𝑥2 = 2𝑥(3 −𝑥−𝜋𝑥/2) + 1 2𝜋𝑥2 = 6𝑥−1 2(4 + 𝜋)𝑥2 . 𝐴= 2𝑥𝑦+ 1 [M1] [A1] (b) Differentiate: 𝐴′ = 6 −(4 + 𝜋)𝑥. [M1] Set this to zero, giving 6 = (4 + 𝜋)𝑥, so 𝑥= 6/(4 + 𝜋). [M1] [A1] The second derivative is 𝐴″ = −(4 + 𝜋) &lt; 0, verifying the maximum. [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q8-solution-2.svg\" alt=\"6 6 2 4 + 𝜋) −1 [M1] 𝐴max = 6 ( 2(4 + 𝜋) ( 4 + 𝜋) 36 18 18 4 + 𝜋m2 . [A1] = 4 + 𝜋− 4 + 𝜋=\" style=\"--madas-width:493.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 11 marks.</p>"
+    ],
+    "promptText": "𝑦 2𝑥 The figure above shows the design of a window which is the shape of a semicircle attached to rectangle. The diameter of the semicircle is 2x m and is attached to one side of the rectangle also measuring 2x m . The other side of the rectangle is y m . The perimeter of the window is 6 m . 2 a) Show that the total area of the window, A m , is given by 1 2 4 A 6 x 4 x . = − + π ( ) 2 ( ) b) Given that the measurements of the window are such so that A is maximum, show by a method involving differentiation that this maximum value of A is 18 . 7 ( ) 4 + π"
+  },
+  {
+    "id": "madas/as-pure-y/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q9-question-1.svg\" alt=\"On the 1st January 2000 a rare stamp was purchased at an auction for £16000 and by the 1st January 2010 its value was four times as large as its purchase price. The future value of this stamp, £V , t years after the 1st January 2000 is modelled by the equation ept V A , t ≥ 0 , = where A and p are positive constants. On the 1st January 1990 a different stamp was purchased for £2. The future value of this stamp, £U , t years after the 1st January 1990 is modelled by the equation\" style=\"--madas-width:558.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q9-question-2.svg\" alt=\"e pt 2 U B , t ≥ 0 , = where B is a positive constant. Determine the year, during which the two stamps will achieve the same value, according to their modelling equations. 11 ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q9-solution-1.svg\" alt=\"For the first stamp, 𝑉(0) = 𝐴= 16000. [B1] Ten years later, 64000 = 16000𝑒10𝑝, so 4 = 𝑒10𝑝and 𝑝= ln 4/10 = ln 2/5. [M1] [A1] For the second stamp, 𝑈(0) = 𝐵= 2 in 1990. [B1] Use 𝑡years after 1990 for both clocks. The first stamp has then been held for 𝑡−10 years. [M1] Equate the two values: 16000𝑒(ln 2)(𝑡−10)/5 = 2𝑒2(ln 2)𝑡/5 [A1] 8000𝑒(ln 2)𝑡/5−2 ln 2 = 𝑒2(ln 2)𝑡/5 [M1] [A1] 8000 ⋅2𝑡/5/4 = 22𝑡/5, 2000 = 2𝑡/5. Taking logarithms, ln 2000 = (𝑡/5) ln 2. [M1] Thus 𝑡= 5 ln 2000/ ln 2 = 54.82 … years after January 1990. [A1] This is during 2044 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 11 marks.</p>"
+    ],
+    "promptText": "On the 1st January 2000 a rare stamp was purchased at an auction for £16000 and by the 1st January 2010 its value was four times as large as its purchase price. The future value of this stamp, £V , t years after the 1st January 2000 is modelled by the equation ept V A , t ≥ 0 , = where A and p are positive constants. On the 1st January 1990 a different stamp was purchased for £2. The future value of this stamp, £U , t years after the 1st January 1990 is modelled by the equation e pt 2 U B , t ≥ 0 , = where B is a positive constant. Determine the year, during which the two stamps will achieve the same value, according to their modelling equations. 11 ( )"
+  },
+  {
+    "id": "madas/as-pure-y/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q10-question-1.svg\" alt=\",ab of the following Determine, in exact simplified surd form, the solution pair ( ) simultaneous equations. a b a b 2 1 6 2 1 3 and 6 3 2 3 . ( − ) + = + − = ( ) Detailed workings must be shown in this question. 10 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q10-solution-1.svg\" alt=\"√ √ √ √ Eliminate 𝑏by multiplying the second equation by 2, giving 6. [M1] Add the first 12𝑎− 6𝑏= 2 equation: √ √ √ √ [A1] 2(𝑎−1) + 12𝑎= 2(1 + 3) + 2 6. Expand and collect 𝑎. √ √ √ √ √ [M1] ( 2 + 2 3)𝑎= 2 + 2 3 + 2 + 2 6. Split the fraction and rationalise: √ 𝑎= 1 + 2(1 + 6) [A1] √ √ 2 3 + 2 √ √ √ = 1 + 2(1 + 6)(2 3 − 2) [M1] √ √ √ √ (2 3 + 2)(2 3 − 2) √ √ √ √ = 1 + 2(2 3 − 2 + 2 18 − 12) [A1] 12 −2 √ √ √ √\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-y/q10-solution-2.svg\" alt=\"√ = 1 + 2(2 3 − 2 + 6 2 −2 3) [A1] = 1 + 2. 10 √ √ √ √ √ √ √ √ Substitute in the second equation: 3. [M1] Thus 3, so 6(1 + 2) − 3𝑏= 2 6 + 12 − 3𝑏= 2 √ √ √ √ √ 2. [A1] The ordered pair is (1 + 2) . [A1] 3𝑏= 6, 𝑏= 2,\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 10 marks.</p>"
+    ],
+    "promptText": ",ab of the following Determine, in exact simplified surd form, the solution pair ( ) simultaneous equations. a b a b 2 1 6 2 1 3 and 6 3 2 3 . ( − ) + = + − = ( ) Detailed workings must be shown in this question. 10 ( )"
+  }
+]

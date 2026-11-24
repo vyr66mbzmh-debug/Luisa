@@ -1,0 +1,126 @@
+[
+  {
+    "id": "madas/alevel-pure-l/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q1-question-1.svg\" alt=\"With respect to a fixed origin, the points A and B have position vectors 2 i + 4 j + 7 k and 4 − i + + j k , respectively. The point P lies on the straight line through A and B .   Find the possible position vectors of P if AP = 2 PB . ( ) 5\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q1-solution-1.svg\" alt=\"Looking at the diagram below: There are two positions on the line:\" style=\"--madas-width:536.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q1-solution-2.svg\" alt=\"For internal division, −→ −−→ AP = 2 AB. 3 Thus −−→ OP = −→ OA + −→ AP −−→ OP = −→ OA + 2 −−→ AB 3 p = a + 2 3(b −a) p = (2, 4, 7) + 2 3(−6, −3, −6) p = (2, 4, 7) + (−4, −2, −4) p = (−2, 2, 3) For external division beyond B, −−→ BP = −−→ AB.\" style=\"--madas-width:432.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q1-solution-3.svg\" alt=\"Thus −−→ OP = −−→ OB + −−→ BP −−→ OP = −−→ OB + −−→ AB p = b + (b −a) p = 2b −a p = 2(−4, 1, 1) −(2, 4, 7) p = (−10, −2, −5) To see that these exhaust the possibilities, write P = A + λ(B −A). [B1] The distance condition gives |λ| = 2|λ −1|, [A1] so λ2 = 4(λ −1)2 [A1] and (3λ −2)(λ −2) = 0. [A1] With B −A = (−6, −3, −6), the two position vectors are\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q1-solution-4.svg\" alt=\"−2i + 2j + 3k and −10i −2j −5k . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 5 marks.</p>"
+    ],
+    "promptText": "With respect to a fixed origin, the points A and B have position vectors 2 i + 4 j + 7 k and 4 − i + + j k , respectively. The point P lies on the straight line through A and B .   Find the possible position vectors of P if AP = 2 PB . ( ) 5"
+  },
+  {
+    "id": "madas/alevel-pure-l/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q2-question-1.svg\" alt=\"A curve is defined by the following parametric equations 2 ,   t ∈ , x = 4 at , y = a ( 2 t + 1 ) where a is non zero constant. Given that the curve passes through the point ( A 4,8 ) , find the possible values of a . ( ) 6\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q2-solution-1.svg\" alt=\"At (4, 8), at2 = 1 [M1] and a(2t + 1) = 8. [A1] The source eliminates t using x = 4at2, y = a(2t + 1): 4 = 4at2 at2 = 1 t2 = 1 a 4t2 = 4 a 8 = a(2t + 1) 8 a = 2t + 1 2t = 8 a −1 8 2 4t2 = a −1 4 8 2 a = a −1 a = 64 4 a2 −16 a + 1\" style=\"--madas-width:652.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q2-solution-2.svg\" alt=\"Multiply by a2 and factor: 4a = 64 −16a + a2 0 = a2 −20a + 64 0 = (a −4)(a −16) This gives a = 4, 16. As a check, eliminate a instead: Then a = 1/t2 and 8t2 −2t −1 = (4t + 1)(2t −1) . [A1] = 0 The roots t = −1 4, 1 2 [A1] give a = 16 or 4 , [A1] respectively: [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 6 marks.</p>"
+    ],
+    "promptText": "A curve is defined by the following parametric equations 2 ,   t ∈ , x = 4 at , y = a ( 2 t + 1 ) where a is non zero constant. Given that the curve passes through the point ( A 4,8 ) , find the possible values of a . ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-l/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q3-question-1.svg\" alt=\"Find the solutions of the trigonometric equation 6 13sin 2 + ( θ + α ) ° = 5cos2 θ °, 0 ≤ θ &lt; 360 5 where tan α° = , 0 &lt; α &lt; 90 . ( ) 7 12\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q3-solution-1.svg\" alt=\"The acute angle has sin(α◦) = 5/13 [B1] and cos(α◦) = 12/13. [A1] Start with 6 + 13 sin(2θ + α) = 5 cos 2θ, with angles in degrees: The addition formula gives 6 + 13(sin 2θ cos α + cos 2θ sin α) = 5 cos 2θ.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q3-solution-2.svg\" alt=\"Substitution of the sides of the 5–12–13 triangle gives 6 + 12 sin 2θ + 5 cos 2θ = 5 cos 2θ. Expand the sine and cancel the two 5 cos((2θ)◦) terms: This gives sin((2θ)◦) = −1/2. [A1] The principal inverse sine is −30◦, so 2θ = −30◦+ 360◦n or 210◦+ 360◦n. Hence θ = −15◦+ 180◦n or 105◦+ 180◦n. In 0 ≤2θ &lt; 720, [A1] the values of 2θ are 210, 330, 570, 690. [A1] Thus θ = 105, 165, 285, 345 [A1] in degrees: [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 7 marks.</p>"
+    ],
+    "promptText": "Find the solutions of the trigonometric equation 6 13sin 2 + ( θ + α ) ° = 5cos2 θ °, 0 ≤ θ < 360 5 where tan α° = , 0 < α < 90 . ( ) 7 12"
+  },
+  {
+    "id": "madas/alevel-pure-l/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q4-question-1.svg\" alt=\"The curve C has equation π y = x cos x , 0 ≤ x ≤ . 2 The curve has a single turning point at M . a) Show that x coordinate of  M is a solution of the equation  1  x = arctan . ( )   5   x b) Show further that the equation\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q4-question-2.svg\" alt=\"  1 x = arctan    x  ( ) 2 has root α between 0.8 and 1. The iterative formula   1 x = arctan   with 1 x = 0.9 n + 1  x  n is to be used to find α . c) Find, to 3 decimal places, the value of x , 3x and x . ( ) 1 2 4\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q4-question-3.svg\" alt=\"[ continues in the next page ]\" style=\"--madas-width:558.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q4-question-4.svg\" alt=\"[ continued from the previous page ]  1  = = The diagram below shows the graphs of y x and y arctan   .  x  y y = x   1 y = arctan    x  x O 1x\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q4-question-5.svg\" alt=\"d) Use a copy of the above diagram to show how the convergence to the root α takes place, by constructing a staircase or cobweb pattern. Indicate clearly the positions of x , 3x and x . ( ) 2 2 4\" style=\"--madas-width:581.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q4-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:561.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q4-solution-2.svg\" alt=\"(a) y′ = cos x −x sin x. [B1] [A1] Indeed y = x cos x, so dy/dx = 1 · cos x + x(−sin x). At a stationary point 0 = cos x −x sin x; thus cos x = x sin x. Divide both sides by x cos x. At the interior stationary point, tan x = 1/x, [A1] giving x = arctan(1/x) [A1] on 0 &lt; x &lt; π/2 . [A1] (b) Using the source convention, f(x) = x −arctan(1/x) gives f(0.8) = −0.096055 . . . &lt; 0, f(1) = 0.214601 . . . &gt; 0. The opposite sign convention gives the same root. The continuous function g(x) = arctan(1/x) −x satisfies g(0.8) ≈0.0961 &gt; 0 [B1] and g(1) = π/4 −1 &lt; 0.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q4-solution-3.svg\" alt=\"Hence α lies between 0.8 and 1. [A1] (c) Apply xn+1 = arctan(1/xn) in radians, using the unrounded result as the next input: Iterating from 0.9 gives x2 ≈0.838 , x3 ≈0.873 , and x4 ≈0.853 . [A1] (d) Start at x1. Each vertical step to y = arctan(1/x) [B1] gives the next ordinate, and each horizontal step to y = x converts it to the next abscissa: [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 10 marks.</p>"
+    ],
+    "promptText": "The curve C has equation π y = x cos x , 0 ≤ x ≤ . 2 The curve has a single turning point at M . a) Show that x coordinate of  M is a solution of the equation  1  x = arctan . ( )   5   x b) Show further that the equation   1 x = arctan    x  ( ) 2 has root α between 0.8 and 1. The iterative formula   1 x = arctan   with 1 x = 0.9 n + 1  x  n is to be used to find α . c) Find, to 3 decimal places, the value of x , 3x and x . ( ) 1 2 4 [ continues in the next page ] [ continued from the previous page ]  1  = = The diagram below shows the graphs of y x and y arctan   .  x  y y = x   1 y = arctan    x  x O 1x d) Use a copy of the above diagram to show how the convergence to the root α takes place, by constructing a staircase or cobweb pattern. Indicate clearly the positions of x , 3x and x . ( ) 2 2 4"
+  },
+  {
+    "id": "madas/alevel-pure-l/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q5-question-1.svg\" alt=\"O 3cm 3cm C D 3cm 3cm R A B\" style=\"--madas-width:430.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q5-question-2.svg\" alt=\"The figure above shows a circular sector OAB , of radius 6 cm, centred at O . The points C and D are the midpoints of OA and OB , respectively. The triangle OCD is equilateral. Another circular sector CDB , centred at D and of radius 3 cm, is drawn inside the circular sector  OAB . The finite region R bounded by the circular arcs AB and CB , and the straight line segment AC , is shown shaded in the figure above. a) Show that the perimeter of R is ( + 4π ) ( ) 3 cm. 4 b) Determine an exact value for the area of R . ( ) 5\" style=\"--madas-width:578.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q5-question-3.svg\" alt=\"Question diagram\" style=\"--madas-width:594.8px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q5-solution-1.svg\" alt=\"Triangle OCD is equilateral because OC = OD = CD .\" style=\"--madas-width:428.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q5-solution-2.svg\" alt=\"= 3 The angle at O is π/3. As DO and DB are opposite rays, ∠CDB = 2π/3. (a) Arc AB has length 6(π/3) = 2π, [B1] arc CB has length 3(2π/3) = 2π, [A1] and AC = 3. [A1] Using P = d AB + d BC + AC = 2π + 2π + 3, the total is 3 + 4π centimetres: [A1] (b) The outer sector has area 1 2(6)2(π/3) = 6π; [B1] the inner sector has area 1 2(3)2(2π/3) = 3π. [A1] Triangle OCD has area √ 1 2(3)(3) sin(π/3) = 9 3/4. [A1] The area is the outer sector less the inner sector and equilateral triangle OCD: √ √ cm2 . 1 2(62)π 3 −1 2(32)2π 4 (32) = 3  3π −9  3 − 3 [M1] [A1] 4\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q5-solution-3.svg\" alt=\"√ The equivalent factorised form is 3 4(4π −3 3) cm2.\" style=\"--madas-width:361.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 9 marks.</p>"
+    ],
+    "promptText": "O 3cm 3cm C D 3cm 3cm R A B The figure above shows a circular sector OAB , of radius 6 cm, centred at O . The points C and D are the midpoints of OA and OB , respectively. The triangle OCD is equilateral. Another circular sector CDB , centred at D and of radius 3 cm, is drawn inside the circular sector  OAB . The finite region R bounded by the circular arcs AB and CB , and the straight line segment AC , is shown shaded in the figure above. a) Show that the perimeter of R is ( + 4π ) ( ) 3 cm. 4 b) Determine an exact value for the area of R . ( ) 5 "
+  },
+  {
+    "id": "madas/alevel-pure-l/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q6-question-1.svg\" alt=\"The surface area A , of a metallic cube of side length x , is increasing at the constant cm s−. 2 1 rate of  0.45 Find the rate at which the volume of the cube is increasing, when the cube’s side length is 8 cm . ( ) 7\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q6-solution-1.svg\" alt=\"Since A = 6x2 and V = x3, [B1] [A1] for x &gt; 0 the chain rule gives dV dt = 3x2 dA dt . [M1] [M1] [A1] 12x In detail, dV/dt = (dV/dx)(dx/dA)(dA/dt)\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q6-solution-2.svg\" alt=\"= 3x2(1/(12x))(0.45) . = 9x/80 At x = 8, this is (8/4)(0.45) = 0.90 cm3 s−1 . [M1] [A1] Alternative. Express the volume directly in terms of surface area: V = x3 ⇒V 2 = x6 A = 6x2 ⇒A3 = 216x6 A3 V 2 = 216 A3 = 216V 2 ! 1 √ A3 2 6 3 V = + = 36 A 2 216\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q6-solution-3.svg\" alt=\"Now apply the chain rule: dV dt = dV dA × dA dt √ dV 36 × 3 6 1 dt = 2A 2 × 0.45 √ dV 6 1 2 × 0.45 dt = 24 A √ dV 6 6x2 1  2 × 0.45 dt = 24 √ √ 6x2 = Since 6x, this simplifies to (x/4)(0.45) = 9x/80, again 0.90 at x = 8.\" style=\"--madas-width:505.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 7 marks.</p>"
+    ],
+    "promptText": "The surface area A , of a metallic cube of side length x , is increasing at the constant cm s−. 2 1 rate of  0.45 Find the rate at which the volume of the cube is increasing, when the cube’s side length is 8 cm . ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-l/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q7-question-1.svg\" alt=\"dy dx = ( + ) x &gt; y &gt; x y y 1 , 0 , 0 Show that the solution of the above differential equation subject to the boundary 1 1 condition y = at x = , is given by 2 3 x = − y . ( 11 ) 1 x\" style=\"--madas-width:590.8px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q7-solution-1.svg\" alt=\"From x dy/dx = y(y + 1), move the differentials to get x dy = y(y + 1) dx, hence dy/[y(y + 1)] = dx/x. Set 1/[y(y + 1)] = A/y + B/(y + 1). Clearing the denominator gives 1 = A(y + 1) + By. With y = 0 obtain A = 1, and with y = −1 obtain 1 = −B, so B = −1. Separate variables and integrate: Z dx Z 1 1   y  y − dy = x , = ln x + C [M1] [A1] ln y + 1 y + 1 since integration gives ln |y| −ln |y + 1| = ln |x| + C. Exponentiating gives y/(y + 1) = kx, where k = eC, using x, y &gt; 0. [M1] [A1] At x = 1 3, y = 1 2 the ratio y/(y + 1) equals 1/3, giving 1/3 = k/3, hence k = 1, so C = 0. [M1] [A1] Thus y/(y + 1) = x, [M1] [A1] hence y = (y + 1)x = xy + x, y −xy = x, y(1 −x) = x, giving y = x/(1 −x) [M1] [A1] on 0 &lt; x &lt; 1. [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 11 marks.</p>"
+    ],
+    "promptText": "dy dx = ( + ) x > y > x y y 1 , 0 , 0 Show that the solution of the above differential equation subject to the boundary 1 1 condition y = at x = , is given by 2 3 x = − y . ( 11 ) 1 x"
+  },
+  {
+    "id": "madas/alevel-pure-l/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q8-question-1.svg\" alt=\"The first three terms of a geometric series are u = q ( 4 p + 1 ) , u = q ( 2 p + 3 ) and u = q ( 2 p − 3 ) . 1 2 3 a) Find the possible values of p . ( ) 7 The sum to infinity of the series is 250 . b) Find the value of q . ( ) 4\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q8-solution-1.svg\" alt=\"(a) The successive terms obey q(4p + 1)r = q(2p + 3) and q(2p + 3)r = q(2p −3). Eliminating r by dividing gives (4p + 1)/(2p + 3) = (2p + 3)/(2p −3). The square of the middle term equals the product of the others: [B1] [A1] Divide by q2, then expand to 8p2 −10p −3 = 4p2 + 12p + 9.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q8-solution-2.svg\" alt=\"Collecting terms gives 4p2 −22p −12 = 0; division by 2 and factorisation give (2p + 3)2 = (4p + 1)(2p −3), 2p2 −11p −6 = (2p + 1)(p −6) = 0. [M1] [M1] [A1] Thus p = −1 2 or 6 . [M1] [A1] (b) At p = −1 2 the first three terms are −q, 2q, −4q, so the common ratio is −2, which is divergent: [M1] At p = 6, the terms are 25q, 15q, 9q. Only this case has |r| &lt; 1. Its first term is 25q and the ratio 3/5. [A1] Thus 250 = 25q/(1 −3/5) [A1] hence 250 = 25q/(2/5), 100 = 25q, and q = 4 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 11 marks.</p>"
+    ],
+    "promptText": "The first three terms of a geometric series are u = q ( 4 p + 1 ) , u = q ( 2 p + 3 ) and u = q ( 2 p − 3 ) . 1 2 3 a) Find the possible values of p . ( ) 7 The sum to infinity of the series is 250 . b) Find the value of q . ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-l/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q9-question-1.svg\" alt=\"The functions f and  g are defined by + , x∈ , f x ( ) = 2 x 3 x ≤ 8 2 g x ( ) = x −, x∈ , 1 x ≥ 0 . Find the domain and range of fg x . ( ) ( ) 6\" style=\"--madas-width:590.8px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q9-solution-1.svg\" alt=\"Looking at the diagram: The input to f requires x2 −1 ≤8. [M1] Adding 1 gives x2 ≤9, i.e. −3 ≤x ≤3.\" style=\"--madas-width:521.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q9-solution-2.svg\" alt=\"With x ≥0, the composite domain is [0, 3] . [M1] [A1] Its formula is 2(x2 −1) + 3 = 2x2 + 1, [A1] so f(g(0)) = 1 and f(g(3)) = 2(9) + 1 . = 19 It is increasing on this interval from 1 to 19. [A1] The range is [1, 19] . [A1]\" style=\"--madas-width:658.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 6 marks.</p>"
+    ],
+    "promptText": "The functions f and  g are defined by + , x∈ , f x ( ) = 2 x 3 x ≤ 8 2 g x ( ) = x −, x∈ , 1 x ≥ 0 . Find the domain and range of fg x . ( ) ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-l/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q10-question-1.svg\" alt=\"4 x + 3 4 = x ≠− y , . 3 3 x + 4 a) Calculate the five missing values of x and y in the following table. x 0 32 3 35 67 y 4 28 52 ( ) 2 b) Use the trapezium rule with all the values from the completed table of part (a) to find an estimate for\" style=\"--madas-width:577.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q10-question-2.svg\" alt=\" 32 4 x + 3 dx . ( ) 3 3 x + 4 0 c) Use the substitution = + u 3 x 4 to find the exact value of  32 4 x + 3 dx . ( ) 7 3 x + 4 0\" style=\"--madas-width:581.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q10-solution-1.svg\" alt=\"(a) The step is 32/4 = 8. The missing x-values are 8, 16, 24; the missing ordinates are y(24) = 99/76 [B1] and y(32) = 131/100 . [A1] (b) Using the trapezium rule: With the printed 35/29, the source obtains 4[9.6559 . . .] = 38.6239 . . . ≈38.6. Replacing this one ordinate with its value from the integrand gives the following estimate: Applying the trapezium rule gives h 3 4 + 131  35 28 + 67 52 + 99 i 4 100 + 2 ≈38.9687 . [M1] [M1] [A1] 76 (c) With u = 3x + 4, dx = du/3. [B1] [A1] The limits are 4 and 100, and 4x + 3 = (4u −7)/3. [M1] [A1] Thus (4x + 3)/(3u) = (12x + 9)/(9u)\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q10-solution-2.svg\" alt=\"= (4u −7)/(9u) . Integration gives 1 9[4u −7 ln u]100 = 1 9[(400 −7 ln 100) −(16 −7 ln 4)] 4 = 1 9[384 + 7 ln(1/25)] . = 1 9[384 −14 ln 5] The integral is Z 100 1 128 3 −7 (4 −7/u) du = 9 ln 25 . [M1] [M1] [A1] 9 4 Alternative. Rewriting the numerator before integration gives Z 32 Z 32 12x + 9 4(3x + 4) −7 I = 1 3x + 4 dx = 1 dx 3 3 3x + 4 0 0 = 1 3[4x −7 3 ln(3x + 4)]32 0 = 1 3[128 −7 3 ln 100 + 7 3 ln 4] = 1 3[128 + 7 3 ln(1/25)] = 1 9[384 −14 ln 5].\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q10-solution-3.svg\" alt=\"Source correction. The printed ordinate at x = 8 is 35/29. Substituting x = 8 into the stated formula gives 35/28, consistent with the equally spaced x-values.\" style=\"--madas-width:638.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 12 marks.</p>"
+    ],
+    "promptText": "4 x + 3 4 = x ≠− y , . 3 3 x + 4 a) Calculate the five missing values of x and y in the following table. x 0 32 3 35 67 y 4 28 52 ( ) 2 b) Use the trapezium rule with all the values from the completed table of part (a) to find an estimate for  32 4 x + 3 dx . ( ) 3 3 x + 4 0 c) Use the substitution = + u 3 x 4 to find the exact value of  32 4 x + 3 dx . ( ) 7 3 x + 4 0"
+  },
+  {
+    "id": "madas/alevel-pure-l/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q11-question-1.svg\" alt=\"The equation of a curve is given implicitly by 2 2 y − x = , 1 y ≥  . 1 Show clearly that 2 d y 1 = . ( ) 8 2 3 dx y\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q11-solution-1.svg\" alt=\"Differentiate y2 −x2 = 1 implicitly: This gives 2yy′ −2x = 0, [B1] hence yy′ = x and y′ = x/y. [A1] Differentiate yy′ = x once more: By the product rule, (y′)2 + yy′′ = 1. [M1] [A1] Thus yy′′ = 1 −(y′)2. [A1] From the first derivative, (y′)2 = x2/y2 = (y2 −1)/y2. [A1] Substituting gives yy′′ = 1 −(y2 −1)/y2 . [M1] = 1/y2 Indeed the numerator after taking the common denominator is y2 −(y2 −1) = 1. Dividing by y gives y′′ = 1/y3 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 8 marks.</p>"
+    ],
+    "promptText": "The equation of a curve is given implicitly by 2 2 y − x = , 1 y ≥  . 1 Show clearly that 2 d y 1 = . ( ) 8 2 3 dx y"
+  },
+  {
+    "id": "madas/alevel-pure-l/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q12-question-1.svg\" alt=\"y x = ( y + 2 ln 3 ) ( y + 4 ) P O x Q The figure above shows the graph of the curve with equation x = ( y + 2 ln 3 ) ( y + 4 ) . The curve meets the coordinate axes at the point P and at the point Q .\" style=\"--madas-width:505.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q12-question-2.svg\" alt=\"( ) Determine the gradient, in exact from where appropriate, at P and at Q . 8\" style=\"--madas-width:578.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q12-solution-1.svg\" alt=\"The domain is y &gt; −4/3. For x = (y + 2) ln(3y + 4) the product rule gives 1 · ln(3y + 4) + (y + 2)[1/(3y + 4)] · 3. Thus dx dy = ln(3y + 4) + 3(y + 2) 3y + 4 . [M1] At P, y = 0, [A1] so P = (2 ln 4, 0) [A1] with 2 ln 4 = 4 ln 2. The derivative dx/dy = ln 4 + 6/4, so dy/dx = 2/(4 ln 2 + 3) and its gradient is 1/(ln 4 + 3/2) . [A1] At Q, x = 0 requires ln(3y + 4) = 0, [A1] since y + 2 &gt; 0 in the domain: [A1] Thus 3y + 4 = e0 = 1, 3y = −3, y = −1. At this point dx/dy = ln 1 + 3(1)/1 . = 3\" style=\"--madas-width:680.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-l/q12-solution-2.svg\" alt=\"Thus Q = (0, −1), where dx/dy = 3 [A1] and the gradient is 1/3 . [A1]\" style=\"--madas-width:462.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 8 marks.</p>"
+    ],
+    "promptText": "y x = ( y + 2 ln 3 ) ( y + 4 ) P O x Q The figure above shows the graph of the curve with equation x = ( y + 2 ln 3 ) ( y + 4 ) . The curve meets the coordinate axes at the point P and at the point Q . ( ) Determine the gradient, in exact from where appropriate, at P and at Q . 8"
+  }
+]

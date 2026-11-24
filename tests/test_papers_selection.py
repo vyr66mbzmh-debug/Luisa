@@ -54,12 +54,59 @@ class PapersSelection(unittest.TestCase):
         self.page.route('**/papers-print.js', lambda route: route.fulfill(content_type='text/javascript', body='window.LUISA_PAPERS_PRINT={create:async (rows,opts)=>{window.testPaperSnapshot=rows;window.testPrintOptions=opts;return {warnings:[]}}};'))
         self.page.route('**/practice-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.route('**/exam-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
+        self.page.route('**/madas-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version': 1, 'questions': []})))
         self.page.route('**/pmt-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.goto(self.url)
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('6,147')")
 
     def tearDown(self):
         self.context.close()
+
+    def test_madas_and_teacher_options_are_independent(self):
+        self.page.unroute('**/madas-catalogue.json')
+        self.page.unroute('**/papers-print.js')
+        self.page.reload()
+        self.page.wait_for_selector('#papers-source-madas:enabled')
+        for source in ('practice', 'exam-style', 'past-papers'):
+            self.page.locator('#papers-source-' + source).uncheck()
+        self.page.locator('#papers-exam > summary').click()
+        self.page.locator('#papers-exam-madas').check()
+        self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.pool().length'), 0)
+        self.assertTrue(self.page.locator('#papers-exam-generate').is_enabled())
+        self.page.locator('#papers-source-madas').check()
+        self.page.locator('#papers-exam-madas').uncheck()
+        self.assertTrue(self.page.locator('#papers-exam-generate').is_disabled())
+        self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.withoutDuplicateCopies(LUISA_PAPERS_BUILDER.pool()).length'), 1018)
+        for band, count in [('standard', 367), ('hard', 364), ('very-hard', 290)]:
+            self.page.locator('#papers-difficulty').select_option(band)
+            self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.pool().length'), count)
+        self.page.locator('#papers-browse').click()
+        self.page.wait_for_selector('[data-add]')
+        self.assertRegex(self.page.locator('.question-card').first.inner_text(), r'MADAS (?:A-level|AS) (?:Applied|Pure) Paper')
+        self.assertEqual(self.page.locator('.question-card .question-context').count(), 0)
+        self.page.locator('#papers-exam-madas').check()
+        self.page.reload()
+        self.page.wait_for_selector('#papers-source-madas:enabled')
+        self.assertTrue(self.page.locator('#papers-exam-madas').is_checked())
+        self.assertEqual(self.page.locator('#papers-difficulty').input_value(), 'very-hard')
+
+    def test_exam_order_preserves_excluded_madas_positions(self):
+        for url in ('**/madas-catalogue.json', '**/exam-catalogue.json', '**/papers-print.js'):
+            self.page.unroute(url)
+        self.page.reload()
+        self.page.wait_for_selector('#papers-source-madas:enabled')
+        self.page.locator('#papers-source-madas').check()
+        self.page.locator('#papers-exam > summary').click()
+        ids = ['exam/edexcel-9ma0-02-2021-october/q7', 'exam/edexcel-9ma0-01-2018-june/q1',
+               'exam/edexcel-9fm0-01-2021-november/q6', 'exam/edexcel-9fm0-01-2024-june/q8',
+               'madas/as-pure-x/q2']
+        self.page.evaluate("""async ids => {
+            const builder = LUISA_PAPERS_BUILDER;
+            builder.arrange(await builder.load(ids.map(id => builder.pool().find(row => row.id === id))));
+        }""", ids)
+        self.page.locator('#papers-exam-order').click()
+        self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().at(-1).id'), ids[-1])
+        self.assertTrue(self.page.locator('#papers-exam-order-warning').is_hidden())
 
     def generate(self, count):
         self.page.locator('#papers-count').fill(str(count))
@@ -750,7 +797,7 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(self.page.locator('#papers-source-pmt').count(), 0)
         self.assertNotIn('PMT', self.page.locator('.source-fieldset').inner_text())
         self.assertEqual(self.page.locator('.source-fieldset input[type=checkbox]').evaluate_all('n => n.map(x => x.id)'),
-                         ['papers-source-practice', 'papers-source-exam-style', 'papers-source-past-papers'])
+                         ['papers-source-practice', 'papers-source-exam-style', 'papers-source-madas', 'papers-source-past-papers'])
         for source in ('practice', 'past-papers'):
             self.page.locator('#papers-source-' + source).uncheck()
         pool = self.page.evaluate("(() => { const p = LUISA_PAPERS_BUILDER.pool(); return [p.length, p.filter(r => r.sourceKind === 'pmt').length, p.filter(r => r.sourceKind === 'pmt' && r.bank !== 'exam-style').length]; })()")

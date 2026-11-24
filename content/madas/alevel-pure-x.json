@@ -1,0 +1,129 @@
+[
+  {
+    "id": "madas/alevel-pure-x/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q1-question-1.svg\" alt=\"Three numbers, A , B , C in that order, are in geometric progression with common ratio r . Given further that A , 2B , C in that order are in arithmetic progression, determine the possible values of r . ( ) 5\" style=\"--madas-width:590.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q1-solution-1.svg\" alt=\"Because the common ratio is defined, A̸ = 0 and B = Ar, C = Ar2. [B1] Equal arithmetic differences give 2B −A = C −2B, [A1] so 4Ar = A(1 + r2). [A1] Divide by A̸ = 0 to get 4r = 1 + r2. √ √ Then r2 −4r + 1 = 0, [A1] so (r −2)2 −4 + 1 = 0, (r −2)2 = 3, r −2 = ± 3, giving r = 2 ± 3 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 5 marks.</p>"
+    ],
+    "promptText": "Three numbers, A , B , C in that order, are in geometric progression with common ratio r . Given further that A , 2B , C in that order are in arithmetic progression, determine the possible values of r . ( ) 5"
+  },
+  {
+    "id": "madas/alevel-pure-x/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q2-question-1.svg\" alt=\"y y = sin x y = cos2 x P R x O The figure above shows the graphs of the curves with equations y = cos2 x and y = sin x ,  for  0 ≤ x ≤ π .\" style=\"--madas-width:474.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q2-question-2.svg\" alt=\"The point P is the first intersection between the graphs for which x &gt; 0 . π . a) Show clearly that the x coordinate of P is 6 ( ) 5 The finite region R , shown shaded in the figure, is bounded by the two curves and the x axis, and includes the point P on its boundary. b) Determine the exact area of R . ( ) 6\" style=\"--madas-width:596.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q2-solution-1.svg\" alt=\"Looking at the diagram we have: (a) Set s = sin x [M1] in sin x = cos 2x . [A1] = 1 −2 sin2 x Collect terms as 2s2 + s −1 = 0. Then (2s −1)(s + 1) = 0. [A1] Since 0 ≤x ≤π, s = 1/2, [A1] since s = −1 is unavailable here:\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q2-solution-2.svg\" alt=\"The two angles with sine 1/2 are π/6, 5π/6, with first intersection at x = π/6 . [A1] (b) The upper boundary of R is sin x on [0, π/6] and cos 2x on [π/6, π/4], where π/4 is the first zero of R π/6 R π/4 cos 2x. [B1] [M1] [A1] The split integral is sin x dx + π/6 cos(2x) dx, with cos 0 = 1, 0 √ cos(π/6) = sin(π/3) = 3/2 and sin(π/2) = 1. The area is √ √ √ iπ/4 2 + 1 3 3 = 3 [−cos x]π/6 h 1 + 2 sin 2x π/6 = 1 − 2 − 4(2 − 3) . [M1] [M1] [A1] 0 4\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 11 marks.</p>"
+    ],
+    "promptText": "y y = sin x y = cos2 x P R x O The figure above shows the graphs of the curves with equations y = cos2 x and y = sin x ,  for  0 ≤ x ≤ π . The point P is the first intersection between the graphs for which x > 0 . π . a) Show clearly that the x coordinate of P is 6 ( ) 5 The finite region R , shown shaded in the figure, is bounded by the two curves and the x axis, and includes the point P on its boundary. b) Determine the exact area of R . ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-x/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q3-question-1.svg\" alt=\"Solve the following equation 2 3 4 5 6 2 x − 2 x + x − 2 x + x − 2 x + ... = − . 5 You may assume that the left hand side of the equation converges. ( ) 7\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q3-solution-1.svg\" alt=\"The source separates the odd and even powers: (x + x3 + x5 + · · · ) −2(x2 + x4 + x6 + · · · ). Both series have ratio x2, with first terms x, x2, so their sums are x/(1 −x2) and x2/(1 −x2). Alternatively pair the terms to obtain a geometric series with first term x −2x2 and ratio x2. [A1] The original series converges only when |x| &lt; 1, since its terms must tend to zero. [A1] Then x −2x2 1 −x2 = −2 12x2 −5x −2 = 0. =⇒ [M1] [A1] 5 Cross-multiplication gives 5x −10x2 = −2 + 2x2; the quadratic factors as (4x + 1)(3x −2) = 0. Both quadratic roots x = (5 ± 11)/24 [A1] lie in the convergence interval, so x = 2/3 or −1/4 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 7 marks.</p>"
+    ],
+    "promptText": "Solve the following equation 2 3 4 5 6 2 x − 2 x + x − 2 x + x − 2 x + ... = − . 5 You may assume that the left hand side of the equation converges. ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-x/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q4-question-1.svg\" alt=\"A C 6cm O D 6cm B The figure above shows a circle of radius 6 cm, centred at O .\" style=\"--madas-width:405.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q4-question-2.svg\" alt=\"An arc OC with centre at A and radius 6 cmis drawn inside the circle. A second arc OD is drawn with centre at B and radius 6 cm. Show clearly that the area of the shaded region OCD is 2 6 3 3 ( − π ) cm . ( ) 7\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q4-solution-1.svg\" alt=\"Triangles AOC and BOD are equilateral, so ∠COD = π/3. [B1] [A1] Use 2r2θ = 1 1 2(6)2(π/3).\" style=\"--madas-width:481.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q4-solution-2.svg\" alt=\"The sector COD has area 6π. [M1] [A1] Each of the two parts to subtract is a circular segment of area √ 6π −9 3, from a 60◦sector minus an equilateral triangle of side 6. [A1] The triangle area is √ 1 2(6)(6) sin(π/3) = 18( 3/2) √ . = 9 3 The shaded area is √ √ 3 −π) cm2 . 6π −2(6π −9 3) = 6(3 [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 7 marks.</p>"
+    ],
+    "promptText": "A C 6cm O D 6cm B The figure above shows a circle of radius 6 cm, centred at O . An arc OC with centre at A and radius 6 cmis drawn inside the circle. A second arc OD is drawn with centre at B and radius 6 cm. Show clearly that the area of the shaded region OCD is 2 6 3 3 ( − π ) cm . ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-x/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q5-question-1.svg\" alt=\"y = arcsin x , 1 −≤ x ≤. 1 a) By writing y = arcsin x as x = sin y show that dy 1 = . ( ) 4 dx 2 1 − x The curve C has equation 3 y = 2arcsin x − 4 x 2 , 0 ≤ x ≤. 1 b) Show that the x coordinates of the stationary points of C are the solutions of the equation\" style=\"--madas-width:578.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q5-question-2.svg\" alt=\"3 ( ) 9 x − 9 x + = 1 0 . 4 c) Show further that one of the roots, α , of the equation of part (b) is 0.9390 , correct to 4 decimal places. ( ) 3 It is further given that the equation of part (b) has 2 more real roots, β ≈− 1.0515 , and γ . ( ) d) Determine the value of γ , correct to 3 places. 4\" style=\"--madas-width:593.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q5-solution-1.svg\" alt=\"(a) For −1 &lt; x &lt; 1, x = sin y [M1] and −π/2 &lt; y &lt; π/2, [A1] so dx/dy = cos y &gt; 0. [A1] Thus 1 −x2 . p dy/dx = 1/ cos y = 1/ [A1] √ 1 −x2 −6√x. [B1] Set the derivative to zero and divide by 2: (b) The derivative is 2/ 1 2 1 2 6x 2 = (1 −x2) 1 1 1 2 3x 2 = (1 −x2) 1 9x = 1 −x2\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q5-solution-2.svg\" alt=\"9x −9x3 = 1 9x3 −9x + 1 = 0 Setting it to zero and squaring gives 1 = 9x(1 −x2), or 9x3 −9x + 1 = 0. [M1] Conversely both sides of the unsquared equality are positive for 0 &lt; x &lt; 1, so roots there are stationary points: [A1] The negative root is outside the curve’s domain: [A1] (c) For F(x) = 9x3 −9x + 1, F(0.93895) &lt; 0 &lt; F(0.93905). [M1] By continuity and monotonicity on that interval the root rounds to 0.9390 . [M1] [A1] (d) The three roots sum to 0, so γ is near 0.1125. [B1] The source uses the constant term in x3 −x + 1/9. Its roots have product −1/9; using the two rounded values gives 0.9390(1.0515)γ ≃1/9. This estimate is very close to the rounding boundary: Since this is a rounding boundary, check F(0.1125) &gt; 0 &gt; F(0.1135). The root is 0.112536 . . ., so γ = 0.113 [A1] to three decimal places: [A1] The handwritten answer rounds a value obtained using the earlier rounded roots. [A1]\" style=\"--madas-width:680.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 15 marks.</p>"
+    ],
+    "promptText": "y = arcsin x , 1 −≤ x ≤. 1 a) By writing y = arcsin x as x = sin y show that dy 1 = . ( ) 4 dx 2 1 − x The curve C has equation 3 y = 2arcsin x − 4 x 2 , 0 ≤ x ≤. 1 b) Show that the x coordinates of the stationary points of C are the solutions of the equation 3 ( ) 9 x − 9 x + = 1 0 . 4 c) Show further that one of the roots, α , of the equation of part (b) is 0.9390 , correct to 4 decimal places. ( ) 3 It is further given that the equation of part (b) has 2 more real roots, β ≈− 1.0515 , and γ . ( ) d) Determine the value of γ , correct to 3 places. 4"
+  },
+  {
+    "id": "madas/alevel-pure-x/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q6-question-1.svg\" alt=\"The mass of a radioactive isotope decays at a rate proportional to the mass of the isotope present. The half life of the isotope is 80 years. Determine the percentage of the original amount which remains after 50 years. ( 11 )\" style=\"--madas-width:593.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q6-solution-1.svg\" alt=\"Let m be the mass after t years and M the initial mass: Decay at a rate proportional to the mass gives dm/dt = −km, with k &gt; 0. [M1] Separating gives dm/m = −k dt. [M1] Integration gives ln m = −kt + C since the mass is positive: [M1] Exponentiating gives m = eCe−kt = Ae−kt . [A1] At t = 0, m = M, so A = M. [A1] The half-life condition is M/2 = Me−80k, [A1] hence e80k = 2. [A1] The handwritten solution takes eighth roots to obtain e10k = 21/8. [A1] Taking logs also gives k = (ln 2)/80 ≃0.00866434, and 21/8 ≃1.09051. At t = 50, m = Me−50k = M(e10k)−5, [A1] hence m = M2−5/8. [A1] The percentage remaining is\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q6-solution-2.svg\" alt=\"100m/M = 100 2−5/8 ≈64.8% . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 11 marks.</p>"
+    ],
+    "promptText": "The mass of a radioactive isotope decays at a rate proportional to the mass of the isotope present. The half life of the isotope is 80 years. Determine the percentage of the original amount which remains after 50 years. ( 11 )"
+  },
+  {
+    "id": "madas/alevel-pure-x/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q7-question-1.svg\" alt=\"( ) y = ln 1 sin + x , sin x ≠−. 1 d y 2 Show clearly that = f ( ) y , where f ( ) y is a function to be found. ( ) 7 dx 2\" style=\"--madas-width:592.1px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q7-solution-1.svg\" alt=\"The first derivative is y′ = cos x/(1 + sin x). [B1] [M1] [A1] The first derivative follows by multiplying 1/(1 + sin x) by cos x. On differentiating a second time its numerator is −sin x −sin2 x −cos2 x = −sin x −1. Also 1 + sin x = ey. By the quotient rule, y′′ = −sin x(1 + sin x) −cos2 x (1 + sin x)2 1 = − 1 + sin x = −e−y . [M1] Apply the quotient rule [M1] differentiate numerator and denominator [A1] simplify using the Pythagorean identity [A1] express the result in terms of y\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 7 marks.</p>"
+    ],
+    "promptText": "( ) y = ln 1 sin + x , sin x ≠−. 1 d y 2 Show clearly that = f ( ) y , where f ( ) y is a function to be found. ( ) 7 dx 2"
+  },
+  {
+    "id": "madas/alevel-pure-x/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q8-question-1.svg\" alt=\"Solve the trigonometric equation 2 π sin cos cos2 cos4 x x x x = ,  0 ≤ x ≤ , 16 2 ( ) giving the answers in terms of π . 7\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q8-solution-1.svg\" alt=\"Successive uses of sin 2u = 2 sin u cos u [M1] [A1] show that the product is sin 8x/8. [A1] In successive lines the equation is √ 2 sin x cos x cos 2x cos 4x = 16 √ 2 2 sin x cos x cos 2x cos 4x = 8 √ 2 sin 2x cos 2x cos 4x = 8 √ 2 2 sin 2x cos 2x cos 4x = 4 √ 2 sin 4x cos 4x = 4 √ 2 2 sin 4x cos 4x = 2 √ 2 sin 8x = 2\" style=\"--madas-width:660.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q8-solution-2.svg\" alt=\"√ Thus sin 8x = 2/2, [M1] with 0 ≤8x ≤4π. [A1] The corresponding values of 8x are π/4, 3π/4, 9π/4 and 11π/4, giving x = π/32, 3π/32, 9π/32, 11π/32 . [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 7 marks.</p>"
+    ],
+    "promptText": "Solve the trigonometric equation 2 π sin cos cos2 cos4 x x x x = ,  0 ≤ x ≤ , 16 2 ( ) giving the answers in terms of π . 7"
+  },
+  {
+    "id": "madas/alevel-pure-x/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q9-question-1.svg\" alt=\"The function f is defined as a ( 2 − 3 x ) , x∈ , 1 f x ( ) ≡ x &lt; , x ≠ 0 . 2 ( 1 2 − x )( 2 + x ) where a is a non zero constant. a) Show that for all values of the constant a , the coefficient of x in the binomial series expansion of f x , is zero. ( ) ( ) 6 2 b) Find the value of a , given that the coefficient of x in the binomial series expansion of f x , is 10. ( ) ( ) 3\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q9-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q9-solution-1.svg\" alt=\"(a) The source first expands the two factors in the denominator: f(x) = a(2 −3x)(1 −2x)−1(2 + x)−1 f(x) = a(2 −3x)(1 −2x)−1 × 2−1(1 + 1 2x)−1 f(x) = 1 2a(2 −3x)(1 −2x)−1(1 + 1 2x)−1 f(x) = 1 2a(2 −3x)(1 + 2x + 4x2 + . . . )(1 −1 2x + 1 4x2 + . . . ) The product of the two series starts 1 + (2 −1/2)x + (4 −1 + 1/4)x2 = 1 + 3x/2 + 13x2/4. Multiplying by (a/2)(2 −3x) gives (a/2)[2 + (3 −3)x + (13/2 −9/2)x2 + · · · ]. This shows directly that the linear coefficient vanishes: By partial fractions, f(x) = a 5(1 −2x)−1 + 8a 5 (2 + x)−1. [B1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q9-solution-2.svg\" alt=\"The expansions are 1 + 2x + 4x2 + · · · and 1 2 −1 4x + 1 8x2 + · · ·. [M1] [A1] The linear terms give 2a/5 −2a/5 = 0 . [M1] [A1] (b) The quadratic terms give 4a/5 + a/5 = a. [B1] Hence a = 10 . [M1] [A1]\" style=\"--madas-width:648.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 9 marks.</p>"
+    ],
+    "promptText": "The function f is defined as a ( 2 − 3 x ) , x∈ , 1 f x ( ) ≡ x < , x ≠ 0 . 2 ( 1 2 − x )( 2 + x ) where a is a non zero constant. a) Show that for all values of the constant a , the coefficient of x in the binomial series expansion of f x , is zero. ( ) ( ) 6 2 b) Find the value of a , given that the coefficient of x in the binomial series expansion of f x , is 10. ( ) ( ) 3 "
+  },
+  {
+    "id": "madas/alevel-pure-x/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q10-question-1.svg\" alt=\"y P Q ϕ θ x S R The figure above shows the curve C with parametric equations\" style=\"--madas-width:554.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q10-question-2.svg\" alt=\"2 , t ∈ , x = t , y = 2 t t ≥ 0 . The point P lies on C , where t = p . The point R lies on the x axis so that PR is parallel to the y axis. The tangent to C at the point P meets the x axis at the point ∡ Take p &gt; 1, as shown. Q , so that the angle PQR = θ . a) Find the coordinates of Q in terms of p . ( ) 4 1 b) By considering the triangle PQR , show tan θ = . ( ) 2 p The point S has coordinates ( 1,0 and ) ∡ PSR = ϕ .\" style=\"--madas-width:576.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q10-question-3.svg\" alt=\"c) Find an expression for tanϕ in terms of p and hence show that ϕ = 2 θ . ( ) 5 d) Deduce that SP = SQ . ( ) 3\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q10-solution-1.svg\" alt=\"Looking at the diagram below:\" style=\"--madas-width:504.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q10-solution-2.svg\" alt=\"(a) At t = p the slope is 2/(2p) = 1/p, [M1] so y −2p = (x −p2)/p. [A1] Multiplying the tangent equation by p gives py −2p2 = x −p2. At y = 0, x = −p2, [A1] giving Q = (−p2, 0) . [A1] (b) R = (p2, 0), so PR = 2p, [B1] QR = 2p2, giving tan θ = 1/p . [A1] (c) Since p &gt; 1, tan ϕ = PR/SR . [B1] = 2p/(p2 −1) Here SR = p2 −1. Dividing top and bottom by p2 gives (2/p)/(1 −1/p2). The double-angle identity gives tan 2θ = 2(1/p)/[1 −1/p2]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q10-solution-3.svg\" alt=\". = 2p/(p2 −1) Here 0 &lt; θ &lt; π/4 [A1] and ϕ is acute, so 2θ = ϕ. [A1] The condition p &gt; 1 [A1] makes the point order and angles agree with the printed diagram: [B1] (d) At S, the interior angle of PSQ is π −ϕ. [M1] At Q it is θ, so at P it is ϕ −θ = θ. [A1] Equal angles imply SP = SQ . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 14 marks.</p>"
+    ],
+    "promptText": "y P Q ϕ θ x S R The figure above shows the curve C with parametric equations 2 , t ∈ , x = t , y = 2 t t ≥ 0 . The point P lies on C , where t = p . The point R lies on the x axis so that PR is parallel to the y axis. The tangent to C at the point P meets the x axis at the point ∡ Take p > 1, as shown. Q , so that the angle PQR = θ . a) Find the coordinates of Q in terms of p . ( ) 4 1 b) By considering the triangle PQR , show tan θ = . ( ) 2 p The point S has coordinates ( 1,0 and ) ∡ PSR = ϕ . c) Find an expression for tanϕ in terms of p and hence show that ϕ = 2 θ . ( ) 5 d) Deduce that SP = SQ . ( ) 3"
+  },
+  {
+    "id": "madas/alevel-pure-x/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q11-question-1.svg\" alt=\"The functions f and  g are defined by  f x ( ) = 2 x + 1, x ∈ , x ≤ 5  g x ( ) = x − 1, x ∈ , x ≥ 10 . a) Find an expression for the composite function fg x , further stating its ( ) domain and range. ( ) 7 The domain of ( ) g x is next changed to x &gt; a . ( ) b) Given that now gf x cannot be formed, determine the smallest possible\" style=\"--madas-width:576.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q11-question-2.svg\" alt=\"value of the constant a . ( ) 4\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q11-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:597.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q11-solution-2.svg\" alt=\"(a) √ f(g(x)) = 2 x −1 + 1. [B1] [A1] Require x ≥10 and √x −1 ≤5, [M1] [A1] hence x −1 ≤25, x ≤26. Intersect this with x ≥10, so the domain is [10, 26]. [M1] [A1] The sketch starts with √x, shifts right by one, stretches vertically by two, then shifts up by one. √ √ At the endpoints 2 9 + 1 = 7 and 2 25 + 1 = 11. The expression increases from 7 to 11, giving range [7, 11] . [A1] (b) The range of f is (−∞, 11]. [B1] For no output to be strictly above a, require a ≥11. [A1] The printed part asks about g(f(x)). Its input to g would be f(x) = 2x + 1 ≤11, and g now accepts only inputs strictly greater than a. The handwritten value 26 corresponds to testing the opposite composition: Thus the smallest value is 11 . [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 11 marks.</p>"
+    ],
+    "promptText": "The functions f and  g are defined by  f x ( ) = 2 x + 1, x ∈ , x ≤ 5  g x ( ) = x − 1, x ∈ , x ≥ 10 . a) Find an expression for the composite function fg x , further stating its ( ) domain and range. ( ) 7 The domain of ( ) g x is next changed to x > a . ( ) b) Given that now gf x cannot be formed, determine the smallest possible value of the constant a . ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-x/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q12-question-1.svg\" alt=\"Use trigonometric identities to find the value of π  3 x x x dx ( ) 9 32sin sin 2 sin3 . 0\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q12-solution-1.svg\" alt=\"Subtract the two compound-angle expansions: cos(3x + x) = cos 3x cos x −sin 3x sin x cos(3x −x) = cos 3x cos x + sin 3x sin x cos(3x −x) −cos(3x + x) = 2 sin 3x sin x cos 2x −cos 4x = 2 sin 3x sin x The handwritten integration uses cos 4x = 2 cos2(2x) −1: 16 sin 2x(cos 2x −cos 4x) = 8 sin 4x −32 cos2(2x) sin 2x + 16 sin 2x = [−2 cos 4x + 16 3 cos3 2x −8 cos 2x] π 3 0 = [−2(−1 2) + 16 3 (−1 2)3 −8(−1 2)] −[−2 + 16 3 −8] = 1 −2 3 + 4 + 2 −16 3 + 8\" style=\"--madas-width:550.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q12-solution-2.svg\" alt=\"= 9 An alternative product-to-sum calculation gives the same value. The identities 2 sin x sin 3x = cos 2x −cos 4x [B1] [A1] and 2 sin u cos v = sin(u + v) + sin(u −v) [M1] [A1] give 32 sin x sin 2x sin 3x = 8(sin 4x + sin 2x −sin 6x). [M1] [A1] The integral is 3 cos 6x]π/3 [−2 cos 4x −4 cos 2x + 4 = 3 + 6 0 [M1] [A1] = 9 when each cosine contribution is evaluated separately: [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 9 marks.</p>"
+    ],
+    "promptText": "Use trigonometric identities to find the value of π  3 x x x dx ( ) 9 32sin sin 2 sin3 . 0"
+  },
+  {
+    "id": "madas/alevel-pure-x/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q13-question-1.svg\" alt=\"θ h cm s−. 3 1 Fine sand starts falling onto a horizontal floor at the constant rate of 50 A heap is formed in the shape of a right circular cone of height h cm .\" style=\"--madas-width:518.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q13-question-2.svg\" alt=\"The angle θ , where tan θ = 3 , is formed between the vertical height and the slant height of the cone, as shown in the figure above. Show that when t = 60 dh 1 − 1 = π 3 . dt 18 where t is the time in seconds since the sand started falling.  1 2  volume of a cone of radius  and height   is given by 3 r h π r h  ( 12 ) \" style=\"--madas-width:580.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q13-question-3.svg\" alt=\"Question diagram\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-x/q13-solution-1.svg\" alt=\"The cross-section gives r = 3h. [B1] [A1] Hence V = π(3h)2h/3 = 3πh3 , [M1] [A1] = 50t so dh/dt = 50/(9πh2). [M1] [A1] Explicitly dV/dh = 9πh2, dh/dV = 1/(9πh2); multiply by dV/dt = 50. At t = 60, h3 = 1000/π, [M1] [A1] since V = 50(60) = 3000 = 3πh3, giving h = 10π−1/3. [M1] [A1] Therefore dh 50 1 18π−1/3 cm s−1 . dt = 9π(10π−1/3)2 = [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 12 marks.</p>"
+    ],
+    "promptText": "θ h cm s−. 3 1 Fine sand starts falling onto a horizontal floor at the constant rate of 50 A heap is formed in the shape of a right circular cone of height h cm . The angle θ , where tan θ = 3 , is formed between the vertical height and the slant height of the cone, as shown in the figure above. Show that when t = 60 dh 1 − 1 = π 3 . dt 18 where t is the time in seconds since the sand started falling.  1 2  volume of a cone of radius  and height   is given by 3 r h π r h  ( 12 )  "
+  }
+]

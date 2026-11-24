@@ -1,0 +1,126 @@
+[
+  {
+    "id": "madas/as-pure-c/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q1-question-1.svg\" alt=\"𝑦 𝑦= 𝑥2 −4𝑥+ 10 𝑥 𝑂 3 The figure above shows the curve with equation 2 y x 4 x 10 , x∈ℝ. = − +\" style=\"--madas-width:412.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q1-question-2.svg\" alt=\"Find the area of the region, bounded by the curve the coordinate axes and the straight 4 line with equation x = 3 . ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q1-solution-1.svg\" alt=\"𝑦 𝑥 3 3 (𝑥2 −4𝑥+ 10) 𝑑𝑥 Area = ∫ [M1] 0 = [ 1 3𝑥3 −2𝑥2 + 10𝑥] 3 [A1] 0 3 × 33 −2 × 32 + 10 × 3) −( 1 3 × 03 −2 × 02 + 10 × 0) [M1] = ( 1 [A1] = 9 −18 + 30 = 21 .\" style=\"--madas-width:520.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 4 marks.</p>"
+    ],
+    "promptText": "𝑦 𝑦= 𝑥2 −4𝑥+ 10 𝑥 𝑂 3 The figure above shows the curve with equation 2 y x 4 x 10 , x∈ℝ. = − + Find the area of the region, bounded by the curve the coordinate axes and the straight 4 line with equation x = 3 . ( )"
+  },
+  {
+    "id": "madas/as-pure-c/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q2-question-1.svg\" alt=\"2 f x 2 x 9 x 4 , x∈ℝ. = − + ( ) a) Sketch the graph of f x . ( ) The sketch must include the coordinates of any points where the graph of f x meets the coordinate axes. 5 ( ) ( ) b) Solve the inequality f x &gt; 0 . 2 ( ) ( )\" style=\"--madas-width:549.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q2-solution-1.svg\" alt=\"(a) Collect the relevant information. The positive leading coefficient gives an upward-opening parabola. [B1] At 𝑥= 0, 𝑦= 4, giving (0, 4). [B1] For the horizontal intercepts: 2𝑥2 −9𝑥+ 4 = 0 [M1] (2𝑥−1)(𝑥−4) = 0 or [A1] 𝑥= 1 𝑥= 4. 2 The turning point follows by completing the square: 2𝑦= 𝑥2 −9 4)2 −81 1 2𝑥+ 2 = (𝑥−9 16 + 2, 4)2 −81 4)2 −49 𝑦= 2(𝑥−9 8 + 4 = 2(𝑥−9 8 . The axis of symmetry is 𝑥= 9 4, and the vertex is (9 4, −49 8 ).\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q2-solution-2.svg\" alt=\"𝑦 (0, 4) (1 2, 0) 𝑥 (4, 0) (9 4, −49 8 ) [A1] (b) The graph is above the horizontal axis to the left of the smaller root and to the right of the larger one. [M1] Therefore 𝑥&lt; 1 2 or 𝑥&gt; 4 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 7 marks.</p>"
+    ],
+    "promptText": "2 f x 2 x 9 x 4 , x∈ℝ. = − + ( ) a) Sketch the graph of f x . ( ) The sketch must include the coordinates of any points where the graph of f x meets the coordinate axes. 5 ( ) ( ) b) Solve the inequality f x > 0 . 2 ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-c/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q3-question-1.svg\" alt=\"ℎ 𝑥 𝑥 The figure above shows the design of a large water tank in the shape of a cuboid with a square base and no top.\" style=\"--madas-width:553.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q3-question-2.svg\" alt=\"The square base is of length x metres and its height is h metres. 3 It is given that the volume of the tank is 500 m . 2 a) Show that the surface area of the tank, A m , is given by 2000 A x 2 . 3 = + ( ) x b) Find the value of x for which A is stationary. 6 ( ) c) Find the minimum value for A , fully justifying the fact that it is the minimum. 3 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q3-solution-1.svg\" alt=\"(a) Use the constraint on the volume: ℎ 𝑥 𝑥 𝑥2ℎ= 500 [B1] 𝑉= 500, 𝑥ℎ= 500 𝑥(𝑥ℎ) = 500, 𝑥 𝐴= 𝑥2 + 4𝑥ℎ [M1] = 𝑥2 + 4 (500 𝑥) = 𝑥2 + 2000 [A1] . 𝑥\" style=\"--madas-width:544.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q3-solution-2.svg\" alt=\"(b) Differentiate and find the stationary point: 𝐴= 𝑥2 + 2000𝑥−1 𝑑𝐴 [M1] [A1] 𝑑𝑥= 2𝑥−2000𝑥−2 𝑑𝐴 𝑑𝑥= 0 2𝑥−2000𝑥−2 = 0 [M1] 2𝑥−2000 = 0 𝑥2 2𝑥= 2000 [A1] 𝑥2 2𝑥3 = 2000, 𝑥3 = 1000 [M1] 𝑥= 10 m . [A1]\" style=\"--madas-width:553.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q3-solution-3.svg\" alt=\"(c) Substitute and test the stationary point: 𝐴= 𝑥2 + 2000 𝑥 𝐴min = 102 + 2000 = 300 m2 . [B1] 10 𝑑𝐴 𝑑𝑥= 2𝑥−2000𝑥−2 𝑑2𝐴 [M1] 𝑑𝑥2 = 2 + 4000𝑥−3 𝑑2𝐴 [A1] 𝑑𝑥2 ∣ = 6 &gt; 0. 𝑥=10 Indeed this is the minimum, since the second derivative is positive throughout 𝑥&gt; 0.\" style=\"--madas-width:546.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 12 marks.</p>"
+    ],
+    "promptText": "ℎ 𝑥 𝑥 The figure above shows the design of a large water tank in the shape of a cuboid with a square base and no top. The square base is of length x metres and its height is h metres. 3 It is given that the volume of the tank is 500 m . 2 a) Show that the surface area of the tank, A m , is given by 2000 A x 2 . 3 = + ( ) x b) Find the value of x for which A is stationary. 6 ( ) c) Find the minimum value for A , fully justifying the fact that it is the minimum. 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-c/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q4-question-1.svg\" alt=\"Solve, in degrees, the following trigonometric equation tan 3 x − 75 tan450 ° , 300 x 500 ° . 5 °= °≤ ( ) &lt; ( )\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q4-solution-1.svg\" alt=\"The printed equation has no real solution. Its right-hand side is tan 450∘. Since 450∘= 360∘+ 90∘, sin 450∘= 1 and cos 450∘= 0. [B1] [B1] Consequently tan 450∘= sin 450∘/ cos 450∘is undefined. [M1] The manuscript sets up a general solution in degrees using the period of the tangent: 3𝑥−75 = 450 ± 180𝑛, 𝑛= 0, 1, 2, … 3𝑥= 525 ± 180𝑛 𝑥= 175 ± 60𝑛. It lists … , 175, 235, 295, 355, 415, 475, 535, …, and selects 355, 415, 475 from the required interval. At these candidates the three arguments on the left are 990∘, 1170∘, 1350∘. Each is 90∘modulo 180∘, so the left-hand side is undefined as well. [M1] Periodicity equates tangent values only where the function is defined. The result for the printed question is ∅. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 5 marks.</p>"
+    ],
+    "promptText": "Solve, in degrees, the following trigonometric equation tan 3 x − 75 tan450 ° , 300 x 500 ° . 5 °= °≤ ( ) < ( )"
+  },
+  {
+    "id": "madas/as-pure-c/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q5-question-1.svg\" alt=\"𝑦 𝐶 𝑂 𝑥 𝐴 𝐵 The figure above shows a circle that crosses the x axis at the points A − 1,0 and ( )\" style=\"--madas-width:530.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q5-question-2.svg\" alt=\"7,0 B , while it passes through the point C 3,8 . ( ) ( ) 8 Determine the coordinates of the centre of the circle and the length of its radius. ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q5-solution-1.svg\" alt=\"Let the expanded equation of the circle be 𝑥2 + 𝑦2 + 𝐴𝑥+ 𝐵𝑦= 𝐶. [M1] (−1)2 + 02 + 𝐴(−1) + 𝐵(0) = 𝐶, 1 −𝐴= 𝐶 72 + 02 + 7𝐴+ 𝐵(0) = 𝐶, [A1] 49 + 7𝐴= 𝐶. Solve simultaneously: 49 + 7𝐴= 1 −𝐴 8𝐴= −48 [M1] 𝐴= −6, 𝐶= 7. Substitute these values and use the point (3, 8).\" style=\"--madas-width:590.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q5-solution-2.svg\" alt=\"𝑥2 + 𝑦2 −6𝑥+ 𝐵𝑦= 7 32 + 82 −6(3) + 8𝐵= 7 [M1] 9 + 64 −18 + 8𝐵= 7 [A1] 8𝐵= −48, 𝐵= −6. Finally, complete the square: 𝑥2 + 𝑦2 −6𝑥−6𝑦= 7 (𝑥−3)2 −9 + (𝑦−3)2 −9 = 7 [M1] (𝑥−3)2 + (𝑦−3)2 = 25. [A1] The centre is (3, 3) and the radius is 5. [A1] Alternative using circle geometry:\" style=\"--madas-width:550.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q5-solution-3.svg\" alt=\"𝐶 𝑟 𝑁 𝑘 𝐴 𝐵 4 𝑀 The midpoint of the chord 𝐴𝐵is 𝑀(3, 0). Its perpendicular bisector contains the centre, so write 𝑁= (3, 𝑘). Also √ √ |𝐴𝐶| = √(8 −0)2 + (3 + 1)2 = 64 + 16 = 80. Looking at triangles 𝐴𝑀𝑁and 𝐴𝑀𝐶.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q5-solution-4.svg\" alt=\"|𝐴𝑀|2 + |𝑀𝑁|2 = |𝐴𝑁|2 |𝐴𝑀|2 + |𝑀𝐶|2 = |𝐴𝐶|2 √ 42 + 𝑘2 = 𝑟2 42 + (𝑟+ 𝑘)2 = ( 80)2 16 + 𝑘2 = 𝑟2 16 + (𝑟+ 𝑘)2 = 80\" style=\"--madas-width:517.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q5-solution-5.svg\" alt=\"(𝑟+ 𝑘)2 = 64, 𝑟+ 𝑘= 8. Combine the equations: 𝑟= 8 −𝑘 16 + 𝑘2 = (8 −𝑘)2 16 + 𝑘2 = 64 −16𝑘+ 𝑘2 16𝑘= 48, 𝑘= 3, 𝑟= 5. Thus 𝑁= (3, 3), 𝑟= 5 .\" style=\"--madas-width:585.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 8 marks.</p>"
+    ],
+    "promptText": "𝑦 𝐶 𝑂 𝑥 𝐴 𝐵 The figure above shows a circle that crosses the x axis at the points A − 1,0 and ( ) 7,0 B , while it passes through the point C 3,8 . ( ) ( ) 8 Determine the coordinates of the centre of the circle and the length of its radius. ( )"
+  },
+  {
+    "id": "madas/as-pure-c/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q6-question-1.svg\" alt=\"A curve has equation y = 2 x 3 , x∈ℝ. 2 x 3 a) Describe the single geometric transformation which map the graph of y = 2 x 3 4 2 onto the graph of y + . ( ) = b) Describe a different geometric transformation which map the graph of 2 x 3 2 x 3 4 y = onto the graph of y . 2 + = ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q6-solution-1.svg\" alt=\"(a) Rewrite the exponent: 23𝑥+4 = 23(𝑥+4/3) = 𝑓(𝑥+ 4 [M1] 3). This is a translation by the vector (−4/3 ) . [A1] 0 (b) Alternatively, write the power as a product: 23𝑥+4 = 23𝑥× 24 = 16 × 23𝑥= 16𝑓(𝑥). [M1] This is a stretch parallel to the 𝑦-axis, scale factor 16 . [A1]\" style=\"--madas-width:546.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 4 marks.</p>"
+    ],
+    "promptText": "A curve has equation y = 2 x 3 , x∈ℝ. 2 x 3 a) Describe the single geometric transformation which map the graph of y = 2 x 3 4 2 onto the graph of y + . ( ) = b) Describe a different geometric transformation which map the graph of 2 x 3 2 x 3 4 y = onto the graph of y . 2 + = ( )"
+  },
+  {
+    "id": "madas/as-pure-c/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q7-question-1.svg\" alt=\"Prove by exhaustion that if n is a positive integer that is not divisible by 3, then 2 n − 1 is divisible by 3. 5 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q7-solution-1.svg\" alt=\"If the positive integer 𝑛is not divisible by three, exactly two forms are possible: 𝑛= 3𝑘+ 1 or 𝑛= 3𝑘+ 2, for a non-negative integer 𝑘. [B1] First case: 𝑛2 −1 = (3𝑘+ 1)2 −1 = 9𝑘2 + 6𝑘+ 1 −1 = 3(3𝑘2 + 2𝑘). [M1] [A1] Second case: 𝑛2 −1 = (3𝑘+ 2)2 −1 = 9𝑘2 + 12𝑘+ 4 −1 = 3(3𝑘2 + 4𝑘+ 1). [M1] In both cases the expression is three times an integer. The two cases exhaust the possibilities, so 3 ∣𝑛2 −1 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 5 marks.</p>"
+    ],
+    "promptText": "Prove by exhaustion that if n is a positive integer that is not divisible by 3, then 2 n − 1 is divisible by 3. 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-c/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q8-question-1.svg\" alt=\"A financial advisor wants to model the annual growth of a certain investment, based on the growth of this investment in the past seven years. n, number of years 1 2 3 4 5 6 7 V, in £1000 44 48 55 63 67 75 82 He assumes the formula n r V = 40 1 100 , + ( ) where r represent the constant annual percentage growth and n represents the number of full years that elapsed since the start of the investment.\" style=\"--madas-width:560.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q8-question-2.svg\" alt=\"a) State the initial value of this investment. 1 ( ) b) Show that the data is consistent with his assumption, by using a graphical method, involving logarithms. 6 ( ) c) Determine an estimate for the annual percentage growth of this investment, correct to two significant figures. 4 ( ) d) Estimate the value of this investment after 10 years, briefly commenting on the reliability of this estimate. 2 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q8-solution-1.svg\" alt=\"(a) At the start 𝑛= 0, so 𝑉= 40. Measured in pounds, the initial investment is £40,000 . [B1] (b) Use logarithms of any base. Using natural logarithms gives: 𝑉= 40(1 + 𝑟/100)𝑛 ln 𝑉= ln[40(1 + 𝑟/100)𝑛] [M1] = ln 40 + ln(1 + 𝑟/100)𝑛 = ln 40 + 𝑛ln(1 + 𝑟/100) = 𝑛ln(1 + 𝑟/100) + ln 40. [A1] On a plot of 𝑌= ln 𝑉against 𝑋= 𝑛, the gradient is ln(1 + 𝑟/100) and the intercept is ln 40. [B1] 1 2 3 4 5 6 7 𝑛 [B1] ln 𝑉 3.78 3.87 4.01 4.14 4.20 4.32 4.41\" style=\"--madas-width:629.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q8-solution-2.svg\" alt=\"ln 𝑉 4.4 4.2 4 3.8 3.6 𝑛 1 2 3 4 5 6 7 [M1] The data are consistent with the assumption because the points lie roughly on a straight line. [A1] (c) Use two points on the line, (2, 3.88) and (7, 4.42). Gradient = 4.42 −3.88 [M1] = 0.108 7 −2\" style=\"--madas-width:637.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q8-solution-3.svg\" alt=\"ln(1 + 𝑟/100) = 0.108 [A1] 1 + 𝑟/100 = 𝑒0.108 = 1.11404 … [M1] 100 + 𝑟= 111.404 … [A1] 𝑟= 11.404 … ≈11% . (d) Use the formula with the estimated rate: 𝑉= 40(1 + 11/100)𝑛 = 40 × 1.1110 = 113.576 … . The investment is estimated at £114,000 . [B1] This is an extrapolation. There is no evidence that the growth trend will continue beyond the seven years observed. [B1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 13 marks.</p>"
+    ],
+    "promptText": "A financial advisor wants to model the annual growth of a certain investment, based on the growth of this investment in the past seven years. n, number of years 1 2 3 4 5 6 7 V, in £1000 44 48 55 63 67 75 82 He assumes the formula n r V = 40 1 100 , + ( ) where r represent the constant annual percentage growth and n represents the number of full years that elapsed since the start of the investment. a) State the initial value of this investment. 1 ( ) b) Show that the data is consistent with his assumption, by using a graphical method, involving logarithms. 6 ( ) c) Determine an estimate for the annual percentage growth of this investment, correct to two significant figures. 4 ( ) d) Estimate the value of this investment after 10 years, briefly commenting on the reliability of this estimate. 2 ( )"
+  },
+  {
+    "id": "madas/as-pure-c/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q9-question-1.svg\" alt=\"1 f x , x∈ℝ, x ≠ 0 . ( ) = 3 x Use the formal definition of the derivative as a limit, to show that 3 f x . 7 =− ′ ( ) ( ) 4 x\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q9-solution-1.svg\" alt=\"If 𝑓(𝑥) = 1/𝑥3, then 𝑓(𝑥+ ℎ) = 1/(𝑥+ ℎ)3. [B1] (𝑥+ ℎ)3 −1 1 𝑓(𝑥+ ℎ) −𝑓(𝑥) = 𝑥3 = 𝑥3 −(𝑥+ ℎ)3 [M1] 𝑥3(𝑥+ ℎ)3 = 𝑥3 −(𝑥3 + 3𝑥2ℎ+ 3𝑥ℎ2 + ℎ3) [A1] 𝑥3(𝑥+ ℎ)3 = −3𝑥2ℎ+ 3𝑥ℎ2 + ℎ3 . 𝑥3(𝑥+ ℎ)3 From the formal definition of the derivative as a limit: 𝑓(𝑥+ ℎ) −𝑓(𝑥) 𝑓′(𝑥) = lim [M1] ℎ ℎ→0 ℎ→0 [−3𝑥2ℎ+ 3𝑥ℎ2 + ℎ3 × 1 = lim ℎ] 𝑥3(𝑥+ ℎ)3 ℎ→0 [−(3𝑥2 + 3𝑥ℎ+ ℎ2)ℎ × 1 = lim [M1] ℎ] 𝑥3(𝑥+ ℎ)3 ℎ→0 [−3𝑥2 + 3𝑥ℎ+ ℎ2 = lim [A1] ] . 𝑥3(𝑥+ ℎ)3\" style=\"--madas-width:568.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q9-solution-2.svg\" alt=\"Taking the limit for 𝑥≠0 yields 𝑥3 × 𝑥3 = −3𝑥2 3𝑥2 𝑥6 = −3 𝑓′(𝑥) = − [A1] 𝑥4 .\" style=\"--madas-width:480.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 7 marks.</p>"
+    ],
+    "promptText": "1 f x , x∈ℝ, x ≠ 0 . ( ) = 3 x Use the formal definition of the derivative as a limit, to show that 3 f x . 7 =− ′ ( ) ( ) 4 x"
+  },
+  {
+    "id": "madas/as-pure-c/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q10-question-1.svg\" alt=\"The straight line 1l passes through the points A − 4, 7 and B 4,9 . − ( ) ( ) The straight line 2l has equation 1 y x 4 , = 2 + and meets the 1l at the point C . a) Determine an equation for 1l . 3 ( ) b) Find the coordinates of C . 4 ( )\" style=\"--madas-width:570.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q10-question-2.svg\" alt=\"The straight line 3l is the bisector of the angle formed by 1l and 2l . 5 c) Given that 3l has positive gradient, determine an equation for 3l . ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q10-solution-1.svg\" alt=\"(a) Use 𝐴(−4, −7) and 𝐵(4, 9). grad 𝐴𝐵= 9 −(−7) 4 −(−4) = 16 [M1] 8 = 2 𝑦−𝑦0 = 𝑚(𝑥−𝑥0) [M1] 𝑦−9 = 2(𝑥−4) 𝑦−9 = 2𝑥−8 [A1] 𝑦= 2𝑥+ 1 . (b) Solve the equations simultaneously: 𝑦= 1 𝑦= 2𝑥+ 1, 2𝑥+ 4 2𝑥+ 1 = 1 [M1] 2𝑥+ 4 [A1] 4𝑥+ 2 = 𝑥+ 8\" style=\"--madas-width:533.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q10-solution-2.svg\" alt=\"[A1] 3𝑥= 6, 𝑥= 2 𝑦= 5. Thus 𝐶= (2, 5) . [A1] (c) Draw a diagram. Find 𝐷on 𝑙2 so that |𝐵𝐶| = |𝐷𝐶|, then find the midpoint 𝑀of 𝐵𝐷. The line from 𝐶to 𝑀bisects the angle. [M1] 𝑙1 𝐵 𝑙3 𝑀 𝑙2 𝐷 𝐶\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q10-solution-3.svg\" alt=\"By inspection 𝐷= (6, 7), so 𝑀= (5, 8). [A1] 𝐵(4, 9) 𝑀(5, 8) 𝐷(6, 7) 𝐶(2, 5) grad 𝑀𝐶= 8 −5 [M1] 5 −2 = 1 [M1] 𝑦−5 = 1(𝑥−2) [A1] 𝑦= 𝑥+ 3 .\" style=\"--madas-width:510.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 12 marks.</p>"
+    ],
+    "promptText": "The straight line 1l passes through the points A − 4, 7 and B 4,9 . − ( ) ( ) The straight line 2l has equation 1 y x 4 , = 2 + and meets the 1l at the point C . a) Determine an equation for 1l . 3 ( ) b) Find the coordinates of C . 4 ( ) The straight line 3l is the bisector of the angle formed by 1l and 2l . 5 c) Given that 3l has positive gradient, determine an equation for 3l . ( )"
+  },
+  {
+    "id": "madas/as-pure-c/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q11-question-1.svg\" alt=\"7 f x 1 2 x ( ) = ( + ) a) Determine the first four terms, in ascending powers of x , in the binomial 4 expansion of f x . ( ) ( ) b) Hence, or otherwise, find the first four terms in the expansion of 2 6 3 4 x 4 x 1 2 x , + − + ( )( ) giving the answer in ascending powers of x . 5 ( )\" style=\"--madas-width:552.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q11-solution-1.svg\" alt=\"(a) Use the standard formula for expanding (1 + 2𝑥)𝑛. (1 + 2𝑥)𝑛= 1 + 𝑛(2𝑥) + 𝑛(𝑛−1) (2𝑥)2 + 𝑛(𝑛−1)(𝑛−2) (2𝑥)3 + ⋯ [M1] 2! 3! (1 + 2𝑥)7 = 1 + 7(2𝑥) + 7 × 6 1 × 2(2𝑥)2 + 7 × 6 × 5 1 × 2 × 3(2𝑥)3 + ⋯ [A1] [A1] = 1 + 14𝑥+ 21(4𝑥2) + 35(8𝑥3) + ⋯ = 1 + 14𝑥+ 84𝑥2 + 280𝑥3 + ⋯. [A1] (b) Factorise the quadratic and use part (a): (3 + 4𝑥−4𝑥2)(1 + 2𝑥)6 = −(4𝑥2 −4𝑥−3)(1 + 2𝑥)6 [M1] = −(2𝑥+ 1)(2𝑥−3)(1 + 2𝑥)6\" style=\"--madas-width:608.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q11-solution-2.svg\" alt=\"= −(2𝑥−3)(2𝑥+ 1)7 = (3 −2𝑥)(1 + 2𝑥)7 [A1] = (3 −2𝑥)(1 + 14𝑥+ 84𝑥2 + 280𝑥3 + ⋯) [M1] = 3 + 42𝑥+ 252𝑥2 + 840𝑥3 + ⋯ −2𝑥−28𝑥2 −168𝑥3 + ⋯ [A1] = 3 + 40𝑥+ 224𝑥2 + 672𝑥3 + ⋯. [A1] Alternative to part (b): (1 + 2𝑥)6 = 1 + 6(2𝑥) + 6 × 5 (2𝑥)2 + 6 × 5 × 4 (2𝑥)3 + ⋯ 2! 3! = 1 + 12𝑥+ 15(4𝑥2) + 20(8𝑥3) + ⋯ = 1 + 12𝑥+ 60𝑥2 + 160𝑥3 + ⋯. Multiply by the given quadratic:\" style=\"--madas-width:605.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q11-solution-3.svg\" alt=\"(3 + 4𝑥−4𝑥2)(1 + 2𝑥)6 = (3 + 4𝑥−4𝑥2)(1 + 12𝑥+ 60𝑥2 + 160𝑥3 + ⋯) = 3 + 36𝑥+ 180𝑥2 + 480𝑥3 + ⋯ + 4𝑥+ 48𝑥2 + 240𝑥3 + ⋯ −4𝑥2 −48𝑥3 + ⋯ = 3 + 40𝑥+ 224𝑥2 + 672𝑥3 + ⋯, as before.\" style=\"--madas-width:568.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 9 marks.</p>"
+    ],
+    "promptText": "7 f x 1 2 x ( ) = ( + ) a) Determine the first four terms, in ascending powers of x , in the binomial 4 expansion of f x . ( ) ( ) b) Hence, or otherwise, find the first four terms in the expansion of 2 6 3 4 x 4 x 1 2 x , + − + ( )( ) giving the answer in ascending powers of x . 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-c/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q12-question-1.svg\" alt=\"A population P of an endangered species of animals was introduced to a park. The population obeys the equation t 125 ka P t , 0 , = ≥ t k 2 a + where k and a are positive constants, and t is the time in years since the species was introduced to the park . Initially 100 individual animals were introduced to the park, and this population doubled after 5 years. a) Show that k = 8 . 2 ( )\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q12-question-2.svg\" alt=\"3 b) Find the value of a , correct to 4 significant figures. ( ) 6 c) Determine the value of t when the P = 400 . ( ) d) Explain why this population cannot exceed 500. 3 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q12-solution-1.svg\" alt=\"The population is 𝑃= 125𝑘𝑎𝑡/(𝑘+2𝑎𝑡). The time 𝑡is measured in years. At 𝑡= 0, 𝑃= 100, and at 𝑡= 5, 𝑃= 200. (a) Use the initial values: 100 = 125𝑘𝑎0 𝑘+ 2𝑎0 = 125𝑘 [M1] 𝑘+ 2 100(𝑘+ 2) = 125𝑘 100𝑘+ 200 = 125𝑘 [A1] 200 = 25𝑘, 𝑘= 8 . (b) Use 𝑡= 5 and 𝑃= 200 in the revised formula: 𝑃= 125 × 8 × 𝑎𝑡 8 + 2𝑎𝑡\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q12-solution-2.svg\" alt=\"200 = 125 × 8 × 𝑎5 = 1000𝑎5 [M1] 8 + 2𝑎5 8 + 2𝑎5 5𝑎5 1 = 8 + 2𝑎5 8 + 2𝑎5 = 5𝑎5, [A1] 8 = 3𝑎5 5√8 [A1] 𝑎= 3 = 1.216728 … ≈1.217 . (c) Use the revised expression and retain the unrounded value of 𝑎. 𝑃= 1000𝑎𝑡 8 + 2𝑎𝑡= 500𝑎𝑡 [M1] 4 + 𝑎𝑡 400 = 500𝑎𝑡 [M1] 4 + 𝑎𝑡 5𝑎𝑡 4 = 4 + 𝑎𝑡\" style=\"--madas-width:564.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-c/q12-solution-3.svg\" alt=\"[A1] 16 + 4𝑎𝑡= 5𝑎𝑡, 16 = 𝑎𝑡 log 16 = log 𝑎𝑡= 𝑡log 𝑎 [M1] 𝑡= log 16 log 16 [A1] log 𝑎= log(1.2167 …) = 14.1339 … ≈14.13 years . [A1] (d) Divide numerator and denominator by 𝑎𝑡. 𝑃= 1000𝑎𝑡 8 + 2𝑎𝑡= 500𝑎𝑡 500 [M1] 4 + 𝑎𝑡= 4/𝑎𝑡+ 1. As 𝑡increases, 𝑎𝑡becomes arbitrarily large since 𝑎&gt; 1. Thus 4/𝑎𝑡approaches zero. [B1] It remains positive for every finite 𝑡, so the population starts at 100 and approaches its limiting value of 500 from below. Hence 𝑃&lt; 500 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 14 marks.</p>"
+    ],
+    "promptText": "A population P of an endangered species of animals was introduced to a park. The population obeys the equation t 125 ka P t , 0 , = ≥ t k 2 a + where k and a are positive constants, and t is the time in years since the species was introduced to the park . Initially 100 individual animals were introduced to the park, and this population doubled after 5 years. a) Show that k = 8 . 2 ( ) 3 b) Find the value of a , correct to 4 significant figures. ( ) 6 c) Determine the value of t when the P = 400 . ( ) d) Explain why this population cannot exceed 500. 3 ( )"
+  }
+]

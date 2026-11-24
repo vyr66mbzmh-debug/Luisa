@@ -163,6 +163,19 @@ def run(url, out, channel):
         p.reload()
         expect(p.locator('#papers-selected-count')).to_have_text('2')
         ok('Offline selection survives reload')
+        clear(p)
+        p.locator('#papers-source-past-papers').uncheck()
+        p.locator('#papers-source-madas').check()
+        p.locator('#papers-browse').click()
+        button = p.locator('[data-add^="madas/"]').first
+        expect(button).to_be_visible()
+        button.click()
+        expect(p.locator('#papers-selected-count')).to_have_text('1')
+        def madas_print(preview):
+            expect(preview.locator('.solutions-page .scheme-credit').first).to_contain_text('Adapted MADAS')
+            assert preview.locator('.madas-excerpt img').evaluate_all('ns=>ns.length>0&&ns.every(n=>n.complete&&n.naturalWidth)')
+        printed(p, out, 'madas', madas_print)
+        ok('Offline MADAS question and adapted scheme print from the downloaded chapter pack')
         b.close()
 
 

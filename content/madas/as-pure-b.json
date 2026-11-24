@@ -1,0 +1,134 @@
+[
+  {
+    "id": "madas/as-pure-b/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q1-question-1.svg\" alt=\"Write each of the following surd expressions as simple as possible. a) 24 6 . 1 + ( ) b) 3 2 3 4 12 + − ( ) ( )( ) Detailed workings must support the answers in this question.\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q1-solution-1.svg\" alt=\"√ √ √ √ √ √ √ (a) 6 . [B1] 24 + 6 = 4 × 6 + 6 = 2 6 + 6 = 3 (b) Expand and simplify: √ √ √ √ √ [M1] (2 + 3)(4 − 12) = 8 −2 12 + 4 3 − 36 √ √ [A1] = 8 −2 × 2 3 + 4 3 −6 √ √ [A1] = 8 −4 3 + 4 3 −6 = 2 .\" style=\"--madas-width:562.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 4 marks.</p>"
+    ],
+    "promptText": "Write each of the following surd expressions as simple as possible. a) 24 6 . 1 + ( ) b) 3 2 3 4 12 + − ( ) ( )( ) Detailed workings must support the answers in this question."
+  },
+  {
+    "id": "madas/as-pure-b/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q2-question-1.svg\" alt=\"Find the set of values of x , that satisfy the following inequality. x 4 1 + 3 . 6 &gt; ( ) x 1 −\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q2-solution-1.svg\" alt=\"Solve the rational inequality by transforming it into a quadratic. The starting expression requires 𝑥≠1. 4𝑥+ 1 𝑥−1 &gt; 3 (4𝑥+ 1)(𝑥−1) (𝑥−1)(𝑥−1) &gt; 3 (4𝑥+ 1)(𝑥−1) [M1] &gt; 3. (𝑥−1)2 Since (𝑥−1)2 &gt; 0, multiply through without changing the inequality: [A1] (4𝑥+ 1)(𝑥−1) &gt; 3(𝑥−1)2 (4𝑥+ 1)(𝑥−1) −3(𝑥−1)2 &gt; 0 [M1] (𝑥−1)[(4𝑥+ 1) −3(𝑥−1)] &gt; 0\" style=\"--madas-width:670.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q2-solution-2.svg\" alt=\"(𝑥−1)[4𝑥+ 1 −3𝑥+ 3] &gt; 0 [A1] (𝑥−1)(𝑥+ 4) &gt; 0. The critical values are −4 and 1. [B1] −4 1 𝑥 The product is positive outside the two roots, giving 𝑥&lt; −4 or 𝑥&gt; 1 . [A1]\" style=\"--madas-width:545.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 6 marks.</p>"
+    ],
+    "promptText": "Find the set of values of x , that satisfy the following inequality. x 4 1 + 3 . 6 > ( ) x 1 −"
+  },
+  {
+    "id": "madas/as-pure-b/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q3-question-1.svg\" alt=\"2 f n n n 2 , n∈ℕ. = + + ( ) Show that f n is always even. 3 ( ) ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q3-solution-1.svg\" alt=\"Proceed as follows: 𝑓(𝑛) = 𝑛2 + 𝑛+ 2 = 𝑛(𝑛+ 1) + 2. [M1] The product 𝑛(𝑛+ 1) contains two consecutive integers. One of those integers must be even, so their product is even. [B1] Let 𝑛(𝑛+ 1) = 2𝑚, where 𝑚is an integer. Then 𝑓(𝑛) = 𝑛(𝑛+ 1) + 2 = 2𝑚+ 2 = 2(𝑚+ 1). Since 𝑚+ 1 is an integer, 𝑓(𝑛) is even . [A1] An alternative proof by exhaustion considers even and odd 𝑛separately. For 𝑛= 2𝑟, the factor 𝑛is even. For 𝑛= 2𝑟+ 1, the factor 𝑛+ 1 = 2(𝑟+ 1) is even. In both cases adding two preserves evenness.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 3 marks.</p>"
+    ],
+    "promptText": "2 f n n n 2 , n∈ℕ. = + + ( ) Show that f n is always even. 3 ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-b/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q4-question-1.svg\" alt=\"2 f x 4 x 20 x 25 , x∈ℝ. = + + ( ) a) Solve the equation f x = 0 . 2 ( ) ( ) 1 b) Hence, or otherwise, solve the equation f x + 1 0 . 2 2 = ( ) ( )\" style=\"--madas-width:545.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q4-solution-1.svg\" alt=\"(a) Factorise the perfect square: 𝑓(𝑥) = 0 4𝑥2 + 20𝑥+ 25 = 0 (2𝑥+ 5)2 = 0 [M1] [A1] 𝑥= −5 2 . (b) The transformation to 𝑓( 1 2𝑥+ 1) can be carried out in either order. First, translate left by one unit and then stretch horizontally by scale factor two. Alternatively, stretch horizontally by scale factor two and then translate left by two units. [M1] 𝑓( 1 𝑓(𝑥) 𝑓(𝑥+ 1) 2𝑥+ 1) −5 −7 −7 2 𝑓( 1 2 𝑓( 1 𝑓(𝑥) 2𝑥) 2𝑥+ 1)\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q4-solution-2.svg\" alt=\"−5 −7 −5 2 The root moves to 𝑥= −7 . [A1]\" style=\"--madas-width:482.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 4 marks.</p>"
+    ],
+    "promptText": "2 f x 4 x 20 x 25 , x∈ℝ. = + + ( ) a) Solve the equation f x = 0 . 2 ( ) ( ) 1 b) Hence, or otherwise, solve the equation f x + 1 0 . 2 2 = ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-b/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q5-question-1.svg\" alt=\"A cubic curve C has equation 3 2 y 6 x Ax 6 x B , x∈ℝ, = + − + where A and B are constants. The graph of C meets the x axis at ( 5,0 . ) When the equation of C is divided by ( x − )1 the remainder is 24 . − a) Determine the value of A and the value of B . 5 ( ) b) Factorize fully the equation of C . 3 ( )\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q5-question-2.svg\" alt=\"c) Sketch the graph of C . The sketch must show clearly the coordinates of any points where the graph of C meets the coordinate axes. 3 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q5-solution-1.svg\" alt=\"(a) Write 𝑦= 𝑓(𝑥) = 6𝑥3 + 𝐴𝑥2 −6𝑥+ 𝐵. Since 𝑥−5 is a factor, 𝑓(5) = 0. Division by 𝑥−1 leaves a remainder of −24, so 𝑓(1) = −24. [M1] 6(5)3 + 𝐴(5)2 −6(5) + 𝐵= 0 6 + 𝐴−6 + 𝐵= −24 750 + 25𝐴−30 + 𝐵= 0 𝐴+ 𝐵= −24 [A1] 25𝐴+ 𝐵= −720 𝐵= −24 −𝐴. Substitute to eliminate 𝐵. [M1] 25𝐴+ (−24 −𝐴) = −720 24𝐴= −696 [A1] 𝐴= −29 [A1] 𝐵= −24 −(−29) = 5 .\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q5-solution-2.svg\" alt=\"(b) Carry out the long division: 6𝑥2 +𝑥 −1 𝑥−5) 6𝑥3 −29𝑥2 −6𝑥 +5 6𝑥3 −30𝑥2 𝑥2 −6𝑥 +5 [M1] 𝑥2 −5𝑥 −𝑥 +5 −𝑥 +5 0 Thus 𝑦= (𝑥−5)(6𝑥2 + 𝑥−1), [A1] giving 𝑦= (𝑥−5)(3𝑥−1)(2𝑥+ 1) . [A1] (c) The leading term is positive. When 𝑥= 0, 𝑦= 5, giving (0, 5). [B1] When 𝑦= 0, 𝑥= −1 2, 1 3, 5. [B1] 𝑦 (0, 5) (1 3, 0) (5, 0) 𝑥 (−1 2, 0) [B1]\" style=\"--madas-width:668.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 11 marks.</p>"
+    ],
+    "promptText": "A cubic curve C has equation 3 2 y 6 x Ax 6 x B , x∈ℝ, = + − + where A and B are constants. The graph of C meets the x axis at ( 5,0 . ) When the equation of C is divided by ( x − )1 the remainder is 24 . − a) Determine the value of A and the value of B . 5 ( ) b) Factorize fully the equation of C . 3 ( ) c) Sketch the graph of C . The sketch must show clearly the coordinates of any points where the graph of C meets the coordinate axes. 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-b/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q6-question-1.svg\" alt=\"The gradient function of the curve with equation 2 y 2 x a , = ( + ) where a is a non zero constant, is given by dy 4 x 10 . = + dx Determine the value of a . 4 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q6-solution-1.svg\" alt=\"Expand and differentiate: 𝑦= 2(𝑥+ 𝑎)2 = 2(𝑥2 + 2𝑎𝑥+ 𝑎2) [M1] = 2𝑥2 + 4𝑎𝑥+ 2𝑎2 𝑑𝑦 [A1] 𝑑𝑥= 4𝑥+ 4𝑎. By direct comparison with 4𝑥+ 10. [M1] 4𝑎= 10 5 [A1] 𝑎= 2 .\" style=\"--madas-width:513.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 4 marks.</p>"
+    ],
+    "promptText": "The gradient function of the curve with equation 2 y 2 x a , = ( + ) where a is a non zero constant, is given by dy 4 x 10 . = + dx Determine the value of a . 4 ( )"
+  },
+  {
+    "id": "madas/as-pure-b/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q7-question-1.svg\" alt=\"The straight line 1l passes through the point A − 7, 4 and meets the y axis at the − ( ) B 0,2 point . ( ) a) Determine, with full justification, whether the point P − 5, 2 lies above 1l or ( − ) below 1l . 6 ( ) The straight line 2l passes through the point C − 1, 10 and meets the 1l at B . − ( ) 1 , 5 b) Determine, with full justification, whether the point Q − lies inside or − ( 2 ) outside the triangle ABC . 3 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q7-solution-1.svg\" alt=\"(a) Start with a diagram: 𝑦 𝐵 𝑥 𝑃 𝐴 𝐶 Determine the equation of 𝑙1.\" style=\"--madas-width:424.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q7-solution-2.svg\" alt=\"grad 𝐴𝐵= 2 −(−4) 0 −(−7) = 6 [M1] [A1] 7. The line passes through (0, 2), so 𝑙1 has equation 𝑦= 6 7𝑥+ 2. [A1] Check the given point 𝑃(−5, −2). When 𝑥= −5, [M1] 𝑦= 6 7(−5) + 2 = −30 7 + 2 = −16 [A1] 7 &lt; −2. The line is lower, so 𝑃lies above 𝑙1 . [A1] (b) At the height of 𝑄, the interior of the triangle lies to the left of 𝑙2. Use similar triangles to locate the point 𝐷on 𝑙2 with the same 𝑥-coordinate as 𝑄. [M1] 𝑦 𝐵 𝑥 𝐷𝑄 𝐶\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q7-solution-3.svg\" alt=\"Since −1 2 is halfway between −1 and 0, the ordinate of 𝐷is halfway between −10 and 2. Thus 𝐷= (−1 2, −4). [A1] The point 𝑄= (−1 2, −5) is below that boundary, so 𝑄lies outside 𝐴𝐵𝐶. [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 9 marks.</p>"
+    ],
+    "promptText": "The straight line 1l passes through the point A − 7, 4 and meets the y axis at the − ( ) B 0,2 point . ( ) a) Determine, with full justification, whether the point P − 5, 2 lies above 1l or ( − ) below 1l . 6 ( ) The straight line 2l passes through the point C − 1, 10 and meets the 1l at B . − ( ) 1 , 5 b) Determine, with full justification, whether the point Q − lies inside or − ( 2 ) outside the triangle ABC . 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-b/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q8-question-1.svg\" alt=\"The following table shows some experimental data. t 2 4 6 8 10 12 14 P 20 64 110 180 260 320 420 It is assumed that the two variables t and P are related by the formula b P at , = where a and b are non zero constants. a) Use a graphical method, involving logarithms, to show that the above data is consistent with this assumption. 7 ( )\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q8-question-2.svg\" alt=\"b) Determine estimates for the value of a and the value of b , correct to one decimal place. 4 ( ) c) Use the estimated values of a and b , to find an estimate for the value of P when t = 20 . 1 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q8-solution-1.svg\" alt=\"(a) Linearise the equation: 𝑃= 𝑎𝑡𝑏 log10 𝑃= log10(𝑎𝑡𝑏) [M1] = log10 𝑎+ log10 𝑡𝑏 = log10 𝑎+ 𝑏log10 𝑡 = 𝑏(log10 𝑡) + log10 𝑎. [A1] Plot 𝑌= log10 𝑃against 𝑋= log10 𝑡. [B1] 0.30 0.60 0.78 0.90 1.00 1.08 1.15 𝑋 [B1] 1.30 1.81 2.04 2.26 2.41 2.51 2.62 𝑌\" style=\"--madas-width:525.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q8-solution-2.svg\" alt=\"𝑌 2.5 2 1.5 1 .5 𝑋 [M1] [A1] .2 .4 .6 .8 1 1.2 The points lie close to a straight line, which supports the assumption. [B1] (b) Read the intercept and gradient:\" style=\"--madas-width:526.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q8-solution-3.svg\" alt=\"log10 𝑎= 𝑐≈0.8 [M1] 𝑎≈100.8 ≈6.3 . [A1] Using the points (0, 0.8) and (1, 2.4). 𝑏= 𝑚= 2.4 −0.8 [M1] 1 [A1] ≈1.6 . (c) Substitute the estimates: 𝑃= 𝑎𝑡𝑏≈6.3𝑡1.6 ≈6.3 × 201.6 ≈760 . [B1]\" style=\"--madas-width:513.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 12 marks.</p>"
+    ],
+    "promptText": "The following table shows some experimental data. t 2 4 6 8 10 12 14 P 20 64 110 180 260 320 420 It is assumed that the two variables t and P are related by the formula b P at , = where a and b are non zero constants. a) Use a graphical method, involving logarithms, to show that the above data is consistent with this assumption. 7 ( ) b) Determine estimates for the value of a and the value of b , correct to one decimal place. 4 ( ) c) Use the estimated values of a and b , to find an estimate for the value of P when t = 20 . 1 ( )"
+  },
+  {
+    "id": "madas/as-pure-b/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q9-question-1.svg\" alt=\"𝑦 𝐴 𝐿 𝑦= 𝑥3 −9𝑥2 + 24𝑥+ 9 𝑥 𝑂 The figure above shows the graph of the curve C with equation\" style=\"--madas-width:414.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q9-question-2.svg\" alt=\"3 2 y x 9 x 24 x 9 . = − + + The straight line L is the normal to C at the point A , whose x coordinate is 5. a) Show that an equation of L is x 9 y 266 . 5 + = ( ) b) Show further that the area of the finite region bounded by C , L and the y axis is approximately 20 square units. 6 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q9-solution-1.svg\" alt=\"(a) Differentiate the curve: 𝑦= 𝑥3 −9𝑥2 + 24𝑥+ 9 𝑑𝑦 𝑑𝑥= 3𝑥2 −18𝑥+ 24 [M1] 𝑑𝑦 = 3 × 52 −18 × 5 + 24 = 9. 𝑑𝑥∣ 𝑥=5 The normal gradient is −1 9. [A1] When 𝑥= 5, 𝑦= 53 −9 × 52 + 24 × 5 + 9 = 29, so 𝐴= (5, 29). [B1] 𝑦 𝐴 𝐿 𝑥 5\" style=\"--madas-width:657.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q9-solution-2.svg\" alt=\"The equation of the normal at 𝐴follows: 𝑦−𝑦0 = 𝑚(𝑥−𝑥0) 𝑦−29 = −1 [M1] 9(𝑥−5) 9𝑦−261 = −𝑥+ 5 [A1] 𝑥+ 9𝑦= 266 . (b) Subtract the area under the curve from the trapezium: 266 − = 29 9 5\" style=\"--madas-width:522.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q9-solution-3.svg\" alt=\"266 9 + 29 × 5 = 2635 [M1] [A1] 𝐴trap = 2 18 5 (𝑥3 −9𝑥2 + 24𝑥+ 9) 𝑑𝑥 [M1] 𝐴curve = ∫ 0 4𝑥4 −3𝑥3 + 12𝑥2 + 9𝑥] 5 [A1] = [ 1 0 = ( 625 4 −375 + 300 + 45) −0 = 505 4 . 𝐴required = 2635 18 −505 = 725 [M1] 36 ≈20.14 4 ≈20 square units . [A1]\" style=\"--madas-width:570.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 11 marks.</p>"
+    ],
+    "promptText": "𝑦 𝐴 𝐿 𝑦= 𝑥3 −9𝑥2 + 24𝑥+ 9 𝑥 𝑂 The figure above shows the graph of the curve C with equation 3 2 y x 9 x 24 x 9 . = − + + The straight line L is the normal to C at the point A , whose x coordinate is 5. a) Show that an equation of L is x 9 y 266 . 5 + = ( ) b) Show further that the area of the finite region bounded by C , L and the y axis is approximately 20 square units. 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-b/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q10-question-1.svg\" alt=\"The curve C has equation 3 2 y x 3 x 3 x + . 5 = − + Show that C has only one stationary point and determine its nature. 7 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q10-solution-1.svg\" alt=\"𝑦= 𝑥3 −3𝑥2 + 3𝑥+ 5. Differentiate and set the gradient to zero: 𝑑𝑦 𝑑𝑥= 3𝑥2 −6𝑥+ 3 [M1] 0 = 3𝑥2 −6𝑥+ 3 0 = 𝑥2 −2𝑥+ 1 [A1] 0 = (𝑥−1)2. Thus 𝑥= 1 gives the only stationary point, with 𝑦= 6. [A1] Determine its nature: 𝑑2𝑦 [M1] 𝑑𝑥2 = 6𝑥−6 𝑑2𝑦 [A1] 𝑑𝑥2 ∣ = 6 × 1 −6 = 0. 𝑥=1\" style=\"--madas-width:518.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q10-solution-2.svg\" alt=\"The second-derivative test is inconclusive. Proceed with the third derivative: 𝑑3𝑦 [M1] 𝑑𝑥3 = 6 𝑑3𝑦 𝑑𝑥3 ∣ = 6 ≠0. 𝑥=1 Hence (1, 6) is a stationary point of inflection . [A1]\" style=\"--madas-width:501.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 7 marks.</p>"
+    ],
+    "promptText": "The curve C has equation 3 2 y x 3 x 3 x + . 5 = − + Show that C has only one stationary point and determine its nature. 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-b/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q11-question-1.svg\" alt=\"A circle C has equation 2 2 x y 4 x 10 y 9 0 . + + − + = a) Find the coordinates of the centre of C and the size of its radius. 3 ( ) A tangent to the circle T , passes through the point with coordinates ( 0, 1 and has − ) gradient m , where m &lt; 0 . b) Show that m is a solution of the equation 2 m 2 3 m 2 0 . 6 − − = ( )\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q11-question-2.svg\" alt=\"The tangent T meets C at the point P . c) Determine the coordinates of P . 5 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q11-solution-1.svg\" alt=\"(a) Complete the square in 𝑥and 𝑦. 𝑥2 + 𝑦2 + 4𝑥−10𝑦+ 9 = 0 𝑥2 + 4𝑥+ 𝑦2 −10𝑦+ 9 = 0 (𝑥+ 2)2 −4 + (𝑦−5)2 −25 + 9 = 0 [M1] (𝑥+ 2)2 + (𝑦−5)2 = 20. √ √ Hence the centre is (−2, 5) [A1] and the radius is 5 . [A1] 20 = 2 (b) The line passes through (0, −1), so its equation is 𝑦= 𝑚𝑥−1. [B1] Solve simultaneously with the circle: (𝑥+ 2)2 + (𝑚𝑥−1 −5)2 = 20 [M1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q11-solution-2.svg\" alt=\"(𝑥+ 2)2 + (𝑚𝑥−6)2 = 20 𝑥2 + 4𝑥+ 4 + 𝑚2𝑥2 −12𝑚𝑥+ 36 = 20 (1 + 𝑚2)𝑥2 + (4 −12𝑚)𝑥+ 20 = 0. [A1] For a tangent, this equation must have a repeated root. Thus 𝑏2 −4𝑎𝑐= 0. [M1] (4 −12𝑚)2 −4(1 + 𝑚2)(20) = 0 42(1 −3𝑚)2 −80(1 + 𝑚2) = 0 (1 −3𝑚)2 −5(1 + 𝑚2) = 0 [A1] 1 −6𝑚+ 9𝑚2 −5 −5𝑚2 = 0 4𝑚2 −6𝑚−4 = 0 2𝑚2 −3𝑚−2 = 0 . [A1]\" style=\"--madas-width:542.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q11-solution-3.svg\" alt=\"(c) Solve the equation in 𝑚. [M1] (2𝑚+ 1)(𝑚−2) = 0 or 𝑚= −1 𝑚= 2. 2 Since 𝑚&lt; 0, use 𝑚= −1 2. [A1] (1 + 𝑚2)𝑥2 + (4 −12𝑚)𝑥+ 20 = 0 4)𝑥2 + [4 −12(−1 [M1] (1 + 1 2)]𝑥+ 20 = 0 4𝑥2 + 10𝑥+ 20 = 0 5 5𝑥2 + 40𝑥+ 80 = 0 𝑥2 + 8𝑥+ 16 = 0\" style=\"--madas-width:568.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q11-solution-4.svg\" alt=\"(𝑥+ 4)2 = 0, [A1] 𝑥= −4. Using 𝑦= −1 2𝑥−1 gives 𝑦= 2 −1 = 1, so 𝑃(−4, 1) . [A1]\" style=\"--madas-width:564.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 14 marks.</p>"
+    ],
+    "promptText": "A circle C has equation 2 2 x y 4 x 10 y 9 0 . + + − + = a) Find the coordinates of the centre of C and the size of its radius. 3 ( ) A tangent to the circle T , passes through the point with coordinates ( 0, 1 and has − ) gradient m , where m < 0 . b) Show that m is a solution of the equation 2 m 2 3 m 2 0 . 6 − − = ( ) The tangent T meets C at the point P . c) Determine the coordinates of P . 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-b/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q12-question-1.svg\" alt=\"Solve, in degrees, the following trigonometric equation 4 2 7 tan y 6 tan y , 0 y 360 ° . = + °≤ &lt; ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q12-solution-1.svg\" alt=\"tan4 𝑦= 6 + tan2 𝑦, 0∘≤𝑦&lt; 360∘. This is a quadratic in tan2 𝑦, so factorise: tan4 𝑦−tan2 𝑦−6 = 0 [M1] (tan2 𝑦+ 2)(tan2 𝑦−3) = 0 [A1] tan2 𝑦= −2 tan2 𝑦= 3. or √ A real square cannot be negative. Thus tan 𝑦= ± 3. [A1] Solve each sign separately: √ √ tan 𝑦= tan 𝑦= − 3 3 √ √ arctan 3 = 60∘ arctan(− 3) = −60∘ [M1] [M1] 𝑦= 60∘± 180∘𝑛 𝑦= −60∘± 180∘𝑛, 𝑛= 0, 1, 2, …\" style=\"--madas-width:628.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q12-solution-2.svg\" alt=\"The first family gives 60∘, 240∘. The second gives 120∘, 300∘. [A1] Collecting the solutions in order, 𝑦= 60∘, 120∘, 240∘, 300∘. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 7 marks.</p>"
+    ],
+    "promptText": "Solve, in degrees, the following trigonometric equation 4 2 7 tan y 6 tan y , 0 y 360 ° . = + °≤ < ( )"
+  },
+  {
+    "id": "madas/as-pure-b/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q13-question-1.svg\" alt=\"A curve has equation x 10e x f x e − −, 7 x∈ℝ. ( ) = + a) Solve the equation f x = 0 . 5 ( ) ( ) b) Hence, or otherwise, solve the equation 2 x 2 x 1 e 7e 10 0 . 3 − − − + = ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q13-solution-1.svg\" alt=\"(a) Solve 𝑓(𝑥) = 0. 𝑒𝑥+ 10𝑒−𝑥−7 = 0 𝑒𝑥+ 10 𝑒𝑥−7 = 0 𝐸+ 10 [M1] 𝐸= 𝑒𝑥 𝐸−7 = 0, 𝐸2 + 10 −7𝐸= 0 𝐸2 −7𝐸+ 10 = 0 [A1] [M1] (𝐸−2)(𝐸−5) = 0 or [A1] 𝐸= 𝑒𝑥= 2 5. Thus 𝑥= ln 2 or 𝑥= ln 5 . [A1] (b) Rewrite the equation as follows:\" style=\"--madas-width:532.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-b/q13-solution-2.svg\" alt=\"𝑒2𝑥−2 −7𝑒𝑥−1 + 10 = 0 𝑒2(𝑥−1) −7𝑒𝑥−1 + 10 = 0. [M1] Compare with 𝑒2𝑥−7𝑒𝑥+ 10 = 0, equivalently 𝐸2 −7𝐸+ 10 = 0. Hence 𝑥−1 = ln 2 or ln 5 [A1] 𝑥= 1 + ln 2 or 𝑥= 1 + ln 5 . [A1]\" style=\"--madas-width:565.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 8 marks.</p>"
+    ],
+    "promptText": "A curve has equation x 10e x f x e − −, 7 x∈ℝ. ( ) = + a) Solve the equation f x = 0 . 5 ( ) ( ) b) Hence, or otherwise, solve the equation 2 x 2 x 1 e 7e 10 0 . 3 − − − + = ( )"
+  }
+]

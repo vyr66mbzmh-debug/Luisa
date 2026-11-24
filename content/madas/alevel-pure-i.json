@@ -1,0 +1,121 @@
+[
+  {
+    "id": "madas/alevel-pure-i/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q1-question-1.svg\" alt=\"A curve C has equation 2 x ,  x∈ , y = x &gt; 0 . ln x Find, in exact form, the equation of the tangent to C at the point where x = e . ( ) 7\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q1-solution-1.svg\" alt=\"By the quotient rule, y′ = (ln x)(2x) −x2(1/x) (ln x)2 [B1] [A1] = 2x ln x −x . (ln x)2 At x = √e, ln x = 1 2, [A1] so the numerator is 2√e ln √e −√e = √e −√e = 0 and the denominator is 1/4. Thus y′ = 0 [A1] and y = e/(1 2) . [A1] = 2e\" style=\"--madas-width:680.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q1-solution-2.svg\" alt=\"The point of contact is (√e, 2e). The tangent is horizontal with equation y = 2e . [M1] [A1]\" style=\"--madas-width:388.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 7 marks.</p>"
+    ],
+    "promptText": "A curve C has equation 2 x ,  x∈ , y = x > 0 . ln x Find, in exact form, the equation of the tangent to C at the point where x = e . ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-i/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q2-question-1.svg\" alt=\"A 7cm c O 1.8 C 7cm B The figure above shows a circle with centre at O and radius 7 cm .\" style=\"--madas-width:482.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q2-question-2.svg\" alt=\"The points A and B lie on the circle so that the angle AOB is 1.8 radians. The tangents to the circle at the points A and B meet at the point C . The region shown shaded in the figure above, is enclosed by the two tangents AC and BC , and the circle. Determine the area of this region. ( ) 7\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q2-solution-1.svg\" alt=\"The radii are perpendicular to their tangents and OC bisects the angle AOB. [B1] [A1] Each right triangle OAC, OBC has perpendicular sides 7 and 7 tan 0.9. [M1] [A1] The half-angle is 1.8/2 = 0.9 radians: Thus tan 0.9 = AC/AO = AC/7, giving AC = 7 tan 0.9 = 8.8211 . . ..\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q2-solution-2.svg\" alt=\"One triangle has area 7(8.8211 . . .)/2 = 30.8738 . . . . The kite has twice this area, 61.7477 . . ., and the sector has area 72(1.8)/2 = 44.1. Subtract the sector of angle 1.8 from their total area: 2(72)(1.8) = 49(tan 0.9 −0.9) ≈17.65 cm2 . 2 · 1 2(7)(7 tan 0.9) −1 [M1] [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 7 marks.</p>"
+    ],
+    "promptText": "A 7cm c O 1.8 C 7cm B The figure above shows a circle with centre at O and radius 7 cm . The points A and B lie on the circle so that the angle AOB is 1.8 radians. The tangents to the circle at the points A and B meet at the point C . The region shown shaded in the figure above, is enclosed by the two tangents AC and BC , and the circle. Determine the area of this region. ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-i/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q3-question-1.svg\" alt=\"y A C x O B The figure above shows the curve C , with parametric equations\" style=\"--madas-width:460.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q3-question-2.svg\" alt=\"2 , x = t y = + 1 cos t , 0 ≤≤ t 2 π . The curve meets the coordinate axes at the points A and B . a) Show that the area of the shaded region bounded by C and the coordinate axes is given by the integral t  2 ( ) 2 1 cos t + t dt , t 1 where 1t and 2t are constants to be stated. ( ) 4\" style=\"--madas-width:572.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q3-question-3.svg\" alt=\"b) Evaluate the above parametric integral to find an exact value for the area of the shaded region. ( ) 4\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q3-solution-1.svg\" alt=\"(a) At A, x = 0 [M1] gives t2 = 0, hence t1 = 0. At B, y = 0 [A1] gives 1 + cos t = 0, or cos t = −1, hence t2 = π. [A1] Since dx/dt = 2t, the area is Z π 2t(1 + cos t) dt . [A1] 0 (b) Apply integration by parts to the whole product, differentiating 2t and integrating 1 + cos t: Z Z 2t(1 + cos t) dt = 2t(t + sin t) −2 (t + sin t) dt = 2t2 + 2t sin t −2(1 2t2 −cos t) + C. The sine term is positive because it comes from 2t(t + sin t). At the limits it vanishes in either case: The area is [t2 + 2t sin t + 2 cos t]π 0 = (π2 + 0 −2) −(0 + 0 + 2)\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q3-solution-2.svg\" alt=\"= π2 −4 . [M1] Choose integration by parts [A1] obtain the sine boundary term [M1] integrate the remaining sine term [A1] evaluate at both limits\" style=\"--madas-width:669.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 8 marks.</p>"
+    ],
+    "promptText": "y A C x O B The figure above shows the curve C , with parametric equations 2 , x = t y = + 1 cos t , 0 ≤≤ t 2 π . The curve meets the coordinate axes at the points A and B . a) Show that the area of the shaded region bounded by C and the coordinate axes is given by the integral t  2 ( ) 2 1 cos t + t dt , t 1 where 1t and 2t are constants to be stated. ( ) 4 b) Evaluate the above parametric integral to find an exact value for the area of the shaded region. ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-i/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q4-question-1.svg\" alt=\"Prove by the method of contradiction that there are no integers a and b which satisfy the following equation. 2 − = ( ) 6 a 8 b 7\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q4-solution-1.svg\" alt=\"Suppose a, b are integers satisfying the equation. [M1] [A1] Then a2 = 8b + 7, [A1] so the right side is odd: Hence a must be odd; write a = 2n + 1 for an integer n. Then (2n + 1)2 = 8b + 7, 4n2 + 4n + 1 = 8b + 7, 4n2 + 4n −8b = 6, 2n2 + 2n −4b = 3, 2(n2 + n −2b) = 3, n2 + n −2b = 3/2. An integer cannot equal 3/2. This is the source’s contradiction: In modular form the original equation gives a2 ≡3 (mod 4). [M1] The square of an even integer is 0 (mod 4), and the square of an odd integer is 1 (mod 4). [A1] This contradiction rules out all integer solutions . [A1]\" style=\"--madas-width:680.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 6 marks.</p>"
+    ],
+    "promptText": "Prove by the method of contradiction that there are no integers a and b which satisfy the following equation. 2 − = ( ) 6 a 8 b 7"
+  },
+  {
+    "id": "madas/alevel-pure-i/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q5-question-1.svg\" alt=\"A function f is defined by 1  f x ( ) = 4 − , x ∈ , x &gt; 1 . x − 1 − 1 a) Determine an expression for the inverse, f ( ) x . ( ) 4 − 1 b) Find the domain and range of f ( ) x . ( ) 2\" style=\"--madas-width:581.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q5-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:549.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q5-solution-2.svg\" alt=\"(a) From y = 4 −1/(x −1) [M1] rearrange to 1/(x −1) = 4 −y, hence x −1 = 1/(4 −y). Thus x = 1 + 1/(4 −y). [A1] Interchanging gives f−1(x) = 1 + 1/(4 −x) = 1 −1/(x −4) . [M1] [A1] (b) For x &gt; 1, f increases from arbitrarily negative values to the limiting value 4. The sketch can be built from 1/x, shifted right by 1, reflected vertically, then shifted up by 4. Restricting to x &gt; 1 selects the branch below y = 4. Interchanging domain and range, the inverse has domain (−∞, 4) [A1] and range (1, ∞) . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 6 marks.</p>"
+    ],
+    "promptText": "A function f is defined by 1  f x ( ) = 4 − , x ∈ , x > 1 . x − 1 − 1 a) Determine an expression for the inverse, f ( ) x . ( ) 4 − 1 b) Find the domain and range of f ( ) x . ( ) 2"
+  },
+  {
+    "id": "madas/alevel-pure-i/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q6-question-1.svg\" alt=\"( ) = ,   x∈ f x sin2 x  π   π  ( ) = + − − , x∈ . g x f  x  f  x   4   4  a) Show clearly that g x ( ) = 2cos2 x . ( ) 4 ′ b) Express g ( ) x in terms of f x . ( ) ( ) 2\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q6-solution-1.svg\" alt=\"(a) Use g(x) = sin[2(x + π/4)] −sin[2(x −π/4)]. With A = 2x, B = π/2 the difference is (sin A cos B + cos A sin B) −(sin A cos B −cos A sin B) = 2 cos A sin B. Here sin B = 1. Since f(x ± π/4) = sin(2x ± π/2) = ± cos 2x, their difference is g(x) = 2 cos 2x. [A1] Convert the positive shift to a phase shift of half pi [A1] obtain the cosine [A1] obtain its negative for the other shift [A1] subtract (b) g′(x) = −4 sin 2x . [M1] [A1] = −4f(x)\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 6 marks.</p>"
+    ],
+    "promptText": "( ) = ,   x∈ f x sin2 x  π   π  ( ) = + − − , x∈ . g x f  x  f  x   4   4  a) Show clearly that g x ( ) = 2cos2 x . ( ) 4 ′ b) Express g ( ) x in terms of f x . ( ) ( ) 2"
+  },
+  {
+    "id": "madas/alevel-pure-i/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q7-question-1.svg\" alt=\"Three points, A ( 4,4,1 ) , B ( 2, 2,0 − ) and C ( 6,3,7 ) are referred relative to a fixed origin O . If A , B , C and the point D form the parallelogram ABCD , use vector algebra to find the coordinates of D and hence calculate the angle OCD . ( ) 7\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q7-solution-1.svg\" alt=\"Looking at the diagram below: In the parallelogram, −−→ CD = −−→ BA, so −−→ OD = −−→ OC + −−→ CD = −−→ OC + −−→ BA, giving −−→ OD = −−→ OC + −→ OA −−−→ OB. [M1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q7-solution-2.svg\" alt=\"Thus (6, 3, 7) + (4, 4, 1) −(2, −2, 0) = (8, 9, 8), so D = (8, 9, 8) . [A1] The three lengths in triangle OCD are OC = √36 + 9 + 49 = √ 94, √ OD = 64 + 81 + 64 √ [A1] = 209 and √ √ CD = |(8, 9, 8) −(6, 3, 7)| = |(2, 6, 1)| = 4 + 36 + 1 = 41. [A1] The longest side is OD, so the largest angle is θ = ∠OCD. By the cosine rule, √ √ 209 = 41 + 94 −2 41 94 cos θ. [A1] Thus √ √ 2 41 94 cos θ = 41 + 94 −209 . = −74 √ Hence cos θ = −37/ 3854, [A1] giving θ ≈126.6◦. [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 7 marks.</p>"
+    ],
+    "promptText": "Three points, A ( 4,4,1 ) , B ( 2, 2,0 − ) and C ( 6,3,7 ) are referred relative to a fixed origin O . If A , B , C and the point D form the parallelogram ABCD , use vector algebra to find the coordinates of D and hence calculate the angle OCD . ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-i/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q8-question-1.svg\" alt=\"f x ( ) = 1 − x , 1 −&lt; x &lt; . 1 3 a) Expand f x up and including the term in ( ) x . ( ) 4 b) Show clearly that 1 × − = ( ) 2 8 1 3 7 . 64 c) By using the first two terms of the expansion obtained in part (a) and the result shown in part (b), show further that\" style=\"--madas-width:570.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q8-question-2.svg\" alt=\"127 7 ≈ . ( ) 3 48\" style=\"--madas-width:586.8px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q8-solution-1.svg\" alt=\"(a) Put the power 1/2 and increment −x into the binomial expansion: The first four terms are 1 + 1 2(−x) + (1/2)(−1/2) (−x)2 + (1/2)(−1/2)(−3/2) (−x)3. 2! 3! Thus f(x) = 1 −1 2x −1 8x2 −1 16x3 + O(x4). [M1] Use the half-power expansion [A1] obtain the linear term [A1] obtain the quadratic term [A1] obtain the cubic term (b) √ √ √ √ √ q q 8 1 −1/64 = 8 63/64 = 8 63/ 64 = 8 9 7/8 = 3 7 . [M1] [A1] (c) With x = 1/64, the first two terms give q 1 −1/64 ≈1 −1/128 = 127/128. [B1] [A1] Multiplying by 8 gives √ 3 7 ≈8(1 −1/128) = 8 −1/16\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q8-solution-2.svg\" alt=\"= 127/16 . Divide by 3. Thus √ 7 ≈(8/3)(127/128) = 127/48 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 9 marks.</p>"
+    ],
+    "promptText": "f x ( ) = 1 − x , 1 −< x < . 1 3 a) Expand f x up and including the term in ( ) x . ( ) 4 b) Show clearly that 1 × − = ( ) 2 8 1 3 7 . 64 c) By using the first two terms of the expansion obtained in part (a) and the result shown in part (b), show further that 127 7 ≈ . ( ) 3 48"
+  },
+  {
+    "id": "madas/alevel-pure-i/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q9-question-1.svg\" alt=\"A curve C  has implicit equation 3 2 ax − 3 xy + by = 224 , where a and b are non zero constants. The normal to the curve at the point ( ) P − 2,6 has equation 15 x − 13 y + 108 = 0 . Determine the value of a and the value of b . ( 12 )\" style=\"--madas-width:577.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q9-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q9-solution-1.svg\" alt=\"Using (−2, 6) in the equation gives −8a + 36 + 36b = 224, [M1] [A1] so −8a + 36b = 188, or −2a + 9b = 47. [M1] [A1] Rearrange 15x −13y + 108 = 0 to 13y = 15x + 108, i.e. y = (15/13)x + 108/13. The normal gradient is 15/13, so the tangent gradient is −13/15. [M1] [A1] Implicit differentiation gives 3ax2 −3y + (−3x + 2by)y′ = 0. [M1] [A1] Substituting x = −2, y = 6, y′ = −13/15 [M1] gives 12a −18 + (6 + 12b)y′ = 0, hence y′ = (18 −12a)/(6 + 12b) . = (3 −2a)/(1 + 2b) Therefore the normal gradient is (2b + 1)/(2a −3) = 15/13. Cross-multiplication gives\" style=\"--madas-width:680.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q9-solution-2.svg\" alt=\"13(2b + 1) = 15(2a −3), 26b + 13 = 30a −45, 30a −26b = 58. Dividing by 2 gives 15a −13b = 29. [A1] Multiply the first point equation by 15 and the gradient equation by 2. Adding −30a + 135b = 705 and 30a −26b = 58 gives 109b = 763, so b = 7. Then −2a + 63 = 47, hence −2a = −16. Thus a = 8, b = 7 . [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 12 marks.</p>"
+    ],
+    "promptText": "A curve C  has implicit equation 3 2 ax − 3 xy + by = 224 , where a and b are non zero constants. The normal to the curve at the point ( ) P − 2,6 has equation 15 x − 13 y + 108 = 0 . Determine the value of a and the value of b . ( 12 ) "
+  },
+  {
+    "id": "madas/alevel-pure-i/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q10-question-1.svg\" alt=\"A pension broker gets paid £15commission per week for every pension scheme he sells. Each week he sells a new pension scheme so that … In the st 1 week he gets paid £15commission for the pension he just sold. nd week he gets paid £30 , £15 for the pension sold in the st In the 2 1 week plus £15 nd for pension he sold in the 2 week. rd week he gets paid £45, £15 for the pension sold in the st In the 3 1 week plus £15 nd rd for pension he sold in the 2 week, plus £15 for the pension he sold in the 3 week, and so on. a) Find the commission he gets paid on the last week of the year. ( ) 2\" style=\"--madas-width:572.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q10-question-2.svg\" alt=\"b) Find his annual earnings after one year in this job. ( ) 2 nd His commission increases to £20 for new pension schemes sold during the 2 year but decreases to £10 for the schemes he sold in the st 1 year. The broker continues to sell at the rate of one new pension scheme every week. nd ( ) 6 c) Find his annual earnings in the 2 year.\" style=\"--madas-width:588.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q10-solution-1.svg\" alt=\"(a) The weekly commissions begin 15, 30, 45, . . ., an arithmetic progression with a = 15, d = 15. Use un = a + (n −1)d, giving u52 = 15 + 51(15). In week 52 he earns 15(52) = £780 . [M1] [A1] (b) Use Sn = n(a + l)/2: S52 = (52/2)(15 + 780) . = 26(795) Total commission is 15(52)(53)/2 = £20,670 . [M1] [A1] (c) First-year schemes now bring in 10(52) each week, so their annual contribution is 10(52)2. [B1] [A1] Week 51 and week 52 of year one gave £765, £780.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q10-solution-2.svg\" alt=\"In year two the first three weeks give 52(10) + 20, 52(10) + 2(20), 52(10) + 3(20). The new sequence starts at 540 and ends at 52(10) + 52(20) = 1560; its sum is (52/2)(540 + 1560) = 54600. Equivalently, new schemes bring 20 P52 n=1 n. [M1] [A1] The total is 27040 + 27560 = £54,600 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 10 marks.</p>"
+    ],
+    "promptText": "A pension broker gets paid £15commission per week for every pension scheme he sells. Each week he sells a new pension scheme so that … In the st 1 week he gets paid £15commission for the pension he just sold. nd week he gets paid £30 , £15 for the pension sold in the st In the 2 1 week plus £15 nd for pension he sold in the 2 week. rd week he gets paid £45, £15 for the pension sold in the st In the 3 1 week plus £15 nd rd for pension he sold in the 2 week, plus £15 for the pension he sold in the 3 week, and so on. a) Find the commission he gets paid on the last week of the year. ( ) 2 b) Find his annual earnings after one year in this job. ( ) 2 nd His commission increases to £20 for new pension schemes sold during the 2 year but decreases to £10 for the schemes he sold in the st 1 year. The broker continues to sell at the rate of one new pension scheme every week. nd ( ) 6 c) Find his annual earnings in the 2 year."
+  },
+  {
+    "id": "madas/alevel-pure-i/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q11-question-1.svg\" alt=\"By using the substitution u = sin 2 x , or otherwise, find an exact simplified value for the following trigonometric integral. 1 π  4 2 1 − tan x dx . ( ) 8 2 sec x + 2tan x 0\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q11-solution-1.svg\" alt=\"The source substitutes u = sin 2x first, so dx = du/(2 cos 2x); the endpoints x = 0, π/4 give u = 0, 1. Convert tangent and secant to sine and cosine: Writing s = sin x, c = cos x, this gives Z 1 1 −s2/c2 I = 1 (1/c2 + 2s/c)(c2 −s2) du 2 0 Z 1 c2 −s2 Z 1 du = 1 (1 + 2sc)(c2 −s2) du = 1 1 + u. 2 2 0 0 The cancellation holds in the interior and the transformed integrand has a finite endpoint value. Equivalently, simplify the original integrand first: Multiply numerator and denominator by cos2 x. [B1] [A1] The quotient becomes cos2 x −sin2 x cos 2x 1 + 2 sin x cos x = 1 + sin 2x. [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q11-solution-2.svg\" alt=\"With u = sin 2x, du = 2 cos 2x dx [A1] and the limits are 0 and 1. [A1] The integral is 1 2[ln(1 + u)]1 0 = 1 2(ln 2 −ln 1) . [M1] [A1] = 1 2 ln 2\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 8 marks.</p>"
+    ],
+    "promptText": "By using the substitution u = sin 2 x , or otherwise, find an exact simplified value for the following trigonometric integral. 1 π  4 2 1 − tan x dx . ( ) 8 2 sec x + 2tan x 0"
+  },
+  {
+    "id": "madas/alevel-pure-i/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q12-question-1.svg\" alt=\"A water tank has the shape of a hollow inverted hemisphere with a radius of 1 m . It can be shown by calculus that when the depth of the water in the tank is h m , its 3 volume, V m , is given by the formula 1 2 V = π h ( 3 − h ) . 3 3 Water is leaking from a hole at the bottom of the tank, in m per hour, at a rate proportional to the volume of the water left in the tank at that time. a) Show clearly that\" style=\"--madas-width:558.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q12-question-2.svg\" alt=\"dh kh ( 3 − h ) = − , dt 3 2 ( − h ) where k is a positive constant. ( ) 5 The water tank is initially full. b) Solve the differential equation to show further that ( ) 9 2 3 2e kt − 3 h − h = .\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q12-solution-1.svg\" alt=\"(a) The model is dV/dt = −kV . [B1] [A1] Expand V = πh2(3 −h)/3 . = π(h2 −h3/3) Since dV/dh = πh(2 −h), the chain rule gives πh(2 −h)dh dt = −kπ 3 h2(3 −h). [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q12-solution-2.svg\" alt=\"For h &gt; 0, cancel πh, giving (2 −h)dh/dt = −kh(3 −h)/3, hence dh/dt = −kh(3 −h)/[3(2 −h)] . [A1] (b) Separating gives [3(2 −h)/(h(3 −h))] dh = −k dt. For partial fractions set 3(2 −h)/(h(3 −h)) = A/h + B/(3 −h). Multiplying through gives 3(2 −h) = A(3 −h) + Bh. At h = 3, −3 = 3B, so B = −1. At h = 0, 6 = 3A, so A = 2. Consequently 2 1  h − dh = −k dt. [B1] [A1] 3 −h Integration gives 2 ln |h| + ln |3 −h| = −kt + C.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-i/q12-solution-3.svg\" alt=\"Combining the logarithms gives ln(h2(3 −h)) = −kt + C, [M1] [A1] since 0 &lt; h ≤1. [M1] [A1] At t = 0, h = 1, [A1] hence h2(3 −h) = e−kt+C = eCe−kt. Set A = eC. The initial condition gives 3 −1 = Ae0, hence eC = 2. [A1] Exponentiating gives 3h2 −h3 = 2e−kt . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 14 marks.</p>"
+    ],
+    "promptText": "A water tank has the shape of a hollow inverted hemisphere with a radius of 1 m . It can be shown by calculus that when the depth of the water in the tank is h m , its 3 volume, V m , is given by the formula 1 2 V = π h ( 3 − h ) . 3 3 Water is leaking from a hole at the bottom of the tank, in m per hour, at a rate proportional to the volume of the water left in the tank at that time. a) Show clearly that dh kh ( 3 − h ) = − , dt 3 2 ( − h ) where k is a positive constant. ( ) 5 The water tank is initially full. b) Solve the differential equation to show further that ( ) 9 2 3 2e kt − 3 h − h = ."
+  }
+]

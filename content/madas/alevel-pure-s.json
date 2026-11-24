@@ -1,0 +1,178 @@
+[
+  {
+    "id": "madas/alevel-pure-s/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q1-question-1.svg\" alt=\"A B D C 2 The figure above shows a square ABCD of side length 2 units. The vertices A and B lie on the circumference of a circle while the side DC is a\" style=\"--madas-width:561.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q1-question-2.svg\" alt=\"tangent to the same circle. ( ) 4 Determine the radius of this circle.\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q1-solution-1.svg\" alt=\"Take DC as the segment from (−1, 0) to (1, 0), so A = (−1, 2) and B = (1, 2). [M1] The centre lies on the perpendicular bisector x = 0. [A1] Its ordinate is r because the circle is tangent to DC and contains points above DC.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q1-solution-2.svg\" alt=\"The distance from the centre to B gives 1 + (2 −r)2 = r2, [A1] so 4 −4r + r2 + 1 = r2, 5 = 4r, r = 5/4 . [A1] Alternative by similar triangles. In the second diagram let x = MN, the extra distance above the square along the diameter: The two right triangles are similar, giving MB/ME = MN/MB. With MB = 1, ME = 2, this is 1/2 = x/1, so x = 1/2. The diameter is 2 + x = 5/2, giving r = (5/2)/2 . = 5/4\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 4 marks.</p>"
+    ],
+    "promptText": "A B D C 2 The figure above shows a square ABCD of side length 2 units. The vertices A and B lie on the circumference of a circle while the side DC is a tangent to the same circle. ( ) 4 Determine the radius of this circle."
+  },
+  {
+    "id": "madas/alevel-pure-s/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q2-question-1.svg\" alt=\"Prove by contradiction that log 5 is an irrational number. ( ) 5 10\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q2-solution-1.svg\" alt=\"Suppose log10 5 = a/b [B1] with positive integers a, b. [A1] Exponentiate to base ten: 10log10 5 = 10a/b, hence 5 = 10a/b. Raising both sides to the power b gives 5b = (10a/b)b. Then 10a = 5b. [A1] Every positive power of 5 ends in 5 (for example 5, 25, 125, 625), whereas every positive power of 10 ends in 0. The left side is even and the right side is odd, a contradiction: [A1] Thus log10 5 is irrational . [A1]\" style=\"--madas-width:657.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 5 marks.</p>"
+    ],
+    "promptText": "Prove by contradiction that log 5 is an irrational number. ( ) 5 10"
+  },
+  {
+    "id": "madas/alevel-pure-s/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q3-question-1.svg\" alt=\"The curve C has equation , x∈ , y = ln 1 cos ( + x ) − π &lt; x &lt; π . Show clearly that 2 4   d y dy − y − 2 y + e + e = 0 . ( ) 8   4  dx  dx\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q3-solution-1.svg\" alt=\"First y′ = −sin x/(1 + cos x). [B1] The quotient rule gives numerator −cos x(1 + cos x) −sin2 x = −(cos x + 1) over (1 + cos x)2. Since ey = 1 + cos x, y′′ = −(1 + cos x)/(1 + cos x)2 . [A1] = −e−y Then y′′′ = e−yy′ [A1] and y(4) = −e−y(y′)2 + e−yy′′ [A1] = −e−y(y′)2 −e−2y. Equivalently, differentiate y′′ + e−y = 0 twice, first obtaining y′′′ −e−yy′ = 0. In the next differentiation the product rule gives\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q3-solution-2.svg\" alt=\"dx4 −d d4y e−y dy   = 0 dx dx d4y &quot; dx + e−y d2y # −e−y dy dx × dy dx4 − = 0 dx2 d4y 2 −e−y d2y dy dx4 + e−y dx2 = 0 dx d4y 2 dy −e−y −e−y = 0 dx4 + e−y dx Therefore y(4) + e−y(y′)2 + e−2y = 0. [M1] In this calculation, y′′ = −e−y [A1] follows directly from the quotient rule, so the coefficient 2 in the printed identity is inconsistent: [A1] For example, at x = 0 the printed left side equals 1/4 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 8 marks.</p>"
+    ],
+    "promptText": "The curve C has equation , x∈ , y = ln 1 cos ( + x ) − π < x < π . Show clearly that 2 4   d y dy − y − 2 y + e + e = 0 . ( ) 8   4  dx  dx"
+  },
+  {
+    "id": "madas/alevel-pure-s/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q4-question-1.svg\" alt=\"A curve C is given parametrically by 2 2, x = t − p y = 2 tp , where t and p are real parameters. The parameters t and p are related by the equation 2 2 p t = 2 −. 1 Show that a Cartesian equation for C is 2 y = 4 ( x − 1 2 )( x − 1 ) . ( ) 6\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q4-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q4-solution-1.svg\" alt=\"Substitute p2 = 2t2 −1 [M1] into x = t2 −p2, [A1] giving t2 = 1 −x and p2 = 1 −2x. [A1] In detail x = t2 −(2t2 −1) = 1 −t2; squaring y = 2tp gives y2 = 4t2(2t2 −1) y2 = 4(1 −x)[2(1 −x) −1] y2 = 4(1 −x)(2 −2x −1) y2 = 4(1 −x)(1 −2x) y2 = 4(−1)(x −1)(−1)(2x −1) y2 = 4(x −1)(2x −1) Hence y2 = 4t2p2 = 4(x −1)(2x −1) . [A1] Real parameters require x ≤1/2 . [A1] Every such x is reached, with both possible signs of y obtained by choosing the signs of t, p. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 6 marks.</p>"
+    ],
+    "promptText": "A curve C is given parametrically by 2 2, x = t − p y = 2 tp , where t and p are real parameters. The parameters t and p are related by the equation 2 2 p t = 2 −. 1 Show that a Cartesian equation for C is 2 y = 4 ( x − 1 2 )( x − 1 ) . ( ) 6 "
+  },
+  {
+    "id": "madas/alevel-pure-s/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q5-question-1.svg\" alt=\"The function f is defined below. sin cos x x e + 1 , x∈ . f x ( ) ≡ x x sin cos e − 1 Prove that f is odd. ( ) 6\" style=\"--madas-width:574.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q5-solution-1.svg\" alt=\"The denominator vanishes exactly when sin x cos x = 0, so the domain is R \\ {kπ/2 : k ∈Z}, symmetric about 0. [M1] [A1] Put a = sin x cos x; [A1] sin(−x) = −sin x and cos(−x) = cos x, so at −x it becomes −a. [A1] Multiply numerator and denominator at −x by ea. Then e−aea = e0 = 1 and 1 −ea = −(ea −1). Thus f(−x) = e−a + 1 e−a −1 = 1 + ea 1 −ea = −f(x) . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 6 marks.</p>"
+    ],
+    "promptText": "The function f is defined below. sin cos x x e + 1 , x∈ . f x ( ) ≡ x x sin cos e − 1 Prove that f is odd. ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-s/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q6-question-1.svg\" alt=\"The Fibonacci sequence is given by the recurrence formula u = u + u ,   1 u = , 1 u = . 1 n + 2 n + 1 n 2 It is further given that in this sequence the ratio of consecutive terms converges to a limit φ , known as the Golden Ratio. 1 1 Show, by using the above recurrence formula, that φ = ( + 5 ) . ( ) 7 2\" style=\"--madas-width:588.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q6-solution-1.svg\" alt=\"Let rn = un+1/un. [M1] All terms are positive and rn ≥1. [A1] Divide both sides by the positive middle term: un+2 = un+1 + un un+2 = un+1 un + un+1 un+1 un+1 The recurrence gives rn+1 = 1 + 1/rn, [A1] so ϕ = 1 + 1/ϕ [A1] on taking limits: [M1] Thus ϕ2 −ϕ −1 = 0. [A1] Complete the square: (ϕ −1 2)2 −5 4 = 0 (ϕ −1 2)2 = 5 4 √ ϕ −1 2 = ± 5 2 √ ϕ = 1 ± 5 2\" style=\"--madas-width:680.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q6-solution-2.svg\" alt=\"The root with a minus sign is negative: Since ϕ ≥1, √ ϕ = (1 + 5)/2 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 7 marks.</p>"
+    ],
+    "promptText": "The Fibonacci sequence is given by the recurrence formula u = u + u ,   1 u = , 1 u = . 1 n + 2 n + 1 n 2 It is further given that in this sequence the ratio of consecutive terms converges to a limit φ , known as the Golden Ratio. 1 1 Show, by using the above recurrence formula, that φ = ( + 5 ) . ( ) 7 2"
+  },
+  {
+    "id": "madas/alevel-pure-s/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q7-question-1.svg\" alt=\"th th The first three terms of a geometric progression are the respective 7 term, 4 term, nd and 2 term of an arithmetic progression. Determine the common ratio of the geometric progression. ( ) 9\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q7-solution-1.svg\" alt=\"Let the arithmetic progression have first term a and common difference d. [B1] [A1] Write A for the first geometric term. Comparing terms gives A = a + 6d Ar = a + 3d Ar2 = a + d Eliminate d = Ar2 −a from the first two equations: A = a + 6Ar2 −6a Ar = a + 3Ar2 −3a 5a = 6Ar2 −A 2a = 3Ar2 −Ar Multiply the first by 2 and the second by 5 and equate:\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q7-solution-2.svg\" alt=\"For A̸ = 0, cancel A: 15r2 −5r = 12r2 −2 3r2 −5r + 2 = 0 (3r −2)(r −1) = 0 This gives r = 2/3 or r = 1. Equivalently, the geometric terms a + 6d, a + 3d, a + d give (a + 3d)2 = (a + 6d)(a + d), d(3d −a) = 0. [M1] [A1] For d = 0, the defined ratio is 1. [A1] For d̸ = 0, a = 3d [A1] and the ratio is 6d/(9d) = 2/3. [A1] The possible values are 1, 2/3 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 9 marks.</p>"
+    ],
+    "promptText": "th th The first three terms of a geometric progression are the respective 7 term, 4 term, nd and 2 term of an arithmetic progression. Determine the common ratio of the geometric progression. ( ) 9"
+  },
+  {
+    "id": "madas/alevel-pure-s/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q8-question-1.svg\" alt=\"18 cm 72 cm A container is in the shape of hollow inverted right circular cone of height 72 cm and radius 18 cm .\" style=\"--madas-width:561.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q8-question-2.svg\" alt=\"The container, which is initially empty, is placed, with its axis vertical, under a tap cm s−. 3 1 where water is flowing in at the constant rate of k The rate at which the height of the water in the container is rising 12.5 minutes after it was placed under the tap is 2 cms−. 1 75 Determine the value of k .  1 2  volume of a cone of radius  and height   is given by 3 r h π r h  ( 10 ) \" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q8-solution-1.svg\" alt=\"By similarity, r = h/4 [B1] [A1] at water depth h. [A1] The volume of a cone is V = πr2h/3\" style=\"--madas-width:518.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q8-solution-2.svg\" alt=\". = π(h/4)2h/3 With time t in seconds, V = πh3/48 . [A1] = kt Differentiating gives k = πh2h′/16. [M1] Equivalently dV/dh = πh2/16, dh/dV = 16/(πh2), so dh/dt = 16k/(πh2). At 12.5 × 60 = 750 seconds the volume is 750k, giving πh3 = 36000k. From dh/dt = 2/75 we have πh2 = 600k. Dividing these two relations gives h = 36000/600 . = 60 Dividing the derivative equation by the volume equation gives 3h′/h = 1/t, [M1] so after 750 seconds the depth is 3 · 750 · (2/75) = 60. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q8-solution-3.svg\" alt=\"This is below the rim: [A1] Hence π603 48 · 750 = 6π cm3 s−1 . k = [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 10 marks.</p>"
+    ],
+    "promptText": "18 cm 72 cm A container is in the shape of hollow inverted right circular cone of height 72 cm and radius 18 cm . The container, which is initially empty, is placed, with its axis vertical, under a tap cm s−. 3 1 where water is flowing in at the constant rate of k The rate at which the height of the water in the container is rising 12.5 minutes after it was placed under the tap is 2 cms−. 1 75 Determine the value of k .  1 2  volume of a cone of radius  and height   is given by 3 r h π r h  ( 10 ) "
+  },
+  {
+    "id": "madas/alevel-pure-s/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q9-question-1.svg\" alt=\"The function y = f x ( ) satisfies the differential equation dy 2 xy y ( + 1 ) = , dx 2 1 sin ( x + π ) 6 subject to the condition y = at 1 x = 0 . π Find the exact value of y when x = . ( 11 ) 12\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q9-solution-1.svg\" alt=\"On the solution through y = 1, [B1] separate variables and use 1/[y(y + 1)] = 1/y −1/(y + 1). [M1] Separate as dx = 2xy(y + 1) dy sin2(x + π 6 ) 1 2x y(y + 1)dy = 6 )dx sin2(x + π For the right side use U = 2x, dW = cosec2(x + π/6) dx, so dU = 2 dx, W = −cot(x + π/6). Integration by parts leaves Z 2 cot(x + π/6) dx = 2 ln | sin(x + π/6)|.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q9-solution-2.svg\" alt=\"Combining the two logarithms on the left gives y ln y + 1 = −2x cot(x + π/6) + 2 ln | sin(x + π/6)| + C. [M1] [A1] At (0, 1), ln(1/2) = 2 ln(1/2) + C, [A1] so C = ln 2. [A1] For x = π/12, cot(x + π/6) = 1 [A1] and √ sin(x + π/6) = 1/ 2. [A1] Thus ln[y/(y + 1)] = −π/6, [A1] since 2 ln(2−1/2) = −ln 2. Exponentiating, taking reciprocals, and subtracting one gives y y + 1 = e−π 6 y + 1 π = e 6 y 1 + 1 π y = e 6 1 π 6 −1 y = e\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q9-solution-3.svg\" alt=\"yielding y = 1/(eπ/6 −1) . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 11 marks.</p>"
+    ],
+    "promptText": "The function y = f x ( ) satisfies the differential equation dy 2 xy y ( + 1 ) = , dx 2 1 sin ( x + π ) 6 subject to the condition y = at 1 x = 0 . π Find the exact value of y when x = . ( 11 ) 12"
+  },
+  {
+    "id": "madas/alevel-pure-s/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q10-question-1.svg\" alt=\"2 2 3 ⋅ 2 3 4 ⋅⋅ 2 3 4 5 ⋅⋅⋅ S = + 1 + + + + ... 4 4 8 ⋅ 4 8 12 ⋅⋅ 4 8 12 16 ⋅⋅ ⋅ By considering a suitable binomial series, or other wise, find the sum to infinity of S . ( ) 7\" style=\"--madas-width:581.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q10-solution-1.svg\" alt=\"The terms are 1 + 2/4 + (2 · 3)/(4 · 8) + (2 · 3 · 4)/(4 · 8 · 12) + · · ·. Factor out powers of four from each denominator: This gives 2 3 1 + 2 4 + 2 · 3 1 1 + 2 · 3 · 4 1 + · · · . 1! 2! 4 3! 4 For exponent −2 the products (−2)(−3) · · · have alternating signs, which cancel those of (−1/4)n. In (1 −z)−2, the term of degree n is (2 · 3 · · · (n + 1))zn/n! for n ≥1, with constant term 1. [B1] [A1] Taking z = 1/4 [M1] [A1] reproduces the series, since its denominator is 4nn!. [A1] Since |1/4| &lt; 1, the expansion converges, giving S = (1 −1/4)−2 . [M1] [A1] = 16/9\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 7 marks.</p>"
+    ],
+    "promptText": "2 2 3 ⋅ 2 3 4 ⋅⋅ 2 3 4 5 ⋅⋅⋅ S = + 1 + + + + ... 4 4 8 ⋅ 4 8 12 ⋅⋅ 4 8 12 16 ⋅⋅ ⋅ By considering a suitable binomial series, or other wise, find the sum to infinity of S . ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-s/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q11-question-1.svg\" alt=\"Use trigonometric algebra to find the solution of the following simultaneous equations, x y in the intervals  0 ≤ &lt; 2 π , 0 ≤ &lt; 2 π . 4cos y = 3 − 2sin x and         4 y − 2 x = π . ( ) 8\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q11-solution-1.svg\" alt=\"The linear equation gives x = 2y −π/2, [M1] so sin x = −cos 2y. Substitution gives 4 cos y = 3 −2 sin x 4 cos y = 3 −2 sin(2y −π 2 ) 4 cos y = 3 + 2 sin(π 2 −2y) 4 cos y = 3 + 2 cos(2y) 4 cos y = 3 + 2[2 cos2 y −1] 4 cos y = 3 + 4 cos2 y −2 0 = 4 cos2 y −4 cos y + 1 (2 cos y −1)2 = 0 cos y = 1 2\" style=\"--madas-width:425.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q11-solution-2.svg\" alt=\"Here we use cos 2y = 2 cos2 y −1 [M1] to get 4 cos y = 1 + 4 cos2 y. [A1] Hence (2 cos y −1)2 = 0. [A1] The candidates y = π/3, 5π/3 [A1] give x = π/6, 17π/6, respectively: [A1] For the second pair 2(5π/3) −π/2 = 17π/6 exceeds the permitted upper bound: Only (x, y) = (π/6, π/3) [A1] is in the required intervals: [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 8 marks.</p>"
+    ],
+    "promptText": "Use trigonometric algebra to find the solution of the following simultaneous equations, x y in the intervals  0 ≤ < 2 π , 0 ≤ < 2 π . 4cos y = 3 − 2sin x and         4 y − 2 x = π . ( ) 8"
+  },
+  {
+    "id": "madas/alevel-pure-s/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q12-question-1.svg\" alt=\"The vertices of the triangle  OAB have coordinates A ( 6, 18, 6 − − ) , ( B 7, 1,3 − ) , where O is a fixed origin. The point N lies on OA so that ON : NA = 1: 2 . The point M is the midpoint of OB . The point P is the intersection of AM and BN . By using vector methods, or otherwise, determine the coordinates of P . ( 10 )\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q12-solution-1.svg\" alt=\"Starting with a diagram: Write a = −→ OA [B1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q12-solution-2.svg\" alt=\"and b = −−→ OB. [A1] Then −−→ ON = a/3 [A1] and −−→ OM = b/2. [A1] The source writes −−→ NP = k−−→ NB, with 0 &lt; k &lt; 1. As N = (2, −6, −2) and M = (7/2, −1/2, 3/2), B −N = (5, 5, 5), giving −−→ NP = (5k, 5k, 5k). Following the two paths gives −−→ MP = −m + n + −−→ NP = (5k −3/2, 5k −11/2, 5k −7/2), −→ PA = −−−→ NP + 2n = (4 −5k, −12 −5k, −4 −5k).\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q12-solution-3.svg\" alt=\"Since these vectors are parallel, set −−→ MP = λ−→ PA. The first two components give 5k −3 2 = −5λk + 4λ 5k −11 2 = −5λk −12λ 4λ + 3 2 = 11 2 −12λ 16λ = 4 λ = 1 4 5k −3 2 = −5 4k + 1 25 4 k = 5 2 k = 2 5\" style=\"--madas-width:414.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q12-solution-4.svg\" alt=\"The third components agree: 2 −7/2 = −3/2 = (1/4)(−2 −4). Thus P = N + (2, 2, 2) = (4, −4, 0).\" style=\"--madas-width:420.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q12-solution-5.svg\" alt=\"Equivalently, on AM the position vector of P is (1 −s)a + (s/2)b, and on NB it is ((1 −t)/3)a + tb. [A1] Matching the coefficients gives s/2 = t [A1] = 2/5 and 1 −s = 1/5. [A1] Hence P = 1 5(6, −18, −6) + 2 5(7, −1, 3) = (4, −4, 0) . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 10 marks.</p>"
+    ],
+    "promptText": "The vertices of the triangle  OAB have coordinates A ( 6, 18, 6 − − ) , ( B 7, 1,3 − ) , where O is a fixed origin. The point N lies on OA so that ON : NA = 1: 2 . The point M is the midpoint of OB . The point P is the intersection of AM and BN . By using vector methods, or otherwise, determine the coordinates of P . ( 10 )"
+  },
+  {
+    "id": "madas/alevel-pure-s/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q13-question-1.svg\" alt=\"The curve C has equation 2 , x∈ . y = x − 16 + 2 ( x − 4 ) Sketch a detailed graph of C and hence show that the area of the finite region bounded by C and the x axis, for which y &lt; 0 , is 32 square units. ( ) 12\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q13-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:545.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q13-solution-2.svg\" alt=\"For |x| ≥4, y = x2 + 2x −24; [B1] [A1] for |x| ≤4, y = −x2 + 2x + 8. [M1] [A1] The two formulae factor as (x −4)(x + 4) + 2(x −4) = (x −4)(x + 6) and −(x −4)(x + 4) + 2(x −4) = (x + 2)(4 −x). The joins are (−4, −16), (4, 0). [M1] [A1] The middle branch peaks at (1, 9), with y-intercept (0, 8). [M1] [A1] The zeros are −6, −2, 4; the graph is negative exactly on (−6, −2). [M1] [A1] The antiderivatives are x3/3 + x2 −24x and −x3/3 + x2 + 8x. Reverse each interval to obtain positive area: 1 −6 −1 −4 3x3 + x2 −24x  3x3 + x2 + 8x = + −4 −2 −64 64 8     = (−72 + 36 + 144) − 3 + 16 + 96 + 3 + 16 −32 − 3 + 4 −16 = 108 −272 + 16 3 + 28 3 3 = 32\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q13-solution-3.svg\" alt=\"Therefore the area is Z −4 Z −2 (−x2 + 2x + 8) dx = 52 3 + 44 (x2 + 2x −24) dx − − 3 = 32 . [M1] [A1] −6 −4\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 12 marks.</p>"
+    ],
+    "promptText": "The curve C has equation 2 , x∈ . y = x − 16 + 2 ( x − 4 ) Sketch a detailed graph of C and hence show that the area of the finite region bounded by C and the x axis, for which y < 0 , is 32 square units. ( ) 12"
+  },
+  {
+    "id": "madas/alevel-pure-s/q14",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q14-question-1.svg\" alt=\"By using the substitution u = sec x + tan x , or otherwise, find  1 + 2sin x tan x dx . ( 11 )   2 1 + cos x tan x cos x tan x  \" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q14-solution-1.svg\" alt=\"On each interval where the integrand is defined, set √ u = sec x + tan x. [M1] [A1] Then sec2 x u′ = sec x tan x + √ 2 tan x √ [M1] [M1] [A1] = 1 + 2 sin x tan x √ tan x . 2 cos2 x √ sin x, c = √cos x on an interval with positive sine and For the fractional powers in the source, put s = cosine: √ Then tan x = s/c and = 2s3 + c dx = 2s cos2 x u′ = sin x + c/(2s) 2s cos2 x, 2s3 + c du. cos2 x The numerator of the integrand becomes (2s3 + c)/c; its denominator becomes 2 cos x(s/c)(1 + cs).\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q14-solution-2.svg\" alt=\"The product after substitution is 2 cos x(s/c)(1 + cs) · 2s cos2 x (2s3 + c)/c 2s3 + c . Cancel 2s3 + c, the factors 1/c, and 2s; one factor of cos x remains above: Cancel these factors against dx: Z du cos x 1 Z Z 1 + cs du = sec x + s/c du = u . The derivative calculation above applies directly on the other real intervals as well: √ tan x)/ cos x, [M1] [A1] so the integrand is u′/u. [M1] [A1] The integral is Also u = (1 + cos x √ ln | sec x + tan x| + C . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 14 is 11 marks.</p>"
+    ],
+    "promptText": "By using the substitution u = sec x + tan x , or otherwise, find  1 + 2sin x tan x dx . ( 11 )   2 1 + cos x tan x cos x tan x  "
+  },
+  {
+    "id": "madas/alevel-pure-s/q15",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q15-question-1.svg\" alt=\"The curve C has equation 4 3 2 ,   x∈ . f x ( ) ≡ 3 x + 8 x + 3 x − 12 x − 6 The curve has a single stationary point whose x coordinate lies in the interval [ n n + , 1 ] , where n∈ . a) Determine with full justification the value of  n . ( ) 3 A suitable equation is rearranged to produced three recurrence relations, each of which may be used to find the x coordinate of the stationary point of C . 0.5 These recurrence relations, all starting with 0x = are shown below.\" style=\"--madas-width:570.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q15-question-2.svg\" alt=\"2 1 1 2 − x n (i) x + = (ii) x + = − − 2 (iii) x = n 1 n 1 n + 1 2 2 2 x 4 + 2 x 2 x + 4 x + 1 x n n n n n b) Use a differentiation method, to investigate the result in attempting to find an approximate value for the x coordinate of the stationary point of f x , with ( ) each of these three recurrence relations. The method must include ... • ...  whether the attempt is successful • ... whether the convergence or divergence is a &quot;cobweb&quot; case or a &quot;staircase&quot; case. • ...  which recurrence relation converges at the fastest rate.\" style=\"--madas-width:560.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q15-question-3.svg\" alt=\"You may not answer part (b), by simply generating sequences. ( 10 )\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q15-solution-1.svg\" alt=\"(a) f′(x) = 6(2x3 + 4x2 + x −2). [B1] Since f′(0) = −12, f′(1) = 30 and f′ is continuous, the given unique zero lies in (0, 1). [A1] Thus n = 0 . [A1] (b) The three iteration functions g1, g2, g3 share the positive fixed point α = 0.53697 . . .. The rules are g1 = 2/(2x2 + 4x + 1), g2 = x−2 −(2x)−1 −2, g3 = (2 −x)1/2(4 + 2x)−1/2. For the last rule use the product rule: = −1 2(2 −x)−1 2 (4 + 2x)−1 1 2 (4 + 2x)−3 2 −(2 −x) 2 At the starting point x = 1/2 the slopes are −48/49, −14, −0.292118 . . ..\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q15-solution-2.svg\" alt=\"Only the second magnitude exceeds one, and the third is the smallest: Their derivatives are 8(x + 1) 2 = −2 1 4 g′ 1 = − g′ g′ 3 = − (2x2 + 4x + 1)2 , x3 + 2x2 , (4 + 2x)2g3(x). [B1] At the fixed point these are about −0.89, −11.18, −0.29. [A1] All three local patterns are cobwebs, since the derivatives are negative: The magnitude for (ii) is above 1, so this is locally repelling: [A1] It cannot converge to α from 1/2: all defined iterates are rational, and the rational-root test on 2x3 + 4x2 + x −2 rules out a rational root in (1/2, 4/7). Convergence to a repelling fixed point would require hitting it exactly: [A1] Both (i) and (iii) map [1/2, 4/7] into itself: [A1] For (i), |g′ 1| decreases there from 48/49 &lt; 1. For (iii), (4 + 2x)2g3(x) = (4 + 2x)3/2√ 2 −x [A1] increases there, so |g′ 3| ≤4/[25 p 3/10] &lt; 1.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q15-solution-3.svg\" alt=\"These bounds give convergence from x0 = 1/2. [A1] The smaller derivative magnitude at the limit makes (iii) [A1] faster: The source prints x0 = n/2, [A1] which would give 0 and make (ii) undefined at the first step: The convergence analysis above uses the midpoint from the handwritten working: [M1]\" style=\"--madas-width:662.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 15 is 13 marks.</p>"
+    ],
+    "promptText": "The curve C has equation 4 3 2 ,   x∈ . f x ( ) ≡ 3 x + 8 x + 3 x − 12 x − 6 The curve has a single stationary point whose x coordinate lies in the interval [ n n + , 1 ] , where n∈ . a) Determine with full justification the value of  n . ( ) 3 A suitable equation is rearranged to produced three recurrence relations, each of which may be used to find the x coordinate of the stationary point of C . 0.5 These recurrence relations, all starting with 0x = are shown below. 2 1 1 2 − x n (i) x + = (ii) x + = − − 2 (iii) x = n 1 n 1 n + 1 2 2 2 x 4 + 2 x 2 x + 4 x + 1 x n n n n n b) Use a differentiation method, to investigate the result in attempting to find an approximate value for the x coordinate of the stationary point of f x , with ( ) each of these three recurrence relations. The method must include ... • ...  whether the attempt is successful • ... whether the convergence or divergence is a \"cobweb\" case or a \"staircase\" case. • ...  which recurrence relation converges at the fastest rate. You may not answer part (b), by simply generating sequences. ( 10 )"
+  },
+  {
+    "id": "madas/alevel-pure-s/q16",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q16-question-1.svg\" alt=\"The point ( P x y lies on a circle with centre at ( , ) 1,0 and radius 1. ) Find, in exact surd form, the greatest value of x + y , for all the possible positions of the point P . ( 11 )\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q16-solution-1.svg\" alt=\"The circle has centre (1, 0) and radius 1, so (x −1)2 + y2 = 1. [B1] For a fixed x, the upper semicircle gives the larger value of x + y. Hence y2 = 1 −(x −1)2 = 2x −x2, p y = 2x −x2. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q16-solution-2.svg\" alt=\"2x −x2 for 0 ≤x ≤2. [A1] Differentiating gives Maximise f(x) = x + f′(x) = 1 + 1 2(2 −2x)(2x −x2)−1/2. [M1] Setting this equal to zero and rearranging, 1 −x √ x −1 = p 2x −x2. 0 = 1 + 2x −x2 , [M1] Squaring gives x2 −2x + 1 = 2x −x2, so 2x2 −4x + 1 = 0. [A1] The roots are √ x = (4 ± 16 −8)/4 √ . [A1] = 1 ± 2/2 √ √ 2x −x2 equals + At either candidate the square root in x −1 = 2/2. √ At the smaller candidate the left side is − 2/2. √ The smaller root makes x −1 negative and cannot satisfy the unsquared equation. [M1] At x = 1 + 2/2, √ 2x −x2 = 1/2, hence y = 2/2. [A1] Substituting directly under the radical gives √ √ 2 + 2 −(1 + 2 + 1/2) = 1/2.\" style=\"--madas-width:680.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q16-solution-3.svg\" alt=\"Thus √ √ f(x) = 1 + 2/2 + 2/2 . [A1] √ = 1 + 2 This exceeds the endpoint values f(0) = 0 and f(2) = 2, so it is the greatest value. [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 16 is 11 marks.</p>"
+    ],
+    "promptText": "The point ( P x y lies on a circle with centre at ( , ) 1,0 and radius 1. ) Find, in exact surd form, the greatest value of x + y , for all the possible positions of the point P . ( 11 )"
+  },
+  {
+    "id": "madas/alevel-pure-s/q17",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q17-question-1.svg\" alt=\"The curve C has equation 2 1   ,   x∈ , &gt; y + 2 =  ln 4 ( x + 1 ) x − . 4 Sketch the graph of  C  and hence determine, in exact simplified form, the area of the finite region bounded by C , for which x ≥ 0 , and the coordinate axes. ( 12 )\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q17-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:560.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q17-solution-2.svg\" alt=\"The logarithm requires x &gt; −1/4, [B1] and x = −1/4 [A1] is a vertical asymptote: [A1] The curve falls to its minimum (0, −2) then rises: [A1] To sketch, take y = ln x, replace the input by 4x + 1, square the ordinates, then translate down two units. √ √ At a zero, ln(4x + 1) = ± 2, so 4x + 1 = e± 2. Its x-intercepts are √ 2 −1)/4 x−= (e− [A1] √ 2 −1)/4. [A1] For the region to the right of the y-axis, set u = 4x + 1. and x+ = (e √ Thus du = 4 dx and the bounds become 1, e 2. [A1] The area is √ Z e 2 √ √ √ 1 2 −(ln u)2 du = 1 = 1 e 2 2 . u(2 ln u −(ln u)2) 2( 2 −1)e [M1] [A1] 4 4 1 1 R (ln u)2du = u(ln u)2 −2 R ln u du, [A1] by choosing the logarithm squared as the differentiated Explicitly, factor and du as the integrated factor: Similarly, choosing ln u as the differentiated factor gives\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q17-solution-3.svg\" alt=\"Z ln u du = u ln u −u. [M1] The printed domain includes the logarithm’s undefined endpoint, which has been excluded: [A1] Alternative working. Using horizontal strips, y + 2 = [ln(4x + 1)]2. On the right-hand branch x ≥0, so √y+2 −1). x = 1 4(e The negative square-root choice gives the left branch and is excluded here: √ Set v = √y + 2, so y = v2 −2, dy = 2v dv, with y = −2, 0 corresponding to v = 0, 2.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-s/q17-solution-4.svg\" alt=\"The area is Z 0 Z 0 x dy = 1 √y+2 −1) dy (e 4 −2 −2 Z √ 2 vev dv = −1 2 + 1 2 0 √ = −1 2 + 1 2[(v −1)ev] 2 0 √ √ √ √ 2 + 1] = 1 = −1 2 + 1 2[( 2 −1)e 2( 2 −1)e 2.\" style=\"--madas-width:510.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 17 is 12 marks.</p>"
+    ],
+    "promptText": "The curve C has equation 2 1   ,   x∈ , > y + 2 =  ln 4 ( x + 1 ) x − . 4 Sketch the graph of  C  and hence determine, in exact simplified form, the area of the finite region bounded by C , for which x ≥ 0 , and the coordinate axes. ( 12 )"
+  }
+]

@@ -3,7 +3,7 @@
   'use strict';
   const macros = {'\\p':'\\mathrm P(#1)','\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
   const validMarks = row => Number.isInteger(row.marks) && row.marks >= 0;
-  const source = row => ['past-exam', 'pmt'].includes(row.sourceKind) ? `Source: ${(row.sourceLabel || 'Past exam').replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
+  const source = row => ['past-exam', 'pmt', 'madas'].includes(row.sourceKind) ? `Source: ${(row.sourceLabel || 'Past exam').replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const context = row => [row.courseTitle, row.bookTitle, row.topicTitle].filter(Boolean).join(' · ');
@@ -98,7 +98,7 @@
       return ['Practice', label, /^\d/.test(row.questionLabel) ? 'Q' + row.questionLabel : row.questionLabel].join(' ');
     }
     if (row.sourceKind === 'past-exam') return source(row).replace(/^Source: Edexcel (?:A Level )?/i, 'Edexcel ').replace(/^Source: /, '');
-    if (row.sourceKind === 'pmt') return source(row).replace(/^Source: /, '');
+    if (['pmt', 'madas'].includes(row.sourceKind)) return source(row).replace(/^Source: /, '');
     return source(row);
   }
   function questionHeading(doc, row, number, continuation) {
@@ -109,10 +109,10 @@
     const title = chapter?.title || row.chapterTitle || row.topicTitle;
     const chapterNumber = chapter?.id || row.chapterNumber;
     const topic = title === 'Applications of forces' ? 'Forces' : title;
-    const place = [course, shortBooks[book] || book, chapterNumber && 'Ch' + chapterNumber, topic].filter(Boolean).join(' ');
-    const difficulty = row.difficulty && row.difficulty[0].toUpperCase() + row.difficulty.slice(1);
+    const place = row.sourceKind === 'madas' ? '' : [course, shortBooks[book] || book, chapterNumber && 'Ch' + chapterNumber, topic].filter(Boolean).join(' ');
+    const difficulty = row.difficulty && (row.difficulty === 'very-hard' ? 'Very Hard' : row.difficulty[0].toUpperCase() + row.difficulty.slice(1));
     const detail = element(doc, 'span', 'compact-provenance', '(' + [place, compactSource(row), difficulty].filter(Boolean).join(' - ') + ')');
-    detail.title = [source(row), context(row)].filter(Boolean).join(' · ');
+    detail.title = [source(row), row.sourceKind === 'madas' ? '' : context(row)].filter(Boolean).join(' · ');
     head.append(element(doc, 'h2', '', 'Q' + number + (continuation ? ' · continued' : '')), detail);
     if (validMarks(row) && !continuation) head.append(element(doc, 'strong', 'question-marks', '[' + row.marks + ' Marks]'));
     return head;
@@ -260,6 +260,7 @@
         question.append(questionHeading(doc, row, index + 1, false), normaliseMarks(content(doc, contextHtml + row.question)));
         const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); if (layout !== 'condensed') question.append(working);
         const solution = includeAnswers ? content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join('')) : null;
+        if (solution && row.sourceKind === 'madas') solution.querySelector('.madas-total').textContent = `Total mark for question ${index + 1} is ${row.marks} marks.`;
         if (includeAnswers && row.hints?.length) {
           const hints = element(doc, 'section', 'solution-hints');
           hints.append(element(doc, 'h3', '', 'Hints from the booklet'), content(doc, row.hints.map(html => `<div class="solution-step">${html}</div>`).join('')));
@@ -358,6 +359,7 @@
         function newSection(continuation) {
           section = element(doc, 'article', 'print-solution'); section.dataset.questionId = item.row.id;
           section.append(questionHeading(doc, item.row, index + 1, continuation));
+          if (!continuation && item.row.sourceKind === 'madas') section.append(element(doc, 'p', 'scheme-credit', 'Adapted MADAS mark scheme · editorial mark allocations'));
           body.append(section);
           fitQuestionHeading(section);
         }

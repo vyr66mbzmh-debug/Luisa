@@ -1,26 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.77 -->
-**Release 0.77 · GitHub #141.** Written for any successor agent, engine or person; it needs no earlier conversation.
+<!-- LUISA-REPORT-HANDOFF v0.78 -->
+**Release 0.78 · GitHub #143.**
 
-**Current state.** Luisa v0.77 is the published version on Cloudflare (owner edition) and ADA (staff and pupil editions), all built from one merged revision recorded on GitHub #141. Papers holds 44 past papers (444 questions) and 83 PMT questions (58 Core Pure 1, 25 Core Pure 2; 704 marks), 9,149 questions in all. Every question exists once.
+Papers includes 1,021 MADAS question appearances in 75 papers, with 1,018 distinct problems across AS Pure, A-level Pure and A-level Applied. Three repeated problems retain their original paper references and marking variants.
 
-**What changed (PAP-077-1 … PAP-077-5 in docs/requirements/register.json, each with acceptance criteria).**
-- **Duplicates removed (PAP-077-1).** The 51 PMT copies (v0.75/v0.76 `duplicateOf`) are deleted from `pmt-catalogue.json`, `content/pmt/` and `resources/pmt/`. The survivor is the official past paper (47) or else the earliest PMT question (4). Survivors keep their wording, marks, scheme and difficulty and gain the copy's chapter keys and skills. Counts: 134 → 83 PMT (Core Pure 1 73 → 58, Core Pure 2 61 → 25), 1,183 → 704 marks, bank 9,200 → 9,149. `pmt-catalogue.json` `migrations` maps every removed ID to its survivor; Papers replaces a saved copy with its survivor once and says so. Full removed → retained list: `docs/evidence/v077-duplicates-removed.json`.
-- **No-duplicates rule (PAP-077-2).** `scripts/duplicates.py` compares every question (shingles plus equations; threshold 0.4 where an official or PMT question is involved, 0.95 between Luisa's own). Every candidate must be decided in `docs/evidence/duplicate-decisions.json` (51 duplicates, 13 confirmed not duplicates). `scripts/luisa.py check` fails on a copy, an undecided candidate or a stale migration. `scripts/import/pmt.py` and `scripts/import/integrate.py` refuse a copy; a new official paper that repeats a PMT question prints the exact `duplicates.py remove` command. The generator's copy safety net stays. The one-time bank-wide check found no further copies.
-- **Tickbox retired (PAP-077-3).** The PMT tickbox, its state key and tests are gone in every edition; an old saved `pmt` key is ignored.
-- **PMT is exam-style (PAP-077-4).** PMT questions are in the "Exam style" box for pupils and in teacher exam papers, where only the mark scheme names the source.
-- **Original exams (PAP-077-5, best effort).** 56 of the 83 PMT questions were matched by sight to an Edexcel 8FM0/01 or 9FM0 paper (2018–2022 and the Sample) and carry `originalExam`, shown in the mark scheme after the PMT label; 27 are "unknown". Nothing was guessed; three look-alikes were rejected. Evidence: `docs/evidence/v077-pmt-original-exams.json`. Source PDFs stay outside Git.
+The Madas source beside Exam style uses Standard for A–I, Hard for J–R and Very Hard for S–Z. The original difficulty guidance stays in the catalogue.
 
-**How to add questions now.** Run the importer as before; if it stops with a duplicate, keep the official paper (or the earlier PMT question), record the decision with `python3 scripts/duplicates.py remove …` or as a not-duplicate in `duplicate-decisions.json`, then rerun the gate.
+Teachers can select Include MADAS questions when generating an exam. The adapted schemes identify the collection, paper and question and show editorial marks. Textbook mappings support selection and are omitted from the question and answer pages.
 
-**Next jobs.** None from this assignment. The owner may review the remaining PMT source slips listed in `tests/test_pmt.py` (`SOURCE_SLIPS`) and the 27 PMT questions without a known original.
-
-**Verified.** The gate, the duplicate, PMT and Papers tests and the full Papers browser and print suites passed; exact-head CI, the independent code review and the live checks (owner, disconnected use, ADA staff and pupil, accounts unchanged, the published report's single handoff, recovery ZIP) are recorded on #141.
-
-**Outstanding.** Two owner notes from v0.65 still await the owner's view: the per-cell marks in the one three-cell table question, and the course label for a future 9FM0 Mechanics paper.
-
-**Usage.** v0.77 used 24,977,814 tokens up to the release build (main session since the v0.77 baseline, per-call transcript usage via scripts/release/tokens.py; mostly cached context); the final count is on #141.
+The catalogue and per-paper content are in `madas-catalogue.json` and `content/madas/`. The importer reads private prepared files. The bank contains 10,167 distinct problems. Release verification and usage are tracked on #143. The next requested release is v0.79 for official AS papers.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

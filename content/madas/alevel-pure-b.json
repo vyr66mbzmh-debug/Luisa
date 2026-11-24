@@ -1,0 +1,138 @@
+[
+  {
+    "id": "madas/alevel-pure-b/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q1-question-1.svg\" alt=\"If x is in radians d ( sin x ) = cos x . dx Prove the validity of the above result from first principles. 0 You may assume that if h is small and measured in radians, then as h → cos ( ) h −→ 1 sin ( ) h ( ) 5 0 and →. 1 h h\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q1-solution-1.svg\" alt=\"The derivative from first principles is f′(x) = lim h→0[f(x + h) −f(x)]/h. Choose f(x) = sin x: d sin(x + h) −sin x dx sin x = lim . h→0 h [M1] sets up the difference quotient Use sin(A + B) = sin A cos B + cos A sin B with A = x, B = h. [A1] angle addition Regroup the numerator and take out the common factor sin x: d sin x cos h + cos x sin h −sin x dx sin x = lim h h→0 sin x cos h −sin x + cos x sin h = lim h h→0\" style=\"--madas-width:462.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q1-solution-2.svg\" alt=\"sin x(cos h −1) + cos x sin h = lim h→0 h  cos h −1  sin h  = lim sin x + cos x . h→0 h h [A1] isolates the two supplied limits In radians, the limits of the two brackets are 0 and 1, respectively: [M1] uses the limits Thus the derivative is sin x · 0 + cos x · 1 = cos x . [A1] conclusion Source correction. The printed limit says h →∞. The supplied limits apply as h →0.\" style=\"--madas-width:505.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 5 marks.</p>"
+    ],
+    "promptText": "If x is in radians d ( sin x ) = cos x . dx Prove the validity of the above result from first principles. 0 You may assume that if h is small and measured in radians, then as h → cos ( ) h −→ 1 sin ( ) h ( ) 5 0 and →. 1 h h"
+  },
+  {
+    "id": "madas/alevel-pure-b/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q2-question-1.svg\" alt=\"A sequence of numbers, 1 u , u , u , u , ... , is defined by 2 3 4 1 = − u = u ,   1 2 . n 1 u − n 1 Determine the value of 20 = u . ( ) 5 n n 1\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q2-solution-1.svg\" alt=\"Use the recurrence un = 1/(1 −un−1) starting from u1 = 2: 1 1 u2 = = 1 −2 = −1, 1 −u1 1 1 u3 = = 1 −(−1) = 1 2, 1 −u2 1 1 u4 = = 1 −1/2 = 2, 1 −u3 1 u5 = 1 −2 = −1. [B1] generates the terms Since u4 = u1, the same recurrence repeats the block 2, −1, 1/2 from that point. [A1] period three Group the terms in threes as in the handwritten table:\" style=\"--madas-width:514.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q2-solution-2.svg\" alt=\"value terms with that value 2 u1 u4 u7 u10 u13 u16 u19 −1 u2 u5 u8 u11 u14 u17 u20 1/2 u3 u6 u9 u12 u15 u18 total 1.5 1.5 1.5 1.5 1.5 1.5 1 Each complete block sums to 2 −1 + 1/2 = 1.5. [A1] block sum There are six complete blocks since 20 = 6(3) + 2; the last two terms sum to 2 −1 = 1. [A1] remainder Thus 20 X un = 6(1.5) + 1 . n=1 = 10\" style=\"--madas-width:560.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q2-solution-3.svg\" alt=\"[A1] total\" style=\"--madas-width:70.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 5 marks.</p>"
+    ],
+    "promptText": "A sequence of numbers, 1 u , u , u , u , ... , is defined by 2 3 4 1 = − u = u ,   1 2 . n 1 u − n 1 Determine the value of 20 = u . ( ) 5 n n 1"
+  },
+  {
+    "id": "madas/alevel-pure-b/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q3-question-1.svg\" alt=\"2 2 The point ( − ) P , lies on the curve C with parametric equations 5 3 1 1 ,   t ∈ ,   t x = + , y = − ≠± a , t a t a where a is a non zero constant. Show that the gradient at P is 25 9 . ( ) 7\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q3-solution-1.svg\" alt=\"Use P = (2/5, −2/3) in the parametric equations: From x = 1/(t + a), 2/5 = 1/(t + a) gives t + a = 5/2. Likewise −2/3 = 1/(t −a) gives t −a = −3/2. [M1] two equations at the point Adding eliminates a: 2t = 5/2 −3/2 = 1, so t = 1/2. Then 5/2 = 1/2 + a, giving a = 2. [M1] solves for both parameters Now x = (t + 2)−1, y = (t −2)−1. Differentiate: dx 1 dy 1 dt = − (t + 2)2 , dt = − (t −2)2 . [M1] [A1] the two derivatives\" style=\"--madas-width:461.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q3-solution-2.svg\" alt=\"The gradient is their ratio: dx = dy/dt dy dx/dt = −1/(t −2)2 −1/(t + 2)2 = (t + 2)2 t + 2 2 (t −2)2 = . t −2 [A1] parametric derivative At t = 1/2, this gives 2 = [(5/2)/(−3/2)]2. (1/2 + 2)/(1/2 −2) [A1] evaluates at the correct parameter Hence the gradient is (−5/3)2 = 25/9 . [A1] result\" style=\"--madas-width:506.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 7 marks.</p>"
+    ],
+    "promptText": "2 2 The point ( − ) P , lies on the curve C with parametric equations 5 3 1 1 ,   t ∈ ,   t x = + , y = − ≠± a , t a t a where a is a non zero constant. Show that the gradient at P is 25 9 . ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-b/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q4-question-1.svg\" alt=\"( ) ( ) ( ) The points A 1,1,2 , B 2,1,5 , C 4,0,1 and D form the parallelogram ABCD , where the above coordinates are measured relative to a fixed origin. a) Find the coordinates of D . ( ) 2 The points E , B and D are collinear, so that B is the midpoint of ED . b) Determine the coordinates of E . ( ) 2 The point F is such so that ABEF is also a parallelogram. ( ) c) Find the coordinates of F . 2 d) Show that B is the midpoint of FC . ( ) 2\" style=\"--madas-width:578.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q4-question-2.svg\" alt=\"e) Prove that ADBF is another parallelogram. ( ) 2\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q4-solution-1.svg\" alt=\"Looking at the diagram:\" style=\"--madas-width:612.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q4-solution-2.svg\" alt=\"Treat coordinates as position vectors: (a) Follow the sides of the parallelogram:\" style=\"--madas-width:409.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q4-solution-3.svg\" alt=\"−−→ OD = −→ OA + −−→ AD . = −→ OA + −−→ BC Thus d = a + (c −b) = (1, 1, 2) + (4, 0, 1) −(2, 1, 5) = (3, 0, −2). Equivalently, the diagonals of ABCD have the same midpoint, so D = A + C −B = (3, 0, −2) . [M1] [A1] (b) From D = (3, 0, −2) to B = (2, 1, 5) the changes are (−1, +1, +7). Repeat the same changes from B to E, since B is the midpoint of DE. Thus E = 2B −D = (1, 2, 12) . [M1] [A1] (c) The change from B to E is (1 −2, 2 −1, 12 −5) = (−1, 1, 7).\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q4-solution-4.svg\" alt=\"Apply it to A = (1, 1, 2): F = (1 −1, 1 + 1, 2 + 7) = (0, 2, 9). Equivalently, the diagonals of ABEF give F = A + E −B = (0, 2, 9) . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q4-solution-5.svg\" alt=\"(d) The midpoint of FC is (0 + 4)/2, (2 + 0)/2, (9 + 1)/2 . Thus (F + C)/2 = (2, 1, 5) = B . [M1] [A1] (e) Check both pairs of directed opposite sides: −−→ AD = (3, 0, −2) −(1, 1, 2) = (2, −1, −4), −−→ FB = (2, 1, 5) −(0, 2, 9) = (2, −1, −4), −→ FA = (1, 1, 2) −(0, 2, 9) = (1, −1, −7), −−→ BD = (3, 0, −2) −(2, 1, 5) = (1, −1, −7). Each pair is equal and parallel, proving the claim: The midpoint test gives a second check: The diagonals of ADBF are AB and DF. Both have midpoint (3 2, 1, 7 2), so they bisect each other: [B1] Thus ADBF is a parallelogram: [A1]\" style=\"--madas-width:672.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 10 marks.</p>"
+    ],
+    "promptText": "( ) ( ) ( ) The points A 1,1,2 , B 2,1,5 , C 4,0,1 and D form the parallelogram ABCD , where the above coordinates are measured relative to a fixed origin. a) Find the coordinates of D . ( ) 2 The points E , B and D are collinear, so that B is the midpoint of ED . b) Determine the coordinates of E . ( ) 2 The point F is such so that ABEF is also a parallelogram. ( ) c) Find the coordinates of F . 2 d) Show that B is the midpoint of FC . ( ) 2 e) Prove that ADBF is another parallelogram. ( ) 2"
+  },
+  {
+    "id": "madas/alevel-pure-b/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q5-question-1.svg\" alt=\"A curve C has implicit equation 2 ( x + 2 y ) + y = 3 x + 2 . 4 x − y a) Show clearly that dy 2 kx − ky + 8 = ( ) 6 , dx 6 y + kx + 2 where k is a constant to be found. b) Find the gradient at each of the points on C , where x = 2 . ( ) 6\" style=\"--madas-width:572.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q5-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:566.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q5-solution-1.svg\" alt=\"(a) Multiply by 4x −y to get (x + 2y)2 + y(4x −y) = (3x + 2)(4x −y). Expand both sides: x2 + 4xy + 4y2 + 4xy −y2 = 12x2 −3xy + 8x −2y. Collecting all terms on the left gives 3y2 + 11xy + 2y −11x2 −8x = 0. [M1] [A1] Multiply the equation by −1 and differentiate: 22x −6yy′ −11y −11xy′ + 8 −2y′ = 0. Thus 22x −11y + 8 = (11x + 6y + 2)y′.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q5-solution-2.svg\" alt=\"In the original sign convention, differentiation gives (6y + 11x + 2)y′ + 11y −22x −8 = 0. [M1] [A1] Therefore y′ = 22x −11y + 8 6y + 11x + 2 , k = 11 . [M1] [A1] (b) With x = 2, the equation with positive 11x2 reads 44 −3y2 −22y + 16 −2y = 0. Hence the simplified curve equation gives 3y2 + 24y −60 = 0, [A1] or y2 + 8y −20 = 0 on division by 3. Factorising gives (y −2)(y + 10) = 0. [M1] Both values satisfy the original denominator restriction: [A1] The gradients at (2, 2) and (2, −10) are (44 −22 + 8)/(12 + 22 + 2) = 30/36 [A1] = 5/6 and (44 + 110 + 8)/(−60 + 22 + 2) = 162/(−36) , [A1] = −9/2\" style=\"--madas-width:680.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q5-solution-3.svg\" alt=\"respectively: [A1]\" style=\"--madas-width:148.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 12 marks.</p>"
+    ],
+    "promptText": "A curve C has implicit equation 2 ( x + 2 y ) + y = 3 x + 2 . 4 x − y a) Show clearly that dy 2 kx − ky + 8 = ( ) 6 , dx 6 y + kx + 2 where k is a constant to be found. b) Find the gradient at each of the points on C , where x = 2 . ( ) 6 "
+  },
+  {
+    "id": "madas/alevel-pure-b/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q6-question-1.svg\" alt=\"Show by using algebra, that the sum of the integers between 1 and 600 inclusive, that are not divisible by 3, is 120000. ( ) 5\" style=\"--madas-width:574.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q6-solution-1.svg\" alt=\"For the integers from 1 to n, Sn = n(n + 1)/2. Setting n = 600, all 600 integers sum to 1 2(600)(601) = 180300. [M1] [A1] The multiples of 3 are 3, 6, . . . , 600, with 600 = 3(200). Factor out 3: 3 + 6 + 9 + · · · + 597 + 600 = 3(1 + 2 + 3 + · · · + 199 + 200). Their sum is 3 · 1 2(200)(201) = 60300. [A1] The required difference is 180300 −60300 = 120000 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 5 marks.</p>"
+    ],
+    "promptText": "Show by using algebra, that the sum of the integers between 1 and 600 inclusive, that are not divisible by 3, is 120000. ( ) 5"
+  },
+  {
+    "id": "madas/alevel-pure-b/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q7-question-1.svg\" alt=\"36 A B C D θ 12 3 O The figure above shows a model of the region used by shot putters in to throw the shot. The throwing region consists of a minor circular sector OAB of radius 12 3\" style=\"--madas-width:536.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q7-question-2.svg\" alt=\"metres subtending an angle θ radians at O . The chord AB is 36 metres. The shot putter’s region COD is a major circular sector of radius 3 3 metres, where C and D lie on OA and OB , respectively. 2 ( ) 3 a) Show that θ = π . 3 b) Find, in terms of π , the total area of throwing region and shot putter’s region. ( ) 4 c) Show further that the total perimeter of the throwing region and the shot putter’s region, shown shaded in the figure above, is ( ) ( ) 3 6 2 π + 3 3 .\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q7-question-3.svg\" alt=\"Question diagram\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q7-solution-1.svg\" alt=\"(a) The cosine rule on OAB gives\" style=\"--madas-width:452.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q7-solution-2.svg\" alt=\"AB2 = OA2 + OB2 −2(OA)(OB) cos θ. Substituting gives √ √ √ √ 362 = (12 3)2 + (12 3)2 −2(12 3)(12 3) cos θ. Thus 1296 = 432 + 432 −864 cos θ, 864 cos θ = −432, and cos θ = −1/2, so θ = 2π/3. The handwritten solution also suggests splitting the triangle. Bisect the isosceles triangle OAB from O to the midpoint of AB. [M1] Then √ sin(θ/2) = 18/(12 3) √ . = 3/2 The minor sector gives 0 &lt; θ/2 &lt; π/2, [A1] so θ = 2π/3 . [A1] (b) The remaining angle is 2π −2π/3 = 4π/3. [B1] [A1] The combined area is\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q7-solution-3.svg\" alt=\"√ √ 3)2 2π 3)2 4π 3 = 144π + 18π = 162π m2 . 1 3 + 1 2(12 2(3 [M1] [A1] (c) The boundary includes both arcs and the two radial segments AC and BD. [B1] Its length is √ √ √ √ √ √ √ √ 32π 34π 12 3 + 3 3 + 2(12 3 −3 3) = 8 3π + 4 3π + 18 3 = 6(2π + 3) 3 m. [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 10 marks.</p>"
+    ],
+    "promptText": "36 A B C D θ 12 3 O The figure above shows a model of the region used by shot putters in to throw the shot. The throwing region consists of a minor circular sector OAB of radius 12 3 metres subtending an angle θ radians at O . The chord AB is 36 metres. The shot putter’s region COD is a major circular sector of radius 3 3 metres, where C and D lie on OA and OB , respectively. 2 ( ) 3 a) Show that θ = π . 3 b) Find, in terms of π , the total area of throwing region and shot putter’s region. ( ) 4 c) Show further that the total perimeter of the throwing region and the shot putter’s region, shown shaded in the figure above, is ( ) ( ) 3 6 2 π + 3 3 . "
+  },
+  {
+    "id": "madas/alevel-pure-b/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q8-question-1.svg\" alt=\"cos cos2 θ θ 1 θ = ≤ θ &lt; 2π ,  0 . cos θ + sin 2 Given that cos θ + sin θ ≠ 0 , find the solutions of the above trigonometric equation, giving the answers in radians in terms of π . ( ) 8\" style=\"--madas-width:578.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q8-solution-1.svg\" alt=\"Multiply across to obtain 2 cos θ cos 2θ = cos θ + sin θ. Substitute cos 2θ = cos2 θ −sin2 θ. Factor cos 2θ = (cos θ + sin θ)(cos θ −sin θ) [M1] [A1] and cancel the nonzero common factor: [M1] In full, 2 cos θ(cos θ −sin θ)(cos θ + sin θ) = cos θ + sin θ. Division gives 2 cos θ(cos θ −sin θ) = 1. Expand and use 2 cos2 θ = 1 + cos 2θ and\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q8-solution-2.svg\" alt=\"2 sin θ cos θ = sin 2θ. Thus 1 + cos 2θ −sin 2θ = 1, or equivalently 2 cos2 θ −2 sin θ cos θ = 1 ⇐⇒ cos 2θ = sin 2θ. [M1] [A1] At a solution cos 2θ̸ = 0, so divide by cos 2θ to get 1 = tan 2θ. Therefore 2θ = π/4 + nπ, or θ = π/8 + nπ/2. [A1] The angles in the required interval, all with nonzero original denominator, are π/8, 5π/8, 9π/8, 13π/8 . [M1] [A1] Source clarification. The printed interval uses x, while the angle everywhere in the equation is θ.\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 8 marks.</p>"
+    ],
+    "promptText": "cos cos2 θ θ 1 θ = ≤ θ < 2π ,  0 . cos θ + sin 2 Given that cos θ + sin θ ≠ 0 , find the solutions of the above trigonometric equation, giving the answers in radians in terms of π . ( ) 8"
+  },
+  {
+    "id": "madas/alevel-pure-b/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q9-question-1.svg\" alt=\"The function f  is defined by , x∈ , f x ( ) = 2 + x x ≥ 0 . a) Evaluate ff ( 49 ) . ( ) 1 − 1 b) Find an expression for the inverse function, f ( ) x . ( ) 2 ( ) − 1 ( ) c) Sketch in the same set of axes the graph of f x and the graph of f x , clearly marking the line of reflection between the two graphs. ( ) 3 − d) Show that x = ( ) = 1 ( ) ( ) 4 is the only solution of the equation f x f x . 3\" style=\"--madas-width:572.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q9-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:574.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q9-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:473.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q9-solution-2.svg\" alt=\"(a) f(49) = 2 + 49 = 2 + 7 = 9, hence f(f(49)) = f(9) √ = 2 + 9 . [A1] = 5 (b) From y = 2 + √x subtract 2 to get y −2 = √x. Squaring gives x = (y −2)2, [B1] y ≥2. Thus f−1(x) = (x −2)2, x ≥2 . [A1] (c) The graphs reflect in the line y = x, [B1] [A1] and their respective starting points are (0, 2) and (2, 0) . [A1] (d) If f(x) = f−1(x), then f(f(x)) = x.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q9-solution-3.svg\" alt=\"As f is strictly increasing, f(x) &gt; x [B1] would imply f(f(x)) &gt; x, and f(x) &lt; x would imply f(f(x)) &lt; x. [A1] Thus f(x) = x. This gives (x −2)2 = x with x ≥2, so x2 −4x + 4 = x, x2 −5x + 4 = 0, and (x −1)(x −4) = 0. The roots are 1 and 4; reject 1 since the inverse requires x ≥2. The only allowed root is x = 4 . [A1]\" style=\"--madas-width:649.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 9 marks.</p>"
+    ],
+    "promptText": "The function f  is defined by , x∈ , f x ( ) = 2 + x x ≥ 0 . a) Evaluate ff ( 49 ) . ( ) 1 − 1 b) Find an expression for the inverse function, f ( ) x . ( ) 2 ( ) − 1 ( ) c) Sketch in the same set of axes the graph of f x and the graph of f x , clearly marking the line of reflection between the two graphs. ( ) 3 − d) Show that x = ( ) = 1 ( ) ( ) 4 is the only solution of the equation f x f x . 3 "
+  },
+  {
+    "id": "madas/alevel-pure-b/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q10-question-1.svg\" alt=\"ex dy 2 2 dx + y = xy x &gt; y &gt; , 0 , 0 Show that the solution of the above differential equation subject to y = e at x = , is 1 1 ex y = . ( ) 8 x\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q10-solution-1.svg\" alt=\"The given equation is exy′ + y2 = xy2. Moving the y2 term gives exy′ = xy2 −y2 , [B1] = y2(x −1) Separating gives ex dy = y2(x −1) dx and then dy/y2 = (x −1) dx/ex. Integrate: Z Z y−2 dy = (x −1)e−x dx. [M1] For integration by parts choose u = x −1, dv = e−x dx, [M1] so du = dx, v = −e−x. [A1] Hence −1 Z y = −(x −1)e−x + e−x dx = −(x −1)e−x −e−x + C = −xe−x + C. [A1] Multiplying through by −1 and renaming the arbitrary constant gives 1/y = e−x(x −1) + e−x + C\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q10-solution-2.svg\" alt=\"= xe−x −e−x + e−x + C . = xe−x + C At x = 1, y = e, so 1/e = 1 · e−1 + C [A1] = 1/e + C and C = 0. Hence 1/y = xe−x. Taking the reciprocal gives y = 1/(xe−x), or y = ex/x [A1] for x &gt; 0. [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 8 marks.</p>"
+    ],
+    "promptText": "ex dy 2 2 dx + y = xy x > y > , 0 , 0 Show that the solution of the above differential equation subject to y = e at x = , is 1 1 ex y = . ( ) 8 x"
+  },
+  {
+    "id": "madas/alevel-pure-b/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q11-question-1.svg\" alt=\"After a road accident, fuel is leaking from a tanker onto a flat section of the motorway forming a circle of thickness 3 mm. m s− 3 1 Petrol is leaking at a steady rate of 0.0008 Find, in terms of π , the rate at which the radius of the circle of petrol is increasing at the instant when the radius has reached 6 m . ( ) 5\" style=\"--madas-width:576.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q11-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:446.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q11-solution-2.svg\" alt=\"The thickness of the cylindrical layer is 3 mm = 0.003 m. With radius r in metres, the volume is V = 0.003πr2. [B1] [A1] Differentiate with respect to the radius to get dV/dr = 0.006πr. Then the reciprocal derivative gives dr/dt = (dr/dV )(dV/dt) = [1/(0.006πr)](0.0008) . = 2/(15πr) Equivalently, differentiating in time gives 0.0008 = 0.006πr dr/dt. [M1] At r = 6, dr dt = 0.0008 1 45π m s−1 . 0.036π = [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 5 marks.</p>"
+    ],
+    "promptText": "After a road accident, fuel is leaking from a tanker onto a flat section of the motorway forming a circle of thickness 3 mm. m s− 3 1 Petrol is leaking at a steady rate of 0.0008 Find, in terms of π , the rate at which the radius of the circle of petrol is increasing at the instant when the radius has reached 6 m . ( ) 5"
+  },
+  {
+    "id": "madas/alevel-pure-b/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q12-question-1.svg\" alt=\"1 1 π π = − ≤ ≤ − ≤ ≤ y arcsin x , x , y . 2 2 2 2 a) By finding dx dy and using an appropriate trigonometric identity show that dy 1 = . ( ) 4 dx 2 1 − x A curve C has equation 1 1 π π y = x arcsin 2 x , − ≤ x ≤ , − ≤ y ≤ . 2 2 2 2\" style=\"--madas-width:572.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q12-question-2.svg\" alt=\"b) Find the exact value of dy 1 dx at the point on C where x = . ( ) 5 4\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q12-solution-1.svg\" alt=\"(a) By the inverse relation: y = arcsin x sin y = x x = sin y dx dy = cos y [M1] cos2 y = 1 −sin2 y q 1 −sin2 y. cos y = ± The principal inverse has −π/2 ≤y ≤π/2, so 0 ≤cos y ≤1. For the stated x-values, cos y &gt; 0, so take the positive root. [B1] dx q 1 −sin2 y dy = p = 1 −x2 (sin y = x) [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q12-solution-2.svg\" alt=\"dy 1 √ dx = [A1] 1 −x2 (b) Differentiation by the product rule: y = x arcsin(2x) dx = 1 · arcsin(2x) + x d dy dx arcsin(2x) [M1] 1 = arcsin(2x) + x 1 −(2x)2 · 2 [M1] p 2x √ = arcsin(2x) + [A1] 1 −4x2 Now substitute x = 1 4. dy 2(1/4) = arcsin 1 2 + [M1] dx p 1 −4(1/4)2 x=1/4\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q12-solution-3.svg\" alt=\"= π 6 + 1/2 √ 3/2 = π 6 + 1 √ 3 √ = π 3 6 + 3 √ = π + 2 3 [A1] 6\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 9 marks.</p>"
+    ],
+    "promptText": "1 1 π π = − ≤ ≤ − ≤ ≤ y arcsin x , x , y . 2 2 2 2 a) By finding dx dy and using an appropriate trigonometric identity show that dy 1 = . ( ) 4 dx 2 1 − x A curve C has equation 1 1 π π y = x arcsin 2 x , − ≤ x ≤ , − ≤ y ≤ . 2 2 2 2 b) Find the exact value of dy 1 dx at the point on C where x = . ( ) 5 4"
+  },
+  {
+    "id": "madas/alevel-pure-b/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q13-question-1.svg\" alt=\"Determine, in terms of a , the value of the following integral. 17  a 2 ax dx , a ≠ 0 . ax − 1 2 a 2 You may find the substitution u = ax − useful in this question. 1 ( ) 7\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-b/q13-solution-1.svg\" alt=\"Use the positive square root u = √ax −1. [M1] Squaring gives u2 = ax −1, so ax = u2 + 1, [A1] 2u du/dx = a, hence 2u du = a dx and dx = (2u/a) du, [A1] and the limits are q u = a(2/a) −1 [A1] = 1 and q u = a(17/a) −1 [A1] = 4 in the stated order, also when a &lt; 0. [B1] The integrand times the differential becomes (2ax/u)(2u/a) du = 4x du = (4/a)(ax) du. Substituting ax = u2 + 1 gives Z 4 #4 &quot; u3 4 (u2 + 1) du = 4 = 4 64  1  = 4 a(24) = 96 3 + u 3 + 4 − 3 + 1 a . [A1] a a a 1 1\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 7 marks.</p>"
+    ],
+    "promptText": "Determine, in terms of a , the value of the following integral. 17  a 2 ax dx , a ≠ 0 . ax − 1 2 a 2 You may find the substitution u = ax − useful in this question. 1 ( ) 7"
+  }
+]

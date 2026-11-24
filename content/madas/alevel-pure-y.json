@@ -1,0 +1,124 @@
+[
+  {
+    "id": "madas/alevel-pure-y/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q1-question-1.svg\" alt=\"2 3cos x − cos x = 1.99375 . It is given that the above trigonometric equation has a solution that is numerically small. Use small angle approximations to find this solution. ( ) No credit will be given for standard solution methods. 7\" style=\"--madas-width:588.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q1-solution-1.svg\" alt=\"For small x in radians, cos x ≈1 −x2/2, so to order x2, cos2 x ≈1 −x2. [B1] [A1] The handwritten double-angle route substitutes cos2 x = (1 + cos 2x)/2, giving 3 + 3 cos 2x −2 cos x = 2(1.99375). Since cos 2x ≃1 −2x2, this gives 3 + 3 −6x2 −2 + x2 ≃3.9875, hence 5x2 ≃0.0125. The equation gives 2 −5 2x2 ≈1.99375, hence x2 ≈0.0025. [M1] [A1] Because the equation is even, the two small solutions are x ≈±0.05 . [M1] [M1] [A1] Alternative working. First solve the quadratic in c = cos x: √ c = 1 ± 24.925 3c2 −c −1.99375 = 0, . 6 Use c ≈1 −x2/2, so x2 ≈2(1 −c). The root near 1 gives x2 ≈0.00250188, hence x ≈±0.0500.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q1-solution-2.svg\" alt=\"The other choice would give x2 ≃3.33083, |x| ≃1.825. The other root lies far from 1 and is incompatible with the small-angle assumption:\" style=\"--madas-width:537.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 7 marks.</p>"
+    ],
+    "promptText": "2 3cos x − cos x = 1.99375 . It is given that the above trigonometric equation has a solution that is numerically small. Use small angle approximations to find this solution. ( ) No credit will be given for standard solution methods. 7"
+  },
+  {
+    "id": "madas/alevel-pure-y/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q2-question-1.svg\" alt=\"A sequence is defined for n ≥ by the recurrence relation 1 5 u 1 u + = + n ,   1 u = . n 1 5 1 8 u n Determine an expression for u , given that it is of the form n n − 1 a u = , n n − 1 c + ka ( ) where a , c and k are constants to be found. 12\" style=\"--madas-width:582.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q2-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:594.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q2-solution-1.svg\" alt=\"The source first fits the proposed form using three successive terms: From u1 = 1/5, the recurrence gives u2 = 1/(8/5 + 1) = 5/13, u3 = (25/13)/(40/13 + 1) = 25/53. Therefore k + c = 1 1 5 k + c = 5 c = 5 −k ka + c = 5 a 13 ka + c = 13a 5 ka + 5 −k = 13 5 a k(a −1) = 13 5 a −5 a2 ka2 + c = 25 53 ka2 + c = 53 25a2 ka2 + 5 −k = 53 25a2 k(a2 −1) = 53 25a2 −5\" style=\"--madas-width:536.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q2-solution-2.svg\" alt=\"Eliminate k by multiplying the first relation by a + 1 and comparing the second: Clearing 25 gives (a + 1)(65a −125) = 53a2 −125 65a2 −125a + 65a −125 = 53a2 −125 12a2 −60a = 0 12a(a −5) = 0 a = 5 a̸ = 0 k(a −1) = 13 5 a −5 4k = 13 −5 Thus k = 2, c = 5 −k = 3. The recurrence itself verifies that this form holds for every n. The terms are positive by induction, so set vn = 1/un. [M1] [A1] Then\" style=\"--madas-width:518.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q2-solution-3.svg\" alt=\"vn+1 = 1 5vn + 8 5, v1 = 5. [M1] [M1] [A1] Subtracting the fixed point 2 gives vn+1 −2 = (vn −2)/5, [M1] [A1] so vn = 2 + 3(1/5)n−1. [M1] [A1] Taking reciprocals, 5n−1 un = 3 + 2 · 5n−1 , a = 5, c = 3, k = 2. [M1] [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 12 marks.</p>"
+    ],
+    "promptText": "A sequence is defined for n ≥ by the recurrence relation 1 5 u 1 u + = + n ,   1 u = . n 1 5 1 8 u n Determine an expression for u , given that it is of the form n n − 1 a u = , n n − 1 c + ka ( ) where a , c and k are constants to be found. 12 "
+  },
+  {
+    "id": "madas/alevel-pure-y/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q3-question-1.svg\" alt=\"A curve C has equation x− x ,  x∈ , y = x &gt; 0 . Show that y is a solution of the equation 2 2 2   d y dy y y =   − . ( ) 8 2  dx  x dx\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q3-solution-1.svg\" alt=\"Take logarithms of y = x−x to get ln y = −x ln x. [M1] The logarithm changes x−x into a product with two x-dependent factors: Differentiate the left side as (1/y)(dy/dx). Implicit differentiation and the product rule give y′/y = −ln x −x(1/x) . [M1] = −ln x −1 Thus y′ = −y(1 + ln x). [A1] Differentiate this form again, using the product rule: y′′ = −y′(1 + ln x) −y/x. [M1] [A1] Here d(1 + ln x)/dx = 1/x, giving the term −y/x. Rearrange the first derivative as 1 + ln x = −y′/y. [M1] Substitution gives y′′ = −y′(−y′/y) −y/x . [M1] = (y′)2/y −y/x\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q3-solution-2.svg\" alt=\"Multiply by y to obtain yy′′ = (y′)2 −y2/x . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 8 marks.</p>"
+    ],
+    "promptText": "A curve C has equation x− x ,  x∈ , y = x > 0 . Show that y is a solution of the equation 2 2 2   d y dy y y =   − . ( ) 8 2  dx  x dx"
+  },
+  {
+    "id": "madas/alevel-pure-y/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q4-question-1.svg\" alt=\"Solve the following trigonometric equation.  x − 5   x − 4  π + = , x∈ . arctan   arctan   ( 10 )  x − 1   x − 3  4\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q4-solution-1.svg\" alt=\"Let u = (x −5)/(x −1), v = (x −4)/(x −3), [M1] with x̸ = 1, 3. [A1] Put θ = arctan u, ϕ = arctan v. Taking tangents of θ + ϕ = π/4 gives tan(θ + ϕ) = 1. A solution must satisfy (u + v)/(1 −uv) = 1, [A1] with 1 −uv̸ = 0. Clearing denominators gives (x −5)(x −3) + (x −4)(x −1) = (x −1)(x −3) −(x −5)(x −4). [A1] Expand all four products: x2 −8x + 15 + x2 −5x + 4 = x2 −4x + 3 −(x2 −9x + 20) 2x2 −13x + 19 = 5x −17 2x2 −18x + 36 = 0 x2 −9x + 18 = 0\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q4-solution-2.svg\" alt=\"(x −3)(x −6) = 0 Thus 2(x −3)(x −6) = 0. [M1] The candidate 3 is excluded: [A1] At x = 6, u = 1/5, v = 2/3. [A1] Both angles are positive and each is less than π/4, so their sum lies in (0, π/2). [A1] Its tangent is 1, confirming x = 6 . [A1] The handwritten working tests 3 as though its fraction were defined; this value is excluded at the outset: [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 10 marks.</p>"
+    ],
+    "promptText": "Solve the following trigonometric equation.  x − 5   x − 4  π + = , x∈ . arctan   arctan   ( 10 )  x − 1   x − 3  4"
+  },
+  {
+    "id": "madas/alevel-pure-y/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q5-question-1.svg\" alt=\"The points ( ) , ( ) ( ) A 3,2,14 B 0,1,13 and C 5,6,8 are defined with respect to a fixed origin O .  The straight line L passes through A and it is parallel to the vector BC . The point D lies on L so that ABCD is a parallelogram. ( ) 2 a) Find the coordinates of D . b) If instead ABCD is an isosceles trapezium and the point D still lies on L , determine the new coordinates of D . ( 10 )\" style=\"--madas-width:596.1px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q5-solution-1.svg\" alt=\"Starting with a diagram:\" style=\"--madas-width:509.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q5-solution-2.svg\" alt=\"(a) −−→ BC = (5, 5, −5). The parallelogram has −−→ AD = −−→ BC, giving D = (8, 7, 9) . [A1] The diagram also gives −−→ OD = −−→ OC + −−→ BA. From B to A, the coordinates increase by (3, 1, 1); adding this to C = (5, 6, 8) yields the same point. [A1] (b) Write D = (3 + 5s, 2 + 5s, 14 −5s). [B1] The source uses k = 5s, so D = (3 + k, 2 + k, 14 −k). In coordinates −−→ AD = (x −3, y −2, z −14) = k(1, 1, −1). Equating the three components gives x = k + 3, y = k + 2, z = 14 −k. The other side has components −−→ CD = (x −5, y −6, z −8).\" style=\"--madas-width:676.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q5-solution-3.svg\" alt=\"As −−→ AB = (−3, −1, −1), its squared length is 9 + 1 + 1 = 11. The nonparallel sides must have equal length, so CD2 = AB2 . [A1] = 11 Hence (5s −2)2 + (5s −4)2 + (6 −5s)2 = 11 ⇐⇒ 15(5s −3)(s −1) = 0. [M1] [A1] In terms of k, expanding gives (k2 −4k + 4) + (k2 −8k + 16) + (k2 −12k + 36) = 11, hence 3k2 −24k + 45 = 0, (k −5)(k −3) = 0. The value s = 1 [A1] gives the parallelogram from part (a). [A1] The value s = 3/5 [A1] gives D = (6, 5, 11) , [M1] [A1] with AD ∥BC and AD̸ = BC. [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 12 marks.</p>"
+    ],
+    "promptText": "The points ( ) , ( ) ( ) A 3,2,14 B 0,1,13 and C 5,6,8 are defined with respect to a fixed origin O .  The straight line L passes through A and it is parallel to the vector BC . The point D lies on L so that ABCD is a parallelogram. ( ) 2 a) Find the coordinates of D . b) If instead ABCD is an isosceles trapezium and the point D still lies on L , determine the new coordinates of D . ( 10 )"
+  },
+  {
+    "id": "madas/alevel-pure-y/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q6-question-1.svg\" alt=\"A curve C is given by the parametric equations x = cos , t y = cos2 t , − π ≤≤ t π . π The point P lies on C , where t = . 3 a) Show that an equation of the normal to C at P is 2 x + 4 y + = 1 0 . ( ) 5 The normal at P meets C again at the point Q .\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q6-question-2.svg\" alt=\"b) Determine, by showing a clear detailed method, the exact coordinates of  Q . ( ) 7\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q6-solution-1.svg\" alt=\"(a) P = (1/2, −1/2). [B1] Since dx/dt = −sin t and dy/dt = −2 sin 2t, [A1] (dy/dt)/(dx/dt) = 2 sin 2t/ sin t . = 4 cos t Thus the tangent gradient at t = π/3 is 4 cos(π/3) = 2. [A1] The normal has slope −1/2, giving y + 1/2 = −1 2(x −1/2) [A1] which expands to 4y + 2 = −2x + 1, or 2x + 4y + 1 = 0 . [A1] (b) The curve has y = 2x2 −1 [B1] [A1] for −1 ≤x ≤1. [M1] [A1] The source substitutes x = cos t, y = cos 2t in the line to find the second point: 2 cos t + 4 cos 2t + 1 = 0 2 cos t + 4(2 cos2 t −1) + 1 = 0 2 cos t + 8 cos2 t −3 = 0\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q6-solution-2.svg\" alt=\"8 cos2 t + 2 cos t −3 = 0 (4 cos t + 3)(2 cos t −1) = 0 The first factor gives cos t = −3/4, the second the original point. Substitute into the normal to obtain 8x2 + 2x −3 = (2x −1)(4x + 3) . [A1] = 0 The other root is −3/4 and lies in the domain, giving Q = (−3/4, 1/8) . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 12 marks.</p>"
+    ],
+    "promptText": "A curve C is given by the parametric equations x = cos , t y = cos2 t , − π ≤≤ t π . π The point P lies on C , where t = . 3 a) Show that an equation of the normal to C at P is 2 x + 4 y + = 1 0 . ( ) 5 The normal at P meets C again at the point Q . b) Determine, by showing a clear detailed method, the exact coordinates of  Q . ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-y/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q7-question-1.svg\" alt=\"The sum to infinity of a geometric series is 2187 . th th The ( k − 1 ) and k term of the same series are 96 and 64 , respectively. Determine the value of ∞ = + u , n n k 1 th where u is the n term of the series. ( ) n 10\" style=\"--madas-width:576.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q7-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q7-solution-1.svg\" alt=\"Write a for the first term and r for the common ratio. The given terms give ark−2 = 96 and ark−1 = 64. [B1] Dividing the second by the first gives r = 64/96 . [A1] = 2/3 The sum to infinity is a/(1 −r) = 2187, [A1] so a/(1/3) = 2187 and a = 729. [A1] Now use uk = 64. Substitution gives 729(2/3)k−1 = 64, [M1] so (2/3)k−1 = 64/729 = (2/3)6 . [A1] Thus k = 7. [A1] The required tail is the sum to infinity less the sum of the first seven terms: ∞ X un = S∞−Sk n=k+1 [A1] = 2187 −a(1 −rk) . 1 −r\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q7-solution-2.svg\" alt=\"Substituting gives 2187 −729[1 −(2/3)7]/(1 −2/3). [M1] Here (2/3)7 = 128/2187, so S7 = 2187(1 −128/2187) . = 2059 The finite sum is 2059, so the required value is 2187 −2059 = 128 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 10 marks.</p>"
+    ],
+    "promptText": "The sum to infinity of a geometric series is 2187 . th th The ( k − 1 ) and k term of the same series are 96 and 64 , respectively. Determine the value of ∞ = + u , n n k 1 th where u is the n term of the series. ( ) n 10 "
+  },
+  {
+    "id": "madas/alevel-pure-y/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q8-question-1.svg\" alt=\"2 A small forest with an area of 25 km has caught fire. 2 Let A , in km , be the area of the forest destroyed by the fire, t hours after the fire was first noticed. The rate at which the forest is destroyed is proportional to the difference between the total area of the forest squared, and the area of the forest destroyed squared. 2 When the fire was first noticed 7 km of the forest had been destroyed and at that 2 instant the rate at which the area of the forest was destroyed was 7.2 km per hour. a) Show clearly that\" style=\"--madas-width:560.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q8-question-2.svg\" alt=\"dA 5 ( 2 ) 50 dt = 625 − A . ( ) 4 8 b) Solve the differential equation to obtain + 5 25 A 16 e t = 8 . ( ) 9 25 − A 9 2 c) Show further that 14 km of the forest will be destroyed, approximately 66 minutes after the fire was first noticed. ( ) 4\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q8-solution-1.svg\" alt=\"(a) Write dA/dt = k(625 −A2). [B1] The given initial rate is 7.2 = k(625 −49) , [A1] = 576k so k = 1/80 [A1] and 50k = 5/8 . [A1] (b) Separate the variables: [M1] [A1] The separated equation is 50dA dt = 5  625 −A2 8 50 dA = 5 8(625 −A2) dt 625 −A2 dA = 5 50 8 dt Z 5 Z 50 (25 + A)(25 −A) dA = 8 dt\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q8-solution-2.svg\" alt=\"Write the partial fractions as P/(25 + A) + Q/(25 −A). Clearing denominators gives 50 = P(25 −A) + Q(25 + A). At A = 25, 50 = 50Q; at A = −25, 50 = 50P. Because 50/(625 −A2) = 1/(25 + A) + 1/(25 −A), [M1] [A1] integration gives ln 25 + A 25 −A = 5 8t + C. [M1] [A1] Exponentiating gives (25 + A)/(25 −A) = Be5t/8, where B = eC. The ratio is 32/18 = 16/9 [A1] at t = 0, hence 25 + A 25 −A = 16 9 e5t/8 . [M1] [A1] (c) For A = 14, e5t/8 = (39/11)(9/16) . [M1] = 351/176\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q8-solution-3.svg\" alt=\"This gives t = 8 5 ln(351/176) [A1] hours: Numerically 5t/8 = 0.69030 . . . , t = 1.10448 . . . hours; multiply by 60 to obtain about 66.3 minutes . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 17 marks.</p>"
+    ],
+    "promptText": "2 A small forest with an area of 25 km has caught fire. 2 Let A , in km , be the area of the forest destroyed by the fire, t hours after the fire was first noticed. The rate at which the forest is destroyed is proportional to the difference between the total area of the forest squared, and the area of the forest destroyed squared. 2 When the fire was first noticed 7 km of the forest had been destroyed and at that 2 instant the rate at which the area of the forest was destroyed was 7.2 km per hour. a) Show clearly that dA 5 ( 2 ) 50 dt = 625 − A . ( ) 4 8 b) Solve the differential equation to obtain + 5 25 A 16 e t = 8 . ( ) 9 25 − A 9 2 c) Show further that 14 km of the forest will be destroyed, approximately 66 minutes after the fire was first noticed. ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-y/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q9-question-1.svg\" alt=\"A 8cm r O π 3 B C 8cm The figure above shows a sector CAB of radius 8 cm , centred at C and  subtending π radians at C . an angle of 3\" style=\"--madas-width:548.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q9-question-2.svg\" alt=\"A circle centred at O and of radius cm r is inscribed in the sector. Find in terms of π , the area of the shaded region in the figure. ( ) 6\" style=\"--madas-width:590.8px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q9-solution-1.svg\" alt=\"The inscribed circle’s centre lies on the angle bisector: [B1] Because the circle also touches the outer arc, CO = 8 −r. [A1] Its perpendicular distance to CB is\" style=\"--madas-width:674.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q9-solution-2.svg\" alt=\"r = (8 −r) sin(π/6) , [A1] = (8 −r)/2 so 2r = 8 −r, 3r = 8, r = 8/3. [A1] The sector area is 32π/3 and the disk area is 64π/9. Subtracting the disk from the sector gives 2(82)(π/3) −π(8/3)2 = 9 cm2 . 1 32π [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 6 marks.</p>"
+    ],
+    "promptText": "A 8cm r O π 3 B C 8cm The figure above shows a sector CAB of radius 8 cm , centred at C and  subtending π radians at C . an angle of 3 A circle centred at O and of radius cm r is inscribed in the sector. Find in terms of π , the area of the shaded region in the figure. ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-y/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q10-question-1.svg\" alt=\"1 b ( ) ( )( ) f x = 1 + ax 1 3 − x 3 + , 3 x &lt; , 1 ax &lt; . 1 2 1 ( + ) 1 x 2 2 3 In the binomial expansion of f x the coefficients of ( ) x and x are both zero. 4 7 Show clearly that the coefficient of x is − . ( ) 9 6\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q10-solution-1.svg\" alt=\"The two binomial expansions through degree four are (1 −3x)1/3 = 1 −x −x2 −5 3x3 −10 3 x4 + O(x5), [B1] [A1] (1 + x/2)−2 = 1 −x + 3 4x2 −1 2x3 + 5 16x4 + O(x5). The ax part of the first product contributes ax −ax2 −ax3 −(5a/3)x4. Multiplying the second series by b contributes b −bx + (3b/4)x2 −(b/2)x3 + (5b/16)x4. The vanishing coefficients give −1 −a + 3b/4 = 0 [M1] [A1] and −5/3 −a −b/2 = 0. [M1] [A1] Subtract the cubic equation from the quadratic equation: 2/3 + 5b/4 = 0, so 5b/4 = −2/3. Substitution in the quadratic equation gives −a −1 −2/5 = 0. Hence b = −8/15, a = −7/5. [A1] The coefficient of x4 is −10/3 −5a/3 + 5b/16 = 7/3 −10/3 −1/6 = −1 −1/6 . [M1] [A1] = −7/6\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 9 marks.</p>"
+    ],
+    "promptText": "1 b ( ) ( )( ) f x = 1 + ax 1 3 − x 3 + , 3 x < , 1 ax < . 1 2 1 ( + ) 1 x 2 2 3 In the binomial expansion of f x the coefficients of ( ) x and x are both zero. 4 7 Show clearly that the coefficient of x is − . ( ) 9 6"
+  },
+  {
+    "id": "madas/alevel-pure-y/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q11-question-1.svg\" alt=\"cm s−. 3 1 Liquid is pouring into a container at the constant rate of 12π The container is initially empty and when the height of the liquid in the container is 3 h cm the volume of the liquid, V cm , is given by V = π h h ( + 20 ) . Determine the rate at which the height of the liquid in the container is rising 8 seconds after the liquid started pouring in. ( 10 )\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q11-solution-1.svg\" alt=\"The inflow gives dV/dt = 12π. Since V = πh(h + 20) = π(h2 + 20h), we have dV/dh = 2π(h + 10). [B1] [A1] Use the chain rule in the form dh/dt = (dh/dV )(dV/dt). [M1] Substituting the reciprocal derivative gives dh/dt = 12π/[2π(h + 10)] . [M1] [A1] = 6/(h + 10)\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q11-solution-2.svg\" alt=\"After eight seconds, V = 8(12π) . [A1] = 96π Thus 96 = h2 + 20h, [A1] giving (h −4)(h + 24) = 0. [A1] The two algebraic roots are 4, −24; a negative depth is physically impossible: Only h = 4 is a possible depth: [A1] At this instant, dh/dt = 6/(4 + 10) = 3/7 cm s−1 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 10 marks.</p>"
+    ],
+    "promptText": "cm s−. 3 1 Liquid is pouring into a container at the constant rate of 12π The container is initially empty and when the height of the liquid in the container is 3 h cm the volume of the liquid, V cm , is given by V = π h h ( + 20 ) . Determine the rate at which the height of the liquid in the container is rising 8 seconds after the liquid started pouring in. ( 10 )"
+  },
+  {
+    "id": "madas/alevel-pure-y/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q12-question-1.svg\" alt=\"By using the substitution x = tan θ , or otherwise, find  ( x + 3 ) x dx . ( 12 ) 2 ( x + 1 )\" style=\"--madas-width:592.1px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q12-solution-1.svg\" alt=\"Set √x = tan θ, [M1] [A1] so x = tan2 θ [M1] [A1] and dx = 2 tan θ sec2 θ dθ. [M1] [A1] After replacing x + 1 = sec2 θ, the differential cancels one factor of sec2 θ. Put S = sec2 θ; the remaining numerator is 2(S −1)(S + 2) = 2S2 + 2S −4, hence dividing by S gives 2S + 2 −4/S. The transformed integrand is 2(tan2 θ + 3) tan2 θ = 2 sec2 θ + 2 −4 cos2 θ sec2 θ [M1] [A1] = 2 sec2 θ −2 cos 2θ. Its integral is 2 tan θ −sin 2θ + C. [M1] [A1] Since sin 2θ = 2 tan θ/(1 + tan2 θ), we have 2 tan θ −sin 2θ = 2√x[1 −1/(1 + x)] = 2√x[x/(1 + x)] .\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-y/q12-solution-2.svg\" alt=\"Thus substituting back gives 2√x −2√x 1 + x + C = 2x3/2 1 + x + C . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 12 marks.</p>"
+    ],
+    "promptText": "By using the substitution x = tan θ , or otherwise, find  ( x + 3 ) x dx . ( 12 ) 2 ( x + 1 )"
+  }
+]
