@@ -450,7 +450,10 @@ def exam_checks(p, role, out, expected24):
     # PAP-075: PMT questions (off by default) mix with past papers; question pages name no source, the scheme names each.
     assert not p.locator('#papers-source-pmt').is_checked()
     p.locator('#papers-source-pmt').check()
-    pmt = p.evaluate("LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='pmt'&&!r.duplicateOf).slice(0,3).map(r=>r.id)")
+    # Three non-duplicate PMT rows, drawn from both Core Pure books when both are imported.
+    pmt = p.evaluate("""() => { const rows = LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='pmt'&&!r.duplicateOf);
+      const cp2 = rows.filter(r=>r.id.startsWith('pmt/pure-core-2/')).slice(0,1);
+      return [...rows.filter(r=>!cp2.includes(r)).slice(0, 3 - cp2.length), ...cp2].map(r=>r.id); }""")
     past = p.evaluate("LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='past-exam').slice(0,1).map(r=>r.id)")
     assert len(pmt) == 3 and len(past) == 1, (pmt, past)
     p.evaluate("async ids => LUISA_PAPERS_BUILDER.arrange(await LUISA_PAPERS_BUILDER.load(LUISA_PAPERS_BUILDER.pool().filter(r=>ids.includes(r.id))))", past + pmt)
@@ -459,7 +462,7 @@ def exam_checks(p, role, out, expected24):
     for leak in ('Source', 'PMT', 'Physics', 'Core Pure', 'Edexcel', 'pmt/', 'exam/'):
         assert leak not in shown, leak
     sources = ex.locator('.exam-scheme-source').all_inner_texts()
-    assert len(sources) == 4 and sum(x.startswith('Source: PMT Core Pure 1 Ch.') for x in sources) == 3, sources
+    assert len(sources) == 4 and sum(bool(re.match(r'Source: PMT Core Pure [12] Ch\.', x)) for x in sources) == 3, sources
     assert ex.locator('.exam-scheme img').evaluate_all('ns=>ns.length>0&&ns.every(n=>n.complete&&n.naturalWidth>0)')
     ex.pdf(path=str(out / f'live-{role}-pmt.pdf'), prefer_css_page_size=True)
     ex.close()

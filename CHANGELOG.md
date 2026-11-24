@@ -1,3 +1,10 @@
+## Luisa v0.76
+
+- Papers: PMT Core Pure 2 topic-sheet questions (61, 558 marks) in `pmt-catalogue.json` and `content/pmt/`, imported by `scripts/import/pmt.py` (set `v076-pmt-cp2`) with source scheme crops, `markScheme: source`, difficulty with reason, skills and `duplicateOf`.
+- Papers: a version-2 saved session no longer ticks PMT; the selection heading names skipped duplicate copies and the count box is capped at the deduplicated pool; Core Pure 1 copies carry their originals' extra chapters.
+- Mark-scheme check: a PMT row is "source" only when every step is a crop of its own question's scheme.
+- Tests: Core Pure 2 counts per chapter, a mixed past-paper + Core Pure 1 + Core Pure 2 exam print test; evidence in `docs/evidence/v076-import-pmt-core-pure-2.json`.
+
 ## Luisa v0.75
 
 - Papers: PMT Core Pure 1 topic-sheet questions (73, 625 marks) in `pmt-catalogue.json` and `content/pmt/`, imported by `scripts/import/pmt.py` (set `v075-pmt-cp1`) with source scheme crops, `markScheme: source`, difficulty with reason, skills and `duplicateOf`.

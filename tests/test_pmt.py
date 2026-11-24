@@ -23,7 +23,7 @@ EXPECTED = {
     'pure-core-2-ch7': (3, 30), 'pure-core-2-ch8': (10, 138),
 }
 SOURCE_SLIPS = {'pmt/pure-core-1/ch2/q7', 'pmt/pure-core-1/ch6/q2', 'pmt/pure-core-1/ch6/q3', 'pmt/pure-core-1/ch6/q6',
-                'pmt/pure-core-1/ch9/q10'}
+                'pmt/pure-core-1/ch9/q10', 'pmt/pure-core-2/ch1/q10', 'pmt/pure-core-2/ch3/q6'}
 LEAKS = re.compile(r'PMT|PhysicsAndMathsTutor|Physics\s*&?\s*Maths\s*Tutor|Mark Scheme|Total for question|\bEdexcel\b|9FM0', re.I)
 
 

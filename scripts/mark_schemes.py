@@ -56,12 +56,21 @@ def exam_kind(question, root=ROOT):
     return 'official'
 
 
-def source_kind(question):
+def source_kind(question, root=ROOT):
     """Questions imported with their source's own marking scheme (for example PMT revision sheets)."""
     scheme = question.get('sourceScheme')
     if scheme:
         if scheme.get('kind') not in ELIGIBLE or not scheme.get('page'):
             raise ValueError(f"{question['id']}: sourceScheme needs kind official|source and its source page")
+        if question['id'].startswith('pmt/'):
+            # Every step must be a crop of this question's own scheme in its source sheet (v0.75 review).
+            book, chapter, q = question['id'].split('/')[1:]
+            crop = re.compile(rf'<figure class="exam-solution-source"[^>]*><img src="(resources/pmt/{re.escape(book)}-{chapter}/'
+                              rf'q{int(q[1:]):02}-ms-(?:from-[a-z0-9-]+-)?p\d+-\d+\.png)"[^>]*></figure>')
+            steps = question.get('steps') or []
+            found = [crop.fullmatch(step) for step in steps]
+            if not steps or not all(m and (root / m.group(1)).is_file() for m in found):
+                raise ValueError(f"{question['id']}: a source scheme must consist of this question's own scheme crops")
         return scheme['kind']
     return _steps_kind(question.get('steps'))
 
@@ -78,11 +87,11 @@ def derive(root=ROOT):
     for q in _json(root / 'practice-catalogue.json')['questions']:
         if q['dataPath'] not in payloads:
             payloads[q['dataPath']] = {x['id']: x for x in _json(root / q['dataPath'])['questions']}
-        out['practice-catalogue.json'][q['id']] = source_kind(payloads[q['dataPath']][q['id']])
+        out['practice-catalogue.json'][q['id']] = source_kind(payloads[q['dataPath']][q['id']], root)
     for q in _json(root / 'pmt-catalogue.json')['questions']:
         if q['dataPath'] not in payloads:
             payloads[q['dataPath']] = {x['id']: x for x in _json(root / q['dataPath'])['questions']}
-        out['pmt-catalogue.json'][q['id']] = source_kind(payloads[q['dataPath']][q['id']])
+        out['pmt-catalogue.json'][q['id']] = source_kind(payloads[q['dataPath']][q['id']], root)
     for q in _json(root / 'exam-catalogue.json')['questions']:
         if q['dataPath'] not in payloads:
             payloads[q['dataPath']] = {x['id']: x for x in _json(root / q['dataPath'])['questions']}

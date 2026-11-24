@@ -947,6 +947,34 @@ class PapersPrintTests(unittest.TestCase):
             self.assertIn(r['id'], scheme_text)
         preview.close()
 
+    def test_exam_past_paper_and_both_pmt_books_hide_source_on_questions_PAP_076(self):
+        import fitz
+        # PAP-076-8: a past paper mixed with Core Pure 1 and Core Pure 2 PMT questions (one with a figure).
+        rows = (self.pmt_rows(['pmt/pure-core-2/ch5/q1']) + self.exam_rows('edexcel-9fm0-02-2024-june', [2])
+                + self.pmt_rows(['pmt/pure-core-1/ch1/q1', 'pmt/pure-core-2/ch7/q3']))
+        self.page.add_script_tag(url='/papers-exam.js')
+        expected = self.page.evaluate('rows => rows.map(LUISA_PAPERS_EXAM.schemeSource)', rows)
+        self.assertEqual(expected, ['Source: PMT Core Pure 2 Ch.5 Polar Coordinates Q1 · ID pmt/pure-core-2/ch5/q1',
+                                    'Source: Edexcel June 2024 9FM0/02 Q2 · ID exam/edexcel-9fm0-02-2024-june/q2',
+                                    'Source: PMT Core Pure 1 Ch.1 Complex Numbers Q1 · ID pmt/pure-core-1/ch1/q1',
+                                    'Source: PMT Core Pure 2 Ch.7 Methods in Differential Equations Q3 · ID pmt/pure-core-2/ch7/q3'])
+        preview, result = self.exam_paper(rows, content='both', title='Mixed sources')
+        self.assertTrue(result['ready'], result)
+        questions = ' '.join(preview.locator('.exam-front-page, .exam-page').all_inner_texts())
+        for leak in ('Source', 'PMT', 'Physics', 'Core Pure', 'Ch.', 'Edexcel', 'June 2024', '9FM0', 'ID ', 'pmt/', 'exam/'):
+            self.assertNotIn(leak, questions)
+        self.assertTrue(preview.locator('.exam-page img').evaluate_all('ns=>ns.length>=1&&ns.every(n=>n.complete&&n.naturalWidth>0)'))
+        self.assertEqual(preview.locator('.exam-scheme-source').all_inner_texts(), expected)
+        with tempfile.TemporaryDirectory() as folder:
+            preview.pdf(path=f'{folder}/mixed.pdf', prefer_css_page_size=True)
+            with fitz.open(f'{folder}/mixed.pdf') as pdf:
+                texts = [page.get_text().replace('\n', ' ') for page in pdf]
+        first_scheme = next(i for i, t in enumerate(texts) if 'Mark scheme: Mixed sources' in t)
+        self.assertFalse(any(leak in t for t in texts[:first_scheme] for leak in ('Source:', 'PMT', 'Edexcel', '9FM0')))
+        for r in rows:
+            self.assertIn(r['id'], ' '.join(texts[first_scheme:]))
+        preview.close()
+
     def test_exam_mark_scheme_print_options_PAP_067(self):
         import fitz, re
         # Mixed Paper 1 and Paper 2 with overlapping question numbers, plus an exam-style practice question.

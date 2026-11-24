@@ -1,0 +1,33 @@
+# PMT Core Pure 2, Ch.4 Volumes of Revolution (CP2): transcribed from the rendered page images. Wording, part labels
+# and marks exactly as printed; figures are crops of the source with their printed captions.
+from lib import *
+Q = {}
+Q[1] = (fig(1, 30, 'Figure 2: a gold pendant in the shape of a teardrop, pointed at the top and rounded at the bottom, with a vertical arrow beside it marked 2 cm for its height')
+        + p(f'Figure 2 shows the image of a gold pendant which has height 2 cm. The pendant is modelled by a solid of revolution of a curve {m("C")} about the {m("y")}-axis. The curve {m("C")} has parametric equations')
+        + eq(r'x=\cos\theta+\frac12\sin2\theta,\quad y=-(1+\sin\theta)\qquad0\leqslant\theta\leqslant2\pi')
+        + parts([p(f'Show that a Cartesian equation of the curve {m("C")} is') + eq(r'x^2=-\left(y^4+2y^3\right)') + mk(4),
+                 f'Hence, using the model, find, in {m(r"\mathrm{cm}^3")}, the volume of the pendant. {mk(4)}'], kind='a'))
+Q[2] = (fig(2, 75, 'Figure 2: axes x and y with origin O; a curve that starts on the positive y-axis, dips slightly and then rises steeply; the region S under the curve between the y-axis and the vertical line at x = ln 4 is shaded; labelled "Diagram not drawn to scale"')
+        + p(f'The finite region {m("S")}, shown shaded in Figure 2, is bounded by the {m("y")}-axis, the {m("x")}-axis, the line with equation {m(r"x=\ln4")} and the curve with equation')
+        + eq(r'y=\mathrm e^x+2\mathrm e^{-x},\qquad x\geqslant0')
+        + p(f'The region {m("S")} is rotated through {m(r"2\pi")} radians about the {m("x")}-axis.')
+        + p('Use integration to find the exact value of the volume of the solid generated.<br>Give your answer in its simplest form.')
+        + p(f'[<em>Solutions based entirely on graphical or numerical methods are not acceptable.</em>] {mk(7)}'))
+Q[3] = (fig(3, 120, 'Figure 1: the cross section ABCD of a paddling pool, with top AB of width 2.36 m, flat bottom CD of width 2 m and curved sides AC and BD. Figure 2: axes x and y with origin O, showing the curve from D at x = 1 on the x-axis rising to B')
+        + p(f'Figure 1 shows the central vertical cross section {m("ABCD")} of a paddling pool that has a circular horizontal cross section. Measurements of the diameters of the top and bottom of the paddling pool have been taken in order to estimate the volume of water that the paddling pool can contain.')
+        + p(f'Using these measurements, the curve {m("BD")} is modelled by the equation') + eq(r'y=\ln(3.6x-k)\qquad1\leqslant x\leqslant1.18')
+        + p('as shown in Figure 2.')
+        + parts([f'Find the value of {m("k")}. {mk(1)}', f'Find the depth of the paddling pool according to this model. {mk(2)}'], kind='a')
+        + p('The pool is being filled with water from a tap.')
+        + parts([f'Find, in terms of {m("h")}, the volume of water in the pool when the pool is filled to a depth of {m("h")} m. {mk(5)}'], start=3, kind='a')
+        + p('Given that the pool is being filled at a constant rate of 15 litres every minute,')
+        + parts([f'find, in {m(r"\mathrm{cm\ h^{-1}}")}, the rate at which the water level is rising in the pool when the depth of the water is 0.2 m. {mk(3)}'], start=4, kind='a'))
+Q[4] = (fig(4, 110, 'Figure 3: axes x and y with origin O; the curve C rising from the left above the x-axis through the y-axis to the point P; the line l touches C at P and meets the x-axis at Q; the region R between the curve, the axes and the line l is shaded; labelled "Diagram not to scale"')
+        + p(f'Figure 3 shows a sketch of part of the curve {m("C")} with equation') + eq(r'y=3^x')
+        + p(f'The point {m("P")} lies on {m("C")} and has coordinates {m("(2,9)")}.')
+        + p(f'The line {m("l")} is a tangent to {m("C")} at {m("P")}. The line {m("l")} cuts the {m("x")}-axis at the point {m("Q")}.')
+        + parts([f'Find the exact value of the {m("x")} coordinate of {m("Q")}. {mk(4)}'], kind='a')
+        + p(f'The finite region {m("R")}, shown shaded in Figure 3, is bounded by the curve {m("C")}, the {m("x")}-axis, the {m("y")}-axis and the line {m("l")}. This region {m("R")} is rotated through 360° about the {m("x")}-axis.')
+        + parts([p('Use integration to find the exact value of the volume of the solid generated.')
+                 + p(f'Give your answer in the form {m(r"\dfrac{p}{q}")} where {m("p")} and {m("q")} are exact constants.')
+                 + p(f'[<em>You may assume the formula {m(r"V=\frac13\pi r^2h")} for the volume of a cone.</em>]') + mk(6)], start=2, kind='a'))

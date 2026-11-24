@@ -18,7 +18,7 @@ class MarkSchemeFlagTests(unittest.TestCase):
         derived = mark_schemes.derive(ROOT)
         self.assertEqual({name: len(rows) for name, rows in derived.items()},
                          {'textbook-catalogue.json': 6147, 'practice-catalogue.json': 2475, 'exam-catalogue.json': 444,
-                          'pmt-catalogue.json': 73})
+                          'pmt-catalogue.json': 134})
 
     def test_counts_per_source(self):
         counts = {f'{source}|{value}': n for (source, value), n in mark_schemes.counts(ROOT).items()}
@@ -28,6 +28,7 @@ class MarkSchemeFlagTests(unittest.TestCase):
             'Practice questions (Practice Booklet)|worked': 1921,
             'Practice questions (Luisa skill questions)|worked': 6147,
             'PMT (pure-core-1)|source': 73,                            # PMT topic sheets with their source mark schemes
+            'PMT (pure-core-2)|source': 61,
         })
 
     def test_past_paper_official_only_when_every_step_is_an_official_crop_of_that_paper(self):
@@ -52,6 +53,14 @@ class MarkSchemeFlagTests(unittest.TestCase):
             mark_schemes.source_kind({'id': 'x', 'steps': ['<p>M1</p>'], 'sourceScheme': {'kind': 'worked', 'page': 4}})
         with self.assertRaises(ValueError):
             mark_schemes.source_kind({'id': 'x', 'steps': ['<p>M1</p>'], 'sourceScheme': {'kind': 'official'}})
+        # A PMT row counts only when every step is a crop of its own question's scheme (v0.75 review).
+        own = '<figure class="exam-solution-source"><img src="resources/pmt/pure-core-1-ch2/q07-ms-p19-1.png" alt="x"></figure>'
+        pmt = {'id': 'pmt/pure-core-1/ch2/q7', 'sourceScheme': {'kind': 'source', 'page': [19]}}
+        self.assertEqual(mark_schemes.source_kind(dict(pmt, steps=[own])), 'source')
+        missing = own.replace('p19-1.png', 'p19-9.png')  # well formed, but no such crop file
+        for steps in ([], ['<p>M1 typed scheme</p>'], [own.replace('q07', 'q08')], [own, '<p>extra</p>'], [own + '<p>extra</p>'], [missing]):
+            with self.assertRaises(ValueError):
+                mark_schemes.source_kind(dict(pmt, steps=steps))
 
     def test_check_detects_a_hand_edited_or_missing_flag(self):
         root = Path(tempfile.mkdtemp())

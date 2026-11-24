@@ -339,7 +339,9 @@ def cmd_integrate(ps, file_id):
             raise SystemExit(f'{file_id} Q{q}: marks {m["marks"]} differ from the printed total')
     for q in sorted(meta, key=int):
         m, n = meta[q], int(q)
-        chapter_keys = [f'further-maths-a-level/{spec["book"]}/{c}' for c in m.get('chapters', [spec['chapter']])]
+        # A chapter is a number in this book, or 'book/number' for another book (a copy keeps its original's chapters).
+        chapter_keys = [f'further-maths-a-level/{c if isinstance(c, str) else f"{spec["book"]}/{c}"}'
+                        for c in m.get('chapters', [spec['chapter']])]
         rows.append({
             'id': prefix + f'q{n}', 'markScheme': 'source', 'questionNumber': n, 'originalQuestionLabel': f'Q{n}',
             'marks': m['marks'], 'difficulty': m['difficulty'], 'difficultyReason': m['reason'], 'topicSummary': m['summary'],
