@@ -29,7 +29,7 @@ EXPECTED = {
     'pure-core-2-ch7': (3, 30), 'pure-core-2-ch8': (10, 138),
 }
 # Source slips kept as printed, on questions still in the bank (two more were on removed copies).
-SOURCE_SLIPS = {'pmt/pure-core-1/ch2/q7', 'pmt/pure-core-1/ch6/q2', 'pmt/pure-core-1/ch6/q6'}
+SOURCE_SLIPS = {'pmt/pure-core-1/ch6/q2'}
 LEAKS = re.compile(r'PMT|PhysicsAndMathsTutor|Physics\s*&?\s*Maths\s*Tutor|Mark Scheme|Total for question|\bEdexcel\b|9FM0', re.I)
 
 
@@ -171,7 +171,7 @@ class PmtChapters(unittest.TestCase):
         # Spot checks confirmed against the rendered pages (v0.75): an official original, and an earlier PMT original.
         by_label = {d['removedLabel']: d['retained'] for d in REMOVED.values()}
         self.assertEqual(by_label['PMT Core Pure 1 Ch.2 Argand Diagrams Q9'], 'exam/edexcel-9fm0-01-2019-june/q1')
-        self.assertEqual(by_label['PMT Core Pure 1 Ch.8 Proof by Induction Q5'], 'pmt/pure-core-1/ch3/q3')
+        self.assertEqual(migrations[by_label['PMT Core Pure 1 Ch.8 Proof by Induction Q5']], 'exam/edexcel-8fm0-01-2021-november/q8')
 
     def test_offline_packs_carry_every_pmt_question(self):
         # Run the real offline generator over a symlinked copy, so the repository itself is not written to.

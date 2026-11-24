@@ -941,12 +941,12 @@ class PapersPrintTests(unittest.TestCase):
         labelled = dict(practice_row('pure-year-2', 2, '2.1/q1'), id='practice/test/labelled', marks=3, markScheme='source',
                         sourceKind='practice-booklet', chapterNumber=2, subchapterLabel='2.1 Fixture exercise', questionLabel='1',
                         contextHtml='<aside class="practice-context"><p class="practice-context-label">Reference from 9.5 Q1</p><p>Use the diagram from the previous question.</p></aside>')
-        rows = (self.exam_rows('edexcel-9fm0-01-2019-june', [2]) + self.pmt_rows(['pmt/pure-core-1/ch2/q8', 'pmt/pure-core-1/ch6/q2'])
+        rows = (self.exam_rows('edexcel-9fm0-01-2019-june', [2]) + self.exam_rows('edexcel-8fm0-01-2021-november', [5]) + self.pmt_rows(['pmt/pure-core-1/ch6/q2'])
                 + [labelled] + self.exam_rows('edexcel-9ma0-32-2024-june', [1]) + self.pmt_rows(['pmt/pure-core-1/ch9/q4']))
         self.page.add_script_tag(url='/papers-exam.js')
         expected = self.page.evaluate('rows => rows.map(LUISA_PAPERS_EXAM.schemeSource)', rows)
         self.assertEqual(expected, ['Source: Edexcel June 2019 9FM0/01 Q2 · ID exam/edexcel-9fm0-01-2019-june/q2',
-                                    'Source: PMT Core Pure 1 Ch.2 Argand Diagrams Q8 · Original: Edexcel 8FM0/01 2021 Q5 · ID pmt/pure-core-1/ch2/q8',
+                                    'Source: Edexcel November 2021 8FM0/01 Q5 · ID exam/edexcel-8fm0-01-2021-november/q5',
                                     'Source: PMT Core Pure 1 Ch.6 Matrices Q2 · Original: Edexcel 9FM0/02 2022 Q2 · ID pmt/pure-core-1/ch6/q2',
                                     'Source: Practice Booklet · Chapter 2 · 2.1 Fixture exercise · Q1 · ID practice/test/labelled',
                                     'Source: Edexcel June 2024 9MA0/32 Q1 · ID exam/edexcel-9ma0-32-2024-june/q1',

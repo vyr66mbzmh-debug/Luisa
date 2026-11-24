@@ -848,21 +848,21 @@ class PapersSelection(unittest.TestCase):
         # kept once), and an old saved 'pmt' source box is ignored without error.
         official = 'exam/edexcel-9fm0-01-2019-june/q1'
         copy_of_official = next(k for k, v in migrations.items() if v == official)
-        copy_of_pmt = next(k for k, v in migrations.items() if v == 'pmt/pure-core-1/ch3/q3')
+        copy_of_pmt = next(k for k, v in migrations.items() if v == 'exam/edexcel-8fm0-01-2021-november/q8')
         saved = [copy_of_official, 'pmt/pure-core-1/ch1/q1', official, copy_of_pmt]
         self.page.evaluate("""ids => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({version:3, sources:{practice:false, 'exam-style':true, 'past-papers':true, pmt:true}, selected:ids, selectionOrder:ids, order:'selection', layout:'condensed', includeAnswers:false}))""", saved)
         self.page.reload()
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
         self.assertIn('2 duplicate questions were replaced by the same question from its original source.', self.page.locator('#papers-status').inner_text())
-        self.assertEqual(self.selection_ids(), [official, 'pmt/pure-core-1/ch1/q1', 'pmt/pure-core-1/ch3/q3'])
+        self.assertEqual(self.selection_ids(), [official, 'pmt/pure-core-1/ch1/q1', 'exam/edexcel-8fm0-01-2021-november/q8'])
         self.assertEqual([self.page.locator(f'#papers-source-{s}').is_checked() for s in ('practice', 'exam-style', 'past-papers')], [False, True, True])
         stored = self.page.evaluate("JSON.parse(sessionStorage.getItem('luisa-papers-v1'))")
-        self.assertEqual(stored['selected'], [official, 'pmt/pure-core-1/ch1/q1', 'pmt/pure-core-1/ch3/q3'])
+        self.assertEqual(stored['selected'], [official, 'pmt/pure-core-1/ch1/q1', 'exam/edexcel-8fm0-01-2021-november/q8'])
         self.assertNotIn('pmt', stored['sources'])
         self.page.reload()
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('restored')")
         self.assertNotIn('replaced', self.page.locator('#papers-status').inner_text())
-        self.assertEqual(self.selection_ids(), [official, 'pmt/pure-core-1/ch1/q1', 'pmt/pure-core-1/ch3/q3'])
+        self.assertEqual(self.selection_ids(), [official, 'pmt/pure-core-1/ch1/q1', 'exam/edexcel-8fm0-01-2021-november/q8'])
         # A version-2 session's single 'exam' box still maps to exam-style and past papers.
         self.page.evaluate('''() => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({version:2, sources:{practice:false, exam:true}, selected:[], order:'selection', layout:'condensed', includeAnswers:false}))''')
         self.page.reload()

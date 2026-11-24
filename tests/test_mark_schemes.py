@@ -12,23 +12,26 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 import mark_schemes  # noqa: E402
 
 
+AS_QUESTIONS = sum(p['questionCount'] for p in json.loads((ROOT / 'content/exams/pilot-metadata.json').read_text())['papers'] if p.get('qualification') == 'AS')
+PMT_REMOVED = [r['removed'] for r in json.loads((ROOT / 'docs/evidence/v079-pmt-duplicates.json').read_text())['removed']]
+
 class MarkSchemeFlagTests(unittest.TestCase):
     def test_every_question_has_its_derived_flag(self):
         self.assertEqual(mark_schemes.errors(ROOT), [])
         derived = mark_schemes.derive(ROOT)
         self.assertEqual({name: len(rows) for name, rows in derived.items()},
-                         {'textbook-catalogue.json': 6147, 'practice-catalogue.json': 2475, 'exam-catalogue.json': 444,
-                          'pmt-catalogue.json': 83})
+                         {'textbook-catalogue.json': 6147, 'practice-catalogue.json': 2475, 'exam-catalogue.json': 444 + AS_QUESTIONS,
+                          'pmt-catalogue.json': 83 - len(PMT_REMOVED)})
 
     def test_counts_per_source(self):
         counts = {f'{source}|{value}': n for (source, value), n in mark_schemes.counts(ROOT).items()}
         self.assertEqual(counts, {
-            'Past Papers|official': 444,                               # paired official Edexcel schemes
+            'Past Papers|official': 444 + AS_QUESTIONS,                               # paired official Edexcel schemes
             'Exam style (Practice Booklet)|worked': 554,               # Luisa worked solutions only
             'Practice questions (Practice Booklet)|worked': 1921,
             'Practice questions (Luisa skill questions)|worked': 6147,
-            'PMT (pure-core-1)|source': 58,                            # PMT topic sheets with their source mark schemes
-            'PMT (pure-core-2)|source': 25,
+            'PMT (pure-core-1)|source': 58 - sum('/pure-core-1/' in key for key in PMT_REMOVED),                            # PMT topic sheets with their source mark schemes
+            'PMT (pure-core-2)|source': 25 - sum('/pure-core-2/' in key for key in PMT_REMOVED),
         })
 
     def test_past_paper_official_only_when_every_step_is_an_official_crop_of_that_paper(self):
@@ -54,11 +57,11 @@ class MarkSchemeFlagTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             mark_schemes.source_kind({'id': 'x', 'steps': ['<p>M1</p>'], 'sourceScheme': {'kind': 'official'}})
         # A PMT row counts only when every step is a crop of its own question's scheme (v0.75 review).
-        own = '<figure class="exam-solution-source"><img src="resources/pmt/pure-core-1-ch2/q07-ms-p19-1.png" alt="x"></figure>'
-        pmt = {'id': 'pmt/pure-core-1/ch2/q7', 'sourceScheme': {'kind': 'source', 'page': [19]}}
+        own = '<figure class="exam-solution-source"><img src="resources/pmt/pure-core-2-ch7/q01-ms-p03-1.png" alt="x"></figure>'
+        pmt = {'id': 'pmt/pure-core-2/ch7/q1', 'sourceScheme': {'kind': 'source', 'page': [3]}}
         self.assertEqual(mark_schemes.source_kind(dict(pmt, steps=[own])), 'source')
-        missing = own.replace('p19-1.png', 'p19-9.png')  # well formed, but no such crop file
-        for steps in ([], ['<p>M1 typed scheme</p>'], [own.replace('q07', 'q08')], [own, '<p>extra</p>'], [own + '<p>extra</p>'], [missing]):
+        missing = own.replace('p03-1.png', 'p03-9.png')  # well formed, but no such crop file
+        for steps in ([], ['<p>M1 typed scheme</p>'], [own.replace('q01', 'q02')], [own, '<p>extra</p>'], [own + '<p>extra</p>'], [missing]):
             with self.assertRaises(ValueError):
                 mark_schemes.source_kind(dict(pmt, steps=steps))
 
