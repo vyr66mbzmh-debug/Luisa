@@ -4,8 +4,8 @@
   "printable": true,
   "contentStatus": "checked",
   "note": "Checked source metadata for the six owner-supplied June 2025 papers. Printable question payloads are joined by stable ID through exam-catalogue.json. Difficulty follows original paper order as a guide, not an empirical rating.",
-  "questionCount": 577,
-  "totalMarks": 4490,
+  "questionCount": 595,
+  "totalMarks": 4610,
   "papers": [
     {
       "id": "edexcel-9ma0-01-2025-june",
@@ -18344,6 +18344,289 @@
       }
     },
     {
+      "id": "edexcel-8ma0-02-2018-june",
+      "board": "Edexcel",
+      "qualification": "AS",
+      "paperCode": "8MA0/02",
+      "title": "Statistics and Mechanics",
+      "examDate": "2018-05-23",
+      "seriesDate": "2018-06-01",
+      "session": "June 2018",
+      "questionCount": 9,
+      "totalMarks": 60,
+      "source": {
+        "questionPaperUrl": null,
+        "markSchemeUrl": null,
+        "questionPaperSha256": "18a2009dc6203337706c609cf5f3714e69bc41d9d121f62fc29712bdbd397018",
+        "markSchemeSha256": "85cdfcc4a691b2e4960b158bac39cace91e3f9c3b32535b752bca5183937e5de",
+        "indexedQuestionPaperSha256": null,
+        "indexedMarkSchemeSha256": null,
+        "basis": "Owner-supplied original PDF attachment"
+      },
+      "difficultyPolicy": {
+        "basis": "original-paper-order",
+        "easyQuestions": [
+          1,
+          3
+        ],
+        "mediumQuestions": [
+          4,
+          6
+        ],
+        "difficultQuestions": [
+          7,
+          9
+        ]
+      },
+      "questions": [
+        {
+          "id": "exam/edexcel-8ma0-02-2018-june/q1",
+          "originalQuestionNumber": 1,
+          "originalQuestionLabel": "1",
+          "marks": 3,
+          "difficulty": "easy",
+          "topicSummary": "Bivariate Data: PMCC and Linear Regression",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "sampling-and-data",
+              "skillId": "smq-1.50"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            2,
+            3
+          ],
+          "questionNumber": 1,
+          "sourceLabel": "Edexcel June 2018 8MA0/02 Q1"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-2018-june/q2",
+          "originalQuestionNumber": 2,
+          "originalQuestionLabel": "2",
+          "marks": 4,
+          "difficulty": "easy",
+          "topicSummary": "Probability: Introduction",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "probability",
+              "skillId": "smq-1.52"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            4,
+            5
+          ],
+          "questionNumber": 2,
+          "sourceLabel": "Edexcel June 2018 8MA0/02 Q2"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-2018-june/q3",
+          "originalQuestionNumber": 3,
+          "originalQuestionLabel": "3",
+          "marks": 7,
+          "difficulty": "easy",
+          "topicSummary": "The Binomial Distribution, Binomial Hypothesis Testing",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-1.56"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-1.57"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            6,
+            9
+          ],
+          "questionNumber": 3,
+          "sourceLabel": "Edexcel June 2018 8MA0/02 Q3"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-2018-june/q4",
+          "originalQuestionNumber": 4,
+          "originalQuestionLabel": "4",
+          "marks": 8,
+          "difficulty": "medium",
+          "topicSummary": "Large Data Set: Edexcel, Measures of Central Tendency and Variation",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "large-data-sets",
+              "skillId": "smq-1.58"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "sampling-and-data",
+              "skillId": "smq-1.48"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            10,
+            11
+          ],
+          "questionNumber": 4,
+          "sourceLabel": "Edexcel June 2018 8MA0/02 Q4"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-2018-june/q5",
+          "originalQuestionNumber": 5,
+          "originalQuestionLabel": "5",
+          "marks": 8,
+          "difficulty": "medium",
+          "topicSummary": "Discrete Random Variables",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-1.55"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            12,
+            15
+          ],
+          "questionNumber": 5,
+          "sourceLabel": "Edexcel June 2018 8MA0/02 Q5"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-2018-june/q6",
+          "originalQuestionNumber": 6,
+          "originalQuestionLabel": "6",
+          "marks": 4,
+          "difficulty": "medium",
+          "topicSummary": "Constant Acceleration",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "kinematics",
+              "skillId": "smq-1.65"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            16,
+            17
+          ],
+          "questionNumber": 6,
+          "sourceLabel": "Edexcel June 2018 8MA0/02 Q6"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-2018-june/q7",
+          "originalQuestionNumber": 7,
+          "originalQuestionLabel": "7",
+          "marks": 7,
+          "difficulty": "difficult",
+          "topicSummary": "Graphs of Motion, Constant Acceleration",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "kinematics",
+              "skillId": "smq-1.64"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "kinematics",
+              "skillId": "smq-1.65"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            18,
+            21
+          ],
+          "questionNumber": 7,
+          "sourceLabel": "Edexcel June 2018 8MA0/02 Q7"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-2018-june/q8",
+          "originalQuestionNumber": 8,
+          "originalQuestionLabel": "8",
+          "marks": 10,
+          "difficulty": "difficult",
+          "topicSummary": "Variable Acceleration",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "kinematics",
+              "skillId": "smq-1.71"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            22,
+            25
+          ],
+          "questionNumber": 8,
+          "sourceLabel": "Edexcel June 2018 8MA0/02 Q8"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-2018-june/q9",
+          "originalQuestionNumber": 9,
+          "originalQuestionLabel": "9",
+          "marks": 9,
+          "difficulty": "difficult",
+          "topicSummary": "Forces: Pulleys, Forces: Connected Particles",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "forces",
+              "skillId": "smq-1.70"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "forces",
+              "skillId": "smq-1.69"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            26,
+            28
+          ],
+          "questionNumber": 9,
+          "sourceLabel": "Edexcel June 2018 8MA0/02 Q9"
+        }
+      ],
+      "sourceVerification": {
+        "questionPaperAndMarkSchemeTotalsAgree": true,
+        "originalQuestionOrderPreserved": true,
+        "totalMarksChecked": 60
+      }
+    },
+    {
       "id": "edexcel-8fm0-01-2018-june",
       "board": "Edexcel",
       "qualification": "AS",
@@ -18986,6 +19269,307 @@
         "questionPaperAndMarkSchemeTotalsAgree": true,
         "originalQuestionOrderPreserved": true,
         "totalMarksChecked": 30
+      }
+    },
+    {
+      "id": "edexcel-8ma0-02-sample",
+      "board": "Edexcel",
+      "qualification": "AS",
+      "paperCode": "8MA0/02",
+      "title": "Statistics and Mechanics",
+      "examDate": null,
+      "seriesDate": null,
+      "session": "Sample",
+      "questionCount": 9,
+      "totalMarks": 60,
+      "source": {
+        "questionPaperUrl": null,
+        "markSchemeUrl": null,
+        "questionPaperSha256": "6427072828df7dd3437b054c0d7c6850ae1050baf9f31a35ba0546aa41186656",
+        "markSchemeSha256": "4fb94878f7f38672ab6f3d9711d0dbc7cfb217dd8718cce7fd4d7253baa08b5d",
+        "indexedQuestionPaperSha256": null,
+        "indexedMarkSchemeSha256": null,
+        "basis": "Owner-supplied original PDF attachment"
+      },
+      "difficultyPolicy": {
+        "basis": "original-paper-order",
+        "easyQuestions": [
+          1,
+          3
+        ],
+        "mediumQuestions": [
+          4,
+          6
+        ],
+        "difficultQuestions": [
+          7,
+          9
+        ]
+      },
+      "questions": [
+        {
+          "id": "exam/edexcel-8ma0-02-sample/q1",
+          "originalQuestionNumber": 1,
+          "originalQuestionLabel": "1",
+          "marks": 4,
+          "difficulty": "easy",
+          "topicSummary": "Sampling Methods, Large Data Set: Edexcel, Measures of Central Tendency and Variation",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "sampling-and-data",
+              "skillId": "smq-1.47"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "large-data-sets",
+              "skillId": "smq-1.58"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "sampling-and-data",
+              "skillId": "smq-1.48"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            2,
+            3
+          ],
+          "questionNumber": 1,
+          "sourceLabel": "Edexcel Sample 8MA0/02 Q1"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-sample/q2",
+          "originalQuestionNumber": 2,
+          "originalQuestionLabel": "2",
+          "marks": 5,
+          "difficulty": "easy",
+          "topicSummary": "Representing Data",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "sampling-and-data",
+              "skillId": "smq-1.49"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            4,
+            5
+          ],
+          "questionNumber": 2,
+          "sourceLabel": "Edexcel Sample 8MA0/02 Q2"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-sample/q3",
+          "originalQuestionNumber": 3,
+          "originalQuestionLabel": "3",
+          "marks": 5,
+          "difficulty": "easy",
+          "topicSummary": "Probability: Regions of Venn Diagrams, Probability: Independence and Mutually Exclusive",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "probability",
+              "skillId": "smq-1.53"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "probability",
+              "skillId": "smq-1.54"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            6,
+            7
+          ],
+          "questionNumber": 3,
+          "sourceLabel": "Edexcel Sample 8MA0/02 Q3"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-sample/q4",
+          "originalQuestionNumber": 4,
+          "originalQuestionLabel": "4",
+          "marks": 7,
+          "difficulty": "medium",
+          "topicSummary": "Bivariate Data: PMCC and Linear Regression, Large Data Set: Edexcel",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "sampling-and-data",
+              "skillId": "smq-1.50"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "large-data-sets",
+              "skillId": "smq-1.58"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            8,
+            9
+          ],
+          "questionNumber": 4,
+          "sourceLabel": "Edexcel Sample 8MA0/02 Q4"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-sample/q5",
+          "originalQuestionNumber": 5,
+          "originalQuestionLabel": "5",
+          "marks": 9,
+          "difficulty": "medium",
+          "topicSummary": "The Binomial Distribution, Binomial Hypothesis Testing",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-1.56"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-statistics-year-1",
+              "topicId": "statistical-distributions-and-testing",
+              "skillId": "smq-1.57"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            10,
+            11
+          ],
+          "questionNumber": 5,
+          "sourceLabel": "Edexcel Sample 8MA0/02 Q5"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-sample/q6",
+          "originalQuestionNumber": 6,
+          "originalQuestionLabel": "6",
+          "marks": 4,
+          "difficulty": "medium",
+          "topicSummary": "Graphs of Motion, Constant Acceleration",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "kinematics",
+              "skillId": "smq-1.64"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "kinematics",
+              "skillId": "smq-1.65"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            12,
+            13
+          ],
+          "questionNumber": 6,
+          "sourceLabel": "Edexcel Sample 8MA0/02 Q6"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-sample/q7",
+          "originalQuestionNumber": 7,
+          "originalQuestionLabel": "7",
+          "marks": 7,
+          "difficulty": "difficult",
+          "topicSummary": "Constant Acceleration",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "kinematics",
+              "skillId": "smq-1.65"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            14,
+            15
+          ],
+          "questionNumber": 7,
+          "sourceLabel": "Edexcel Sample 8MA0/02 Q7"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-sample/q8",
+          "originalQuestionNumber": 8,
+          "originalQuestionLabel": "8",
+          "marks": 9,
+          "difficulty": "difficult",
+          "topicSummary": "Variable Acceleration",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "kinematics",
+              "skillId": "smq-1.71"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            16,
+            17
+          ],
+          "questionNumber": 8,
+          "sourceLabel": "Edexcel Sample 8MA0/02 Q8"
+        },
+        {
+          "id": "exam/edexcel-8ma0-02-sample/q9",
+          "originalQuestionNumber": 9,
+          "originalQuestionLabel": "9",
+          "marks": 10,
+          "difficulty": "difficult",
+          "topicSummary": "Forces: Pulleys, Forces: Connected Particles",
+          "skillMappings": [
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "forces",
+              "skillId": "smq-1.70"
+            },
+            {
+              "courseId": "maths-a-level",
+              "bookId": "maths-mechanics-year-1",
+              "topicId": "forces",
+              "skillId": "smq-1.69"
+            }
+          ],
+          "printable": true,
+          "contentStatus": "checked",
+          "sourceQuestionPages": [
+            18,
+            21
+          ],
+          "questionNumber": 9,
+          "sourceLabel": "Edexcel Sample 8MA0/02 Q9"
+        }
+      ],
+      "sourceVerification": {
+        "questionPaperAndMarkSchemeTotalsAgree": true,
+        "originalQuestionOrderPreserved": true,
+        "totalMarksChecked": 60
       }
     },
     {
