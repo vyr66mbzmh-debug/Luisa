@@ -1,0 +1,121 @@
+[
+  {
+    "id": "madas/alevel-pure-d/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q1-question-1.svg\" alt=\"1 f x ( ) = ( 1 − x ) 3 , 1 −&lt; x &lt; . 1 a) Find the binomial expansion of f x in ascending powers of x up and ( ) 2 including the term in x . 1 8 8 ( ) = ( − ) − &lt; &lt; ( ) g x 8 3 x 3 , x . 3 3 3 b) Use the result of part (a) to find the binomial expansion of ( ) g x in ascending 2 powers of x up and including the term in x . ( ) 3 c) Hence, show that\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q1-question-2.svg\" alt=\"551 3 7 ≈ . ( ) 3 288\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q1-solution-1.svg\" alt=\"(a) By the binomial series, (1 −x)1/3 = 1 −x 3)x2 + · · · 3 + 1 2(1 3)(−2 [M1] [M1] [A1] = 1 −x 3 −x2 9 + · · · . (b) Factor out 8 before taking the cube root: (8 −3x)1/3 = 81/3(1 −3x/8)1/3 . = 2f(3x/8) Thus g(x) = 2(1 −3x/8)1/3. [B1] Substituting 3x/8 in (a) gives h 9(3x/8)2 + O(x3) i h i 1 −1 3(3x/8) −1 1 −x/8 −x2/64 + O(x3) 2 = 2 . Multiplying by 2 gives g(x) = 2 −x 4 −x2 32 + · · · . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q1-solution-2.svg\" alt=\"3√ (c) At x = 1/3, g(x) = 7. [M1] Substitute on both sides: 3)1/3 ≈2 −1 (8 −3 · 1 4(1 3) −1 32(1 3)2. The expansion through x2 gives 2 −1 1 551 12 − 288 = 288 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 9 marks.</p>"
+    ],
+    "promptText": "1 f x ( ) = ( 1 − x ) 3 , 1 −< x < . 1 a) Find the binomial expansion of f x in ascending powers of x up and ( ) 2 including the term in x . 1 8 8 ( ) = ( − ) − < < ( ) g x 8 3 x 3 , x . 3 3 3 b) Use the result of part (a) to find the binomial expansion of ( ) g x in ascending 2 powers of x up and including the term in x . ( ) 3 c) Hence, show that 551 3 7 ≈ . ( ) 3 288"
+  },
+  {
+    "id": "madas/alevel-pure-d/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q2-question-1.svg\" alt=\"Given that x is measured in radians, use small angle approximations to simplify the following expression. 2 cos ( 3 x ) − 1 ( ) 5 3 2 sin 4 x ( x )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q2-solution-1.svg\" alt=\"2(3x)2]2 −1 For small angles in radians use sin u ≈u [M1] and cos u ≈1 −u2/2. [A1] First substitute [1 −1 for the numerator and 2x(3x/4) for the denominator: Expanding the square in the numerator gives 1 −9x2 + 81x4/4 −1. Hence 2x sin(3x/4) ≈(1 −9x2/2)2 −1 = −9x2 + (81/4)x4 cos2(3x) −1 . [M1] [A1] (3/2)x2 (3/2)x2 Discarding the higher-order term leaves −9/(3/2) = −6 . [A1] Alternative working. Using 1 −cos2(3x) = sin2(3x), cos2(3x) −1 = −sin2(3x). Therefore the fraction is −sin2(3x)/[2x sin(3x/4)], approximately −(3x)2/[2x(3x/4)] = −9x2/(3 2x2) . = −6\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 5 marks.</p>"
+    ],
+    "promptText": "Given that x is measured in radians, use small angle approximations to simplify the following expression. 2 cos ( 3 x ) − 1 ( ) 5 3 2 sin 4 x ( x )"
+  },
+  {
+    "id": "madas/alevel-pure-d/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q3-question-1.svg\" alt=\"Show that 12   r  2 r + 7 + 2 = 8430 . ( ) 6   r = 1 Detailed workings must be shown in this question.\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q3-solution-1.svg\" alt=\"The first five values of 2r + 7 + 2r are r 1 2 3 4 5 2r + 7 + 2r 2 + 7 + 2 4 + 7 + 4 6 + 7 + 8 8 + 7 + 16 10 + 7 + 32 11 15 21 31 49 These differences are unequal: Split the sum into two familiar sequences: 12 12 12 X (2r + 7 + 2r) = X X 2r (2r + 7) + r=1 r=1 r=1 = (9 + 11 + 13 + · · · + 31) + (2 + 4 + 8 + · · · + 4096). For the first sum a = 9, d = 2, l = 31, n = 12, so S = n(a + l)/2 = 12(9 + 31)/2 .\" style=\"--madas-width:572.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q3-solution-2.svg\" alt=\"= 240 For the second a = 2, r = 2, n = 12, so S = a(1 −rn)/(1 −r) = 2(1 −212)/(1 −2) . = 8190 Together these give 240 + 8190 = 8430. Equivalently, the arithmetic contributions are 2(12 · 13/2) = 156 [B1] [A1] and 12(7) = 84. [A1] The geometric contribution is 2(212 −1)/(2 −1) = 8190. [A1] Their sum is 156 + 84 + 8190 = 8430 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 6 marks.</p>"
+    ],
+    "promptText": "Show that 12   r  2 r + 7 + 2 = 8430 . ( ) 6   r = 1 Detailed workings must be shown in this question."
+  },
+  {
+    "id": "madas/alevel-pure-d/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q4-question-1.svg\" alt=\"a) Use the trapezium rule with 5 equally spaced ordinates to estimate the value of the following integral.  18   2   ln dx . ( ) 4    4 + x  2 b) Use the answer of part (a) to estimate the value of  18 ( + ) ( ) ln 4 x dx . 4 2\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q4-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q4-solution-1.svg\" alt=\"(a) The step is 4 and the ordinates at x = 2, 6, 10, 14, 18 are approximately −0.151367, −0.238853, −0.291267, −0.330161, −0.361513. [B1] [A1] Use half the step times the sum of the two end ordinates and twice the sum of the three interior ordinates: [M1] Using the four-decimal ordinates gives 2[−0.1514 −0.3615 + 2(−0.2389 −0.2913 −0.3302)] ≈−4.467. With unrounded ordinates the integral is approximately −4.46688 . [A1] 2 ln(4 + √x). [B1] If the integral in (b) is J, linearity gives (b) Write the integrand in (a) as ln 2 −1   Z 18 Z 18 2 ln dx = (ln 2) 1 dx −1 2J = (ln 2)[x]18 2 −1 2J.  4 + √x q 2 2 Thus the result of (a) is 16 ln 2 −1 2J. [A1] Hence 1 2J ≈4.467 + 16 ln 2 and\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q4-solution-2.svg\" alt=\"J ≈2(4.467 + 16 ln 2). Therefore J ≈32 ln 2 + 2(4.46688) ≈31.1145 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 8 marks.</p>"
+    ],
+    "promptText": "a) Use the trapezium rule with 5 equally spaced ordinates to estimate the value of the following integral.  18   2   ln dx . ( ) 4    4 + x  2 b) Use the answer of part (a) to estimate the value of  18 ( + ) ( ) ln 4 x dx . 4 2 "
+  },
+  {
+    "id": "madas/alevel-pure-d/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q5-question-1.svg\" alt=\"Relative to a fixed origin O , the point A has coordinates ( − ) 6, 4,1 .  BA = −+ The point B is such so that i j 3 k .  If the point M is the midpoint of OB , show that AM = k 10 , where k is a rational constant to be found. ( ) 6\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q5-solution-1.svg\" alt=\"From A = B + (1, −1, 3), [M1] we have −−→ OB = −→ OA + −−→ AB = (6, −4, 1) −(1, −1, 3) = (5, −3, −2), giving B = (5, −3, −2). [A1] The midpoint has position vector −−→ −−→ OM = 1 OB = 1 2(5, −3, −2). 2\" style=\"--madas-width:654.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q5-solution-2.svg\" alt=\"Thus M = (5/2, −3/2, −1) [A1] and −−→ AM = −→ AO + −−→ OM = −(6, −4, 1) + (5/2, −3/2, −1), giving −−→ AM = (−7/2, 5/2, −2). [A1] Hence √ 90/4 = 3 q q AM = 49/4 + 25/4 + 4 = 10, k = 3 2 . [M1] [A1] 2\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 6 marks.</p>"
+    ],
+    "promptText": "Relative to a fixed origin O , the point A has coordinates ( − ) 6, 4,1 .  BA = −+ The point B is such so that i j 3 k .  If the point M is the midpoint of OB , show that AM = k 10 , where k is a rational constant to be found. ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-d/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q6-question-1.svg\" alt=\"The functions f and  g are defined by + , x∈ , f x ( ) = 2 x 3 x ≤ 4 2 g x ( ) = x − 4 , x∈ , x ≥. 1 Find the domain and range of gf x . ( ) ( ) 6\" style=\"--madas-width:576.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q6-solution-1.svg\" alt=\"Looking at the diagram below: Apply f(x) = 2x + 3, x ≤4, first, and then g(u) = u2 −4, u ≥1. The input to g must satisfy f(x) ≥1, so 2x + 3 ≥1 , hence 2x ≥−2 and x ≥−1. [M1] [A1] With x ≤4, the composite domain is [−1, 4] . [M1] [A1] The graph on this domain has equation\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q6-solution-2.svg\" alt=\"g(f(x)) = g(2x + 3) . = (2x + 3)2 −4 At the endpoints g(f(−1)) = 12 −4 = −3 and g(f(4)) = 112 −4 . = 117 On this interval f(x) increases from 1 to 11, and g increases on [1, 11], giving range [−3, 117] . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 6 marks.</p>"
+    ],
+    "promptText": "The functions f and  g are defined by + , x∈ , f x ( ) = 2 x 3 x ≤ 4 2 g x ( ) = x − 4 , x∈ , x ≥. 1 Find the domain and range of gf x . ( ) ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-d/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q7-question-1.svg\" alt=\"12 x = If sin and x is obtuse, show clearly that 13 119 cot 2 x = . ( ) 5 120\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q7-solution-1.svg\" alt=\"The reference triangle has opposite side 12 and hypotenuse 13. Pythagoras gives 132 −122 = 25 = 52.\" style=\"--madas-width:409.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q7-solution-2.svg\" alt=\"Because x is obtuse, cos x = −5/13. [B1] [A1] Therefore sin 2x = 2(12/13)(−5/13) = −120/169, cos 2x = 25/169 −144/169 = −119/169. [M1] [A1] Equivalently, apply the source’s double-angle identity directly: sin 2x = 1 −2 sin2 x 1 −2(12/13)2 cot 2x = cos 2x 2 sin x cos x = 2(12/13)(−5/13) = 1 −288/169 = 169 −288 = 288 −169 . −120/169 −120 120 Taking the ratio gives cot 2x = 119/120 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 5 marks.</p>"
+    ],
+    "promptText": "12 x = If sin and x is obtuse, show clearly that 13 119 cot 2 x = . ( ) 5 120"
+  },
+  {
+    "id": "madas/alevel-pure-d/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q8-question-1.svg\" alt=\"L The figure above shows a pattern of 5 circles, touching externally, whose centres lie on a straight line of length L units.\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q8-question-2.svg\" alt=\"The radii of these circles form a geometric progression, where the radius of the smaller circle is 3 units and that of the fifth (larger) circle is 48 units. a) Find the common ratio of the geometric progression. ( ) 2 The pattern is extended by 5 more circles to 10 circles. b) Determine the new value of L . ( ) 3 c) Calculate, in terms of π ,  the total area of the 10 circles of the new pattern. ( ) 5\" style=\"--madas-width:578.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q8-solution-1.svg\" alt=\"(a) Write q &gt; 0 for the common ratio. [M1] The nth radius is un = 3qn−1. Since 3q4 = 48, q4 = 16 and q = 2 . [A1] (b) The dimension L spans the full row, so it is the sum of the diameters: [B1] The radii have sum a(qn −1)/(q −1), with a = 3, q = 2, n = 10. Doubling the sum accounts for each diameter: For ten circles L = 6(210 −1)/(2 −1) . [M1] [A1] = 6138 (c) Writing out the circular areas in radius order gives S = π32 + π(2 · 3)2 + π(22 · 3)2 + · · · + π(29 · 3)2 = 9π[1 + 22 + 24 + 26 + · · · + 218]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q8-solution-2.svg\" alt=\"= 9π[1 + 4 + 16 + 64 + · · · + 262144]. The ten areas have first term 9π and common ratio 4. [B1] [A1] Their sum is 9π(410 −1)/(4 −1) = 3145725π . [M1] [M1] [A1] Source clarification. The printed wording describes the line of centres: The dimension arrows span the outer edges of the row: This worked solution follows those arrows:\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 10 marks.</p>"
+    ],
+    "promptText": "L The figure above shows a pattern of 5 circles, touching externally, whose centres lie on a straight line of length L units. The radii of these circles form a geometric progression, where the radius of the smaller circle is 3 units and that of the fifth (larger) circle is 48 units. a) Find the common ratio of the geometric progression. ( ) 2 The pattern is extended by 5 more circles to 10 circles. b) Determine the new value of L . ( ) 3 c) Calculate, in terms of π ,  the total area of the 10 circles of the new pattern. ( ) 5"
+  },
+  {
+    "id": "madas/alevel-pure-d/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q9-question-1.svg\" alt=\"The curve C has equation π 2 x = sec y + tan y , 0 ≤ y &lt; . 2 a) Show that dy cos 2 y = + . ( ) 5 dx 2tan y 1 π b) Hence show that the equation of the normal to C at the point where y = is 4\" style=\"--madas-width:576.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q9-question-2.svg\" alt=\"( ) 4 y + 24 x = π + 72 . 4\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q9-solution-1.svg\" alt=\"(a) From x = sec2 y + tan y, differentiation by the chain rule gives dx/dy = 2 sec y(sec y tan y) + sec2 y, or dx/dy = 2 sec2 y tan y + sec2 y. [M1] [A1] Factor to obtain dx/dy = sec2 y(2 tan y + 1) . = (2 tan y + 1)/ cos2 y This is positive on the given interval. [M1] [A1] Its reciprocal is cos2 y/(2 tan y + 1) . [A1] (b) At y = π/4 we have x = 2 + 1 [M1] = 3 from x = sec2(π/4) + tan(π/4).\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q9-solution-2.svg\" alt=\"The tangent gradient is cos2(π/4)/(2 tan(π/4) + 1) = (1/2)/(2 + 1) = 1 2/3 . [A1] = 1/6 The normal has gradient −6 and equation y −π/4 = −6(x −3), [M1] giving y −π/4 = −6x + 18 and 4y −π = −24x + 72, so 4y + 24x = π + 72 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 9 marks.</p>"
+    ],
+    "promptText": "The curve C has equation π 2 x = sec y + tan y , 0 ≤ y < . 2 a) Show that dy cos 2 y = + . ( ) 5 dx 2tan y 1 π b) Hence show that the equation of the normal to C at the point where y = is 4 ( ) 4 y + 24 x = π + 72 . 4"
+  },
+  {
+    "id": "madas/alevel-pure-d/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q10-question-1.svg\" alt=\"The value of a computer system V , in hundred of £ , t years from when it was new, is depreciating at a rate proportional to its value cubed, at that time t . The value of the computer system when it was new, was £1000 . a) By forming and solving a differential equation, show that 1 1 = At + , 2 V 100 where A is a positive constant. ( ) 7 b) Given that the value of the computer system halves after one year, find the value of t when the system is worth £250 . ( ) 5\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q10-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q10-solution-1.svg\" alt=\"(a) Measure V in hundreds of pounds and t in years: The rate is proportional to V 3 and negative because the value decreases: For c &gt; 0, dV/dt = −cV 3. [B1] [A1] Write dV = −cV 3 dt, so −V −3dV = c dt. R −V −3 dV = R c dt, or 1 2V −2 = ct + B. Equivalently, −1/(2V 2) = −ct + C. [M1] Integrating gives [A1] At t = 0, V = 10, [A1] so B = 1/(2 · 102) = 1/200 and 1/(2V 2) = ct + 1/200, hence 1/V 2 = 2ct + 1/100. [A1] Set A = 2c &gt; 0 . [A1] (b) From V = 5 [M1] at t = 1, A = 1/25 −1/100 . [A1] = 3/100 The model is now 1/V 2 = (3/100)t + 1/100. At V = 2.5, 1/V 2 = 16/100, [A1] giving 1/6.25 = 3t/100 + 1/100.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q10-solution-2.svg\" alt=\"Multiplying by 100 gives 16 = 3t + 1, hence 3t = 15, so t = (16/100 −1/100)/(3/100) . [M1] [A1] = 5 years\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 12 marks.</p>"
+    ],
+    "promptText": "The value of a computer system V , in hundred of £ , t years from when it was new, is depreciating at a rate proportional to its value cubed, at that time t . The value of the computer system when it was new, was £1000 . a) By forming and solving a differential equation, show that 1 1 = At + , 2 V 100 where A is a positive constant. ( ) 7 b) Given that the value of the computer system halves after one year, find the value of t when the system is worth £250 . ( ) 5 "
+  },
+  {
+    "id": "madas/alevel-pure-d/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q11-question-1.svg\" alt=\"Use a suitable substitution to show that 1  ln 2  1 1  1  27  x dx + =   e ln   ( 10 ) 2 3  x x   4  1 ln3\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q11-solution-1.svg\" alt=\"Put u = 1/x, so x = 1/u. Then du/dx = −1/x2 and dx = −x2 du = −u−2 du. [B1] [A1] At x = 1/ ln 3, u = ln 3, and at x = 1/ ln 2, u = ln 2. [A1] The differential contributes a minus sign: Reversing the new limits absorbs it, and (u2 + u3)u−2 = 1 + u. The transformed integral is Z ln 2 Z ln 3 (u2 + u3)eu(−u−2) du = (1 + u)eu du. [M1] [A1] ln 3 ln 2 Integrate by parts, differentiating 1 + u and integrating eu. [M1] Z ln 3 (u + 1)euln 3 eu du = (u + 1)eu −euln 3 ueuln 3 ln 2 − ln 2 = ln 2. [M1] [A1] ln 2 Evaluating gives 3 ln 3 −2 ln 2, [A1] which is\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q11-solution-2.svg\" alt=\"ln 27 −ln 4 = ln(27/4) . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 10 marks.</p>"
+    ],
+    "promptText": "Use a suitable substitution to show that 1  ln 2  1 1  1  27  x dx + =   e ln   ( 10 ) 2 3  x x   4  1 ln3"
+  },
+  {
+    "id": "madas/alevel-pure-d/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q12-question-1.svg\" alt=\"A curve lies entirely above the x axis and has parametric equations 2 3 1 x = sin t , y = 4tan t , 0 ≤&lt; t π . 2 The finite region R is bounded by the curve, the x axis and the straight line with 1 equation x = . 2 Use integration in parametric to find the exact area of R . ( 14 )\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q12-solution-1.svg\" alt=\"The parametrisation x = sin2 t, y = 4 tan3 t, 0 ≤t &lt; π/2, starts at the origin.\" style=\"--madas-width:498.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-d/q12-solution-2.svg\" alt=\"It has 0 ≤x &lt; 1, y ≥0. √ At x = 1/2, sin2 t = 1/2, so sin t = 1/ 2 on this interval. The limits x = 0, 1 2 [B1] [A1] correspond to t = 0, π/4, [M1] [A1] and dx/dt = 2 sin t cos t. [M1] [A1] The R 1/2 R π/4 area is y(x) dx = y(t)(dx/dt) dt, giving 0 0 Z π/4 Z π/4 sin3 t Z π/4 sin4 t 4 tan3 t(2 sin t cos t) dt = 8 cos3 t sin t cos t dt = 8 cos2 t dt. [M1] [A1] 0 0 0 Using sin2 t = 1 −cos2 t, [M1] [A1] the integrand inside the last integral is (1 −cos2 t)2/ cos2 t = (1 −2 cos2 t + cos4 t)/ cos2 t. Dividing and using cos2 t = (1 + cos 2t)/2 gives sec2 t −2 + cos2 t = sec2 t −3 2 + 1 2 cos 2t. [M1] [A1] Thus the area is iπ/4 h tan t −3 2t + 1 8 4 sin 2t = 8[(1 −3π/8 + 1/4) −0] = 8(5/4 −3π/8) = 10 −3π . [M1] [A1] 0\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 14 marks.</p>"
+    ],
+    "promptText": "A curve lies entirely above the x axis and has parametric equations 2 3 1 x = sin t , y = 4tan t , 0 ≤< t π . 2 The finite region R is bounded by the curve, the x axis and the straight line with 1 equation x = . 2 Use integration in parametric to find the exact area of R . ( 14 )"
+  }
+]

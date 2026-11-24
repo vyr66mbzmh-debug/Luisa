@@ -1,0 +1,110 @@
+[
+  {
+    "id": "madas/as-pure-r/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q1-question-1.svg\" alt=\"Find the binomial expansion of 6 2 ⎛ x ⎞ , x ≠ 0 , + ⎜ x ⎟ ⎝ ⎠ simplifying each term of the expansion. 4 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q1-solution-1.svg\" alt=\"Use the binomial coefficients 1, 6, 15, 20, 15, 6, 1. [B1] (𝑥+ 2/𝑥)6 = 𝑥6 + 6𝑥5(2/𝑥) + 15𝑥4(2/𝑥)2 + 20𝑥3(2/𝑥)3 [M1] + 15𝑥2(2/𝑥)4 + 6𝑥(2/𝑥)5 + (2/𝑥)6 [A1] = 𝑥6 + 12𝑥4 + 60𝑥2 + 160 + 240/𝑥2 + 192/𝑥4 + 64/𝑥6 . [A1]\" style=\"--madas-width:577.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 4 marks.</p>"
+    ],
+    "promptText": "Find the binomial expansion of 6 2 ⎛ x ⎞ , x ≠ 0 , + ⎜ x ⎟ ⎝ ⎠ simplifying each term of the expansion. 4 ( )"
+  },
+  {
+    "id": "madas/as-pure-r/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q2-question-1.svg\" alt=\"𝑦 𝑦= 𝑥2 −5𝑥+ 9 𝑦= 5 𝐴 𝐵 𝑥 𝑂 The figure above shows a quadratic curve and a straight line with respective equations 2 y x 5 x 9 and y = 5 . = − +\" style=\"--madas-width:557.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q2-question-2.svg\" alt=\"The points A and B are the points of intersection between the straight line and the quadratic curve. a) Find the coordinates of A and B . 3 ( ) b) Calculate the exact area of the finite region bounded by the quadratic curve and the straight line, shown shaded in the above figure. 6 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q2-solution-1.svg\" alt=\"(a) Solve the equations simultaneously: 5 = 𝑥2 −5𝑥+ 9, 𝑥2 −5𝑥+ 4 = 0 [M1] 𝑥= 1 or 4. [A1] (𝑥−1)(𝑥−4) = 0, Both points have height five, so 𝐴= (1, 5), 𝐵= (4, 5) . [A1] 𝑦 𝑦= 𝑥2 −5𝑥+ 9 𝐴 𝐵 𝑦= 5 𝑥 𝑂\" style=\"--madas-width:524.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q2-solution-2.svg\" alt=\"= − 1 4 (b) The rectangle under the line from 𝑥= 1 to 𝑥= 4 has area 5(4 −1) = 15. [B1] Find the area under the curve: 4 (𝑥2 −5𝑥+ 9) 𝑑𝑥 [M1] 𝐼= ∫ 1 = [𝑥3/3 −5𝑥2/2 + 9𝑥]4 [A1] 1 [M1] = (64/3 −40 + 36) −(1/3 −5/2 + 9) [A1] = 52/3 −41/6 = 21/2.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q2-solution-3.svg\" alt=\"Subtracting gives 15 −21/2 = 9/2 . [A1]\" style=\"--madas-width:270.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 9 marks.</p>"
+    ],
+    "promptText": "𝑦 𝑦= 𝑥2 −5𝑥+ 9 𝑦= 5 𝐴 𝐵 𝑥 𝑂 The figure above shows a quadratic curve and a straight line with respective equations 2 y x 5 x 9 and y = 5 . = − + The points A and B are the points of intersection between the straight line and the quadratic curve. a) Find the coordinates of A and B . 3 ( ) b) Calculate the exact area of the finite region bounded by the quadratic curve and the straight line, shown shaded in the above figure. 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-r/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q3-question-1.svg\" alt=\"The curve C has equation 1 a y , x ≠ 0 , = x where a is a positive constant. a) Describe geometrically the transformation that maps the graph of C onto the 1 a graph of C whose equation is y + . 1 2 2 = ( ) x b) Sketch the graph of C . 2 The sketch must include the coordinates of …\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q3-question-2.svg\" alt=\"… all the points where the curves meet the coordinate axes. • … the equations of any asymptotes of the curves. 3 • ( ) The line with equation y x intersects C at the point A − 2, 2 and B . = − 2 ( ) c) Determine … i. … the value of a . 3 ( ) ii. … the coordinates of B . 3 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q3-solution-1.svg\" alt=\"(a) Add one to every ordinate. This is a translation [M1] by the vector (0 1) . [A1] (b) The asymptotes are 𝑥= 0 and 𝑦= 1. [B1] Setting 𝑦= 0 gives 𝑎/𝑥= −1, hence the intercept is (−𝑎, 0). [B1] There is no vertical intercept, since 𝑥= 0 is excluded. 𝑦 𝑦= 1 𝑥 (−𝑎, 0) [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q3-solution-2.svg\" alt=\"(c)(i) Substituting 𝐴= (−2, −2) into 𝑦= 𝑎/𝑥+ 1 gives −2 = 𝑎/(−2) + 1. [M1] Thus −3 = −𝑎/2, giving 𝑎= 6 . [M1] [A1] (ii) On 𝑦= 𝑥, 𝑥= 6/𝑥+ 1 so 𝑥2 −𝑥−6 = 0. [M1] Then (𝑥+ 2)(𝑥−3) = 0, giving 𝑥= −2 or 3. [A1] The former gives 𝐴, so 𝐵= (3, 3) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 11 marks.</p>"
+    ],
+    "promptText": "The curve C has equation 1 a y , x ≠ 0 , = x where a is a positive constant. a) Describe geometrically the transformation that maps the graph of C onto the 1 a graph of C whose equation is y + . 1 2 2 = ( ) x b) Sketch the graph of C . 2 The sketch must include the coordinates of … … all the points where the curves meet the coordinate axes. • … the equations of any asymptotes of the curves. 3 • ( ) The line with equation y x intersects C at the point A − 2, 2 and B . = − 2 ( ) c) Determine … i. … the value of a . 3 ( ) ii. … the coordinates of B . 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-r/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q4-question-1.svg\" alt=\"Use proof by exhaustion to show that if m∈ℕand n∈ℕ, then m 2 n 2 102 . 5 − ≠ ( )\" style=\"--madas-width:566.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q4-solution-1.svg\" alt=\"Write 𝑚2 −𝑛2 = (𝑚+ 𝑛)(𝑚−𝑛). [B1] Exhaust the possibilities for the parity of 𝑚, 𝑛. If both are even, both 𝑚+𝑛and 𝑚−𝑛are even. Their product is a multiple of four. [M1] If both are odd, their sum and difference are again even, so the product is also a multiple of four. [A1] But 102 = 4(25)+2. If one is even and the other odd, both factors are odd. Write 𝑚−𝑛= 2𝑝+ 1, 𝑚+ 𝑛= 2𝑞+ 1, with integer 𝑝, 𝑞. Their product is 4𝑝𝑞+ 2𝑝+ 2𝑞+ 1 = 2(2𝑝𝑞+ 𝑝+ 𝑞) + 1, which is odd. [M1] Since 102 is even, neither mixed-parity ordering can work. All cases are exhausted, so 𝑚2 −𝑛2 ≠102 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 5 marks.</p>"
+    ],
+    "promptText": "Use proof by exhaustion to show that if m∈ℕand n∈ℕ, then m 2 n 2 102 . 5 − ≠ ( )"
+  },
+  {
+    "id": "madas/as-pure-r/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q5-question-1.svg\" alt=\"A circle has equation x 2 y 2 x y 4 2 13 . + − − = 3 a) Find the coordinates of the centre of the circle and the size of its radius. ( ) The points A and B lie on the circle such that the length of AB is 6 units. b) Show that ACB = 90 , where C is the centre of the circle. 2 ∡ ° ( ) A tangent to the circle has equation y k x , where k is a constant. = − c) Show clearly that\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q5-question-2.svg\" alt=\"2 x 2 2 k 1 x k 2 2 k 13 0 . 3 − ( + ) + − − = ( ) d) Determine the possible values of k . 5 ( )\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q5-solution-1.svg\" alt=\"(a) Complete both squares: (𝑥−2)2 −4 + (𝑦−1)2 −1 = 13, (𝑥−2)2 + (𝑦−1)2 = 18. [M1] √ √ Centre 𝐶= (2, 1) , radius 2 . [A1] [A1] 18 = 3 (b) Let 𝑀be the chord midpoint. Then 𝐴𝑀= 𝐵𝑀= 3 and 𝐶𝑀⟂𝐴𝐵. If 𝜃= ∠𝐴𝐶𝑀, then sin 𝜃= √ √ 2, so 𝜃= 45∘and ∠𝐴𝐶𝐵= 2𝜃= 90∘. 3/ 18 = 1/ Alternatively 𝐴𝑀2 + 𝑀𝐶2 = 𝐴𝐶2 gives 32 + 𝑀𝐶2 = 18, so 𝑀𝐶= 3. Thus 𝐴𝑀𝐶is right isosceles, ∠𝐴𝐶𝑀= 45∘, and ∠𝐴𝐶𝐵= 90∘. As a direct check, the radii satisfy 𝐶𝐴2+𝐶𝐵2 = 18+18 = 36 = 𝐴𝐵2. [M1] By the converse of Pythagoras, ∠𝐴𝐶𝐵= 90∘. [A1] 𝐴 𝑀 𝐵 𝐶\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q5-solution-2.svg\" alt=\"(c) Substitute 𝑦= 𝑘−𝑥in the circle: 𝑥2 + (𝑘−𝑥)2 −4𝑥−2(𝑘−𝑥) = 13 [M1] 𝑥2 + 𝑘2 −2𝑘𝑥+ 𝑥2 −4𝑥−2𝑘+ 2𝑥= 13 [A1] 2𝑥2 −2(𝑘+ 1)𝑥+ 𝑘2 −2𝑘−13 = 0. [A1] (d) A tangent gives a repeated root. Set the quadratic discriminant equal to zero: [−2(𝑘+ 1)]2 −4(2)(𝑘2 −2𝑘−13) = 0 [M1] 4(𝑘+ 1)2 −8(𝑘2 −2𝑘−13) = 0 [A1] (𝑘+ 1)2 −2(𝑘2 −2𝑘−13) = 0 [M1] 𝑘2 + 2𝑘+ 1 −2𝑘2 + 4𝑘+ 26 = 0, 𝑘2 −6𝑘−27 = 0 [A1] 𝑘= 9 or −3 . [A1] (𝑘−9)(𝑘+ 3) = 0,\" style=\"--madas-width:553.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 13 marks.</p>"
+    ],
+    "promptText": "A circle has equation x 2 y 2 x y 4 2 13 . + − − = 3 a) Find the coordinates of the centre of the circle and the size of its radius. ( ) The points A and B lie on the circle such that the length of AB is 6 units. b) Show that ACB = 90 , where C is the centre of the circle. 2 ∡ ° ( ) A tangent to the circle has equation y k x , where k is a constant. = − c) Show clearly that 2 x 2 2 k 1 x k 2 2 k 13 0 . 3 − ( + ) + − − = ( ) d) Determine the possible values of k . 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-r/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q6-question-1.svg\" alt=\"A quartic curve C has equation 3 y x x 2 , x∈ℝ. = + ( ) a) Sketch the graph of C . The sketch must contain the coordinates of any stationary points and the coordinates of the points of intersection with the coordinate axes. 8 ( ) b) Show that there is only one point on C where the gradient is 10. 7 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q6-solution-1.svg\" alt=\"(a) From 𝑦= 𝑥3(𝑥+ 2) = 0, the intercepts are (−2, 0) and (0, 0). [M1] [A1] Expand 𝑦= 𝑥4 + 2𝑥3 and differentiate: 𝑦′ = 4𝑥3 + 6𝑥2 = 2𝑥2(2𝑥+ 3) [M1] 𝑦′ = 0 ⟹𝑥= 0 or 𝑥= −3/2. [A1] At 𝑥= −3/2, 𝑦= (−3/2)3(1/2) = −27/16. [A1] The gradient changes from negative to positive there, giving a minimum. [B1] At zero the gradient stays positive on either side, giving a horizontal inflexion. [B1] 𝑦 (0, 0) 𝑥 (−2, 0) (−3/2, −27/16) [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q6-solution-2.svg\" alt=\"(b) Set the derivative equal to ten: 4𝑥3 + 6𝑥2 = 10, 2𝑥3 + 3𝑥2 −5 = 0. [M1] [A1] By inspection 𝑥= 1 is a root. [B1] Divide by 𝑥−1, or group as follows: 2𝑥2(𝑥−1) + 5𝑥(𝑥−1) + 5(𝑥−1) = (𝑥−1)(2𝑥2 + 5𝑥+ 5) = 0. [M1] [A1] The remaining discriminant is 52 −4(2)(5) = 25 −40 = −15 &lt; 0, giving no further real roots. [M1] At 𝑥= 1, 𝑦= 13(1 + 2) = 3, so the only point is (1, 3) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 15 marks.</p>"
+    ],
+    "promptText": "A quartic curve C has equation 3 y x x 2 , x∈ℝ. = + ( ) a) Sketch the graph of C . The sketch must contain the coordinates of any stationary points and the coordinates of the points of intersection with the coordinate axes. 8 ( ) b) Show that there is only one point on C where the gradient is 10. 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-r/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q7-question-1.svg\" alt=\"𝐶 𝐷 60 60∘ 𝐵 𝐸 15 𝐴 90 ABCD is a trapezium where AB is parallel to DC .\" style=\"--madas-width:386.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q7-question-2.svg\" alt=\"The angle CAB is 60° and AB = 90 . The side AB is extended from A to E so that AED = , as shown in the figure above. ∡ 90 ° It is further given that EA = 15 and ED = 60 . a) Find, correct to 1 decimal place, the value of BC and the value of CD . 4 ( ) b) Calculate, correct to 1 decimal place, the angle DAC . 3 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q7-solution-1.svg\" alt=\"𝐶 𝐷 60 60∘ 𝐵 𝐸 15 𝐴 90 𝐺 (a) Drop a perpendicular from 𝐶to 𝐴𝐵at 𝐺. Then 𝐶𝐺= 𝐸𝐷= 60, and tan 60∘= 60/𝐴𝐺, so 𝐴𝐺= √ √ 3. [M1] By Pythagoras in 𝐶𝐺𝐵. 60/ 3 = 20 √ 𝐵𝐶2 = 602 + (90 −20 3)2 = 6664.617 … [M1] √ [A1] [A1] 𝐵𝐶= 81.6 , 𝐶𝐷= 𝐸𝐴+ 𝐴𝐺= 15 + 20 3 = 49.6 .\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q7-solution-2.svg\" alt=\"(b) In 𝐸𝐴𝐷, tan ∠𝐸𝐴𝐷= 60/15 = 4, [M1] so ∠𝐸𝐴𝐷= 75.9637 …∘. [A1] Along the straight line through 𝐴, ∠𝐷𝐴𝐶= 180∘−60∘−75.9637 …∘= 44.0∘. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 7 marks.</p>"
+    ],
+    "promptText": "𝐶 𝐷 60 60∘ 𝐵 𝐸 15 𝐴 90 ABCD is a trapezium where AB is parallel to DC . The angle CAB is 60° and AB = 90 . The side AB is extended from A to E so that AED = , as shown in the figure above. ∡ 90 ° It is further given that EA = 15 and ED = 60 . a) Find, correct to 1 decimal place, the value of BC and the value of CD . 4 ( ) b) Calculate, correct to 1 decimal place, the angle DAC . 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-r/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q8-question-1.svg\" alt=\"Solve the following simultaneous logarithmic equations. 2 log x y = 2 2 ( ) 1 log y 11 3log x . 7 =− 2 2 + 2 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q8-solution-1.svg\" alt=\"First remove the logarithms. From the first equation: log2(𝑥2𝑦) = 2 log2 2 = log2 4, 𝑥2𝑦= 4. [M1] [A1] From the second, 11+ 1 2 log2 𝑦= 3 log2 𝑥. Multiplying by two gives 22+log2 𝑦= 6 log2 𝑥, hence log2(222)+ log2 𝑦= log2(𝑥6). Thus 222𝑦= 𝑥6. [M1] [A1] Divide the latter equation by 𝑥2𝑦= 4. 222 𝑥2 = 𝑥6 4 ⋅222 = 𝑥8, 4 , 224 = 𝑥8, (23)8 = 𝑥8. Since 𝑥&gt; 0, 𝑥= 8 . [M1] [A1] Substitution gives 82𝑦= 4, 64𝑦= 4, so 𝑦= 1/16 . [A1] Alternative using simultaneous linear equations. Let 𝑋= log2 𝑥, 𝑌= log2 𝑦. Expand log2(𝑥2𝑦) = 2 log2 𝑥+ log2 𝑦. The equations become 2𝑋+ 𝑌= 2 and 11 + 1 2𝑌= 3𝑋.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q8-solution-2.svg\" alt=\"2𝑋+ 𝑌= 2 −22 −𝑌= −6𝑋 2𝑋−22 = 2 −6𝑋, 8𝑋= 24, 𝑋= 3. Substitute in 2𝑋+𝑌= 2. 6+𝑌= 2, so 𝑌= −4. Hence log2 𝑥= 3 gives 𝑥= 23 = 8 . Likewise log2 𝑦= −4 gives 𝑦= 2−4 = 1/16 .\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 7 marks.</p>"
+    ],
+    "promptText": "Solve the following simultaneous logarithmic equations. 2 log x y = 2 2 ( ) 1 log y 11 3log x . 7 =− 2 2 + 2 ( )"
+  },
+  {
+    "id": "madas/as-pure-r/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q9-question-1.svg\" alt=\"𝐵 𝑃 𝑄 𝑂 𝐴 𝑅 The figure above shows a triangle OAB , where O is a fixed origin.\" style=\"--madas-width:437.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q9-question-2.svg\" alt=\"The point A has coordinates ( 6, 8 . • − ) 4:1 The point P , whose coordinates are ( 4,1 , lies on OB so that OP PB = : . • ) 3:2 The point Q lies on AB so that AQ : QB = • 5:3 The side OA is extended to the point R so that OA AR = : . • a) Use vector methods to determine the coordinates of Q . 4 ( ) b) Determine expressions, in terms of i and j, for the vectors PQ ―――→ and QR ―――→ . 4 ( ) c) Deduce, showing your reasoning, that P , Q and R are collinear and state the ratio of PQ QR . : 3 ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q9-solution-1.svg\" alt=\"𝐵 𝑃 𝑄 𝑂 𝐴 𝑅 (a) Write p = 4i+j, a = 6i−8j. Then b = 5 4p = 5i+ 5 4j. [M1] From 𝐵towards 𝐴,⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐵𝐴= i−37 4 j. [A1] Since 𝐵𝑄∶𝑄𝐴= 2 ∶3,⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐵𝑄= 2 5i −37 10j. [M1] Adding b gives q = 27 5 i −49 20j, hence 𝑄= (5.4, −2.45) . 5⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐵𝐴= 2 [A1] (b) Subtract the position vectors:\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q9-solution-2.svg\" alt=\"𝑃𝑄= q −p = 5i −69 20j . [M1] [A1] 7 Since 𝑂𝑅∶𝑂𝐴= 8 ∶5, r = 8 5a = 48 5 i −64 5 j. [M1] Thus⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑄𝑅= r −q = 21 5 i −207 20 j . [A1] (c) Write⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑃𝑄= (28i −69j)/20 and⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑄𝑅= 3(28i −69j)/20. [M1] They point in the same direction and share 𝑄, so 𝑃, 𝑄, 𝑅are collinear. [A1] Their lengths have ratio 𝑃𝑄∶𝑄𝑅= 1 ∶3 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 11 marks.</p>"
+    ],
+    "promptText": "𝐵 𝑃 𝑄 𝑂 𝐴 𝑅 The figure above shows a triangle OAB , where O is a fixed origin. The point A has coordinates ( 6, 8 . • − ) 4:1 The point P , whose coordinates are ( 4,1 , lies on OB so that OP PB = : . • ) 3:2 The point Q lies on AB so that AQ : QB = • 5:3 The side OA is extended to the point R so that OA AR = : . • a) Use vector methods to determine the coordinates of Q . 4 ( ) b) Determine expressions, in terms of i and j, for the vectors PQ ―――→ and QR ―――→ . 4 ( ) c) Deduce, showing your reasoning, that P , Q and R are collinear and state the ratio of PQ QR . : 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-r/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q10-question-1.svg\" alt=\"The points A and B have coordinates ( 3,10 and ( 9,6 , respectively. − ) ) a) Find an equation for the straight line L which passes through the point B and 1 is perpendicular to AB , in the form y mx + , where m and c are constants. c = 3 ( ) L crosses the x axis at the point C . 1 b) Determine the value of tanθ , where θ is the angle that BC makes with the positive x axis. 2 ( ) c) Find an equation for the straight line L which passes through the point C 2 and is parallel to AB , in the form ax by c , where a , b and c are integers. + = 2 ( )\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q10-question-2.svg\" alt=\"The point D is such so that ABCD is a rectangle. d) Show that the coordinates of D are ( 5,4 2 . − ) ( ) e) Find the area of the rectangle ABCD . 3 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q10-solution-1.svg\" alt=\"(a) 𝑚𝐴𝐵= (6 −10)/(9 −(−3)) = −4/12 = −1/3, so the perpendicular gradient is 3. [M1] [A1] Through 𝐵, 𝑦−6 = 3(𝑥−9), giving 𝑦= 3𝑥−21 . [A1] (b) The gradient of 𝐵𝐶equals the tangent of its inclination. [M1] Thus tan 𝜃= 3 . [A1] (c) Setting 𝑦= 0 gives 3𝑥−21 = 0, so 𝐶= (7, 0). [M1] The parallel through 𝐶is 𝑦= −1 3(𝑥−7), giving 𝑥+ 3𝑦= 7 . [A1] 𝐴(−3, 10) 𝐵(9, 6) 𝐷 𝐶(7, 0)\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q10-solution-2.svg\" alt=\"(d) From 𝐵to 𝐶the displacement is (7 −9, 0 −6) = (−2, −6). [M1] Add this to 𝐴to find 𝐷= (−3 −2, 10 −6) = (−5, 4) . [A1] √ √ (e) 𝐴𝐵= √(−3 −9)2 + (10 −6)2 = 10. [M1] Likewise 𝐵𝐶= √(7 −9)2 + (0 −6)2 = 144 + 16 = 4 √ √ √ √ 10. [A1] The rectangle has area (4 10) = 80 . [A1] 40 = 2 10)(2\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 12 marks.</p>"
+    ],
+    "promptText": "The points A and B have coordinates ( 3,10 and ( 9,6 , respectively. − ) ) a) Find an equation for the straight line L which passes through the point B and 1 is perpendicular to AB , in the form y mx + , where m and c are constants. c = 3 ( ) L crosses the x axis at the point C . 1 b) Determine the value of tanθ , where θ is the angle that BC makes with the positive x axis. 2 ( ) c) Find an equation for the straight line L which passes through the point C 2 and is parallel to AB , in the form ax by c , where a , b and c are integers. + = 2 ( ) The point D is such so that ABCD is a rectangle. d) Show that the coordinates of D are ( 5,4 2 . − ) ( ) e) Find the area of the rectangle ABCD . 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-r/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q11-question-1.svg\" alt=\"𝑦 𝐵 𝑦= 6 −4 sin 𝜃−cos2 𝜃 𝐴 𝜃∘ 𝑂 The figure above shows the graph of the curve with equation 4sin 2 y 6 cos , 0 °≤ 360 ° . = − θ − θ θ ≤ The curve has a minimum at the point A and a maximum at the point B .\" style=\"--madas-width:474.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q11-question-2.svg\" alt=\"Determine the coordinates of A and B . 6 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-r/q11-solution-1.svg\" alt=\"Use cos2 𝜃= 1 −sin2 𝜃. 𝑦= 6 −4 sin 𝜃−(1 −sin2 𝜃) = 5 −4 sin 𝜃+ sin2 𝜃. [M1] [A1] Inspection of the sine graph gives sin 270∘= −1. Both −4 sin 𝜃and sin2 𝜃then attain their greatest possible values. Thus 𝑦max = 5 −4(−1) + (−1)2 = 10 and 𝐵= (270∘, 10) . [M1] [A1] Complete the square: 𝑦= (sin 𝜃−2)2 + 1. [M1] Since sin 𝜃≤1, it comes closest to two when sin 𝜃= 1. Then 𝑦min = (1 −2)2 + 1 = 2, so 𝐴= (90∘, 2) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 6 marks.</p>"
+    ],
+    "promptText": "𝑦 𝐵 𝑦= 6 −4 sin 𝜃−cos2 𝜃 𝐴 𝜃∘ 𝑂 The figure above shows the graph of the curve with equation 4sin 2 y 6 cos , 0 °≤ 360 ° . = − θ − θ θ ≤ The curve has a minimum at the point A and a maximum at the point B . Determine the coordinates of A and B . 6 ( )"
+  }
+]

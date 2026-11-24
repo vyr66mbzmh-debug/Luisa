@@ -61,7 +61,8 @@ class BankHasNoDuplicates(unittest.TestCase):
 
     def test_counts_after_removal(self):
         items = duplicates.bank(ROOT)
-        self.assertEqual(len(items), 9149)
+        self.assertEqual(len([i for i in items if i['kind'] != 'madas']), 9149)
+        self.assertEqual(sum(i['kind'] == 'madas' for i in items), 1018)
         pmt = [i for i in items if i['kind'] == 'pmt']
         self.assertEqual(len(pmt), 83)
         self.assertEqual(sum(i['id'].startswith('pmt/pure-core-1/') for i in pmt), 58)

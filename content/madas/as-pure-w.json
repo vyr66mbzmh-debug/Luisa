@@ -1,0 +1,116 @@
+[
+  {
+    "id": "madas/as-pure-w/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q1-question-1.svg\" alt=\"log4 𝑦 log4 𝑥 𝑂 𝐵( 1 5, 0) 𝐴(0, −1 2) The figure above shows a set of axes where log y is plotted against log x. 4 4\" style=\"--madas-width:494.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q1-question-2.svg\" alt=\"1 1,0 A straight line passes through the points A and B . 0, − 5 ( 2 ) ( ) Find a relationship, not involving logarithms between x and y . 5 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q1-solution-1.svg\" alt=\"log4 𝑦 log4 𝑥 𝑂 𝐵( 1 5, 0) 𝐴(0, −1 2) Let 𝑋= log4 𝑥, 𝑌= log4 𝑦. From the intercepts the gradient is [0 −(−1/2)]/(1/5 −0) = 5/2. [M1] Hence 2, so 2𝑌= 5𝑋−1. [A1] 𝑌= 5 2𝑋−1 2 log4 𝑦= 5 log4 𝑥−1 [M1] log4(𝑦2) = log4(𝑥5) −log4 4 = log4(𝑥5/4) [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q1-solution-2.svg\" alt=\"𝑦2 = 𝑥5/4, 4𝑦2 = 𝑥5 . [A1]\" style=\"--madas-width:437.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 5 marks.</p>"
+    ],
+    "promptText": "log4 𝑦 log4 𝑥 𝑂 𝐵( 1 5, 0) 𝐴(0, −1 2) The figure above shows a set of axes where log y is plotted against log x. 4 4 1 1,0 A straight line passes through the points A and B . 0, − 5 ( 2 ) ( ) Find a relationship, not involving logarithms between x and y . 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q2-question-1.svg\" alt=\"The height of tides in a harbour, on a particular day, can be modelled by the equation h a b sin 30 t °, = + ( ) where h is the height of the water in metres, t hours after midnight, and a and b are constants. At 02.00 , h = 9.5 m and at 08.00 , h = 3.5 m . Determine … a) … the value of a and the exact value of b . 4 ( )\" style=\"--madas-width:578.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q2-question-2.svg\" alt=\"b) … the first time after midnight when the height of the tide is 5 metres. 6 ( )\" style=\"--madas-width:578.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q2-solution-1.svg\" alt=\"(a) At two and eight hours: √ √ 9.5 = 𝑎+ 𝑏sin 60∘= 𝑎+ 3.5 = 𝑎+ 𝑏sin 240∘= 𝑎− [M1] 2 𝑏, 3 2 𝑏. 3 √ √ √ Adding gives 13 = 2𝑎, so 𝑎= 6.5 . [A1] Substitution gives 3 = ( 3𝑏, hence 𝑏= 2 3 . [M1] 3/2)𝑏, 6 = [A1] √ √ √ (b) Set ℎ= 5. 5 = 6.5 + 2 3 sin(30𝑡)∘. [M1] Hence sin(30𝑡)∘= −1.5/(2 3/4. [A1] Its principal 3) = − inverse is −25.6589 …∘. [M1] Thus 30𝑡= −25.6589 … + 360𝑛or 205.6589 … + 360𝑛. [A1] Dividing by 30 gives −0.8553 … + 12𝑛or 6.8553 … + 12𝑛. The first positive time is 6.8553 … hours. [M1] Since 0.8553 … (60) = 51.3 … minutes, the answer is 06∶51 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 10 marks.</p>"
+    ],
+    "promptText": "The height of tides in a harbour, on a particular day, can be modelled by the equation h a b sin 30 t °, = + ( ) where h is the height of the water in metres, t hours after midnight, and a and b are constants. At 02.00 , h = 9.5 m and at 08.00 , h = 3.5 m . Determine … a) … the value of a and the exact value of b . 4 ( ) b) … the first time after midnight when the height of the tide is 5 metres. 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q3-question-1.svg\" alt=\"2 2 f x x 2 kx 15 k , where k is a constant. = + − ( ) a) Express f x in completed the square form. 2 ( ) ( ) b) Hence solve the equation f x = 0 . 3 ( ) ( )\" style=\"--madas-width:544.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q3-solution-1.svg\" alt=\"(a) Complete the square: 𝑓(𝑥) = (𝑥+ 𝑘)2 −𝑘2 −15𝑘2 = (𝑥+ 𝑘)2 −16𝑘2 . [M1] [A1] (b) Set 𝑓(𝑥) = 0, giving (𝑥+ 𝑘)2 = (4𝑘)2. [M1] Thus 𝑥+ 𝑘= ±4𝑘, [A1] so 𝑥= 3𝑘or −5𝑘. [A1] Alternatively factor the difference of squares: (𝑥+ 𝑘−4𝑘)(𝑥+ 𝑘+ 4𝑘) = (𝑥−3𝑘)(𝑥+ 5𝑘) = 0, giving the same roots.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 5 marks.</p>"
+    ],
+    "promptText": "2 2 f x x 2 kx 15 k , where k is a constant. = + − ( ) a) Express f x in completed the square form. 2 ( ) ( ) b) Hence solve the equation f x = 0 . 3 ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q4-question-1.svg\" alt=\"The quadratic functions f and g are defined by f x 4 x 2 a , x∈ℝ ( ) ≡ + 2 g x x bx a , x∈ℝ, ≡ + + ( ) where a , b and c are non zero constants, such that a 2 c and b 3 c . =− =− It is further given that ( x c is a common factor f and g . + ) Determine the value of a , b and c , and hence factorize f and g , showing clearly the common factor in these factorizations. 7 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q4-solution-1.svg\" alt=\"The factor theorem gives 𝑓(−𝑐) = 𝑔(−𝑐) = 0. [M1] Substitute 𝑎= −2𝑐, 𝑏= −3𝑐. From 𝑓, 4𝑐2 −2𝑐= 0. From 𝑔, 𝑐2 + (−3𝑐)(−𝑐) −2𝑐= 4𝑐2 −2𝑐= 0. [A1] Factor to give 2𝑐(2𝑐−1) = 0. [M1] Reject zero, since all three constants are nonzero. Hence 𝑐= 1/2, 𝑎= −1, 𝑏= −3/2 . [A1] 𝑓(𝑥) = 4𝑥2 −1 = (2𝑥−1)(2𝑥+ 1) = 4(𝑥−1/2)(𝑥+ 1/2) [M1] [A1] 𝑔(𝑥) = 𝑥2 −3 [A1] 2𝑥−1 = (𝑥+ 1/2)(𝑥−2) .\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 7 marks.</p>"
+    ],
+    "promptText": "The quadratic functions f and g are defined by f x 4 x 2 a , x∈ℝ ( ) ≡ + 2 g x x bx a , x∈ℝ, ≡ + + ( ) where a , b and c are non zero constants, such that a 2 c and b 3 c . =− =− It is further given that ( x c is a common factor f and g . + ) Determine the value of a , b and c , and hence factorize f and g , showing clearly the common factor in these factorizations. 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q5-question-1.svg\" alt=\"The points A , B and C have coordinates ( 6,6 , ( 0,8 and ( 2,2 , respectively. − ) ) ) a) Find an equation of the perpendicular bisector of AB . 3 ( ) The points A , B and C lie on the circumference of a circle whose centre is located at the point D . b) Determine the coordinates of D . 7 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q5-solution-1.svg\" alt=\"(a) The gradient of 𝐴𝐵is (8 −6)/(0 −6) = −1/3, so the perpendicular gradient is three. [M1] The midpoint is ((6 + 0)/2, (6 + 8)/2) = (3, 7). [B1] Thus 𝑦−7 = 3(𝑥−3), or 𝑦= 3𝑥−2 . [A1] 𝐵 𝐴 𝐷 𝐶 (b) Repeat for 𝐵𝐶. Its gradient is (2 −8)/(−2 −0) = 3, giving perpendicular gradient −1/3. [M1] [A1] Its midpoint is (−1, 5). [B1] The second perpendicular bisector is 𝑦−5 = −1 3(𝑥+ 1), hence 3𝑦−15 = −𝑥−1, 3𝑦+𝑥= 14. [M1] [A1] At the centre, 3(3𝑥−2)+𝑥= 14, giving 10𝑥= 20. [M1] Thus 𝑥= 2, 𝑦= 4, and 𝐷= (2, 4) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 10 marks.</p>"
+    ],
+    "promptText": "The points A , B and C have coordinates ( 6,6 , ( 0,8 and ( 2,2 , respectively. − ) ) ) a) Find an equation of the perpendicular bisector of AB . 3 ( ) The points A , B and C lie on the circumference of a circle whose centre is located at the point D . b) Determine the coordinates of D . 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q6-question-1.svg\" alt=\"The distance between the town of Arundel ( A and the town of Berry( B is 60 km . ) ) Berry is on bearing of 75° from Arundel. The village of Crake ( C is on a bearing of 120° from Arundel and on a bearing of ) 195° from Berry. The village of Dorking ( D is on a bearing of 135° from Arundel ) and on a bearing of 210° from Berry. a) Find, to three significant figures where appropriate, the distance between … i. … Berry and Crake. 3 ( ) ii. … Berry and Dorking. 3 ( )\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q6-question-2.svg\" alt=\"iii. … Crake and Dorking. 3 ( ) b) State the bearing of Dorking from Crake. 1 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q6-solution-1.svg\" alt=\"Draw the bearings clockwise from north. Triangles 𝐴𝐵𝐶and 𝐵𝐴𝐷have common side 𝐴𝐵and the same three angles 45∘, 60∘, 75∘in opposite order. 𝑁 𝑁 𝐵 𝐴 𝐶 𝐷\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q6-solution-2.svg\" alt=\"(a)(i) In 𝐴𝐵𝐶, ∠𝐵𝐴𝐶= 120∘−75∘= 45∘and ∠𝐴𝐵𝐶= 255∘−195∘= 60∘. [B1] By the sine rule √ 𝐵𝐶/ sin 45∘= 60/ sin 75∘. [M1] Thus 𝐵𝐶= 60( 3 −1) = 43.9 km . [A1] √ (ii) In 𝐴𝐵𝐷, the angles at 𝐴, 𝐵, 𝐷are 60∘, 45∘, 75∘. [B1] Hence 𝐵𝐷= 60 sin 60∘/ sin 75∘[M1] = 30(3 2 − √ 6) = 53.8 km . [A1] (iii) In 𝐵𝐶𝐷, the included angle at 𝐵is 210∘−195∘= 15∘. [B1] By the cosine rule 𝐶𝐷2 = 𝐵𝐶2 + 𝐵𝐷2 − 2(𝐵𝐶)(𝐵𝐷) cos 15∘. [M1] Using the unrounded lengths gives 𝐶𝐷= 16.1 km . [A1] 𝐵 𝐴 𝑁 45∘ 𝐶 𝐷\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q6-solution-3.svg\" alt=\"For the diagram method, label 𝐸= 𝐴𝐶∩𝐵𝐷. The bearings of the two lines differ by 90∘, so 𝐷𝐸𝐶is right angled. Reflection in the perpendicular bisector of 𝐴𝐵interchanges 𝐷, 𝐶and leaves 𝐸fixed, so 𝐷𝐸𝐶is isosceles. At 𝐶, the bearing of 𝐷is 360∘−(60∘+ 45∘) = 255∘. (b) By congruence, 𝐶and 𝐷are mirror images about the perpendicular bisector of 𝐴𝐵, so 𝐶𝐷∥𝐵𝐴. Its bearing is 75∘+ 180∘= 255∘. [B1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 10 marks.</p>"
+    ],
+    "promptText": "The distance between the town of Arundel ( A and the town of Berry( B is 60 km . ) ) Berry is on bearing of 75° from Arundel. The village of Crake ( C is on a bearing of 120° from Arundel and on a bearing of ) 195° from Berry. The village of Dorking ( D is on a bearing of 135° from Arundel ) and on a bearing of 210° from Berry. a) Find, to three significant figures where appropriate, the distance between … i. … Berry and Crake. 3 ( ) ii. … Berry and Dorking. 3 ( ) iii. … Crake and Dorking. 3 ( ) b) State the bearing of Dorking from Crake. 1 ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q7-question-1.svg\" alt=\"A curve C and a straight L have respective equations 2 C : y 4 x 6 x 3 and L : 2 x 4 y 3 0 . = − + − + = 10 Show that L is a normal to C , at some point on C . ( )\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q7-solution-1.svg\" alt=\"Find the intersections between the curve and the line: 2𝑥−4(4𝑥2 −6𝑥+ 3) + 3 = 0 [M1] 2𝑥−16𝑥2 + 24𝑥−12 + 3 = 0, 16𝑥2 −26𝑥+ 9 = 0 [A1] 𝑥= 1/2 or 9/8. [M1] [A1] (2𝑥−1)(8𝑥−9) = 0, The line satisfies 4𝑦= 2𝑥+ 3, so 𝑦= 𝑥/2 + 3/4 and its gradient is 1/2. [M1] [A1] The curve gradient is 𝑑𝑦/𝑑𝑥= 8𝑥−6. [M1] At 𝑥= 1/2 it is 8(1/2) −6 = −2. [A1] The product of gradients is −1, [M1] so the line is normal to the curve at (1/2, 1) . [A1] At 𝑥= 9/8 the curve gradient is three, so the second intersection is not a point of normal contact.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 10 marks.</p>"
+    ],
+    "promptText": "A curve C and a straight L have respective equations 2 C : y 4 x 6 x 3 and L : 2 x 4 y 3 0 . = − + − + = 10 Show that L is a normal to C , at some point on C . ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q8-question-1.svg\" alt=\"Show that 1 5 6125 4 5 4 + 1 can be written in the form 10 a 5 b 7 2 , where a and b are positive integers + ( ) to be found. 8 ( )\" style=\"--madas-width:566.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q8-solution-1.svg\" alt=\"Since 6125 = 49 ⋅125 = 72 ⋅53, the expression is 71/253/4 +55/4. [M1] [A1] It is positive, so we may square and take the positive square root. Let its value be 𝑆. 𝑆2 = (71/253/4)2 + 2(71/253/4)(55/4) + (55/4)2 [M1] √ = 7 ⋅53/2 + 2 7 ⋅52 + 55/2 [A1] √ √ √ [A1] = 35 5 + 50 7 + 25 5 √ √ √ √ [M1] = 60 5 + 50 7 = 10(6 5 + 5 7). √ √ √ 7)1/2 , [A1] giving 𝑎= 6, 𝑏= 5. [A1] Thus 𝑆= 10(6 5 + 5\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 8 marks.</p>"
+    ],
+    "promptText": "Show that 1 5 6125 4 5 4 + 1 can be written in the form 10 a 5 b 7 2 , where a and b are positive integers + ( ) to be found. 8 ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q9-question-1.svg\" alt=\"A quadratic has equation 2 y A Bx x , x∈ℝ. = + − The image of the curve, when reflected in the y axis, is identical to the image of the 3 − ⎛ ⎞ curve when translated by the vector . ⎜ 0 ⎟ ⎝ ⎠ Given further that the curve meets the y axis at ( 0,10 , determine the area of the ) finite region bounded by the curve and the x axis. 10 ( )\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q9-solution-1.svg\" alt=\"The vertical intercept gives 𝐴= 10. [B1] Reflection in the vertical axis gives 𝑓(−𝑥), and a translation three units left gives 𝑓(𝑥+ 3). [M1] Their equality for all 𝑥gives: 10 −𝐵𝑥−𝑥2 = 10 + 𝐵(𝑥+ 3) −(𝑥+ 3)2 [A1] −𝐵𝑥−𝑥2 = 𝐵𝑥+ 3𝐵−𝑥2 −6𝑥−9 [M1] 0 = 2𝐵𝑥−6𝑥+ 3𝐵−9 = (𝐵−3)(2𝑥+ 3). Therefore 𝐵= 3. [A1] Now −𝑓(𝑥) = 𝑥2 −3𝑥−10 = (𝑥+ 2)(𝑥−5), so 𝑓(𝑥) = (𝑥+ 2)(5 −𝑥) has roots −2, 5. [M1] [A1] −2 5\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q9-solution-2.svg\" alt=\"5 [M1] (10 + 3𝑥−𝑥2) 𝑑𝑥 𝐼= ∫ −2 = [10𝑥+ 3𝑥2/2 −𝑥3/3]5 [A1] −2 [A1] = (50 + 75/2 −125/3) −(−20 + 6 + 8/3) = 343/6 .\" style=\"--madas-width:533.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 10 marks.</p>"
+    ],
+    "promptText": "A quadratic has equation 2 y A Bx x , x∈ℝ. = + − The image of the curve, when reflected in the y axis, is identical to the image of the 3 − ⎛ ⎞ curve when translated by the vector . ⎜ 0 ⎟ ⎝ ⎠ Given further that the curve meets the y axis at ( 0,10 , determine the area of the ) finite region bounded by the curve and the x axis. 10 ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q10-question-1.svg\" alt=\"The curve C has equation x 3 y 1 , x∈ℝ. = − x 2 x 2 4 − + Use a method not involving differentiation to find the coordinates of the stationary points of C . 10 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q10-solution-1.svg\" alt=\"A horizontal tangent 𝑦= 𝑘meets the curve at a repeated root. [B1] Since 𝑥2 −2𝑥+ 4 = (𝑥−1)2 + 3 &gt; 0, multiply through: 3𝑥/(𝑥2 −2𝑥+ 4) = 1 −𝑘 [M1] (1 −𝑘)𝑥2 + (2𝑘−2)𝑥+ 4(1 −𝑘) = 3𝑥 (1 −𝑘)𝑥2 + (2𝑘−5)𝑥+ 4 −4𝑘= 0. [A1] For 𝑘= 1 this is linear and has no repeated intersection. Otherwise set the discriminant to zero: (2𝑘−5)2 −4(1 −𝑘)(4 −4𝑘) = 0 [M1] 4𝑘2 −20𝑘+ 25 −16𝑘2 + 32𝑘−16 = 0 [A1] 4𝑘2 −4𝑘−3 = 0, [M1] [A1] (2𝑘−3)(2𝑘+ 1) = 0.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q10-solution-2.svg\" alt=\"For 𝑘= −1/2, the intersection equation is 3 2𝑥2 −6𝑥+ 6 = 0, giving (𝑥−2)2 = 0. [M1] For 𝑘= 3/2, it is −1 2𝑥2 −2𝑥−2 = 0, giving (𝑥+ 2)2 = 0. [A1] The stationary points are (2, −1/2), (−2, 3/2) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 10 marks.</p>"
+    ],
+    "promptText": "The curve C has equation x 3 y 1 , x∈ℝ. = − x 2 x 2 4 − + Use a method not involving differentiation to find the coordinates of the stationary points of C . 10 ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q11-question-1.svg\" alt=\"The four vertices of a quadrilateral ABCD lie on the same plane. The points M and N are the midpoints of AB and CD , respectively. Determine the possible values of the scalar constant λ , given further that 2 10 MN ――――→ ―――→ AD ―――→ BC 7 6 . λ − λ + = + ( ) ( )\" style=\"--madas-width:566.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q11-solution-1.svg\" alt=\"Use paths through the midpoints: 𝐵 𝐶 𝑀 𝑁 𝐴 𝐷 [M1] 𝐴𝐷=⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐴𝑀+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑀𝑁+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑁𝐷 [M1] 𝐵𝐶=⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐵𝑀+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑀𝑁+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑁𝐶.\" style=\"--madas-width:444.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q11-solution-2.svg\" alt=\"Adding, the midpoint identities give⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐴𝑀+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐵𝑀= 0 and⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑁𝐷+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑁𝐶= 0. [A1] Thus⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐴𝐷+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐵𝐶= 2⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑀𝑁. [A1] For the quadrilateral’s distinct midpoints, 𝜆2 −6𝜆+ 10 = 2, 𝜆2 −6𝜆+ 8 = 0, [M1] [A1] (𝜆−4)(𝜆−2) = 0. Hence 𝜆= 2 or 4 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 7 marks.</p>"
+    ],
+    "promptText": "The four vertices of a quadrilateral ABCD lie on the same plane. The points M and N are the midpoints of AB and CD , respectively. Determine the possible values of the scalar constant λ , given further that 2 10 MN ――――→ ―――→ AD ―――→ BC 7 6 . λ − λ + = + ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-w/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q12-question-1.svg\" alt=\"Use algebra, to solve the following equation. x 1 x 8 e e − e + . 1 + = ( )\" style=\"--madas-width:565.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-w/q12-solution-1.svg\" alt=\"Write 𝑒1−𝑥= 𝑒/𝑒𝑥and multiply by the positive number 𝑒𝑥. [M1] (𝑒𝑥)2 + 𝑒= (𝑒+ 1)𝑒𝑥 [A1] (𝑒𝑥)2 −(𝑒+ 1)𝑒𝑥+ 𝑒= 0. [A1] Complete the square (or apply the quadratic formula): 2 (𝑒𝑥−𝑒+ 1 = (𝑒+ 1)2 [M1] ) −𝑒 2 4 = 𝑒2 + 2𝑒+ 1 −4𝑒 = (𝑒−1)2 [A1] . 4 4 Thus 𝑒𝑥= (𝑒+ 1)/2 ± (𝑒−1)/2, [M1] giving 𝑒𝑥= 𝑒or 𝑒𝑥= 1. [A1] Hence 𝑥= 1 or 0 . [A1]\" style=\"--madas-width:602.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 8 marks.</p>"
+    ],
+    "promptText": "Use algebra, to solve the following equation. x 1 x 8 e e − e + . 1 + = ( )"
+  }
+]

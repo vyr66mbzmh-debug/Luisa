@@ -1,0 +1,146 @@
+[
+  {
+    "id": "madas/as-pure-m/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q1-question-1.svg\" alt=\"𝑦 𝑦= (3 −𝑥)(𝑥+ 1) 𝑥 𝑂 The figure above shows the curve with equation y 3 x x 1 , x∈ℝ. = − + ( )( )\" style=\"--madas-width:445.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q1-question-2.svg\" alt=\"Find the exact area of the region, bounded by the curve and the x axis, shown shaded in the figure above. 5 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q1-solution-1.svg\" alt=\"Since the curve is given in factorised form, the integration limits are −1 and 3 by inspection. [B1] 𝑦 𝑦= (3 −𝑥)(𝑥+ 1) 𝑥 𝑂 3 3 Area = ∫ [M1] 𝑓(𝑥) 𝑑𝑥= ∫ (3 −𝑥)(𝑥+ 1) 𝑑𝑥 −1 −1 3 3 (3𝑥+ 3 −𝑥2 −𝑥) 𝑑𝑥= ∫ (−𝑥2 + 2𝑥+ 3) 𝑑𝑥 = ∫ −1 −1 3𝑥3 + 𝑥2 + 3𝑥] 3 [A1] = [−1 −1 [M1] = (−9 + 9 + 9) −( 1 3 + 1 −3)\" style=\"--madas-width:632.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q1-solution-2.svg\" alt=\"[A1] = 9 −(−5 3) = 32 3 .\" style=\"--madas-width:361.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 5 marks.</p>"
+    ],
+    "promptText": "𝑦 𝑦= (3 −𝑥)(𝑥+ 1) 𝑥 𝑂 The figure above shows the curve with equation y 3 x x 1 , x∈ℝ. = − + ( )( ) Find the exact area of the region, bounded by the curve and the x axis, shown shaded in the figure above. 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q2-question-1.svg\" alt=\"The curve C has equation 2x 3 y − . = a) Describe geometrically a single transformation that maps the graph of y = 2x onto the graph of C . 2 ( ) b) Describe geometrically a different transformation that can also map the graph of y = 2x onto the graph of C . 1 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q2-solution-1.svg\" alt=\"(a) If 𝑓(𝑥) = 2𝑥, then 𝑓(𝑥−3) = 2𝑥−3. [M1] This is a translation through three units in the positive horizontal direction, with vector (3 0) . [A1] (b) Rewriting gives 𝑦= 2𝑥−3 = 2𝑥× 2−3 = 2𝑥/8 = 𝑓(𝑥)/8. This is a stretch parallel to the vertical axis with scale factor 1/8 . [B1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 3 marks.</p>"
+    ],
+    "promptText": "The curve C has equation 2x 3 y − . = a) Describe geometrically a single transformation that maps the graph of y = 2x onto the graph of C . 2 ( ) b) Describe geometrically a different transformation that can also map the graph of y = 2x onto the graph of C . 1 ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q3-question-1.svg\" alt=\"9 Find the coefficient of x in the binomial expansion of ( 5 2 3x . 2 + ) ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q3-solution-1.svg\" alt=\"Only the fifth-power term is required: (2 + 3𝑥)9 = ⋯+ (9 5)24(3𝑥)5 + ⋯ [M1] = ⋯+ 126 × 16 × 243𝑥5 + ⋯ = ⋯+ 489888𝑥5 + ⋯. Thus the coefficient is 489888 . [A1]\" style=\"--madas-width:474.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 2 marks.</p>"
+    ],
+    "promptText": "9 Find the coefficient of x in the binomial expansion of ( 5 2 3x . 2 + ) ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q4-question-1.svg\" alt=\"The straight line joining the points A 2,5 and B − 2,9 is a diameter of a circle. ( ) ( ) a) Find an equation for this circle. 3 ( ) b) Determine by calculation whether the point P 1,5 lies inside or outside the ( ) 2 above mentioned circle. ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q4-solution-1.svg\" alt=\"(a) The midpoint of the diameter is 𝐶= ((2 −2)/2, (5 + 9)/2) = (0, 7). [B1] Find its distance from 𝐴(or from 𝐵): √ √ 𝑟= √(0 −2)2 + (7 −5)2 = [M1] 4 + 4 = 8. √ (𝑥−0)2 + (𝑦−7)2 = ( 8)2, 𝑥2 + (𝑦−7)2 = 8 . [A1] 𝐵 𝐶 𝑃 𝐴\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q4-solution-2.svg\" alt=\"(b) Find the distance from 𝑃(1, 5) to 𝐶(0, 7). √ √ |𝐶𝑃| = √(0 −1)2 + (7 −5)2 = [M1] 1 + 4 = 5. √ √ Since 8, 𝑃lies inside the circle . [A1] 5 &lt;\" style=\"--madas-width:509.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 5 marks.</p>"
+    ],
+    "promptText": "The straight line joining the points A 2,5 and B − 2,9 is a diameter of a circle. ( ) ( ) a) Find an equation for this circle. 3 ( ) b) Determine by calculation whether the point P 1,5 lies inside or outside the ( ) 2 above mentioned circle. ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q5-question-1.svg\" alt=\"Solve the following trigonometric equation in the range given. cos(2 y − 35) 0.891 , 0 y 360 . 5 °= ≤ &lt; ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q5-solution-1.svg\" alt=\"[B1] The second cosine angle is 360∘−27.000823 …∘= First calculate arccos(0.891) = 27.000823 …∘. 332.99917 …∘. [M1] or [A1] 2𝑦−35 ≈27.0 + 360𝑛 2𝑦−35 ≈333.0 + 360𝑛 2𝑦≈62 + 360𝑛 2𝑦≈368 + 360𝑛 [M1] 𝑦≈31 + 180𝑛 𝑦≈184 + 180𝑛, 𝑛∈ℤ. The first family gives 31∘, 211∘, and the second gives 184∘, 4∘. Hence 𝑦≈4∘, 31∘, 184∘, 211∘. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 5 marks.</p>"
+    ],
+    "promptText": "Solve the following trigonometric equation in the range given. cos(2 y − 35) 0.891 , 0 y 360 . 5 °= ≤ < ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q6-question-1.svg\" alt=\"Find the real solutions of the following equation 2 2 2 5 x x 3 12 x x 3 27 0 . ( ) ( − − ) − ( − − ) + =\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q6-solution-1.svg\" alt=\"Let 𝑦= 𝑥2 −𝑥−3 to reduce the equation to a quadratic. [M1] 𝑦2 −12𝑦+ 27 = 0, [A1] 𝑦= 9 or 3. (𝑦−9)(𝑦−3) = 0, Solve the resulting quadratics separately: 𝑥2 −𝑥−3 = 9 𝑥2 −𝑥−3 = 3 [M1] 𝑥2 −𝑥−12 = 0 𝑥2 −𝑥−6 = 0 [A1] (𝑥−4)(𝑥+ 3) = 0 (𝑥+ 2)(𝑥−3) = 0. All four roots are real, giving 𝑥= −3, −2, 3, 4 . [A1]\" style=\"--madas-width:546.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 5 marks.</p>"
+    ],
+    "promptText": "Find the real solutions of the following equation 2 2 2 5 x x 3 12 x x 3 27 0 . ( ) ( − − ) − ( − − ) + ="
+  },
+  {
+    "id": "madas/as-pure-m/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q7-question-1.svg\" alt=\"2 f x x 3 x 7 , x∈ℝ. = − + ( ) Use the formal definition of the derivative as a limit, to show that f x 2 x −. 3 4 ′ ( ) = ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q7-solution-1.svg\" alt=\"First obtain a simplified expression for 𝑓(𝑥+ ℎ). 𝑓(𝑥+ ℎ) = (𝑥+ ℎ)2 −3(𝑥+ ℎ) + 7 = 𝑥2 + 2𝑥ℎ+ ℎ2 −3𝑥−3ℎ+ 7. [M1] Use the formal definition of the derivative: 𝑓(𝑥+ ℎ) −𝑓(𝑥) 𝑓′(𝑥) = lim [M1] ℎ→0 ℎ 𝑥2 + 2𝑥ℎ+ ℎ2 −3𝑥−3ℎ+ 7 −(𝑥2 −3𝑥+ 7) = lim ℎ ℎ→0 2𝑥ℎ+ ℎ2 −3ℎ = lim = lim [A1] ℎ→0(2𝑥+ ℎ−3) ℎ→0 ℎ [A1] = 2𝑥−3 .\" style=\"--madas-width:578.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 4 marks.</p>"
+    ],
+    "promptText": "2 f x x 3 x 7 , x∈ℝ. = − + ( ) Use the formal definition of the derivative as a limit, to show that f x 2 x −. 3 4 ′ ( ) = ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q8-question-1.svg\" alt=\"The table below shows experimental data connecting two variables x and y . x 1 2 3 4 5 y 12.0 14.4 17.3 20.7 27.0 It is assumed that x and y are related by an equation of the form x y ab , = where a and b are non zero constants. a) Find an equation of a straight line, in terms of well defined constants, in order to investigate the validity of this assumption. 3 ( )\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q8-question-2.svg\" alt=\"b) Plot a suitable graph to show that the assumption of part (a) is valid. 3 ( ) c) Use the graph of part (b) to estimate, correct to 1 decimal place, the value of a and the value of b . 3 ( ) d) Estimate the value of y when x = 2.5 . 1 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q8-solution-1.svg\" alt=\"(a) Take logarithms to base ten on both sides: log10 𝑦= log10(𝑎𝑏𝑥) [M1] 𝑦= 𝑎𝑏𝑥, log10 𝑦= log10 𝑎+ log10 𝑏𝑥= log10 𝑎+ 𝑥log10 𝑏 [A1] log10 𝑦= (log10 𝑏)𝑥+ log10 𝑎. Plot 𝑌= log10 𝑦against 𝑋= 𝑥. The gradient is 𝑚= log10 𝑏and the intercept is 𝑐= log10 𝑎. [A1] (b) Calculate and plot the transformed data: 1 2 3 4 5 𝑋= 𝑥 [B1] 𝑌= log10 𝑦 1.08 1.16 1.24 1.32 1.43 log10 𝑦\" style=\"--madas-width:629.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q8-solution-2.svg\" alt=\"1.4 1.3 1.2 1.1 1 𝑥 1 2 3 4 5 [M1] The points lie approximately on a straight line, supporting the assumed model. [A1] (c) The line has intercept approximately 0.99 and gradient approximately (1.43 −0.99)/(5 −0) = 0.088. [M1] Thus log10 𝑎≈0.99, giving 𝑎≈100.99 ≈9.8 . [A1] Also log10 𝑏≈0.088, so 𝑏≈100.088 ≈1.2 . [A1] (d) The estimated model is 𝑦≈9.8 × 1.2𝑥. At 𝑥= 2.5, 𝑦≈9.8 × 1.22.5 ≈15 to two significant figures. [B1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 10 marks.</p>"
+    ],
+    "promptText": "The table below shows experimental data connecting two variables x and y . x 1 2 3 4 5 y 12.0 14.4 17.3 20.7 27.0 It is assumed that x and y are related by an equation of the form x y ab , = where a and b are non zero constants. a) Find an equation of a straight line, in terms of well defined constants, in order to investigate the validity of this assumption. 3 ( ) b) Plot a suitable graph to show that the assumption of part (a) is valid. 3 ( ) c) Use the graph of part (b) to estimate, correct to 1 decimal place, the value of a and the value of b . 3 ( ) d) Estimate the value of y when x = 2.5 . 1 ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q9-question-1.svg\" alt=\"Find the solution of the following simultaneous equations 2 x 2 y z 2 + − = 2 2 z x y = + assuming that x , y , z are all real numbers. 5 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q9-solution-1.svg\" alt=\"Substitute the second equation into the first: 2𝑥+ 2𝑦−(𝑥2 + 𝑦2) = 2 [M1] 2𝑥+ 2𝑦−𝑥2 −𝑦2 = 2, 0 = 𝑥2 −2𝑥+ 𝑦2 −2𝑦+ 2 [A1] 0 = (𝑥−1)2 −1 + (𝑦−1)2 −1 + 2 [M1] 0 = (𝑥−1)2 + (𝑦−1)2. Both squares are non-negative for real 𝑥, 𝑦, so both must vanish: 𝑥= 1 and 𝑦= 1. [A1] Then 𝑧= 𝑥2+𝑦2 = 2. Hence (𝑥, 𝑦, 𝑧) = (1, 1, 2) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 5 marks.</p>"
+    ],
+    "promptText": "Find the solution of the following simultaneous equations 2 x 2 y z 2 + − = 2 2 z x y = + assuming that x , y , z are all real numbers. 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q10-question-1.svg\" alt=\"A hot drink is cooling down in a room. The temperature T C of the drink, t minutes after it was made is modelled by ° 1 t T 22 50e − , t ≥ 0 . 8 = + a) State the temperature of the drink when it was first made. 1 ( ) b) Assuming the drink is not consumed ... i. ... calculate, to the nearest minute, the value of t when the temperature of the drink has reached 40 C . 4 ° ( )\" style=\"--madas-width:566.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q10-question-2.svg\" alt=\"ii. ... determine the value of T , when the drink is cooling at the rate of 2.5 C per minute. 4 ° ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q10-solution-1.svg\" alt=\"(a) When 𝑡= 0, 𝑇= 22 + 50𝑒0 = 22 + 50 = 72∘C . [B1] (b)(i) When 𝑇= 40. 40 = 22 + 50𝑒−𝑡/8 [M1] 𝑒−𝑡/8 = 18 = 50𝑒−𝑡/8, 9 [A1] 25 𝑒𝑡/8 = 25 𝑡/8 = ln(25/9) [M1] 9 , 𝑡= 8 ln(25/9) = 8.1732 … ≈8 minutes . [A1] (ii) Differentiate first: 𝑑𝑇 [M1] 𝑑𝑡= −50 8 𝑒−𝑡/8 −2.5 = −50 8 𝑒−𝑡/8, 𝑒−𝑡/8 = 2 [M1] [A1] 5.\" style=\"--madas-width:500.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q10-solution-2.svg\" alt=\"The exponential factor is all that is needed in the temperature formula: 𝑇= 22 + 50(2/5) = 42∘C . [A1]\" style=\"--madas-width:676.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 9 marks.</p>"
+    ],
+    "promptText": "A hot drink is cooling down in a room. The temperature T C of the drink, t minutes after it was made is modelled by ° 1 t T 22 50e − , t ≥ 0 . 8 = + a) State the temperature of the drink when it was first made. 1 ( ) b) Assuming the drink is not consumed ... i. ... calculate, to the nearest minute, the value of t when the temperature of the drink has reached 40 C . 4 ° ( ) ii. ... determine the value of T , when the drink is cooling at the rate of 2.5 C per minute. 4 ° ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q11-question-1.svg\" alt=\"The following quadratic equation, where m is a constant, has two distinct real roots. 2 x m 2 x 4 m 7 0 , x∈ℝ. + + + − = ( ) Determine the range of the possible values of m . 6 ( )\" style=\"--madas-width:565.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q11-solution-1.svg\" alt=\"For distinct real roots require 𝑏2 −4𝑎𝑐&gt; 0, where 𝑎= 1, 𝑏= 𝑚+ 2 and 𝑐= 4𝑚−7. [M1] (𝑚+ 2)2 −4(1)(4𝑚−7) &gt; 0 [A1] 𝑚2 + 4𝑚+ 4 −16𝑚+ 28 &gt; 0, 𝑚2 −12𝑚+ 32 &gt; 0 [M1] [A1] (𝑚−4)(𝑚−8) &gt; 0. 4 8 The product is positive outside the critical values. [M1] Thus 𝑚&lt; 4 or 𝑚&gt; 8 . [A1]\" style=\"--madas-width:582.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 6 marks.</p>"
+    ],
+    "promptText": "The following quadratic equation, where m is a constant, has two distinct real roots. 2 x m 2 x 4 m 7 0 , x∈ℝ. + + + − = ( ) Determine the range of the possible values of m . 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q12-question-1.svg\" alt=\"The points A , B and C lie on a plane so that ―――→ AB = 2 i 7 j and ―――→ AC = 4 i 5 j , + − where i and j are mutually perpendicular unit vectors lying on the same plane. 1:2 The point D lies on the straight line segment BC , so that BD : DC = . a) Determine a simplified expression, in terms of i and j, for BD ―――→ . 3 ( ) b) Show that the AD ―――→ is approximately 4 units. 3 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q12-solution-1.svg\" alt=\"(a) Use vector addition and the division ratio: 𝐵 𝐷 𝐴 𝐶 𝐵𝐶=⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐵𝐴+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐴𝐶= −(2i + 7j) + (4i −5j) [M1] = 2i −12j. [A1] 3i −4j . [A1] 𝐵𝐷= 1 3⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐵𝐶= 2\" style=\"--madas-width:493.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q12-solution-2.svg\" alt=\"(b) Find⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐴𝐷and its modulus: 𝐴𝐷=⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐴𝐵+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐵𝐷= (2i + 7j) + ( 2 3i −4j) = 8 3i + 3j [M1] √ 3)2 + 32 = √145 [M1] |𝐴𝐷| = √(8 = 145 9 3 ≈4.014 ≈4 units . [A1]\" style=\"--madas-width:525.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 6 marks.</p>"
+    ],
+    "promptText": "The points A , B and C lie on a plane so that ―――→ AB = 2 i 7 j and ―――→ AC = 4 i 5 j , + − where i and j are mutually perpendicular unit vectors lying on the same plane. 1:2 The point D lies on the straight line segment BC , so that BD : DC = . a) Determine a simplified expression, in terms of i and j, for BD ―――→ . 3 ( ) b) Show that the AD ―――→ is approximately 4 units. 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q13-question-1.svg\" alt=\"A cubic curve and a quartic curve, are both defined for all real numbers, and have respective equations 3 2 3 y x 3 x and y x x 2 . = − = − ( ) a) Sketch both curves in the same set of axes, indicating the coordinates of any points where each curve meets the coordinate axes. 6 ( ) b) State the number of solutions of the equation 3 2 3 x 3 x x x 2 , x∈ℝ. 1 − = ( − ) ( ) c) Indicate by shading in the set of axes of part (a) the region satisfied by the following inequality.\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q13-question-2.svg\" alt=\"3 2 3 1 x 3 x y x x 2 1 x 4 . ∩ − ≤ ≤ ( − ) − &lt; &lt; ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q13-solution-1.svg\" alt=\"(a) Factorise the cubic as 𝑦= 𝑥2(𝑥−3). It touches the axis at the repeated root (0, 0) and crosses at (3, 0). [B1] [B1] The quartic 𝑦= 𝑥(𝑥−2)3 crosses at (0, 0) and has a stationary point of inflection at its triple root (2, 0). [B1] [B1] Its ends rise, while the cubic rises to the right and falls to the left. [B1] [A1] 𝑦 (0, 0) (2, 0) 𝑥 (3, 0) −1 4\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q13-solution-2.svg\" alt=\"(b) There are 2 solutions, since the two curves meet twice. [B1] (c) The blue regions lie above the red cubic and below the green quartic, restricted to −1 &lt; 𝑥&lt; 4. The dashed vertical boundaries are excluded. [B1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 8 marks.</p>"
+    ],
+    "promptText": "A cubic curve and a quartic curve, are both defined for all real numbers, and have respective equations 3 2 3 y x 3 x and y x x 2 . = − = − ( ) a) Sketch both curves in the same set of axes, indicating the coordinates of any points where each curve meets the coordinate axes. 6 ( ) b) State the number of solutions of the equation 3 2 3 x 3 x x x 2 , x∈ℝ. 1 − = ( − ) ( ) c) Indicate by shading in the set of axes of part (a) the region satisfied by the following inequality. 3 2 3 1 x 3 x y x x 2 1 x 4 . ∩ − ≤ ≤ ( − ) − < < ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q14",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q14-question-1.svg\" alt=\"y 2l B P Q 1l A O x The straight line 1l passes though the points A 15,0 and B 0,30 . ( ) ( )\" style=\"--madas-width:466.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q14-question-2.svg\" alt=\"a) Determine an equation for 1l . 2 ( ) The straight line 2l is perpendicular to 1l and passes though the point Q 0, k , where ( ) k is a positive constant. The point P is the intersection between 1l and 2l . b) Find, in terms of k , the x coordinate of P . 3 ( ) c) Given further that the area of the triangle OQP is 25 , where O is the origin, determine the possible area of the quadrilateral OQPA. 6 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q14-solution-1.svg\" alt=\"(a) The gradient through 𝐴(15, 0) and 𝐵(0, 30) is (0 −30)/(15 −0) = −2. [M1] The intercept is thirty, so 𝑙1 ∶𝑦= −2𝑥+ 30 . [A1] (b) The perpendicular gradient is 1/2. Through 𝑄(0, 𝑘), 𝑙2 ∶𝑦= 𝑥/2 + 𝑘. [B1] [M1] −2𝑥+ 30 = 𝑥/2 + 𝑘, −4𝑥+ 60 = 𝑥+ 2𝑘 [A1] 5𝑥= 60 −2𝑘, 𝑥𝑃= 12 −2 5𝑘. 𝑦 𝐵 𝑙2 𝑃 𝑄(0, 𝑘) 𝑥 𝑂 𝐴\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q14-solution-2.svg\" alt=\"(c) The triangle has base 𝑂𝑄= 𝑘and perpendicular height 𝑥𝑃. [M1] 1 2𝑘(12 −2 5𝑘) = 25 5𝑘2 = 25, 𝑘2 −30𝑘+ 125 = 0 [A1] 6𝑘−1 𝑘= 5 or 25. [A1] (𝑘−5)(𝑘−25) = 0, If 𝑘= 5, then 𝑦= 𝑥/2+5 and 𝑥𝑃= 12−2 = 10, giving 𝑃= (10, 10). Triangle 𝑂𝑃𝐴has area 1 2×15×10 = 75. [M1] Adding 𝑂𝑄𝑃gives 75 + 25 = 100 . [A1] If 𝑘= 25, then 𝑦= 𝑥/2 + 25 and 𝑥𝑃= 12 −10 = 2, giving 𝑃= (2, 26). Triangle 𝑂𝑃𝐴has area 1 2 × 15 × 26 = 195. The quadrilateral then has area 195 + 25 = 220 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 14 is 11 marks.</p>"
+    ],
+    "promptText": "y 2l B P Q 1l A O x The straight line 1l passes though the points A 15,0 and B 0,30 . ( ) ( ) a) Determine an equation for 1l . 2 ( ) The straight line 2l is perpendicular to 1l and passes though the point Q 0, k , where ( ) k is a positive constant. The point P is the intersection between 1l and 2l . b) Find, in terms of k , the x coordinate of P . 3 ( ) c) Given further that the area of the triangle OQP is 25 , where O is the origin, determine the possible area of the quadrilateral OQPA. 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-m/q15",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q15-question-1.svg\" alt=\"The curve C has equation 3 5 x x x 128 − ( ) y , x∈ℝ, x &gt; 0 . = x 2 3 a) Determine expressions for dy d y d y dx , and . 4 ( ) 2 3 dx dx 3 4 b) Show that the y coordinate of the stationary point of C is k , where k is − a positive integer. 5 ( ) d y 2 c) Evaluate at the stationary point of C . dx 2\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q15-question-2.svg\" alt=\"Give the answer in terms of 3 2 . 3 ( ) 3 2 d y d y d) Find the value of at the point on C , where 0 . 5 = 3 2 ( ) dx dx\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q15-solution-1.svg\" alt=\"(a) Expand the expression using indices and differentiate: 𝑦= 𝑥3(5𝑥√𝑥−128) = 5𝑥4 −128𝑥5/2 [B1] √𝑥 𝑦′ = 20𝑥3 −320𝑥3/2 [A1] 𝑦″ = 60𝑥2 −480𝑥1/2 [A1] 𝑦‴ = 120𝑥−240𝑥−1/2 . [A1] (b) Set the first derivative equal to zero: 20𝑥3 −320𝑥3/2 = 0, 𝑥3 = 16𝑥3/2 [M1] 𝑥3/2 = 16 𝑥= 162/3 = (24)2/3 = 28/3. [A1] (𝑥&gt; 0),\" style=\"--madas-width:562.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q15-solution-2.svg\" alt=\"Substitute in 𝑦= 𝑥5/2(5𝑥3/2 −128). [M1] 𝑦= (28/3)5/2[5(16) −128] = 220/3(80 −128) = −48 × 26 × 22/3 [A1] 3√ [A1] = −3072 4 . (c) At the stationary point: 𝑦″ = 60√𝑥(𝑥3/2 −8) [M1] = 60 × 24/3 × (16 −8) [A1] 3√ 3√ [A1] = 480 × 2 2 = 960 2 .\" style=\"--madas-width:485.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-m/q15-solution-3.svg\" alt=\"(d) Solve 𝑦″ = 0 for positive 𝑥. 60𝑥2 −480√𝑥= 0, 60√𝑥(𝑥3/2 −8) = 0 [M1] 𝑥3/2 = 8, 𝑥= 82/3 = 4. [A1] [A1] √ 𝑦‴ = 120𝑥−240𝑥−1/2 = 120(4) −240/ [M1] 4 [A1] = 480 −120 = 360 .\" style=\"--madas-width:534.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 15 is 17 marks.</p>"
+    ],
+    "promptText": "The curve C has equation 3 5 x x x 128 − ( ) y , x∈ℝ, x > 0 . = x 2 3 a) Determine expressions for dy d y d y dx , and . 4 ( ) 2 3 dx dx 3 4 b) Show that the y coordinate of the stationary point of C is k , where k is − a positive integer. 5 ( ) d y 2 c) Evaluate at the stationary point of C . dx 2 Give the answer in terms of 3 2 . 3 ( ) 3 2 d y d y d) Find the value of at the point on C , where 0 . 5 = 3 2 ( ) dx dx"
+  }
+]

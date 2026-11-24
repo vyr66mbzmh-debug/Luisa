@@ -251,6 +251,26 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
     p.locator('#papers-source-exam-style').uncheck()
     expect(p.locator('#filter-title')).to_have_text(f'{len(cat):,} questions in the selection')
     ok(f'{role} no PMT tickbox; {pmt_count} PMT questions in Exam style, no duplicates')
+    p.locator('#papers-source-past-papers').uncheck()
+    p.locator('#papers-source-madas').check()
+    madas = p.evaluate("LUISA_PAPERS_BUILDER.pool().map(r=>[r.id,r.sourceLabel,r.difficulty,r.markScheme])")
+    assert len(madas) == 1021 and all(row[3] == 'worked' for row in madas)
+    assert {row[1].split(' Paper ')[0] for row in madas} == {'MADAS AS Pure', 'MADAS A-level Pure', 'MADAS A-level Applied'}
+    p.locator('#papers-difficulty').select_option('very-hard')
+    assert p.evaluate("LUISA_PAPERS_BUILDER.pool().every(r=>r.difficulty==='very-hard')") and len(p.evaluate("LUISA_PAPERS_BUILDER.pool()")) == 290
+    p.locator('#papers-difficulty').select_option('')
+    if p.locator('#papers-exam-madas').count():
+        exam_open = p.locator('#papers-exam').evaluate('node => node.open')
+        if not exam_open:
+            p.locator('#papers-exam > summary').click()
+        p.locator('#papers-exam-madas').check()
+        expect(p.locator('#papers-exam-eligible')).to_contain_text('MADAS editorial marks')
+        p.locator('#papers-exam-madas').uncheck()
+        if not exam_open:
+            p.locator('#papers-exam > summary').click()
+    p.locator('#papers-source-madas').uncheck()
+    p.locator('#papers-source-past-papers').check()
+    ok(f'{role} MADAS collections, adapted marking and Very Hard filter')
     # Stable regression: a whole June 2025 paper selected by browsing, then generated in paper order.
     p.locator('#papers-past-paper').select_option('edexcel-9ma0-02-2025-june')
     expect(p.locator('#filter-title')).to_have_text('15 questions in the selection')

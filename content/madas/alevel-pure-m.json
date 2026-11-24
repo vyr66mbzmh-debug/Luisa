@@ -1,0 +1,134 @@
+[
+  {
+    "id": "madas/alevel-pure-m/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q1-question-1.svg\" alt=\"2 − x ( ) ≡ x &lt; . f x , 1 1 + x ( ) a) Show that the first four terms in the binomial expansion of f x are 5 2 3 2 − 2 x + x − x . ( ) 5 4 b) Use the answer of part (a) to find the first four terms in the expansion of 2 − 2 x ( ) g x ( ) = . 2 + 1 2 x\" style=\"--madas-width:577.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q1-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:597.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q1-solution-1.svg\" alt=\"(a) Write f(x) = (2 −x)(1 + x)−1/2. The coefficients for powers x, x2, x3 are −1/2, (−1/2)(−3/2)/2!, and (−1/2)(−3/2)(−5/2)/3!. The expansion of (1 + x)−1/2 begins 1 −1 2x + 3 8x2 −5 16x3. [B1] [M1] [A1] Doubling the series gives 2 −x + 3x2/4 −5x3/8. Multiplication by −x contributes −x + x2/2 −3x3/8 to the same order: Adding the two rows amounts to multiplying by 2 −x gives 4x2 −x3 + O(x4) . 2 −2x + 5 [M1] [A1] (b) Since g(x) = f(2x), write 4(2x)2 −(2x)3 + O(x4). f(2x) = 2 −2(2x) + 5\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q1-solution-2.svg\" alt=\"In other words, replace x by 2x to obtain 2 −4x + 5x2 −8x3 + O(x4) , [A1] for |x| &lt; 1/2. [A1]\" style=\"--madas-width:648.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 7 marks.</p>"
+    ],
+    "promptText": "2 − x ( ) ≡ x < . f x , 1 1 + x ( ) a) Show that the first four terms in the binomial expansion of f x are 5 2 3 2 − 2 x + x − x . ( ) 5 4 b) Use the answer of part (a) to find the first four terms in the expansion of 2 − 2 x ( ) g x ( ) = . 2 + 1 2 x "
+  },
+  {
+    "id": "madas/alevel-pure-m/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q2-question-1.svg\" alt=\"y ( 2,6 ) = ( ) y f x O 3 x − 4 x + = 1 0 . x = ( ) The figure above shows part of the curve with equation y f x , which has a local maximum at ( 2,6 . )\" style=\"--madas-width:565.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q2-question-2.svg\" alt=\"The graph y = f x ( ) is transformed onto the graph of y = g x ( ) , so that the graph of = ( ) y g x has a local minimum at the origin. Express ( ) g x in terms of f x . ( ) ( ) 3\" style=\"--madas-width:601.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q2-solution-1.svg\" alt=\"Follow the turning point and the equation at the same time: operation turning point equation start maximum (2, 6) y = f(x) left 2 maximum (0, 6) y = f(x + 2) down 6 maximum (0, 0) y = f(x + 2) −6 reflect in x-axis minimum (0, 0) y = −[f(x + 2) −6] Translate two units left and six down to move the maximum to the origin. [M1] Reflect in the x-axis to turn it into a minimum. This gives g(x) = 6 −f(x + 2) . [A1] Other transformations could also give a local minimum at the origin. [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 3 marks.</p>"
+    ],
+    "promptText": "y ( 2,6 ) = ( ) y f x O 3 x − 4 x + = 1 0 . x = ( ) The figure above shows part of the curve with equation y f x , which has a local maximum at ( 2,6 . ) The graph y = f x ( ) is transformed onto the graph of y = g x ( ) , so that the graph of = ( ) y g x has a local minimum at the origin. Express ( ) g x in terms of f x . ( ) ( ) 3"
+  },
+  {
+    "id": "madas/alevel-pure-m/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q3-question-1.svg\" alt=\"Prove by contradiction that for all real x 2 2 ( 13 x + 1 ) + 3 &gt; ( 5 x − 1 ) . ( ) 4\" style=\"--madas-width:590.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q3-solution-1.svg\" alt=\"Suppose that (13x + 1)2 + 3 ≤(5x −1)2 [B1] for some real x. [A1] Expanding both squares and completing the square gives (169x2 + 26x + 1) + 3 ≤25x2 −10x + 1, 144x2 + 36x + 3 ≤0 (12x + 3 2)2 −9 (12x + 3 2)2 + 3 4 + 3 ≤0, 4 ≤0 In particular, 2 + 3 144x2 + 36x + 3 =  12x + 3 4 ≤0. [A1] 2 The expression is at least 3/4 for every real x, a contradiction: Therefore (13x + 1)2 + 3 &gt; (5x −1)2 for every real x. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 4 marks.</p>"
+    ],
+    "promptText": "Prove by contradiction that for all real x 2 2 ( 13 x + 1 ) + 3 > ( 5 x − 1 ) . ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-m/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q4-question-1.svg\" alt=\"The obtuse angles A and B , satisfy the following relationships. 1 cos2 A = sin B = . 3 Determine the exact value of tan A ( + B ) . ( ) 8\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q4-solution-1.svg\" alt=\"Use the double-angle formula to construct the reference triangle: cos 2A = 2 cos2 A −1 1 3 = 2 cos2 A −1 4 3 = 2 cos2 A cos2 A = 2 3 r2 cos A = − 3\" style=\"--madas-width:470.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q4-solution-2.svg\" alt=\"Its remaining side ratio gives sin A = 1/ 3, and √ sin A/ cos A = −1/ 2. Equivalently, from cos 2A = (1 −tan2 A)/(1 + tan2 A) [B1] [A1] = 1/3 √ obtain tan2 A = 1/2. [A1] As A is obtuse, tan A = −1/ 2. [A1] For obtuse B, sin B = 1/3 gives √ √ 32 −12 = 2 adjacent-side magnitude 2, with negative cosine: √ √ Thus cos B = −2 2/3, [A1] so tan B = −1/(2 2). [A1] Hence √ √ tan(A + B) = −1/ 2 −1/(2 2) 1 −1/4 √ = −3/(2 2) 3/4 = −12 [M1] [A1] √ 6 2 = −2\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q4-solution-3.svg\" alt=\"√ 2 √ = − 2 .\" style=\"--madas-width:372.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 8 marks.</p>"
+    ],
+    "promptText": "The obtuse angles A and B , satisfy the following relationships. 1 cos2 A = sin B = . 3 Determine the exact value of tan A ( + B ) . ( ) 8"
+  },
+  {
+    "id": "madas/alevel-pure-m/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q5-question-1.svg\" alt=\"The curve C has equation = x &gt; . y x ln x , 1 4 Find an equation of the tangent to the curve at the point where x = e giving the 4 answer in the form ay = bx − e , where a and b are integers. ( ) 7\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q5-solution-1.svg\" alt=\"Write y = x(ln x)1/2. Differentiating gives 1(ln x)1/2 + x[ 1 2(ln x)−1/2](1/x). By the product and chain rules, √ √ y′ = ln x + 1/(2 ln x). [B1] [A1] At x = e4, y = 2e4 [A1] from e4p ln(e4), and y′ = 2 + 1/4 . [A1] = 9/4 Therefore y −2e4 = 9 4(x −e4), [A1] so 4y −8e4 = 9x −9e4, giving 4y = 9x −e4 . Thus the coefficients are 4 and 9. [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 7 marks.</p>"
+    ],
+    "promptText": "The curve C has equation = x > . y x ln x , 1 4 Find an equation of the tangent to the curve at the point where x = e giving the 4 answer in the form ay = bx − e , where a and b are integers. ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-m/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q6-question-1.svg\" alt=\"Each of the terms of an arithmetic series is added to the corresponding terms of a geometric series, forming a new series with first term 3 8 and second term 13 16 . The common difference of the arithmetic series is four times as large as the first term of the geometric series. The common ratio of the geometric series is twice as large as the first term of the arithmetic series. Determine the possible values of the first term of the geometric series. ( ) 8\" style=\"--madas-width:590.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q6-solution-1.svg\" alt=\"Write a for the first arithmetic term and b for the first geometric term. [B1] [A1] Let d be the common difference and r the common ratio. The first two arithmetic terms are a, a + d and the first two geometric terms b, br. The new terms are a + b, a + d + br. Using r = 2a, d = 4b, we get a + d + br = a + 4b + 2ab. Then a + b = 3/8 [A1] and (a + 4b) + (2a)b = 13/16. [A1] Eliminate a = 3/8 −b, expand and multiply by 16: 3 3  = 13 8 −b + 4b + 2b 8 −b 16 3 8 + 3b + 3 4b −2b2 = 13 16 6 + 48b + 12b −32b2 = 13 Rearrangement gives 32b2 −60b + 7 = (8b −1)(4b −7) [M1] [A1] = 0.\" style=\"--madas-width:680.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q6-solution-2.svg\" alt=\"The possible terms are b = 1 8 or 7 4 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 8 marks.</p>"
+    ],
+    "promptText": "Each of the terms of an arithmetic series is added to the corresponding terms of a geometric series, forming a new series with first term 3 8 and second term 13 16 . The common difference of the arithmetic series is four times as large as the first term of the geometric series. The common ratio of the geometric series is twice as large as the first term of the arithmetic series. Determine the possible values of the first term of the geometric series. ( ) 8"
+  },
+  {
+    "id": "madas/alevel-pure-m/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q7-question-1.svg\" alt=\"Use the substitution t = 3 + x to find the value of the following integral 36  1 dx . ( ) 8 3 x 2 + 3 x 1\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q7-solution-1.svg\" alt=\"With t = 3 + √x, differentiate t = x1/2 + 3, giving dt/dx = 1/(2√x) and dx = 2√x dt. When x = 1, t = 4; when x = 36, t = 9, so the limits become 4 and 9. [B1] [A1] Here x = (t −3)2, [M1] [A1] dx = 2(t −3) dt, [A1] and √ q x3/2 + 3x = (t −3) t. [A1] The transformed fraction is 2√x/ x(√x + 3) = 2√x/(√x √ q t) . = 2t−1/2 Hence Z 9 √ √ √ 2t−1/2 dt = [4 t]9 4 = 4 9 −4 4 = 12 −8 = 4 . [M1] [A1] 4\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 8 marks.</p>"
+    ],
+    "promptText": "Use the substitution t = 3 + x to find the value of the following integral 36  1 dx . ( ) 8 3 x 2 + 3 x 1"
+  },
+  {
+    "id": "madas/alevel-pure-m/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q8-question-1.svg\" alt=\"A curve C has equation − x y = e ln x , x &gt; 0 . a) Show that the x coordinate of the stationary point of C lies between 1 and 2 . ( ) 6 b) Use an iterative formula based on the Newton Raphson method to find the x coordinate of the stationary point of C , correct to 8 decimal places. ( ) 6\" style=\"--madas-width:593.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q8-solution-1.svg\" alt=\"(a) Differentiating e−x ln x gives −e−x ln x + e−x/x, hence y′ = e−x(1/x −ln x). [A1] Because e−x &gt; 0, set 1/x −ln x = 0, giving 1 −x ln x = 0. The source uses f = 1 −x ln x, with f(1) = 1 and f(2) = 1 −2 ln 2 = −0.386 . . .. Equivalently, the stationary equation is F(x) = x ln x −1 . [M1] = 0 The continuous F has F(1) = −1 [A1] and F(2) = 2 ln 2 −1 &gt; 0, [A1] so there is a root in (1, 2). [A1] As F is increasing for x ≥1 and negative for 0 &lt; x ≤1, it is the only stationary point. [A1] (b) By the Newton–Raphson method:\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q8-solution-2.svg\" alt=\"The source differentiates f to get −[1 · ln x + x(1/x)] = −1 −ln x. Newton–Raphson then simplifies as follows: xn+1 = xn −f(xn) f′(xn) xn+1 = xn −1 −xn ln xn −1 −ln xn xn+1 = xn + 1 −xn ln xn 1 + ln xn xn+1 = xn + xn ln xn + 1 −xn ln xn 1 + ln xn xn + 1 xn+1 = 1 + ln xn Equivalently, apply xn+1 = xn −xn ln xn −1 [M1] [A1] 1 + ln xn\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q8-solution-3.svg\" alt=\"starting at x1 = 1.5. [A1] This gives x2 ≈1.778770590, x3 ≈1.763266078, x4 ≈1.763222835, then x5 ≈1.763222834. [A1] One more application gives x6 = 1.763222834 . . ., confirming the stable digits: Thus x = 1.76322283 [A1] to eight decimal places: [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 12 marks.</p>"
+    ],
+    "promptText": "A curve C has equation − x y = e ln x , x > 0 . a) Show that the x coordinate of the stationary point of C lies between 1 and 2 . ( ) 6 b) Use an iterative formula based on the Newton Raphson method to find the x coordinate of the stationary point of C , correct to 8 decimal places. ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-m/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q9-question-1.svg\" alt=\"A curve is defined by the parametric equations π x = 2cos t , y = 4sin t , 0 ≤≤ t . 2 a) Show that an equation of the tangent to the curve at the point P where t = θ can be written as y sin θ + 2 cos x θ = 4 . ( ) 5 The tangent to curve at P meets the coordinate axes at the points A and B . The triangle OAB , where O is the origin, has the least possible area.\" style=\"--madas-width:577.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q9-question-2.svg\" alt=\"( ) 4 b) Find the coordinates of P .\" style=\"--madas-width:592.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q9-solution-1.svg\" alt=\"(a) For 0 &lt; θ &lt; π/2, the tangent gradient is (4 cos θ)/(−2 sin θ) = −2 cot θ. [M1] Use the point-slope equation at (2 cos θ, 4 sin θ):\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q9-solution-2.svg\" alt=\"y −4 sin θ = −2 cot θ(x −2 cos θ). Therefore sin θ(y −4 sin θ) = −2 cos θ(x −2 cos θ). [M1] [A1] Expand the two sides and collect the intercept terms: y sin θ −4 sin2 θ = (−2 cos θ)x + 4 cos2 θ y sin θ + 2x cos θ = 4 cos2 θ + 4 sin2 θ y sin θ + 2x cos θ = 4(cos2 θ + sin2 θ) y sin θ + 2x cos θ = 4 This uses sin2 θ + cos2 θ = 1. [M1] The formula also gives the vertical and horizontal tangents at the respective endpoints: [A1] (b) For a triangle with two finite intercepts, 0 &lt; θ &lt; π/2. [M1] Its intercepts are 2/ cos θ and 4/ sin θ, from y = 0 and x = 0, respectively:\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q9-solution-3.svg\" alt=\"Its area is 1 2(2/ cos θ)(4/ sin θ) = 8/(2 sin θ cos θ), or 8/ sin 2θ. [A1] This is least when sin 2θ = 1, giving minimum area 8. In the permitted interval 2θ = π/2, so t = π/4 [A1] and √ √ P = ( 2, 2 2) . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 9 marks.</p>"
+    ],
+    "promptText": "A curve is defined by the parametric equations π x = 2cos t , y = 4sin t , 0 ≤≤ t . 2 a) Show that an equation of the tangent to the curve at the point P where t = θ can be written as y sin θ + 2 cos x θ = 4 . ( ) 5 The tangent to curve at P meets the coordinate axes at the points A and B . The triangle OAB , where O is the origin, has the least possible area. ( ) 4 b) Find the coordinates of P ."
+  },
+  {
+    "id": "madas/alevel-pure-m/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q10-question-1.svg\" alt=\"During a chemical reaction a compound is formed, whose mass y grams in time t minutes satisfies the differential equation dy dt = ( − )( − ) t ≥ k 1 2 y 1 3 y , 0 , where k is a positive constant. a) Solve the differential equation to show that 1 2 − y ln 1 3 = kt + C , − y\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q10-question-2.svg\" alt=\"where C is a constant. ( ) 7 When the chemical reaction started there was no compound present, and when t = ln 4 the mass of the compound has risen to 0.25 grams. b) Show further that 1 − t 1 e − 2 = ( ) 5 y . 1 − t 3 − 2e 2 c) State, with justification, the limiting value of y as t gets large. ( ) 1\" style=\"--madas-width:593.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q10-solution-1.svg\" alt=\"(a) By partial fractions: On the branch with 0 ≤y &lt; 1/3, write dy = k(1 −2y)(1 −3y) dt, so dy/[(1 −2y)(1 −3y)] = k dt. To find the partial fractions, clear the denominator and substitute the two roots: 1 A B (1 −2y)(1 −3y) ≡ 1 −2y + 1 −3y 1 ≡A(1 −3y) + B(1 −2y) y = 1 2 1 = −1 2A A = −2 y = 1 3 1 = 1 3B\" style=\"--madas-width:552.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q10-solution-2.svg\" alt=\"B = 3 This gives 1 2 3 (1 −2y)(1 −3y) = − 1 −2y + 1 −3y. [M1] Separate the variables [M1] set up the two partial fractions [B1] determine the first coefficient [B1] determine the second coefficient The two antiderivatives are ln |1 −2y| −ln |1 −3y|, while the right side gives kt + C. Combining the logarithms gives ln((1 −2y)/(1 −3y)) = kt + C . [M1] [M1] [A1] (b) At t = 0, y = 0, we have C = 0. [B1] [A1] At t = ln 4, y = 1/4, the ratio is 2, so k = ln 2/ ln 4 . [A1] = 1/2\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q10-solution-3.svg\" alt=\"Now e−t/2(1 −2y) = 1 −3y, [A1] giving the following explicit expression: Before substituting k = 1/2, rearrange 1 −2y 1 −3y = ekt 1 −2y = (1 −3y)ekt 1 −2y = ekt −3yekt 3yekt −2y = ekt −1 y(3ekt −2) = ekt −1 y = ekt −1 3ekt −2 Substitute k = 1/2 and multiply numerator and denominator by e−t/2 to obtain y = 1 −e−t/2 3 −2e−t/2 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q10-solution-4.svg\" alt=\"(c) As t →∞, e−t/2 →0 and y →1/3 g . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 13 marks.</p>"
+    ],
+    "promptText": "During a chemical reaction a compound is formed, whose mass y grams in time t minutes satisfies the differential equation dy dt = ( − )( − ) t ≥ k 1 2 y 1 3 y , 0 , where k is a positive constant. a) Solve the differential equation to show that 1 2 − y ln 1 3 = kt + C , − y where C is a constant. ( ) 7 When the chemical reaction started there was no compound present, and when t = ln 4 the mass of the compound has risen to 0.25 grams. b) Show further that 1 − t 1 e − 2 = ( ) 5 y . 1 − t 3 − 2e 2 c) State, with justification, the limiting value of y as t gets large. ( ) 1"
+  },
+  {
+    "id": "madas/alevel-pure-m/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q11-question-1.svg\" alt=\"A function f  is defined in a restricted real domain and has equation ( ) ≡ 2 − + f x x 6 x 13 . It is further given that the equations f x = ( ) 8 , f x = ( ) 13 and f x = ( ) 20 have 2 distinct solutions, 1 solution and no solutions, respectively. Determine the possible domain of f . ( ) 6\" style=\"--madas-width:600.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q11-solution-1.svg\" alt=\"Complete the square: x2 −6x + 13 = (x −3)2 −9 + 13.\" style=\"--madas-width:565.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q11-solution-2.svg\" alt=\"The graph has vertex (3, 4). Intersection with the levels 8, 13, 20 requires respectively (x −3)2 = 4, 9, 16. Since f(x) = (x −3)2 + 4, the three equations have unrestricted root pairs {1, 5}, {0, 6} and {−1, 7}, respectively: [M1] The domain must include 1 and 5, include exactly one of 0 and 6, and exclude −1, 7. [A1] Including 0 and excluding 6 gives the maximal interval (−1, 6) ; [M1] [A1] including 6 and excluding 0 gives (0, 7) . [A1] In the first case 0 ∈(−1, 6); in the second 6 ∈(0, 7). [A1] Source clarification. The printed conditions alone allow many smaller domains: The handwritten working gives the maximal intervals, which are listed above:\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 6 marks.</p>"
+    ],
+    "promptText": "A function f  is defined in a restricted real domain and has equation ( ) ≡ 2 − + f x x 6 x 13 . It is further given that the equations f x = ( ) 8 , f x = ( ) 13 and f x = ( ) 20 have 2 distinct solutions, 1 solution and no solutions, respectively. Determine the possible domain of f . ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-m/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q12-question-1.svg\" alt=\"Use a trigonometric identity to integrate + 1 ( ) 3 dx . 1 cos2 x\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q12-solution-1.svg\" alt=\"Substitute cos 2x = 2 cos2 x −1 into the denominator, giving 1 + (2 cos2 x −1) = 2 cos2 x. Since 1 + cos 2x = 2 cos2 x, the integral is Z sec2 x dx = 1 1 2 tan x + C [M1] [A1] 2 on each interval where it is defined: [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 3 marks.</p>"
+    ],
+    "promptText": "Use a trigonometric identity to integrate + 1 ( ) 3 dx . 1 cos2 x"
+  },
+  {
+    "id": "madas/alevel-pure-m/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q13-question-1.svg\" alt=\"A function f  is defined in the largest real domain by the equation 2 x − x + 50 142 95 f x ( ) ≡ . 2 x − 5 ( ) 1 a) State the domain of f . ( ) ( ) ( ) b) Evaluate f 1 , f 2 and f 3 , and hence briefly discuss the number of possible intersections of f with the coordinate axes, ... i.      ... in the interval [ ] 1,2 . ii. ... in the interval [ ] ( ) 3 2,3 .\" style=\"--madas-width:572.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q13-question-2.svg\" alt=\"C c) Express f x in the form ( ) Ax + B + , where A , B and C are constants. 2 x − 5 ( ) 3 d) Calculate, correct to 3 decimal places, the x coordinates of the stationary points of f . ( ) 5\" style=\"--madas-width:578.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q13-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:548.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q13-solution-2.svg\" alt=\"(a) The denominator is 2x −5. Solving 2x −5 = 0 shows it vanishes at 5/2. The domain is R \\ {5/2} . [A1] (b) Substitution gives f(1) = (50 −142 + 95)/(−3), f(2) = (200 −284 + 95)/(−1), f(3) = (450 −426 + 95)/1. The values are f(1) = −1, f(2) = −11, f(3) = 119. (i) The equal endpoint signs on the continuous interval [1, 2] do not establish whether there are any √ crossings: [B1] The numerator’s two roots (71 ± 291)/50 both lie in [1, 2], so there are two. [A1] (ii) On [2, 3], the change of sign does not establish a root because x = 5/2 is a discontinuity: The two numerator roots already found are both outside [2, 3], so there are no crossings there: [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q13-solution-3.svg\" alt=\"(c) The first quotient term is 25x. Subtract 25x(2x −5) = 50x2 −125x from 50x2 −142x + 95 to leave −17x + 95. The next term is −17/2; subtracting (−17/2)(2x −5) = −17x + 85/2 leaves 105/2. Thus f(x) = 25x −17/2 + (105/2)/(2x −5). Polynomial division gives A = 25, B = −17/2, C = 105/2 . [M1] [M1] [A1] (d) Set f′(x) = 25 −105/(2x −5)2 . [M1] [A1] = 0 The derivative of (105/2)(2x −5)−1 is −(105/2)(2x −5)−2(2). Thus 105/(2x −5)2 = 25, (2x −5)2 = 21/5, 2x −5 = ± q 21/5.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-m/q13-solution-4.svg\" alt=\"This gives q x = 1 2(5 ± 21/5). [A1] To three decimal places, the coordinates are x = 1.475 and 3.525 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 12 marks.</p>"
+    ],
+    "promptText": "A function f  is defined in the largest real domain by the equation 2 x − x + 50 142 95 f x ( ) ≡ . 2 x − 5 ( ) 1 a) State the domain of f . ( ) ( ) ( ) b) Evaluate f 1 , f 2 and f 3 , and hence briefly discuss the number of possible intersections of f with the coordinate axes, ... i.      ... in the interval [ ] 1,2 . ii. ... in the interval [ ] ( ) 3 2,3 . C c) Express f x in the form ( ) Ax + B + , where A , B and C are constants. 2 x − 5 ( ) 3 d) Calculate, correct to 3 decimal places, the x coordinates of the stationary points of f . ( ) 5"
+  }
+]

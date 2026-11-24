@@ -1,0 +1,122 @@
+[
+  {
+    "id": "madas/as-pure-v/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q1-question-1.svg\" alt=\"log10 𝑦 𝐵(8, 21) 𝐴(2, 3) log10 𝑥 𝑂 The figure above shows a set of axes where log y is plotted against log x . 10 10\" style=\"--madas-width:505.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q1-question-2.svg\" alt=\"A straight line passes through the points A 2,3 and B 8,21 . ( ) ( ) Express y in terms of x . 6 ( )\" style=\"--madas-width:566.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q1-solution-1.svg\" alt=\"Let 𝑋= log10 𝑥, 𝑌= log10 𝑦. The gradient is (21−3)/(8−2) = 18/6 = 3. [M1] Using 𝐴, 𝑌−3 = 3(𝑋−2), so 𝑌= 3𝑋−3. [M1] [A1] Reverse the substitutions: log10 𝑦= 3 log10 𝑥−3 = log10(𝑥3) −3 [M1] 𝑦= 10log10(𝑥3)−3 = 10log10(𝑥3)10−3 [M1] = 𝑥3/1000 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 6 marks.</p>"
+    ],
+    "promptText": "log10 𝑦 𝐵(8, 21) 𝐴(2, 3) log10 𝑥 𝑂 The figure above shows a set of axes where log y is plotted against log x . 10 10 A straight line passes through the points A 2,3 and B 8,21 . ( ) ( ) Express y in terms of x . 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-v/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q2-question-1.svg\" alt=\"Determine the range of values of x that satisfy both the inequalities given below. 5 x 8 4 x 1 + ≥ ( + ) 2 x 1 8 x 1 x 2 0 . 8 + − + )( + &lt; ( ) ( ) ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q2-solution-1.svg\" alt=\"The first inequality gives 5𝑥+ 8 ≥4𝑥+ 4, hence 𝑥≥−4. [M1] [A1] For the second, take out the common factor: [M1] (𝑥+ 1)[(𝑥+ 1) −8(𝑥+ 2)] &lt; 0 [A1] (𝑥+ 1)(−7𝑥−15) &lt; 0, (𝑥+ 1)(7𝑥+ 15) &gt; 0. The critical values are −15/7 and −1. [B1] The product is positive for 𝑥&lt; −15/7 or 𝑥&gt; −1. [A1] −4 −15/7 −1 Intersect with 𝑥≥−4. [M1] The combined solution is −4 ≤𝑥&lt; −15/7 or 𝑥&gt; −1 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 8 marks.</p>"
+    ],
+    "promptText": "Determine the range of values of x that satisfy both the inequalities given below. 5 x 8 4 x 1 + ≥ ( + ) 2 x 1 8 x 1 x 2 0 . 8 + − + )( + < ( ) ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-v/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q3-question-1.svg\" alt=\"1 6 Differentiate from first principles. ( ) 2 2 x +\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q3-solution-1.svg\" alt=\"Let 𝑓(𝑥) = 1/(2 + 𝑥2). Form the difference quotient: 𝑓(𝑥+ ℎ) −𝑓(𝑥) = 1 1 1 [M1] ℎ[ 2 + (𝑥+ ℎ)2 − 2 + 𝑥2 ] ℎ = (2 + 𝑥2) −[2 + (𝑥+ ℎ)2] [A1] ℎ(2 + 𝑥2)[2 + (𝑥+ ℎ)2] −2𝑥ℎ−ℎ2 [A1] = ℎ(2 + 𝑥2)[2 + (𝑥+ ℎ)2] 2𝑥+ ℎ [M1] = − (2 + 𝑥2)[2 + (𝑥+ ℎ)2]. Take the limit as ℎ→0. 𝑓′(𝑥) = −2𝑥/[(2 + 𝑥2)(2 + 𝑥2)] = −2𝑥/(2 + 𝑥2)2 . [M1] [A1]\" style=\"--madas-width:561.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 6 marks.</p>"
+    ],
+    "promptText": "1 6 Differentiate from first principles. ( ) 2 2 x +"
+  },
+  {
+    "id": "madas/as-pure-v/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q4-question-1.svg\" alt=\"Find the possible solutions of the quadratic equation 2 2 x 3 m x 5 m , + ( − ) + = 8 where m is a constant, given that the equation has repeated roots. ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q4-solution-1.svg\" alt=\"Rearrange to 𝑥2 + (3 −𝑚)𝑥+ 5 −𝑚2 = 0. [B1] A repeated root gives zero discriminant: (3 −𝑚)2 −4(5 −𝑚2) = 0 [M1] 9 −6𝑚+ 𝑚2 −20 + 4𝑚2 = 0 [A1] 5𝑚2 −6𝑚−11 = 0, [M1] [A1] (5𝑚−11)(𝑚+ 1) = 0. For 𝑚= 11/5, 𝑥2 + 4 5𝑥+ 4 25 = (𝑥+ 2/5)2 = 0, giving 𝑥= −2/5 . [M1] [A1] For 𝑚= −1, 𝑥2 + 4𝑥+ 4 = (𝑥+ 2)2 = 0, giving 𝑥= −2 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 8 marks.</p>"
+    ],
+    "promptText": "Find the possible solutions of the quadratic equation 2 2 x 3 m x 5 m , + ( − ) + = 8 where m is a constant, given that the equation has repeated roots. ( )"
+  },
+  {
+    "id": "madas/as-pure-v/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q5-question-1.svg\" alt=\"𝑦 4 𝐵 𝐴 2 𝑥 𝑂 𝐶 𝐷 The figure above shows four distinct graphs, each located within a separate quadrant, labelled as A , B , C and D .\" style=\"--madas-width:550.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q5-question-2.svg\" alt=\"The equation of A is 2 y x 2 , 0 x 2 , 0 y 4 . = − ≤ ≤ ≤ ≤ ( ) Find the equations for each of the remaining sections, B , C and D , giving each of the equations in a simplified form y f x . 6 = ( ) ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q5-solution-1.svg\" alt=\"Start from 𝐴∶𝑦= (𝑥−2)2 on 0 ≤𝑥≤2. Reflect first in the horizontal axis and then in the vertical axis, equivalent to a rotation through 180∘about the origin. Replacing 𝑥by −𝑥and reversing the ordinate gives 𝐶∶𝑦= −(−𝑥−2)2. [M1] Hence 𝐶∶𝑦= −𝑥2 −4𝑥−4, −2 ≤𝑥≤0 . [A1] Translate 𝐶upwards four units for 𝐵. 𝑦= −(𝑥+ 2)2 + 4. [M1] Thus 𝐵∶𝑦= −𝑥2 −4𝑥, −2 ≤𝑥≤0 . [A1] Translate 𝐶four units to the right for 𝐷. 𝑦= −(𝑥−4)2 −4(𝑥−4) −4. [M1] Expanding gives −𝑥2 + 8𝑥− 16 −4𝑥+ 16 −4, hence 𝐷∶𝑦= −𝑥2 + 4𝑥−4, 2 ≤𝑥≤4 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 6 marks.</p>"
+    ],
+    "promptText": "𝑦 4 𝐵 𝐴 2 𝑥 𝑂 𝐶 𝐷 The figure above shows four distinct graphs, each located within a separate quadrant, labelled as A , B , C and D . The equation of A is 2 y x 2 , 0 x 2 , 0 y 4 . = − ≤ ≤ ≤ ≤ ( ) Find the equations for each of the remaining sections, B , C and D , giving each of the equations in a simplified form y f x . 6 = ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-v/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q6-question-1.svg\" alt=\"3120 If x = , show clearly that 240 2 3 5 x 12 225 . + = ( ) x\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q6-solution-1.svg\" alt=\"Use a common denominator and 𝑥3 = 120. 3√ 𝑥2 + 240/𝑥= (𝑥3 + 240)/𝑥= (120 + 240)/ [M1] 120 3√ 3√ 120)2 120 = 360( [M1] = 360/ 120 3√ [A1] 120)2. = 3( Reduce the cubic surd using 120 = 8 ⋅15. 3√ 3√ 3√ 3√ 15)2 = 3(2 15)2 = 3 ⋅4( [M1] 3( 8 15)2 3√ [A1] = 12 225 .\" style=\"--madas-width:517.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 5 marks.</p>"
+    ],
+    "promptText": "3120 If x = , show clearly that 240 2 3 5 x 12 225 . + = ( ) x"
+  },
+  {
+    "id": "madas/as-pure-v/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q7-question-1.svg\" alt=\"The three angles in a triangle are denoted as α , β and γ . It is further given that tan 4.705 and tan 0.404 α =− β ( − ) = γ Determine, in degrees, the size of each of the angles α , β and γ . 7 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q7-solution-1.svg\" alt=\"From tan 𝛼= −4.705, tan−1(−4.705) ≈−78.0∘. [M1] The triangle angle is therefore 𝛼≈−78∘+ 180∘= 102∘. [A1] Also tan−1(0.404) = 21.9987 …∘, so 𝛽−𝛾= 22.0∘+ 180∘𝑛to the precision of the data. [M1] Since 𝛽+ 𝛾= 180∘−𝛼≈78∘, only 𝛽−𝛾≈22∘is possible. [A1] Adding the sum and difference equations gives 2𝛽≈100∘, [M1] so 𝛽≈50∘[A1] and 𝛾≈28∘. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 7 marks.</p>"
+    ],
+    "promptText": "The three angles in a triangle are denoted as α , β and γ . It is further given that tan 4.705 and tan 0.404 α =− β ( − ) = γ Determine, in degrees, the size of each of the angles α , β and γ . 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-v/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q8-question-1.svg\" alt=\"A curve has equation 3 3 y 6 x 5 15 x 4 80 x 16 , x∈ℝ, x ≥ 0 . = − − + Find the coordinates of the stationary point of the curve and determine whether it is a local maximum, a local minimum or a point of inflexion. 12 ( )\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q8-solution-1.svg\" alt=\"Write 𝑦= 6𝑥5/3 −15𝑥4/3 −80𝑥+ 16. [B1] Differentiate and set the gradient to zero: 𝑦′ = 10𝑥2/3 −20𝑥1/3 −80 [M1] [A1] 𝑥2/3 −2𝑥1/3 −8 = 0. [M1] Let 𝑎= 𝑥1/3. Then 𝑎2 −2𝑎−8 = (𝑎+ 2)(𝑎−4) = 0, giving 𝑎= −2 or 4. [M1] [A1] Since 𝑥≥0, only 𝑎= 4 is possible, hence 𝑥= 43 = 64. [A1] [M1] 𝑦= 6(1024) −15(256) −80(64) + 16 [A1] = 6144 −3840 −5120 + 16 = −2800. Use the second derivative:\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q8-solution-2.svg\" alt=\"𝑦″ = 20 3 𝑥−1/3 −20 [M1] [A1] 3 𝑥−2/3, 𝑦″(64) = 20 3 (1/4 −1/16) = 5/4 &gt; 0. Thus (64, −2800) is a local minimum . [A1]\" style=\"--madas-width:589.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 12 marks.</p>"
+    ],
+    "promptText": "A curve has equation 3 3 y 6 x 5 15 x 4 80 x 16 , x∈ℝ, x ≥ 0 . = − − + Find the coordinates of the stationary point of the curve and determine whether it is a local maximum, a local minimum or a point of inflexion. 12 ( )"
+  },
+  {
+    "id": "madas/as-pure-v/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q9-question-1.svg\" alt=\"Given that k ∈ℕ, use algebra to prove that k k 2 2 2 + + . 5 &gt; ( ) 2 k 3 2 k 1 +\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q9-solution-1.svg\" alt=\"Subtract the two fractions: 2𝑘+ 2 2𝑘+ 1 = (2𝑘+ 2)(2𝑘+ 1) −2𝑘(2𝑘+ 3) 2𝑘 [M1] 2𝑘+ 3 − (2𝑘+ 3)(2𝑘+ 1) = 4𝑘2 + 6𝑘+ 2 −4𝑘2 −6𝑘 2 [A1] = (2𝑘+ 3)(2𝑘+ 1). (2𝑘+ 3)(2𝑘+ 1) For 𝑘 ℕboth denominator factors are positive. [B1] The difference is positive, [M1] so ∈ (2𝑘+ 2)/(2𝑘+ 3) &gt; 2𝑘/(2𝑘+ 1) . [A1] Alternative. The two fractions are 1 −1/(2𝑘+ 3) and 1 −1/(2𝑘+ 1). Since 2𝑘+ 3 &gt; 2𝑘+ 1 &gt; 0, their reciprocals satisfy 1/(2𝑘+ 3) &lt; 1/(2𝑘+ 1). Negating and adding one proves the result.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 5 marks.</p>"
+    ],
+    "promptText": "Given that k ∈ℕ, use algebra to prove that k k 2 2 2 + + . 5 > ( ) 2 k 3 2 k 1 +"
+  },
+  {
+    "id": "madas/as-pure-v/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q10-question-1.svg\" alt=\"Two circles have equations 2 2 x y 8 x 2 y 13 0 , + − − + = x 2 y 2 2 x 2 y 1 k , + − − + = where k is a constant. a) Find the values of k , for which the two circles touch each other. 6 ( ) b) Hence state the range of values of k , for which the two circles intersect each other at exactly two points. 1 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q10-solution-1.svg\" alt=\"(a) Complete the squares separately: (𝑥−4)2 −16 + (𝑦−1)2 −1 + 13 = 0, (𝑥−4)2 + (𝑦−1)2 = 4 [M1] (𝑥−1)2 −1 + (𝑦−1)2 −1 + 1 = 𝑘, (𝑥−1)2 + (𝑦−1)2 = 𝑘+ 1. [A1] √ The centres are (4, 1), (1, 1), three units apart. The radii are 2, 𝑘+ 1. [B1]\" style=\"--madas-width:588.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q10-solution-2.svg\" alt=\"√ For external tangency 2 + 𝑘+ 1 = 3, giving 𝑘+ 1 = 1, 𝑘= 0 . [M1] [A1] For internal tangency √ 𝑘+ 1 −2 = 3, giving 𝑘+ 1 = 25, 𝑘= 24 . [A1] (b) The circles cross twice between the two tangencies, so 0 &lt; 𝑘&lt; 24 . [B1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 7 marks.</p>"
+    ],
+    "promptText": "Two circles have equations 2 2 x y 8 x 2 y 13 0 , + − − + = x 2 y 2 2 x 2 y 1 k , + − − + = where k is a constant. a) Find the values of k , for which the two circles touch each other. 6 ( ) b) Hence state the range of values of k , for which the two circles intersect each other at exactly two points. 1 ( )"
+  },
+  {
+    "id": "madas/as-pure-v/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q11-question-1.svg\" alt=\"If k &gt; 0 and n is a positive integer, then n 7 2 3 1 kx 1 x Bx Bx ... , ( + ) ≡ + 2 + + + where B is a non zero constant. 2 3 By considering the coefficients of x and x , show that nk 2 k 3 , = + and hence find the value of n and the value of k . 9 ( )\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q11-solution-1.svg\" alt=\"Expand the first terms: 1 + 𝑛𝑘𝑥+ 𝑛(𝑛−1) 𝑘2𝑥2 + 𝑛(𝑛−1)(𝑛−2) 𝑘3𝑥3 + ⋯. [M1] 2 6 The linear coefficient is 𝑛𝑘= 7/2. [B1] Both higher coefficients are 𝐵≠0, so set them equal. [M1] Cancelling the nonzero factor 𝑛(𝑛−1)𝑘2 gives 1/2 = (𝑛−2)𝑘/6. [A1] Hence 3 = (𝑛−2)𝑘= 𝑛𝑘−2𝑘, or 𝑛𝑘= 2𝑘+ 3 . [A1] Solve the two equations simultaneously: 2𝑘+ 3 = 7/2, so 2𝑘= 1/2 and 𝑘= 1/4 . [M1] [A1] Then 𝑛/4 = 7/2, giving 𝑛= 14 . [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 9 marks.</p>"
+    ],
+    "promptText": "If k > 0 and n is a positive integer, then n 7 2 3 1 kx 1 x Bx Bx ... , ( + ) ≡ + 2 + + + where B is a non zero constant. 2 3 By considering the coefficients of x and x , show that nk 2 k 3 , = + and hence find the value of n and the value of k . 9 ( )"
+  },
+  {
+    "id": "madas/as-pure-v/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q12-question-1.svg\" alt=\"Find, in exact form, the solutions of the following equation 2 ln x 7 − 2 ln x 0 . 9 + ( ) = ( ) 7 x 2 ln −\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q12-solution-1.svg\" alt=\"Let 𝑎= ln 𝑥, so 𝑥&gt; 0. Then ln(𝑥7) = 7𝑎, ln(𝑥2) = 2𝑎. [M1] The equation becomes (2−7𝑎)/(7−2𝑎)+𝑎2 = 0, with 𝑎≠7/2. [A1] [M1] 2 −7𝑎+ 𝑎2(7 −2𝑎) = 0 2𝑎3 −7𝑎2 + 7𝑎−2 = 0. [A1] Test 𝑎= 1. 2 −7 + 7 −2 = 0, hence 𝑎−1 is a factor. [M1] By grouping or division: 2𝑎2(𝑎−1) −5𝑎(𝑎−1) + 2(𝑎−1) = (𝑎−1)(2𝑎2 −5𝑎+ 2) = (𝑎−1)(2𝑎−1)(𝑎−2). [M1] [A1] 2, 2, all allowed. [A1] Reversing the substitution gives 𝑥= 𝑒, √𝑒, 𝑒2 . [A1] Thus 𝑎= 1, 1\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 9 marks.</p>"
+    ],
+    "promptText": "Find, in exact form, the solutions of the following equation 2 ln x 7 − 2 ln x 0 . 9 + ( ) = ( ) 7 x 2 ln −"
+  },
+  {
+    "id": "madas/as-pure-v/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q13-question-1.svg\" alt=\"4𝑥−√𝑥 𝑦 𝑦= 1 𝑄 𝑂 𝑥 𝑃 The figure above shows the curve with equation\" style=\"--madas-width:402.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q13-question-2.svg\" alt=\"1 y x x , x∈ℝ, x ≥ 0 . = 4 − The points P 0.04, 0.19 and Q lie on the curve, so that OPQ = 90 , where O is ∡ ° ( − ) the origin. k , where k is a six digit integer. Show that the y coordinate of Q is 900 12 ( )\" style=\"--madas-width:574.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q13-solution-1.svg\" alt=\"4𝑥−√𝑥 𝑦 𝑦= 1 𝑄 𝑂 𝑥 𝑃 Write 𝑃= (1/25, −19/100). Then 𝑚𝑂𝑃= (−19/100)/(1/25) = −19/4. [M1] The perpendicular gradient is 4/19. [A1] Hence the line 𝑃𝑄satisfies 𝑦+ 19/100 = 19(𝑥−1/25). [M1] Substitute the curve equation: 4 𝑥/4 −√𝑥+ 19/100 = 4 4 [M1] 19𝑥− 475 475𝑥−1900√𝑥+ 361 = 400𝑥−16 [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-v/q13-solution-2.svg\" alt=\"75𝑥−1900√𝑥+ 377 = 0. [A1] The known point 𝑃gives √𝑥= 1/5. Factorise the quadratic in √𝑥. (5√𝑥−1)(15√𝑥−377) = 0. [M1] [A1] For 𝑄, √𝑥= 377/15, so 𝑥= 142129/225. [A1] Substitute: 142129 −377 𝑦= 1 [M1] 4 225 15 = 142129 −377(60) = 142129 −22620 [A1] 900 900 = 119509 [A1] , 𝑘= 119509. 900\" style=\"--madas-width:493.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 12 marks.</p>"
+    ],
+    "promptText": "4𝑥−√𝑥 𝑦 𝑦= 1 𝑄 𝑂 𝑥 𝑃 The figure above shows the curve with equation 1 y x x , x∈ℝ, x ≥ 0 . = 4 − The points P 0.04, 0.19 and Q lie on the curve, so that OPQ = 90 , where O is ∡ ° ( − ) the origin. k , where k is a six digit integer. Show that the y coordinate of Q is 900 12 ( )"
+  }
+]

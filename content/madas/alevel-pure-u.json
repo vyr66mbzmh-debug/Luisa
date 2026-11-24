@@ -1,0 +1,157 @@
+[
+  {
+    "id": "madas/alevel-pure-u/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q1-question-1.svg\" alt=\"1 cos 2 ( x ) x = 0.925 . 1 sin + Given that the above equation has a solution that is numerically small, find this solution by using a quadratic approximation. No credit will be given for solving a trigonometric equation. ( ) 7\" style=\"--madas-width:574.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q1-solution-1.svg\" alt=\"For small x in radians, sin x ≈x [M1] and cos(x/2) ≈1 −x2/8. [A1] Substituting into the cross-multiplied equation gives 1 −x2/8 ≈0.925(1 + x), or x2 + 7.4x −0.6 ≈0. [M1] Multiply through by eight to get (8 −x2)/(8 + 8x) ≈0.925, so 7.4 + 7.4x ≈8 −x2. Completing the square gives (x + 3.7)2 −3.72 −0.6 ≈0. Thus (x + 3.7)2 ≈14.29. [A1] √ The numerically small root is x ≈0.0802 ; [M1] [A1] the other root −3.7 − 14.29 ≈−7.48 lies outside the small-angle range: [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 7 marks.</p>"
+    ],
+    "promptText": "1 cos 2 ( x ) x = 0.925 . 1 sin + Given that the above equation has a solution that is numerically small, find this solution by using a quadratic approximation. No credit will be given for solving a trigonometric equation. ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-u/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q2-question-1.svg\" alt=\"Solve the following equation x x x x x 2 + 4 + 8 + 16 + 32 + ... = 1 . You may assume that the left hand side of the equation converges. ( ) 5\" style=\"--madas-width:576.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q2-solution-1.svg\" alt=\"Write 2x + 4x + 8x + 16x + · · · = 2x + (2x)2 + (2x)3 + (2x)4 + · · · . The terms form a geometric series with first term and ratio r = 2x. [M1] Convergence gives 0 &lt; r &lt; 1, [A1] and r/(1 −r) = 1 [A1] gives r = 1 −r, 2r = 1, and yields r = 1/2. [A1] Thus 2x = 1/2 = 2−1. Hence x = −1 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 5 marks.</p>"
+    ],
+    "promptText": "Solve the following equation x x x x x 2 + 4 + 8 + 16 + 32 + ... = 1 . You may assume that the left hand side of the equation converges. ( ) 5"
+  },
+  {
+    "id": "madas/alevel-pure-u/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q3-question-1.svg\" alt=\" π  , x∈ , 0 f x ( ) = 2 + sec  x −  ≤ x ≤ 2 π .  3  ( ) a) Solve the equation f x = ( ) 0 . 4 b) Sketch the graph of ( ) f x . The sketch must include the coordinates of any stationary points, the coordinates of any x or y intercepts and equations of the vertical asymptotes. ( ) 4\" style=\"--madas-width:562.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q3-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:502.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q3-solution-2.svg\" alt=\"(a) At a zero, 2 + sec(x −π/3) = 0, so sec(x −π/3) = −2. The condition is cos(x −π/3) = −1/2. [B1] [A1] Consequently x −π/3 = 2π/3 + 2nπ or 4π/3 + 2nπ. On the given interval this gives x = π, 5π/3 . [M1] [A1] (b) Translate the graph of y = sec x right by π/3, then up by 2. Vertical asymptotes occur at x = 5π/6, 11π/6 where the cosine is zero. [B1] [A1] The derivative is sec(x −π/3) tan(x −π/3), giving stationary points (π/3, 3) and (4π/3, 1). [A1] The y-intercept is (0, 4), and f(2π) = 4 . [A1]\" style=\"--madas-width:680.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 8 marks.</p>"
+    ],
+    "promptText": " π  , x∈ , 0 f x ( ) = 2 + sec  x −  ≤ x ≤ 2 π .  3  ( ) a) Solve the equation f x = ( ) 0 . 4 b) Sketch the graph of ( ) f x . The sketch must include the coordinates of any stationary points, the coordinates of any x or y intercepts and equations of the vertical asymptotes. ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-u/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q4-question-1.svg\" alt=\"Relative to a fixed origin O , the positions vectors of the points A , B and C are defined below.    OA = + + i j 4 k , OB = 2 i − 2 j + 4 k , OC = 4 i + 12 k .   1 ( ) If OD = OC prove that the point D lies on the straight line AB . 5 3\" style=\"--madas-width:594.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q4-solution-1.svg\" alt=\"Drawing a diagram: Since −−→ −−→ OD = 1 OC = 1 3(4, 0, 12), D = (4/3, 0, 4), [B1] [A1] so 3 −−→ −−→ AD = (1/3, −1, 0) = 1 3(1, −3, 0) = 1 AB. [M1] [A1] 3\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q4-solution-2.svg\" alt=\"The source also finds −−→ DB = (2, −2, 4) −(4/3, 0, 4) = (2/3, −2, 0) = 2−−→ AD. The vectors are parallel and have D in common: Thus D lies on AB . [A1]\" style=\"--madas-width:504.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 5 marks.</p>"
+    ],
+    "promptText": "Relative to a fixed origin O , the positions vectors of the points A , B and C are defined below.    OA = + + i j 4 k , OB = 2 i − 2 j + 4 k , OC = 4 i + 12 k .   1 ( ) If OD = OC prove that the point D lies on the straight line AB . 5 3"
+  },
+  {
+    "id": "madas/alevel-pure-u/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q5-question-1.svg\" alt=\"The function f is defined by   x + 1, x ∈ , x ≤ 2 ( ) =  f x 2  ( x − 2 ) + 3, x ∈  , x &gt; 2 a) Sketch the graph of f x . ( ) ( ) 3 − 1 b) Find an expression for f ( ) x , fully specifying its domain. ( ) 6\" style=\"--madas-width:588.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q5-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:541.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q5-solution-2.svg\" alt=\"(a) The line ends at (2, 3) and meets the axes at (−1, 0), (0, 1). [B1] [A1] From (2, 3) the right arm of the parabola rises: [A1] (b) The line branch has range (−∞, 3]; the right arm has range (3, ∞). [B1] [M1] [A1] On the linear branch y = x + 1 gives x = y −1.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q5-solution-3.svg\" alt=\"On the other branch y −3 = (x −2)2, hence x −2 = ±√y −3. The restriction x &gt; 2 selects the positive sign, giving x = 2 + √y −3. Solving for the input in each branch gives ( x −1, x ≤3, dom f−1 = R. f−1(x) = 2 + √x −3, [M1] [M1] [A1] x &gt; 3.\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 9 marks.</p>"
+    ],
+    "promptText": "The function f is defined by   x + 1, x ∈ , x ≤ 2 ( ) =  f x 2  ( x − 2 ) + 3, x ∈  , x > 2 a) Sketch the graph of f x . ( ) ( ) 3 − 1 b) Find an expression for f ( ) x , fully specifying its domain. ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-u/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q6-question-1.svg\" alt=\"The function f is defined below. f x ( ) ≡ 4cos x − 3sin ( 1 x ) ,   x∈ . 2 Show that if  θ satisfies the equation 4sin ( 1 θ + ) 3 = 0 , 2 1 then f ( ) θ = ( a + b 3 ) , where a and b are integers to be found. ( ) 7 4\" style=\"--madas-width:581.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q6-solution-1.svg\" alt=\"√ √ From 4 sin(θ/2) + 3 = 0, 4 sin(θ/2) = − 3, so √ sin(θ/2) = − 3/4. [B1] [A1] Thus cos θ = 1 −2 sin2(θ/2) . [M1] [A1] = 5/8 The intermediate arithmetic is √ √ !2 ! 3 3 f(θ) = 4 −8 − −3 − 4 4 √  3 + 3 3  = 4 −8 16 4 √ = 4 −3 2 + 3 3 4 √ = 5 2 + 3 3 4 √\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q6-solution-2.svg\" alt=\"= 10 4 + 3 3 4 √ = 1 4(10 + 3 3) Substitution gives √ f(θ) = 4(5/8) + 3 3/4 √ . [M1] = 1 4(10 + 3 3) Hence a = 10, b = 3 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 7 marks.</p>"
+    ],
+    "promptText": "The function f is defined below. f x ( ) ≡ 4cos x − 3sin ( 1 x ) ,   x∈ . 2 Show that if  θ satisfies the equation 4sin ( 1 θ + ) 3 = 0 , 2 1 then f ( ) θ = ( a + b 3 ) , where a and b are integers to be found. ( ) 7 4"
+  },
+  {
+    "id": "madas/alevel-pure-u/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q7-question-1.svg\" alt=\"A curve has equation = ,      x∈ , x &gt; y x ln x 0 . Find the exact coordinates of the two points on the curve which have gradient 3 2 . ( ) 9\" style=\"--madas-width:576.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q7-solution-1.svg\" alt=\"The real curve starts at x = 1; on x &gt; 1, [M1] write y = x(ln x)1/2; differentiating yields 1 · (ln x)1/2 + x · 1 2(ln x)−1/2(1/x). Thus the product and chain rules give √ √ y′ = ln x + 1/(2 ln x). [A1] √ The right derivative at 1 is unbounded: [A1] Set s = ln x &gt; 0. Then s + 1/(2s) = 3/2 [A1] gives 2s2 + 1 = 3s, 2s2 −3s + 1 = 0, hence (2s −1)(s −1) = 0. [A1] The two cases give ln x = s2 = 1/4 or 1. For s = 1/2, x = e1/4 [A1] and y = 1 2e1/4; [A1] for s = 1, x = y = e. [A1] The two points are (e1/4, e1/4/2), (e, e) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 9 marks.</p>"
+    ],
+    "promptText": "A curve has equation = ,      x∈ , x > y x ln x 0 . Find the exact coordinates of the two points on the curve which have gradient 3 2 . ( ) 9"
+  },
+  {
+    "id": "madas/alevel-pure-u/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q8-question-1.svg\" alt=\"It is given that a and b are positive odd integers, with  a &gt; b . Use proof by contradiction to show that if  a + b is a multiple of 4 , then a − b cannot be a multiple of 4 . ( ) 5\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q8-solution-1.svg\" alt=\"Suppose both a + b and a −b were multiples of 4. [B1] [A1] Then a + b = 4m, a −b = 4n for integers m, n. Adding gives 2a = 4(m + n), hence a = 2(m + n). Their sum 2a would then be a multiple of 4, forcing a even: [M1] [A1] This contradicts the hypothesis that a is odd . [B1]\" style=\"--madas-width:680.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 5 marks.</p>"
+    ],
+    "promptText": "It is given that a and b are positive odd integers, with  a > b . Use proof by contradiction to show that if  a + b is a multiple of 4 , then a − b cannot be a multiple of 4 . ( ) 5"
+  },
+  {
+    "id": "madas/alevel-pure-u/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q9-question-1.svg\" alt=\"It is required to find the single real root α of the following equation 2 3 2 x = + , x &gt; 0 . 2 x x a) Show that the α lies between 1 and 2 . ( ) 2 b) Use the Newton Raphson method to show that α can be found by the iterative formula 5 5 x + 3 x 2 + 9 x n n n x = , + n 1 3 4 2 x + x + 6 2 n n\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q9-question-2.svg\" alt=\"starting with a suitable value for 1x . ( ) 5 c)  Hence find the value of α , correct to 8 decimal places. ( ) 1\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q9-solution-1.svg\" alt=\"(a) Let F(x) = x2 −2x−1/2 −3x−2. √ It is continuous on [1, 2], with F(1) = −4 &lt; 0 and F(2) = 13/4 − 2 &gt; 0. [B1] Therefore the root lies between 1 and 2 . [A1] (b) F ′(x) = 2x + x−3/2 + 6x−3. [B1] [A1] Substituting into xn+1 = xn −F(xn)/F ′(xn), [M1] the numerator after multiplication by x3 n is n + x3/2 n −2x5/2 xn(2x4 + 6) −(x5 −3xn). n n n + x5/2 n + 2x5/2 Expand to obtain 2x5 + 6xn −x5 + 3xn. n n Thus combining the fractions and multiplying top and bottom by x3 n gives n + 3x5/2 xn+1 = x5 + 9xn n . [M1] [A1] 2x4n + x3/2 + 6 n\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q9-solution-2.svg\" alt=\"(c) Starting at 1.5 gives 1.6345944846, 1.6375654056, 1.6375662279, . . .. The fourth and fifth iterates agree at 1.637566228 to nine decimal places: Hence α = 1.63756623 to eight decimal places: [A1]\" style=\"--madas-width:502.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 8 marks.</p>"
+    ],
+    "promptText": "It is required to find the single real root α of the following equation 2 3 2 x = + , x > 0 . 2 x x a) Show that the α lies between 1 and 2 . ( ) 2 b) Use the Newton Raphson method to show that α can be found by the iterative formula 5 5 x + 3 x 2 + 9 x n n n x = , + n 1 3 4 2 x + x + 6 2 n n starting with a suitable value for 1x . ( ) 5 c)  Hence find the value of α , correct to 8 decimal places. ( ) 1"
+  },
+  {
+    "id": "madas/alevel-pure-u/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q10-question-1.svg\" alt=\"The figure below shows a square ABCD of side length 2a cm, circumscribed by a circle. Four semicircles are then drawn outside the square having each of the sides of the square as a diameter. A B 2a 2a lunes C D\" style=\"--madas-width:546.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q10-question-2.svg\" alt=\"Each of the four regions bounded by a semicircle and the circumscribing circle is known by the mathematical name of a “lune”, i.e. moon shaped. ( ) Show that the area of the four lunes is equal to the area of the square ABCD . 8\" style=\"--madas-width:578.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q10-solution-1.svg\" alt=\"√ The radius of the circumscribed circle is half the square’s diagonal, namely a 2. [B1] [A1] The diagonal is √ q (2a)2 + (2a)2 = 8a2 . √ = 2a 2 The circle area is 2πa2, which is also the sum of the areas of the four semicircles of radius a. [M1] [A1] Inside the circle, the four semicircles cover the four circle segments outside the square: [A1] One circle segment has area [2πa2 −4a2]/4 = (π −2)a2/2.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q10-solution-2.svg\" alt=\"Subtract this from the semicircle to find one lune: πa2/2 −(π −2)a2/2 = a2. The four therefore total 4a2. Subtract these segments from both equal areas: [A1] The circle leaves the square and the semicircles leave the four lunes, so both have area 4a2 cm2 . [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 8 marks.</p>"
+    ],
+    "promptText": "The figure below shows a square ABCD of side length 2a cm, circumscribed by a circle. Four semicircles are then drawn outside the square having each of the sides of the square as a diameter. A B 2a 2a lunes C D Each of the four regions bounded by a semicircle and the circumscribing circle is known by the mathematical name of a “lune”, i.e. moon shaped. ( ) Show that the area of the four lunes is equal to the area of the square ABCD . 8"
+  },
+  {
+    "id": "madas/alevel-pure-u/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q11-question-1.svg\" alt=\"A + Bx 1 2 3 ≡ + Cx + Dx + ... , 3 4 ( 2 − x ) where A , B , C and D are constants, and x &lt; 2 Determine the value of  A , B , C and D . ( ) 8\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q11-solution-1.svg\" alt=\"Write (2 −x)−3 = 2−3(1 −x/2)−3. In the binomial formula put z = −x/2: the successive coefficients of z, z2, z3 are −3, (−3)(−4)/2!, (−3)(−4)(−5)/3!. For |x| &lt; 2, (2 −x)−3 = 1  1 + 3 2x + 3 2x2 + 5 4x3 + O(x4)  . [B1] [A1] 8 The two product rows are = 1 8A + 3 16Ax + 3 16Ax2 + 5 32Ax3 + O(x4) +1 8Bx + 3 16Bx2 + 3 16Bx3 + O(x4) Multiplying by A + Bx, the constant coefficient 1/4 gives A = 2, [M1] [A1] and the missing linear term gives 3A/2 + B = 0, [A1] so B = −3. [A1] Then\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q11-solution-2.svg\" alt=\"C = (3A/2 + 3B/2)/8 [A1] = −3/16 and D = (5A/4 + 3B/2)/8 = −1/4 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 8 marks.</p>"
+    ],
+    "promptText": "A + Bx 1 2 3 ≡ + Cx + Dx + ... , 3 4 ( 2 − x ) where A , B , C and D are constants, and x < 2 Determine the value of  A , B , C and D . ( ) 8"
+  },
+  {
+    "id": "madas/alevel-pure-u/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q12-question-1.svg\" alt=\"A sequence  1t , 2t , 3t , 4t , 5t , … is given by t + = at + 3 n + 2 ,   t ∈ ,  1 t = −, 2 n 1 n where a is a non zero constant. 3  3 ( ) a) Given that ( r + t ) = 12 , determine the possible values of a . 7 r r = 1 31  b) Evaluate ( t − at ) . ( ) 5 r + 1 r r = 8\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q12-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q12-solution-1.svg\" alt=\"(a) With t1 = −2, substitute into the recurrence: t2 = at1 + 3 × 1 + 2 = a(−2) + 3 + 2 = 5 −2a t3 = at2 + 3 × 2 + 2 = a(5 −2a) + 6 + 2 = 8 + 5a −2a2 The recurrence gives t2 = 5 −2a, t3 = 8 + 5a −2a2. [M1] [A1] Expand the cube sum as 3 X (tr + r3) = (t1 + 13) + (t2 + 23) + (t3 + 33) r=1 = t1 + 1 + t2 + 8 + t3 + 27 = t1 + t2 + t3 + 36 = −2 + (5 −2a) + (8 + 5a −2a2) + 36 = −2a2 + 3a + 47\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q12-solution-2.svg\" alt=\"Thus the sum is 36 + t1 + t2 + t3 = 47 + 3a −2a2. [M1] [A1] Equating it to 12 gives (a −5)(2a + 7) = 0, [M1] so a = 5 or −7/2 . [M1] [A1] (b) By the recurrence tr+1 −atr = (atr + 3r + 2) −atr. Each summand is 3r + 2. [B1] [A1] These 24 terms run from 26 to 95 in steps of 3; their sum is 12(26 + 95) = 1452 . [M1] [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 12 marks.</p>"
+    ],
+    "promptText": "A sequence  1t , 2t , 3t , 4t , 5t , … is given by t + = at + 3 n + 2 ,   t ∈ ,  1 t = −, 2 n 1 n where a is a non zero constant. 3  3 ( ) a) Given that ( r + t ) = 12 , determine the possible values of a . 7 r r = 1 31  b) Evaluate ( t − at ) . ( ) 5 r + 1 r r = 8 "
+  },
+  {
+    "id": "madas/alevel-pure-u/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q13-question-1.svg\" alt=\"In a cold winter morning when the temperature of the air is 10 C ° , Ben the builder pours a cup of coffee out of his flask. Let x be the temperature of the coffee, in C ° , t minutes after it was poured. The rate at which the temperature of the coffee is decreasing is proportional to the square of the difference between the temperature of the coffee and the air temperature. The initial temperature of the coffee is 80 C ° and ten minutes later the temperature of the coffee has dropped to 40 C ° . By forming and solving a suitable differential equation show that 20 t + 1200 x = , 2 t + 15\" style=\"--madas-width:560.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q13-question-2.svg\" alt=\"° . and hence find after how many minutes the coffee will have a temperature of 20 C ( 10 )\" style=\"--madas-width:576.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q13-solution-1.svg\" alt=\"On the cooling branch x &gt; 10, [B1] dx/dt = −k(x −10)2 [A1] with k &gt; 0. [A1] Separate as dx/(x −10)2 = −k dt. Integration gives −(x −10)−1 = −kt + C1, so renaming the constant gives 1/(x −10) = kt + C. [M1] From the initial temperature C = 1/70. [A1] At t = 10, 1/30 = 10k + 1/70, [A1] so k = 1/525. [A1] Rearrange explicitly: 1 525t + 1 1 x −10 = 70 1050 x −10 = 2t + 15 1050 2t + 15 = x −10 1050 x = 2t + 15 + 10 Therefore 1050 x = 10 + 2t + 15 [A1] = 20t + 1200 . 2t + 15\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q13-solution-2.svg\" alt=\"For x = 20, 2t + 15 = 105, [A1] so t = 45 minutes . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 10 marks.</p>"
+    ],
+    "promptText": "In a cold winter morning when the temperature of the air is 10 C ° , Ben the builder pours a cup of coffee out of his flask. Let x be the temperature of the coffee, in C ° , t minutes after it was poured. The rate at which the temperature of the coffee is decreasing is proportional to the square of the difference between the temperature of the coffee and the air temperature. The initial temperature of the coffee is 80 C ° and ten minutes later the temperature of the coffee has dropped to 40 C ° . By forming and solving a suitable differential equation show that 20 t + 1200 x = , 2 t + 15 ° . and hence find after how many minutes the coffee will have a temperature of 20 C ( 10 )"
+  },
+  {
+    "id": "madas/alevel-pure-u/q14",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q14-question-1.svg\" alt=\"1 ( ) ≡ f u . 2 u + 5 u + 6 a) Express f u into partial fractions. ( ) ( ) 1 arccos 3  5 1 I = dx . ( sin x + 2cos x )( sin x + 3cos x ) arcsin 3 5 b) Express I in the form arccos 3 I = 2 5 sec x dx , g ( tan x ) arcsin 3 5\" style=\"--madas-width:572.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q14-question-2.svg\" alt=\"where g is a function to be found. ( ) 2 c) Hence show that ln a   = I   ,   b where a and b are positive integers to be found. ( ) 7\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q14-solution-1.svg\" alt=\"(a) Factor u2 + 5u + 6 = (u + 2)(u + 3). Clearing denominators gives 1 = A(u + 3) + B(u + 2). At u = −3, 1 = −B; at u = −2, 1 = A. Thus f(u) = 1/(u + 2) −1/(u + 3) . [A1] (b) Divide the two factors by cos x, which is nonzero on the interval. [M1] The integrand becomes sec2 x/[(tan x + 2)(tan x + 3)], so g(u) = (u + 2)(u + 3) . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q14-solution-2.svg\" alt=\"(c) Set u = tan x, [M1] [A1] so du = sec2 x dx, [M1] [A1] with limits 3/4 and 4/3 from the two reference triangles: [A1] For the lower angle, opposite and adjacent sides are 3, 4; for the upper angle they are 4, 3. R 4/3 3/4 [(u + 2)−1 −(u + 3)−1] du, with antiderivative ln |u + 2| −ln |u + 3|. The integral is Thus ln u + 2 4/3 = ln 10/13 11/15 = ln 150  I = 143 . [M1] [A1] u + 3 3/4\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 14 is 10 marks.</p>"
+    ],
+    "promptText": "1 ( ) ≡ f u . 2 u + 5 u + 6 a) Express f u into partial fractions. ( ) ( ) 1 arccos 3  5 1 I = dx . ( sin x + 2cos x )( sin x + 3cos x ) arcsin 3 5 b) Express I in the form arccos 3 I = 2 5 sec x dx , g ( tan x ) arcsin 3 5 where g is a function to be found. ( ) 2 c) Hence show that ln a   = I   ,   b where a and b are positive integers to be found. ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-u/q15",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q15-question-1.svg\" alt=\"The point P lies on the curve given parametrically as 2 2 −,   t ∈ . x = t , y = t t 3 The tangent to the curve at P passes through the point with coordinates ( ) 4, 2 . Determine the possible coordinates of P . ( ) 9\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q15-solution-1.svg\" alt=\"At t = 0, the tangent is vertical at x = 0, so it cannot pass through (4, 3/2). [B1] [A1] For t̸ = 0, the slope is (2t −1)/(2t). [M1] [A1] Substituting the given point into the tangent equation, 3 2 −(t2 −t) = 2t −1 (4 −t2). [M1] [A1] 2t Multiply by 2t and expand: 3t −2t3 + 2t2 = (2t −1)(4 −t2) = 8t −2t3 −4 + t2. Cancel the cubic terms: This reduces to t2 −5t + 4 = (t −1)(t −4) . [A1] = 0 Both parameters are valid, giving (1, 0), (16, 12) . [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 15 is 9 marks.</p>"
+    ],
+    "promptText": "The point P lies on the curve given parametrically as 2 2 −,   t ∈ . x = t , y = t t 3 The tangent to the curve at P passes through the point with coordinates ( ) 4, 2 . Determine the possible coordinates of P . ( ) 9"
+  },
+  {
+    "id": "madas/alevel-pure-u/q16",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q16-question-1.svg\" alt=\"A curve has equation 2 x y = 3e ,  x∈ . 2 Express dy ( ) dx in terms of y . 5\" style=\"--madas-width:581.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-u/q16-solution-1.svg\" alt=\"dxbf(x) = bf(x) ln(b)f′(x), with d Use the chain rule in the form b = 2, f(x) = 3e2x, f′(x) = 6e2x. Direct differentiation of y = 23e2x gives dy/dx = 23e2x ln 2 (6e2x) = 2y(3e2x ln 2). The bracket equals ln y, giving the required derivative. Alternatively, taking logarithms gives ln y = 3e2x ln 2. [M1] [A1] Differentiating, 1 dy dy dx = 6e2x ln 2 = 2 ln y, so dx = 2y ln y . [M1] [M1] [A1] y\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 16 is 5 marks.</p>"
+    ],
+    "promptText": "A curve has equation 2 x y = 3e ,  x∈ . 2 Express dy ( ) dx in terms of y . 5"
+  }
+]

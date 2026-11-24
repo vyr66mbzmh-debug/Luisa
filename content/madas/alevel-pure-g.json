@@ -1,0 +1,118 @@
+[
+  {
+    "id": "madas/alevel-pure-g/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q1-question-1.svg\" alt=\"y y C C R R x O 1 x O 2 14 The figure above shows the curve C , given parametrically by = 2 − = t ≥ x t 2, y 6 t , 0 .\" style=\"--madas-width:493.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q1-question-2.svg\" alt=\"The finite region R is bounded by C , the x axis and the straight lines with equations x = 2 and x = 14 . a) Show that the area of R is given by T  2 12 t dt , 2 stating the value of T . ( ) 5 b) Hence find the area of  R . ( ) 2\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q1-solution-1.svg\" alt=\"(a) The boundaries x = 2, 14 [B1] give t2 −2 = 2 or t2 −2 = 14, hence t2 = 4, 16. Since t ≥0, we obtain t = 2, 4, [A1] respectively: [A1] Since dx/dt = 2t, the parameter formula R y(x) dx = R y(t)(dx/dt) dt gives R 4 2 12t2 dt. R 4 In product form the area is 2 (6t)(2t) dt. [A1] Thus T = 4 . [A1] (b) [4t3]4 2 = 256 −32 . [M1] [A1] = 224\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 7 marks.</p>"
+    ],
+    "promptText": "y y C C R R x O 1 x O 2 14 The figure above shows the curve C , given parametrically by = 2 − = t ≥ x t 2, y 6 t , 0 . The finite region R is bounded by C , the x axis and the straight lines with equations x = 2 and x = 14 . a) Show that the area of R is given by T  2 12 t dt , 2 stating the value of T . ( ) 5 b) Hence find the area of  R . ( ) 2"
+  },
+  {
+    "id": "madas/alevel-pure-g/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q2-question-1.svg\" alt=\"Prove by the method of contradiction that there are no integers n and m which satisfy the following equation. 3 n + 21 m = 137 ( ) 4\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q2-solution-1.svg\" alt=\"Suppose there are integers m, n with 3n + 21m = 137. [B1] Then 137 = 3(n + 7m) [A1] would be a multiple of 3, but 137 = 3 · 45 + 2. [A1] Dividing by 3 would give n + 7m = 137/3 = 452 3, yet 7m is an integer and adding n still gives an integer: This contradiction proves the claim . [A1]\" style=\"--madas-width:660.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 4 marks.</p>"
+    ],
+    "promptText": "Prove by the method of contradiction that there are no integers n and m which satisfy the following equation. 3 n + 21 m = 137 ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-g/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q3-question-1.svg\" alt=\"A 7 A 6 A P 5 A Q 4 A 3 A 2 A 1 c θ O\" style=\"--madas-width:453.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q3-question-2.svg\" alt=\"The figure above shows a grid used to help spectators estimate the throwing distances of athletes in a shot put competition. The grid consists of circular sectors each with centre at O and the angle POQ is θ radians. The radius of the smaller sector is 10 metres and each of the other sectors has a radius 2 metres more than the previous one. The perimeter of A , shown shaded in the figure, is 1.4 times larger than the 4 perimeter of  the sector A . 1 Determine the value of θ .\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q3-solution-1.svg\" alt=\"Looking at the diagram: The perimeter of A1 is 10 + 10 + 10θ = 20 + 10θ. [B1] [A1] The third and fourth radii are 14 and 16 metres: [M1] [A1] Thus A4 has perimeter\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q3-solution-2.svg\" alt=\"2 + 2 + 14θ + 16θ = 4 + 30θ. [A1] Hence 4 + 30θ = 1.4(20 + 10θ) = 28 + 14θ, 16θ = 24, θ = 1.5 radians . [M1] [A1] Source clarification. The printed question omits its mark label: Seven marks are inferred from the 100-mark cover and the 93 marks allocated elsewhere: The ratio of perimeters follows the handwritten working:\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 7 marks.</p>"
+    ],
+    "promptText": "A 7 A 6 A P 5 A Q 4 A 3 A 2 A 1 c θ O The figure above shows a grid used to help spectators estimate the throwing distances of athletes in a shot put competition. The grid consists of circular sectors each with centre at O and the angle POQ is θ radians. The radius of the smaller sector is 10 metres and each of the other sectors has a radius 2 metres more than the previous one. The perimeter of A , shown shaded in the figure, is 1.4 times larger than the 4 perimeter of  the sector A . 1 Determine the value of θ ."
+  },
+  {
+    "id": "madas/alevel-pure-g/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q4-question-1.svg\" alt=\"1 1 1 ( ) = − &lt; &lt; f x , x . 4 4 1 + 4 x 3 a) Find the binomial series expansion of f x up and including the term in ( ) x . ( ) 4 x in the binomial expansion of ( 3 2 ) b) Hence determine the coefficient of f x + x . ( ) 4\" style=\"--madas-width:592.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q4-solution-1.svg\" alt=\"(a) Write f(x) = (1 + 4x)−1/2. The terms through the cubic are 1 + −1/2 1! (4x) + (−1/2)(−3/2) (4x)2 + (−1/2)(−3/2)(−5/2) (4x)3. 2! 3! By the binomial expansion with power −1/2, f(x) = 1 −2x + 6x2 −20x3 + O(x4). [M1] Use the power minus one half [A1] obtain the linear term [A1] obtain the quadratic term [A1] obtain the cubic term (b) Set z = x + x2, [M1] so z2 = x2 + 2x3 + O(x4) [A1] and z3 = x3 + O(x4). [A1] In terms of the original variable this is 1 −2(x + x2) + 6(x + x2)2 −20(x + x2)3 + O(x4). The cubic terms are 6(2x3) −20x3. The cubic coefficient in 1 −2z + 6z2 −20z3 + · · · is 12 −20 = −8 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 8 marks.</p>"
+    ],
+    "promptText": "1 1 1 ( ) = − < < f x , x . 4 4 1 + 4 x 3 a) Find the binomial series expansion of f x up and including the term in ( ) x . ( ) 4 x in the binomial expansion of ( 3 2 ) b) Hence determine the coefficient of f x + x . ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-g/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q5-question-1.svg\" alt=\"A curve C has equation 2 e x 2 , x∈ . y = ( x + 1 ) a) Show that dy i. dx = ( + )( + 2 e x ) 2 ( ) 2 x 1 x . 5 2 d y ( 2 7 e x ) 2 ii. = 2 2 x + 8 x + . ( ) 4 2 dx b) Hence, or otherwise, find the exact coordinates of the stationary points of C and determine their nature. ( ) 6\" style=\"--madas-width:576.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q5-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:581.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q5-solution-1.svg\" alt=\"(a) By the product rule: By the product rule, (i) y′ = 2(x + 1)e2x + 2(x + 1)2e2x = 2e2x(x + 1)[1 + (x + 1)] = 2(x + 1)(x + 2)e2x. [A1] Select the product rule [M1] differentiate the squared factor [M1] differentiate the exponential factor [A1] combine the two products [M1] factorise (ii) Differentiate 2(x2 + 3x + 2)e2x to get y′′ = 4e2x(x2 + 3x + 2) + 2e2x(2x + 3) (2x + 3) + 2(x2 + 3x + 2) e2x = 2 = 2(2x2 + 8x + 7)e2x. [M1] Apply the product rule again [M1] differentiate the quadratic factor [M1] retain the chain-rule factor in the exponential derivative [A1] collect the quadratic\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q5-solution-2.svg\" alt=\"Alternative for (ii). Differentiate the three factors in 2e2x(x + 1)(x + 2) in turn: The rule is (uvw)′ = u′vw + uv′w + uvw′: y′′ = 4e2x(x + 1)(x + 2) + 2e2x(x + 2) + 2e2x(x + 1) = 2e2x[2(x + 1)(x + 2) + (x + 2) + (x + 1)] = 2e2x[2x2 + 6x + 4 + 2x + 3]. (b) Since the exponential is positive, setting y′ = 0 requires 2(x + 1)(x + 2)e2x = 0, so only x = −2, −1 [M1] are stationary: At x = −2, y = e−4 [A1] and y′′ = 2(8 −16 + 7)e−4 = −2e−4 &lt; 0 , [A1] a local maximum. [A1] At x = −1, y = 0 and y′′ = 2(2 −8 + 7)e−2 , [A1] = 2e−2 &gt; 0 a local minimum . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 15 marks.</p>"
+    ],
+    "promptText": "A curve C has equation 2 e x 2 , x∈ . y = ( x + 1 ) a) Show that dy i. dx = ( + )( + 2 e x ) 2 ( ) 2 x 1 x . 5 2 d y ( 2 7 e x ) 2 ii. = 2 2 x + 8 x + . ( ) 4 2 dx b) Hence, or otherwise, find the exact coordinates of the stationary points of C and determine their nature. ( ) 6 "
+  },
+  {
+    "id": "madas/alevel-pure-g/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q6-question-1.svg\" alt=\"A curve C is defined parametrically by x = + t ln , t y = − t ln , t t &gt; 0 . a) Find the coordinates of the turning point of C . ( ) 5 b) Show that a Cartesian equation for C is 4ex y −= 2 ( x + y ) . ( ) 5\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q6-solution-1.svg\" alt=\"(a) dx/dt = 1 + 1/t &gt; 0, [B1] while dy/dt = 1 −1/t [A1] changes from negative to positive at t = 1. [A1] The stationary condition dy/dx = (dy/dt)/(dx/dt) = 0 requires 1 −1/t = 0, hence 1/t = 1, t = 1. As ln 1 = 0, x = 1 + 0, y = 1 −0. Hence the turning point is a minimum at (1, 1) . [M1] [A1] (b) Since x + y = 2t and x −y = 2 ln t, [B1] solve the sum for t = (x + y)/2. Substituting in the difference gives x −y = 2 ln[(x + y)/2] . = ln([(x + y)/2]2) Thus 4ex−y = (x + y)2, since exponentiation gives ex−y = t2 4(x + y)2. [A1] = 1\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q6-solution-2.svg\" alt=\"The parametrised branch has x + y &gt; 0. [A1] Equivalently, substitute directly into both sides: 4ex−y = 4e(t+ln t)−(t−ln t) = 4e2 ln t = 4t2, (x + y)2 = [(t + ln t) + (t −ln t)]2 = 4t2 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 10 marks.</p>"
+    ],
+    "promptText": "A curve C is defined parametrically by x = + t ln , t y = − t ln , t t > 0 . a) Find the coordinates of the turning point of C . ( ) 5 b) Show that a Cartesian equation for C is 4ex y −= 2 ( x + y ) . ( ) 5"
+  },
+  {
+    "id": "madas/alevel-pure-g/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q7-question-1.svg\" alt=\"( ) ( ) The variable points A 1,8, t − 1 and B 2 t − 1,4,3 t − 1 , where t is a scalar variable, are referred relative to a fixed origin O . Find the shortest distance between A and B , as t varies. ( ) 7\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q7-solution-1.svg\" alt=\"Subtract the position vectors (2t −1, 4, 3t −1) −(1, 8, t −1). The displacement is (2t −2, −4, 2t), so AB2 = (2t −2)2 + 16 + (2t)2 = 4t2 −8t + 4 + 16 + 4t2. Thus p 8t2 −8t + 20 = q 8(t2 −t + 5/2) AB = q 8[(t −1/2)2 −1/4 + 5/2] = q 8(t −1/2)2 −2 + 20 = q 8(t −1/2)2 + 18. = [B1] Form the displacement vector [B1] sum its squared components [M1] expand the quadratic [B1] complete the square √ This is smallest at t = 1 2, giving distance 3 2 . [M1] [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q7-solution-2.svg\" alt=\"Alternative by calculus. Minimise f(t) = AB2 . = 8t2 −8t + 20 Then f′(t) = 16t −8; setting this to zero gives 16t = 8, t = 1/2. Since f′′(t) = 16 &gt; 0, this is a minimum. Evaluate f(1/2) = 8(1/2)2 −8(1/2) + 20 = 2 −4 + 20 . = 18 Thus √ ABmin = 18 √ . = 3 2\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 7 marks.</p>"
+    ],
+    "promptText": "( ) ( ) The variable points A 1,8, t − 1 and B 2 t − 1,4,3 t − 1 , where t is a scalar variable, are referred relative to a fixed origin O . Find the shortest distance between A and B , as t varies. ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-g/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q8-question-1.svg\" alt=\"3 Water is pouring into a container at a constant rate of 0.05 m per hour and is leaking from a hole at the base of the container at the rate of  4 V 3 m per hour, where 5 3 V m is the volume of the water in the container. a) Show clearly that dV − = −, 20 16 V 1 dt where t is the time measured in hours. ( ) 3 3 Initially there were 4 m of water in the container.\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q8-question-2.svg\" alt=\"b) Show further that  4  1 1 63e − t 5 ( ) V =  +  . 8 16   c) State, with justification, the minimum volume that the water in the container will ever attain. ( ) 1\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q8-solution-1.svg\" alt=\"(a) Subtract outflow from inflow: dV/dt = 1/20 −4V/5, [B1] [A1] where 0.05 = 1/20. Multiplying by −20 gives −20 dV/dt = −1 + 16V = 16V −1 . [A1] (b) Separate the original equation to give −20 dV = (16V −1) dt, hence −20 Z Z −5 16V −1 dV = 1 dt =⇒ 4 ln |16V −1| = t + C1. Consequently ln |16V −1| = −4t/5 + C2. Exponentiating on the branch through V = 4 gives 16V −1 = eC2e−4t/5. Writing V = 1/16 + Be−4t/5, the initial condition gives 4 = 1/16 + B, so B = 63/16. Equivalently, let U = 16V −1. [B1] [A1] Then dU/dt = −4 5U, [M1] [A1] so U = Ce−4t/5. [A1] As V (0) = 4, [A1] C = 63, [A1] giving V = 1 16(1 + 63e−4t/5) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q8-solution-2.svg\" alt=\"(c) The volume decreases to 16 m3 . 1 As t →∞, e−4t/5 →0. The limiting volume is 0.0625 m3 = 62.5 litres: The exponential remains positive at every finite time, so this lower bound is approached but never attained: [M1] Source clarification. The printed question asks for a minimum volume. The given model only has a limiting lower bound:\" style=\"--madas-width:665.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 12 marks.</p>"
+    ],
+    "promptText": "3 Water is pouring into a container at a constant rate of 0.05 m per hour and is leaking from a hole at the base of the container at the rate of  4 V 3 m per hour, where 5 3 V m is the volume of the water in the container. a) Show clearly that dV − = −, 20 16 V 1 dt where t is the time measured in hours. ( ) 3 3 Initially there were 4 m of water in the container. b) Show further that  4  1 1 63e − t 5 ( ) V =  +  . 8 16   c) State, with justification, the minimum volume that the water in the container will ever attain. ( ) 1"
+  },
+  {
+    "id": "madas/alevel-pure-g/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q9-question-1.svg\" alt=\"Oil leaking from a damaged tanker is forming a circular oil spillage on the surface of m s−. 2 1 the sea, whose area is increasing at the constant rate of 360 We may assume that the spillage is of negligible thickness. a) Find the rate at which the radius of the oil spillage is increasing when the radius of the spillage reaches 100 m . ( ) 4 b) Determine the rate at which the radius of the oil spillage is increasing 1 minute after it started forming. ( ) 4\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q9-solution-1.svg\" alt=\"Let r be the radius in metres and t the elapsed time in seconds: From A = πr2, 360 = 2πr dr/dt. (a) Equivalently dr/dt = (dr/dA)(dA/dt)\" style=\"--madas-width:433.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q9-solution-2.svg\" alt=\"= [1/(2πr)]360 . = 180/(πr) At r = 100 this gives 180/(100π) ≈0.573 m s−1, or exactly 9/(5π) m s−1 . [M1] Differentiate the area relation with respect to time [M1] substitute the area rate [M1] substitute the radius [M1] solve for the radial rate (b) With zero initial area, A = 360t, [B1] giving A(0) = 0, A(1) = 360, A(2) = 2(360), . . . , A(60) = 60(360) = 21600. Thus πr2 = 21600, so r = p 21600/π [A1] at t = 60, a radius of 82.918 . . . m. Substituting in 180/(πr) gives 0.691 . . . m s−1. [M1] Then q 3/(2π) m s−1 . dr/dt = 180/(πr) = [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 8 marks.</p>"
+    ],
+    "promptText": "Oil leaking from a damaged tanker is forming a circular oil spillage on the surface of m s−. 2 1 the sea, whose area is increasing at the constant rate of 360 We may assume that the spillage is of negligible thickness. a) Find the rate at which the radius of the oil spillage is increasing when the radius of the spillage reaches 100 m . ( ) 4 b) Determine the rate at which the radius of the oil spillage is increasing 1 minute after it started forming. ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-g/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q10-question-1.svg\" alt=\"Given that θ θ + θ θ = 64cos2 cos 32sin 2 sin 27 , find the value of cosθ . ( ) 6\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q10-solution-1.svg\" alt=\"Start from 64 cos 2θ cos θ + 32 sin 2θ sin θ = 27. For the handwritten route, put c = cos θ, s = sin θ. Then 64(2c2 −1)c + 32(2sc)s = 27, 128c3 −64c + 64s2c = 27, 128c3 −64c + 64(1 −c2)c = 27, 128c3 −64c + 64c −64c3 = 27. Thus 64c3 = 27, c3 = 27/64. Equivalently, use cos 2θ = cos2 θ −sin2 θ [M1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q10-solution-2.svg\" alt=\"and sin 2θ = 2 sin θ cos θ. [A1] The mixed terms cancel: 64 cos θ(cos2 θ −sin2 θ) + 64 sin2 θ cos θ = 64 cos3 θ [M1] [A1] = 27. Hence cos θ = 3 4 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 6 marks.</p>"
+    ],
+    "promptText": "Given that θ θ + θ θ = 64cos2 cos 32sin 2 sin 27 , find the value of cosθ . ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-g/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q11-question-1.svg\" alt=\"Find the value of x that satisfies the equation 20  ( ) 6 ( 2 r + x ) = 280 . r = 1\" style=\"--madas-width:581.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q11-solution-1.svg\" alt=\"Writing out the terms gives 20 X (2r + x) = (2 + x) + (4 + x) + (6 + x) + · · · + (40 + x). [B1] r=1 Each successive term increases by (2(r + 1) + x) −(2r + x) = 2. This is an arithmetic progression with first term a = 2 + x, common difference d = 2, last term l = 40 + x, and n = 20. [A1] Using Sn = n 2 (a + l), [A1] S20 = 20 (2 + x) + (40 + x)  2 [A1] = 10(2x + 42). Equating the sum to 280 gives 10(2x + 42) = 280, so 2x + 42 = 28. [M1] Hence 2x = −14 and x = −7 . [A1]\" style=\"--madas-width:680.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 6 marks.</p>"
+    ],
+    "promptText": "Find the value of x that satisfies the equation 20  ( ) 6 ( 2 r + x ) = 280 . r = 1"
+  },
+  {
+    "id": "madas/alevel-pure-g/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q12-question-1.svg\" alt=\"f x ( ) ≡ 2 − x −, 1 x ≥. 1 a) Find a simplified expression for ( ) f x g x = . ( ) ( ) g x so that 1 ( ) 4 b) Hence, or otherwise, find  5 − x dx . ( ) 6 − − 2 x 1\" style=\"--madas-width:574.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q12-solution-1.svg\" alt=\"(a) From f(x)g(x) = 1 we have g(x) = 1/f(x) √ . = 1/(2 − x −1) The denominator vanishes at x = 5. [B1] [A1] Multiply top and bottom by 2 + √x −1. The denominator becomes (2 −√x −1)(2 + √x −1) = 4 −(x −1) = 5 −x, giving g(x) = 2 + √x −1 , x ≥1, x̸ = 5. [M1] [A1] 5 −x (b) Write (5 −x)/f(x) = (5 −x)[1/f(x)] √ . = (5 −x)(2 + x −1)/(5 −x) The integrand reduces to 2 + √x −1 [B1] [A1] wherever it is defined: [M1] [A1] Write the square root as (x −1)1/2 and integrate term by term.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-g/q12-solution-2.svg\" alt=\"Hence its integral on each interval of definition is 3(x −1)3/2 + C . 2x + 2 [B1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 10 marks.</p>"
+    ],
+    "promptText": "f x ( ) ≡ 2 − x −, 1 x ≥. 1 a) Find a simplified expression for ( ) f x g x = . ( ) ( ) g x so that 1 ( ) 4 b) Hence, or otherwise, find  5 − x dx . ( ) 6 − − 2 x 1"
+  }
+]

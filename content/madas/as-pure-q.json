@@ -1,0 +1,105 @@
+[
+  {
+    "id": "madas/as-pure-q/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q1-question-1.svg\" alt=\"3 Show that a a 1 is odd for all positive integer values of a . 5 − + ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q1-solution-1.svg\" alt=\"Method A. Factor the first two terms: 𝑎3 −𝑎+ 1 = 𝑎(𝑎2 −1) + 1 = (𝑎−1)𝑎(𝑎+ 1) + 1. [M1] [A1] The factors 𝑎−1, 𝑎, 𝑎+ 1 are consecutive integers, so at least one is even. [B1] Their product is therefore even for every positive integer 𝑎. [M1] Adding one proves that 𝑎3 −𝑎+ 1 is odd . [A1] Method B. Exhaust the two parity cases. For 𝑎= 2𝑛. (2𝑛)3 −2𝑛+ 1 = 8𝑛3 −2𝑛+ 1 = 2(4𝑛3 −𝑛) + 1. For 𝑎= 2𝑛+ 1. (2𝑛+ 1)3 −(2𝑛+ 1) + 1 = 8𝑛3 + 12𝑛2 + 6𝑛+ 1 −2𝑛−1 + 1 = 2(4𝑛3 + 6𝑛2 + 2𝑛) + 1. Each expression is twice an integer plus one, hence odd.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 5 marks.</p>"
+    ],
+    "promptText": "3 Show that a a 1 is odd for all positive integer values of a . 5 − + ( )"
+  },
+  {
+    "id": "madas/as-pure-q/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q2-question-1.svg\" alt=\"Find the value of the constant k if 3 2 6 x kx dx 8 . 5 + = ( ) ∫ 1\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q2-solution-1.svg\" alt=\"Integrate the left-hand side and evaluate both limits: [2𝑥3 + 1 [M1] [A1] 2𝑘𝑥2]3 1 = 8 (2 ⋅33 + 1 2𝑘⋅32) −(2 ⋅13 + 1 [M1] 2𝑘⋅12) = 8 54 + 9 2𝑘−2 −1 [A1] 2𝑘= 8, 52 + 4𝑘= 8 [A1] 4𝑘= −44, 𝑘= −11 .\" style=\"--madas-width:548.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 5 marks.</p>"
+    ],
+    "promptText": "Find the value of the constant k if 3 2 6 x kx dx 8 . 5 + = ( ) ∫ 1"
+  },
+  {
+    "id": "madas/as-pure-q/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q3-question-1.svg\" alt=\"2 f x x , x∈ℝ. = ( ) Use the formal definition of the derivative as a limit, to show that f x 2 x . 5 ′ ( ) = ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q3-solution-1.svg\" alt=\"Apply the definition of the derivative: 𝑓(𝑥+ ℎ) −𝑓(𝑥) 𝑓′(𝑥) = lim [B1] ℎ ℎ→0 (𝑥+ ℎ)2 −𝑥2 = lim [M1] ℎ ℎ→0 𝑥2 + 2𝑥ℎ+ ℎ2 −𝑥2 = lim [A1] ℎ→0 ℎ 2𝑥ℎ+ ℎ2 = lim = lim [M1] ℎ→0(2𝑥+ ℎ). ℎ ℎ→0 As ℎtends to zero, the only surviving term is 𝑓′(𝑥) = 2𝑥. [A1]\" style=\"--madas-width:484.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 5 marks.</p>"
+    ],
+    "promptText": "2 f x x , x∈ℝ. = ( ) Use the formal definition of the derivative as a limit, to show that f x 2 x . 5 ′ ( ) = ( )"
+  },
+  {
+    "id": "madas/as-pure-q/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q4-question-1.svg\" alt=\"The graph of the curve with equation y 2sin 2 x k ° , 0 x 360 , = ( + ) ≤ &lt; where k is a constant so that 0 k 90 , passes through the points with coordinates &lt; &lt; P 55,1 and Q α , 3 . ( ) ( ) a) Show, without verification, that 5 k = 40 . ( ) b) Determine the possible values of α . 5 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q4-solution-1.svg\" alt=\"(a) Substitute 𝑃= (55, 1). 1 = 2 sin(110 + 𝑘)∘, sin(110 + 𝑘)∘= 1/2. [M1] [A1] Since 0 &lt; 𝑘&lt; 90, 110 &lt; 110 + 𝑘&lt; 200. [B1] The reference angle is 30∘. In this interval the only angle with sine 1/2 is 180∘−30∘= 150∘. [M1] Thus 110 + 𝑘= 150, giving 𝑘= 40 . [A1] √ (b) Substitute 𝑄= (𝛼, 3). √ sin(2𝛼+ 40)∘= [M1] 3/2. The angles are 60∘+ 360∘𝑛or 120∘+ 360∘𝑛. [A1] Hence 2𝛼= 20 + 360𝑛or 80 + 360𝑛. [M1] Dividing by two gives 𝛼= 10 + 180𝑛or 40 + 180𝑛. [A1] In the printed range, 𝛼= 10, 40, 190, 220 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 10 marks.</p>"
+    ],
+    "promptText": "The graph of the curve with equation y 2sin 2 x k ° , 0 x 360 , = ( + ) ≤ < where k is a constant so that 0 k 90 , passes through the points with coordinates < < P 55,1 and Q α , 3 . ( ) ( ) a) Show, without verification, that 5 k = 40 . ( ) b) Determine the possible values of α . 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-q/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q5-question-1.svg\" alt=\"The variables x and y are thought to obey a law of the form y a k x , = × where a and k are positive constants. Let Y log y . = 10 a) Show there is a linear relationship between x and Y . 4 ( ) The figure below shows the graph of Y against x .\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q5-question-2.svg\" alt=\"𝑌 𝐵(0, 3) 𝐴(−3 2, 0) 𝑥 𝑂 b) Determine the value of a and the value of k . 4 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q5-solution-1.svg\" alt=\"(a) Take logarithms to base ten: 𝑌= log10(𝑎𝑘𝑥) [M1] = log10 𝑎+ log10(𝑘𝑥) [A1] = 𝑥log10 𝑘+ log10 𝑎. [A1] This has the form 𝑌= 𝑚𝑥+ 𝑐, with constant gradient 𝑚= log10 𝑘and constant intercept 𝑐= log10 𝑎. [A1] (b) From 𝐵= (0, 3), log10 𝑎= 3, hence 𝑎= 103 = 1000 . [M1] [A1] The gradient from 𝐴= (−3/2, 0) to 𝐵is (3 −0)/(0 + 3/2) = 2. [M1] Thus log10 𝑘= 2 and 𝑘= 102 = 100 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 8 marks.</p>"
+    ],
+    "promptText": "The variables x and y are thought to obey a law of the form y a k x , = × where a and k are positive constants. Let Y log y . = 10 a) Show there is a linear relationship between x and Y . 4 ( ) The figure below shows the graph of Y against x . 𝑌 𝐵(0, 3) 𝐴(−3 2, 0) 𝑥 𝑂 b) Determine the value of a and the value of k . 4 ( )"
+  },
+  {
+    "id": "madas/as-pure-q/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q6-question-1.svg\" alt=\"The triangle ABC has AB = 13 cm and BC = 15 cm . Given that BCA = 60 , determine the possible values of AC . 5 ∡ ° ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q6-solution-1.svg\" alt=\"Start with a diagram. The two possible positions of 𝐴are close together: 𝐴 13 60∘ 𝐶 15 𝐵 By the sine rule: √ sin 𝐴= 15 sin 60∘ 13 15 = 15 3 [M1] sin 60∘= sin 𝐴, 13 26\" style=\"--madas-width:514.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q6-solution-2.svg\" alt=\"[A1] 𝐴= 87.7957 …∘ or 92.2042 …∘. For the cosine rule using sides 𝐴𝐵, 𝐵𝐶, the included angle is 𝐵= 120∘−𝐴. The manuscript uses the angle symbol inconsistently here. With the included angle made explicit: 𝐴𝐶2 = 132 + 152 −2(13)(15) cos 𝐵= 394 −390 cos 𝐵. [M1] For 𝐴= 87.7957 …∘, 𝐵= 32.2042 …∘and 𝐴𝐶= 8. [A1] For 𝐴= 92.2042 …∘, 𝐵= 27.7957 …∘and 𝐴𝐶= 7. The possible lengths are 7 cm, 8 cm . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 5 marks.</p>"
+    ],
+    "promptText": "The triangle ABC has AB = 13 cm and BC = 15 cm . Given that BCA = 60 , determine the possible values of AC . 5 ∡ ° ( )"
+  },
+  {
+    "id": "madas/as-pure-q/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q7-question-1.svg\" alt=\"The points A , B and C have coordinates ( 2,1 , ( 4,0 and ( 6,4 respectively. ) ) ) a) Determine an equation of the straight line L which passes through C and is parallel to AB . 4 ( ) b) Show that the angle ABC is 90° . 3 ( ) c) Calculate the distance AC . 2 ( ) A circle passes through the points A , B and C . d) Show that the equation of this circle is given by\" style=\"--madas-width:570.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q7-question-2.svg\" alt=\"x 2 y 2 8 x 5 y 16 0 . 5 + − − + = ( ) e) Find the coordinates of the point other than the point C where L intersects the circle. 5 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q7-solution-1.svg\" alt=\"[M1] [A1] Through 𝐶, the parallel line satisfies (a) The gradient of 𝐴𝐵is (0 −1)/(4 −2) = −1/2. 2(𝑥−6), so 2𝑦−8 = −𝑥+ 6. [M1] Thus 𝐿∶𝑥+ 2𝑦= 14 . [A1] 𝑦−4 = −1 (b) The gradient of 𝐵𝐶is (4 −0)/(6 −4) = 2. [M1] Since 2(−1/2) = −1, the sides are perpendicular. [M1] Hence ∠𝐴𝐵𝐶= 90∘. [A1] (c) 𝐴𝐶= √(6 −2)2 + (4 −1)2 = √16 + 9 = 5 . [M1] [A1] (4, 5) 𝐶 𝐿 𝑀 𝐴 𝐵\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q7-solution-2.svg\" alt=\"(d) The right angle at 𝐵stands on the diameter 𝐴𝐶. [B1] The centre is its midpoint, ((2+6)/2, (1+4)/2) = (4, 5/2). [M1] Its radius is 5/2. [A1] (𝑥−4)2 + (𝑦−5 2)2 = 25 [M1] 4 . Expand to get 𝑥2 −8𝑥+ 16 + 𝑦2 −5𝑦+ 25/4 = 25/4. Thus 𝑥2 + 𝑦2 −8𝑥−5𝑦+ 16 = 0 . [A1] (e) Substitute 𝑥= 14 −2𝑦from 𝐿into the circle: (14 −2𝑦)2 + 𝑦2 −8(14 −2𝑦) −5𝑦+ 16 = 0 [M1] 196 −56𝑦+ 4𝑦2 + 𝑦2 −112 + 16𝑦−5𝑦+ 16 = 0 [A1] 5𝑦2 −45𝑦+ 100 = 0, 𝑦2 −9𝑦+ 20 = 0 [A1] [M1] (𝑦−4)(𝑦−5) = 0. For 𝑦= 4, 𝑥= 6, giving 𝐶. For 𝑦= 5, 𝑥= 4, giving the other point (4, 5) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 19 marks.</p>"
+    ],
+    "promptText": "The points A , B and C have coordinates ( 2,1 , ( 4,0 and ( 6,4 respectively. ) ) ) a) Determine an equation of the straight line L which passes through C and is parallel to AB . 4 ( ) b) Show that the angle ABC is 90° . 3 ( ) c) Calculate the distance AC . 2 ( ) A circle passes through the points A , B and C . d) Show that the equation of this circle is given by x 2 y 2 8 x 5 y 16 0 . 5 + − − + = ( ) e) Find the coordinates of the point other than the point C where L intersects the circle. 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-q/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q8-question-1.svg\" alt=\"A cubic curve C has equation 1 2 y x 8 x 4 x 3 . = ( − )( − + ) A quadratic curve C has equation 2 y 2 x 3 8 x . = − − ( )( ) a) Sketch on separate set of axes the graphs of C and C . 1 2 The sketches must contain the coordinates of the points where each of the curves meet the coordinate axes. 5 ( )\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q8-question-2.svg\" alt=\"b) Hence find the solutions of the following equation. 2 x 8 x 4 x 3 2 x 3 8 x . 6 ( − )( − + = ( − )( − ) ( ) )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q8-solution-1.svg\" alt=\"(a) The cubic factors as (𝑥−8)(𝑥−1)(𝑥−3). [M1] Its horizontal intercepts are (1, 0), (3, 0), (8, 0) and its vertical intercept is (0, −24). [A1] It rises to the right. [B1] The quadratic (2𝑥−3)(8 −𝑥) opens downwards with roots 3/2, 8, [B1] and meets the vertical axis at (0, −24). [B1] 3/2 1 3 8 8 −24 −24 The manuscript overlays the two curves to illustrate their intersections: 𝑦 𝑥\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q8-solution-2.svg\" alt=\"(b) Use 8 −𝑥= −(𝑥−8). Keep the common factor so its root is retained: (𝑥−8)(𝑥2 −4𝑥+ 3) + (2𝑥−3)(𝑥−8) = 0 [M1] (𝑥−8)[𝑥2 −4𝑥+ 3 + 2𝑥−3] = 0 [A1] (𝑥−8)(𝑥2 −2𝑥) = 0 [A1] [M1] 𝑥(𝑥−2)(𝑥−8) = 0. Hence 𝑥= 0, 2, 8 . [A1] [A1] Alternative solution. Expand both sides: 𝑥3 −4𝑥2 + 3𝑥−8𝑥2 + 32𝑥−24 = 16𝑥−2𝑥2 −24 + 3𝑥. Thus 𝑥3 −12𝑥2 + 35𝑥−24 = −2𝑥2 + 19𝑥−24. Collecting terms gives 𝑥3 −10𝑥2 + 16𝑥= 0, then 𝑥(𝑥2 −10𝑥+ 16) = 𝑥(𝑥−2)(𝑥−8) = 0, with the same three roots.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 11 marks.</p>"
+    ],
+    "promptText": "A cubic curve C has equation 1 2 y x 8 x 4 x 3 . = ( − )( − + ) A quadratic curve C has equation 2 y 2 x 3 8 x . = − − ( )( ) a) Sketch on separate set of axes the graphs of C and C . 1 2 The sketches must contain the coordinates of the points where each of the curves meet the coordinate axes. 5 ( ) b) Hence find the solutions of the following equation. 2 x 8 x 4 x 3 2 x 3 8 x . 6 ( − )( − + = ( − )( − ) ( ) )"
+  },
+  {
+    "id": "madas/as-pure-q/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q9-question-1.svg\" alt=\"The points A and C have coordinates ( 3,2 and ( 5,6 , respectively. ) ) a) Find an equation for the perpendicular bisector of AC , giving the answer in the form ax by c , where a , b and c are integers. 5 + = ( ) The perpendicular bisector of AC crosses the y axis at the point B . The point D is such so that ABCD is a rhombus. b) Show that the coordinates of D are ( 3 8,2 . ( ) ) c) Calculate the area of the rhombus ABCD . 4 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q9-solution-1.svg\" alt=\"(a) The midpoint of 𝐴𝐶is 𝑀= ((3+5)/2, (2+6)/2) = (4, 4). [M1] Its gradient is (6−2)/(5−3) = 2, so the perpendicular gradient is −1/2. [M1] [A1] Use point and gradient: 𝑦−4 = −1 2(𝑥−4), so 2𝑦−8 = −𝑥+4. [M1] Thus 𝑥+ 2𝑦= 12 . [A1] (b) At 𝑥= 0, 2𝑦= 12 gives 𝐵= (0, 6). [B1] 𝐶(5, 6) 𝐵(0, 6) 𝑀 𝐷 𝐴(3, 2) A rhombus has bisecting diagonals, so 𝑀= (4, 4) is also the midpoint of 𝐵𝐷. [M1] Write 𝐷= (𝑎, 𝑏). Then 𝑎/2 = 4, (6 + 𝑏)/2 = 4, giving 𝐷= (8, 2) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q9-solution-2.svg\" alt=\"(c) Using the distance formula from the midpoint to each vertex: √ √ √ √ 𝐴𝑀= √(3 −4)2 + (2 −4)2 = 𝐵𝑀= √(0 −4)2 + (6 −4)2 = 1 + 4 = 5, 16 + 4 = 2 5. √ √ There are four congruent right triangles. Their combined area is 4( 1 5) = 4(5) = 20. 2𝐴𝑀⋅𝐵𝑀) = 2( 5)(2 As a check: √ √ The diagonals are perpendicular. Their lengths are 𝐴𝐶= 20 [M1] and 𝐵𝐷= √82 + (−4)2 = 22 + 42 = √ √ √ √ 80. [A1] The area is 1 1600 = 20 . [M1] [A1] Equivalently, horizontal base 𝐵𝐶= 5 and 80 = 1 20 2 2 perpendicular height 6 −2 = 4 give 5(4) = 20.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 12 marks.</p>"
+    ],
+    "promptText": "The points A and C have coordinates ( 3,2 and ( 5,6 , respectively. ) ) a) Find an equation for the perpendicular bisector of AC , giving the answer in the form ax by c , where a , b and c are integers. 5 + = ( ) The perpendicular bisector of AC crosses the y axis at the point B . The point D is such so that ABCD is a rhombus. b) Show that the coordinates of D are ( 3 8,2 . ( ) ) c) Calculate the area of the rhombus ABCD . 4 ( )"
+  },
+  {
+    "id": "madas/as-pure-q/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q10-question-1.svg\" alt=\"The point P , whose x coordinate is 1 4 , lies on the curve with equation k 4 x x + y , x∈ℝ, x &gt; 0 , = 7 x where k is a non zero constant. 5 a) Determine, in terms of k , the gradient of the curve at P . ( ) The tangent to the curve at P is parallel to the straight line with equation 44 x 7 y 5 0 . + − =\" style=\"--madas-width:570.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q10-question-2.svg\" alt=\"b) Find an equation of the tangent to the curve at P . 7 ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q10-solution-1.svg\" alt=\"(a) Simplify with indices before differentiating: 𝑦= 4𝑥√𝑥+ 𝑘 7𝑥1/2 + 𝑘 [M1] [A1] = 4 7𝑥−1 7𝑥 𝑦′ = 2 7𝑥−1/2 −𝑘 7𝑥−2 [M1] [A1] 𝑦′(1/4) = 2 7(2) −𝑘 4−16𝑘 [A1] 7(16) = . 7 (b) Rearrange the parallel line: 7𝑦= −44𝑥+5, so 𝑦= −44𝑥/7 +5/7. [M1] Its gradient equals the tangent gradient. [B1] [M1] [A1] (4 −16𝑘)/7 = −44/7, 4 −16𝑘= −44, 48 = 16𝑘, 𝑘= 3. At 𝑃, 𝑦= [4(1/4)√1/4+3]/[7(1/4)] = (1/2+3)/(7/4) = 2. [A1] Through 𝑃= (1/4, 2), 𝑦−2 = −44 7 (𝑥−1 4). [M1] Thus 7𝑦−14 = −44𝑥+ 11, giving 44𝑥+ 7𝑦= 25 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 12 marks.</p>"
+    ],
+    "promptText": "The point P , whose x coordinate is 1 4 , lies on the curve with equation k 4 x x + y , x∈ℝ, x > 0 , = 7 x where k is a non zero constant. 5 a) Determine, in terms of k , the gradient of the curve at P . ( ) The tangent to the curve at P is parallel to the straight line with equation 44 x 7 y 5 0 . + − = b) Find an equation of the tangent to the curve at P . 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-q/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q11-question-1.svg\" alt=\"Find the exact solutions of the equation 8 2e 2 x 5e x 3e x − 4 . ( ) − + =\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-q/q11-solution-1.svg\" alt=\"Multiply throughout by 𝑒𝑥and collect terms: [M1] 2𝑒3𝑥−5𝑒2𝑥+ 3 = 4𝑒𝑥 2𝑒3𝑥−5𝑒2𝑥−4𝑒𝑥+ 3 = 0. [A1] Let 𝑢= 𝑒𝑥&gt; 0. Then 2𝑢3 −5𝑢2 −4𝑢+ 3 = 0. [M1] Testing 𝑢= −1 gives −2 −5 + 4 + 3 = 0. Factorise: (𝑢+ 1)(2𝑢2 −7𝑢+ 3) = 0 [M1] [A1] (𝑢+ 1)(2𝑢−1)(𝑢−3) = 0. Thus 𝑢= −1, 1 2, 3. Reject −1, since an exponential is positive. [B1] For 𝑒𝑥= 1/2, 𝑥= ln(1/2) = −ln 2. [A1] For 𝑒𝑥= 3, 𝑥= ln 3. Hence 𝑥= −ln 2 or 𝑥= ln 3 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 8 marks.</p>"
+    ],
+    "promptText": "Find the exact solutions of the equation 8 2e 2 x 5e x 3e x − 4 . ( ) − + ="
+  }
+]

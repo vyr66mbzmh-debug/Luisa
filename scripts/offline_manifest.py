@@ -19,6 +19,9 @@ def generate(root, entries, version):
     # PAP-075: PMT questions travel in the same chapter packs as past-paper questions (same chapterKeys and dataPath shape).
     if (root/'pmt-catalogue.json').exists():
         exam_index = {'questions': exam_index['questions'] + json.loads((root/'pmt-catalogue.json').read_text())['questions']}
+    if (root/'madas-catalogue.json').exists():
+        for primary in json.loads((root/'madas-catalogue.json').read_text())['questions']:
+            exam_index['questions'].extend([primary, *primary.get('editions', [])])
     chapter_keys = {f"{book['course']}/{book['id']}/{chapter['id']}"
                     for book in catalogue['books'] for chapter in book['chapters']}
     exams_by_chapter = {}
@@ -33,7 +36,7 @@ def generate(root, entries, version):
         key = (question['bookId'], str(question['chapterNumber']))
         practice_files.setdefault(key, set()).add(question['dataPath'])
         practice_counts[key] = practice_counts.get(key, 0) + 1
-    shared = {n for n in entries if (len(Path(n).parts)==1 and Path(n).suffix in {'.html','.js','.css','.webmanifest'}) or n in {'exam-catalogue.json','pmt-catalogue.json','textbook-catalogue.json','practice-catalogue.json','release.json','version-history.json'} or n.startswith('vendor/') or n.startswith('assets/luisa/') or (n.startswith('resources/') and (Path(n).suffix in {'.js','.css'} or Path(n).name=='index.json'))}
+    shared = {n for n in entries if (len(Path(n).parts)==1 and Path(n).suffix in {'.html','.js','.css','.webmanifest'}) or n in {'exam-catalogue.json','pmt-catalogue.json','madas-catalogue.json','textbook-catalogue.json','practice-catalogue.json','release.json','version-history.json'} or n.startswith('vendor/') or n.startswith('assets/luisa/') or (n.startswith('resources/') and (Path(n).suffix in {'.js','.css'} or Path(n).name=='index.json'))}
     shared.discard('sw.js')
     def local(url, bases=('',)):
         p = urlsplit(url)
@@ -159,7 +162,11 @@ def generate(root, entries, version):
             for name in {q['dataPath'] for q in exams}:
                 if name not in entries:raise ValueError('Offline exam questions missing: '+name)
                 files.add(name)
-                files.update(refs(json.loads((root/name).read_text()), ('',)))
+                payload = json.loads((root/name).read_text())
+                if name.startswith('content/madas/'):
+                    selected_ids = {q['id'] for q in exams if q['dataPath'] == name}
+                    payload = [row for row in payload if row['id'] in selected_ids]
+                files.update(refs(payload, ('',)))
             for skill in {q['skill'] for q in practice}:
                 name='content/'+skill+'.json'
                 if name not in entries:raise ValueError('Offline practice missing: '+name)

@@ -37,7 +37,7 @@ DECISIONS = 'docs/evidence/duplicate-decisions.json'
 # pairs among them are candidates.
 IMPORTED = 0.4
 OWN = 0.95
-IMPORT_KINDS = {'official', 'pmt'}
+IMPORT_KINDS = {'official', 'pmt', 'madas'}
 SHINGLE = 3
 MIN_TOKENS = 12           # shorter prompts ("Simplify x^2 x^3") repeat legitimately across exercises
 COMMON = 40               # shingles shared by more questions than this are boilerplate
@@ -121,6 +121,12 @@ def bank(root=ROOT):
             item = next(c for c in _payload(root, q['dataPath'], cache) if c['id'] == q['id'])
             out.append({'id': q['id'], 'kind': 'pmt', 'marks': q['marks'], 'order': (1, pmt_order(q['id'])),
                         'duplicateOf': q.get('duplicateOf'), 'html': item['question']})
+    madas = root / 'madas-catalogue.json'
+    if madas.exists():
+        for q in _json(madas)['questions']:
+            item = next(row for row in _payload(root, q['dataPath'], cache) if row['id'] == q['id'])
+            out.append({'id': q['id'], 'kind': 'madas', 'marks': q['marks'], 'order': (4, q['id']),
+                        'html': html.escape(item['promptText'])})
     return out
 
 

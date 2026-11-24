@@ -1,3 +1,9 @@
+## Luisa v0.78
+
+- Papers includes 1,021 MADAS question appearances in 75 papers, with 1,018 distinct problems across AS Pure, A-level Pure and A-level Applied. Three repeated problems retain their original paper references and marking variants.
+- The Madas source beside Exam style uses Standard for A–I, Hard for J–R and Very Hard for S–Z. The original difficulty guidance stays in the catalogue.
+- Teachers can select Include MADAS questions when generating an exam. The adapted schemes identify the collection, paper and question and show editorial marks. Textbook mappings support selection and are omitted from the question and answer pages.
+
 ## Luisa v0.77
 
 - Papers: 51 duplicate PMT questions removed from `pmt-catalogue.json`, `content/pmt/` and `resources/pmt/` (survivor: the official paper, else the earliest PMT question); chapter keys and skills carried to the survivor; `migrations` in `pmt-catalogue.json` maps each removed ID to its survivor for saved selections. Traceability in `docs/evidence/v077-duplicates-removed.json`.

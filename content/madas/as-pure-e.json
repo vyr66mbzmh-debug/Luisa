@@ -1,0 +1,105 @@
+[
+  {
+    "id": "madas/as-pure-e/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q1-question-1.svg\" alt=\"𝑦 4𝑥+ 9 𝑦= (𝑥+ 1)2 𝑥 𝑂 2 The figure above shows the graphs of y x 1 and y 4 x + . 9 5 = ( + ) = ( ) a) Find the coordinates of the points of intersection between the two graphs.\" style=\"--madas-width:570.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q1-question-2.svg\" alt=\"b) Hence solve the inequality 2 x 1 4 x 9 , + ≥ + ( ) fully justifying the answer. 2 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q1-solution-1.svg\" alt=\"(a) Solve simultaneously: 𝑦= (𝑥+ 1)2, 𝑦= 4𝑥+ 9 (𝑥+ 1)2 = 4𝑥+ 9 [M1] 𝑥2 + 2𝑥+ 1 = 4𝑥+ 9 𝑥2 −2𝑥−8 = 0 [A1] [M1] (𝑥−4)(𝑥+ 2) = 0 𝑥= 4 ⟹𝑦= (4 + 1)2 = 25 𝑥= −2 ⟹𝑦= (−2 + 1)2 = 1. [A1] Hence the intersections are (−2, 1), (4, 25) . [A1] (b) Look at the diagram:\" style=\"--madas-width:505.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q1-solution-2.svg\" alt=\"𝑦 𝑦= (𝑥+ 1)2 𝑦= 4𝑥+ 9 𝑥 −2 4 The quadratic is on or above the line outside the two intersections. [M1] Hence 𝑥≤−2 or 𝑥≥4 . [A1]\" style=\"--madas-width:670.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 7 marks.</p>"
+    ],
+    "promptText": "𝑦 4𝑥+ 9 𝑦= (𝑥+ 1)2 𝑥 𝑂 2 The figure above shows the graphs of y x 1 and y 4 x + . 9 5 = ( + ) = ( ) a) Find the coordinates of the points of intersection between the two graphs. b) Hence solve the inequality 2 x 1 4 x 9 , + ≥ + ( ) fully justifying the answer. 2 ( )"
+  },
+  {
+    "id": "madas/as-pure-e/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q2-question-1.svg\" alt=\"A circle has centre at the origin and radius R . This circle fits wholly inside the circle with equation 2 2 x y 10 x 24 y 231 . + − − = 7 Determine the range of possible values of R . ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q2-solution-1.svg\" alt=\"Obtain the parameters of the given circle: 𝑥2 −10𝑥+ 𝑦2 −24𝑦= 231 (𝑥−5)2 −25 + (𝑦−12)2 −144 = 231 [M1] (𝑥−5)2 + (𝑦−12)2 = 400. [A1] The centre is 𝐶(5, 12), and the radius is 20. [A1] 𝐶 𝑂 𝐷\" style=\"--madas-width:485.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q2-solution-2.svg\" alt=\"The required radius is at most |𝑂𝐷|, the shortest distance from the origin to the larger circle. [M1] 𝑅≤|𝑂𝐷| = |𝐶𝐷| −|𝑂𝐶| = 20 −√52 + 122 [M1] √ [A1] = 20 − 169 = 20 −13 = 7. The possible positive radii are 0 &lt; 𝑅≤7 . [A1]\" style=\"--madas-width:602.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 7 marks.</p>"
+    ],
+    "promptText": "A circle has centre at the origin and radius R . This circle fits wholly inside the circle with equation 2 2 x y 10 x 24 y 231 . + − − = 7 Determine the range of possible values of R . ( )"
+  },
+  {
+    "id": "madas/as-pure-e/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q3-question-1.svg\" alt=\"3 2 f x x 9 x 13 x 2 , x∈ℝ. = − + + ( ) a) Show, by using the factor theorem, that ( x − 2 is a factor of f x and hence ) ( ) express f x as a product of a linear and a quadratic factor. ( ) g x x x 2 x 4 , x∈ℝ. 3 = − − ( ) ( )( ) ( ) b) Sketch the graph of g x , indicating clearly the coordinates of any points ( ) where the graph of g x meets the coordinate axes. 3 ( ) ( ) c) Determine the exact coordinates, where appropriate, of the points of intersection between the graph of f x and the graph of g x . 5 ( ) ( ) ( )\" style=\"--madas-width:546.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q3-solution-1.svg\" alt=\"(a) By the factor theorem: 𝑓(𝑥) = 𝑥3 −9𝑥2 + 13𝑥+ 2 𝑓(2) = 23 −9 × 22 + 13 × 2 + 2 = 8 −36 + 26 + 2 = 0. [B1] Hence 𝑥−2 is a factor. By algebraic division or grouping: 𝑓(𝑥) = 𝑥2(𝑥−2) −7𝑥(𝑥−2) −(𝑥−2) [M1] = (𝑥−2)(𝑥2 −7𝑥−1) . [A1] (b) The leading term is +𝑥3. When 𝑥= 0, 𝑦= 0. For 𝑦= 0, the factors in 𝑥(𝑥−2)(𝑥−4) = 0 give 𝑥= 0, 2, 4. [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q3-solution-2.svg\" alt=\"𝑦 (2, 0) 𝑥 (0, 0) (4, 0) [A1] (c) Solve 𝑓(𝑥) = 𝑔(𝑥). 𝑥(𝑥−2)(𝑥−4) = (𝑥−2)(𝑥2 −7𝑥−1). [M1] The factor 𝑥−2 gives the solution (2, 0). [B1] For 𝑥≠2, divide both sides by 𝑥−2.\" style=\"--madas-width:546.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q3-solution-3.svg\" alt=\"𝑥(𝑥−4) = 𝑥2 −7𝑥−1 𝑥2 −4𝑥= 𝑥2 −7𝑥−1 𝑥= −1 [A1] 3𝑥= −1, 3 𝑦= −1 3(−1 3 −2)(−1 [M1] 3 −4) = −1 3(−7 3)(−13 3 ) = −91 27. The intersections are (2, 0), (−1 27) . [A1] 3, −91\" style=\"--madas-width:468.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 11 marks.</p>"
+    ],
+    "promptText": "3 2 f x x 9 x 13 x 2 , x∈ℝ. = − + + ( ) a) Show, by using the factor theorem, that ( x − 2 is a factor of f x and hence ) ( ) express f x as a product of a linear and a quadratic factor. ( ) g x x x 2 x 4 , x∈ℝ. 3 = − − ( ) ( )( ) ( ) b) Sketch the graph of g x , indicating clearly the coordinates of any points ( ) where the graph of g x meets the coordinate axes. 3 ( ) ( ) c) Determine the exact coordinates, where appropriate, of the points of intersection between the graph of f x and the graph of g x . 5 ( ) ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-e/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q4-question-1.svg\" alt=\"a) Sketch the graph of y 2 x in its largest real domain. 2 = ( ) b) Describe a single geometric transformation which maps the graph of y 2 x = onto the graph of y 3 2 x . 3 = ( ) c) Describe a single geometric transformation which maps the graph of y 2 x = onto the graph of y 3 2 x , other than the one described in part (b). 3 = ( )\" style=\"--madas-width:544.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q4-solution-1.svg\" alt=\"(a) Sketch 𝑦= 2√𝑥on its full domain 𝑥≥0. [B1] 𝑦 𝑦= 2√𝑥 𝑥 𝑂 [B1] (b) One approach is to factor out the original function: √ √ 2√𝑥 [M1] 𝑦= 3 2𝑥= 3\" style=\"--madas-width:450.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q4-solution-2.svg\" alt=\"√ 2 (2√𝑥). = 3 2 [A1] √ This is a stretch parallel to the 𝑦-axis, scale factor 3 2/2 . [A1] (c) A different approach is to rewrite the argument: √ √ 2𝑥= 3 [M1] 𝑦= 3 2 × 2 2𝑥 √ [A1] = 2√9 2𝑥= 2√9 4 × 2𝑥= 2√9 2𝑥. 4 This is a stretch parallel to the 𝑥-axis, scale factor 2/9 . [A1]\" style=\"--madas-width:478.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 8 marks.</p>"
+    ],
+    "promptText": "a) Sketch the graph of y 2 x in its largest real domain. 2 = ( ) b) Describe a single geometric transformation which maps the graph of y 2 x = onto the graph of y 3 2 x . 3 = ( ) c) Describe a single geometric transformation which maps the graph of y 2 x = onto the graph of y 3 2 x , other than the one described in part (b). 3 = ( )"
+  },
+  {
+    "id": "madas/as-pure-e/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q5-question-1.svg\" alt=\"Solve the following trigonometric equation. sin 3 72 cos48 ° , 0 180 . 7 θ + °= θ ( ) ≤ &lt; ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q5-solution-1.svg\" alt=\"Solve the equation in degrees: sin(3𝜃+ 72∘) = cos 48∘= sin(90∘−48∘) = sin 42∘. [M1] The two sine families are: or [M1] [A1] 3𝜃+ 72∘= 42∘+ 360∘𝑛 3𝜃+ 72∘= 138∘+ 360∘𝑛 3𝜃= −30∘+ 360∘𝑛 3𝜃= 66∘+ 360∘𝑛 [M1] [A1] 𝜃= −10∘+ 120∘𝑛 𝜃= 22∘+ 120∘𝑛, 𝑛∈ℤ. In the given range the first family gives 110∘, and the second gives 22∘, 142∘. [A1] Thus 𝜃= 22∘, 110∘, 142∘. [A1] Alternatively, sin(3𝜃+ 72∘) = sin 42∘= 0.6691 …. The principal value arcsin(0.6691 …) = 42∘gives the same two families, using the supplementary angle 180∘−42∘= 138∘.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 7 marks.</p>"
+    ],
+    "promptText": "Solve the following trigonometric equation. sin 3 72 cos48 ° , 0 180 . 7 θ + °= θ ( ) ≤ < ( )"
+  },
+  {
+    "id": "madas/as-pure-e/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q6-question-1.svg\" alt=\"6 7 f x 1 2 x , g x 2 x , h x f x g x . ( ) = ( − ) ( ) = ( + ) ( ) = ( ) ( ) a) Find the first four terms in ascending powers of x in the binomial expansion 7 of f x and in the binomial expansion of g x . ( ) ( ) ( ) 2 b) Hence determine the coefficient of x in the binomial expansion of h x . 3 ( ) ( )\" style=\"--madas-width:545.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q6-solution-1.svg\" alt=\"(a) Use the standard binomial expansions: 𝑓(𝑥) = (1 −2𝑥)6 = 1 + 6(−2𝑥) + 6 ⋅5 1 ⋅2(−2𝑥)2 + 6 ⋅5 ⋅4 1 ⋅2 ⋅3(−2𝑥)3 + ⋯ [M1] [A1] = 1 −12𝑥+ 15(4𝑥2) + 20(−8𝑥3) + ⋯ = 1 −12𝑥+ 60𝑥2 −160𝑥3 + ⋯. [A1] 𝑔(𝑥) = (2 + 𝑥)7 = (7 0)27𝑥0 + (7 1)26𝑥+ (7 2)25𝑥2 + (7 3)24𝑥3 + ⋯ [M1] = 128 + 7(64)𝑥+ 21(32)𝑥2 + 35(16)𝑥3 + ⋯ [A1] [A1] = 128 + 448𝑥+ 672𝑥2 + 560𝑥3 + ⋯. [A1]\" style=\"--madas-width:552.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q6-solution-2.svg\" alt=\"(b) Multiply the two expansions and collect the quadratic term: ℎ(𝑥) = 𝑓(𝑥)𝑔(𝑥) = (1 −12𝑥+ 60𝑥2 + ⋯)(128 + 448𝑥+ 672𝑥2 + ⋯). [M1] The three contributions to 𝑥2 give [M1] [A1] 1(672) + (−12)(448) + 60(128) = 672 −5376 + 7680 = 2976 .\" style=\"--madas-width:578.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 10 marks.</p>"
+    ],
+    "promptText": "6 7 f x 1 2 x , g x 2 x , h x f x g x . ( ) = ( − ) ( ) = ( + ) ( ) = ( ) ( ) a) Find the first four terms in ascending powers of x in the binomial expansion 7 of f x and in the binomial expansion of g x . ( ) ( ) ( ) 2 b) Hence determine the coefficient of x in the binomial expansion of h x . 3 ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-e/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q7-question-1.svg\" alt=\"𝑦 𝐴 𝑦= 4(𝑥−2)2 𝑦= 2𝑥2 −9𝑥+ 16 𝐵 𝑥 𝑂 The figure above shows the graph of the curves with equations 2 2 y 4 x 2 and y 2 x 9 x 16 . = ( − ) = − +\" style=\"--madas-width:452.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q7-question-2.svg\" alt=\"The curves meet each other at the points A and B . 5 a) Determine the coordinates of A and B . ( ) b) Find the exact area of the finite region bounded by the two curves, shown shaded in the above figure. 6 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q7-solution-1.svg\" alt=\"(a) Solve simultaneously: 𝑦= 2𝑥2 −9𝑥+ 16 𝑦= 4(𝑥−2)2, 4(𝑥−2)2 = 2𝑥2 −9𝑥+ 16 [M1] 4(𝑥2 −4𝑥+ 4) = 2𝑥2 −9𝑥+ 16 4𝑥2 −16𝑥+ 16 = 2𝑥2 −9𝑥+ 16 [A1] 2𝑥2 −7𝑥= 0, [M1] 𝑥(2𝑥−7) = 0 𝑥= 0 ⟹𝑦= 4(0 −2)2 = 16 𝑥= 7 2 ⟹𝑦= 4( 7 2 −2)2 = 9. [A1] Thus 𝐴(0, 16), 2, 9) . [A1] 𝐵( 7 𝑦 𝐴 𝐵 𝑥 (2, 0)\" style=\"--madas-width:504.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q7-solution-2.svg\" alt=\"(b) The diagram gives the upper curve and the lower curve. Subtract their integrals: 7/2 7/2 Area = ∫ (2𝑥2 −9𝑥+ 16) 𝑑𝑥−∫ 4(𝑥−2)2 𝑑𝑥 [M1] 0 0 7/2 7/2 (2𝑥2 −9𝑥+ 16) 𝑑𝑥−∫ (4𝑥2 −16𝑥+ 16) 𝑑𝑥 [A1] = ∫ 0 0 7/2 [(2𝑥2 −9𝑥+ 16) −(4𝑥2 −16𝑥+ 16)] 𝑑𝑥 = ∫ 0 7/2 (−2𝑥2 + 7𝑥) 𝑑𝑥 [A1] = ∫ 0 3𝑥3 + 7 7/2 = [−2 2𝑥2] [M1] 0 2)3 + 7 [M1] = [−2 3( 7 2(7 2)2] −0\" style=\"--madas-width:550.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q7-solution-3.svg\" alt=\"[A1] = −343 12 + 343 = 343 24 . 8\" style=\"--madas-width:349.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 11 marks.</p>"
+    ],
+    "promptText": "𝑦 𝐴 𝑦= 4(𝑥−2)2 𝑦= 2𝑥2 −9𝑥+ 16 𝐵 𝑥 𝑂 The figure above shows the graph of the curves with equations 2 2 y 4 x 2 and y 2 x 9 x 16 . = ( − ) = − + The curves meet each other at the points A and B . 5 a) Determine the coordinates of A and B . ( ) b) Find the exact area of the finite region bounded by the two curves, shown shaded in the above figure. 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-e/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q8-question-1.svg\" alt=\"𝐴 𝑂 𝐷 𝐵 𝐶 The figure above shows a trapezium OABC , where O is a fixed origin. i j and 18 i j, respectively. The position vectors of A and C are 12 4 21 + − CB is parallel to OA, so that CB ―――→ 2 OA ―――→ . =\" style=\"--madas-width:478.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q8-question-2.svg\" alt=\"1:2 The point D lies on AC so that AD DC = : . a) Find a simplified expression, in terms of i and j, for the position vector of D . 4 ( ) b) Show that that O , D and B are collinear and state the ratio of OD DB . : 5 ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q8-solution-1.svg\" alt=\"(a) Look at the trapezium: 𝐴 𝑂 𝐷⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗ 𝐵 𝐶 𝐴𝐶=⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐴𝑂+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑂𝐶= −(12i + 4j) + (18i −21j) [M1] = 6i −25j. [A1]\" style=\"--madas-width:505.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q8-solution-2.svg\" alt=\"3(6i −25j) = 2i −25 3 j. [M1] 𝐴𝐷= 1 3⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐴𝐶= 1 𝑂𝐷=⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑂𝐴+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐴𝐷= (12i + 4j) + (2i −25 3 j) = 14i −13 3 j . [A1] (b) Find⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐷𝐵to compare it with⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑂𝐷. 𝐶𝐵= 2⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑂𝐴= 2(12i + 4j) = 24i + 8j [B1] 3(6i −25j) = 4i −50 3 j [M1] 𝐷𝐶= 2 3⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐴𝐶= 2 𝐷𝐵=⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐷𝐶+⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐶𝐵= (4i −50 3 j) + (24i + 8j) = 28i −26 3 j. [A1] Hence⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑂𝐷= 1 3(42i −13j) and⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝐷𝐵= 2 3(42i −13j). [M1] The vectors have the same direction and share the point 𝐷, so 𝑂, 𝐷, 𝐵are collinear, with 𝑂𝐷∶𝐷𝐵= 1 ∶2 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 9 marks.</p>"
+    ],
+    "promptText": "𝐴 𝑂 𝐷 𝐵 𝐶 The figure above shows a trapezium OABC , where O is a fixed origin. i j and 18 i j, respectively. The position vectors of A and C are 12 4 21 + − CB is parallel to OA, so that CB ―――→ 2 OA ―――→ . = 1:2 The point D lies on AC so that AD DC = : . a) Find a simplified expression, in terms of i and j, for the position vector of D . 4 ( ) b) Show that that O , D and B are collinear and state the ratio of OD DB . : 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-e/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q9-question-1.svg\" alt=\"Solve each of the following equations, giving the final answers correct to three significant figures, where appropriate. a) 4 3 x 2 3 4 x . 7 + × = × ( ) 1 b) 1 x 9 16 x . 7 log log + = + a ( ) 2 a ( ) ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q9-solution-1.svg\" alt=\"(a) Take logarithms to base ten on both sides: 4 × 3𝑥+2 = 3 × 4𝑥 log(4 × 3𝑥+2) = log(3 × 4𝑥) [M1] log 4 + log 3𝑥+2 = log 3 + log 4𝑥 [A1] log 4 + (𝑥+ 2) log 3 = log 3 + 𝑥log 4 [M1] log 4 + 𝑥log 3 + 2 log 3 = log 3 + 𝑥log 4 log 4 + 2 log 3 −log 3 = 𝑥log 4 −𝑥log 3 [M1] log 4 + log 3 = 𝑥(log 4 −log 3) [A1] 𝑥= log 4 + log 3 log 12 [M1] [A1] log 4 −log 3 = log(4/3) ≈8.64 . Alternative method:\" style=\"--madas-width:566.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q9-solution-2.svg\" alt=\"4 × 3𝑥+2 = 3 × 4𝑥 4 × 3𝑥× 32 = 3 × 4𝑥 36 × 3𝑥= 3 × 4𝑥 12 = 4𝑥 3𝑥, ( 4 3)𝑥= 12. Taking logarithms, log[(4/3)𝑥] = log 12, hence 𝑥log(4/3) = log 12. This again gives 𝑥= log 12/ log(4/3) ≈ 8.64. (b) Use the laws of logarithms. The printed subscript is the common base 𝑎. √ log𝑎(1 + √𝑥) = 1 2 log𝑎(9 + 16𝑥) 2 log𝑎(1 + √𝑥) = log𝑎(9 + √ [M1] 16𝑥) log𝑎[(1 + √𝑥)2] = log𝑎(9 + √ [A1] 16𝑥) √ (1 + √𝑥)2 = 9 + [M1] 16𝑥\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q9-solution-3.svg\" alt=\"1 + 2√𝑥+ 𝑥= 9 + 4√𝑥 [A1] 𝑥−2√𝑥−8 = 0 (√𝑥−4)(√𝑥+ 2) = 0. [M1] Since √𝑥≥0, reject √𝑥= −2. [A1] The valid root is √𝑥= 4, hence 𝑥= 16 . [A1]\" style=\"--madas-width:538.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 14 marks.</p>"
+    ],
+    "promptText": "Solve each of the following equations, giving the final answers correct to three significant figures, where appropriate. a) 4 3 x 2 3 4 x . 7 + × = × ( ) 1 b) 1 x 9 16 x . 7 log log + = + a ( ) 2 a ( ) ( )"
+  },
+  {
+    "id": "madas/as-pure-e/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q10-question-1.svg\" alt=\"A circle has equation 2 2 x 2 y 2 20 . ( − ) + ( + ) = a) Write down the coordinates of its centre the size of its radius. 2 ( ) b) Sketch the circle. The sketch must include the coordinates of any points where the graph meets the coordinate axes. 5 ( ) The straight line with equation y 2 x k , where k is a constant, meets the circle. = + c) Show that the coordinates of any points of intersection between the line and the circle satisfies the equation\" style=\"--madas-width:570.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q10-question-2.svg\" alt=\"5 x 2 4 k 1 x k 2 4 k 12 0 . 4 + ( + ) + + − = ( ) d) Hence, find the two values of k for which the line y 2 x k is a tangent to = + the circle. 5 ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q10-solution-1.svg\" alt=\"(a) Read the standard circle equation (𝑥−2)2 + (𝑦+ 2)2 = 20. The centre is (2, −2) [B1] and the radius √ √ is 5 . [B1] 20 = 2 (b) Find the intercepts. On the vertical axis 𝑥= 0. 4 + (𝑦+ 2)2 = 20, (𝑦+ 2)2 = 16 [M1] 𝑦= 2 or −6. [A1] 𝑦+ 2 = ±4, On the horizontal axis 𝑦= 0. (𝑥−2)2 + 4 = 20, (𝑥−2)2 = 16 [M1] 𝑥= 6 or −2. [A1] 𝑥−2 = ±4,\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q10-solution-2.svg\" alt=\"𝑦 (0, 2) (−2, 0) (6, 0) 𝑥 (2, −2) (0, −6) [A1] (c) Solve simultaneously using 𝑦= 2𝑥+ 𝑘. (𝑥−2)2 + (2𝑥+ 𝑘+ 2)2 = 20 [M1]\" style=\"--madas-width:521.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-e/q10-solution-3.svg\" alt=\"𝑥2 −4𝑥+ 4 + 4𝑥2 + 4𝑥(𝑘+ 2) + (𝑘+ 2)2 = 20 [A1] 5𝑥2 −4𝑥+ 4 + 4𝑘𝑥+ 8𝑥+ 𝑘2 + 4𝑘+ 4 −20 = 0 [M1] 5𝑥2 + 4(𝑘+ 1)𝑥+ 𝑘2 + 4𝑘−12 = 0 . [A1] (d) At tangency there is a repeated root. Thus 𝑏2 −4𝑎𝑐= 0. [M1] [4(𝑘+ 1)]2 −4 × 5 × (𝑘2 + 4𝑘−12) = 0 [A1] 16(𝑘+ 1)2 −20(𝑘2 + 4𝑘−12) = 0 16𝑘2 + 32𝑘+ 16 −20𝑘2 −80𝑘+ 240 = 0 𝑘2 + 12𝑘−64 = 0 [M1] [M1] (𝑘+ 16)(𝑘−4) = 0 𝑘= −16 or 4 . [A1]\" style=\"--madas-width:521.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 16 marks.</p>"
+    ],
+    "promptText": "A circle has equation 2 2 x 2 y 2 20 . ( − ) + ( + ) = a) Write down the coordinates of its centre the size of its radius. 2 ( ) b) Sketch the circle. The sketch must include the coordinates of any points where the graph meets the coordinate axes. 5 ( ) The straight line with equation y 2 x k , where k is a constant, meets the circle. = + c) Show that the coordinates of any points of intersection between the line and the circle satisfies the equation 5 x 2 4 k 1 x k 2 4 k 12 0 . 4 + ( + ) + + − = ( ) d) Hence, find the two values of k for which the line y 2 x k is a tangent to = + the circle. 5 ( )"
+  }
+]

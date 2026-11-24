@@ -1,0 +1,133 @@
+[
+  {
+    "id": "madas/as-pure-f/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q1-question-1.svg\" alt=\"𝐴 12 m 150∘ 𝐵 𝐶 The triangle ABC is such so that AC is 12 m and the angle CAB is 150°. a) Given that the area of the triangle ABC is 30 2 m , show that the length of AB is 10 m . 2 ( ) b) Find the length of BC , giving the answer in m , correct to 2 decimal places. 3 ( )\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q1-question-2.svg\" alt=\"c) Calculate the smallest angle of the triangle ABC , giving the answer in degrees, correct to one decimal place. 3 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q1-solution-1.svg\" alt=\"(a) Look at the triangle: |𝐴𝐵| 𝐴 𝐵 12 m 150∘ 𝐶 Area = 1 2|𝐴𝐶| |𝐴𝐵| sin 150∘ [M1] 30 = 1 2 × 12 × |𝐴𝐵| × 1 2 = 3|𝐴𝐵| |𝐴𝐵| = 10 m . [A1] (b) Apply the cosine rule:\" style=\"--madas-width:452.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q1-solution-2.svg\" alt=\"|𝐵𝐶|2 = |𝐴𝐶|2 + |𝐴𝐵|2 −2|𝐴𝐶| |𝐴𝐵| cos 150∘ [M1] √ = 122 + 102 −2 × 12 × 10(− 3 2 ) √ [A1] = 144 + 100 + 120 3 = 451.846 … |𝐵𝐶| = 21.26 m . [A1] (c) The smallest angle lies opposite the shortest side, 𝐴𝐵, so it is ∠𝐴𝐶𝐵= 𝜃. [B1] By the sine rule: sin ∠𝐴𝐶𝐵 = sin ∠𝐶𝐴𝐵 sin 𝜃 sin 150∘ [M1] , = |𝐴𝐵| |𝐵𝐶| 10 21.25667 … sin 𝜃= 10 sin 150∘ 21.25667 … = 0.23522 … 𝜃= 13.6∘. [A1]\" style=\"--madas-width:645.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 8 marks.</p>"
+    ],
+    "promptText": "𝐴 12 m 150∘ 𝐵 𝐶 The triangle ABC is such so that AC is 12 m and the angle CAB is 150°. a) Given that the area of the triangle ABC is 30 2 m , show that the length of AB is 10 m . 2 ( ) b) Find the length of BC , giving the answer in m , correct to 2 decimal places. 3 ( ) c) Calculate the smallest angle of the triangle ABC , giving the answer in degrees, correct to one decimal place. 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q2-question-1.svg\" alt=\"a) Determine, in ascending powers of x , the first three terms in the binomial 10 expansion of ( 2 3x . 3 − ) ( ) b) Use the first three terms in the binomial expansion of ( 10 , with a 2 3x − ) suitable value for x , to find an approximation for 1.97 10 . 3 ( ) c) Use the answer of part (b) to estimate, correct to 2 significant figures, the 10 2 value of 3.94 . ( )\" style=\"--madas-width:549.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q2-solution-1.svg\" alt=\"(a) Use the standard expansion: (2 −3𝑥)10 = (10 0 )210(−3𝑥)0 + (10 1 )29(−3𝑥) + (10 2 )28(−3𝑥)2 + ⋯ [M1] [A1] = (1 × 1024 × 1) + (10 × 512 × (−3𝑥)) + (45 × 256 × 9𝑥2) + ⋯ = 1024 −15360𝑥+ 103680𝑥2 + ⋯. [A1] (b) Set 1.97 = 2 −3𝑥. Then 3𝑥= 0.03, so 𝑥= 0.01. [B1] Using part (a): [2 −3(0.01)]10 ≈1024 −15360(0.01) + 103680(0.01)2 [M1] 1.9710 ≈1024 −153.6 + 10.368 = 880.768 ≈881. [A1] (c) Use part (b):\" style=\"--madas-width:596.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q2-solution-2.svg\" alt=\"3.9410 = (2 × 1.97)10 = 210 × 1.9710 [M1] ≈1024 × 880.768 = 901906.432 ≈9.0 × 105 . [A1]\" style=\"--madas-width:528.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 8 marks.</p>"
+    ],
+    "promptText": "a) Determine, in ascending powers of x , the first three terms in the binomial 10 expansion of ( 2 3x . 3 − ) ( ) b) Use the first three terms in the binomial expansion of ( 10 , with a 2 3x − ) suitable value for x , to find an approximation for 1.97 10 . 3 ( ) c) Use the answer of part (b) to estimate, correct to 2 significant figures, the 10 2 value of 3.94 . ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q3-question-1.svg\" alt=\"Prove that when the square of a positive odd integer is divided by 4 the remainder is always 1. 2 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q3-solution-1.svg\" alt=\"Let the odd positive integer be 2𝑛+ 1, where 𝑛= 0, 1, 2, …. [M1] (2𝑛+ 1)2 = 4𝑛2 + 4𝑛+ 1 = 4(𝑛2 + 𝑛) + 1 = 4𝑚+ 1, where 𝑚= 𝑛2 + 𝑛is an integer. The remainder on division by four is therefore 1 . [A1]\" style=\"--madas-width:569.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 2 marks.</p>"
+    ],
+    "promptText": "Prove that when the square of a positive odd integer is divided by 4 the remainder is always 1. 2 ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q4-question-1.svg\" alt=\"A cubic graph is defined by 3 2 f x x 3 x 4 x 12 , x∈ℝ. ≡ − − + ( ) a) Show, by using the factor theorem, that ( x − 3 is a factor of f x and hence ) ( ) 5 factorize f x into product of three linear factors. ( ) ( ) b) Sketch the graph of f x . ( ) The sketch must include the coordinates of any points where the graph of f x meets the coordinate axes. 3 ( ) ( ) Another cubic graph is defined as\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q4-question-2.svg\" alt=\"2 g x x 2 x 4 , x∈ℝ. ( ) ≡ ( − )( − ) The two graphs meet at the points P and Q . c) Determine the x coordinates of P and the x coordinates of Q . 5 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q4-solution-1.svg\" alt=\"(a) Substitute 𝑥= 3 in the function: 𝑓(𝑥) = 𝑥3 −3𝑥2 −4𝑥+ 12 𝑓(3) = 33 −3 × 32 −4 × 3 + 12 [M1] [A1] = 27 −27 −12 + 12 = 0. By the factor theorem, 𝑥−3 is a factor. [B1] By long division or inspection: 𝑓(𝑥) = 𝑥2(𝑥−3) −4(𝑥−3) = (𝑥−3)(𝑥2 −4) [M1] [A1] = (𝑥−3)(𝑥−2)(𝑥+ 2) . (b) The leading term is positive. For 𝑦= 0, the roots are −2, 2, 3. [B1] When 𝑥= 0, 𝑦= 12. [B1]\" style=\"--madas-width:630.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q4-solution-2.svg\" alt=\"𝑦 (0, 12) (2, 0) 𝑥 (−2, 0) (3, 0) [A1] (c) Solve 𝑓(𝑥) = 𝑔(𝑥). (𝑥−3)(𝑥−2)(𝑥+ 2) = (𝑥−2)(𝑥−4)2. [M1] The common factor gives 𝑥= 2. [B1] For 𝑥≠2, divide by 𝑥−2.\" style=\"--madas-width:494.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q4-solution-3.svg\" alt=\"(𝑥−3)(𝑥+ 2) = (𝑥−4)2 [M1] 𝑥2 −3𝑥+ 2𝑥−6 = 𝑥2 −8𝑥+ 16 [A1] 7𝑥= 22, 𝑥= 22 7 . Thus the two horizontal coordinates are 2, 22 7 . [A1]\" style=\"--madas-width:474.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 13 marks.</p>"
+    ],
+    "promptText": "A cubic graph is defined by 3 2 f x x 3 x 4 x 12 , x∈ℝ. ≡ − − + ( ) a) Show, by using the factor theorem, that ( x − 3 is a factor of f x and hence ) ( ) 5 factorize f x into product of three linear factors. ( ) ( ) b) Sketch the graph of f x . ( ) The sketch must include the coordinates of any points where the graph of f x meets the coordinate axes. 3 ( ) ( ) Another cubic graph is defined as 2 g x x 2 x 4 , x∈ℝ. ( ) ≡ ( − )( − ) The two graphs meet at the points P and Q . c) Determine the x coordinates of P and the x coordinates of Q . 5 ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q5-question-1.svg\" alt=\"It is given that p = log 25 and q = log 2 . 6 6 Express in terms of p and q each of the following expressions a) log 200 2 6 ( ) b) log 3.2 3 6 ( ) c) log 75 4 6 ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q5-solution-1.svg\" alt=\"Use 𝑝= log6 25 and 𝑞= log6 2. (a) log6 200 = log6(25 × 8) = log6 25 + log6 8 [M1] = log6 25 + log6 23 = log6 25 + 3 log6 2 = 𝑝+ 3𝑞. [A1] (b) log6(3.2) = log6(32/10) = log6(16/5) [M1] = log6 16 −log6 5 = log6 24 −log6(251/2) [M1] = 4 log6 2 −1 2 log6 25 = 4𝑞−1 [A1] 2𝑝.\" style=\"--madas-width:546.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q5-solution-2.svg\" alt=\"(c) log6 75 = log6(25 × 3) = log6 25 + log6 3 [M1] = log6 25 + log6(6/2) [M1] [A1] = log6 25 + log6 6 −log6 2 [A1] = 𝑝+ 1 −𝑞.\" style=\"--madas-width:490.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 9 marks.</p>"
+    ],
+    "promptText": "It is given that p = log 25 and q = log 2 . 6 6 Express in terms of p and q each of the following expressions a) log 200 2 6 ( ) b) log 3.2 3 6 ( ) c) log 75 4 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q6-question-1.svg\" alt=\"The quadratic equation 2 k x 1 3 x 4 0 , ( + ) − + = where k is a non zero constant, has real roots. Find the range of possible values of k . 7 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q6-solution-1.svg\" alt=\"Reorder the quadratic: 𝑘(𝑥2 + 1) −3𝑥+ 4 = 0 𝑘𝑥2 + 𝑘−3𝑥+ 4 = 0 𝑘𝑥2 −3𝑥+ (𝑘+ 4) = 0. For real roots, including repeated roots, require 𝑏2 −4𝑎𝑐≥0. [M1] (−3)2 −4𝑘(𝑘+ 4) ≥0 [A1] 9 −4𝑘2 −16𝑘≥0 4𝑘2 + 16𝑘−9 ≤0 [A1] [M1] (2𝑘−1)(2𝑘+ 9) ≤0.\" style=\"--madas-width:437.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q6-solution-2.svg\" alt=\"The boundary values are −9/2 and 1/2. [A1] −9 1 2 2 𝑘 The product is non-positive between the roots, including the endpoints. [M1] The printed condition excludes zero, giving −9 2 ≤𝑘&lt; 0 or 0 &lt; 𝑘≤1 2 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 7 marks.</p>"
+    ],
+    "promptText": "The quadratic equation 2 k x 1 3 x 4 0 , ( + ) − + = where k is a non zero constant, has real roots. Find the range of possible values of k . 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q7-question-1.svg\" alt=\"𝑦 𝑦= 𝑥2 −2𝑥+ 7 𝑦= 2𝑥+ 7 𝑥 𝑂 2 The figure above shows the graphs of y x 2 x 7 and y 2 x 7 . = − + = +\" style=\"--madas-width:453.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q7-question-2.svg\" alt=\"Express the shaded region in the figure as a set of inequalities. 3 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q7-solution-1.svg\" alt=\"The shaded region lies above the line, so 𝑦≥2𝑥+ 7. [B1] It lies below the quadratic, so 𝑦≤𝑥2 −2𝑥+ 7. [B1] Those two inequalities also select a second region. The intercepts of the curves follow from: 𝑥2 −2𝑥+ 7 = 2𝑥+ 7 𝑥2 −4𝑥= 0, 𝑥(𝑥−4) = 0 or 𝑥= 0 𝑥= 4. 𝑦 (4, 15) (0, 7) 𝑥\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q7-solution-2.svg\" alt=\"A third inequality such as 𝑥&gt; 0 selects just the right-hand region. Hence 2𝑥+ 7 ≤𝑦≤𝑥2 −2𝑥+ 7, 𝑥≥4 . [B1] With the first two inequalities in force, any cut 𝑥&gt; 𝑐for 0 ≤𝑐&lt; 4 selects the same region.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 3 marks.</p>"
+    ],
+    "promptText": "𝑦 𝑦= 𝑥2 −2𝑥+ 7 𝑦= 2𝑥+ 7 𝑥 𝑂 2 The figure above shows the graphs of y x 2 x 7 and y 2 x 7 . = − + = + Express the shaded region in the figure as a set of inequalities. 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q8-question-1.svg\" alt=\"Given that θ is measured in degrees, solve the following trigonometric equation 4 7 2 , 0 180 . 9 θ + = ≤ ≤ ( ) 2 sin3 tan 3 θ θ\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q8-solution-1.svg\" alt=\"Manipulate the equation on its domain, where both denominators are defined: 4 7 tan2 3𝜃+ 2 = sin 3𝜃 4 7 sin2 3𝜃/ cos2 3𝜃+ 2 = sin 3𝜃 4 cos2 3𝜃 7 [M1] sin2 3𝜃+ 2 = sin 3𝜃. Multiply through by sin2 3𝜃and use cos2 𝑢+ sin2 𝑢= 1. 4 cos2 3𝜃+ 2 sin2 3𝜃= 7 sin 3𝜃 [A1] 4(1 −sin2 3𝜃) + 2 sin2 3𝜃= 7 sin 3𝜃 [M1] 4 −4 sin2 3𝜃+ 2 sin2 3𝜃= 7 sin 3𝜃\" style=\"--madas-width:504.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q8-solution-2.svg\" alt=\"0 = 2 sin2 3𝜃+ 7 sin 3𝜃−4 [A1] (2 sin 3𝜃−1)(sin 3𝜃+ 4) = 0. [M1] The root sin 3𝜃= −4 is impossible. The other root gives sin 3𝜃= 1/2, so arcsin(1/2) = 30∘. [A1] 3𝜃= 30∘+ 360∘𝑛 or 3𝜃= 150∘+ 360∘𝑛 [M1] [A1] 𝜃= 10∘+ 120∘𝑛 𝜃= 50∘+ 120∘𝑛. The two branches give 10∘, 130∘and 50∘, 170∘. Thus 𝜃= 10∘, 50∘, 130∘, 170∘. [A1]\" style=\"--madas-width:620.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 9 marks.</p>"
+    ],
+    "promptText": "Given that θ is measured in degrees, solve the following trigonometric equation 4 7 2 , 0 180 . 9 θ + = ≤ ≤ ( ) 2 sin3 tan 3 θ θ"
+  },
+  {
+    "id": "madas/as-pure-f/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q9-question-1.svg\" alt=\"f x x 4 3 x 4 3 , x∈ℝ. ( ) = ( − − )( − + ) a) Express f x in the form … ( ) i. 2 … f x x bx c , where b and c are constants. 3 = + + ( ) ( ) 2 ii. … f x x B C , where B and C are constants. 2 ( ) = ( + ) + ( ) b) Sketch the graph of the curve C with equation y f x . = ( ) The sketch must include the coordinates of any points where the graph of C meets the coordinate axes, and the coordinates of the minimum point of C . 4 ( )\" style=\"--madas-width:549.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q9-solution-1.svg\" alt=\"(a)(i) Multiply out the brackets: √ √ 𝑓(𝑥) = (𝑥−4 − 3)(𝑥−4 + 3) √ √ √ √ = 𝑥2 −4𝑥+ [M1] 3𝑥−4𝑥+ 16 −4 3 − 3𝑥+ 4 3 −3 = 𝑥2 −8𝑥+ 13 . [A1] Thus 𝑏= −8 and 𝑐= 13. [A1] (ii) Complete the square: 𝑓(𝑥) = 𝑥2 −8𝑥+ 13 = (𝑥−4)2 −16 + 13 [M1] = (𝑥−4)2 −3 . [A1]\" style=\"--madas-width:548.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q9-solution-2.svg\" alt=\"Here 𝐵= −4, 𝐶= −3. (b) The leading coefficient is positive, and the vertex is (4, −3). [B1] At 𝑥= 0, 𝑦= 13, giving (0, 13). [B1] √ √ At 𝑦= 0, the original factors give 𝑥= 4 − 3 and 𝑥= 4 + 3. [B1] 𝑦 (0, 13) √ √ (4 − 3, 0) (4 + 3, 0) 𝑥 (4, −3) [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 9 marks.</p>"
+    ],
+    "promptText": "f x x 4 3 x 4 3 , x∈ℝ. ( ) = ( − − )( − + ) a) Express f x in the form … ( ) i. 2 … f x x bx c , where b and c are constants. 3 = + + ( ) ( ) 2 ii. … f x x B C , where B and C are constants. 2 ( ) = ( + ) + ( ) b) Sketch the graph of the curve C with equation y f x . = ( ) The sketch must include the coordinates of any points where the graph of C meets the coordinate axes, and the coordinates of the minimum point of C . 4 ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q10-question-1.svg\" alt=\"A circle has centre at C 2,3 and radius 6 . ( ) a) Show that an equation of the circle is 2 2 x y 4 x 6 y 23 . 3 + − − = ( ) The circle crosses the y axis at the points P and Q , where the y coordinate of P is positive. b) Find the distance PQ , giving the answer as an exact simplified surd. 4 ( ) The vertical straight line with equation x = 1 intersects the radii CP and CQ at the points R and S , respectively.\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q10-question-2.svg\" alt=\"c) Determine the exact area of the trapezium PQSR . 4 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q10-solution-1.svg\" alt=\"(a) Use the standard circle equation: (𝑥−2)2 + (𝑦−3)2 = 62 [B1] 𝑥2 −4𝑥+ 4 + 𝑦2 −6𝑦+ 9 = 36 [M1] 𝑥2 + 𝑦2 −4𝑥−6𝑦= 23 . [A1] (b) At the vertical intercepts 𝑥= 0. (0 −2)2 + (𝑦−3)2 = 36 [M1] 4 + (𝑦−3)2 = 36, (𝑦−3)2 = 32 √ √ [A1] 𝑦−3 = ± 32, 𝑦= 3 ± 32. √ √ Thus 𝑃= (0, 3 + 32), 𝑄= (0, 3 − 32). The vertical distance is:\" style=\"--madas-width:510.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q10-solution-2.svg\" alt=\"[M1] |𝑃𝑄| = (3 + 32) −(3 − 32) = 2 32 √ √ √ [A1] = 2 16 × 2 = 2 × 4 2 = 8 2 . (c) Look at the diagram: 𝑦 𝑃 𝑅 𝐶 𝑥 𝑆 𝑄\" style=\"--madas-width:488.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q10-solution-3.svg\" alt=\"Method A, by direct computation. The line 𝑥= 1 is halfway between 𝑥= 2 and the vertical axis, so 𝑅is the midpoint of 𝑃𝐶. [M1] √ √ 𝑅= (0 + 2 , 3 + 32 + 3 ) = (1, 3 + 2 2) 2 2 √ by the same argument. [A1] 𝑆= (1, 3 −2 2) √ √ √ |𝑅𝑆| = (3 + 2 2) −(3 −2 2) = 4 2. √ √ Area = |𝑃𝑄| + |𝑅𝑆| × height = 8 2 + 4 2 [M1] × 1 2 2 √ [A1] = 6 2 . Method B, by similar triangles. The respective heights of triangles 𝑃𝑄𝐶and 𝑅𝑆𝐶are two and one. Their linear scale factor is two, so their area ratio is four.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q10-solution-4.svg\" alt=\"Area of 𝑃𝑄𝐶= 1 2 × 8 2 × 2 = 8 2 √ √ √ Area of 𝑅𝑆𝐶= 1 2 = 1 22 × 8 4 × 8 2 = 2 2 √ √ √ Area of trapezium = 8 2 −2 2 = 6 2, as before.\" style=\"--madas-width:320.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 11 marks.</p>"
+    ],
+    "promptText": "A circle has centre at C 2,3 and radius 6 . ( ) a) Show that an equation of the circle is 2 2 x y 4 x 6 y 23 . 3 + − − = ( ) The circle crosses the y axis at the points P and Q , where the y coordinate of P is positive. b) Find the distance PQ , giving the answer as an exact simplified surd. 4 ( ) The vertical straight line with equation x = 1 intersects the radii CP and CQ at the points R and S , respectively. c) Determine the exact area of the trapezium PQSR . 4 ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q11-question-1.svg\" alt=\"It is given that ln3 ln2 − x . = 1 ln3 + Show clearly that x is the solution of the equation x x 5 2 3 3 e − . × = × ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q11-solution-1.svg\" alt=\"Solve the equation, taking natural logarithms: 2 × 3𝑥= 3 × 𝑒−𝑥 ln(2 × 3𝑥) = ln(3 × 𝑒−𝑥) [M1] ln 2 + ln 3𝑥= ln 3 + ln 𝑒−𝑥 [A1] ln 2 + 𝑥ln 3 = ln 3 −𝑥 [A1] 𝑥+ 𝑥ln 3 = ln 3 −ln 2 [M1] 𝑥(1 + ln 3) = ln 3 −ln 2 𝑥= ln 3 −ln 2 [A1] . 1 + ln 3 Both sides of the starting equation are positive, so taking logarithms is reversible. The given value is therefore the solution.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 5 marks.</p>"
+    ],
+    "promptText": "It is given that ln3 ln2 − x . = 1 ln3 + Show clearly that x is the solution of the equation x x 5 2 3 3 e − . × = × ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q12-question-1.svg\" alt=\"𝑦 𝑦= 6𝑥2 −4𝑥3 𝐴1 𝑘 𝑥 𝑂 3 𝐴2 2 The figure above shows the graph of the curve with equation y 6 x 2 4 x 3 , x∈ℝ. = −\" style=\"--madas-width:412.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q12-question-2.svg\" alt=\"3,0 The curve meets x axis at the origin O and at the point ( . 2 ) 3 ,0 is such so that, the area A of the region between the curve The point ( k , k &gt; ) 2 1 3 x axis for which , is equal to the area and the 0 x A of the region between ≤ ≤ 2 2 the curve and the x axis for which 3 x k . ≤ ≤ 2 Determine the value of k . 7 ( )\" style=\"--madas-width:566.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q12-solution-1.svg\" alt=\"Calculate the area above the axis: 3/2 (6𝑥2 −4𝑥3) 𝑑𝑥 [M1] 𝐴1 = ∫ 0 = [2𝑥3 −𝑥4] 3/2 [A1] 0 = 2( 3 2)3 −( 3 2)4 −0 = 27 4 −81 16 = 27 16. The curve lies below the axis from 3/2 to 𝑘, so the second signed integral is negative. 𝑘 (6𝑥2 −4𝑥3) 𝑑𝑥 [M1] 𝐴2 = −∫ 3/2 = −[2𝑥3 −𝑥4] 𝑘 3/2 = −(2𝑘3 −𝑘4 −27 16) .\" style=\"--madas-width:548.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q12-solution-2.svg\" alt=\"Set 𝐴1 = 𝐴2. 16 = 𝑘4 −2𝑘3 + 27 [A1] 27 16 𝑘4 −2𝑘3 = 0, 𝑘3(𝑘−2) = 0. [M1] Equivalently, the equal areas cancel in the signed integral from zero to 𝑘, so [2𝑥3 −𝑥4]𝑘 0 = 0. The roots are zero and two. [A1] The condition 𝑘&gt; 3/2 gives 𝑘= 2 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 7 marks.</p>"
+    ],
+    "promptText": "𝑦 𝑦= 6𝑥2 −4𝑥3 𝐴1 𝑘 𝑥 𝑂 3 𝐴2 2 The figure above shows the graph of the curve with equation y 6 x 2 4 x 3 , x∈ℝ. = − 3,0 The curve meets x axis at the origin O and at the point ( . 2 ) 3 ,0 is such so that, the area A of the region between the curve The point ( k , k > ) 2 1 3 x axis for which , is equal to the area and the 0 x A of the region between ≤ ≤ 2 2 the curve and the x axis for which 3 x k . ≤ ≤ 2 Determine the value of k . 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-f/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q13-question-1.svg\" alt=\"The curve C has equation 3 y 7 x , x &gt; 0 = − x Show clearly that d y 2 dy ⎛ ⎞ y 4 x x . 7 = + ( ) ⎜ dx 2 dx ⎟ ⎜ ⎟ ⎝ ⎠\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q13-solution-1.svg\" alt=\"Rewrite using indices and differentiate twice: 𝑦= 7√𝑥−3 √𝑥= 7𝑥1/2 −3𝑥−1/2 [B1] 𝑑𝑦 2𝑥−1/2 + 3 𝑑𝑥= 7 2𝑥−3/2 [M1] [A1] 𝑑2𝑦 4𝑥−3/2 −9 [M1] [A1] 𝑑𝑥2 = −7 4𝑥−5/2. Substitute these expressions into the right-hand side: 4𝑥(𝑥𝑑2𝑦 𝑑𝑥2 + 𝑑𝑦 𝑑𝑥) = 4𝑥2 𝑑2𝑦 𝑑𝑥2 + 4𝑥𝑑𝑦 [M1] 𝑑𝑥\" style=\"--madas-width:477.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-f/q13-solution-2.svg\" alt=\"= 4𝑥2 (−7 4𝑥−3/2 −9 2𝑥−1/2 + 3 4𝑥−5/2) + 4𝑥( 7 2𝑥−3/2) = −7𝑥1/2 −9𝑥−1/2 + 14𝑥1/2 + 6𝑥−1/2 = 7𝑥1/2 −3𝑥−1/2 = 𝑦. [A1]\" style=\"--madas-width:505.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 7 marks.</p>"
+    ],
+    "promptText": "The curve C has equation 3 y 7 x , x > 0 = − x Show clearly that d y 2 dy ⎛ ⎞ y 4 x x . 7 = + ( ) ⎜ dx 2 dx ⎟ ⎜ ⎟ ⎝ ⎠"
+  }
+]

@@ -1,0 +1,115 @@
+[
+  {
+    "id": "madas/as-pure-z/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q1-question-1.svg\" alt=\"The positive constants p and q satisfy the following equation p 2 p q − . = 2 p p 3 p q + + Show by a detailed method that p 2 p + q . 7 = ( ) 2 2 p +\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q1-solution-1.svg\" alt=\"Cross multiply; positivity ensures both denominators are nonzero: √𝑝(3𝑝+ 𝑞) = (2𝑝+ √𝑝)(2√𝑝−𝑞) [M1] 3𝑝√𝑝+ 𝑞√𝑝= 4𝑝√𝑝−2𝑝𝑞+ 2𝑝−𝑞√𝑝 [A1] 2𝑞√𝑝+ 2𝑝𝑞= 𝑝√𝑝+ 2𝑝 [M1] 𝑞(2√𝑝+ 2𝑝) = 𝑝√𝑝+ 2𝑝 [A1] 𝑞= 𝑝√𝑝+ 2𝑝 [A1] 2√𝑝+ 2𝑝. Divide numerator and denominator by √𝑝, permissible since 𝑝&gt; 0. [M1] This gives 𝑞= 𝑝+ 2√𝑝 2 + 2√𝑝. [A1] Alternative. Divide the numerator and denominator on the left of the original equation by √𝑝. Then 1/(2√𝑝+ 1) = (2√𝑝−𝑞)/(3𝑝+ 𝑞). Cross multiplying gives 3𝑝+ 𝑞= 4𝑝+ 2√𝑝−2𝑞√𝑝−𝑞, hence 2𝑞+ 2𝑞√𝑝= 𝑝+ 2√𝑝, giving the same expression.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 7 marks.</p>"
+    ],
+    "promptText": "The positive constants p and q satisfy the following equation p 2 p q − . = 2 p p 3 p q + + Show by a detailed method that p 2 p + q . 7 = ( ) 2 2 p +"
+  },
+  {
+    "id": "madas/as-pure-z/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q2-question-1.svg\" alt=\"𝐶 72 cm 𝑂 𝐴 𝐵 24 cm The figure above shows a circle with centre at O and radius r . The straight line AB is a chord to the circle.\" style=\"--madas-width:409.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q2-question-2.svg\" alt=\"The perpendicular bisector of AB passes through O and meets the circle at the point C , as shown in the figure. Given that 24cm and the length of the perpendicular bisector is 72cm , AB = determine the value of r . 4 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q2-solution-1.svg\" alt=\"𝐶 72 cm 𝑂 𝐴 𝐵 24 cm 𝑀 Let 𝑀be the midpoint of the chord. Then 𝐴𝑀= 24/2 = 12 and 𝑂𝑀= 𝐶𝑀−𝐶𝑂= 72 −𝑟. [B1] Apply Pythagoras in 𝐴𝑀𝑂. 122 + (72 −𝑟)2 = 𝑟2. [M1] Expanding gives 144 + 5184 −144𝑟+ 𝑟2 = 𝑟2, so 5328 = 144𝑟. [M1] Hence 𝑟= 37 cm . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 4 marks.</p>"
+    ],
+    "promptText": "𝐶 72 cm 𝑂 𝐴 𝐵 24 cm The figure above shows a circle with centre at O and radius r . The straight line AB is a chord to the circle. The perpendicular bisector of AB passes through O and meets the circle at the point C , as shown in the figure. Given that 24cm and the length of the perpendicular bisector is 72cm , AB = determine the value of r . 4 ( )"
+  },
+  {
+    "id": "madas/as-pure-z/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q3-question-1.svg\" alt=\"2 6 2 2 ax 1 bx 4 44 x 85 x ... , ( + ) ( + ) = + + + where a and b are integers. Find the possible values of a and the possible values of b . 8 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q3-solution-1.svg\" alt=\"Expand the two factors to the powers required: (2 + 𝑎𝑥)2 = 4 + 4𝑎𝑥+ 𝑎2𝑥2, (1 + 𝑏𝑥)6 = 1 + 6𝑏𝑥+ 15𝑏2𝑥2 + ⋯. [M1] Multiplication gives 4 + (4𝑎+ 24𝑏)𝑥+ (60𝑏2 + 24𝑎𝑏+ 𝑎2)𝑥2 + ⋯. [A1] Equate coefficients: 4𝑎+ 24𝑏= 44 and 60𝑏2 + 24𝑎𝑏+ 𝑎2 = 85. [M1] From the first 𝑎= 11 −6𝑏. Substitute: 60𝑏2 + 24𝑏(11 −6𝑏) + (11 −6𝑏)2 = 85 [M1] 60𝑏2 + 264𝑏−144𝑏2 + 121 −132𝑏+ 36𝑏2 = 85 [A1] 48𝑏2 −132𝑏−36 = 0, 4𝑏2 −11𝑏−3 = 0 [A1] [M1] (4𝑏+ 1)(𝑏−3) = 0. If 𝑏= 3, 𝑎= 11 −18 = −7. If 𝑏= −1/4, 𝑎= 25/2. The manuscript lists both algebraic pairs, but only (𝑎, 𝑏) = (−7, 3) satisfies the printed requirement that both are integers. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 8 marks.</p>"
+    ],
+    "promptText": "2 6 2 2 ax 1 bx 4 44 x 85 x ... , ( + ) ( + ) = + + + where a and b are integers. Find the possible values of a and the possible values of b . 8 ( )"
+  },
+  {
+    "id": "madas/as-pure-z/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q4-question-1.svg\" alt=\"It is given that 2 2 f x x 2 x m x 2 x 2 2 , ( ) = + − ( − + ) − where m is a constant such that m ≠. 1 The equation f x = 0 has distinct real roots. ( ) Determine the range of values of m . 7 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q4-solution-1.svg\" alt=\"Collect coefficients to obtain 𝑓(𝑥) = (1 −𝑚)𝑥2 + (2 + 2𝑚)𝑥−2𝑚−2. [M1] Since 𝑚≠1, this is quadratic. Distinct real roots require: (2 + 2𝑚)2 −4(1 −𝑚)(−2𝑚−2) &gt; 0 [M1] (1 + 𝑚)2 + (1 −𝑚)(2𝑚+ 2) &gt; 0 [A1] 1 + 2𝑚+ 𝑚2 + 2𝑚+ 2 −2𝑚2 −2𝑚&gt; 0, −𝑚2 + 2𝑚+ 3 &gt; 0 [A1] [M1] (𝑚−3)(𝑚+ 1) &lt; 0. −1 3\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q4-solution-2.svg\" alt=\"The product is negative for −1 &lt; 𝑚&lt; 3. [A1] Exclude 𝑚= 1, giving −1 &lt; 𝑚&lt; 1 or 1 &lt; 𝑚&lt; 3 . [A1]\" style=\"--madas-width:666.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 7 marks.</p>"
+    ],
+    "promptText": "It is given that 2 2 f x x 2 x m x 2 x 2 2 , ( ) = + − ( − + ) − where m is a constant such that m ≠. 1 The equation f x = 0 has distinct real roots. ( ) Determine the range of values of m . 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-z/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q5-question-1.svg\" alt=\"-xy plane, where the point O is the origin. The points A , B and P lie on the It is further given that OA = 4 , OB = 6 and AOB = 40 . ∡ ° ―――→ OA ―――→ ―――→ determine the distance of P from the origin and the angle If OP 2 3 OB = − ( ) ( ) 7 between OP ―――→ and OA ―――→ . ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q5-solution-1.svg\" alt=\"Write a =⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑂𝐴, b =⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗⃗𝑂𝐵. To construct 𝑃, follow 2a from 𝑂to 𝐻, then −3b from 𝐻to 𝑃. The lengths are 𝑂𝐻= 8, 𝐻𝑃= 18, and the included angle at 𝐻is 40∘. [B1] 𝐵 𝑂 𝐴 𝐻 40∘ 𝑃 By the cosine rule:\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q5-solution-2.svg\" alt=\"𝑂𝑃2 = 182 + 82 −2(18)(8) cos 40∘= 388 −288 cos 40∘= 167.379 … . [M1] [A1] Thus 𝑂𝑃= 12.94 approximately . [A1] By the sine rule, sin ∠𝑂𝑃𝐻/8 = sin 40∘/𝑂𝑃. [M1] Hence ∠𝑂𝑃𝐻= 23.42 …∘. [A1] The required angle is ∠𝑃𝑂𝐻= 180∘−40∘−23.42 …∘= 116.6∘approximately . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 7 marks.</p>"
+    ],
+    "promptText": "-xy plane, where the point O is the origin. The points A , B and P lie on the It is further given that OA = 4 , OB = 6 and AOB = 40 . ∡ ° ―――→ OA ―――→ ―――→ determine the distance of P from the origin and the angle If OP 2 3 OB = − ( ) ( ) 7 between OP ―――→ and OA ―――→ . ( )"
+  },
+  {
+    "id": "madas/as-pure-z/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q6-question-1.svg\" alt=\"f x 2log x , x∈ℝ, x &gt; 0 . = ( ) 4 g x 1 2log x , x∈ℝ, x &gt; 0 . ( ) = + 4 a) State the translation vector that maps the graph of f x onto the graph of ( ) g x . 2 ( ) ( ) It is given that the graph of g x can also be obtained from the graph of f x by a ( ) ( ) single transformation, but this transformation is not a translation. b) Describe this transformation geometrically. 3 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q6-solution-1.svg\" alt=\"(a) Since 𝑔(𝑥) = 𝑓(𝑥) + 1, the translation is one unit upwards, with vector (0 1) . [M1] [A1] (b) Write 1 = 2 log4 2. [B1] Then 𝑔(𝑥) = 2[log4 2 + log4 𝑥] = 2 log4(2𝑥) = 𝑓(2𝑥). [M1] This is a stretch parallel to the horizontal axis with scale factor 1/2 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 5 marks.</p>"
+    ],
+    "promptText": "f x 2log x , x∈ℝ, x > 0 . = ( ) 4 g x 1 2log x , x∈ℝ, x > 0 . ( ) = + 4 a) State the translation vector that maps the graph of f x onto the graph of ( ) g x . 2 ( ) ( ) It is given that the graph of g x can also be obtained from the graph of f x by a ( ) ( ) single transformation, but this transformation is not a translation. b) Describe this transformation geometrically. 3 ( )"
+  },
+  {
+    "id": "madas/as-pure-z/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q7-question-1.svg\" alt=\"The straight line l passes through the point P 4,5 and has gradient 3. ( ) The point Q also lies on l so that the distance PQ is 3 10 . Determine the coordinates of the two possible positions of Q . 7 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q7-solution-1.svg\" alt=\"The line through 𝑃has equation 𝑦−5 = 3(𝑥−4), or 𝑦= 3𝑥−7. [M1] Write 𝑄= (𝑎, 3𝑎−7). [A1] From the distance condition: (𝑎−4)2 + (3𝑎−7 −5)2 = 90 [M1] 𝑎2 −8𝑎+ 16 + 9𝑎2 −72𝑎+ 144 = 90 [A1] 10𝑎2 −80𝑎+ 70 = 0, 𝑎2 −8𝑎+ 7 = 0 [M1] [A1] (𝑎−7)(𝑎−1) = 0. For 𝑎= 1, 𝑦= 3 −7 = −4; for 𝑎= 7, 𝑦= 21 −7 = 14. Thus 𝑄= (1, −4) or (7, 14) . [A1] √ Alternative by geometry. Each step (1, 3) along the line has length 10. Take three such steps in either direction from 𝑃. (7, 14) (6, 11) (5, 8) (4, 5) (3, 2) (2, −1) (1, −4)\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 7 marks.</p>"
+    ],
+    "promptText": "The straight line l passes through the point P 4,5 and has gradient 3. ( ) The point Q also lies on l so that the distance PQ is 3 10 . Determine the coordinates of the two possible positions of Q . 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-z/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q8-question-1.svg\" alt=\"When a tree of a certain species was planted it was 2 metres in height and after 2 years its height was measured at 3.81 metres. The height, h metres, of this tree, t years after it was planted, is modelled by the equation e kt h A B − , = − where A , B and k are positive constants. Given that this species of tree will reach in its lifetime a maximum height of 12 metres, find the value of t when h = 10 . 10 ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q8-solution-1.svg\" alt=\"As 𝑡→∞, 𝐵𝑒−𝑘𝑡→0 because 𝑘&gt; 0. The limiting height is 𝐴= 12 . [M1] [A1] At planting, 2 = 12 −𝐵𝑒0 = 12 −𝐵, so 𝐵= 10. [M1] [A1] At two years, 3.81 = 12 −10𝑒−2𝑘, giving 10𝑒−2𝑘= 8.19, 𝑒−2𝑘= 0.819. [M1] Thus −2𝑘= ln(0.819) and 𝑘= −ln(0.819)/2 = 0.099835 …. [A1] For height ten, 10 = 12 −10𝑒−𝑘𝑡, [M1] so 𝑒−𝑘𝑡= 1/5 and 𝑒𝑘𝑡= 5. [A1] Take logs: 𝑡= ln 5/𝑘. [M1] With the unrounded 𝑘, 𝑡≈16.12 years. The manuscript rounds 𝑘to 0.1, giving 10 ln 5 ≈16.09; both give 16.1 years to three significant figures. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 10 marks.</p>"
+    ],
+    "promptText": "When a tree of a certain species was planted it was 2 metres in height and after 2 years its height was measured at 3.81 metres. The height, h metres, of this tree, t years after it was planted, is modelled by the equation e kt h A B − , = − where A , B and k are positive constants. Given that this species of tree will reach in its lifetime a maximum height of 12 metres, find the value of t when h = 10 . 10 ( )"
+  },
+  {
+    "id": "madas/as-pure-z/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q9-question-1.svg\" alt=\"A cubic curve C has equation 1 3 y 2 x 3 . = ( − ) A quadratic curve C has equation 2 2 y 2 x 1 4 . = − − ( ) a) Sketch on separate set of axes the graphs of C and C . 1 2 The sketches must contain the coordinates of the points where each of the curves meet the coordinate axes. 5 ( )\" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q9-question-2.svg\" alt=\"b) Hence, find in exact form, the solutions of the following equation. 2 3 2 x 1 3 2 x 4 . 7 ( − ) + ( − ) = ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q9-solution-1.svg\" alt=\"(a) The cubic 𝑦= (2𝑥−3)3 crosses the vertical axis at (0, −27) and has a stationary inflexion at the horizontal intercept (3/2, 0). [B1] [B1] The parabola 𝑦= (2𝑥−1)2 −4 has vertex (1/2, −4). [B1] Its vertical intercept is (0, −3) and its horizontal intercepts satisfy 2𝑥−1 = ±2, giving (−1/2, 0), (3/2, 0). [B1] [B1] −1/2 3/2 3/2 −3 (1/2, −4) −27 (b) Rewrite the equation as an intersection, using (3 −2𝑥)3 = −(2𝑥−3)3.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q9-solution-2.svg\" alt=\"(2𝑥−3)3 = (2𝑥−1)2 −4 = (2𝑥−3)(2𝑥+ 1). [M1] [A1] Collect terms and take out the shared factor: (2𝑥−3)[(2𝑥−3)2 −(2𝑥+ 1)] = (2𝑥−3)(4𝑥2 −14𝑥+ 8) = 0. [M1] [A1] The first factor gives 𝑥= 3/2. [B1] For 2𝑥2 −7𝑥+ 4 = 0, the discriminant is 49 −32 = 17. [M1] Thus √ √ 17)/4 . [A1] 𝑥= 3/2, (7 + 17)/4, (7 −\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 12 marks.</p>"
+    ],
+    "promptText": "A cubic curve C has equation 1 3 y 2 x 3 . = ( − ) A quadratic curve C has equation 2 2 y 2 x 1 4 . = − − ( ) a) Sketch on separate set of axes the graphs of C and C . 1 2 The sketches must contain the coordinates of the points where each of the curves meet the coordinate axes. 5 ( ) b) Hence, find in exact form, the solutions of the following equation. 2 3 2 x 1 3 2 x 4 . 7 ( − ) + ( − ) = ( )"
+  },
+  {
+    "id": "madas/as-pure-z/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q10-question-1.svg\" alt=\"The circles C and C have respective equations 1 2 2 2 x y 6 x 16 + − = x 2 y 2 18 x 16 y 80 . + − + = a) By solving these equations simultaneously show that C and C touch at a 1 2 8 point P and determine its coordinates. ( ) b) Determine further whether C and C touch internally or externally. 7 1 2 ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q10-solution-1.svg\" alt=\"(a) Subtract the equations to remove the squared terms. This gives 12𝑥−16𝑦= −64, or 3𝑥= 4𝑦−16. [M1] [A1] Multiply the first circle equation by nine: (3𝑥)2 + 9𝑦2 −18(3𝑥) = 144. [M1] Substitute the expression for 3𝑥. (4𝑦−16)2 + 9𝑦2 −18(4𝑦−16) = 144 [M1] 16𝑦2 −128𝑦+ 256 + 9𝑦2 −72𝑦+ 288 = 144 [A1] 25𝑦2 −200𝑦+ 400 = 0, 𝑦2 −8𝑦+ 16 = (𝑦−4)2 = 0. [A1] The repeated root is 𝑦= 4, and 3𝑥= 16 −16 = 0. [A1] There is a single common point, 𝑃= (0, 4) , so the circles touch. [A1] (b) Complete both squares:\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q10-solution-2.svg\" alt=\"(𝑥−3)2 −9 + 𝑦2 = 16, (𝑥−9)2 −81 + (𝑦+ 8)2 −64 = 80. [M1] Thus 𝐶1 ∶(𝑥−3)2+𝑦2 = 25 and 𝐶2 ∶(𝑥−9)2+(𝑦+8)2 = 225. [A1] Their centres are (3, 0), (9, −8) and their √ radii are 5, 15. [A1] The centre distance is √(3 −9)2 + (0 + 8)2 = 36 + 64 = 10. [M1] [A1] External tangency would give 15 + 5 = 20. Internal tangency gives 15 −5 = 10. [M1] Hence they touch internally . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 15 marks.</p>"
+    ],
+    "promptText": "The circles C and C have respective equations 1 2 2 2 x y 6 x 16 + − = x 2 y 2 18 x 16 y 80 . + − + = a) By solving these equations simultaneously show that C and C touch at a 1 2 8 point P and determine its coordinates. ( ) b) Determine further whether C and C touch internally or externally. 7 1 2 ( )"
+  },
+  {
+    "id": "madas/as-pure-z/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q11-question-1.svg\" alt=\"𝑦 5𝑥+ 2𝑦= 𝑞 𝑦= 𝑥3 −4𝑥2 + 𝑝𝑥+ 4 𝐴 𝐵 𝑥 𝑂 The figure above shows a curve C and a straight line L , with respective equations and 5 3 2 y x 4 x px 4 x 2 y q , = − + + + =\" style=\"--madas-width:537.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q11-question-2.svg\" alt=\"where p and q are constants. C and L intersect at the point A . The point B is a turning point C . Given that the respective x coordinates of A and B are 1 and 2 , determine … a) … the value of p and the value of q 6 ( ) b) … the area of the shaded region bounded by C , L and the coordinate axes. 7 ( )\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q11-solution-1.svg\" alt=\"(a) At the turning point 𝐵, 𝑦′ = 3𝑥2 −8𝑥+ 𝑝= 0. [M1] With 𝑥= 2, 12 −16 + 𝑝= 0, giving 𝑝= 4 . [A1] At 𝐴, 𝑥= 1 and 𝑦= 1 −4 + 4 + 4 = 5. [M1] [A1] Substitute into the line: 5(1) + 2(5) = 𝑞, so 𝑞= 15 . [M1] [A1] (b) On the horizontal axis 5𝑥= 15, giving 𝑥= 3. [B1] Split the area at 𝑥= 1. The triangular part has base 3 −1 = 2, height five and area 1 2(2)(5) = 5. [M1] [A1] 𝑦 5𝑥+ 2𝑦= 𝑞 𝑦= 𝑥3 −4𝑥2 + 𝑝𝑥+ 4 𝐴 𝐵 𝑥 𝑂\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q11-solution-2.svg\" alt=\"𝐴(1, 5) 𝐴(1, 5) = required region + 0 1 1 3 1 (𝑥3 −4𝑥2 + 4𝑥+ 4) 𝑑𝑥 [M1] 𝐼= ∫ 0 = [𝑥4/4 −4𝑥3/3 + 2𝑥2 + 4𝑥]1 [A1] 0 [A1] = 1/4 −4/3 + 2 + 4 = 59/12. The combined area is 5 + 59/12 = 119/12 . [A1]\" style=\"--madas-width:492.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 13 marks.</p>"
+    ],
+    "promptText": "𝑦 5𝑥+ 2𝑦= 𝑞 𝑦= 𝑥3 −4𝑥2 + 𝑝𝑥+ 4 𝐴 𝐵 𝑥 𝑂 The figure above shows a curve C and a straight line L , with respective equations and 5 3 2 y x 4 x px 4 x 2 y q , = − + + + = where p and q are constants. C and L intersect at the point A . The point B is a turning point C . Given that the respective x coordinates of A and B are 1 and 2 , determine … a) … the value of p and the value of q 6 ( ) b) … the area of the shaded region bounded by C , L and the coordinate axes. 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-z/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q12-question-1.svg\" alt=\"Use a calculus method to prove that if x∈ℝ, x &gt; 0 , then x 4 x− 4 2 . 5 + ≥ ( )\" style=\"--madas-width:566.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-z/q12-solution-1.svg\" alt=\"Put 𝑓(𝑥) = 𝑥4 + 𝑥−4 for 𝑥&gt; 0. Differentiate: 𝑓′(𝑥) = 4𝑥3 −4𝑥−5, 𝑓′(𝑥) = 0 ⟺𝑥8 = 1. [M1] [A1] Positivity gives 𝑥= 1. [B1] The second derivative 𝑓″(𝑥) = 12𝑥2+20𝑥−6 is positive throughout the domain. Thus the stationary point is the global minimum. [M1] Its value is 14 + 1−4 = 2, proving 𝑥4 + 𝑥−4 ≥2 , with equality only at one. [A1] Alternative without calculus. (𝑥4 −1)2 ≥0, so 𝑥8 −2𝑥4 + 1 ≥0, hence 𝑥8 + 1 ≥2𝑥4. Divide by the positive number 𝑥4 to obtain the same inequality.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 5 marks.</p>"
+    ],
+    "promptText": "Use a calculus method to prove that if x∈ℝ, x > 0 , then x 4 x− 4 2 . 5 + ≥ ( )"
+  }
+]

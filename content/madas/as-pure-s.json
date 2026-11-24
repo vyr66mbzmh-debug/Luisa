@@ -1,0 +1,133 @@
+[
+  {
+    "id": "madas/as-pure-s/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q1-question-1.svg\" alt=\"32 cm 𝐴 𝐵 𝑃 𝑄 32 cm 𝑅 𝐷 𝐶 The figure above shows, two identical circles, centred at P and Q , and a third circle,\" style=\"--madas-width:558.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q1-question-2.svg\" alt=\"centred at R , are touching each other externally. The three circles fit snugly inside a square ABCD , of side length 32 cm, so that PQ is parallel to AB . 4 Determine the size of radius of the circle centred at R . ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q1-solution-1.svg\" alt=\"32 cm 𝐴 𝐵 𝑀 8 𝑃 𝑄 32 cm 𝑑 8 + 𝑟 𝑅 𝐷 𝐶 The top two diameters span 32 cm, so each radius is eight. [B1] Write 𝑟for the lower radius. The vertical separation is 𝑑= 32 −8 −𝑟= 24 −𝑟. By external tangency 𝑄𝑅= 8 + 𝑟. [M1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q1-solution-2.svg\" alt=\"82 + (24 −𝑟)2 = (8 + 𝑟)2 [M1] 64 + 576 −48𝑟+ 𝑟2 = 64 + 16𝑟+ 𝑟2, 𝑟= 9 cm . [A1] 576 = 64𝑟,\" style=\"--madas-width:580.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 4 marks.</p>"
+    ],
+    "promptText": "32 cm 𝐴 𝐵 𝑃 𝑄 32 cm 𝑅 𝐷 𝐶 The figure above shows, two identical circles, centred at P and Q , and a third circle, centred at R , are touching each other externally. The three circles fit snugly inside a square ABCD , of side length 32 cm, so that PQ is parallel to AB . 4 Determine the size of radius of the circle centred at R . ( )"
+  },
+  {
+    "id": "madas/as-pure-s/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q2-question-1.svg\" alt=\"A curve has equation 2ax f x b , x∈ℝ, ( ) ≡ + where a and b are non zero constants. Find the value of a and the value of b , given further that 5 f 2 and f 2 4 . 8 ( ) = 2 ( − ) = ( )\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q2-solution-1.svg\" alt=\"Use the two function values separately: [M1] 22𝑎+ 𝑏= 5/2, 𝑏= 5/2 −22𝑎 2−2𝑎+ 𝑏= 4, 𝑏= 4 −2−2𝑎. [M1] Equate the two expressions. Put 𝐴= 22𝑎&gt; 0. [A1] 4 −1/𝐴= 5/2 −𝐴 [M1] 4𝐴−1 = 5 2𝐴−𝐴2, 8𝐴−2 = 5𝐴−2𝐴2 2𝐴2 + 3𝐴−2 = 0, [A1] (2𝐴−1)(𝐴+ 2) = 0. Reject 𝐴= −2. Thus 22𝑎= 1/2 = 2−1, so 2𝑎= −1 and 𝑎= −1/2 . [M1] [A1] Finally 𝑏= 5/2−1/2 = 2 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 8 marks.</p>"
+    ],
+    "promptText": "A curve has equation 2ax f x b , x∈ℝ, ( ) ≡ + where a and b are non zero constants. Find the value of a and the value of b , given further that 5 f 2 and f 2 4 . 8 ( ) = 2 ( − ) = ( )"
+  },
+  {
+    "id": "madas/as-pure-s/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q3-question-1.svg\" alt=\"The binomial coefficients are given by n n ! ⎛ ⎞= , k ∈ℕ, n∈ ∪ { } 0 . ℕ ⎜ k ⎟ k ! n k ! − ( ) ⎝ ⎠ Show directly from the above definition that if n r m , then ≥ ≥ n n m n r − ⎛ ⎞⎛ ⎞ ⎛ ⎞⎛ ⎞ 5 . = ( ) ⎜ m ⎟⎜ r m ⎟ ⎜ r ⎟⎜ m ⎟ − ⎝ ⎠⎝ ⎠ ⎝ ⎠⎝ ⎠\" style=\"--madas-width:568.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q3-solution-1.svg\" alt=\"Expand the two binomial coefficients on the left using their definition: (𝑛 𝑚)(𝑛−𝑚 𝑛! (𝑛−𝑚)! [M1] [A1] 𝑟−𝑚) = 𝑚!(𝑛−𝑚)! (𝑟−𝑚)![(𝑛−𝑚) −(𝑟−𝑚)]! 𝑛! [A1] = 𝑚!(𝑟−𝑚)!(𝑛−𝑟)!. Multiply numerator and denominator by 𝑟! and regroup: 𝑛! 𝑟! 𝑛! 𝑟! [M1] (𝑛−𝑟)! 𝑟! 𝑚!(𝑟−𝑚)! = 𝑟!(𝑛−𝑟)! 𝑚!(𝑟−𝑚)! = (𝑛 𝑟)( 𝑟 [A1] 𝑚) .\" style=\"--madas-width:572.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 5 marks.</p>"
+    ],
+    "promptText": "The binomial coefficients are given by n n ! ⎛ ⎞= , k ∈ℕ, n∈ ∪ { } 0 . ℕ ⎜ k ⎟ k ! n k ! − ( ) ⎝ ⎠ Show directly from the above definition that if n r m , then ≥ ≥ n n m n r − ⎛ ⎞⎛ ⎞ ⎛ ⎞⎛ ⎞ 5 . = ( ) ⎜ m ⎟⎜ r m ⎟ ⎜ r ⎟⎜ m ⎟ − ⎝ ⎠⎝ ⎠ ⎝ ⎠⎝ ⎠"
+  },
+  {
+    "id": "madas/as-pure-s/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q4-question-1.svg\" alt=\"𝑦 𝐵 𝐶 𝐴 𝑥 𝑂 𝑙 The figure above shows a circle whose centre is located at the point C k h , where k , ( ) and h are constants such that 2 h 5 . &lt; &lt;\" style=\"--madas-width:556.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q4-question-2.svg\" alt=\"The points A 3,2 and B 7,8 lie on this circle. ( ) ( ) The straight line l passes through C and the midpoint of AB . Given that the radius of the circle is 26 , find an equation for l , the value of k and the value of h . 12 ( )\" style=\"--madas-width:576.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q4-solution-1.svg\" alt=\"Algebraic approach. The centre is equidistant from 𝐴and 𝐵, with both squared distances equal to 26: (𝑘−3)2 + (ℎ−2)2 = 26, (𝑘−7)2 + (ℎ−8)2 = 26. [M1] [A1] Subtract the equations. Expanding both sides gives 𝑘2 −6𝑘+9+ℎ2 −4ℎ+4 = 𝑘2 −14𝑘+49+ℎ2 −16ℎ+64. Thus 8𝑘+ 12ℎ= 100, or 2𝑘+ 3ℎ= 25. [M1] [A1] This is the perpendicular bisector, so 𝑙∶2𝑥+ 3𝑦= 25 . [A1] Solve it simultaneously with the first distance equation: 4(𝑘−3)2 + 4(ℎ−2)2 = 104 [M1] [(25 −3ℎ) −6]2 + (2ℎ−4)2 = 104 [A1] (19 −3ℎ)2 + (2ℎ−4)2 = 104 [M1] 361 −114ℎ+ 9ℎ2 + 4ℎ2 −16ℎ+ 16 = 104\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q4-solution-2.svg\" alt=\"13ℎ2 −130ℎ+ 273 = 0, ℎ2 −10ℎ+ 21 = 0 [A1] [A1] (ℎ−3)(ℎ−7) = 0. The restriction 2 &lt; ℎ&lt; 5 selects ℎ= 3 . [A1] Substitution gives 2𝑘+ 9 = 25, so 𝑘= 8 . [A1] Geometric approach to the line. The gradient of 𝐴𝐵is (8−2)/(7−3) = 3/2, so the perpendicular gradient is −2/3. The midpoint is ((7+3)/2, (8+2)/2) = (5, 5). Hence 𝑦−5 = −2(𝑥−5)/3, giving 3𝑦−15 = −2𝑥+10 and 2𝑥+ 3𝑦= 25. Solve with 𝐴𝐶2 = 26 or 𝐵𝐶2 = 26 as above.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 12 marks.</p>"
+    ],
+    "promptText": "𝑦 𝐵 𝐶 𝐴 𝑥 𝑂 𝑙 The figure above shows a circle whose centre is located at the point C k h , where k , ( ) and h are constants such that 2 h 5 . < < The points A 3,2 and B 7,8 lie on this circle. ( ) ( ) The straight line l passes through C and the midpoint of AB . Given that the radius of the circle is 26 , find an equation for l , the value of k and the value of h . 12 ( )"
+  },
+  {
+    "id": "madas/as-pure-s/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q5-question-1.svg\" alt=\"𝑦 𝑓(𝑥) = 𝑥2 −3𝑥+ 18 𝑃 𝑥 1 𝑂 A quadratic curve has equation 2 y x 3 x 18 , x∈ℝ. = − +\" style=\"--madas-width:432.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q5-question-2.svg\" alt=\"The tangent to the curve at the point P meets the x axis at the point with coordinates 1,0 , as shown in the figure above. ( ) Find the area of the finite region bounded by the curve, the coordinates axes and the tangent to the curve at P , shown shaded in figure above. 12 ( )\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q5-solution-1.svg\" alt=\"First find the point of tangency. Method A uses a parameter. Let 𝑃= (𝑎, 𝑎2 −3𝑎+ 18), 𝑎&gt; 0. Since 𝑦′ = 2𝑥−3, the slope at 𝑃is 2𝑎−3. [M1] [A1] The tangent has equation 𝑦−(𝑎2−3𝑎+18) = (2𝑎−3)(𝑥−𝑎). [M1] Substitute (1, 0). 𝑎2 −3𝑎+ 18 = (2𝑎−3)(𝑎−1) = 2𝑎2 −5𝑎+ 3 [M1] 𝑎2 −2𝑎−15 = 0, [A1] (𝑎+ 3)(𝑎−5) = 0 [A1] 𝑎= 5, 𝑃= (5, 28) . Method B uses a repeated root. A tangent 𝑦= 𝑚𝑥+𝑐through (1, 0) satisfies 𝑐= −𝑚. Intersect 𝑦= 𝑚𝑥−𝑚 with the quadratic to obtain 𝑥2 −(3 + 𝑚)𝑥+ (𝑚+ 18) = 0. At tangency: (3 + 𝑚)2 −4(𝑚+ 18) = 0, 𝑚2 + 6𝑚+ 9 −4𝑚−72 = 0, (𝑚−7)(𝑚+ 9) = 0. The tangent shown has positive gradient, so 𝑚= 7. Then 𝑥2 −10𝑥+ 25 = (𝑥−5)2 = 0, again giving 𝑃= (5, 28).\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q5-solution-2.svg\" alt=\"𝑦 𝑃 𝑓(𝑥) = 𝑥2 −3𝑥+ 18 𝑥 𝑂 1 28 = required area − 4\" style=\"--madas-width:514.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q5-solution-3.svg\" alt=\"Subtract the triangular area from the area under the curve. The triangle has base 5 −1 = 4, height 28 and area 1 2(4)(28) = 56. [M1] [A1] 5 (𝑥2 −3𝑥+ 18) 𝑑𝑥 [M1] 𝐼= ∫ 0 = [𝑥3/3 −3𝑥2/2 + 18𝑥]5 [A1] 0 [A1] = 125/3 −75/2 + 90 −0 = 565/6. The required area is 565/6 −56 = 229/6 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 12 marks.</p>"
+    ],
+    "promptText": "𝑦 𝑓(𝑥) = 𝑥2 −3𝑥+ 18 𝑃 𝑥 1 𝑂 A quadratic curve has equation 2 y x 3 x 18 , x∈ℝ. = − + The tangent to the curve at the point P meets the x axis at the point with coordinates 1,0 , as shown in the figure above. ( ) Find the area of the finite region bounded by the curve, the coordinates axes and the tangent to the curve at P , shown shaded in figure above. 12 ( )"
+  },
+  {
+    "id": "madas/as-pure-s/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q6-question-1.svg\" alt=\"Rationalize the denominator of the following surd. 4 2 2 6 . = + − 3 2 1 + + Show detailed workings in this question. 7 ( )\" style=\"--madas-width:572.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q6-solution-1.svg\" alt=\"√ √ Group the first two radicals. Multiply numerator and denominator by 2 −1. 3 + √ √ 4 = 4( 3 + 2 −1) [M1] √ √ √ √ 2)2 −1 3 + 2 + 1 ( 3 + √ √ = 4( 3 + 2 −1) [A1] √ 3 + 2 + 2 6 −1 √ √ = 2( 3 + 2 −1) [A1] √ . 2 + 6 Remove the remaining surd using its conjugate: √ √ √ 2( 3 + 2 −1)( 6 −2) [M1] √ √ (2 + 6)( 6 −2) √ √ √\" style=\"--madas-width:541.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q6-solution-2.svg\" alt=\"= 2( 3 + 2 −1)( 6 −2) [A1] 6 −4 √ √ √ √ √ [M1] = 18 + 12 − 6 −2 3 −2 2 + 2 √ √ √ √ √ √ √ [A1] = 3 2 + 2 3 − 6 −2 3 −2 2 + 2 = 2 + 2 − 6 . The manuscript starts with a different fraction. Its two conjugate steps are: √ √ √ √ √ √ 4 2 −3 3 −1 = (4 2 −3 3 −1)(1 −2 2 − 3) √ √ √ 2)2 −3 1 −2 2 + 3 (1 −2 √ √ √ √ √ √ = 4 2 −16 −4 6 −3 3 + 6 6 + 9 −1 + 2 2 + 3 √ 6 −4 2 √ √ √ = 3 2 + 6 − 3 −4 √ 3 −2 2 √ √ √ √ = (3 + 2 2)(3 2 + 6 − 3 −4) 9 −8 √ √ √ √ √ √ = 9 2 + 3 6 −3 3 −12 + 12 + 2 12 −2 6 −8 2\" style=\"--madas-width:564.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q6-solution-3.svg\" alt=\"= 6 + 3 + 2. √ √ √ √ √ √ √ The manuscript’s intermediate expression (3 2) rationalises to 3, 2 + 6 − 3 −4)/(3 −2 2 + 6 + a different surd. It cannot equal the printed fraction. The calculation above rationalises the fraction as printed.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 7 marks.</p>"
+    ],
+    "promptText": "Rationalize the denominator of the following surd. 4 2 2 6 . = + − 3 2 1 + + Show detailed workings in this question. 7 ( )"
+  },
+  {
+    "id": "madas/as-pure-s/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q7-question-1.svg\" alt=\"𝑦 𝐵 𝐴 𝐶 𝑥 𝑂 The figure above shows an isosceles trapezium OABC , where O is the origin. It is further given that\" style=\"--madas-width:508.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q7-question-2.svg\" alt=\"0,6 , the coordinates of A are ( • ) the sides AB and OC are parallel, • OA BC , • = the diagonal AC is parallel to the x axis. • If B lies on the line with equation y x , determine, in exact simplified surd form, the = coordinates of B . 14 ( )\" style=\"--madas-width:570.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q7-solution-1.svg\" alt=\"𝑦 𝐵 𝐴 𝐶 𝑥 𝑂 Let 𝐵= (𝑡, 𝑡). The gradient of 𝐴𝐵is (𝑡−6)/𝑡. [M1] Since 𝑂𝐶∥𝐴𝐵, its equation is 𝑦= (𝑡−6)𝑥/𝑡. [A1] As 𝐴𝐶is horizontal, 𝑦𝐶= 6. Thus 𝐶= (6𝑡/(𝑡−6), 6). [A1] The diagram requires 𝑡&gt; 6. Use 𝐵𝐶= 𝑂𝐴= 6. 2 ( 6𝑡 + (6 −𝑡)2 = 36 [M1] 𝑡−6 −𝑡) [6𝑡−𝑡(𝑡−6)]2 + (𝑡−6)2 = 36 [A1] (𝑡−6)2\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q7-solution-2.svg\" alt=\"𝑡2(𝑡−12)2 + (𝑡−6)4 = 36(𝑡−6)2. [A1] For symmetry put 𝑤= 𝑡−6, so 𝑡= 𝑤+ 6, 𝑡−12 = 𝑤−6. (𝑤+ 6)2(𝑤−6)2 + 𝑤4 = 36𝑤2 [M1] (𝑤2 −36)2 + 𝑤4 = 36𝑤2 𝑤4 −72𝑤2 + 1296 + 𝑤4 −36𝑤2 = 0 [A1] 𝑤4 −54𝑤2 + 648 = 0, (𝑤2 −36)(𝑤2 −18) = 0. [M1] [A1] √ √ Hence 𝑤= ±6, ±3 2. Since 𝑡&gt; 6, 𝑤&gt; 0, leaving 𝑡= 12 or 𝑡= 6 + 3 2. [A1] If 𝑡= 12, 𝑥𝐶= 72/(12 −6) = 12. This gives a parallelogram with 𝐵𝐶∥𝑂𝐴, contrary to the trapezium √ √ √ √ shown. [M1] For 𝑡= 6 + 3 2, 𝑥𝐶= 6(6 + 3 2, to the right of 𝐵as required. [A1] 2)/(3 2) = 6 + 6 √ √ Therefore 𝐵= (6 + 3 2) . [A1] 2, 6 + 3\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 14 marks.</p>"
+    ],
+    "promptText": "𝑦 𝐵 𝐴 𝐶 𝑥 𝑂 The figure above shows an isosceles trapezium OABC , where O is the origin. It is further given that 0,6 , the coordinates of A are ( • ) the sides AB and OC are parallel, • OA BC , • = the diagonal AC is parallel to the x axis. • If B lies on the line with equation y x , determine, in exact simplified surd form, the = coordinates of B . 14 ( )"
+  },
+  {
+    "id": "madas/as-pure-s/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q8-question-1.svg\" alt=\"Solve the following trigonometric equation 3 2 12 19 2sin 2 tan2 17cos2 , 0 360 ° . θ θ θ °≤ θ ( ) ( + ) = − &lt; cos2 θ\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q8-solution-1.svg\" alt=\"Rewrite the tangent as a quotient and multiply by cos 2𝜃, which is nonzero in the original equation. Put 𝑢= sin 2𝜃. (19 + 2𝑢2)𝑢= 3 −17 cos2 2𝜃 [M1] [A1] = 3 −17(1 −𝑢2) = −14 + 17𝑢2 2𝑢3 −17𝑢2 + 19𝑢+ 14 = 0. [A1] For 𝐹(𝑢) = 2𝑢3 −17𝑢2 + 19𝑢+ 14, 𝐹(1) = 2 −17 + 19 + 14 ≠0 and 𝐹(−1) = −2 −17 −19 + 14 ≠0. But 𝐹(2) = 16 −68 + 38 + 14 = 0. [M1] Factor by grouping or division: [M1] 𝐹(𝑢) = 2𝑢2(𝑢−2) −13𝑢(𝑢−2) −7(𝑢−2) = (𝑢−2)(2𝑢2 −13𝑢−7) = (𝑢−2)(2𝑢+ 1)(𝑢−7). [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q8-solution-2.svg\" alt=\"The candidates 2, −1/2, 7 leave only sin 2𝜃= −1/2. [A1] Its reference angle is 30∘. Therefore 2𝜃= −30∘+ 360∘𝑛or 210∘+ 360∘𝑛. [M1] [A1] Dividing by two gives 𝜃= −15∘+ 180∘𝑛or 105∘+ 180∘𝑛. [M1] The first family gives 165∘, 345∘, the second 105∘, 285∘. [A1] In order, 𝜃= 105∘, 165∘, 285∘, 345∘. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 12 marks.</p>"
+    ],
+    "promptText": "Solve the following trigonometric equation 3 2 12 19 2sin 2 tan2 17cos2 , 0 360 ° . θ θ θ °≤ θ ( ) ( + ) = − < cos2 θ"
+  },
+  {
+    "id": "madas/as-pure-s/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q9-question-1.svg\" alt=\"𝑦 𝑓(𝑥) = (1 + 𝑥)(5 −𝑥) 𝑃 𝑦= 𝑔(𝑥) 𝑥 𝑂 The figure above shows the curve with equation f x 1 x 5 x , ( ) = ( + )( − )\" style=\"--madas-width:444.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q9-question-2.svg\" alt=\"and the curve with equation y g x . = ( ) The curve with equation y g x can be obtained by two transformations of the = ( ) curve with equation y f x . It is further given that these two transformations do = ( ) not include any stretches, shears or rotations. If both curves meet the y axis at the same point P , find an equation for y g x . = ( ) 6 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q9-solution-1.svg\" alt=\"The shared vertical intercept is 𝑃= (0, 𝑓(0)) = (0, 5). [B1] Translate 𝑓down ten units to the blue graph 𝑓(𝑥) −10. [M1] Reflect that graph in the horizontal axis to obtain the pink graph −[𝑓(𝑥) −10]. [M1] 𝑦 𝑃 𝑥 [A1] 𝑔(𝑥) = 10 −𝑓(𝑥) = 10 −(𝑥+ 1)(5 −𝑥) = 10 + (𝑥+ 1)(𝑥−5) = 10 + 𝑥2 −4𝑥−5 [M1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q9-solution-2.svg\" alt=\"= 𝑥2 −4𝑥+ 5 . [A1]\" style=\"--madas-width:348.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 6 marks.</p>"
+    ],
+    "promptText": "𝑦 𝑓(𝑥) = (1 + 𝑥)(5 −𝑥) 𝑃 𝑦= 𝑔(𝑥) 𝑥 𝑂 The figure above shows the curve with equation f x 1 x 5 x , ( ) = ( + )( − ) and the curve with equation y g x . = ( ) The curve with equation y g x can be obtained by two transformations of the = ( ) curve with equation y f x . It is further given that these two transformations do = ( ) not include any stretches, shears or rotations. If both curves meet the y axis at the same point P , find an equation for y g x . = ( ) 6 ( )"
+  },
+  {
+    "id": "madas/as-pure-s/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q10-question-1.svg\" alt=\"An open box is to be made of thin sheet metal, in the shape of a cuboid with a square base of length x and height h . The box is to have a fixed volume. 11 Find the value of x , in terms of h , when the surface area of the box is minimum. ( )\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q10-solution-1.svg\" alt=\"Let the fixed volume be 𝑉. The square base has side 𝑥and the height is ℎ. ℎ 𝑥 𝑥 [B1] 𝑉= 𝑥2ℎ, ℎ= 𝑉/𝑥2 𝐴= 𝑥2 + 4𝑥ℎ [M1] = 𝑥2 + 4𝑉/𝑥= 𝑥2 + 4𝑉𝑥−1. [A1] For a stationary surface area:\" style=\"--madas-width:481.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q10-solution-2.svg\" alt=\"𝐴′ = 2𝑥−4𝑉𝑥−2 [M1] 2𝑥3 = 4𝑉, 𝑥3 = 2𝑉 [M1] [A1] 2𝑥= 4𝑉/𝑥2, 3√ [A1] 𝑥= 2𝑉. Check the nature of the stationary point: 𝐴″ = 2 + 8𝑉𝑥−3 = 2 + 8𝑉/𝑥3 [M1] [A1] = 2 + 8𝑉/(2𝑉) = 6 &gt; 0. Thus the surface area is minimal. Now ℎ= 𝑉/(2𝑉)2/3 = 𝑉1/3/22/3 = (2𝑉)1/3/2 = 𝑥/2. [M1] Therefore 𝑥= 2ℎ. [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 11 marks.</p>"
+    ],
+    "promptText": "An open box is to be made of thin sheet metal, in the shape of a cuboid with a square base of length x and height h . The box is to have a fixed volume. 11 Find the value of x , in terms of h , when the surface area of the box is minimum. ( )"
+  },
+  {
+    "id": "madas/as-pure-s/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q11-question-1.svg\" alt=\"Show that the square of an odd positive integer greater than 1 is of the form 8 T + , 1 where T is a triangular number. 13 ( )\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q11-solution-1.svg\" alt=\"Write the odd integer as 2𝑛+ 1 &gt; 1, where 𝑛is positive. [B1] Exhaust the possibilities for 𝑛. If 𝑛= 2𝑚, then 2𝑛+ 1 = 4𝑚+ 1, as in 5, 21, 33. [M1] Squaring gives (4𝑚+ 1)2 = 16𝑚2 + 8𝑚+ 1 = 8𝑚(2𝑚+ 1) + 1. [A1] [A1] If 𝑛= 2𝑚+ 1, then 2𝑛+ 1 = 4𝑚+ 3, as in 7, 35, 47. [M1] Squaring gives (4𝑚+ 3)2 = 16𝑚2 + 24𝑚+ 9 = 8(2𝑚2 + 3𝑚+ 1) + 1 = 8(2𝑚+ 1)(𝑚+ 1) + 1. [A1] [A1] Thus both results take the form 8𝑇+1. [B1] It remains to identify 𝑇as triangular, using 𝑇𝑗= 1+2+⋯+𝑗= 𝑗(𝑗+ 1)/2. [B1] For even 𝑛, 𝑇= 𝑚(2𝑚+ 1) = (2𝑚)(2𝑚+ 1)/2 = 𝑇2𝑚. [M1] [A1] For odd 𝑛, 𝑇= (2𝑚+ 1)(𝑚+ 1) = (2𝑚+ 1)(2𝑚+ 2)/2 = 𝑇2𝑚+1. [M1] So for every positive 𝑛, (2𝑛+ 1)2 = 8𝑇𝑛+ 1 . [A1] The manuscript also identifies the triangular numbers by splitting 1, 3, 6, 10, 15, 21, 28, 36, … into alternating terms: general term 𝑛 1 2 3 4 2𝑛2 −𝑛= 𝑛(2𝑛−1) 𝑇2𝑛−1 1 6 15 28 2𝑛2 + 𝑛= 𝑛(2𝑛+ 1) 𝑇2𝑛 3 10 21 36\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q11-solution-2.svg\" alt=\"The first differences are 5, 9, 13 and 7, 11, 15; both sets of second differences are four. Comparing with 2𝑛2 = 2, 8, 18, 32, … gives the corrections −1, −2, −3, −4 and 1, 2, 3, 4. Replacing 𝑛by 𝑚+ 1 in the first sequence gives (𝑚+ 1)(2𝑚+ 1); taking 𝑛= 𝑚in the second gives 𝑚(2𝑚+ 1), exactly the factors above.\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 13 marks.</p>"
+    ],
+    "promptText": "Show that the square of an odd positive integer greater than 1 is of the form 8 T + , 1 where T is a triangular number. 13 ( )"
+  },
+  {
+    "id": "madas/as-pure-s/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q12-question-1.svg\" alt=\"Solve the following equation. 2 x 1 x 4 2 x 3e ( + ) 2e e 9 3e 4 , x∈ℝ. × − ( ) ( + ) + Give the two solutions of the equation in the form x A , where A is in the form =± a ln3 − , where a and b are positive integers. 14 b ln2 ( ) −\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q12-solution-1.svg\" alt=\"The printed line gives an expression without an equality sign. The manuscript solves it equal to zero. Write 𝑒2(𝑥+1) = 𝑒2(𝑒𝑥)2, (2𝑒)𝑥= 2𝑥𝑒𝑥, 4𝑥= (2𝑥)2. 3𝑒2(𝑒𝑥)2 −2𝑥𝑒𝑥(𝑒4 + 9) + 3𝑒2(2𝑥)2 = 0. [M1] [A1] Divide through by 3𝑒2(2𝑥)2, which is positive, and set 𝑢= 𝑒𝑥/2𝑥= (𝑒/2)𝑥. 𝑢2 −𝑒4 + 9 [M1] [A1] 3𝑒2 𝑢+ 1 = 0. Complete the square: (𝑢−𝑒4 + 9 2 = (𝑒4 + 9)2 [M1] 6𝑒2 ) −1 36𝑒4 = 𝑒8 + 18𝑒4 + 81 −36𝑒4 = (𝑒4 −9)2 [A1] . 36𝑒4 36𝑒4\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q12-solution-2.svg\" alt=\"Take both square roots. The two values are: 𝑢= 𝑒4 + 9 ± (𝑒4 −9) = 𝑒2 3 or [M1] [A1] 𝑒2 . 6𝑒2 3 Solve each case separately. For the first: 𝑥ln(𝑒/2) = ln(𝑒2/3) [M1] (𝑒/2)𝑥= 𝑒2/3, 𝑥= 2 −ln 3 𝑥(1 −ln 2) = 2 −ln 3, [A1] 1 −ln 2. For the second: (𝑒/2)𝑥= 3/𝑒2, 𝑥ln(𝑒/2) = ln(3/𝑒2) [M1] 𝑥= −2 −ln 3 𝑥(1 −ln 2) = ln 3 −2, [A1] 1 −ln 2.\" style=\"--madas-width:500.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q12-solution-3.svg\" alt=\"Hence 𝑥= ±(2 −ln 3)/(1 −ln 2) , with 𝑎= 2, 𝑏= 1. [A1] [A1]\" style=\"--madas-width:413.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 14 marks.</p>"
+    ],
+    "promptText": "Solve the following equation. 2 x 1 x 4 2 x 3e ( + ) 2e e 9 3e 4 , x∈ℝ. × − ( ) ( + ) + Give the two solutions of the equation in the form x A , where A is in the form =± a ln3 − , where a and b are positive integers. 14 b ln2 ( ) −"
+  },
+  {
+    "id": "madas/as-pure-s/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q13-question-1.svg\" alt=\"2 The curve with equation y x , x∈ℝ, is translated parallel to the x axis, so that R = denotes the area of the finite region bounded by the coordinated axes, the curve and the straight line with equation x = 3 . Determine the least value of R . 7 ( )\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q13-solution-1.svg\" alt=\"Write the translated parabola as 𝑦= (𝑥−𝑡)2. [B1] The vertex may lie on either side of the interval or inside it. In each configuration the required area is the integral from zero to three. 3 3 3 3 3 3 (𝑥−𝑡)2 𝑑𝑥= ∫ (𝑥2 −2𝑡𝑥+ 𝑡2) 𝑑𝑥 [M1] 𝑅= ∫ 0 0 = [𝑥3/3 −𝑡𝑥2 + 𝑡2𝑥]3 [A1] 0 [A1] = 9 −9𝑡+ 3𝑡2.\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/as-pure-s/q13-solution-2.svg\" alt=\"Complete the square: 𝑅= 3(𝑡2 −3𝑡+ 3) = 3[(𝑡−3/2)2 −9/4 + 3] = 3(𝑡−3/2)2 + 9/4. [M1] [A1] The square is least when 𝑡= 3/2. The least area is 9/4 . [A1]\" style=\"--madas-width:588.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 7 marks.</p>"
+    ],
+    "promptText": "2 The curve with equation y x , x∈ℝ, is translated parallel to the x axis, so that R = denotes the area of the finite region bounded by the coordinated axes, the curve and the straight line with equation x = 3 . Determine the least value of R . 7 ( )"
+  }
+]

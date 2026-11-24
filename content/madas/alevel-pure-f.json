@@ -1,0 +1,129 @@
+[
+  {
+    "id": "madas/alevel-pure-f/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q1-question-1.svg\" alt=\"3 x + 10 x − 4 = 0 . ( ) 2 a) Show that the above equation has a root α , which lies between 0 and  1. b) Use the Newton-Raphson method twice, starting with 1 x = 0.5 to find, correct to 4 decimal places, an approximation for α . ( ) 6\" style=\"--madas-width:577.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q1-solution-1.svg\" alt=\"(a) Let f(x) = x3 + 10x −4. Since f(0) = −4, f(1) = 7 [B1] and f is continuous, there is a root in (0, 1) . [A1] (b) With f′(x) = 3x2 + 10, Newton–Raphson gives xn+1 = xn −f(xn)/f′(xn), with numerator x3 n + 10xn −4, so the iteration is xn+1 = xn −f(xn)/(3x2 n + 10). [B1] From x1 = 0.5 [A1] the first substitution is 0.5 −[0.53 + 10(0.5) −4]/[3(0.5)2 + 10] = 17/43. Thus x2 = 0.39534884, [A1] then substituting 17/43 into the same formula gives x3 = 0.39388912. [M1] The requested estimate is 0.3939 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 8 marks.</p>"
+    ],
+    "promptText": "3 x + 10 x − 4 = 0 . ( ) 2 a) Show that the above equation has a root α , which lies between 0 and  1. b) Use the Newton-Raphson method twice, starting with 1 x = 0.5 to find, correct to 4 decimal places, an approximation for α . ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-f/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q2-question-1.svg\" alt=\"y x O P Q The figure above shows a curve known as a re-entrant cycloid, with parametric equations x = θ − 4sin , θ y = − 1 2cos θ ,   0 ≤ θ ≤ 2 π .\" style=\"--madas-width:558.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q2-question-2.svg\" alt=\"The curve crosses the x axis at the points P and Q . ( ) a) Find the value of θ at the points P and Q . 3 b) Show that the area of the finite region bounded by the curve and the x axis, shown shaded in the figure above, is given by the integral θ  2 2 1 6cos − θ + 8cos θ d θ , θ 1 ( ) where 1 θ and θ must be stated. 4 2 ( ) c) Find an exact value for the above integral. 5\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q2-question-3.svg\" alt=\"Question diagram\" style=\"--madas-width:566.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q2-solution-1.svg\" alt=\"(a) On the x-axis y = 0, so 1 −2 cos θ = 0 and 2 cos θ = 1. Hence cos θ = 1/2, so θ1 = π/3 [A1] at P and θ2 = 5π/3 [A1] at Q. The two angles are arccos(1/2) and 2π −arccos(1/2). To label them, x = π/3 −4 sin(π/3) = −2.4169 . . . for the left point and x = 5π/3 −4 sin(5π/3) = 8.7000 . . . for the right point. [A1] R y dx. (b) The upper boundary is traversed from P to Q. [M1] Its oriented area integral is This also follows by writing the area as the integral of the horizontal strip width and integrating by R 5π/3 parts, since y = 0 at P, Q. [M1] As dx/dθ = 1 −4 cos θ, [A1] write the area as π/3 y(θ)(dx/dθ) dθ.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q2-solution-2.svg\" alt=\"Expanding gives 1 −4 cos θ −2 cos θ + 8 cos2 θ, so the integrand is (1 −2 cos θ)(1 −4 cos θ) = 1 −6 cos θ + 8 cos2 θ . [A1] (c) Use cos2 θ = (1 + cos 2θ)/2. [M1] [A1] The integrand is 1 −6 cos θ + 8(1 2 + 1 2 cos 2θ) = 5 −6 cos θ + 4 cos 2θ. The integral equals √ √ √ √ [5θ −6 sin θ + 2 sin 2θ]5π/3  25π   5π  π/3 = 3 + 3 3 − 3 − 3 −3 3 + 3 . Simplifying gives √ 20π/3 + 4 3 . [M1] [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 12 marks.</p>"
+    ],
+    "promptText": "y x O P Q The figure above shows a curve known as a re-entrant cycloid, with parametric equations x = θ − 4sin , θ y = − 1 2cos θ ,   0 ≤ θ ≤ 2 π . The curve crosses the x axis at the points P and Q . ( ) a) Find the value of θ at the points P and Q . 3 b) Show that the area of the finite region bounded by the curve and the x axis, shown shaded in the figure above, is given by the integral θ  2 2 1 6cos − θ + 8cos θ d θ , θ 1 ( ) where 1 θ and θ must be stated. 4 2 ( ) c) Find an exact value for the above integral. 5 "
+  },
+  {
+    "id": "madas/alevel-pure-f/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q3-question-1.svg\" alt=\"Solve the trigonometric equation π 1 π sin θ cos = − cos sin θ ,  2 π &lt; θ &lt; 4 π , 5 2 5 giving the answers in terms of π . ( ) 5\" style=\"--madas-width:593.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q3-solution-1.svg\" alt=\"The equation is sin θ cos(π/5) = 1/2 −cos θ sin(π/5), so sin θ cos(π/5) + cos θ sin(π/5) = 1/2. Bring the cosine term to the left and apply the sine addition formula: [M1] Then sin(θ + π/5) = 1/2. [A1] The principal angle is arcsin(1/2) = π/6, and the second angle is π −π/6 = 5π/6. The solutions for θ + π/5 are π/6 + 2kπ or 5π/6 + 2kπ. [A1] Subtracting π/5 gives −π/30 + 2kπ or 19π/30 + 2kπ. Taking k = 2 in the first and k = 1 in the second and imposing 2π &lt; θ &lt; 4π [M1] gives θ = 79π/30 or 119π/30 . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 5 marks.</p>"
+    ],
+    "promptText": "Solve the trigonometric equation π 1 π sin θ cos = − cos sin θ ,  2 π < θ < 4 π , 5 2 5 giving the answers in terms of π . ( ) 5"
+  },
+  {
+    "id": "madas/alevel-pure-f/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q4-question-1.svg\" alt=\"y = , y ∈ . It is given that 2 a) Find the possible values of 3 y −. 1 ( ) 2 It is next given that 5 ≤≤ t 13 , t ∈ . b) Express the above inequality in the form t − ≤ a b , where a and b are positive integers to be stated. ( ) 2 It is finally given that x − 2 = x + 5 2 , x∈ .\" style=\"--madas-width:578.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q4-question-2.svg\" alt=\"c) Determine the value of x . ( ) 3\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q4-solution-1.svg\" alt=\"(a) The two possibilities from |y| = 2 are y = ±2. For y = 2, |3y −1| = |6 −1| = 5, and for y = −2, |3y −1| = | −6 −1| . [M1] = 7\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q4-solution-2.svg\" alt=\"The values are 5, 7 . [A1] (b) The interval’s midpoint is (5 + 13)/2 = 9 and its half-width is (13 −5)/2 = 4, so |t −9| ≤4 . [M1] [A1] √ √ √ √ √ √ (c) From |x − 2| = |x + 5 2| one either has x − 2 = x + 5 2, impossible, or x − 2 = −(x + 5 2), so √ 2x = −4 2. √ √ √ Geometrically x must be halfway between 2 and −5 2. [B1] Therefore x = −2 2 . [M1] [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 7 marks.</p>"
+    ],
+    "promptText": "y = , y ∈ . It is given that 2 a) Find the possible values of 3 y −. 1 ( ) 2 It is next given that 5 ≤≤ t 13 , t ∈ . b) Express the above inequality in the form t − ≤ a b , where a and b are positive integers to be stated. ( ) 2 It is finally given that x − 2 = x + 5 2 , x∈ . c) Determine the value of x . ( ) 3"
+  },
+  {
+    "id": "madas/alevel-pure-f/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q5-question-1.svg\" alt=\"( − ) ( − ) ( ) The points A 5, 1,0 , B 3,5, 4 , C 12,2,8 are referred relative to a fixed origin O .   The point D is such so that AD = 2 BC . ( ) Determine the distance CD . 6\" style=\"--madas-width:589.5px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q5-solution-1.svg\" alt=\"Start with a diagram: Write −−→ OD = −→ OA + −−→ AD . = −→ OA + 2−−→ BC\" style=\"--madas-width:438.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q5-solution-2.svg\" alt=\"In position vectors, d = a + 2(c −b) = a + 2c −2b = (5, −1, 0) + 2(12, 2, 8) −2(3, 5, −4). The displacement −−→ BC = (9, −3, 12), [B1] [A1] so D = A + 2−−→ BC = (23, −7, 24). [A1] Then −−→ CD = d −c = (23, −7, 24) −(12, 2, 8) = (11, −9, 16), [A1] giving √ CD = 121 + 81 + 256 . [M1] [A1] √ = 458 ≈21.40\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 6 marks.</p>"
+    ],
+    "promptText": "( − ) ( − ) ( ) The points A 5, 1,0 , B 3,5, 4 , C 12,2,8 are referred relative to a fixed origin O .   The point D is such so that AD = 2 BC . ( ) Determine the distance CD . 6"
+  },
+  {
+    "id": "madas/alevel-pure-f/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q6-question-1.svg\" alt=\"1 ( ) , x∈ . y = arctan 2 x 1 By writing y = arctan 2 ( x ) as x = f ( ) y , show that dy 2 = . ( ) 5 2 dx x + 4\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q6-solution-1.svg\" alt=\"Apply tangent to y = arctan(x/2), giving tan y = tan(arctan(x/2)) . = x/2 On the principal arctangent branch, x = 2 tan y. [B1] [A1] Then dx/dy = 2 sec2 y = 2(1 + tan2 y) . [M1] [A1] = 2(1 + x2/4) By the inverse rule, dy/dx = 1/(2 + 2 tan2 y) . = 1/(2 + x2/2) Multiply the numerator and denominator by 2.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q6-solution-2.svg\" alt=\"Its simplified value is 2/(x2 + 4) . [A1]\" style=\"--madas-width:256.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 5 marks.</p>"
+    ],
+    "promptText": "1 ( ) , x∈ . y = arctan 2 x 1 By writing y = arctan 2 ( x ) as x = f ( ) y , show that dy 2 = . ( ) 5 2 dx x + 4"
+  },
+  {
+    "id": "madas/alevel-pure-f/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q7-question-1.svg\" alt=\"y 1 D ( 6, 2 ) ( ) C 4,0 O x   x f : x , x ∈ , x ≠− 3 x + 3 B ( 0, 2 − ) A −− ( 1, 3 ) The figure above shows the graph of the function f x , defined for 1 ( ) −≤ x ≤ 6 .\" style=\"--madas-width:517.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q7-question-2.svg\" alt=\"− 1 ( ) Sketch the graph of f x , marking clearly the end points of the graph and any ( ) 3 points where it crosses the coordinate axes.\" style=\"--madas-width:574.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q7-solution-1.svg\" alt=\"Worked solution diagram\" style=\"--madas-width:498.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q7-solution-2.svg\" alt=\"Reflect the graph in y = x, [B1] interchanging the coordinates. [A1] Each point (a, b) maps to (b, a), so the domain and range swap: In particular (−1, −3) 7→(−3, −1), (6, 1/2) 7→(1/2, 6), (0, −2) 7→(−2, 0) and (4, 0) 7→(0, 4). The endpoints become (−3, −1) and (1 2, 6); the intercepts are (−2, 0) and (0, 4) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 3 marks.</p>"
+    ],
+    "promptText": "y 1 D ( 6, 2 ) ( ) C 4,0 O x   x f : x , x ∈ , x ≠− 3 x + 3 B ( 0, 2 − ) A −− ( 1, 3 ) The figure above shows the graph of the function f x , defined for 1 ( ) −≤ x ≤ 6 . − 1 ( ) Sketch the graph of f x , marking clearly the end points of the graph and any ( ) 3 points where it crosses the coordinate axes."
+  },
+  {
+    "id": "madas/alevel-pure-f/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q8-question-1.svg\" alt=\"A curve is given parametrically by = + θ = −+ θ ≤ θ &lt; π x 3 2cos , y 3 2sin , 0 2 . Show clearly that dy 3 − x = . ( ) 5 dx 3 + y\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q8-solution-1.svg\" alt=\"The parametric derivatives are −2 sin θ and 2 cos θ, respectively: [B1] [A1] The parametric equations give 2 cos θ = x −3 and −2 sin θ = −3 −y. Thus dy/dx = (dy/dθ)/(dx/dθ) = (0 + 2 cos θ)/(0 −2 sin θ), giving dx = −2 cos θ dy 2 sin θ = x −3 −3 −y [M1] [A1] = −(3 −x) −(3 + y) = 3 −x 3 + y where 3 + y̸ = 0 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 5 marks.</p>"
+    ],
+    "promptText": "A curve is given parametrically by = + θ = −+ θ ≤ θ < π x 3 2cos , y 3 2sin , 0 2 . Show clearly that dy 3 − x = . ( ) 5 dx 3 + y"
+  },
+  {
+    "id": "madas/alevel-pure-f/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q9-question-1.svg\" alt=\"The sum to infinity of a geometric progression is four times as large as its second term. a) Show that the common ratio of the series is 1 2 . ( ) 4 It is further given that the sum of the first four terms of the progression is 5760. b) Find the first term of the progression. ( ) 3 The sum of the first k terms of the progression is three less than its sum to infinity. ( ) 4 c) Use algebra to determine the value of  k .\" style=\"--madas-width:580.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q9-solution-1.svg\" alt=\"(a) For first term a̸ = 0 and convergent ratio r, a/(1 −r) = 4ar. [B1] [A1] Here S∞= 4u2 and u2 = ar. Cancelling a gives 1/(1 −r) = 4r; multiplying by 1 −r gives 1 = 4r −4r2. Thus 4r2 −4r + 1 = (2r −1)2 , [A1] = 0 giving r = 1 2 . [A1] (b) 5760 = a(1 −2−4)/(1 −1/2) , [B1] = 15a/8 equivalently a(1 −1/16) = 5760(1/2), so 15a/16 = 2880, 15a = 46080 and a = 3072 . [M1] [A1] (c) First S∞= 4ar\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q9-solution-2.svg\" alt=\"= 4(3072)(1/2) . = 6144 We need Sk = S∞−3. Thus 3072(1 −0.5k)/(1 −0.5) = 6141, giving 3072(1 −0.5k) = 6141(0.5), 1 −0.5k = 2047/2048 and 0.5k = 1/2048. The tail after k terms is 6144(1/2)k = 3. [B1] Therefore 2k = 2048 [A1] = 211 by inspection: Alternatively, k log(1/2) = log(1/2048) and k = log(1/2048)/ log(1/2) . = 11\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q9-solution-3.svg\" alt=\"Hence k = 11 . [M1] [A1]\" style=\"--madas-width:205.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 11 marks.</p>"
+    ],
+    "promptText": "The sum to infinity of a geometric progression is four times as large as its second term. a) Show that the common ratio of the series is 1 2 . ( ) 4 It is further given that the sum of the first four terms of the progression is 5760. b) Find the first term of the progression. ( ) 3 The sum of the first k terms of the progression is three less than its sum to infinity. ( ) 4 c) Use algebra to determine the value of  k ."
+  },
+  {
+    "id": "madas/alevel-pure-f/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q10-question-1.svg\" alt=\"a) Find an estimate for the following integral, by using the trapezium rule with 5 equally spaced ordinates. to for 2  2 1 x 10 e dx . ( ) 4 1 b) Use the answer of part (a) to find estimates for 2 1  2 + 1 x e 10 dx . ( ) 3 1\" style=\"--madas-width:590.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q10-solution-1.svg\" alt=\"(a) Five ordinates give four strips, at x = 1, 1.25, 1.5, 1.75, 2. Evaluate y = ex2/10 at each: With step 0.25, the ordinates are approximately 1.10517, 1.16912, 1.25232, 1.35832, 1.49182. [B1] [A1] The rule gives 0.25 2 [1.1052 + 1.4918 + 2(1.1691 + 1.2523 + 1.3583)]. Half the step times the end ordinates plus twice the interior ordinates gives 1.26957 . [M1] [A1] (b) Since e1+x2/10 = e1ex2/10, Z 2 Z 2 e1+x2/10 dx = e ex2/10 dx ≈e(1.26957 . . .). 1 1 The new integrand is e times the first, so the estimate is 3.45104 . [M1] [M1] [A1]\" style=\"--madas-width:668.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 7 marks.</p>"
+    ],
+    "promptText": "a) Find an estimate for the following integral, by using the trapezium rule with 5 equally spaced ordinates. to for 2  2 1 x 10 e dx . ( ) 4 1 b) Use the answer of part (a) to find estimates for 2 1  2 + 1 x e 10 dx . ( ) 3 1"
+  },
+  {
+    "id": "madas/alevel-pure-f/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q11-question-1.svg\" alt=\"2 − 3 x Use the substitution u = + 1 x e to find an expression for  x ( 2 − 3 x dx ) . ( ) 8 e x 3 + x 2\" style=\"--madas-width:594.8px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q11-solution-1.svg\" alt=\"Put u = 1 + x2e−3x. The product rule gives du dx = 2xe−3x + x2(−3e−3x) = 2xe−3x −3x2e−3x = x(2 −3x)e−3x. Thus dx = du/[x(2 −3x)e−3x] wherever the derivative is nonzero: Substitution and cancellation give Z x(2 −3x) du 1 1 du Z Z x(2 −3x)e−3x = e−3x du = 1 + x2e−3x . e3x + x2 e3x + x2 Equivalently, multiply the numerator and denominator by e−3x. [M1] [A1] The denominator becomes u = 1 + x2e−3x &gt; 0 [M1] [A1] and the numerator times dx is du. [M1] [A1] Thus the integral is Z du/u = ln |u| + C . [M1] [A1] = ln(1 + x2e−3x) + C\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 8 marks.</p>"
+    ],
+    "promptText": "2 − 3 x Use the substitution u = + 1 x e to find an expression for  x ( 2 − 3 x dx ) . ( ) 8 e x 3 + x 2"
+  },
+  {
+    "id": "madas/alevel-pure-f/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q12-question-1.svg\" alt=\"f x ( ) = 1 − x , −&lt; 1 x &lt; , 1 2 a) Expand f x in ascending powers of x , up and including the term in ( ) x . ( ) 3 b) Use the expansion of part (a) to show that if y is numerically small 3 2 2 1 − 4 y + y ≈− 1 2 y − y . ( ) 5 2\" style=\"--madas-width:581.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q12-solution-1.svg\" alt=\"(a) Write √ 1 −x = (1 −x)1/2. Expanding gives 1 + 1 2(−x) + [(1/2)(−1/2)/2!](−x)2 + · · ·, so 8x2 + O(x3) f(x) = 1 −1 2x −1 [M1] [A1] by the binomial series. [A1] (b) Put x = 4y −y2. [B1] [A1] Then q 1 −4y + y2 = q 1 −(4y −y2). Explicitly, −1 2(4y −y2) = −2y + y2/2, and 8(4y −y2)2 = −1 8(16y2 −8y3 + y4) −1 . = −2y2 + y3 −y4/8\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q12-solution-2.svg\" alt=\"The first-order term contributes −2y + y2/2, and the quadratic term contributes −2y2 through order two. [M1] [A1] Thus the result is 2y2 + O(y3) . 1 −2y −3 [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 8 marks.</p>"
+    ],
+    "promptText": "f x ( ) = 1 − x , −< 1 x < , 1 2 a) Expand f x in ascending powers of x , up and including the term in ( ) x . ( ) 3 b) Use the expansion of part (a) to show that if y is numerically small 3 2 2 1 − 4 y + y ≈− 1 2 y − y . ( ) 5 2"
+  },
+  {
+    "id": "madas/alevel-pure-f/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q13-question-1.svg\" alt=\"A container is the shape of a hollow inverted right circular cone has base radius 20 cm and height 80 cm. The container is filled with water and is supported in an upright position. Water is leaking out of a hole at the vertex of the cone. Let h cm be the height of the water in the container, where h is measured from the vertex of the cone, and t minutes be the time from the instant since h = 80 . The rate at which the volume of the water is decreasing is directly proportional to the height of the water in the container. a) By relating the measurements of the container to that of the volume of the water in the container, show that\" style=\"--madas-width:560.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q13-question-2.svg\" alt=\"dh A = − , dt h where A is a positive constant.   1 2 volume of a cone of radius  and height   is given by 3 r h π r h  ( ) 7  When t = , 1 h = 78 . b) Determine the value of t by which all the water would have leaked out of the container. ( ) 8\" style=\"--madas-width:589.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q13-solution-1.svg\" alt=\"(a) Similar triangles give r/h = 20/80 . [B1] [A1] = 1/4\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q13-solution-2.svg\" alt=\"Hence r = h/4. Substituting in V = πr2h/3 gives V = π(h/4)2h/3. Then V = πh3/48. [M1] [A1] With dV/dt = −kh for k &gt; 0, the chain rule gives dh dh dt = −16k πh2 dt = −kh, πh . [M1] [A1] 16 Multiply by 16 to get πh2 dh/dt = −16kh. Dividing by πh2 gives −(16k/π)(1/h). Thus A = 16k/π . [A1] R h dh = R −A dt and h2/2 = −At + B. (b) Separate h dh = −A dt, so At t = 0, h = 80, B = 802/2 = 3200 .\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-f/q13-solution-3.svg\" alt=\"Integrate h dh/dt = −A [M1] [A1] to get h2 = 6400 −2At. [M1] [A1] When t = 1, h = 78, [A1] so 2A = 6400 −6084 . [A1] = 316 Therefore 3042 = 3200 −A, so A = 158 and h2/2 = 3200 −158t. Setting h = 0 gives 0 = 3200 −158t, hence 158t = 3200. The height reaches zero at t = 1600/79 min ≈20.25 min . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 15 marks.</p>"
+    ],
+    "promptText": "A container is the shape of a hollow inverted right circular cone has base radius 20 cm and height 80 cm. The container is filled with water and is supported in an upright position. Water is leaking out of a hole at the vertex of the cone. Let h cm be the height of the water in the container, where h is measured from the vertex of the cone, and t minutes be the time from the instant since h = 80 . The rate at which the volume of the water is decreasing is directly proportional to the height of the water in the container. a) By relating the measurements of the container to that of the volume of the water in the container, show that dh A = − , dt h where A is a positive constant.   1 2 volume of a cone of radius  and height   is given by 3 r h π r h  ( ) 7  When t = , 1 h = 78 . b) Determine the value of t by which all the water would have leaked out of the container. ( ) 8"
+  }
+]

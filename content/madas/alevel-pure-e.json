@@ -1,0 +1,123 @@
+[
+  {
+    "id": "madas/alevel-pure-e/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q1-question-1.svg\" alt=\"Differentiate each of the following expressions with respect to x . 3 a) y = ( 2 x + ln x ) . ( ) 3 2 x ( ) b) y = −. 3 3 x 1 4 ( ) c) y = sin 3 x . 3\" style=\"--madas-width:574.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q1-solution-1.svg\" alt=\"(a) Write u = 2x + ln x. Then dy/du = 3u2 and du/dx = 2 + 1/x. The chain rule gives y′ = 3(2x + ln x)2(2 + 1/x) . [M1] [M1] [A1] (b) The quotient rule gives y′ = 2x(3x −1) −3x2 (3x −1)2 = 6x2 −2x −3x2 (3x −1)2 [M1] [M1] [A1] = 3x2 −2x (3x −1)2 = x(3x −2) (3x −1)2 .\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q1-solution-2.svg\" alt=\"(c) Write sin4(3x) = (sin 3x)4. Its derivative is 4(sin 3x)3 · cos 3x · 3. Differentiating the fourth power and then the sine gives y′ = 12 sin3(3x) cos(3x) . [M1] [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 9 marks.</p>"
+    ],
+    "promptText": "Differentiate each of the following expressions with respect to x . 3 a) y = ( 2 x + ln x ) . ( ) 3 2 x ( ) b) y = −. 3 3 x 1 4 ( ) c) y = sin 3 x . 3"
+  },
+  {
+    "id": "madas/alevel-pure-e/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q2-question-1.svg\" alt=\"a) Use the trapezium rule with 5 equally spaced ordinates to estimate the value of the following integral. π 1 3 2 x dx tan ( ) 4 e . 0 b) Use the answer of part (a) to estimate the value of 1 π 3 2 x dx sec ( ) e . 3 0 c) Discuss briefly whether the estimates of the previous parts of the question are likely to be accurate, stating further whether they are overestimates or underestimates to the true values of these integrals. ( ) 3\" style=\"--madas-width:576.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q2-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q2-solution-1.svg\" alt=\"(a) Divide [0, π/3] into four equal intervals: The step is (π/3 −0)/4 = π/12. [B1] At 0, π/12, π/6, π/4 and π/3 the five ordinates are approximately 1, 1.07444, 1.39561, 2.71828, 20.08554. [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q2-solution-2.svg\" alt=\"The trapezium estimate is π 24[1 + 20.08554 + 2(1.07444 + 1.39561 + 2.71828)] ≈4.118 . [A1] (b) Since sec2 x = 1 + tan2 x, esec2 x = e1+tan2 x = e · etan2 x, so the integrand is e times the one in (a). [B1] Taking the constant outside gives Z π/3 etan2 x dx ≈e(4.118 . . .). e 0 The estimate is 11.19 . [M1] [A1] (c) On this interval tan2 x has positive second derivative. [B1] Its exponential is also strictly convex, so the chords lie above the curve: The ordinates near the right endpoint increase especially rapidly, as the sketch shows: Both estimates are overestimates: [A1] With only four panels and steep growth near the upper limit, the error may be substantial: [A1]\" style=\"--madas-width:680.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 10 marks.</p>"
+    ],
+    "promptText": "a) Use the trapezium rule with 5 equally spaced ordinates to estimate the value of the following integral. π 1 3 2 x dx tan ( ) 4 e . 0 b) Use the answer of part (a) to estimate the value of 1 π 3 2 x dx sec ( ) e . 3 0 c) Discuss briefly whether the estimates of the previous parts of the question are likely to be accurate, stating further whether they are overestimates or underestimates to the true values of these integrals. ( ) 3 "
+  },
+  {
+    "id": "madas/alevel-pure-e/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q3-question-1.svg\" alt=\"Prove by contradiction that if p and q are positive integers, then p q + ≥ 2 . ( ) 5 q p\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q3-solution-1.svg\" alt=\"Suppose p/q + q/p &lt; 2. [B1] Putting both terms over their common denominator gives (p2 + q2)/(pq) &lt; 2. As pq &gt; 0, multiplication gives p2 + q2 &lt; 2pq, [A1] so p2 −2pq + q2 &lt; 0, or (p −q)2 &lt; 0, [A1] a contradiction since the square of a real number is nonnegative: [A1] Therefore p/q + q/p ≥2 . [A1]\" style=\"--madas-width:680.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 5 marks.</p>"
+    ],
+    "promptText": "Prove by contradiction that if p and q are positive integers, then p q + ≥ 2 . ( ) 5 q p"
+  },
+  {
+    "id": "madas/alevel-pure-e/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q4-question-1.svg\" alt=\"( ) ( ) The points A t ,3,2 and B 5,2,2 t , where t is a scalar constant, are referred relative to a fixed origin O .  ( ) 7 Given that AB = 21 , find the possible values of t .\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q4-solution-1.svg\" alt=\"The given length condition reads |−−→ AB| = |b −a| √ . = 21 Subtract the position vectors to obtain −−→ AB = (5, 2, 2t) −(t, 3, 2) = (5 −t, −1, 2t −2). [A1] The magnitude is √ q (5 −t)2 + (−1)2 + (2t −2)2 = 21. [A1] Expanding the radicand gives 25 −10t + t2 + 1 + 4t2 −8t + 4 = 5t2 −18t + 30. [M1] Thus √ p 5t2 −18t + 30 = 21.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q4-solution-2.svg\" alt=\"Squaring yields 5t2 −18t + 30 = 21, [A1] hence 5t2 −18t + 9 = 0. [A1] Factorising gives (5t −3)(t −3) = 0, [M1] so t = 3/5 or t = 3 . [A1]\" style=\"--madas-width:680.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 7 marks.</p>"
+    ],
+    "promptText": "( ) ( ) The points A t ,3,2 and B 5,2,2 t , where t is a scalar constant, are referred relative to a fixed origin O .  ( ) 7 Given that AB = 21 , find the possible values of t ."
+  },
+  {
+    "id": "madas/alevel-pure-e/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q5-question-1.svg\" alt=\"An oil company is drilling for oil. It costs £5000 to drill for the first 10 metres into the ground. For the next 10 metres it costs an extra £1200 compared with the first 10 metres, thus it costs £6200 . Each successive 10 metres drilled into the ground costs an extra £1200 , compared with the cost of drilling the previous 10 metres. a) Find the cost of drilling 200 metres into the ground. ( ) 4 The company has a budget of £15,000,000. b) Determine the maximum depth, in metres, that can be reached on this budget. ( ) 5\" style=\"--madas-width:580.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q5-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q5-solution-1.svg\" alt=\"(a) The successive ten-metre sections cost £5000, £6200, £7400, . . .. This arithmetic sequence has first term a = 5000 and common difference d = 1200. Its sum is n[2a + (n −1)d]/2. With n ten-metre sections, the arithmetic sum is Sn = n 2 [10000 + 1200(n −1)] [B1] [A1] = 600n2 + 4400n. For 200 m, n = 200/10 . = 20 Substitution gives S20 = (20/2)[2(5000) + 19(1200)] = 10[10000 + 22800], so the cost is £328,000 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q5-solution-2.svg\" alt=\"(b) Working backwards from the budget gives 15,000,000 = n 2 [2(5000) + (n −1)1200] = n 2 [10000 + 1200n −1200] = n 2 [8800 + 1200n] = 4400n + 600n2. Rearrange, divide by 100, then by 2: 600n2 + 4400n −15,000,000 = 0, 6n2 + 44n −150000 = 0, 3n2 + 22n −75000 = 0. The quadratic formula gives √ n = (−22 ± 484 + 900000)/6. Discard the negative root. The positive root lies between 154 and 155. Check the two integers: S154 = 14,907,200 [B1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q5-solution-3.svg\" alt=\"and S155 = 15,097,000. [A1] The greatest whole number of sections within budget is 154, so the answer is 1540 m . [M1] [A1] Source clarification. The displayed answer assumes complete ten-metre sections, as in the primary handwritten answer: Charging proportionally within the next section would allow about 1544.89 m.\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 9 marks.</p>"
+    ],
+    "promptText": "An oil company is drilling for oil. It costs £5000 to drill for the first 10 metres into the ground. For the next 10 metres it costs an extra £1200 compared with the first 10 metres, thus it costs £6200 . Each successive 10 metres drilled into the ground costs an extra £1200 , compared with the cost of drilling the previous 10 metres. a) Find the cost of drilling 200 metres into the ground. ( ) 4 The company has a budget of £15,000,000. b) Determine the maximum depth, in metres, that can be reached on this budget. ( ) 5 "
+  },
+  {
+    "id": "madas/alevel-pure-e/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q6-question-1.svg\" alt=\"3 The volume of the water, V m , in a container  satisfies 3 e x 2 − V = x , where x m is the depth of the water in the container. Find the rate of increase of the volume of the water in the container when its depth is ms−. 1 0.5 m and is rising at the rate of 0.01 ( ) 6\" style=\"--madas-width:569.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q6-solution-1.svg\" alt=\"From V = x3e−x2, dV/dx = (3x2)e−x2 + x3e−x2(−2x) . = 3x2e−x2 −2x4e−x2 The product and chain rules give dV/dx = e−x2(3x2 −2x4). [B1] [A1] Now dV/dt = (dV/dx)(dx/dt). Multiply by dx/dt = 0.01 [M1] [A1] at x = 1 2: dV 100 = e−1/4 4e−1/4 −2 · 1 160 ≈0.004868 m3 s−1 .  3 · 1 16e−1/4 0.01 = (3 4 −1 8)e−1/4 1 dt = [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 6 marks.</p>"
+    ],
+    "promptText": "3 The volume of the water, V m , in a container  satisfies 3 e x 2 − V = x , where x m is the depth of the water in the container. Find the rate of increase of the volume of the water in the container when its depth is ms−. 1 0.5 m and is rising at the rate of 0.01 ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-e/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q7-question-1.svg\" alt=\"The functions f and g are defined as 1 ( ) ( ) , x∈ , f x = x + 2 a 3 g x ( ) = 2 x − a , x∈ , where a is a positive constant. a) Sketch in the same set of axes the graph of f x and the graph of ( ) ( ) g x . ( ) 4 The sketch must include the coordinates of any points where these graphs meet the coordinate axes.\" style=\"--madas-width:573.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q7-question-2.svg\" alt=\"b) Find, in terms of a , the coordinates of the points of intersection between the graphs of f x and ( ) ( ) g x . ( ) 5\" style=\"--madas-width:576.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q7-solution-1.svg\" alt=\"(a) The intercepts of f are (−2a, 0), (0, 2a/3), and those of g are (a/2, 0), (0, a) . [M1] [M1] [M1] [A1] One mark for each of the four correctly located intercepts\" style=\"--madas-width:540.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q7-solution-2.svg\" alt=\"(b) If x ≤a/2, set (x + 2a)/3 = a −2x. [M1] Multiplication by 3 gives x + 2a = 3a −6x, so 7x = a. Substitution gives y = (a/7 + 2a)/3 . = 15a/21 This gives x = a/7, y = 5a/7, [A1] which lies on the correct branch: If x ≥a/2, [A1] set (x + 2a)/3 = 2x −a to obtain x + 2a = 6x −3a. Thus 5x = 5a and y = (a + 2a)/3, giving x = a, y = a. [A1] Thus the points are (a/7, 5a/7) and (a, a) . [A1]\" style=\"--madas-width:660.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 9 marks.</p>"
+    ],
+    "promptText": "The functions f and g are defined as 1 ( ) ( ) , x∈ , f x = x + 2 a 3 g x ( ) = 2 x − a , x∈ , where a is a positive constant. a) Sketch in the same set of axes the graph of f x and the graph of ( ) ( ) g x . ( ) 4 The sketch must include the coordinates of any points where these graphs meet the coordinate axes. b) Find, in terms of a , the coordinates of the points of intersection between the graphs of f x and ( ) ( ) g x . ( ) 5"
+  },
+  {
+    "id": "madas/alevel-pure-e/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q8-question-1.svg\" alt=\"dy = 2 − sec x y y dx 1 y = Solve the differential equation above, subject to the boundary condition, at 2 x = 0 , to show that 1 y = ( ) . 10 sin x 1 + e\" style=\"--madas-width:593.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q8-solution-1.svg\" alt=\"Start from (dy/dx) sec x = y2 −y. Moving differentials gives sec x dy = (y2 −y) dx, so dy/(y2 −y) = dx/ sec x = cos x dx. Factor y2 −y = y(y −1). Indeed 1/(y −1) −1/y = [y −(y −1)]/[y(y −1)]. Separate variables and use partial fractions:  y −1 −1 1  y −1 = sin x + C. dy = cos x dx, ln [M1] [A1] y y Integration on the left first gives ln |y −1| −ln |y|. Exponentiating gives |(y −1)/y| = esin x+C\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q8-solution-2.svg\" alt=\"= eCesin x. With a signed constant A = ±eC this becomes (y −1)/y = Aesin x. On the solution through y = 1 2, [M1] [A1] choose the branch 0 &lt; y &lt; 1. [M1] [A1] At x = 0, y = 1/2, ((1/2) −1)/(1/2) = Ae0, so A = −1. The initial condition gives C = 0. [M1] [A1] Therefore (1 −y)/y = esin x, [A1] hence 1 −1/y = −esin x, 1/y = 1 + esin x and y = 1/(1 + esin x) . [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 10 marks.</p>"
+    ],
+    "promptText": "dy = 2 − sec x y y dx 1 y = Solve the differential equation above, subject to the boundary condition, at 2 x = 0 , to show that 1 y = ( ) . 10 sin x 1 + e"
+  },
+  {
+    "id": "madas/alevel-pure-e/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q9-question-1.svg\" alt=\"S R A B 2.5 2.5 P Q 3 3 2θ C The figure above shows an isosceles triangle ABC where the angle ACB = 2 θ . A rectangle PQRS  is drawn inside ABC , so that S and R lie on AB , P lies on AC and Q lies on BC .\" style=\"--madas-width:565.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q9-question-2.svg\" alt=\"It is further given that AP = BQ = 2.5 and PC = QC = 3 . a) Show clearly that the perimeter of PQRS is θ + θ ( ) 3 5cos 12sin . b) Express 5cos θ + 12sin θ in the form R sin ( θ + α ) , R &gt; 0 , 0 &lt; α &lt; 90 ° . ( ) 3 ( ) c) Find the value of θ , given that the perimeter of PQRS is 10. 4\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q9-solution-1.svg\" alt=\"(a) Bisect the vertex angle at C. [M1] Half the rectangle’s width is 3 sin θ, and its height is the projection of BQ onto the altitude, 2.5 cos θ. [A1] Thus PQ = 2MQ = 2(3 sin θ) = 6 sin θ and RQ = 2.5 cos θ. Doubling the sum of adjacent sides, P = 2(6 sin θ) + 2(2.5 cos θ). The perimeter is 12 sin θ + 5 cos θ . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q9-solution-2.svg\" alt=\"(b) Expand R sin(θ + α) = R sin θ cos α + R cos θ sin α = (R cos α) sin θ + (R sin α) cos θ. Match coefficients to obtain R cos α = 12 [A1] and R sin α = 5. √ 122 + 52, so R = 13, [A1] with Squaring and adding gives R = α = arctan(5/12) ≈22.62◦. [A1] (c) Setting the perimeter equal to 10 gives 12 sin θ + 5 cos θ = 10, or 13 sin(θ + α) = 10. The equation is sin(θ + α) = 10/13. [M1] The principal angle is arcsin(10/13) = 50.28 . . .◦; its supplement is 129.72 . . .◦. Thus θ + α = 50.28 . . .◦+ 360◦n or 129.72 . . .◦+ 360◦n, n ∈Z.\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q9-solution-3.svg\" alt=\"Subtract α. The two branches in one turn give θ ≈27.66◦or 107.10◦. [A1] The triangle requires 0 &lt; θ &lt; 90◦, [A1] so θ ≈27.7◦. [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 10 marks.</p>"
+    ],
+    "promptText": "S R A B 2.5 2.5 P Q 3 3 2θ C The figure above shows an isosceles triangle ABC where the angle ACB = 2 θ . A rectangle PQRS  is drawn inside ABC , so that S and R lie on AB , P lies on AC and Q lies on BC . It is further given that AP = BQ = 2.5 and PC = QC = 3 . a) Show clearly that the perimeter of PQRS is θ + θ ( ) 3 5cos 12sin . b) Express 5cos θ + 12sin θ in the form R sin ( θ + α ) , R > 0 , 0 < α < 90 ° . ( ) 3 ( ) c) Find the value of θ , given that the perimeter of PQRS is 10. 4"
+  },
+  {
+    "id": "madas/alevel-pure-e/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q10-question-1.svg\" alt=\"It is given that for some constants A and B 6sin x ≡ A ( cos x + sin x ) + B ( cos x − sin x ) . a) Find the value of A and the value of B . ( ) 3 b) Hence find  6sin x dx . ( ) 5 + cos x sin x\" style=\"--madas-width:606.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q10-solution-1.svg\" alt=\"(a) Expand 6 sin x = A(cos x + sin x) + B(cos x −sin x) . = (A + B) cos x + (A −B) sin x Matching coefficients gives A + B = 0 [B1] and A −B = 6, [A1] Adding gives 2A = 6, while subtracting gives 2B = −6, so A = 3, B = −3 . [A1] (b) Divide the identity by cos x + sin x. [B1] [A1] After substituting A = 3, B = −3, the integrand becomes 3(cos x + sin x) −3(cos x −sin x) = 3 −3−sin x + cos x cos x + sin x . cos x + sin x Use Z f′(x)/f(x) dx = ln |f(x)| + C. Since (cos x + sin x)′ = cos x −sin x, the integral is\" style=\"--madas-width:646.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q10-solution-2.svg\" alt=\"3x −3 ln | cos x + sin x| + C [M1] [A1] on each interval where the denominator is nonzero: [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 8 marks.</p>"
+    ],
+    "promptText": "It is given that for some constants A and B 6sin x ≡ A ( cos x + sin x ) + B ( cos x − sin x ) . a) Find the value of A and the value of B . ( ) 3 b) Hence find  6sin x dx . ( ) 5 + cos x sin x"
+  },
+  {
+    "id": "madas/alevel-pure-e/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q11-question-1.svg\" alt=\"( ) The function f x is defined 2  f x ( ) = x ( x + 2 ) , x ∈ , x &gt; 0 . ( ) ( ) a) Show that f x is invertible. 3 b) Solve the equation − ( ) = 1 ( ) ( ) 6 f x f x .\" style=\"--madas-width:578.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q11-solution-1.svg\" alt=\"(a) Write f(x) = x2(x + 2) = x3 + 2x2 . Then f′(x) = 3x2 + 4x &gt; 0 [B1] [A1] for x &gt; 0, so the function is strictly increasing and hence invertible on its range, (0, ∞) . [A1]\" style=\"--madas-width:642.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q11-solution-2.svg\" alt=\"(b) If f(x) = f−1(x), then f(f(x)) = x, [B1] and strict increase forces f(x) = x. For instance, f(x) &gt; x [A1] would give f(f(x)) &gt; f(x) &gt; x, and f(x) &lt; x [A1] gives the reverse: Thus x2(x + 2) = x. [A1] Divide by x &gt; 0 to get x2 + 2x −1 = 0. [A1] Completing the square gives √ √ x2 + 2x = 1, so (x + 1)2 −1 = 1, (x + 1)2 = 2, x + 1 = ± 2, and x = −1 ± 2. √ Its only positive solution is x = 2 −1 , a fixed point of both functions: [A1]\" style=\"--madas-width:672.0px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 9 marks.</p>"
+    ],
+    "promptText": "( ) The function f x is defined 2  f x ( ) = x ( x + 2 ) , x ∈ , x > 0 . ( ) ( ) a) Show that f x is invertible. 3 b) Solve the equation − ( ) = 1 ( ) ( ) 6 f x f x ."
+  },
+  {
+    "id": "madas/alevel-pure-e/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q12-question-1.svg\" alt=\"A curve lies entirely above the x axis and has parametric equations 1 5 x = 2 t , y = , t ≥ 0 . 5 1 + 2 t 2 The finite region R is bounded by the curve, the x axis, the y axis and the straight line with equation x = 2 . ( ) 8 Use integration in parametric to find the exact area of R .\" style=\"--madas-width:573.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q12-solution-1.svg\" alt=\"At t = 0 the curve starts at (0, 1). As t increases, x increases and y decreases while remaining positive: The limits x = 0, 2 [B1] [A1] give t = 0, 1, [A1] and dx/dt = 10t4. [A1] The parametric area formula gives Z 1 Z I = y dx = y(t)(dx/dt) dt. 0\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q12-solution-2.svg\" alt=\"First integrate by recognition: Z 1 5t3/2(1 + 2t5/2) −5t3/2 I = dt 1 + 2t5/2 0 Z 1 5t3/2 ! 5t3/2 − = dt 1 + 2t5/2 0 = [2t5/2 −ln |1 + 2t5/2|]1 0 = (2 −ln 3) −(0 −ln 1) = 2 −ln 3. Here 5t3/2 is the derivative of the denominator of the second term. Alternative by substitution. With u = 1 + 2t5/2, du = 5t3/2 dt [M1] and 10t4 dt = (u −1) du. [A1] At t = 0, 1 the new limits are u = 1, 3. Since dt = du/(5t3/2), the numerator after substitution is 10t4/(5t3/2) = 2t5/2 . = u −1\" style=\"--madas-width:644.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-e/q12-solution-3.svg\" alt=\"The exact area is Z 1 Z 3 Z 3 10t4 u −1 (1 −1/u) du = [u −ln u]3 1 + 2t5/2 dt = du = 1 = (3 −ln 3) −(1 −ln 1) = 2 −ln 3 . u 0 1 1 [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 8 marks.</p>"
+    ],
+    "promptText": "A curve lies entirely above the x axis and has parametric equations 1 5 x = 2 t , y = , t ≥ 0 . 5 1 + 2 t 2 The finite region R is bounded by the curve, the x axis, the y axis and the straight line with equation x = 2 . ( ) 8 Use integration in parametric to find the exact area of R ."
+  }
+]

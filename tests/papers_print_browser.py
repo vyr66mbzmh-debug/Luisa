@@ -309,6 +309,34 @@ class PapersPrintTests(unittest.TestCase):
             self.assertEqual(preview.locator('.solutions-page,.print-solution').count(), 0)
             self.assertNotIn('-ms-p', preview.content())
 
+    def test_madas_collections_print_in_every_layout(self):
+        import pymupdf
+        catalogue = json.loads((ROOT / 'madas-catalogue.json').read_text())
+        books = {}
+        for main in catalogue['questions']:
+            for q in [main, *main.get('editions', [])]:
+                books.setdefault(q['dataPath'], {})[q['id']] = q
+        for path, refs in sorted(books.items()):
+            rows = [dict(**{**r, **refs[r['id']]}, sourceKind='madas') for r in json.loads((ROOT / path).read_text())]
+            for layout in ('one', 'condensed'):
+                for answers in (False, True):
+                    with self.subTest(paper=path, layout=layout, answers=answers):
+                        preview, result = self.preview(rows, layout=layout, includeAnswers=answers)
+                        try:
+                            self.assertTrue(result['ready'], result)
+                            expected = [url for row in rows for url in re.findall('src="([^"]+)"',row['question'])]
+                            self.assertEqual(preview.locator('.questions-page .madas-excerpt img').evaluate_all('ns=>ns.map(n=>n.getAttribute("src"))'), expected)
+                            schemes = [url for row in rows for url in re.findall('src="([^"]+)"',''.join(row['steps']))] if answers else []
+                            self.assertEqual(preview.locator('.solutions-page .madas-excerpt img').evaluate_all('ns=>ns.map(n=>n.getAttribute("src"))'), schemes)
+                            self.assertTrue(preview.locator('.print-pages img').evaluate_all('ns=>ns.every(n=>n.complete && n.naturalWidth)'))
+                            with pymupdf.open(stream=preview.pdf(prefer_css_page_size=True), filetype='pdf') as doc:
+                                self.assertEqual(len(doc), result['pageCount'])
+                                text = ' '.join(page.get_text() for page in doc)
+                                self.assertNotRegex(text, r'Ch(?:apter)?\.?\s*\d+')
+                                self.assertEqual('Adapted MADAS mark scheme' in text, answers)
+                        finally:
+                            preview.close()
+
     def test_june_2024_complete_papers_print_in_every_layout(self):
         self.assert_session_papers_print('June 2024', {
             'edexcel-9ma0-01-2024-june': (15, 100), 'edexcel-9ma0-02-2024-june': (15, 100),

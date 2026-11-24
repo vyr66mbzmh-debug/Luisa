@@ -1,0 +1,134 @@
+[
+  {
+    "id": "madas/alevel-pure-q/q1",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q1-question-1.svg\" alt=\"It is asserted that 2 x + 1 ≤ 5  x ≤ 2 . Disprove this assertion by a counter-example. ( ) 3\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q1-solution-1.svg\" alt=\"The source chooses x = −5/2. Then |2(−5/2) + 1| = | −5 + 1| = 4 ≤5, whereas | −5/2| = 5/2 &gt; 2. More generally the graph meets y = 5 at 2x + 1 = ±5, giving x = 2, −3. The premise therefore holds on [−3, 2]; its conclusion fails throughout [−3, −2).\" style=\"--madas-width:510.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q1-solution-2.svg\" alt=\"For an endpoint example, take x = −3. [M1] Then |2x + 1| = | −5| = 5 but |x| = 3 &gt; 2, [A1] so the implication is false . [A1]\" style=\"--madas-width:618.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 1 is 3 marks.</p>"
+    ],
+    "promptText": "It is asserted that 2 x + 1 ≤ 5  x ≤ 2 . Disprove this assertion by a counter-example. ( ) 3"
+  },
+  {
+    "id": "madas/alevel-pure-q/q2",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q2-question-1.svg\" alt=\"Relative to a fixed origin O , the point A has coordinates ( ) 2,5,4 . The points B , C and D are such so that    BA = + i 2 j + 3 k , BC = 7 i + − j k and DC = 4 i + 2 k . Determine the distance  of D from the origin. ( ) 6\" style=\"--madas-width:590.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q2-solution-1.svg\" alt=\"Starting with a vector diagram: Follow the directed route from the origin.\" style=\"--madas-width:488.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q2-solution-2.svg\" alt=\"Both given vectors BA and DC are reversed along this route: −−→ OD = −→ OA + −−→ AB + −−→ BC + −−→ CD −−→ OD = (2, 5, 4) −(1, 2, 3) + (7, 1, −1) −(4, 0, 2) −−→ OD = (4, 4, −2) The coordinates of B are (2, 5, 4) −(1, 2, 3) = (1, 3, 1). [B1] [A1] Hence C = (1, 3, 1) + (7, 1, −1) = (8, 4, 0), [A1] and D = (8, 4, 0) −(4, 0, 2) = (4, 4, −2). [A1] This gives √ OD = 16 + 16 + 4 . [M1] [A1] = 6\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 2 is 6 marks.</p>"
+    ],
+    "promptText": "Relative to a fixed origin O , the point A has coordinates ( ) 2,5,4 . The points B , C and D are such so that    BA = + i 2 j + 3 k , BC = 7 i + − j k and DC = 4 i + 2 k . Determine the distance  of D from the origin. ( ) 6"
+  },
+  {
+    "id": "madas/alevel-pure-q/q3",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q3-question-1.svg\" alt=\"An area of neglected lawn is treated with weed killer. Before the treatment started, the 2 2 area covered by the weed was 75 m and two days later it has reduced to 33.7 m . 2 Let the area of the lawn covered with weed be A m , t days after it was treated. The rate at which the area covered by the weed is decreasing, is proportional to the area still covered by the weed. By forming and solving a suitable differential equation, express A in terms of t . ( ) 7\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q3-solution-1.svg\" alt=\"The model is dA/dt = −kA [B1] for k &gt; 0. [A1] Separate and integrate: dA = −kAdt 1 AdA = −kdt 1 Z Z AdA = −kdt Since A &gt; 0, this gives ln A = −kt + C. [M1] Exponentiating gives A = e−kt+C = eCe−kt. At t = 0 this gives 75 = eCe0 . = eC\" style=\"--madas-width:465.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q3-solution-2.svg\" alt=\"Thus A = 75e−kt [A1] by the initial condition: [A1] At t = 2, e−2k = 33.7/75, [A1] so e−2k = 337 750 e2k = 750 337 750  2k = ln 337 k = 1 750  2 ln 337 The approximate form is A ≃75e−0.4t, and the exact model is 337 t/2 k = 1 A = 75 2 ln(750/337) ≈0.400 . [A1] 750\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 3 is 7 marks.</p>"
+    ],
+    "promptText": "An area of neglected lawn is treated with weed killer. Before the treatment started, the 2 2 area covered by the weed was 75 m and two days later it has reduced to 33.7 m . 2 Let the area of the lawn covered with weed be A m , t days after it was treated. The rate at which the area covered by the weed is decreasing, is proportional to the area still covered by the weed. By forming and solving a suitable differential equation, express A in terms of t . ( ) 7"
+  },
+  {
+    "id": "madas/alevel-pure-q/q4",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q4-question-1.svg\" alt=\"A 5cm O c C 1.2 6cm 5cm B The figure above shows a template design CAB . The curve AB is the arc of a circular sector OAB , subtending an angle of 1.2 radians at its centre O . The radius of the sector is 5 cm . The straight lines CA and CB are of\" style=\"--madas-width:566.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q4-question-2.svg\" alt=\"equal length. The length of the straight line OC is 6 cm . Find, to three significant figures where appropriate, … a)  … the area of the circular sector OAB . ( ) 2 b) … the size of the angle COB , in radians. ( ) 2 c) … the total area of the template design. ( ) 3\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q4-solution-1.svg\" alt=\"Looking at the diagram below: (a) The sector area is 1 2(52)(1.2) = 15 cm2 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q4-solution-2.svg\" alt=\"(b) Triangles COA, COB are congruent by SSS: The two equal angles at O and the sector angle sum to 2π. [M1] Writing either angle as ϕ gives 2ϕ + 1.2 = 2π, ϕ + 0.6 = π. Thus ∠COB = π −0.6 ≈2.54 radians . [A1] (c) Add the two triangles and the sector: [B1] Each triangle has area 1 2(6)(5) sin(π −0.6) = 8.4696 . . . . The result is 15 + 2( 1 2 · 6 · 5 sin(π −0.6)) = 31.9 cm2 [A1] to three significant figures: [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 4 is 7 marks.</p>"
+    ],
+    "promptText": "A 5cm O c C 1.2 6cm 5cm B The figure above shows a template design CAB . The curve AB is the arc of a circular sector OAB , subtending an angle of 1.2 radians at its centre O . The radius of the sector is 5 cm . The straight lines CA and CB are of equal length. The length of the straight line OC is 6 cm . Find, to three significant figures where appropriate, … a)  … the area of the circular sector OAB . ( ) 2 b) … the size of the angle COB , in radians. ( ) 2 c) … the total area of the template design. ( ) 3"
+  },
+  {
+    "id": "madas/alevel-pure-q/q5",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q5-question-1.svg\" alt=\"It is given that the value of 1 π  3 2 2 ( k cos x − sec x ) sin x dx , 0 is 3 4 , where k is a non zero constant. ( ) 7 Determine the value of k .\" style=\"--madas-width:586.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q5-solution-1.svg\" alt=\"Expand the product: (k cos2 x −sec2 x) sin x = k cos2 x sin x −sec x(sin x/ cos x). Using the reverse chain rule and sec2 x sin x = sec x tan x, [B1] [A1] the integral equals = 7k [−(k/3) cos3 x −sec x]π/3 24 −1. [M1] [M1] [A1] 0 At the two endpoints cos 0 = 1, cos(π/3) = 1/2, so  k k   = k 3 −k = 3 + 1 − 24 + 2 24 −1 = 1 24(8k −k −24) = 1 24(7k −24) Equating this to 3/4 gives 7k −24 = 18, 7k = 42, hence k = 6 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 5 is 7 marks.</p>"
+    ],
+    "promptText": "It is given that the value of 1 π  3 2 2 ( k cos x − sec x ) sin x dx , 0 is 3 4 , where k is a non zero constant. ( ) 7 Determine the value of k ."
+  },
+  {
+    "id": "madas/alevel-pure-q/q6",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q6-question-1.svg\" alt=\"f x ( ) = 1 − x , 1 −&lt; x &lt; . 1 3 a) Expand f x up and including the term in ( ) x . ( ) 3 b) Show clearly that 1 7 1 − = 4 3 . ( ) 1 49 c) By using the first two terms of the expansion obtained in part (a) and the result obtained in part (b), show further that\" style=\"--madas-width:572.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q6-question-2.svg\" alt=\"97 3 ≈ . ( ) 4 56\" style=\"--madas-width:585.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q6-solution-1.svg\" alt=\"(a) Put z = −x in the power series. Through degree three its terms give 2z + (1/2)(−1/2) z2 + (1/2)(−1/2)(−3/2) 1 + 1 z3. 2! 3! The binomial expansion gives √ 1 −x = 1 −1 2x −1 8x2 −1 16x3 + O(x4) . [M1] [M1] [A1] (b) √ √ q q 7 1 −1/49 = 7 48/49 = 48 = 4 3 . [A1] (c) At x = 1/49, the two-term estimate gives √ 4 3 ≈7(1 −1/98) = 97/14. [B1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q6-solution-2.svg\" alt=\"Dividing by 4 gives √ 3 ≈97/56 . [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 6 is 8 marks.</p>"
+    ],
+    "promptText": "f x ( ) = 1 − x , 1 −< x < . 1 3 a) Expand f x up and including the term in ( ) x . ( ) 3 b) Show clearly that 1 7 1 − = 4 3 . ( ) 1 49 c) By using the first two terms of the expansion obtained in part (a) and the result obtained in part (b), show further that 97 3 ≈ . ( ) 4 56"
+  },
+  {
+    "id": "madas/alevel-pure-q/q7",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q7-question-1.svg\" alt=\"It is required to find the approximate coordinates of the points of intersection between the graphs of 2 y x , x∈         and y ln ( x 1 ) , x∈ , x &gt; −. = − 1 = + 1 1 2 a) Show that the two graphs intersect at a single point P , explaining further why the x coordinate of P lies between 0 and 1. ( ) 2 b) Use the Newton Raphson method once, starting x = 0.7 , to calculate the x coordinate of P , giving the answer correct to 3 decimal places. ( ) 6 c) By considering two suitable transformations, determine correct to 2 decimal places the coordinates of the points of intersection between the graph of\" style=\"--madas-width:569.3px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q7-question-2.svg\" alt=\" 2  1 ( ) , x∈        and y ( x ) , x∈ , y = 2 1 − 2 x + 1 = 2ln 2 + 2 x &gt; − . 3  4 2 ( ) 2\" style=\"--madas-width:584.0px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q7-solution-1.svg\" alt=\"Using a quick sketch of the two graphs:\" style=\"--madas-width:469.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q7-solution-2.svg\" alt=\"(a) On x &gt; −1, let F(x) = 1 −x2 −ln(x + 1). Then 1 F ′(x) = −2x − x + 1 [M1] = −2(x + 1 2)2 + 1 2 &lt; 0. x + 1 Also F(0) = 1 &gt; 0 and F(1) = −ln 2 &lt; 0. In the sketch the logarithm rises from its vertical asymptote x = −1, passes through (0, 0), and crosses the descending branch of y = 1 −x2. Continuity gives the unique intersection in (0, 1) . [A1] (b) The source sets f = −F = x2 −1 + ln(1 + x), so f′ = 2x + 1/(1 + x). The Newton quotient is unchanged when both signs reverse:\" style=\"--madas-width:678.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q7-solution-3.svg\" alt=\"x ≈0.7 −(0.7)2 −1 + ln(1 + 0.7) ≈0.690 1 2 × 0.7 + 0.7+1 Thus x2 = 0.7 −F(0.7)/F ′(0.7) , [B1] [A1] = 0.689624844 . . . so the estimate is 0.690 [M1] [A1] to three decimal places: [M1] [A1] (c) Apply a stretch with scale factors 1/2 horizontally and 2 vertically, followed by translation by (−1/2, 0). The source translates left first and then applies the two stretches: (0.690, 0.524) →(−0.310, 0.524) →(−0.155, 0.524) →(−0.155, 1.048), using its rounded coordinates. Equivalently (u, v) 7→((u −1)/2, 2v). [B1] Using the unrounded estimate yields (−0.15519, 1.04901) approximately, so the intersection is (−0.16, 1.05) . This lies in the stated restricted domain: [B1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 7 is 10 marks.</p>"
+    ],
+    "promptText": "It is required to find the approximate coordinates of the points of intersection between the graphs of 2 y x , x∈         and y ln ( x 1 ) , x∈ , x > −. = − 1 = + 1 1 2 a) Show that the two graphs intersect at a single point P , explaining further why the x coordinate of P lies between 0 and 1. ( ) 2 b) Use the Newton Raphson method once, starting x = 0.7 , to calculate the x coordinate of P , giving the answer correct to 3 decimal places. ( ) 6 c) By considering two suitable transformations, determine correct to 2 decimal places the coordinates of the points of intersection between the graph of  2  1 ( ) , x∈        and y ( x ) , x∈ , y = 2 1 − 2 x + 1 = 2ln 2 + 2 x > − . 3  4 2 ( ) 2"
+  },
+  {
+    "id": "madas/alevel-pure-q/q8",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q8-question-1.svg\" alt=\"It is given that for θ ∈ , ϕ ∈ 3tan θ = 4tan ϕ . Show that the above relationship implies that sin 2 θ tan ( θ − ϕ ) = . ( ) 7 7 + cos2 θ\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q8-solution-1.svg\" alt=\"Since tan ϕ = 3 4 tan θ, multiply numerator and denominator in the subtraction formula by four: tan(θ −ϕ) = tan θ −tan ϕ 1 + tan θ tan ϕ = 4 tan θ −4 tan ϕ 4 + 4 tan θ tan ϕ = 4 tan θ −(3 tan θ) 4 + tan θ(3 tan θ) = 4 tan θ −3 tan θ 4 + 3 tan2 θ tan θ = 4 + 3 tan2 θ Multiply through by cos2 θ, then by two, and apply the two identities cos2 θ = (1 + cos 2θ)/2 and sin2 θ = (1 −cos 2θ)/2: sin θ cos θ = 4 cos2 θ + 3 sin2 θ 2 sin θ cos θ\" style=\"--madas-width:624.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q8-solution-2.svg\" alt=\"= 8 cos2 θ + 6 sin2 θ sin 2θ = 8(1 2 + 1 2 cos 2θ) + 6( 1 2 −1 2 cos 2θ) sin 2θ = 4 + 4 cos 2θ + 3 −3 cos 2θ sin 2θ = 7 + cos 2θ This gives tan θ tan(θ −ϕ) = 4 + 3 tan2 θ sin θ cos θ = 4 cos2 θ + 3 sin2 θ sin 2θ = 7 + cos 2θ .\" style=\"--madas-width:452.0px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q8-solution-3.svg\" alt=\"[M1] Use the tangent subtraction formula [M1] substitute the tangent relation [B1] rewrite in sine and cosine [M1] apply the double-angle identities The subtraction formula denominator is positive on the specified domain: [M1] [M1] [A1]\" style=\"--madas-width:634.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 8 is 7 marks.</p>"
+    ],
+    "promptText": "It is given that for θ ∈ , ϕ ∈ 3tan θ = 4tan ϕ . Show that the above relationship implies that sin 2 θ tan ( θ − ϕ ) = . ( ) 7 7 + cos2 θ"
+  },
+  {
+    "id": "madas/alevel-pure-q/q9",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q9-question-1.svg\" alt=\"The functions f and g are defined by 2 , x∈ , f x ( ) = x − 4 x &gt; 8 g x ( ) = 2 x − 2 , x∈ , x &gt; 3 . a) State the range of f x and the range of ( ) ( ) g x . ( ) 2 b) Find a simplified expression for fg x . ( ) ( ) 2 c) Determine the domain and range of fg x . ( ) ( ) 2\" style=\"--madas-width:574.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q9-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:582.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q9-solution-1.svg\" alt=\"By sketching or visualizing the graphs:\" style=\"--madas-width:538.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q9-solution-2.svg\" alt=\"(a) The functions are both increasing on their domains:\" style=\"--madas-width:514.7px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q9-solution-3.svg\" alt=\"At the excluded lower endpoints the values would be 82 −4 = 60 and 2(3) −2 = 4; all larger values are attained: Their ranges are f(x) &gt; 60 [B1] and g(x) &gt; 4 . [A1] (b) fg(x) = f(2x −2) = (2x −2)2 −4 = 4x2 −8x . [M1] [A1] (c) Require x &gt; 3 and 2x −2 &gt; 8, [B1] giving 2x &gt; 10, or x &gt; 5, in addition to x &gt; 3, so the domain is (5, ∞). The outputs g(x) span (8, ∞), giving range (60, ∞) . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 9 is 6 marks.</p>"
+    ],
+    "promptText": "The functions f and g are defined by 2 , x∈ , f x ( ) = x − 4 x > 8 g x ( ) = 2 x − 2 , x∈ , x > 3 . a) State the range of f x and the range of ( ) ( ) g x . ( ) 2 b) Find a simplified expression for fg x . ( ) ( ) 2 c) Determine the domain and range of fg x . ( ) ( ) 2 "
+  },
+  {
+    "id": "madas/alevel-pure-q/q10",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q10-question-1.svg\" alt=\"cm s−. 3 1 A bubble is formed and its volume is increasing at the constant rate of 20 The shape of the bubble remains spherical at all times. Find the rate at which the radius of the bubble is increasing … a) … when the radius of the bubble reaches 5 cm . ( ) 3 3 b) ... when the volume of the bubble reaches 300 cm . ( ) 4 c) … ten seconds after the bubble was first formed. ( ) 4  4  3 volume of a sphere of radius  is given by 3 r π r  \" style=\"--madas-width:568.0px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q10-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:578.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q10-solution-1.svg\" alt=\"Differentiate V = 4πr3/3 with respect to time: The radius derivative is dV/dr = 4πr2, so dr/dt = (dr/dV )(dV/dt) . = [1/(4πr2)]20 Then 20 = 4πr2 dr/dt, so dr/dt = 5/(πr2). (a) At r = 5, the rate is 1/(5π) ≈0.0637 cm s−1 . [M1] [M1] [A1] (b) At V = 300, r = (225/π)1/3 [M1] since 300 = (4/3)πr3. Thus r ≃4.1528, and 5/[π(4.1528 . . .)2] gives the rate 0.0923 cm s−1 [M1] [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q10-solution-2.svg\" alt=\"to three significant figures: [A1] (c) At t = 10, V = 200, [M1] giving r = (150/π)1/3 [A1] since 20 × 10 = 200 = (4/3)πr3. Thus r ≃3.6278, giving 5/[π(3.6278 . . .)2] and a rate of 0.121 cm s−1 [A1] to three significant figures: [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 10 is 11 marks.</p>"
+    ],
+    "promptText": "cm s−. 3 1 A bubble is formed and its volume is increasing at the constant rate of 20 The shape of the bubble remains spherical at all times. Find the rate at which the radius of the bubble is increasing … a) … when the radius of the bubble reaches 5 cm . ( ) 3 3 b) ... when the volume of the bubble reaches 300 cm . ( ) 4 c) … ten seconds after the bubble was first formed. ( ) 4  4  3 volume of a sphere of radius  is given by 3 r π r   "
+  },
+  {
+    "id": "madas/alevel-pure-q/q11",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q11-question-1.svg\" alt=\"The curve C has equation given by x e y = ,    0 &lt; x &lt; π . sin x a) Show clearly that dy dx = y ( 1 cot − x ) . ( ) 4 b) Show further that 2 d y dy 2 = ( 1 cot − x ) + y cosec x . ( ) 2 2 dx dx\" style=\"--madas-width:570.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q11-question-2.svg\" alt=\"c) Use the above results to find the exact coordinates of the turning point of C , and determine its nature. ( ) 4\" style=\"--madas-width:578.7px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q11-solution-1.svg\" alt=\"(a) Differentiate and factor ex/ sin x: ex dx = (sin x)ex −ex cos x sin x ⇒dy y = (sin x)2 dx = ex(sin x −cos x) dy sin2 x ex dy sin x −cos x  dx = sin x sin x dy sin x sin x −cos x  dx = y sin x By the quotient rule y′ = ex(sin x −cos x)/ sin2 x = y(1 −cot x). [M1] Apply the quotient rule [A1] obtain the two numerator terms [A1] divide by the squared sine [A1] express the result in terms of the original function (b) Differentiate y(1 −cot x), differentiating each factor in turn:\" style=\"--madas-width:669.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q11-solution-2.svg\" alt=\"Since (1 −cot x)′ = cosec2 x, by the product rule, y′′ = y′(1 −cot x) + y cosec2 x . [M1] [A1] (c) Since y &gt; 0, y′ = 0 at the unique solution to cot x = 1 [M1] in (0, π), namely x = π/4. [A1] There √ √ 2eπ/4 and y′′ = 2y &gt; 0. [A1] The turning point is a minimum at sin(π/4) = 1/ 2, so y = √ 2eπ/4) . (π/4, [A1]\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 11 is 10 marks.</p>"
+    ],
+    "promptText": "The curve C has equation given by x e y = ,    0 < x < π . sin x a) Show clearly that dy dx = y ( 1 cot − x ) . ( ) 4 b) Show further that 2 d y dy 2 = ( 1 cot − x ) + y cosec x . ( ) 2 2 dx dx c) Use the above results to find the exact coordinates of the turning point of C , and determine its nature. ( ) 4"
+  },
+  {
+    "id": "madas/alevel-pure-q/q12",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q12-question-1.svg\" alt=\"A curve is given parametrically by the equations x = 3cos , t y = 4sin , 0 t ≤≤ t 2 π . a) Show that the equation of the tangent to the curve at the point where t = θ is 3 sin y θ + 4 cos x θ = 12 . ( ) 5 The tangent to the curve at the point where t = θ meets the y axis at the point P ( 0,8 ) and the x axis at the point Q . b) Find the exact area of the triangle POQ , where O is the origin. ( ) 7\" style=\"--madas-width:578.7px\"></figure><figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q12-question-2.svg\" alt=\"Question diagram\" style=\"--madas-width:593.3px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q12-solution-1.svg\" alt=\"(a) At t = θ, dx/dt = −3 sin θ and dy/dt = 4 cos θ. [M1] The tangent gradient is (dy/dt)/(dx/dt) = −4 cos θ/(3 sin θ). [A1] The tangent through (3 cos θ, 4 sin θ) has equation y −4 sin θ = −4 cos θ 3 sin θ (x −3 cos θ). [M1] First 3y sin θ −12 sin2 θ = −4x cos θ + 12 cos2 θ. Multiplying through and collecting gives 3y sin θ + 4x cos θ = 12 cos2 θ + 12 sin2 θ. [A1] Thus 3y sin θ + 4x cos θ = 12 . [A1] At sin θ = 0 this gives the vertical tangent directly:\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q12-solution-2.svg\" alt=\"(b) Substituting P = (0, 8) gives 24 sin θ = 12, [M1] so θ = π/6 or 5π/6. [A1] The two tangent equations √ are 3 2y + 2 3x = 12 and √ 3 2y −2 3x = 12. [M1] [A1] √ √ √ √ At Q, set y = 0, giving 2 3x = 12 or −2 3x = 12, hence x = ±6/ 3, or x = ±2 3. [A1] In either √ case the perpendicular base and height are 8 and 2 3. [A1] The triangle has area √ √ 1 2(8)(2 3) = 8 3 . [A1]\" style=\"--madas-width:678.7px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 12 is 12 marks.</p>"
+    ],
+    "promptText": "A curve is given parametrically by the equations x = 3cos , t y = 4sin , 0 t ≤≤ t 2 π . a) Show that the equation of the tangent to the curve at the point where t = θ is 3 sin y θ + 4 cos x θ = 12 . ( ) 5 The tangent to the curve at the point where t = θ meets the y axis at the point P ( 0,8 ) and the x axis at the point Q . b) Find the exact area of the triangle POQ , where O is the origin. ( ) 7 "
+  },
+  {
+    "id": "madas/alevel-pure-q/q13",
+    "question": "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q13-question-1.svg\" alt=\"It is given that 20 20   2     f r ( ) − 10 = 200 and f r ( ) − 10 = 2800 .     r = 1 r = 1 Find the value of 20  2  f r ( )  .   ( ) 6 r = 1\" style=\"--madas-width:598.8px\"></figure>",
+    "steps": [
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q13-solution-1.svg\" alt=\"Distribute the sum across the difference: &quot; 20 20 20 # X X X (f(r) −10) = f(r) − 10 r=1 r=1 r=1 &quot; 20 # X 200 = f(r) −10 × 20 r=1 The first sum gives 20 X f(r) = 200 + 20 · 10 . [B1] [M1] [A1] r=1 = 400 Expanding (f(r) −10)2 = [f(r)]2 −20f(r) + 100 and summing each term gives 20 20 20 [f(r)]2 −20 X X X 2800 = [f(r)] + 100 1 r=1 r=1 r=1\" style=\"--madas-width:677.3px\"></figure>",
+      "<figure class=\"madas-excerpt\"><img src=\"resources/madas/alevel-pure-q/q13-solution-2.svg\" alt=\"20 (f(r))2 −20 × 400 + 100 × 20 X 2800 = r=1 20 (f(r))2 −6000 X 2800 = r=1 Therefore 20 20 [f(r)]2 −20 · 400 + 100 · 20, [f(r)]2 = 8800 . X X 2800 = so [M1] [M1] [A1] r=1 r=1\" style=\"--madas-width:677.3px\"></figure>",
+      "<p class=\"madas-total\">Total mark for question 13 is 6 marks.</p>"
+    ],
+    "promptText": "It is given that 20 20   2     f r ( ) − 10 = 200 and f r ( ) − 10 = 2800 .     r = 1 r = 1 Find the value of 20  2  f r ( )  .   ( ) 6 r = 1"
+  }
+]
