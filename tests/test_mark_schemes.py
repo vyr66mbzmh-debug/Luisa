@@ -53,6 +53,13 @@ class MarkSchemeFlagTests(unittest.TestCase):
             mark_schemes.source_kind({'id': 'x', 'steps': ['<p>M1</p>'], 'sourceScheme': {'kind': 'worked', 'page': 4}})
         with self.assertRaises(ValueError):
             mark_schemes.source_kind({'id': 'x', 'steps': ['<p>M1</p>'], 'sourceScheme': {'kind': 'official'}})
+        # A PMT row counts only when every step is a crop of its own question's scheme (v0.75 review).
+        own = '<figure class="exam-solution-source"><img src="resources/pmt/pure-core-1-ch2/q07-ms-p19-1.png" alt="x"></figure>'
+        pmt = {'id': 'pmt/pure-core-1/ch2/q7', 'sourceScheme': {'kind': 'source', 'page': [19]}}
+        self.assertEqual(mark_schemes.source_kind(dict(pmt, steps=[own])), 'source')
+        for steps in ([], ['<p>M1 typed scheme</p>'], [own.replace('q07', 'q08')], [own, '<p>extra</p>']):
+            with self.assertRaises(ValueError):
+                mark_schemes.source_kind(dict(pmt, steps=steps))
 
     def test_check_detects_a_hand_edited_or_missing_flag(self):
         root = Path(tempfile.mkdtemp())

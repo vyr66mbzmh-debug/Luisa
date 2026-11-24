@@ -62,6 +62,14 @@ def source_kind(question):
     if scheme:
         if scheme.get('kind') not in ELIGIBLE or not scheme.get('page'):
             raise ValueError(f"{question['id']}: sourceScheme needs kind official|source and its source page")
+        if question['id'].startswith('pmt/'):
+            # Every step must be a crop of this question's own scheme in its source sheet (v0.75 review).
+            book, chapter, q = question['id'].split('/')[1:]
+            crop = re.compile(rf'<figure class="exam-solution-source"[^>]*><img src="resources/pmt/{re.escape(book)}-{chapter}/'
+                              rf'q{int(q[1:]):02}-ms-(?:from-[a-z0-9-]+-)?p\d+-\d+\.png"')
+            steps = question.get('steps') or []
+            if not steps or not all(crop.match(step) for step in steps):
+                raise ValueError(f"{question['id']}: a source scheme must consist of this question's own scheme crops")
         return scheme['kind']
     return _steps_kind(question.get('steps'))
 

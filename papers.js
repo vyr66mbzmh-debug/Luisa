@@ -146,9 +146,11 @@
   }
   function updatePool() {
     cancelLoading();
-    const count = pool().length;
-    $('filter-title').textContent = `${count.toLocaleString()} questions in the selection`;
-    $('papers-count').max = String(count);
+    const rows = pool(), count = rows.length, copies = count - withoutDuplicateCopies(rows).length;
+    // PAP-075-6: browsing lists both copies; a generated paper skips a copy whose original is also selected.
+    $('filter-title').textContent = `${count.toLocaleString()} questions in the selection` +
+      (copies ? ` · a generated paper skips ${copies.toLocaleString()} duplicate ${copies === 1 ? 'copy' : 'copies'}` : '');
+    $('papers-count').max = String(count - copies);
     page = 0; updateControls(); persist();
     if (browseOpen) renderBrowse();
   }
@@ -487,7 +489,8 @@
     try { saved = JSON.parse(sessionStorage.getItem(storageKey)); } catch (_) { /* A new session or unavailable storage. */ }
     if (![1, 2, 3].includes(saved?.version)) saved = null;
     for (const source of sources) {
-      const key = saved?.version === 2 && source !== 'practice' ? 'exam' : source;
+      // A version-2 session had one 'exam' box for exam-style and past papers; it never covered PMT (PAP-075-5).
+      const key = saved?.version === 2 && ['exam-style', 'past-papers'].includes(source) ? 'exam' : source;
       $('papers-source-' + source).checked = saved?.sources?.[key] ?? sourceDefault(source);
     }
     paperChoices = [...papers].sort(([,a],[,b]) => b.date.localeCompare(a.date) || a.code.localeCompare(b.code))

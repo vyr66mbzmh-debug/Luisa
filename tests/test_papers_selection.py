@@ -750,10 +750,14 @@ class PapersSelection(unittest.TestCase):
         for source in ('practice', 'exam-style', 'past-papers'):
             self.page.locator('#papers-source-' + source).uncheck()
         self.page.locator('#papers-source-pmt').check()
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{len(pmt)} questions in the selection')
+        ids = {r['id'] for r in pmt}
+        within = sum(r['duplicateOf'] in ids for r in copies)  # PMT copies of other PMT questions
+        skipped = lambda n: f' · a generated paper skips {n} duplicate {"copy" if n == 1 else "copies"}' if n else ''
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{len(pmt)} questions in the selection' + skipped(within))
         self.page.locator('#papers-source-past-papers').check()
         total = 444 + len(pmt)
-        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{total} questions in the selection')
+        self.assertEqual(self.page.locator('#filter-title').inner_text(), f'{total} questions in the selection' + skipped(len(copies)))
+        self.assertEqual(self.page.locator('#papers-count').get_attribute('max'), str(total - len(copies)))
         self.page.locator('#papers-exam summary').click()
         self.assertEqual(self.page.locator('#papers-exam-eligible').inner_text(),
                          f'{total} of {total} questions in the chosen sources and topics have an official mark scheme and can go in an exam paper.')
@@ -778,6 +782,12 @@ class PapersSelection(unittest.TestCase):
         self.page.reload()
         self.page.wait_for_function("!document.querySelector('#papers-source-pmt').disabled")
         self.assertFalse(self.page.locator('#papers-source-pmt').is_checked())
+        # A version-2 session's single 'exam' box maps to exam-style and past papers only, never to PMT (v0.75 review).
+        self.page.evaluate('''() => sessionStorage.setItem('luisa-papers-v1', JSON.stringify({version:2, sources:{practice:false, exam:true}, selected:[], order:'selection', layout:'condensed', includeAnswers:false}))''')
+        self.page.reload()
+        self.page.wait_for_function("!document.querySelector('#papers-source-pmt').disabled")
+        self.assertEqual([self.page.locator(f'#papers-source-{s}').is_checked() for s in ('practice', 'exam-style', 'past-papers', 'pmt')],
+                         [False, True, True, False])
 
     def test_in_paper_order_only_for_one_past_paper_and_survives_reload(self):
         self.page.unroute('**/exam-catalogue.json')
