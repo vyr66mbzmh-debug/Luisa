@@ -1,0 +1,83 @@
+# 1
+The random variable $X \sim B(20, 0.37)$
+(a) Find $P(X = 8)$
+[1]
+(b) Find $P(X \leq 5)$
+[1]
+(c) Find $P(X \leq 5.7)$
+[1]
+
+# 2
+Jasper is investigating the relationship between Daily Mean Pressure and Daily Mean Windspeed (Beaufort conversion) for Perth in 2015 using the data from the large data set.
+Treating the large data set for Perth in 2015 as the population, Jasper decides to use all the data available.
+(a) Write down the name given to this method of data collection.
+[1]
+All of the Daily Mean Windspeed data for Perth in 2015 are classed as either “Light” or “Moderate”.
+Jasper splits the data for Perth in 2015 into Light days and Moderate days and draws a box plot for each set of data, but omits the lower tail for Light days.
+@figure 156 Daily Mean Pressure in hPa for Light and Moderate days, with the lower tail for Light days to be completed.
+The smallest three values of Daily Mean Pressure for Light days for Perth in 2015 are 1007, 1009 and 1010 hPa.
+An outlier in the first quartile is defined as any value more than $1.5 \times IQR$ below $Q_1$
+(b) (i) Determine if there are any outliers in the first quartile of Daily Mean Pressure for Light days.
+[2]
+(ii) Hence, complete the box plot of Daily Mean Pressure for Light days.
+[1]
+The box plot for Light days is based on data for 161 days.
+(c) Using your knowledge of the large data set, estimate the number of Moderate days with a Daily Mean Pressure of 1028 hPa and higher in the large data set for Perth in 2015.
+[2]
+
+# 3
+A bag contains red counters, green counters and white counters only. The table shows the proportion of each colour of counter that Elsa believes to be in the bag.
+| Colour | red | green | white |
+| :--- | :--- | :--- | :--- |
+| Proportion | $p$ | 0.2 | $4p$ |
+Elsa selects at random 40 counters from the bag, one at a time, with replacement.
+Assuming Elsa’s belief is true,
+(a) find the distribution of the number of red counters Elsa selects.
+[3]
+Jayda believes that the true proportion of green counters in the bag is greater than 0.2
+She takes a random sample of 40 counters from the bag, one at a time, with replacement.
+There are 11 green counters in her sample.
+(b) (i) Use a suitable test to assess Jayda’s belief.
+You should
+• state your hypotheses clearly
+• use a 5% level of significance
+• state the $p$-value for the test
+[4]
+(ii) Find the acceptance region for the test in part (i).
+[2]
+
+# 4
+Giovanni believes there is a relationship between the mass of a car, $m$ kg, and its fuel consumption, $c$ miles per gallon (mpg). For a sample of 25 cars, he obtains the following summary statistic.
+$$\sum (c - \bar{c})^2 = 394$$
+(a) Find the standard deviation of the fuel consumption of the 25 cars.
+[1]
+Using $m$ as the explanatory variable, Giovanni creates the linear regression model
+$$c = a + bm$$
+where $a$ and $b$ are constants.
+Using his model, he concludes that, on average
+• the fuel consumption is 3.5 mpg lower for each additional 500 kg of mass
+• the fuel consumption of a car with a mass of 1700 kg is 20 mpg
+(b) (i) Find the value of $b$
+[2]
+(ii) Find the value of $a$
+[2]
+
+# 5
+Events $A$, $B$ and $C$ are such that
+• $P(A \text{ or } C) = 0.55$
+• the probability that none of the events occur is 0.23
+• the probability that exactly two of the events occur is 0.18
+• $A$ and $B$ are independent
+• $P(B) = P(A) + 0.1$
+The Venn diagram represents the events $A$, $B$ and $C$ and their associated probabilities $p$, $q$, $r$, $s$, $t$ and $u$
+@figure 124 Three-event Venn diagram with the six probability regions labelled.
+(a) Write down the value of $u$
+[1]
+(b) Find the value of $r$
+[2]
+(c) Find
+(i) the value of $p$
+(ii) the value of $q$
+(iii) the value of $s$
+(iv) the value of $t$
+[4]
