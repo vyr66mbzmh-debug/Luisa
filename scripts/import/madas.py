@@ -100,24 +100,25 @@ def fragments(book, pages, folder, prefix, is_solution):
     return chunks, ' '.join(words), total
 
 
-# Repeated problems keep their printed paper wording, mark totals and schemes as
-# editions of one selectable question. Some editions have different difficulty.
-EDITIONS = {
+# Removed source appearances map to the retained problem for saved selections.
+REMOVED_COPIES = {
     'madas/alevel-applied-f/q11': 'madas/alevel-applied-d/q12',
     'madas/alevel-applied-v/q2': 'madas/alevel-applied-a/q4',
     'madas/alevel-pure-o/q12': 'madas/alevel-applied-s/q2',
 }
 
 
-def merge_editions(index):
+def merge_topics(index, removed):
     by_id = {row['id']: row for row in index}
-    for edition, original in EDITIONS.items():
-        by_id[original].setdefault('editions', []).append(by_id[edition])
-    return [q for q in index if q['id'] not in EDITIONS]
+    for old, retained in REMOVED_COPIES.items():
+        for key in ('chapterKeys', 'skills'):
+            row = by_id[retained]
+            row[key] = list(dict.fromkeys(row[key] + removed[old][key]))
 
 
 def run(source):
     index = []
+    removed = {}
     catalogue = json.loads((ROOT/'textbook-catalogue.json').read_text())
     valid = {f"{b['course']}/{b['id']}/{ch['id']}" for b in catalogue['books'] for ch in b['chapters']}
     for folder in sorted(source.iterdir()):
@@ -144,13 +145,6 @@ def run(source):
             for q in questions:
                 n = q['number'] if as_level else q['question_number']
                 uid = f'madas/{slug}/q{n}'
-                a,text,_ = fragments(qb,qm[n],assets,f'q{n}-question',False)
-                steps,_,marks = fragments(sb,sm[n],assets,f'q{n}-solution',True)
-                expected = q.get('part_marks',q.get('marks'))
-                if expected and marks != sum(expected):
-                    raise ValueError((uid,marks,expected))
-                if not (a and steps and marks):
-                    raise ValueError((uid,'missing content or marks',marks))
                 if as_level:
                     topics = [(s['id'].split(':')[0],s['id'].split(':')[1].split('.')[0],s['chapter']) for s in q['skills']]
                     skills = [s['id'] for s in q['skills']]
@@ -160,6 +154,16 @@ def run(source):
                 keys = list(dict.fromkeys(f'maths-a-level/{b}/{c}' for b,c,_ in topics))
                 if not keys or not set(keys)<=valid:
                     raise ValueError((uid,keys))
+                if uid in REMOVED_COPIES:
+                    removed[uid] = dict(chapterKeys=keys, skills=skills)
+                    continue
+                a,text,_ = fragments(qb,qm[n],assets,f'q{n}-question',False)
+                steps,_,marks = fragments(sb,sm[n],assets,f'q{n}-solution',True)
+                expected = q.get('part_marks',q.get('marks'))
+                if expected and marks != sum(expected):
+                    raise ValueError((uid,marks,expected))
+                if not (a and steps and marks):
+                    raise ValueError((uid,'missing content or marks',marks))
                 level = {'as-pure':'AS Pure','alevel-pure':'A-level Pure','alevel-applied':'A-level Applied'}[group]
                 label = f'MADAS {level} Paper {letter} Q{n}'
                 index.append(dict(id=uid, marks=marks, markScheme='worked', difficulty='standard' if letter<'J' else 'hard' if letter<'S' else 'very-hard',
@@ -172,7 +176,8 @@ def run(source):
             qb.close()
             write_json(ROOT/data_path,payload)
             print(slug,len(payload),flush=True)
-    write_json(ROOT/'madas-catalogue.json',dict(version=1,syllabus='Mostly follows the Pearson/Edexcel syllabus introduced for teaching from 2017.',sourceDifficulty='A–R standard, generally increasing. S and T extremely hard. U–Z hard.',questions=merge_editions(index)))
+    merge_topics(index, removed)
+    write_json(ROOT/'madas-catalogue.json',dict(version=1,syllabus='Mostly follows the Pearson/Edexcel syllabus introduced for teaching from 2017.',sourceDifficulty='A–R standard, generally increasing. S and T extremely hard. U–Z hard.',questions=index,migrations=REMOVED_COPIES))
 
 
 if __name__ == '__main__':

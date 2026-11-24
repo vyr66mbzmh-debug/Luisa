@@ -77,7 +77,7 @@ class PapersSelection(unittest.TestCase):
         self.page.locator('#papers-exam-madas').uncheck()
         self.assertTrue(self.page.locator('#papers-exam-generate').is_disabled())
         self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.withoutDuplicateCopies(LUISA_PAPERS_BUILDER.pool()).length'), 1018)
-        for band, count in [('standard', 367), ('hard', 364), ('very-hard', 290)]:
+        for band, count in [('medium', 366), ('difficult', 363), ('very-difficult', 289)]:
             self.page.locator('#papers-difficulty').select_option(band)
             self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.pool().length'), count)
         self.page.locator('#papers-browse').click()
@@ -88,7 +88,21 @@ class PapersSelection(unittest.TestCase):
         self.page.reload()
         self.page.wait_for_selector('#papers-source-madas:enabled')
         self.assertTrue(self.page.locator('#papers-exam-madas').is_checked())
-        self.assertEqual(self.page.locator('#papers-difficulty').input_value(), 'very-hard')
+        self.assertEqual(self.page.locator('#papers-difficulty').input_value(), 'very-difficult')
+
+    def test_old_madas_copies_and_difficulty_restore_to_their_survivors(self):
+        self.page.unroute('**/madas-catalogue.json')
+        self.page.unroute('**/papers-print.js')
+        moves = json.loads((ROOT / 'madas-catalogue.json').read_text())['migrations']
+        ids = [*moves, *moves.values()]
+        for old, new in [('standard', 'medium'), ('hard', 'difficult'), ('very-hard', 'very-difficult')]:
+            self.page.evaluate("""([ids, difficulty]) => sessionStorage.setItem('luisa-papers-v1',
+                JSON.stringify({version:3, selected:ids, selectionOrder:ids, difficulty, order:'selection'}))""", [ids, old])
+            self.page.reload()
+            self.page.wait_for_selector('#papers-source-madas:enabled')
+            self.assertEqual(self.page.locator('#papers-difficulty').input_value(), new)
+            self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(q=>q.id)'), list(moves.values()))
+            self.assertNotIn('skips', self.page.locator('#filter-title').inner_text())
 
     def test_exam_order_preserves_excluded_madas_positions(self):
         for url in ('**/madas-catalogue.json', '**/exam-catalogue.json', '**/papers-print.js'):

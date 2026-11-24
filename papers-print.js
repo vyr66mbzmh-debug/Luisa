@@ -110,7 +110,7 @@
     const chapterNumber = chapter?.id || row.chapterNumber;
     const topic = title === 'Applications of forces' ? 'Forces' : title;
     const place = row.sourceKind === 'madas' ? '' : [course, shortBooks[book] || book, chapterNumber && 'Ch' + chapterNumber, topic].filter(Boolean).join(' ');
-    const difficulty = row.difficulty && (row.difficulty === 'very-hard' ? 'Very Hard' : row.difficulty[0].toUpperCase() + row.difficulty.slice(1));
+    const difficulty = row.difficulty && (row.difficulty[0].toUpperCase() + row.difficulty.slice(1).replace('-', ' '));
     const detail = element(doc, 'span', 'compact-provenance', '(' + [place, compactSource(row), difficulty].filter(Boolean).join(' - ') + ')');
     detail.title = [source(row), row.sourceKind === 'madas' ? '' : context(row)].filter(Boolean).join(' · ');
     head.append(element(doc, 'h2', '', 'Q' + number + (continuation ? ' · continued' : '')), detail);

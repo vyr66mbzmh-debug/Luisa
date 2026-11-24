@@ -6565,6 +6565,54 @@
         "tests/test_papers_selection.py",
         "tests/papers_print_browser.py"
       ]
+    },
+    {
+      "id": "PAP-079-1",
+      "requirement": "Include all supplied official Edexcel AS papers and their official schemes in Papers and teacher exams, with relevant Year 1 topics and difficulty ratings.",
+      "scope": "Luisa Papers",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "pending",
+      "origin": "Owner brief for v0.79, GitHub #145",
+      "acceptance": [
+        "Preserve source wording, original references, marks, question numbering and diagrams. Keep textbook chapter references in catalogue metadata only.",
+        "Verify official question and scheme pairs, mathematical agreement, topic and difficulty, and the complete print and online/offline selection workflows."
+      ],
+      "evidence": [
+        "GitHub issue #145"
+      ]
+    },
+    {
+      "id": "PAP-079-2",
+      "requirement": "Use one five-bucket difficulty scale throughout Luisa Papers, including the teacher exam selector.",
+      "scope": "All question sources and editions",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "pending",
+      "origin": "Owner addition to v0.79, GitHub #145",
+      "acceptance": [
+        "Show Easy, Medium, Difficult, Very difficult and Unclassified. Group Standard with Medium, Hard with Difficult and Very Hard with Very difficult.",
+        "Migrate saved filters and preserve original source guidance."
+      ],
+      "evidence": [
+        "GitHub issue #145"
+      ]
+    },
+    {
+      "id": "PAP-079-3",
+      "requirement": "Delete the three duplicate MADAS copies from the selectable question bank.",
+      "scope": "Luisa Papers",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "pending",
+      "origin": "Owner addition to v0.79, GitHub #145",
+      "acceptance": [
+        "One stored question and marking per problem, with valid chapter mappings and saved selection migration. Remove the generated-paper duplicate notice."
+      ],
+      "evidence": [
+        "GitHub issue #145",
+        "tests/test_madas.py"
+      ]
     }
   ]
 }

@@ -45,6 +45,9 @@
       }));
     } catch (_) { $('papers-selection-note').textContent = 'Your selection is held on this page. Browser session storage is unavailable.'; }
   }
+  function difficultyBucket(value) {
+    return ({standard: 'medium', hard: 'difficult', 'very-hard': 'very-difficult'})[value] || value || 'unclassified';
+  }
   function sourceMatches(row, includeMadas) {
     const difficulty = $('papers-difficulty').value;
     const paper = $('papers-past-paper').disabled ? '' : $('papers-past-paper').value;
@@ -152,11 +155,9 @@
   }
   function updatePool() {
     cancelLoading();
-    const rows = pool(), count = rows.length, copies = count - withoutDuplicateCopies(rows).length;
-    // PAP-075-6: browsing lists both copies; a generated paper skips a copy whose original is also selected.
-    $('filter-title').textContent = `${count.toLocaleString()} questions in the selection` +
-      (copies ? ` · a generated paper skips ${copies.toLocaleString()} duplicate ${copies === 1 ? 'copy' : 'copies'}` : '');
-    $('papers-count').max = String(count - copies);
+    const count = pool().length;
+    $('filter-title').textContent = `${count.toLocaleString()} questions in the selection`;
+    $('papers-count').max = String(count);
     page = 0; updateControls(); persist();
     if (browseOpen) renderBrowse();
   }
@@ -279,7 +280,7 @@
     rows.set(row.id, row); return row;
   }
   function questionMetadata(row) {
-    return [Number.isInteger(row.marks) && row.marks > 0 ? `${row.marks} marks` : '', row.difficulty ? `${(row.difficulty === 'very-hard' ? 'Very Hard' : row.difficulty[0].toUpperCase() + row.difficulty.slice(1))} · difficulty guide` : ''].filter(Boolean).join(' · ');
+    return [Number.isInteger(row.marks) && row.marks > 0 ? `${row.marks} marks` : '', row.difficulty ? `${(row.difficulty[0].toUpperCase() + row.difficulty.slice(1).replace('-', ' '))} · difficulty guide` : ''].filter(Boolean).join(' · ');
   }
   function fillPreview(container, row) {
     container.innerHTML = (row.contextHtml || '') + row.question;
@@ -426,6 +427,7 @@
     }
     const ids = new Set();
     function add(row, keys) {
+      row.difficulty = difficultyBucket(row.difficulty);
       // PAP-074-1: every question carries its derived mark-scheme flag.
       if (!['official', 'source', 'worked', 'none'].includes(row.markScheme)) throw Error('A question has no mark-scheme classification: ' + row.id + '. Reload the page to retry.');
       if (ids.has(row.id) || !Array.isArray(keys) || !keys.length || keys.some(key => !chapters.has(key))) {
@@ -495,7 +497,7 @@
     if (!madasResponse.ok) throw Error('The MADAS catalogue could not be loaded.');
     const madas = await madasResponse.json();
     if (madas.version !== 1 || !Array.isArray(madas.questions)) throw Error('Invalid MADAS catalogue.');
-    for (const q of madas.questions.flatMap(primary => [primary, ...(primary.editions || []).map(edition => ({...edition, canonicalId: primary.id}))])) {
+    for (const q of madas.questions) {
       const chapter = chapters.get(q.chapterKeys?.[0]);
       if (!chapter || !q.id.startsWith('madas/') || !/^content\/madas\/[a-z-]+\.json$/.test(q.dataPath) ||
           !Number.isInteger(q.marks) || q.marks < 1 || !['standard', 'hard', 'very-hard'].includes(q.difficulty)) throw Error('Invalid MADAS question: ' + q.id);
@@ -505,7 +507,7 @@
     // A copy may point at a past-paper question or at another PMT question; both must exist once everything is loaded.
     for (const q of pmtCatalogue.questions) if (q.duplicateOf && !ids.has(q.duplicateOf)) throw Error('A PMT question is marked as a copy of a missing question.');
     // PAP-077-1: a removed duplicate maps to the question kept in its place (an official past paper or the earlier PMT question).
-    const migrations = new Map(Object.entries(pmtCatalogue.migrations || {}).filter(([from, to]) => !ids.has(from) && ids.has(to)));
+    const migrations = new Map(Object.entries({...pmtCatalogue.migrations, ...madas.migrations}).filter(([from, to]) => !ids.has(from) && ids.has(to)));
     let saved = null;
     try { saved = JSON.parse(sessionStorage.getItem(storageKey)); } catch (_) { /* A new session or unavailable storage. */ }
     if (![1, 2, 3].includes(saved?.version)) saved = null;
@@ -517,12 +519,15 @@
     paperChoices = [...papers].sort(([,a],[,b]) => b.date.localeCompare(a.date) || a.code.localeCompare(b.code))
       .map(([id, paper]) => {
         const part = paper.code.split('/').at(-1);
-        const applied = {'31': '3 Statistics', '32': '3 Mechanics'};
+        const applied = {'21': '2 Statistics', '22': '2 Mechanics', '31': '3 Statistics', '32': '3 Mechanics'};
         const number = applied[part] || part.replace(/^0/, '');
-        const qualification = paper.code.startsWith('9FM') ? 'Further Maths' : 'Maths';
+        const qualification = (paper.code.startsWith('8') ? 'AS ' : '') + (paper.code.includes('FM0') ? 'Further Maths' : 'Maths');
         return [id, paper.session + ' Paper ' + number + ' (' + qualification + ' · ' + paper.code + ')'];
       });
-    if (['easy','medium','difficult','standard','hard','very-hard','unclassified'].includes(saved?.difficulty)) $('papers-difficulty').value = saved.difficulty;
+    if (saved?.difficulty) {
+      const bucket = difficultyBucket(saved.difficulty);
+      if ([...$('papers-difficulty').options].some(option => option.value === bucket)) $('papers-difficulty').value = bucket;
+    }
     $('papers-condensed').checked = saved?.layout === 'condensed';
     if (typeof saved?.includeAnswers === 'boolean') $('papers-answers').checked = saved.includeAnswers;
     options('papers-course', 'All courses', textbook.courses.map(c => [c.id, c.title]), saved?.course);
