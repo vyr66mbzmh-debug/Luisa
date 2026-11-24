@@ -241,11 +241,12 @@ def errors(root=ROOT):
         errs.append(f'possible duplicate {drop["id"]} of {keep["id"]} (similarity {score}); confirm it and run '
                     f'"scripts/duplicates.py remove", or record it under notDuplicates in {DECISIONS}')
     removed = {d['removed'] for d in known.get('duplicates', [])}
-    for old, new in migrations(root).items():
+    moves = migrations(root)
+    for old, new in moves.items():
         if old in ids or new not in ids or old not in removed:
             errs.append(f'question migration {old} -> {new} is stale or unrecorded')
     for d in known.get('duplicates', []):
-        if d['removed'].startswith(('pmt/', 'practice/')) and migrations(root).get(d['removed']) != d['retained']:
+        if d['removed'].startswith(('pmt/', 'practice/')) and moves.get(d['removed']) != d['retained']:
             errs.append(f'removed {d["removed"]} has no migration to {d["retained"]}')
     return errs
 
