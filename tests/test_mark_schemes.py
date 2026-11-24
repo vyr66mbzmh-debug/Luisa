@@ -57,7 +57,8 @@ class MarkSchemeFlagTests(unittest.TestCase):
         own = '<figure class="exam-solution-source"><img src="resources/pmt/pure-core-1-ch2/q07-ms-p19-1.png" alt="x"></figure>'
         pmt = {'id': 'pmt/pure-core-1/ch2/q7', 'sourceScheme': {'kind': 'source', 'page': [19]}}
         self.assertEqual(mark_schemes.source_kind(dict(pmt, steps=[own])), 'source')
-        for steps in ([], ['<p>M1 typed scheme</p>'], [own.replace('q07', 'q08')], [own, '<p>extra</p>']):
+        missing = own.replace('p19-1.png', 'p19-9.png')  # well formed, but no such crop file
+        for steps in ([], ['<p>M1 typed scheme</p>'], [own.replace('q07', 'q08')], [own, '<p>extra</p>'], [own + '<p>extra</p>'], [missing]):
             with self.assertRaises(ValueError):
                 mark_schemes.source_kind(dict(pmt, steps=steps))
 
