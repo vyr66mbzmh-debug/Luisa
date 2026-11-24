@@ -109,10 +109,11 @@
     const title = chapter?.title || row.chapterTitle || row.topicTitle;
     const chapterNumber = chapter?.id || row.chapterNumber;
     const topic = title === 'Applications of forces' ? 'Forces' : title;
-    const place = row.sourceKind === 'madas' ? '' : [course, shortBooks[book] || book, chapterNumber && 'Ch' + chapterNumber, topic].filter(Boolean).join(' ');
+    const showChapter = row.sourceKind !== 'madas' && !(row.sourceKind === 'past-exam' && row.paperCode?.startsWith('8'));
+    const place = !showChapter ? '' : [course, shortBooks[book] || book, chapterNumber && 'Ch' + chapterNumber, topic].filter(Boolean).join(' ');
     const difficulty = row.difficulty && (row.difficulty[0].toUpperCase() + row.difficulty.slice(1).replace('-', ' '));
     const detail = element(doc, 'span', 'compact-provenance', '(' + [place, compactSource(row), difficulty].filter(Boolean).join(' - ') + ')');
-    detail.title = [source(row), row.sourceKind === 'madas' ? '' : context(row)].filter(Boolean).join(' · ');
+    detail.title = [source(row), showChapter ? context(row) : ''].filter(Boolean).join(' · ');
     head.append(element(doc, 'h2', '', 'Q' + number + (continuation ? ' · continued' : '')), detail);
     if (validMarks(row) && !continuation) head.append(element(doc, 'strong', 'question-marks', '[' + row.marks + ' Marks]'));
     return head;

@@ -383,6 +383,20 @@ class PapersPrintTests(unittest.TestCase):
             'edexcel-9fm0-01-sample': (9, 75), 'edexcel-9fm0-02-sample': (7, 75), 'edexcel-9ma0-01-sample': (15, 100),
             'edexcel-9ma0-02-sample': (16, 100), 'edexcel-9ma0-03-sample': (10, 100)})
 
+    def test_as_chapter_mapping_stays_out_of_printed_questions_and_schemes(self):
+        rows = self.exam_rows('edexcel-8ma0-01-2025-june', [1])
+        rows[0].update(bookTitle='Pure Year 1', topicTitle='Graph transformations',
+                       printChapter={'id': '4', 'title': 'Graph transformations'})
+        preview, result = self.preview(rows, includeAnswers=True)
+        self.assertTrue(result['ready'], result)
+        details = preview.locator('.compact-provenance')
+        self.assertGreaterEqual(details.count(), 2)
+        for text, title in details.evaluate_all('nodes => nodes.map(n => [n.innerText, n.title])'):
+            for value in (text, title):
+                self.assertIn(rows[0]['sourceLabel'], value)
+                self.assertNotRegex(value, 'Ch4|Pure Year 1|Y1 Pure|Graph transformations')
+        preview.close()
+
     def test_official_as_complete_papers_print_in_every_layout(self):
         sources = json.loads((ROOT / 'scripts/import/sets/v079-as/sources.json').read_text())
         self.assertEqual(len(sources), 37)
