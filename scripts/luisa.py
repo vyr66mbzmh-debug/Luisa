@@ -587,7 +587,9 @@ def scan(root=ROOT):
 PRIVATE_HASHES = 'docs/security/private-hashes.json'
 EMAIL_SCOPE = re.compile(r'(?:\.md$|^scripts/|^docs/(?!evidence/)|^\.github/|^HANDOFF|^CHANGELOG|^AGENTS|^CLAUDE)')
 ALLOWED_EMAIL = re.compile(r'(?:noreply@[\w.]+|[\w.+-]+@users\.noreply\.github\.com|[\w.+-]+@example\.(?:com|org)|[\w.+-]+@[\w.-]+\.test)$')
-TOKEN = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|(?<![\w.-])(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}(?![\w-])|\b(?:\d{1,3}\.){3}\d{1,3}\b')
+ADDRESS_PATTERN = r'(?<![\w.-])(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}(?![\w-])|\b(?:\d{1,3}\.){3}\d{1,3}\b'
+HOST_OR_IP = re.compile(ADDRESS_PATTERN)
+TOKEN = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}|' + ADDRESS_PATTERN)
 PERSONAL_PATH = re.compile(r'(?:/Users|/home)/(?!runner\b|Shared\b|<|\$|\{)[A-Za-z0-9._-]+(?![A-Za-z0-9._-])|[A-Z]:\\{1,2}Users\\{1,2}[A-Za-z0-9._-]+')
 BINARY_SUFFIXES = {'.pdf', '.png', '.jpg', '.jpeg', '.gif', '.webp', '.ico', '.woff', '.woff2', '.ttf', '.otf', '.zip', '.gz',
                    '.pptx', '.docx', '.xlsx', '.sqlite', '.mp4', '.mp3'}
@@ -644,7 +646,10 @@ def privacy(root=ROOT, workspace_values=None):
         count += 1
         if PERSONAL_PATH.search(text):
             errors.append((name, 'personal absolute path'))
-        for token in set(TOKEN.findall(text)):
+        # An email requires an at sign. All other address checks still run on
+        # vector data, including long embedded image and font sections.
+        addresses = TOKEN if '@' in text else HOST_OR_IP
+        for token in set(addresses.findall(text)):
             if any(hashlib.sha256(v.encode()).hexdigest() in hashes for v in token_variants(token)):
                 errors.append((name, 'private host or address'))
                 break
