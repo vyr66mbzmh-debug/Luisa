@@ -6483,13 +6483,16 @@
         "scripts/duplicates.py finds candidates across all sources; scripts/import/pmt.py and scripts/import/integrate.py refuse an import with an undecided candidate, and skip removed or already-imported questions.",
         "scripts/luisa.py check (part of the gate) fails on any duplicateOf link, undecided candidate, removed ID still present or stale migration; tests cover it.",
         "The whole bank (all sources) was checked once in v0.77 and the result recorded in the evidence file.",
-        "The generator keeps its duplicate-skip safety net; with no duplicates left the \"skips N copies\" note never appears."
+        "The generator keeps its duplicate-skip safety net; with no duplicates left the \"skips N copies\" note never appears.",
+        "For every future import, retain the official paper question and its official scheme when another source supplies the same problem. Delete the confirmed duplicate from the selectable catalogue and its question payload. In particular, delete the PMT copy. Preserve saved selection IDs and additional topic mappings on the official survivor, and record both IDs and the comparison."
       ],
       "evidence": [
         "GitHub issue #141",
         "docs/evidence/duplicate-decisions.json",
         "scripts/duplicates.py",
-        "tests/test_duplicates.py"
+        "tests/test_duplicates.py",
+        "GitHub issue #145",
+        "docs/evidence/v079-pmt-duplicates.json"
       ]
     },
     {
