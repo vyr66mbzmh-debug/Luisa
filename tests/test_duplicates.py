@@ -61,12 +61,14 @@ class BankHasNoDuplicates(unittest.TestCase):
 
     def test_counts_after_removal(self):
         items = duplicates.bank(ROOT)
-        self.assertEqual(len([i for i in items if i['kind'] != 'madas']), 9149)
+        removed = read('docs/evidence/v079-pmt-duplicates.json')['removed']
+        imported = sum(p['questionCount'] for p in read('content/exams/pilot-metadata.json')['papers'] if p.get('qualification') == 'AS')
+        self.assertEqual(len([i for i in items if i['kind'] != 'madas']), 9149 + imported - len(removed))
         self.assertEqual(sum(i['kind'] == 'madas' for i in items), 1018)
         pmt = [i for i in items if i['kind'] == 'pmt']
-        self.assertEqual(len(pmt), 83)
-        self.assertEqual(sum(i['id'].startswith('pmt/pure-core-1/') for i in pmt), 58)
-        self.assertEqual(sum(i['id'].startswith('pmt/pure-core-2/') for i in pmt), 25)
+        self.assertEqual(len(pmt) + len(removed), 83)
+        self.assertEqual(sum(i['id'].startswith('pmt/pure-core-1/') for i in pmt) + sum('/pure-core-1/' in r['removed'] for r in removed), 58)
+        self.assertEqual(sum(i['id'].startswith('pmt/pure-core-2/') for i in pmt) + sum('/pure-core-2/' in r['removed'] for r in removed), 25)
 
     def test_no_row_carries_a_copy_link(self):
         for name in ('pmt-catalogue.json', 'exam-catalogue.json', 'practice-catalogue.json'):
@@ -75,18 +77,19 @@ class BankHasNoDuplicates(unittest.TestCase):
 
     def test_every_removal_is_recorded_and_migrated(self):
         decisions = read(duplicates.DECISIONS)['duplicates']
-        self.assertEqual(len(decisions), 51)
-        self.assertEqual(sum(d['retained'].startswith('exam/') for d in decisions), 47)
-        self.assertEqual(sum(d['retained'].startswith('pmt/') for d in decisions), 4)
-        self.assertEqual(read('pmt-catalogue.json')['migrations'], {d['removed']: d['retained'] for d in decisions})
-        pmt_to_pmt = {d['removed']: d['retained'] for d in decisions if d['retained'].startswith('pmt/')}
-        self.assertEqual(pmt_to_pmt, {'pmt/pure-core-1/ch8/q5': 'pmt/pure-core-1/ch3/q3',
-                                      'pmt/pure-core-1/ch8/q8': 'pmt/pure-core-1/ch3/q6',
-                                      'pmt/pure-core-2/ch1/q10': 'pmt/pure-core-1/ch2/q7',
-                                      'pmt/pure-core-2/ch6/q1': 'pmt/pure-core-2/ch3/q3'})
-        trace = read('docs/evidence/v077-duplicates-removed.json')
-        self.assertEqual({(r['removed'], r['retained']) for r in trace['removed']},
-                         {(d['removed'], d['retained']) for d in decisions})
+        old_trace = read('docs/evidence/v077-duplicates-removed.json')['removed']
+        new_trace = read('docs/evidence/v079-pmt-duplicates.json')['removed']
+        self.assertEqual(len(old_trace), 51)
+        self.assertEqual(sum(d['retained'].startswith('exam/') for d in old_trace), 47)
+        migrations = read('pmt-catalogue.json')['migrations']
+        self.assertEqual(migrations, {d['removed']: d['retained'] for d in decisions})
+        self.assertEqual(set(migrations), {d['removed'] for d in old_trace + new_trace})
+        self.assertFalse(set(migrations.values()) & set(migrations))
+        for entry in old_trace + new_trace:
+            target = entry['retained']
+            self.assertEqual(migrations[entry['removed']], migrations.get(target, target))
+        for entry in new_trace:
+            self.assertTrue(entry['retained'].startswith('exam/'))
 
     def test_no_removed_id_is_left_anywhere_in_shipped_data_or_tests(self):
         removed = [d['removed'] for d in read(duplicates.DECISIONS)['duplicates']]
@@ -148,7 +151,7 @@ class ImportersRefuseDuplicates(unittest.TestCase):
 
     def test_known_copies_score_above_the_threshold(self):
         # Each removed copy's retained question, re-imported under a PMT ID, is caught (recall on the 51 pairs).
-        decisions = read(duplicates.DECISIONS)['duplicates']
+        decisions = read('docs/evidence/v077-duplicates-removed.json')['removed']
         for d in decisions:
             self.assertGreaterEqual(d['similarity'], duplicates.IMPORTED, d['removed'])
 

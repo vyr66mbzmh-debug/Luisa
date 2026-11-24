@@ -1,0 +1,123 @@
+# 1
+A system of three equations is defined by
+$$kx + 3y - z = 3$$
+$$3x - y + z = -k$$
+$$-16x - ky - kz = k$$
+where $k$ is a positive constant.
+Given that there is no unique solution to all three equations,
+(a) show that $k = 2$
+[2]
+Using $k = 2$
+(b) determine whether the three equations are consistent, justifying your answer.
+[3]
+(c) Interpret the answer to part (b) geometrically.
+[1]
+
+# 2
+Given that
+$$z_1 = 2 + 3i$$
+$$\left| z_1 z_2 \right| = 39\sqrt{2}$$
+$$\arg(z_1 z_2) = \frac{\pi}{4}$$
+where $z_1$ and $z_2$ are complex numbers,
+(a) write $z_1$ in the form $r(\cos \theta + i \sin \theta)$
+Give the exact value of $r$ and give the value of $\theta$ in radians to 4 significant figures.
+[2]
+(b) Find $z_2$ giving your answer in the form $a + i b$ where $a$ and $b$ are integers.
+[6]
+
+# 3
+@figure 85 Figure 1. The upper semicircle is shaded.
+Figure 1 shows a circle with radius $r$ and centre at the origin. The region $R$, shown shaded in Figure 1, is bounded by the $x$-axis and the part of the circle for which $y > 0$. The region $R$ is rotated through $360^\circ$ about the $x$-axis to create a sphere with volume $V$.
+Use integration to show that $V = \frac{4}{3}\pi r^3$
+[5]
+
+# 4
+All units in this question are in metres.
+A lawn is modelled as a plane that contains the points $L(-2, -3, -1), M(6, -2, 0)$ and $N(2, 0, 0)$, relative to a fixed origin $O$.
+(a) Determine a vector equation of the plane that models the lawn, giving your answer in the form $\mathbf r=\mathbf a+\lambda\mathbf b+\mu\mathbf c$
+[3]
+(b) (i) Show that, according to the model, the lawn is perpendicular to the vector $\begin{pmatrix} 1 \\ 2 \\ -10 \end{pmatrix}$
+(ii) Hence determine a Cartesian equation of the plane that models the lawn.
+[4]
+There are two posts set in the lawn.
+There is a washing line between the two posts.
+The washing line is modelled as a straight line through points at the top of each post with coordinates $P(-10, 8, 2)$ and $Q(6, 4, 3)$.
+(c) Determine a vector equation of the line that models the washing line.
+[2]
+(d) State a limitation of one of the models.
+[1]
+The point $R(2, 5, 2.75)$ lies on the washing line.
+(e) Determine, according to the model, the shortest distance from the point $R$ to the lawn, giving your answer to the nearest cm.
+[2]
+Given that the shortest distance from the point $R$ to the lawn is actually $1.5\text{ m}$,
+(f) use your answer to part (e) to evaluate the model, explaining your reasoning.
+[1]
+
+# 5
+@figure 85 Figure 2. A rectangular block with all three dimensions labelled.
+A block has length $(r + 2)$ cm, width $(r + 1)$ cm and height $r$ cm, as shown in Figure 2.
+In a set of $n$ such blocks, the first block has a height of 1 cm, the second block has a height of 2 cm, the third block has a height of 3 cm and so on.
+(a) Use the standard results for $\sum_{r=1}^{n} r^3, \sum_{r=1}^{n} r^2$ and $\sum_{r=1}^{n} r$ to show that the total volume, $V$, of all $n$ blocks in the set is given by
+$$V = \frac{n}{4} (n + 1)(n + 2)(n + 3) \quad n \geqslant 1$$
+[5]
+Given that the total volume of all $n$ blocks is
+$$(n^4 + 6n^3 - 11710) \text{ cm}^3$$
+(b) determine how many blocks make up the set.
+[2]
+
+# 6
+(i)
+$$\mathbf{A} = \begin{pmatrix} 2 & a \\ a - 4 & b \end{pmatrix}$$
+where $a$ and $b$ are non-zero constants.
+Given that the matrix $\mathbf{A}$ is self-inverse,
+(a) determine the value of $b$ and the possible values for $a$.
+[5]
+The matrix $\mathbf{A}$ represents a linear transformation $M$.
+Using the smaller value of $a$ from part (a),
+(b) show that the invariant points of the linear transformation $M$ form a line, stating the equation of this line.
+[3]
+(ii)
+$$\mathbf{P} = \begin{pmatrix} p & 2p \\ -1 & 3p \end{pmatrix}$$
+where $p$ is a positive constant.
+The matrix $\mathbf{P}$ represents a linear transformation $U$.
+The triangle $T$ has vertices at the points with coordinates $(1, 2), (3, 2)$ and $(2, 5)$.
+The area of the image of $T$ under the linear transformation $U$ is 15
+(a) Determine the value of $p$.
+[4]
+The transformation $V$ consists of a stretch scale factor 3 parallel to the $x$-axis with the $y$-axis invariant followed by a stretch scale factor $-2$ parallel to the $y$-axis with the $x$-axis invariant. The transformation $V$ is represented by the matrix $\mathbf{Q}$.
+(b) Write down the matrix $\mathbf{Q}$.
+[2]
+Given that $U$ followed by $V$ is the transformation $W$, which is represented by the matrix $\mathbf{R}$,
+(c) find the matrix $\mathbf{R}$.
+[2]
+
+# 7
+$$f(z) = z^4 + az^3 + bz^2 + cz + d$$
+where $a, b, c$ and $d$ are real constants.
+The equation $f(z) = 0$ has complex roots $z_1, z_2, z_3$ and $z_4$.
+When plotted on an Argand diagram, the points representing $z_1, z_2, z_3$ and $z_4$ form the vertices of a square, with one vertex in each quadrant.
+Given that $z_1 = 2 + 3i$, determine the values of $a, b, c$ and $d$.
+[6]
+
+# 8
+Prove by induction that, for $n \in \mathbb{Z}^+$
+$$f(n) = 2^{n+2} + 3^{2n+1}$$
+is divisible by 7
+[6]
+
+# 9
+The cubic equation
+$$3x^3 + x^2 - 4x + 1 = 0$$
+has roots $\alpha, \beta$ and $\gamma$.
+Without solving the cubic equation,
+(a) determine the value of $\frac{1}{\alpha} + \frac{1}{\beta} + \frac{1}{\gamma}$
+[3]
+(b) find a cubic equation that has roots $\frac{1}{\alpha}, \frac{1}{\beta}$ and $\frac{1}{\gamma}$, giving your answer in the form
+$x^3 + ax^2 + bx + c = 0$, where $a$, $b$ and $c$ are integers to be determined.
+[3]
+
+# 10
+Given that there are two distinct complex numbers $z$ that satisfy
+$$\{z : |z - 3 - 5i| = 2r\} \cap \{z : \arg(z - 2) = \frac{3\pi}{4}\}$$
+determine the exact range of values for the real constant $r$.
+[7]

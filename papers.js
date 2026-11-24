@@ -31,6 +31,7 @@
   const sourceLabel = row => ['past-exam', 'pmt', 'madas'].includes(row.sourceKind) ? `Source: ${row.sourceLabel.replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
+  const showTopicContext = row => row.sourceKind !== 'madas' && !(row.sourceKind === 'past-exam' && row.paperCode?.startsWith('8'));
   const contextLabel = row => `${row.courseTitle} · ${row.bookTitle} · ${row.topicTitle}`;
   const printLayout = () => $('papers-condensed').checked ? 'condensed' : 'one';
   function persist() {
@@ -320,7 +321,7 @@
       const li = element('li', undefined, 'selected-item');
       const details = document.createElement('details');
       const summary = element('summary', sourceLabel(row));
-      if (row.sourceKind !== 'madas') summary.append(element('small', `${contextLabel(row)} · ${row.skillTitle}`));
+      if (showTopicContext(row)) summary.append(element('small', `${contextLabel(row)} · ${row.skillTitle}`));
       summary.append(element('small', questionMetadata(row), 'question-meta'));
       const preview = element('div', undefined, 'math-content selected-preview');
       details.append(summary, preview);
@@ -392,7 +393,7 @@
       if (loaded.length) target.replaceChildren(...loaded.map(row => {
         const card = element('article', undefined, 'question-card');
         card.append(element('h3', sourceLabel(row), 'source-label'));
-        if (row.sourceKind !== 'madas') card.append(element('p', `${contextLabel(row)} · ${row.skillTitle}`, 'question-context'));
+        if (showTopicContext(row)) card.append(element('p', `${contextLabel(row)} · ${row.skillTitle}`, 'question-context'));
         card.append(element('p', questionMetadata(row), 'question-meta'));
         const preview = element('div', undefined, 'math-content'); fillPreview(preview, row);
         const add = element('button', 'Add to paper'); add.type = 'button'; add.dataset.add = row.id;
