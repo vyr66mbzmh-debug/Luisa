@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.76
+
+[Issue #138](https://github.com/vyr66mbzmh-debug/Luisa/issues/138) imports the 61 PMT Core Pure 2 topic-sheet questions with their own mark schemes, rubric difficulty and duplicate links (PAP-076-1 to PAP-076-8), completing the owner's PMT Core Pure folders.
+
 ## Papers v0.75
 
 [Issue #137](https://github.com/vyr66mbzmh-debug/Luisa/issues/137) imports the 73 PMT Core Pure 1 topic-sheet questions with their own mark schemes, a PMT source tickbox, rubric difficulty and duplicate links (PAP-075-1 to PAP-075-8). Core Pure 2 follows in v0.76 (#138).
