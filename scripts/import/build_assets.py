@@ -7,7 +7,7 @@ Writes resources/exams/<pid>/*.svg and the asset record <state>/import/<set>/ass
 (every text span and image lies in exactly one crop; breaks only in empty bands).
 --figures-only re-creates only the question-figure SVGs (needs the question paper alone) and keeps the scheme crops.
 """
-import hashlib, json, math, sys
+import base64, hashlib, json, math, re, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import common  # noqa: E402
@@ -44,7 +44,19 @@ def whole(box):
 def write_svg(src, page, box, name):
     r = pymupdf.Rect(box); tmp = pymupdf.open(); p = tmp.new_page(width=r.width, height=r.height)
     p.show_pdf_page(p.rect, src, page - 1, clip=r)
-    target = OUT / name; target.write_text(p.get_svg_image(text_as_path=True)); tmp.close()
+    svg = p.get_svg_image(text_as_path=True)
+    tmp.close()
+    diagram = P.get('msDiagram', {})
+    if '-ms-' in name and page == diagram.get('page'):
+        def replace_image(match):
+            if hashlib.sha256(base64.b64decode(match[1])).hexdigest() != diagram['imageSha256']:
+                return match[0]
+            return (SET.dir / diagram['vector']).read_text().strip()
+        svg = re.sub(r'<image\b[^>]*?xlink:href="data:image/jpeg;base64,([^"]+)"\s*/>', replace_image, svg)
+        if 'data:image/jpeg;base64,' in svg or 'core19q8-' not in svg:
+            raise ValueError(f'{name}: could not verify the source diagram replacement')
+    target = OUT / name
+    target.write_text(svg)
     data = target.read_bytes()
     return {'asset': target.relative_to(ROOT).as_posix(), 'sha256': hashlib.sha256(data).hexdigest(), 'bytes': len(data),
             'sourcePage': page, 'boundsPoints': [round(v, 3) for v in box]}
@@ -110,6 +122,9 @@ def gapcut(page, y):
 def segments(page, lo=None, hi=None):
     lo = gapcut(page, lo) if lo is not None else -1e9; hi = gapcut(page, hi) if hi is not None else 1e9
     if P.get('msfoot'): hi = min(hi, P['msfoot'])  # sample schemes: drop the page footer band (rule, Pearson imprint, page-number box)
+    page_bottom = P.get('msBottom', {}).get(str(page.number + 1))
+    if page_bottom is not None:
+        hi = min(hi, page_bottom)  # crop a verified blank answer-box tail or publisher footer
     inr = lambda r: lo <= (r.y0 + r.y1) / 2 <= hi
     clip = lambda r: pymupdf.Rect(r.x0, max(r.y0, lo), r.x1, min(r.y1, hi))
     sp = [(t, r) for t, r in spans(page) if inr(r)]
