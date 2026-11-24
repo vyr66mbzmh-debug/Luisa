@@ -1,0 +1,396 @@
+{
+ "rule": "PAP-077-2 (standing from v0.77). No question may exist twice in the bank. An official past paper beats a PMT question, the earlier PMT question beats a later one, and a second copy of the same official paper is skipped. scripts/duplicates.py lists candidates; an agent confirms each by looking at both questions and records it here. scripts/luisa.py check (the gate) fails on any candidate not recorded here, any duplicateOf link, and any removed ID still in the bank.",
+ "thresholds": {
+  "imported": 0.4,
+  "own": 0.95,
+  "note": "A pair involving an official or PMT question is a candidate from similarity 0.4; a pair of Luisa or Practice Booklet questions from 0.95."
+ },
+ "duplicates": [
+  {
+   "removed": "pmt/pure-core-1/ch2/q9",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q1",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q1: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch3/q1",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q4",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch6/q7",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q7",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 0.701
+  },
+  {
+   "removed": "pmt/pure-core-1/ch6/q8",
+   "retained": "exam/edexcel-9fm0-01-2021-november/q4",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/01 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch7/q3",
+   "retained": "exam/edexcel-9fm0-01-2021-november/q1",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/01 Q1: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 0.808
+  },
+  {
+   "removed": "pmt/pure-core-1/ch7/q5",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q2",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q2: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q3",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q6",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q6: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q5",
+   "retained": "pmt/pure-core-1/ch3/q3",
+   "reason": "Copy of the earlier PMT question PMT Core Pure 1 Ch.3 Series Q3: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q7",
+   "retained": "exam/edexcel-9fm0-01-sample/q2",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q2: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q8",
+   "retained": "pmt/pure-core-1/ch3/q6",
+   "reason": "Copy of the earlier PMT question PMT Core Pure 1 Ch.3 Series Q6: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q9",
+   "retained": "exam/edexcel-9fm0-02-sample/q3",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch9/q1",
+   "retained": "exam/edexcel-9fm0-02-sample/q2",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q2: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 0.9
+  },
+  {
+   "removed": "pmt/pure-core-1/ch9/q2",
+   "retained": "exam/edexcel-9fm0-01-sample/q8",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q8: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch9/q8",
+   "retained": "exam/edexcel-9fm0-01-2021-november/q7",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/01 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-1/ch9/q9",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q7",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q2",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q4",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.613
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q3",
+   "retained": "exam/edexcel-9fm0-02-2020-october/q4",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/02 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q4",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q9",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q9: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.591
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q5",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q6",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q6: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q6",
+   "retained": "exam/edexcel-9fm0-02-sample/q4",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q9",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q8",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q8: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q10",
+   "retained": "pmt/pure-core-1/ch2/q7",
+   "reason": "Copy of the earlier PMT question PMT Core Pure 1 Ch.2 Argand Diagrams Q7: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch2/q3",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q3",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch2/q4",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q4",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.581
+  },
+  {
+   "removed": "pmt/pure-core-2/ch2/q5",
+   "retained": "exam/edexcel-9fm0-02-sample/q5",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch2/q8",
+   "retained": "exam/edexcel-9fm0-01-sample/q1",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q1: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch3/q2",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q2",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q2: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch3/q4",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q5",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch3/q5",
+   "retained": "exam/edexcel-9fm0-01-2020-october/q2",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/01 Q2: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch3/q6",
+   "retained": "exam/edexcel-9fm0-01-sample/q6",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q6: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.98
+  },
+  {
+   "removed": "pmt/pure-core-2/ch4/q1",
+   "retained": "exam/edexcel-9fm0-01-sample/q7",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.544
+  },
+  {
+   "removed": "pmt/pure-core-2/ch4/q3",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q8",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q8: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.633
+  },
+  {
+   "removed": "pmt/pure-core-2/ch5/q1",
+   "retained": "exam/edexcel-9fm0-01-sample/q4",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.695
+  },
+  {
+   "removed": "pmt/pure-core-2/ch5/q4",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q3",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.617
+  },
+  {
+   "removed": "pmt/pure-core-2/ch5/q5",
+   "retained": "exam/edexcel-9fm0-01-2020-october/q3",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/01 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.535
+  },
+  {
+   "removed": "pmt/pure-core-2/ch5/q6",
+   "retained": "exam/edexcel-9fm0-02-sample/q6",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q6: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q1",
+   "retained": "pmt/pure-core-2/ch3/q3",
+   "reason": "Copy of the earlier PMT question PMT Core Pure 2 Ch.3 Methods in Calculus Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q2",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q3",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q3",
+   "retained": "exam/edexcel-9fm0-02-2020-october/q1",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/02 Q1: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q5",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q1",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q1: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q7",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q7",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.971
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q8",
+   "retained": "exam/edexcel-9fm0-01-2021-november/q9",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/01 Q9: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.964
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q2",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q5",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.601
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q3",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q8",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q8: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.789
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q4",
+   "retained": "exam/edexcel-9fm0-02-sample/q7",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.605
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q5",
+   "retained": "exam/edexcel-9fm0-01-2020-october/q7",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/01 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q6",
+   "retained": "exam/edexcel-9fm0-01-sample/q5",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q7",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q5",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q8",
+   "retained": "exam/edexcel-9fm0-01-sample/q9",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q9: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.75
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q9",
+   "retained": "exam/edexcel-9fm0-02-2020-october/q3",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/02 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.577
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q10",
+   "retained": "exam/edexcel-9fm0-01-2020-october/q5",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/01 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.604
+  }
+ ],
+ "notDuplicates": [
+  {
+   "id": "luisa/smq-1.40:21",
+   "checkedAgainst": "luisa/smq-1.40:17",
+   "why": "Same wording, different diagram: A and B are at different intersections (q17.png against q21.png, viewed).",
+   "decided": "v0.77"
+  },
+  {
+   "id": "luisa/smq-1.28:30",
+   "checkedAgainst": "luisa/smq-1.28:29",
+   "why": "Stretch parallel to the y-axis against the x-axis; a different exercise on the same function list.",
+   "decided": "v0.77"
+  },
+  {
+   "id": "luisa/smq-1.28:52",
+   "checkedAgainst": "luisa/smq-1.28:51",
+   "why": "Reflection in the x-axis against the y-axis; a different exercise on the same function list.",
+   "decided": "v0.77"
+  },
+  {
+   "id": "luisa/1.04:7",
+   "checkedAgainst": "exam/edexcel-9fm0-01-2019-june/q1",
+   "why": "Different roots (1+i, -2, 3 against -1+2i and 3-i) and no Argand diagram part.",
+   "decided": "v0.77"
+  },
+  {
+   "id": "luisa/1.04:7",
+   "checkedAgainst": "pmt/pure-core-1/ch2/q10",
+   "why": "Different problem: the PMT question gives a square of roots with z1 = 2+3i.",
+   "decided": "v0.77"
+  },
+  {
+   "id": "luisa/1.04:9",
+   "checkedAgainst": "exam/edexcel-9fm0-01-2019-june/q1",
+   "why": "Different roots (2+i and 4-3i) and no Argand diagram part.",
+   "decided": "v0.77"
+  },
+  {
+   "id": "exam/edexcel-9ma0-02-2018-june/q9",
+   "checkedAgainst": "exam/edexcel-9ma0-01-sample/q10",
+   "why": "Derivative of cos (June 2018) against derivative of sin (Sample); different questions.",
+   "decided": "v0.77"
+  },
+  {
+   "id": "exam/edexcel-9ma0-01-2018-june/q2",
+   "checkedAgainst": "exam/edexcel-9ma0-01-sample/q1",
+   "why": "Different curves (y = x^2 - 2x - 24 sqrt x against y = 3x^4 - 8x^3 - 3) with the same part structure.",
+   "decided": "v0.77"
+  },
+  {
+   "id": "pmt/pure-core-1/ch4/q3",
+   "checkedAgainst": "exam/edexcel-9fm0-01-2023-june/q1",
+   "why": "Different cubic (x^3+3x^2-8x+6 against x^3-7x^2-12x+6) and transformation (alpha-1 against alpha+2).",
+   "decided": "v0.77"
+  },
+  {
+   "id": "practice/maths-a-level/maths-pure-year-2/ch5/5.5/q4",
+   "checkedAgainst": "exam/edexcel-9ma0-01-2018-june/q1",
+   "why": "Different expression ((1-cos 2theta)/(3theta sin 2theta) against (1-cos 4theta)/(2theta sin 3theta)).",
+   "decided": "v0.77"
+  },
+  {
+   "id": "pmt/pure-core-1/ch8/q2",
+   "checkedAgainst": "luisa/1.48:7",
+   "why": "Different series (1/((2r-1)(2r+1)) against 1/((r+1)(r+2))).",
+   "decided": "v0.77"
+  },
+  {
+   "id": "pmt/pure-core-1/ch4/q3",
+   "checkedAgainst": "pmt/pure-core-1/ch4/q1",
+   "why": "Different cubic and transformation (2alpha+1 against alpha-1).",
+   "decided": "v0.77"
+  },
+  {
+   "id": "pmt/pure-core-2/ch6/q6",
+   "checkedAgainst": "exam/edexcel-9fm0-01-2025-june/q2",
+   "why": "v0.76 decision: different equation (64cosh^4 x - 64cosh^2 x - 9 = 0 against sinh 2x = 3 sinh x); only the boilerplate instruction lines are shared.",
+   "decided": "v0.76"
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+{
+  "version": "0.77",
+  "previous": "0.76",
+  "date": "2026-11-24",
+  "issue": 141,
+  "note": "One copy of every question: the 51 PMT copies of past-paper or earlier PMT questions are removed, a permanent no-duplicates rule guards every import, the PMT tickbox is gone and PMT questions are exam-style questions.",
+  "changes": [
+    "The 51 PMT questions that repeated a past-paper question (47) or an earlier PMT question (4) are removed; the original is kept with its own wording, marks, mark scheme and difficulty, and gains any chapter or skill the copy had.",
+    "Papers now holds 83 PMT questions (58 Core Pure 1, 25 Core Pure 2; 704 marks) and 9,149 questions in all.",
+    "The PMT tickbox is removed. PMT questions are exam-style questions: they appear under \"Exam style\" for pupils and in teacher exam papers, where only the mark scheme names the source.",
+    "A saved selection that held a removed copy now holds the question kept in its place, once, and says so.",
+    "The bank never holds two copies of a question: every importer refuses a copy, the release gate fails on one, and the whole bank was checked once (no further copies).",
+    "56 PMT questions now name their original exam in the mark scheme, each confirmed by sight against the paper; the other 27 are recorded as unknown."
+  ],
+  "reportIntro": [
+    "Luisa v0.77 keeps one copy of every question. The 51 PMT questions that repeated a past-paper question or an earlier PMT question are gone; the original stays, with its own wording, marks and mark scheme. Papers now holds 83 PMT questions and 9,149 questions in all.",
+    "The PMT tickbox has gone: PMT questions are exam-style questions, in pupil practice and in teacher exam papers, where only the mark scheme names the source. A permanent rule stops any future import from adding a copy, and a check of the whole bank found no other copies."
+  ],
+  "requirements": [
+    "PAP-077-1",
+    "PAP-077-2",
+    "PAP-077-3",
+    "PAP-077-4",
+    "PAP-077-5"
+  ],
+  "changelog": [
+    "Papers: 51 duplicate PMT questions removed from `pmt-catalogue.json`, `content/pmt/` and `resources/pmt/` (survivor: the official paper, else the earliest PMT question); chapter keys and skills carried to the survivor; `migrations` in `pmt-catalogue.json` maps each removed ID to its survivor for saved selections. Traceability in `docs/evidence/v077-duplicates-removed.json`.",
+    "No-duplicates rule: `scripts/duplicates.py` (candidates, check, incoming, remove) with decisions in `docs/evidence/duplicate-decisions.json`; `scripts/luisa.py check` fails on any copy, undecided candidate or stale migration; `scripts/import/pmt.py` and `scripts/import/integrate.py` refuse copies; the generator's copy safety net stays.",
+    "Papers: the PMT tickbox, its state key and its tests are removed; PMT rows are in the exam-style bank; a saved `pmt` key is ignored.",
+    "Mark scheme: a PMT question with a visually confirmed original exam (`originalExam`, 56 of 83) names it after its source; evidence in `docs/evidence/v077-pmt-original-exams.json`.",
+    "Tests: `tests/test_duplicates.py` (bank, importers, gate), PMT counts 83/58/25, the no-tickbox and migration browser test, live check that PMT questions are exam-style in every edition."
+  ],
+  "roadmapHeading": "Papers v0.77",
+  "roadmap": "[Issue #141](https://github.com/vyr66mbzmh-debug/Luisa/issues/141) removes the 51 duplicate PMT questions, adds a permanent no-duplicates rule with an importer and gate check, retires the PMT tickbox so PMT questions are exam-style, and records confirmed original exams (PAP-077-1 to PAP-077-5).",
+  "handoff": "docs/releases/v0.77-handoff.md"
+}

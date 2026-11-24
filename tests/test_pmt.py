@@ -1,7 +1,9 @@
-"""PAP-075 / PAP-076: PMT Core Pure topic-sheet questions, checked chapter by chapter.
+"""PAP-075 / PAP-076 / PAP-077: PMT Core Pure topic-sheet questions, checked chapter by chapter.
 
 Expected counts and marks come from the source inventory taken before import (question count and the printed
 "(Total for question = N marks)" lines of each PDF); the evidence file records the SHA-256 and page count of each PDF.
+Since v0.77 the 51 questions that copied an official past paper or an earlier PMT question are removed (PAP-077-1);
+each sheet's inventory equals the questions kept plus the questions removed.
 """
 import collections
 import html
@@ -13,6 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOGUE = json.loads((ROOT / 'pmt-catalogue.json').read_text())['questions']
+REMOVED = {d['removed']: d for d in json.loads((ROOT / 'docs/evidence/v077-duplicates-removed.json').read_text())['removed']}
 
 # sheetId -> (questions, total marks) from the inventory of the source PDFs.
 EXPECTED = {
@@ -22,8 +25,9 @@ EXPECTED = {
     'pure-core-2-ch3': (7, 49), 'pure-core-2-ch4': (4, 36), 'pure-core-2-ch5': (6, 59), 'pure-core-2-ch6': (9, 67),
     'pure-core-2-ch7': (3, 30), 'pure-core-2-ch8': (10, 138),
 }
+# Source slips kept as printed, on questions still in the bank (two more were on removed copies).
 SOURCE_SLIPS = {'pmt/pure-core-1/ch2/q7', 'pmt/pure-core-1/ch6/q2', 'pmt/pure-core-1/ch6/q3', 'pmt/pure-core-1/ch6/q6',
-                'pmt/pure-core-1/ch9/q10', 'pmt/pure-core-2/ch1/q10', 'pmt/pure-core-2/ch3/q6'}
+                'pmt/pure-core-1/ch9/q10'}
 LEAKS = re.compile(r'PMT|PhysicsAndMathsTutor|Physics\s*&?\s*Maths\s*Tutor|Mark Scheme|Total for question|\bEdexcel\b|9FM0', re.I)
 
 
@@ -55,16 +59,44 @@ class PmtChapters(unittest.TestCase):
             self.rows[row['sheetId']].append(row)
         self.payloads = payloads()
 
+    def test_counts_after_duplicate_removal(self):
+        self.assertEqual(len(CATALOGUE), 83)
+        self.assertEqual(sum(r['id'].startswith('pmt/pure-core-1/') for r in CATALOGUE), 58)
+        self.assertEqual(sum(r['id'].startswith('pmt/pure-core-2/') for r in CATALOGUE), 25)
+        self.assertEqual(sum(r['marks'] for r in CATALOGUE), 704)
+        self.assertEqual(collections.Counter(r['difficulty'] for r in CATALOGUE), {'easy': 29, 'medium': 42, 'difficult': 12})
+        self.assertEqual(len(REMOVED), 51)
+
+    def test_original_exams_are_recorded_only_when_confirmed_PAP_077_5(self):
+        # Every survivor is listed; a confirmed original names a paper, series and question; the rest are 'unknown'.
+        evidence = json.loads((ROOT / 'docs/evidence/v077-pmt-original-exams.json').read_text())
+        listed = {r['id']: r for r in evidence['questions']}
+        self.assertEqual(set(listed), {r['id'] for r in CATALOGUE})
+        confirmed = {i: r for i, r in listed.items() if r['originalExam'] != 'unknown'}
+        self.assertEqual((evidence['summary']['confirmed'], evidence['summary']['unknown']), (len(confirmed), len(listed) - len(confirmed)))
+        self.assertEqual(len(confirmed), 56)
+        for row in CATALOGUE:
+            with self.subTest(row['id']):
+                record = listed[row['id']]
+                self.assertEqual(row.get('originalExam'), confirmed.get(row['id'], {}).get('originalExam'))
+                if row['id'] in confirmed:
+                    self.assertRegex(record['originalExam'], r'^Edexcel [89]FM0/0[12] .+ Q\d+$')
+                    self.assertEqual(record['originalExam'], f"Edexcel {record['paper']} {record['series']} Q{record['questionNumber']}")
+                    self.assertTrue(record['dateEvidence'] and record['comparedWith'] and record['method'])
+
     def test_every_imported_chapter_is_complete_with_its_printed_marks(self):
         imported = set(self.rows)
         self.assertTrue(imported, 'no PMT chapters imported')
         self.assertLessEqual(imported, set(EXPECTED), 'a chapter without an inventory entry')
-        for sheet in sorted(imported):
+        for sheet in sorted(EXPECTED):
             with self.subTest(sheet=sheet):
-                rows = self.rows[sheet]
+                book, chapter = sheet.rsplit('-ch', 1)
+                kept = {r['questionNumber']: r['marks'] for r in self.rows[sheet]}
+                gone = {int(i.rsplit('/q', 1)[1]): d['marks'] for i, d in REMOVED.items() if i.startswith(f'pmt/{book}/ch{chapter}/')}
                 count, marks = EXPECTED[sheet]
-                self.assertEqual([r['questionNumber'] for r in rows], list(range(1, count + 1)))
-                self.assertEqual(sum(r['marks'] for r in rows), marks)
+                self.assertFalse(set(kept) & set(gone))
+                self.assertEqual(sorted(kept | gone), list(range(1, count + 1)))
+                self.assertEqual(sum(kept.values()) + sum(gone.values()), marks)
 
     def test_rows_carry_the_source_scheme_flag_difficulty_and_source(self):
         library = skill_library()
@@ -119,22 +151,23 @@ class PmtChapters(unittest.TestCase):
                 if parts:  # a few sheets print only the question total
                     self.assertEqual(sum(parts), row['marks'])
 
-    def test_duplicates_are_marked_and_point_at_a_real_question(self):
+    def test_no_duplicates_remain_and_removed_ids_migrate(self):
         exam_ids = {r['id'] for r in json.loads((ROOT / 'exam-catalogue.json').read_text())['questions']}
         pmt_ids = {r['id'] for r in CATALOGUE}
+        migrations = json.loads((ROOT / 'pmt-catalogue.json').read_text())['migrations']
         for row in CATALOGUE:
-            if row['duplicateOf']:
-                with self.subTest(id=row['id']):
-                    self.assertNotEqual(row['duplicateOf'], row['id'])
-                    self.assertIn(row['duplicateOf'], exam_ids | pmt_ids)
-                    original = next((r for r in CATALOGUE if r['id'] == row['duplicateOf']), None)
-                    self.assertTrue(original is None or not original['duplicateOf'], 'a copy must point at the original')
-        # Spot checks confirmed against the rendered pages.
-        dup = {r['id']: r['duplicateOf'] for r in CATALOGUE}
-        if 'pmt/pure-core-1/ch2/q9' in dup:
-            self.assertEqual(dup['pmt/pure-core-1/ch2/q9'], 'exam/edexcel-9fm0-01-2019-june/q1')
-        if 'pmt/pure-core-1/ch8/q5' in dup:
-            self.assertEqual(dup['pmt/pure-core-1/ch8/q5'], 'pmt/pure-core-1/ch3/q3')
+            self.assertNotIn('duplicateOf', row)
+        self.assertEqual(set(migrations), set(REMOVED))
+        for old, new in migrations.items():
+            with self.subTest(id=old):
+                self.assertNotIn(old, pmt_ids)
+                self.assertIn(new, exam_ids | pmt_ids)
+                self.assertEqual(REMOVED[old]['retained'], new)
+                self.assertTrue(new.startswith('exam/') or new in pmt_ids)
+        # Spot checks confirmed against the rendered pages (v0.75): an official original, and an earlier PMT original.
+        by_label = {d['removedLabel']: d['retained'] for d in REMOVED.values()}
+        self.assertEqual(by_label['PMT Core Pure 1 Ch.2 Argand Diagrams Q9'], 'exam/edexcel-9fm0-01-2019-june/q1')
+        self.assertEqual(by_label['PMT Core Pure 1 Ch.8 Proof by Induction Q5'], 'pmt/pure-core-1/ch3/q3')
 
     def test_offline_packs_carry_every_pmt_question(self):
         # Run the real offline generator over a symlinked copy, so the repository itself is not written to.

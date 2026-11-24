@@ -2,6 +2,31 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.76 -->
+**Release 0.76 · GitHub #138.** Written for any successor agent, engine or person; it needs no earlier conversation.
+
+**Current state.** Luisa v0.76 is the published version on Cloudflare (owner edition) and ADA (staff and pupil editions), all built from one merged revision recorded on GitHub #138. Papers holds 44 past papers (444 questions) and 134 PMT questions (73 Core Pure 1, 61 Core Pure 2; 1,183 marks), 9,200 questions in all. The owner's three-release assignment (v0.74 mark-scheme flag, v0.75 and v0.76 PMT) is complete.
+
+**What changed (PAP-076-1 … PAP-076-8 in docs/requirements/register.json, each with acceptance criteria).**
+- **Import (PAP-076-1, 2).** The eight owner PDFs "PMT further maths questions/Year 2/Ch.N …" were identified by content and hash (inventory on #138; hashes and pages in `docs/evidence/v076-import-pmt-core-pure-2.json`). The set `scripts/import/sets/v076-pmt-cp2/` (prompts, `questions.json`, `figs.json`, `files.py`) feeds `scripts/import/pmt.py` exactly as in v0.75. Source PDFs stay outside Git.
+- **Schemes (PAP-076-3).** Each question's scheme is its own page-image crops (`markScheme: source`). `scripts/mark_schemes.py check` now rejects a PMT row whose steps are not crops of its own scheme. Year 2 has no misplaced appendix.
+- **Difficulty (PAP-076-4).** The v0.75 rubric, unchanged: 13 easy, 36 medium, 12 difficult, each with a one-line reason. Reviewer re-rate of 10 (15%, seed 76): 7 of 10 agreed blind, 9 of 10 after resolution by the rubric.
+- **Tickbox (PAP-076-5).** Core Pure 2 joins the "PMT" tickbox. A version-2 saved session now restores its old exam box to exam-style and past papers only, never PMT (a v0.75 review finding).
+- **Duplicates (PAP-076-6).** 36 copies carry `duplicateOf` (34 past paper, 2 PMT); Ch.6 Q6 is confirmed not a copy of June 2025 9FM0/01 Q2. The selection heading says how many copies a generated paper skips, and the count box is capped at that pool. The six Core Pure 1 copies whose originals span several chapters now carry those chapters too.
+- **Tests and evidence (PAP-076-7, 8).** `tests/test_pmt.py` per chapter for both books; a mixed past-paper + Core Pure 1 + Core Pure 2 exam print test with no source before the scheme.
+
+**Source slips kept as printed (for owner review).** Ch.1 Q10 "r(cosθ θ+ isinθ)" (same as Core Pure 1 Ch.2 Q7); Ch.3 Q6(c) lacks "where" (the Sample paper copy has it). Ch.2 Q4, Ch.3 Q2, Ch.5 Q5 and Ch.6 Q3 and Q6 print only question totals.
+
+**Owner note.** Copies and their past-paper originals can differ in difficulty (Core Pure 1: 6 of 15; Core Pure 2: 19 of 36) because the PMT ratings follow the new rubric and the past-paper ratings come from earlier imports. Both were kept; no generated paper holds both copies.
+
+**Next jobs.** None from this assignment. The owner may review the source slips and the difficulty note above.
+
+**Verified.** The gate, the PMT tests and the full Papers browser and print suites passed; exact-head CI, the independent code review and the live checks (owner, disconnected use, ADA staff and pupil, accounts unchanged, the published report's single handoff, recovery ZIP) are recorded on #138.
+
+**Outstanding.** Two owner notes from v0.65 still await the owner's view: the per-cell marks in the one three-cell table question, and the course label for a future 9FM0 Mechanics paper.
+
+**Usage.** v0.76 used 9,381,102 tokens up to the release build (main session since the v0.76 baseline plus the independent maths reviewer; the Core Pure 2 transcription ran earlier in the same session and is counted on #137); the final count is on #138.
+
 <!-- LUISA-REPORT-HANDOFF v0.75 -->
 **Release 0.75 · GitHub #137.** Written for any successor agent, engine or person; it needs no earlier conversation.
 

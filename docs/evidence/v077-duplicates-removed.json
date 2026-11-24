@@ -1,0 +1,1021 @@
+{
+ "requirement": "PAP-077-1",
+ "issue": 141,
+ "release": "v0.77",
+ "rule": "An official past-paper question always beats a PMT question; between two PMT questions the earlier (Core Pure 1 before Core Pure 2, then chapter, then question) is kept. No chains existed: none of the four PMT originals was itself a copy.",
+ "derivation": "Re-derived from duplicateOf in pmt-catalogue.json (v0.76) and the duplicates lists of docs/evidence/v075-import-pmt-core-pure-1.json and v076-import-pmt-core-pure-2.json: 51 copies (Core Pure 1 15, Core Pure 2 36; 47 of official past-paper questions, 4 of PMT questions), identical to the brief. No difference.",
+ "carryOver": "Before deletion each survivor gained the chapter keys and skill mappings the copy had and it lacked (13 survivors; exam rows in exam-catalogue.json and pilot-metadata.json). Wording, marks, mark schemes and difficulty of every survivor are unchanged (checked field by field against v0.76).",
+ "migration": "pmt-catalogue.json \"migrations\" maps each removed ID to its retained ID. The Papers page rewrites a restored selection once (position kept, a question selected twice kept once) and saves the new IDs.",
+ "bank": {
+  "before": 9200,
+  "after": 9149
+ },
+ "pmt": {
+  "before": {
+   "questions": 134,
+   "marks": 1183,
+   "difficulty": {
+    "difficult": 23,
+    "easy": 39,
+    "medium": 72
+   }
+  },
+  "after": {
+   "questions": 83,
+   "marks": 704,
+   "difficulty": {
+    "difficult": 12,
+    "easy": 29,
+    "medium": 42
+   }
+  },
+  "coreOneBefore": {
+   "questions": 73,
+   "marks": 625,
+   "difficulty": {
+    "difficult": 11,
+    "easy": 26,
+    "medium": 36
+   }
+  },
+  "coreOneAfter": {
+   "questions": 58,
+   "marks": 498,
+   "difficulty": {
+    "difficult": 10,
+    "easy": 21,
+    "medium": 27
+   }
+  },
+  "coreTwoBefore": {
+   "questions": 61,
+   "marks": 558,
+   "difficulty": {
+    "difficult": 12,
+    "easy": 13,
+    "medium": 36
+   }
+  },
+  "coreTwoAfter": {
+   "questions": 25,
+   "marks": 206,
+   "difficulty": {
+    "difficult": 2,
+    "easy": 8,
+    "medium": 15
+   }
+  }
+ },
+ "removed": [
+  {
+   "removed": "pmt/pure-core-1/ch2/q9",
+   "removedLabel": "PMT Core Pure 1 Ch.2 Argand Diagrams Q9",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q1",
+   "retainedLabel": "Edexcel June 2019 9FM0/01 Q1",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q1: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 9,
+   "difficulty": {
+    "removed": "easy",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 6
+  },
+  {
+   "removed": "pmt/pure-core-1/ch3/q1",
+   "removedLabel": "PMT Core Pure 1 Ch.3 Series Q1",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q4",
+   "retainedLabel": "Edexcel November 2021 9FM0/02 Q4",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 9,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 4
+  },
+  {
+   "removed": "pmt/pure-core-1/ch6/q7",
+   "removedLabel": "PMT Core Pure 1 Ch.6 Matrices Q7",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q7",
+   "retainedLabel": "Edexcel June 2019 9FM0/02 Q7",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 0.701,
+   "marks": 11,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": [
+     "1.43"
+    ]
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-1/ch6/q8",
+   "removedLabel": "PMT Core Pure 1 Ch.6 Matrices Q8",
+   "retained": "exam/edexcel-9fm0-01-2021-november/q4",
+   "retainedLabel": "Edexcel November 2021 9FM0/01 Q4",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/01 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 9,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-1/ch7/q3",
+   "removedLabel": "PMT Core Pure 1 Ch.7 Linear Transformations Q3",
+   "retained": "exam/edexcel-9fm0-01-2021-november/q1",
+   "retainedLabel": "Edexcel November 2021 9FM0/01 Q1",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/01 Q1: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 0.808,
+   "marks": 6,
+   "difficulty": {
+    "removed": "easy",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": [
+     "1.36",
+     "1.37"
+    ]
+   },
+   "imageFilesDeleted": 2
+  },
+  {
+   "removed": "pmt/pure-core-1/ch7/q5",
+   "removedLabel": "PMT Core Pure 1 Ch.7 Linear Transformations Q5",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q2",
+   "retainedLabel": "Edexcel November 2021 9FM0/02 Q2",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q2: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 5,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 2
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q3",
+   "removedLabel": "PMT Core Pure 1 Ch.8 Proof by Induction Q3",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q6",
+   "retainedLabel": "Edexcel June 2019 9FM0/01 Q6",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q6: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 6,
+   "difficulty": {
+    "removed": "easy",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 8
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q5",
+   "removedLabel": "PMT Core Pure 1 Ch.8 Proof by Induction Q5",
+   "retained": "pmt/pure-core-1/ch3/q3",
+   "retainedLabel": "PMT Core Pure 1 Ch.3 Series Q3",
+   "reason": "Copy of the earlier PMT question PMT Core Pure 1 Ch.3 Series Q3: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 9,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [
+     "further-maths-a-level/pure-core-1/8"
+    ],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q7",
+   "removedLabel": "PMT Core Pure 1 Ch.8 Proof by Induction Q7",
+   "retained": "exam/edexcel-9fm0-01-sample/q2",
+   "retainedLabel": "Edexcel Sample 9FM0/01 Q2",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q2: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 6,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 1
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q8",
+   "removedLabel": "PMT Core Pure 1 Ch.8 Proof by Induction Q8",
+   "retained": "pmt/pure-core-1/ch3/q6",
+   "retainedLabel": "PMT Core Pure 1 Ch.3 Series Q6",
+   "reason": "Copy of the earlier PMT question PMT Core Pure 1 Ch.3 Series Q6: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 15,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [
+     "further-maths-a-level/pure-core-1/8"
+    ],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-1/ch8/q9",
+   "removedLabel": "PMT Core Pure 1 Ch.8 Proof by Induction Q9",
+   "retained": "exam/edexcel-9fm0-02-sample/q3",
+   "retainedLabel": "Edexcel Sample 9FM0/02 Q3",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 12,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": [
+     "1.43"
+    ]
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-1/ch9/q1",
+   "removedLabel": "PMT Core Pure 1 Ch.9 Vectors Q1",
+   "retained": "exam/edexcel-9fm0-02-sample/q2",
+   "retainedLabel": "Edexcel Sample 9FM0/02 Q2",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q2: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 0.9,
+   "marks": 8,
+   "difficulty": {
+    "removed": "easy",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": [
+     "1.63",
+     "1.59",
+     "1.61"
+    ]
+   },
+   "imageFilesDeleted": 2
+  },
+  {
+   "removed": "pmt/pure-core-1/ch9/q2",
+   "removedLabel": "PMT Core Pure 1 Ch.9 Vectors Q2",
+   "retained": "exam/edexcel-9fm0-01-sample/q8",
+   "retainedLabel": "Edexcel Sample 9FM0/01 Q8",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q8: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 7,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": [
+     "1.61",
+     "1.55"
+    ]
+   },
+   "imageFilesDeleted": 2
+  },
+  {
+   "removed": "pmt/pure-core-1/ch9/q8",
+   "removedLabel": "PMT Core Pure 1 Ch.9 Vectors Q8",
+   "retained": "exam/edexcel-9fm0-01-2021-november/q7",
+   "retainedLabel": "Edexcel November 2021 9FM0/01 Q7",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/01 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 8,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": [
+     "1.57"
+    ]
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-1/ch9/q9",
+   "removedLabel": "PMT Core Pure 1 Ch.9 Vectors Q9",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q7",
+   "retainedLabel": "Edexcel June 2019 9FM0/01 Q7",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.75 (#137) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 7,
+   "difficulty": {
+    "removed": "easy",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": [
+     "1.55"
+    ]
+   },
+   "imageFilesDeleted": 9
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q2",
+   "removedLabel": "PMT Core Pure 2 Ch.1 Complex Numbers Q2",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q4",
+   "retainedLabel": "Edexcel June 2019 9FM0/02 Q4",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.613,
+   "marks": 8,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q3",
+   "removedLabel": "PMT Core Pure 2 Ch.1 Complex Numbers Q3",
+   "retained": "exam/edexcel-9fm0-02-2020-october/q4",
+   "retainedLabel": "Edexcel October 2020 9FM0/02 Q4",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/02 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 10,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q4",
+   "removedLabel": "PMT Core Pure 2 Ch.1 Complex Numbers Q4",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q9",
+   "retainedLabel": "Edexcel November 2021 9FM0/02 Q9",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q9: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.591,
+   "marks": 8,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 5
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q5",
+   "removedLabel": "PMT Core Pure 2 Ch.1 Complex Numbers Q5",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q6",
+   "retainedLabel": "Edexcel June 2019 9FM0/02 Q6",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q6: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 9,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 7
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q6",
+   "removedLabel": "PMT Core Pure 2 Ch.1 Complex Numbers Q6",
+   "retained": "exam/edexcel-9fm0-02-sample/q4",
+   "retainedLabel": "Edexcel Sample 9FM0/02 Q4",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 7,
+   "difficulty": {
+    "removed": "easy",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 1
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q9",
+   "removedLabel": "PMT Core Pure 2 Ch.1 Complex Numbers Q9",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q8",
+   "retainedLabel": "Edexcel November 2021 9FM0/02 Q8",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q8: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 11,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 5
+  },
+  {
+   "removed": "pmt/pure-core-2/ch1/q10",
+   "removedLabel": "PMT Core Pure 2 Ch.1 Complex Numbers Q10",
+   "retained": "pmt/pure-core-1/ch2/q7",
+   "retainedLabel": "PMT Core Pure 1 Ch.2 Argand Diagrams Q7",
+   "reason": "Copy of the earlier PMT question PMT Core Pure 1 Ch.2 Argand Diagrams Q7: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 10,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [
+     "further-maths-a-level/pure-core-2/1"
+    ],
+    "skills": []
+   },
+   "imageFilesDeleted": 6
+  },
+  {
+   "removed": "pmt/pure-core-2/ch2/q3",
+   "removedLabel": "PMT Core Pure 2 Ch.2 Series Q3",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q3",
+   "retainedLabel": "Edexcel November 2021 9FM0/02 Q3",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 6,
+   "difficulty": {
+    "removed": "easy",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch2/q4",
+   "removedLabel": "PMT Core Pure 2 Ch.2 Series Q4",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q4",
+   "retainedLabel": "Edexcel June 2019 9FM0/01 Q4",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.581,
+   "marks": 5,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": [
+     "2.11"
+    ]
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch2/q5",
+   "removedLabel": "PMT Core Pure 2 Ch.2 Series Q5",
+   "retained": "exam/edexcel-9fm0-02-sample/q5",
+   "retainedLabel": "Edexcel Sample 9FM0/02 Q5",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 10,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 2
+  },
+  {
+   "removed": "pmt/pure-core-2/ch2/q8",
+   "removedLabel": "PMT Core Pure 2 Ch.2 Series Q8",
+   "retained": "exam/edexcel-9fm0-01-sample/q1",
+   "retainedLabel": "Edexcel Sample 9FM0/01 Q1",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q1: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 5,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [
+     "further-maths-a-level/pure-core-2/2"
+    ],
+    "skills": [
+     "2.11"
+    ]
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch3/q2",
+   "removedLabel": "PMT Core Pure 2 Ch.3 Methods in Calculus Q2",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q2",
+   "retainedLabel": "Edexcel June 2019 9FM0/01 Q2",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q2: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 7,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 2
+  },
+  {
+   "removed": "pmt/pure-core-2/ch3/q4",
+   "removedLabel": "PMT Core Pure 2 Ch.3 Methods in Calculus Q4",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q5",
+   "retainedLabel": "Edexcel November 2021 9FM0/02 Q5",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 8,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch3/q5",
+   "removedLabel": "PMT Core Pure 2 Ch.3 Methods in Calculus Q5",
+   "retained": "exam/edexcel-9fm0-01-2020-october/q2",
+   "retainedLabel": "Edexcel October 2020 9FM0/01 Q2",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/01 Q2: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 7,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch3/q6",
+   "removedLabel": "PMT Core Pure 2 Ch.3 Methods in Calculus Q6",
+   "retained": "exam/edexcel-9fm0-01-sample/q6",
+   "retainedLabel": "Edexcel Sample 9FM0/01 Q6",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q6: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.98,
+   "marks": 9,
+   "difficulty": {
+    "removed": "easy",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 2
+  },
+  {
+   "removed": "pmt/pure-core-2/ch4/q1",
+   "removedLabel": "PMT Core Pure 2 Ch.4 Volumes of Revolution Q1",
+   "retained": "exam/edexcel-9fm0-01-sample/q7",
+   "retainedLabel": "Edexcel Sample 9FM0/01 Q7",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.544,
+   "marks": 8,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch4/q3",
+   "removedLabel": "PMT Core Pure 2 Ch.4 Volumes of Revolution Q3",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q8",
+   "retainedLabel": "Edexcel June 2019 9FM0/02 Q8",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q8: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.633,
+   "marks": 11,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 5
+  },
+  {
+   "removed": "pmt/pure-core-2/ch5/q1",
+   "removedLabel": "PMT Core Pure 2 Ch.5 Polar Coordinates Q1",
+   "retained": "exam/edexcel-9fm0-01-sample/q4",
+   "retainedLabel": "Edexcel Sample 9FM0/01 Q4",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q4: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.695,
+   "marks": 9,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch5/q4",
+   "removedLabel": "PMT Core Pure 2 Ch.5 Polar Coordinates Q4",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q3",
+   "retainedLabel": "Edexcel June 2019 9FM0/01 Q3",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.617,
+   "marks": 10,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 5
+  },
+  {
+   "removed": "pmt/pure-core-2/ch5/q5",
+   "removedLabel": "PMT Core Pure 2 Ch.5 Polar Coordinates Q5",
+   "retained": "exam/edexcel-9fm0-01-2020-october/q3",
+   "retainedLabel": "Edexcel October 2020 9FM0/01 Q3",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/01 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.535,
+   "marks": 9,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 4
+  },
+  {
+   "removed": "pmt/pure-core-2/ch5/q6",
+   "removedLabel": "PMT Core Pure 2 Ch.5 Polar Coordinates Q6",
+   "retained": "exam/edexcel-9fm0-02-sample/q6",
+   "retainedLabel": "Edexcel Sample 9FM0/02 Q6",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q6: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 13,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 5
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q1",
+   "removedLabel": "PMT Core Pure 2 Ch.6 Hyperbolic Functions Q1",
+   "retained": "pmt/pure-core-2/ch3/q3",
+   "retainedLabel": "PMT Core Pure 2 Ch.3 Methods in Calculus Q3",
+   "reason": "Copy of the earlier PMT question PMT Core Pure 2 Ch.3 Methods in Calculus Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 5,
+   "difficulty": {
+    "removed": "easy",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [
+     "further-maths-a-level/pure-core-2/6"
+    ],
+    "skills": []
+   },
+   "imageFilesDeleted": 2
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q2",
+   "removedLabel": "PMT Core Pure 2 Ch.6 Hyperbolic Functions Q2",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q3",
+   "retainedLabel": "Edexcel June 2019 9FM0/02 Q3",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 6,
+   "difficulty": {
+    "removed": "easy",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q3",
+   "removedLabel": "PMT Core Pure 2 Ch.6 Hyperbolic Functions Q3",
+   "retained": "exam/edexcel-9fm0-02-2020-october/q1",
+   "retainedLabel": "Edexcel October 2020 9FM0/02 Q1",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/02 Q1: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 7,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q5",
+   "removedLabel": "PMT Core Pure 2 Ch.6 Hyperbolic Functions Q5",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q1",
+   "retainedLabel": "Edexcel June 2019 9FM0/02 Q1",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q1: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 10,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "easy"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 4
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q7",
+   "removedLabel": "PMT Core Pure 2 Ch.6 Hyperbolic Functions Q7",
+   "retained": "exam/edexcel-9fm0-02-2021-november/q7",
+   "retainedLabel": "Edexcel November 2021 9FM0/02 Q7",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/02 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.971,
+   "marks": 9,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 4
+  },
+  {
+   "removed": "pmt/pure-core-2/ch6/q8",
+   "removedLabel": "PMT Core Pure 2 Ch.6 Hyperbolic Functions Q8",
+   "retained": "exam/edexcel-9fm0-01-2021-november/q9",
+   "retainedLabel": "Edexcel November 2021 9FM0/01 Q9",
+   "reason": "Copy of the official past-paper question Edexcel November 2021 9FM0/01 Q9: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.964,
+   "marks": 11,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 4
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q2",
+   "removedLabel": "PMT Core Pure 2 Ch.8 Modelling with Differential Equations Q2",
+   "retained": "exam/edexcel-9fm0-02-2019-june/q5",
+   "retainedLabel": "Edexcel June 2019 9FM0/02 Q5",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/02 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.601,
+   "marks": 12,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q3",
+   "removedLabel": "PMT Core Pure 2 Ch.8 Modelling with Differential Equations Q3",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q8",
+   "retainedLabel": "Edexcel June 2019 9FM0/01 Q8",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q8: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.789,
+   "marks": 18,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 4
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q4",
+   "removedLabel": "PMT Core Pure 2 Ch.8 Modelling with Differential Equations Q4",
+   "retained": "exam/edexcel-9fm0-02-sample/q7",
+   "retainedLabel": "Edexcel Sample 9FM0/02 Q7",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/02 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.605,
+   "marks": 17,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q5",
+   "removedLabel": "PMT Core Pure 2 Ch.8 Modelling with Differential Equations Q5",
+   "retained": "exam/edexcel-9fm0-01-2020-october/q7",
+   "retainedLabel": "Edexcel October 2020 9FM0/01 Q7",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/01 Q7: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 11,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 4
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q6",
+   "removedLabel": "PMT Core Pure 2 Ch.8 Modelling with Differential Equations Q6",
+   "retained": "exam/edexcel-9fm0-01-sample/q5",
+   "retainedLabel": "Edexcel Sample 9FM0/01 Q5",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 10,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 2
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q7",
+   "removedLabel": "PMT Core Pure 2 Ch.8 Modelling with Differential Equations Q7",
+   "retained": "exam/edexcel-9fm0-01-2019-june/q5",
+   "retainedLabel": "Edexcel June 2019 9FM0/01 Q5",
+   "reason": "Copy of the official past-paper question Edexcel June 2019 9FM0/01 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 1.0,
+   "marks": 13,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 4
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q8",
+   "removedLabel": "PMT Core Pure 2 Ch.8 Modelling with Differential Equations Q8",
+   "retained": "exam/edexcel-9fm0-01-sample/q9",
+   "retainedLabel": "Edexcel Sample 9FM0/01 Q9",
+   "reason": "Copy of the official past-paper question Edexcel Sample 9FM0/01 Q9: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.75,
+   "marks": 12,
+   "difficulty": {
+    "removed": "medium",
+    "retained": "difficult"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q9",
+   "removedLabel": "PMT Core Pure 2 Ch.8 Modelling with Differential Equations Q9",
+   "retained": "exam/edexcel-9fm0-02-2020-october/q3",
+   "retainedLabel": "Edexcel October 2020 9FM0/02 Q3",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/02 Q3: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.577,
+   "marks": 14,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 3
+  },
+  {
+   "removed": "pmt/pure-core-2/ch8/q10",
+   "removedLabel": "PMT Core Pure 2 Ch.8 Modelling with Differential Equations Q10",
+   "retained": "exam/edexcel-9fm0-01-2020-october/q5",
+   "retainedLabel": "Edexcel October 2020 9FM0/01 Q5",
+   "reason": "Copy of the official past-paper question Edexcel October 2020 9FM0/01 Q5: same wording, marks and equations; confirmed against the rendered pages in v0.76 (#138) and found again by the v0.77 detector.",
+   "similarity": 0.604,
+   "marks": 17,
+   "difficulty": {
+    "removed": "difficult",
+    "retained": "medium"
+   },
+   "carriedOver": {
+    "chapterKeys": [],
+    "skills": []
+   },
+   "imageFilesDeleted": 5
+  }
+ ]
+}

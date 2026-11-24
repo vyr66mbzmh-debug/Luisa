@@ -1,6 +1,31 @@
 {
-  "current": "0.76",
+  "current": "0.77",
   "releases": [
+    {
+      "version": "0.77",
+      "previous": "0.76",
+      "date": "2026-11-24",
+      "issue": 141,
+      "changes": [
+        "The 51 PMT questions that repeated a past-paper question (47) or an earlier PMT question (4) are removed; the original is kept with its own wording, marks, mark scheme and difficulty, and gains any chapter or skill the copy had.",
+        "Papers now holds 83 PMT questions (58 Core Pure 1, 25 Core Pure 2; 704 marks) and 9,149 questions in all.",
+        "The PMT tickbox is removed. PMT questions are exam-style questions: they appear under \"Exam style\" for pupils and in teacher exam papers, where only the mark scheme names the source.",
+        "A saved selection that held a removed copy now holds the question kept in its place, once, and says so.",
+        "The bank never holds two copies of a question: every importer refuses a copy, the release gate fails on one, and the whole bank was checked once (no further copies).",
+        "56 PMT questions now name their original exam in the mark scheme, each confirmed by sight against the paper; the other 27 are recorded as unknown."
+      ],
+      "reportIntro": [
+        "Luisa v0.77 keeps one copy of every question. The 51 PMT questions that repeated a past-paper question or an earlier PMT question are gone; the original stays, with its own wording, marks and mark scheme. Papers now holds 83 PMT questions and 9,149 questions in all.",
+        "The PMT tickbox has gone: PMT questions are exam-style questions, in pupil practice and in teacher exam papers, where only the mark scheme names the source. A permanent rule stops any future import from adding a copy, and a check of the whole bank found no other copies."
+      ],
+      "requirements": [
+        "PAP-077-1",
+        "PAP-077-2",
+        "PAP-077-3",
+        "PAP-077-4",
+        "PAP-077-5"
+      ]
+    },
     {
       "version": "0.76",
       "previous": "0.75",

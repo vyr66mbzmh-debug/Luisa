@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Papers v0.77
+
+[Issue #141](https://github.com/vyr66mbzmh-debug/Luisa/issues/141) removes the 51 duplicate PMT questions, adds a permanent no-duplicates rule with an importer and gate check, retires the PMT tickbox so PMT questions are exam-style, and records confirmed original exams (PAP-077-1 to PAP-077-5).
+
 ## Papers v0.76
 
 [Issue #138](https://github.com/vyr66mbzmh-debug/Luisa/issues/138) imports the 61 PMT Core Pure 2 topic-sheet questions with their own mark schemes, rubric difficulty and duplicate links (PAP-076-1 to PAP-076-8), completing the owner's PMT Core Pure folders.

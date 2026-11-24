@@ -1,0 +1,706 @@
+{
+  "requirement": "PAP-077-5",
+  "rule": "An original exam is recorded only when the paper page was seen and matches the stored question exactly; otherwise unknown. Nothing is guessed.",
+  "papersCompared": [
+    "8FM0 June 2018 QP",
+    "8FM0 June 2019 QP",
+    "8FM0 June 2020 QP",
+    "8FM0 June 2021 QP",
+    "8FM0 June 2022 QP",
+    "8FM0 Sample QP",
+    "9FM0 Core Pure 1 June 2022 QP",
+    "9FM0 Core Pure 2 June 2022 QP"
+  ],
+  "rejectedNearMatches": [
+    {
+      "id": "pmt/pure-core-1/ch4/q3",
+      "looksLike": "8FM0/01 May 2018 Q2",
+      "reason": "same wording, different cubic"
+    },
+    {
+      "id": "pmt/pure-core-1/ch4/q4",
+      "looksLike": "8FM0/01 2021 Q2",
+      "reason": "same wording, different cubic (confirmed instead as May 2019 Q2)"
+    },
+    {
+      "id": "pmt/pure-core-1/ch8/q2",
+      "looksLike": "9FM0/02 2022 Q3",
+      "reason": "different induction statement (confirmed instead as May 2019 Q3)"
+    }
+  ],
+  "summary": {
+    "survivors": 83,
+    "confirmed": 56,
+    "unknown": 27
+  },
+  "questions": [
+    {
+      "id": "pmt/pure-core-1/ch1/q1",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch1/q2",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch1/q3",
+      "originalExam": "Edexcel 8FM0/01 2021 Q7",
+      "paper": "8FM0/01",
+      "series": "2021",
+      "questionNumber": 7,
+      "dateEvidence": "no sitting date printed; cover shows ©2021, PMT file label June 2021",
+      "comparedWith": "8FM0 June 2021 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch1/q4",
+      "originalExam": "Edexcel 9FM0/01 2022 Q7",
+      "paper": "9FM0/01",
+      "series": "2022",
+      "questionNumber": 7,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 1 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch1/q5",
+      "originalExam": "Edexcel 8FM0/01 May 2019 Q7",
+      "paper": "8FM0/01",
+      "series": "May 2019",
+      "questionNumber": 7,
+      "dateEvidence": "Monday 13 May 2019 (printed on cover; scanned paper read by OCR, confirmed visually)",
+      "comparedWith": "8FM0 June 2019 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch1/q6",
+      "originalExam": "Edexcel 8FM0/01 Sample Assessment Material Q1",
+      "paper": "8FM0/01",
+      "series": "Sample Assessment Material",
+      "questionNumber": 1,
+      "dateEvidence": "Sample Assessment Material for first teaching September 2017",
+      "comparedWith": "8FM0 Sample QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch1/q7",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch2/q1",
+      "originalExam": "Edexcel 8FM0/01 May 2018 Q3",
+      "paper": "8FM0/01",
+      "series": "May 2018",
+      "questionNumber": 3,
+      "dateEvidence": "Monday 14 May 2018 (printed on cover)",
+      "comparedWith": "8FM0 June 2018 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch2/q2",
+      "originalExam": "Edexcel 8FM0/01 May 2020 Q10",
+      "paper": "8FM0/01",
+      "series": "May 2020",
+      "questionNumber": 10,
+      "dateEvidence": "Monday 11 May 2020 (printed on cover)",
+      "comparedWith": "8FM0 June 2020 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch2/q3",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch2/q4",
+      "originalExam": "Edexcel 8FM0/01 May 2018 Q7",
+      "paper": "8FM0/01",
+      "series": "May 2018",
+      "questionNumber": 7,
+      "dateEvidence": "Monday 14 May 2018 (printed on cover)",
+      "comparedWith": "8FM0 June 2018 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch2/q5",
+      "originalExam": "Edexcel 9FM0/01 2022 Q1",
+      "paper": "9FM0/01",
+      "series": "2022",
+      "questionNumber": 1,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 1 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch2/q6",
+      "originalExam": "Edexcel 8FM0/01 May 2019 Q5",
+      "paper": "8FM0/01",
+      "series": "May 2019",
+      "questionNumber": 5,
+      "dateEvidence": "Monday 13 May 2019 (printed on cover; scanned paper read by OCR, confirmed visually)",
+      "comparedWith": "8FM0 June 2019 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch2/q7",
+      "originalExam": "Edexcel 8FM0/01 2022 Q2",
+      "paper": "8FM0/01",
+      "series": "2022",
+      "questionNumber": 2,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "8FM0 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch2/q8",
+      "originalExam": "Edexcel 8FM0/01 2021 Q5",
+      "paper": "8FM0/01",
+      "series": "2021",
+      "questionNumber": 5,
+      "dateEvidence": "no sitting date printed; cover shows ©2021, PMT file label June 2021",
+      "comparedWith": "8FM0 June 2021 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch2/q10",
+      "originalExam": "Edexcel 8FM0/01 May 2020 Q7",
+      "paper": "8FM0/01",
+      "series": "May 2020",
+      "questionNumber": 7,
+      "dateEvidence": "Monday 11 May 2020 (printed on cover)",
+      "comparedWith": "8FM0 June 2020 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch2/q11",
+      "originalExam": "Edexcel 8FM0/01 May 2020 Q2",
+      "paper": "8FM0/01",
+      "series": "May 2020",
+      "questionNumber": 2,
+      "dateEvidence": "Monday 11 May 2020 (printed on cover)",
+      "comparedWith": "8FM0 June 2020 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch3/q2",
+      "originalExam": "Edexcel 8FM0/01 2021 Q3",
+      "paper": "8FM0/01",
+      "series": "2021",
+      "questionNumber": 3,
+      "dateEvidence": "no sitting date printed; cover shows ©2021, PMT file label June 2021",
+      "comparedWith": "8FM0 June 2021 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch3/q3",
+      "originalExam": "Edexcel 8FM0/01 2021 Q8",
+      "paper": "8FM0/01",
+      "series": "2021",
+      "questionNumber": 8,
+      "dateEvidence": "no sitting date printed; cover shows ©2021, PMT file label June 2021",
+      "comparedWith": "8FM0 June 2021 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch3/q4",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch3/q5",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch3/q6",
+      "originalExam": "Edexcel 8FM0/01 Sample Assessment Material Q6",
+      "paper": "8FM0/01",
+      "series": "Sample Assessment Material",
+      "questionNumber": 6,
+      "dateEvidence": "Sample Assessment Material for first teaching September 2017",
+      "comparedWith": "8FM0 Sample QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch4/q1",
+      "originalExam": "Edexcel 8FM0/01 May 2018 Q2",
+      "paper": "8FM0/01",
+      "series": "May 2018",
+      "questionNumber": 2,
+      "dateEvidence": "Monday 14 May 2018 (printed on cover)",
+      "comparedWith": "8FM0 June 2018 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch4/q2",
+      "originalExam": "Edexcel 8FM0/01 May 2020 Q9",
+      "paper": "8FM0/01",
+      "series": "May 2020",
+      "questionNumber": 9,
+      "dateEvidence": "Monday 11 May 2020 (printed on cover)",
+      "comparedWith": "8FM0 June 2020 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch4/q3",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch4/q4",
+      "originalExam": "Edexcel 8FM0/01 May 2019 Q2",
+      "paper": "8FM0/01",
+      "series": "May 2019",
+      "questionNumber": 2,
+      "dateEvidence": "Monday 13 May 2019 (printed on cover; scanned paper read by OCR, confirmed visually)",
+      "comparedWith": "8FM0 June 2019 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch4/q5",
+      "originalExam": "Edexcel 8FM0/01 2021 Q2",
+      "paper": "8FM0/01",
+      "series": "2021",
+      "questionNumber": 2,
+      "dateEvidence": "no sitting date printed; cover shows ©2021, PMT file label June 2021",
+      "comparedWith": "8FM0 June 2021 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch4/q6",
+      "originalExam": "Edexcel 8FM0/01 2022 Q4",
+      "paper": "8FM0/01",
+      "series": "2022",
+      "questionNumber": 4,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "8FM0 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch5/q1",
+      "originalExam": "Edexcel 8FM0/01 Sample Assessment Material Q7",
+      "paper": "8FM0/01",
+      "series": "Sample Assessment Material",
+      "questionNumber": 7,
+      "dateEvidence": "Sample Assessment Material for first teaching September 2017",
+      "comparedWith": "8FM0 Sample QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch5/q2",
+      "originalExam": "Edexcel 8FM0/01 May 2019 Q9",
+      "paper": "8FM0/01",
+      "series": "May 2019",
+      "questionNumber": 9,
+      "dateEvidence": "Monday 13 May 2019 (printed on cover; scanned paper read by OCR, confirmed visually)",
+      "comparedWith": "8FM0 June 2019 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch5/q3",
+      "originalExam": "Edexcel 8FM0/01 May 2020 Q3",
+      "paper": "8FM0/01",
+      "series": "May 2020",
+      "questionNumber": 3,
+      "dateEvidence": "Monday 11 May 2020 (printed on cover)",
+      "comparedWith": "8FM0 June 2020 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch5/q4",
+      "originalExam": "Edexcel 8FM0/01 2021 Q9",
+      "paper": "8FM0/01",
+      "series": "2021",
+      "questionNumber": 9,
+      "dateEvidence": "no sitting date printed; cover shows ©2021, PMT file label June 2021",
+      "comparedWith": "8FM0 June 2021 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch5/q5",
+      "originalExam": "Edexcel 8FM0/01 2022 Q8",
+      "paper": "8FM0/01",
+      "series": "2022",
+      "questionNumber": 8,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "8FM0 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch6/q1",
+      "originalExam": "Edexcel 8FM0/01 May 2018 Q1",
+      "paper": "8FM0/01",
+      "series": "May 2018",
+      "questionNumber": 1,
+      "dateEvidence": "Monday 14 May 2018 (printed on cover)",
+      "comparedWith": "8FM0 June 2018 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch6/q2",
+      "originalExam": "Edexcel 9FM0/02 2022 Q2",
+      "paper": "9FM0/02",
+      "series": "2022",
+      "questionNumber": 2,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 2 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch6/q3",
+      "originalExam": "Edexcel 8FM0/01 May 2019 Q10",
+      "paper": "8FM0/01",
+      "series": "May 2019",
+      "questionNumber": 10,
+      "dateEvidence": "Monday 13 May 2019 (printed on cover; scanned paper read by OCR, confirmed visually)",
+      "comparedWith": "8FM0 June 2019 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch6/q4",
+      "originalExam": "Edexcel 9FM0/01 2022 Q5",
+      "paper": "9FM0/01",
+      "series": "2022",
+      "questionNumber": 5,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 1 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch6/q5",
+      "originalExam": "Edexcel 8FM0/01 2021 Q4",
+      "paper": "8FM0/01",
+      "series": "2021",
+      "questionNumber": 4,
+      "dateEvidence": "no sitting date printed; cover shows ©2021, PMT file label June 2021",
+      "comparedWith": "8FM0 June 2021 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch6/q6",
+      "originalExam": "Edexcel 8FM0/01 2022 Q1",
+      "paper": "8FM0/01",
+      "series": "2022",
+      "questionNumber": 1,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "8FM0 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch7/q1",
+      "originalExam": "Edexcel 8FM0/01 May 2018 Q5",
+      "paper": "8FM0/01",
+      "series": "May 2018",
+      "questionNumber": 5,
+      "dateEvidence": "Monday 14 May 2018 (printed on cover)",
+      "comparedWith": "8FM0 June 2018 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch7/q2",
+      "originalExam": "Edexcel 8FM0/01 May 2020 Q6",
+      "paper": "8FM0/01",
+      "series": "May 2020",
+      "questionNumber": 6,
+      "dateEvidence": "Monday 11 May 2020 (printed on cover)",
+      "comparedWith": "8FM0 June 2020 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch7/q4",
+      "originalExam": "Edexcel 8FM0/01 May 2019 Q1",
+      "paper": "8FM0/01",
+      "series": "May 2019",
+      "questionNumber": 1,
+      "dateEvidence": "Monday 13 May 2019 (printed on cover; scanned paper read by OCR, confirmed visually)",
+      "comparedWith": "8FM0 June 2019 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch7/q6",
+      "originalExam": "Edexcel 8FM0/01 2022 Q3",
+      "paper": "8FM0/01",
+      "series": "2022",
+      "questionNumber": 3,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "8FM0 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch7/q7",
+      "originalExam": "Edexcel 8FM0/01 2021 Q1",
+      "paper": "8FM0/01",
+      "series": "2021",
+      "questionNumber": 1,
+      "dateEvidence": "no sitting date printed; cover shows ©2021, PMT file label June 2021",
+      "comparedWith": "8FM0 June 2021 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch7/q8",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch7/q9",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch7/q10",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch8/q1",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch8/q2",
+      "originalExam": "Edexcel 8FM0/01 May 2019 Q3",
+      "paper": "8FM0/01",
+      "series": "May 2019",
+      "questionNumber": 3,
+      "dateEvidence": "Monday 13 May 2019 (printed on cover; scanned paper read by OCR, confirmed visually)",
+      "comparedWith": "8FM0 June 2019 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch8/q4",
+      "originalExam": "Edexcel 8FM0/01 May 2020 Q8",
+      "paper": "8FM0/01",
+      "series": "May 2020",
+      "questionNumber": 8,
+      "dateEvidence": "Monday 11 May 2020 (printed on cover)",
+      "comparedWith": "8FM0 June 2020 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch8/q6",
+      "originalExam": "Edexcel 8FM0/01 May 2018 Q8",
+      "paper": "8FM0/01",
+      "series": "May 2018",
+      "questionNumber": 8,
+      "dateEvidence": "Monday 14 May 2018 (printed on cover)",
+      "comparedWith": "8FM0 June 2018 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch9/q3",
+      "originalExam": "Edexcel 8FM0/01 2021 Q6",
+      "paper": "8FM0/01",
+      "series": "2021",
+      "questionNumber": 6,
+      "dateEvidence": "no sitting date printed; cover shows ©2021, PMT file label June 2021",
+      "comparedWith": "8FM0 June 2021 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch9/q4",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-1/ch9/q5",
+      "originalExam": "Edexcel 9FM0/02 2022 Q8",
+      "paper": "9FM0/02",
+      "series": "2022",
+      "questionNumber": 8,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 2 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch9/q6",
+      "originalExam": "Edexcel 8FM0/01 Sample Assessment Material Q9",
+      "paper": "8FM0/01",
+      "series": "Sample Assessment Material",
+      "questionNumber": 9,
+      "dateEvidence": "Sample Assessment Material for first teaching September 2017",
+      "comparedWith": "8FM0 Sample QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch9/q7",
+      "originalExam": "Edexcel 8FM0/01 May 2018 Q4",
+      "paper": "8FM0/01",
+      "series": "May 2018",
+      "questionNumber": 4,
+      "dateEvidence": "Monday 14 May 2018 (printed on cover)",
+      "comparedWith": "8FM0 June 2018 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch9/q10",
+      "originalExam": "Edexcel 8FM0/01 May 2019 Q8",
+      "paper": "8FM0/01",
+      "series": "May 2019",
+      "questionNumber": 8,
+      "dateEvidence": "Monday 13 May 2019 (printed on cover; scanned paper read by OCR, confirmed visually)",
+      "comparedWith": "8FM0 June 2019 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-1/ch9/q11",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch1/q1",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch1/q7",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch1/q8",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch1/q11",
+      "originalExam": "Edexcel 9FM0/02 2022 Q4",
+      "paper": "9FM0/02",
+      "series": "2022",
+      "questionNumber": 4,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 2 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-2/ch2/q1",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch2/q2",
+      "originalExam": "Edexcel 8FM0/01 2022 Q5",
+      "paper": "8FM0/01",
+      "series": "2022",
+      "questionNumber": 5,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "8FM0 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-2/ch2/q6",
+      "originalExam": "Edexcel 9FM0/01 2022 Q4",
+      "paper": "9FM0/01",
+      "series": "2022",
+      "questionNumber": 4,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 1 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-2/ch2/q7",
+      "originalExam": "Edexcel 9FM0/02 2022 Q9",
+      "paper": "9FM0/02",
+      "series": "2022",
+      "questionNumber": 9,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 2 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-2/ch2/q9",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch2/q10",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch2/q11",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch3/q1",
+      "originalExam": "Edexcel 9FM0/02 2022 Q5",
+      "paper": "9FM0/02",
+      "series": "2022",
+      "questionNumber": 5,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 2 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-2/ch3/q3",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch3/q7",
+      "originalExam": "Edexcel 9FM0/01 2022 Q6",
+      "paper": "9FM0/01",
+      "series": "2022",
+      "questionNumber": 6,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 1 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-2/ch4/q2",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch4/q4",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch5/q2",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch5/q3",
+      "originalExam": "Edexcel 9FM0/02 2022 Q7",
+      "paper": "9FM0/02",
+      "series": "2022",
+      "questionNumber": 7,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 2 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-2/ch6/q4",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch6/q6",
+      "originalExam": "Edexcel 9FM0/01 2022 Q2",
+      "paper": "9FM0/01",
+      "series": "2022",
+      "questionNumber": 2,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 1 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-2/ch6/q9",
+      "originalExam": "Edexcel 9FM0/01 2022 Q9",
+      "paper": "9FM0/01",
+      "series": "2022",
+      "questionNumber": 9,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 1 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-2/ch7/q1",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch7/q2",
+      "originalExam": "Edexcel 9FM0/01 2022 Q3",
+      "paper": "9FM0/01",
+      "series": "2022",
+      "questionNumber": 3,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 1 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    },
+    {
+      "id": "pmt/pure-core-2/ch7/q3",
+      "originalExam": "unknown"
+    },
+    {
+      "id": "pmt/pure-core-2/ch8/q1",
+      "originalExam": "Edexcel 9FM0/01 2022 Q10",
+      "paper": "9FM0/01",
+      "series": "2022",
+      "questionNumber": 10,
+      "dateEvidence": "no sitting date printed; cover shows ©2022, PMT file label June 2022",
+      "comparedWith": "9FM0 Core Pure 1 June 2022 QP",
+      "method": "visual comparison of the paper page with the stored question"
+    }
+  ]
+}

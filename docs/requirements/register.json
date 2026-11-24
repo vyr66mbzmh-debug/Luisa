@@ -6450,6 +6450,100 @@
         "GitHub issue #138",
         "docs/evidence/v076-import-pmt-core-pure-2.json"
       ]
+    },
+    {
+      "id": "PAP-077-1",
+      "requirement": "Delete every PMT question that duplicates an official past-paper question or an earlier PMT question; keep the official question (or the earliest PMT question), carry over chapter keys and skill mappings the survivor lacks without changing its wording, marks, scheme or difficulty, remove the copies everywhere with no dangling IDs, write a traceability file, and migrate saved selections from each removed ID to its retained ID (de-duplicated).",
+      "scope": "v0.77 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner brief (next release: PMT duplicates, no-duplicates rule, PMT tickbox), GitHub #141, 24 November 2026",
+      "acceptance": [
+        "The 51 copies (15 Core Pure 1, 36 Core Pure 2; 47 to past papers, 4 to PMT) are re-derived from duplicateOf and the evidence, with no chains, and deleted; PMT 134 -> 83 (Core Pure 1 58, Core Pure 2 25); bank 9,200 -> 9,149.",
+        "Survivors gain the chapter keys and skill mappings the copies had; their wording, marks, schemes and difficulty are unchanged.",
+        "No removed ID remains in content, catalogues, metadata, tests or built editions; docs/evidence/v077-duplicates-removed.json lists each removed ID, retained ID and reason.",
+        "A restored Papers selection holding a removed ID shows the retained question instead, once, with no duplicate."
+      ],
+      "evidence": [
+        "GitHub issue #141",
+        "docs/evidence/v077-duplicates-removed.json",
+        "tests/test_duplicates.py"
+      ]
+    },
+    {
+      "id": "PAP-077-2",
+      "requirement": "Standing rule from v0.77 for every agent and every upload: no import may add a question that already exists in the bank. The importers detect candidates (normalised text, marks, equations), the agent confirms each visually and records duplicates and notDuplicates; an official paper beats a PMT question (the PMT question is deleted with migration and trace), the earlier PMT question beats a later one, and a second copy of the same official paper is skipped. The gate fails if the bank holds a duplicate.",
+      "scope": "All agents and providers, every question import (standing); v0.77 gate",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner brief (next release: PMT duplicates, no-duplicates rule, PMT tickbox), GitHub #141, 24 November 2026",
+      "acceptance": [
+        "scripts/duplicates.py finds candidates across all sources; scripts/import/pmt.py and scripts/import/integrate.py refuse an import with an undecided candidate, and skip removed or already-imported questions.",
+        "scripts/luisa.py check (part of the gate) fails on any duplicateOf link, undecided candidate, removed ID still present or stale migration; tests cover it.",
+        "The whole bank (all sources) was checked once in v0.77 and the result recorded in the evidence file.",
+        "The generator keeps its duplicate-skip safety net; with no duplicates left the \"skips N copies\" note never appears."
+      ],
+      "evidence": [
+        "GitHub issue #141",
+        "docs/evidence/duplicate-decisions.json",
+        "scripts/duplicates.py",
+        "tests/test_duplicates.py"
+      ]
+    },
+    {
+      "id": "PAP-077-3",
+      "requirement": "Remove the PMT source tickbox from the Papers page and the teacher exam paper in every edition, with its code, saved-state key and tests; old saved states with that key load without errors; the remaining PMT questions are ordinary bank questions.",
+      "scope": "v0.77 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner brief (next release: PMT duplicates, no-duplicates rule, PMT tickbox), GitHub #141, 24 November 2026",
+      "acceptance": [
+        "No #papers-source-pmt control in the owner, staff or student edition.",
+        "A saved session holding sources.pmt (version 3) or an old version-2 session loads without errors.",
+        "The 83 PMT questions are in the Exam style source."
+      ],
+      "evidence": [
+        "GitHub issue #141",
+        "tests/test_papers_selection.py"
+      ]
+    },
+    {
+      "id": "PAP-077-4",
+      "requirement": "The remaining PMT questions stay available: teacher exam papers draw them from the selected course, book and chapters under the existing rules with no source on the question pages and the exact source in the mark scheme; students see them as normal exam-style questions with their source-image mark schemes; survivors are otherwise unchanged; tests cover counts, no duplicateOf, exam eligibility, source only in the scheme, no PMT checkbox and selection migration.",
+      "scope": "v0.77 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner brief (next release: PMT duplicates, no-duplicates rule, PMT tickbox), GitHub #141, 24 November 2026",
+      "acceptance": [
+        "tests/test_pmt.py, tests/test_papers_selection.py and tests/papers_print_browser.py cover (a) counts 83/58/25, (b) no duplicateOf, (c) exam eligibility, (d) source only in the scheme, (e) no PMT checkbox, (f) migration of old selections.",
+        "Live checks on owner, ADA staff and ADA pupil."
+      ],
+      "evidence": [
+        "GitHub issue #141",
+        "tests/test_papers_selection.py",
+        "tests/papers_print_browser.py"
+      ]
+    },
+    {
+      "id": "PAP-077-5",
+      "requirement": "Best effort, not blocking: identify the original exam (series, year, paper, question) of each remaining PMT question by matching against officially published papers; record only visually confirmed matches as originalExam in the evidence file, leave the rest unknown, never guess, and show a confirmed source in the mark scheme beside the PMT label without changing question content.",
+      "scope": "v0.77 Papers bank: Cloudflare owner (including disconnected use) and ADA staff and pupil editions; the exam paper is teacher only",
+      "priority": "P2",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner brief (next release: PMT duplicates, no-duplicates rule, PMT tickbox), GitHub #141, 24 November 2026",
+      "acceptance": [
+        "docs/evidence/v077-pmt-original-exams.json records originalExam for each confirmed match and \"unknown\" for the rest, with the count in the owner report."
+      ],
+      "evidence": [
+        "GitHub issue #141",
+        "docs/evidence/v077-pmt-original-exams.json",
+        "tests/test_pmt.py"
+      ]
     }
   ]
 }

@@ -160,6 +160,9 @@ def check(root=ROOT):
     sys.path.insert(0, str(root / 'scripts'))
     import mark_schemes
     errors.extend(mark_schemes.errors(root))
+    # PAP-077-2 (standing): no question exists twice in the bank; every candidate pair is decided.
+    import duplicates
+    errors.extend(duplicates.errors(root))
     for path in public_files(root):
         if path.stat().st_size > 25 * 1024 * 1024:
             errors.append('Cloudflare file exceeds 25MiB: ' + str(path.relative_to(root)))
