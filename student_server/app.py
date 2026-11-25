@@ -418,6 +418,7 @@ def create_app(overrides: dict | None = None) -> Flask:
         response.headers['Strict-Transport-Security'] = 'max-age=31536000'
         asset = (request.view_args or {}).get('asset') if embedded else None
         frame_policy = {
+            'teaching-lesson-viewer.html': "frame-src 'self' https://www.youtube-nocookie.com/embed/6dTyOl1fmDo; ",
             'pure1-native-viewer.html': "frame-src 'self' https://www.geogebra.org; ",
             'v026-lesson-viewer.html': "frame-src 'self' https://www.geogebra.org https://www.youtube-nocookie.com; ",
             'pure2-lesson-viewer.html': "frame-src 'self' https://www.geogebra.org https://www.youtube-nocookie.com; ",
