@@ -6708,6 +6708,22 @@
       "evidence": [
         "GitHub issue #156"
       ]
+    },
+    {
+      "id": "RES-085",
+      "requirement": "Update the diagram conventions label and embed the specified collision video.",
+      "scope": "v0.85 · Further Mechanics 1, chapter 4, Elastic collisions in one dimension, slides 32 and 41.",
+      "priority": "P2",
+      "implementation": "planned",
+      "verification": "pending",
+      "origin": "Owner request for v0.85, GitHub #158",
+      "acceptance": [
+        "Slide 32 shows “Diagram conventions” in place of “My diagram conventions”. Check corresponding handout text.",
+        "Slide 41 of 41 embeds https://www.youtube.com/watch?v=6dTyOl1fmDo in place of the broken hyperlink. Verify playback within the slide on the public and school viewers."
+      ],
+      "evidence": [
+        "GitHub issue #158"
+      ]
     }
   ]
 }
