@@ -608,6 +608,7 @@ def check_further_mechanics(page, url, role):
     prompt = page.locator('[data-shape="native-1"]')
     expect(prompt.locator('.luisa-lettered-part')).to_have_count(2)
     assert not re.search(r'\(\d+ marks?\)|\[\d+ marks?\]|\(5\)', prompt.inner_text())
+    page.goto(url + 'teaching-chapters.html')
     ok(role + ' Further Mechanics 1 slides, handouts, solutions and direct-access permissions')
 
 
