@@ -80,3 +80,9 @@ html[data-luisa-edition="student"] .slide-toolbar #book-pdf { display: none; }
 @media (max-width: 350px) {
   .slide-toolbar .luisa-logo { width: 29px; }
 }
+
+/* Teaching controls use the same bundled typeface as the lesson canvas. */
+.slide-toolbar #lesson-title, .slide-toolbar #slide-number,
+.slide-toolbar select, .slide-toolbar #compact-slide {
+  font-family: Lesson, KaTeX_Main, Georgia, serif;
+}
