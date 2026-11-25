@@ -305,6 +305,7 @@ def student_content(name, content, restricted_urls, restricted_hashes, root, *, 
         except UnicodeError:
             return content
         if path.suffix == '.html':
+            text = re.sub(r'<!--school-resources-->.*?<!--/school-resources-->', '', text, flags=re.S)
             text = text.replace('<meta name="recent-chapters" content="owner">',
                                 '<meta name="recent-chapters" content="teacher" data-csrf="__LUISA_SESSION_CSRF__">' if staff else '')
             text = re.sub(r'<script\b[^>]*offline-register\.js[^>]*>\s*</script\s*>', '<script defer src="app-navigation.js"></script>', text, flags=re.I)

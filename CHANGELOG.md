@@ -1,3 +1,9 @@
+## Luisa v0.80
+
+- Further Mechanics 1 adds five teaching decks, five student booklets and five worked-solutions booklets to the school Resources catalogue.
+- The five decks retain 121 source slides and include 131 exam-style questions worth 1,044 marks. Each exam question has its own booklet page and a link to the corresponding Solution Bank working.
+- Teachers can also open each of the five textbook chapters separately. The school sign-in protects the materials.
+
 ## Luisa v0.79
 
 - Papers adds 322 official Edexcel AS questions worth 2,320 marks from 36 question papers and their mark schemes. The two independently numbered specimen applied sections are listed separately.

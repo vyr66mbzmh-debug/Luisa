@@ -91,6 +91,43 @@ def upload(dest, files):
         raise private.RemoteError('Upload to ADA failed: ' + private.redact(error.strip())[-600:])
 
 
+def stage_school_resources(previous, release):
+    """Install the hash-checked FM1 pack beside the private edition directories."""
+    pack = 'further-mechanics-1'
+    manifest = json.loads((ROOT / 'docs/evidence/further-mechanics-1.json').read_text())
+    files = manifest['files']
+    local = private.state_dir() / 'school-resources' / pack
+    dest = release + '/school-resources/' + pack
+    source = previous + '/school-resources/' + pack
+    setup = f"""from pathlib import Path
+import os,json,hashlib
+dest=Path({dest!r});old=Path({source!r});files={files!r}
+def matches(path, expected):
+ return path.is_file() and hashlib.sha256(path.read_bytes()).hexdigest()==expected
+"""
+    missing = json.loads(private.remote_python(setup + """
+need=[]
+for name,expected in files.items():
+ target=dest/name
+ target.parent.mkdir(parents=True,exist_ok=True)
+ if matches(target,expected):continue
+ if target.exists():target.unlink()
+ if matches(old/name,expected):os.link(old/name,target)
+ else:need.append(name)
+print(json.dumps(need))
+"""))
+    if missing:
+        for name in missing:
+            path = local / name
+            if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != files[name]:
+                raise SystemExit('Missing or changed local Further Mechanics resource: ' + name)
+        upload(dest, [(name, local / name) for name in missing])
+    private.remote_python(setup + """
+assert all(matches(dest/name,h) for name,h in files.items())
+assert {p.relative_to(dest).as_posix() for p in dest.rglob('*') if p.is_file()}==set(files)
+""")
+
+
 def stage():
     rev, v = revision(), version()
     old, new = live_folder(), folder(rev)
@@ -143,6 +180,7 @@ for n,e in files.items():
  assert p.stat().st_size==e['bytes'] and hashlib.sha256(p.read_bytes()).hexdigest()==e['sha256'],n
 assert {str(p.relative_to(d)) for p in d.rglob('*') if p.is_file()}==set(files)|{'build-manifest.json'}
 """)
+    stage_school_resources(old, new)
     upload(new + '/src', [(str(p.relative_to(ROOT)), p) for p in sorted((ROOT / 'student_server').glob('*.py'))]
            + [('tests/test_student_auth.py', ROOT / 'tests/test_student_auth.py')])
     private.remote_python(f"""from pathlib import Path
