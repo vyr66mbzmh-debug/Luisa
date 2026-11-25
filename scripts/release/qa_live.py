@@ -384,6 +384,8 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
     expect(p.locator('#papers-summary')).to_contain_text('6 marks')
     print_paper('labelled-table', 'one', False, '[6 Marks]')
     manifest_checks(p, url, role, rev, version)
+    if role == 'owner':
+        check_further_mechanics(p, url, role)
     ok(f'{role} live manifest, assets, textbook topics, mobile, marks, mixed and condensed print, restore passed')
 
 
@@ -555,13 +557,20 @@ def check_further_mechanics(page, url, role):
         for category in ('booklets', 'solutions', 'textbook'):
             path = f'{category}/chapter-{n:02}.pdf'
             response = live_get(page, url + prefix + path)
-            if category == 'textbook' and role == 'student':
-                assert response.status == 404
+            if category == 'textbook' and role != 'staff':
+                # Pages may serve its HTML fallback for an absent route.
+                assert response.status == 404 or (role == 'owner' and not response.body().startswith(b'%PDF-'))
             else:
                 assert response.ok and hashlib.sha256(response.body()).hexdigest() == fingerprints[path], path
         response = live_get(page, url + prefix + f'chapter-{n:02}.json')
         assert response.ok and hashlib.sha256(response.body()).hexdigest() == fingerprints[f'chapter-{n:02}.json']
     book.get_by_role('link', name='Teaching slides', exact=True).first.click()
+    page.locator('#slide-select').select_option(index=1)
+    photos = page.locator('.lesson-photo .lesson-picture-crop img')
+    expect(photos).to_have_count(4)
+    for photo in photos.all():
+        expect(photo).to_be_visible()
+        assert photo.evaluate('async image => { await image.decode(); return image.naturalWidth > 0 }')
     page.locator('#slide-select').select_option(index=8)
     expect(page.locator('#lesson-title')).to_have_text('Exercise 1A · page 4')
     prompt = page.locator('[data-shape="prompt"]')
@@ -572,6 +581,8 @@ def check_further_mechanics(page, url, role):
     expect(solution).to_be_visible()
     expect(prompt).to_be_visible()
     expect(solution).to_contain_text('[M1]')
+    expect(solution).to_contain_text('[A1]')
+    expect(page.locator('[data-shape="working-next"]')).to_have_count(0)
     page.locator('#reset').click()
     expect(solution).to_be_hidden()
     page.goto(url + 'teaching-chapters.html#further-mechanics-1')
