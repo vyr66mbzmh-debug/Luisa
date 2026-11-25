@@ -51,6 +51,8 @@ function imageContent(tex,o){
  if(!found&&!prose){if(!/\\[A-Za-z]|[=^_]/.test(value)||(words(value)>8&&!/\\(?!quad|qquad|par)[A-Za-z]/.test(value)))return plain(value);return math(value);}
  flush(value.length);return out;
  }
+ const lettered = root.LUISA_CONTROLS?.formatSubparts(tex, part => render(part));
+ if (lettered) return lettered;
  return '<span class="lesson-image-prose">'+tex.split(/\\par\b/).map(part=>{
  const m=part.match(/^\s*(?:\\textbf\{([a-z])[.)]?\}|(\d+[a-z]?[.)]|[a-z][.)]|[•]))\s+/);
  if(m)return '<span class="lesson-subpart" style="display:block;position:relative;margin-left:1.4em;padding-left:1.6em"><span style="position:absolute;left:0">'+esc(m[1]?m[1]+'.':m[2])+'</span>'+render(part.slice(m[0].length))+'</span>';

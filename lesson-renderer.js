@@ -16,7 +16,7 @@ function geometry(s){const b=s.box,w=b.w,h=b.h,l=s.line||{},fill=s.fill||'transp
 }
 function imageContent(tex,o){
  tex=String(tex).replace(/\\hfill\s*/g,' ');
- if(!/\\begin|\\text|[=^_]|\\(?:frac|sqrt)|\\[([]/.test(tex)&&tex.split(/\s+/).length>8)return '<span class="lesson-image-prose">'+esc(tex).replace(/\\par\b\s*/g,'<br>').replace(/\n/g,'<br>')+'</span>';
+ if(!/(?:^|\\par)\s*(?:\d+\s+)?\([a-h]\)/.test(tex)&&!/\\begin|\\text|[=^_]|\\(?:frac|sqrt)|\\[([]/.test(tex)&&tex.split(/\s+/).length>8)return '<span class="lesson-image-prose">'+esc(tex).replace(/\\par\b\s*/g,'<br>').replace(/\n/g,'<br>')+'</span>';
 
  if(tex.includes('\\multicolumn')||tex.includes('\\cline')){
   const match=tex.match(/^\\begin\{array\}\{([^{}]*)\}([\s\S]*)\\end\{array\}$/);
@@ -47,6 +47,8 @@ function imageContent(tex,o){
  if(!found&&!prose){if(!/\\[A-Za-z]|[=^_]/.test(value)||(words(value)>8&&!/\\(?!quad|qquad|par)[A-Za-z]/.test(value)))return plain(value);return math(value);}
  flush(value.length);return out;
  }
+ const lettered = root.LUISA_CONTROLS?.formatSubparts(tex, part => render(part));
+ if (lettered) return lettered;
  return '<span class="lesson-image-prose">'+tex.split(/\\par\b/).map(part=>'<span style="display:block;'+(/^\s*\\(?:qquad|quad)/.test(part)?'margin-left:2em;':'')+'">'+render(part.replace(/^\s*\\(?:qquad|quad)\s*/,''))+'</span>').join('').replace(/<\/span>([.,;:])/g,'</span>&#8288;$1')+'</span>';
 }
 

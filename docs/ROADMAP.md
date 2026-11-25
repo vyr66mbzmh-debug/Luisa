@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Teaching presentation consistency v0.83
+
+Further Mechanics 1, Complex Numbers and shared teaching presentation rules. [Issue #153](https://github.com/vyr66mbzmh-debug/Luisa/issues/153).
+
 ## Further Mechanics 1 single-page exercises v0.82
 
 Five public teaching sets, complete single-page exercises, and native mechanics diagrams. [Issue #151](https://github.com/vyr66mbzmh-debug/Luisa/issues/151).
