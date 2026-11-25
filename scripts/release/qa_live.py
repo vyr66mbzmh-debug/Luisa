@@ -591,6 +591,23 @@ def check_further_mechanics(page, url, role):
     page.locator('#next').click()
     expect(page.locator('#slide-content .source-slide[data-source-slide="2"]')).to_be_visible()
     page.goto(url + 'teaching-chapters.html')
+    viewer = url + 'teaching-lesson-viewer.html?book='
+    page.goto(viewer + 'further-mechanics-1&chapter=2&slide=11')
+    expect(page.locator('#lesson-title')).to_have_text('Gravitational potential energy and speed')
+    buttons = page.locator('#slide-content [role="button"]')
+    expect(buttons.first).to_have_attribute('aria-label', 'Solution (a)')
+    buttons.first.click()
+    expect(page.locator('[data-shape="c1-0"]')).to_be_visible()
+    expect(page.locator('[data-shape="c1-1"]')).to_be_hidden()
+    page.goto(viewer + 'further-core-pure-2&chapter=1&slide=29')
+    expansion = page.get_by_role('button', name='Expansion of (cos θ + i sin θ)⁶', exact=True)
+    expect(page.locator('[data-shape="native-2"]')).to_be_hidden()
+    expansion.click()
+    expect(page.locator('[data-shape="native-2"]')).to_be_visible()
+    page.locator('#slide-select').select_option(index=29)
+    prompt = page.locator('[data-shape="native-1"]')
+    expect(prompt.locator('.luisa-lettered-part')).to_have_count(2)
+    assert not re.search(r'\(\d+ marks?\)|\[\d+ marks?\]|\(5\)', prompt.inner_text())
     ok(role + ' Further Mechanics 1 slides, handouts, solutions and direct-access permissions')
 
 

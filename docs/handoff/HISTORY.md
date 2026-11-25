@@ -2,6 +2,17 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.82 -->
+**Release 0.82 · GitHub #151.**
+
+All five Further Mechanics 1 teaching decks and both sets of handouts open directly in the Cloudflare resource library. Teacher textbook chapters remain available behind the school staff sign-in.
+
+Each of the 131 exercise questions has one Solution reveal, with its complete worked answer on the same board and one worked PDF page. Longer calculations use columns.
+
+The vector lessons explain substitutions, components, magnitude and direction. All six illustrative photographs appear when their slides open. Mechanics diagrams use native LaTeX drawings and the shared display conventions are recorded in Git.
+
+The 1,044 allocated marks and printed exercise references are retained. School handouts and public handouts use matching checksums. Release verification, usage and recovery evidence are recorded on issue #151.
+
 <!-- LUISA-REPORT-HANDOFF v0.81 -->
 **Release 0.81 · GitHub #149.**
 

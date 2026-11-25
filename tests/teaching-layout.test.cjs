@@ -56,3 +56,32 @@ test('a source question image presents one structured transcript including its f
   assert.match(markup, /marked length is 24 cm/);
   assert.match(markup, /<img [^>]*alt=""/);
 });
+
+test('question marks require working for the same part; exam paper codes are not mark allocations', () => {
+  const shape = (id, tex) => ({id, box:{x:0,y:0,w:180,h:80}, transcription:{tex}});
+  const question = shape('prompt', String.raw`Edexcel M2 June 2005\par (a) Find the speed. (3)\par (b) Find the time. [2 marks]`);
+  const answer = shape('work-0', String.raw`(a) Use equation (3) to find the speed. [M1] [A1] [A1]`);
+  const bare = prepare(slide([question]), {height:200}).shapes[0].transcription.tex;
+  assert.doesNotMatch(bare, /marks|\(3\)/);
+  const checked = prepare(slide([question, answer]), {height:200}).shapes;
+  assert.match(checked[0].transcription.tex, /speed\. \[3 marks\]/);
+  assert.doesNotMatch(checked[0].transcription.tex, /2 marks/);
+  assert.match(checked[1].transcription.tex, /equation \(3\)/);
+});
+
+test('separate mark labels, mixed maths runs and trailing punctuation follow the same rule', () => {
+  const p = parts => ({fontSize:20,parts});
+  const text = text => ({type:'text',text});
+  const math = tex => ({type:'math',tex});
+  const shape = {id:'question',box:{x:0,y:0,w:160,h:100},text:{paragraphs:[
+    p([text('(a) Find '), math('p'), text('. '), text('(3)')]),
+    p([text('(b) Exactly two programmes (2).')]),
+    p([text('(5)')]), p([text('Use equation (3).')])
+  ]}};
+  const rows = prepare(slide([shape]),{height:200}).shapes[0].text.paragraphs;
+  const line = i => rows[i].parts.map(r => r.text ?? r.tex).join('');
+  assert.equal(line(0).trim(), '(a) Find p.');
+  assert.equal(line(1), '(b) Exactly two programmes.');
+  assert.equal(line(2), '');
+  assert.equal(line(3), 'Use equation (3).');
+});

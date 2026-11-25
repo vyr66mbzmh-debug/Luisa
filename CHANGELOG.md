@@ -1,3 +1,9 @@
+## Luisa v0.83
+
+- Further Mechanics 1 uses the Luisa teaching palette across five chapters. Work, Energy and Power has new force diagrams, ordered reveals and complete on-board solutions for the energy examples.
+- Year 2 Complex Numbers has a dedicated binomial expansion reveal and revised question layouts. Shared teaching controls suppress unsupported mark allocations and align lettered subparts.
+- The five student booklets, five worked handouts and the Complex Numbers student booklet have been refreshed.
+
 ## Luisa v0.82
 
 - All five Further Mechanics 1 teaching decks and both sets of handouts open directly in the Cloudflare resource library. Teacher textbook chapters remain available behind the school staff sign-in.

@@ -18,6 +18,7 @@ class ChapterSolutions(unittest.TestCase):
         # reviewed replacement PDFs. Check every current fingerprint, and the
         # historical fingerprint/page count for matched canonical chapter records.
         replacements = json.loads((ROOT / 'docs/evidence/v059-integration.json').read_text())['mathematics']['pdfs']
+        replacements += json.loads((ROOT / 'docs/evidence/v083-teaching-pdfs.json').read_text())['pdfs']
         for replacement in replacements:
             self.assertEqual(hashlib.sha256((ROOT / replacement['path']).read_bytes()).hexdigest(), replacement['after'])
             for record in evidence.values():

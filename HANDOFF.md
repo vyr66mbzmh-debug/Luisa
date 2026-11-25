@@ -1,15 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.82 -->
-**Release 0.82 · GitHub #151.**
+<!-- LUISA-REPORT-HANDOFF v0.83 -->
+**Release 0.83 · GitHub #153.**
 
-All five Further Mechanics 1 teaching decks and both sets of handouts open directly in the Cloudflare resource library. Teacher textbook chapters remain available behind the school staff sign-in.
+Further Mechanics 1 uses the Luisa teaching palette across five chapters. Work, Energy and Power has new force diagrams, ordered reveals and complete on-board solutions for the energy examples.
 
-Each of the 131 exercise questions has one Solution reveal, with its complete worked answer on the same board and one worked PDF page. Longer calculations use columns.
+Year 2 Complex Numbers has a dedicated binomial expansion reveal and revised question layouts. Shared teaching controls suppress unsupported mark allocations and align lettered subparts.
 
-The vector lessons explain substitutions, components, magnitude and direction. All six illustrative photographs appear when their slides open. Mechanics diagrams use native LaTeX drawings and the shared display conventions are recorded in Git.
+The five student booklets, five worked handouts and the Complex Numbers student booklet have been refreshed.
 
-The 1,044 allocated marks and printed exercise references are retained. School handouts and public handouts use matching checksums. Release verification, usage and recovery evidence are recorded on issue #151.
+Release verification, usage and recovery evidence are recorded on issue #153.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

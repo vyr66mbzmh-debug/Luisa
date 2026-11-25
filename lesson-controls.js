@@ -84,15 +84,117 @@
     }
   }
 
+  function formatSubparts(tex, render) {
+    const parts = tex.split(/\\par\b/);
+    const label = /^\s*(?:(\d+)\s+)?(?:\(([a-h])\)|([a-h])\)|\\textbf\{\(?([a-h])\)?[.)]?\})\s+/;
+    if (!parts.some(part => label.test(part))) return null;
+    let inside = false;
+    const html = parts.map(part => {
+      const m = part.match(label);
+      if (!m) return '<span class="' + (inside ? 'luisa-part-continuation' : 'luisa-part-preamble') + '">' + render(part) + '</span>';
+      const gap = inside ? ' luisa-next-part' : '';
+      inside = true;
+      const number = m[1] ? '<span class="luisa-question-number">' + m[1] + '</span>' : '';
+      return number + '<span class="luisa-lettered-part' + gap + '"><span class="luisa-part-label">(' + (m[2] || m[3] || m[4]) + ')</span>' + render(part.slice(m[0].length)) + '</span>';
+    }).join('');
+    return '<span class="lesson-image-prose">' + html + '</span>';
+  }
+
+  function formatPanel(shape) {
+    if (!shape.text || shape.cover || !/^(rect|roundRect|.*Callout.*)$/i.test(shape.geometry || '')) return;
+    const fill = String(shape.fill || '').toLowerCase();
+    if (!/^(?:#(?:000000|e97738|f79646|ffc000)|rgba?\((?:0,0,0|247,150,70|255,192,0),?[^)]*\))$/.test(fill)) return;
+    delete shape.latexInk;
+    shape.fill = '#ecf4fa';
+    shape.line = {color:'#9eb6c9',width:1};
+    for (const paragraph of shape.text.paragraphs || []) {
+      paragraph.color = '#183957';
+      for (const run of paragraph.parts) run.color = '#183957';
+    }
+  }
+
+  function markPolicy(slide) {
+    const shapes = (slide.shapes || []).flatMap(function flatten(shape) {
+      return [shape, ...(shape.children || []).flatMap(flatten)];
+    });
+    const content = s => [s.transcription?.tex, ...(s.text?.paragraphs || []).map(p => p.parts.map(r => r.text ?? r.tex ?? '').join(''))].filter(Boolean).join(' ');
+    const markedParts = new Set();
+    let earned = false;
+    let current = '';
+    const partAtStart = /^\s*(?:\d+\.?\s*)?(?:\(([a-h])\)|([a-h])\)|\\textbf\{\(?([a-h])\)?[.)]?\})\s*/;
+    for (const shape of shapes) {
+      const solution = shape.answerFor || /^(?:work|ans(?:wer)?[-_]|solution)/i.test(shape.id);
+      if (shape.cover || (!solution && !/\[[MAB]\d+\]/.test(content(shape)))) continue;
+      const owner = shapes.find(s => s.cover && s.id === shape.answerFor);
+      const named = (owner?.coverLabel || '').match(/(?:^|\()([a-h])\)?$/);
+      if (named) current = named[1];
+      for (const line of content(shape).split(/\\par\b|\n/)) {
+        const m = line.match(partAtStart);
+        if (m) current = m[1] || m[2] || m[3];
+        if (!/(?:\[[MAB]\d+\]|(?:^|\s)[MAB]\d+\s*(?=\s|$))/.test(line.replace(/Edexcel\s+[MAB]\d+/gi,''))) continue;
+        earned = true;
+        if (current) markedParts.add(current);
+      }
+    }
+    return function format(value, question, initialPart = '') {
+      if (!value) return value;
+      let part = initialPart;
+      let out = value.split(/(\\par\b)/).map(line => {
+        const m = line.match(partAtStart);
+        if (m) part = m[1] || m[2] || m[3];
+        const supported = earned && (!part || markedParts.has(part));
+        const allocation = (_, n) => supported ? '[' + n + (n === '1' ? ' mark]' : ' marks]') : '';
+        let result = line.replace(/[[(](\d{1,2})\s+marks?[\])]/gi, allocation);
+        if (question && !/\b(?:equation|formula|expression|identity|statement|relation|from|using|in)\s+[[(]\d+[\])][.,]?\s*$/i.test(result)) result = result.replace(/(?:^|(?<=\s))(?:\((\d{1,2})\)|\[(\d{1,2})\])(?=[.,]?\s*$)/g, (_, parens, brackets) => allocation(_, parens || brackets));
+        return result.replace(/ +([.,])/g, '$1');
+      }).join('');
+      return out.replace(/\\par\s*(?=\\par\b|$)/g, '').trimEnd();
+    };
+  }
+
   function prepare(slide, deck) {
     const copy = JSON.parse(JSON.stringify(slide));
+    const marks = markPolicy(copy);
     copy.shapes = copy.shapes.filter(shape => !copy.headerShapes.includes(shape.id));
     if (!copy.flowLayout) alignRevealRows(copy.shapes, copy.contentHeight || deck.height);
     function visit(shape) {
+      formatPanel(shape);
       delete shape.printFallback;
       delete shape.webStage;
       const paras = shape.text?.paragraphs || [];
-      paras.forEach(prepareParagraph);
+      const isPrompt = !shape.cover && !shape.answerFor && !/^(?:work|ans(?:wer)?[-_]|solution)/i.test(shape.id);
+      let previousPart = '';
+      for (const p of paras) {
+        prepareParagraph(p);
+        const line = p.parts.map(run => run.text ?? '\ufffc').join('');
+        const label = line.match(/^\s*\(?([a-h])\)\s+/);
+        if (label) {
+          p.spaceBeforeSubpart = Boolean(previousPart);
+          previousPart = label[1];
+        } else if (previousPart && !p.bullet) {
+          p.marginLeft = Math.max(p.marginLeft || 0, (p.fontSize || 22)*1.4);
+        }
+        // A suffix can span multiple PowerPoint runs. Splice only that suffix,
+        // keeping every maths run, preceding word and its formatting intact.
+        const suffix = line.match(/\s*[[(]\d{1,2}(?:\s+marks?)?[\])][.,]?\s*$/i);
+        if (suffix) {
+          const revised = marks(line, isPrompt, previousPart);
+          if (revised !== line.trimEnd()) {
+            let offset = 0;
+            for (const run of p.parts) {
+              const old = run.text ?? '\ufffc';
+              if (typeof run.text === 'string' && offset + old.length > suffix.index) {
+                const keep = Math.max(0, suffix.index - offset);
+                run.text = old.slice(0, keep) + (offset <= suffix.index ? revised.slice(suffix.index) : '');
+              }
+              offset += old.length;
+            }
+          }
+        }
+      }
+      if (shape.transcription) {
+        for (const prop of ['tex','printTex']) if (shape.transcription[prop]) shape.transcription[prop] = marks(shape.transcription[prop], isPrompt);
+      }
       for (const p of paras) for (const part of p.parts) if (part.tex) part.tex=ruleDataTables(part.tex);
       if (shape.transcription?.tex) shape.transcription.tex = ruleDataTables(teachingNames(shape.transcription.tex));
       const runs = paras.flatMap(p => p.parts);
@@ -123,6 +225,7 @@
   }
 
   function setTitle(element, title) {
+    title = title.replace(/^exam[ -]style questions?\s*[.!:]?$/i, 'Exam style question');
     element.replaceChildren();
     for (const fragment of title.split(/(σ²|σ|Σ\s*x²|Σ\s*x|x̄)/g)) {
       const tex = {'σ²':'\\sigma^2','σ':'\\sigma','x̄':'\\bar{x}'}[fragment]
@@ -139,7 +242,11 @@
   function updateToolbar(slide, total, number = slide.sourceSlide) {
     const heading = document.getElementById('lesson-title');
     if (slide.titleTex) root.katex.render(slide.titleTex, heading, {throwOnError:true,trust:false});
-    else setTitle(heading, slide.title);
+    else {
+      const sourceExam = /^(?:test your understanding|exam[ -]style questions?|tough question)$/i.test(slide.title)
+        && slide.shapes.some(shape => /Edexcel.{0,50}(?:\d{4}|Q\d)/i.test([shape.transcription?.tex, ...(shape.text?.paragraphs || []).flatMap(p => p.parts.map(r => r.text || ''))].join(' ')));
+      setTitle(heading, sourceExam ? 'Exam style question' : slide.title);
+    }
     heading.title = slide.title;
     root.dispatchEvent(new CustomEvent('luisa-slide', {detail: Number(number)}));
     document.getElementById('slide-number').textContent = number;
@@ -170,7 +277,7 @@
     else link.removeAttribute('href');
   }
 
-  const api = {prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments};
+  const api = {formatSubparts,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments};
   if (typeof module !== 'undefined') module.exports = api;
   root.LUISA_CONTROLS = api;
 })(typeof window === 'undefined' ? globalThis : window);
