@@ -123,8 +123,8 @@
     let current = '';
     const partAtStart = /^\s*(?:\d+\.?\s*)?(?:\(([a-h])\)|([a-h])\)|\\textbf\{\(?([a-h])\)?[.)]?\})\s*/;
     for (const shape of shapes) {
-      const solution = shape.answerFor || /^(?:work|answer|solution)/i.test(shape.id);
-      if (!solution || shape.cover) continue;
+      const solution = shape.answerFor || /^(?:work|ans(?:wer)?[-_]|solution)/i.test(shape.id);
+      if (shape.cover || (!solution && !/\[[MAB]\d+\]/.test(content(shape)))) continue;
       const owner = shapes.find(s => s.cover && s.id === shape.answerFor);
       const named = (owner?.coverLabel || '').match(/(?:^|\()([a-h])\)?$/);
       if (named) current = named[1];
@@ -136,17 +136,17 @@
         if (current) markedParts.add(current);
       }
     }
-    return function format(value, question) {
+    return function format(value, question, initialPart = '') {
       if (!value) return value;
-      let part = '';
+      let part = initialPart;
       let out = value.split(/(\\par\b)/).map(line => {
         const m = line.match(partAtStart);
         if (m) part = m[1] || m[2] || m[3];
         const supported = earned && (!part || markedParts.has(part));
         const allocation = (_, n) => supported ? '[' + n + (n === '1' ? ' mark]' : ' marks]') : '';
         let result = line.replace(/[[(](\d{1,2})\s+marks?[\])]/gi, allocation);
-        if (question) result = result.replace(/(?:^|(?<=\s))\((\d{1,2})\)(?=\s*$)/g, allocation);
-        return result;
+        if (question && !/\b(?:equation|formula|expression|identity|statement|relation|from|using|in)\s+[[(]\d+[\])][.,]?\s*$/i.test(result)) result = result.replace(/(?:^|(?<=\s))(?:\((\d{1,2})\)|\[(\d{1,2})\])(?=[.,]?\s*$)/g, (_, parens, brackets) => allocation(_, parens || brackets));
+        return result.replace(/ +([.,])/g, '$1');
       }).join('');
       return out.replace(/\\par\s*(?=\\par\b|$)/g, '').trimEnd();
     };
@@ -162,11 +162,35 @@
       delete shape.printFallback;
       delete shape.webStage;
       const paras = shape.text?.paragraphs || [];
-      const isPrompt = !shape.cover && !shape.answerFor && !/^(?:work|answer|solution)/i.test(shape.id);
+      const isPrompt = !shape.cover && !shape.answerFor && !/^(?:work|ans(?:wer)?[-_]|solution)/i.test(shape.id);
+      let previousPart = '';
       for (const p of paras) {
         prepareParagraph(p);
-        const last = p.parts.at(-1);
-        if (last?.text) last.text = marks(last.text, isPrompt && !p.parts.some(r => r.type === 'math' && !r.text) && !(p.parts.length === 1 && /^\s*\(\d+\)\s*$/.test(last.text)));
+        const line = p.parts.map(run => run.text ?? '\ufffc').join('');
+        const label = line.match(/^\s*\(?([a-h])\)\s+/);
+        if (label) {
+          p.spaceBeforeSubpart = Boolean(previousPart);
+          previousPart = label[1];
+        } else if (previousPart && !p.bullet) {
+          p.marginLeft = Math.max(p.marginLeft || 0, (p.fontSize || 22)*1.4);
+        }
+        // A suffix can span multiple PowerPoint runs. Splice only that suffix,
+        // keeping every maths run, preceding word and its formatting intact.
+        const suffix = line.match(/\s*[[(]\d{1,2}(?:\s+marks?)?[\])][.,]?\s*$/i);
+        if (suffix) {
+          const revised = marks(line, isPrompt, previousPart);
+          if (revised !== line.trimEnd()) {
+            let offset = 0;
+            for (const run of p.parts) {
+              const old = run.text ?? '\ufffc';
+              if (typeof run.text === 'string' && offset + old.length > suffix.index) {
+                const keep = Math.max(0, suffix.index - offset);
+                run.text = old.slice(0, keep) + (offset <= suffix.index ? revised.slice(suffix.index) : '');
+              }
+              offset += old.length;
+            }
+          }
+        }
       }
       if (shape.transcription) {
         for (const prop of ['tex','printTex']) if (shape.transcription[prop]) shape.transcription[prop] = marks(shape.transcription[prop], isPrompt);

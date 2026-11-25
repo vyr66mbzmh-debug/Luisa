@@ -159,3 +159,9 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 .luisa-lettered-part,.luisa-part-continuation {position:relative;padding-left:1.8em}
 .luisa-part-label {position:absolute;left:0}
 .luisa-next-part {margin-top:1em}
+
+.lesson-paragraph.luisa-next-source-part {margin-top:1em!important}
+
+.exercise-diagram-band {flex:0 0 26%;min-height:0;display:flex;justify-content:center}
+.exercise-diagram-band .exercise-figure {max-width:95%;height:100%;margin:0}
+@media print {body.question-print .exercise-diagram-band {display:none}}
