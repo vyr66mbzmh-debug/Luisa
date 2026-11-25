@@ -552,12 +552,12 @@ def check_further_mechanics(page, url, role):
     expect(book.locator('h3')).to_have_count(5)
     for label in ('Teaching slides', 'Student booklet', 'Solutions'):
         expect(book.get_by_role('link', name=label, exact=True)).to_have_count(5)
-    expect(book.get_by_role('link', name='Book chapter', exact=True)).to_have_count(5 if role == 'staff' else 0)
+    expect(book.get_by_role('link', name='Book chapter', exact=True)).to_have_count(5 if role == 'staff' else int(role == 'owner'))
     for n in range(1, 6):
         for category in ('booklets', 'solutions', 'textbook'):
             path = f'{category}/chapter-{n:02}.pdf'
             response = live_get(page, url + prefix + path)
-            if category == 'textbook' and role != 'staff':
+            if category == 'textbook' and role != 'staff' and (role != 'owner' or n != 4):
                 # Pages may serve its HTML fallback for an absent route.
                 assert response.status == 404 or (role == 'owner' and not response.body().startswith(b'%PDF-'))
             else:
@@ -631,8 +631,60 @@ def check_further_mechanics(page, url, role):
     prompt = page.locator('[data-shape="native-1"]')
     expect(prompt.locator('.luisa-lettered-part')).to_have_count(2)
     assert not re.search(r'\(\d+ marks?\)|\[\d+ marks?\]|\(5\)', prompt.inner_text())
+    page.goto(viewer + 'further-mechanics-1&chapter=4&slide=32')
+    expect(page.locator('#slide-content')).to_contain_text('Diagram conventions')
+    expect(page.locator('#slide-content')).not_to_contain_text('My diagram conventions')
+    page.goto(viewer + 'further-mechanics-1&chapter=4&slide=41')
+    video = page.locator('iframe[title="Why do colliding blocks compute pi?"]')
+    expect(video).to_be_visible()
+    expect(video).to_have_attribute('src', 'https://www.youtube-nocookie.com/embed/6dTyOl1fmDo')
+    player = page.frame_locator('iframe[title="Why do colliding blocks compute pi?"]')
+    player.get_by_role('button', name=re.compile('Play', re.I)).first.wait_for(timeout=25000)
+    video.click()
+    player.locator('video').first.evaluate('''media => new Promise((resolve, reject) => {
+        const deadline = setTimeout(() => reject(Error('Collision video did not play')), 25000);
+        function advanced() {
+            if (media.currentTime <= 0 || media.paused) return;
+            clearTimeout(deadline);
+            media.removeEventListener('timeupdate', advanced);
+            resolve();
+        }
+        media.addEventListener('timeupdate', advanced);
+        advanced();
+    })''')
+    check_further_statistics(page, url, role)
     page.goto(url + 'teaching-chapters.html')
     ok(role + ' Further Mechanics 1 slides, handouts, solutions and direct-access permissions')
+
+
+def check_further_statistics(page, url, role):
+    prefix = 'resources/teaching/v003/further-statistics-1/'
+    manifest = json.loads((ROOT / 'docs/evidence/further-statistics-1.json').read_text())
+    page.goto(url + 'teaching-chapters.html#further-statistics-1')
+    course = page.locator('article#further-statistics-1')
+    for label in ('Teaching slides', 'Student booklet', 'Solutions', 'Book chapter'):
+        count = 0 if label == 'Book chapter' and role == 'student' else 8
+        expect(course.get_by_role('link', name=label, exact=True)).to_have_count(count)
+    for chapter in manifest['chapters']:
+        number = chapter['number']
+        for category in ('booklets', 'solutions', 'textbook'):
+            name = f'{category}/chapter-{number:02}.pdf'
+            response = live_get(page, url + prefix + name)
+            if role == 'student' and category == 'textbook':
+                assert response.status == 404, name
+            else:
+                assert response.ok and response.body().startswith(b'%PDF-'), name
+                assert hashlib.sha256(response.body()).hexdigest() == manifest['files'][name], name
+        page.goto(url + f'teaching-lesson-viewer.html?book=further-statistics-1&chapter={number}&slide={chapter["firstExercise"]}')
+        solution = page.get_by_role('button', name='Solution', exact=True)
+        working = page.locator('[data-shape="work-0"]')
+        expect(working).to_be_hidden()
+        solution.click()
+        expect(working).to_be_visible()
+        expect(page.locator('[data-shape="prompt"]')).to_be_visible()
+        page.locator('#reset').click()
+        expect(working).to_be_hidden()
+    ok(role + ' Further Statistics 1 chapter files and exercise reveals')
 
 
 def ada_fixture(script):

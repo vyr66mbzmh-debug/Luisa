@@ -6714,8 +6714,8 @@
       "requirement": "Update the diagram conventions label, embed the specified collision video and provide the textbook chapter on Cloudflare. Refresh all ten Further Mechanics 1 booklets and match their covers to the established module format using the supplied orange.",
       "scope": "v0.85 · Further Mechanics 1, chapter 4, Elastic collisions in one dimension, slides 32 and 41 and the Cloudflare chapter resource. All five Further Mechanics 1 student booklets and their five solutions editions.",
       "priority": "P2",
-      "implementation": "planned",
-      "verification": "pending",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner request for v0.85, GitHub #158",
       "acceptance": [
         "Slide 32 shows “Diagram conventions” in place of “My diagram conventions”. Check corresponding handout text.",
@@ -6726,7 +6726,8 @@
         "Render page 1 of all ten PDFs and compare each with the corresponding student or solutions cover from an existing module. Verify the cover colour and the chapter and edition titles, and check the updated content on the affected booklet pages."
       ],
       "evidence": [
-        "GitHub issue #158"
+        "GitHub issue #158",
+        "docs/evidence/further-mechanics-1.json"
       ]
     },
     {
@@ -6734,8 +6735,8 @@
       "requirement": "Add Further Statistics 1 to Luisa using the established Further Mechanics chapter resource and presentation standards.",
       "scope": "v0.85 · Further Statistics 1, chapters 1–8.",
       "priority": "P1",
-      "implementation": "planned",
-      "verification": "pending",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner request for v0.85, GitHub #158",
       "acceptance": [
         "Deliver eight chapter presentations, eight student booklets, eight worked-solutions booklets and eight individually extracted textbook chapter PDFs in the Further Statistics 1 resource library. Match the Further Mechanics 1 resource workflow and ADA role access.",
@@ -6746,7 +6747,8 @@
         "Publish all eight Further Statistics 1 textbook chapter PDFs in the Cloudflare owner edition. For each chapter, verify in a signed-out browser that its resource link opens the correct full chapter directly on Cloudflare without a password or redirect to ADA. Preserve the separate teacher-only textbook access on ADA."
       ],
       "evidence": [
-        "GitHub issue #158"
+        "GitHub issue #158",
+        "docs/evidence/further-statistics-1.json"
       ]
     }
   ]

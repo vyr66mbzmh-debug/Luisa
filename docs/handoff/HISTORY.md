@@ -2,6 +2,17 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.84 -->
+**Release 0.84 · GitHub #156.**
+
+Further Mechanics 1 now separates the exam banner and question heading. The Work, Energy and Power van example reveals its diagram, acceleration and maximum speed in order.
+
+The five chapters have revised diagrams, worked examples, controls and matching student and worked handouts. English teaching hints preserve spaces around inline mathematics.
+
+Teaching slides show a mark total only when the individual earning steps support it. In 25 other teaching chapters the corresponding exam panels in the student and worked handouts now use the shared exam heading.
+
+Release verification, usage and recovery evidence are recorded on issue #156.
+
 <!-- LUISA-REPORT-HANDOFF v0.83 -->
 **Release 0.83 · GitHub #153.**
 
