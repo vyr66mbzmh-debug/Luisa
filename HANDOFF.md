@@ -1,15 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.83 -->
-**Release 0.83 · GitHub #153.**
+<!-- LUISA-REPORT-HANDOFF v0.84 -->
+**Release 0.84 · GitHub #156.**
 
-Further Mechanics 1 uses the Luisa teaching palette across five chapters. Work, Energy and Power has new force diagrams, ordered reveals and complete on-board solutions for the energy examples.
+Further Mechanics 1 now separates the exam banner and question heading. The Work, Energy and Power van example reveals its diagram, acceleration and maximum speed in order.
 
-Year 2 Complex Numbers has a dedicated binomial expansion reveal and revised question layouts. Shared teaching controls suppress unsupported mark allocations and align lettered subparts.
+The five chapters have revised diagrams, worked examples, controls and matching student and worked handouts. English teaching hints preserve spaces around inline mathematics.
 
-The five student booklets, five worked handouts and the Complex Numbers student booklet have been refreshed.
+Teaching slides show a mark total only when the individual earning steps support it.
 
-Release verification, usage and recovery evidence are recorded on issue #153.
+Release verification, usage and recovery evidence are recorded on issue #156.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

@@ -63,6 +63,9 @@ test('question marks require working for the same part; exam paper codes are not
   const answer = shape('work-0', String.raw`(a) Use equation (3) to find the speed. [M1] [A1] [A1]`);
   const bare = prepare(slide([question]), {height:200}).shapes[0].transcription.tex;
   assert.doesNotMatch(bare, /marks|\(3\)/);
+  const bundled = prepare(slide([question, answer]), {height:200}).shapes;
+  assert.doesNotMatch(bundled[0].transcription.tex, /marks/);
+  answer.transcription.tex = String.raw`(a) Use equation (3) to find the speed. [M1]\par Substitute the measured time. [A1]\par Obtain the correct numerical speed. [A1]`;
   const checked = prepare(slide([question, answer]), {height:200}).shapes;
   assert.match(checked[0].transcription.tex, /speed\. \[3 marks\]/);
   assert.doesNotMatch(checked[0].transcription.tex, /2 marks/);

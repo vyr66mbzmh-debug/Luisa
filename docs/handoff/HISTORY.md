@@ -2,6 +2,17 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.83 -->
+**Release 0.83 · GitHub #153.**
+
+Further Mechanics 1 uses the Luisa teaching palette across five chapters. Work, Energy and Power has new force diagrams, ordered reveals and complete on-board solutions for the energy examples.
+
+Year 2 Complex Numbers has a dedicated binomial expansion reveal and revised question layouts. Shared teaching controls suppress unsupported mark allocations and align lettered subparts.
+
+The five student booklets, five worked handouts and the Complex Numbers student booklet have been refreshed.
+
+Release verification, usage and recovery evidence are recorded on issue #153.
+
 <!-- LUISA-REPORT-HANDOFF v0.82 -->
 **Release 0.82 · GitHub #151.**
 

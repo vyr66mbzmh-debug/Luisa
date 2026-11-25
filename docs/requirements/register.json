@@ -6697,13 +6697,13 @@
       "requirement": "Separate exam banner and body title, require complete one-by-one mark allocations, and review actual diagrams, buttons and intermediate reveal states.",
       "scope": "Global teaching standards; all Further Mechanics 1 chapters.",
       "priority": "P1",
-      "implementation": "planned",
-      "verification": "pending",
+      "implementation": "implemented",
+      "verification": "agent_checked",
       "origin": "Owner request v0.84, GitHub #156",
       "acceptance": [
         "Exam banner reads Test your understanding, with separate Exam style question title. Omit unsupported totals and marks.",
         "Remove legacy exclamation callouts and stretched text. Verify first click and ordered parts on Work, Energy and Power page 30.",
-        "Review all slides in chapters 1, 3, 4 and 5 including intermediate states, buttons, diagrams, print and reset."
+        "Review all slides in chapters 1, 3, 4 and 5 including intermediate states, buttons, diagrams, print and reset. Keep English prose outside math mode, including the power hint on chapter 2 page 39."
       ],
       "evidence": [
         "GitHub issue #156"

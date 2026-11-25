@@ -117,23 +117,34 @@
     const shapes = (slide.shapes || []).flatMap(function flatten(shape) {
       return [shape, ...(shape.children || []).flatMap(flatten)];
     });
-    const content = s => [s.transcription?.tex, ...(s.text?.paragraphs || []).map(p => p.parts.map(r => r.text ?? r.tex ?? '').join(''))].filter(Boolean).join(' ');
-    const markedParts = new Set();
-    let earned = false;
+    const content = s => [s.transcription?.tex, ...(s.text?.paragraphs || []).map(p => p.parts.map(r => r.text ?? r.tex ?? '').join(''))].filter(Boolean).join('\\par ');
+    const earned = new Map();
+    const code = /(?:\[(?:D?M|A|B)1\]|\b(?:D?M|A|B)1\b)/gi;
+    const individuallyMarked = line => {
+      let count = 0, start = 0;
+      const matches = [...line.matchAll(code)];
+      for (const [index, match] of matches.entries()) {
+        const evidence = line.slice(start, match.index).replace(partAtStart, '').trim();
+        if (!/[a-zA-Z0-9]/.test(evidence)) return 0;
+        if (index && !/[=a-zA-Z]/.test(evidence)) return 0;
+        count++;
+        start = match.index + match[0].length;
+      }
+      return count;
+    };
     let current = '';
     const partAtStart = /^\s*(?:\d+\.?\s*)?(?:\(([a-h])\)|([a-h])\)|\\textbf\{\(?([a-h])\)?[.)]?\})\s*/;
     for (const shape of shapes) {
       const solution = shape.answerFor || /^(?:work|ans(?:wer)?[-_]|solution)/i.test(shape.id);
-      if (shape.cover || (!solution && !/\[[MAB]\d+\]/.test(content(shape)))) continue;
+      if (shape.cover || (!solution && !/\[(?:D?M|A|B)1\]/i.test(content(shape)))) continue;
       const owner = shapes.find(s => s.cover && s.id === shape.answerFor);
       const named = (owner?.coverLabel || '').match(/(?:^|\()([a-h])\)?$/);
       if (named) current = named[1];
       for (const line of content(shape).split(/\\par\b|\n/)) {
         const m = line.match(partAtStart);
         if (m) current = m[1] || m[2] || m[3];
-        if (!/(?:\[[MAB]\d+\]|(?:^|\s)[MAB]\d+\s*(?=\s|$))/.test(line.replace(/Edexcel\s+[MAB]\d+/gi,''))) continue;
-        earned = true;
-        if (current) markedParts.add(current);
+        const count = individuallyMarked(line.replace(/Edexcel\s+[MAB]\d+/gi,''));
+        if (count) earned.set(current, (earned.get(current) || 0) + count);
       }
     }
     return function format(value, question, initialPart = '') {
@@ -142,10 +153,16 @@
       let out = value.split(/(\\par\b)/).map(line => {
         const m = line.match(partAtStart);
         if (m) part = m[1] || m[2] || m[3];
-        const supported = earned && (!part || markedParts.has(part));
-        const allocation = (_, n) => supported ? '[' + n + (n === '1' ? ' mark]' : ' marks]') : '';
+        const supported = part ? earned.get(part) : [...earned.values()].reduce((sum, n) => sum + n, 0);
+        const allocation = (_, n) => supported === Number(n) ? '[' + n + (n === '1' ? ' mark]' : ' marks]') : '';
         let result = line.replace(/[[(](\d{1,2})\s+marks?[\])]/gi, allocation);
         if (question && !/\b(?:equation|formula|expression|identity|statement|relation|from|using|in)\s+[[(]\d+[\])][.,]?\s*$/i.test(result)) result = result.replace(/(?:^|(?<=\s))(?:\((\d{1,2})\)|\[(\d{1,2})\])(?=[.,]?\s*$)/g, (_, parens, brackets) => allocation(_, parens || brackets));
+        if (!question && /(?:^|\s)\[?(?:D?M|A|B)\d+\]?\s*$/i.test(result)) {
+          // Detached scheme columns and bundles do not explain individual marks.
+          if (!individuallyMarked(result) || /(?:\[?(?:D?M|A|B)\d+\]?\s*){2,}$/i.test(result)) {
+            result = result.replace(/(?:\s*\[?(?:D?M|A|B)\d+(?:ft)?\]?)+\s*$/gi, '');
+          }
+        }
         return result.replace(/ +([.,])/g, '$1');
       }).join('');
       return out.replace(/\\par\s*(?=\\par\b|$)/g, '').trimEnd();
@@ -241,12 +258,20 @@
 
   function updateToolbar(slide, total, number = slide.sourceSlide) {
     const heading = document.getElementById('lesson-title');
-    if (slide.titleTex) root.katex.render(slide.titleTex, heading, {throwOnError:true,trust:false});
-    else {
-      const sourceExam = /^(?:test your understanding|exam[ -]style questions?|tough question)$/i.test(slide.title)
-        && slide.shapes.some(shape => /Edexcel.{0,50}(?:\d{4}|Q\d)/i.test([shape.transcription?.tex, ...(shape.text?.paragraphs || []).flatMap(p => p.parts.map(r => r.text || ''))].join(' ')));
-      setTitle(heading, sourceExam ? 'Exam style question' : slide.title);
+    const exam = /^exam[ -]style questions?$/i.test(slide.title) ||
+      /^(?:test your understanding|tough question)$/i.test(slide.title) &&
+      slide.shapes.some(shape => /Edexcel.{0,50}(?:\d{4}|Q\d)/i.test([shape.transcription?.tex, ...(shape.text?.paragraphs || []).flatMap(p => p.parts.map(r => r.text || ''))].join(' ')));
+    if (exam) setTitle(heading, 'Test your understanding');
+    else if (slide.titleTex) root.katex.render(slide.titleTex, heading, {throwOnError:true,trust:false});
+    else setTitle(heading, slide.title);
+    let subtitle = document.getElementById('lesson-exam-title');
+    if (exam && !subtitle) {
+      subtitle = document.createElement('h2');
+      subtitle.id = 'lesson-exam-title';
+      subtitle.textContent = 'Exam style question';
+      document.getElementById('slide-region').before(subtitle);
     }
+    if (subtitle) subtitle.hidden = !exam;
     heading.title = slide.title;
     root.dispatchEvent(new CustomEvent('luisa-slide', {detail: Number(number)}));
     document.getElementById('slide-number').textContent = number;
@@ -277,7 +302,7 @@
     else link.removeAttribute('href');
   }
 
-  const api = {formatSubparts,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments};
+  const api = {formatSubparts,markPolicy,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments};
   if (typeof module !== 'undefined') module.exports = api;
   root.LUISA_CONTROLS = api;
 })(typeof window === 'undefined' ? globalThis : window);
