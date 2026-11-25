@@ -6711,8 +6711,8 @@
     },
     {
       "id": "RES-085",
-      "requirement": "Update the diagram conventions label, embed the specified collision video and provide the textbook chapter on Cloudflare.",
-      "scope": "v0.85 · Further Mechanics 1, chapter 4, Elastic collisions in one dimension, slides 32 and 41 and the Cloudflare chapter resource.",
+      "requirement": "Update the diagram conventions label, embed the specified collision video and provide the textbook chapter on Cloudflare. Refresh all ten Further Mechanics 1 booklets and match their covers to the established module format using the supplied orange.",
+      "scope": "v0.85 · Further Mechanics 1, chapter 4, Elastic collisions in one dimension, slides 32 and 41 and the Cloudflare chapter resource. All five Further Mechanics 1 student booklets and their five solutions editions.",
       "priority": "P2",
       "implementation": "planned",
       "verification": "pending",
@@ -6720,7 +6720,10 @@
       "acceptance": [
         "Slide 32 shows “Diagram conventions” in place of “My diagram conventions”. Check corresponding handout text.",
         "Slide 41 of 41 embeds https://www.youtube.com/watch?v=6dTyOl1fmDo in place of the broken hyperlink. Verify playback within the slide on the public and school viewers.",
-        "Publish the Further Mechanics 1 chapter 4 textbook PDF in the Cloudflare owner edition and link it from chapter resources. Verify in a signed-out browser that the link opens the full “Elastic collisions in one dimension” chapter on Cloudflare without a password or redirect to ADA. ADA student and teacher permissions retain their existing settings."
+        "Publish the Further Mechanics 1 chapter 4 textbook PDF in the Cloudflare owner edition and link it from chapter resources. Verify in a signed-out browser that the link opens the full “Elastic collisions in one dimension” chapter on Cloudflare without a password or redirect to ADA. ADA student and teacher permissions retain their existing settings.",
+        "Update all five Further Mechanics 1 student booklets and all five corresponding worked-solutions booklets to reflect the approved v0.85 teaching changes relevant to each chapter.",
+        "Use the existing Luisa module booklet cover format for each edition: match the page dimensions, layout, typography, branding, spacing and placement of the chapter and edition titles. Use the supplied orange swatch for the front-cover colour (sRGB #E97738, RGB 233, 119, 56, converted from the source image’s embedded colour profile).",
+        "Render page 1 of all ten PDFs and compare each with the corresponding student or solutions cover from an existing module. Verify the cover colour and the chapter and edition titles, and check the updated content on the affected booklet pages."
       ],
       "evidence": [
         "GitHub issue #158"
