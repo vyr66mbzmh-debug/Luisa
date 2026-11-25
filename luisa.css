@@ -4,25 +4,25 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 .view-tabs{display:flex;gap:6px;align-items:center;flex-wrap:wrap}.view-tabs a{padding:10px 14px;border:1px solid #8095a5;border-radius:8px;color:white;text-decoration:none;font:600 14px system-ui}.view-tabs a[aria-current=page]{background:#fff;color:#102b43}
 
 #slide-region { overscroll-behavior-x: contain; }
-#slide-region :is(.lesson-answer-cover,.lesson-animation-control) {
+#slide-region :is(.lesson-answer-cover,.lesson-animation-control,.exercise-reveal) {
   background: #d7e9f8;
   border: 1px solid #829eb6;
   border-radius: 3px;
   box-shadow: inset 0 1px 0 #ffffffb3, 0 1px 2px #1c426333;
   cursor: pointer;
 }
-#slide-region :is(.lesson-answer-cover,.lesson-animation-control) > .lesson-drawing { display: none; }
-#slide-region :is(.lesson-answer-cover,.lesson-animation-control) .lesson-text,
-#slide-region :is(.lesson-answer-cover,.lesson-animation-control) .lesson-text * { color: #173b60 !important; }
+#slide-region :is(.lesson-answer-cover,.lesson-animation-control,.exercise-reveal) > .lesson-drawing { display: none; }
+#slide-region :is(.lesson-answer-cover,.lesson-animation-control,.exercise-reveal) .lesson-text,
+#slide-region :is(.lesson-answer-cover,.lesson-animation-control,.exercise-reveal) .lesson-text * { color: #173b60 !important; }
 #slide-region .lesson-animation-control.played.is-hidden { visibility: visible !important; opacity: 1 !important; pointer-events: auto; }
 @media print {
   .lesson-answer-cover { background: white !important; border: 1px solid #a1b2c4 !important; box-shadow: none !important; }
 }
-#slide-region :is(.lesson-answer-cover,.lesson-animation-control):active {
+#slide-region :is(.lesson-answer-cover,.lesson-animation-control,.exercise-reveal):active {
   background: #c8dff2;
   box-shadow: inset 0 1px 2px #43668240;
 }
-#slide-region :is(.lesson-answer-cover,.lesson-animation-control):focus-visible {
+#slide-region :is(.lesson-answer-cover,.lesson-animation-control,.exercise-reveal):focus-visible {
   outline: 2px solid #325f86;
   outline-offset: -2px;
 }
@@ -85,7 +85,7 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 .library-actions .luisa-signout:hover { box-shadow: inset 0 0 0 1px #f0d6a1; }
 
 /* Reveal labels follow the native lesson serif used in Pure 1, chapter 14, page 19. */
-#slide-region :is(.lesson-answer-cover,.lesson-animation-control) .lesson-text,
+#slide-region :is(.lesson-answer-cover,.lesson-animation-control,.exercise-reveal) .lesson-text,
 #slide-region .ch14 :is(.cover,.choice) {
   font-family: Lesson,KaTeX_Main,Georgia,serif;
   font-weight: normal;
@@ -110,20 +110,48 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 
 /* Common on-screen reveal treatment. Keep printed writing areas flat. */
 @media screen {
-  #slide-region :is(.lesson-answer-cover,.lesson-animation-control) {
+  #slide-region :is(.lesson-answer-cover,.lesson-animation-control,.exercise-reveal) {
     background: linear-gradient(#f2f8fd, #c8dff2);
     border: 1.5px solid #6f91ad;
     border-bottom: 3px solid #51728d;
     border-radius: 7px;
     box-shadow: inset 0 1px 0 white, 0 2px 3px #18395730;
   }
-  #slide-region :is(.lesson-answer-cover,.lesson-animation-control):hover {
+  #slide-region :is(.lesson-answer-cover,.lesson-animation-control,.exercise-reveal):hover {
     background: linear-gradient(#f8fcff, #d6e8f7);
   }
-  #slide-region :is(.lesson-answer-cover,.lesson-animation-control):active {
+  #slide-region :is(.lesson-answer-cover,.lesson-animation-control,.exercise-reveal):active {
     background: #c6dcec;
     box-shadow: inset 0 2px 3px #18395740;
   }
 }
 .lesson-step-count {font: 19px Lesson,KaTeX_Main,serif;color:#45617b;text-align:right;}
 #exercise-assignment {max-width:28em;font:16px Lesson,KaTeX_Main,serif;line-height:1.35;color:#183957;}
+.exercise-sheet {display:flex; flex-direction:column; padding:24px 30px; color:#183957; font-family:Lesson,serif}
+.exercise-head {display:grid; grid-template-columns:31% 1fr; align-items:center; font-size:30px; margin-bottom:15px}
+.exercise-reveal {justify-self:start; font:24px Lesson,serif; color:#173b60; padding:4px 26px; cursor:pointer}
+.exercise-columns {display:grid;grid-template-columns:30% minmax(0,1fr);gap:2%;min-height:0;flex:1;line-height:1.17}
+.exercise-question,.exercise-working {min-width:0;min-height:0;height:100%}
+.exercise-working {column-gap:1.15em;column-rule:1px solid #d7e3ed;color:#173b60}
+.exercise-columns .lesson-image-prose {display:contents}
+.exercise-columns .lesson-image-prose>span {margin-bottom:.16em;break-inside:avoid}
+.exercise-columns .katex {font-size:1em}
+.exercise-figure {display:block;width:100%;height:8em;object-fit:contain;margin:.35em auto;break-inside:avoid}
+.exercise-question .exercise-figure {height:11em}
+#slide-region .lesson-tip {background:#eef5fa!important;border-left:4px solid #5a819e;color:#183957!important;padding:4px 8px}
+#slide-region .lesson-tip .lesson-text *,#slide-region .lesson-tip .lesson-image-tex {color:#183957!important}
+#slide-region .lesson-tip>.lesson-drawing,#slide-region .lesson-tip>.lesson-tex-geometry {display:none}
+@media print {.exercise-reveal{visibility:hidden}}
+/* Keep an opaque mask where the source placed the answer; only the label is a button. */
+@media screen {
+ #slide-region [data-compact-control].lesson-answer-cover {
+   background:white;border:0;box-shadow:none;border-radius:0;
+ }
+ #slide-region [data-compact-control].lesson-answer-cover>:is(.lesson-drawing,.lesson-tex-geometry) {display:none}
+ #slide-region [data-compact-control].lesson-answer-cover>.lesson-text {
+   inset:0 auto auto 0!important;min-height:42px;padding:4px 20px!important;
+   max-width:100%;border:1.5px solid #6f91ad;border-bottom:3px solid #51728d;
+   border-radius:7px;background:linear-gradient(#f2f8fd,#c8dff2);
+   box-shadow:inset 0 1px white,0 2px 3px #18395730;transform:none!important;
+ }
+}

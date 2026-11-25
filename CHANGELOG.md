@@ -1,3 +1,9 @@
+## Luisa v0.82
+
+- All five Further Mechanics 1 teaching decks and both sets of handouts open directly in the Cloudflare resource library. Teacher textbook chapters remain available behind the school staff sign-in.
+- Each of the 131 exercise questions has one Solution reveal, with its complete worked answer on the same board and one worked PDF page. Longer calculations use columns.
+- The vector lessons explain substitutions, components, magnitude and direction. All six illustrative photographs appear when their slides open. Mechanics diagrams use native LaTeX drawings and the shared display conventions are recorded in Git.
+
 ## Luisa v0.81
 
 - Further Mechanics 1 now opens each textbook exercise directly on its first question. All 131 questions keep the prompt visible while the complete solution opens on the same slide.

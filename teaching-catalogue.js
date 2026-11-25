@@ -569,5 +569,45 @@ window.LUISA_TEACHING={
         "solutions": "resources/solutions/further-core-pure-2/CorePure2_Ch08_Modelling_With_Differential_Equations SOLUTIONS.pdf"
       }
     ]
+  },
+  "further-mechanics-1": {
+    "title": "Further Mechanics 1",
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Momentum and impulse",
+        "slides": "teaching-lesson-viewer.html?book=further-mechanics-1&chapter=1&slide=1",
+        "booklet": "resources/teaching/v003/further-mechanics-1/booklets/chapter-01.pdf",
+        "solutions": "resources/teaching/v003/further-mechanics-1/solutions/chapter-01.pdf"
+      },
+      {
+        "number": 2,
+        "title": "Work, energy and power",
+        "slides": "teaching-lesson-viewer.html?book=further-mechanics-1&chapter=2&slide=1",
+        "booklet": "resources/teaching/v003/further-mechanics-1/booklets/chapter-02.pdf",
+        "solutions": "resources/teaching/v003/further-mechanics-1/solutions/chapter-02.pdf"
+      },
+      {
+        "number": 3,
+        "title": "Elastic strings and springs",
+        "slides": "teaching-lesson-viewer.html?book=further-mechanics-1&chapter=3&slide=1",
+        "booklet": "resources/teaching/v003/further-mechanics-1/booklets/chapter-03.pdf",
+        "solutions": "resources/teaching/v003/further-mechanics-1/solutions/chapter-03.pdf"
+      },
+      {
+        "number": 4,
+        "title": "Elastic collisions in one dimension",
+        "slides": "teaching-lesson-viewer.html?book=further-mechanics-1&chapter=4&slide=1",
+        "booklet": "resources/teaching/v003/further-mechanics-1/booklets/chapter-04.pdf",
+        "solutions": "resources/teaching/v003/further-mechanics-1/solutions/chapter-04.pdf"
+      },
+      {
+        "number": 5,
+        "title": "Elastic collisions in two dimensions",
+        "slides": "teaching-lesson-viewer.html?book=further-mechanics-1&chapter=5&slide=1",
+        "booklet": "resources/teaching/v003/further-mechanics-1/booklets/chapter-05.pdf",
+        "solutions": "resources/teaching/v003/further-mechanics-1/solutions/chapter-05.pdf"
+      }
+    ]
   }
 };

@@ -1,15 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.81 -->
-**Release 0.81 · GitHub #149.**
+<!-- LUISA-REPORT-HANDOFF v0.82 -->
+**Release 0.82 · GitHub #151.**
 
-Further Mechanics 1 now opens each textbook exercise directly on its first question. All 131 questions keep the prompt visible while the complete solution opens on the same slide.
+All five Further Mechanics 1 teaching decks and both sets of handouts open directly in the Cloudflare resource library. Teacher textbook chapters remain available behind the school staff sign-in.
 
-The five decks use raised reveal buttons, native LaTeX mechanics artwork and six replacement photographs. Each exercise banner gives the printed book page.
+Each of the 131 exercise questions has one Solution reveal, with its complete worked answer on the same board and one worked PDF page. Longer calculations use columns.
 
-The worked solutions attach 1,044 marks to calculation and reasoning steps. Revised print booklets keep one exercise question per page and provide full-width worked solutions.
+The vector lessons explain substitutions, components, magnitude and direction. All six illustrative photographs appear when their slides open. Mechanics diagrams use native LaTeX drawings and the shared display conventions are recorded in Git.
 
-The step allocations are Luisa teaching guidance. Source page references and original chapter PDFs remain available in the school edition. The school resource manifest identifies the reviewed files. Deployment, recovery and token evidence are recorded on issue #149.
+The 1,044 allocated marks and printed exercise references are retained. School handouts and public handouts use matching checksums. Release verification, usage and recovery evidence are recorded on issue #151.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

@@ -1,0 +1,41 @@
+/* One board sheet is also one worked PDF page. Visibility changes never reflow the question. */
+(() => {
+  const {escape, imageContent} = FMQ_SLIDE_RENDERER;
+  function render(slide, base) {
+    const spec = slide.singlePageExercise;
+    const objects = new Map(slide.shapes.map(shape => [shape.id, shape]));
+    function figure(id) {
+      const item = objects.get(id);
+      return `<img class="exercise-figure" src="${escape(base + item.asset)}" alt="${escape(item.alt || 'Mechanics diagram')}">`;
+    }
+    const question = imageContent(objects.get(spec.question).transcription.tex, {});
+    const working = spec.working.map(id => {
+      const item = objects.get(id);
+      return item.asset ? figure(id) : imageContent(item.transcription.tex, {});
+    }).join('');
+    const number = escape(objects.get('number').transcription.tex);
+    return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet" style="width:100%;height:100%"><div class="exercise-head"><strong>${number}</strong><button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button></div><div class="exercise-columns"><div class="exercise-question" data-shape="prompt">${question}${spec.figures.map(figure).join('')}</div><div class="exercise-working" data-shape="work-0" data-answer-for="solution">${working}</div></div></div></div>`;
+  }
+  function fit(sheet) {
+    if (!sheet) return;
+    const container = sheet.querySelector('.exercise-columns');
+    const solution = sheet.querySelector('.exercise-working');
+    // Size against hidden working as well, so revealing it leaves everything in place.
+    for (let size = 29; size >= 8; size -= 0.5) {
+      for (const count of [1, 2, 3, 4]) {
+        container.style.fontSize = size + 'px';
+        solution.style.columnCount = count;
+        if (solution.scrollWidth > solution.clientWidth + 1 || solution.scrollHeight > solution.clientHeight + 1) continue;
+        const question = sheet.querySelector('.exercise-question');
+        if (question.scrollHeight > question.clientHeight + 1 || question.scrollWidth > question.clientWidth + 1) continue;
+        const outer = solution.getBoundingClientRect();
+        const scale = outer.width / solution.clientWidth;
+        const colWidth = (solution.clientWidth - (count-1)*parseFloat(getComputedStyle(solution).columnGap))/count;
+        if ([...solution.querySelectorAll('.katex-html')].some(e => e.getBoundingClientRect().width > colWidth*scale+1)) continue;
+        if ([...solution.querySelectorAll('.katex-html,.exercise-figure')].some(e=>e.getBoundingClientRect().right > outer.right + 1)) continue;
+        return;
+      }
+    }
+  }
+  window.LUISA_EXERCISE = {render, fit};
+})();

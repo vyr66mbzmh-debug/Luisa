@@ -2,6 +2,17 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.81 -->
+**Release 0.81 · GitHub #149.**
+
+Further Mechanics 1 now opens each textbook exercise directly on its first question. All 131 questions keep the prompt visible while the complete solution opens on the same slide.
+
+The five decks use raised reveal buttons, native LaTeX mechanics artwork and six replacement photographs. Each exercise banner gives the printed book page.
+
+The worked solutions attach 1,044 marks to calculation and reasoning steps. Revised print booklets keep one exercise question per page and provide full-width worked solutions.
+
+The step allocations are Luisa teaching guidance. Source page references and original chapter PDFs remain available in the school edition. The school resource manifest identifies the reviewed files. Deployment, recovery and token evidence are recorded on issue #149.
+
 <!-- LUISA-REPORT-HANDOFF v0.80 -->
 **Release 0.80 · GitHub #147.**
 
