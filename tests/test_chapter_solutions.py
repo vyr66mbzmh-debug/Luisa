@@ -19,14 +19,21 @@ class ChapterSolutions(unittest.TestCase):
         # historical fingerprint/page count for matched canonical chapter records.
         replacements = json.loads((ROOT / 'docs/evidence/v059-integration.json').read_text())['mathematics']['pdfs']
         replacements += json.loads((ROOT / 'docs/evidence/v083-teaching-pdfs.json').read_text())['pdfs']
+        replacements += json.loads((ROOT / 'docs/evidence/v084-teaching-pdfs.json').read_text())['pdfs']
+        latest = {}
         for replacement in replacements:
-            self.assertEqual(hashlib.sha256((ROOT / replacement['path']).read_bytes()).hexdigest(), replacement['after'])
+            path = replacement['path']
+            if path in latest:
+                self.assertEqual(latest[path], replacement['before'])
+            latest[path] = replacement['after']
             for record in evidence.values():
                 for kind in ('booklet', 'solutions'):
                     if record[kind]['file'] == replacement['path']:
                         self.assertEqual(record[kind]['sha256'], replacement['before'])
                         self.assertEqual(record[kind]['pages'], replacement['pages'])
                         record[kind]['sha256'] = replacement['after']
+        for path, digest in latest.items():
+            self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), digest)
         textbook = json.loads((ROOT / 'textbook-catalogue.json').read_text())
         progress = (ROOT / 'development-progress.html').read_text()
         seen = set()

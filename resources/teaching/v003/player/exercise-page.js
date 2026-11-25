@@ -8,11 +8,12 @@
       const item = objects.get(id);
       return `<img class="exercise-figure" src="${escape(base + item.asset)}" alt="${escape(item.alt || 'Mechanics diagram')}">`;
     }
-    const question = imageContent(objects.get(spec.question).transcription.tex, {});
+    const formatMarks = LUISA_CONTROLS.markPolicy(slide);
+    const question = imageContent(formatMarks(objects.get(spec.question).transcription.tex, true), {});
     const band = spec.diagramBand;
     const working = spec.working.filter(id => id !== band).map(id => {
       const item = objects.get(id);
-      return item.asset ? figure(id) : imageContent(item.transcription.tex, {});
+      return item.asset ? figure(id) : imageContent(formatMarks(item.transcription.tex, false), {});
     }).join('');
     const number = escape(objects.get('number').transcription.tex);
     return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet" style="width:100%;height:100%"><div class="exercise-head"><strong>${number}</strong><button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button></div><div class="exercise-columns"><div class="exercise-question" data-shape="prompt">${question}${spec.figures.map(figure).join('')}</div><div class="exercise-working" data-shape="work-0" data-answer-for="solution">${working}</div></div>${band ? '<div class="exercise-diagram-band" data-answer-for="solution">'+figure(band)+'</div>' : ''}</div></div>`;

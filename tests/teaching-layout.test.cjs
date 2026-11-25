@@ -63,6 +63,9 @@ test('question marks require working for the same part; exam paper codes are not
   const answer = shape('work-0', String.raw`(a) Use equation (3) to find the speed. [M1] [A1] [A1]`);
   const bare = prepare(slide([question]), {height:200}).shapes[0].transcription.tex;
   assert.doesNotMatch(bare, /marks|\(3\)/);
+  const bundled = prepare(slide([question, answer]), {height:200}).shapes;
+  assert.doesNotMatch(bundled[0].transcription.tex, /marks/);
+  answer.transcription.tex = String.raw`(a) Use equation (3) to find the speed. [M1]\par Substitute the measured time. [A1]\par Obtain the correct numerical speed. [A1]`;
   const checked = prepare(slide([question, answer]), {height:200}).shapes;
   assert.match(checked[0].transcription.tex, /speed\. \[3 marks\]/);
   assert.doesNotMatch(checked[0].transcription.tex, /2 marks/);
@@ -84,4 +87,13 @@ test('separate mark labels, mixed maths runs and trailing punctuation follow the
   assert.equal(line(1), '(b) Exactly two programmes.');
   assert.equal(line(2), '');
   assert.equal(line(3), 'Use equation (3).');
+});
+
+test('exam headings recognise paper references across lesson titles and retain textbook exercise banners', () => {
+  const { examExample } = require('../lesson-controls.js');
+  const cited = {title:'Finding the equation yourself', shapes:[{children:[{transcription:{tex:'Edexcel FP1 (Old), January 2011, Q5'}}]}]};
+  assert.equal(examExample(cited), true);
+  assert.equal(examExample({title:'Harder Exam Question', shapes:[]}), true);
+  assert.equal(examExample({...cited, title:'Exercise 1D Pearson Core Pure 1, p. 7-8'}), false);
+  assert.equal(examExample({title:'Iteration — Calculation and Exam Technique', shapes:[]}), false);
 });
