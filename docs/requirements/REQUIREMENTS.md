@@ -330,3 +330,4 @@ Historical assertions are not current verification. See README.md in this folder
 | <a name='req-pap-079-1'></a>PAP-079-1 | Include all supplied official Edexcel AS papers and their official schemes in Papers and teacher exams, with relevant Year 1 topics and difficulty ratings. | Luisa Papers | implemented | pending |
 | <a name='req-pap-079-2'></a>PAP-079-2 | Use one five-bucket difficulty scale throughout Luisa Papers, including the teacher exam selector. | All question sources and editions | implemented | pending |
 | <a name='req-pap-079-3'></a>PAP-079-3 | Delete the three duplicate MADAS copies from the selectable question bank. | Luisa Papers | implemented | pending |
+| <a name='req-res-080'></a>RES-080 | Publish the five Further Mechanics 1 chapters in Resources with faithful teaching slides, student booklets, worked solutions and separate teacher textbook chapters. | Further Mechanics 1, both editions | implemented | agent_checked |

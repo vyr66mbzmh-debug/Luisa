@@ -2,6 +2,17 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.79 -->
+**Release 0.79 · GitHub #145.**
+
+Papers adds 322 official Edexcel AS questions worth 2,320 marks from 36 question papers and their mark schemes. The two independently numbered specimen applied sections are listed separately.
+
+Teachers and pupils can filter questions by Easy, Medium, Difficult, Very difficult and Unclassified. Standard joins Medium, Hard joins Difficult, and Very Hard joins Very difficult.
+
+The official question and scheme take precedence when sources repeat a problem. This release retires 45 PMT questions, two practice booklet questions and three repeated MADAS copies. Saved selections resolve to the retained questions.
+
+The official bank now contains 766 questions worth 5,770 marks. AS source checksums, page ranges, skill assignments and printed mark allocations are in `scripts/import/sets/v079-as/`. Duplicate decisions and retained IDs are in `docs/evidence/duplicate-decisions.json`. Release verification and usage are tracked on issue #145.
+
 <!-- LUISA-REPORT-HANDOFF v0.78 -->
 **Release 0.78 · GitHub #143.**
 

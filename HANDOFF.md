@@ -1,15 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.79 -->
-**Release 0.79 · GitHub #145.**
+<!-- LUISA-REPORT-HANDOFF v0.80 -->
+**Release 0.80 · GitHub #147.**
 
-Papers adds 322 official Edexcel AS questions worth 2,320 marks from 36 question papers and their mark schemes. The two independently numbered specimen applied sections are listed separately.
+Further Mechanics 1 adds five teaching decks, five student booklets and five worked-solutions booklets to the school Resources catalogue.
 
-Teachers and pupils can filter questions by Easy, Medium, Difficult, Very difficult and Unclassified. Standard joins Medium, Hard joins Difficult, and Very Hard joins Very difficult.
+The five decks retain 121 source slides and include 131 exam-style questions worth 1,044 marks. Each exam question has its own booklet page and a link to the corresponding Solution Bank working.
 
-The official question and scheme take precedence when sources repeat a problem. This release retires 45 PMT questions, two practice booklet questions and three repeated MADAS copies. Saved selections resolve to the retained questions.
+Teachers can also open each of the five textbook chapters separately. The school sign-in protects the materials.
 
-The official bank now contains 766 questions worth 5,770 marks. AS source checksums, page ranges, skill assignments and printed mark allocations are in `scripts/import/sets/v079-as/`. Duplicate decisions and retained IDs are in `docs/evidence/duplicate-decisions.json`. Release verification and usage are tracked on issue #145.
+Print counts are 198 student booklet pages, 363 worked-solutions pages and 109 textbook pages. The worked solutions identify source discrepancies in 4C Q10, 5B Q8, 5C Q14 and Mixed Exercise 5 Q6. The release manifest lists the school files by checksum. Live verification and recovery evidence are tracked on issue #147.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

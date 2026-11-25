@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-23",
+  "asOf": "2026-11-25",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -6622,6 +6622,23 @@
       "evidence": [
         "GitHub issue #145",
         "tests/test_madas.py"
+      ]
+    },
+    {
+      "id": "RES-080",
+      "requirement": "Publish the five Further Mechanics 1 chapters in Resources with faithful teaching slides, student booklets, worked solutions and separate teacher textbook chapters.",
+      "scope": "Further Mechanics 1, both editions",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner request v0.80, GitHub #147",
+      "acceptance": [
+        "Preserve every teaching step and meaningful diagram, using the supplied orange topic accent.",
+        "Include every exam-style question in the referenced Pearson exercises on its own page, with exact wording and corresponding Solution Bank working.",
+        "Give pupils access to slides, booklets and solutions. Give teachers additional access to individual textbook chapters. Verify both roles."
+      ],
+      "evidence": [
+        "GitHub issue #147"
       ]
     }
   ]

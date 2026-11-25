@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Further Mechanics 1 v0.80
+
+Five chapters of Further Mechanics 1 teaching materials. [Issue #147](https://github.com/vyr66mbzmh-debug/Luisa/issues/147).
+
 ## Papers v0.79
 
 Official AS papers, unified difficulty and duplicate removal. [Issue #145](https://github.com/vyr66mbzmh-debug/Luisa/issues/145).

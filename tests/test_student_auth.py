@@ -406,6 +406,38 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(colleague.get('/', base_url=host).status_code, 200)
         self.assertNotIn(replacement, self.admin.get('/admin?role=teachers', base_url=host).text)
 
+    def test_further_mechanics_role_access(self):
+        host = 'https://ada.test'
+        base = 'resources/teaching/v003/further-mechanics-1/'
+        directory = self.build.parent / 'school-resources' / 'further-mechanics-1'
+        student_pdf = 'booklets/chapter-01.pdf'
+        teacher_pdf = 'textbook/chapter-01.pdf'
+        for name in [student_pdf, teacher_pdf, 'unlisted.pdf']:
+            path = directory / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(('%PDF-' + name).encode())
+        self.assertEqual(self.client.get('/' + base + teacher_pdf, base_url=host).status_code, 302)
+        password = 'School fixture password'
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('INSERT INTO staff_accounts(username,password_hash,force_change) VALUES(?,?,0)',
+                         ('mechanics.staff', PasswordHasher().hash(password)))
+        self.assertEqual(self.student_login('mechanics.staff', password).location, '/')
+        for name in [student_pdf, teacher_pdf]:
+            with self.client.get('/' + base + name, base_url=host) as response:
+                self.assertEqual(response.data, ('%PDF-' + name).encode())
+        self.assertEqual(self.client.get('/' + base + 'unlisted.pdf', base_url=host).status_code, 404)
+        self.add('01239')
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('UPDATE accounts SET password_hash=?,force_change=0 WHERE school_number=?',
+                         (PasswordHasher().hash(password), '01239'))
+        self.assertEqual(self.student_login('01239@marlboroughcollege.org', password).location, '/')
+        self.assertEqual(self.client.get('/' + base + teacher_pdf, base_url=host).status_code, 404)
+        viewer = self.client.get('/' + base + student_pdf + '?page=12', base_url=host,
+                                 headers={'Sec-Fetch-Dest': 'document'})
+        self.assertIn((base + student_pdf + '?inline=1#page=12').encode(), viewer.data)
+        with self.client.get('/' + base + student_pdf, base_url=host) as response:
+            self.assertEqual(response.data, ('%PDF-' + student_pdf).encode())
+
     def test_staff_content_login_is_independent_of_pupils_and_admin(self):
         login = 'sample.teacher'
         temp = 'One-use-test-secret!'

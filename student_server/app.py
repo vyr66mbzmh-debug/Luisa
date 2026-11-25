@@ -28,7 +28,7 @@ _DUMMY_PASSWORD_HASH = _PH.hash(secrets.token_urlsafe(32))
 _SCHOOL_NUMBER = re.compile(r"[0-9]{5}\Z", re.ASCII)
 _SIGN_IN = re.compile(r"[0-9]{5}@marlboroughcollege\.org\Z", re.ASCII | re.IGNORECASE)
 _UTC = timezone.utc
-from . import signin_summary
+from . import further_mechanics, signin_summary
 
 # Shared by the PDF, password and administration screens.
 SIGN_OUT_FORM = """<form method="post" target="_top" action="{{ (url_for('admin_home') + '/logout') if request.path.startswith('/admin') else url_for('logout') }}" style="display:inline;margin:0">
@@ -59,7 +59,7 @@ PDF_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewpo
 <title>{{ title }}</title><style>body{margin:0;height:100dvh;display:flex;flex-direction:column;font:16px system-ui}
 nav{display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;background:#183957}a{color:white}
 iframe{width:100%;border:0;flex:1}</style><nav><a href="{{ file }}?download=1" download>Download PDF</a>
-""" + SIGN_OUT_FORM + """</nav><iframe src="{{ file }}?inline=1" title="{{ title }}"></iframe></html>"""
+""" + SIGN_OUT_FORM + """</nav><iframe src="{{ file }}?inline=1{% if page_number %}#page={{ page_number }}{% endif %}" title="{{ title }}"></iframe></html>"""
 LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Luisa sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>School email or username<input name=email type=text autocomplete=username required maxlength=64></label><label>Luisa password<input name=password type=password autocomplete=current-password required maxlength=1024></label><button>Sign in</button></form><p><a href="{{ url_for('admin_login') }}">Admin login</a></p></html>"""
 ADMIN_LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa admin login</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Admin login</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>Admin password<input name=password type=password autocomplete=current-password required maxlength=1024></label>{% if config.ADMIN_AUTH_MODE == "totp" %}<label>Authenticator code<input name=totp inputmode=numeric autocomplete=one-time-code required pattern='[0-9]{6}'></label>{% endif %}<button>Sign in</button></form></html>"""
 CHANGE_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Change Luisa password</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><div style="text-align:right">""" + SIGN_OUT_FORM + """</div><h1>Choose a new Luisa password</h1><p>Change your temporary password before opening course content.</p>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>New password<input name=password type=password autocomplete=new-password required minlength=8 maxlength=1024></label><label>Repeat new password<input name=confirm type=password autocomplete=new-password required minlength=8 maxlength=1024></label><button>Save password</button></form></html>"""
@@ -1074,15 +1074,25 @@ else document.getElementById('status').textContent='Open Offline downloads from 
         if asset == 'index.html':
             return index()
         directory, allowed = course_artifact()
-        if asset not in allowed:
+        request_asset = asset
+        if asset.startswith(further_mechanics.PREFIX):
+            asset = asset[len(further_mechanics.PREFIX):]
+            if not further_mechanics.permitted(asset, g.luisa_session['role'] == 'staff'):
+                abort(404)
+            directory = build_dir.parent / 'school-resources' / further_mechanics.BOOK
+        elif asset not in allowed:
             abort(404)
+        elif asset == 'teaching-catalogue.js':
+            book = further_mechanics.teaching_catalogue(g.luisa_session['role'] == 'staff')
+            script = (directory / asset).read_text() + '\nLUISA_TEACHING[' + json.dumps(further_mechanics.BOOK) + '] = ' + json.dumps(book) + ';'
+            return app.response_class(script, mimetype='application/javascript')
         target = (directory / asset).resolve()
         if not target.is_relative_to(directory) or not target.is_file():
             abort(404)
         if target.suffix.lower() == '.html':
             return course_page(target)
         if target.suffix.lower() == '.pdf' and request.headers.get('Sec-Fetch-Dest') == 'document' and 'download' not in request.args:
-            return watch_pupil_session(render_template_string(PDF_PAGE, title=target.stem, csrf=base_context(), file=url_for('private_asset', asset=asset)))
+            return watch_pupil_session(render_template_string(PDF_PAGE, title=target.stem, csrf=base_context(), file=url_for('private_asset', asset=request_asset), page_number=request.args.get('page', type=int)))
         return send_from_directory(str(directory), asset, conditional=False, etag=False, max_age=0,
                                    as_attachment=target.suffix.lower() == '.pdf' and 'download' in request.args)
 

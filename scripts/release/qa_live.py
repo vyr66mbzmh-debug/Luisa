@@ -144,7 +144,7 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
     for i in ('#papers-past-paper', '#papers-difficulty', '#papers-course', '#papers-book'):
         assert look(i) == white, (i, look(i))
     shot('all')
-    maths = [x['id'] for x in order if x['paperCode'].startswith('9MA')]
+    maths = [x['id'] for x in order if x['paperCode'].startswith(('8MA', '9MA'))]
     p.locator('#papers-course').select_option('maths-a-level')
     assert opts() == [''] + maths, opts()
     assert look('#papers-course') == [True, False, 'rgb(237, 243, 247)', 'rgb(21, 59, 87)'], look('#papers-course')
@@ -542,6 +542,33 @@ def manifest_checks(p, url, role, rev, version):
         ok('owner published release report has exactly one correctly titled handoff')
 
 
+def check_further_mechanics(page, url, role):
+    prefix = 'resources/teaching/v003/further-mechanics-1/'
+    fingerprints = json.loads((ROOT / 'docs/evidence/further-mechanics-1.json').read_text())['files']
+    page.goto(url + 'teaching-chapters.html#further-mechanics-1')
+    book = page.locator('article#further-mechanics-1')
+    expect(book.locator('h3')).to_have_count(5)
+    for label in ('Teaching slides', 'Student booklet', 'Solutions'):
+        expect(book.get_by_role('link', name=label, exact=True)).to_have_count(5)
+    expect(book.get_by_role('link', name='Book chapter', exact=True)).to_have_count(5 if role == 'staff' else 0)
+    for n in range(1, 6):
+        for category in ('booklets', 'solutions', 'textbook'):
+            path = f'{category}/chapter-{n:02}.pdf'
+            response = live_get(page, url + prefix + path)
+            if category == 'textbook' and role == 'student':
+                assert response.status == 404
+            else:
+                assert response.ok and hashlib.sha256(response.body()).hexdigest() == fingerprints[path], path
+        response = live_get(page, url + prefix + f'chapter-{n:02}.json')
+        assert response.ok and hashlib.sha256(response.body()).hexdigest() == fingerprints[f'chapter-{n:02}.json']
+    book.get_by_role('link', name='Teaching slides', exact=True).last.click()
+    expect(page.locator('#lesson-title')).to_have_text('Elastic collisions in two dimensions')
+    page.locator('#next').click()
+    expect(page.locator('#slide-content .source-slide[data-source-slide="2"]')).to_be_visible()
+    page.goto(url + 'teaching-chapters.html')
+    ok(role + ' Further Mechanics 1 slides, handouts, solutions and direct-access permissions')
+
+
 def ada_fixture(script):
     """Run a short script against the ADA account database on the server (private paths come from WORKSPACE)."""
     db = private.layout('dataDir') + '/accounts.sqlite'
@@ -626,12 +653,13 @@ def main():
                     p.locator('button[type=submit],button').first.click()
                     expect(p).not_to_have_url(re.compile(r'/login'))
                     paper(p, url, role, totals, qa_papers, out, rev, version)
+                    check_further_mechanics(p, url, role)
                     p.locator('.luisa-signout').click()
                     expect(p).to_have_url(url + 'login')
                     assert live_get(p, url + 'papers.js', max_redirects=0).status == 302
                     c.close()
                 guest = browser.new_context().new_page()
-                for path in ['papers.html', 'papers.js', 'exam-catalogue.json', 'content/exams/edexcel-9ma0-01-2025-june.json',
+                for path in ['resources/teaching/v003/further-mechanics-1/textbook/chapter-01.pdf', 'resources/teaching/v003/further-mechanics-1/chapter-01.json', 'papers.html', 'papers.js', 'exam-catalogue.json', 'content/exams/edexcel-9ma0-01-2025-june.json',
                              'resources/exams/edexcel-9ma0-01-2025-june/q07-figure.svg', 'content/exams/edexcel-9fm0-02-2024-june.json']:
                     assert live_get(guest, url + path, max_redirects=0).status == 302, path
                 assert live_get(guest, url + 'admin', max_redirects=0).status in (302, 403)
