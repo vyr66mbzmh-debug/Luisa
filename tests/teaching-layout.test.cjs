@@ -88,3 +88,12 @@ test('separate mark labels, mixed maths runs and trailing punctuation follow the
   assert.equal(line(2), '');
   assert.equal(line(3), 'Use equation (3).');
 });
+
+test('exam headings recognise paper references across lesson titles and retain textbook exercise banners', () => {
+  const { examExample } = require('../lesson-controls.js');
+  const cited = {title:'Finding the equation yourself', shapes:[{children:[{transcription:{tex:'Edexcel FP1 (Old), January 2011, Q5'}}]}]};
+  assert.equal(examExample(cited), true);
+  assert.equal(examExample({title:'Harder Exam Question', shapes:[]}), true);
+  assert.equal(examExample({...cited, title:'Exercise 1D Pearson Core Pure 1, p. 7-8'}), false);
+  assert.equal(examExample({title:'Iteration — Calculation and Exam Technique', shapes:[]}), false);
+});

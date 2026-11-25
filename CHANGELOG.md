@@ -2,7 +2,7 @@
 
 - Further Mechanics 1 now separates the exam banner and question heading. The Work, Energy and Power van example reveals its diagram, acceleration and maximum speed in order.
 - The five chapters have revised diagrams, worked examples, controls and matching student and worked handouts. English teaching hints preserve spaces around inline mathematics.
-- Teaching slides show a mark total only when the individual earning steps support it.
+- Teaching slides show a mark total only when the individual earning steps support it. In 25 other teaching chapters the corresponding exam panels in the student and worked handouts now use the shared exam heading.
 
 ## Luisa v0.83
 

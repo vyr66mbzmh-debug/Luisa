@@ -618,6 +618,10 @@ def check_further_mechanics(page, url, role):
     expect(prompt.locator('[data-math="P=Fv"]')).to_be_visible()
     expect(prompt).to_contain_text('to find the driving force in terms of')
     assert not prompt.locator('[data-math*="driving force"]').count()
+    for example in ('further-core-pure-1&chapter=3&slide=21', 'further-core-pure-2&chapter=1&slide=19'):
+        page.goto(viewer + example)
+        expect(page.locator('#lesson-title')).to_have_text('Test your understanding')
+        expect(page.locator('#lesson-exam-title')).to_have_text('Exam style question')
     page.goto(viewer + 'further-core-pure-2&chapter=1&slide=29')
     expansion = page.get_by_role('button', name='Expansion of (cos θ + i sin θ)⁶', exact=True)
     expect(page.locator('[data-shape="native-2"]')).to_be_hidden()

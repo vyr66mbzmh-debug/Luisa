@@ -256,11 +256,20 @@
     }
   }
 
+  function examExample(slide) {
+    if (slide.titlePage || slide.singlePageExercise || /^exercise\b/i.test(slide.title)) return false;
+    if (/\b(?:exam(?:ination)?[ -](?:style[ -])?(?:questions?|examples?)|exam[ -]style)\b/i.test(slide.title)) return true;
+    function hasExamReference(shape) {
+      const text = [shape.transcription?.tex, ...(shape.text?.paragraphs || []).map(p => p.parts.map(r => r.text || '').join(''))].filter(Boolean).join(' ');
+      return /\b(?:Edexcel|AQA|OCR)\b.{0,70}(?:\b(?:19|20)\d{2}\b|\bQ\s*\d)/i.test(text)
+        || (shape.children || []).some(hasExamReference);
+    }
+    return (slide.shapes || []).some(hasExamReference);
+  }
+
   function updateToolbar(slide, total, number = slide.sourceSlide) {
     const heading = document.getElementById('lesson-title');
-    const exam = /^exam[ -]style questions?$/i.test(slide.title) ||
-      /^(?:test your understanding|tough question)$/i.test(slide.title) &&
-      slide.shapes.some(shape => /Edexcel.{0,50}(?:\d{4}|Q\d)/i.test([shape.transcription?.tex, ...(shape.text?.paragraphs || []).flatMap(p => p.parts.map(r => r.text || ''))].join(' ')));
+    const exam = examExample(slide);
     if (exam) setTitle(heading, 'Test your understanding');
     else if (slide.titleTex) root.katex.render(slide.titleTex, heading, {throwOnError:true,trust:false});
     else setTitle(heading, slide.title);
@@ -302,7 +311,7 @@
     else link.removeAttribute('href');
   }
 
-  const api = {formatSubparts,markPolicy,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments};
+  const api = {examExample,formatSubparts,markPolicy,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments};
   if (typeof module !== 'undefined') module.exports = api;
   root.LUISA_CONTROLS = api;
 })(typeof window === 'undefined' ? globalThis : window);
