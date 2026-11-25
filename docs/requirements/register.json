@@ -6728,6 +6728,25 @@
       "evidence": [
         "GitHub issue #158"
       ]
+    },
+    {
+      "id": "RES-085-FS1",
+      "requirement": "Add Further Statistics 1 to Luisa using the established Further Mechanics chapter resource and presentation standards.",
+      "scope": "v0.85 · Further Statistics 1, chapters 1–8.",
+      "priority": "P1",
+      "implementation": "planned",
+      "verification": "pending",
+      "origin": "Owner request for v0.85, GitHub #158",
+      "acceptance": [
+        "Deliver eight chapter presentations, eight student booklets, eight worked-solutions booklets and eight individually extracted textbook chapter PDFs in the Further Statistics 1 resource library. Match the Further Mechanics 1 resource workflow and ADA role access.",
+        "Use the established student and solutions cover layouts. Apply the supplied Further Statistics 1 red (sRGB #DB4040, converted using the embedded source profile) to front covers. Apply the shared Luisa slide palette, LaTeX typography, buttons, tips and hanging indents throughout.",
+        "For each referenced textbook exercise, include every exam-style question with exact source wording, its exercise identifier and printed book page, and its complete SolutionBank working behind one Solution button on the same slide. Print each question and complete worked answer on one page in the solutions edition. Apply the Test your understanding banner and separate Exam style question heading to exam examples; retain exercise and printed-page banners on textbook exercise pages. Show mark totals only where individual earning steps are identified.",
+        "Preserve the teaching steps. Typeset clear diagrams, distributions, graphs and tables, including axes, scales and tail regions. Verify assumptions, probability notation, critical regions and conclusions against the sources. Inspect every slide in the actual viewer before revealing, after each click or Space, and after Reset. Ensure each reveal follows its prerequisite, with no exposed answers, empty clicks, clipping or overlapping labels. Compare both rendered handout editions with their corresponding slides.",
+        "The chapter 3 presentation references Exercise 3C. The supplied SolutionBank folder skips it. A matching Pearson worked PDF is available at https://pmt.physicsandmathstutor.com/download/Maths/A-level/Edexcel-Solutionbanks/FS1/Ch3/Exercise%203C.pdf; cross-check selected questions against the supplied textbook."
+      ],
+      "evidence": [
+        "GitHub issue #158"
+      ]
     }
   ]
 }
