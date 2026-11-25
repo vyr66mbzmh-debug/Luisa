@@ -1,3 +1,9 @@
+## Luisa v0.85
+
+- Further Statistics 1 adds eight teaching chapters, each with a presentation, student booklet, worked solutions and the corresponding textbook chapter.
+- The chapter exercises include all 131 exam-style questions from the 34 referenced exercises. Each opens its complete SolutionBank working beside the question. The worked booklet keeps each question and its solution on one sheet.
+- Further Mechanics 1 has matching orange covers on its ten handouts, a revised diagram conventions label and an embedded collision video in chapter 4. Its chapter 4 textbook and all eight Further Statistics chapters open directly on the owner site. School textbook access is reserved for staff.
+
 ## Luisa v0.84
 
 - Further Mechanics 1 now separates the exam banner and question heading. The Work, Energy and Power van example reveals its diagram, acceleration and maximum speed in order.

@@ -1,15 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.84 -->
-**Release 0.84 · GitHub #156.**
+<!-- LUISA-REPORT-HANDOFF v0.85 -->
+**Release 0.85 · GitHub #158.**
 
-Further Mechanics 1 now separates the exam banner and question heading. The Work, Energy and Power van example reveals its diagram, acceleration and maximum speed in order.
+Further Statistics 1 adds eight teaching chapters, each with a presentation, student booklet, worked solutions and the corresponding textbook chapter.
 
-The five chapters have revised diagrams, worked examples, controls and matching student and worked handouts. English teaching hints preserve spaces around inline mathematics.
+The chapter exercises include all 131 exam-style questions from the 34 referenced exercises. Each opens its complete SolutionBank working beside the question. The worked booklet keeps each question and its solution on one sheet.
 
-Teaching slides show a mark total only when the individual earning steps support it. In 25 other teaching chapters the corresponding exam panels in the student and worked handouts now use the shared exam heading.
+Further Mechanics 1 has matching orange covers on its ten handouts, a revised diagram conventions label and an embedded collision video in chapter 4. Its chapter 4 textbook and all eight Further Statistics chapters open directly on the owner site. School textbook access is reserved for staff.
 
-Release verification, usage and recovery evidence are recorded on issue #156.
+Release verification, usage and recovery evidence are recorded on issue #158.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

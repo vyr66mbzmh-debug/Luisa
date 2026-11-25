@@ -27,9 +27,11 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.build.mkdir()
         (self.build / 'build-manifest.json').write_text(json.dumps({'edition': 'student', 'files': {
             'index.html': {}, 'content/questions.json': {}, 'assets/question.png': {},
-            'question-bundle.js': {}, 'resources/printouts/sample.pdf': {}, 'sw.js': {}
+            'question-bundle.js': {}, 'resources/printouts/sample.pdf': {}, 'sw.js': {},
+            'teaching-lesson-viewer.html': {}
         }}))
         (self.build / 'index.html').write_text('<h1>Student content</h1>')
+        (self.build / 'teaching-lesson-viewer.html').write_text('<main>Teaching slides</main>')
         (self.build / 'content').mkdir()
         (self.build / 'content/questions.json').write_text('{"question":"private question"}')
         (self.build / 'assets').mkdir()
@@ -432,6 +434,12 @@ class StudentAuthAcceptance(unittest.TestCase):
                          (PasswordHasher().hash(password), '01239'))
         self.assertEqual(self.student_login('01239@marlboroughcollege.org', password).location, '/')
         self.assertEqual(self.client.get('/' + base + teacher_pdf, base_url=host).status_code, 404)
+        with self.client.get('/teaching-lesson-viewer.html', base_url=host) as teaching:
+            self.assertEqual(teaching.status_code, 200)
+            self.assertIn("frame-src 'self' https://www.youtube-nocookie.com/embed/6dTyOl1fmDo;",
+                          teaching.headers['Content-Security-Policy'])
+        with self.client.get('/' + base + student_pdf, base_url=host) as handout:
+            self.assertNotIn('youtube-nocookie.com', handout.headers['Content-Security-Policy'])
         viewer = self.client.get('/' + base + student_pdf + '?page=12', base_url=host,
                                  headers={'Sec-Fetch-Dest': 'document'})
         self.assertIn((base + student_pdf + '?inline=1#page=12').encode(), viewer.data)

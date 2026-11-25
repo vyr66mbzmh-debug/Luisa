@@ -165,3 +165,6 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 .exercise-diagram-band {flex:0 0 26%;min-height:0;display:flex;justify-content:center}
 .exercise-diagram-band .exercise-figure {max-width:95%;height:100%;margin:0}
 @media print {body.question-print .exercise-diagram-band {display:none}}
+
+.source-exercise .exercise-head, .source-exercise-body {display:grid;grid-template-columns:var(--prompt-width) minmax(0,1fr);column-gap:16px}
+.source-exercise-body img {display:block;max-width:100%;object-fit:contain;object-position:top left}

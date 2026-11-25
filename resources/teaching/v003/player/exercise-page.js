@@ -1,8 +1,14 @@
 /* One board sheet is also one worked PDF page. Visibility changes never reflow the question. */
 (() => {
   const {escape, imageContent} = FMQ_SLIDE_RENDERER;
+  function renderSourcePlates(slide, base) {
+    const {sourcePlates: plates, questionNumber} = slide.singlePageExercise;
+    const plate = (item) => `<img src="${escape(base + item.asset)}" alt="${escape(item.alt)}" width="${item.width}" height="${item.height}">`;
+    return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:1440px;height:840px"><div class="lesson-canvas exercise-sheet source-exercise" style="width:100%;height:100%;--prompt-width:${plates.left}px"><div class="exercise-head"><strong>Question ${escape(String(questionNumber))}</strong><button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button></div><div class="source-exercise-body"><div data-shape="prompt">${plate(plates.questionPlate)}</div><div data-shape="work-0" data-answer-for="solution">${plate(plates.workingPlate)}</div></div></div></div>`;
+  }
   function render(slide, base) {
     const spec = slide.singlePageExercise;
+    if (spec.sourcePlates) return renderSourcePlates(slide, base);
     const objects = new Map(slide.shapes.map(shape => [shape.id, shape]));
     function figure(id) {
       const item = objects.get(id);
@@ -19,7 +25,7 @@
     return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet" style="width:100%;height:100%"><div class="exercise-head"><strong>${number}</strong><button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button></div><div class="exercise-columns"><div class="exercise-question" data-shape="prompt">${question}${spec.figures.map(figure).join('')}</div><div class="exercise-working" data-shape="work-0" data-answer-for="solution">${working}</div></div>${band ? '<div class="exercise-diagram-band" data-answer-for="solution">'+figure(band)+'</div>' : ''}</div></div>`;
   }
   function fit(sheet) {
-    if (!sheet) return;
+    if (!sheet || sheet.classList.contains('source-exercise')) return;
     const container = sheet.querySelector('.exercise-columns');
     const solution = sheet.querySelector('.exercise-working');
     // Size against hidden working as well, so revealing it leaves everything in place.

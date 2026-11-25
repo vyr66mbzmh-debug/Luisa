@@ -599,7 +599,8 @@ window.LUISA_TEACHING={
         "title": "Elastic collisions in one dimension",
         "slides": "teaching-lesson-viewer.html?book=further-mechanics-1&chapter=4&slide=1",
         "booklet": "resources/teaching/v003/further-mechanics-1/booklets/chapter-04.pdf",
-        "solutions": "resources/teaching/v003/further-mechanics-1/solutions/chapter-04.pdf"
+        "solutions": "resources/teaching/v003/further-mechanics-1/solutions/chapter-04.pdf",
+        "pdf": "resources/teaching/v003/further-mechanics-1/textbook/chapter-04.pdf"
       },
       {
         "number": 5,
@@ -607,6 +608,75 @@ window.LUISA_TEACHING={
         "slides": "teaching-lesson-viewer.html?book=further-mechanics-1&chapter=5&slide=1",
         "booklet": "resources/teaching/v003/further-mechanics-1/booklets/chapter-05.pdf",
         "solutions": "resources/teaching/v003/further-mechanics-1/solutions/chapter-05.pdf"
+      }
+    ]
+  },
+  "further-statistics-1": {
+    "title": "Further Statistics 1",
+    "chapters": [
+      {
+        "number": 1,
+        "title": "Discrete random variables",
+        "slides": "teaching-lesson-viewer.html?book=further-statistics-1&chapter=1&slide=1",
+        "booklet": "resources/teaching/v003/further-statistics-1/booklets/chapter-01.pdf",
+        "solutions": "resources/teaching/v003/further-statistics-1/solutions/chapter-01.pdf",
+        "pdf": "resources/teaching/v003/further-statistics-1/textbook/chapter-01.pdf"
+      },
+      {
+        "number": 2,
+        "title": "Poisson distributions",
+        "slides": "teaching-lesson-viewer.html?book=further-statistics-1&chapter=2&slide=1",
+        "booklet": "resources/teaching/v003/further-statistics-1/booklets/chapter-02.pdf",
+        "solutions": "resources/teaching/v003/further-statistics-1/solutions/chapter-02.pdf",
+        "pdf": "resources/teaching/v003/further-statistics-1/textbook/chapter-02.pdf"
+      },
+      {
+        "number": 3,
+        "title": "Geometric and negative binomial distributions",
+        "slides": "teaching-lesson-viewer.html?book=further-statistics-1&chapter=3&slide=1",
+        "booklet": "resources/teaching/v003/further-statistics-1/booklets/chapter-03.pdf",
+        "solutions": "resources/teaching/v003/further-statistics-1/solutions/chapter-03.pdf",
+        "pdf": "resources/teaching/v003/further-statistics-1/textbook/chapter-03.pdf"
+      },
+      {
+        "number": 4,
+        "title": "Hypothesis testing",
+        "slides": "teaching-lesson-viewer.html?book=further-statistics-1&chapter=4&slide=1",
+        "booklet": "resources/teaching/v003/further-statistics-1/booklets/chapter-04.pdf",
+        "solutions": "resources/teaching/v003/further-statistics-1/solutions/chapter-04.pdf",
+        "pdf": "resources/teaching/v003/further-statistics-1/textbook/chapter-04.pdf"
+      },
+      {
+        "number": 5,
+        "title": "Central limit theorem",
+        "slides": "teaching-lesson-viewer.html?book=further-statistics-1&chapter=5&slide=1",
+        "booklet": "resources/teaching/v003/further-statistics-1/booklets/chapter-05.pdf",
+        "solutions": "resources/teaching/v003/further-statistics-1/solutions/chapter-05.pdf",
+        "pdf": "resources/teaching/v003/further-statistics-1/textbook/chapter-05.pdf"
+      },
+      {
+        "number": 6,
+        "title": "Chi-squared tests",
+        "slides": "teaching-lesson-viewer.html?book=further-statistics-1&chapter=6&slide=1",
+        "booklet": "resources/teaching/v003/further-statistics-1/booklets/chapter-06.pdf",
+        "solutions": "resources/teaching/v003/further-statistics-1/solutions/chapter-06.pdf",
+        "pdf": "resources/teaching/v003/further-statistics-1/textbook/chapter-06.pdf"
+      },
+      {
+        "number": 7,
+        "title": "Probability generating functions",
+        "slides": "teaching-lesson-viewer.html?book=further-statistics-1&chapter=7&slide=1",
+        "booklet": "resources/teaching/v003/further-statistics-1/booklets/chapter-07.pdf",
+        "solutions": "resources/teaching/v003/further-statistics-1/solutions/chapter-07.pdf",
+        "pdf": "resources/teaching/v003/further-statistics-1/textbook/chapter-07.pdf"
+      },
+      {
+        "number": 8,
+        "title": "Quality of tests",
+        "slides": "teaching-lesson-viewer.html?book=further-statistics-1&chapter=8&slide=1",
+        "booklet": "resources/teaching/v003/further-statistics-1/booklets/chapter-08.pdf",
+        "solutions": "resources/teaching/v003/further-statistics-1/solutions/chapter-08.pdf",
+        "pdf": "resources/teaching/v003/further-statistics-1/textbook/chapter-08.pdf"
       }
     ]
   }
