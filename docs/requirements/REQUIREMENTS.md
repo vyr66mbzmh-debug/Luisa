@@ -331,3 +331,4 @@ Historical assertions are not current verification. See README.md in this folder
 | <a name='req-pap-079-2'></a>PAP-079-2 | Use one five-bucket difficulty scale throughout Luisa Papers, including the teacher exam selector. | All question sources and editions | implemented | pending |
 | <a name='req-pap-079-3'></a>PAP-079-3 | Delete the three duplicate MADAS copies from the selectable question bank. | Luisa Papers | implemented | pending |
 | <a name='req-res-080'></a>RES-080 | Publish the five Further Mechanics 1 chapters in Resources with faithful teaching slides, student booklets, worked solutions and separate teacher textbook chapters. | Further Mechanics 1, both editions | implemented | agent_checked |
+| <a name='req-res-081'></a>RES-081 | Apply the shared slide conventions and revise all five Further Mechanics 1 teaching sets. | Teaching slides across all books; five FM1 decks and their print companions | in_progress | not_checked |

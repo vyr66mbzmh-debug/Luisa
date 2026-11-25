@@ -38,3 +38,8 @@ For legacy Maths progress include questions completed /3423, percentage, and sec
 
 ## Authority
 The owner-approved register in docs/requirements/register.json supersedes all historical README/LESSON_REQUIREMENTS and V10–V13 planning files. Those names remain provenance only. New explicit owner instructions take precedence; log them before implementation.
+
+## Teaching slides, all books (RES-081)
+Use the shared Luisa lesson font and visibly raised, keyboard-operable reveal buttons. Hide the answer content itself until its button is activated. Check for exposed glyphs at every edge before revealing and again after Reset. Student print uses flat writing areas.
+Use one banner. For textbook exercises it identifies the exercise and the **printed book page**. Start immediately with the question, identify it by number and place its complete working behind **Solution** on that same slide. Long working may advance in steps while the question remains visible. Remove exercise-only divider slides and retain source assignment instructions with the relevant exercise.
+For multipart examples, reveal each part's diagram and then its solution before starting the next part. Typeset mechanics diagrams in LaTeX with legible labels, arrowheads, directions and units. Explain abbreviations on first use and distinguish signed quantities from magnitudes. Write allocations as [3 marks] or [1 mark] and attach any method and accuracy marks to the line that earns them. Compare covered, revealed and printed views against the source before release.
