@@ -1,15 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.80 -->
-**Release 0.80 · GitHub #147.**
+<!-- LUISA-REPORT-HANDOFF v0.81 -->
+**Release 0.81 · GitHub #149.**
 
-Further Mechanics 1 adds five teaching decks, five student booklets and five worked-solutions booklets to the school Resources catalogue.
+Further Mechanics 1 now opens each textbook exercise directly on its first question. All 131 questions keep the prompt visible while the complete solution opens on the same slide.
 
-The five decks retain 121 source slides and include 131 exam-style questions worth 1,044 marks. Each exam question has its own booklet page and a link to the corresponding Solution Bank working.
+The five decks use raised reveal buttons, native LaTeX mechanics artwork and six replacement photographs. Each exercise banner gives the printed book page.
 
-Teachers can also open each of the five textbook chapters separately. The school sign-in protects the materials.
+The worked solutions attach 1,044 marks to calculation and reasoning steps. Revised print booklets keep one exercise question per page and provide full-width worked solutions.
 
-Print counts are 198 student booklet pages, 363 worked-solutions pages and 109 textbook pages. The worked solutions identify source discrepancies in 4C Q10, 5B Q8, 5C Q14 and Mixed Exercise 5 Q6. The release manifest lists the school files by checksum. Live verification and recovery evidence are tracked on issue #147.
+The step allocations are Luisa teaching guidance. Source page references and original chapter PDFs remain available in the school edition. The school resource manifest identifies the reviewed files. Deployment, recovery and token evidence are recorded on issue #149.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

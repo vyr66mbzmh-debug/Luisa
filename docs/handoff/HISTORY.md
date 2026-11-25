@@ -2,6 +2,17 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.80 -->
+**Release 0.80 · GitHub #147.**
+
+Further Mechanics 1 adds five teaching decks, five student booklets and five worked-solutions booklets to the school Resources catalogue.
+
+The five decks retain 121 source slides and include 131 exam-style questions worth 1,044 marks. Each exam question has its own booklet page and a link to the corresponding Solution Bank working.
+
+Teachers can also open each of the five textbook chapters separately. The school sign-in protects the materials.
+
+Print counts are 198 student booklet pages, 363 worked-solutions pages and 109 textbook pages. The worked solutions identify source discrepancies in 4C Q10, 5B Q8, 5C Q14 and Mixed Exercise 5 Q6. The release manifest lists the school files by checksum. Live verification and recovery evidence are tracked on issue #147.
+
 <!-- LUISA-REPORT-HANDOFF v0.79 -->
 **Release 0.79 · GitHub #145.**
 

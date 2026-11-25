@@ -1,3 +1,9 @@
+## Luisa v0.81
+
+- Further Mechanics 1 now opens each textbook exercise directly on its first question. All 131 questions keep the prompt visible while the complete solution opens on the same slide.
+- The five decks use raised reveal buttons, native LaTeX mechanics artwork and six replacement photographs. Each exercise banner gives the printed book page.
+- The worked solutions attach 1,044 marks to calculation and reasoning steps. Revised print booklets keep one exercise question per page and provide full-width worked solutions.
+
 ## Luisa v0.80
 
 - Further Mechanics 1 adds five teaching decks, five student booklets and five worked-solutions booklets to the school Resources catalogue.
