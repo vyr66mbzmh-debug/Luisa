@@ -587,6 +587,14 @@ def check_moments(page, url, role):
     page.locator('#slide-select').select_option(index=21)
     expect(page.locator('[data-shape="key"]')).to_contain_text('centre of mass')
     expect(page.locator('[data-shape="key"]')).to_contain_text('pivot')
+    for number in (5, 21, 22, 39, 40):
+        page.locator('#slide-select').select_option(index=number - 1)
+        arrows = page.locator('[data-shape="force-arrows"]')
+        expect(arrows).to_be_hidden()
+        page.locator('[data-shape="forces"]').click()
+        expect(arrows).to_be_visible()
+        page.locator('#reset').click()
+        expect(arrows).to_be_hidden()
     ok(f'{role} Moments lesson, multipart reveal order and both booklet fingerprints verified')
 
 

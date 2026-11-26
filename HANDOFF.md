@@ -3,7 +3,7 @@
 <!-- LUISA-REPORT-HANDOFF v0.87 -->
 **Release 0.87 · GitHub #164.**
 
-Moments pairs each question part with its own answer and writing area. A new illustration shows a theatre stagehand opening a backstage door, and the seesaw example explains the pivot and centre of mass beside the original Woody and Buzz artwork.
+Moments pairs each question part with its own answer and writing area. A new illustration shows a theatre stagehand opening a backstage door, and Woody and Buzz sit on the seesaw. The beam and seesaw examples have separate force diagrams.
 
 The remaining Resources review stays paused in issue #160. See issue #164 for production verification.
 <!-- END LUISA-RELEASE-BLOCK -->

@@ -118,9 +118,14 @@
     for (const id of ids)
       content.querySelector('[data-shape="' + CSS.escape(id) + '"]')?.remove();
   }
+  // Leave the pupil's beam clear for a free-body diagram, retaining the timber,
+  // contact points and dimensions. The worked panel prints the registered arrows.
+  if (student && live.diagramOverlay) {
+    content.querySelector('[data-shape="' + CSS.escape(live.diagramOverlay) + '"]')?.remove();
+  }
   const owned = [...panel.querySelectorAll("[data-answer-for]")].filter(
     (e) =>
-      !e.closest("[data-supplied-theory]") && e.offsetWidth && e.offsetHeight,
+      e.dataset.shape !== live.diagramOverlay && !e.closest("[data-supplied-theory]") && e.offsetWidth && e.offsetHeight,
   );
   if (live.singlePageExercise?.parts) {
     const originals = panel.querySelectorAll(".matched-row");
