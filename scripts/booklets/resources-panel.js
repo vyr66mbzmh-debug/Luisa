@@ -122,7 +122,24 @@
     (e) =>
       !e.closest("[data-supplied-theory]") && e.offsetWidth && e.offsetHeight,
   );
-  if (live.singlePageExercise) {
+  if (live.singlePageExercise?.parts) {
+    const work = panel.querySelector(".exercise-parts");
+    const printWork = content.querySelector(".exercise-parts");
+    printWork.style.height = (printHeight - bounds(work).y - 12) + "px";
+    const rows = [...printWork.children];
+    rows.forEach((row, index) => {
+      const ref = work.children[index];
+      row.style.minHeight = bounds(ref).h + "px";
+      row.style.border = "1.55px solid #8997a2";
+      row.style.padding = "4px 8px";
+      row.querySelector("button").remove();
+      if (student) {
+        const marker = live.singlePageExercise.parts[index].label.replace(/^Solution /, "");
+        row.replaceChildren(document.createTextNode(marker));
+        row.classList.add("student-part-cue");
+      }
+    });
+  } else if (live.singlePageExercise) {
     const sketch = content.querySelector(".exercise-sketch");
     if (sketch) {
       // The classroom layers these two states in exactly the same position.
@@ -298,12 +315,15 @@
         !e.querySelector("[data-shape]") && !e.closest(".lesson-answer-cover")
     ).map(bounds);
     // Several shapes revealed by one control share one writing space.
-    const slots = [...areas.values()].map(rectangles => {
+    const slots = [...areas.entries()].map(([control, rectangles]) => {
       const x = Math.min(...rectangles.map(r => r.x));
       const y = Math.min(...rectangles.map(r => r.y));
       const right = Math.max(...rectangles.map(r => r.x + r.w));
       const bottom = Math.max(...rectangles.map(r => r.y + r.h));
-      return {x, y, w: right - x, h: bottom - y};
+      const cover = live.shapes.find(shape => shape.id === control);
+      const caption = cover?.coverLabel || "";
+      const label = student && /^(Step \d+|Solution (?:\d+)?\()/.test(caption) ? caption.replace(/^Solution /, "") : "";
+      return {x, y, w: right - x, h: bottom - y, label};
     });
     for (const r of slots) {
       const bottom = r.y + r.h;
@@ -314,7 +334,7 @@
         limit = Math.min(limit, Math.max(bottom, other.y - 8));
       }
       box(Math.max(2, r.x - 3), Math.max(1, r.y - 3),
-          Math.min(w - r.x - 4, r.w + 6), Math.min(printHeight - r.y - 3, limit - r.y));
+          Math.min(w - r.x - 4, r.w + 6), Math.min(printHeight - r.y - 3, limit - r.y), r.label);
     }
     if (student)
       for (const e of content.querySelectorAll(

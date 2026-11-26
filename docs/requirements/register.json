@@ -6669,7 +6669,8 @@
       "acceptance": [
         "One Solution reveal and one complete worked PDF page per exercise, with every step and diagram present.",
         "Compare buttons, tips and lesson fonts with Pure Year 2 Numerical Methods. Check photograph visibility, figure legibility and the Chapter 1 vector examples.",
-        "Open the five sets of slides and both handouts directly on public Cloudflare, retaining teacher-only textbook chapters."
+        "Open the five sets of slides and both handouts directly on public Cloudflare, retaining teacher-only textbook chapters.",
+        "RES-087 supersedes any whole-exercise reveal instruction for multipart questions. Use a separate directly selectable control for each answerable part."
       ],
       "evidence": [
         "GitHub issue #151"
@@ -6765,6 +6766,23 @@
       ],
       "evidence": [
         "GitHub issue #162"
+      ]
+    },
+    {
+      "id": "RES-087",
+      "requirement": "Give every independently answerable part its own spaced and directly selectable Solution control. Keep the complete exercise together and sequence method lists one step at a time when teaching them.",
+      "scope": "All Resources slide and booklet authoring. This release corrects Applied Year 2 Moments only.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner correction, GitHub issue #164",
+      "acceptance": [
+        "Show one independent control for every lettered or separately answered nested part, in source order, including six controls for Exercise 4B Q1. Preserve each question and its complete answer on the same panel.",
+        "Check each part from Reset by itself and in keyboard order. Provide separate, labelled writing areas and corresponding worked areas.",
+        "Use the supplied door illustration and Woody and Buzz artwork in Moments. Verify every label against its vector and every restored image against the source."
+      ],
+      "evidence": [
+        "GitHub issue #164"
       ]
     }
   ]

@@ -1,3 +1,8 @@
+## Luisa v0.87
+
+- Moments now uses its original door, Woody and Buzz illustrations and gives independently answerable parts their own classroom controls and writing areas.
+- The five-step equilibrium method builds one point at a time. The quickfire force diagram separates the angle label from its vector.
+
 ## Luisa v0.86
 
 - Applied Mathematics Year 2, Chapter 4, Moments, has an updated classroom lesson, student booklet and worked-solutions booklet.

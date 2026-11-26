@@ -21,6 +21,7 @@ class ChapterSolutions(unittest.TestCase):
         replacements += json.loads((ROOT / 'docs/evidence/v083-teaching-pdfs.json').read_text())['pdfs']
         replacements += json.loads((ROOT / 'docs/evidence/v084-teaching-pdfs.json').read_text())['pdfs']
         replacements += json.loads((ROOT / 'docs/evidence/v086-moments.json').read_text())['pdfs']
+        replacements += json.loads((ROOT / 'docs/evidence/v087-moments.json').read_text())['pdfs']
         latest = {}
         for replacement in replacements:
             path = replacement['path']
