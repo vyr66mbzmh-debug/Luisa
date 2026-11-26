@@ -120,7 +120,9 @@ with sync_playwright() as pw:
             continue
         page.evaluate("n=>FMQ_TEST.show(n-1)", n)
         page.evaluate("document.fonts.ready")
-        labels[n] = page.locator("#lesson-title").inner_text()
+        banner = page.locator("#lesson-title")
+        # A KaTeX title contains both an accessibility tree and visible glyphs.
+        labels[n] = slide["title"] if banner.locator(".katex").count() else banner.inner_text()
         if n not in changed:
             continue
         page.evaluate("Promise.all([...document.images].map(e=>e.decode()))")

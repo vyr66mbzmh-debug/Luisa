@@ -493,6 +493,36 @@
       e.textContent,
       bounds(e),
     ]);
+    // Allocate spare vertical space across all parts. Otherwise short typeset
+    // answers put (b) directly below (a), leaving the pupil no room for (a).
+    // Keep the starts aligned in both editions. Tables retain their drawn grids
+    // and multiple columns retain their own reading order.
+    const blocks = [...work.querySelectorAll(".lesson-image-prose > *")];
+    const plainSingleColumn = anchors.length > 1 && blocks.length &&
+      !live.singlePageExercise.studentGraph && !live.id.startsWith("fs1-6") &&
+      (parseInt(getComputedStyle(work).columnCount, 10) || 1) === 1 &&
+      !work.querySelector("img,svg:not(.katex svg),table,[data-math*='{array}']");
+    if (plainSingleColumn) {
+      const inkBottom = Math.max(...blocks.map(el => {
+        const area = bounds(el);
+        return area.y + area.h;
+      }));
+      const bottom = band ? bounds(band).y : printHeight;
+      const extra = Math.floor((bottom - inkBottom - 24) / anchors.length);
+      if (extra > 0) {
+        const labels = content.querySelectorAll(".exercise-working .luisa-part-label");
+        for (let i = 1; i < anchors.length; i++) {
+          anchors[i][1].y += i * extra;
+          const line = labels[i].closest(".luisa-lettered-part");
+          const original = work.querySelectorAll(".luisa-part-label")[i]
+            .closest(".luisa-lettered-part");
+          const oldMargin = parseFloat(getComputedStyle(original).marginTop) || 0;
+          line.style.marginTop = (oldMargin + extra) + "px";
+        }
+        const printWork = content.querySelector(".exercise-working");
+        printWork.style.height = (bottom - r.y - 8) + "px";
+      }
+    }
     const title = content.querySelector(".exercise-head");
     title.querySelector(".exercise-reveal")?.remove();
     if (student) {
