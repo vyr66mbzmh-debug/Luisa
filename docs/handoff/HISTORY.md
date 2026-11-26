@@ -2,6 +2,13 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.86 -->
+**Release 0.86 · GitHub #162.**
+
+Applied Mathematics Year 2, Chapter 4, Moments, has an updated classroom lesson, student booklet and worked-solutions booklet.
+
+The remaining Resources chapters are deferred in issue #160. The site and school deployment evidence belongs to issue #162.
+
 <!-- LUISA-REPORT-HANDOFF v0.85 -->
 **Release 0.85 · GitHub #158.**
 

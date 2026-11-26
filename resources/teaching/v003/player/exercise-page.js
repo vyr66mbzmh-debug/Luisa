@@ -17,19 +17,44 @@
     const formatMarks = LUISA_CONTROLS.markPolicy(slide);
     const question = imageContent(formatMarks(objects.get(spec.question).transcription.tex, true), {});
     const band = spec.diagramBand;
-    const working = spec.working.filter(id => id !== band).map(id => {
+    function renderWork(id) {
       const item = objects.get(id);
       return item.asset ? figure(id) : imageContent(formatMarks(item.transcription.tex, false), {});
-    }).join('');
+    }
+    const parts = spec.parts;
+    if (parts) {
+      const cards = parts.every(part => part.figure);
+      const rows = parts.map(part => {
+        const prompt = part.figure ? figure(part.figure) : imageContent(formatMarks(part.prompt, true), {});
+        const button = `<button class="exercise-reveal" data-shape="${escape(part.control)}" aria-label="${escape(part.label)}" aria-expanded="false">${escape(part.label)}</button>`;
+        const work = `<div data-shape="${escape(part.work)}" data-answer-for="${escape(part.control)}">${renderWork(part.work)}</div>`;
+        return `<section class="matched-row"><div class="matched-question">${prompt}</div><div class="matched-answer">${button}${work}</div></section>`;
+      }).join('');
+      const number = escape(objects.get('number').transcription.tex);
+      const intro = `<div class="matched-intro"><div data-shape="prompt"><strong>${number}</strong>${question}</div>${spec.figures.map(figure).join('')}</div>`;
+      return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet matched-sheet${cards ? ' matched-cards' : ''}" style="width:100%;height:100%">${intro}<div class="matched-rows">${rows}</div></div></div>`;
+    }
+    const working = spec.working.filter(id => id !== band).map(renderWork).join('');
+    const reveal = '<button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button>';
+    const workAttrs = 'class="exercise-working" data-shape="work-0" data-answer-for="solution"';
     const width = spec.questionWidth;
     const layout = Number.isFinite(width) && width >= 30 && width <= 65
       ? ' data-balanced-exercise style="width:100%;height:100%;--exercise-question-width:' + width + '%"'
       : ' style="width:100%;height:100%"';
     const number = escape(objects.get('number').transcription.tex);
-    return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet"${layout}><div class="exercise-head"><strong>${number}</strong><button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button></div><div class="exercise-columns"><div class="exercise-question" data-shape="prompt">${question}${spec.figures.map(figure).join('')}</div><div class="exercise-working" data-shape="work-0" data-answer-for="solution">${working}</div></div>${band ? '<div class="exercise-diagram-band" data-answer-for="solution">'+figure(band)+'</div>' : ''}</div></div>`;
+    return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet"${layout}><div class="exercise-head"><strong>${number}</strong>${reveal}</div><div class="exercise-columns"><div class="exercise-question" data-shape="prompt">${question}${spec.figures.map(figure).join('')}</div><div ${workAttrs}>${working}</div></div>${band ? '<div class="exercise-diagram-band" data-answer-for="solution">'+figure(band)+'</div>' : ''}</div></div>`;
   }
   function fit(sheet) {
     if (!sheet || sheet.classList.contains('source-exercise')) return;
+    if (sheet.classList.contains('matched-sheet')) {
+      const cells = [...sheet.querySelectorAll('.matched-question,.matched-answer,.matched-rows')];
+      for (let size = 30; size >= 14; size -= 0.5) {
+        sheet.style.fontSize = size + 'px';
+        if (sheet.scrollHeight <= sheet.clientHeight + 1 && cells.every(cell =>
+          cell.scrollWidth <= cell.clientWidth + 1 && cell.scrollHeight <= cell.clientHeight + 1)) break;
+      }
+      return;
+    }
     const container = sheet.querySelector('.exercise-columns');
     const solution = sheet.querySelector('.exercise-working');
     // Size against hidden working as well, so revealing it leaves everything in place.

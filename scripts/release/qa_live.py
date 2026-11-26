@@ -545,7 +545,7 @@ def manifest_checks(p, url, role, rev, version):
 
 
 def check_moments(page, url, role):
-    evidence = json.loads((ROOT / 'docs/evidence/v086-moments.json').read_text())
+    evidence = json.loads((ROOT / 'docs/evidence/v087-moments.json').read_text())
     for record in evidence['pdfs']:
         response = live_get(page, url + record['path'])
         assert response.ok and hashlib.sha256(response.body()).hexdigest() == record['after'], record['path']
@@ -555,21 +555,51 @@ def check_moments(page, url, role):
     page.goto(url + 'teaching-lesson-viewer.html?book=maths-applied-year-2&chapter=4&slide=28')
     expect(page.locator('#slide-select option')).to_have_count(evidence['slides'])
     expect(page.locator('#lesson-title')).to_have_text('Exercise 4C · page 79')
-    solution = page.locator('.exercise-working')
-    expect(solution).to_be_hidden()
-    page.get_by_role('button', name='Solution', exact=True).click()
-    expect(solution).to_be_visible()
-    expect(solution).to_contain_text('750')
-    for number in (22, 24, 33, 42):
+    for number, keys in ((14, list("abcdef")), (25, list("abcd")), (28, list("abc")),
+                         (35, list("abc")), (44, list("ab")), (22, list("ab")),
+                         (24, list("ab")), (33, list("ab")), (42, ["ai", "aii", "b"])):
         page.locator('#slide-select').select_option(index=number - 1)
-        first = page.locator('[data-answer-for="part-a"]').first
-        second = page.locator('[data-answer-for="part-b"]').first
-        expect(first).to_be_hidden()
-        page.locator('#next-step').click()
-        expect(first).to_be_visible()
-        expect(second).to_be_hidden()
-        page.locator('#next-step').click()
-        expect(second).to_be_visible()
+        for key in reversed(keys):
+            page.locator('#reset').click()
+            control = 'part-' + key
+            page.locator(f'[data-shape="{control}"]').click()
+            for candidate in keys:
+                answer = page.locator(f'[data-answer-for="part-{candidate}"]').first
+                if candidate == key:
+                    expect(answer).to_be_visible()
+                else:
+                    expect(answer).to_be_hidden()
+        page.locator('#reset').click()
+        if number == 22:
+            # Draw the forces before resolving and taking moments in parts (a) and (b).
+            page.locator('#next-step').click()
+            expect(page.locator('[data-shape="force-arrows"]')).to_be_visible()
+            expect(page.locator('[data-answer-for="part-a"]').first).to_be_hidden()
+        for key in keys:
+            page.locator('#next-step').click()
+            expect(page.locator(f'[data-answer-for="part-{key}"]').first).to_be_visible()
+    for number in (8, 14, 19, 25, 26, 27, 28, 30, 34, 35, 44):
+        page.locator('#slide-select').select_option(index=number - 1)
+        rows = page.locator('.matched-row')
+        assert rows.count() >= 2
+        assert rows.evaluate_all("""rows => rows.every(row => {
+          const prompt = row.querySelector('.matched-question').getBoundingClientRect();
+          const answer = row.querySelector('.matched-answer').getBoundingClientRect();
+          return row.closest('.matched-cards')
+            ? Math.abs(prompt.left - answer.left) < 2 && prompt.bottom <= answer.top
+            : Math.abs(prompt.top - answer.top) < 2;
+        })"""), f"Question and answer alignment on slide {number}"
+    page.locator('#slide-select').select_option(index=21)
+    expect(page.locator('[data-shape="key"]')).to_contain_text('centre of mass')
+    expect(page.locator('[data-shape="key"]')).to_contain_text('pivot')
+    for number in (5, 21, 22, 39, 40):
+        page.locator('#slide-select').select_option(index=number - 1)
+        arrows = page.locator('[data-shape="force-arrows"]')
+        expect(arrows).to_be_hidden()
+        page.locator('[data-shape="forces"]').click()
+        expect(arrows).to_be_visible()
+        page.locator('#reset').click()
+        expect(arrows).to_be_hidden()
     ok(f'{role} Moments lesson, multipart reveal order and both booklet fingerprints verified')
 
 
@@ -635,6 +665,8 @@ def check_further_mechanics(page, url, role):
         page.get_by_role('button', name='Solution', exact=True).click()
         assert not re.search(r'\[\d+ marks?\]', page.locator('#slide-content').inner_text())
     page.goto(viewer + 'further-mechanics-1&chapter=2&slide=30')
+    expect(page.locator('#lesson-title')).to_have_text('Power and driving force')
+    expect(page.locator('[data-shape="action-0-1"]')).to_be_visible()
     for step in ['action-0-1', 'action-1-0', 'action-1-1']:
         answer = page.locator(f'[data-answer-for="{step}"]').first
         expect(answer).to_be_hidden()

@@ -6669,7 +6669,8 @@
       "acceptance": [
         "One Solution reveal and one complete worked PDF page per exercise, with every step and diagram present.",
         "Compare buttons, tips and lesson fonts with Pure Year 2 Numerical Methods. Check photograph visibility, figure legibility and the Chapter 1 vector examples.",
-        "Open the five sets of slides and both handouts directly on public Cloudflare, retaining teacher-only textbook chapters."
+        "Open the five sets of slides and both handouts directly on public Cloudflare, retaining teacher-only textbook chapters.",
+        "RES-087 supersedes any whole-exercise reveal instruction for multipart questions. Use a separate directly selectable control for each answerable part."
       ],
       "evidence": [
         "GitHub issue #151"
@@ -6765,6 +6766,23 @@
       ],
       "evidence": [
         "GitHub issue #162"
+      ]
+    },
+    {
+      "id": "RES-087",
+      "requirement": "Give every independently answerable part its own spaced and directly selectable Solution control. Keep the complete exercise together and sequence method lists one step at a time when teaching them.",
+      "scope": "All Resources slide and booklet authoring. This release corrects Applied Year 2 Moments only.",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner correction, GitHub issue #164",
+      "acceptance": [
+        "Show one independent control for every lettered or separately answered nested part, in source order, including six controls for Exercise 4B Q1. Preserve each question and its complete answer on the same panel.",
+        "Check each part from Reset by itself and in keyboard order. Align each numbered question and answer along the same row, or place the answer directly beneath its own diagram. Preserve the pairing in student and worked editions.",
+        "Use a new line illustration of an adult theatre stagehand at the door handle, using the illustration selected by the owner. Show Woody and Buzz seated on the timber in the seesaw examples and Woody standing directly on the supported beam in the tipping examples. Keep the force arrows separately revealable and explain G and P. Verify every angle label against its vector."
+      ],
+      "evidence": [
+        "GitHub issue #164"
       ]
     }
   ]

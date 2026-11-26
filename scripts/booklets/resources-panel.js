@@ -118,11 +118,30 @@
     for (const id of ids)
       content.querySelector('[data-shape="' + CSS.escape(id) + '"]')?.remove();
   }
+  // Leave the pupil's beam clear for a free-body diagram, retaining the timber,
+  // contact points and dimensions. The worked panel prints the registered arrows.
+  if (student && live.diagramOverlay) {
+    content.querySelector('[data-shape="' + CSS.escape(live.diagramOverlay) + '"]')?.remove();
+  }
   const owned = [...panel.querySelectorAll("[data-answer-for]")].filter(
     (e) =>
-      !e.closest("[data-supplied-theory]") && e.offsetWidth && e.offsetHeight,
+      e.dataset.shape !== live.diagramOverlay && !e.closest("[data-supplied-theory]") && e.offsetWidth && e.offsetHeight,
   );
-  if (live.singlePageExercise) {
+  if (live.singlePageExercise?.parts) {
+    const originals = panel.querySelectorAll(".matched-row");
+    const rows = content.querySelectorAll(".matched-row");
+    rows.forEach((row, index) => {
+      // Reserve the same row for both editions even after its workings are removed.
+      row.style.minHeight = bounds(originals[index]).h + "px";
+      const answer = row.querySelector(".matched-answer");
+      answer.querySelector("button").remove();
+      answer.classList.add("printed-part");
+      if (student) {
+        answer.replaceChildren(document.createTextNode(live.singlePageExercise.parts[index].label.replace(/^Solution /, "")));
+        answer.classList.add("student-part-cue");
+      }
+    });
+  } else if (live.singlePageExercise) {
     const sketch = content.querySelector(".exercise-sketch");
     if (sketch) {
       // The classroom layers these two states in exactly the same position.
@@ -298,12 +317,15 @@
         !e.querySelector("[data-shape]") && !e.closest(".lesson-answer-cover")
     ).map(bounds);
     // Several shapes revealed by one control share one writing space.
-    const slots = [...areas.values()].map(rectangles => {
+    const slots = [...areas.entries()].map(([control, rectangles]) => {
       const x = Math.min(...rectangles.map(r => r.x));
       const y = Math.min(...rectangles.map(r => r.y));
       const right = Math.max(...rectangles.map(r => r.x + r.w));
       const bottom = Math.max(...rectangles.map(r => r.y + r.h));
-      return {x, y, w: right - x, h: bottom - y};
+      const cover = live.shapes.find(shape => shape.id === control);
+      const caption = cover?.coverLabel || "";
+      const label = student && /^(Step \d+|Solution (?:\d+)?\()/.test(caption) ? caption.replace(/^Solution /, "") : "";
+      return {x, y, w: right - x, h: bottom - y, label};
     });
     for (const r of slots) {
       const bottom = r.y + r.h;
@@ -314,7 +336,7 @@
         limit = Math.min(limit, Math.max(bottom, other.y - 8));
       }
       box(Math.max(2, r.x - 3), Math.max(1, r.y - 3),
-          Math.min(w - r.x - 4, r.w + 6), Math.min(printHeight - r.y - 3, limit - r.y));
+          Math.min(w - r.x - 4, r.w + 6), Math.min(printHeight - r.y - 3, limit - r.y), r.label);
     }
     if (student)
       for (const e of content.querySelectorAll(

@@ -1,11 +1,11 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.86 -->
-**Release 0.86 · GitHub #162.**
+<!-- LUISA-REPORT-HANDOFF v0.87 -->
+**Release 0.87 · GitHub #164.**
 
-Applied Mathematics Year 2, Chapter 4, Moments, has an updated classroom lesson, student booklet and worked-solutions booklet.
+Moments pairs each question part with its own answer and writing area. A new illustration shows a theatre stagehand opening a backstage door, and Woody and Buzz sit on the seesaw. The beam and seesaw examples have separate force diagrams.
 
-The remaining Resources chapters are deferred in issue #160. The site and school deployment evidence belongs to issue #162.
+The remaining Resources review stays paused in issue #160. See issue #164 for production verification.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

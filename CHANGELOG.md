@@ -1,3 +1,8 @@
+## Luisa v0.87
+
+- Moments pairs each question part with its own answer and writing area. A new illustration shows a theatre stagehand opening a backstage door, and Woody and Buzz sit on the seesaw. The beam and seesaw examples have separate force diagrams.
+- The five-step equilibrium method builds one point at a time. The quickfire force diagram separates the angle label from its vector.
+
 ## Luisa v0.86
 
 - Applied Mathematics Year 2, Chapter 4, Moments, has an updated classroom lesson, student booklet and worked-solutions booklet.

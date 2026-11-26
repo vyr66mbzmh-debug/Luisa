@@ -133,6 +133,21 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 .exercise-columns {display:grid;grid-template-columns:30% minmax(0,1fr);gap:2%;min-height:0;flex:1;line-height:1.17}
 .exercise-sheet[data-balanced-exercise] .exercise-columns,
 .exercise-sheet[data-balanced-exercise] .exercise-head {grid-template-columns:var(--exercise-question-width) minmax(0,1fr);column-gap:2%}
+.matched-sheet {gap:18px;line-height:1.2}
+.matched-intro {display:flex;align-items:center;gap:30px}
+.matched-intro strong {display:block;margin-bottom:.2em}
+.matched-intro > :first-child {flex:1}
+.matched-intro .exercise-figure {width:32%;height:5.5em;margin:0}
+.matched-rows {display:grid;flex:1;min-height:0;gap:20px;grid-auto-rows:minmax(min-content,auto)}
+.matched-row {display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:32px;min-width:0}
+.matched-answer {position:relative;min-height:50px;min-width:0;color:#173b60}
+.matched-question {min-width:0}
+.matched-answer > button {position:absolute;top:0;left:0;z-index:1}
+.matched-sheet .katex {font-size:1em}
+.matched-cards .matched-rows {grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:24px 32px}
+.matched-cards .matched-row {display:flex;flex-direction:column;gap:12px}
+.matched-cards .matched-question .exercise-figure {width:100%;height:6em;margin:0}
+.matched-cards .matched-answer {flex:1}
 .exercise-question,.exercise-working {min-width:0;min-height:0;height:100%}
 .exercise-working {column-gap:1.15em;column-rule:1px solid #d7e3ed;color:#173b60}
 .exercise-columns .lesson-image-prose {display:contents}

@@ -70,3 +70,8 @@ main {
 .katex-html [style*="color:transparent"] {
   visibility: hidden;
 }
+
+.matched-answer.student-part-cue {color:#183957 !important;font:22px Lesson,serif}
+
+.matched-answer.printed-part {outline:1.55px solid #8997a2;outline-offset:3px;color:#a61d2c}
+.matched-answer.printed-part [data-answer-for] {color:inherit}
