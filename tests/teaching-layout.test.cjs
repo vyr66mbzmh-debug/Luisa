@@ -112,12 +112,21 @@ test('inline totals, PowerPoint run breaks and TeX spacing do not hide a followi
   assert.equal(m.text.paragraphs[0].parts.map(r=>r.text).join(''),'(a) Draw a Venn diagram. Tip: include the box.');
 });
 
-test('transcribed questions keep spaces around numerical comparisons and spreadsheet instructions', () => {
-  const {imageContent} = require('../lesson-renderer.js');
-  const render = text => imageContent(text, {math: value => '<math>' + value + '</math>'});
-  const comparison = render('Given that $P(Y<160)$ = 0.99 and $P(Y>152)$ = 0.90, find the mean.');
-  assert.match(comparison, / = 0.99 and /);
-  assert.doesNotMatch(comparison, /<math>[^<]*and /);
-  assert.match(render('For this reason the value of $x$ can be found directly.'), /<math>x<\/math>/);
-  assert.match(render(String.raw`For the cumulative probability $P(X\le r)$, use \texttt{TRUE}.`), /, use <code>TRUE<\/code>/);
-});
+for (const player of [
+  '../lesson-renderer.js',
+  '../p1-native-lesson-renderer.js',
+  '../resources/pure-year-2/v12/player/lesson-renderer.js',
+  '../resources/teaching/v003/player/lesson-renderer.js',
+  '../resources/teaching/v025/player/lesson-renderer.js',
+  '../resources/teaching/v026/player/lesson-renderer.js',
+]) {
+  test(`prose with inline comparisons and spreadsheet instructions in ${player}`, () => {
+    const {imageContent} = require(player);
+    const render = text => imageContent(text, {math: value => '<math>' + value + '</math>'});
+    const comparison = render('Given that $P(Y<160)$ = 0.99 and $P(Y>152)$ = 0.90, find the mean.');
+    assert.match(comparison, / = 0.99 and /);
+    assert.doesNotMatch(comparison, /<math>[^<]*and /);
+    assert.match(render('For this reason the value of $x$ can be found directly.'), /<math>x<\/math>/);
+    assert.match(render(String.raw`For the cumulative probability $P(X\le r)$, use \texttt{TRUE}.`), / use <code>TRUE<\/code>/);
+  });
+}
