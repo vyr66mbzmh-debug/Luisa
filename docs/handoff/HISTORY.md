@@ -2,6 +2,17 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.85 -->
+**Release 0.85 · GitHub #158.**
+
+Further Statistics 1 adds eight teaching chapters, each with a presentation, student booklet, worked solutions and the corresponding textbook chapter.
+
+The chapter exercises include all 131 exam-style questions from the 34 referenced exercises. Each opens its complete SolutionBank working beside the question. The worked booklet keeps each question and its solution on one sheet.
+
+Further Mechanics 1 has matching orange covers on its ten handouts, a revised diagram conventions label and an embedded collision video in chapter 4. Its chapter 4 textbook and all eight Further Statistics chapters open directly on the owner site. School textbook access is reserved for staff.
+
+Release verification, usage and recovery evidence are recorded on issue #158.
+
 <!-- LUISA-REPORT-HANDOFF v0.84 -->
 **Release 0.84 · GitHub #156.**
 

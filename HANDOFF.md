@@ -1,15 +1,11 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.85 -->
-**Release 0.85 · GitHub #158.**
+<!-- LUISA-REPORT-HANDOFF v0.86 -->
+**Release 0.86 · GitHub #162.**
 
-Further Statistics 1 adds eight teaching chapters, each with a presentation, student booklet, worked solutions and the corresponding textbook chapter.
+Applied Mathematics Year 2, Chapter 4, Moments, has an updated classroom lesson, student booklet and worked-solutions booklet.
 
-The chapter exercises include all 131 exam-style questions from the 34 referenced exercises. Each opens its complete SolutionBank working beside the question. The worked booklet keeps each question and its solution on one sheet.
-
-Further Mechanics 1 has matching orange covers on its ten handouts, a revised diagram conventions label and an embedded collision video in chapter 4. Its chapter 4 textbook and all eight Further Statistics chapters open directly on the owner site. School textbook access is reserved for staff.
-
-Release verification, usage and recovery evidence are recorded on issue #158.
+The remaining Resources chapters are deferred in issue #160. The site and school deployment evidence belongs to issue #162.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

@@ -544,6 +544,35 @@ def manifest_checks(p, url, role, rev, version):
         ok('owner published release report has exactly one correctly titled handoff')
 
 
+def check_moments(page, url, role):
+    evidence = json.loads((ROOT / 'docs/evidence/v086-moments.json').read_text())
+    for record in evidence['pdfs']:
+        response = live_get(page, url + record['path'])
+        assert response.ok and hashlib.sha256(response.body()).hexdigest() == record['after'], record['path']
+    deck = 'resources/teaching/v003/applied-year-2/chapter-04.json'
+    response = live_get(page, url + deck)
+    assert response.ok and response.body() == (ROOT / deck).read_bytes(), deck
+    page.goto(url + 'teaching-lesson-viewer.html?book=maths-applied-year-2&chapter=4&slide=28')
+    expect(page.locator('#slide-select option')).to_have_count(evidence['slides'])
+    expect(page.locator('#lesson-title')).to_have_text('Exercise 4C · page 79')
+    solution = page.locator('.exercise-working')
+    expect(solution).to_be_hidden()
+    page.get_by_role('button', name='Solution', exact=True).click()
+    expect(solution).to_be_visible()
+    expect(solution).to_contain_text('750')
+    for number in (22, 24, 33, 42):
+        page.locator('#slide-select').select_option(index=number - 1)
+        first = page.locator('[data-answer-for="part-a"]').first
+        second = page.locator('[data-answer-for="part-b"]').first
+        expect(first).to_be_hidden()
+        page.locator('#next-step').click()
+        expect(first).to_be_visible()
+        expect(second).to_be_hidden()
+        page.locator('#next-step').click()
+        expect(second).to_be_visible()
+    ok(f'{role} Moments lesson, multipart reveal order and both booklet fingerprints verified')
+
+
 def check_further_mechanics(page, url, role):
     prefix = 'resources/teaching/v003/further-mechanics-1/'
     fingerprints = json.loads((ROOT / 'docs/evidence/further-mechanics-1.json').read_text())['files']
@@ -653,6 +682,7 @@ def check_further_mechanics(page, url, role):
         advanced();
     })''')
     check_further_statistics(page, url, role)
+    check_moments(page, url, role)
     page.goto(url + 'teaching-chapters.html')
     ok(role + ' Further Mechanics 1 slides, handouts, solutions and direct-access permissions')
 
