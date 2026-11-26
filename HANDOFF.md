@@ -1,11 +1,11 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.87 -->
-**Release 0.87 · GitHub #164.**
+<!-- LUISA-REPORT-HANDOFF v0.88 -->
+**Release 0.88 · GitHub #166.**
 
-Moments pairs each question part with its own answer and writing area. A new illustration shows a theatre stagehand opening a backstage door, and Woody and Buzz sit on the seesaw. The beam and seesaw examples have separate force diagrams.
+Further Statistics 1 now has eight revised classroom decks and matching student and worked booklets. The 272 slides include all 131 exam-style questions from the exercises assigned in the source presentations.
 
-The remaining Resources review stays paused in issue #160. See issue #164 for production verification.
+Only the eight Further Statistics 1 chapters resume from the wider review in issue #160. See issue #166 for production verification.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

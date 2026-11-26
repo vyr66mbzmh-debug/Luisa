@@ -2,6 +2,13 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.87 -->
+**Release 0.87 · GitHub #164.**
+
+Moments pairs each question part with its own answer and writing area. A new illustration shows a theatre stagehand opening a backstage door, and Woody and Buzz sit on the seesaw. The beam and seesaw examples have separate force diagrams.
+
+The remaining Resources review stays paused in issue #160. See issue #164 for production verification.
+
 <!-- LUISA-REPORT-HANDOFF v0.86 -->
 **Release 0.86 · GitHub #162.**
 

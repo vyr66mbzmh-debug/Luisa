@@ -85,12 +85,21 @@
   }
 
   function formatSubparts(tex, render) {
-    const parts = tex.split(/\\par\b/);
+    // Preserve explicit source paragraph breaks. A text-box newline can also
+    // introduce a labelled part, but a wrapped sentence is still one item.
+    const parts = tex.split(/\\par\b|\n(?=[ \t]*(?:\([a-hivx]+\)|[a-h]\)|\\textbf\{\(?[a-h]\)?\}))/);
     const label = /^\s*(?:(\d+)\s+)?(?:\(([a-h])\)|([a-h])\)|\\textbf\{\(?([a-h])\)?[.)]?\})\s+/;
-    if (!parts.some(part => label.test(part))) return null;
+    const roman = /^\s*\((i{1,3}|iv|v|vi{1,3}|ix|x)\)\s+/;
+    if (!parts.some(part => label.test(part) || roman.test(part))) return null;
     let inside = false;
     const html = parts.map(part => {
       const m = part.match(label);
+      const subpart = !m && part.match(roman);
+      if (subpart) {
+        const nesting = inside ? ' luisa-nested-roman' : '';
+        return '<span class="luisa-roman-part'+nesting+'"><span class="luisa-roman-label">('+
+          subpart[1]+')</span>'+render(part.slice(subpart[0].length))+'</span>';
+      }
       if (!m) return '<span class="' + (inside ? 'luisa-part-continuation' : 'luisa-part-preamble') + '">' + render(part) + '</span>';
       const gap = inside ? ' luisa-next-part' : '';
       inside = true;
@@ -150,13 +159,23 @@
     return function format(value, question, initialPart = '') {
       if (!value) return value;
       let part = initialPart;
-      let out = value.split(/(\\par\b)/).map(line => {
+      const chunks = value.split(/(\\par\b|\n|(?=\([a-h]\)\s+[A-Za-z]))/);
+      let out = chunks.map(line => {
         const m = line.match(partAtStart);
         if (m) part = m[1] || m[2] || m[3];
         const supported = part ? earned.get(part) : [...earned.values()].reduce((sum, n) => sum + n, 0);
         const allocation = (_, n) => supported === Number(n) ? '[' + n + (n === '1' ? ' mark]' : ' marks]') : '';
         let result = line.replace(/[[(](\d{1,2})\s+marks?[\])]/gi, allocation);
-        if (question && !/\b(?:equation|formula|expression|identity|statement|relation|from|using|in)\s+[[(]\d+[\])][.,]?\s*$/i.test(result)) result = result.replace(/(?:^|(?<=\s))(?:\((\d{1,2})\)|\[(\d{1,2})\])(?=[.,]?\s*$)/g, (_, parens, brackets) => allocation(_, parens || brackets));
+        if (question) {
+          // Imported questions can place a total after a TeX spacing command or
+          // between two sentences on the same line. Keep numbered references.
+          result = result.replace(/(?:\\(?:hfill|qquad|quad)\s*|(?<=\s)|^)(?:\((\d{1,2})\)|\[(\d{1,2})\])(?=[.,;]?\s*\}?\s*$|\s+(?:Find|Give|Show|Hence|Calculate|Determine)\b)/g,
+            (match, parens, brackets, offset) => {
+              if (/\b(?:equation|formula|expression|identity|statement|relation|from|using|in)\s*$/i.test(result.slice(0,offset))) return match;
+              const label = allocation(match, parens || brackets);
+              return label && match.startsWith('\\') ? ' ' + label : label;
+            });
+        }
         if (!question && /(?:^|\s)\[?(?:D?M|A|B)\d+\]?\s*$/i.test(result)) {
           // Detached scheme columns and bundles do not explain individual marks.
           if (!individuallyMarked(result) || /(?:\[?(?:D?M|A|B)\d+\]?\s*){2,}$/i.test(result)) {
@@ -191,21 +210,31 @@
         } else if (previousPart && !p.bullet) {
           p.marginLeft = Math.max(p.marginLeft || 0, (p.fontSize || 22)*1.4);
         }
-        // A suffix can span multiple PowerPoint runs. Splice only that suffix,
-        // keeping every maths run, preceding word and its formatting intact.
-        const suffix = line.match(/\s*[[(]\d{1,2}(?:\s+marks?)?[\])][.,]?\s*$/i);
-        if (suffix) {
-          const revised = marks(line, isPrompt, previousPart);
-          if (revised !== line.trimEnd()) {
-            let offset = 0;
-            for (const run of p.parts) {
-              const old = run.text ?? '\ufffc';
-              if (typeof run.text === 'string' && offset + old.length > suffix.index) {
-                const keep = Math.max(0, suffix.index - offset);
-                run.text = old.slice(0, keep) + (offset <= suffix.index ? revised.slice(suffix.index) : '');
-              }
-              offset += old.length;
-            }
+        // A label can cross several text runs or occur before a hint. Apply
+        // each change to its original characters so maths and font runs survive.
+        const offsetByRun = [];
+        let offset = 0;
+        for (const run of p.parts) {
+          offsetByRun.push(offset);
+          offset += (run.text ?? '\ufffc').length;
+        }
+        const candidates = [...line.matchAll(/[ \t]*[[(]\d{1,2}(?:\s+marks?)?[\])]/gi)];
+        for (const hit of candidates.reverse()) {
+          const start = hit.index, end = start + hit[0].length;
+          const after = line.slice(end);
+          if (!/marks?/i.test(hit[0]) && !/^[.,;]?\s*$/.test(after)) continue;
+          const prefix = line.slice(0,start);
+          const test = marks(prefix + hit[0], isPrompt, previousPart);
+          const original = (prefix + hit[0]).trimEnd();
+          if (test === original) continue;
+          // The prefix may contain another allocation. Only its final label
+          // belongs to this run interval. Original punctuation follows the hit.
+          const label = test.match(/\[\d{1,2} marks?\]$/i);
+          const replacement = label ? (start && /^\s/.test(hit[0]) ? ' ' : '') + label[0] : '';
+          for (let i=p.parts.length-1; i>=0; --i) {
+            const run=p.parts[i], pos=offsetByRun[i];
+            if (typeof run.text!=='string' || pos>=end || pos+run.text.length<=start) continue;
+            run.text=run.text.slice(0,Math.max(0,start-pos)) + (pos<=start ? replacement : '') + run.text.slice(Math.max(0,end-pos));
           }
         }
       }
@@ -223,6 +252,7 @@
       if (control || shape.cover) {
         const original = deck.sourceCoverLabels ? shape.coverLabel ?? prompt : prompt || shape.coverLabel || '';
         const label = rotation ? 'Animation · '+(rotation[1].toLowerCase()==='degree'?'1°':'1 rad') : control ? (/sketch|plot/i.test(caption) ? 'Sketch' : 'Animation') : cleanLabel(original);
+        if (shape.cover) shape.coverLabel = label;
         const maths = !control && runs.some(r => r.type === 'math') && original.replace(/\?|\s/g,'') === prompt.replace(/\?|\s/g,'');
         const size = Math.min(26, Math.max(16, shape.box.h * .62));
         const parts = maths ? runs.filter(r => r.type === 'math' || r.text?.replace(/\?/g,'').trim()).map(r => ({...r, text:r.text?.replace(/\?/g,''),fontSize:size})) : [{type:'text',text:label,fontSize:size}];
@@ -257,8 +287,9 @@
   }
 
   function examExample(slide) {
-    if (slide.titlePage || slide.singlePageExercise || /^exercise\b/i.test(slide.title)) return false;
+    if (slide.titlePage || /^exercise\b/i.test(slide.title)) return false;
     if (/\b(?:exam(?:ination)?[ -](?:style[ -])?(?:questions?|examples?)|exam[ -]style)\b/i.test(slide.title)) return true;
+    if (slide.singlePageExercise) return false;
     function hasExamReference(shape) {
       const text = [shape.transcription?.tex, ...(shape.text?.paragraphs || []).map(p => p.parts.map(r => r.text || '').join(''))].filter(Boolean).join(' ');
       return /\b(?:Edexcel|AQA|OCR)\b.{0,70}(?:\b(?:19|20)\d{2}\b|\bQ\s*\d)/i.test(text)
@@ -269,7 +300,9 @@
 
   function updateToolbar(slide, total, number = slide.sourceSlide) {
     const heading = document.getElementById('lesson-title');
-    const exam = examExample(slide);
+    const extension = slide.extension || /^Extension\b/i.test(slide.title);
+    heading.classList.toggle('extension', Boolean(extension));
+    const exam = !extension && examExample(slide);
     if (exam) setTitle(heading, 'Test your understanding');
     else if (slide.titleTex) root.katex.render(slide.titleTex, heading, {throwOnError:true,trust:false});
     else setTitle(heading, slide.title);
@@ -309,9 +342,32 @@
     link.hidden = !chapter?.solutions;
     if (chapter?.solutions) link.href = chapter.solutions;
     else link.removeAttribute('href');
+    return chapter?.solutions;
   }
 
-  const api = {examExample,formatSubparts,markPolicy,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments};
+  function workedPanelUrl(resource, chapterResource, panel, base) {
+    if (!resource || !chapterResource) return resource || '';
+    const url = new URL(resource, base);
+    const chapter = new URL(chapterResource, base);
+    if (url.origin !== chapter.origin || url.pathname !== chapter.pathname) return resource;
+    const sheet = Math.ceil(panel / 2);
+    // ADA's PDF wrapper reads the query. Native PDF viewers read the fragment.
+    url.searchParams.set('page', String(sheet));
+    url.hash = 'page=' + sheet;
+    return url.href;
+  }
+
+  // Text fitting measures the initial board before a pupil reveals any answers.
+  // A font first requested by a hidden formula must already have its final metrics.
+  async function loadBoardFonts() {
+    const faces = [...document.fonts].filter(face =>
+      /^(?:Lesson|KaTeX_)/.test(face.family.replace(/["']/g, ''))
+    );
+    await Promise.allSettled(faces.map(face => face.load()));
+    await document.fonts.ready;
+  }
+
+  const api = {loadBoardFonts,examExample,formatSubparts,markPolicy,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments,workedPanelUrl};
   if (typeof module !== 'undefined') module.exports = api;
   root.LUISA_CONTROLS = api;
 })(typeof window === 'undefined' ? globalThis : window);

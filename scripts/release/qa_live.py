@@ -738,14 +738,21 @@ def check_further_statistics(page, url, role):
                 assert response.ok and response.body().startswith(b'%PDF-'), name
                 assert hashlib.sha256(response.body()).hexdigest() == manifest['files'][name], name
         page.goto(url + f'teaching-lesson-viewer.html?book=further-statistics-1&chapter={number}&slide={chapter["firstExercise"]}')
-        solution = page.get_by_role('button', name='Solution', exact=True)
-        working = page.locator('[data-shape="work-0"]')
-        expect(working).to_be_hidden()
-        solution.click()
-        expect(working).to_be_visible()
-        expect(page.locator('[data-shape="prompt"]')).to_be_visible()
-        page.locator('#reset').click()
-        expect(working).to_be_hidden()
+        controls = chapter['firstExerciseControls']
+        bodies = [page.locator(f'[data-shape="{body}"]') for _, body in controls]
+        for body in bodies:
+            expect(body).to_be_hidden()
+        # Start at the end to check that selecting a later part works from Reset.
+        for index in reversed(range(len(controls))):
+            control, _ = controls[index]
+            page.locator(f'button[data-shape="{control}"]').click()
+            expect(bodies[index]).to_be_visible()
+            expect(page.locator('[data-shape="prompt"]')).to_be_visible()
+            for sibling, body in enumerate(bodies):
+                if sibling != index:
+                    expect(body).to_be_hidden()
+            page.locator('#reset').click()
+            expect(bodies[index]).to_be_hidden()
     ok(role + ' Further Statistics 1 chapter files and exercise reveals')
 
 

@@ -138,6 +138,14 @@
       answer.classList.add("printed-part");
       if (student) {
         answer.replaceChildren(document.createTextNode(live.singlePageExercise.parts[index].label.replace(/^Solution /, "")));
+        const graph = live.singlePageExercise.studentGraph;
+        if (graph && live.singlePageExercise.parts[index].label === "Solution (" + graph.part + ")") {
+          const axes = document.createElement("img");
+          axes.className = "exercise-figure";
+          axes.src = new URL(graph.asset, new URL(live.solutionsResource, document.baseURI).href.replace(/solutions\/[^/]+$/, ""));
+          axes.alt = graph.alt;
+          answer.append(axes);
+        }
         answer.classList.add("student-part-cue");
       }
     });
