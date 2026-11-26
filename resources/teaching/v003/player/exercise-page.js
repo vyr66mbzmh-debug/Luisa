@@ -67,5 +67,14 @@
     }
     fits(low / 2);
   }
-  window.LUISA_EXERCISE = {render, fit};
+  function fitWhenReady(sheet) {
+    if (!sheet) return;
+    function fitCurrentSheet() {
+      if (sheet.isConnected) fit(sheet);
+    }
+    fitCurrentSheet();
+    const images = [...sheet.querySelectorAll('img')].map(image => image.decode());
+    Promise.allSettled([document.fonts.ready, ...images]).then(fitCurrentSheet);
+  }
+  window.LUISA_EXERCISE = {render, fit, fitWhenReady};
 })();
