@@ -1,6 +1,6 @@
 ## Luisa v0.87
 
-- Moments now uses its original door, Woody and Buzz illustrations and gives independently answerable parts their own classroom controls and writing areas.
+- Moments pairs each question part with its own answer and writing area. A new illustration shows a boy opening a door, and the seesaw example explains the pivot and centre of mass beside the original Woody and Buzz artwork.
 - The five-step equilibrium method builds one point at a time. The quickfire force diagram separates the angle label from its vector.
 
 ## Luisa v0.86
