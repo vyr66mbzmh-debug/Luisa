@@ -123,6 +123,13 @@
       !e.closest("[data-supplied-theory]") && e.offsetWidth && e.offsetHeight,
   );
   if (live.singlePageExercise) {
+    const sketch = content.querySelector(".exercise-sketch");
+    if (sketch) {
+      // The classroom layers these two states in exactly the same position.
+      // Keep just the appropriate diagram in each permanent print edition.
+      sketch.querySelector(student ? ".exercise-sketch-answer" : ":scope > img").remove();
+    }
+
     if (live.id === "fs1-1C-q8") {
       const question = content.querySelector(".exercise-question");
       const prompt = document.createElement("header");

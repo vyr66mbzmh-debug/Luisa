@@ -85,12 +85,21 @@
   }
 
   function formatSubparts(tex, render) {
-    const parts = tex.split(/\\par\b/);
+    // Preserve explicit source paragraph breaks. A text-box newline can also
+    // introduce a labelled part, but a wrapped sentence is still one item.
+    const parts = tex.split(/\\par\b|\n(?=[ \t]*(?:\([a-hivx]+\)|[a-h]\)|\\textbf\{\(?[a-h]\)?\}))/);
     const label = /^\s*(?:(\d+)\s+)?(?:\(([a-h])\)|([a-h])\)|\\textbf\{\(?([a-h])\)?[.)]?\})\s+/;
-    if (!parts.some(part => label.test(part))) return null;
+    const roman = /^\s*\((i{1,3}|iv|v|vi{1,3}|ix|x)\)\s+/;
+    if (!parts.some(part => label.test(part) || roman.test(part))) return null;
     let inside = false;
     const html = parts.map(part => {
       const m = part.match(label);
+      const subpart = !m && part.match(roman);
+      if (subpart) {
+        const nesting = inside ? ' luisa-nested-roman' : '';
+        return '<span class="luisa-roman-part'+nesting+'"><span class="luisa-roman-label">('+
+          subpart[1]+')</span>'+render(part.slice(subpart[0].length))+'</span>';
+      }
       if (!m) return '<span class="' + (inside ? 'luisa-part-continuation' : 'luisa-part-preamble') + '">' + render(part) + '</span>';
       const gap = inside ? ' luisa-next-part' : '';
       inside = true;

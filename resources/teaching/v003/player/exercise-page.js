@@ -38,6 +38,12 @@
     const underQuestion = spec.underQuestion
       ? '<div class="exercise-under-question" data-answer-for="solution">'+workingContent([spec.underQuestion])+'</div>'
       : '';
+    // Give pupils the same plotting space before and after the solution reveal.
+    const sketch = spec.sketch
+      ? '<div class="exercise-sketch">'+figure(spec.sketch.axes)+
+        '<div class="exercise-sketch-answer" data-answer-for="solution">'+
+        figure(spec.sketch.solution)+'</div></div>'
+      : '';
     const band = spec.diagramBand;
     const topFigures = spec.headerFigures || [];
     const working = workingContent(spec.working.filter(id => id !== band && !topFigures.includes(id)));
@@ -51,7 +57,7 @@
       ? '<div class="exercise-head exercise-figure-header"><div>'+title+'</div>'+diagrams+
         topFigures.map(id => '<div class="exercise-header-answer" data-answer-for="solution">'+figure(id)+'</div>').join('')+'</div>'
       : '<div class="exercise-head">'+title+'</div>';
-    return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet" style="width:100%;height:100%">${head}${introduction}<div class="exercise-columns${spec.compactWorking ? ' exercise-long-working' : ''}"><div class="exercise-question" data-shape="prompt">${question}${topFigures.length ? '' : questionFigures}${underQuestion}</div><div class="exercise-working" data-shape="work-0" data-answer-for="solution">${working}</div></div>${band ? '<div class="exercise-diagram-band" data-answer-for="solution">'+figure(band)+'</div>' : ''}</div></div>`;
+    return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet" style="width:100%;height:100%">${head}${introduction}<div class="exercise-columns${spec.compactWorking ? ' exercise-long-working' : ''}"><div class="exercise-question" data-shape="prompt">${question}${topFigures.length ? '' : questionFigures}${underQuestion}${sketch}</div><div class="exercise-working" data-shape="work-0" data-answer-for="solution">${working}</div></div>${band ? '<div class="exercise-diagram-band" data-answer-for="solution">'+figure(band)+'</div>' : ''}</div></div>`;
   }
   function fit(sheet) {
     if (!sheet || sheet.classList.contains('source-exercise')) return;
