@@ -207,7 +207,7 @@
     // Replace or reorder the selection in an explicit order; printed "As selected".
     arrange(rows, message) {
       if (operation || printing) return false;
-      selected = [...rows]; selectionOrder = rows.map(row => row.id);
+      selected = withoutDuplicateCopies(preferOldSpec(rows)); selectionOrder = selected.map(row => row.id);
       $('papers-order').value = 'selection';
       updateSelection();
       if (message) status(message);
@@ -364,6 +364,7 @@
     });
   }
   async function setSelection(descriptors, message, resetOrder = false) {
+    descriptors = withoutDuplicateCopies(preferOldSpec(descriptors));
     cancelLoading(false);
     const controller = new AbortController(); operation = controller; updateControls();
     status(`Loading ${descriptors.length} questions…`);

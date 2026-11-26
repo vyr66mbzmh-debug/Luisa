@@ -14,6 +14,17 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 ASSETS = Path('resources/old-spec')
 GROUP = 'old spec revision questions'
+# Same assessed tasks, verified against the live bank after conversion. REV07-06
+# and the 2024 paper have different mark allocations; each keeps its own scheme.
+ADDITIONAL_MATCHES = {
+    "REV02-02": "pmt/pure-core-1/ch3/q4",
+    "REV05-01": "exam/edexcel-8fm0-01-2020-october/q8",
+    "REV07-06": "exam/edexcel-9fm0-01-2024-june/q4",
+    "REV10-04": "pmt/pure-core-2/ch3/q3",
+    "REV11-01": "exam/edexcel-9fm0-01-2019-june/q2",
+    "REV17-15": "pmt/pure-core-2/ch1/q1",
+    "REV20-04": "pmt/pure-core-2/ch2/q9"
+}
 
 
 def write_json(path, data):
@@ -179,8 +190,9 @@ def convert(src):
                               questionNumber=number, marks=marks, difficulty=q['difficulty'], chapterKeys=keys,
                               edited=q['edited'], packs=[m['appearance'] for m in q['packMemberships']],
                               markScheme='source' if q['markSchemeSources'] else 'editorial', dataPath=data_path)
-            if q['existingLuisaId']:
-                descriptor['canonicalId'] = q['existingLuisaId']
+            original = ADDITIONAL_MATCHES.get(q['id'], q['existingLuisaId'])
+            if original:
+                descriptor['canonicalId'] = original
             catalogue.append(descriptor)
             payloads[data_path].append(dict(id=uid, question=''.join(conv.blocks((src/q['question']).read_text())),
                                             steps=conv.blocks((src/q['solution']).read_text()), markSchemeSteps=marking(src,q,conv)))

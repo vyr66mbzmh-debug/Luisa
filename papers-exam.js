@@ -104,7 +104,7 @@
 
   async function create(rows, options = {}) {
     if (!Array.isArray(rows) || !rows.length) throw Error('Select at least one question first.');
-    if (new Set(rows.map(row => row.id)).size !== rows.length) throw Error('A paper cannot contain duplicate questions.');
+    if (new Set(rows.map(row => row.canonicalId || row.id)).size !== rows.length) throw Error('A paper cannot contain duplicate questions.');
     if (rows.some(row => !row.id || !row.question)) throw Error('Every selected question needs its original prompt.');
     const choice = options.content ?? 'questions';
     if (!CONTENTS.includes(choice)) throw Error('Choose Questions only, Mark scheme only or Questions and mark scheme.');

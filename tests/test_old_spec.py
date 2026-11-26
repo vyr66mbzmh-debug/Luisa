@@ -28,7 +28,7 @@ class OldSpecRevision(unittest.TestCase):
         self.assertEqual(Counter(r['markScheme'] for r in rows), {'source':227, 'editorial':17})
         existing = {q['id'] for name in ('exam','pmt') for q in read(name+'-catalogue.json')['questions']}
         aliases = [r['canonicalId'] for r in rows if 'canonicalId' in r]
-        self.assertEqual(len(set(aliases)), 23)
+        self.assertEqual(len(set(aliases)), 30)
         self.assertTrue(set(aliases) <= existing)
         keys = {f"{b['course']}/{b['id']}/{c['id']}" for b in read('textbook-catalogue.json')['books'] for c in b['chapters']}
         payloads = {name:{q['id']:q for q in read(name)} for name in {r['dataPath'] for r in rows}}
