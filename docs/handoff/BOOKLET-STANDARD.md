@@ -19,6 +19,8 @@ Fill the entire title panel, including its integrated top banner, with the colou
 | Core Pure Year 1 | CorePure1 | Pure Core 1 | #0E8A5A, RGB(14, 138, 90) |
 | Core Pure Year 2 | CorePure2 | Pure Core 2 | #0E8A5A, RGB(14, 138, 90) |
 
+Further Mechanics 1 uses orange (#E97738). Further Statistics 1 uses red (#DB4040). The chapter catalogue gives the published locations for both modules.
+
 The white title-panel banner names the subject, year, chapter number and topic. For example, `Statistics Year 1 Chapter 1 - Data Collection`. The cover composition has no standalone slide-number marker. On solution booklets, centre the red subtitle “Solutions” beneath the chapter title. Student covers retain the title-only design.
 
 ## Teaching-panel banners and content
@@ -27,7 +29,7 @@ Later panels have white teaching backgrounds and the existing navy-blue banners 
 
 The student version conceals answers and provides the accepted handwriting space. The private solution version preserves the student page composition and fills the corresponding answer areas with the complete supplied working in red. Insert the red word `Solution` immediately before each white slide number. The remaining banner title stays white on the same navy background. Keep all header elements clear of one another.
 
-Supplied raster diagrams retain their original colours and aspect ratios. Preserve meaningful diagrams, arrows, annotations, intermediate steps and source crops. Native revealed working must be red and readable. Fit complete answer ink into the real student PDF writing rectangles while retaining question and cue text. Verify every answer's destination and its association with the question.
+Transcribe all image-based teaching questions and working. Redraw mathematical diagrams in LaTeX, preserving their aspect ratios, colours, arrow directions, scales, units and annotations. Compare each rendered drawing with the source. Apply RES-086 when a source symbol remains ambiguous. Native revealed working must be red and readable. Fit complete answer ink into the real student PDF writing rectangles while retaining question and cue text. Verify every answer's destination and its association with the question.
 
 ## Filenames and locations
 
