@@ -37,7 +37,11 @@ class FurtherStatistics(unittest.TestCase):
                     shapes = {shape['id']: shape for shape in slide['shapes']}
                     for part in parts:
                         self.assertEqual(shapes[part['work']]['answerFor'], part['control'])
-                        self.assertTrue(shapes[part['work']]['transcription']['tex'].strip())
+                        answer = shapes[part['work']]['transcription']['tex']
+                        self.assertTrue(answer.strip())
+                        # A second source part in one row has lost its own control.
+                        for field in (part['prompt'], answer):
+                            self.assertNotRegex(field, r'\\par\s+\\textbf\{[a-z]+\}')
             total += len(exercises)
             for edition in ('booklets', 'solutions', 'textbook'):
                 key = f'{edition}/chapter-{number:02}.pdf'
