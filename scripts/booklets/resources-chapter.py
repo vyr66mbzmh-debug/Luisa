@@ -112,6 +112,7 @@ with sync_playwright() as pw:
     b = pw.chromium.launch(channel=os.environ.get("LUISA_BROWSER_CHANNEL", "chrome"))
     page = b.new_page(viewport={"width": 1440, "height": 900})
     paper = b.new_page()
+    paper.emulate_media(media="print")
     paper.goto(base + "vendor/katex.min.css")
     page.goto(urljoin(base, chapter["slides"]))
     page.locator("#slide-content .source-slide, #slide-content .ch14").first.wait_for(state="attached")
@@ -169,6 +170,16 @@ with sync_playwright() as pw:
             paper.evaluate("prepareBookletMath(document)")
             paper.evaluate("Promise.all([...document.images].map(e=>e.decode()))")
             paper.evaluate("document.fonts.ready")
+            # Measure the issued paper layout after its own fonts and formulae
+            # have loaded. A classroom fit can still clip a final printed line.
+            if not activity:
+                clipped = paper.locator(".lesson-image-tex").evaluate_all(
+                    """nodes => nodes.filter(e => e.offsetWidth && e.offsetHeight &&
+                        (e.scrollHeight > e.clientHeight + 4 || e.scrollWidth > e.clientWidth + 4))
+                        .map(e => e.closest('[data-shape]')?.dataset.shape)"""
+                )
+                if clipped:
+                    raise ValueError(f"Clipped {edition} text on {slide['id']}: {clipped}")
             path = dest / f"{edition}-{n:02}.pdf"
             paper.pdf(path=path, prefer_css_page_size=True, print_background=True)
             with pdf.open(path) as a:

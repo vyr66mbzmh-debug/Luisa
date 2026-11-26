@@ -8,6 +8,9 @@
     throw Error("Needs all staged solution panels: " + live.id);
   const content = panel.cloneNode(true),
     student = opts.edition === "student";
+  // The classroom sets its readable typography on an ancestor outside the
+  // cloned board. Retain it so wrapped answer lines have the same width in print.
+  if (panel.closest(".readable-mode")) content.classList.add("readable-mode");
   // An embedded player has no playback in print. Keep its actual video link.
   for (const frame of content.querySelectorAll("iframe")) {
     const shape = frame.closest("[data-shape]");
@@ -456,10 +459,12 @@
                 "px";
               if (!j) td.style.width = tall ? "26%" : "20%";
               const containsText = /\\text\{/.test(value);
+              const chiSquareHeading = ["x", "O_i", "E_i",
+                "\\frac{(O_i-E_i)^2}{E_i}", "\\dfrac{(O_i-E_i)^2}{E_i}"].includes(value);
               // Leave student-computed numbers, estimates and pooling choices blank.
               if (
                 (i === 0 || j === 0) &&
-                (containsText || /^[OE]_i$/.test(value))
+                (containsText || chiSquareHeading)
               ) {
                 katex.render(value, td, { throwOnError: true });
               }

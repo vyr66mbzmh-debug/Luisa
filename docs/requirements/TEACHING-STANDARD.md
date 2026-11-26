@@ -21,6 +21,8 @@ For an edit or a change of sequence in any Resources module, use the same comman
 
 Generate each private LaTeX original with `python scripts/booklets/reproduction.py SOURCE.pdf OUTPUT.tex`. Compile it with pdfLaTeX in its output folder, compare every page with its accepted PDF, and verify the positions and destinations of clickable links.
 
+Read through the last visible sentence and equation on each rendered panel. Searchable PDF text can include clipped material. For tables, check the row and column headings, units and totals against the source, and make sure a student can follow one observation across the table.
+
 Open the corresponding student and worked PDF pages at actual print size. Compare titles, numbers, question wording and all source steps, then try fitting the written working into each student area. Check the approved Pure Maths example alongside them. Render with Apple Quartz and an independent PDF engine. Regenerate all affected booklet editions, editable reproductions and catalogue aliases. Check the public, staff and student routes, and respect each role's textbook permissions.
 
 Record the chapter route, slide ID, source, matching PDF pages, acceptance evidence and unresolved findings. A changed source, renderer, teaching sequence or PDF invalidates the corresponding checks. Keep inventory, automated checks and individually completed teaching reviews as distinct counts. Mark an unresolved slide or print page as pending.
