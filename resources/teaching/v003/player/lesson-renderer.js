@@ -69,7 +69,20 @@ function shape(s,o){if(o.print&&s.screenOnly)return '';const b=s.box;let transfo
    const description=s.diagramDescription ? '<p>'+esc(s.diagramDescription)+'</p>' : '';
    inner+='<div class="lesson-question-transcript" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">'+imageContent(s.accessibleTex,o)+description+'</div>';
   }
-  if(s.asset){const c=s.crop||{},cw=1-(c.l||0)-(c.r||0),ch=1-(c.t||0)-(c.b||0);inner+=`<div class="lesson-picture-crop" style="overflow:hidden;position:absolute;inset:0"><img draggable="false" alt="${s.accessibleTex ? '' : esc(s.alt || 'Original mathematical diagram or question')}" src="${o.assetBase||''}${esc(s.asset)}${o.assetRevision?(s.asset.includes('?')?'&':'?')+'build='+encodeURIComponent(o.assetRevision):''}" style="position:absolute;width:${100/cw}%;height:${100/ch}%;max-width:none;left:${-100*(c.l||0)/cw}%;top:${-100*(c.t||0)/ch}%;"/></div>`;}
+  if (s.asset) {
+    const crop = s.crop || {};
+    const width = 1 - (crop.l || 0) - (crop.r || 0);
+    const height = 1 - (crop.t || 0) - (crop.b || 0);
+    const imageUrl = asset => {
+      const revision = o.assetRevision ? (asset.includes('?') ? '&' : '?') + 'build=' + encodeURIComponent(o.assetRevision) : '';
+      return esc((o.assetBase || '') + asset + revision);
+    };
+    const image = `<img draggable="false" alt="${s.accessibleTex ? '' : esc(s.alt || 'Original mathematical diagram or question')}" src="${imageUrl(s.asset)}" style="position:absolute;width:${100 / width}%;height:${100 / height}%;max-width:none;left:${-100 * (crop.l || 0) / width}%;top:${-100 * (crop.t || 0) / height}%;"/>`;
+    const picture = s.staticAsset
+      ? `<picture><source media="print, (prefers-reduced-motion: reduce)" srcset="${imageUrl(s.staticAsset)}"/>${image}</picture>`
+      : image;
+    inner += `<div class="lesson-picture-crop" style="overflow:hidden;position:absolute;inset:0">${picture}</div>`;
+  }
   if (s.youtubeId && /^[A-Za-z0-9_-]{11}$/.test(s.youtubeId) && !o.print) {
     const id = s.youtubeId;
     inner = `<iframe title="${esc(s.alt || 'Lesson video')}" src="https://www.youtube-nocookie.com/embed/${id}" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen style="position:absolute;inset:0;border:0;width:100%;height:100%"></iframe>`;

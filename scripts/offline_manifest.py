@@ -51,7 +51,7 @@ def generate(root, entries, version):
         found=set()
         if isinstance(obj,dict):
             for field,value in obj.items():
-                if field in {'asset','solutionsResource'} and isinstance(value,str) and value and not value.startswith('data:'):
+                if field in {'asset','staticAsset','solutionsResource'} and isinstance(value,str) and value and not value.startswith('data:'):
                     if not local(value,bases):raise ValueError('Unresolved offline dependency: '+value+' in '+str(bases))
                 found.update(refs(value,bases))
         elif isinstance(obj,list):

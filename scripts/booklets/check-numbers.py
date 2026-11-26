@@ -8,8 +8,9 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def verify(path, count):
     with pdf.open(path) as document:
-        if len(document) < (count + 1) // 2:
-            raise ValueError(f'{path} is missing teaching panels')
+        sheets = (count + 1) // 2
+        if len(document) != sheets:
+            raise ValueError(f'{path} has {len(document)} A4 sheets for {count} slides, expected {sheets}')
         for number in range(1, count + 1):
             page = document[(number - 1) // 2]
             offset = 413.25 * ((number - 1) % 2)
