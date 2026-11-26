@@ -1,3 +1,8 @@
+## Luisa v0.88
+
+- Further Statistics 1 now has eight revised classroom decks and matching student and worked booklets. The 272 slides include all 131 exam-style questions from the exercises assigned in the source presentations.
+- Teachers can reveal individual exercise parts in any order. Each part has a corresponding writing area in the student booklet and its working in the solutions booklet. The Poisson timeline and the football extension have been typeset for classroom use.
+
 ## Luisa v0.87
 
 - Moments pairs each question part with its own answer and writing area. A new illustration shows a theatre stagehand opening a backstage door, and Woody and Buzz sit on the seesaw. The beam and seesaw examples have separate force diagrams.
