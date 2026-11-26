@@ -20,6 +20,7 @@ class ChapterSolutions(unittest.TestCase):
         replacements = json.loads((ROOT / 'docs/evidence/v059-integration.json').read_text())['mathematics']['pdfs']
         replacements += json.loads((ROOT / 'docs/evidence/v083-teaching-pdfs.json').read_text())['pdfs']
         replacements += json.loads((ROOT / 'docs/evidence/v084-teaching-pdfs.json').read_text())['pdfs']
+        replacements += json.loads((ROOT / 'docs/evidence/v086-moments.json').read_text())['pdfs']
         latest = {}
         for replacement in replacements:
             path = replacement['path']
@@ -32,6 +33,7 @@ class ChapterSolutions(unittest.TestCase):
                         self.assertEqual(record[kind]['sha256'], replacement['before'])
                         self.assertEqual(record[kind]['pages'], replacement['pages'])
                         record[kind]['sha256'] = replacement['after']
+                        record[kind]['pages'] = replacement.get('updatedPages', replacement['pages'])
         for path, digest in latest.items():
             self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), digest)
         textbook = json.loads((ROOT / 'textbook-catalogue.json').read_text())
@@ -58,4 +60,4 @@ class ChapterSolutions(unittest.TestCase):
                     self.assertEqual(hashlib.sha256(alias.read_bytes()).hexdigest(), record['booklet']['sha256'])
                     self.assertEqual(progress.count(f'<a href="{url}">Solutions</a>'), 1)
         self.assertEqual(len(seen), 62)
-        self.assertEqual(sum(r['solutions']['pages'] for r in evidence.values()), 1507)
+        self.assertEqual(sum(r['solutions']['pages'] for r in evidence.values()), 1509)

@@ -1,3 +1,8 @@
+## Luisa v0.86
+
+- Applied Mathematics Year 2, Chapter 4, Moments, has an updated classroom lesson, student booklet and worked-solutions booklet.
+- The chapter follows forces from their lines of action through resultants, equilibrium, centre of mass and the onset of tilting. The corresponding student and worked panels share the same A4 sheet numbering.
+
 ## Luisa v0.85
 
 - Further Statistics 1 adds eight teaching chapters, each with a presentation, student booklet, worked solutions and the corresponding textbook chapter.
