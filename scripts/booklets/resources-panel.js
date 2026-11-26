@@ -568,6 +568,24 @@
         content.append(e);
       }
     }
+  } else if (live.exerciseWritingAreas) {
+    // Some exercises have their own labelled axes and multi-cell data tables.
+    // Keep the full source layout and reserve one writing area per subpart.
+    for (const area of live.exerciseWritingAreas) {
+      const cells = area.shapes.map(id => {
+        const el = panel.querySelector('[data-shape="' + CSS.escape(id) + '"]');
+        if (!el) throw Error("Missing exercise writing area: " + id);
+        return bounds(el);
+      });
+      const x = Math.min(...cells.map(b => b.x));
+      const y = Math.min(...cells.map(b => b.y));
+      const right = Math.max(...cells.map(b => b.x + b.w));
+      const bottom = Math.max(...cells.map(b => b.y + b.h));
+      box(x, y, right - x, bottom - y, student ? area.label : "");
+    }
+    if (student) {
+      content.querySelectorAll("[data-answer-for]").forEach(answer => answer.remove());
+    }
   } else {
     const areas = new Map();
     for (const e of owned) {

@@ -165,9 +165,22 @@ for edition in ["student", "worked"]:
     doc = pdf.open()
     toc = []
     original = pdf.open(previous[edition]) if args.plan else None
+    # Preserve an unchanged A4 sheet as a single page, including its links.
+    # Repeatedly clipping and re-embedding both halves nests old drawing objects.
+    intact_sheets = {
+        j // 2 for j in range(0, len(deck) - 1, 2)
+        if original is not None and mapping[j:j + 2] == [j + 1, j + 2]
+        and changed.isdisjoint((j + 1, j + 2))
+    }
     for j, s in enumerate(deck):
         n = j + 1
         lower = j % 2
+        if j // 2 in intact_sheets:
+            if not lower:
+                doc.insert_pdf(original, from_page=j // 2, to_page=j // 2, final=False)
+            if n > 1:
+                toc.append([1, f"{n}. " + (s.get("navigationTitle") or s["title"]), j // 2 + 1])
+            continue
         Y = 413.25 * lower
         if not lower:
             doc.new_page(width=size.width, height=size.height)
@@ -273,7 +286,7 @@ for edition in ["student", "worked"]:
     doc.set_toc(toc)
     doc.subset_fonts()
     doc.set_metadata({"title": f"{subject} · {deck[0]['title']} · " + edition})
-    doc.save(dest / (edition + ".pdf"), garbage=4, deflate=True, use_objstms=1)
+    doc.save(dest / (edition + ".pdf"), garbage=2 if intact_sheets else 4, deflate=True, use_objstms=1)
     doc.close()
     if original is not None:
         original.close()
