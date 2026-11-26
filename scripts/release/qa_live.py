@@ -560,7 +560,17 @@ def check_moments(page, url, role):
     page.get_by_role('button', name='Solution', exact=True).click()
     expect(solution).to_be_visible()
     expect(solution).to_contain_text('750')
-    ok(f'{role} Moments classroom slide, handout and solutions verified')
+    for number in (22, 24, 33, 42):
+        page.locator('#slide-select').select_option(index=number - 1)
+        first = page.locator('[data-answer-for="part-a"]').first
+        second = page.locator('[data-answer-for="part-b"]').first
+        expect(first).to_be_hidden()
+        page.locator('#next-step').click()
+        expect(first).to_be_visible()
+        expect(second).to_be_hidden()
+        page.locator('#next-step').click()
+        expect(second).to_be_visible()
+    ok(f'{role} Moments lesson, multipart reveal order and both booklet fingerprints verified')
 
 
 def check_further_mechanics(page, url, role):
