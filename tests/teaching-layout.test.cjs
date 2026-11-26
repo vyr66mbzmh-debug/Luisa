@@ -111,3 +111,13 @@ test('inline totals, PowerPoint run breaks and TeX spacing do not hide a followi
   assert.match(q.transcription.tex,/equation \(3\)/);
   assert.equal(m.text.paragraphs[0].parts.map(r=>r.text).join(''),'(a) Draw a Venn diagram. Tip: include the box.');
 });
+
+test('transcribed questions keep spaces around numerical comparisons and spreadsheet instructions', () => {
+  const {imageContent} = require('../lesson-renderer.js');
+  const render = text => imageContent(text, {math: value => '<math>' + value + '</math>'});
+  const comparison = render('Given that $P(Y<160)$ = 0.99 and $P(Y>152)$ = 0.90, find the mean.');
+  assert.match(comparison, / = 0.99 and /);
+  assert.doesNotMatch(comparison, /<math>[^<]*and /);
+  assert.match(render('For this reason the value of $x$ can be found directly.'), /<math>x<\/math>/);
+  assert.match(render(String.raw`For the cumulative probability $P(X\le r)$, use \texttt{TRUE}.`), /, use <code>TRUE<\/code>/);
+});

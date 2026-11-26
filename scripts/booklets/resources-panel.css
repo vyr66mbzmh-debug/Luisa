@@ -125,3 +125,9 @@ main {
 .lesson-tip .lesson-tex-geometry {
   display: none;
 }
+
+/* A LaTeX phantom aligns continuation lines while contributing no visible ink. */
+.katex-html [style*="color: transparent"],
+.katex-html [style*="color:transparent"] {
+  visibility: hidden;
+}
