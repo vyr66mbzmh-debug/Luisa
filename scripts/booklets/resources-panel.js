@@ -123,20 +123,17 @@
       !e.closest("[data-supplied-theory]") && e.offsetWidth && e.offsetHeight,
   );
   if (live.singlePageExercise?.parts) {
-    const work = panel.querySelector(".exercise-parts");
-    const printWork = content.querySelector(".exercise-parts");
-    printWork.style.height = (printHeight - bounds(work).y - 12) + "px";
-    const rows = [...printWork.children];
+    const originals = panel.querySelectorAll(".matched-row");
+    const rows = content.querySelectorAll(".matched-row");
     rows.forEach((row, index) => {
-      const ref = work.children[index];
-      row.style.minHeight = bounds(ref).h + "px";
-      row.style.border = "1.55px solid #8997a2";
-      row.style.padding = "4px 8px";
-      row.querySelector("button").remove();
+      // Reserve the same row for both editions even after its workings are removed.
+      row.style.minHeight = bounds(originals[index]).h + "px";
+      const answer = row.querySelector(".matched-answer");
+      answer.querySelector("button").remove();
+      answer.classList.add("printed-part");
       if (student) {
-        const marker = live.singlePageExercise.parts[index].label.replace(/^Solution /, "");
-        row.replaceChildren(document.createTextNode(marker));
-        row.classList.add("student-part-cue");
+        answer.replaceChildren(document.createTextNode(live.singlePageExercise.parts[index].label.replace(/^Solution /, "")));
+        answer.classList.add("student-part-cue");
       }
     });
   } else if (live.singlePageExercise) {

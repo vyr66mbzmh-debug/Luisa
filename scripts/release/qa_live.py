@@ -573,6 +573,20 @@ def check_moments(page, url, role):
         for key in keys:
             page.locator('#next-step').click()
             expect(page.locator(f'[data-answer-for="part-{key}"]').first).to_be_visible()
+    for number in (8, 14, 19, 25, 26, 27, 28, 30, 34, 35, 44):
+        page.locator('#slide-select').select_option(index=number - 1)
+        rows = page.locator('.matched-row')
+        assert rows.count() >= 2
+        assert rows.evaluate_all("""rows => rows.every(row => {
+          const prompt = row.querySelector('.matched-question').getBoundingClientRect();
+          const answer = row.querySelector('.matched-answer').getBoundingClientRect();
+          return row.closest('.matched-cards')
+            ? Math.abs(prompt.left - answer.left) < 2 && prompt.bottom <= answer.top
+            : Math.abs(prompt.top - answer.top) < 2;
+        })"""), f"Question and answer alignment on slide {number}"
+    page.locator('#slide-select').select_option(index=21)
+    expect(page.locator('[data-shape="key"]')).to_contain_text('centre of mass')
+    expect(page.locator('[data-shape="key"]')).to_contain_text('pivot')
     ok(f'{role} Moments lesson, multipart reveal order and both booklet fingerprints verified')
 
 

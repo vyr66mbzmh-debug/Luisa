@@ -22,11 +22,21 @@
       return item.asset ? figure(id) : imageContent(formatMarks(item.transcription.tex, false), {});
     }
     const parts = spec.parts;
-    const working = parts ? parts.map(({control, work, label}) =>
-      `<section class="exercise-part"><button class="exercise-reveal" data-shape="${escape(control)}" aria-label="${escape(label)}" aria-expanded="false">${escape(label)}</button><div data-shape="${escape(work)}" data-answer-for="${escape(control)}">${renderWork(work)}</div></section>`
-    ).join('') : spec.working.filter(id => id !== band).map(renderWork).join('');
-    const reveal = parts ? '' : '<button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button>';
-    const workAttrs = parts ? 'class="exercise-working exercise-parts"' : 'class="exercise-working" data-shape="work-0" data-answer-for="solution"';
+    if (parts) {
+      const cards = parts.every(part => part.figure);
+      const rows = parts.map(part => {
+        const prompt = part.figure ? figure(part.figure) : imageContent(formatMarks(part.prompt, true), {});
+        const button = `<button class="exercise-reveal" data-shape="${escape(part.control)}" aria-label="${escape(part.label)}" aria-expanded="false">${escape(part.label)}</button>`;
+        const work = `<div data-shape="${escape(part.work)}" data-answer-for="${escape(part.control)}">${renderWork(part.work)}</div>`;
+        return `<section class="matched-row"><div class="matched-question">${prompt}</div><div class="matched-answer">${button}${work}</div></section>`;
+      }).join('');
+      const number = escape(objects.get('number').transcription.tex);
+      const intro = `<div class="matched-intro"><div data-shape="prompt"><strong>${number}</strong>${question}</div>${spec.figures.map(figure).join('')}</div>`;
+      return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet matched-sheet${cards ? ' matched-cards' : ''}" style="width:100%;height:100%">${intro}<div class="matched-rows">${rows}</div></div></div>`;
+    }
+    const working = spec.working.filter(id => id !== band).map(renderWork).join('');
+    const reveal = '<button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button>';
+    const workAttrs = 'class="exercise-working" data-shape="work-0" data-answer-for="solution"';
     const width = spec.questionWidth;
     const layout = Number.isFinite(width) && width >= 30 && width <= 65
       ? ' data-balanced-exercise style="width:100%;height:100%;--exercise-question-width:' + width + '%"'
@@ -36,11 +46,20 @@
   }
   function fit(sheet) {
     if (!sheet || sheet.classList.contains('source-exercise')) return;
+    if (sheet.classList.contains('matched-sheet')) {
+      const cells = [...sheet.querySelectorAll('.matched-question,.matched-answer,.matched-rows')];
+      for (let size = 30; size >= 14; size -= 0.5) {
+        sheet.style.fontSize = size + 'px';
+        if (sheet.scrollHeight <= sheet.clientHeight + 1 && cells.every(cell =>
+          cell.scrollWidth <= cell.clientWidth + 1 && cell.scrollHeight <= cell.clientHeight + 1)) break;
+      }
+      return;
+    }
     const container = sheet.querySelector('.exercise-columns');
     const solution = sheet.querySelector('.exercise-working');
     // Size against hidden working as well, so revealing it leaves everything in place.
     for (let size = 29; size >= 8; size -= 0.5) {
-      for (const count of (solution.classList.contains('exercise-parts') ? [1] : [1, 2, 3, 4])) {
+      for (const count of [1, 2, 3, 4]) {
         container.style.fontSize = size + 'px';
         solution.style.columnCount = count;
         if (solution.scrollWidth > solution.clientWidth + 1 || solution.scrollHeight > solution.clientHeight + 1) continue;
