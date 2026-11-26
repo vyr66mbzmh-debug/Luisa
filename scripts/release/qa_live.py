@@ -570,6 +570,11 @@ def check_moments(page, url, role):
                 else:
                     expect(answer).to_be_hidden()
         page.locator('#reset').click()
+        if number == 22:
+            # Draw the forces before resolving and taking moments in parts (a) and (b).
+            page.locator('#next-step').click()
+            expect(page.locator('[data-shape="force-arrows"]')).to_be_visible()
+            expect(page.locator('[data-answer-for="part-a"]').first).to_be_hidden()
         for key in keys:
             page.locator('#next-step').click()
             expect(page.locator(f'[data-answer-for="part-{key}"]').first).to_be_visible()
