@@ -129,6 +129,8 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 #exercise-assignment {max-width:28em;font:16px Lesson,KaTeX_Main,serif;line-height:1.35;color:#183957;}
 .exercise-sheet {display:flex; flex-direction:column; padding:24px 30px; color:#183957; font-family:Lesson,serif}
 .exercise-head {display:grid; grid-template-columns:31% 1fr; align-items:center; font-size:30px; margin-bottom:15px}
+.exercise-introduction {font:28px/1.2 Lesson,serif;margin:0 0 .45em}
+.exercise-introduction .lesson-image-prose {display:block}
 .exercise-reveal {justify-self:start; font:24px Lesson,serif; color:#173b60; padding:4px 26px; cursor:pointer}
 .exercise-columns {display:grid;grid-template-columns:30% minmax(0,1fr);gap:2%;min-height:0;flex:1;line-height:1.17}
 .exercise-question,.exercise-working {min-width:0;min-height:0;height:100%}
@@ -140,6 +142,7 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 .exercise-question .exercise-figure {height:11em}
 #slide-region .lesson-tip {background:#eef5fa!important;border-left:4px solid #5a819e;color:#183957!important;padding:4px 8px}
 #slide-region .lesson-tip .lesson-text *,#slide-region .lesson-tip .lesson-image-tex {color:#183957!important}
+.lesson-tip .lesson-image-tex {box-sizing:border-box;padding:5px 10px}
 #slide-region .lesson-tip>.lesson-drawing,#slide-region .lesson-tip>.lesson-tex-geometry {display:none}
 @media print {.exercise-reveal{visibility:hidden}}
 /* Keep an opaque mask where the source placed the answer; only the label is a button. */
