@@ -97,3 +97,17 @@ test('exam headings recognise paper references across lesson titles and retain t
   assert.equal(examExample({...cited, title:'Exercise 1D Pearson Core Pure 1, p. 7-8'}), false);
   assert.equal(examExample({title:'Iteration — Calculation and Exam Technique', shapes:[]}), false);
 });
+
+test('inline totals, PowerPoint run breaks and TeX spacing do not hide a following hint or alter a formula', () => {
+  const question = {id:'q', box:{x:0,y:0,w:150,h:70}, transcription:{
+    tex: String.raw`(a) Find the radius. \hfill(3) (b) Find \(f(2)\). \qquad(2)\par Use equation (3).`,
+  }};
+  const mixed = {id:'mixed', box:question.box, text:{paragraphs:[{parts:[
+    {type:'text',text:'(a) Draw a Venn diagram. (4 ma'}, {type:'text',text:'rks) Tip: include the box.'},
+  ]}]}};
+  const [q,m] = prepare(slide([question,mixed]),{height:200}).shapes;
+  assert.doesNotMatch(q.transcription.tex,/hfill|qquad|\(2\)\\par/);
+  assert.match(q.transcription.tex,/f\(2\)/);
+  assert.match(q.transcription.tex,/equation \(3\)/);
+  assert.equal(m.text.paragraphs[0].parts.map(r=>r.text).join(''),'(a) Draw a Venn diagram. Tip: include the box.');
+});

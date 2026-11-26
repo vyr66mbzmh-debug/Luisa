@@ -150,13 +150,23 @@
     return function format(value, question, initialPart = '') {
       if (!value) return value;
       let part = initialPart;
-      let out = value.split(/(\\par\b)/).map(line => {
+      const chunks = value.split(/(\\par\b|\n|(?=\([a-h]\)\s+[A-Za-z]))/);
+      let out = chunks.map(line => {
         const m = line.match(partAtStart);
         if (m) part = m[1] || m[2] || m[3];
         const supported = part ? earned.get(part) : [...earned.values()].reduce((sum, n) => sum + n, 0);
         const allocation = (_, n) => supported === Number(n) ? '[' + n + (n === '1' ? ' mark]' : ' marks]') : '';
         let result = line.replace(/[[(](\d{1,2})\s+marks?[\])]/gi, allocation);
-        if (question && !/\b(?:equation|formula|expression|identity|statement|relation|from|using|in)\s+[[(]\d+[\])][.,]?\s*$/i.test(result)) result = result.replace(/(?:^|(?<=\s))(?:\((\d{1,2})\)|\[(\d{1,2})\])(?=[.,]?\s*$)/g, (_, parens, brackets) => allocation(_, parens || brackets));
+        if (question) {
+          // Imported questions can place a total after a TeX spacing command or
+          // between two sentences on the same line. Keep numbered references.
+          result = result.replace(/(?:\\(?:hfill|qquad|quad)\s*|(?<=\s)|^)(?:\((\d{1,2})\)|\[(\d{1,2})\])(?=[.,;]?\s*\}?\s*$|\s+(?:Find|Give|Show|Hence|Calculate|Determine)\b)/g,
+            (match, parens, brackets, offset) => {
+              if (/\b(?:equation|formula|expression|identity|statement|relation|from|using|in)\s*$/i.test(result.slice(0,offset))) return match;
+              const label = allocation(match, parens || brackets);
+              return label && match.startsWith('\\') ? ' ' + label : label;
+            });
+        }
         if (!question && /(?:^|\s)\[?(?:D?M|A|B)\d+\]?\s*$/i.test(result)) {
           // Detached scheme columns and bundles do not explain individual marks.
           if (!individuallyMarked(result) || /(?:\[?(?:D?M|A|B)\d+\]?\s*){2,}$/i.test(result)) {
@@ -191,21 +201,31 @@
         } else if (previousPart && !p.bullet) {
           p.marginLeft = Math.max(p.marginLeft || 0, (p.fontSize || 22)*1.4);
         }
-        // A suffix can span multiple PowerPoint runs. Splice only that suffix,
-        // keeping every maths run, preceding word and its formatting intact.
-        const suffix = line.match(/\s*[[(]\d{1,2}(?:\s+marks?)?[\])][.,]?\s*$/i);
-        if (suffix) {
-          const revised = marks(line, isPrompt, previousPart);
-          if (revised !== line.trimEnd()) {
-            let offset = 0;
-            for (const run of p.parts) {
-              const old = run.text ?? '\ufffc';
-              if (typeof run.text === 'string' && offset + old.length > suffix.index) {
-                const keep = Math.max(0, suffix.index - offset);
-                run.text = old.slice(0, keep) + (offset <= suffix.index ? revised.slice(suffix.index) : '');
-              }
-              offset += old.length;
-            }
+        // A label can cross several text runs or occur before a hint. Apply
+        // each change to its original characters so maths and font runs survive.
+        const offsetByRun = [];
+        let offset = 0;
+        for (const run of p.parts) {
+          offsetByRun.push(offset);
+          offset += (run.text ?? '\ufffc').length;
+        }
+        const candidates = [...line.matchAll(/[ \t]*[[(]\d{1,2}(?:\s+marks?)?[\])]/gi)];
+        for (const hit of candidates.reverse()) {
+          const start = hit.index, end = start + hit[0].length;
+          const after = line.slice(end);
+          if (!/marks?/i.test(hit[0]) && !/^[.,;]?\s*$/.test(after)) continue;
+          const prefix = line.slice(0,start);
+          const test = marks(prefix + hit[0], isPrompt, previousPart);
+          const original = (prefix + hit[0]).trimEnd();
+          if (test === original) continue;
+          // The prefix may contain another allocation. Only its final label
+          // belongs to this run interval. Original punctuation follows the hit.
+          const label = test.match(/\[\d{1,2} marks?\]$/i);
+          const replacement = label ? (start && /^\s/.test(hit[0]) ? ' ' : '') + label[0] : '';
+          for (let i=p.parts.length-1; i>=0; --i) {
+            const run=p.parts[i], pos=offsetByRun[i];
+            if (typeof run.text!=='string' || pos>=end || pos+run.text.length<=start) continue;
+            run.text=run.text.slice(0,Math.max(0,start-pos)) + (pos<=start ? replacement : '') + run.text.slice(Math.max(0,end-pos));
           }
         }
       }

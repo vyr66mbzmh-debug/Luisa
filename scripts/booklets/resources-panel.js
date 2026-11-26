@@ -579,14 +579,28 @@
       all.push(r);
       areas.set(key, all);
     }
+    // The printed answer starts where its classroom working starts. Give a
+    // pupil the clear space below it, stopping before any other teaching ink.
+    const occupied = [...panel.querySelectorAll("[data-shape]")].filter(
+      e => e.offsetWidth && e.offsetHeight && !e.matches(".lesson-answer-cover,.is-hidden,.answer-concealed") &&
+        !e.querySelector("[data-shape]") && !e.closest(".lesson-answer-cover")
+    ).map(bounds);
     for (const rectangles of areas.values()) {
-      for (const r of rectangles)
+      for (const r of rectangles) {
+        const bottom = r.y + r.h;
+        let limit = printHeight - 5;
+        for (const other of occupied) {
+          if (other.x >= r.x + r.w || other.x + other.w <= r.x) continue;
+          if (other.y + other.h <= bottom + 1) continue;
+          limit = Math.min(limit, Math.max(bottom, other.y - 8));
+        }
         box(
           Math.max(2, r.x - 3),
           Math.max(1, r.y - 3),
           Math.min(w - r.x - 4, r.w + 6),
-          Math.min(printHeight - r.y - 3, r.h + 6),
+          Math.min(printHeight - r.y - 3, Math.max(r.h + 6, limit - r.y)),
         );
+      }
     }
     if (student)
       for (const e of content.querySelectorAll(

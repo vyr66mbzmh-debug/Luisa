@@ -86,7 +86,7 @@ with sync_playwright() as pw:
         for edition in ["student", "worked"]:
             dat = page.evaluate(panel_exporter, {"edition": edition})
             w, h = dat["w"], dat["h"]
-            if slide["title"].casefold() == "exam style question":
+            if page.locator("#lesson-exam-title:not([hidden])").count():
                 h += 52
                 dat["html"] = (
                     '<div style="font:32px Lesson;padding:5px 16px;height:52px">Exam style question</div>'
@@ -138,6 +138,10 @@ for edition in ["student", "worked"]:
                 fontname="Georgia",
                 fontfile=font,
                 color=white,
+            )
+            page.insert_text(
+                (574 - pdf.get_text_length("1", fontname="tibo", fontsize=13.5), 27.75),
+                "1", fontname="tibo", fontsize=13.5, color=white,
             )
             typeface = pdf.Font(fontfile=str(bold))
             lines = [""]

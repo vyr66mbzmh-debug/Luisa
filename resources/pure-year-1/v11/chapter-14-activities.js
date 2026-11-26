@@ -153,6 +153,14 @@ window.LuisaChapter14 = (() => {
           '<div class="pesticide-graph"><p>e. Sketch the graph of '+math('P')+' against '+math('t')+'.</p>'+
           cover('<img src="resources/pure-year-1/native/assets/ch14-18.svg" data-blank-src="resources/pure-year-1/native/assets/ch14-18-blank.svg" alt="Pesticide density against time">','Graph')+'</div></div>';return;
       }
+      if(n===32){
+        const given=shapes.find(s=>s.id==='native-1').transcription.tex.slice(6,-1).split('\n');
+        const prompts=given.map(line=>{
+          const part=line.match(/^\(([ab])\)\s+(.*)$/);
+          return part ? '<p class="luisa-lettered-part"><span class="luisa-part-label">('+part[1]+')</span>'+prose(part[2])+'</p>' : note(prose(line));
+        }).join('');
+        root.innerHTML=prompts+row([2,'Part (a)'],[3,'Part (b)']);return;
+      }
       if(n===34){root.innerHTML='<div class="stack compact">'+note(copy(1))+cover(copy(2),'Answer')+'</div><div class="stack compact"><h2>Challenge</h2>'+note(copy(3))+cover(copy(4),'Proof')+'</div>';return;}
       root.innerHTML=note(copy(1))+row([2,n===33?'use law of logs to derive an equation in x..':'1'],[3,n===33?'.. then solve the equation':'2']);
     }
