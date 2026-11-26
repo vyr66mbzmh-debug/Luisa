@@ -31,22 +31,38 @@
     if (!sheet || sheet.classList.contains('source-exercise')) return;
     const container = sheet.querySelector('.exercise-columns');
     const solution = sheet.querySelector('.exercise-working');
-    // Size against hidden working as well, so revealing it leaves everything in place.
-    for (let size = 29; size >= 8; size -= 0.5) {
-      for (const count of [1, 2, 3, 4]) {
-        container.style.fontSize = size + 'px';
-        solution.style.columnCount = count;
-        if (solution.scrollWidth > solution.clientWidth + 1 || solution.scrollHeight > solution.clientHeight + 1) continue;
-        const question = sheet.querySelector('.exercise-question');
+    const question = sheet.querySelector('.exercise-question');
+    const maths = [...solution.querySelectorAll('.katex-html')];
+    const figures = [...solution.querySelectorAll('.exercise-figure')];
+    // Long question stems and short numerical solutions need a different
+    // division of the board from brief prompts with extended working.
+    function fits(size) {
+      container.style.fontSize = size + 'px';
+      for (const width of [30, 38, 45, 50, 55]) {
+        container.style.gridTemplateColumns = width + '% minmax(0,1fr)';
         if (question.scrollHeight > question.clientHeight + 1 || question.scrollWidth > question.clientWidth + 1) continue;
-        const outer = solution.getBoundingClientRect();
-        const scale = outer.width / solution.clientWidth;
-        const colWidth = (solution.clientWidth - (count-1)*parseFloat(getComputedStyle(solution).columnGap))/count;
-        if ([...solution.querySelectorAll('.katex-html')].some(e => e.getBoundingClientRect().width > colWidth*scale+1)) continue;
-        if ([...solution.querySelectorAll('.katex-html,.exercise-figure')].some(e=>e.getBoundingClientRect().right > outer.right + 1)) continue;
-        return;
+        for (const count of [1, 2, 3, 4]) {
+          solution.style.columnCount = count;
+          if (solution.scrollWidth > solution.clientWidth + 1 || solution.scrollHeight > solution.clientHeight + 1) continue;
+          const outer = solution.getBoundingClientRect();
+          const scale = outer.width / solution.clientWidth;
+          const gap = parseFloat(getComputedStyle(solution).columnGap);
+          const columnWidth = (solution.clientWidth - (count - 1) * gap) / count;
+          if (maths.some(e => e.getBoundingClientRect().width > columnWidth * scale + 1)) continue;
+          if ([...maths, ...figures].some(e => e.getBoundingClientRect().right > outer.right + 1)) continue;
+          return true;
+        }
       }
+      return false;
     }
+    if (fits(29)) return;
+    let low = 16, high = 58;
+    while (high - low > 1) {
+      const mid = Math.floor((high + low) / 2);
+      if (fits(mid / 2)) low = mid;
+      else high = mid;
+    }
+    fits(low / 2);
   }
   window.LUISA_EXERCISE = {render, fit};
 })();
