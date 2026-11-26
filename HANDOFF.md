@@ -1,11 +1,13 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.88 -->
-**Release 0.88 · GitHub #166.**
+<!-- LUISA-REPORT-HANDOFF v0.89 -->
+**Release 0.89 · GitHub #168.**
 
-Further Statistics 1 now has eight revised classroom decks and matching student and worked booklets. The 272 slides include all 131 exam-style questions from the exercises assigned in the source presentations.
+Select Old Spec beside Past Papers to include 244 revision questions across 17 Core Pure chapters. The paper dropdown groups the 22 packs under old spec revision questions.
 
-Only the eight Further Statistics 1 chapters resume from the wider review in issue #160. See issue #166 for production verification.
+Each exercise has a worked solution and a separate mark scheme. The collection retains 15 edited labels and includes 33 easy, 124 medium and 87 difficult questions. The teacher exam builder uses the marking tables or the suggested marking guide for the 17 exercises with authored allocations.
+
+The 264 pack positions resolve to 244 exercises. The 30 existing catalogue matches keep their original sources and appear once in a combined selection. See issue #168 for production verification.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

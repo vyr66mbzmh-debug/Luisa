@@ -1,0 +1,175 @@
+[
+  {
+    "id": "old-spec/rev11-01",
+    "question": "<p>Show that\n<span class=\"inline-math\" data-math=\"\\displaystyle \\int_0^\\infty\\frac{8x-12}{(2x^2+3)(x+1)}\\,\\mathrm dx\"></span> = ln <em>k</em>\nwhere <em>k</em> is a rational number to be found.\n<span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>The irreducible quadratic needs a linear numerator in the partial fractions. After integration each logarithm grows without bound on its own. Combine them at a finite upper limit <span class=\"inline-math\" data-math=\"t\"></span> first, then divide numerator and denominator of the log argument by <span class=\"inline-math\" data-math=\"t^2\"></span> to take the limit.</p>",
+      "<p>Decompose the integrand as <span class=\"inline-math\" data-math=\"(Ax+B)/(2x^2+3)+C/(x+1)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Clearing denominators gives <span class=\"inline-math\" data-math=\"A+2C=0,\\ A+B=8,\\ B+3C=-12\"></span>, hence <span class=\"inline-math\" data-math=\"(A,B,C)=(8,0,-4)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Integrating up to <span class=\"inline-math\" data-math=\"t\"></span> gives <span class=\"inline-math\" data-math=\"[2\\ln(2x^2+3)-4\\ln(x+1)]_0^t\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Combine the logarithms. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Since <span class=\"inline-math\" data-math=\"(2t^2+3)/(t+1)^2\\to2\"></span>, <small class=\"step-credit\">[1]</small>\nthe integral equals <span class=\"inline-math\" data-math=\"2\\ln2-2\\ln3=\\ln(4/9)\"></span>, giving <span class=\"inline-math\" data-math=\"k=4/9\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-01-ms-01.webp\" alt=\"Source marking table for Session unverified · local Q1, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev11-02",
+    "question": "<p>(<em>a</em>) Find\n<span class=\"inline-math\" data-math=\"\\displaystyle \\int\\frac{1}{x^2+6x+25}\\,\\mathrm dx\"></span>\n<span class=\"marks\">(3)</span></p><p>(<em>b</em>) Hence find the exact value of\n<span class=\"inline-math\" data-math=\"\\displaystyle \\int_{-3}^1\\left(1-\\frac{25}{x^2+6x+25}\\right)\\,\\mathrm dx\"></span>\ngiving the answer in simplest form.\n<span class=\"marks\">(3)</span>\nA student claims that the magnitude of the answer to part (b) gives the total area bounded\nby the curve <span class=\"inline-math\" data-math=\"\\displaystyle y=1-\\frac{25}{x^2+6x+25}\"></span> and the <em>x</em>-axis between the line <em>x</em> = −3 and the line <em>x</em> = 1</p><p>(<em>c</em>) State, with a reason, whether or not the student is correct.\n<span class=\"marks\">(1)</span></p>",
+    "steps": [
+      "<p>The denominator is always positive because it is a square plus <span class=\"inline-math\" data-math=\"16\"></span>. Rewrite the numerator against that denominator to produce the constant term <span class=\"inline-math\" data-math=\"1\"></span> and a multiple of the integral from (a). For geometric area, split at each zero of the curve and add the magnitudes of the signed pieces.</p>",
+      "<p>(a) Complete the square: <span class=\"inline-math\" data-math=\"x^2+6x+25=(x+3)^2+16\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>With <span class=\"inline-math\" data-math=\"u=(x+3)/4\"></span>, the integral is <span class=\"inline-math\" data-math=\"\\tfrac14\\int(1+u^2)^{-1}\\,\\mathrm du\"></span>, <small class=\"step-credit\">[1]</small>\nhence <span class=\"inline-math\" data-math=\"\\tfrac14\\arctan((x+3)/4)+C\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) The antiderivative is <span class=\"inline-math\" data-math=\"x-(25/4)\\arctan((x+3)/4)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The arctangent limits are <span class=\"inline-math\" data-math=\"0,\\pi/4\"></span>, <small class=\"step-credit\">[1]</small> giving <span class=\"inline-math\" data-math=\"4-25\\pi/16\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) The claim is false. The curve changes sign at <span class=\"inline-math\" data-math=\"x=0\"></span> inside the interval, so the signed areas cancel in part. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-02-ms-01.webp\" alt=\"Source marking table for Session unverified · local Q2, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev11-03",
+    "question": "<p>f(<em>x</em>) = <span class=\"inline-math\" data-math=\"\\displaystyle \\frac{x+2}{x^2+9}\"></span></p><p>(<em>a</em>) Show that\n<span class=\"inline-math\" data-math=\"\\displaystyle \\int\\mathrm f(x)\\,\\mathrm dx\"></span> = <em>A </em>ln (<em>x</em><sup>2 </sup>+ 9) + <em>B </em>arctan  <span class=\"inline-math\" data-math=\"\\displaystyle \\left(\\frac x3\\right)\"></span>  + <em>c</em>,\nwhere <em>c</em> is an arbitrary constant and <em>A</em> and <em>B</em> are constants to be found.\n<span class=\"marks\">(4)</span></p><p>(<em>b</em>) Hence show that the mean value of f(<em>x</em>) over the interval {[}0, 3{]} is\n<span class=\"inline-math\" data-math=\"\\displaystyle \\frac16\"></span> ln 2 + <span class=\"inline-math\" data-math=\"\\displaystyle \\frac1{18}\"></span> <span class=\"inline-math\" data-math=\"\\pi\"></span>.\n<span class=\"marks\">(3)</span></p><p>(<em>c</em>) Use your answer to part (<em>b</em>) to find the mean value, over the interval {[}0, 3{]}, of\nf(<em>x</em>) + ln <em>k</em>,\nwhere <em>k</em> is a positive constant, giving your answer in the form <em>p</em> + <span class=\"inline-math\" data-math=\"\\frac{1}{6}\"></span>ln <em>q</em>,\nwhere <em>p</em> and <em>q</em> are constants and <em>q</em> is in terms of <em>k</em>.\n<span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The terms of the numerator need different antiderivatives. The <span class=\"inline-math\" data-math=\"x\"></span> term is proportional to the derivative of the denominator, producing a logarithm; the constant term over <span class=\"inline-math\" data-math=\"x^2+9\"></span> produces an arctangent. For a mean, divide their combined endpoint difference by the interval length.</p>",
+      "<p>(a) Split the numerator. Since the derivative of <span class=\"inline-math\" data-math=\"x^2+9\"></span> is <span class=\"inline-math\" data-math=\"2x\"></span>,\n<span class=\"inline-math\" data-math=\"\\int x/(x^2+9)\\,\\mathrm dx=\\tfrac12\\ln(x^2+9)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The remaining integral is <span class=\"inline-math\" data-math=\"\\tfrac23\\arctan(x/3)\"></span>, so <span class=\"inline-math\" data-math=\"A=1/2, B=2/3\"></span>, with the arbitrary additive constant. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) Divide the definite integral by 3. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The differences in the two terms are <span class=\"inline-math\" data-math=\"\\tfrac12\\ln2\"></span> and <span class=\"inline-math\" data-math=\"(2/3)(\\pi/4)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The mean is <span class=\"inline-math\" data-math=\"\\tfrac16\\ln2+\\pi/18\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) Adding a constant to the function adds that constant to its mean. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus the mean is <span class=\"inline-math\" data-math=\"\\pi/18+\\tfrac16\\ln(2k^6)\"></span>, so <span class=\"inline-math\" data-math=\"p=\\pi/18,\\ q=2k^6\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 9 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-03-ms-01.webp\" alt=\"Source marking table for Edexcel Sample Assessment Materials 9FM0/01 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-03-ms-02.svg\" alt=\"Source marking table for Edexcel Sample Assessment Materials 9FM0/01 · Q6, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev11-04",
+    "question": "<p>(<em>a</em>) Explain why <span class=\"inline-math\" data-math=\"\\displaystyle \\int_0^5\\frac{2}{\\sqrt[3]{2-x}}\\,\\mathrm dx\"></span> is an improper integral.\n<span class=\"marks\">(1)</span></p><p>(<em>b</em>) Prove that\n<span class=\"inline-math\" data-math=\"\\displaystyle \\int_0^5\\frac{2}{\\sqrt[3]{2-x}}\\,\\mathrm dx=a\\bigl(\\sqrt[3]b-\\sqrt[3]c\\bigr)\"></span>\nwhere <em>a</em>, <em>b</em> and <em>c</em> are integers to be determined.\n<span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>Write the two pieces with separate endpoints <span class=\"inline-math\" data-math=\"t&lt;2\"></span> and <span class=\"inline-math\" data-math=\"s&gt;2\"></span>. The boundary terms <span class=\"inline-math\" data-math=\"(2-t)^{2/3}\"></span> and <span class=\"inline-math\" data-math=\"(2-s)^{2/3}\"></span> both tend to zero; on the right, take the real cube root before squaring. Each integral must have its own finite limit before the values can be added.</p>",
+      "<p>(a) The integrand is unbounded at the interior point <span class=\"inline-math\" data-math=\"x=2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Split at 2 and take separate one-sided limits. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For real cube roots an antiderivative on each side is <span class=\"inline-math\" data-math=\"-3(2-x)^{2/3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The first integral is <span class=\"inline-math\" data-math=\"3\\sqrt[3]{4}\"></span>, <small class=\"step-credit\">[1]</small> and the second is <span class=\"inline-math\" data-math=\"-3\\sqrt[3]{9}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Both converge, so the result is <span class=\"inline-math\" data-math=\"3(\\sqrt[3]4-\\sqrt[3]9)\"></span>: <span class=\"inline-math\" data-math=\"a=3,b=4,c=9\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>More explicitly, on the right of the singularity put <span class=\"inline-math\" data-math=\"x=2+h\"></span>, <span class=\"inline-math\" data-math=\"h&gt;0\"></span>. Then <span class=\"inline-math\" data-math=\"(2-x)^{2/3}=h^{2/3}\\to0\"></span>, although the integrand itself is negative and unbounded. This explains how the right-hand integral can converge to a negative number.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-04-ms-01.webp\" alt=\"Source marking table for Session unverified · local Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev11-05",
+    "question": "<p>Given that <em>y</em> = arcsin <em>x</em>, <span class=\"inline-math\" data-math=\"-1\\le x&lt;1\"></span>,</p><p>(a) show that <span class=\"inline-math\" data-math=\"\\displaystyle \\frac{\\mathrm dy}{\\mathrm dx}\"></span> = <span class=\"inline-math\" data-math=\"\\displaystyle \\frac1{\\sqrt{1-x^2}}\"></span> .\n<span class=\"marks\">(3)</span>\nGiven that f(<em>x</em>) = <span class=\"inline-math\" data-math=\"\\displaystyle \\frac{3x+2}{\\sqrt{4-x^2}}\"></span> ,</p><p>(b) show that the mean value of f(<em>x</em>) over the interval {[}0, <span class=\"inline-math\" data-math=\"\\sqrt2\"></span>{]}, is\n<span class=\"inline-math\" data-math=\"\\displaystyle \\frac{\\pi\\sqrt2}{4}\"></span> + <em>A</em><span class=\"inline-math\" data-math=\"\\sqrt2\"></span> – <em>A</em>,\nwhere <em>A</em> is a constant to be determined.\n<span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>On the principal range of <span class=\"inline-math\" data-math=\"\\arcsin\"></span>, the cosine in the inverse derivative is nonnegative. It is zero at the endpoint <span class=\"inline-math\" data-math=\"x=-1\"></span>, where the graph has a vertical tangent. In the mean-value calculation a separate scale of two comes from the argument <span class=\"inline-math\" data-math=\"x/2\"></span>.</p>",
+      "<p>(a) Put <span class=\"inline-math\" data-math=\"x=\\sin y\"></span> where <span class=\"inline-math\" data-math=\"-\\pi/2\\le y\\le\\pi/2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Then <span class=\"inline-math\" data-math=\"\\mathrm dx/\\mathrm dy=\\cos y=\\sqrt{1-x^2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Inverting gives <span class=\"inline-math\" data-math=\"\\mathrm dy/\\mathrm dx=1/\\sqrt{1-x^2}\"></span> at interior points. The endpoint <span class=\"inline-math\" data-math=\"x=-1\"></span> has a vertical tangent. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) The mean is <span class=\"inline-math\" data-math=\"\\frac1{\\sqrt2}\\int_0^{\\sqrt2}(3x+2)/\\sqrt{4-x^2}\\,\\mathrm dx\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrating the <span class=\"inline-math\" data-math=\"3x\"></span> term gives <span class=\"inline-math\" data-math=\"-3\\sqrt{4-x^2}\"></span>, and the constant numerator gives <span class=\"inline-math\" data-math=\"2\\arcsin(x/2)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>At the upper limit this is <span class=\"inline-math\" data-math=\"-3\\sqrt2+\\pi/2\"></span>; at zero it is <span class=\"inline-math\" data-math=\"-6\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Dividing by <span class=\"inline-math\" data-math=\"\\sqrt2\"></span> gives <span class=\"inline-math\" data-math=\"\\pi\\sqrt2/4+3\\sqrt2-3\"></span>, so <span class=\"inline-math\" data-math=\"A=3\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 9 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-05-ms-01.svg\" alt=\"Source marking table for Session unverified · local Q5, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev11-06",
+    "question": "<p><span class=\"inline-math\" data-math=\"\\displaystyle \\mathrm f(x)=\\begin{cases}\\frac{kx}{x^2+6}&amp;0\\le x&lt;3,\\\\ \\frac{k}{x^2-4}&amp;3\\le x.\\end{cases}\"></span>\nwhere <em>k</em> is a positive constant.\nThe area between the curve <em>y</em> = f ( <em>x</em> ) and the positive <em>x</em>-axis is <span class=\"inline-math\" data-math=\"\\displaystyle \\frac14\"></span>\nShow that\n<span class=\"inline-math\" data-math=\"\\displaystyle k=\\frac1{\\ln a}\"></span>\nwhere <em>a</em> is a constant to be determined.\n<span class=\"marks\">(8)</span></p>",
+    "steps": [
+      "<p>Use the two definitions of the curve on their own intervals. In the infinite tail the ratio <span class=\"inline-math\" data-math=\"(t-2)/(t+2)\"></span> tends to one, so its logarithm tends to zero. This finite limit is what allows the total area to determine <span class=\"inline-math\" data-math=\"k\"></span>.</p>",
+      "<p>Split the area at 3 and use a limit <span class=\"inline-math\" data-math=\"t\\to\\infty\"></span> on the second interval. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The first integral is <span class=\"inline-math\" data-math=\"[\\tfrac{k}{2}\\ln(x^2+6)]_0^3=(k/2)\\ln(5/2)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>On the second interval <span class=\"inline-math\" data-math=\"1/(x^2-4)=\\tfrac14(1/(x-2)-1/(x+2))\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Its contribution is <span class=\"inline-math\" data-math=\"\\lim_{t\\to\\infty}[\\tfrac k4\\ln((x-2)/(x+2))]_3^t=(k/4)\\ln5\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"1/4=(k/4)\\ln(125/4)\"></span>, <small class=\"step-credit\">[1]</small> giving <span class=\"inline-math\" data-math=\"k=1/\\ln(125/4)\"></span> and <span class=\"inline-math\" data-math=\"a=125/4\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-06-ms-01.webp\" alt=\"Source marking table for Session unverified · local Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev11-07",
+    "question": "<p>f(<em>x</em>) = <span class=\"inline-math\" data-math=\"\\displaystyle \\frac{1}{\\sqrt{4x^2+9}}\"></span></p><p>(<em>a</em>) Using a substitution, that should be stated clearly, show that\n<span class=\"inline-math\" data-math=\"\\displaystyle \\int\\mathrm f(x)\\,\\mathrm dx\"></span> = <em>A</em> sinh<sup>–1</sup> (<em>Bx</em>) + <em>c</em>\nwhere <em>c</em> is an arbitrary constant and <em>A</em> and <em>B</em> are constants to be found.\n<span class=\"marks\">(4)</span></p><p>(<em>b</em>) Hence find, in exact form in terms of natural logarithms, the mean value of f(<em>x</em>) over\nthe interval {[}0, 3{]}.\n<span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The factor <span class=\"inline-math\" data-math=\"3\"></span> in <span class=\"inline-math\" data-math=\"2x=3\\sinh u\"></span> is chosen so that <span class=\"inline-math\" data-math=\"4x^2+9=9(1+\\sinh^2u)\"></span>. Its positive square root is <span class=\"inline-math\" data-math=\"3\\cosh u\"></span>, which cancels the <span class=\"inline-math\" data-math=\"\\cosh u\"></span> in the differential. The extra division by three in part (b) comes from averaging over the interval.</p>",
+      "<p>(a) Let <span class=\"inline-math\" data-math=\"2x=3\\sinh u\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Then <span class=\"inline-math\" data-math=\"\\mathrm dx=(3/2)\\cosh u\\,\\mathrm du\"></span> and <span class=\"inline-math\" data-math=\"\\sqrt{4x^2+9}=3\\cosh u\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integral becomes <span class=\"inline-math\" data-math=\"\\frac12\\int\\mathrm du=u/2+c\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"A=1/2,B=2/3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) The mean is <span class=\"inline-math\" data-math=\"\\tfrac16[\\operatorname{arsinh}(2x/3)]_0^3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>It equals <span class=\"inline-math\" data-math=\"\\frac16\\ln(2+\\sqrt5)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-07-ms-01.webp\" alt=\"Source marking table for Edexcel June 2019 9FM0/02 · Q3, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-07-ms-02.webp\" alt=\"Source marking table for Edexcel June 2019 9FM0/02 · Q3, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev11-08",
+    "question": "<p><strong><span class=\"inline-math\" data-math=\"\\displaystyle \\mathrm f(x)=\\frac1{\\sqrt{x^2+2x+10}}\"></span></strong></p><p>(<em>a</em>) Determine <span class=\"inline-math\" data-math=\"\\int\\mathrm f(x)\\,\\mathrm dx\"></span>\n<span class=\"marks\">(3)</span></p><p>(<em>b</em>) Hence show that the mean value of f (<em>x</em>) over the interval {[}2, 20{]} may be expressed in\nthe form <em>a</em> ln(<em>b</em> + <em><span class=\"inline-math\" data-math=\"\\displaystyle c\\sqrt2\"></span></em> ), where <em>a</em>, <em>b</em> and <em>c</em> are rational constants to be determined.\n<span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>The denominator is a radical of a square plus a constant. With the proposed substitution, the two endpoints <span class=\"inline-math\" data-math=\"2,20\"></span> become <span class=\"inline-math\" data-math=\"1,7\"></span>. Use <span class=\"inline-math\" data-math=\"\\sqrt{50}=5\\sqrt2\"></span>; multiplying <span class=\"inline-math\" data-math=\"(7+5\\sqrt2)\"></span> by <span class=\"inline-math\" data-math=\"\\sqrt2-1\"></span> explains the simplified logarithmic argument.</p>",
+      "<p>(a) Complete the square to obtain <span class=\"inline-math\" data-math=\"(x+1)^2+9\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Using <span class=\"inline-math\" data-math=\"u=(x+1)/3\"></span> reduces the integral to <span class=\"inline-math\" data-math=\"\\int(1+u^2)^{-1/2}\\,\\mathrm du\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus an antiderivative is <span class=\"inline-math\" data-math=\"\\operatorname{arsinh}((x+1)/3)+C\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Divide its increment by <span class=\"inline-math\" data-math=\"20-2=18\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The logarithmic expression is <span class=\"inline-math\" data-math=\"\\tfrac1{18}\\ln[(7+\\sqrt{50})/(1+\\sqrt2)]\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Rationalising the denominator gives <span class=\"inline-math\" data-math=\"\\tfrac1{18}\\ln(3+2\\sqrt2)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-08-ms-01.webp\" alt=\"Source marking table for Session unverified · local Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev11-09",
+    "question": "<p>(a) By writing tanh <em>x</em> in terms of exponentials, show that tanh<sup>–1</sup> <em>x</em> = <span class=\"inline-math\" data-math=\"\\displaystyle \\frac12\"></span> ln <span class=\"inline-math\" data-math=\"\\displaystyle \\left(\\frac{1+x}{1-x}\\right)\"></span> .\n<span class=\"marks\">(3)</span>\n<strong></p><figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-09-fig1.svg\" alt=\"Question diagram\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p></strong>\n<strong>Figure 4</strong>\nFigure 4 shows a sketch of part of the curve with equation <em>y </em>= tanh <em>x</em> and the line with equation <em>y</em> = 0.8.\nThe finite region <em>R</em>, shown shaded in Figure 4, is bounded by the curve, the line with equation <em>y</em> = 0.8 and the <em>y</em>-axis.\nThe region <em>R</em> is rotated through 2<span class=\"inline-math\" data-math=\"\\pi\"></span> radians about the <em>x</em>-axis to form a solid of revolution.</p><p>(b) Determine the exact value of the volume of this solid of revolution, giving your answer in the form <span class=\"inline-math\" data-math=\"\\pi\"></span>(<em>a</em> – <em>b</em> ln 3), where <em>a</em> and <em>b</em> are simplified constants to be found.\n<span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>A vertical cross-section of the rotated region is a washer. Its area is <span class=\"inline-math\" data-math=\"\\pi(R^2-r^2)\"></span>; subtract the two squared radii individually. At the intersection the radii agree, which provides a check on the upper limit <span class=\"inline-math\" data-math=\"\\ln3\"></span>.</p>",
+      "<p>(a) Set <span class=\"inline-math\" data-math=\"x=\\tanh u=(e^{2u}-1)/(e^{2u}+1)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Rearrange to <span class=\"inline-math\" data-math=\"e^{2u}=(1+x)/(1-x)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Take logarithms to obtain the required inverse for <span class=\"inline-math\" data-math=\"|x|&lt;1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) The intersection has <span class=\"inline-math\" data-math=\"x=\\operatorname{artanh}(4/5)=\\ln3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Use washers with outer radius <span class=\"inline-math\" data-math=\"4/5\"></span> and inner radius <span class=\"inline-math\" data-math=\"\\tanh x\"></span>:</p>",
+      "<div class=\"equation\" data-display=\"true\" data-math=\"V=\\pi\\int_0^{\\ln3}(16/25-\\tanh^2 x)\\,\\mathrm dx.\"></div>",
+      "<p><small class=\"step-credit\">[2]</small>\nSince <span class=\"inline-math\" data-math=\"\\tanh^2 x=1-\\operatorname{sech}^2x\"></span>, <small class=\"step-credit\">[1]</small>\n<span class=\"inline-math\" data-math=\"V=\\pi[\\tanh x-(9/25)x]_0^{\\ln3}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"V=\\pi(4/5-(9/25)\\ln3)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 10 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-09-ms-01.svg\" alt=\"Source marking table for Session unverified · local Q9, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-09-ms-02.svg\" alt=\"Source marking table for Session unverified · local Q9, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev11-10",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-10-fig1.svg\" alt=\"Question diagram\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1 shows the central vertical cross section <em>PQRS</em> of a handle for a drawer.\nMeasurements were taken and the handle was found to have a height of 2 cm and the\nlengths of the straight lines <em>PQ</em> and <em>SR</em> were 2 cm and 6 cm respectively, as shown in\nFigure 1.\nThe handle is modelled by a solid of revolution of a curve <em>C</em> about the <em>y</em>-axis. The curve <em>C</em>\nhas parametric equations\n<span class=\"inline-math\" data-math=\"\\displaystyle x=a\\cos^2\\theta,\\qquad y=b\\tan\\theta,\\qquad\\frac\\pi6\\le\\theta\\le\\frac\\pi3\"></span>\nwhere <em>a</em> and <em>b</em> are constants.\nFind, according to the model,</p><p>(<em>a</em>) (i) the value of <em>a</em>,\n(ii) the value of <em>b</em>.\n<span class=\"marks\">(4)</span></p><p>(<em>b</em>) Hence, using calculus, determine the volume of the handle, according to the model.\n<span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>The measurements of the circular faces give radii, while their separation fixes the change in height. Volume is accumulated along that height: each small slice has thickness <span class=\"inline-math\" data-math=\"dy\"></span> and radius <span class=\"inline-math\" data-math=\"x\"></span>. When the parameter is used, the thickness must include <span class=\"inline-math\" data-math=\"dy/d\\theta\"></span>.</p>",
+      "<p>(a)(i) The radii of the lower and upper circles are respectively 3 and 1. Thus <span class=\"inline-math\" data-math=\"a\\cos^2(\\pi/6)=3\"></span> and <span class=\"inline-math\" data-math=\"a\\cos^2(\\pi/3)=1\"></span>, giving <span class=\"inline-math\" data-math=\"a=4\"></span>. <small class=\"step-credit\">[2]</small>\n(ii) The height difference is <span class=\"inline-math\" data-math=\"b(\\tan(\\pi/3)-\\tan(\\pi/6))=2\"></span>, hence <span class=\"inline-math\" data-math=\"b=\\sqrt3\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) <span class=\"inline-math\" data-math=\"V=\\pi\\int x^2\\,\\mathrm dy\"></span> with <span class=\"inline-math\" data-math=\"\\mathrm dy=\\sqrt3\\sec^2\\theta\\,\\mathrm d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"V=16\\pi\\sqrt3\\int_{\\pi/6}^{\\pi/3}\\cos^2\\theta\\,\\mathrm d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Integrate to <span class=\"inline-math\" data-math=\"16\\pi\\sqrt3[\\theta/2+\\sin(2\\theta)/4]_{\\pi/6}^{\\pi/3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The sine terms cancel and the volume is <span class=\"inline-math\" data-math=\"4\\sqrt3\\pi^2/3\\ {\\rm cm}^3\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 10 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev11-10-ms-01.webp\" alt=\"Source marking table for Session unverified · local Q10, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  }
+]

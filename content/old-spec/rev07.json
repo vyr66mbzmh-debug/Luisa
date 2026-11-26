@@ -1,0 +1,151 @@
+[
+  {
+    "id": "old-spec/rev07-01",
+    "question": "<p>Given that <span class=\"inline-math\" data-math=\"z=x+\\mathrm{i} y\"></span> , find the value of x and the value of y such that <span class=\"inline-math\" data-math=\"z+3\\mathrm{i} z^{*}=-1+13\\mathrm{i}\"></span> where <span class=\"inline-math\" data-math=\"z^{*}\"></span> is the complex conjugate of z. <span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>Writing <span class=\"inline-math\" data-math=\"z=x+iy\"></span> makes conjugation particularly simple because it changes only the sign of <span class=\"inline-math\" data-math=\"y\"></span>. In <span class=\"inline-math\" data-math=\"3i(x-iy)\"></span> the second term becomes <span class=\"inline-math\" data-math=\"+3y\"></span> because <span class=\"inline-math\" data-math=\"i^2=-1\"></span>. This is the real contribution needed to solve the two simultaneous equations.</p>",
+      "<p>Since <span class=\"inline-math\" data-math=\"z^*=x-iy\"></span>, <small class=\"step-credit\">[1]</small> <span class=\"inline-math\" data-math=\"z+3iz^*=x+iy+3ix+3y=(x+3y)+i(3x+y)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Equal real and imaginary parts give <span class=\"inline-math\" data-math=\"x+3y=-1\"></span> and <span class=\"inline-math\" data-math=\"3x+y=13\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Subtracting the first equation from three times the second gives <span class=\"inline-math\" data-math=\"8x=40\"></span>, so <span class=\"inline-math\" data-math=\"x=5\"></span> and <span class=\"inline-math\" data-math=\"y=-2\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-01-ms-01.webp\" alt=\"Source marking table for Session unverified · local Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev07-02",
+    "question": "<p>The point P represents the complex number z on an Argand diagram, where <span class=\"inline-math\" data-math=\"\\left| z-i\\right|=2\"></span></p><p>The locus of P as z varies is the curve C.</p><p>(a) Find a cartesian equation of C.</p><p><span class=\"marks\">(2)</span></p><p>(b) Sketch the curve C.</p><p><span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>Subtracting <span class=\"inline-math\" data-math=\"i\"></span> shifts the vertical coordinate down by one. The modulus measures distance from the origin after that shift, so in the original diagram it measures distance from <span class=\"inline-math\" data-math=\"(0,1)\"></span>. Points two units above and below that centre check the sketch.</p>",
+      "<p>(a) With <span class=\"inline-math\" data-math=\"z=x+iy\"></span>, <span class=\"inline-math\" data-math=\"|z-i|=\\sqrt{x^2+(y-1)^2}=2\"></span>, so <span class=\"inline-math\" data-math=\"x^2+(y-1)^2=4\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) Draw a circle of radius 2 about <span class=\"inline-math\" data-math=\"(0,1)\"></span>, crossing the imaginary axis at <span class=\"inline-math\" data-math=\"-1\"></span> and <span class=\"inline-math\" data-math=\"3\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-02-solution-1.svg\" alt=\"Worked diagram for REV07-02\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 4 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-02-ms-01.webp\" alt=\"Source marking table for 2011 FP2 · Q5, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev07-03",
+    "question": "<p>(a) Use de Moivre&#x27;s theorem to show that <span class=\"inline-math\" data-math=\"\\sin 5\\theta=16\\sin^{5}\\theta-20\\sin^{3}\\theta+5\\sin\\theta\"></span> <span class=\"marks\">(5)</span></p><p>Hence, given also that <span class=\"inline-math\" data-math=\"\\sin 3\\theta=3\\sin\\theta-4\\sin^{3}\\theta,\"></span></p><p>(b) find all the solutions of <span class=\"inline-math\" data-math=\"\\sin 5\\theta=5\\sin 3\\theta,\"></span></p><p>in the interval <span class=\"inline-math\" data-math=\"0\\leqslant\\theta&lt;2\\pi.\"></span> Give your answers to 3 decimal places. <span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>Only odd powers of <span class=\"inline-math\" data-math=\"is\"></span> contribute to the imaginary part, and <span class=\"inline-math\" data-math=\"i^3=-i,\\ i^5=i\"></span> determine their signs. In the resulting equation factor out <span class=\"inline-math\" data-math=\"s\"></span> before solving the fourth-power equation. Dividing by <span class=\"inline-math\" data-math=\"s\"></span> would lose the angles with zero sine.</p>",
+      "<p>(a) Write <span class=\"inline-math\" data-math=\"s=\\sin\\theta,\\ c=\\cos\\theta\"></span>. In <span class=\"inline-math\" data-math=\"(c+is)^5=\\cos5\\theta+i\\sin5\\theta\"></span> take imaginary parts. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This gives <span class=\"inline-math\" data-math=\"5c^4s-10c^2s^3+s^5\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Put <span class=\"inline-math\" data-math=\"c^2=1-s^2\"></span> and expand: <span class=\"inline-math\" data-math=\"5s-10s^3+5s^5-10s^3+10s^5+s^5=16s^5-20s^3+5s\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) Equating to <span class=\"inline-math\" data-math=\"5(3s-4s^3)\"></span> gives <span class=\"inline-math\" data-math=\"16s^5-10s=0\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"s=0\"></span> or <span class=\"inline-math\" data-math=\"s=\\pm(5/8)^{1/4}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>On the given interval the solutions (radians, 3 d.p.) are 0.000, 1.095, 2.046, 3.142, 4.237, 5.188. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 11 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-03-ms-01.webp\" alt=\"Source marking table for 2011 FP2 · Q7, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev07-04",
+    "question": "<div class=\"equation\" data-display=\"true\" data-math=\"z=2-\\mathrm{i}\\sqrt{3}\"></div><p>(a) Calculate arg <span class=\"inline-math\" data-math=\"z\"></span> , giving your answer in radians to 2 decimal places. <span class=\"marks\">(2)</span></p><p>Use algebra to express</p><p>(b) <span class=\"inline-math\" data-math=\"z+z^{2}\"></span> in the form <span class=\"inline-math\" data-math=\"a+b\\mathrm{i}\\sqrt{3}\"></span> , where <span class=\"inline-math\" data-math=\"a\"></span> and <span class=\"inline-math\" data-math=\"b\"></span> are integers, <span class=\"marks\">(3)</span></p><p>(c) <span class=\"inline-math\" data-math=\"\\frac{z+7}{z-1}\"></span> in the form <span class=\"inline-math\" data-math=\"c+d\\mathrm{i}\\sqrt{3}\"></span> , where <span class=\"inline-math\" data-math=\"c\"></span> and <span class=\"inline-math\" data-math=\"d\"></span> are integers. <span class=\"marks\">(4)</span></p><p>Given that</p><div class=\"equation\" data-display=\"true\" data-math=\"w=\\lambda-3\\mathrm{i}\"></div><p>where <span class=\"inline-math\" data-math=\"\\lambda\"></span> is a real constant, and <span class=\"inline-math\" data-math=\"\\operatorname{arg}(4-5\\mathrm{i}+3 w)=-\\frac{\\pi}{2}\"></span>,</p><p>(d) find the value of <span class=\"inline-math\" data-math=\"\\lambda\"></span>. <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>For an argument of <span class=\"inline-math\" data-math=\"-\\pi/2\"></span>, the point must lie directly below the origin. Setting its real coordinate to zero gives the required parameter. Checking the sign of the imaginary coordinate then distinguishes the negative imaginary axis from the positive one.</p>",
+      "<p>(a) The fourth-quadrant argument is <span class=\"inline-math\" data-math=\"-\\arctan(\\sqrt3/2)=-0.71\"></span> radians (2 d.p.). <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) <span class=\"inline-math\" data-math=\"z^2=4-4i\\sqrt3-3=1-4i\\sqrt3\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Adding <span class=\"inline-math\" data-math=\"z\"></span> gives <span class=\"inline-math\" data-math=\"3-5i\\sqrt3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) Multiply <span class=\"inline-math\" data-math=\"(9-i\\sqrt3)/(1-i\\sqrt3)\"></span> by <span class=\"inline-math\" data-math=\"(1+i\\sqrt3)/(1+i\\sqrt3)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The numerator is <span class=\"inline-math\" data-math=\"12+8i\\sqrt3\"></span>, denominator 4. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The result is <span class=\"inline-math\" data-math=\"3+2i\\sqrt3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(d) <span class=\"inline-math\" data-math=\"4-5i+3w=(4+3\\lambda)-14i\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For argument <span class=\"inline-math\" data-math=\"-\\pi/2\"></span> the real part vanishes and the imaginary part is negative, giving <span class=\"inline-math\" data-math=\"\\lambda=-4/3\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 11 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-04-ms-01.webp\" alt=\"Source marking table for June 2012 FP1 · Q7, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev07-05",
+    "question": "<p>(a) Express the complex number <span class=\"inline-math\" data-math=\"- 2+\\left( 2 \\sqrt{3} \\right) \\mathrm{i}\"></span> in the form <span class=\"inline-math\" data-math=\"r(\\cos \\theta+\\mathrm{i}\\sin \\theta),-\\pi&lt;\\theta\\leqslant\\pi.\"></span></p><p><span class=\"marks\">(3)</span></p><p>(b) Solve the equation</p><div class=\"equation\" data-display=\"true\" data-math=\"z^{4}=-2+\\left( 2 \\sqrt{3} \\right) \\mathrm{i}\"></div><p>giving the roots in the form <span class=\"inline-math\" data-math=\"r(\\cos \\theta+\\mathrm{i}\\sin \\theta),-\\pi&lt;\\theta\\leqslant\\pi.\"></span></p><p><span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>First locate the original point in quadrant two. A fourth root divides its modulus on a logarithmic scale and divides its argument by four; all the arguments of the input are <span class=\"inline-math\" data-math=\"2\\pi/3+2k\\pi\"></span>. Subtract a full turn from any answers lying beyond the principal range.</p>",
+      "<p>(a) The modulus is <span class=\"inline-math\" data-math=\"\\sqrt{4+12}=4\"></span>, and the argument is <span class=\"inline-math\" data-math=\"\\pi-\\pi/3=2\\pi/3\"></span>. Hence the number is <span class=\"inline-math\" data-math=\"4(\\cos(2\\pi/3)+i\\sin(2\\pi/3))\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>(b) Write <span class=\"inline-math\" data-math=\"z=\\rho(\\cos\\theta+i\\sin\\theta)\"></span>. Then <span class=\"inline-math\" data-math=\"\\rho^4=4\"></span> gives <span class=\"inline-math\" data-math=\"\\rho=\\sqrt2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>De Moivre gives <span class=\"inline-math\" data-math=\"4\\theta=2\\pi/3+2k\\pi\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The four roots are <span class=\"inline-math\" data-math=\"\\sqrt2(\\cos\\theta+i\\sin\\theta)\"></span> with <span class=\"inline-math\" data-math=\"\\theta=-5\\pi/6,-\\pi/3,\\pi/6,2\\pi/3\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-05-ms-01.webp\" alt=\"Source marking table for 2012 FP2 · Q3, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev07-06",
+    "question": "<p>The complex number <span class=\"inline-math\" data-math=\"z=\\mathrm{e}^{\\mathrm{i}\\theta}\"></span> , where <span class=\"inline-math\" data-math=\"\\theta\"></span> is real.</p><p>(a) Use de Moivre&#x27;s theorem to show that</p><div class=\"equation\" data-display=\"true\" data-math=\"z^{n}+\\frac{1}{z^{n}}=2\\cos n\\theta\"></div><p>where n is a positive integer.</p><p><span class=\"marks\">(2)</span></p><p>(b) Show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\cos^{5}\\theta=\\frac{1}{16} \\left( \\cos 5\\theta+5\\cos 3\\theta+10\\cos\\theta \\right)\"></div><p><span class=\"marks\">(5)</span></p><p>(c) Hence find all the solutions of</p><div class=\"equation\" data-display=\"true\" data-math=\"\\cos 5\\theta+5\\cos 3\\theta+12\\cos\\theta=0\"></div><p>in the interval <span class=\"inline-math\" data-math=\"0\\leqslant\\theta&lt;2\\pi\"></span></p><p><span class=\"marks\">(4)</span></p>",
+    "steps": [
+      "<p>The pair <span class=\"inline-math\" data-math=\"z^n,z^{-n}\"></span> has opposite imaginary parts because <span class=\"inline-math\" data-math=\"z\"></span> lies on the unit circle. Group the terms of the fifth-power expansion into such pairs to obtain cosines. In the equation <span class=\"inline-math\" data-math=\"8\\cos^4\\theta+1\"></span> is at least one, leaving only the zero of the other factor.</p>",
+      "<p>(a) By de Moivre, <span class=\"inline-math\" data-math=\"z^{\\pm n}=\\cos n\\theta\\pm i\\sin n\\theta\"></span>. Adding gives <span class=\"inline-math\" data-math=\"2\\cos n\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) Raise <span class=\"inline-math\" data-math=\"z+z^{-1}=2\\cos\\theta\"></span> to the fifth power. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The binomial expansion is <span class=\"inline-math\" data-math=\"z^5+5z^3+10z+10z^{-1}+5z^{-3}+z^{-5}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Pair opposite powers to get <span class=\"inline-math\" data-math=\"32\\cos^5\\theta=2\\cos5\\theta+10\\cos3\\theta+20\\cos\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Division by 32 gives the required identity. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) Substitution gives <span class=\"inline-math\" data-math=\"16\\cos^5\\theta+2\\cos\\theta=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Factor as <span class=\"inline-math\" data-math=\"2\\cos\\theta(8\\cos^4\\theta+1)=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The bracket is positive. The two solutions are <span class=\"inline-math\" data-math=\"\\theta=\\pi/2,3\\pi/2\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 11 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-06-ms-01.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-06-ms-02.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q6, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev07-07",
+    "question": "<div class=\"equation\" data-display=\"true\" data-math=\"z=5\\sqrt{3}-5\\mathrm{i}\"></div><p>Find</p><p>(a) <span class=\"inline-math\" data-math=\"|z|,\"></span></p><p><span class=\"marks\">(1)</span></p><p>(b) <span class=\"inline-math\" data-math=\"\\arg(z),\"></span> in terms of <span class=\"inline-math\" data-math=\"\\pi.\"></span></p><p><span class=\"marks\">(2)</span></p><div class=\"equation\" data-display=\"true\" data-math=\"w=2\\left(\\cos\\frac{\\pi}{4}+\\mathrm{i}\\sin\\frac{\\pi}{4}\\right)\"></div><p>Find</p><p>(c) <span class=\"inline-math\" data-math=\"\\left|\\frac{w}{z}\\right|,\"></span></p><p><span class=\"marks\">(1)</span></p><p>(d) <span class=\"inline-math\" data-math=\"\\arg\\left(\\frac{w}{z}\\right),\"></span> in terms of <span class=\"inline-math\" data-math=\"\\pi.\"></span></p><p><span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>Division by <span class=\"inline-math\" data-math=\"z\"></span> scales a modulus by <span class=\"inline-math\" data-math=\"1/10\"></span> and rotates through the negative of its argument. Since <span class=\"inline-math\" data-math=\"\\arg z=-\\pi/6\"></span>, division produces a positive rotation of <span class=\"inline-math\" data-math=\"\\pi/6\"></span>. Add that to <span class=\"inline-math\" data-math=\"\\pi/4\"></span> using a common denominator of twelve.</p>",
+      "<p>(a) <span class=\"inline-math\" data-math=\"|z|=\\sqrt{75+25}=10\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) The reference angle is <span class=\"inline-math\" data-math=\"\\arctan(1/\\sqrt3)=\\pi/6\"></span> and the point is below the real axis, so <span class=\"inline-math\" data-math=\"\\arg z=-\\pi/6\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) <span class=\"inline-math\" data-math=\"|w/z|=2/10=1/5\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(d) <span class=\"inline-math\" data-math=\"\\arg(w/z)=\\pi/4-(-\\pi/6)=5\\pi/12\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-07-ms-01.webp\" alt=\"Source marking table for 2013 FP2 · Q2, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev07-08",
+    "question": "<p>(a) Given that <span class=\"inline-math\" data-math=\"z=r(\\cos \\theta+i\\sin \\theta),\\quad r\\in\\mathbb{R}\"></span></p><p>prove, by induction, that <span class=\"inline-math\" data-math=\"z^{n}=r^{n}(\\cos n\\theta+i\\sin n\\theta),\\quad n\\in\\mathbb{Z}^{+}\"></span></p><p><span class=\"marks\">(5)</span></p><div class=\"equation\" data-display=\"true\" data-math=\"w=3\\left(\\cos \\frac{3\\pi}{4}+i\\sin \\frac{3\\pi}{4}\\right)\"></div><p>(b) Find the exact value of <span class=\"inline-math\" data-math=\"w^{5},\"></span> giving your answer in the form a+ib, where a,b <span class=\"inline-math\" data-math=\"\\in\\mathbb{R}.\"></span></p><p><span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>In the induction step the real part of the product is <span class=\"inline-math\" data-math=\"\\cos k\\theta\\cos\\theta-\\sin k\\theta\\sin\\theta\"></span>. Its imaginary part is <span class=\"inline-math\" data-math=\"\\sin k\\theta\\cos\\theta+\\cos k\\theta\\sin\\theta\"></span>. The angle-addition identities turn both into functions of the same new angle <span class=\"inline-math\" data-math=\"(k+1)\\theta\"></span>.</p>",
+      "<p>(a) The identity at <span class=\"inline-math\" data-math=\"n=1\"></span> is the definition of <span class=\"inline-math\" data-math=\"z\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume it is true at <span class=\"inline-math\" data-math=\"n=k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiply the formula for <span class=\"inline-math\" data-math=\"z^k\"></span> by <span class=\"inline-math\" data-math=\"r(\\cos\\theta+i\\sin\\theta)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The real part is <span class=\"inline-math\" data-math=\"r^{k+1}(\\cos k\\theta\\cos\\theta-\\sin k\\theta\\sin\\theta)\"></span> and the imaginary part is <span class=\"inline-math\" data-math=\"r^{k+1}(\\sin k\\theta\\cos\\theta+\\cos k\\theta\\sin\\theta)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The addition formulas give the required result at <span class=\"inline-math\" data-math=\"k+1\"></span>. Therefore it holds by induction. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) <span class=\"inline-math\" data-math=\"w^5=243(\\cos(15\\pi/4)+i\\sin(15\\pi/4))=243\\sqrt2(1-i)/2\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-08-ms-01.webp\" alt=\"Source marking table for 2013 FP2 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-08-ms-02.webp\" alt=\"Source marking table for 2013 FP2 · Q4, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev07-09",
+    "question": "<p>(a) Use de Moivre&#x27;s theorem to show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\cos 6\\theta=32\\cos^{6}\\theta-48\\cos^{4}\\theta+18\\cos^{2}\\theta-1\"></div><p><span class=\"marks\">(5)</span></p><p>(b) Hence solve for <span class=\"inline-math\" data-math=\"0\\leqslant\\theta\\leqslant\\frac{\\pi}{2}\"></span></p><div class=\"equation\" data-display=\"true\" data-math=\"64\\cos^{6}\\theta-96\\cos^{4}\\theta+36\\cos^{2}\\theta-3=0\"></div><p>giving your answers as exact multiples of <span class=\"inline-math\" data-math=\"\\pi.\"></span></p><p><span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>For the real part retain the even powers of <span class=\"inline-math\" data-math=\"i\"></span>, with signs <span class=\"inline-math\" data-math=\"+,-,+,-\"></span>. Once the polynomial has been recognised as <span class=\"inline-math\" data-math=\"\\cos6\\theta\"></span>, list solutions for the enlarged angle <span class=\"inline-math\" data-math=\"6\\theta\"></span> over its full interval. Dividing those values by six at the end prevents missed roots.</p>",
+      "<p>(a) Put <span class=\"inline-math\" data-math=\"c=\\cos\\theta,\\ s=\\sin\\theta\"></span>. Equate real parts of <span class=\"inline-math\" data-math=\"(c+is)^6\"></span> to <span class=\"inline-math\" data-math=\"\\cos6\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This gives <span class=\"inline-math\" data-math=\"c^6-15c^4s^2+15c^2s^4-s^6\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Substituting <span class=\"inline-math\" data-math=\"s^2=1-c^2\"></span> and collecting terms gives <span class=\"inline-math\" data-math=\"32c^6-48c^4+18c^2-1\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) The given equation is <span class=\"inline-math\" data-math=\"2\\cos6\\theta-1=0\"></span>, so <span class=\"inline-math\" data-math=\"\\cos6\\theta=1/2\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>For <span class=\"inline-math\" data-math=\"0\\le6\\theta\\le3\\pi\"></span>, the angles are <span class=\"inline-math\" data-math=\"\\pi/3,5\\pi/3,7\\pi/3\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Dividing by 6 gives <span class=\"inline-math\" data-math=\"\\theta=\\pi/18,5\\pi/18,7\\pi/18\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 10 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev07-09-ms-01.webp\" alt=\"Source marking table for 2014 FP2 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "id": "old-spec/rev08-01",
+    "question": "<p><span class=\"inline-math\" data-math=\"y=\\sqrt{8+e^{x}},\"></span> <span class=\"inline-math\" data-math=\"x\\in\\mathbb{R}\"></span></p><p>Find the series expansion for y in ascending powers of x, up to and including the term in <span class=\"inline-math\" data-math=\"x^{2}\"></span> , giving each coefficient in its simplest form.</p><p><span class=\"marks\">(8)</span></p>",
+    "steps": [
+      "<p>Implicit differentiation avoids taking two lengthy derivatives of a square root. At zero, <span class=\"inline-math\" data-math=\"2yy&#x27;=1\"></span> gives <span class=\"inline-math\" data-math=\"y&#x27;=1/6\"></span>. In the next derivative the extra term <span class=\"inline-math\" data-math=\"2(y&#x27;)^2=1/18\"></span> comes from differentiating the first factor of the product <span class=\"inline-math\" data-math=\"2yy&#x27;\"></span>.</p>",
+      "<p>Square to get <span class=\"inline-math\" data-math=\"y^2=8+e^x\"></span>, hence <span class=\"inline-math\" data-math=\"y(0)=3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiating implicitly gives <span class=\"inline-math\" data-math=\"2yy&#x27;=e^x\"></span>, so <span class=\"inline-math\" data-math=\"y&#x27;(0)=1/6\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Differentiate again: <span class=\"inline-math\" data-math=\"2(y&#x27;)^2+2yy&#x27;&#x27;=e^x\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>At zero, <span class=\"inline-math\" data-math=\"1/18+6y&#x27;&#x27;(0)=1\"></span>; hence <span class=\"inline-math\" data-math=\"y&#x27;&#x27;(0)=17/108\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The Maclaurin polynomial is <span class=\"inline-math\" data-math=\"y(0)+y&#x27;(0)x+y&#x27;&#x27;(0)x^2/2!=3+x/6+17x^2/216\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev08-01-ms-01.webp\" alt=\"Source marking table for 2014 FP2 · Q3, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev08-02",
+    "question": "<p>(a) Show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\tan\\left(x+\\frac{\\pi}{4}\\right)\\approx1+2x+2x^2+\\frac83x^3.\"></div><p>(b) Deduce that an approximation for <span class=\"inline-math\" data-math=\"\\tan\\dfrac{5\\pi}{12}\"></span> is <span class=\"inline-math\" data-math=\"1+\\dfrac{\\pi}{3}+\\dfrac{\\pi^2}{18}+\\dfrac{\\pi^3}{81}\"></span>. <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The shift <span class=\"inline-math\" data-math=\"\\pi/4\"></span> gives a nonzero constant term. At zero, <span class=\"inline-math\" data-math=\"y&#x27;&#x27;=2(1)(2)=4\"></span> and <span class=\"inline-math\" data-math=\"y&#x27;&#x27;&#x27;=2(2)^2+2(1)(4)=16\"></span>. For the estimate the variable in the polynomial is the increment from <span class=\"inline-math\" data-math=\"\\pi/4\"></span>, rather than the final angle itself.</p>",
+      "<p>(a) Put <span class=\"inline-math\" data-math=\"y=\\tan(x+\\pi/4)\"></span>. Then <span class=\"inline-math\" data-math=\"y(0)=1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiating gives</p>",
+      "<div class=\"equation\" data-display=\"true\" data-math=\"y&#x27;=1+y^2,\\qquad y&#x27;&#x27;=2yy&#x27;,\\qquad y^{\\prime\\prime\\prime}=2(y&#x27;)^2+2yy&#x27;&#x27;.\"></div>",
+      "<p><small class=\"step-credit\">[3]</small> At zero these derivatives are <span class=\"inline-math\" data-math=\"2,4,16\"></span>, respectively. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution in Maclaurin&#x27;s formula gives</p>",
+      "<div class=\"equation\" data-display=\"true\" data-math=\"y=1+2x+\\frac{4}{2!}x^2+\\frac{16}{3!}x^3+O(x^4)\n=1+2x+2x^2+\\frac83x^3+O(x^4).\"></div>",
+      "<p><small class=\"step-credit\">[2]</small> The final two marks credit the factorial denominators and the simplified expansion separately.</p>",
+      "<p>(b) Take <span class=\"inline-math\" data-math=\"x=5\\pi/12-\\pi/4=\\pi/6\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substituting in the polynomial gives <span class=\"inline-math\" data-math=\"1+\\pi/3+\\pi^2/18+\\pi^3/81\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The series can also be checked by the tangent addition formula. Write <span class=\"inline-math\" data-math=\"t=\\tan x=x+x^3/3+O(x^5)\"></span>. Then <span class=\"inline-math\" data-math=\"\\tan(\\pi/4+x)=(1+t)/(1-t)=1+2t+2t^2+2t^3+O(t^4)\"></span>. The cubic coefficient is <span class=\"inline-math\" data-math=\"2/3+2=8/3\"></span>, as above.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 7 marks</strong></p>",
+      "<p>[1] Find <span class=\"inline-math\" data-math=\"y(0)=1\"></span></p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"y&#x27;=1+y^2\"></span></p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"y&#x27;&#x27;=2yy&#x27;\"></span></p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"y&#x27;&#x27;&#x27;=2(y&#x27;)^2+2yy&#x27;&#x27;\"></span></p>",
+      "<p>[1] Evaluate derivatives <span class=\"inline-math\" data-math=\"2,4,16\"></span> at zero</p>",
+      "<p>[1] Use the correct factorial divisors</p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"1+2x+2x^2+8x^3/3\"></span>. Equivalent series division earns corresponding marks.</p>",
+      "<p><strong>(b) · 2 marks</strong></p>",
+      "<p>[1] Use displacement <span class=\"inline-math\" data-math=\"x=\\pi/6\"></span></p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"1+\\pi/3+\\pi^2/18+\\pi^3/81\"></span>.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev08-03",
+    "question": "<div class=\"equation\" data-display=\"true\" data-math=\"y=\\ln \\left( \\frac{1}{1-2 x}\\right), \\quad| x|&lt;\\frac{1}{2}\"></div><p>(a) Find <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} x}, \\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}\"></span> and <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d}^{3} y}{\\mathrm{d} x^{3}}\"></span></p><p><span class=\"marks\">(4)</span></p><p>(b) Hence, or otherwise, find the series expansion of <span class=\"inline-math\" data-math=\"\\ln \\left( \\frac{1}{1-2 x}\\right)\"></span> about <span class=\"inline-math\" data-math=\"x=0\"></span> , in ascending powers of <span class=\"inline-math\" data-math=\"x\"></span> , up to and including the term in <span class=\"inline-math\" data-math=\"x^{3}\"></span> . Give each coefficient in its simplest form.</p><p><span class=\"marks\">(3)</span></p><p>(c) Use your expansion to find an approximate value for <span class=\"inline-math\" data-math=\"\\ln \\left( \\frac{3}{2}\\right)\"></span> , giving your answer to 3 decimal places.</p><p><span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>Writing the logarithm of a reciprocal as a negative logarithm makes each differentiation a chain-rule calculation. For example, differentiating <span class=\"inline-math\" data-math=\"2(1-2x)^{-1}\"></span> introduces two minus signs and gives <span class=\"inline-math\" data-math=\"4(1-2x)^{-2}\"></span>. Divide the third derivative by <span class=\"inline-math\" data-math=\"3!=6\"></span> in the expansion.</p>",
+      "<p>(a) Write <span class=\"inline-math\" data-math=\"y=-\\ln(1-2x)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiating in turn gives <span class=\"inline-math\" data-math=\"y&#x27;=2/(1-2x)\"></span>, <span class=\"inline-math\" data-math=\"y&#x27;&#x27;=4/(1-2x)^2\"></span> and <span class=\"inline-math\" data-math=\"y&#x27;&#x27;&#x27;=16/(1-2x)^3\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>(b) At zero the values are <span class=\"inline-math\" data-math=\"0,2,4,16\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitute in Maclaurin&#x27;s formula to get <span class=\"inline-math\" data-math=\"2x+4x^2/2+16x^3/6=2x+2x^2+8x^3/3\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) Solve <span class=\"inline-math\" data-math=\"1/(1-2x)=3/2\"></span> to obtain <span class=\"inline-math\" data-math=\"x=1/6\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The polynomial gives <span class=\"inline-math\" data-math=\"1/3+1/18+1/81=65/162\\approx0.401\"></span> (3 d.p.). <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 10 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev08-03-ms-01.webp\" alt=\"Source marking table for 2017 FP2 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev08-03-ms-02.webp\" alt=\"Source marking table for 2017 FP2 · Q4, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev08-04",
+    "question": "<p>Given that <span class=\"inline-math\" data-math=\"y=\\cot x\"></span>,</p><p>(a) show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm d^2y}{\\mathrm dx^2}=2\\cot x+2\\cot^3x.\"></div><p><span class=\"marks\">(3)</span>\n(b) Hence show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm d^3y}{\\mathrm dx^3}=p\\cot^4x+q\\cot^2x+r\"></div><p>where <span class=\"inline-math\" data-math=\"p,q\"></span> and <span class=\"inline-math\" data-math=\"r\"></span> are integers to be found. <span class=\"marks\">(3)</span>\n(c) Hence show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\cot\\left(x+\\frac\\pi3\\right)\\approx\\frac1{\\sqrt3}-\\frac{4x}{3}+\\frac{4x^2}{3\\sqrt3}-\\frac{8x^3}{9}.\"></div>",
+    "steps": [
+      "<p>Expressing every derivative in terms of <span class=\"inline-math\" data-math=\"y=\\cot x\"></span> lets you reuse <span class=\"inline-math\" data-math=\"y&#x27;=-(1+y^2)\"></span>. The shifted series at zero uses the unshifted derivatives at <span class=\"inline-math\" data-math=\"\\pi/3\"></span>. The extra factors <span class=\"inline-math\" data-math=\"1/2!\"></span> and <span class=\"inline-math\" data-math=\"1/3!\"></span> enter only after those derivative values have been evaluated.</p>",
+      "<p>(a) <span class=\"inline-math\" data-math=\"y&#x27;=-\\csc^2 x=-(1+y^2)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiating gives <span class=\"inline-math\" data-math=\"y&#x27;&#x27;=-2yy&#x27;\"></span>, <small class=\"step-credit\">[1]</small> so <span class=\"inline-math\" data-math=\"y&#x27;&#x27;=2y+2y^3=2\\cot x+2\\cot^3 x\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) <span class=\"inline-math\" data-math=\"y&#x27;&#x27;&#x27;=(2+6y^2)y&#x27;\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution gives <span class=\"inline-math\" data-math=\"-(2+6y^2)(1+y^2)\"></span>, <small class=\"step-credit\">[1]</small> so <span class=\"inline-math\" data-math=\"(p,q,r)=(-6,-8,-2)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) For <span class=\"inline-math\" data-math=\"g(x)=\\cot(x+\\pi/3)\"></span> the values at zero of <span class=\"inline-math\" data-math=\"g,g&#x27;,g&#x27;&#x27;,g&#x27;&#x27;&#x27;\"></span> are\n<span class=\"inline-math\" data-math=\"1/\\sqrt3,-4/3,8/(3\\sqrt3),-16/3\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Hence</p>",
+      "<div class=\"equation\" data-display=\"true\" data-math=\"g(x)=\\frac1{\\sqrt3}-\\frac43x+\\frac{8}{3\\sqrt3}\\frac{x^2}{2!}\n-\\frac{16}{3}\\frac{x^3}{3!}+O(x^4).\"></div>",
+      "<p><small class=\"step-credit\">[2]</small> This gives the stated cubic.</p>",
+      "<p>For the last coefficient, evaluate the expanded third derivative directly at <span class=\"inline-math\" data-math=\"y=1/\\sqrt3\"></span>. It gives <span class=\"inline-math\" data-math=\"-6/9-8/3-2=-16/3\"></span>. Dividing by <span class=\"inline-math\" data-math=\"3!=6\"></span> gives <span class=\"inline-math\" data-math=\"-8/9\"></span>; the negative sign agrees with the displayed cubic.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 3 marks</strong></p>",
+      "<p>[1] <span class=\"inline-math\" data-math=\"y&#x27;=-(1+y^2)\"></span></p>",
+      "<p>[1] Apply the chain rule to give <span class=\"inline-math\" data-math=\"y&#x27;&#x27;=-2yy&#x27;\"></span></p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"2\\cot x+2\\cot^3x\"></span>.</p>",
+      "<p><strong>(b) · 3 marks</strong></p>",
+      "<p>[1] Differentiate to obtain <span class=\"inline-math\" data-math=\"(2+6y^2)y&#x27;\"></span></p>",
+      "<p>[1] Insert <span class=\"inline-math\" data-math=\"y&#x27;=-(1+y^2)\"></span></p>",
+      "<p>[1] Identify <span class=\"inline-math\" data-math=\"(p,q,r)=(-6,-8,-2)\"></span>.</p>",
+      "<p><strong>(c) · 4 marks</strong></p>",
+      "<p>[1] Find value and first derivative <span class=\"inline-math\" data-math=\"1/\\sqrt3,-4/3\"></span></p>",
+      "<p>[1] Find higher derivatives <span class=\"inline-math\" data-math=\"8/(3\\sqrt3),-16/3\"></span></p>",
+      "<p>[1] Use <span class=\"inline-math\" data-math=\"2!\"></span> and <span class=\"inline-math\" data-math=\"3!\"></span> in the correct terms</p>",
+      "<p>[1] Obtain coefficients <span class=\"inline-math\" data-math=\"1/\\sqrt3,-4/3,4/(3\\sqrt3),-8/9\"></span> in ascending powers.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev08-05",
+    "question": "<div class=\"equation\" data-display=\"true\" data-math=\"\\mathrm f(x)=\\sin\\left(\\frac32\\left(x+\\frac\\pi3\\right)\\right).\"></div><p>Show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\mathrm f(x)\\approx1-\\frac{9x^2}{8}+\\frac{27x^4}{128}.\"></div><p><span class=\"marks\">(6)</span>\n(b) Hence obtain an estimate of <span class=\"inline-math\" data-math=\"\\sin\\dfrac12\"></span>, giving your answer to 4 decimal places. <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The angle addition formula turns the shifted sine into an even function of the displacement. This rules out the linear and cubic terms immediately. For the estimate the target is <span class=\"inline-math\" data-math=\"\\sin(1/2)\"></span>, so solve for the displacement that puts <span class=\"inline-math\" data-math=\"1/2\"></span> inside the original sine before evaluating the polynomial.</p>",
+      "<p>The shifted argument gives <span class=\"inline-math\" data-math=\"\\mathrm f(x)=\\sin(3x/2+\\pi/2)=\\cos(3x/2)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"\\mathrm f(0)=1\"></span> and the first and third derivatives vanish at zero. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The second and fourth derivatives at zero are <span class=\"inline-math\" data-math=\"-9/4\"></span> and <span class=\"inline-math\" data-math=\"81/16\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Substitute these in Maclaurin&#x27;s formula with the factorial denominators: <small class=\"step-credit\">[1]</small></p>",
+      "<div class=\"equation\" data-display=\"true\" data-math=\"\\mathrm f(x)=1-\\frac94\\frac{x^2}{2!}+\\frac{81}{16}\\frac{x^4}{4!}+O(x^6)\n=1-\\frac98x^2+\\frac{27}{128}x^4+O(x^6).\"></div>",
+      "<p><small class=\"step-credit\">[1]</small>\n(b) Solve <span class=\"inline-math\" data-math=\"\\tfrac32(x+\\pi/3)=\\tfrac12\"></span> to get <span class=\"inline-math\" data-math=\"x=(1-\\pi)/3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The fourth-degree approximation gives\n<span class=\"inline-math\" data-math=\"1-(1-\\pi)^2/8+(1-\\pi)^4/384=0.481476884\\ldots\"></span>, so the requested estimate is <span class=\"inline-math\" data-math=\"0.4815\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The supplied solution expands the original unshifted function about <span class=\"inline-math\" data-math=\"\\pi/3\"></span>. Its expansion variable is the displacement from that point, equal to the <span class=\"inline-math\" data-math=\"x\"></span> used here.</p>",
+      "<p>For a numerical check on the shift, <span class=\"inline-math\" data-math=\"x=(1-\\pi)/3\"></span> gives <span class=\"inline-math\" data-math=\"3x/2+\\pi/2=1/2\"></span> exactly. Evaluating the actual sine gives <span class=\"inline-math\" data-math=\"0.4794\"></span> to four decimal places. The requested polynomial estimate is <span class=\"inline-math\" data-math=\"0.4815\"></span>; the small difference is the truncation error.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 6 marks</strong></p>",
+      "<p>[1] Reduce to <span class=\"inline-math\" data-math=\"\\cos(3x/2)\"></span></p>",
+      "<p>[1] Identify constant <span class=\"inline-math\" data-math=\"1\"></span> and vanishing odd powers</p>",
+      "<p>[1] Obtain second derivative at zero <span class=\"inline-math\" data-math=\"-9/4\"></span></p>",
+      "<p>[1] Obtain fourth derivative at zero <span class=\"inline-math\" data-math=\"81/16\"></span></p>",
+      "<p>[1] Use the factorial denominators</p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"1-9x^2/8+27x^4/128\"></span>.</p>",
+      "<p><strong>(b) · 2 marks</strong></p>",
+      "<p>[1] Use <span class=\"inline-math\" data-math=\"x=(1-\\pi)/3\"></span></p>",
+      "<p>[1] Evaluate the polynomial to <span class=\"inline-math\" data-math=\"0.4815\"></span> at the requested precision.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev08-06",
+    "question": "<div class=\"equation\" data-display=\"true\" data-math=\"y=\\mathrm{e}^{\\cos^{2} x}\"></div><p>(a) Show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}=\\mathrm{e}^{\\cos^{2} x} \\left( \\sin^{2} 2 x-2 \\cos 2 x \\right)\"></div><p><span class=\"marks\">(4)</span></p><p>(b) Hence find the Maclaurin series expansion of <span class=\"inline-math\" data-math=\"\\mathrm{e}^{\\cos^{2} x}\"></span> up to and including the term in <span class=\"inline-math\" data-math=\"x^{2}\"></span></p><p><span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>Differentiate the exponent <span class=\"inline-math\" data-math=\"\\cos^2x\"></span> first. Its derivative <span class=\"inline-math\" data-math=\"-2\\sin x\\cos x\"></span> is <span class=\"inline-math\" data-math=\"-\\sin2x\"></span>, leaving the original exponential as a factor of <span class=\"inline-math\" data-math=\"y&#x27;\"></span>. The function is even about zero, so the first neglected term after <span class=\"inline-math\" data-math=\"x^2\"></span> has degree at least four.</p>",
+      "<p>(a) The chain rule gives <span class=\"inline-math\" data-math=\"y&#x27;=e^{\\cos^2x}(-2\\sin x\\cos x)=-y\\sin2x\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Differentiating the product gives <span class=\"inline-math\" data-math=\"y&#x27;&#x27;=-y&#x27;\\sin2x-2y\\cos2x=y(\\sin^22x-2\\cos2x)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) At zero, <span class=\"inline-math\" data-math=\"y=e,\\ y&#x27;=0,\\ y&#x27;&#x27;=-2e\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Therefore <span class=\"inline-math\" data-math=\"y=e-ex^2+O(x^4)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev08-06-ms-01.webp\" alt=\"Source marking table for IAL 2017 · Q5, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  }
+]

@@ -7,7 +7,7 @@
   const mathMacros = {"\\p":"\\mathrm P(#1)",'\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
   const catalogue = [], rows = new Map(), contentCache = new Map();
   // PAP-077-3: there is no separate PMT source; PMT questions are exam-style questions.
-  const sources = ['practice', 'exam-style', 'madas', 'past-papers'];
+  const sources = ['practice', 'exam-style', 'madas', 'past-papers', 'old-spec'];
   const chapters = new Map(), books = new Map(), papers = new Map();
   let textbook;
   let selectionOrder = [];
@@ -28,7 +28,7 @@
       window.katex.render(node.dataset.math, node, {displayMode: node.dataset.display === 'true', throwOnError: true, strict: 'error', macros: {...mathMacros}});
     }
   }
-  const sourceLabel = row => ['past-exam', 'pmt', 'madas'].includes(row.sourceKind) ? `Source: ${row.sourceLabel.replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
+  const sourceLabel = row => ['past-exam', 'pmt', 'madas', 'old-spec'].includes(row.sourceKind) ? `Source: ${row.sourceLabel.replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const showTopicContext = row => row.sourceKind !== 'madas' && !(row.sourceKind === 'past-exam' && row.paperCode?.startsWith('8'));
@@ -54,7 +54,7 @@
     const paper = $('papers-past-paper').disabled ? '' : $('papers-past-paper').value;
     return (row.bank === 'madas' && includeMadas !== undefined ? includeMadas : $('papers-source-' + row.bank).checked) &&
       (!difficulty || (row.difficulty || 'unclassified') === difficulty) &&
-      (row.bank !== 'past-papers' || !paper || row.paperId === paper);
+      (!['past-papers', 'old-spec'].includes(row.bank) || !paper || row.paperId === paper);
   }
   function inHierarchy(chapter) {
     const course = $('papers-course').value, book = $('papers-book').value;
@@ -64,7 +64,13 @@
     return row.chapterKeys.filter(key => inHierarchy(chapters.get(key)) && (!chosenTopics.size || chosenTopics.has(key)));
   }
   function pool(includeMadas) {
-    return catalogue.filter(row => sourceMatches(row, includeMadas) && matchingChapters(row).length);
+    const eligible = catalogue.filter(row => sourceMatches(row, includeMadas) && matchingChapters(row).length);
+    return preferOldSpec(eligible);
+  }
+  // Use the converted solution and marking table when both copies pass the filters.
+  function preferOldSpec(eligible) {
+    const aliases = new Set(eligible.filter(row => row.bank === 'old-spec' && row.canonicalId).map(row => row.canonicalId));
+    return eligible.filter(row => !aliases.has(row.id));
   }
   function options(id, label, choices, wanted = '') {
     const select = $(id);
@@ -73,16 +79,17 @@
   }
   function refreshFilters() {
     const topics = [...chapters.values()].filter(inHierarchy);
-    const counts = new Map();
+    const idsByChapter = new Map();
     for (const row of catalogue) if (sourceMatches(row)) for (const key of row.chapterKeys) {
-      counts.set(key, (counts.get(key) || 0) + 1);
+      if (!idsByChapter.has(key)) idsByChapter.set(key, new Set());
+      idsByChapter.get(key).add(row.canonicalId || row.id);
     }
     $('papers-topics').replaceChildren(...topics.map(t => {
       const label = element('label', undefined, 'topic-choice');
       const input = document.createElement('input');
       input.type = 'checkbox'; input.value = t.key; input.checked = chosenTopics.has(t.key);
       const text = element('span', `${t.id}. ${t.title}`);
-      const count = `${(counts.get(t.key) || 0).toLocaleString()} questions`;
+      const count = `${(idsByChapter.get(t.key)?.size || 0).toLocaleString()} questions`;
       text.append(element('small', $('papers-book').value ? count : `${t.bookTitle} · ${count}`));
       label.append(input, text);
       return label;
@@ -99,15 +106,17 @@
   // disabled (and reset to All) while Past Papers is unticked (PAP-068-1, PAP-068-3).
   let paperChoices = [];
   function relevantPapers() {
+    const oldSpec = $('papers-source-old-spec').checked;
+    const regular = $('papers-source-past-papers').checked || !oldSpec;
     const relevant = new Set();
-    for (const row of catalogue) if (row.bank === 'past-papers' && !relevant.has(row.paperId)
+    for (const row of catalogue) if (((row.bank === 'past-papers' && regular) || (row.bank === 'old-spec' && oldSpec)) && !relevant.has(row.paperId)
       && row.chapterKeys.some(key => inHierarchy(chapters.get(key)))) relevant.add(row.paperId);
     return relevant;
   }
   function refreshPapers(wanted = $('papers-past-paper').value) {
-    const ticked = $('papers-source-past-papers').checked, relevant = relevantPapers();
+    const ticked = $('papers-source-past-papers').checked || $('papers-source-old-spec').checked, relevant = relevantPapers();
     options('papers-past-paper', 'All past papers', paperChoices.filter(([id]) => relevant.has(id)), ticked ? wanted : '');
-    $('papers-past-paper').disabled = !ticked || !papers.size;
+    $('papers-past-paper').disabled = !ticked || !relevant.size;
   }
   // Filter dropdowns on anything but "All" carry the active style (PAP-068-2).
   function markActive() {
@@ -117,7 +126,7 @@
     }
   }
   // "In paper order" exists only while one individual past paper is chosen (PAP-063).
-  const singlePaper = () => ($('papers-source-past-papers').checked && $('papers-past-paper').value) || '';
+  const singlePaper = () => (!$('papers-past-paper').disabled && $('papers-past-paper').value) || '';
   function refreshOrder() {
     const select = $('papers-order'), paper = singlePaper();
     let option = select.querySelector('option[value="paper"]');
@@ -198,7 +207,7 @@
     // Replace or reorder the selection in an explicit order; printed "As selected".
     arrange(rows, message) {
       if (operation || printing) return false;
-      selected = [...rows]; selectionOrder = rows.map(row => row.id);
+      selected = withoutDuplicateCopies(preferOldSpec(rows)); selectionOrder = selected.map(row => row.id);
       $('papers-order').value = 'selection';
       updateSelection();
       if (message) status(message);
@@ -257,7 +266,7 @@
   async function loadRow(descriptor, signal) {
     if (rows.has(descriptor.id)) return rows.get(descriptor.id);
     if (signal?.aborted) throw new DOMException('Aborted', 'AbortError');
-    const practice = ['practice-booklet', 'past-exam', 'pmt', 'madas'].includes(descriptor.sourceKind);
+    const practice = ['practice-booklet', 'past-exam', 'pmt', 'madas', 'old-spec'].includes(descriptor.sourceKind);
     const dataPath = practice ? descriptor.dataPath : `content/${encodeURIComponent(descriptor.skillId)}.json`;
     let content = contentCache.get(dataPath);
     if (!content) {
@@ -277,7 +286,8 @@
       throw new Error(`${sourceLabel(descriptor)} has incomplete content. Your previous paper has been kept.`);
     }
     const marks = descriptor.sourceKind === 'practice-booklet' ? practiceMarks(question.question) : descriptor.marks;
-    const row = Object.freeze({...descriptor, marks, schemeNote: question.schemeNote || null, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: ['past-exam', 'pmt', 'madas'].includes(descriptor.sourceKind) ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
+    if (descriptor.bank === 'old-spec' && (!Array.isArray(question.markSchemeSteps) || !question.markSchemeSteps.length)) throw Error('This Old Spec mark scheme is incomplete.');
+    const row = Object.freeze({...descriptor, marks, markSchemeSteps: question.markSchemeSteps, schemeNote: question.schemeNote || null, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: ['past-exam', 'pmt', 'madas', 'old-spec'].includes(descriptor.sourceKind) ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
     rows.set(row.id, row); return row;
   }
   function questionMetadata(row) {
@@ -285,6 +295,19 @@
   }
   function fillPreview(container, row) {
     container.innerHTML = (row.contextHtml || '') + row.question;
+    if (row.bank === 'old-spec') {
+      for (const [label, steps] of [['Worked solution', row.steps], ['Mark scheme', row.markSchemeSteps]]) {
+        const details = element('details'), body = element('div');
+        details.append(element('summary', label), body);
+        container.append(details);
+        details.addEventListener('toggle', () => {
+          if (details.open && !body.childNodes.length) {
+            body.innerHTML = steps.join('');
+            renderMath(body);
+          }
+        });
+      }
+    }
     container.querySelectorAll('table').forEach(table => {
       if (table.closest('.math-table')) return;
       const scroll = element('div', undefined, 'math-table');
@@ -341,6 +364,7 @@
     });
   }
   async function setSelection(descriptors, message, resetOrder = false) {
+    descriptors = withoutDuplicateCopies(preferOldSpec(descriptors));
     cancelLoading(false);
     const controller = new AbortController(); operation = controller; updateControls();
     status(`Loading ${descriptors.length} questions…`);
@@ -430,7 +454,7 @@
     function add(row, keys) {
       row.difficulty = difficultyBucket(row.difficulty);
       // PAP-074-1: every question carries its derived mark-scheme flag.
-      if (!['official', 'source', 'worked', 'none'].includes(row.markScheme)) throw Error('A question has no mark-scheme classification: ' + row.id + '. Reload the page to retry.');
+      if (!['official', 'source', 'editorial', 'worked', 'none'].includes(row.markScheme)) throw Error('A question has no mark-scheme classification: ' + row.id + '. Reload the page to retry.');
       if (ids.has(row.id) || !Array.isArray(keys) || !keys.length || keys.some(key => !chapters.has(key))) {
         throw Error('Invalid chapter association for ' + row.id + '. Reload the page to retry.');
       }
@@ -505,6 +529,18 @@
       add({...q, sourceKind: 'madas', bank: 'madas', courseTitle: chapter.courseTitle, bookTitle: chapter.bookTitle,
         topicTitle: chapter.title, skillTitle: q.topicSummary}, q.chapterKeys);
     }
+    const oldResponse = await fetch(new URL('old-spec-catalogue.json', document.baseURI));
+    if (!oldResponse.ok) throw Error('The Old Spec catalogue could not be loaded.');
+    const oldSpec = await oldResponse.json();
+    if (oldSpec.version !== 1 || !Array.isArray(oldSpec.questions)) throw Error('Invalid Old Spec catalogue.');
+    for (const q of oldSpec.questions) {
+      const chapter = chapters.get(q.chapterKeys?.[0]);
+      if (!chapter || !q.id.startsWith('old-spec/') || !/^content\/old-spec\/rev\d\d\.json$/.test(q.dataPath) ||
+          (q.canonicalId && !ids.has(q.canonicalId)) || !['easy','medium','difficult'].includes(q.difficulty)) throw Error('Invalid Old Spec question: ' + q.id);
+      add({...q, sourceLabel: q.sourceLabel + ' · ' + q.id.split('/')[1].toUpperCase(), sourceKind: 'old-spec', bank: 'old-spec', bookTitle: chapter.bookTitle,
+        courseTitle: chapter.courseTitle, topicTitle: chapter.title, bookId: chapter.bookKey.split('/')[1],
+        courseId: chapter.course, chapterId: chapter.id}, q.chapterKeys);
+    }
     // A copy may point at a past-paper question or at another PMT question; both must exist once everything is loaded.
     for (const q of pmtCatalogue.questions) if (q.duplicateOf && !ids.has(q.duplicateOf)) throw Error('A PMT question is marked as a copy of a missing question.');
     // PAP-077-1: a removed duplicate maps to the question kept in its place (an official past paper or the earlier PMT question).
@@ -515,7 +551,7 @@
     for (const source of sources) {
       // A version-2 session had one 'exam' box for exam-style and past papers. A saved 'pmt' box (v0.75-v0.76) is ignored (PAP-077-3).
       const key = saved?.version === 2 && ['exam-style', 'past-papers'].includes(source) ? 'exam' : source;
-      $('papers-source-' + source).checked = saved?.sources?.[key] ?? (source !== 'madas');
+      $('papers-source-' + source).checked = saved?.sources?.[key] ?? (!['madas', 'old-spec'].includes(source));
     }
     paperChoices = [...papers].sort(([,a],[,b]) => b.date.localeCompare(a.date) || a.code.localeCompare(b.code))
       .map(([id, paper]) => {
@@ -525,6 +561,7 @@
         const qualification = (paper.code.startsWith('8') ? 'AS ' : '') + (paper.code.includes('FM0') ? 'Further Maths' : 'Maths');
         return [id, paper.session + ' Paper ' + number + ' (' + qualification + ' · ' + paper.code + ')'];
       });
+    paperChoices.push(['old-spec-revision', oldSpec.group]);
     if (saved?.difficulty) {
       const bucket = difficultyBucket(saved.difficulty);
       if ([...$('papers-difficulty').options].some(option => option.value === bucket)) $('papers-difficulty').value = bucket;

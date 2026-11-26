@@ -1,0 +1,138 @@
+[
+  {
+    "id": "old-spec/rev05-01",
+    "question": "<p>Prove by induction that <span class=\"inline-math\" data-math=\"\\mathrm{f}(n)=2^{n+2}+3^{2n+1}\"></span> is divisible by 7 for all positive integers n. <span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>Increasing <span class=\"inline-math\" data-math=\"k\"></span> by one multiplies the first power by <span class=\"inline-math\" data-math=\"2\"></span> and the second by <span class=\"inline-math\" data-math=\"3^2=9\"></span>. Subtracting <span class=\"inline-math\" data-math=\"2f(k)\"></span> cancels the first power exactly. The second coefficient is then <span class=\"inline-math\" data-math=\"9-2=7\"></span>, which is how to spot the useful multiple of the hypothesis.</p>",
+      "<p>At <span class=\"inline-math\" data-math=\"n=1\"></span>, <span class=\"inline-math\" data-math=\"f(1)=8+27=35=5\\cdot7\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume <span class=\"inline-math\" data-math=\"f(k)=7m\"></span> for an integer <span class=\"inline-math\" data-math=\"m\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p><span class=\"inline-math\" data-math=\"f(k+1)=2\\cdot2^{k+2}+9\\cdot3^{2k+1}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Subtracting <span class=\"inline-math\" data-math=\"2f(k)\"></span> leaves <span class=\"inline-math\" data-math=\"7\\cdot3^{2k+1}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"f(k+1)=7(2m+3^{2k+1})\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The base case and inductive implication prove divisibility by 7 for every positive integer. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev05-01-ms-01.webp\" alt=\"Source marking table for June 2018 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev05-02",
+    "question": "<p>(ii) Prove by induction that, for <span class=\"inline-math\" data-math=\"n\\in\\mathbb Z^+\"></span>,</p><div class=\"equation\" data-display=\"true\" data-math=\"\\mathrm f(n)=3^{3n-2}+2^{3n+1}\"></div><p>is divisible by 19. <span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>Both exponents increase by three, giving multipliers <span class=\"inline-math\" data-math=\"3^3=27\"></span> and <span class=\"inline-math\" data-math=\"2^3=8\"></span>. Their difference is <span class=\"inline-math\" data-math=\"19\"></span>. Extracting either eight or twenty-seven copies of the old expression will therefore leave an integer multiple of nineteen.</p>",
+      "<p>(ii) At <span class=\"inline-math\" data-math=\"n=1\"></span>, <span class=\"inline-math\" data-math=\"\\mathrm f(1)=3+16=19\"></span>, a multiple of 19. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume <span class=\"inline-math\" data-math=\"\\mathrm f(k)=19m\"></span> for an integer <span class=\"inline-math\" data-math=\"m\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<div class=\"equation\" data-display=\"true\" data-math=\"\\begin{aligned}\n\\mathrm f(k+1)&amp;=27\\,3^{3k-2}+8\\,2^{3k+1}\\\\\n &amp;=8\\bigl(3^{3k-2}+2^{3k+1}\\bigr)+19\\,3^{3k-2}.\n\\end{aligned}\"></div>",
+      "<p>Expanding at <span class=\"inline-math\" data-math=\"k+1\"></span> and isolating <span class=\"inline-math\" data-math=\"\\mathrm f(k)\"></span> earn one mark each. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"\\mathrm f(k+1)=19(8m+3^{3k-2})\"></span> is divisible by 19. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The base case and inductive implication establish the result for every positive integer. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Equivalently, subtract <span class=\"inline-math\" data-math=\"27\\mathrm f(k)\"></span> to obtain <span class=\"inline-math\" data-math=\"-19\\,2^{3k+1}\"></span>.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<p>Count only the retained parts. Any original whole-question total on the extract belongs to the complete exam question.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev05-02-ms-01.webp\" alt=\"Source marking table for June 2017 edited · Q9, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev05-02-ms-02.webp\" alt=\"Source marking table for June 2017 edited · Q9, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev05-03",
+    "question": "<p>(i) Prove by induction that, for <span class=\"inline-math\" data-math=\"n \\in \\mathbb{Z}^{+}\"></span></p><div class=\"equation\" data-display=\"true\" data-math=\"\\sum_{r=1}^{n} \\frac{2r+1}{r^{2}(r+1)^{2}} = 1 - \\frac{1}{(n+1)^{2}}\"></div><p><span class=\"marks\">(5)</span></p><p>(ii) A sequence of positive rational numbers is defined by</p><div class=\"equation\" data-display=\"true\" data-math=\"u_{1} = 3\"></div><div class=\"equation\" data-display=\"true\" data-math=\"u_{n+1} = \\frac{1}{3} u_{n} + \\frac{8}{9}, \\quad n \\in \\mathbb{Z}^{+}\"></div><p>Prove by induction that, for <span class=\"inline-math\" data-math=\"n \\in \\mathbb{Z}^{+}\"></span></p><div class=\"equation\" data-display=\"true\" data-math=\"u_{n} = 5 \\times \\left(\\frac{1}{3}\\right)^{n} + \\frac{4}{3}\"></div><p><span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>For the sum, <span class=\"inline-math\" data-math=\"2k+3=(k+2)^2-(k+1)^2\"></span>, so the next fraction cancels the old residual square. For the recurrence, the constant term <span class=\"inline-math\" data-math=\"4/3\"></span> reproduces itself since <span class=\"inline-math\" data-math=\"(4/3)/3+8/9=4/3\"></span>. Only the decaying power changes from one index to the next.</p>",
+      "<p>(i) At <span class=\"inline-math\" data-math=\"n=1\"></span> both sides are <span class=\"inline-math\" data-math=\"3/4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume <span class=\"inline-math\" data-math=\"S_k=1-(k+1)^{-2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Add <span class=\"inline-math\" data-math=\"(2k+3)/[(k+1)^2(k+2)^2]\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Over a common denominator the subtracted numerator is <span class=\"inline-math\" data-math=\"(k+2)^2-(2k+3)=(k+1)^2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"S_{k+1}=1-(k+2)^{-2}\"></span>. Induction establishes the identity for every positive integer. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(ii) At <span class=\"inline-math\" data-math=\"n=1\"></span> the formula gives <span class=\"inline-math\" data-math=\"5/3+4/3=3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The optional check at <span class=\"inline-math\" data-math=\"n=2\"></span> gives <span class=\"inline-math\" data-math=\"17/9\"></span> by either formula.\nAssume <span class=\"inline-math\" data-math=\"u_k=5(1/3)^k+4/3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The recurrence gives <span class=\"inline-math\" data-math=\"u_{k+1}=5(1/3)^{k+1}+4/9+8/9\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This is <span class=\"inline-math\" data-math=\"5(1/3)^{k+1}+4/3\"></span>, the required next term. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The result follows by induction. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 10 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev05-03-ms-01.webp\" alt=\"Source marking table for June 2016 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev05-04",
+    "question": "<p>(i) Prove by induction that, for <span class=\"inline-math\" data-math=\"n \\in\\mathbb{Z}^{+}\"></span>,</p><div class=\"equation\" data-display=\"true\" data-math=\"\\left( \\begin{array}{cc} 1 &amp; 0 \\\\ -1 &amp; 5 \\end{array} \\right)^{n}=\\left( \\begin{array}{cc} 1 &amp; 0 \\\\ -\\frac{1}{4}\\left( 5^{n}-1 \\right) &amp; 5^{n} \\end{array} \\right)\"></div><p><span class=\"marks\">(6)</span></p><p>(ii) Prove by induction that, for <span class=\"inline-math\" data-math=\"n \\in\\mathbb{Z}^{+}\"></span>,</p><div class=\"equation\" data-display=\"true\" data-math=\"\\sum_{r=1}^{n}\\left( 2r-1 \\right)^{2}=\\frac{1}{3}n\\left( 4n^{2}-1 \\right)\"></div><p><span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>In the matrix argument take the lower-left dot product using the first column <span class=\"inline-math\" data-math=\"(1,-1)\"></span>. In the separate sum argument the next odd number after <span class=\"inline-math\" data-math=\"2k-1\"></span> is <span class=\"inline-math\" data-math=\"2k+1\"></span>. This is why the induction step adds <span class=\"inline-math\" data-math=\"(2k+1)^2\"></span>.</p>",
+      "<p>(i) At <span class=\"inline-math\" data-math=\"n=1\"></span>, <span class=\"inline-math\" data-math=\"-(5-1)/4=-1\"></span>, so the stated matrix equals <span class=\"inline-math\" data-math=\"A\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume the expression holds when <span class=\"inline-math\" data-math=\"n=k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Then <span class=\"inline-math\" data-math=\"A^{k+1}=\\begin{pmatrix}1&amp;0\\\\-(5^k-1)/4&amp;5^k\\end{pmatrix}\\begin{pmatrix}1&amp;0\\\\-1&amp;5\\end{pmatrix}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The first row is <span class=\"inline-math\" data-math=\"(1,0)\"></span> and the bottom-right entry is <span class=\"inline-math\" data-math=\"5^{k+1}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The bottom-left entry is <span class=\"inline-math\" data-math=\"-(5^k-1)/4-5^k=-(5^{k+1}-1)/4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This proves the induction step and hence the formula for every positive integer. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(ii) At <span class=\"inline-math\" data-math=\"n=1\"></span> both sides are 1. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume <span class=\"inline-math\" data-math=\"S_k=k(4k^2-1)/3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Add the next term <span class=\"inline-math\" data-math=\"(2k+1)^2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Factor to give <span class=\"inline-math\" data-math=\"(2k+1)[k(2k-1)+3(2k+1)]/3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Inside the brackets, <span class=\"inline-math\" data-math=\"2k^2+5k+3=(k+1)(2k+3)\"></span>. Thus <span class=\"inline-math\" data-math=\"S_{k+1}=(k+1)[4(k+1)^2-1]/3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The base case and inductive implication establish the result for every positive integer. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 12 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev05-04-ms-01.webp\" alt=\"Source marking table for June 2015 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev05-05",
+    "question": "<p>Prove by induction that, for <span class=\"inline-math\" data-math=\"n \\in \\mathbb{Z}^{+}\"></span> <span class=\"inline-math\" data-math=\"\\mathrm{f}(n)=8^{n}-2^{n}\"></span> is divisible by 6 <span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>The useful multiplier is visible from <span class=\"inline-math\" data-math=\"8^{k+1}=8\\cdot8^k\"></span>. Subtracting <span class=\"inline-math\" data-math=\"8f(k)\"></span> cancels that whole power. The terms in <span class=\"inline-math\" data-math=\"2^k\"></span> then have coefficient <span class=\"inline-math\" data-math=\"8-2=6\"></span>, yielding a multiple of the desired divisor.</p>",
+      "<p><span class=\"inline-math\" data-math=\"f(1)=8-2=6\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume <span class=\"inline-math\" data-math=\"8^k-2^k=6m\"></span> for some integer <span class=\"inline-math\" data-math=\"m\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p><span class=\"inline-math\" data-math=\"f(k+1)=8\\cdot8^k-2\\cdot2^k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Subtract <span class=\"inline-math\" data-math=\"8f(k)\"></span> to leave <span class=\"inline-math\" data-math=\"6\\cdot2^k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"f(k+1)=6(8m+2^k)\"></span> is divisible by 6. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The result follows for every positive integer by induction. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev05-05-ms-01.webp\" alt=\"Source marking table for June 2014 · Q9, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev05-06",
+    "question": "<p>(a) Prove by induction that, for <span class=\"inline-math\" data-math=\"n \\in \\mathbb{Z}^{+}\"></span> <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} (r+1)2^{r-1}=n2^{n}\"></span> <span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>The sum through <span class=\"inline-math\" data-math=\"k+1\"></span> contains the entire sum through <span class=\"inline-math\" data-math=\"k\"></span> plus the single term at <span class=\"inline-math\" data-math=\"r=k+1\"></span>. In that new term <span class=\"inline-math\" data-math=\"r+1=k+2\"></span> and <span class=\"inline-math\" data-math=\"r-1=k\"></span>. Both contributions now contain <span class=\"inline-math\" data-math=\"2^k\"></span>, leaving the simple coefficient <span class=\"inline-math\" data-math=\"k+(k+2)\"></span>.</p>",
+      "<p>(a) When <span class=\"inline-math\" data-math=\"n=1\"></span> the sum and the proposed expression both equal 2. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume <span class=\"inline-math\" data-math=\"S_k=\\sum_{r=1}^k(r+1)2^{r-1}=k2^k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>On adding the next term, <span class=\"inline-math\" data-math=\"S_{k+1}=k2^k+(k+2)2^k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Collecting powers gives <span class=\"inline-math\" data-math=\"(2k+2)2^k=(k+1)2^{k+1}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence the formula propagates from <span class=\"inline-math\" data-math=\"k\"></span> to <span class=\"inline-math\" data-math=\"k+1\"></span> and holds by induction for every positive integer. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 5 marks.</p>",
+      "<p>Count only the retained parts. Any original whole-question total on the extract belongs to the complete exam question.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev05-06-ms-01.webp\" alt=\"Source marking table for June 2014 (R) edited · Q9, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev05-07",
+    "question": "<p>(a) A sequence of numbers is defined by</p><div class=\"equation\" data-display=\"true\" data-math=\"u_{1}=8\"></div><div class=\"equation\" data-display=\"true\" data-math=\"u_{n+1}=4 u_{n}-9 n, \\quad n \\geqslant 1\"></div><p>Prove by induction that, for <span class=\"inline-math\" data-math=\"n \\in \\mathbb{Z}^{+}\"></span></p><div class=\"equation\" data-display=\"true\" data-math=\"u_{n}=4^{n}+3 n+1\"></div><p><span class=\"marks\">(5)</span></p><p>(b) Prove by induction that, for <span class=\"inline-math\" data-math=\"m \\in \\mathbb{Z}^{+}\"></span></p><div class=\"equation\" data-display=\"true\" data-math=\"\\left( \\begin{array}{cc} 3 &amp; -4 \\\\ 1 &amp; -1 \\end{array} \\right)^{m}=\\left( \\begin{array}{cc} 2 m+1 &amp; -4 m \\\\ m &amp; 1-2 m \\end{array} \\right)\"></div><p><span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>In the recurrence the linear term <span class=\"inline-math\" data-math=\"12k-9k\"></span> leaves <span class=\"inline-math\" data-math=\"3k\"></span>, and the remaining constant <span class=\"inline-math\" data-math=\"4\"></span> supplies the required shift to <span class=\"inline-math\" data-math=\"3(k+1)+1\"></span>. In the matrix argument compare entries with the claimed matrix after replacing every <span class=\"inline-math\" data-math=\"k\"></span> by <span class=\"inline-math\" data-math=\"k+1\"></span>.</p>",
+      "<p>(a) At <span class=\"inline-math\" data-math=\"n=1\"></span>, <span class=\"inline-math\" data-math=\"4+3+1=8=u_1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume <span class=\"inline-math\" data-math=\"u_k=4^k+3k+1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Then <span class=\"inline-math\" data-math=\"u_{k+1}=4(4^k+3k+1)-9k=4^{k+1}+3k+4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This equals <span class=\"inline-math\" data-math=\"4^{k+1}+3(k+1)+1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence the formula follows by induction. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) When <span class=\"inline-math\" data-math=\"m=1\"></span> the right side equals the given matrix. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume the formula for <span class=\"inline-math\" data-math=\"A^k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiply <span class=\"inline-math\" data-math=\"A^k\"></span> by <span class=\"inline-math\" data-math=\"A\"></span> to give <span class=\"inline-math\" data-math=\"\\begin{pmatrix}3(2k+1)-4k&amp;-4(2k+1)+4k\\\\3k+1-2k&amp;-4k-1+2k\\end{pmatrix}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This is <span class=\"inline-math\" data-math=\"\\begin{pmatrix}2(k+1)+1&amp;-4(k+1)\\\\k+1&amp;1-2(k+1)\\end{pmatrix}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>By induction the identity holds for every positive integer. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 10 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev05-07-ms-01.webp\" alt=\"Source marking table for June 2013 · Q9, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  }
+]

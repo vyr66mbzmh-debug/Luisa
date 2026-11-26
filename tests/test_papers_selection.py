@@ -58,12 +58,43 @@ class PapersSelection(unittest.TestCase):
         self.page.route('**/practice-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.route('**/exam-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.route('**/madas-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version': 1, 'questions': []})))
+        self.page.route('**/old-spec-catalogue.json', lambda route: route.fulfill(json={'version': 1, 'group': 'old spec revision questions', 'questions': []}))
         self.page.route('**/pmt-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.goto(self.url)
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('6,147')")
 
     def tearDown(self):
         self.context.close()
+
+    def test_old_spec_aliases_in_mixed_student_and_teacher_papers(self):
+        for name in ('exam-catalogue.json', 'pmt-catalogue.json', 'old-spec-catalogue.json', 'papers-print.js'):
+            self.page.unroute('**/' + name)
+        self.page.reload()
+        self.page.locator('#papers-source-old-spec').check()
+        pairs = self.page.evaluate("""async () => {
+          const builder = LUISA_PAPERS_BUILDER;
+          const old = builder.pool().filter(q => q.bank === 'old-spec' && q.canonicalId);
+          const included = new Set(builder.pool().map(q => q.id));
+          if (old.some(q => included.has(q.canonicalId))) throw Error('Student pool contains both copies');
+          document.querySelector('#papers-source-old-spec').click();
+          const originals = new Map(builder.pool().map(q => [q.id, q]));
+          const names = old.map(q => [q.id, originals.get(q.canonicalId)?.id]);
+          const editedEdition = old.find(q => q.id === 'old-spec/rev07-06');
+          if (editedEdition.marks !== 11 || originals.get(editedEdition.canonicalId).marks !== 10)
+            throw Error('Each source must retain its own allocations');
+          const integral = old.find(q => q.id === 'old-spec/rev11-01');
+          const rows = await builder.load([originals.get(integral.canonicalId), integral]);
+          builder.arrange(rows);
+          if (builder.snapshot().length !== 1 || builder.snapshot()[0].marks !== 7)
+            throw Error('Teacher selection doubled the seven-mark integral');
+          try { await LUISA_PAPERS_EXAM.create(rows); }
+          catch (err) { if (err.message.includes('duplicate')) return names; throw err; }
+          throw Error('Exam export accepted duplicate mathematical tasks');
+        }""")
+        self.assertEqual(len(pairs), 30)
+        self.assertTrue(all(original for _, original in pairs))
+        self.assertIn(['old-spec/rev11-01', 'exam/edexcel-9fm0-01-2019-june/q2'], pairs)
+        self.assertIn(['old-spec/rev10-04', 'pmt/pure-core-2/ch3/q3'], pairs)
 
     def test_madas_and_teacher_options_are_independent(self):
         self.page.unroute('**/madas-catalogue.json')
@@ -817,7 +848,7 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(self.page.locator('#papers-source-pmt').count(), 0)
         self.assertNotIn('PMT', self.page.locator('.source-fieldset').inner_text())
         self.assertEqual(self.page.locator('.source-fieldset input[type=checkbox]').evaluate_all('n => n.map(x => x.id)'),
-                         ['papers-source-practice', 'papers-source-exam-style', 'papers-source-madas', 'papers-source-past-papers'])
+                         ['papers-source-practice', 'papers-source-exam-style', 'papers-source-madas', 'papers-source-past-papers', 'papers-source-old-spec'])
         for source in ('practice', 'past-papers'):
             self.page.locator('#papers-source-' + source).uncheck()
         pool = self.page.evaluate("(() => { const p = LUISA_PAPERS_BUILDER.pool(); return [p.length, p.filter(r => r.sourceKind === 'pmt').length, p.filter(r => r.sourceKind === 'pmt' && r.bank !== 'exam-style').length]; })()")

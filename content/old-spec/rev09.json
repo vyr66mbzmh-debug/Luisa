@@ -1,0 +1,85 @@
+[
+  {
+    "id": "old-spec/rev09-01",
+    "question": "<p>(a) Express <span class=\"inline-math\" data-math=\"\\frac{1}{r(r+2)}\"></span> in partial fractions.</p><p><span class=\"marks\">(1)</span></p><p>(b) Hence show that <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} \\frac{4}{r(r+2)}=\\frac{n(3n+5)}{(n+1)(n+2)}.\"></span> <span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>In one term of the difference the two denominators differ by two. This means <span class=\"inline-math\" data-math=\"1/(r+2)\"></span> cancels with the positive fraction two terms later. The first two positive fractions and the last two negative fractions therefore determine the entire sum.</p>",
+      "<p>(a) <span class=\"inline-math\" data-math=\"\\dfrac1{r(r+2)}=\\tfrac12(1/r-1/(r+2))\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Multiply by 4 and sum. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The first terms are <span class=\"inline-math\" data-math=\"2[(1-1/3)+(1/2-1/4)+(1/3-1/5)+\\cdots]\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Cancelling terms two places apart leaves <span class=\"inline-math\" data-math=\"2[1+1/2-1/(n+1)-1/(n+2)]\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The common numerator is <span class=\"inline-math\" data-math=\"3(n+1)(n+2)-2(n+2)-2(n+1)=n(3n+5)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev09-01-ms-01.webp\" alt=\"Source marking table for 2009 · Q1, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev09-02",
+    "question": "<p>(a) Express <span class=\"inline-math\" data-math=\"\\frac{3}{(3 r-1)(3 r+2)}\"></span> in partial fractions.</p><p><span class=\"marks\">(2)</span></p><p>(b) Using your answer to part (a) and the method of differences, show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\sum_{r=1}^{n} \\frac{3}{(3 r-1)(3 r+2)}=\\frac{3 n}{2(3 n+2)}\"></div><p><span class=\"marks\">(3)</span></p><p>(c) Evaluate <span class=\"inline-math\" data-math=\"\\sum_{r=100}^{1000} \\frac{3}{(3 r-1)(3 r+2)}\"></span> , giving your answer to 3 significant figures.</p><p><span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The sequence of denominators increases by three each time, so <span class=\"inline-math\" data-math=\"3r+2=3(r+1)-1\"></span>. This identity identifies the cancelling pair. For the range 100 to 1000, substitute the first index into the positive denominator and the last into the negative denominator.</p>",
+      "<p>(a) In <span class=\"inline-math\" data-math=\"A/(3r-1)+B/(3r+2)\"></span>, <span class=\"inline-math\" data-math=\"A+B=0\"></span> and <span class=\"inline-math\" data-math=\"2A-B=3\"></span>. Thus <span class=\"inline-math\" data-math=\"A=1,\\ B=-1\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) The first differences are <span class=\"inline-math\" data-math=\"(1/2-1/5)+(1/5-1/8)+\\cdots\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>All interior terms cancel, leaving <span class=\"inline-math\" data-math=\"1/2-1/(3n+2)=3n/[2(3n+2)]\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) From <span class=\"inline-math\" data-math=\"r=100\"></span> to <span class=\"inline-math\" data-math=\"1000\"></span>, the two surviving terms are <span class=\"inline-math\" data-math=\"1/299-1/3002\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This is <span class=\"inline-math\" data-math=\"0.00301\"></span> (3 s.f.). <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev09-02-ms-01.webp\" alt=\"Source marking table for 2010 · Q1, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev09-03",
+    "question": "<p>Given that</p><div class=\"equation\" data-display=\"true\" data-math=\"(2 r+1)^{3}=A r^{3}+B r^{2}+C r+1,\"></div><p>(a) find the values of the constants A, B and C.</p><p><span class=\"marks\">(2)</span></p><p>(b) Show that</p><div class=\"equation\" data-display=\"true\" data-math=\"(2 r+1)^{3}-(2 r-1)^{3}=24 r^{2}+2\"></div><p><span class=\"marks\">(2)</span></p><p>(c) Using the result in part (b) and the method of differences, show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\sum_{r=1}^{n} r^{2}=\\frac{1}{6} n(n+1)(2 n+1)\"></div><p><span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>The negative cube at step <span class=\"inline-math\" data-math=\"r+1\"></span> is <span class=\"inline-math\" data-math=\"(2(r+1)-1)^3=(2r+1)^3\"></span>, exactly the positive cube at step <span class=\"inline-math\" data-math=\"r\"></span>. On the other side of the identity the constant <span class=\"inline-math\" data-math=\"2\"></span> occurs <span class=\"inline-math\" data-math=\"n\"></span> times. That accounts for the subtraction of <span class=\"inline-math\" data-math=\"2n\"></span> before dividing by <span class=\"inline-math\" data-math=\"24\"></span>.</p>",
+      "<p>(a) <span class=\"inline-math\" data-math=\"(2r+1)^3=8r^3+12r^2+6r+1\"></span>, so <span class=\"inline-math\" data-math=\"A=8,\\ B=12,\\ C=6\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) Subtract <span class=\"inline-math\" data-math=\"8r^3-12r^2+6r-1\"></span>, obtaining <span class=\"inline-math\" data-math=\"24r^2+2\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) Sum from 1 to <span class=\"inline-math\" data-math=\"n\"></span>. On the left <span class=\"inline-math\" data-math=\"(3^3-1^3)+(5^3-3^3)+\\cdots\"></span> cancels to <span class=\"inline-math\" data-math=\"(2n+1)^3-1\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The right side is <span class=\"inline-math\" data-math=\"24\\sum r^2+2n\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"\\sum r^2=[(2n+1)^3-1-2n]/24=(8n^3+12n^2+4n)/24=n(n+1)(2n+1)/6\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 9 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev09-03-ms-01.webp\" alt=\"Source marking table for 2011 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev09-04",
+    "question": "<p>(a) Express <span class=\"inline-math\" data-math=\"\\frac{1}{r(r+2)}\"></span> in partial fractions.</p><p><span class=\"marks\">(2)</span></p><p>(b) Hence prove, by the method of differences, that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\sum_{r=1}^{n} \\frac{1}{r(r+2)}=\\frac{n(an+b)}{4(n+1)(n+2)}\"></div><p>where a and b are constants to be found.</p><p><span class=\"marks\">(6)</span></p><p>(c) Hence show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\sum_{r=n+1}^{2n} \\frac{1}{r(r+2)}=\\frac{n(4n+5)}{4(n+1)(n+2)(2n+1)}\"></div><p><span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>Substituting <span class=\"inline-math\" data-math=\"r=0\"></span> and <span class=\"inline-math\" data-math=\"r=-2\"></span> in the cleared polynomial identity isolates the two coefficients immediately. Although these are poles of the original fractions, the cleared identity is a polynomial equality. In the tail sum the same two-step cancellation occurs at new endpoints.</p>",
+      "<p>(a) Clearing denominators gives <span class=\"inline-math\" data-math=\"1=A(r+2)+Br\"></span>, so <span class=\"inline-math\" data-math=\"A=1/2,\\ B=-1/2\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) Sum <span class=\"inline-math\" data-math=\"\\tfrac12(1/r-1/(r+2))\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The first terms are <span class=\"inline-math\" data-math=\"(1-1/3)+(1/2-1/4)+(1/3-1/5)\"></span> inside the half factor. <small class=\"step-credit\">[1]</small></p>",
+      "<p>All but the first two positive and last two negative terms cancel. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The sum is <span class=\"inline-math\" data-math=\"\\tfrac12(3/2-1/(n+1)-1/(n+2))\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Combining fractions gives <span class=\"inline-math\" data-math=\"n(3n+5)/[4(n+1)(n+2)]\"></span>, hence <span class=\"inline-math\" data-math=\"a=3,b=5\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) From <span class=\"inline-math\" data-math=\"n+1\"></span> to <span class=\"inline-math\" data-math=\"2n\"></span>, retain <span class=\"inline-math\" data-math=\"\\tfrac12[1/(n+1)+1/(n+2)-1/(2n+1)-1/(2n+2)]\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Putting over a common denominator gives <span class=\"inline-math\" data-math=\"n(4n+5)/[4(n+1)(n+2)(2n+1)]\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For example, at <span class=\"inline-math\" data-math=\"n=2\"></span> the sum in (b) is <span class=\"inline-math\" data-math=\"1/3+1/8=11/24\"></span>. Substituting <span class=\"inline-math\" data-math=\"n=2\"></span> in <span class=\"inline-math\" data-math=\"n(3n+5)/[4(n+1)(n+2)]\"></span> also gives <span class=\"inline-math\" data-math=\"22/48=11/24\"></span>, checking both end terms of the cancellation.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 11 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev09-04-ms-01.webp\" alt=\"Source marking table for 2012 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev09-05",
+    "question": "<p>(a) Express <span class=\"inline-math\" data-math=\"\\frac{2}{(2 r+1)(2 r+3)}\"></span> in partial fractions.</p><p><span class=\"marks\">(2)</span></p><p>(b) Using your answer to (a), find, in terms of n,</p><div class=\"equation\" data-display=\"true\" data-math=\"\\sum_{r=1}^{n} \\frac{3}{(2 r+1)(2 r+3)}\"></div><p>Give your answer as a single fraction in its simplest form.</p><p><span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>Consecutive indices give denominators <span class=\"inline-math\" data-math=\"2r+3\"></span> and <span class=\"inline-math\" data-math=\"2(r+1)+1\"></span>, which are identical. The factor <span class=\"inline-math\" data-math=\"3/2\"></span> changes the numerator <span class=\"inline-math\" data-math=\"2\"></span> from the difference into the required <span class=\"inline-math\" data-math=\"3\"></span>. At <span class=\"inline-math\" data-math=\"n=1\"></span> the final expression gives <span class=\"inline-math\" data-math=\"1/5\"></span>, agreeing with the first term.</p>",
+      "<p>(a) With a common denominator <span class=\"inline-math\" data-math=\"1/(2r+1)-1/(2r+3)\"></span> has numerator 2. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) Multiply by <span class=\"inline-math\" data-math=\"3/2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The differences cancel successively, giving <span class=\"inline-math\" data-math=\"\\tfrac32(1/3-1/(2n+3))\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Simplifying gives <span class=\"inline-math\" data-math=\"n/(2n+3)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 5 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev09-05-ms-01.webp\" alt=\"Source marking table for 2013 · Q1, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  }
+]

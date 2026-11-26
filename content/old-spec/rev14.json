@@ -1,0 +1,621 @@
+[
+  {
+    "id": "old-spec/rev14-01",
+    "question": "<p>Find the general solution of the differential equation</p><div class=\"equation\" data-display=\"true\" data-math=\"\\sin x \\frac{\\mathrm{d} y}{\\mathrm{d} x}-y \\cos x=\\sin 2 x \\sin x,\"></div><p>giving your answer in the form <span class=\"inline-math\" data-math=\"y=f(x).\"></span></p><p><span class=\"marks\">(8)</span></p>",
+    "steps": [
+      "<p>After division the coefficient of <span class=\"inline-math\" data-math=\"y\"></span> is <span class=\"inline-math\" data-math=\"-\\cot x\"></span>. Integrating it gives <span class=\"inline-math\" data-math=\"-\\ln|\\sin x|\"></span>, so a convenient factor on each regular interval is <span class=\"inline-math\" data-math=\"1/\\sin x\"></span>. Multiplying the forcing term by it reduces <span class=\"inline-math\" data-math=\"\\sin2x/\\sin x\"></span> to <span class=\"inline-math\" data-math=\"2\\cos x\"></span>.</p>",
+      "<p>Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(- \\frac{1}{\\tan{\\left(x \\right)}}\\right)y=\\sin{\\left(2 x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int - \\frac{1}{\\tan{\\left(x \\right)}}\\,\\mathrm dx\\right)=\\frac{1}{\\sin{\\left(x \\right)}}\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=2 \\cos{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=2 \\sin{\\left(x \\right)}+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\left(C + 2 \\sin{\\left(x \\right)}\\right) \\sin{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-01-ms-01.webp\" alt=\"Source marking table for 2009 FP2 · Q3, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-02",
+    "question": "<div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm{d}^{2} x}{\\mathrm{d} t^{2}}+5 \\frac{\\mathrm{d} x}{\\mathrm{d} t}+6 x=2 \\mathrm{e}^{-t}\"></div><p>Given that <span class=\"inline-math\" data-math=\"x=0\"></span> and <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} x}{\\mathrm{d} t}=2\"></span> at <span class=\"inline-math\" data-math=\"t=0\"></span>,</p><p>(a) find <span class=\"inline-math\" data-math=\"x\"></span> in terms of <span class=\"inline-math\" data-math=\"t\"></span>.</p><p><span class=\"marks\">(8)</span></p><p>The solution to part (a) is used to represent the motion of a particle <span class=\"inline-math\" data-math=\"P\"></span> on the <span class=\"inline-math\" data-math=\"x\"></span>-axis. At time <span class=\"inline-math\" data-math=\"t\"></span> seconds, where <span class=\"inline-math\" data-math=\"t&gt;0\"></span> , <span class=\"inline-math\" data-math=\"P\"></span> is <span class=\"inline-math\" data-math=\"x\"></span> metres from the origin <span class=\"inline-math\" data-math=\"O\"></span> .</p><p>(b) Show that the maximum distance between <span class=\"inline-math\" data-math=\"O\"></span> and <span class=\"inline-math\" data-math=\"P\"></span> is <span class=\"inline-math\" data-math=\"\\frac{2 \\sqrt{3}}{9}\"></span> m and justify that this distance is a maximum.</p><p><span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>The forcing is proportional to <span class=\"inline-math\" data-math=\"e^{-t}\"></span>, which is distinct from the two complementary modes <span class=\"inline-math\" data-math=\"e^{-2t},e^{-3t}\"></span>. A constant multiple of <span class=\"inline-math\" data-math=\"e^{-t}\"></span> is therefore a valid trial. Once both initial conditions are imposed, the competition between the two remaining decay rates gives a positive peak before the displacement returns towards zero.</p>",
+      "<p>(a) Solve the auxiliary equation <span class=\"inline-math\" data-math=\"m^{2} + 5 m + 6=0\"></span>. Its roots are <span class=\"inline-math\" data-math=\"-2,\\ -3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The complementary function is <span class=\"inline-math\" data-math=\"A e^{- 2 t} + B e^{- 3 t}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For a particular integral try <span class=\"inline-math\" data-math=\"x_p=D e^{- t}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate: <span class=\"inline-math\" data-math=\"x_p&#x27;=- D e^{- t}\"></span> and <span class=\"inline-math\" data-math=\"x_p&#x27;&#x27;=D e^{- t}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution and collection of terms give <span class=\"inline-math\" data-math=\"2 D e^{- t} - 2 e^{- t}=0\"></span>. Thus <span class=\"inline-math\" data-math=\"D=1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Add the complementary function to get <span class=\"inline-math\" data-math=\"x=A e^{- 2 t} + B e^{- 3 t} + e^{- t}\"></span>.\nAt zero, <span class=\"inline-math\" data-math=\"A + B + 1=0\"></span>.\nThe derivative is <span class=\"inline-math\" data-math=\"x&#x27;=- 2 A e^{- 2 t} - 3 B e^{- 3 t} - e^{- t}\"></span>. At zero this gives <span class=\"inline-math\" data-math=\"- 2 A - 3 B - 3=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Solving gives <span class=\"inline-math\" data-math=\"A=0,\\ B=-1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The particular solution is <span class=\"inline-math\" data-math=\"x=\\left(e^{2 t} - 1\\right) e^{- 3 t}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Here <span class=\"inline-math\" data-math=\"x=e^{-t}-e^{-3t}&gt;0\"></span> for <span class=\"inline-math\" data-math=\"t&gt;0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Setting <span class=\"inline-math\" data-math=\"x^{\\prime}=-e^{-t}+3e^{-3t}=0\"></span> gives <span class=\"inline-math\" data-math=\"e^{2t}=3\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"t=\\ln3/2\"></span> and <span class=\"inline-math\" data-math=\"x=1/\\sqrt3-1/(3\\sqrt3)=2\\sqrt3/9\"></span> metres. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The derivative is positive before this time and negative afterwards, giving the global maximum. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 15 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-02-ms-01.webp\" alt=\"Source marking table for 2009 FP2 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-02-ms-02.webp\" alt=\"Source marking table for 2009 FP2 · Q8, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-03",
+    "question": "<p>(a) Find the value of <span class=\"inline-math\" data-math=\"\\lambda\"></span> for which <span class=\"inline-math\" data-math=\"y=\\lambda x\\sin 5 x\"></span> is a particular integral of the differential equation <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}+25 y=3 \\cos 5 x\"></span> <span class=\"marks\">(4)</span></p><p>(b) Using your answer to part (a), find the general solution of the differential equation <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}+25 y=3 \\cos 5 x\"></span> <span class=\"marks\">(3)</span></p><p>Given that at <span class=\"inline-math\" data-math=\"x=0\"></span> , <span class=\"inline-math\" data-math=\"y=0\"></span> and <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} x}=5\"></span> ,</p><p>(c) find the particular solution of this differential equation, giving your solution in the form <span class=\"inline-math\" data-math=\"y=f(x).\"></span> <span class=\"marks\">(5)</span></p><p>(d) Sketch the curve with equation <span class=\"inline-math\" data-math=\"y=f(x)\"></span> for <span class=\"inline-math\" data-math=\"0 \\leqslant x \\leqslant \\pi.\"></span> <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The forcing frequency <span class=\"inline-math\" data-math=\"5\"></span> is also the natural frequency, so a trial consisting only of <span class=\"inline-math\" data-math=\"\\sin5x,\\cos5x\"></span> would vanish under <span class=\"inline-math\" data-math=\"D^2+25\"></span>. The factor <span class=\"inline-math\" data-math=\"x\"></span> supplies a nonzero term after differentiation. The same factor later makes successive oscillations larger in the sketch.</p>",
+      "<p>(a) For <span class=\"inline-math\" data-math=\"y=\\lambda x\\sin5x\"></span>, <span class=\"inline-math\" data-math=\"y&#x27;=\\lambda(\\sin5x+5x\\cos5x)\"></span>, <span class=\"inline-math\" data-math=\"y&#x27;&#x27;=\\lambda(10\\cos5x-25x\\sin5x)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"y&#x27;&#x27;+25y=10\\lambda\\cos5x\"></span>, requiring <span class=\"inline-math\" data-math=\"\\lambda=3/10\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) The auxiliary roots are <span class=\"inline-math\" data-math=\"\\pm5i\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"y=A\\cos5x+B\\sin5x+(3/10)x\\sin5x\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) At zero <span class=\"inline-math\" data-math=\"y=A=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The derivative of the remaining terms is <span class=\"inline-math\" data-math=\"5B\\cos5x+(3/10)\\sin5x+(3/2)x\\cos5x\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>At zero <span class=\"inline-math\" data-math=\"5B=5\"></span>, so <span class=\"inline-math\" data-math=\"y=(1+3x/10)\\sin5x\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(d) Draw zeros at <span class=\"inline-math\" data-math=\"0,\\pi/5,\\ldots,\\pi\"></span>, starting upwards with amplitude bounded by <span class=\"inline-math\" data-math=\"1+3x/10\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-03-solution-1.svg\" alt=\"Worked diagram for REV14-03\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 14 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-03-ms-01.webp\" alt=\"Source marking table for 2010 FP2 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-04",
+    "question": "<p>Find the general solution of the differential equation</p><p><span class=\"inline-math\" data-math=\"x \\frac{\\mathrm{d} y}{\\mathrm{d} x}+5 y=\\frac{\\ln x}{x},\"></span> <span class=\"inline-math\" data-math=\"x&gt;0\"></span></p><p>giving your answer in the form <span class=\"inline-math\" data-math=\"y=f(x).\"></span> <span class=\"marks\">(8)</span></p>",
+    "steps": [
+      "<p>Multiplying by <span class=\"inline-math\" data-math=\"x^5\"></span> turns the right side into <span class=\"inline-math\" data-math=\"x^3\\ln x\"></span>. For its integral choose <span class=\"inline-math\" data-math=\"u=\\ln x\"></span> and <span class=\"inline-math\" data-math=\"dv=x^3dx\"></span>; then <span class=\"inline-math\" data-math=\"du=dx/x\"></span>, leaving an ordinary power integral. Divide by the integrating factor only after including the integration constant.</p>",
+      "<p>Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(\\frac{5}{x}\\right)y=\\frac{\\ln{\\left(x \\right)}}{x^{2}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int \\frac{5}{x}\\,\\mathrm dx\\right)=x^{5}\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=x^{3} \\ln{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=x^{4} \\left(\\frac{\\ln{\\left(x \\right)}}{4} - \\frac{1}{16}\\right)+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{C + x^{4} \\left(\\frac{\\ln{\\left(x \\right)}}{4} - \\frac{1}{16}\\right)}{x^{5}}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-04-ms-01.webp\" alt=\"Source marking table for 2011 FP2 · Q3, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-05",
+    "question": "<p>The differential equation</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{d^2x}{dt^2}+6\\frac{dx}{dt}+9x=\\cos 3t, \\quad t\\geqslant 0\"></div><p>describes the motion of a particle along the x-axis.</p><p>(a) Find the general solution of this differential equation.</p><p><span class=\"marks\">(8)</span></p><p>(b) Find the particular solution of this differential equation for which, at <span class=\"inline-math\" data-math=\"t=0\"></span>,</p><div class=\"equation\" data-display=\"true\" data-math=\"x=\\frac{1}{2}\"></div><p>and <span class=\"inline-math\" data-math=\"\\frac{dx}{dt}=0\"></span>.</p><p><span class=\"marks\">(5)</span></p><p>On the graph of the particular solution defined in part (b), the first turning point for <span class=\"inline-math\" data-math=\"t&gt;30\"></span> is the point <span class=\"inline-math\" data-math=\"A\"></span>.</p><p>(c) Find approximate values for the coordinates of <span class=\"inline-math\" data-math=\"A\"></span>.\n<span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>A repeated auxiliary root requires both <span class=\"inline-math\" data-math=\"e^{-3t}\"></span> and <span class=\"inline-math\" data-math=\"te^{-3t}\"></span>. The sinusoidal forcing supplies a separate steady oscillation. When locating a turning point use the velocity of their sum, since the transient terms still affect the derivative at finite time.</p>",
+      "<p>(a) Solve the auxiliary equation <span class=\"inline-math\" data-math=\"m^{2} + 6 m + 9=0\"></span>. Its roots are <span class=\"inline-math\" data-math=\"-3\"></span> (repeated). <small class=\"step-credit\">[1]</small></p>",
+      "<p>The complementary function is <span class=\"inline-math\" data-math=\"\\left(A + B t\\right) e^{- 3 t}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For a particular integral try <span class=\"inline-math\" data-math=\"x_p=D \\cos{\\left(3 t \\right)} + E \\sin{\\left(3 t \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate: <span class=\"inline-math\" data-math=\"x_p&#x27;=- 3 D \\sin{\\left(3 t \\right)} + 3 E \\cos{\\left(3 t \\right)}\"></span> and <span class=\"inline-math\" data-math=\"x_p&#x27;&#x27;=- 9 \\left(D \\cos{\\left(3 t \\right)} + E \\sin{\\left(3 t \\right)}\\right)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution and collection of terms give <span class=\"inline-math\" data-math=\"- 18 D \\sin{\\left(3 t \\right)} + 18 E \\cos{\\left(3 t \\right)} - \\cos{\\left(3 t \\right)}=0\"></span>. Thus <span class=\"inline-math\" data-math=\"D=0,\\ E=\\frac{1}{18}\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Add the complementary function to get <span class=\"inline-math\" data-math=\"x=\\left(A + B t\\right) e^{- 3 t} + \\frac{\\sin{\\left(3 t \\right)}}{18}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At zero, <span class=\"inline-math\" data-math=\"A - \\frac{1}{2}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The derivative is <span class=\"inline-math\" data-math=\"x&#x27;=B e^{- 3 t} - 3 \\left(A + B t\\right) e^{- 3 t} + \\frac{\\cos{\\left(3 t \\right)}}{6}\"></span>. At zero this gives <span class=\"inline-math\" data-math=\"- 3 A + B + \\frac{1}{6}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Solving gives <span class=\"inline-math\" data-math=\"A=\\frac{1}{2},\\ B=\\frac{4}{3}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The particular solution is <span class=\"inline-math\" data-math=\"x=\\frac{\\left(24 t + e^{3 t} \\sin{\\left(3 t \\right)} + 9\\right) e^{- 3 t}}{18}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) For <span class=\"inline-math\" data-math=\"t&gt;30\"></span> the exponential transient is below <span class=\"inline-math\" data-math=\"10^{-36}\"></span> in magnitude. The first subsequent stationary point of <span class=\"inline-math\" data-math=\"\\sin(3t)/18\"></span> occurs at <span class=\"inline-math\" data-math=\"t=59\\pi/6\\approx30.89\"></span>; the corresponding displacement is approximately <span class=\"inline-math\" data-math=\"-1/18=-0.0556\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 15 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-05-ms-01.webp\" alt=\"Source marking table for 2011 FP2 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-06",
+    "question": "<p>Find the general solution of the differential equation <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d}^{2} x}{\\mathrm{d} t^{2}}+5 \\frac{\\mathrm{d} x}{\\mathrm{d} t}+6 x=2 \\cos t-\\sin t\"></span> <span class=\"marks\">(9)</span></p>",
+    "steps": [
+      "<p>Use a sine and a cosine in the trial because differentiating either introduces the other. The cosine terms give <span class=\"inline-math\" data-math=\"5D+5E=2\"></span>, while the sine terms give <span class=\"inline-math\" data-math=\"-5D+5E=-1\"></span>. Adding and subtracting these short equations explains the coefficients in the particular integral.</p>",
+      "<p>Solve the auxiliary equation <span class=\"inline-math\" data-math=\"m^{2} + 5 m + 6=0\"></span>. Its roots are <span class=\"inline-math\" data-math=\"-2,\\ -3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The complementary function is <span class=\"inline-math\" data-math=\"A e^{- 2 t} + B e^{- 3 t}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For a particular integral try <span class=\"inline-math\" data-math=\"x_p=D \\cos{\\left(t \\right)} + E \\sin{\\left(t \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate: <span class=\"inline-math\" data-math=\"x_p&#x27;=- D \\sin{\\left(t \\right)} + E \\cos{\\left(t \\right)}\"></span> and <span class=\"inline-math\" data-math=\"x_p&#x27;&#x27;=- (D \\cos{\\left(t \\right)} + E \\sin{\\left(t \\right)})\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution and collection of terms give <span class=\"inline-math\" data-math=\"- 5 D \\sin{\\left(t \\right)} + 5 D \\cos{\\left(t \\right)} + 5 E \\sin{\\left(t \\right)} + 5 E \\cos{\\left(t \\right)} + \\sin{\\left(t \\right)} - 2 \\cos{\\left(t \\right)}=0\"></span>. Thus <span class=\"inline-math\" data-math=\"D=\\frac{3}{10},\\ E=\\frac{1}{10}\"></span>. <small class=\"step-credit\">[4]</small></p>",
+      "<p>Add the complementary function to get <span class=\"inline-math\" data-math=\"x=A e^{- 2 t} + B e^{- 3 t} + \\frac{\\sin{\\left(t \\right)}}{10} + \\frac{3 \\cos{\\left(t \\right)}}{10}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 9 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-06-ms-01.webp\" alt=\"Source marking table for 2012 FP2 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-07",
+    "question": "<p>(a) Find, in the form <span class=\"inline-math\" data-math=\"y=f(x)\"></span> , the general solution of the equation <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} x}+2 y \\tan x=\\sin 2 x,\"></span> <span class=\"inline-math\" data-math=\"0&lt;x&lt;\\frac{\\pi}{2}\"></span> <span class=\"marks\">(6)</span></p><p>Given that <span class=\"inline-math\" data-math=\"y=2\"></span> at <span class=\"inline-math\" data-math=\"x=\\frac{\\pi}{3}\"></span></p><p>(b) find the value of y at <span class=\"inline-math\" data-math=\"x=\\frac{\\pi}{6}\"></span> , giving your answer in the form <span class=\"inline-math\" data-math=\"a+k \\ln b\"></span> , where a and b are integers and k is rational. <span class=\"marks\">(4)</span></p>",
+    "steps": [
+      "<p>The integral of <span class=\"inline-math\" data-math=\"2\\tan x\"></span> is <span class=\"inline-math\" data-math=\"-2\\ln|\\cos x|\"></span>, producing factor <span class=\"inline-math\" data-math=\"\\sec^2x\"></span>. Its product with <span class=\"inline-math\" data-math=\"\\sin2x\"></span> is <span class=\"inline-math\" data-math=\"2\\tan x\"></span>, so the logarithm returns at the next integration. Keep the constant inside <span class=\"inline-math\" data-math=\"y\\sec^2x\"></span> until applying the given point.</p>",
+      "<p>(a) Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(2 \\tan{\\left(x \\right)}\\right)y=\\sin{\\left(2 x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int 2 \\tan{\\left(x \\right)}\\,\\mathrm dx\\right)=\\sec^{2}{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=2 \\tan{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=- 2 \\ln{\\left(\\cos{\\left(x \\right)} \\right)}+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{C - 2 \\ln{\\left(\\cos{\\left(x \\right)} \\right)}}{\\sec^{2}{\\left(x \\right)}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At <span class=\"inline-math\" data-math=\"x=\\pi/3\"></span>, <span class=\"inline-math\" data-math=\"8=2\\ln2+C\"></span>, hence <span class=\"inline-math\" data-math=\"C=8-2\\ln2\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>At <span class=\"inline-math\" data-math=\"x=\\pi/6\"></span> the result is <span class=\"inline-math\" data-math=\"\\tfrac34(8-\\ln3)=6-\\tfrac34\\ln3\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 10 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-07-ms-01.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q5, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-07-ms-02.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q5, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-07-ms-03.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q5, extract 3\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-08",
+    "question": "<p>(a) Find the value of <span class=\"inline-math\" data-math=\"\\lambda\"></span> for which <span class=\"inline-math\" data-math=\"\\lambda t^{2} \\mathrm{e}^{3 t}\"></span> is a particular integral of the differential equation</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm{d}^{2} y}{\\mathrm{d} t^{2}}-6 \\frac{\\mathrm{d} y}{\\mathrm{d} t}+9 y=6 \\mathrm{e}^{3 t}, \\qquad t \\geqslant 0\"></div><p><span class=\"marks\">(5)</span></p><p>(b) Hence find the general solution of this differential equation.</p><p><span class=\"marks\">(3)</span></p><p>Given that when <span class=\"inline-math\" data-math=\"t=0, y=5\"></span> and <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} t}=4\"></span></p><p>(c) find the particular solution of this differential equation, giving your solution in the form <span class=\"inline-math\" data-math=\"y=\\mathrm{f}(t).\"></span>\n<span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>Here <span class=\"inline-math\" data-math=\"e^{3t}\"></span> and <span class=\"inline-math\" data-math=\"te^{3t}\"></span> are already complementary solutions. Multiplying the exponential by <span class=\"inline-math\" data-math=\"t^2\"></span> gives the first viable trial. Differentiating twice then cancels every term involving <span class=\"inline-math\" data-math=\"t\"></span> in the forced equation, leaving a constant coefficient to determine.</p>",
+      "<p>(a) For <span class=\"inline-math\" data-math=\"y=\\lambda t^2e^{3t}\"></span>, <span class=\"inline-math\" data-math=\"y&#x27;=\\lambda e^{3t}(2t+3t^2)\"></span> and <span class=\"inline-math\" data-math=\"y&#x27;&#x27;=\\lambda e^{3t}(2+12t+9t^2)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Substitution leaves <span class=\"inline-math\" data-math=\"2\\lambda e^{3t}=6e^{3t}\"></span>, so <span class=\"inline-math\" data-math=\"\\lambda=3\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>(b) The auxiliary equation is <span class=\"inline-math\" data-math=\"(m-3)^2=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"y=e^{3t}(A+Bt+3t^2)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) <span class=\"inline-math\" data-math=\"y(0)=A=5\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate to get <span class=\"inline-math\" data-math=\"y&#x27;=e^{3t}[3(A+Bt+3t^2)+B+6t]\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"15+B=4\"></span>, so <span class=\"inline-math\" data-math=\"B=-11\"></span> and <span class=\"inline-math\" data-math=\"y=e^{3t}(5-11t+3t^2)\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 13 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-08-ms-01.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q7, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-08-ms-02.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q7, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-09",
+    "question": "<p>(a) Find the general solution of the differential equation</p><div class=\"equation\" data-display=\"true\" data-math=\"x \\frac{\\mathrm{d} y}{\\mathrm{d} x}+2 y=4 x^{2}\"></div><p><span class=\"marks\">(5)</span></p><p>(b) Find the particular solution for which <span class=\"inline-math\" data-math=\"y=5\"></span> at <span class=\"inline-math\" data-math=\"x=1\"></span> , giving your answer in the form <span class=\"inline-math\" data-math=\"y=\\mathrm{f}(x).\"></span></p><p><span class=\"marks\">(2)</span></p><p>(c) (i) Find the exact values of the coordinates of the turning points of the curve with equation <span class=\"inline-math\" data-math=\"y=\\mathrm{f}(x)\"></span> , making your method clear.</p><p>(ii) Sketch the curve with equation <span class=\"inline-math\" data-math=\"y=\\mathrm{f}(x)\"></span> , showing the coordinates of the turning points.</p><p><span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>The factor <span class=\"inline-math\" data-math=\"x^2\"></span> turns the left side into <span class=\"inline-math\" data-math=\"(x^2y)&#x27;\"></span> and the right into <span class=\"inline-math\" data-math=\"4x^3\"></span>. Keeping the integration constant when you divide by <span class=\"inline-math\" data-math=\"x^2\"></span> supplies the inverse-square term. That term affects both the location and classification of the stationary points.</p>",
+      "<p>(a) Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(\\frac{2}{x}\\right)y=4 x\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int \\frac{2}{x}\\,\\mathrm dx\\right)=x^{2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=4 x^{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=x^{4}+C\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{C + x^{4}}{x^{2}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) <span class=\"inline-math\" data-math=\"5=1+C\"></span>, so <span class=\"inline-math\" data-math=\"C=4\"></span> and <span class=\"inline-math\" data-math=\"y=x^2+4/x^2\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) <span class=\"inline-math\" data-math=\"y^{\\prime}=2x-8/x^3=0\"></span> gives <span class=\"inline-math\" data-math=\"x^4=4\"></span>, so both minima are <span class=\"inline-math\" data-math=\"(\\pm\\sqrt2,4)\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>The curve is even with vertical asymptote <span class=\"inline-math\" data-math=\"x=0\"></span> and grows on both outer branches. <small class=\"step-credit\">[2]</small></p>",
+      "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-09-solution-1.svg\" alt=\"Worked diagram for REV14-09\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 12 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-09-ms-01.webp\" alt=\"Source marking table for 2013 FP2 · Q5, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-09-ms-02.webp\" alt=\"Source marking table for 2013 FP2 · Q5, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-10",
+    "question": "<p>(a) Find the general solution of the differential equation <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}+2 \\frac{\\mathrm{d} y}{\\mathrm{d} x}+10 y=27 \\mathrm{e}^{-x}\"></span> <span class=\"marks\">(6)</span></p><p>(b) Find the particular solution that satisfies y=0 and <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} x}=0\"></span> when x=0 <span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>The auxiliary roots give a damped oscillation. Although <span class=\"inline-math\" data-math=\"e^{-x}\"></span> also occurs in the forcing, an exponential by itself is not a complementary solution here, because the complementary terms carry frequency three. A constant multiple of <span class=\"inline-math\" data-math=\"e^{-x}\"></span> is therefore a valid trial.</p>",
+      "<p>(a) Solve the auxiliary equation <span class=\"inline-math\" data-math=\"m^{2} + 2 m + 10=0\"></span>. Its roots are <span class=\"inline-math\" data-math=\"-1 - 3 i,\\ -1 + 3 i\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The complementary function is <span class=\"inline-math\" data-math=\"\\left(A \\cos{\\left(3 x \\right)} + B \\sin{\\left(3 x \\right)}\\right) e^{- x}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For a particular integral try <span class=\"inline-math\" data-math=\"y_p=D e^{- x}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate: <span class=\"inline-math\" data-math=\"y_p&#x27;=- D e^{- x}\"></span> and <span class=\"inline-math\" data-math=\"y_p&#x27;&#x27;=D e^{- x}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution and collection of terms give <span class=\"inline-math\" data-math=\"9 D e^{- x} - 27 e^{- x}=0\"></span>. Thus <span class=\"inline-math\" data-math=\"D=3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Add the complementary function to get <span class=\"inline-math\" data-math=\"y=\\left(A \\cos{\\left(3 x \\right)} + B \\sin{\\left(3 x \\right)}\\right) e^{- x} + 3 e^{- x}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At zero, <span class=\"inline-math\" data-math=\"A + 3=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The derivative is <span class=\"inline-math\" data-math=\"y&#x27;=\\left(- 3 A \\sin{\\left(3 x \\right)} + 3 B \\cos{\\left(3 x \\right)}\\right) e^{- x} - \\left(A \\cos{\\left(3 x \\right)} + B \\sin{\\left(3 x \\right)}\\right) e^{- x} - 3 e^{- x}\"></span>. At zero this gives <span class=\"inline-math\" data-math=\"- A + 3 B - 3=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Solving gives <span class=\"inline-math\" data-math=\"A=-3,\\ B=0\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>The particular solution is <span class=\"inline-math\" data-math=\"y=3 \\left(1 - \\cos{\\left(3 x \\right)}\\right) e^{- x}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 12 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-10-ms-01.webp\" alt=\"Source marking table for 2014 FP2 · Q5, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-11",
+    "question": "<p>You may use the result that the substitution <span class=\"inline-math\" data-math=\"v=y^{-3}\"></span> transforms</p><div class=\"equation\" data-display=\"true\" data-math=\"x\\frac{\\mathrm dy}{\\mathrm dx}+y=2x^4y^4\\tag{I}\"></div><p>into</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm dv}{\\mathrm dx}-\\frac{3v}{x}=-6x^3\\tag{II}\"></div><p>(b) By solving differential equation (II), find a general solution of differential equation (I) in the form <span class=\"inline-math\" data-math=\"y^{3}=\\mathrm{f}(x).\"></span> <span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>The factor <span class=\"inline-math\" data-math=\"x^{-3}\"></span> is chosen because its derivative is <span class=\"inline-math\" data-math=\"-3x^{-4}\"></span>, exactly the additional term needed in the product rule. Multiplication turns the forcing into the constant <span class=\"inline-math\" data-math=\"-6\"></span>. Reversing the substitution involves a reciprocal, so check the solution lost by division separately.</p>",
+      "<p>(b) In (II) the integrating factor is <span class=\"inline-math\" data-math=\"\\exp\\int -3/x\\,\\mathrm dx=x^{-3}\"></span> up to a constant factor on an interval excluding zero. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiplying by it gives <span class=\"inline-math\" data-math=\"x^{-3}v&#x27;-3x^{-4}v=-6\"></span>, <small class=\"step-credit\">[1]</small> or <span class=\"inline-math\" data-math=\"(x^{-3}v)&#x27;=-6\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrating, <span class=\"inline-math\" data-math=\"x^{-3}v=-6x+C\"></span>, <small class=\"step-credit\">[1]</small> so <span class=\"inline-math\" data-math=\"v=x^3(C-6x)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Therefore <span class=\"inline-math\" data-math=\"y^3=1/[x^3(C-6x)]\"></span> where the denominator is nonzero. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The substitution assumes <span class=\"inline-math\" data-math=\"y\\ne0\"></span>. Direct substitution in (I) also gives the exceptional solution <span class=\"inline-math\" data-math=\"y=0\"></span>.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<p>Count only the retained parts. Any original whole-question total on the extract belongs to the complete exam question.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-11-ms-01.svg\" alt=\"Source marking table for 2014 FP2 edited · Q7, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-12",
+    "question": "<p>(a) Find the general solution of the differential equation</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} x}+2 y \\tan x=\\mathrm{e}^{4 x} \\cos^{2} x, \\quad-\\frac{\\pi}{2}&lt;x&lt;\\frac{\\pi}{2}\"></div><p>giving your answer in the form <span class=\"inline-math\" data-math=\"y=\\mathrm{f}(x).\"></span></p><p><span class=\"marks\">(6)</span></p><p>(b) Find the particular solution for which <span class=\"inline-math\" data-math=\"y=1\"></span> at <span class=\"inline-math\" data-math=\"x=0\"></span></p><p><span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The integrating factor <span class=\"inline-math\" data-math=\"\\sec^2x\"></span> cancels the <span class=\"inline-math\" data-math=\"\\cos^2x\"></span> multiplying the exponential on the right. The integral is then just <span class=\"inline-math\" data-math=\"e^{4x}/4\"></span>. Restoring <span class=\"inline-math\" data-math=\"y\"></span> multiplies the entire result, including the constant, by <span class=\"inline-math\" data-math=\"\\cos^2x\"></span>.</p>",
+      "<p>(a) Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(2 \\tan{\\left(x \\right)}\\right)y=e^{4 x} \\cos^{2}{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int 2 \\tan{\\left(x \\right)}\\,\\mathrm dx\\right)=\\sec^{2}{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=e^{4 x}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=\\frac{e^{4 x}}{4}+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{C + \\frac{e^{4 x}}{4}}{\\sec^{2}{\\left(x \\right)}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At <span class=\"inline-math\" data-math=\"x=0\"></span>, <span class=\"inline-math\" data-math=\"1=1/4+C\"></span>. Hence <span class=\"inline-math\" data-math=\"y=\\cos^2x(e^{4x}+3)/4\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-12-ms-01.webp\" alt=\"Source marking table for 2014 (R) FP2 · Q3, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-13",
+    "question": "<p>You may use the result that the substitution <span class=\"inline-math\" data-math=\"x=\\mathrm e^z\"></span> transforms</p><div class=\"equation\" data-display=\"true\" data-math=\"x^2\\frac{\\mathrm d^2y}{\\mathrm dx^2}+2x\\frac{\\mathrm dy}{\\mathrm dx}-2y=3\\ln x,\\quad x&gt;0\\tag{I}\"></div><p>into</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm d^2y}{\\mathrm dz^2}+\\frac{\\mathrm dy}{\\mathrm dz}-2y=3z\\tag{II}\"></div><p>(b) Find the general solution of the differential equation (II).\n<span class=\"marks\">(6)</span>\n(c) Hence obtain the general solution of the differential equation (I) giving your answer in the form <span class=\"inline-math\" data-math=\"y=\\mathrm{f}(x).\"></span> <span class=\"marks\">(1)</span></p>",
+    "steps": [
+      "<p>A linear forcing needs a linear trial because the equation contains a nonzero multiple of <span class=\"inline-math\" data-math=\"y\"></span>. Its second derivative vanishes. Equating the coefficient of <span class=\"inline-math\" data-math=\"z\"></span> gives <span class=\"inline-math\" data-math=\"-2a=3\"></span>; equating the constant gives <span class=\"inline-math\" data-math=\"a-2b=0\"></span>. Substitute <span class=\"inline-math\" data-math=\"z=\\ln x\"></span> only after finding both terms.</p>",
+      "<p>(b) The auxiliary equation is <span class=\"inline-math\" data-math=\"m^2+m-2=0\"></span>, so <span class=\"inline-math\" data-math=\"(m-1)(m+2)=0\"></span> and <span class=\"inline-math\" data-math=\"y_c=Ae^z+Be^{-2z}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Try <span class=\"inline-math\" data-math=\"y_p=az+b\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Then <span class=\"inline-math\" data-math=\"a-2az-2b=3z\"></span>, <small class=\"step-credit\">[1]</small> giving <span class=\"inline-math\" data-math=\"a=-3/2,\\ b=-3/4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"y=Ae^z+Be^{-2z}-3z/2-3/4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) Since <span class=\"inline-math\" data-math=\"z=\\ln x\"></span>, <span class=\"inline-math\" data-math=\"y=Ax+B/x^2-(3/2)\\ln x-3/4\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<p>Count only the retained parts. Any original whole-question total on the extract belongs to the complete exam question.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-13-ms-01.webp\" alt=\"Source marking table for 2014 (R) FP2 edited · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-13-ms-02.webp\" alt=\"Source marking table for 2014 (R) FP2 edited · Q8, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-14",
+    "question": "<p>Find, in the form y=f(x), the general solution of the differential equation</p><p><span class=\"inline-math\" data-math=\"\\tan x \\frac{\\mathrm{d} y}{\\mathrm{d} x}+y=3 \\cos 2 x \\tan x,\"></span> <span class=\"inline-math\" data-math=\"0&lt;x&lt;\\frac{\\pi}{2}\"></span></p><p><span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>Here <span class=\"inline-math\" data-math=\"\\cot x\"></span> integrates to <span class=\"inline-math\" data-math=\"\\ln|\\sin x|\"></span>, so take <span class=\"inline-math\" data-math=\"\\sin x\"></span> as integrating factor on a regular interval. In the resulting <span class=\"inline-math\" data-math=\"3\\sin x\\cos2x\"></span> integral use <span class=\"inline-math\" data-math=\"\\cos2x=2\\cos^2x-1\"></span>. The remaining <span class=\"inline-math\" data-math=\"\\sin x\\,dx\"></span> supplies the differential for <span class=\"inline-math\" data-math=\"u=\\cos x\"></span>.</p>",
+      "<p>Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(\\frac{1}{\\tan{\\left(x \\right)}}\\right)y=3 \\cos{\\left(2 x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int \\frac{1}{\\tan{\\left(x \\right)}}\\,\\mathrm dx\\right)=\\sin{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=3 \\sin{\\left(x \\right)} \\cos{\\left(2 x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=- 2 \\cos^{3}{\\left(x \\right)} + 3 \\cos{\\left(x \\right)}+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{C - 2 \\cos^{3}{\\left(x \\right)} + 3 \\cos{\\left(x \\right)}}{\\sin{\\left(x \\right)}}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-14-ms-01.webp\" alt=\"Source marking table for 2015 FP2 · Q3, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-15",
+    "question": "<p>You may use the result that the substitution <span class=\"inline-math\" data-math=\"x=\\mathrm e^u\"></span> transforms</p><div class=\"equation\" data-display=\"true\" data-math=\"x^2\\frac{\\mathrm d^2y}{\\mathrm dx^2}-7x\\frac{\\mathrm dy}{\\mathrm dx}+16y=2\\ln x,\\quad x&gt;0\\tag{I}\"></div><p>into</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm d^2y}{\\mathrm du^2}-8\\frac{\\mathrm dy}{\\mathrm du}+16y=2u\\tag{II}\"></div><p>(b) Find the general solution of the differential equation (II), expressing <span class=\"inline-math\" data-math=\"y\"></span> as a function of <span class=\"inline-math\" data-math=\"u\"></span>.\n<span class=\"marks\">(7)</span>\n(c) Hence obtain the general solution of the differential equation (I).\n<span class=\"marks\">(1)</span></p>",
+    "steps": [
+      "<p>The repeated root <span class=\"inline-math\" data-math=\"4\"></span> supplies the independent solution <span class=\"inline-math\" data-math=\"ue^{4u}\"></span> as well as <span class=\"inline-math\" data-math=\"e^{4u}\"></span>. In the polynomial trial, matching constants gives <span class=\"inline-math\" data-math=\"-8a+16b=0\"></span>. On returning to <span class=\"inline-math\" data-math=\"x\"></span>, the extra <span class=\"inline-math\" data-math=\"u\"></span> in the complementary function becomes the factor <span class=\"inline-math\" data-math=\"\\ln x\"></span>.</p>",
+      "<p>(b) The auxiliary equation <span class=\"inline-math\" data-math=\"m^2-8m+16=0\"></span> has the repeated root 4. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"y_c=(A+Bu)e^{4u}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Try <span class=\"inline-math\" data-math=\"y_p=au+b\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution gives <span class=\"inline-math\" data-math=\"-8a+16(au+b)=2u\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Equating the coefficients gives <span class=\"inline-math\" data-math=\"a=1/8\"></span>, <small class=\"step-credit\">[1]</small> and the constants give <span class=\"inline-math\" data-math=\"b=1/16\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"y=(A+Bu)e^{4u}+u/8+1/16\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) With <span class=\"inline-math\" data-math=\"u=\\ln x\"></span>, <span class=\"inline-math\" data-math=\"y=x^4(A+B\\ln x)+(\\ln x)/8+1/16\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<p>Count only the retained parts. Any original whole-question total on the extract belongs to the complete exam question.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-15-ms-01.webp\" alt=\"Source marking table for 2015 FP2 edited · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-16",
+    "question": "<p>(i)</p><p><span class=\"inline-math\" data-math=\"p \\frac{\\mathrm{d} x}{\\mathrm{d} t}+q x=r\"></span> where p, q and r are constants</p><p>Given that x = 0 when t = 0</p><p>(a) find x in terms of t <span class=\"marks\">(4)</span></p><p>(b) find the limiting value of x as <span class=\"inline-math\" data-math=\"t \\to \\infty\"></span> <span class=\"marks\">(1)</span></p><p>(ii)</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} \\theta}+2 y=\\sin \\theta\"></div><p>Given that y = 0 when <span class=\"inline-math\" data-math=\"\\theta=0\"></span> , find y in terms of <span class=\"inline-math\" data-math=\"\\theta\"></span> <span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>For a constant applied force in the first equation, <span class=\"inline-math\" data-math=\"r/q\"></span> is the equilibrium found by setting the time derivative to zero. The exponential term tells you whether the initial value approaches it. In the second problem the integral of <span class=\"inline-math\" data-math=\"e^{2\\theta}\\sin\\theta\"></span> returns after two integrations by parts; collect its occurrences and solve for it.</p>",
+      "<p>(i)(a) For <span class=\"inline-math\" data-math=\"pq\\ne0\"></span>, divide by <span class=\"inline-math\" data-math=\"p\"></span> and use integrating factor <span class=\"inline-math\" data-math=\"e^{qt/p}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Then <span class=\"inline-math\" data-math=\"(xe^{qt/p})&#x27;=(r/p)e^{qt/p}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrating gives <span class=\"inline-math\" data-math=\"x=r/q+Ce^{-qt/p}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The initial value yields <span class=\"inline-math\" data-math=\"x=(r/q)(1-e^{-qt/p})\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) The limiting value is <span class=\"inline-math\" data-math=\"r/q\"></span> when <span class=\"inline-math\" data-math=\"q/p&gt;0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>If <span class=\"inline-math\" data-math=\"q/p&lt;0\"></span> and <span class=\"inline-math\" data-math=\"r\\ne0\"></span> there is no finite limit. If <span class=\"inline-math\" data-math=\"p\\ne0\"></span> and <span class=\"inline-math\" data-math=\"q=0\"></span>, <span class=\"inline-math\" data-math=\"x=rt/p\"></span>. If <span class=\"inline-math\" data-math=\"r=0\"></span> and <span class=\"inline-math\" data-math=\"p\\ne0\"></span>, the initial condition gives <span class=\"inline-math\" data-math=\"x=0\"></span>. For <span class=\"inline-math\" data-math=\"p=0\"></span> the equation is algebraic: consistency with <span class=\"inline-math\" data-math=\"x(0)=0\"></span> requires <span class=\"inline-math\" data-math=\"r=0\"></span>, and <span class=\"inline-math\" data-math=\"q\\ne0\"></span> then forces <span class=\"inline-math\" data-math=\"x=0\"></span>; when <span class=\"inline-math\" data-math=\"p=q=r=0\"></span> the equation imposes no further condition.</p>",
+      "<p>(ii) Use integrating factor <span class=\"inline-math\" data-math=\"e^{2\\theta}\"></span> to obtain <span class=\"inline-math\" data-math=\"(ye^{2\\theta})&#x27;=e^{2\\theta}\\sin\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Put <span class=\"inline-math\" data-math=\"I=\\int e^{2\\theta}\\sin\\theta\\,d\\theta\"></span>. Integrating by parts gives <span class=\"inline-math\" data-math=\"I=e^{2\\theta}\\sin\\theta/2-\\tfrac12\\int e^{2\\theta}\\cos\\theta\\,d\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>A second integration gives <span class=\"inline-math\" data-math=\"\\int e^{2\\theta}\\cos\\theta\\,d\\theta=e^{2\\theta}\\cos\\theta/2+I/2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Rearranging yields <span class=\"inline-math\" data-math=\"I=e^{2\\theta}(2\\sin\\theta-\\cos\\theta)/5+C\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The initial condition gives <span class=\"inline-math\" data-math=\"C=1/5\"></span> and <span class=\"inline-math\" data-math=\"y=(2\\sin\\theta-\\cos\\theta+e^{-2\\theta})/5\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 12 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-16-ms-01.webp\" alt=\"Source marking table for 2016 FP2 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-17",
+    "question": "<p>You may use the result that the substitution <span class=\"inline-math\" data-math=\"x=\\mathrm e^u\"></span> transforms</p><div class=\"equation\" data-display=\"true\" data-math=\"x^2\\frac{\\mathrm d^2y}{\\mathrm dx^2}-2x\\frac{\\mathrm dy}{\\mathrm dx}+2y=-x^{-2},\\quad x&gt;0\\tag{I}\"></div><p>into</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm d^2y}{\\mathrm du^2}-3\\frac{\\mathrm dy}{\\mathrm du}+2y=-\\mathrm e^{-2u}\\tag{II}\"></div><p>(b) Find the general solution of the differential equation (II).\n<span class=\"marks\">(7)</span>\n(c) Hence obtain the general solution of the differential equation (I) giving your answer in the form <span class=\"inline-math\" data-math=\"y=f(x)\"></span> <span class=\"marks\">(1)</span></p>",
+    "steps": [
+      "<p>For <span class=\"inline-math\" data-math=\"y_p=Ke^{-2u}\"></span>, differentiating once multiplies by <span class=\"inline-math\" data-math=\"-2\"></span> and twice by <span class=\"inline-math\" data-math=\"4\"></span>. Applying the full differential operator therefore multiplies this exponential by <span class=\"inline-math\" data-math=\"4-3(-2)+2=12\"></span>. This is why the particular coefficient is <span class=\"inline-math\" data-math=\"-1/12\"></span>.</p>",
+      "<p>(b) The auxiliary equation is <span class=\"inline-math\" data-math=\"m^2-3m+2=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Its roots 1 and 2 give <span class=\"inline-math\" data-math=\"y_c=Ae^u+Be^{2u}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Take <span class=\"inline-math\" data-math=\"y_p=Ke^{-2u}\"></span>, <small class=\"step-credit\">[1]</small> so <span class=\"inline-math\" data-math=\"y_p&#x27;=-2Ke^{-2u}\"></span> and <span class=\"inline-math\" data-math=\"y_p&#x27;&#x27;=4Ke^{-2u}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution gives <span class=\"inline-math\" data-math=\"(4+6+2)Ke^{-2u}=-e^{-2u}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"K=-1/12\"></span> <small class=\"step-credit\">[1]</small> and <span class=\"inline-math\" data-math=\"y=Ae^u+Be^{2u}-e^{-2u}/12\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) Replacing <span class=\"inline-math\" data-math=\"e^u\"></span> by <span class=\"inline-math\" data-math=\"x\"></span> gives <span class=\"inline-math\" data-math=\"y=Ax+Bx^2-1/(12x^2)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<p>Count only the retained parts. Any original whole-question total on the extract belongs to the complete exam question.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-17-ms-01.webp\" alt=\"Source marking table for 2016 FP2 edited · Q7, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-18",
+    "question": "<p>(a) Find the general solution of the differential equation</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{d^{2}y}{dx^{2}}-2\\frac{dy}{dx}=26\\sin 3x\"></div><p><span class=\"marks\">(8)</span></p><p>(b) Find the particular solution of this differential equation for which <span class=\"inline-math\" data-math=\"y=0\"></span> and <span class=\"inline-math\" data-math=\"\\frac{dy}{dx}=0\"></span> when <span class=\"inline-math\" data-math=\"x=0\"></span> <span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>A zero auxiliary root gives a free constant because <span class=\"inline-math\" data-math=\"e^{0x}=1\"></span>. That constant disappears from the derivative, so the derivative initial condition fixes the exponential coefficient first. The displacement condition then fixes the constant.</p>",
+      "<p>(a) Solve the auxiliary equation <span class=\"inline-math\" data-math=\"m^{2} - 2 m=0\"></span>. Its roots are <span class=\"inline-math\" data-math=\"2,\\ 0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The complementary function is <span class=\"inline-math\" data-math=\"A e^{2 x} + B\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For a particular integral try <span class=\"inline-math\" data-math=\"y_p=D \\cos{\\left(3 x \\right)} + E \\sin{\\left(3 x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate: <span class=\"inline-math\" data-math=\"y_p&#x27;=- 3 D \\sin{\\left(3 x \\right)} + 3 E \\cos{\\left(3 x \\right)}\"></span> and <span class=\"inline-math\" data-math=\"y_p&#x27;&#x27;=- 9 \\left(D \\cos{\\left(3 x \\right)} + E \\sin{\\left(3 x \\right)}\\right)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution and collection of terms give <span class=\"inline-math\" data-math=\"6 D \\sin{\\left(3 x \\right)} - 9 D \\cos{\\left(3 x \\right)} - 9 E \\sin{\\left(3 x \\right)} - 6 E \\cos{\\left(3 x \\right)} - 26 \\sin{\\left(3 x \\right)}=0\"></span>. Thus <span class=\"inline-math\" data-math=\"D=\\frac{4}{3},\\ E=-2\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Add the complementary function to get <span class=\"inline-math\" data-math=\"y=A e^{2 x} + B - 2 \\sin{\\left(3 x \\right)} + \\frac{4 \\cos{\\left(3 x \\right)}}{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At zero, <span class=\"inline-math\" data-math=\"A + B + \\frac{4}{3}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The derivative is <span class=\"inline-math\" data-math=\"y&#x27;=2 A e^{2 x} - 4 \\sin{\\left(3 x \\right)} - 6 \\cos{\\left(3 x \\right)}\"></span>. At zero this gives <span class=\"inline-math\" data-math=\"2 A - 6=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Solving gives <span class=\"inline-math\" data-math=\"A=3,\\ B=- \\frac{13}{3}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The particular solution is <span class=\"inline-math\" data-math=\"y=3 e^{2 x} - 2 \\sin{\\left(3 x \\right)} + \\frac{4 \\cos{\\left(3 x \\right)}}{3} - \\frac{13}{3}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 13 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-18-ms-01.webp\" alt=\"Source marking table for 2017 FP2 · Q5, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-19",
+    "question": "<p>(a) Find, in the form <span class=\"inline-math\" data-math=\"y=f(x)\"></span> , the general solution of the equation <span class=\"inline-math\" data-math=\"\\cos x\\frac{\\mathrm{d} y}{\\mathrm{d} x}+y\\sin x=2\\cos^{3} x\\sin x+1,\"></span> <span class=\"inline-math\" data-math=\"0&lt;x&lt;\\frac{\\pi}{2}\"></span> <span class=\"marks\">(8)</span></p><p>Given that <span class=\"inline-math\" data-math=\"y=5\\sqrt{2}\"></span> when <span class=\"inline-math\" data-math=\"x=\\frac{\\pi}{4}\"></span></p><p>(b) find the value of y when <span class=\"inline-math\" data-math=\"x=\\frac{\\pi}{6}\"></span> , giving your answer in the form <span class=\"inline-math\" data-math=\"a+b\\sqrt{3}\"></span> , where a and b are rational numbers to be found. <span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>Multiplication by <span class=\"inline-math\" data-math=\"\\sec x\"></span> simplifies the right side to <span class=\"inline-math\" data-math=\"2\\sin x\\cos x+\\sec^2x\"></span>. Integrate these terms separately, using <span class=\"inline-math\" data-math=\"\\sin2x\"></span> for the first. Keeping exact trigonometric values when imposing the first condition avoids rounding the second value.</p>",
+      "<p>(a) Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(\\tan{\\left(x \\right)}\\right)y=2 \\sin{\\left(x \\right)} \\cos^{2}{\\left(x \\right)} + \\sec{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int \\tan{\\left(x \\right)}\\,\\mathrm dx\\right)=\\sec{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=2 \\sin{\\left(x \\right)} \\cos{\\left(x \\right)} + \\sec^{2}{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=\\sin^{2}{\\left(x \\right)} + \\tan{\\left(x \\right)}+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{C + \\sin^{2}{\\left(x \\right)} + \\tan{\\left(x \\right)}}{\\sec{\\left(x \\right)}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At <span class=\"inline-math\" data-math=\"\\pi/4\"></span>, <span class=\"inline-math\" data-math=\"10=1/2+1+C\"></span>, so <span class=\"inline-math\" data-math=\"C=17/2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>At <span class=\"inline-math\" data-math=\"\\pi/6\"></span>, <span class=\"inline-math\" data-math=\"y=(\\sqrt3/2)(1/4+1/\\sqrt3+17/2)=1/2+35\\sqrt3/8\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 11 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-19-ms-01.webp\" alt=\"Source marking table for 2017 FP2 · Q7, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-20",
+    "question": "<p>(a) Find the general solution of the differential equation</p><div class=\"equation\" data-display=\"true\" data-math=\"6 \\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}+5 \\frac{\\mathrm{d} y}{\\mathrm{d} x}-6 y=x-6 x^{2}\"></div><p><span class=\"marks\">(8)</span></p><p>(b) Find the particular solution for which y=0 and <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} x}=\\frac{3}{2}\"></span> when x=0 <span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>The coefficient of <span class=\"inline-math\" data-math=\"x^2\"></span> requires <span class=\"inline-math\" data-math=\"-6D=-6\"></span>, so <span class=\"inline-math\" data-math=\"D=1\"></span>. The linear term then gives <span class=\"inline-math\" data-math=\"10-6E=1\"></span>, and the constant term gives <span class=\"inline-math\" data-math=\"12+5E-6F=0\"></span>. These equations recover all three polynomial coefficients before the initial conditions determine the exponentials.</p>",
+      "<p>(a) Solve the auxiliary equation <span class=\"inline-math\" data-math=\"6 m^{2} + 5 m - 6=0\"></span>. Its roots are <span class=\"inline-math\" data-math=\"- \\frac{3}{2},\\ \\frac{2}{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The complementary function is <span class=\"inline-math\" data-math=\"A e^{- \\frac{3 x}{2}} + B e^{\\frac{2 x}{3}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For a particular integral try <span class=\"inline-math\" data-math=\"y_p=D x^{2} + E x + F\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate: <span class=\"inline-math\" data-math=\"y_p&#x27;=2 D x + E\"></span> and <span class=\"inline-math\" data-math=\"y_p&#x27;&#x27;=2 D\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution and collection of terms give <span class=\"inline-math\" data-math=\"- 6 D x^{2} + 10 D x + 12 D - 6 E x + 5 E - 6 F + 6 x^{2} - x=0\"></span>. Thus <span class=\"inline-math\" data-math=\"D=1,\\ E=\\frac{3}{2},\\ F=\\frac{13}{4}\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Add the complementary function to get <span class=\"inline-math\" data-math=\"y=A e^{- \\frac{3 x}{2}} + B e^{\\frac{2 x}{3}} + x^{2} + \\frac{3 x}{2} + \\frac{13}{4}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At zero, <span class=\"inline-math\" data-math=\"A + B + \\frac{13}{4}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The derivative is <span class=\"inline-math\" data-math=\"y&#x27;=- \\frac{3 A e^{- \\frac{3 x}{2}}}{2} + \\frac{2 B e^{\\frac{2 x}{3}}}{3} + 2 x + \\frac{3}{2}\"></span>. At zero this gives <span class=\"inline-math\" data-math=\"- \\frac{3 A}{2} + \\frac{2 B}{3}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Solving gives <span class=\"inline-math\" data-math=\"A=-1,\\ B=- \\frac{9}{4}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The particular solution is <span class=\"inline-math\" data-math=\"y=x^{2} + \\frac{3 x}{2} - \\frac{9 e^{\\frac{2 x}{3}}}{4} + \\frac{13}{4} - e^{- \\frac{3 x}{2}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>With <span class=\"inline-math\" data-math=\"A\"></span> multiplying <span class=\"inline-math\" data-math=\"e^{-3x/2}\"></span> and <span class=\"inline-math\" data-math=\"B\"></span> multiplying <span class=\"inline-math\" data-math=\"e^{2x/3}\"></span>, the two equations reduce to <span class=\"inline-math\" data-math=\"4A+4B=-13\"></span> and <span class=\"inline-math\" data-math=\"-9A+4B=0\"></span>. Subtracting the second from the first gives <span class=\"inline-math\" data-math=\"13A=-13\"></span>, then <span class=\"inline-math\" data-math=\"4B=9A=-9\"></span>. This fixes which coefficient belongs to which exponential.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 8 marks</strong></p>",
+      "<p>[1] Form and solve <span class=\"inline-math\" data-math=\"6m^2+5m-6=0\"></span>.</p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"m=2/3,-3/2\"></span>.</p>",
+      "<p>[1] Write both complementary exponentials using the candidate roots.</p>",
+      "<p>[1] Try a quadratic particular integral.</p>",
+      "<p>[1] Differentiate the trial twice.</p>",
+      "<p>[1] Substitute and compare at least one pair of coefficients.</p>",
+      "<p>[1] Solve for all three polynomial coefficients.</p>",
+      "<p>[1] Give the full general solution with polynomial <span class=\"inline-math\" data-math=\"x^2+3x/2+13/4\"></span>.</p>",
+      "<p><strong>(b) · 5 marks</strong></p>",
+      "<p>[1] Differentiate the general solution.</p>",
+      "<p>[1] Use both initial data to form two simultaneous equations.</p>",
+      "<p>[1] Solve for at least one constant.</p>",
+      "<p>[1] Obtain coefficients <span class=\"inline-math\" data-math=\"-9/4,-1\"></span> for <span class=\"inline-math\" data-math=\"e^{2x/3},e^{-3x/2}\"></span>, respectively.</p>",
+      "<p>[1] Give the complete particular solution with both exponentials and the polynomial.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-21",
+    "question": "<p>(a) Using the substitution <span class=\"inline-math\" data-math=\"t=x^{2}\"></span> , or otherwise, find <span class=\"inline-math\" data-math=\"\\int 2 x^{5} \\mathrm{e}^{-x^{2}} \\mathrm{d} x\"></span> <span class=\"marks\">(6)</span></p><p>(b) Hence find the general solution of the differential equation <span class=\"inline-math\" data-math=\"x \\frac{\\mathrm{d} y}{\\mathrm{d} x}+4 y=2 x^{2} \\mathrm{e}^{-x^{2}}\"></span> giving your answer in the form <span class=\"inline-math\" data-math=\"y=f(x).\"></span> <span class=\"marks\">(4)</span></p><p>Given that <span class=\"inline-math\" data-math=\"y=0\"></span> when <span class=\"inline-math\" data-math=\"x=1\"></span></p><p>(c) find the particular solution of this differential equation, giving your solution in the form <span class=\"inline-math\" data-math=\"y=f(x).\"></span> <span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>The substitution <span class=\"inline-math\" data-math=\"t=x^2\"></span> brings the factor <span class=\"inline-math\" data-math=\"2x\\,dx\"></span> into the differential and changes <span class=\"inline-math\" data-math=\"x^4\"></span> into <span class=\"inline-math\" data-math=\"t^2\"></span>. Each integration by parts lowers this power by one. Differentiating the resulting polynomial times <span class=\"inline-math\" data-math=\"e^{-t}\"></span> is a quick check on all three signs.</p>",
+      "<p>(a) With <span class=\"inline-math\" data-math=\"t=x^2\"></span>, <span class=\"inline-math\" data-math=\"dt=2x\\,dx\"></span> and <span class=\"inline-math\" data-math=\"x^4=t^2\"></span>, so the integral becomes <span class=\"inline-math\" data-math=\"\\int t^2e^{-t}\\,dt\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Integrate by parts twice: <span class=\"inline-math\" data-math=\"-t^2e^{-t}+2\\int te^{-t}\\,dt=-(t^2+2t+2)e^{-t}+C\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Substitution gives <span class=\"inline-math\" data-math=\"-(x^4+2x^2+2)e^{-x^2}+C\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) For <span class=\"inline-math\" data-math=\"x\\ne0\"></span> divide by <span class=\"inline-math\" data-math=\"x\"></span> and use integrating factor <span class=\"inline-math\" data-math=\"x^4\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Then <span class=\"inline-math\" data-math=\"(x^4y)&#x27;=2x^5e^{-x^2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Part (a) gives <span class=\"inline-math\" data-math=\"y=[C-(x^4+2x^2+2)e^{-x^2}]/x^4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) Set <span class=\"inline-math\" data-math=\"x=1,y=0\"></span>: <span class=\"inline-math\" data-math=\"C=5/e\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"y=[5/e-(x^4+2x^2+2)e^{-x^2}]/x^4\"></span> on <span class=\"inline-math\" data-math=\"x&gt;0\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 13 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-21-ms-01.webp\" alt=\"Source marking table for 2018 FP2 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-21-ms-02.webp\" alt=\"Source marking table for 2018 FP2 · Q8, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-21-ms-03.webp\" alt=\"Source marking table for 2018 FP2 · Q8, extract 3\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-22",
+    "question": "<p><span class=\"inline-math\" data-math=\"x \\frac{\\mathrm{d} y}{\\mathrm{d} x}+(1-2 x) y=x,\"></span> <span class=\"inline-math\" data-math=\"x&gt;0\"></span></p><p>Find the general solution of the differential equation, giving your answer in the form <span class=\"inline-math\" data-math=\"y=f(x).\"></span> <span class=\"marks\">(9)</span></p>",
+    "steps": [
+      "<p>The coefficient <span class=\"inline-math\" data-math=\"1/x-2\"></span> integrates to <span class=\"inline-math\" data-math=\"\\ln|x|-2x\"></span>, yielding <span class=\"inline-math\" data-math=\"xe^{-2x}\"></span> on a regular interval. In the resulting right-hand integral choose <span class=\"inline-math\" data-math=\"u=x\"></span> in integration by parts. Its derivative is <span class=\"inline-math\" data-math=\"1\"></span>, so only one more exponential integral is needed.</p>",
+      "<p>Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(-2 + \\frac{1}{x}\\right)y=1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int -2 + \\frac{1}{x}\\,\\mathrm dx\\right)=x e^{- 2 x}\"></span>. <small class=\"step-credit\">[4]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=x e^{- 2 x}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=\\frac{\\left(- 2 x - 1\\right) e^{- 2 x}}{4}+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{\\left(C + \\frac{\\left(- 2 x - 1\\right) e^{- 2 x}}{4}\\right) e^{2 x}}{x}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 9 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-22-ms-01.webp\" alt=\"Source marking table for IAL 2014 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-23",
+    "question": "<p>You may use the result that the substitution <span class=\"inline-math\" data-math=\"z=y^{-2}\"></span> transforms</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm dy}{\\mathrm dx}+2xy=x\\mathrm e^{-x^2}y^3\\tag{I}\"></div><p>into</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm dz}{\\mathrm dx}-4xz=-2x\\mathrm e^{-x^2}\\tag{II}\"></div><p>(b) Solve differential equation (II) to find z as a function of x.\n<span class=\"marks\">(5)</span>\n(c) Hence find the general solution of differential equation (I), giving your answer in the form <span class=\"inline-math\" data-math=\"y^{2}=\\mathrm{f}(x).\"></span> <span class=\"marks\">(1)</span></p>",
+    "steps": [
+      "<p>The product derivative on the left works because <span class=\"inline-math\" data-math=\"(e^{-2x^2})&#x27;=-4xe^{-2x^2}\"></span>. On the right, <span class=\"inline-math\" data-math=\"-2x\"></span> is one third of the <span class=\"inline-math\" data-math=\"-6x\"></span> needed to differentiate <span class=\"inline-math\" data-math=\"e^{-3x^2}\"></span>. The reciprocal-square substitution must be undone after the constant has been included.</p>",
+      "<p>(b) The integrating factor for (II) is <span class=\"inline-math\" data-math=\"e^{\\int-4x\\,\\mathrm dx}=e^{-2x^2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiplying gives <span class=\"inline-math\" data-math=\"(ze^{-2x^2})&#x27;=-2xe^{-3x^2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Since <span class=\"inline-math\" data-math=\"(e^{-3x^2})&#x27;=-6xe^{-3x^2}\"></span>, <small class=\"step-credit\">[1]</small>\n<span class=\"inline-math\" data-math=\"ze^{-2x^2}=\\tfrac13e^{-3x^2}+C\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"z=\\tfrac13e^{-x^2}+Ce^{2x^2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) Using <span class=\"inline-math\" data-math=\"z=y^{-2}\"></span>, <span class=\"inline-math\" data-math=\"y^2=3e^{x^2}/(1+3Ce^{3x^2})\"></span>, on intervals where the right side is positive. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The original equation also admits <span class=\"inline-math\" data-math=\"y=0\"></span>, lost when making the substitution.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<p>Count only the retained parts. Any original whole-question total on the extract belongs to the complete exam question.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-23-ms-01.webp\" alt=\"Source marking table for IAL 2015 edited · Q3, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-24",
+    "question": "<p>(a) Find the general solution of the differential equation <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}-2 \\frac{\\mathrm{d} y}{\\mathrm{d} x}-3 y=2 \\sin x\"></span> (I)</p><p><span class=\"marks\">(8)</span></p><p>Given that y=0 and <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} x}=1\"></span> when x=0</p><p>(b) find the particular solution of differential equation (I).</p><p><span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>The auxiliary roots <span class=\"inline-math\" data-math=\"3,-1\"></span> supply two real exponentials. The right side oscillates, so choose a sine-cosine pair for the particular integral and match their coefficients separately. Apply the initial conditions to the sum of all three terms.</p>",
+      "<p>(a) Solve the auxiliary equation <span class=\"inline-math\" data-math=\"m^{2} - 2 m - 3=0\"></span>. Its roots are <span class=\"inline-math\" data-math=\"3,\\ -1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The complementary function is <span class=\"inline-math\" data-math=\"A e^{3 x} + B e^{- x}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For a particular integral try <span class=\"inline-math\" data-math=\"y_p=D \\cos{\\left(x \\right)} + E \\sin{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate: <span class=\"inline-math\" data-math=\"y_p&#x27;=- D \\sin{\\left(x \\right)} + E \\cos{\\left(x \\right)}\"></span> and <span class=\"inline-math\" data-math=\"y_p&#x27;&#x27;=- (D \\cos{\\left(x \\right)} + E \\sin{\\left(x \\right)})\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution and collection of terms give <span class=\"inline-math\" data-math=\"2 D \\sin{\\left(x \\right)} - 4 D \\cos{\\left(x \\right)} - 4 E \\sin{\\left(x \\right)} - 2 E \\cos{\\left(x \\right)} - 2 \\sin{\\left(x \\right)}=0\"></span>. Thus <span class=\"inline-math\" data-math=\"D=\\frac{1}{5},\\ E=- \\frac{2}{5}\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Add the complementary function to get <span class=\"inline-math\" data-math=\"y=A e^{3 x} + B e^{- x} - \\frac{2 \\sin{\\left(x \\right)}}{5} + \\frac{\\cos{\\left(x \\right)}}{5}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At zero, <span class=\"inline-math\" data-math=\"A + B + \\frac{1}{5}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The derivative is <span class=\"inline-math\" data-math=\"y&#x27;=3 A e^{3 x} - B e^{- x} - \\frac{\\sin{\\left(x \\right)}}{5} - \\frac{2 \\cos{\\left(x \\right)}}{5}\"></span>. At zero this gives <span class=\"inline-math\" data-math=\"3 A - B - \\frac{7}{5}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Solving gives <span class=\"inline-math\" data-math=\"A=\\frac{3}{10},\\ B=- \\frac{1}{2}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The particular solution is <span class=\"inline-math\" data-math=\"y=\\frac{\\left(\\left(3 e^{3 x} - 4 \\sin{\\left(x \\right)} + 2 \\cos{\\left(x \\right)}\\right) e^{x} - 5\\right) e^{- x}}{10}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 13 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-24-ms-01.webp\" alt=\"Source marking table for IAL 2015 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-25",
+    "question": "<p>Find, in terms of k, where k is a positive integer, the general solution of the differential equation</p><p><span class=\"inline-math\" data-math=\"\\left( 1+x\\right) \\frac{\\mathrm{d} y}{\\mathrm{d} x}+k y=x^{\\frac{1}{2}}(1+x)^{2-k},\"></span> <span class=\"inline-math\" data-math=\"x&gt;0\"></span></p><p>giving your answer in the form <span class=\"inline-math\" data-math=\"y=f(x).\"></span> <span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>The factor <span class=\"inline-math\" data-math=\"(1+x)^k\"></span> combines with <span class=\"inline-math\" data-math=\"(1+x)^{1-k}\"></span> on the right to leave <span class=\"inline-math\" data-math=\"1+x\"></span>. Multiplying by <span class=\"inline-math\" data-math=\"\\sqrt x\"></span> gives <span class=\"inline-math\" data-math=\"x^{1/2}+x^{3/2}\"></span>, whose terms can now be integrated by the ordinary power rule.</p>",
+      "<p>Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(\\frac{k}{x + 1}\\right)y=\\sqrt{x} \\left(x + 1\\right)^{1 - k}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int \\frac{k}{x + 1}\\,\\mathrm dx\\right)=\\left(x + 1\\right)^{k}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=\\sqrt{x} \\left(x + 1\\right)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=\\frac{2 x^{\\frac{5}{2}}}{5} + \\frac{2 x^{\\frac{3}{2}}}{3}+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\left(x + 1\\right)^{- k} \\left(C + \\frac{2 x^{\\frac{5}{2}}}{5} + \\frac{2 x^{\\frac{3}{2}}}{3}\\right)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 6 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-25-ms-01.webp\" alt=\"Source marking table for IAL 2016 · Q3, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-26",
+    "question": "<p>(a) Find the general solution of the differential equation <span class=\"inline-math\" data-math=\"\\frac{d^{2} y}{d x^{2}}+3 \\frac{d y}{d x}+2 y=3 x^{2}+2 x+1\"></span> <span class=\"marks\">(9)</span></p><p>(b) Find the particular solution of this differential equation for which y=0 and <span class=\"inline-math\" data-math=\"\\frac{d y}{d x}=0\"></span> when x=0 <span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>Match powers starting with the highest degree, since differentiation lowers a polynomial&#x27;s degree. Once its quadratic coefficient is fixed, the linear and then constant equations each contain only one new unknown. Use both initial conditions only after adding the two decaying complementary terms.</p>",
+      "<p>(a) Solve the auxiliary equation <span class=\"inline-math\" data-math=\"m^{2} + 3 m + 2=0\"></span>. Its roots are <span class=\"inline-math\" data-math=\"-1,\\ -2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The complementary function is <span class=\"inline-math\" data-math=\"A e^{- x} + B e^{- 2 x}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For a particular integral try <span class=\"inline-math\" data-math=\"y_p=D x^{2} + E x + F\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate: <span class=\"inline-math\" data-math=\"y_p&#x27;=2 D x + E\"></span> and <span class=\"inline-math\" data-math=\"y_p&#x27;&#x27;=2 D\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution and collection of terms give <span class=\"inline-math\" data-math=\"2 D x^{2} + 6 D x + 2 D + 2 E x + 3 E + 2 F - 3 x^{2} - 2 x - 1=0\"></span>. Thus <span class=\"inline-math\" data-math=\"D=\\frac{3}{2},\\ E=- \\frac{7}{2},\\ F=\\frac{17}{4}\"></span>. <small class=\"step-credit\">[4]</small></p>",
+      "<p>Add the complementary function to get <span class=\"inline-math\" data-math=\"y=A e^{- x} + B e^{- 2 x} + \\frac{3 x^{2}}{2} - \\frac{7 x}{2} + \\frac{17}{4}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At zero, <span class=\"inline-math\" data-math=\"A + B + \\frac{17}{4}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The derivative is <span class=\"inline-math\" data-math=\"y&#x27;=- A e^{- x} - 2 B e^{- 2 x} + 3 x - \\frac{7}{2}\"></span>. At zero this gives <span class=\"inline-math\" data-math=\"- A - 2 B - \\frac{7}{2}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Solving gives <span class=\"inline-math\" data-math=\"A=-5,\\ B=\\frac{3}{4}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The particular solution is <span class=\"inline-math\" data-math=\"y=\\frac{\\left(\\left(6 x^{2} - 14 x + 17\\right) e^{2 x} - 20 e^{x} + 3\\right) e^{- 2 x}}{4}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 14 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-26-ms-01.webp\" alt=\"Source marking table for IAL 2016 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-27",
+    "question": "<div class=\"equation\" data-display=\"true\" data-math=\"y=3 \\mathrm{e}^{-x} \\cos 3 x+A \\mathrm{e}^{-x} \\sin 3 x\"></div><p>is a particular integral of the differential equation</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}-2 \\frac{\\mathrm{d} y}{\\mathrm{d} x}+10 y=40 \\mathrm{e}^{-x} \\sin 3 x\"></div><p>where A is a constant.</p><p>(a) Find the value of A.</p><p><span class=\"marks\">(5)</span></p><p>(b) Hence find the general solution of this differential equation.</p><p><span class=\"marks\">(4)</span></p><p>(c) Find the particular solution of this differential equation for which both <span class=\"inline-math\" data-math=\"y=3\"></span> and <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} x}=3\"></span> at <span class=\"inline-math\" data-math=\"x=0\"></span>\n<span class=\"marks\">(4)</span></p>",
+    "steps": [
+      "<p>Writing <span class=\"inline-math\" data-math=\"y=e^{-x}v\"></span> isolates the decaying envelope from its oscillation. The product rule gives <span class=\"inline-math\" data-math=\"(D+1)(e^{-x}v)=e^{-x}v&#x27;\"></span>; applying the shifted derivative twice explains why several terms cancel on substitution. Initial data still apply to the complete <span class=\"inline-math\" data-math=\"y\"></span> and <span class=\"inline-math\" data-math=\"y&#x27;\"></span>.</p>",
+      "<p>(a) Write the proposed solution as <span class=\"inline-math\" data-math=\"y=e^{-x}v\"></span>, with <span class=\"inline-math\" data-math=\"v=3\\cos3x+A\\sin3x\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Then <span class=\"inline-math\" data-math=\"y&#x27;=e^{-x}(v&#x27;-v)\"></span> and <span class=\"inline-math\" data-math=\"y&#x27;&#x27;=e^{-x}(v&#x27;&#x27;-2v&#x27;+v)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution gives <span class=\"inline-math\" data-math=\"e^{-x}(v&#x27;&#x27;-4v&#x27;+13v)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The cosine coefficient is <span class=\"inline-math\" data-math=\"12-12A\"></span> and the sine coefficient is <span class=\"inline-math\" data-math=\"36+4A\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Both conditions give <span class=\"inline-math\" data-math=\"A=1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) The auxiliary equation <span class=\"inline-math\" data-math=\"m^2-2m+10=0\"></span> has roots <span class=\"inline-math\" data-math=\"1\\pm3i\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"y=e^x(C\\cos3x+D\\sin3x)+e^{-x}(3\\cos3x+\\sin3x)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) The initial displacement gives <span class=\"inline-math\" data-math=\"C+3=3\"></span>, so <span class=\"inline-math\" data-math=\"C=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>At zero the derivative of the particular integral is <span class=\"inline-math\" data-math=\"-3+3=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"3D=3\"></span> and <span class=\"inline-math\" data-math=\"y=e^x\\sin3x+e^{-x}(3\\cos3x+\\sin3x)\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 13 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-27-ms-01.webp\" alt=\"Source marking table for IAL 2017 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-28",
+    "question": "<p>Find the general solution of the differential equation</p><p><span class=\"inline-math\" data-math=\"\\cos x \\frac{\\mathrm{d} y}{\\mathrm{d} x}+y \\sin x=(\\cos^{2} x) \\ln x,\"></span> <span class=\"inline-math\" data-math=\"0 &lt; x &lt; \\frac{\\pi}{2}\"></span></p><p>Give your answer in the form <span class=\"inline-math\" data-math=\"y=f(x).\"></span> <span class=\"marks\">(8)</span></p>",
+    "steps": [
+      "<p>The integrating factor <span class=\"inline-math\" data-math=\"\\sec x\"></span> cancels the cosine on the right and leaves just <span class=\"inline-math\" data-math=\"\\ln x\"></span>. Integrating by parts with <span class=\"inline-math\" data-math=\"u=\\ln x,\\ dv=dx\"></span> gives <span class=\"inline-math\" data-math=\"x\\ln x-x\"></span>. Divide the whole expression by <span class=\"inline-math\" data-math=\"\\sec x\"></span>, including the arbitrary constant.</p>",
+      "<p>Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(\\tan{\\left(x \\right)}\\right)y=\\ln{\\left(x \\right)} \\cos{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int \\tan{\\left(x \\right)}\\,\\mathrm dx\\right)=\\sec{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=\\ln{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=x \\ln{\\left(x \\right)} - x+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{C + x \\ln{\\left(x \\right)} - x}{\\sec{\\left(x \\right)}}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-28-ms-01.webp\" alt=\"Source marking table for IAL 2017 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-29",
+    "question": "<p>(a) Find the general solution of the differential equation <span class=\"inline-math\" data-math=\"\\left(x^{2}+1\\right)\\frac{\\mathrm{d} y}{\\mathrm{d} x}+xy-x=0\"></span></p><p>giving your answer in the form <span class=\"inline-math\" data-math=\"y=f(x).\"></span></p><p><span class=\"marks\">(6)</span></p><p>(b) Find the particular solution for which <span class=\"inline-math\" data-math=\"y=2\"></span> when <span class=\"inline-math\" data-math=\"x=3\"></span></p><p><span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The coefficient of <span class=\"inline-math\" data-math=\"y\"></span> is half the logarithmic derivative of <span class=\"inline-math\" data-math=\"1+x^2\"></span>. Thus the integrating factor is its square root. Multiplication leaves <span class=\"inline-math\" data-math=\"x/\\sqrt{1+x^2}\"></span> on the right, which is exactly the derivative of that square root.</p>",
+      "<p>(a) Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(\\frac{x}{x^{2} + 1}\\right)y=\\frac{x}{x^{2} + 1}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int \\frac{x}{x^{2} + 1}\\,\\mathrm dx\\right)=\\sqrt{x^{2} + 1}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=\\frac{x}{\\sqrt{x^{2} + 1}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=\\sqrt{x^{2} + 1}+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{C + \\sqrt{x^{2} + 1}}{\\sqrt{x^{2} + 1}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) When <span class=\"inline-math\" data-math=\"x=3\"></span>, <span class=\"inline-math\" data-math=\"2=1+C/\\sqrt{10}\"></span>, hence <span class=\"inline-math\" data-math=\"y=1+\\sqrt{10}/\\sqrt{1+x^2}\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-29-ms-01.webp\" alt=\"Source marking table for IAL 2018 · Q2, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-30",
+    "question": "<p>Obtain the general solution of the equation <span class=\"inline-math\" data-math=\"x^{2}\\frac{\\mathrm{d} y}{\\mathrm{d} x}+(x\\cot x+2) x y=4 \\sin x\"></span> <span class=\"inline-math\" data-math=\"0&lt;x&lt;\\pi\"></span></p><p>Give your answer in the form <span class=\"inline-math\" data-math=\"y=f(x)\"></span> <span class=\"marks\">(8)</span></p>",
+    "steps": [
+      "<p>Integrate <span class=\"inline-math\" data-math=\"\\cot x+2/x\"></span> term by term. Exponentiating the sum of logarithms multiplies the factors, giving <span class=\"inline-math\" data-math=\"x^2\\sin x\"></span> up to a nonzero constant on a regular interval. This factor changes the forcing into <span class=\"inline-math\" data-math=\"4\\sin^2x\"></span>, suitable for the double-angle identity.</p>",
+      "<p>Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(\\frac{1}{\\tan{\\left(x \\right)}} + \\frac{2}{x}\\right)y=\\frac{4 \\sin{\\left(x \\right)}}{x^{2}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int \\frac{1}{\\tan{\\left(x \\right)}} + \\frac{2}{x}\\,\\mathrm dx\\right)=x^{2} \\sin{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=4 \\sin^{2}{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=2 x - \\sin{\\left(2 x \\right)}+C\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{C + 2 x - \\sin{\\left(2 x \\right)}}{x^{2} \\sin{\\left(x \\right)}}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-30-ms-01.webp\" alt=\"Source marking table for IAL 2020 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-31",
+    "question": "<p>(a) Find the general solution of the differential equation <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d}^{2} y}{\\mathrm{d} x^{2}}-6 \\frac{\\mathrm{d} y}{\\mathrm{d} x}+8 y=2 x^{2}+x\"></span> <span class=\"marks\">(8)</span></p><p>(b) Find the particular solution of this differential equation for which y=1 and <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} x}=0\"></span> when x=0 <span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>The complementary equation factors as <span class=\"inline-math\" data-math=\"(m-2)(m-4)=0\"></span>, so no trial polynomial overlaps with it. Match the quadratic, linear and constant terms of the forcing in descending order. When applying the slope condition, differentiating the exponentials supplies factors two and four.</p>",
+      "<p>(a) Solve the auxiliary equation <span class=\"inline-math\" data-math=\"m^{2} - 6 m + 8=0\"></span>. Its roots are <span class=\"inline-math\" data-math=\"4,\\ 2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The complementary function is <span class=\"inline-math\" data-math=\"A e^{4 x} + B e^{2 x}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For a particular integral try <span class=\"inline-math\" data-math=\"y_p=D x^{2} + E x + F\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate: <span class=\"inline-math\" data-math=\"y_p&#x27;=2 D x + E\"></span> and <span class=\"inline-math\" data-math=\"y_p&#x27;&#x27;=2 D\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitution and collection of terms give <span class=\"inline-math\" data-math=\"8 D x^{2} - 12 D x + 2 D + 8 E x - 6 E + 8 F - 2 x^{2} - x=0\"></span>. Thus <span class=\"inline-math\" data-math=\"D=\\frac{1}{4},\\ E=\\frac{1}{2},\\ F=\\frac{5}{16}\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Add the complementary function to get <span class=\"inline-math\" data-math=\"y=A e^{4 x} + B e^{2 x} + \\frac{x^{2}}{4} + \\frac{x}{2} + \\frac{5}{16}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At zero, <span class=\"inline-math\" data-math=\"A + B - \\frac{11}{16}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The derivative is <span class=\"inline-math\" data-math=\"y&#x27;=4 A e^{4 x} + 2 B e^{2 x} + \\frac{x}{2} + \\frac{1}{2}\"></span>. At zero this gives <span class=\"inline-math\" data-math=\"4 A + 2 B + \\frac{1}{2}=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Solving gives <span class=\"inline-math\" data-math=\"A=- \\frac{15}{16},\\ B=\\frac{13}{8}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The particular solution is <span class=\"inline-math\" data-math=\"y=\\frac{x^{2}}{4} + \\frac{x}{2} - \\frac{15 e^{4 x}}{16} + \\frac{13 e^{2 x}}{8} + \\frac{5}{16}\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 13 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-31-ms-01.webp\" alt=\"Source marking table for IAL 2021 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev14-32",
+    "question": "<p>(a) Determine the general solution of the differential equation <span class=\"inline-math\" data-math=\"\\frac{\\mathrm{d} y}{\\mathrm{d} x}-3 y \\tan x=\\mathrm{e}^{4 x} \\sec^{3} x\"></span> giving your answer in the form <span class=\"inline-math\" data-math=\"y=f(x)\"></span> <span class=\"marks\">(5)</span></p><p>(b) Determine the particular solution for which <span class=\"inline-math\" data-math=\"y=4\"></span> at <span class=\"inline-math\" data-math=\"x=0\"></span> <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The coefficient <span class=\"inline-math\" data-math=\"-3\\tan x\"></span> integrates to <span class=\"inline-math\" data-math=\"3\\ln|\\cos x|\"></span>, giving an integrating factor proportional to <span class=\"inline-math\" data-math=\"\\cos^3x\"></span>. This deliberately cancels the <span class=\"inline-math\" data-math=\"\\sec^3x\"></span> in the forcing, leaving just the exponential to integrate.</p>",
+      "<p>(a) Divide through to obtain <span class=\"inline-math\" data-math=\"y&#x27;+\\left(- 3 \\tan{\\left(x \\right)}\\right)y=e^{4 x} \\sec^{3}{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The integrating factor is <span class=\"inline-math\" data-math=\"\\mu=\\exp\\!\\left(\\int - 3 \\tan{\\left(x \\right)}\\,\\mathrm dx\\right)=\\cos^{3}{\\left(x \\right)}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Multiplication gives <span class=\"inline-math\" data-math=\"\\frac{\\mathrm d}{\\mathrm dx}(\\mu y)=e^{4 x}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Integrate to obtain <span class=\"inline-math\" data-math=\"\\mu y=\\frac{e^{4 x}}{4}+C\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Solving for the dependent variable gives <span class=\"inline-math\" data-math=\"y=\\frac{C + \\frac{e^{4 x}}{4}}{\\cos^{3}{\\left(x \\right)}}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At zero <span class=\"inline-math\" data-math=\"4=1/4+C\"></span>, so <span class=\"inline-math\" data-math=\"y=(e^{4x}+15)/(4\\cos^3x)\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev14-32-ms-01.webp\" alt=\"Source marking table for IAL 2022 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  }
+]
