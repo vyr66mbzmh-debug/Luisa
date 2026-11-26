@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Teaching Resources and paired booklets v0.86
+
+Classroom teaching and two-panel booklets across eight books. [Issue #160](https://github.com/vyr66mbzmh-debug/Luisa/issues/160).
+
 ## Further Statistics 1 and Further Mechanics handouts v0.85
 
 Eight statistics chapters and the Further Mechanics handout refresh. [Issue #158](https://github.com/vyr66mbzmh-debug/Luisa/issues/158).

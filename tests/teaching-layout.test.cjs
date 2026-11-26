@@ -97,3 +97,50 @@ test('exam headings recognise paper references across lesson titles and retain t
   assert.equal(examExample({...cited, title:'Exercise 1D Pearson Core Pure 1, p. 7-8'}), false);
   assert.equal(examExample({title:'Iteration — Calculation and Exam Technique', shapes:[]}), false);
 });
+
+test('inline totals, PowerPoint run breaks and TeX spacing do not hide a following hint or alter a formula', () => {
+  const question = {id:'q', box:{x:0,y:0,w:150,h:70}, transcription:{
+    tex: String.raw`(a) Find the radius. \hfill(3) (b) Find \(f(2)\). \qquad(2)\par Use equation (3).`,
+  }};
+  const mixed = {id:'mixed', box:question.box, text:{paragraphs:[{parts:[
+    {type:'text',text:'(a) Draw a Venn diagram. (4 ma'}, {type:'text',text:'rks) Tip: include the box.'},
+  ]}]}};
+  const [q,m] = prepare(slide([question,mixed]),{height:200}).shapes;
+  assert.doesNotMatch(q.transcription.tex,/hfill|qquad|\(2\)\\par/);
+  assert.match(q.transcription.tex,/f\(2\)/);
+  assert.match(q.transcription.tex,/equation \(3\)/);
+  assert.equal(m.text.paragraphs[0].parts.map(r=>r.text).join(''),'(a) Draw a Venn diagram. Tip: include the box.');
+});
+
+for (const player of [
+  '../lesson-renderer.js',
+  '../p1-native-lesson-renderer.js',
+  '../resources/pure-year-2/v12/player/lesson-renderer.js',
+  '../resources/teaching/v003/player/lesson-renderer.js',
+  '../resources/teaching/v025/player/lesson-renderer.js',
+  '../resources/teaching/v026/player/lesson-renderer.js',
+]) {
+  test(`prose with inline comparisons and spreadsheet instructions in ${player}`, () => {
+    const {imageContent} = require(player);
+    const render = text => imageContent(text, {math: value => '<math>' + value + '</math>'});
+    const comparison = render('Given that $P(Y<160)$ = 0.99 and $P(Y>152)$ = 0.90, find the mean.');
+    assert.match(comparison, / = 0.99 and /);
+    assert.doesNotMatch(comparison, /<math>[^<]*and /);
+    assert.match(render('For this reason the value of $x$ can be found directly.'), /<math>x<\/math>/);
+    assert.match(render(String.raw`For the cumulative probability $P(X\le r)$, use \texttt{TRUE}.`), / use <code>TRUE<\/code>/);
+  });
+}
+
+test('the teaching panel selects the right two-up sheet for both PDF viewers', () => {
+  const {workedPanelUrl} = require('../lesson-controls.js');
+  const base = 'https://school.example/teaching-lesson-viewer.html';
+  const chapter = 'resources/solutions/chapter-07.pdf';
+  for (const panel of [1, 2, 40, 41]) {
+    const url = new URL(workedPanelUrl(chapter + '?page=34', chapter, panel, base));
+    const expected = String(Math.ceil(panel / 2));
+    assert.equal(url.searchParams.get('page'), expected);
+    assert.equal(url.hash, '#page=' + expected);
+  }
+  assert.equal(workedPanelUrl('other.pdf#page=8', chapter, 41, base), 'other.pdf#page=8');
+  assert.equal(workedPanelUrl('', chapter, 1, base), '');
+});

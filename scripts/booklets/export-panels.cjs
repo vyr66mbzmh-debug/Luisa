@@ -29,7 +29,7 @@ const exporter = fs.readFileSync(path.join(here, 'panel-state.js'), 'utf8');
       await page.waitForFunction(()=>window.FMQ_TEST?.getState().slide);
       const source = page.locator('#slide-content .luisa-overview,#slide-content .ch14,#slide-content .source-slide,#slide-content .lesson-flow').first();
       await source.waitFor({state:'attached'});
-      await page.evaluate(exporter);
+      await page.addScriptTag({content:exporter});
       for (const [index, edition] of ['student','solution'].entries()) {
         const data = await page.evaluate(async opts=>window.luisaPrintPanel(opts), {item,edition});
         const links = data.css.map(href=>'<link rel="stylesheet" href="'+href+'">').join('');

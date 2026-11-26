@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-25",
+  "asOf": "2026-11-26",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -4212,7 +4212,7 @@
     },
     {
       "id": "BKT-036-SOLUTIONS",
-      "requirement": "Maintain a matching solution booklet for every teaching chapter, preserving the accepted student composition, questions, diagrams and slide order. Print complete revealed working in red and red Solution immediately before each white slide number on its navy banner; preserve approved covers and original raster diagram colours/crops/aspect ratios. Every slide or dependent teaching-asset change must refresh the affected student PDF and solution PDF, both PDF-backed LaTeX reproduction bundles, owner copies and published copies before renewed chapter acceptance. On 9 November 2026 the owner authorised verified solution PDFs to be loaded into Luisa: expose them in teaching chapters, the relevant topic in View by textbook, and Development progress. This supersedes the earlier prohibition on publishing solution PDFs; LaTeX originals, authoring/source materials and private verification state remain private. From v0.38, place a centred red Solutions subtitle beneath the title on every solution cover.",
+      "requirement": "Maintain a matching solution booklet for every teaching chapter, preserving the accepted student composition, questions, diagrams and slide order. Print complete revealed working in red and red Solution immediately before each white slide number on its navy banner; preserve approved covers and original raster diagram colours/crops/aspect ratios. Every slide or dependent teaching-asset change must refresh the affected student PDF and solution PDF, both PDF-backed LaTeX reproduction bundles, owner copies and published copies before renewed chapter acceptance. On 9 November 2026 the owner authorised verified solution PDFs to be loaded into Luisa: expose them in teaching chapters, the relevant topic in View by textbook, and Development progress. This supersedes the earlier prohibition on publishing solution PDFs; LaTeX originals, authoring/source materials and private verification state remain private. From v0.38, centre the Solutions subtitle beneath the chapter title. Use white on Further Statistics red covers (#DB4040) and the approved red subtitle for other subjects.",
       "scope": "all current and future chapter slides and booklets",
       "priority": "P1",
       "implementation": "implemented",
@@ -4733,7 +4733,7 @@
       "acceptance": [
         "preserve all exercise prompts verbatim including subparts and notation, across all slides and both booklets. Change layout to fit. No paraphrased replacements.",
         "Restore historically shortened exercise wording wherever the supplied original is available, including previous chapters and their booklets.",
-        "For image-only maths that cannot be transcribed reliably, use a clean accessible original question crop on the slides and in the booklets, keeping answer controls and solutions separate."
+        "Historical v0.51 exception, superseded for all Resources by RES-086. Transcribe image-only questions and working, redraw mathematical diagrams in LaTeX, and ask the owner if a source detail remains ambiguous."
       ],
       "priority": "P1",
       "implementation": "implemented",
@@ -6749,6 +6749,34 @@
       "evidence": [
         "GitHub issue #158",
         "docs/evidence/further-statistics-1.json"
+      ]
+    },
+    {
+      "id": "RES-086",
+      "scope": "All teaching slides and both chapter booklet editions on Cloudflare and ADA; authoring and editing in every module.",
+      "priority": "P1",
+      "implementation": "in_progress",
+      "verification": "needs_revalidation",
+      "origin": "Owner review of v0.85 and GitHub #160",
+      "requirement": "Audit every slide as a teaching explanation and apply the consolidated slide and booklet authoring standard to every module.",
+      "acceptance": [
+        "Follow docs/requirements/TEACHING-STANDARD.md and the applicable chapter requirements. Put the complete exercise set before its red Extension, remove publisher tags and introductory exclamation badges, and label generic assignments Exercises. Preserve factorials and exact question wording.",
+        "Use the Numerical Methods fonts and controls, readable native maths and labelled diagrams, fully concealed working, useful area and a logical reveal order.",
+        "Compare both print editions with Pure Maths, allocate handwriting space part by part, use subject colours for covers and catalogue spines, and record separate slide, source, interaction and printed-page review outcomes.",
+        "Ask the owner for a choice when applicable requirements conflict. Record the resolution for future authors.",
+        "Owner decision 26 November 2026: both Resources editions always use two teaching slide panels per A4 sheet, including exercises. Keep each complete question and worked answer in its single panel. Paper-builder layouts are governed separately. This supersedes earlier one-exercise-per-sheet guidance for Resources.",
+        "Owner decision 26 November 2026: transcribe every image-based question and worked answer, redraw mathematical diagrams in LaTeX, verify the meaning against the source and inspect the rendered labels, spacing and overlaps. No general image-crop exception for teaching slides. Ask the owner with alternatives if source meaning remains ambiguous.",
+        "Pure Year 1 Differentiation: teach the three STEP I 2007 Q8 sketch cases directly after the general derivation. Follow with the existing gradient-function lesson and each Exercise 12J question in sequence. Give every case and question matching student and worked panels, preserving each question with its answer.",
+        "Further Statistics worked covers use a centred white Solutions subtitle directly on the red (#DB4040) subject panel. The student cover has the chapter title alone. Compare actual rendered covers in both editions.",
+        "Use AI-generated photographs for real-world contexts across Resources. Retain the scenario, render mathematical diagrams in native LaTeX, and transcribe any text or data needed to answer the question. Verify the photograph and its classroom and print placement.",
+        "Retain the authentic source still when recognising the original is part of the task. This includes the Name the movie slide from 21 in Pure Year 2 Numerical Methods and its supplied clip. Contextual photographs elsewhere follow the AI-generated photograph rule.",
+        "Further Statistics 1 exercise selection follows the original chapter presentations. Include every exam-style question in each exercise explicitly referenced by that chapter, in textbook order with complete worked answers. Include a Mixed exercise only when the source slides reference it.",
+        "Where the question is clear, verify each worked answer against its printed data and assumptions. Correct any mathematical error throughout the classroom and worked booklet, including downstream steps. Keep a private editorial record of the discrepancy and check the corrected answer independently.",
+        "Keep an exceptionally long STEP question and its complete solution together in one worked half-page. The student edition has the matching half-page. Reflow the full proof and maximise the available handwriting area.",
+        "For the Further Statistics 1 daisy-count activity, the owner authorised a clearly labelled adapted example using internally consistent integer counts. Verify the frequency table, moments and model probability independently and keep the source discrepancy in the private editorial record."
+      ],
+      "evidence": [
+        "GitHub issue #160"
       ]
     }
   ]

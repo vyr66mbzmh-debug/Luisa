@@ -36,8 +36,25 @@ window.mountLessonMedia = function (slide, find) {
         frame.requestFullscreen?.().catch(() => frame.focus());
       });
       host.append(play);
-    } else if (navigator.onLine) {
-      mount();
+    } else {
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      host.classList.add('lesson-geogebra');
+      toggle.className = 'lesson-media-toggle';
+      toggle.textContent = 'Explore in GeoGebra';
+      toggle.setAttribute('aria-pressed', 'false');
+      let graph = null;
+      toggle.addEventListener('click', () => {
+        if (graph) {
+          graph.remove();
+          graph = null;
+        } else {
+          graph = mount();
+        }
+        toggle.textContent = graph ? 'Show graph' : 'Explore in GeoGebra';
+        toggle.setAttribute('aria-pressed', String(Boolean(graph)));
+      });
+      host.append(toggle);
     }
     host.append(link);
   }

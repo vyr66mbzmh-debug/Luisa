@@ -16,7 +16,7 @@ function geometry(s){const b=s.box,w=b.w,h=b.h,l=s.line||{},fill=s.fill||'transp
 }
 function imageContent(tex,o){
  tex=String(tex).replace(/\\hfill\s*/g,' ');
- if(!/(?:^|\\par)\s*(?:\d+\s+)?\([a-h]\)/.test(tex)&&!/\\begin|\\text|[=^_]|\\(?:frac|sqrt)|\\[([]/.test(tex)&&tex.split(/\s+/).length>8)return '<span class="lesson-image-prose">'+esc(tex).replace(/\\par\b\s*/g,'<br>').replace(/\n/g,'<br>')+'</span>';
+ if(!/(?:^|\\par)\s*(?:\d+\s+)?\([a-h]\)/.test(tex)&&!/\\begin|\\text|[$=^_]|\\(?:frac|sqrt)|\\[([]/.test(tex)&&tex.split(/\s+/).length>8)return '<span class="lesson-image-prose">'+esc(tex).replace(/\\par\b\s*/g,'<br>').replace(/\n/g,'<br>')+'</span>';
 
  if(tex.includes('\\multicolumn')||tex.includes('\\cline')){
   const match=tex.match(/^\\begin\{array\}\{([^{}]*)\}([\s\S]*)\\end\{array\}$/);
@@ -34,10 +34,11 @@ function imageContent(tex,o){
  function plain(value){return esc(value).replace(/\\qquad\b\s*/g,'&emsp;&emsp;').replace(/\\quad\b\s*/g,'&emsp;').replace(/\\par\s*/g,'<br>').replace(/\\([%&#_$])/g,'$1').replace(/~+/g,' ').replace(/\n/g,'<br>');}
  function math(value,display=false){const aligned=value.match(/^\\begin\{aligned\}([\s\S]*)\\end\{aligned\}$/);if(aligned&&!/\\(?:phantom|frac|dfrac|sqrt|left|begin)\{[^}]*\\text/.test(aligned[1])&&!value.includes('\\phantom')&&/\\text\{[^}]{25}/.test(value))return '<div class="lesson-flow-equations">'+aligned[1].split('\\\\').map(row=>'<div style="margin-bottom:.2em">'+render(row.replace(/&/g,' '))+'</div>').join('')+'</div>';if(value.includes('\\multicolumn')||value.includes('\\cline'))return imageContent(value,o);return `<${display?'div':'span'} class="${display?'lesson-image-block':'lesson-image-inline'}" data-math="${esc(value)}">${o.math?o.math(value):''}</${display?'div':'span'}>`;}
  function render(value,prose=false){let out='',last=0,i=0,found=false;
- const flush=end=>{const v=value.slice(last,end);if(!v.trim()){out+=v?' ':'';return;}out+=(prose||/\\par|[“”]/.test(v)||(!/\\[A-Za-z]|[=^_]/.test(v))||(words(v)>8&&!/\\(?!quad|qquad|par)[A-Za-z]/.test(v)))?plain(v):math(v);};
+ const explicitMath = /(?<!\\)\$|\\\(|\\\[/.test(value);
+ const flush=end=>{const v=value.slice(last,end);if(!v.trim()){out+=v?' ':'';return;}out+=(prose||(explicitMath && /\b[a-zA-Z]{3,}\b/.test(v) && !/\\[a-zA-Z]/.test(v))||/\\par|[“”]/.test(v)||(!/\\[A-Za-z]|[=^_]/.test(v))||(words(v)>8&&!/\\(?!quad|qquad|par)[A-Za-z]/.test(v)))?plain(v):math(v);};
  while(i<value.length){if(value[i]==='\\'&&value[i-1]!=='\\'){
-  const t=value.slice(i).match(/^\\(textbf|textit|emph|text)\{/);
-  if(t){let j=i+t[0].length,d=1;for(;j<value.length&&d;j++){if(value[j]==='{'&&value[j-1]!=='\\')d++;if(value[j]==='}'&&value[j-1]!=='\\')d--;}if(d===0){const part=value.slice(i+t[0].length,j-1),newPart=t[1]==='textbf'&&/^[a-z][).]?$/.test(part)&&i>0&&/\\quad\s*$/.test(value.slice(last,i));flush(i);if(newPart)out+='<br>';const tag=t[1]==='textbf'?'strong':['textit','emph'].includes(t[1])?'em':'span';out+=`<${tag}>`+render(value.slice(i+t[0].length,j-1),true)+`</${tag}>`;last=j;i=j;found=true;continue;}}
+  const t=value.slice(i).match(/^\\(textbf|textit|texttt|emph|text)\{/);
+  if(t){let j=i+t[0].length,d=1;for(;j<value.length&&d;j++){if(value[j]==='{'&&value[j-1]!=='\\')d++;if(value[j]==='}'&&value[j-1]!=='\\')d--;}if(d===0){const part=value.slice(i+t[0].length,j-1),newPart=t[1]==='textbf'&&/^[a-z][).]?$/.test(part)&&i>0&&/\\quad\s*$/.test(value.slice(last,i));flush(i);if(newPart)out+='<br>';const tag=t[1]==='texttt'?'code':t[1]==='textbf'?'strong':['textit','emph'].includes(t[1])?'em':'span';out+=`<${tag}>`+render(value.slice(i+t[0].length,j-1),true)+`</${tag}>`;last=j;i=j;found=true;continue;}}
   const env=value.slice(i).match(/^\\begin\{([^{}]+)\}/);
   if(env){const end='\\end{'+env[1]+'}',j=value.indexOf(end,i+env[0].length);if(j>=0){flush(i);out+=math(value.slice(i,j+end.length),true);last=j+end.length;i=last;found=true;continue;}}
   if(value[i+1]==='('||value[i+1]==='['){const close=value[i+1]==='('?String.raw`\)`:String.raw`\]`,j=value.indexOf(close,i+2);if(j>=0){flush(i);out+=math(value.slice(i+2,j),value[i+1]==='[');last=j+2;i=last;found=true;continue;}}

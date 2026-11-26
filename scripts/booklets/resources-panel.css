@@ -1,0 +1,133 @@
+html,
+body,
+main {
+  display: block !important;
+  position: relative !important;
+  width: var(--panel-width) !important;
+  height: var(--panel-height) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: white !important;
+  overflow: hidden !important;
+}
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.split-prompt {
+  background: white;
+  color: #183957;
+  padding: 10px 24px;
+  box-shadow: none;
+  border: 0;
+  font: 29px/1.26 Lesson;
+  display: block;
+}
+.split-prompt strong {
+  display: block;
+  margin-bottom: 8px;
+}
+.three-part {
+  display: grid;
+  grid-template-columns: 1.04fr 1.12fr 0.84fr;
+  gap: 12px;
+  padding: 5px 18px;
+  font:
+    24.5px/1.12 Lesson,
+    serif;
+  height: 790px;
+}
+.three-part section {
+  border: 1.4px solid #8796a2;
+  padding: 10px 12px;
+  min-width: 0;
+}
+.three-part .part-prompt {
+  position: relative;
+  padding-left: 1.5em;
+  color: #183957;
+  font:
+    27px/1.15 Lesson,
+    serif;
+  margin-bottom: 12px;
+  min-height: 52px;
+}
+.work-line {
+  color: #a61d2c;
+  margin: 0.15em 0;
+  overflow-wrap: normal;
+}
+.work-line .katex {
+  font-size: 1em;
+}
+.exercise-grid {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.exercise-grid td {
+  border: 1.4px solid #8796a2;
+  height: 33px;
+  text-align: center;
+  font-size: 22px;
+}
+.exercise-grid td:first-child {
+  width: 27%;
+}
+.write-area {
+  position: absolute;
+  box-sizing: border-box;
+  border: 1.55px solid #8997a2;
+  z-index: 5;
+  pointer-events: none;
+}
+.pencil-table {
+  position: absolute;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font:
+    19px Lesson,
+    serif;
+  color: #45596b;
+  z-index: 6;
+}
+.pencil-table td {
+  border: 1.4px solid #8796a2;
+  text-align: center;
+  padding: 1px;
+}
+.pencil-table td:first-child {
+  width: 32%;
+}
+.part-cue {
+  position: absolute;
+  font:
+    24px Lesson,
+    serif;
+  color: #435568;
+  z-index: 7;
+}
+.answer-blue,
+.answer-blue *,
+.lesson-owned-answer:not([data-supplied-theory]) .lesson-image-tex,
+.lesson-owned-answer:not([data-supplied-theory]) .lesson-image-tex *,
+.exercise-working,
+.exercise-working * {
+  color: #a61d2c !important;
+}
+.lesson-tip {
+  background: #eef5fa !important;
+  border-left: 4px solid #5a819e;
+  color: #183957 !important;
+}
+.lesson-tip .lesson-drawing,
+.lesson-tip .lesson-tex-geometry {
+  display: none;
+}
+
+/* A LaTeX phantom aligns continuation lines while contributing no visible ink. */
+.katex-html [style*="color: transparent"],
+.katex-html [style*="color:transparent"] {
+  visibility: hidden;
+}
