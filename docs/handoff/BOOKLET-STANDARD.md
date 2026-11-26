@@ -21,7 +21,7 @@ Fill the entire title panel, including its integrated top banner, with the colou
 
 Further Mechanics 1 uses orange (#E97738). Further Statistics 1 uses red (#DB4040). The chapter catalogue gives the published locations for both modules.
 
-The white title-panel banner names the subject, year, chapter number and topic. For example, `Statistics Year 1 Chapter 1 - Data Collection`. The cover composition has no standalone slide-number marker. On solution booklets, centre the red subtitle “Solutions” beneath the chapter title. Student covers retain the title-only design.
+The white title-panel banner names the subject, year, chapter number and topic. For example, `Statistics Year 1 Chapter 1 - Data Collection`. The cover composition has no standalone slide-number marker. On solution booklets, centre “Solutions” beneath the chapter title. On Further Statistics covers the subtitle is white directly on the red (#DB4040) panel. Other subjects retain their approved red subtitle. Student covers retain the title-only design.
 
 ## Teaching-panel banners and content
 
