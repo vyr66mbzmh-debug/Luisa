@@ -269,7 +269,9 @@
 
   function updateToolbar(slide, total, number = slide.sourceSlide) {
     const heading = document.getElementById('lesson-title');
-    const exam = examExample(slide);
+    const extension = slide.extension || /^Extension\b/i.test(slide.title);
+    heading.classList.toggle('extension', Boolean(extension));
+    const exam = !extension && examExample(slide);
     if (exam) setTitle(heading, 'Test your understanding');
     else if (slide.titleTex) root.katex.render(slide.titleTex, heading, {throwOnError:true,trust:false});
     else setTitle(heading, slide.title);
