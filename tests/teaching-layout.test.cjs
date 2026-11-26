@@ -130,3 +130,17 @@ for (const player of [
     assert.match(render(String.raw`For the cumulative probability $P(X\le r)$, use \texttt{TRUE}.`), / use <code>TRUE<\/code>/);
   });
 }
+
+test('the teaching panel selects the right two-up sheet for both PDF viewers', () => {
+  const {workedPanelUrl} = require('../lesson-controls.js');
+  const base = 'https://school.example/teaching-lesson-viewer.html';
+  const chapter = 'resources/solutions/chapter-07.pdf';
+  for (const panel of [1, 2, 40, 41]) {
+    const url = new URL(workedPanelUrl(chapter + '?page=34', chapter, panel, base));
+    const expected = String(Math.ceil(panel / 2));
+    assert.equal(url.searchParams.get('page'), expected);
+    assert.equal(url.hash, '#page=' + expected);
+  }
+  assert.equal(workedPanelUrl('other.pdf#page=8', chapter, 41, base), 'other.pdf#page=8');
+  assert.equal(workedPanelUrl('', chapter, 1, base), '');
+});

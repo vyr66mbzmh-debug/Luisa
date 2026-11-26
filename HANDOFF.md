@@ -9,7 +9,7 @@ The Further Statistics exercise slides include the 131 exam-style questions assi
 
 The student and worked Resources booklets use two teaching panels per A4 sheet. Their numbering follows the classroom sequence. The Further Statistics worked covers use a white Solutions subtitle on red.
 
-The creation and acceptance procedure for subsequent edits is in [the teaching standard](docs/requirements/TEACHING-STANDARD.md). Release verification, usage and recovery evidence are recorded on issue #160.
+The creation and acceptance procedure for subsequent edits is in [the teaching standard](https://github.com/vyr66mbzmh-debug/Luisa/blob/main/docs/requirements/TEACHING-STANDARD.md). Release verification, usage and recovery evidence are recorded on issue #160.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

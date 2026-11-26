@@ -1,6 +1,6 @@
 /* Chapter 14 teaching activities. The booklet export uses these same prompts and final states. */
 window.LuisaChapter14 = (() => {
-  const pages = new Set([4,5,8,16,17,18,21,22,27,28,31,32,33,34,46,47,48,49]);
+  const pages = new Set([4,5,8,16,17,18,21,22,27,28,32,33,34,46,47,48,49]);
   const {plot,colours} = LuisaChapterGraphs;
   const math = tex => katex.renderToString(tex,{throwOnError:true,trust:false,output:'htmlAndMathml'});
   const eq = tex => '<div class="equation">'+math(tex)+'</div>';

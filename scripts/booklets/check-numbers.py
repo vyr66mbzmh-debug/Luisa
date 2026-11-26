@@ -23,6 +23,15 @@ def verify(path, count):
             pixels = page.get_pixmap(matrix=pdf.Matrix(2, 2), clip=pdf.Rect(digits[-1][:4])).samples
             if sum(min(pixels[i:i+3]) > 190 for i in range(0, len(pixels), 3)) < 12:
                 raise ValueError(f'{path}, panel {number}: invisible number')
+            if number > 1:
+                title = pdf.Rect(19, offset + 11, 490, offset + 33)
+                if any(c in page.get_textbox(title) for c in ("\x00", "\ufffd")):
+                    raise ValueError(f'{path}, panel {number}: missing glyph in banner')
+                pixmap = page.get_pixmap(clip=pdf.Rect(20, offset + 13, 485, offset + 32.75))
+                background = pixmap.color_topusage()[1]
+                if not any(max(abs(a - b) for a, b in zip(colour, background)) > 70
+                           and count >= 2 for colour, count in pixmap.color_count(colors=True).items()):
+                    raise ValueError(f'{path}, panel {number}: empty banner')
 
 
 def main():

@@ -333,6 +333,19 @@
     link.hidden = !chapter?.solutions;
     if (chapter?.solutions) link.href = chapter.solutions;
     else link.removeAttribute('href');
+    return chapter?.solutions;
+  }
+
+  function workedPanelUrl(resource, chapterResource, panel, base) {
+    if (!resource || !chapterResource) return resource || '';
+    const url = new URL(resource, base);
+    const chapter = new URL(chapterResource, base);
+    if (url.origin !== chapter.origin || url.pathname !== chapter.pathname) return resource;
+    const sheet = Math.ceil(panel / 2);
+    // ADA's PDF wrapper reads the query. Native PDF viewers read the fragment.
+    url.searchParams.set('page', String(sheet));
+    url.hash = 'page=' + sheet;
+    return url.href;
   }
 
   // Text fitting measures the initial board before a pupil reveals any answers.
@@ -345,7 +358,7 @@
     await document.fonts.ready;
   }
 
-  const api = {loadBoardFonts,examExample,formatSubparts,markPolicy,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments};
+  const api = {loadBoardFonts,examExample,formatSubparts,markPolicy,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments,workedPanelUrl};
   if (typeof module !== 'undefined') module.exports = api;
   root.LUISA_CONTROLS = api;
 })(typeof window === 'undefined' ? globalThis : window);

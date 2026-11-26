@@ -71,6 +71,7 @@ navy = (24 / 255, 57 / 255, 87 / 255)
 red = (1, 0.63, 0.64)
 font = args.font_directory / "Georgia.ttf"
 bold = font.with_name("Georgia Bold.ttf")
+heading_font = pdf.Font(fontfile=str(font))
 ref = pdf.open(repo / "resources/pure-year-1/v11/booklets/chapter-01.pdf")
 size = ref[0].rect
 ref.close()
@@ -115,11 +116,13 @@ with sync_playwright() as pw:
     page.goto(urljoin(base, chapter["slides"]))
     page.locator("#slide-content .source-slide, #slide-content .ch14").first.wait_for(state="attached")
     for n, slide in enumerate(deck, 1):
-        if n == 1 or n not in changed:
+        if n == 1 or (n not in changed and mapping[n - 1] == n):
             continue
         page.evaluate("n=>FMQ_TEST.show(n-1)", n)
         page.evaluate("document.fonts.ready")
         labels[n] = page.locator("#lesson-title").inner_text()
+        if n not in changed:
+            continue
         page.evaluate("Promise.all([...document.images].map(e=>e.decode()))")
         for edition in ["student", "worked"]:
             # The legacy FM/FS teaching templates use the completed diagram in both
@@ -130,22 +133,33 @@ with sync_playwright() as pw:
             page.evaluate("Promise.all([...document.images].map(e=>e.decode()))")
             if page.locator(".katex-error").count():
                 raise ValueError(f"Invalid classroom maths on panel {n}")
-            dat = page.evaluate(panel_exporter, {"edition": edition})
-            w, h = dat["w"], dat["h"]
-            if page.locator("#lesson-exam-title:not([hidden])").count():
-                h += 52
-                dat["html"] = (
-                    '<div style="font:32px Lesson;padding:5px 16px;height:52px">Exam style question</div>'
-                    + dat["html"]
+            activity = page.locator("#slide-content .ch14, #slide-content .luisa-overview").count()
+            if activity:
+                page.add_script_tag(content=(here / "panel-state.js").read_text())
+                state = "student" if edition == "student" else "solution"
+                dat = page.evaluate("opts => luisaPrintPanel(opts)", {
+                    "item": {"slide": n, "chapterKey": lib}, "edition": state,
+                })
+                style = (here / "panel.css").read_text()
+                body = f'<body class="paper {state}"><main id="print-body">{dat["html"]}</main></body>'
+            else:
+                dat = page.evaluate(panel_exporter, {"edition": edition})
+                w, h = dat["w"], dat["h"]
+                if page.locator("#lesson-exam-title:not([hidden])").count():
+                    h += 52
+                    dat["html"] = (
+                        '<div style="font:32px Lesson;padding:5px 16px;height:52px">Exam style question</div>'
+                        + dat["html"]
+                    )
+                style = (
+                    f":root {{--panel-width:{w}px;--panel-height:{h}px;}}"
+                    + panel_css + f"@page {{size:{w}px {h}px; margin:0}}"
                 )
+                body = f'<main>{dat["html"]}</main>'
             css = "".join(
                 f'<link rel="stylesheet" href="{escape(link, quote=True)}">' for link in dat["css"]
             )
-            source = f"""<!doctype html><base href="{base}">{css}<style>
-   :root {{--panel-width:{w}px;--panel-height:{h}px;}}
-   {panel_css}
-   @page {{size:{w}px {h}px; margin:0}}
-   </style><main>{dat["html"]}</main>"""
+            source = f'<!doctype html><base href="{base}">{css}<style>{style}</style>{body}'
             paper.set_content(source, wait_until="load")
             paper.add_script_tag(
                 content=(repo / "scripts/booklets/print-maths.js").read_text()
@@ -248,20 +262,14 @@ for edition in ["student", "worked"]:
         page.draw_rect(panel, color=navy, width=0.55)
         page.draw_rect(header, fill=navy, color=None)
         title = labels.get(n, s["title"])
-        if original is not None and n not in changed:
-            words = original[old_index].get_text("words", clip=pdf.Rect(16, old_y + 11, 497, old_y + 32))
-            title = " ".join(word[4] for word in sorted(words, key=lambda w: w[0])) or title
         mark_x = 500 if n >= 100 else 515
         width = (mark_x - 28 if edition == "worked" else 526)
-        title_size = min(13.5, 13.5 * width / max(1, pdf.Font(fontfile=str(font)).text_length(title, fontsize=13.5)))
-        page.insert_text(
-            (21.67, Y + 27.75),
-            title,
-            fontname="Georgia",
-            fontfile=font,
-            fontsize=title_size,
-            color=red if s.get("extension") else white,
-        )
+        title_size = min(13.5, 13.5 * width / max(1, heading_font.text_length(title, fontsize=13.5)))
+        # A retained half-page can already use the name Georgia for a subset.
+        # Bind the full typeface directly so newly drawn letters have glyphs.
+        heading = pdf.TextWriter(page.rect)
+        heading.append((21.67, Y + 27.75), title, font=heading_font, fontsize=title_size)
+        heading.write_text(page, color=red if s.get("extension") else white)
         if edition == "worked":
             page.insert_text(
                 (mark_x, Y + 27.75), "Solution", fontname="tibo", fontsize=10.5, color=red
