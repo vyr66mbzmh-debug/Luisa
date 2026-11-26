@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-25",
+  "asOf": "2026-11-26",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -6749,6 +6749,26 @@
       "evidence": [
         "GitHub issue #158",
         "docs/evidence/further-statistics-1.json"
+      ]
+    },
+    {
+      "id": "RES-086",
+      "scope": "All teaching slides and both chapter booklet editions on Cloudflare and ADA; authoring and editing in every module.",
+      "priority": "P1",
+      "implementation": "in_progress",
+      "verification": "needs_revalidation",
+      "origin": "Owner review of v0.85 and GitHub #160",
+      "requirement": "Audit every slide as a teaching explanation and apply the consolidated slide and booklet authoring standard to every module.",
+      "acceptance": [
+        "Follow docs/requirements/TEACHING-STANDARD.md and the applicable chapter requirements. Put the complete exercise set before its red Extension, remove publisher tags and introductory exclamation badges, and label generic assignments Exercises. Preserve factorials and exact question wording.",
+        "Use the Numerical Methods fonts and controls, readable native maths and labelled diagrams, fully concealed working, useful area and a logical reveal order.",
+        "Compare both print editions with Pure Maths, allocate handwriting space part by part, use subject colours for covers and catalogue spines, and record separate slide, source, interaction and printed-page review outcomes.",
+        "Ask the owner for a choice when applicable requirements conflict. Record the resolution for future authors.",
+        "Owner decision 26 November 2026: both Resources editions always use two teaching slide panels per A4 sheet, including exercises. Keep each complete question and worked answer in its single panel. Paper-builder layouts are governed separately. This supersedes earlier one-exercise-per-sheet guidance for Resources.",
+        "Owner decision 26 November 2026: transcribe every image-based question and worked answer, redraw mathematical diagrams in LaTeX, verify the meaning against the source and inspect the rendered labels, spacing and overlaps. No general image-crop exception for teaching slides. Ask the owner with alternatives if source meaning remains ambiguous."
+      ],
+      "evidence": [
+        "GitHub issue #160"
       ]
     }
   ]

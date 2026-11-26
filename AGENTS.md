@@ -16,6 +16,7 @@ Never commit credentials, account usage snapshots, personal paths/contact data, 
 Read HANDOFF.md, docs/agentic/LEAD-RULES.md and the assigned issue only. Consult docs/requirements/register.json by requirement ID and architecture/decisions only as needed. CLAUDE.md points here. Do not read the chat archive or whole material library.
 
 ## Mandatory output standard
+Read [the teaching authoring and acceptance standard](docs/requirements/TEACHING-STANDARD.md) before any slide, booklet or shared viewer change. Check the applicable entries in the register and record unresolved teaching or print findings.
 - Luisa branding; public version increases by .01 for product releases; all version badges link to development progress.
 - White slide background to viewport edges; whole slide fits without scrolling, clipping, overlap, tiny text or distorted diagrams. Consistent readable fonts; hanging indents for every numbered/bulleted item and subpart.
 - Preserve every supplied teaching step, explanation, hint and meaningful diagram/arrow. Native LaTeX except explicit owner image exceptions.
@@ -45,7 +46,7 @@ Use one banner. For textbook exercises it identifies the exercise and the **prin
 For multipart examples, reveal each part's diagram and then its solution before starting the next part. Typeset mechanics diagrams in LaTeX with legible labels, arrowheads, directions and units. Explain abbreviations on first use and distinguish signed quantities from magnitudes. Write allocations as [3 marks] or [1 mark] and attach any method and accuracy marks to the line that earns them. Compare covered, revealed and printed views against the source before release.
 
 ## Single-page exercises and the Numerical Methods reference (RES-082)
-Use Pure Year 2, Chapter 10 Numerical Methods as the visual reference for lesson type, reveal buttons and tip panels. Check the actual rendered styles on the board and in print. Each exercise and its entire worked solution belong to one page, including diagrams and marks. One Solution control reveals the entire answer. Do not divide it into navigation steps, scroll regions, continuation pages or separate question/answer pages. Print the complete exercise and working on one sheet in the solutions edition. Reflow longer working into columns while retaining every step. Verify each exercise by counting pages and testing for clipping and overflow.
+Use Pure Year 2, Chapter 10 Numerical Methods as the visual reference for lesson type, reveal buttons and tip panels. Check the actual rendered styles on the board and in print. Each exercise and its entire worked solution belong to one page, including diagrams and marks. One Solution control reveals the entire answer. Do not divide it into navigation steps, scroll regions, continuation pages or separate question/answer pages. In Resources, print the complete exercise and working within one of two slide panels on each A4 sheet (RES-086). The Papers module has a separate layout. Reflow longer working into columns while retaining every step. Verify each exercise by counting pages and testing for clipping and overflow.
 Verify actual photographs, diagrams, labels, colour contrast and direction arrows in the delivered edition. A file extension, a decoded image or a successful build alone does not establish visual quality.
 
 ## Teaching presentation standard (RES-083)
