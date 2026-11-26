@@ -1,6 +1,6 @@
 ## Luisa v0.87
 
-- Moments pairs each question part with its own answer and writing area. A new illustration shows a boy opening a door, and the seesaw example explains the pivot and centre of mass beside the original Woody and Buzz artwork.
+- Moments pairs each question part with its own answer and writing area. A new illustration shows a theatre stagehand opening a backstage door, and the seesaw example explains the pivot and centre of mass beside the original Woody and Buzz artwork.
 - The five-step equilibrium method builds one point at a time. The quickfire force diagram separates the angle label from its vector.
 
 ## Luisa v0.86
