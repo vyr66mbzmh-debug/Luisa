@@ -1,15 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.85 -->
-**Release 0.85 · GitHub #158.**
+<!-- LUISA-REPORT-HANDOFF v0.86 -->
+**Release 0.86 · GitHub #160.**
 
-Further Statistics 1 adds eight teaching chapters, each with a presentation, student booklet, worked solutions and the corresponding textbook chapter.
+Resources uses a shared authoring guide for all eight books and their 75 chapters. It covers question wording, readable mathematics and diagrams, reveal order, extension placement and handwriting space.
 
-The chapter exercises include all 131 exam-style questions from the 34 referenced exercises. Each opens its complete SolutionBank working beside the question. The worked booklet keeps each question and its solution on one sheet.
+The Further Statistics exercise slides include the 131 exam-style questions assigned by the source presentations. Each question has its worked solution on the same slide. Revised Pure, Applied and Core Pure exercises also bring previously separated questions and answers together.
 
-Further Mechanics 1 has matching orange covers on its ten handouts, a revised diagram conventions label and an embedded collision video in chapter 4. Its chapter 4 textbook and all eight Further Statistics chapters open directly on the owner site. School textbook access is reserved for staff.
+The student and worked Resources booklets use two teaching panels per A4 sheet. Their numbering follows the classroom sequence. The Further Statistics worked covers use a white Solutions subtitle on red.
 
-Release verification, usage and recovery evidence are recorded on issue #158.
+The creation and acceptance procedure for subsequent edits is in [the teaching standard](docs/requirements/TEACHING-STANDARD.md). Release verification, usage and recovery evidence are recorded on issue #160.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

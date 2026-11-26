@@ -127,7 +127,7 @@ def main():
                 target = args.output/f'{book}-{number}.jsonl'
                 try:
                     page.goto(urljoin(args.base_url,chapter['slides']))
-                    page.wait_for_function('window.FMQ_TEST?.getState()?.slide')
+                    page.locator("#slide-content .source-slide, #slide-content .ch14").first.wait_for(state="attached")
                     total = page.evaluate('FMQ_TEST.getState().deck.slides.length')
                     with target.open('w') as stream:
                         for index in range(total):

@@ -20,11 +20,12 @@ class TeachingLayoutTests(unittest.TestCase):
         chapter = ROOT / "resources" / "pure-year-1"
         source = json.loads((chapter / "native" / "chapter-05.json").read_text())
         live = json.loads((chapter / "v11" / "chapter-05.json").read_text())
-        originals = {
-            shape["id"]: shape.get("transcription", {}).get("tex")
-            for shape in source["slides"][26]["shapes"]
-        }
-        prompts = [shape for shape in live["slides"][26]["shapes"] if shape.get("sourceQuestionShape")]
-        self.assertEqual(len(prompts), 2)
-        for prompt in prompts:
-            self.assertEqual(prompt["transcription"]["tex"], originals[prompt["sourceQuestionShape"]])
+        original = next(slide for slide in source["slides"] if slide["id"] == "p1-c05-s027")
+        for shape_id, question, board_id in [("5", "14", "p1-c05-s027"), ("6", "16", "p1-c05-s027-item-2")]:
+            with self.subTest(question=question):
+                supplied = next(shape for shape in original["shapes"] if shape["id"] == shape_id)
+                board = next(slide for slide in live["slides"] if slide["id"] == board_id)
+                texts = {shape["id"]: shape["transcription"]["tex"] for shape in board["shapes"]
+                         if "transcription" in shape}
+                self.assertEqual(texts["number"], f"Question {question}")
+                self.assertEqual(f"{question} " + texts["question"], supplied["transcription"]["tex"])

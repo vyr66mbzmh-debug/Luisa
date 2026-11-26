@@ -113,7 +113,7 @@ with sync_playwright() as pw:
     paper = b.new_page()
     paper.goto(base + "vendor/katex.min.css")
     page.goto(urljoin(base, chapter["slides"]))
-    page.wait_for_function("window.FMQ_TEST?.getState().slide")
+    page.locator("#slide-content .source-slide, #slide-content .ch14").first.wait_for(state="attached")
     for n, slide in enumerate(deck, 1):
         if n == 1 or n not in changed:
             continue

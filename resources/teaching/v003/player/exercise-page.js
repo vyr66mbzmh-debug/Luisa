@@ -19,23 +19,39 @@
     const introduction = spec.introduction
       ? '<div class="exercise-introduction">'+imageContent(objects.get(spec.introduction).transcription.tex, {})+'</div>'
       : '';
-    const lowerItem = objects.get(spec.underQuestion);
-    const lowerContent = lowerItem?.asset ? figure(lowerItem.id) :
-      lowerItem ? imageContent(formatMarks(lowerItem.transcription.tex, false), {}) : '';
-    const underQuestion = lowerItem
-      ? '<div class="exercise-under-question" data-answer-for="solution">'+lowerContent+'</div>'
+    function workingContent(ids) {
+      const fragments = [];
+      for (let index = 0; index < ids.length; index++) {
+        const item = objects.get(ids[index]);
+        if (!item.asset) {
+          fragments.push(imageContent(formatMarks(item.transcription.tex, false), {}));
+          continue;
+        }
+        if (spec.pairWorkingFigures && objects.get(ids[index + 1])?.asset) {
+          fragments.push('<div class="exercise-figure-pair">'+figure(item.id)+figure(ids[++index])+'</div>');
+        } else {
+          fragments.push(figure(item.id));
+        }
+      }
+      return fragments.join('');
+    }
+    const underQuestion = spec.underQuestion
+      ? '<div class="exercise-under-question" data-answer-for="solution">'+workingContent([spec.underQuestion])+'</div>'
       : '';
     const band = spec.diagramBand;
-    const working = spec.working.filter(id => id !== band).map(id => {
-      const item = objects.get(id);
-      return item.asset ? figure(id) : imageContent(formatMarks(item.transcription.tex, false), {});
-    }).join('');
+    const topFigures = spec.headerFigures || [];
+    const working = workingContent(spec.working.filter(id => id !== band && !topFigures.includes(id)));
     const diagrams = spec.figures.map(figure).join('');
     const questionFigures = (spec.figures.length >= 3 || spec.pairFigures)
       ? '<div class="exercise-figure-grid">' + diagrams + '</div>'
       : diagrams;
     const number = escape(objects.get('number').transcription.tex);
-    return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet" style="width:100%;height:100%"><div class="exercise-head"><strong>${number}</strong><button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button></div>${introduction}<div class="exercise-columns"><div class="exercise-question" data-shape="prompt">${question}${questionFigures}${underQuestion}</div><div class="exercise-working" data-shape="work-0" data-answer-for="solution">${working}</div></div>${band ? '<div class="exercise-diagram-band" data-answer-for="solution">'+figure(band)+'</div>' : ''}</div></div>`;
+    const title = '<strong>'+number+'</strong><button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button>';
+    const head = topFigures.length
+      ? '<div class="exercise-head exercise-figure-header"><div>'+title+'</div>'+diagrams+
+        topFigures.map(id => '<div class="exercise-header-answer" data-answer-for="solution">'+figure(id)+'</div>').join('')+'</div>'
+      : '<div class="exercise-head">'+title+'</div>';
+    return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet" style="width:100%;height:100%">${head}${introduction}<div class="exercise-columns${spec.compactWorking ? ' exercise-long-working' : ''}"><div class="exercise-question" data-shape="prompt">${question}${topFigures.length ? '' : questionFigures}${underQuestion}</div><div class="exercise-working" data-shape="work-0" data-answer-for="solution">${working}</div></div>${band ? '<div class="exercise-diagram-band" data-answer-for="solution">'+figure(band)+'</div>' : ''}</div></div>`;
   }
   function fit(sheet) {
     if (!sheet || sheet.classList.contains('source-exercise')) return;
@@ -47,6 +63,7 @@
     // Long question stems and short numerical solutions need a different
     // division of the board from brief prompts with extended working.
     const widths = question.querySelector('.exercise-figure-grid') ? [50, 55, 45, 38, 30] : [30, 38, 45, 50, 55];
+    if (container.classList.contains('exercise-long-working')) widths.push(28, 32, 34, 36, 40, 42, 47, 52);
     function fits(size) {
       container.style.fontSize = size + 'px';
       for (const width of widths) {

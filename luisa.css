@@ -139,6 +139,8 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 .exercise-columns .lesson-image-prose>span {margin-bottom:.16em;break-inside:avoid}
 .exercise-columns .katex {font-size:1em}
 .exercise-figure {display:block;width:100%;height:8em;object-fit:contain;margin:.35em auto;break-inside:avoid}
+.exercise-figure-pair {display:flex;align-items:center;gap:.4em;break-inside:avoid}
+.exercise-columns .exercise-figure-pair .exercise-figure {width:calc(50% - .2em);height:6.8em;min-width:0}
 .exercise-under-question {margin-top:.85em}
 .exercise-question .exercise-figure {height:11em}
 .exercise-figure-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.35em}
@@ -180,3 +182,19 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 .katex-html [style*="color:transparent"] {
   visibility: hidden;
 }
+
+/* Long multipart exercises retain the complete prompt and proof in a single panel. */
+.exercise-long-working {line-height:1.12;gap:1.3%}
+.exercise-long-working .exercise-working {column-gap:.8em}
+.exercise-long-working .exercise-question .exercise-figure {height:7.5em}
+.exercise-long-working .exercise-working .exercise-figure {height:6.5em}
+.exercise-long-working .luisa-next-part {margin-top:.6em}
+.exercise-sheet:has(.exercise-long-working) {padding:12px 14px}
+.exercise-sheet:has(.exercise-long-working) .exercise-head {margin-bottom:6px}
+
+.exercise-figure-header {display:flex;align-items:center;gap:10px}
+.exercise-figure-header>div:first-child {flex:0 0 168px;display:grid;gap:8px}
+.exercise-figure-header>.exercise-figure,.exercise-header-answer {flex:1;min-width:0;height:108px;margin:0}
+.exercise-header-answer .exercise-figure {width:100%;height:100%;margin:0}
+.exercise-figure-header strong {white-space:nowrap;font-size:27px}
+.exercise-figure-header>.exercise-header-answer:nth-child(3) {flex-grow:2}

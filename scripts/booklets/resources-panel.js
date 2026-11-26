@@ -495,6 +495,21 @@
     ]);
     const title = content.querySelector(".exercise-head");
     title.querySelector(".exercise-reveal")?.remove();
+    if (student) {
+      // The header keeps the given diagram. Reserve the worked diagrams' space for sketches.
+      const workedFigures = [...panel.querySelectorAll(".exercise-header-answer")];
+      if (workedFigures.length) {
+        const first = bounds(workedFigures[0]);
+        const last = bounds(workedFigures.at(-1));
+        title.querySelectorAll(".exercise-header-answer").forEach(e => {
+          e.replaceChildren();
+          e.removeAttribute("data-answer-for");
+          e.removeAttribute("aria-hidden");
+          e.classList.remove("answer-concealed", "answer-blue", "is-hidden");
+        });
+        box(first.x, first.y, last.x + last.w - first.x, first.h);
+      }
+    }
     box(
       r.x - 5,
       r.y - 7,

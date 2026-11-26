@@ -1,3 +1,9 @@
+## Luisa v0.86
+
+- Resources uses a shared authoring guide for all eight books and their 75 chapters. It covers question wording, readable mathematics and diagrams, reveal order, extension placement and handwriting space.
+- The Further Statistics exercise slides include the 131 exam-style questions assigned by the source presentations. Each question has its worked solution on the same slide. Revised Pure, Applied and Core Pure exercises also bring previously separated questions and answers together.
+- The student and worked Resources booklets use two teaching panels per A4 sheet. Their numbering follows the classroom sequence. The Further Statistics worked covers use a white Solutions subtitle on red.
+
 ## Luisa v0.85
 
 - Further Statistics 1 adds eight teaching chapters, each with a presentation, student booklet, worked solutions and the corresponding textbook chapter.
