@@ -35,7 +35,7 @@ def frame(page):
     page.evaluate('document.fonts.ready')
     page.evaluate('Promise.allSettled([...document.querySelectorAll("#slide-content img")].map(i=>i.decode()))')
     page.evaluate('new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done)))')
-    pixels = page.locator('#slide-region').screenshot(animations='disabled', type='jpeg', quality=63)
+    pixels = page.locator('#slide-region').screenshot(animations='disabled', type='png')
     return hashlib.sha256(pixels).hexdigest()
 
 
@@ -65,12 +65,22 @@ def inspect(page, index):
         page.evaluate('FMQ_TEST.reset()')
         selector = page.evaluate('([attr,id])=>"["+attr+"="+CSS.escape(id)+"]"', [attribute, key])
         node = page.locator('#slide-content').locator(selector)
+        # A later control may be introduced by a teaching step, or by an
+        # earlier part. Follow the student's sequence to the first eligible state.
+        advanced = 0
+        while node.count() == 1 and not node.is_visible() and advanced < 120:
+            if page.locator('#next-step').is_disabled():
+                break
+            page.locator('#next-step').click()
+            page.evaluate('new Promise(done=>requestAnimationFrame(done))')
+            advanced += 1
         if node.count() != 1 or not node.is_visible():
-            physical.append([key, 'absent or initially hidden'])
+            physical.append([key, 'unreachable from the teaching sequence'])
             continue
         try:
+            before = frame(page) if advanced else initial_hash
             node.click(timeout=1200)
-            physical.append([key, 'changed' if frame(page) != initial_hash else 'same board pixels'])
+            physical.append([key, 'changed' if frame(page) != before else 'same board pixels'])
         except Error as error:
             physical.append([key, error.message.splitlines()[0]])
     page.evaluate('FMQ_TEST.reset();document.activeElement?.blur()')

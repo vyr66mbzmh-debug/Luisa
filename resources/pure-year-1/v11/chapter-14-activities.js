@@ -200,9 +200,9 @@ window.LuisaChapter14 = (() => {
       q('#year').onclick=()=>perform('year'+(year+2));q('#transform').onclick=()=>perform('transform');draw();
     }
     function earthquake(){
-      root.innerHTML='<h2>The Richter scale</h2><div class="cols"><div class="stack"><img class="ch-photo" alt="Original Richter-scale chart showing relative wave amplitudes" src="'+activityImage+'"></div><div class="stack"><p>At the same recording distance, how much larger is the recorded wave amplitude for magnitude 5 than for magnitude 4?</p><p>Magnitude 4 · 1 unit</p><div class="amplitude reference"></div>'+
+      root.innerHTML='<h2>The Richter scale</h2><div class="cols"><div class="stack"><img class="ch-photo" alt="Relative wave amplitude A divided by its magnitude-four value. Each unit increase in magnitude multiplies amplitude by ten." src="'+activityImage+'"></div><div class="stack"><p>At the same recording distance, how much larger is the recorded wave amplitude for magnitude 5 than for magnitude 4?</p><p>Use the magnitude 4 amplitude as one unit.</p><div class="amplitude reference"></div>'+
         stage('magnitude','<p>Magnitude 5 · 10 units</p><div class="amplitude bigger"></div>')+'</div></div>'+
-        stage('scale',eq('\\Delta M=\\log_{10}(10/1)=1')+'A tenfold increase in measured wave amplitude gives one extra magnitude unit. Energy is a different quantity.');
+        stage('scale',eq('\\Delta M=\\log_{10}(10/1)=1')+'A tenfold increase in measured amplitude adds one magnitude unit. The vertical axis uses powers of ten. Descriptions such as minor, moderate, strong, major or great refer to the event. How strongly it is felt also depends on where the observer is.');
     }
     function power(){
       const raw={x:[0,4.2],y:[0,140],ticksX:[0,1,2,3,4],ticksY:[0,32,64,96,128],label:'Ordinary axes: cubic',curves:[{fn:x=>2*x**3,colour:colours[1]}],points:[[1,2],[2,16],[4,128]].map((p,i)=>[...p,colours[i]])};

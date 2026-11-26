@@ -243,6 +243,7 @@
       if (control || shape.cover) {
         const original = deck.sourceCoverLabels ? shape.coverLabel ?? prompt : prompt || shape.coverLabel || '';
         const label = rotation ? 'Animation · '+(rotation[1].toLowerCase()==='degree'?'1°':'1 rad') : control ? (/sketch|plot/i.test(caption) ? 'Sketch' : 'Animation') : cleanLabel(original);
+        if (shape.cover) shape.coverLabel = label;
         const maths = !control && runs.some(r => r.type === 'math') && original.replace(/\?|\s/g,'') === prompt.replace(/\?|\s/g,'');
         const size = Math.min(26, Math.max(16, shape.box.h * .62));
         const parts = maths ? runs.filter(r => r.type === 'math' || r.text?.replace(/\?/g,'').trim()).map(r => ({...r, text:r.text?.replace(/\?/g,''),fontSize:size})) : [{type:'text',text:label,fontSize:size}];
