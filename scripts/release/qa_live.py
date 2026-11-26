@@ -94,6 +94,48 @@ def live_get(p, url, **options):
                 raise
 
 
+def old_spec(p, role):
+    opt = p.locator('#papers-source-old-spec')
+    expect(opt).to_be_enabled()
+    expect(opt).not_to_be_checked()
+    expect(p.locator('#papers-past-paper option[value="old-spec-revision"]')).to_have_count(0)
+    for bank in ('practice', 'exam-style', 'past-papers'):
+        p.locator('#papers-source-' + bank).uncheck()
+    opt.check()
+    select = p.locator('#papers-past-paper')
+    expect(select.locator('option[value="old-spec-revision"]')).to_have_text('old spec revision questions')
+    select.select_option('old-spec-revision')
+    expect(p.locator('#filter-title')).to_have_text('244 questions in the selection')
+    for difficulty, count in [('easy', 33), ('medium', 124), ('difficult', 87)]:
+        p.locator('#papers-difficulty').select_option(difficulty)
+        expect(p.locator('#filter-title')).to_have_text(f'{count} questions in the selection')
+    p.locator('#papers-difficulty').select_option('easy')
+    p.locator('#papers-course').select_option('further-maths-a-level')
+    p.locator('#papers-book').select_option('further-maths-a-level/pure-core-1')
+    p.locator('#papers-topics input[value="further-maths-a-level/pure-core-1/2"]').check()
+    p.locator('#papers-browse').click()
+    card = p.locator('.question-card').filter(has=p.locator('[data-add="old-spec/rev01-01"]'))
+    card.get_by_text('Worked solution', exact=True).click()
+    expect(card.get_by_text('Think of', exact=False).first).to_be_visible()
+    card.get_by_text('Mark scheme', exact=True).click()
+    image = card.locator('img[src*="-ms-"]').first
+    expect(image).to_be_visible()
+    image.evaluate('img => img.decode()')
+    card.locator('[data-add]').click()
+    expect(p.locator('#papers-selected-count')).to_have_text('1')
+    if role != 'student':
+        expect(p.locator('#papers-exam-print')).to_be_enabled()
+    p.reload(wait_until='domcontentloaded')
+    expect(opt).to_be_checked()
+    expect(select).to_have_value('old-spec-revision')
+    expect(p.locator('#papers-selected-count')).to_have_text('1')
+    p.evaluate("sessionStorage.removeItem('luisa-papers-v1')")
+    p.reload(wait_until='domcontentloaded')
+    expect(opt).to_be_enabled()
+    expect(opt).not_to_be_checked()
+    ok(f'{role} Old Spec chapters, three difficulty bands, distinct worked solution and source mark scheme, selection and restore passed')
+
+
 def paper(p, url, role, totals, qa_papers, out, rev, version):
     meta, cat = metadata()
     marks_of = {q['id']: q['marks'] for q in cat}
@@ -134,6 +176,7 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
         assert not p.locator('a[href$="offline.html"],a[href$="development-progress.html"],a[href*="classpad.net"]').count()
     if role != 'owner':
         expect(p.locator('.luisa-signout')).to_have_count(1)
+    old_spec(p, role)
     # PAP-068: the paper dropdown follows Course/Book; active and disabled styles.
     panel = p.locator('.filter-panel')
     shot = lambda name: panel.screenshot(path=str(out / f'shot-{role}-{name}.png'))

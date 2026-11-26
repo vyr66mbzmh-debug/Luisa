@@ -1,0 +1,168 @@
+[
+  {
+    "id": "old-spec/rev03-01",
+    "question": "<p>The quadratic equation <span class=\"inline-math\" data-math=\"2 z^{2}-4 z+5=0\"></span> has roots <span class=\"inline-math\" data-math=\"\\alpha\"></span> and <span class=\"inline-math\" data-math=\"\\beta\"></span> Without solving the equation,</p><p>(a) write down the values of <span class=\"inline-math\" data-math=\"\\alpha+\\beta\"></span> and <span class=\"inline-math\" data-math=\"\\alpha\\beta\"></span> <span class=\"marks\">(2)</span></p><p>(b) find the quadratic equation with roots <span class=\"inline-math\" data-math=\"3\\alpha-1, 3\\beta-1\"></span> <span class=\"marks\">(3)</span></p><p>(c) find the cubic equation which has roots <span class=\"inline-math\" data-math=\"\\alpha, \\beta\"></span> and <span class=\"inline-math\" data-math=\"\\alpha+\\beta\"></span> <span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>Write the original quadratic as <span class=\"inline-math\" data-math=\"2(x-\\alpha)(x-\\beta)\"></span>. Its middle coefficient is <span class=\"inline-math\" data-math=\"-2(\\alpha+\\beta)\"></span>, and its constant coefficient is <span class=\"inline-math\" data-math=\"2\\alpha\\beta\"></span>. The same comparison works for the transformed roots once you have found their new sum and product.</p>",
+      "<p>(a) Comparing coefficients gives <span class=\"inline-math\" data-math=\"\\alpha+\\beta=2,\\ \\alpha\\beta=5/2\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) The new sum is <span class=\"inline-math\" data-math=\"3(\\alpha+\\beta)-2=4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The product is <span class=\"inline-math\" data-math=\"9\\alpha\\beta-3(\\alpha+\\beta)+1=35/2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"2x^2-8x+35=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>An alternative from the pack uses <span class=\"inline-math\" data-math=\"w=3z-1\"></span>. Substitution gives <span class=\"inline-math\" data-math=\"2(w+1)^2-12(w+1)+45=0\"></span>, which expands to the same quadratic.</p>",
+      "<p>(c) The third root is 2, so multiply the original quadratic by <span class=\"inline-math\" data-math=\"x-2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Expanding <span class=\"inline-math\" data-math=\"(x-2)(2x^2-4x+5)\"></span> gives <span class=\"inline-math\" data-math=\"2x^3-8x^2+13x-10=0\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 2 marks</strong></p>",
+      "<p>[1] Sum <span class=\"inline-math\" data-math=\"2\"></span></p>",
+      "<p>[1] Product <span class=\"inline-math\" data-math=\"5/2\"></span>.</p>",
+      "<p><strong>(b) · 3 marks</strong></p>",
+      "<p>[1] New sum <span class=\"inline-math\" data-math=\"4\"></span></p>",
+      "<p>[1] New product <span class=\"inline-math\" data-math=\"35/2\"></span></p>",
+      "<p>[1] Form <span class=\"inline-math\" data-math=\"2x^2-8x+35=0\"></span>. Equivalent substitution earns corresponding credit.</p>",
+      "<p><strong>(c) · 3 marks</strong></p>",
+      "<p>[1] Introduce the factor <span class=\"inline-math\" data-math=\"x-2\"></span></p>",
+      "<p>[1] Multiply by the original quadratic</p>",
+      "<p>[1] Correct coefficients <span class=\"inline-math\" data-math=\"2,-8,13,-10\"></span>.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev03-02",
+    "question": "<p>The equation <span class=\"inline-math\" data-math=\"z^{3}+k z^{2}-4 z-12=0\"></span> has roots <span class=\"inline-math\" data-math=\"\\alpha, \\beta\"></span> and <span class=\"inline-math\" data-math=\"\\gamma.\"></span></p><p>(a) Write down the values of <span class=\"inline-math\" data-math=\"\\alpha\\beta+\\beta\\gamma+\\gamma\\alpha\"></span> and of <span class=\"inline-math\" data-math=\"\\alpha\\beta\\gamma,\"></span> and express k in terms of <span class=\"inline-math\" data-math=\"\\alpha, \\beta\"></span> and <span class=\"inline-math\" data-math=\"\\gamma.\"></span> <span class=\"marks\">(3)</span></p><p>(b) For the case where <span class=\"inline-math\" data-math=\"\\gamma=-\\alpha\"></span> , solve the equation and find the value of k. <span class=\"marks\">(4)</span></p><p>(c) For the case k=5, find a cubic equation with roots <span class=\"inline-math\" data-math=\"2-\\alpha, 2-\\beta, 2-\\gamma.\"></span> <span class=\"marks\">(4)</span></p>",
+    "steps": [
+      "<p>Expanding a monic cubic in its roots gives signs minus, plus, minus for the three symmetric sums. When two roots are opposites their sum vanishes, and their products with the third root cancel. That is why the pair sum immediately determines their squares.</p>",
+      "<p>(a) <span class=\"inline-math\" data-math=\"\\alpha\\beta+\\beta\\gamma+\\gamma\\alpha=-4\"></span>, <span class=\"inline-math\" data-math=\"\\alpha\\beta\\gamma=12\"></span> and <span class=\"inline-math\" data-math=\"k=-(\\alpha+\\beta+\\gamma)\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>(b) With <span class=\"inline-math\" data-math=\"\\gamma=-\\alpha\"></span> the pair sum reduces to <span class=\"inline-math\" data-math=\"-\\alpha^2=-4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus the opposite roots are <span class=\"inline-math\" data-math=\"2,-2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The product gives <span class=\"inline-math\" data-math=\"-4\\beta=12\"></span>, so <span class=\"inline-math\" data-math=\"\\beta=-3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"k=3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) Write <span class=\"inline-math\" data-math=\"x=2-z\"></span>, so <span class=\"inline-math\" data-math=\"z=2-x\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitute to give <span class=\"inline-math\" data-math=\"(2-x)^3+5(2-x)^2-4(2-x)-12=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Expanding gives <span class=\"inline-math\" data-math=\"-x^3+11x^2-28x+8=0\"></span>, or <span class=\"inline-math\" data-math=\"x^3-11x^2+28x-8=0\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>A check on (c) uses sums. With <span class=\"inline-math\" data-math=\"k=5\"></span>, the old roots sum to <span class=\"inline-math\" data-math=\"-5\"></span>. The three new roots <span class=\"inline-math\" data-math=\"2-\\alpha,2-\\beta,2-\\gamma\"></span> must sum to <span class=\"inline-math\" data-math=\"6-(-5)=11\"></span>, which agrees with the coefficient <span class=\"inline-math\" data-math=\"-11\"></span> in the monic transformed cubic.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 3 marks</strong></p>",
+      "<p>[1] Pair sum <span class=\"inline-math\" data-math=\"-4\"></span></p>",
+      "<p>[1] Product <span class=\"inline-math\" data-math=\"12\"></span></p>",
+      "<p>[1] <span class=\"inline-math\" data-math=\"k\"></span> is the negative sum of the three roots.</p>",
+      "<p><strong>(b) · 4 marks</strong></p>",
+      "<p>[1] Cancel opposite-root cross terms</p>",
+      "<p>[1] Infer opposite roots <span class=\"inline-math\" data-math=\"2,-2\"></span></p>",
+      "<p>[1] Obtain third root <span class=\"inline-math\" data-math=\"-3\"></span> from the product</p>",
+      "<p>[1] <span class=\"inline-math\" data-math=\"k=3\"></span>.</p>",
+      "<p><strong>(c) · 4 marks</strong></p>",
+      "<p>[1] Set <span class=\"inline-math\" data-math=\"z=2-x\"></span></p>",
+      "<p>[1] Substitute throughout the original cubic with <span class=\"inline-math\" data-math=\"k=5\"></span></p>",
+      "<p>[1] Expand the transformed cubic</p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"x^3-11x^2+28x-8=0\"></span>.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev03-03",
+    "question": "<p>The complex number <span class=\"inline-math\" data-math=\"3+2 \\mathrm{i}\"></span> is a root of the equation <span class=\"inline-math\" data-math=\"2 x^{3}+p x^{2}+20 x+q=0\"></span> where p and q are real numbers.</p><p>(a) Write down the other complex root of the equation and explain why the equation must have one real root. <span class=\"marks\">(2)</span></p><p>(b) Find the values of p and q. <span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>Conjugating an equation with real coefficients carries each root to another root of the same equation. Multiplying the conjugate factors directly gives <span class=\"inline-math\" data-math=\"((x-3)-2i)((x-3)+2i)=(x-3)^2+4\"></span>. The remaining linear factor must start with <span class=\"inline-math\" data-math=\"2x\"></span> to produce the original leading term.</p>",
+      "<p>(a) The coefficients are real, so <span class=\"inline-math\" data-math=\"3-2i\"></span> is the conjugate root. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Nonreal roots occur in conjugate pairs, so the third root is real. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) The conjugate pair gives the factor <span class=\"inline-math\" data-math=\"(x-3)^2+4=x^2-6x+13\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Use <span class=\"inline-math\" data-math=\"(2x+b)(x^2-6x+13)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The linear coefficient is <span class=\"inline-math\" data-math=\"26-6b=20\"></span>, so <span class=\"inline-math\" data-math=\"b=1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The <span class=\"inline-math\" data-math=\"x^2\"></span> coefficient is <span class=\"inline-math\" data-math=\"b-12=-11\"></span> and the constant is <span class=\"inline-math\" data-math=\"13b=13\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The real root is consequently <span class=\"inline-math\" data-math=\"-1/2\"></span>.\nAlternatively, writing <span class=\"inline-math\" data-math=\"a\"></span> for the real root, the pair sum gives <span class=\"inline-math\" data-math=\"6a+13=10\"></span>, so <span class=\"inline-math\" data-math=\"a=-1/2\"></span>. The sum gives <span class=\"inline-math\" data-math=\"-p/2=6-1/2=11/2\"></span>, while the product gives <span class=\"inline-math\" data-math=\"-q/2=13(-1/2)\"></span>. These recover <span class=\"inline-math\" data-math=\"p=-11,\\ q=13\"></span>.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 2 marks</strong></p>",
+      "<p>[1] Identify <span class=\"inline-math\" data-math=\"3-2i\"></span></p>",
+      "<p>[1] Explain why the third root is real for a real cubic.</p>",
+      "<p><strong>(b) · 5 marks</strong></p>",
+      "<p>[1] Form <span class=\"inline-math\" data-math=\"x^2-6x+13\"></span></p>",
+      "<p>[1] Use complementary factor <span class=\"inline-math\" data-math=\"2x+b\"></span>, or equivalent root relations</p>",
+      "<p>[1] Find <span class=\"inline-math\" data-math=\"b=1\"></span> or real root <span class=\"inline-math\" data-math=\"-1/2\"></span></p>",
+      "<p>[1] Quadratic coefficient <span class=\"inline-math\" data-math=\"-11\"></span></p>",
+      "<p>[1] Constant <span class=\"inline-math\" data-math=\"13\"></span>.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev03-04",
+    "question": "<p>The cubic equation <span class=\"inline-math\" data-math=\"2 z^{3}+p z^{2}+q z+r=0\"></span> has roots <span class=\"inline-math\" data-math=\"\\frac{\\alpha}{k},\\alpha\"></span> and <span class=\"inline-math\" data-math=\"k\\alpha.\"></span></p><p>(a) Express p, q and r in terms of k and <span class=\"inline-math\" data-math=\"\\alpha.\"></span> <span class=\"marks\">(3)</span></p><p>(b) Show that <span class=\"inline-math\" data-math=\"2 q^{3}=p^{3} r.\"></span> <span class=\"marks\">(3)</span></p><p>(c) Solve the equation for the case where <span class=\"inline-math\" data-math=\"p=q=-3.\"></span> <span class=\"marks\">(4)</span></p>",
+    "steps": [
+      "<p>The three roots are arranged in a geometric progression. Their product loses all powers of <span class=\"inline-math\" data-math=\"k\"></span>, whereas their sum and pair sum share the factor <span class=\"inline-math\" data-math=\"k+1+1/k\"></span>. Keeping this factor intact makes it possible to eliminate <span class=\"inline-math\" data-math=\"k\"></span> without dividing by <span class=\"inline-math\" data-math=\"p\"></span>.</p>",
+      "<p>(a) Write <span class=\"inline-math\" data-math=\"t=k+1+1/k\"></span>. The sum of roots gives <span class=\"inline-math\" data-math=\"p=-2\\alpha t\"></span>, the pair sum gives <span class=\"inline-math\" data-math=\"q=2\\alpha^2t\"></span>, and the product gives <span class=\"inline-math\" data-math=\"r=-2\\alpha^3\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>(b) Since <span class=\"inline-math\" data-math=\"q=-\\alpha p\"></span>, <small class=\"step-credit\">[1]</small> <span class=\"inline-math\" data-math=\"2q^3=-2\\alpha^3p^3=p^3r\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) With <span class=\"inline-math\" data-math=\"p=q=-3\"></span>, <span class=\"inline-math\" data-math=\"q=-\\alpha p\"></span> gives <span class=\"inline-math\" data-math=\"\\alpha=-1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"r=2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Factor the cubic as <span class=\"inline-math\" data-math=\"(z+1)(2z^2-5z+2)=(z+1)(2z-1)(z-2)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The roots are <span class=\"inline-math\" data-math=\"-1,1/2,2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Alternatively, <span class=\"inline-math\" data-math=\"p=-3\"></span> and <span class=\"inline-math\" data-math=\"\\alpha=-1\"></span> give <span class=\"inline-math\" data-math=\"2k^2+5k+2=(2k+1)(k+2)=0\"></span>. Both <span class=\"inline-math\" data-math=\"k=-1/2\"></span> and <span class=\"inline-math\" data-math=\"k=-2\"></span> give the same three roots.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 3 marks</strong></p>",
+      "<p>[1] <span class=\"inline-math\" data-math=\"p=-2\\alpha(k+1+1/k)\"></span></p>",
+      "<p>[1] <span class=\"inline-math\" data-math=\"q=2\\alpha^2(k+1+1/k)\"></span></p>",
+      "<p>[1] <span class=\"inline-math\" data-math=\"r=-2\\alpha^3\"></span>.</p>",
+      "<p><strong>(b) · 3 marks</strong></p>",
+      "<p>[1] Establish <span class=\"inline-math\" data-math=\"q=-\\alpha p\"></span></p>",
+      "<p>[1] Cube this relation</p>",
+      "<p>[1] Substitute <span class=\"inline-math\" data-math=\"r=-2\\alpha^3\"></span> to reach <span class=\"inline-math\" data-math=\"2q^3=p^3r\"></span>.</p>",
+      "<p><strong>(c) · 4 marks</strong></p>",
+      "<p>[1] Find <span class=\"inline-math\" data-math=\"\\alpha=-1\"></span></p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"r=2\"></span></p>",
+      "<p>[1] Factor the residual quadratic or find <span class=\"inline-math\" data-math=\"k\"></span></p>",
+      "<p>[1] Give all three roots <span class=\"inline-math\" data-math=\"-1,1/2,2\"></span>.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev03-05",
+    "question": "<p>In this question you must show detailed reasoning.</p><p>The cubic equation <span class=\"inline-math\" data-math=\"2 x^{3}+3 x^{2}-8 x+3=0\"></span> has roots <span class=\"inline-math\" data-math=\"\\alpha, \\beta\"></span> and <span class=\"inline-math\" data-math=\"\\gamma\"></span> .</p><p>Without solving the equation, find the value of</p><p>(a) <span class=\"inline-math\" data-math=\"\\frac{1}{\\alpha}+\\frac{1}{\\beta}+\\frac{1}{\\gamma},\"></span> <span class=\"marks\">(3)</span></p><p>(b) <span class=\"inline-math\" data-math=\"\\alpha^{2}+\\beta^{2}+\\gamma^{2}.\"></span> <span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>For reciprocals, use <span class=\"inline-math\" data-math=\"\\alpha\\beta\\gamma\"></span> as the common denominator: the numerator contributed by <span class=\"inline-math\" data-math=\"1/\\alpha\"></span> is <span class=\"inline-math\" data-math=\"\\beta\\gamma\"></span>. For squares, expand <span class=\"inline-math\" data-math=\"(\\alpha+\\beta+\\gamma)^2\"></span>. Each cross term occurs twice, explaining the factor of two in the subtraction.</p>",
+      "<p>(a) The pair sum is <span class=\"inline-math\" data-math=\"-4\"></span> and the product is <span class=\"inline-math\" data-math=\"-3/2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"\\sum 1/\\alpha=(\\alpha\\beta+\\beta\\gamma+\\gamma\\alpha)/(\\alpha\\beta\\gamma)=(-4)/(-3/2)=8/3\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) The sum of the roots is <span class=\"inline-math\" data-math=\"-3/2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Squaring it counts each pair twice, so <span class=\"inline-math\" data-math=\"\\alpha^2+\\beta^2+\\gamma^2=(-3/2)^2-2(-4)=41/4\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 3 marks</strong></p>",
+      "<p>[1] Read pair sum <span class=\"inline-math\" data-math=\"-4\"></span> and product <span class=\"inline-math\" data-math=\"-3/2\"></span></p>",
+      "<p>[1] Express the reciprocal sum as their quotient</p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"8/3\"></span>.</p>",
+      "<p><strong>(b) · 3 marks</strong></p>",
+      "<p>[1] Root sum <span class=\"inline-math\" data-math=\"-3/2\"></span></p>",
+      "<p>[1] Subtract twice the pair sum from its square</p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"41/4\"></span>.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev03-06",
+    "question": "<p>In this question you must show detailed reasoning.</p><p>One root of the quartic equation</p><div class=\"equation\" data-display=\"true\" data-math=\"3 z^{4}-14 z^{3}+48 z^{2}-30 z+13=0\"></div><p>is the complex number <span class=\"inline-math\" data-math=\"2+3 \\mathrm{i}\"></span>.</p><p>Show that, when plotted on an Argand diagram, the roots of the quartic equation form the vertices of a trapezium and calculate the exact area of the trapezium. <span class=\"marks\">(8)</span></p>",
+    "steps": [
+      "<p>Both conjugate pairs have identical real coordinates within each pair, so they form the parallel sides of the trapezium. The height used in the area formula is therefore horizontal. It is the difference of the real parts, whereas each side length is the difference of the imaginary parts.</p>",
+      "<p>The real coefficients give the conjugate root <span class=\"inline-math\" data-math=\"2-3i\"></span>, so <span class=\"inline-math\" data-math=\"z^2-4z+13\"></span> is a factor. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Dividing the quartic gives <span class=\"inline-math\" data-math=\"3z^2-2z+1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Its roots are <span class=\"inline-math\" data-math=\"(1\\pm i\\sqrt2)/3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The pair with real part 2 forms a vertical side of length 6. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The pair with real part <span class=\"inline-math\" data-math=\"1/3\"></span> forms a parallel vertical side of length <span class=\"inline-math\" data-math=\"2\\sqrt2/3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Their separation is <span class=\"inline-math\" data-math=\"2-1/3=5/3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The trapezium area is <span class=\"inline-math\" data-math=\"\\tfrac12(6+2\\sqrt2/3)(5/3)=(45+5\\sqrt2)/9\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev03-06-solution-1.svg\" alt=\"Worked diagram for REV03-06\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>Overall · 8 marks</strong></p>",
+      "<p>[1] Identify <span class=\"inline-math\" data-math=\"2-3i\"></span></p>",
+      "<p>[1] Form <span class=\"inline-math\" data-math=\"z^2-4z+13\"></span></p>",
+      "<p>[1] Find the remaining factor <span class=\"inline-math\" data-math=\"3z^2-2z+1\"></span></p>",
+      "<p>[1] Find both remaining roots <span class=\"inline-math\" data-math=\"(1\\pm i\\sqrt2)/3\"></span></p>",
+      "<p>[1] Identify the parallel side of length <span class=\"inline-math\" data-math=\"6\"></span></p>",
+      "<p>[1] Find other side <span class=\"inline-math\" data-math=\"2\\sqrt2/3\"></span></p>",
+      "<p>[1] Obtain perpendicular separation <span class=\"inline-math\" data-math=\"5/3\"></span></p>",
+      "<p>[1] Evaluate trapezium area <span class=\"inline-math\" data-math=\"(45+5\\sqrt2)/9\"></span>.</p>"
+    ]
+  }
+]

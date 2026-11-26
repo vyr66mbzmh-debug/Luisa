@@ -19,7 +19,7 @@
   const extraMinutes = minutes => Math.round(minutes * 0.25);
   const plural = (count, word) => `${count} ${word}${count === 1 ? '' : 's'}`;
   // PAP-074-2: only questions with an official (or equivalent source) mark scheme may go in an exam paper.
-  const hasMarkScheme = row => row.markScheme === 'official' || row.markScheme === 'source' || (row.sourceKind === 'madas' && row.markScheme === 'worked');
+  const hasMarkScheme = row => row.markScheme === 'official' || row.markScheme === 'source' || row.markScheme === 'editorial' || (row.sourceKind === 'madas' && row.markScheme === 'worked');
   // PAP-074-3 / PAP-075: a question page names no source. A context block keeps its content but loses its source label
   // (for example "Reference from 9.5 Q1"), whatever source the row comes from.
   const withoutSourceLabels = node => { node.querySelectorAll('.practice-context-label').forEach(label => label.remove()); return node; };
@@ -151,7 +151,7 @@
       if (withQuestions) staging.append(front);
       // The paired official (or source) scheme with all its continuations (PAP-074-2).
       const schemes = withScheme ? rows.map((row, index) => {
-        const scheme = content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join(''));
+        const scheme = content(doc, (row.markSchemeSteps || row.steps).map(html => `<div class="solution-step">${html}</div>`).join(''));
         if (scheme && row.schemeNote) scheme.prepend(element(doc, 'p', 'exam-scheme-note', row.schemeNote));
         if (row.sourceKind === 'madas') scheme.querySelector('.madas-total').textContent = `Total mark for question ${index + 1} is ${row.marks} marks.`;
         staging.append(scheme);
@@ -524,7 +524,10 @@
     $('papers-exam-print').disabled = busy || !rows.length || Boolean(totals.unknown.length) || Boolean(totals.noScheme.length);
     $('papers-exam-generate').disabled = busy || !eligible;
     const total = candidates.length;
-    $('papers-exam-eligible').textContent = `${eligible.toLocaleString()} of ${total.toLocaleString()} question${total === 1 ? '' : 's'} in the chosen sources and topics ${eligible === 1 ? 'has' : 'have'} ${madas.checked ? 'an eligible mark scheme (including MADAS editorial marks)' : 'an official mark scheme'} and can go in an exam paper.`;
+    const schemeDescription = candidates.some(row => row.bank === 'old-spec')
+      ? 'a mark scheme (including source tables and suggested marking guides)'
+      : madas.checked ? 'an eligible mark scheme (including MADAS editorial marks)' : 'an official mark scheme';
+    $('papers-exam-eligible').textContent = `${eligible.toLocaleString()} of ${total.toLocaleString()} question${total === 1 ? '' : 's'} in the chosen sources and topics ${eligible === 1 ? 'has' : 'have'} ${schemeDescription} and can go in an exam paper.`;
     $('papers-exam-order').disabled = busy || rows.length < 2 || Boolean(totals.unknown.length);
     $('papers-exam-summary').textContent = !rows.length ? 'Select questions to build an exam paper.'
       : totals.noScheme.length ? `${plural(totals.noScheme.length, 'selected question')} without an official mark scheme cannot go in an exam paper. Remove ${totals.noScheme.length === 1 ? 'it' : 'them'} or generate a timed paper.`

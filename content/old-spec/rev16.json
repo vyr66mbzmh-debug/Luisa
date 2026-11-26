@@ -1,0 +1,171 @@
+[
+  {
+    "id": "old-spec/rev16-01",
+    "question": "<p>Show, using the formulae for <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r\"></span> and <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{2}\"></span> , that <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} 3 \\left( 2 r-1 \\right)^{2}=n \\left( 2 n+1 \\right) \\left( 2 n-1 \\right)\"></span> , for all positive integers n. <span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>Expand <span class=\"inline-math\" data-math=\"3(2r-1)^2\"></span> as <span class=\"inline-math\" data-math=\"12r^2-12r+3\"></span>. The constant term contributes <span class=\"inline-math\" data-math=\"3n\"></span>, since there are <span class=\"inline-math\" data-math=\"n\"></span> odd squares. A check at <span class=\"inline-math\" data-math=\"n=1\"></span> gives <span class=\"inline-math\" data-math=\"3\"></span> from both the original term and the factored expression.</p>",
+      "<p>Let <span class=\"inline-math\" data-math=\"T_j=\\sum_{r=1}^n r^j\"></span>. Expanding the summand gives <span class=\"inline-math\" data-math=\"S_n=3 T_{0} - 12 T_{1} + 12 T_{2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitute <span class=\"inline-math\" data-math=\"T_2=\\frac{n \\left(n + 1\\right) \\left(2 n + 1\\right)}{6}\"></span>, <span class=\"inline-math\" data-math=\"T_1=\\frac{n \\left(n + 1\\right)}{2}\"></span>, <span class=\"inline-math\" data-math=\"T_0=n\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Consequently <span class=\"inline-math\" data-math=\"S_n=2 n \\left(n + 1\\right) \\left(2 n + 1\\right) - 6 n \\left(n + 1\\right) + 3 n\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Simplifying and factorising gives <span class=\"inline-math\" data-math=\"S_n=n \\left(2 n - 1\\right) \\left(2 n + 1\\right)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 5 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-01-ms-01.webp\" alt=\"Source marking table for Jan 2013 · Q1, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev16-02",
+    "question": "<p>(a) Use the standard results for <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{3}\"></span> and <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r\"></span> to show that <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} \\left(r^{3}+6 r-3\\right)=\\frac{1}{4} n^{2}\\left(n^{2}+2 n+13\\right)\"></span> for all positive integers n. <span class=\"marks\">(5)</span></p><p>(b) Hence find the exact value of <span class=\"inline-math\" data-math=\"\\sum_{r=16}^{30} \\left(r^{3}+6 r-3\\right)\"></span> <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The constant <span class=\"inline-math\" data-math=\"-3\"></span> is added once for each term. Combining <span class=\"inline-math\" data-math=\"6\\sum r-3n\"></span> therefore gives <span class=\"inline-math\" data-math=\"3n(n+1)-3n=3n^2\"></span>, which explains the overall factor <span class=\"inline-math\" data-math=\"n^2\"></span>. For the range 16 to 30 the last term removed is the one at 15.</p>",
+      "<p>(a) Let <span class=\"inline-math\" data-math=\"T_j=\\sum_{r=1}^n r^j\"></span>. Expanding the summand gives <span class=\"inline-math\" data-math=\"S_n=- 3 T_{0} + 6 T_{1} + T_{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitute <span class=\"inline-math\" data-math=\"T_3=\\frac{n^{2} \\left(n + 1\\right)^{2}}{4}\"></span>, <span class=\"inline-math\" data-math=\"T_1=\\frac{n \\left(n + 1\\right)}{2}\"></span>, <span class=\"inline-math\" data-math=\"T_0=n\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Consequently <span class=\"inline-math\" data-math=\"S_n=\\frac{n^{2} \\left(n + 1\\right)^{2}}{4} + 3 n \\left(n + 1\\right) - 3 n\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Simplifying and factorising gives <span class=\"inline-math\" data-math=\"S_n=\\frac{n^{2} \\left(n^{2} + 2 n + 13\\right)}{4}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Subtract the partial sums <span class=\"inline-math\" data-math=\"S_{30}-S_{15}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This gives <span class=\"inline-math\" data-math=\"\\left(218925\\right)-\\left(15075\\right)=203850\"></span>.  <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-02-ms-01.webp\" alt=\"Source marking table for June 2012 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev16-03",
+    "question": "<p>(a) Prove by induction <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{3}=\\frac{1}{4} n^{2}(n+1)^{2}\"></span> <span class=\"marks\">(5)</span></p><p>(b) Using the result in part (a), show that <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} (r^{3}-2)=\\frac{1}{4} n(n^{3}+2n^{2}+n-8)\"></span> <span class=\"marks\">(3)</span></p><p>(c) Calculate the exact value of <span class=\"inline-math\" data-math=\"\\sum_{r=20}^{50} (r^{3}-2).\"></span> <span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>Extract <span class=\"inline-math\" data-math=\"(k+1)^2/4\"></span> after adding the next cube. The remaining bracket is <span class=\"inline-math\" data-math=\"k^2+4(k+1)=(k+2)^2\"></span>, the square required for the next induction step. In the altered sum subtract two for every retained index.</p>",
+      "<p>(a) At <span class=\"inline-math\" data-math=\"n=1\"></span>, both sides equal <span class=\"inline-math\" data-math=\"1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume <span class=\"inline-math\" data-math=\"S_k=\\frac{k^{2} \\left(k + 1\\right)^{2}}{4}\"></span> for a positive integer <span class=\"inline-math\" data-math=\"k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Adding the next term gives <span class=\"inline-math\" data-math=\"S_{k+1}=\\frac{k^{2} \\left(k + 1\\right)^{2}}{4}+\\left(k + 1\\right)^{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Collecting terms gives <span class=\"inline-math\" data-math=\"S_{k+1}=\\frac{\\left(k + 1\\right)^{2} \\left(k + 2\\right)^{2}}{4}\"></span>, the required formula with <span class=\"inline-math\" data-math=\"n=k+1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The base case and inductive implication prove the formula for every positive integer. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Subtract 2 once for each of the <span class=\"inline-math\" data-math=\"n\"></span> terms. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The new partial sum is <span class=\"inline-math\" data-math=\"T_n=n^2(n+1)^2/4-2n\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Expanding gives <span class=\"inline-math\" data-math=\"T_n=\\frac{n \\left(n^{3} + 2 n^{2} + n - 8\\right)}{4}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) Subtract the partial sums <span class=\"inline-math\" data-math=\"T_{50}-T_{19}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This gives <span class=\"inline-math\" data-math=\"\\left(1625525\\right)-\\left(36062\\right)=1589463\"></span>.  <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 11 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-03-ms-01.webp\" alt=\"Source marking table for Jan 2012 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev16-04",
+    "question": "<p>(a) Use the results for <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r\"></span> and <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{2}\"></span> to show that <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} (2r-1)^{2}=\\frac{1}{3} n(2n+1)(2n-1)\"></span> for all positive integers n. <span class=\"marks\">(6)</span></p><p>(b) Hence show that <span class=\"inline-math\" data-math=\"\\sum_{r=n+1}^{3n} (2r-1)^{2}=\\frac{2}{3} n\\left( a n^{2}+b \\right)\"></span> where a and b are integers to be found. <span class=\"marks\">(4)</span></p>",
+    "steps": [
+      "<p>The formula for the first <span class=\"inline-math\" data-math=\"n\"></span> odd squares ends at <span class=\"inline-math\" data-math=\"(2n-1)^2\"></span>, so use the index <span class=\"inline-math\" data-math=\"n\"></span> rather than the odd value <span class=\"inline-math\" data-math=\"2n-1\"></span> as the partial-sum input. To keep the terms indexed <span class=\"inline-math\" data-math=\"n+1\"></span> through <span class=\"inline-math\" data-math=\"3n\"></span>, take the difference between the two cumulative totals.</p>",
+      "<p>(a) Let <span class=\"inline-math\" data-math=\"T_j=\\sum_{r=1}^n r^j\"></span>. Expanding the summand gives <span class=\"inline-math\" data-math=\"S_n=T_{0} - 4 T_{1} + 4 T_{2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitute <span class=\"inline-math\" data-math=\"T_2=\\frac{n \\left(n + 1\\right) \\left(2 n + 1\\right)}{6}\"></span>, <span class=\"inline-math\" data-math=\"T_1=\\frac{n \\left(n + 1\\right)}{2}\"></span>, <span class=\"inline-math\" data-math=\"T_0=n\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>Consequently <span class=\"inline-math\" data-math=\"S_n=\\frac{2 n \\left(n + 1\\right) \\left(2 n + 1\\right)}{3} - 2 n \\left(n + 1\\right) + n\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Simplifying and factorising gives <span class=\"inline-math\" data-math=\"S_n=\\frac{n \\left(2 n - 1\\right) \\left(2 n + 1\\right)}{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Subtract the partial sums <span class=\"inline-math\" data-math=\"S_{3 n}-S_{n}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This gives <span class=\"inline-math\" data-math=\"\\left(n \\left(6 n - 1\\right) \\left(6 n + 1\\right)\\right)-\\left(\\frac{n \\left(2 n - 1\\right) \\left(2 n + 1\\right)}{3}\\right)=\\frac{2 n \\left(52 n^{2} - 1\\right)}{3}\"></span>. Thus <span class=\"inline-math\" data-math=\"a=52,\\ b=-1\"></span>. <small class=\"step-credit\">[3]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 10 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-04-ms-01.webp\" alt=\"Source marking table for June 2011 · Q7, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev16-05",
+    "question": "<p>(a) Use the results for <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r\"></span> <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{2}\"></span> and <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{3}\"></span> , to prove that <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r(r+1)(r+5)=\\frac{1}{4} n(n+1)(n+2)(n+7)\"></span> for all positive integers n. <span class=\"marks\">(5)</span></p><p>(b) Hence, or otherwise, find the value of <span class=\"inline-math\" data-math=\"\\sum_{r=20}^{50} r(r+1)(r+5)\"></span> <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>Expanding <span class=\"inline-math\" data-math=\"r(r+1)(r+5)\"></span> gives <span class=\"inline-math\" data-math=\"r^3+6r^2+5r\"></span>. All three standard sums have a factor <span class=\"inline-math\" data-math=\"n(n+1)\"></span>, so take it out before trying to factor the rest. The range 20 through 50 includes 31 terms and starts immediately after the sum through 19.</p>",
+      "<p>(a) Let <span class=\"inline-math\" data-math=\"T_j=\\sum_{r=1}^n r^j\"></span>. Expanding the summand gives <span class=\"inline-math\" data-math=\"S_n=5 T_{1} + 6 T_{2} + T_{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitute <span class=\"inline-math\" data-math=\"T_3=\\frac{n^{2} \\left(n + 1\\right)^{2}}{4}\"></span>, <span class=\"inline-math\" data-math=\"T_2=\\frac{n \\left(n + 1\\right) \\left(2 n + 1\\right)}{6}\"></span>, <span class=\"inline-math\" data-math=\"T_1=\\frac{n \\left(n + 1\\right)}{2}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Consequently <span class=\"inline-math\" data-math=\"S_n=\\frac{n^{2} \\left(n + 1\\right)^{2}}{4} + n \\left(n + 1\\right) \\left(2 n + 1\\right) + \\frac{5 n \\left(n + 1\\right)}{2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Simplifying and factorising gives <span class=\"inline-math\" data-math=\"S_n=\\frac{n \\left(n + 1\\right) \\left(n + 2\\right) \\left(n + 7\\right)}{4}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Subtract the partial sums <span class=\"inline-math\" data-math=\"S_{50}-S_{19}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This gives <span class=\"inline-math\" data-math=\"\\left(1889550\\right)-\\left(51870\\right)=1837680\"></span>.  <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-05-ms-01.webp\" alt=\"Source marking table for Jan 2011 · Q5, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev16-06",
+    "question": "<p>(a) Prove by induction that <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{2}=\\frac{1}{6} n(n+1)(2n+1)\"></span> <span class=\"marks\">(6)</span></p><p>Using the standard results for <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r\"></span> and <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{2},\"></span></p><p>(b) show that <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} (r+2)(r+3)=\\frac{1}{3} n(n^{2}+an+b),\"></span></p><p>where a and b are integers to be found. <span class=\"marks\">(5)</span></p><p>(c) Hence show that <span class=\"inline-math\" data-math=\"\\sum_{r=n+1}^{2n} (r+2)(r+3)=\\frac{1}{3} n(7n^{2}+27n+26)\"></span> <span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>For the induction step extract <span class=\"inline-math\" data-math=\"k+1\"></span> after adding its square. The residual numerator <span class=\"inline-math\" data-math=\"k(2k+1)+6(k+1)=2k^2+7k+6\"></span> factors as <span class=\"inline-math\" data-math=\"(k+2)(2k+3)\"></span>. This yields exactly the sum-of-squares formula at <span class=\"inline-math\" data-math=\"k+1\"></span>.</p>",
+      "<p>(a) At <span class=\"inline-math\" data-math=\"n=1\"></span>, both sides equal <span class=\"inline-math\" data-math=\"1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume <span class=\"inline-math\" data-math=\"S_k=\\frac{k \\left(k + 1\\right) \\left(2 k + 1\\right)}{6}\"></span> for a positive integer <span class=\"inline-math\" data-math=\"k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Adding the next term gives <span class=\"inline-math\" data-math=\"S_{k+1}=\\frac{k \\left(k + 1\\right) \\left(2 k + 1\\right)}{6}+\\left(k + 1\\right)^{2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Collecting terms gives <span class=\"inline-math\" data-math=\"S_{k+1}=\\frac{\\left(k + 1\\right) \\left(k + 2\\right) \\left(2 k + 3\\right)}{6}\"></span>, the required formula with <span class=\"inline-math\" data-math=\"n=k+1\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The base case and inductive implication prove the formula for every positive integer. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Let <span class=\"inline-math\" data-math=\"T_j=\\sum_{r=1}^n r^j\"></span>. Expanding the summand gives <span class=\"inline-math\" data-math=\"S_n=6 T_{0} + 5 T_{1} + T_{2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitute <span class=\"inline-math\" data-math=\"T_2=\\frac{n \\left(n + 1\\right) \\left(2 n + 1\\right)}{6}\"></span>, <span class=\"inline-math\" data-math=\"T_1=\\frac{n \\left(n + 1\\right)}{2}\"></span>, <span class=\"inline-math\" data-math=\"T_0=n\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Consequently <span class=\"inline-math\" data-math=\"S_n=\\frac{n \\left(n + 1\\right) \\left(2 n + 1\\right)}{6} + \\frac{5 n \\left(n + 1\\right)}{2} + 6 n\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Simplifying and factorising gives <span class=\"inline-math\" data-math=\"S_n=\\frac{n \\left(n^{2} + 9 n + 26\\right)}{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"a=9,\\ b=26\"></span>.</p>",
+      "<p>(c) Subtract the partial sums <span class=\"inline-math\" data-math=\"S_{2 n}-S_{n}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This gives <span class=\"inline-math\" data-math=\"\\left(\\frac{2 n \\left(4 n^{2} + 18 n + 26\\right)}{3}\\right)-\\left(\\frac{n \\left(n^{2} + 9 n + 26\\right)}{3}\\right)=\\frac{n \\left(n + 2\\right) \\left(7 n + 13\\right)}{3}\"></span>.  <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 14 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-06-ms-01.webp\" alt=\"Source marking table for June 2010 · Q9, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-06-ms-02.webp\" alt=\"Source marking table for June 2010 · Q9, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-06-ms-03.webp\" alt=\"Source marking table for June 2010 · Q9, extract 3\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev16-07",
+    "question": "<p>(a) Prove by induction that, for any positive integer n,</p><div class=\"equation\" data-display=\"true\" data-math=\"\\sum_{r=1}^{n} r^{3}=\\frac{1}{4} n^{2}(n+1)^{2}\"></div><p><span class=\"marks\">(5)</span></p><p>(b) Using the formulae for <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r\"></span> and <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{3}\"></span> , show that</p><div class=\"equation\" data-display=\"true\" data-math=\"\\sum_{r=1}^{n} \\left(r^{3}+3 r+2\\right)=\\frac{1}{4} n(n+2)\\left(n^{2}+7\\right)\"></div><p><span class=\"marks\">(5)</span></p><p>(c) Hence evaluate <span class=\"inline-math\" data-math=\"\\sum_{r=15}^{25} \\left(r^{3}+3 r+2\\right)\"></span></p><p><span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The sum of cubes equals the square of a triangular number. In the induction step the next cube contributes <span class=\"inline-math\" data-math=\"4(k+1)\"></span> after factoring out <span class=\"inline-math\" data-math=\"(k+1)^2/4\"></span>. Later, to keep terms 15 through 25, remove the first fourteen terms of the appropriate polynomial sum.</p>",
+      "<p>(a) At <span class=\"inline-math\" data-math=\"n=1\"></span>, both sides equal <span class=\"inline-math\" data-math=\"1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Assume <span class=\"inline-math\" data-math=\"S_k=\\frac{k^{2} \\left(k + 1\\right)^{2}}{4}\"></span> for a positive integer <span class=\"inline-math\" data-math=\"k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Adding the next term gives <span class=\"inline-math\" data-math=\"S_{k+1}=\\frac{k^{2} \\left(k + 1\\right)^{2}}{4}+\\left(k + 1\\right)^{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Collecting terms gives <span class=\"inline-math\" data-math=\"S_{k+1}=\\frac{\\left(k + 1\\right)^{2} \\left(k + 2\\right)^{2}}{4}\"></span>, the required formula with <span class=\"inline-math\" data-math=\"n=k+1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The base case and inductive implication prove the formula for every positive integer. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Let <span class=\"inline-math\" data-math=\"T_j=\\sum_{r=1}^n r^j\"></span>. Expanding the summand gives <span class=\"inline-math\" data-math=\"S_n=2 T_{0} + 3 T_{1} + T_{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitute <span class=\"inline-math\" data-math=\"T_3=\\frac{n^{2} \\left(n + 1\\right)^{2}}{4}\"></span>, <span class=\"inline-math\" data-math=\"T_1=\\frac{n \\left(n + 1\\right)}{2}\"></span>, <span class=\"inline-math\" data-math=\"T_0=n\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Consequently <span class=\"inline-math\" data-math=\"S_n=\\frac{n^{2} \\left(n + 1\\right)^{2}}{4} + \\frac{3 n \\left(n + 1\\right)}{2} + 2 n\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Simplifying and factorising gives <span class=\"inline-math\" data-math=\"S_n=\\frac{n \\left(n + 2\\right) \\left(n^{2} + 7\\right)}{4}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) Subtract the partial sums <span class=\"inline-math\" data-math=\"S_{25}-S_{14}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This gives <span class=\"inline-math\" data-math=\"\\left(106650\\right)-\\left(11368\\right)=95282\"></span>.  <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 12 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-07-ms-01.webp\" alt=\"Source marking table for Jan 2010 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev16-08",
+    "question": "<p>(a) Using the formulae for <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r\"></span> <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{2}\"></span> and <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r^{3}\"></span> , show that <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} r(r+1)(r+3)=\\frac{1}{12} n(n+1)(n+2)(3 n+k),\"></span> where k is a constant to be found. <span class=\"marks\">(7)</span></p><p>(b) Hence evaluate <span class=\"inline-math\" data-math=\"\\sum_{r=21}^{40} r(r+1)(r+3).\"></span> <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The expanded summand is <span class=\"inline-math\" data-math=\"r^3+4r^2+3r\"></span>; collect the three standard sums over denominator <span class=\"inline-math\" data-math=\"12\"></span>. A check on the unknown is available at <span class=\"inline-math\" data-math=\"n=1\"></span>: the single product is <span class=\"inline-math\" data-math=\"8\"></span>, while the proposed expression is <span class=\"inline-math\" data-math=\"(3+k)/2\"></span>, forcing <span class=\"inline-math\" data-math=\"k=13\"></span>.</p>",
+      "<p>(a) Let <span class=\"inline-math\" data-math=\"T_j=\\sum_{r=1}^n r^j\"></span>. Expanding the summand gives <span class=\"inline-math\" data-math=\"S_n=3 T_{1} + 4 T_{2} + T_{3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitute <span class=\"inline-math\" data-math=\"T_3=\\frac{n^{2} \\left(n + 1\\right)^{2}}{4}\"></span>, <span class=\"inline-math\" data-math=\"T_2=\\frac{n \\left(n + 1\\right) \\left(2 n + 1\\right)}{6}\"></span>, <span class=\"inline-math\" data-math=\"T_1=\\frac{n \\left(n + 1\\right)}{2}\"></span>. <small class=\"step-credit\">[4]</small></p>",
+      "<p>Consequently <span class=\"inline-math\" data-math=\"S_n=\\frac{n^{2} \\left(n + 1\\right)^{2}}{4} + \\frac{2 n \\left(n + 1\\right) \\left(2 n + 1\\right)}{3} + \\frac{3 n \\left(n + 1\\right)}{2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Simplifying and factorising gives <span class=\"inline-math\" data-math=\"S_n=\\frac{n \\left(n + 1\\right) \\left(n + 2\\right) \\left(3 n + 13\\right)}{12}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"k=13\"></span>.</p>",
+      "<p>(b) Subtract the partial sums <span class=\"inline-math\" data-math=\"S_{40}-S_{20}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This gives <span class=\"inline-math\" data-math=\"\\left(763420\\right)-\\left(56210\\right)=707210\"></span>.  <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 9 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-08-ms-01.webp\" alt=\"Source marking table for June 2009 · Q2, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev16-09",
+    "question": "<p>(a) Show, using the formulae for <span class=\"inline-math\" data-math=\"\\sum r\"></span> and <span class=\"inline-math\" data-math=\"\\sum r^{2}\"></span> , that <span class=\"inline-math\" data-math=\"\\sum_{r=1}^{n} \\left( 6 r^{2}+4 r-1 \\right)=n \\left( n+2 \\right)\\left( 2 n+1 \\right)\"></span> <span class=\"marks\">(5)</span></p><p>(b) Hence, or otherwise, find the value of <span class=\"inline-math\" data-math=\"\\sum_{r=11}^{20} \\left( 6 r^{2}+4 r-1 \\right).\"></span> <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>Separate the quadratic, linear and constant contributions. Summing <span class=\"inline-math\" data-math=\"6r^2+4r-1\"></span> gives a term <span class=\"inline-math\" data-math=\"-n\"></span>, rather than a single subtraction of one. In the numerical interval subtract through 10 to keep the ten terms starting at 11.</p>",
+      "<p>(a) Let <span class=\"inline-math\" data-math=\"T_j=\\sum_{r=1}^n r^j\"></span>. Expanding the summand gives <span class=\"inline-math\" data-math=\"S_n=- T_{0} + 4 T_{1} + 6 T_{2}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Substitute <span class=\"inline-math\" data-math=\"T_2=\\frac{n \\left(n + 1\\right) \\left(2 n + 1\\right)}{6}\"></span>, <span class=\"inline-math\" data-math=\"T_1=\\frac{n \\left(n + 1\\right)}{2}\"></span>, <span class=\"inline-math\" data-math=\"T_0=n\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Consequently <span class=\"inline-math\" data-math=\"S_n=n \\left(n + 1\\right) \\left(2 n + 1\\right) + 2 n \\left(n + 1\\right) - n\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Simplifying and factorising gives <span class=\"inline-math\" data-math=\"S_n=n \\left(n + 2\\right) \\left(2 n + 1\\right)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Subtract the partial sums <span class=\"inline-math\" data-math=\"S_{20}-S_{10}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>This gives <span class=\"inline-math\" data-math=\"\\left(18040\\right)-\\left(2520\\right)=15520\"></span>.  <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev16-09-ms-01.webp\" alt=\"Source marking table for Jan 2009 · Q2, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  }
+]

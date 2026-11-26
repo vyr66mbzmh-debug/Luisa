@@ -1,0 +1,287 @@
+[
+  {
+    "id": "old-spec/rev13-01",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-01-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>The curve C shown in Figure 1 has polar equation</p><p><span class=\"inline-math\" data-math=\"r=2+\\sqrt{3}\\cos \\theta,\"></span> <span class=\"inline-math\" data-math=\"0 \\leqslant \\theta &lt; 2\\pi\"></span></p><p>The tangent to C at the point P is parallel to the initial line.</p><p>(a) Show that <span class=\"inline-math\" data-math=\"O P=\\frac{1}{2}(3+\\sqrt{7})\"></span></p><p><span class=\"marks\">(6)</span></p><p>(b) Find the exact area enclosed by the curve C.</p><p><span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>The height of a polar point is <span class=\"inline-math\" data-math=\"r\\sin\\theta\"></span>. Maximising the radius alone generally misses a horizontal tangent because the ray is turning too. For the area over a full revolution, the average of <span class=\"inline-math\" data-math=\"\\cos^2\\theta\"></span> is <span class=\"inline-math\" data-math=\"1/2\"></span>, whereas the average of <span class=\"inline-math\" data-math=\"\\cos\\theta\"></span> is zero.</p>",
+      "<p>(a) A horizontal tangent requires <span class=\"inline-math\" data-math=\"dy/d\\theta=0\"></span>, with <span class=\"inline-math\" data-math=\"y=(2+\\sqrt3\\cos\\theta)\\sin\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Differentiate to give <span class=\"inline-math\" data-math=\"2\\cos\\theta+\\sqrt3\\cos2\\theta=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>With <span class=\"inline-math\" data-math=\"u=\\cos\\theta\"></span>, <span class=\"inline-math\" data-math=\"2\\sqrt3u^2+2u-\\sqrt3=0\"></span>, so <span class=\"inline-math\" data-math=\"u=(-1\\pm\\sqrt7)/(2\\sqrt3)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The minus sign gives a value below <span class=\"inline-math\" data-math=\"-1\"></span>. Hence <span class=\"inline-math\" data-math=\"OP=2+\\sqrt3u=(3+\\sqrt7)/2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) Use <span class=\"inline-math\" data-math=\"A=\\tfrac12\\int_0^{2\\pi}(2+\\sqrt3\\cos\\theta)^2\\,d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The integrand before the half factor is <span class=\"inline-math\" data-math=\"4+4\\sqrt3\\cos\\theta+3\\cos^2\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Over a full turn the linear cosine integrates to zero and <span class=\"inline-math\" data-math=\"\\int_0^{2\\pi}\\cos^2\\theta\\,d\\theta=\\pi\"></span> by the double-angle identity. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"A=11\\pi/2\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 12 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-01-ms-01.webp\" alt=\"Source marking table for 2018 FP2 · Q7, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-01-ms-02.webp\" alt=\"Source marking table for 2018 FP2 · Q7, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-02",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-02-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>Figure 1 shows a sketch of a curve with polar equation <span class=\"inline-math\" data-math=\"r=6+a\\sin \\theta\"></span> where <span class=\"inline-math\" data-math=\"0&lt;a&lt;6\"></span> and <span class=\"inline-math\" data-math=\"0\\leqslant \\theta &lt;2\\pi\"></span> The area enclosed by the curve is <span class=\"inline-math\" data-math=\"\\frac{97 \\pi}{2}\"></span> Find the value of the constant a. <span class=\"marks\">(8)</span></p>",
+    "steps": [
+      "<p>Over a complete turn, the positive and negative contributions of <span class=\"inline-math\" data-math=\"12a\\sin\\theta\"></span> cancel. The squared sine is always nonnegative and contributes half the interval length. Thus the area depends only on <span class=\"inline-math\" data-math=\"a^2\"></span>; use the sign restriction after solving.</p>",
+      "<p>The curve is traced once for <span class=\"inline-math\" data-math=\"0\\le\\theta\\le2\\pi\"></span> and <span class=\"inline-math\" data-math=\"r&gt;0\"></span>. Use <span class=\"inline-math\" data-math=\"A=\\tfrac12\\int_0^{2\\pi}(6+a\\sin\\theta)^2\\,d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Expand to <span class=\"inline-math\" data-math=\"36+12a\\sin\\theta+a^2\\sin^2\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The sine term integrates to zero. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Since <span class=\"inline-math\" data-math=\"\\sin^2\\theta=(1-\\cos2\\theta)/2\"></span>, its integral over the full turn is <span class=\"inline-math\" data-math=\"\\pi\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"36\\pi+a^2\\pi/2=97\\pi/2\"></span>, so <span class=\"inline-math\" data-math=\"a^2=25\"></span> and the positive value is <span class=\"inline-math\" data-math=\"a=5\"></span>. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 8 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-02-ms-01.webp\" alt=\"Source marking table for 2017 FP2 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-03",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-03-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>The curve <span class=\"inline-math\" data-math=\"C_{1}\"></span> with equation</p><div class=\"equation\" data-display=\"true\" data-math=\"r = 7 \\cos \\theta, \\quad -\\frac{\\pi}{2} &lt; \\theta \\leqslant \\frac{\\pi}{2}\"></div><p>and the curve <span class=\"inline-math\" data-math=\"C_{2}\"></span> with equation</p><div class=\"equation\" data-display=\"true\" data-math=\"r = 3(1 + \\cos \\theta), \\quad -\\pi &lt; \\theta \\leqslant \\pi\"></div><p>are shown on Figure 1.</p><p>The curves <span class=\"inline-math\" data-math=\"C_{1}\"></span> and <span class=\"inline-math\" data-math=\"C_{2}\"></span> both pass through the pole and intersect at the point <span class=\"inline-math\" data-math=\"P\"></span> and the point <span class=\"inline-math\" data-math=\"Q\"></span>.</p><p>(a) Find the polar coordinates of <span class=\"inline-math\" data-math=\"P\"></span> and the polar coordinates of <span class=\"inline-math\" data-math=\"Q\"></span>.</p><p><span class=\"marks\">(3)</span></p><p>The regions enclosed by the curve <span class=\"inline-math\" data-math=\"C_{1}\"></span> and the curve <span class=\"inline-math\" data-math=\"C_{2}\"></span> overlap, and the common region <span class=\"inline-math\" data-math=\"R\"></span> is shaded in Figure 1.</p><p>(b) Find the area of <span class=\"inline-math\" data-math=\"R\"></span>.\n<span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>On the initial ray the circle extends to <span class=\"inline-math\" data-math=\"7\"></span> and the cardioid to <span class=\"inline-math\" data-math=\"6\"></span>, so the cardioid bounds their common interior there. At <span class=\"inline-math\" data-math=\"\\pi/2\"></span> the circle closes at the pole. These two test rays explain the switch of integrand at <span class=\"inline-math\" data-math=\"\\alpha\"></span> and why only half the overlap needs to be integrated.</p>",
+      "<p>(a) At the two non-polar intersections <span class=\"inline-math\" data-math=\"7\\cos\\theta=3+3\\cos\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"\\cos\\theta=3/4\"></span>, giving <span class=\"inline-math\" data-math=\"P=(21/4,\\alpha)\"></span> and <span class=\"inline-math\" data-math=\"Q=(21/4,-\\alpha)\"></span>, where <span class=\"inline-math\" data-math=\"\\alpha=\\arccos(3/4)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) Use symmetry about the initial line. For <span class=\"inline-math\" data-math=\"0\\le\\theta\\le\\alpha\"></span> the cardioid has smaller radius; from <span class=\"inline-math\" data-math=\"\\alpha\"></span> to <span class=\"inline-math\" data-math=\"\\pi/2\"></span> the circle does. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Doubling the upper half cancels the factor <span class=\"inline-math\" data-math=\"1/2\"></span> in the polar area formula. <small class=\"step-credit\">[1]</small></p>",
+      "<p><span class=\"inline-math\" data-math=\"A=9\\int_0^\\alpha(1+\\cos\\theta)^2\\,d\\theta+49\\int_\\alpha^{\\pi/2}\\cos^2\\theta\\,d\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Evaluate using the primitives <span class=\"inline-math\" data-math=\"3\\theta/2+2\\sin\\theta+\\sin2\\theta/4\"></span> and <span class=\"inline-math\" data-math=\"\\theta/2+\\sin2\\theta/4\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>With <span class=\"inline-math\" data-math=\"\\sin\\alpha=\\sqrt7/4\"></span> this gives <span class=\"inline-math\" data-math=\"49\\pi/4-11\\arccos(3/4)+3\\sqrt7/4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>At the intersection <span class=\"inline-math\" data-math=\"\\sin\\alpha=\\sqrt7/4\"></span> and <span class=\"inline-math\" data-math=\"\\sin2\\alpha=3\\sqrt7/8\"></span>. The two primitives together contribute <span class=\"inline-math\" data-math=\"18\\sin\\alpha-10\\sin2\\alpha=3\\sqrt7/4\"></span>. This checks the radical term in the overlap area.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 10 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-03-ms-01.webp\" alt=\"Source marking table for 2016 FP2 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-04",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-04-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>The curve C, shown in Figure 1, has polar equation</p><div class=\"equation\" data-display=\"true\" data-math=\"r = 3a \\left(1 + \\cos \\theta\\right), \\quad 0 \\leqslant \\theta &lt; \\pi\"></div><p>The tangent to C at the point A is parallel to the initial line.</p><p>(a) Find the polar coordinates of A.</p><p><span class=\"marks\">(6)</span></p><p>The finite region R, shown shaded in Figure 1, is bounded by the curve C, the initial line and the line OA.</p><p>(b) Use calculus to find the area of the shaded region R, giving your answer in the</p><p>form <span class=\"inline-math\" data-math=\"a^{2}\\left(p\\pi + q\\sqrt{3}\\right)\"></span>, where p and q are rational numbers.</p><p><span class=\"marks\">(5)</span></p>",
+    "steps": [
+      "<p>The mixed term <span class=\"inline-math\" data-math=\"\\sin\\theta\\cos\\theta\"></span> can be written as <span class=\"inline-math\" data-math=\"\\sin2\\theta/2\"></span>, making the derivative particularly short. Of the two factors in the resulting quadratic, the relevant one gives the specified point on the upper arc. Its radius determines the ray where the area integral stops.</p>",
+      "<p>(a) <span class=\"inline-math\" data-math=\"y=3a(1+\\cos\\theta)\\sin\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>At the horizontal tangent <span class=\"inline-math\" data-math=\"dy/d\\theta=3a(\\cos\\theta+\\cos2\\theta)=0\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>With <span class=\"inline-math\" data-math=\"u=\\cos\\theta\"></span> this is <span class=\"inline-math\" data-math=\"(2u-1)(u+1)=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The point shown has <span class=\"inline-math\" data-math=\"u=1/2\"></span>, giving <span class=\"inline-math\" data-math=\"\\theta=\\pi/3,\\ r=9a/2\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) The sector has <span class=\"inline-math\" data-math=\"A=\\tfrac92a^2\\int_0^{\\pi/3}(1+\\cos\\theta)^2\\,d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Its primitive after expansion and use of the double-angle identity is <span class=\"inline-math\" data-math=\"9a^2(3\\theta/4+\\sin\\theta+\\sin2\\theta/8)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Therefore <span class=\"inline-math\" data-math=\"A=a^2(9\\pi/4+81\\sqrt3/16)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 11 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-04-ms-01.webp\" alt=\"Source marking table for 2015 FP2 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-05",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-05-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>Figure 1 shows a sketch of part of the curve <span class=\"inline-math\" data-math=\"C\"></span> with polar equation</p><div class=\"equation\" data-display=\"true\" data-math=\"r = 1 + \\tan \\theta, \\quad 0 \\leqslant \\theta &lt; \\frac{\\pi}{2}\"></div><p>The tangent to the curve <span class=\"inline-math\" data-math=\"C\"></span> at the point <span class=\"inline-math\" data-math=\"P\"></span> is perpendicular to the initial line.</p><p>(a) Find the polar coordinates of the point <span class=\"inline-math\" data-math=\"P\"></span>.</p><p><span class=\"marks\">(5)</span></p><p>The point <span class=\"inline-math\" data-math=\"Q\"></span> lies on the curve <span class=\"inline-math\" data-math=\"C\"></span>, where <span class=\"inline-math\" data-math=\"\\theta = \\frac{\\pi}{3}\"></span></p><p>The shaded region <span class=\"inline-math\" data-math=\"R\"></span> is bounded by <span class=\"inline-math\" data-math=\"OP, OQ\"></span> and the curve <span class=\"inline-math\" data-math=\"C\"></span>, as shown in Figure 1</p><p>(b) Find the exact area of <span class=\"inline-math\" data-math=\"R\"></span>, giving your answer in the form</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{1}{2} (\\ln p + \\sqrt{q} + r)\"></div><p>where <span class=\"inline-math\" data-math=\"p, q\"></span> and <span class=\"inline-math\" data-math=\"r\"></span> are integers to be found.</p><p><span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>For a vertical tangent it is the horizontal coordinate <span class=\"inline-math\" data-math=\"r\\cos\\theta\"></span> that is momentarily stationary. Simplifying that coordinate first removes the tangent function entirely. In the area calculation use <span class=\"inline-math\" data-math=\"1+\\tan^2\\theta=\\sec^2\\theta\"></span> to handle the expanded square.</p>",
+      "<p>(a) For a vertical tangent set <span class=\"inline-math\" data-math=\"dx/d\\theta=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Since <span class=\"inline-math\" data-math=\"x=(1+\\tan\\theta)\\cos\\theta=\\cos\\theta+\\sin\\theta\"></span>, <small class=\"step-credit\">[1]</small> <span class=\"inline-math\" data-math=\"\\cos\\theta-\\sin\\theta=0\"></span> gives <span class=\"inline-math\" data-math=\"\\theta=\\pi/4\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"P=(2,\\pi/4)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) <span class=\"inline-math\" data-math=\"A=\\tfrac12\\int_{\\pi/4}^{\\pi/3}(1+\\tan\\theta)^2\\,d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The integrand is <span class=\"inline-math\" data-math=\"\\sec^2\\theta+2\\tan\\theta\"></span>, with primitive <span class=\"inline-math\" data-math=\"\\tan\\theta-2\\ln\\cos\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>At the upper limit this is <span class=\"inline-math\" data-math=\"\\sqrt3+2\\ln2\"></span>; at the lower it is <span class=\"inline-math\" data-math=\"1+\\ln2\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"A=(\\ln2+\\sqrt3-1)/2\"></span>, so <span class=\"inline-math\" data-math=\"(p,q,r)=(2,3,-1)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 12 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-05-ms-01.webp\" alt=\"Source marking table for 2014 FP2 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-06",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-06-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>Figure 1 shows the curve C with polar equation</p><p><span class=\"inline-math\" data-math=\"r=2 \\cos 2 \\theta,\"></span> <span class=\"inline-math\" data-math=\"0 \\leqslant \\theta \\leqslant \\frac{\\pi}{4}\"></span></p><p>The line l is parallel to the initial line and is a tangent to C.</p><p>Find an equation of l, giving your answer in the form <span class=\"inline-math\" data-math=\"r=\\mathrm{f}(\\theta).\"></span></p><p><span class=\"marks\">(9)</span></p>",
+    "steps": [
+      "<p>The tangent is horizontal, so every point on it has the same height as the contact point. Writing <span class=\"inline-math\" data-math=\"\\cos2\\theta=1-2\\sin^2\\theta\"></span> turns that height into a cubic in <span class=\"inline-math\" data-math=\"s=\\sin\\theta\"></span>. Differentiate the cubic and apply the chain rule before solving for the height.</p>",
+      "<p>The horizontal tangent has equation <span class=\"inline-math\" data-math=\"y=h\"></span>, with <span class=\"inline-math\" data-math=\"y=2\\cos2\\theta\\sin\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Put <span class=\"inline-math\" data-math=\"s=\\sin\\theta\"></span>; then <span class=\"inline-math\" data-math=\"y=2s-4s^3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate: <span class=\"inline-math\" data-math=\"dy/d\\theta=(2-12s^2)\\cos\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>In the interior <span class=\"inline-math\" data-math=\"\\cos\\theta\\ne0\"></span>, so <span class=\"inline-math\" data-math=\"s=1/\\sqrt6\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The height is <span class=\"inline-math\" data-math=\"h=2/\\sqrt6-4/(6\\sqrt6)=4/(3\\sqrt6)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Since <span class=\"inline-math\" data-math=\"y=r\\sin\\theta\"></span>, the tangent is <span class=\"inline-math\" data-math=\"r=4/(3\\sqrt6\\sin\\theta)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 9 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-06-ms-01.webp\" alt=\"Source marking table for 2014 (R) FP2 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-07",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-07-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>Figure 1 shows a curve <span class=\"inline-math\" data-math=\"C\"></span> with polar equation <span class=\"inline-math\" data-math=\"r = a \\sin 2\\theta, 0 \\leqslant \\theta \\leqslant \\frac{\\pi}{2}\"></span>, and a half-line <span class=\"inline-math\" data-math=\"l\"></span>.</p><p>The half-line <span class=\"inline-math\" data-math=\"l\"></span> meets <span class=\"inline-math\" data-math=\"C\"></span> at the pole <span class=\"inline-math\" data-math=\"O\"></span> and at the point <span class=\"inline-math\" data-math=\"P\"></span>. The tangent to <span class=\"inline-math\" data-math=\"C\"></span> at <span class=\"inline-math\" data-math=\"P\"></span> is parallel to the initial line. The polar coordinates of <span class=\"inline-math\" data-math=\"P\"></span> are <span class=\"inline-math\" data-math=\"(R, \\phi)\"></span>.</p><p>(a) Show that <span class=\"inline-math\" data-math=\"\\cos \\phi = \\frac{1}{\\sqrt{3}}\"></span> <span class=\"marks\">(6)</span></p><p>(b) Find the exact value of <span class=\"inline-math\" data-math=\"R\"></span>. <span class=\"marks\">(2)</span></p><p>The region <span class=\"inline-math\" data-math=\"S\"></span>, shown shaded in Figure 1, is bounded by <span class=\"inline-math\" data-math=\"C\"></span> and <span class=\"inline-math\" data-math=\"l\"></span>.</p><p>(c) Use calculus to show that the exact area of <span class=\"inline-math\" data-math=\"S\"></span> is</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{1}{36} a^{2} \\left( 9 \\arccos \\left( \\frac{1}{\\sqrt{3}} \\right) + \\sqrt{2} \\right)\"></div><p><span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>The angle of the stationary height is in the first quadrant. The relation <span class=\"inline-math\" data-math=\"\\tan^2\\phi=2\"></span> makes <span class=\"inline-math\" data-math=\"2\\phi\"></span> obtuse, giving <span class=\"inline-math\" data-math=\"\\cos2\\phi=-1/3\"></span>. Consequently <span class=\"inline-math\" data-math=\"\\sin4\\phi\"></span> is negative, which explains the positive radical contribution to the area.</p>",
+      "<p>(a) <span class=\"inline-math\" data-math=\"y=a\\sin2\\theta\\sin\\theta=2a\\sin^2\\theta\\cos\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>At <span class=\"inline-math\" data-math=\"P\"></span> the derivative vanishes, giving <span class=\"inline-math\" data-math=\"2a\\sin\\phi(2\\cos^2\\phi-\\sin^2\\phi)=0\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Here <span class=\"inline-math\" data-math=\"\\sin\\phi&gt;0\"></span>, so <span class=\"inline-math\" data-math=\"3\\cos^2\\phi=1\"></span> and <span class=\"inline-math\" data-math=\"\\cos\\phi=1/\\sqrt3\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) <span class=\"inline-math\" data-math=\"\\sin\\phi=\\sqrt{2/3}\"></span>, hence <span class=\"inline-math\" data-math=\"R=2a\\sin\\phi\\cos\\phi=2\\sqrt2\\,a/3\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) <span class=\"inline-math\" data-math=\"A=\\tfrac12a^2\\int_0^\\phi\\sin^22\\theta\\,d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Apply the double-angle identity to obtain <span class=\"inline-math\" data-math=\"(a^2/4)[\\theta-\\sin4\\theta/4]_0^\\phi\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Since <span class=\"inline-math\" data-math=\"\\sin2\\phi=2\\sqrt2/3\"></span> and <span class=\"inline-math\" data-math=\"\\cos2\\phi=-1/3\"></span>, <span class=\"inline-math\" data-math=\"\\sin4\\phi=-4\\sqrt2/9\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"A=a^2[9\\arccos(1/\\sqrt3)+\\sqrt2]/36\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 15 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-07-ms-01.webp\" alt=\"Source marking table for 2013 FP2 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-08",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>Figure 1 shows a closed curve <span class=\"inline-math\" data-math=\"C\"></span> with equation <span class=\"inline-math\" data-math=\"r=3(\\cos 2\\theta)^{\\frac{1}{2}},\"></span> where <span class=\"inline-math\" data-math=\"-\\frac{\\pi}{4}&lt;\\theta\\leqslant\\frac{\\pi}{4}, \\frac{3\\pi}{4}&lt;\\theta\\leqslant\\frac{5\\pi}{4}\"></span> The lines PQ, SR, PS and QR are tangents to C, where PQ and SR are parallel to the initial line and PS and QR are perpendicular to the initial line. The point O is the pole.</p><p>(a) Find the total area enclosed by the curve C, shown unshaded inside the rectangle in Figure 1.</p><p><span class=\"marks\">(4)</span></p><p>(b) Find the total area of the region bounded by the curve C and the four tangents, shown shaded in Figure 1.</p><p><span class=\"marks\">(9)</span></p>",
+    "steps": [
+      "<p>For the rectangle, symmetry gives its total height as twice the greatest positive <span class=\"inline-math\" data-math=\"y\"></span>. You can maximise <span class=\"inline-math\" data-math=\"y^2\"></span> on the upper lobe because <span class=\"inline-math\" data-math=\"y\"></span> there is nonnegative. Subtract the areas of both congruent lobes from the full enclosing rectangle.</p>",
+      "<p>(a) The two lobes are congruent. Twice the right-lobe area is <span class=\"inline-math\" data-math=\"9\\int_{-\\pi/4}^{\\pi/4}\\cos2\\theta\\,d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>This is <span class=\"inline-math\" data-math=\"(9/2)[\\sin2\\theta]_{-\\pi/4}^{\\pi/4}=9\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) The extreme horizontal coordinates are <span class=\"inline-math\" data-math=\"\\pm3\"></span>, attained at angles 0 and <span class=\"inline-math\" data-math=\"\\pi\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>For the top edge maximise <span class=\"inline-math\" data-math=\"y^2=9\\cos2\\theta\\sin^2\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>With <span class=\"inline-math\" data-math=\"u=\\sin^2\\theta\"></span> this is <span class=\"inline-math\" data-math=\"9(u-2u^2)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Setting <span class=\"inline-math\" data-math=\"9(1-4u)=0\"></span> gives <span class=\"inline-math\" data-math=\"u=1/4\"></span>, a maximum since the quadratic is concave. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"y_{\\max}=3/(2\\sqrt2)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The rectangle has area <span class=\"inline-math\" data-math=\"6(3/\\sqrt2)=9\\sqrt2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Subtract the lobes to obtain <span class=\"inline-math\" data-math=\"9(\\sqrt2-1)\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 13 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-01.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-02.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-03.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 3\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-04.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 4\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-05.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 5\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-06.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 6\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-07.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 7\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-08.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 8\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-09.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 9\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-10.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 10\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-08-ms-11.webp\" alt=\"Source marking table for 2013 (R) FP2 · Q8, extract 11\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-09",
+    "question": "<p>The curve C has polar equation <span class=\"inline-math\" data-math=\"r=1+2\\cos \\theta, \\quad 0\\leqslant \\theta \\leqslant \\frac{\\pi}{2}\"></span> At the point P on C, the tangent to C is parallel to the initial line. Given that O is the pole, find the exact length of the line OP. <span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>Use <span class=\"inline-math\" data-math=\"y=\\sin\\theta+\\sin2\\theta\"></span> to recognise its derivative as <span class=\"inline-math\" data-math=\"\\cos\\theta+2\\cos2\\theta\"></span>. Replacing <span class=\"inline-math\" data-math=\"\\cos2\\theta\"></span> by <span class=\"inline-math\" data-math=\"2\\cos^2\\theta-1\"></span> produces a quadratic. The requested distance <span class=\"inline-math\" data-math=\"OP\"></span> is the radius itself, so no Cartesian distance formula is needed.</p>",
+      "<p><span class=\"inline-math\" data-math=\"y=(1+2\\cos\\theta)\\sin\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Differentiate for the horizontal tangent to get <span class=\"inline-math\" data-math=\"\\cos\\theta+2\\cos2\\theta=0\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Put <span class=\"inline-math\" data-math=\"u=\\cos\\theta\"></span>: <span class=\"inline-math\" data-math=\"4u^2+u-2=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Its roots are <span class=\"inline-math\" data-math=\"(-1\\pm\\sqrt{33})/8\"></span>; only the positive root belongs to the first quadrant. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"OP=1+2u=(3+\\sqrt{33})/4\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-09-ms-01.webp\" alt=\"Source marking table for 2012 FP2 · Q2, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-10",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-10-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>The curve <span class=\"inline-math\" data-math=\"C\"></span> shown in Figure 1 has polar equation <span class=\"inline-math\" data-math=\"r=2+\\cos \\theta, \\quad 0 \\leqslant \\theta \\leqslant \\frac{\\pi}{2}\"></span></p><p>At the point <span class=\"inline-math\" data-math=\"A\"></span> on <span class=\"inline-math\" data-math=\"C\"></span>, the value of <span class=\"inline-math\" data-math=\"r\"></span> is <span class=\"inline-math\" data-math=\"\\frac{5}{2}\"></span>.</p><p>The point <span class=\"inline-math\" data-math=\"N\"></span> lies on the initial line and <span class=\"inline-math\" data-math=\"AN\"></span> is perpendicular to the initial line.</p><p>The finite region <span class=\"inline-math\" data-math=\"R\"></span>, shown shaded in Figure 1, is bounded by the curve <span class=\"inline-math\" data-math=\"C\"></span>, the initial line and the line <span class=\"inline-math\" data-math=\"AN\"></span>.</p><p>Find the exact area of the shaded region <span class=\"inline-math\" data-math=\"R\"></span>. <span class=\"marks\">(9)</span></p>",
+    "steps": [
+      "<p>The ray <span class=\"inline-math\" data-math=\"OA\"></span> bounds a sector, but the perpendicular <span class=\"inline-math\" data-math=\"AN\"></span> bounds the requested region. Their difference is the right triangle with legs <span class=\"inline-math\" data-math=\"r\\cos\\theta\"></span> and <span class=\"inline-math\" data-math=\"r\\sin\\theta\"></span>. At <span class=\"inline-math\" data-math=\"A\"></span> the two legs are <span class=\"inline-math\" data-math=\"5/4\"></span> and <span class=\"inline-math\" data-math=\"5\\sqrt3/4\"></span>, so no further integration is needed for that piece.</p>",
+      "<p>At <span class=\"inline-math\" data-math=\"A\"></span>, <span class=\"inline-math\" data-math=\"\\cos\\theta=1/2\"></span> so <span class=\"inline-math\" data-math=\"\\theta=\\pi/3\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The required area is the polar sector minus triangle <span class=\"inline-math\" data-math=\"ONA\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The sector is <span class=\"inline-math\" data-math=\"\\tfrac12\\int_0^{\\pi/3}(2+\\cos\\theta)^2\\,d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Its primitive is <span class=\"inline-math\" data-math=\"9\\theta/4+2\\sin\\theta+\\sin2\\theta/8\"></span>, giving <span class=\"inline-math\" data-math=\"3\\pi/4+17\\sqrt3/16\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p><span class=\"inline-math\" data-math=\"ON=(5/2)\\cos(\\pi/3)=5/4\"></span> and <span class=\"inline-math\" data-math=\"AN=5\\sqrt3/4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The triangle area is <span class=\"inline-math\" data-math=\"25\\sqrt3/32\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"A_R=3\\pi/4+9\\sqrt3/32\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 9 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-10-ms-01.webp\" alt=\"Source marking table for 2011 FP2 · Q6, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-11",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-11-fig1.svg\" alt=\"Figure 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 2</p><p>Figure 2 shows part of the curve with polar equation</p><div class=\"equation\" data-display=\"true\" data-math=\"r = 4 - \\frac{3}{2} \\cos 6\\theta \\quad 0 \\leq \\theta &lt; 2\\pi\"></div><p>(a) Sketch, on the polar grid in Figure 2,</p><p>(i) the rest of the curve with equation <span class=\"inline-math\" data-math=\"r = 4 - \\frac{3}{2} \\cos 6\\theta \\quad 0 \\leq \\theta &lt; 2\\pi\"></span></p><p>(ii) the polar curve with equation <span class=\"inline-math\" data-math=\"r = 1 \\quad 0 \\leq \\theta &lt; 2\\pi\"></span></p><p>A spare copy of the grid is given on page 15.</p><p><span class=\"marks\">(3)</span></p><p>In part (b) you must show all stages of your working.</p><p>Solutions relying entirely on calculator technology are not acceptable.</p><p>(b) Determine the exact area enclosed between the two curves defined in part (a).\n<span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>Because the minimum radius <span class=\"inline-math\" data-math=\"5/2\"></span> exceeds one, the unit circle lies inside the curve in every direction. A full-turn integral of the difference of the squared radii therefore uses the same bounds throughout. The six repetitions in the sketch follow from the period of <span class=\"inline-math\" data-math=\"\\cos6\\theta\"></span>.</p>",
+      "<p>(a) Continue the curve through six equal sectors of width <span class=\"inline-math\" data-math=\"\\pi/3\"></span>; the radii range from <span class=\"inline-math\" data-math=\"5/2\"></span> to <span class=\"inline-math\" data-math=\"11/2\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Draw the circle of radius 1 centred on the pole. <small class=\"step-credit\">[1]</small></p>",
+      "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-11-solution-1.svg\" alt=\"Worked diagram for REV13-11\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure>",
+      "<p>(b) The outer radius exceeds 1 at every angle. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"A=\\tfrac12\\int_0^{2\\pi}[(4-\\tfrac32\\cos6\\theta)^2-1]\\,d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Expand to <span class=\"inline-math\" data-math=\"15-12\\cos6\\theta+\\tfrac94\\cos^26\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The cosine integrates to zero; using <span class=\"inline-math\" data-math=\"\\cos^26\\theta=(1+\\cos12\\theta)/2\"></span> gives integral <span class=\"inline-math\" data-math=\"\\pi\"></span> for the square. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Therefore <span class=\"inline-math\" data-math=\"A=129\\pi/8\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 10 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-11-ms-01.webp\" alt=\"Source marking table for IAL Jan 2022 · Q4, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-11-ms-02.webp\" alt=\"Source marking table for IAL Jan 2022 · Q4, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-12",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-12-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>Figure 1 shows a sketch of curve <span class=\"inline-math\" data-math=\"C\"></span> with polar equation</p><div class=\"equation\" data-display=\"true\" data-math=\"r = 3 \\sin 2\\theta \\quad 0 \\leqslant \\theta \\leqslant \\frac{\\pi}{2}\"></div><p>The point <span class=\"inline-math\" data-math=\"P\"></span> on <span class=\"inline-math\" data-math=\"C\"></span> has polar coordinates <span class=\"inline-math\" data-math=\"(R, \\phi)\"></span>. The tangent to <span class=\"inline-math\" data-math=\"C\"></span> at <span class=\"inline-math\" data-math=\"P\"></span> is perpendicular to the initial line.</p><p>(a) Show that <span class=\"inline-math\" data-math=\"\\tan \\phi = \\frac{1}{\\sqrt{2}}\"></span></p><p><span class=\"marks\">(4)</span></p><p>(b) Determine the exact value of <span class=\"inline-math\" data-math=\"R\"></span>.</p><p><span class=\"marks\">(2)</span></p><p>The region <span class=\"inline-math\" data-math=\"S\"></span>, shown shaded in Figure 1, is bounded by <span class=\"inline-math\" data-math=\"C\"></span> and the line <span class=\"inline-math\" data-math=\"OP\"></span>, where <span class=\"inline-math\" data-math=\"O\"></span> is the pole.</p><p>(c) Use calculus to show that the exact area of <span class=\"inline-math\" data-math=\"S\"></span> is</p><div class=\"equation\" data-display=\"true\" data-math=\"p \\arctan \\frac{1}{\\sqrt{2}} + q \\sqrt{2}\"></div><p>where <span class=\"inline-math\" data-math=\"p\"></span> and <span class=\"inline-math\" data-math=\"q\"></span> are constants to be determined.</p><p>Solutions relying entirely on calculator technology are not acceptable.</p><p><span class=\"marks\">(7)</span></p>",
+    "steps": [
+      "<p>At a vertical tangent the horizontal velocity is zero while the vertical velocity is nonzero. Here <span class=\"inline-math\" data-math=\"y=6\\sin^2\\theta\\cos\\theta\"></span>, so <span class=\"inline-math\" data-math=\"y&#x27;=6\\sin\\theta(2\\cos^2\\theta-\\sin^2\\theta)\"></span> is positive at the stated <span class=\"inline-math\" data-math=\"\\phi\"></span>. A triangle with opposite side <span class=\"inline-math\" data-math=\"1\"></span> and adjacent side <span class=\"inline-math\" data-math=\"\\sqrt2\"></span> then gives the exact trigonometric values.</p>",
+      "<p>(a) Write <span class=\"inline-math\" data-math=\"x=r\\cos\\theta=3\\sin2\\theta\\cos\\theta=6\\sin\\theta\\cos^2\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Then <span class=\"inline-math\" data-math=\"\\mathrm dx/\\mathrm d\\theta=6\\cos\\theta(\\cos^2\\theta-2\\sin^2\\theta)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>At the interior vertical tangent this vanishes. Here <span class=\"inline-math\" data-math=\"\\cos\\phi\\ne0\"></span>, so <span class=\"inline-math\" data-math=\"\\cos^2\\phi=2\\sin^2\\phi\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The positive root gives <span class=\"inline-math\" data-math=\"\\tan\\phi=1/\\sqrt2\"></span>; also <span class=\"inline-math\" data-math=\"\\mathrm dy/\\mathrm d\\theta\\ne0\"></span> there. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) <span class=\"inline-math\" data-math=\"\\sin\\phi=1/\\sqrt3\"></span> and <span class=\"inline-math\" data-math=\"\\cos\\phi=\\sqrt{2/3}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence <span class=\"inline-math\" data-math=\"R=6\\sin\\phi\\cos\\phi=2\\sqrt2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) The shaded region is swept out by the radius for <span class=\"inline-math\" data-math=\"0\\leq\\theta\\leq\\phi\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<div class=\"equation\" data-display=\"true\" data-math=\"A=\\tfrac12\\int_0^\\phi r^2\\,\\mathrm d\\theta\n =\\tfrac92\\int_0^\\phi\\sin^2(2\\theta)\\,\\mathrm d\\theta.\"></div>",
+      "<p><small class=\"step-credit\">[1]</small>\nUse <span class=\"inline-math\" data-math=\"2\\sin^2(2\\theta)=1-\\cos4\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"A=\\tfrac94[\\theta-\\tfrac14\\sin4\\theta]_0^\\phi\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Now <span class=\"inline-math\" data-math=\"\\sin2\\phi=2\\sqrt2/3\"></span> and <span class=\"inline-math\" data-math=\"\\cos2\\phi=1/3\"></span>, so <span class=\"inline-math\" data-math=\"\\sin4\\phi=4\\sqrt2/9\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Therefore <span class=\"inline-math\" data-math=\"A=\\frac94\\arctan(1/\\sqrt2)-\\frac14\\sqrt2\"></span>, giving <span class=\"inline-math\" data-math=\"p=9/4,\\ q=-1/4\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The sign of the correction can be checked geometrically. Replacing <span class=\"inline-math\" data-math=\"\\sin^2(2\\theta)\"></span> by its constant term <span class=\"inline-math\" data-math=\"1/2\"></span> in the integral gives <span class=\"inline-math\" data-math=\"9\\phi/4\"></span>. The integrated oscillating term subtracts <span class=\"inline-math\" data-math=\"9\\sin(4\\phi)/16\"></span>; at this <span class=\"inline-math\" data-math=\"\\phi\"></span> that is positive, so <span class=\"inline-math\" data-math=\"q\"></span> must be negative.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 13 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-12-ms-01.webp\" alt=\"Source marking table for IAL Jan 2021 · Q7, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-12-ms-02.webp\" alt=\"Source marking table for IAL Jan 2021 · Q7, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-13",
+    "question": "<p>The curve C, with pole O, has polar equation <span class=\"inline-math\" data-math=\"r=1+\\cos \\theta, \\quad 0 \\leqslant \\theta \\leqslant \\frac{\\pi}{2}\"></span></p><p>At the point A on C, the tangent to C is parallel to the initial line.</p><p>(a) Find the polar coordinates of A.</p><p><span class=\"marks\">(4)</span></p><p>(b) Find the finite area enclosed by the initial line, the line OA and the curve C, giving your answer in the form <span class=\"inline-math\" data-math=\"a\\pi+b\\sqrt{3},\"></span> where a and b are rational constants to be found.</p><p><span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>The derivative of the height vanishes both at a cusp candidate and at the required smooth contact. The root <span class=\"inline-math\" data-math=\"\\cos\\theta=-1\"></span> gives radius zero, whereas <span class=\"inline-math\" data-math=\"\\cos\\theta=1/2\"></span> gives radius <span class=\"inline-math\" data-math=\"3/2\"></span>. This separates the requested point from the pole.</p>",
+      "<p>(a) Differentiate <span class=\"inline-math\" data-math=\"y=(1+\\cos\\theta)\\sin\\theta\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>At <span class=\"inline-math\" data-math=\"A\"></span>, <span class=\"inline-math\" data-math=\"\\cos\\theta+\\cos2\\theta=0\"></span>, or <span class=\"inline-math\" data-math=\"(2\\cos\\theta-1)(\\cos\\theta+1)=0\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"A=(3/2,\\pi/3)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) The area is <span class=\"inline-math\" data-math=\"\\tfrac12\\int_0^{\\pi/3}(1+2\\cos\\theta+\\cos^2\\theta)\\,d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Replace <span class=\"inline-math\" data-math=\"\\cos^2\\theta\"></span> by <span class=\"inline-math\" data-math=\"(1+\\cos2\\theta)/2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The primitive including the half factor is <span class=\"inline-math\" data-math=\"3\\theta/4+\\sin\\theta+\\sin2\\theta/8\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Its endpoint difference gives <span class=\"inline-math\" data-math=\"\\pi/4+9\\sqrt3/16\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>In the area integral the two trigonometric endpoint contributions are <span class=\"inline-math\" data-math=\"\\sin(\\pi/3)=\\sqrt3/2\"></span> and <span class=\"inline-math\" data-math=\"\\sin(2\\pi/3)/8=\\sqrt3/16\"></span>. Their sum gives <span class=\"inline-math\" data-math=\"9\\sqrt3/16\"></span>. The angle term is <span class=\"inline-math\" data-math=\"3(\\pi/3)/4=\\pi/4\"></span>.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 4 marks</strong></p>",
+      "<p>[1] Write height <span class=\"inline-math\" data-math=\"y=(1+\\cos\\theta)\\sin\\theta\"></span></p>",
+      "<p>[1] Differentiate and set <span class=\"inline-math\" data-math=\"\\cos\\theta+\\cos2\\theta=0\"></span></p>",
+      "<p>[1] Solve for the relevant <span class=\"inline-math\" data-math=\"\\cos\\theta=1/2\"></span></p>",
+      "<p>[1] Give the polar point <span class=\"inline-math\" data-math=\"(3/2,\\pi/3)\"></span>.</p>",
+      "<p><strong>(b) · 6 marks</strong></p>",
+      "<p>[1] Use the half-factor in the polar area formula with limits <span class=\"inline-math\" data-math=\"0,\\pi/3\"></span></p>",
+      "<p>[1] Expand to <span class=\"inline-math\" data-math=\"1+2\\cos\\theta+\\cos^2\\theta\"></span></p>",
+      "<p>[1] Replace the squared cosine using the double-angle identity</p>",
+      "<p>[1] Integrate constant and first-harmonic contributions correctly</p>",
+      "<p>[1] Include the term <span class=\"inline-math\" data-math=\"\\sin2\\theta/8\"></span> in the primitive with the half-factor</p>",
+      "<p>[1] Evaluate to <span class=\"inline-math\" data-math=\"\\pi/4+9\\sqrt3/16\"></span>.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev13-14",
+    "question": "<figure class=\"old-spec-diagram\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-14-fig1.svg\" alt=\"Figure 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;max-width:100%;max-height:65mm\"></figure><p>Figure 1</p><p>The curve <span class=\"inline-math\" data-math=\"C\"></span> shown in Figure 1 has polar equation</p><div class=\"equation\" data-display=\"true\" data-math=\"r = 1 + \\sin \\theta \\quad -\\frac{\\pi}{2} &lt; \\theta \\leq \\frac{\\pi}{2}\"></div><p>The point <span class=\"inline-math\" data-math=\"P\"></span> lies on <span class=\"inline-math\" data-math=\"C\"></span> such that the tangent to <span class=\"inline-math\" data-math=\"C\"></span> at <span class=\"inline-math\" data-math=\"P\"></span> is perpendicular to the initial line.</p><p>(a) Use calculus to determine the polar coordinates of <span class=\"inline-math\" data-math=\"P\"></span>.</p><p><span class=\"marks\">(5)</span></p><p>The tangent to <span class=\"inline-math\" data-math=\"C\"></span> at the point <span class=\"inline-math\" data-math=\"Q\"></span> where <span class=\"inline-math\" data-math=\"\\theta = \\frac{\\pi}{2}\"></span> is parallel to the initial line.</p><p>The tangent to <span class=\"inline-math\" data-math=\"C\"></span> at <span class=\"inline-math\" data-math=\"Q\"></span> meets the tangent to <span class=\"inline-math\" data-math=\"C\"></span> at <span class=\"inline-math\" data-math=\"P\"></span> at the point <span class=\"inline-math\" data-math=\"S\"></span>, as shown in Figure 1.</p><p>The finite region <span class=\"inline-math\" data-math=\"R\"></span>, shown shaded in Figure 1, is bounded by the line segments <span class=\"inline-math\" data-math=\"QS, SP\"></span> and the curve <span class=\"inline-math\" data-math=\"C\"></span>.</p><p>(b) Use algebraic integration to show that the area of <span class=\"inline-math\" data-math=\"R\"></span> is</p><div class=\"equation\" data-display=\"true\" data-math=\"\\frac{1}{32} \\left( a \\sqrt{3} + b \\pi \\right)\"></div><p>where <span class=\"inline-math\" data-math=\"a\"></span> and <span class=\"inline-math\" data-math=\"b\"></span> are integers to be determined.</p><p><span class=\"marks\">(6)</span></p>",
+    "steps": [
+      "<p>For a tangent perpendicular to the initial line, differentiate <span class=\"inline-math\" data-math=\"x\"></span>, the horizontal coordinate. For the shaded area identify the straight-sided region first and then remove the appropriate polar sector. The trigonometric term in that sector has a nonzero value at <span class=\"inline-math\" data-math=\"\\pi/6\"></span> even though it vanishes at <span class=\"inline-math\" data-math=\"\\pi/2\"></span>.</p>",
+      "<p>(a) Differentiate <span class=\"inline-math\" data-math=\"x=(1+\\sin\\theta)\\cos\\theta\"></span> to get <span class=\"inline-math\" data-math=\"\\cos2\\theta-\\sin\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Setting this to zero gives <span class=\"inline-math\" data-math=\"(2\\sin\\theta-1)(\\sin\\theta+1)=0\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The interior point has <span class=\"inline-math\" data-math=\"\\sin\\theta=1/2\"></span>, giving <span class=\"inline-math\" data-math=\"P=(3/2,\\pi/6)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) In cartesian coordinates <span class=\"inline-math\" data-math=\"P=(3\\sqrt3/4,3/4)\"></span> and <span class=\"inline-math\" data-math=\"Q=(0,2)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The area of <span class=\"inline-math\" data-math=\"OQSP\"></span> is <span class=\"inline-math\" data-math=\"(3\\sqrt3/4)(2-3/8)=39\\sqrt3/32\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Subtract sector <span class=\"inline-math\" data-math=\"OPQ\"></span>, of area <span class=\"inline-math\" data-math=\"\\tfrac12\\int_{\\pi/6}^{\\pi/2}(1+\\sin\\theta)^2\\,d\\theta\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The primitive is <span class=\"inline-math\" data-math=\"3\\theta/4-\\cos\\theta-\\sin2\\theta/8\"></span>, giving <span class=\"inline-math\" data-math=\"\\pi/4+9\\sqrt3/16\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"A_R=(21\\sqrt3-8\\pi)/32\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 11 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev13-14-ms-01.webp\" alt=\"Source marking table for IAL Oct 2021 · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  }
+]

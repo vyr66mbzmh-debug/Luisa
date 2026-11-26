@@ -58,6 +58,7 @@ class PapersSelection(unittest.TestCase):
         self.page.route('**/practice-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.route('**/exam-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.route('**/madas-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version': 1, 'questions': []})))
+        self.page.route('**/old-spec-catalogue.json', lambda route: route.fulfill(json={'version': 1, 'group': 'old spec revision questions', 'questions': []}))
         self.page.route('**/pmt-catalogue.json', lambda route: route.fulfill(content_type='application/json', body=json.dumps({'version':1,'questions':[]})))
         self.page.goto(self.url)
         self.page.wait_for_function("document.querySelector('#papers-status').textContent.includes('6,147')")
@@ -817,7 +818,7 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(self.page.locator('#papers-source-pmt').count(), 0)
         self.assertNotIn('PMT', self.page.locator('.source-fieldset').inner_text())
         self.assertEqual(self.page.locator('.source-fieldset input[type=checkbox]').evaluate_all('n => n.map(x => x.id)'),
-                         ['papers-source-practice', 'papers-source-exam-style', 'papers-source-madas', 'papers-source-past-papers'])
+                         ['papers-source-practice', 'papers-source-exam-style', 'papers-source-madas', 'papers-source-past-papers', 'papers-source-old-spec'])
         for source in ('practice', 'past-papers'):
             self.page.locator('#papers-source-' + source).uncheck()
         pool = self.page.evaluate("(() => { const p = LUISA_PAPERS_BUILDER.pool(); return [p.length, p.filter(r => r.sourceKind === 'pmt').length, p.filter(r => r.sourceKind === 'pmt' && r.bank !== 'exam-style').length]; })()")

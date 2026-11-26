@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Old specification revision questions v0.89
+
+Student and teacher paper selection, chapter mappings, difficulty and marking materials. [Issue #168](https://github.com/vyr66mbzmh-debug/Luisa/issues/168).
+
 ## Further Statistics 1 v0.88
 
 Eight chapters of teaching slides, student booklets and worked solutions. [Issue #166](https://github.com/vyr66mbzmh-debug/Luisa/issues/166).

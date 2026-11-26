@@ -1,0 +1,213 @@
+[
+  {
+    "id": "old-spec/rev19-01",
+    "question": "<p>Show that the system of equations</p><div class=\"equation\" data-display=\"true\" data-math=\"14 x-4 y+6 z=5,\"></div><div class=\"equation\" data-display=\"true\" data-math=\"x+y+k z=3,\"></div><div class=\"equation\" data-display=\"true\" data-math=\"-21 x+6 y-9 z=14,\"></div><p>where k is a constant, does not have a unique solution and interpret this situation geometrically. <span class=\"marks\">(4)</span></p>",
+    "steps": [
+      "<p>Compare the normal vectors and then compare the constants using the same multiplier. Proportional normals make the first and third planes parallel, but their different scaled constants put them at different offsets. Their incompatibility alone prevents a common solution.</p>",
+      "<p>The third coefficient row is <span class=\"inline-math\" data-math=\"-3/2\"></span> times the first, so the determinant vanishes for every <span class=\"inline-math\" data-math=\"k\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The first plane multiplied by <span class=\"inline-math\" data-math=\"-3/2\"></span> would have right side <span class=\"inline-math\" data-math=\"-15/2\"></span>, whereas the third has 14. <small class=\"step-credit\">[1]</small></p>",
+      "<p>These are distinct parallel planes. The second plane cuts both, because its normal cannot be parallel to <span class=\"inline-math\" data-math=\"(14,-4,6)\"></span>. The three planes have no common point and the system is inconsistent. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 4 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev19-01-ms-01.webp\" alt=\"Source marking table for Oct 2023 (v1) CAIE · Q1, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev19-02",
+    "question": "<p>(a) Show that the system of equations <span class=\"inline-math\" data-math=\"x-y+2 z=4,\"></span> <span class=\"inline-math\" data-math=\"x-y-3 z=a,\"></span> <span class=\"inline-math\" data-math=\"x-y+7 z=13,\"></span> where a is a constant, does not have a unique solution. <span class=\"marks\">(2)</span></p><p>(b) Given that a=-5, show that the system of equations in part (a) is consistent. Interpret this situation geometrically. <span class=\"marks\">(3)</span></p><p>(c) Given instead that <span class=\"inline-math\" data-math=\"a\\neq-5\"></span> , show that the system of equations in part (a) is inconsistent. Interpret this situation geometrically. <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>The equations determine the difference <span class=\"inline-math\" data-math=\"x-y\"></span>, not the separate coordinates. Once <span class=\"inline-math\" data-math=\"z=9/5\"></span> and <span class=\"inline-math\" data-math=\"x-y=2/5\"></span> are fixed, moving by <span class=\"inline-math\" data-math=\"(t,t,0)\"></span> leaves both unchanged. This explains the direction of the common line in the consistent case.</p>",
+      "<p>(a) In the coefficient matrix the second column is the negative of the first. Thus the determinant is zero for every <span class=\"inline-math\" data-math=\"a\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) Write <span class=\"inline-math\" data-math=\"u=x-y\"></span>. Subtracting the first equation from the third gives <span class=\"inline-math\" data-math=\"5z=9\"></span>, so <span class=\"inline-math\" data-math=\"z=9/5,\\ u=2/5\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The second then requires <span class=\"inline-math\" data-math=\"a=u-3z=-5\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>With <span class=\"inline-math\" data-math=\"a=-5\"></span> the three distinct planes meet in the line <span class=\"inline-math\" data-math=\"x-y=2/5,\\ z=9/5\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(c) For other <span class=\"inline-math\" data-math=\"a\"></span> the second equation contradicts the first and third. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Their pairwise intersections are distinct parallel lines (all parallel to <span class=\"inline-math\" data-math=\"(1,1,0)\"></span>), with no common point. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 7 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev19-02-ms-01.webp\" alt=\"Source marking table for Oct 2023 (v3) CAIE · Q2, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev19-02-ms-02.webp\" alt=\"Source marking table for Oct 2023 (v3) CAIE · Q2, extract 2\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev19-03",
+    "question": "<p>(a) Show that the system of equations <span class=\"inline-math\" data-math=\"x+2 y+3 z=1,\"></span> <span class=\"inline-math\" data-math=\"4 x+5 y+6 z=1,\"></span> <span class=\"inline-math\" data-math=\"7 x+8 y+9 z=1,\"></span> does not have a unique solution. <span class=\"marks\">(2)</span></p><p>(b) Show that the system of equations in part (a) is consistent. Interpret this situation geometrically. <span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>Applying the row dependence to the right sides as well distinguishes a redundant equation from a contradiction. After choosing <span class=\"inline-math\" data-math=\"z=t\"></span>, solve for <span class=\"inline-math\" data-math=\"y\"></span> and then for <span class=\"inline-math\" data-math=\"x\"></span>. The single free parameter describes a line of common points.</p>",
+      "<p>(a) The third coefficient row is twice the second minus the first, so the determinant is zero. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) The right sides obey the same relation <span class=\"inline-math\" data-math=\"2(1)-1=1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Subtracting consecutive equations yields <span class=\"inline-math\" data-math=\"x+y+z=0\"></span>, then <span class=\"inline-math\" data-math=\"y+2z=1\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Writing <span class=\"inline-math\" data-math=\"z=t\"></span> gives <span class=\"inline-math\" data-math=\"(x,y,z)=(-1+t,1-2t,t)\"></span>, the common line of the three planes. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 5 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev19-03-ms-01.webp\" alt=\"Source marking table for June 2023 (v1) CAIE · Q1, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev19-04",
+    "question": "<p>The matrix A is given by <span class=\"inline-math\" data-math=\"\\mathbf{A}=\\left( \\begin{array}{c c c} a &amp; - 6 a &amp; 2 a+2 \\\\ 0 &amp; 1-a &amp; 0 \\\\ 0 &amp; 2-a &amp; -1 \\end{array} \\right)\"></span> where a is a constant with <span class=\"inline-math\" data-math=\"a\\neq0\"></span> and <span class=\"inline-math\" data-math=\"a\\neq1\"></span>.</p><p>(a) Show that the equation <span class=\"inline-math\" data-math=\"\\mathbf{A}\\left( \\begin{array}{c} x \\\\ y \\\\ z \\end{array} \\right)=\\left( \\begin{array}{c} 1 \\\\ 2 \\\\ 3 \\end{array} \\right)\"></span> has a unique solution and interpret this situation geometrically. <span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>The first column makes cofactor expansion especially short because two entries vanish. The exclusions <span class=\"inline-math\" data-math=\"a=0,1\"></span> are precisely the values that would destroy invertibility. Thus the unique algebraic solution determines one point in three-dimensional space.</p>",
+      "<p>(a) Expanding down the first column gives <span class=\"inline-math\" data-math=\"\\det A=a(1-a)(-1)=a(a-1)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The restrictions <span class=\"inline-math\" data-math=\"a\\ne0,1\"></span> ensure <span class=\"inline-math\" data-math=\"\\det A\\ne0\"></span>, so <span class=\"inline-math\" data-math=\"A\"></span> is invertible and the system has one solution. <small class=\"step-credit\">[1]</small></p>",
+      "<p>The three planes meet at a single point. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Alternatively, the second row fixes <span class=\"inline-math\" data-math=\"y=2/(1-a)\"></span>, the third row fixes <span class=\"inline-math\" data-math=\"z=(2-a)y-3\"></span>, and the first fixes <span class=\"inline-math\" data-math=\"x=(1+6ay-(2a+2)z)/a\"></span>. Both required divisions are valid.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 3 marks.</p>",
+      "<p>Count only the retained parts. Any original whole-question total on the extract belongs to the complete exam question.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev19-04-ms-01.webp\" alt=\"Source marking table for June 2023 (v3) CAIE edited · Q8, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev19-05",
+    "question": "<p>(a) Find the set of values of k for which the system of equations <span class=\"inline-math\" data-math=\"x+2 y+3 z=1,\"></span> <span class=\"inline-math\" data-math=\"k x+4 y+6 z=0,\"></span> <span class=\"inline-math\" data-math=\"7 x+8 y+9 z=3,\"></span> has a unique solution. <span class=\"marks\">(3)</span></p><p>(b) Interpret the situation geometrically in the case where the system of equations does not have a unique solution. <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>Subtracting a multiple of one row from another preserves the determinant. When <span class=\"inline-math\" data-math=\"k=2\"></span>, the zero coefficient row must also have zero on the right to be consistent. The conflicting constants instead give two distinct parallel planes.</p>",
+      "<p>(a) Subtract twice row 1 from row 2 to get <span class=\"inline-math\" data-math=\"(k-2,0,0)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Expanding along this row gives <span class=\"inline-math\" data-math=\"\\det=6(k-2)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus there is a unique solution for every <span class=\"inline-math\" data-math=\"k\\ne2\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>(b) At <span class=\"inline-math\" data-math=\"k=2\"></span> the second plane has twice the first normal and a conflicting constant. These distinct parallel planes are both cut by the third along parallel lines. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Retained exercise: 5 marks.</p>",
+      "<figure class=\"exam-solution-source\" style=\"margin:2mm 0\"><img src=\"resources/old-spec/rev19-05-ms-01.webp\" alt=\"Source marking table for Oct 2022 (v2) CAIE · Q1, extract 1\" style=\"display:block;margin:auto;height:auto;object-fit:contain;width:100%;max-height:210mm\"></figure>"
+    ]
+  },
+  {
+    "id": "old-spec/rev19-06",
+    "question": "<p>Describe fully the transformations represented by each of the following matrices.</p><p>(a) <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{cc} 1 &amp; 0 \\\\ 0 &amp; -1 \\end{array} \\right)\"></span></p><p>(b) <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{cc} \\frac{\\sqrt{2}}{2} &amp; -\\frac{\\sqrt{2}}{2} \\\\ \\frac{\\sqrt{2}}{2} &amp; \\frac{\\sqrt{2}}{2} \\end{array} \\right)\"></span></p><p>(c) <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{c c} 0 &amp; 1 \\\\ 1 &amp; 0 \\end{array} \\right)\"></span></p><p>(d) <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{c c c} 1 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; -1 \\\\ 0 &amp; 1 &amp; 0 \\end{array} \\right)\"></span> <span class=\"marks\">(8)</span></p>",
+    "steps": [
+      "<p>Use each column as the image of its corresponding coordinate unit vector. For example the last matrix fixes <span class=\"inline-math\" data-math=\"(1,0,0)\"></span> and takes <span class=\"inline-math\" data-math=\"(0,1,0)\"></span> to <span class=\"inline-math\" data-math=\"(0,0,1)\"></span>. These two checks give the rotation axis and distinguish its two possible senses.</p>",
+      "<p>(a) <span class=\"inline-math\" data-math=\"(x,y)\\mapsto(x,-y)\"></span> reflects in the <span class=\"inline-math\" data-math=\"x\"></span>-axis. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) The columns are those of a counterclockwise rotation through <span class=\"inline-math\" data-math=\"45^\\circ\"></span> about the origin. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) <span class=\"inline-math\" data-math=\"(x,y)\\mapsto(y,x)\"></span> reflects in <span class=\"inline-math\" data-math=\"y=x\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(d) <span class=\"inline-math\" data-math=\"(x,y,z)\\mapsto(x,-z,y)\"></span> fixes the <span class=\"inline-math\" data-math=\"x\"></span>-axis and rotates through <span class=\"inline-math\" data-math=\"90^\\circ\"></span> from the positive <span class=\"inline-math\" data-math=\"y\"></span>-axis towards the positive <span class=\"inline-math\" data-math=\"z\"></span>-axis. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 2 marks</strong></p>",
+      "<p>[1] Identify a reflection</p>",
+      "<p>[1] Give mirror <span class=\"inline-math\" data-math=\"x\"></span>-axis.</p>",
+      "<p><strong>(b) · 2 marks</strong></p>",
+      "<p>[1] Identify rotation about the origin</p>",
+      "<p>[1] Give <span class=\"inline-math\" data-math=\"45^\\circ\"></span> anticlockwise.</p>",
+      "<p><strong>(c) · 2 marks</strong></p>",
+      "<p>[1] Identify a reflection</p>",
+      "<p>[1] Give mirror <span class=\"inline-math\" data-math=\"y=x\"></span>.</p>",
+      "<p><strong>(d) · 2 marks</strong></p>",
+      "<p>[1] Identify a rotation about the <span class=\"inline-math\" data-math=\"x\"></span>-axis</p>",
+      "<p>[1] Give a quarter-turn from the positive <span class=\"inline-math\" data-math=\"y\"></span>-axis towards positive <span class=\"inline-math\" data-math=\"z\"></span>.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev19-07",
+    "question": "<p>The matrix <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{cc}0&amp;-1\\\\ 1&amp;0\\end{array} \\right)\"></span> represents a transformation S. The matrix <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{cc}0&amp;-1\\\\ -1&amp;0\\end{array} \\right)\"></span> represents a transformation T.</p><p>(a) Describe fully each of the transformations S and T. <span class=\"marks\">(2)</span></p><p>(b) Find the matrix of the transformation given by &#x27;S followed by T&#x27;. <span class=\"marks\">(2)</span></p><p>(c) Describe fully the transformation &#x27;S followed by T&#x27;. <span class=\"marks\">(2)</span></p>",
+    "steps": [
+      "<p>To decide the multiplication order, follow a single point. <span class=\"inline-math\" data-math=\"S\"></span> sends <span class=\"inline-math\" data-math=\"(1,0)\"></span> to <span class=\"inline-math\" data-math=\"(0,1)\"></span>, and <span class=\"inline-math\" data-math=\"T\"></span> then sends this to <span class=\"inline-math\" data-math=\"(-1,0)\"></span>. That is the first column of <span class=\"inline-math\" data-math=\"TS\"></span>, and it also checks the stated mirror line.</p>",
+      "<p>(a) <span class=\"inline-math\" data-math=\"S\"></span> rotates through <span class=\"inline-math\" data-math=\"90^\\circ\"></span> anticlockwise about the origin; <span class=\"inline-math\" data-math=\"T\"></span> reflects in <span class=\"inline-math\" data-math=\"y=-x\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) Apply <span class=\"inline-math\" data-math=\"S\"></span> first, so the product is <span class=\"inline-math\" data-math=\"TS=\\begin{pmatrix}0&amp;-1\\\\-1&amp;0\\end{pmatrix}\\begin{pmatrix}0&amp;-1\\\\1&amp;0\\end{pmatrix}=\\begin{pmatrix}-1&amp;0\\\\0&amp;1\\end{pmatrix}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) The composite takes <span class=\"inline-math\" data-math=\"(x,y)\"></span> to <span class=\"inline-math\" data-math=\"(-x,y)\"></span>, a reflection in the <span class=\"inline-math\" data-math=\"y\"></span>-axis. <small class=\"step-credit\">[2]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 2 marks</strong></p>",
+      "<p>[1] <span class=\"inline-math\" data-math=\"S\"></span> is a <span class=\"inline-math\" data-math=\"90^\\circ\"></span> anticlockwise rotation about the origin</p>",
+      "<p>[1] <span class=\"inline-math\" data-math=\"T\"></span> is reflection in <span class=\"inline-math\" data-math=\"y=-x\"></span>.</p>",
+      "<p><strong>(b) · 2 marks</strong></p>",
+      "<p>[1] Form <span class=\"inline-math\" data-math=\"TS\"></span> in that order</p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"\\begin{pmatrix}-1&amp;0\\\\0&amp;1\\end{pmatrix}\"></span>.</p>",
+      "<p><strong>(c) · 2 marks</strong></p>",
+      "<p>[1] Identify a reflection</p>",
+      "<p>[1] Give the <span class=\"inline-math\" data-math=\"y\"></span>-axis as the mirror.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev19-08",
+    "question": "<p>The matrix <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{cc} 3 &amp; -2 \\\\ 2 &amp; -1 \\end{array} \\right)\"></span> represents a transformation, T. Find the invariant points for the transformation T. <span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>An invariant point has both coordinates unchanged by the map. The two fixed-point equations express the same condition, leaving one free parameter. Substituting <span class=\"inline-math\" data-math=\"(t,t)\"></span> into the map returns <span class=\"inline-math\" data-math=\"(t,t)\"></span> for every <span class=\"inline-math\" data-math=\"t\"></span>, proving the whole line is fixed.</p>",
+      "<p>At an invariant point <span class=\"inline-math\" data-math=\"3x-2y=x\"></span> and <span class=\"inline-math\" data-math=\"2x-y=y\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Both reduce to <span class=\"inline-math\" data-math=\"x=y\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Every point on the line <span class=\"inline-math\" data-math=\"y=x\"></span> is fixed. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>Overall · 3 marks</strong></p>",
+      "<p>[1] Set both image coordinates equal to the original coordinates</p>",
+      "<p>[1] Reduce both equations to <span class=\"inline-math\" data-math=\"x=y\"></span></p>",
+      "<p>[1] Identify the entire line <span class=\"inline-math\" data-math=\"y=x\"></span> as fixed.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev19-09",
+    "question": "<p>The matrix <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{cc} 3 &amp; -2 \\\\ 4 &amp; -6 \\end{array} \\right)\"></span> defines a transformation M of the (x,y) plane.</p><p>(a) Show that the origin is the only invariant point of the transformation. <span class=\"marks\">(2)</span></p><p>(b) Find the two values of m for which y=mx is an invariant line under the transformation. <span class=\"marks\">(4)</span></p>",
+    "steps": [
+      "<p>For a fixed point require equality of the old and new coordinates. For a line to map to itself, the new point need only satisfy the same line equation. Substituting <span class=\"inline-math\" data-math=\"(x,mx)\"></span> handles the whole line at once and produces a quadratic in its slope.</p>",
+      "<p>(a) Fixed points satisfy <span class=\"inline-math\" data-math=\"2x-2y=0\"></span> and <span class=\"inline-math\" data-math=\"4x-7y=0\"></span>. Their only simultaneous solution is <span class=\"inline-math\" data-math=\"(0,0)\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(b) <span class=\"inline-math\" data-math=\"(x,mx)\"></span> maps to <span class=\"inline-math\" data-math=\"((3-2m)x,(4-6m)x)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Invariance requires <span class=\"inline-math\" data-math=\"4-6m=m(3-2m)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Thus <span class=\"inline-math\" data-math=\"2m^2-9m+4=(2m-1)(m-4)=0\"></span>, giving <span class=\"inline-math\" data-math=\"m=1/2,4\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>The slope method covers nonvertical lines through the origin. To check for a further vertical invariant line through the origin, apply the matrix to <span class=\"inline-math\" data-math=\"(0,1)\"></span>. Its first coordinate is <span class=\"inline-math\" data-math=\"-2\"></span>, so the image leaves the <span class=\"inline-math\" data-math=\"y\"></span>-axis.</p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 2 marks</strong></p>",
+      "<p>[1] Form the two simultaneous fixed-point conditions</p>",
+      "<p>[1] Conclude that only the origin is fixed.</p>",
+      "<p><strong>(b) · 4 marks</strong></p>",
+      "<p>[1] Find the image of <span class=\"inline-math\" data-math=\"(x,mx)\"></span></p>",
+      "<p>[1] Impose the same slope to obtain <span class=\"inline-math\" data-math=\"4-6m=m(3-2m)\"></span></p>",
+      "<p>[1] Reduce to <span class=\"inline-math\" data-math=\"(2m-1)(m-4)=0\"></span></p>",
+      "<p>[1] Give both slopes <span class=\"inline-math\" data-math=\"1/2,4\"></span>.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev19-10",
+    "question": "<p>The matrix <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{cc}-a&amp;a\\\\ 2&amp;3\\end{array} \\right)\"></span> defines a transformation M of the (x,y) plane. The line y=2x is an invariant line under the transformation M. Find the value of a. <span class=\"marks\">(3)</span></p>",
+    "steps": [
+      "<p>A linear transformation preserves scalar multiples. It is enough to follow the direction vector <span class=\"inline-math\" data-math=\"(1,2)\"></span> of the line, whose image is <span class=\"inline-math\" data-math=\"(a,8)\"></span>. The second image coordinate must be twice the first, which supplies the parameter equation.</p>",
+      "<p><span class=\"inline-math\" data-math=\"(x,2x)\"></span> maps to <span class=\"inline-math\" data-math=\"((-a+2a)x,(2+6)x)=(ax,8x)\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>For all these points to lie on <span class=\"inline-math\" data-math=\"y=2x\"></span>, <span class=\"inline-math\" data-math=\"8x=2ax\"></span>, <small class=\"step-credit\">[1]</small> so <span class=\"inline-math\" data-math=\"a=4\"></span>. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>Overall · 3 marks</strong></p>",
+      "<p>[1] Obtain image <span class=\"inline-math\" data-math=\"(ax,8x)\"></span> for <span class=\"inline-math\" data-math=\"(x,2x)\"></span>, or <span class=\"inline-math\" data-math=\"(a,8)\"></span> for <span class=\"inline-math\" data-math=\"(1,2)\"></span></p>",
+      "<p>[1] Impose <span class=\"inline-math\" data-math=\"8=2a\"></span> from line invariance</p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"a=4\"></span>.</p>"
+    ]
+  },
+  {
+    "id": "old-spec/rev19-11",
+    "question": "<p>The matrix <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{cc}-0.28&amp;0.96\\\\-0.96&amp;-0.28\\end{array} \\right)\"></span> corresponds to a rotation R in the x-y plane.</p><p>(a) State the centre of the rotation R, and find the angle of rotation (stating whether it is clockwise or anticlockwise). <span class=\"marks\">(3)</span></p><p>The transformation S is the rotation R followed by reflection in the x-axis.</p><p>(b) Write down the matrix corresponding to reflection in the x-axis, and show that the matrix corresponding to the transformation S is <span class=\"inline-math\" data-math=\"\\left( \\begin{array}{cc}-0.28&amp;0.96\\\\0.96&amp;0.28\\end{array} \\right).\"></span> <span class=\"marks\">(3)</span></p><p>(c) Show that the invariant points of the transformation S lie on a straight line, and find the equation of this line. <span class=\"marks\">(4)</span></p>",
+    "steps": [
+      "<p>The cosine alone leaves the rotation direction ambiguous. The negative sine in the first column selects clockwise rotation through the smaller angle. For the composition, reflecting in the <span class=\"inline-math\" data-math=\"x\"></span>-axis changes every image&#x27;s second coordinate, which means negating the rotation matrix&#x27;s second row.</p>",
+      "<p>(a) The centre is <span class=\"inline-math\" data-math=\"(0,0)\"></span>. The first column gives <span class=\"inline-math\" data-math=\"\\cos\\theta=-0.28,\\ \\sin\\theta=-0.96\"></span>. Thus the rotation is clockwise through <span class=\"inline-math\" data-math=\"\\arccos(-0.28)\\approx106.26^\\circ\"></span>. <small class=\"step-credit\">[3]</small></p>",
+      "<p>(b) The reflection matrix is <span class=\"inline-math\" data-math=\"\\begin{pmatrix}1&amp;0\\\\0&amp;-1\\end{pmatrix}\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Premultiply <span class=\"inline-math\" data-math=\"R\"></span> by this matrix, which changes the sign of its second row. The product is <span class=\"inline-math\" data-math=\"\\begin{pmatrix}-.28&amp;.96\\\\.96&amp;.28\\end{pmatrix}\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>(c) Fixed points satisfy <span class=\"inline-math\" data-math=\"-.28x+.96y=x\"></span> and <span class=\"inline-math\" data-math=\".96x+.28y=y\"></span>. <small class=\"step-credit\">[2]</small></p>",
+      "<p>Both equations reduce to <span class=\"inline-math\" data-math=\"3y=4x\"></span>. <small class=\"step-credit\">[1]</small></p>",
+      "<p>Hence exactly the points on the line <span class=\"inline-math\" data-math=\"y=4x/3\"></span> are invariant. <small class=\"step-credit\">[1]</small></p>"
+    ],
+    "markSchemeSteps": [
+      "<p>Suggested marking guide. Credit equivalent methods that satisfy the question.</p>",
+      "<p><strong>(a) · 3 marks</strong></p>",
+      "<p>[1] Identify rotation about the origin</p>",
+      "<p>[1] Use the signed sine and cosine to determine direction</p>",
+      "<p>[1] Give <span class=\"inline-math\" data-math=\"106.3^\\circ\"></span> clockwise, allowing equivalent precision or angle.</p>",
+      "<p><strong>(b) · 3 marks</strong></p>",
+      "<p>[1] Give the <span class=\"inline-math\" data-math=\"x\"></span>-axis reflection matrix</p>",
+      "<p>[1] Premultiply the rotation by it</p>",
+      "<p>[1] Obtain <span class=\"inline-math\" data-math=\"\\begin{pmatrix}-.28&amp;.96\\\\.96&amp;.28\\end{pmatrix}\"></span>.</p>",
+      "<p><strong>(c) · 4 marks</strong></p>",
+      "<p>[1] Equate first image coordinate to <span class=\"inline-math\" data-math=\"x\"></span></p>",
+      "<p>[1] Equate second image coordinate to <span class=\"inline-math\" data-math=\"y\"></span></p>",
+      "<p>[1] Show both reduce to <span class=\"inline-math\" data-math=\"3y=4x\"></span></p>",
+      "<p>[1] Identify the full line as the locus of invariant points.</p>"
+    ]
+  }
+]

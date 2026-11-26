@@ -2,6 +2,13 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.88 -->
+**Release 0.88 · GitHub #166.**
+
+Further Statistics 1 now has eight revised classroom decks and matching student and worked booklets. The 272 slides include all 131 exam-style questions from the exercises assigned in the source presentations.
+
+Only the eight Further Statistics 1 chapters resume from the wider review in issue #160. See issue #166 for production verification.
+
 <!-- LUISA-REPORT-HANDOFF v0.87 -->
 **Release 0.87 · GitHub #164.**
 

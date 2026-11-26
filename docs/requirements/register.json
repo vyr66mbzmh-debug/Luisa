@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-25",
+  "asOf": "2026-11-26",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -6801,6 +6801,22 @@
       "evidence": [
         "docs/evidence/further-statistics-1.json",
         "GitHub issue #166"
+      ]
+    },
+    {
+      "id": "PAP-089",
+      "requirement": "Offer the converted old specification questions in Papers for students and teachers.",
+      "scope": "Papers, exam builder and chapter downloads",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner instruction and GitHub issue #168",
+      "acceptance": [
+        "Put an opt-in Old Spec checkbox immediately to the right of Past Papers and offer a single old spec revision questions group.",
+        "Retain chapter mappings, difficulty, source labels, edited status, separate worked solutions and mark schemes. Deduplicate repeated exercises."
+      ],
+      "evidence": [
+        "GitHub issue #168"
       ]
     }
   ]

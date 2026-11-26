@@ -3,7 +3,7 @@
   'use strict';
   const macros = {'\\p':'\\mathrm P(#1)','\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
   const validMarks = row => Number.isInteger(row.marks) && row.marks >= 0;
-  const source = row => ['past-exam', 'pmt', 'madas'].includes(row.sourceKind) ? `Source: ${(row.sourceLabel || 'Past exam').replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
+  const source = row => ['past-exam', 'pmt', 'madas', 'old-spec'].includes(row.sourceKind) ? `Source: ${(row.sourceLabel || 'Past exam').replace(/^Source:\s*/i, '')}` : row.sourceKind === 'practice-booklet'
     ? `Source: Practice Booklet · Chapter ${row.chapterNumber} · ${row.subchapterLabel || row.subchapterTitle} · ${/^\d/.test(row.questionLabel) ? 'Q' : ''}${row.questionLabel}`
     : `Source: Luisa ${row.skillCode} Q${row.number}`;
   const context = row => [row.courseTitle, row.bookTitle, row.topicTitle].filter(Boolean).join(' · ');
@@ -98,7 +98,7 @@
       return ['Practice', label, /^\d/.test(row.questionLabel) ? 'Q' + row.questionLabel : row.questionLabel].join(' ');
     }
     if (row.sourceKind === 'past-exam') return source(row).replace(/^Source: Edexcel (?:A Level )?/i, 'Edexcel ').replace(/^Source: /, '');
-    if (['pmt', 'madas'].includes(row.sourceKind)) return source(row).replace(/^Source: /, '');
+    if (['pmt', 'madas', 'old-spec'].includes(row.sourceKind)) return source(row).replace(/^Source: /, '');
     return source(row);
   }
   function questionHeading(doc, row, number, continuation) {
@@ -165,8 +165,9 @@
     const detail = question.querySelector('.compact-provenance');
     for (const size of [9, 8.5, 8, 7.5]) {
       detail.style.fontSize = size + 'pt';
-      if (detail.scrollWidth <= detail.clientWidth + 1) break;
+      if (detail.scrollWidth <= detail.clientWidth + 1) return;
     }
+    detail.style.whiteSpace = 'normal';
   }
   function overflows(node) { return node.scrollHeight > node.clientHeight + 1 || node.scrollWidth > node.clientWidth + 1; }
   // The marks margin is reserved: question content may not run into it.
