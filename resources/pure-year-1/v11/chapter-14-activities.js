@@ -82,15 +82,35 @@ window.LuisaChapter14 = (() => {
     function specialBase() {
       const rows=[['1','0'],['1.5','0.41(1.5^x)'],['2','0.69(2^x)'],['2.5','0.92(2.5^x)'],['3','1.10(3^x)'],['3.5','1.25(3.5^x)']];
       const url='https://www.geogebra.org/material/iframe/id/bajx8km2/width/1780/height/1410/sdz/true/smb/false/stb/false/sfsb/true';
-      const diagram=navigator.onLine ? '<div class="frame-viewport"><iframe class="frame" title="GeoGebra: gradient of an exponential" allowfullscreen referrerpolicy="no-referrer" src="'+url+'"></iframe></div>' :
-        '<img class="frame" src="'+activityImage+'" alt="Static view of the exponential gradient diagram">';
+      const graphs=slide.gradientGraphs;
+      const graphPath=graph=>'resources/pure-year-1/native/'+graph.asset;
+      const graphLabel=graph=>'Exponential function and its derivative for base '+graph.base;
+      const initial=graphs.findIndex(graph=>graph.base==='2');
+      const diagram='<div class="gradient-activity"><img class="gradient-graph" src="'+graphPath(graphs[initial])+'" alt="'+graphLabel(graphs[initial])+'">'+
+        '<div class="gradient-key"><span>'+math('f(x)=a^x')+'</span><span>'+math("f\\prime(x)=a^x\\ln a")+'</span></div>'+
+        '<label class="base-selector">Base '+math('a')+' <input type="range" min="0" max="'+(graphs.length-1)+'" value="'+initial+'" step="1"><output>2</output></label></div>';
       root.classList.add('special-base');
       const diagramLink='<a class="frame-link" href="https://www.geogebra.org/classic/bajx8km2" target="_blank" rel="noopener noreferrer">See it in <img src="assets/luisa/geogebra-gold.png" width="29" height="29" alt=""> GeoGebra</a>';
       root.innerHTML=note(copy(1))+'<div class="cols compact"><div class="stack"><table><tr><th>'+math('y')+'</th><th>'+math('\\mathrm dy/\\mathrm dx')+' (approx.)</th></tr>'+
         rows.map(([a,r])=>'<tr>'+values([math(a+'^x'),math(r)])+'</tr>').join('')+'</table>'+note(copy(3))+cover(copy(4),'Special base')+'</div>'+
-        '<div class="stack">'+diagram+diagramLink+'<p class="diagram-key">'+math('f(x)=a^x')+'　'+math("f\\prime(x)=a^x\\ln a")+'</p></div></div>';
-      const viewport=q('.frame-viewport');
-      if(viewport)viewport.style.setProperty('--diagram-scale',viewport.clientWidth/1780);
+        '<div class="stack">'+diagram+'<details class="original-gradient"><summary>Interactive GeoGebra diagram</summary></details>'+diagramLink+'</div></div>';
+      const select=q('.base-selector input'), image=q('.gradient-graph');
+      function updateGraph() {
+        const graph=graphs[Number(select.value)];
+        image.src=graphPath(graph);image.alt=graphLabel(graph);
+        q('.base-selector output').textContent=graph.base;
+        select.setAttribute('aria-valuetext',graph.base);
+      }
+      updateGraph();select.addEventListener('input',updateGraph);
+      const original=q('.original-gradient');
+      original.addEventListener('toggle',()=>{
+        if (!original.open) return;
+        if (!original.querySelector('iframe')) {
+          const frame=document.createElement('iframe');
+          frame.title='GeoGebra: gradient of an exponential';frame.src=url;frame.allowFullscreen=true;
+          original.append(frame);
+        }
+      });
     }
     function balance(){
       root.innerHTML='<h2>'+copy(1)+'</h2>'+note(copy(2))+copy(3)+'<table><tr><th>'+math('n')+'</th>'+values(['1','2','12','365','10000'])+

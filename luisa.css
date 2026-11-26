@@ -141,6 +141,8 @@ body:has(#slide-region),#slide-region,#slide-region.chapter-opening,#slide-regio
 .exercise-figure {display:block;width:100%;height:8em;object-fit:contain;margin:.35em auto;break-inside:avoid}
 .exercise-under-question {margin-top:.85em}
 .exercise-question .exercise-figure {height:11em}
+.exercise-figure-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.35em}
+.exercise-figure-grid .exercise-figure {width:100%;height:auto;margin:0}
 #slide-region .lesson-tip {background:#eef5fa!important;border-left:4px solid #5a819e;color:#183957!important;padding:4px 8px}
 #slide-region .lesson-tip .lesson-text *,#slide-region .lesson-tip .lesson-image-tex {color:#183957!important}
 .lesson-tip .lesson-image-tex {box-sizing:border-box;padding:5px 10px}

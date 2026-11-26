@@ -12,13 +12,11 @@ window.luisaPrintPanel = async function({item,edition}) {
   copy.dataset.panel=n;
   if(n===5 && student) copy.querySelector('.slot').classList.remove('open');
   if(n===8) {
-    const image = new Image();
-    image.className='paper-geogebra';
-    image.alt='Exponential gradient and its tangent for the GeoGebra activity';
-    image.src=item.poster||new URL('resources/pure-year-1/native/assets/ch14-8-geogebra.png',location.href).href;
-    const frame=copy.querySelector('.frame-viewport,.frame');
-    if(!frame)throw Error('Missing original GeoGebra diagram');
-    frame.replaceWith(image);
+    copy.querySelector('.original-gradient').remove();
+    const selector=copy.querySelector('.base-selector');
+    const graph=copy.querySelector('.gradient-graph');
+    graph.src=new URL(graph.getAttribute('src'),location.href).href;
+    selector.replaceChildren('Base a = '+selector.querySelector('output').textContent);
   }
   if(n===28) {
     if(!copy.dataset.proof)throw Error('Missing change-of-base proof');

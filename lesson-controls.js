@@ -277,8 +277,9 @@
   }
 
   function examExample(slide) {
-    if (slide.titlePage || slide.singlePageExercise || /^exercise\b/i.test(slide.title)) return false;
+    if (slide.titlePage || /^exercise\b/i.test(slide.title)) return false;
     if (/\b(?:exam(?:ination)?[ -](?:style[ -])?(?:questions?|examples?)|exam[ -]style)\b/i.test(slide.title)) return true;
+    if (slide.singlePageExercise) return false;
     function hasExamReference(shape) {
       const text = [shape.transcription?.tex, ...(shape.text?.paragraphs || []).map(p => p.parts.map(r => r.text || '').join(''))].filter(Boolean).join(' ');
       return /\b(?:Edexcel|AQA|OCR)\b.{0,70}(?:\b(?:19|20)\d{2}\b|\bQ\s*\d)/i.test(text)

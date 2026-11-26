@@ -19,7 +19,7 @@ SNAPSHOT = """() => {
       && !e.closest('[aria-hidden=true],.is-hidden,.answer-concealed');
   const controls = [...panel.querySelectorAll('button,[role=button]')].filter(visible);
   return {
-    controls: controls.map(e => ({key:e.dataset.shape || e.id || '',label:e.innerText.trim() || e.ariaLabel})),
+    controls: controls.map(e => ({key:e.dataset.shape || e.dataset.action || e.id || '',label:e.innerText.trim() || e.ariaLabel})),
     errors: panel.querySelectorAll('.katex-error').length,
     missingImages: [...panel.querySelectorAll('img')].filter(i => !i.complete || !i.naturalWidth).map(i => i.alt),
     oversizeText: [...panel.querySelectorAll('.lesson-image-tex')].filter(e => visible(e) &&
@@ -30,6 +30,10 @@ SNAPSHOT = """() => {
 
 
 def frame(page):
+    page.mouse.move(0, 0)
+    page.evaluate('document.activeElement?.blur()')
+    page.evaluate('document.fonts.ready')
+    page.evaluate('Promise.allSettled([...document.querySelectorAll("#slide-content img")].map(i=>i.decode()))')
     page.evaluate('new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done)))')
     pixels = page.locator('#slide-region').screenshot(animations='disabled', type='jpeg', quality=63)
     return hashlib.sha256(pixels).hexdigest()
@@ -46,9 +50,20 @@ def inspect(page, index):
     initial = page.evaluate(SNAPSHOT)
     initial_hash = frame(page)
     physical = []
-    for key in dict.fromkeys(info['covers'] + info['triggers']):
+    # Interactive graphs and activities build their own controls at mount time.
+    # Their source-slide cover IDs identify the imported deck, not the rendered activity.
+    activity = page.locator('#slide-content .ch14')
+    if activity.count():
+        keys = activity.locator('button[data-action]').evaluate_all(
+            '(buttons) => buttons.map(button => button.dataset.action)'
+        )
+        attribute = 'data-action'
+    else:
+        keys = info['covers'] + info['triggers']
+        attribute = 'data-shape'
+    for key in dict.fromkeys(keys):
         page.evaluate('FMQ_TEST.reset()')
-        selector = page.evaluate('id=>"[data-shape="+CSS.escape(id)+"]"', key)
+        selector = page.evaluate('([attr,id])=>"["+attr+"="+CSS.escape(id)+"]"', [attribute, key])
         node = page.locator('#slide-content').locator(selector)
         if node.count() != 1 or not node.is_visible():
             physical.append([key, 'absent or initially hidden'])

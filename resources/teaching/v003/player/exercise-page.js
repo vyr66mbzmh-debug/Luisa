@@ -12,7 +12,7 @@
     const objects = new Map(slide.shapes.map(shape => [shape.id, shape]));
     function figure(id) {
       const item = objects.get(id);
-      return `<img class="exercise-figure" src="${escape(base + item.asset)}" alt="${escape(item.alt || 'Mechanics diagram')}">`;
+      return `<img class="exercise-figure" src="${escape(base + item.asset)}" alt="${escape(item.alt || ('Diagram for question ' + spec.questionNumber))}">`;
     }
     const formatMarks = LUISA_CONTROLS.markPolicy(slide);
     const question = imageContent(formatMarks(objects.get(spec.question).transcription.tex, true), {});
@@ -27,8 +27,12 @@
       const item = objects.get(id);
       return item.asset ? figure(id) : imageContent(formatMarks(item.transcription.tex, false), {});
     }).join('');
+    const diagrams = spec.figures.map(figure).join('');
+    const questionFigures = (spec.figures.length >= 3 || spec.pairFigures)
+      ? '<div class="exercise-figure-grid">' + diagrams + '</div>'
+      : diagrams;
     const number = escape(objects.get('number').transcription.tex);
-    return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet" style="width:100%;height:100%"><div class="exercise-head"><strong>${number}</strong><button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button></div>${introduction}<div class="exercise-columns"><div class="exercise-question" data-shape="prompt">${question}${spec.figures.map(figure).join('')}${underQuestion}</div><div class="exercise-working" data-shape="work-0" data-answer-for="solution">${working}</div></div>${band ? '<div class="exercise-diagram-band" data-answer-for="solution">'+figure(band)+'</div>' : ''}</div></div>`;
+    return `<div class="source-slide" data-source-slide="${slide.sourceSlide}" style="width:${slide.contentWidth}px;height:${slide.contentHeight}px"><div class="lesson-canvas exercise-sheet" style="width:100%;height:100%"><div class="exercise-head"><strong>${number}</strong><button class="exercise-reveal" data-shape="solution" aria-label="Solution" aria-expanded="false">Solution</button></div>${introduction}<div class="exercise-columns"><div class="exercise-question" data-shape="prompt">${question}${questionFigures}${underQuestion}</div><div class="exercise-working" data-shape="work-0" data-answer-for="solution">${working}</div></div>${band ? '<div class="exercise-diagram-band" data-answer-for="solution">'+figure(band)+'</div>' : ''}</div></div>`;
   }
   function fit(sheet) {
     if (!sheet || sheet.classList.contains('source-exercise')) return;
@@ -39,9 +43,10 @@
     const figures = [...solution.querySelectorAll('.exercise-figure')];
     // Long question stems and short numerical solutions need a different
     // division of the board from brief prompts with extended working.
+    const widths = question.querySelector('.exercise-figure-grid') ? [50, 55, 45, 38, 30] : [30, 38, 45, 50, 55];
     function fits(size) {
       container.style.fontSize = size + 'px';
-      for (const width of [30, 38, 45, 50, 55]) {
+      for (const width of widths) {
         container.style.gridTemplateColumns = width + '% minmax(0,1fr)';
         if (question.scrollHeight > question.clientHeight + 1 || question.scrollWidth > question.clientWidth + 1) continue;
         for (const count of [1, 2, 3, 4]) {
