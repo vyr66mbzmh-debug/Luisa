@@ -335,7 +335,17 @@
     else link.removeAttribute('href');
   }
 
-  const api = {examExample,formatSubparts,markPolicy,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments};
+  // Text fitting measures the initial board before a pupil reveals any answers.
+  // A font first requested by a hidden formula must already have its final metrics.
+  async function loadBoardFonts() {
+    const faces = [...document.fonts].filter(face =>
+      /^(?:Lesson|KaTeX_)/.test(face.family.replace(/["']/g, ''))
+    );
+    await Promise.allSettled(faces.map(face => face.load()));
+    await document.fonts.ready;
+  }
+
+  const api = {loadBoardFonts,examExample,formatSubparts,markPolicy,prepare,setTitle,updateToolbar,bookletUrl,setChapterDocuments};
   if (typeof module !== 'undefined') module.exports = api;
   root.LUISA_CONTROLS = api;
 })(typeof window === 'undefined' ? globalThis : window);

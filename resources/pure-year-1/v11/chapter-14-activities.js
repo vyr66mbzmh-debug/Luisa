@@ -13,7 +13,7 @@ window.LuisaChapter14 = (() => {
     }).join('');
   }
   function mount(container,slide,changed) {
-    if(slide.chapter!==14 || !pages.has(slide.sourceSlide))return null;
+    if(slide.singlePageExercise || slide.chapter!==14 || !pages.has(slide.sourceSlide))return null;
     const n=slide.sourceSlide, shapes=slide.shapes;
     const activityImage='resources/pure-year-1/native/'+(slide.activityImage||'');
     const root=document.createElement('section');root.className='ch14';container.replaceChildren(root);

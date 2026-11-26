@@ -19,8 +19,11 @@
     const introduction = spec.introduction
       ? '<div class="exercise-introduction">'+imageContent(objects.get(spec.introduction).transcription.tex, {})+'</div>'
       : '';
-    const underQuestion = spec.underQuestion
-      ? '<div class="exercise-under-question" data-answer-for="solution">'+imageContent(formatMarks(objects.get(spec.underQuestion).transcription.tex, false), {})+'</div>'
+    const lowerItem = objects.get(spec.underQuestion);
+    const lowerContent = lowerItem?.asset ? figure(lowerItem.id) :
+      lowerItem ? imageContent(formatMarks(lowerItem.transcription.tex, false), {}) : '';
+    const underQuestion = lowerItem
+      ? '<div class="exercise-under-question" data-answer-for="solution">'+lowerContent+'</div>'
       : '';
     const band = spec.diagramBand;
     const working = spec.working.filter(id => id !== band).map(id => {

@@ -4,7 +4,7 @@ window.luisaPrintPanel = async function({item,edition}) {
   if (overview) return {html:overview.outerHTML,width:1200,height:760,css};
   const activity = document.querySelector('#slide-content .ch14');
   if (!activity) throw Error('Expected an activity on '+item.chapterKey+' '+item.slide);
-  const student = edition==='student', n=item.slide;
+  const student = edition==='student', n=FMQ_TEST.getState().slide.sourceSlide;
   // The worked teaching sequences stay on paper in both editions. Independent
   // exercise slots and table answers remain writable in the student edition.
   if(!student || [22,46,47,48,49].includes(n)) FMQ_TEST.revealAll();

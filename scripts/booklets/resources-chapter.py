@@ -4,11 +4,13 @@ import pymupdf as pdf
 import json
 from argparse import ArgumentParser
 import os
+from html import escape
+from urllib.parse import urljoin
 
 parser = ArgumentParser(
-    description="Export an FM1 or FS1 Resources chapter as paired two-up A4 handouts."
+    description="Export a Resources chapter as paired two-up A4 handouts."
 )
-parser.add_argument("book", choices=["further-mechanics-1", "further-statistics-1"])
+parser.add_argument("book", help="Book key from teaching-catalogue.js")
 parser.add_argument("chapter", type=int)
 parser.add_argument(
     "output",
@@ -22,7 +24,12 @@ parser.add_argument(
     default=Path("/System/Library/Fonts/Supplemental"),
     help="Directory containing the approved Georgia regular and bold fonts",
 )
+parser.add_argument("--plan", type=Path, help="JSON with one-based mapping and changed panel numbers")
+parser.add_argument("--previous-student", type=Path, help="Matching student edition before the edits")
+parser.add_argument("--previous-worked", type=Path, help="Matching worked edition before the edits")
 args = parser.parse_args()
+if bool(args.plan) != bool(args.previous_student) or bool(args.plan) != bool(args.previous_worked):
+    parser.error("Supply the edit plan and both previous editions together.")
 here = Path(__file__).resolve().parent
 repo = here.parents[1]
 lib = args.book
@@ -32,13 +39,33 @@ dest.mkdir(parents=True, exist_ok=True)
 base = args.base_url.rstrip("/") + "/"
 panel_css = (here / "resources-panel.css").read_text()
 panel_exporter = (here / "resources-panel.js").read_text()
-assets = repo / "resources/teaching/v003" / lib
+catalogue = json.loads((repo / "teaching-catalogue.js").read_text().split("=", 1)[1].strip().rstrip(";"))
+volume = catalogue[lib]
+chapter = next(item for item in volume["chapters"] if item["number"] == num)
+assets = (repo / chapter["booklet"]).parent.parent
 deck = json.loads((assets / f"chapter-{num:02}.json").read_bytes())["slides"]
-subject = lib.replace("further-", "Further ").replace("-1", " 1").title()
-bg = {
+subject = volume["title"]
+colours = {
     "further-statistics-1": (219 / 255, 64 / 255, 64 / 255),
     "further-mechanics-1": (233 / 255, 119 / 255, 56 / 255),
-}[lib]
+}
+previous = {"student": args.previous_student, "worked": args.previous_worked}
+mapping = list(range(1, len(deck) + 1))
+changed = set(mapping)
+if args.plan:
+    plan = json.loads(args.plan.read_text())
+    mapping = plan["mapping"]
+    changed = set(plan["changed"])
+    if (len(mapping) != len(deck) or mapping[0] != 1 or 1 in changed or
+        any(type(n) is not int or n < 1 for n in mapping) or
+        not changed.issubset(range(2, len(deck) + 1))):
+        parser.error("The plan must map every panel and retain the original cover.")
+    for edition, path in previous.items():
+        with pdf.open(path) as original:
+            if max(mapping) > 2 * len(original):
+                parser.error(f"The {edition} reference is too short for the plan.")
+elif lib not in colours:
+    parser.error("Use the chapter’s approved covers and an edit plan for this module.")
 white = (1, 1, 1)
 navy = (24 / 255, 57 / 255, 87 / 255)
 red = (1, 0.63, 0.64)
@@ -47,7 +74,7 @@ bold = font.with_name("Georgia Bold.ttf")
 ref = pdf.open(repo / "resources/pure-year-1/v11/booklets/chapter-01.pdf")
 size = ref[0].rect
 ref.close()
-labels = []
+labels = {}
 ledger = []
 
 
@@ -68,22 +95,41 @@ def place_panel(page, rectangle, panel):
             )
 
 
+def copy_panel_area(page, original, old_index, area, dy):
+    # Clip the physical PDF content so a removed question is also removed from text search.
+    with pdf.open() as single:
+        single.insert_pdf(original, from_page=old_index, to_page=old_index, links=False)
+        single[0].clip_to_rect(area)
+        offset = pdf.Matrix(1, 0, 0, 1, 0, dy)
+        page.show_pdf_page(area * offset, single, 0, clip=area)
+    for link in original[old_index].get_links():
+        if link.get("uri") and area.contains(link["from"]):
+            page.insert_link({"kind": pdf.LINK_URI, "uri": link["uri"], "from": link["from"] * offset})
+
+
 with sync_playwright() as pw:
     b = pw.chromium.launch(channel=os.environ.get("LUISA_BROWSER_CHANNEL", "chrome"))
     page = b.new_page(viewport={"width": 1440, "height": 900})
     paper = b.new_page()
     paper.goto(base + "vendor/katex.min.css")
-    page.goto(base + f"teaching-lesson-viewer.html?book={lib}&chapter={num}")
+    page.goto(urljoin(base, chapter["slides"]))
     page.wait_for_function("window.FMQ_TEST?.getState().slide")
     for n, slide in enumerate(deck, 1):
+        if n == 1 or n not in changed:
+            continue
         page.evaluate("n=>FMQ_TEST.show(n-1)", n)
         page.evaluate("document.fonts.ready")
-        labels.append(page.locator("#lesson-title").inner_text())
-        if n == 1:
-            continue
-        page.evaluate("FMQ_TEST.revealAll()")
+        labels[n] = page.locator("#lesson-title").inner_text()
         page.evaluate("Promise.all([...document.images].map(e=>e.decode()))")
         for edition in ["student", "worked"]:
+            # The legacy FM/FS teaching templates use the completed diagram in both
+            # paper editions. Native exercise pages expose only the question initially.
+            initial = edition == "student" and args.plan is not None
+            page.evaluate("FMQ_TEST.reset()" if initial else "FMQ_TEST.revealAll()")
+            page.evaluate("document.fonts.ready")
+            page.evaluate("Promise.all([...document.images].map(e=>e.decode()))")
+            if page.locator(".katex-error").count():
+                raise ValueError(f"Invalid classroom maths on panel {n}")
             dat = page.evaluate(panel_exporter, {"edition": edition})
             w, h = dat["w"], dat["h"]
             if page.locator("#lesson-exam-title:not([hidden])").count():
@@ -93,7 +139,7 @@ with sync_playwright() as pw:
                     + dat["html"]
                 )
             css = "".join(
-                f'<link rel="stylesheet" href="{link}">' for link in dat["css"]
+                f'<link rel="stylesheet" href="{escape(link, quote=True)}">' for link in dat["css"]
             )
             source = f"""<!doctype html><base href="{base}">{css}<style>
    :root {{--panel-width:{w}px;--panel-height:{h}px;}}
@@ -118,6 +164,7 @@ with sync_playwright() as pw:
 for edition in ["student", "worked"]:
     doc = pdf.open()
     toc = []
+    original = pdf.open(previous[edition]) if args.plan else None
     for j, s in enumerate(deck):
         n = j + 1
         lower = j % 2
@@ -128,9 +175,19 @@ for edition in ["student", "worked"]:
         panel = pdf.Rect(14.625, 11.625 + Y, 580.875, 415.875 + Y)
         header = pdf.Rect(15, 12 + Y, 580.5, Y + 33.75)
         body = pdf.Rect(17, Y + 36, 578, Y + 413.8)
+        if original is not None:
+            old = mapping[j]
+            old_index, half = divmod(old - 1, 2)
+            old_y = 413.25 * half
+            if n == 1 or (n not in changed and n == old):
+                crop = pdf.Rect(0, 0 if n == 1 else old_y + 8, size.width, 417.9 if n == 1 else old_y + 416)
+                copy_panel_area(page, original, old_index, crop, 0)
+                if n > 1:
+                    toc.append([1, f"{n}. " + (s.get("navigationTitle") or s["title"]), j // 2 + 1])
+                continue
         if n == 1:
             title = deck[0]["title"]
-            page.draw_rect(panel, fill=bg, color=None)
+            page.draw_rect(panel, fill=colours[lib], color=None)
             page.insert_text(
                 (21.7, 27.75),
                 f"{subject} Chapter {num} - {title}",
@@ -177,18 +234,24 @@ for edition in ["student", "worked"]:
             continue
         page.draw_rect(panel, color=navy, width=0.55)
         page.draw_rect(header, fill=navy, color=None)
-        title = labels[j]
+        title = labels.get(n, s["title"])
+        if original is not None and n not in changed:
+            words = original[old_index].get_text("words", clip=pdf.Rect(16, old_y + 11, 497, old_y + 32))
+            title = " ".join(word[4] for word in sorted(words, key=lambda w: w[0])) or title
+        mark_x = 500 if n >= 100 else 515
+        width = (mark_x - 28 if edition == "worked" else 526)
+        title_size = min(13.5, 13.5 * width / max(1, pdf.Font(fontfile=str(font)).text_length(title, fontsize=13.5)))
         page.insert_text(
             (21.67, Y + 27.75),
             title,
             fontname="Georgia",
             fontfile=font,
-            fontsize=13.5,
+            fontsize=title_size,
             color=red if s.get("extension") else white,
         )
         if edition == "worked":
             page.insert_text(
-                (518, Y + 27.75), "Solution", fontname="tibo", fontsize=10.5, color=red
+                (mark_x, Y + 27.75), "Solution", fontname="tibo", fontsize=10.5, color=red
             )
         page.insert_text(
             (
@@ -200,12 +263,18 @@ for edition in ["student", "worked"]:
             fontsize=13.5,
             color=white,
         )
-        with pdf.open(dest / f"{edition}-{n:02}.pdf") as p:
-            place_panel(page, body, p)
+        if n in changed:
+            with pdf.open(dest / f"{edition}-{n:02}.pdf") as p:
+                place_panel(page, body, p)
+        else:
+            crop = pdf.Rect(15.3, old_y + 34.3, 580.15, old_y + 415.15)
+            copy_panel_area(page, original, old_index, crop, Y - old_y)
         toc.append([1, f"{n}. " + (s.get("navigationTitle") or title), j // 2 + 1])
     doc.set_toc(toc)
     doc.subset_fonts()
     doc.set_metadata({"title": f"{subject} · {deck[0]['title']} · " + edition})
     doc.save(dest / (edition + ".pdf"), garbage=4, deflate=True, use_objstms=1)
     doc.close()
+    if original is not None:
+        original.close()
 (dest / "panels.json").write_text(json.dumps(ledger, indent=1))
