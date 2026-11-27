@@ -203,6 +203,9 @@ def student_restricted_pdfs(root):
 LIBRARY_PAGES = {'index.html', 'textbook-view.html', 'teaching-chapters.html', 'papers.html'}
 # PAP-065C: the exam paper is a teacher-only feature; pupil builds omit its files and controls.
 TEACHER_ONLY_FILES = {'papers-exam.js', 'papers-exam.css'}
+PREFERENCES_META = ('<meta name="luisa-preferences" content="ada" data-csrf="__LUISA_SESSION_CSRF__" '
+                    'data-scope="__LUISA_TAB_SCOPE__" data-default-course="__LUISA_DEFAULT_COURSE__" '
+                    'data-modules="__LUISA_PREFERENCE_MODULES__" data-state="__LUISA_PREFERENCES__">')
 TEACHER_ONLY_BLOCK = re.compile(r'<!--luisa-teacher-exam-->.*?<!--/luisa-teacher-exam-->\n?', re.S)
 
 TEACHING_VIEWERS = {
@@ -308,6 +311,8 @@ def student_content(name, content, restricted_urls, restricted_hashes, root, *, 
             text = re.sub(r'<!--school-resources-->.*?<!--/school-resources-->', '', text, flags=re.S)
             text = text.replace('<meta name="recent-chapters" content="owner">',
                                 '<meta name="recent-chapters" content="teacher" data-csrf="__LUISA_SESSION_CSRF__">' if staff else '')
+            # NAV-091: ADA pages carry the account's current preferences and post changes to private storage.
+            text = text.replace('<meta name="luisa-preferences" content="local">', PREFERENCES_META)
             text = re.sub(r'<script\b[^>]*offline-register\.js[^>]*>\s*</script\s*>', '<script defer src="app-navigation.js"></script>', text, flags=re.I)
             text = re.sub(r'<link\b[^>]*rel=["\']manifest["\'][^>]*>', '', text, flags=re.I)
             if staff:
@@ -456,6 +461,14 @@ def check_artifact(directory, profile, root=ROOT):
         labels = re.findall(r'<a\b[^>]*>(.*?)</a>', navigation[1], re.S) if navigation else []
         if labels != ['By skill', 'By textbook', 'Resources', 'Papers']:
             raise ValueError('Incorrect library navigation order: ' + name)
+    modules = {'index.html': 'skill', 'textbook-view.html': 'textbook', 'teaching-chapters.html': 'resources', 'papers.html': 'papers'}
+    for name, module in modules.items():
+        page = (directory / name).read_text()
+        wanted = '<meta name="luisa-preferences" content="local">' if profile == 'owner' else PREFERENCES_META
+        if page.count(f'<script src="luisa-resume.js" data-module="{module}"></script>') != 1 or page.count(wanted) != 1:
+            raise ValueError('Missing return-to-last-page support: ' + name)
+    if not {'luisa-resume.js', 'papers-timing.js'} <= files:
+        raise ValueError('Artifact lacks the shared resume or timing script')
     papers_page = (directory / 'papers.html').read_text()
     teacher_exam = TEACHER_ONLY_FILES & files or 'papers-exam' in papers_page or 'luisa-teacher-exam' in papers_page
     if profile == 'student' and teacher_exam:

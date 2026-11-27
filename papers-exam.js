@@ -3,7 +3,7 @@
 (() => {
   'use strict';
   const print = window.LUISA_PAPERS_PRINT;
-  if (!print?.internals) return;
+  if (!print?.internals || !window.LUISA_PAPERS_TIMING) return;
   const {element, whileOpen, asset, content, prepare, overflows, wideContent, splitBlock} = print.internals;
   const storageKey = 'luisa-papers-exam-v1';
   const defaultInstructions = [
@@ -11,8 +11,8 @@
     'Give exact answers where requested and approximate numerical answers to three significant figures unless otherwise stated.',
     'Clearly label all answers, including those on additional paper, with the question number and part.'
   ].join('\n\n');
-  // PAP-067-1: paper time within ±2 minutes of the target.
-  const TOLERANCE = 2;
+  // PAP-067-1: paper time within ±2 minutes of the target (shared with papers-timing.js).
+  const TOLERANCE = window.LUISA_PAPERS_TIMING?.tolerance ?? 2;
   // PAP-067-2: one print choice; questions only is the default.
   const CONTENTS = ['questions', 'scheme', 'both'];
   const gravityHtml = 'Unless otherwise indicated, wherever a value of <span data-math="g"></span> is required, take <span data-math="g = 9.8\\,\\mathrm{m\\,s^{-2}}"></span>';
@@ -336,161 +336,26 @@
   }
 
   // ---- PAP-066-1 and PAP-066-5: timed selection and difficulty order (exam paper only) ----
-  const bandOf = row => row.difficulty || 'unclassified';
-  const closingBand = row => ['difficult', 'very-difficult'].includes(bandOf(row));
-  const topicOf = row => row.paperId ? `${row.paperId}:${(row.chapterKeys || [])[0] || ''}` : (row.chapterKeys || [])[0] || row.chapterId || row.skillId || row.bookId || row.id;
-  const markedRows = rows => rows.filter(row => Number.isInteger(row.marks) && row.marks > 0);
-  // Mark totals whose paper time is within ±2 minutes of the target, nearest first.
-  function targetMarks(minutes) {
-    const out = [];
-    for (let marks = 1; marks <= Math.ceil(minutes * 5 / 6) + 3; marks++) {
-      const off = Math.abs(print.paperMinutes(marks) - minutes);
-      if (off <= TOLERANCE) out.push({marks, off});
-    }
-    return out.sort((a, b) => a.off - b.off || a.marks - b.marks).map(item => item.marks);
-  }
-  // A question belongs to the band holding its midpoint mark (cumulative from Question 1):
-  // midpoint below 20% of the paper's marks = opening band, above 80% = closing band.
-  function bandPositions(rows) {
-    const total = rows.reduce((sum, row) => sum + row.marks, 0); let start = 0;
-    return rows.map(row => { const mid = (start + row.marks / 2) / total; start += row.marks; return mid < 0.2 ? 'opening' : mid > 0.8 ? 'closing' : 'middle'; });
-  }
-  // Rule: every opening-band question is easy, every closing-band question is difficult,
-  // and (for two or more questions) Question 1 is easy and the last question is difficult.
-  function orderProblems(rows) {
-    if (rows.length < 2 || markedRows(rows).length !== rows.length) return [];
-    const problems = [], bands = bandPositions(rows);
-    rows.forEach((row, index) => {
-      const opening = bands[index] === 'opening' || index === 0, closing = bands[index] === 'closing' || index === rows.length - 1;
-      if (opening && bandOf(row) !== 'easy') problems.push(`Question ${index + 1} is in the first 20% of marks but is ${bandOf(row)}, not easy.`);
-      else if (closing && !closingBand(row)) problems.push(`Question ${index + 1} is in the last 20% of marks but is ${bandOf(row)}, not difficult.`);
-    });
-    return problems;
-  }
-  // Middle 60%: a varied mix, avoiding the same topic or difficulty twice in a row where possible.
-  function vary(rows) {
-    const left = [...rows], out = [];
-    while (left.length) {
-      const last = out.at(-1);
-      let index = last ? left.findIndex(row => topicOf(row) !== topicOf(last) && bandOf(row) !== bandOf(last)) : 0;
-      if (index < 0) index = left.findIndex(row => topicOf(row) !== topicOf(last));
-      out.push(...left.splice(Math.max(index, 0), 1));
-    }
-    return out;
-  }
-  function orderByBands(rows, {repair = true} = {}) {
-    const total = rows.reduce((sum, row) => sum + row.marks, 0);
-    if (rows.length < 2 || !total) return [...rows];
-    const easy = rows.filter(row => bandOf(row) === 'easy').sort((a, b) => b.marks - a.marks);
-    const hard = rows.filter(row => closingBand(row)).sort((a, b) => b.marks - a.marks);
-    const opening = [], closing = []; let head = 0, tail = 0;
-    // Fill the opening band with easy questions until the next question's midpoint passes 20%.
-    while (easy.length && (!opening.length || head + Math.min(...rows.filter(row => !opening.includes(row)).map(row => row.marks)) / 2 < total * 0.2)) {
-      const fit = easy.findIndex(row => head + row.marks / 2 < total * 0.2);
-      const row = easy.splice(fit < 0 ? easy.length - 1 : fit, 1)[0]; opening.push(row); head += row.marks;
-      if (fit < 0) break;
-    }
-    while (hard.length && (!closing.length || tail + Math.min(...rows.filter(row => !opening.includes(row) && !closing.includes(row)).map(row => row.marks).concat([Infinity])) / 2 < total * 0.2)) {
-      const fit = hard.findIndex(row => tail + row.marks / 2 < total * 0.2);
-      const row = hard.splice(fit < 0 ? hard.length - 1 : fit, 1)[0]; closing.unshift(row); tail += row.marks;
-      if (fit < 0) break;
-    }
-    let middle = vary(rows.filter(row => !opening.includes(row) && !closing.includes(row)));
-    // The question after the opening band should be the one whose midpoint lands past 20%.
-    const first = middle.findIndex(row => head + row.marks / 2 >= total * 0.2);
-    if (first > 0) middle = [middle[first], ...vary(middle.filter((_, index) => index !== first))];
-    const last = middle.findIndex(row => tail + row.marks / 2 >= total * 0.2 && row !== middle[0]);
-    if (last >= 0 && last !== middle.length - 1) middle = [...middle.filter((_, index) => index !== last), middle[last]];
-    const greedy = [...opening, ...middle, ...closing];
-    return repair && orderProblems(greedy).length ? repairOrder(greedy) : greedy;
-  }
-  // When the greedy order breaks the rule, search for a better one: every order for up to
-  // 8 questions, otherwise improving pairwise swaps. Fewest problems wins; ties keep the
-  // greedy order (and its variety).
-  function repairOrder(rows) {
-    let best = rows, bestProblems = orderProblems(rows).length;
-    if (rows.length <= 8) {
-      const permute = (done, left) => {
-        if (!bestProblems) return;
-        if (!left.length) { const n = orderProblems(done).length; if (n < bestProblems) { best = done; bestProblems = n; } return; }
-        left.forEach((row, index) => permute([...done, row], left.filter((_, i) => i !== index)));
-      };
-      permute([], rows);
-      return best;
-    }
-    for (let improved = true; improved && bestProblems;) {
-      improved = false;
-      for (let i = 0; i < best.length && !improved; i++) for (let j = i + 1; j < best.length && !improved; j++) {
-        const trial = [...best]; [trial[i], trial[j]] = [trial[j], trial[i]];
-        const n = orderProblems(trial).length;
-        if (n < bestProblems) { best = trial; bestProblems = n; improved = true; }
-      }
-    }
-    return best;
-  }
-  const shuffle = (rows, random) => { const out = [...rows]; for (let i = out.length - 1; i > 0; i--) { const j = Math.floor(random() * (i + 1)); [out[i], out[j]] = [out[j], out[i]]; } return out; };
-  // New topics first, then the rest, so every subset prefers variety (priority c).
-  function freshFirst(rows, used) { const seen = new Set(used); const a = [], b = []; for (const row of rows) { (seen.has(topicOf(row)) ? b : a).push(row); seen.add(topicOf(row)); } return [...a, ...b]; }
-  function subsetWithSum(rows, wanted) {
-    const parent = new Array(wanted + 1).fill(-1); parent[0] = -2;
-    rows.forEach((row, index) => { for (let sum = wanted; sum >= row.marks; sum--) if (parent[sum] === -1 && parent[sum - row.marks] !== -1 && parent[sum - row.marks] !== index) parent[sum] = index; });
-    if (parent[wanted] === -1) return null;
-    const out = []; for (let sum = wanted; sum > 0; sum -= rows[parent[sum]].marks) out.push(rows[parent[sum]]);
-    return out;
-  }
-  // Fill one band with whole questions whose midpoints stay inside its 20% of `marks`.
-  function bandFill(rows, marks) { const out = []; let sum = 0; for (const row of rows) if (sum + row.marks / 2 < marks * 0.2 || !out.length) { if (sum + row.marks > marks * 0.45) continue; out.push(row); sum += row.marks; } return out; }
-  function score(rows, minutes) {
-    const marks = rows.reduce((sum, row) => sum + row.marks, 0), time = print.paperMinutes(marks) ?? 0;
-    return {rows, marks, minutes: time, timeMiss: Math.max(0, Math.abs(time - minutes) - TOLERANCE), offBy: Math.abs(time - minutes), bandProblems: orderProblems(rows).length, variety: new Set(rows.map(topicOf)).size};
-  }
-  const compare = (a, b) => a.timeMiss - b.timeMiss || a.bandProblems - b.bandProblems || b.variety - a.variety || a.offBy - b.offBy;
-  const better = (a, b) => !b || compare(a, b) < 0;
-  // Priorities when constraints conflict: (a) time within ±2 minutes, (b) difficulty bands, (c) variety.
-  function planTimedPaper(pool, minutes, {attempts = 240, random = Math.random} = {}) {
-    if (!Number.isInteger(minutes) || minutes < 2 || minutes > 600) throw Error('Choose a whole number of minutes from 2 to 600.');
-    const rows = markedRows(pool.filter(hasMarkScheme)), counts = {easy: 0, medium: 0, difficult: 0, 'very-difficult': 0, unclassified: 0}, marksBy = {easy: 0, medium: 0, difficult: 0, 'very-difficult': 0, unclassified: 0};
-    for (const row of rows) { counts[bandOf(row)]++; marksBy[bandOf(row)] += row.marks; }
-    const report = {target: minutes, extraTarget: extraMinutes(minutes), available: rows.length, availableMarks: rows.reduce((sum, row) => sum + row.marks, 0), counts, marksBy, excluded: pool.length - rows.length};
-    if (!rows.length) return {...report, ok: false, rows: [], reasons: ['A timed exam needs questions with a mark scheme and known marks. Choose a past paper or change the selected topics.']};
-    const goals = targetMarks(minutes); let best = null;
-    for (let attempt = 0; attempt < attempts; attempt++) {
-      const order = shuffle(rows, random);
-      for (const marks of goals.slice(0, 5)) {
-        const opening = bandFill(freshFirst(order.filter(row => bandOf(row) === 'easy'), []), marks);
-        const closing = bandFill(freshFirst(order.filter(row => closingBand(row) && !opening.includes(row)), opening.map(topicOf)), marks);
-        const chosen = new Set([...opening, ...closing]), used = [...chosen].map(topicOf);
-        const rest = marks - [...chosen].reduce((sum, row) => sum + row.marks, 0);
-        const others = order.filter(row => !chosen.has(row));
-        // Middle 60%: any difficulty (a varied mix), new topics first.
-        const middlePool = freshFirst(others, used).slice(0, 160);
-        let middle = rest > 0 ? subsetWithSum(middlePool, rest) : rest === 0 ? [] : null;
-        if (!middle) { // Closest whole-question total: greedy fill below the goal.
-          middle = []; let sum = 0;
-          for (const row of middlePool) if (sum + row.marks <= Math.max(rest, 0)) { middle.push(row); sum += row.marks; }
-        }
-        let paper = [...opening, ...middle, ...closing];
-        let total = paper.reduce((sum, row) => sum + row.marks, 0);
-        if (total < marks) { for (const row of order) if (!paper.includes(row) && total + row.marks <= goals.at(-1)) { paper.push(row); total += row.marks; } }
-        // Attempts use the fast greedy order; the order search runs once on the chosen paper.
-        const candidate = score(orderByBands(paper, {repair: false}), minutes);
-        if (better(candidate, best)) best = candidate;
-        if (!best.timeMiss && !best.bandProblems && !best.offBy && best.variety === best.rows.length) break;
-      }
-      if (best && !best.timeMiss && !best.bandProblems && attempt > 24) break;
-    }
-    if (best.bandProblems) { const repaired = score(orderByBands(best.rows), minutes); if (compare(repaired, best) < 0) best = repaired; }
+  // PAP-091: the scheduling is shared with the student generator (papers-timing.js). The teacher entry
+  // point keeps its own rule: only questions with known marks AND an eligible mark scheme are used.
+  const timing = window.LUISA_PAPERS_TIMING;
+  const {targetMarks, bandPositions, orderProblems, orderByBands} = timing;
+  function planTimedPaper(pool, minutes, options = {}) {
+    const plan = timing.plan(pool, minutes, {...options, eligible: hasMarkScheme});
+    const {counts, marksBy} = plan;
+    const report = {...plan, extraTarget: extraMinutes(minutes)};
+    if (!plan.available) return {...report, ok: false, rows: [], reasons: ['A timed exam needs questions with a mark scheme and known marks. Choose a past paper or change the selected topics.']};
     const reasons = [];
-    if (best.timeMiss) {
-      reasons.push(report.availableMarks * 6 / 5 < minutes - TOLERANCE
-        ? `The chosen topics have ${plural(rows.length, 'question')} with known marks, ${report.availableMarks} marks in all, which is only ${print.paperMinutes(report.availableMarks)} minutes.`
-        : `No combination of whole questions in the chosen topics gives ${minutes} ± ${TOLERANCE} minutes; the nearest is ${best.minutes} minutes (${best.marks} marks).`);
+    if (!plan.timeMet) {
+      reasons.push(plan.availableMarks * 6 / 5 < minutes - TOLERANCE
+        ? `The chosen topics have ${plural(plan.available, 'question')} with known marks, ${plan.availableMarks} marks in all, which is only ${print.paperMinutes(plan.availableMarks)} minutes.`
+        : `No combination of whole questions in the chosen topics gives ${minutes} ± ${TOLERANCE} minutes; the nearest is ${plan.minutes} minutes (${plan.marks} marks).`);
     }
-    if (best.bandProblems) {
-      reasons.push(`The difficulty order cannot be met: the chosen topics have ${plural(counts.easy, 'easy question')} (${marksBy.easy} marks) and ${plural(counts.difficult + counts['very-difficult'], 'difficult or very difficult question')} (${marksBy.difficult + marksBy['very-difficult']} marks), and the paper needs about ${Math.ceil(best.marks * 0.2)} marks of each.`);
-      reasons.push(...orderProblems(best.rows));
+    if (plan.bandProblems) {
+      reasons.push(`The difficulty order cannot be met: the chosen topics have ${plural(counts.easy, 'easy question')} (${marksBy.easy} marks) and ${plural(counts.difficult + counts['very-difficult'], 'difficult or very difficult question')} (${marksBy.difficult + marksBy['very-difficult']} marks), and the paper needs about ${Math.ceil(plan.marks * 0.2)} marks of each.`);
+      reasons.push(...plan.problems);
     }
-    return {...report, ok: !reasons.length, rows: best.rows, marks: best.marks, minutes: best.minutes, extra: extraMinutes(best.minutes), variety: best.variety, reasons};
+    return {...report, ok: !reasons.length, extra: extraMinutes(plan.minutes), reasons};
   }
 
   window.LUISA_PAPERS_EXAM = Object.freeze({create, hasMarkScheme, schemeSource, courseGroup, extraMinutes, defaultInstructions, todayLabel, tolerance: TOLERANCE, targetMarks, bandPositions, orderProblems, orderByBands, planTimedPaper});
@@ -501,7 +366,9 @@
   if (!$('papers-exam') || !builder) return;
   const fields = {yearGroup: 'papers-exam-year', title: 'papers-exam-title', monthYear: 'papers-exam-month', date: 'papers-exam-date', instructions: 'papers-exam-instructions', targetMinutes: 'papers-exam-minutes'};
   let saved = {};
-  try { saved = JSON.parse(sessionStorage.getItem(storageKey)) || {}; } catch (_) { saved = {}; }
+  const resume = window.LUISA_RESUME;
+  // NAV-091: this tab's settings win; a new sign-in or another device starts from the account's exam settings.
+  try { saved = JSON.parse(sessionStorage.getItem(storageKey)) || resume?.get('exam') || {}; } catch (_) { saved = resume?.get('exam') || {}; }
   $('papers-exam-title').value = saved.title ?? 'Maths Assessment';
   $('papers-exam-year').value = saved.yearGroup ?? '';
   $('papers-exam-month').value = saved.monthYear ?? monthYear();
@@ -515,8 +382,25 @@
   const examPool = () => builder.withoutDuplicateCopies(builder.pool(madas.checked));
   const includeInExam = row => hasMarkScheme(row) && (madas.checked || row.sourceKind !== 'madas');
   const examSelection = () => builder.snapshot().filter(includeInExam);
-  const syncExamBrowse = () => builder.setExamFilter($('papers-exam').open ? carriesScheme : null, madas.checked);
-  $('papers-exam').addEventListener('toggle', syncExamBrowse);
+  const syncExamBrowse = () => builder.setExamFilter($('papers-exam').open ? carriesScheme : null, madas.checked, includeInExam);
+  // NAV-091: Exam paper is the teacher's exam mode, with its own draft. Opening it opens the exam draft
+  // (the first time, the practice paper's questions with a mark scheme); closing it returns to the practice paper.
+  $('papers-exam').addEventListener('toggle', async () => {
+    syncExamBrowse();
+    const wanted = $('papers-exam').open ? 'exam' : 'practice';
+    if (builder.mode() !== wanted && !(await builder.switchDraft(wanted, wanted === 'exam' ? hasMarkScheme : null))) {
+      $('papers-exam').open = builder.mode() === 'exam';
+    }
+    refresh();
+  });
+  builder.restored.then(() => {
+    if (builder.mode() !== 'exam') return;
+    $('papers-exam').open = true;
+    syncExamBrowse();
+    // Each restored exam question must still meet the current exam rules; the rest keep their order.
+    builder.validateDraft(hasMarkScheme);
+    refresh();
+  });
   const contentInputs = [...document.querySelectorAll('input[name="papers-exam-content"]')];
   const chosenContent = () => contentInputs.find(input => input.checked)?.value || 'questions';
   if (CONTENTS.includes(saved.printContent)) contentInputs.forEach(input => { input.checked = input.value === saved.printContent; });
@@ -526,6 +410,7 @@
     state.printContent = chosenContent();
     state.dateEdited = dateEdited;
     try { sessionStorage.setItem(storageKey, JSON.stringify(state)); } catch (_) { /* Optional convenience only. */ }
+    if (resume?.touched()) resume.save('exam', state);
   }
   let proposal = null;
   const report = $('papers-exam-target-report'), accept = $('papers-exam-accept');

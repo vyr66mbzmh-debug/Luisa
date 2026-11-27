@@ -889,5 +889,114 @@ class StudentAuthAcceptance(unittest.TestCase):
         self.assertEqual(client.get('/content/questions.json', base_url='https://ada.test').status_code, 404)
 
 
+    # ---- NAV-091: return to the last page and selection, privately per account ----
+    PREFERENCES_META = ('<meta name="luisa-preferences" content="ada" data-csrf="__LUISA_SESSION_CSRF__" '
+                        'data-scope="__LUISA_TAB_SCOPE__" data-default-course="__LUISA_DEFAULT_COURSE__" '
+                        'data-modules="__LUISA_PREFERENCE_MODULES__" data-state="__LUISA_PREFERENCES__">')
+
+    def preference_build(self):
+        names = ['index.html', 'papers.html', 'textbook-view.html', 'teaching-chapters.html']
+        for name in names:
+            (self.build / name).write_text(f"<!doctype html>{self.PREFERENCES_META}<form><input type=hidden name=_csrf value='__LUISA_SESSION_CSRF__'></form>{name}")
+        manifest = json.loads((self.build / 'build-manifest.json').read_text())
+        manifest['files'].update({name: {} for name in names})
+        (self.build / 'build-manifest.json').write_text(json.dumps(manifest))
+        # The asset list is read at start-up; the existing admin session carries over to the new app.
+        cookies = [(cookie.key, cookie.value, cookie.path) for cookie in self.admin._cookies.values()]
+        self.app = create_app({**self.app.config, 'STUDENT_BUILD_DIR': str(self.build)})
+        self.client = self.app.test_client()
+        self.admin = self.app.test_client()
+        for key, value, path in cookies:
+            self.admin.set_cookie(key, value, domain='ada.test', path=path)
+
+    def page_preferences(self, client, page='/papers.html'):
+        response = client.get(page, base_url='https://ada.test')
+        self.assertEqual(response.status_code, 200, response.location)
+        text = response.get_data(as_text=True)
+        meta = re.search(r'<meta name="luisa-preferences" content="ada" data-csrf="([^"]*)" data-scope="([^"]*)" '
+                         r'data-default-course="([^"]*)" data-modules="([^"]*)" data-state="([^"]*)">', text)
+        self.assertIsNotNone(meta, text)
+        import html as _html
+        return {'csrf': meta[1], 'scope': meta[2], 'course': meta[3], 'modules': meta[4], 'state': json.loads(_html.unescape(meta[5]))}
+
+    def save_preference(self, client, csrf, **fields):
+        return client.post('/preferences', data={'_csrf': csrf, **fields}, base_url='https://ada.test')
+
+    def pupil(self, number, class_code, password):
+        self.post_form(self.admin, '/admin/roster', {'numbers': number, 'class_code': class_code})
+        self.action(number, 'reset', chosen_password='Temporary ' + password)
+        client = self.app.test_client()
+        page = client.get('/login', base_url='https://ada.test')
+        self.assertEqual(self.post_form(client, '/login', {'email': number + '@marlboroughcollege.org', 'password': 'Temporary ' + password}, page).location, '/change-password')
+        self.assertEqual(self.change_password(client, password).location, '/')
+        return client
+
+    def sign_in(self, email, password, path='/login', fragment=''):
+        client = self.app.test_client()
+        page = client.get(path, base_url='https://ada.test')
+        return client, self.post_form(client, path, {'email': email, 'password': password, 'fragment': fragment}, page)
+
+    def test_pupil_preferences_follow_the_account_to_a_second_browser_NAV_091(self):
+        self.preference_build()
+        further = self.pupil('02340', 'U6Y', 'Synthetic further pupil password')
+        other = self.pupil('02341', '', 'Synthetic other pupil password')
+        prefs = self.page_preferences(further)
+        self.assertEqual((prefs['course'], prefs['modules'], prefs['state']), ('further-maths-a-level', 'papers,resources,skill,textbook', {'last': None, 'modules': {}}))
+        self.assertEqual(self.page_preferences(other)['course'], 'maths-a-level')
+        draft = {'version': 4, 'course': 'further-maths-a-level', 'chapters': ['a', 'b'], 'sources': {'old-spec': True},
+                 'mode': 'time', 'minutes': '45', 'selected': [], 'note': '__LUISA_SESSION_CSRF__'}
+        csrf = prefs['csrf']
+        self.assertEqual(self.save_preference(further, csrf, module='papers', state=json.dumps(draft)).status_code, 204)
+        self.assertEqual(self.save_preference(further, csrf, last='papers').status_code, 204)
+        # Invalid writes, a wrong token and a teacher-only module are refused.
+        self.assertEqual(self.save_preference(further, 'wrong', last='skill').status_code, 400)
+        self.assertEqual(self.save_preference(further, csrf, module='exam', state='{}').status_code, 400)
+        self.assertEqual(self.save_preference(further, csrf, module='papers', state='[1]').status_code, 400)
+        self.assertEqual(self.save_preference(further, csrf, module='papers', state='{"x":"' + 'y' * 12000 + '"}').status_code, 400)
+        self.assertEqual(self.save_preference(further, csrf, last='admin').status_code, 400)
+        self.assertEqual(self.save_preference(self.app.test_client(), csrf, last='papers').status_code, 302)
+        # A second browser opens Papers with the same draft; the saved text cannot fill a page placeholder.
+        second, signed = self.sign_in('02340@marlboroughcollege.org', 'Synthetic further pupil password')
+        self.assertEqual(signed.location, '/papers.html')
+        restored = self.page_preferences(second)
+        self.assertEqual(restored['state'], {'last': 'papers', 'modules': {'papers': draft}})
+        self.assertNotEqual(restored['scope'], prefs['scope'])
+        # Another pupil sees only their own (empty) preferences.
+        self.assertEqual(self.page_preferences(other)['state'], {'last': None, 'modules': {}})
+        # A shared link survives sign-in, including its fragment; unsafe destinations are ignored.
+        anonymous = self.app.test_client()
+        self.assertEqual(anonymous.get('/textbook-view.html', base_url='https://ada.test').location, '/login?next=/textbook-view.html')
+        self.assertEqual(anonymous.get('/', base_url='https://ada.test').location, '/login')
+        for path, fragment, expected in [
+                ('/login?next=/textbook-view.html', '#course=maths-a-level&book=maths-pure-year-1&chapter=3', '/textbook-view.html#course=maths-a-level&book=maths-pure-year-1&chapter=3'),
+                ('/login', '#course=maths-a-level&skill=smq-1.1&question=2', '/#course=maths-a-level&skill=smq-1.1&question=2'),
+                ('/login?next=//evil.test/x.html', '', '/papers.html'), ('/login?next=/admin', '', '/papers.html'),
+                ('/login?next=https://evil.test/', '', '/papers.html'), ('/login', '#"><script>', '/papers.html')]:
+            _, response = self.sign_in('02340@marlboroughcollege.org', 'Synthetic further pupil password', path, fragment)
+            self.assertEqual(response.location, expected, path)
+        # Preferences are removed with the account and hold no timestamps.
+        with closing(sqlite3.connect(self.db_path)) as conn:
+            columns = {row[1] for row in conn.execute('PRAGMA table_info(pupil_preferences)')}
+            self.assertEqual(columns, {'school_number', 'module', 'state'})
+
+    def test_teacher_preferences_keep_exam_settings_and_last_module_NAV_091(self):
+        self.preference_build()
+        password = 'Synthetic teaching password'
+        with closing(sqlite3.connect(self.db_path)) as conn, conn:
+            conn.execute('INSERT INTO staff_accounts(username,password_hash,force_change) VALUES(?,?,0)', ('first', PasswordHasher().hash(password)))
+        teacher, signed = self.sign_in('first', password)
+        self.assertEqual(signed.location, '/')
+        prefs = self.page_preferences(teacher, '/textbook-view.html')
+        self.assertEqual(prefs['course'], '')
+        self.assertEqual(self.save_preference(teacher, prefs['csrf'], module='exam', state='{"title":"Mock","draft":true}').status_code, 204)
+        self.assertEqual(self.save_preference(teacher, prefs['csrf'], module='textbook', state='{"course":"maths-a-level","chapter":"4"}').status_code, 204)
+        self.assertEqual(self.save_preference(teacher, prefs['csrf'], last='textbook').status_code, 204)
+        other, signed = self.sign_in('first', password)
+        self.assertEqual(signed.location, '/textbook-view.html')
+        state = self.page_preferences(other, '/papers.html')['state']
+        self.assertEqual(state['modules']['exam'], {'title': 'Mock', 'draft': True})
+        self.assertEqual(state['last'], 'textbook')
+        self.assertEqual(self.save_preference(other, prefs['csrf'], last='skill').status_code, 400)
+
 if __name__ == '__main__':
     unittest.main()

@@ -31,3 +31,22 @@
 .madas-excerpt img, .print-question .math-content .madas-excerpt img {display:block; width:var(--madas-width)!important; height:auto!important; max-width:100%!important; max-height:none!important; object-fit:contain}
 
 .exam-subpart { padding-inline-start: 1.8em; text-indent: -1.8em; }
+/* PAP-091: Generate a paper by count or by time, and the filter Reset control. */
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.source-fieldset>legend{float:left;margin:0;padding:7px 0;line-height:22px}.source-fieldset>.reset-filters{margin:0 0 8px 12px}.source-fieldset>.reset-filters+*{clear:both}
+.generate-mode{display:inline-flex;flex-wrap:wrap;border:1px solid #aab9c4;border-radius:8px;padding:3px;margin:0 0 16px;gap:3px;min-width:0;max-width:100%}
+.mode-choice{position:relative;display:flex;align-items:center;min-height:40px;padding:0 14px;border-radius:6px;font-size:.88rem;font-weight:600;cursor:pointer;color:#465c6d}
+.mode-choice input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.mode-choice:has(input:checked){background:#153b57;color:#fff}
+.mode-choice:has(input:focus-visible){outline:3px solid #b68c46;outline-offset:2px}
+.mode-choice:has(input:disabled){opacity:.55;cursor:not-allowed}
+.generate-panel form{display:flex;flex-wrap:wrap;align-items:end;gap:10px 14px}
+.time-fields{display:flex;flex-wrap:wrap;align-items:end;gap:10px 14px;min-width:0}
+.time-presets{display:flex;flex-wrap:wrap;gap:6px}
+.time-presets button{min-height:44px;font-size:.88rem;padding:8px 12px}
+.time-presets button[aria-pressed=true]{background:#edf3f7;border-color:#153b57;box-shadow:inset 0 0 0 1px #153b57;font-weight:700}
+.minutes-field{width:150px;margin:0}.minutes-field input{width:100%}
+.generate-actions{display:flex;flex-wrap:wrap;gap:10px}
+#papers-time-report{font-weight:600;color:#153b57}#papers-time-report.error{color:#6c3718}
+#papers-time-accept{margin-top:2px}
+@media(max-width:700px){.generate-mode{display:flex}.mode-choice{flex:1 1 auto;justify-content:center}.time-fields,.generate-actions{width:100%}.minutes-field{width:100%}.generate-actions>button{flex:1 1 auto}.time-presets button{flex:1 1 64px}}

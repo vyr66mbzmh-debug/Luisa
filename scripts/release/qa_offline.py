@@ -163,6 +163,11 @@ def run(url, out, channel):
         p.reload()
         expect(p.locator('#papers-selected-count')).to_have_text('2')
         ok('Offline selection survives reload')
+        # NAV-091: the teacher exam mode opened above is restored after the reload; close it to return to the practice draft.
+        expect(p.locator('#papers-exam')).to_have_js_property('open', True)
+        p.locator('#papers-exam summary').click()
+        expect(p.locator('#papers-exam')).to_have_js_property('open', False)
+        ok('Offline exam mode restored after reload and closed to the practice draft')
         clear(p)
         p.locator('#papers-source-past-papers').uncheck()
         p.locator('#papers-source-madas').check()

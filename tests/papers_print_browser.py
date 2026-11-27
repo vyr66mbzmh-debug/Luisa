@@ -71,6 +71,8 @@ class PapersPrintTests(unittest.TestCase):
         self.page.goto(f'http://127.0.0.1:{self.server.server_port}/icon.svg')
         self.page.goto(f'http://127.0.0.1:{self.server.server_port}/index.html')
         self.page.add_script_tag(url='/papers-print.js')
+        # papers.html loads the shared timed-paper scheduler after the print module (PAP-091).
+        self.page.add_script_tag(url='/papers-timing.js')
 
     def tearDown(self):
         for page in self.context.pages:

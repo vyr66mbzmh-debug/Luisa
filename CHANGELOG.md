@@ -1,3 +1,9 @@
+## Luisa v0.91
+
+- Students can generate a paper by time: presets of 30, 45, 60, 90 and 120 minutes or a custom target from 2 to 600 minutes, at 6 minutes per 5 marks within ±2 minutes. Any whole question with a known mark total is eligible, and a mark scheme is optional. Teacher exams still require a mark scheme.
+- Luisa now reopens each user’s last main page and that page’s latest selection: By skill, By textbook, Resources, Papers and the teacher exam draft. On ADA these follow the account to any browser. Shared links, tabs, Home and Back are honoured, and retired items fall back safely.
+- Pupils in L6X, U6X, L6Y and U6Y default to Further Maths A level and other pupils to Maths A level until they choose a course. A Reset button beside Question sources restores the standard sources and filters while keeping the paper.
+
 ## Luisa v0.90
 
 - Student papers now group each question’s worked solution and marking material under Solution/Mark Scheme at the back. Current official past papers show the original mark scheme. When a worked solution is supplied, it prints first under the same question number.
