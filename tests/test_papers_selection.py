@@ -136,6 +136,8 @@ class PapersSelection(unittest.TestCase):
                 JSON.stringify({version:3, selected:ids, selectionOrder:ids, difficulty, order:'selection'}))""", [ids, old])
             self.page.reload()
             self.page.wait_for_selector('#papers-source-madas:enabled')
+            # The saved paper loads asynchronously after the controls are enabled.
+            self.page.wait_for_function("/restored/.test(document.querySelector('#papers-status').textContent)")
             self.assertEqual(self.page.locator('#papers-difficulty').input_value(), new)
             self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(q=>q.id)'), list(moves.values()))
             self.assertNotIn('skips', self.page.locator('#filter-title').inner_text())
@@ -634,6 +636,7 @@ class PapersSelection(unittest.TestCase):
         panel = self.page.locator('#papers-exam')
         self.assertIn('Teachers only', panel.locator('summary').inner_text())
         panel.locator('summary').click()
+        self.page.wait_for_function("/Exam draft/.test(document.querySelector('#papers-status').textContent)")
         self.assertEqual(self.page.locator('#papers-exam-title').input_value(), 'Maths Assessment')
         self.assertRegex(self.page.locator('#papers-exam-month').input_value(), r'^[A-Z][a-z]+ \d{4}$')
         # PAP-067-3: three default paragraphs separated by blank lines, still editable.
@@ -650,7 +653,8 @@ class PapersSelection(unittest.TestCase):
         self.page.wait_for_function(f"document.querySelectorAll('#papers-past-paper option').length === {PAPER_OPTIONS}")
         self.assertEqual(self.page.locator('#papers-exam-date').input_value(), f"{now:%A} {now.day}{suffix} {now:%B}")
         self.page.evaluate("sessionStorage.removeItem('luisa-papers-exam-v1')")
-        panel.locator('summary').click()
+        # NAV-091: the teacher's active exam mode is restored after a reload, with its own draft.
+        self.page.wait_for_function("document.querySelector('#papers-exam').open")
         # PAP-067-2: one print choice, Questions only by default.
         radios = self.page.locator('input[name="papers-exam-content"]')
         self.assertEqual(radios.evaluate_all('ns=>ns.map(n=>[n.value,n.parentElement.textContent.trim(),n.checked,n.type])'),
@@ -710,8 +714,8 @@ class PapersSelection(unittest.TestCase):
         self.assertEqual(self.page.locator('#papers-exam-year').input_value(), 'L6')
         self.assertEqual(self.page.locator('#papers-exam-date').input_value(), 'Friday 20th November P4 & P5')
         self.assertTrue(self.page.locator('input[name="papers-exam-content"][value="both"]').is_checked())
-        # The Date field can be cleared; it stays empty and prints no date line.
-        self.page.locator('#papers-exam summary').click()
+        # The Date field can be cleared; it stays empty and prints no date line. Exam mode reopens with its draft (NAV-091).
+        self.page.wait_for_function("document.querySelector('#papers-exam').open")
         self.page.locator('#papers-exam-date').fill('')
         self.page.locator('input[name="papers-exam-content"][value="scheme"]').check()
         with self.page.expect_popup() as event:

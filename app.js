@@ -1,6 +1,9 @@
 'use strict';
 const $=id=>document.getElementById(id),library=window.FMQ_LIBRARY;
 let current=null,history=[],mode='hidden',stage=0,view='split';
+// NAV-091: a hash is an explicit destination; otherwise reopen this account's By skill selection, then a pupil's class course.
+const openedExplicitly=location.hash.length>1;
+function initialSelection(){if(openedExplicitly)return Object.fromEntries(new URLSearchParams(location.hash.slice(1)));const saved=window.LUISA_RESUME?.get('skill');if(saved&&library.courses.some(c=>c.id===saved.course))return saved;const course=window.LUISA_RESUME?.defaultCourse;return course&&library.courses.some(c=>c.id===course)?{course}:{};}
 const remembered=new Map(),pools=new Map(),contentCache=new Map();let navigationRevision=0;
 const mathMacros={"\\p":"\\mathrm P(#1)",'\\cosec':'\\operatorname{cosec}','\\cosech':'\\operatorname{cosech}','\\sech':'\\operatorname{sech}','\\coth':'\\operatorname{coth}','\\arcosech':'\\operatorname{arcosech}','\\arcsech':'\\operatorname{arcsech}','\\arsech':'\\operatorname{arsech}','\\arcoth':'\\operatorname{arcoth}','\\arsinh':'\\operatorname{arsinh}','\\arcosh':'\\operatorname{arcosh}','\\artanh':'\\operatorname{artanh}','\\Real':'\\operatorname{Re}','\\Imag':'\\operatorname{Im}','\\ssum':'\\sum_{r=1}^{#1}#2','\\arraystretch':'1'};
 function renderMath(root){for(const node of root.querySelectorAll('[data-math]'))katex.render(node.dataset.math,node,{displayMode:node.dataset.display==='true',throwOnError:true,strict:'error',macros:{...mathMacros}});}
@@ -51,6 +54,8 @@ async function navigate(s,record=true){
  $('previous').disabled=!r.skill.available||(!history.length&&next.question===1);for(const id of ['skip','random','choose','full','hide'])$(id).disabled=!r.skill.available||r.skill.reference;
  const hash=new URLSearchParams({course:next.course,book:next.book,topic:next.topic,skill:next.skill,question:next.question});
  try{window.history.replaceState(null,'','#'+hash);}catch{}
+ // NAV-091: an explicit destination, or a change the user makes, is this account's latest By skill selection.
+ if(window.LUISA_RESUME&&!window.LUISA_RESUME.leaving&&(openedExplicitly||window.LUISA_RESUME.touched()))window.LUISA_RESUME.save('skill',{course:next.course,book:next.book,topic:next.topic,skill:next.skill,question:next.question});
  document.title=`Luisa · ${r.skill.code} · Question ${next.question}`;
  renderMath($('question'));renderMath($('solution'));
  renderSolution();
@@ -100,7 +105,7 @@ $('view-question').onclick=()=>enterFocusedFullscreen('question');
 $('view-solution').onclick=()=>enterFocusedFullscreen('solution');
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&view!=='split')setView('split');});
 window.addEventListener('hashchange',()=>navigate(Object.fromEntries(new URLSearchParams(location.hash.slice(1)))));
-$('library-status').textContent=library.availableSkillCount+' of '+library.totalSkillCount+' skills available · '+library.questionCount+' questions';navigate(Object.fromEntries(new URLSearchParams(location.hash.slice(1))),false);
+$('library-status').textContent=library.availableSkillCount+' of '+library.totalSkillCount+' skills available · '+library.questionCount+' questions';navigate(initialSelection(),false);
 if('serviceWorker' in navigator&&location.protocol!=='file:')navigator.serviceWorker.register('sw.js').catch(()=>{});
 
 async function enterFocusedFullscreen(next){

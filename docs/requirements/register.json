@@ -6836,6 +6836,87 @@
       "evidence": [
         "GitHub issue #170"
       ]
+    },
+    {
+      "id": "PAP-091",
+      "requirement": "Let a student generate a normal practice paper of approximately a chosen working time: presets of 30, 45, 60, 90 and 120 minutes and a custom whole-number target from 2 to 600 minutes, using whole questions with a known whole-question mark total.",
+      "scope": "Student and teacher practice papers (all editions)",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner brief “Student timed papers and site-wide return to last page” (2026-11-27; GitHub issue #172)",
+      "acceptance": [
+        "Rename the generator “Generate a paper” with a keyboard-accessible choice between By number of questions and By time; default to by-count, with 30 minutes preselected on first use of By time; controls wrap on narrow screens.",
+        "Estimated time is floor(total marks × 6 / 5) over the whole paper (papers-print.js paperMinutes), prefer the exact time and accept ±2 minutes; no lesson label, countdown, deadline or extra time for students.",
+        "Student eligibility is a known positive whole-question mark total, read from the validated catalogue or loaded question; a scheme is optional and labels alone never imply a total. Pearson descriptors are loaded before they are judged. MADAS and Old Spec stay opt-in; canonical deduplication and Old Spec precedence apply.",
+        "Support the verified Pearson layouts (a combined allocation after the last subpart; an allocation printed after the prose before an unmarked part). Never sum partial allocations or guess missing marks.",
+        "Show the eligible count and the generated paper’s questions, marks and estimated time. Offer an outside-tolerance paper explicitly (“Use N-minute paper”) without replacing the current paper; target or filter changes withdraw the offer; cancellation, failed loads and stale results keep the current paper.",
+        "Teacher exams keep their own entry point, presets, extra time, difficulty rules and scheme requirement while sharing the scheduler (papers-timing.js)."
+      ],
+      "evidence": [
+        "GitHub issue #172",
+        "tests/test_timed_papers.py",
+        "tests/test_student_auth.py"
+      ]
+    },
+    {
+      "id": "PAP-092",
+      "requirement": "Add a Reset control beside Question sources that restores the standard sources and unrestricted content filters in one change.",
+      "scope": "Paper builder, all editions",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner brief “Student timed papers and site-wide return to last page” (2026-11-27; GitHub issue #172)",
+      "acceptance": [
+        "A non-submit button labelled Reset with accessible name “Reset question filters”, immediately right of Question sources.",
+        "Pupils return to the course of their current class (Further Maths A level for L6X, U6X, L6Y and U6Y, otherwise Maths A level); teachers and the owner keep their course scope, including All courses.",
+        "Enable Practice questions, Exam style and Past Papers; switch off Madas and Old Spec; use the All state for books, chapters/topics, difficulty and past papers.",
+        "Refresh controls and the eligible count, withdraw any generation offer and persist the filters; keep the draft’s questions and order, generator mode, count or duration and print settings."
+      ],
+      "evidence": [
+        "GitHub issue #172",
+        "tests/test_timed_papers.py"
+      ]
+    },
+    {
+      "id": "NAV-091",
+      "requirement": "Return every user to their last main Luisa page and that module’s latest selection.",
+      "scope": "ADA pupil and staff editions (private account storage) and the owner static edition (this browser profile and origin)",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner brief “Student timed papers and site-wide return to last page” (2026-11-27; GitHub issue #172)",
+      "acceptance": [
+        "One last module per account (By skill, By textbook, Resources, Papers) and one latest selection per module, saved when a page opens or a selection changes, including deselections and in-page navigation, without browsing history or timestamps.",
+        "An ordinary sign-in or launch reopens the last module; explicit destinations (shared links through sign-in, tab clicks, Home, Back) are honoured and never bounce. Main tabs restore each module’s own selection.",
+        "By skill: course, book, topic, skill and question. By textbook: course, book, chapter, subtopic or Whole chapter, practice group and entry. Resources: book, chapter and resource. Papers: ordered question IDs, filters, named paper, generator mode, count, duration and print options; an explicitly cleared paper stays cleared.",
+        "Validate against the current catalogue and routes after it loads; keep valid parts of a retired selection, use the containing section, otherwise the normal landing page. Restored drafts reuse ID migration and deduplication and name any omitted entry.",
+        "Teacher practice and exam drafts and settings are separate, the active mode is restored, and each restored exam question is checked against current exam eligibility.",
+        "Scope by authenticated identity and edition; isolate tab-session data on account changes; temporary previews, sign-out, downloads and authentication screens never become the last page; startup defaults and stale background tabs never overwrite newer choices."
+      ],
+      "evidence": [
+        "GitHub issue #172",
+        "tests/test_student_auth.py",
+        "tests/test_timed_papers.py"
+      ]
+    },
+    {
+      "id": "NAV-092",
+      "requirement": "Default a pupil’s course by class when they have no saved course for a module.",
+      "scope": "By skill, By textbook and Papers on ADA",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner brief “Student timed papers and site-wide return to last page” (2026-11-27; GitHub issue #172)",
+      "acceptance": [
+        "An explicit destination wins, then the pupil’s saved valid selection for that module (including an explicit All courses in Papers).",
+        "Otherwise pupils in L6X, U6X, L6Y or U6Y open Further Maths A level and every other pupil, including one with no class, opens Maths A level. Teachers resume their own selections independently of class rules."
+      ],
+      "evidence": [
+        "GitHub issue #172",
+        "tests/test_student_auth.py",
+        "tests/test_timed_papers.py"
+      ]
     }
   ]
 }

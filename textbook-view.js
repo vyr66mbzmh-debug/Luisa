@@ -44,6 +44,8 @@ function render(){
  // Keep incoming context until the user changes selection, so multi-chapter choices remain recoverable.
  if(input.fromSkill){state.fromSkill=input.fromSkill;state.fromQuestion=input.fromQuestion;}
  window.history.replaceState(null,'',hash(state));
+ // NAV-091: save an explicit destination or the user's own change, never a startup default.
+ const resume=window.LUISA_RESUME;if(resume&&(openedExplicitly||resume.touched()))resume.save('textbook',{course:state.course,book:state.book,chapter:state.chapter,subtopic:state.subtopic||'',group:state.group||'',entry:state.entry||''});
 }
 async function showQuestion(record,questions){
  const token=++revision;selected=record;shown=0;steps=[];$('question').classList.remove('load-error');$('question').textContent='Loading question…';$('solution').replaceChildren();$('solution-hint').hidden=false;$('solution-hint').textContent='Choose Reveal next or Show full solution.';for(const id of ['reveal','show-all','hide'])$(id).disabled=true;
@@ -62,4 +64,10 @@ async function showQuestion(record,questions){
 function solution(){const container=$('solution');container.replaceChildren();for(const step of steps.slice(0,shown)){const div=document.createElement('div');div.className='solution-step';div.innerHTML=step;container.append(div);}renderMath(container);$('solution-hint').hidden=shown>0;$('reveal').disabled=shown>=steps.length;$('show-all').disabled=shown>=steps.length;$('hide').disabled=shown===0;}
 $('reveal').onclick=()=>{shown=Math.min(shown+1,steps.length);solution();};$('show-all').onclick=()=>{shown=steps.length;solution();};$('hide').onclick=()=>{shown=0;solution();};
 $('course').onchange=()=>{location.hash=hash({course:$('course').value});};$('book').onchange=()=>{location.hash=hash({course:state.course,book:$('book').value});};$('chapter').onchange=()=>{location.hash=hash({course:state.course,book:state.book,chapter:$('chapter').value});};$('subtopic').onchange=()=>change({subtopic:$('subtopic').value,entry:'',group:'',fromSkill:'',fromQuestion:''});$('practice-skill').onchange=()=>change({group:$('practice-skill').value,entry:'',fromSkill:'',fromQuestion:''});$('question-select').onchange=()=>change({entry:$('question-select').value,fromSkill:'',fromQuestion:''});
-fetch('textbook-catalogue.json').then(r=>{if(!r.ok)throw Error('Catalogue unavailable');return r.json();}).then(data=>{catalogue=data;render();window.addEventListener('hashchange',render);}).catch(error=>{$('chapter-title').textContent='The textbook catalogue could not be loaded. Please reload.';console.error(error);});
+// NAV-091: a hash is an explicit destination; otherwise reopen this account's textbook selection after the catalogue loads.
+const openedExplicitly=location.hash.length>1;
+function restoreSelection(){if(openedExplicitly)return;const saved=window.LUISA_RESUME?.get('textbook');const course=window.LUISA_RESUME?.defaultCourse;let wanted=null;
+ if(saved&&catalogue.courses.some(c=>c.id===saved.course)){const book=catalogue.books.find(b=>b.id===saved.book&&b.course===saved.course);wanted={course:saved.course};if(book){wanted.book=book.id;const chapter=book.chapters.find(c=>c.id===saved.chapter);if(chapter){wanted.chapter=chapter.id;if(chapter.subtopics.some(t=>t.id===saved.subtopic))wanted.subtopic=saved.subtopic;if(saved.group)wanted.group=saved.group;if(saved.entry)wanted.entry=saved.entry;}}}
+ else if(course&&catalogue.courses.some(c=>c.id===course))wanted={course};
+ if(wanted)window.history.replaceState(null,'',hash(wanted));}
+fetch('textbook-catalogue.json').then(r=>{if(!r.ok)throw Error('Catalogue unavailable');return r.json();}).then(data=>{catalogue=data;restoreSelection();render();window.addEventListener('hashchange',render);}).catch(error=>{$('chapter-title').textContent='The textbook catalogue could not be loaded. Please reload.';console.error(error);});

@@ -148,10 +148,24 @@ def old_spec(p, role, out):
     expect(opt).to_be_checked()
     expect(select).to_have_value('old-spec-revision')
     expect(p.locator('#papers-selected-count')).to_have_text('1')
+    # NAV-091: without the tab copy, the paper and its filters come back from the account (or, for the owner, this browser).
     p.evaluate("sessionStorage.removeItem('luisa-papers-v1')")
     p.reload(wait_until='domcontentloaded')
+    expect(opt).to_be_checked()
+    expect(p.locator('#papers-selected-count')).to_have_text('1')
+    # PAP-092: Reset restores the standard sources, switches Old Spec off and keeps the paper.
+    expect(p.locator('#papers-reset')).to_be_enabled()
+    p.get_by_role('button', name='Reset question filters').click()
     expect(opt).to_be_enabled()
     expect(opt).not_to_be_checked()
+    expect(p.locator('#papers-selected-count')).to_have_text('1')
+    expect(p.locator('#papers-difficulty')).to_have_value('')
+    if role != 'student':
+        expect(p.locator('#papers-course')).to_have_value('further-maths-a-level')  # teachers and the owner keep their course
+    # Return to the unfiltered start for the checks that follow.
+    p.locator('#papers-course').select_option('')
+    p.locator('#papers-clear').click()
+    expect(p.locator('#papers-selected-count')).to_have_text('0')
     ok(f'{role} Old Spec chapters, three difficulty bands, distinct worked solution and source mark scheme, selection and restore passed')
 
 
@@ -456,6 +470,14 @@ def exam_checks(p, role, out, expected24):
     import datetime
     import zoneinfo
     p.locator('#papers-exam summary').click()
+    # NAV-091: the exam draft is kept apart from the practice paper (it was first opened for the MADAS note above).
+    expect(p.locator('#papers-status')).to_contain_text('Exam draft:')
+    p.locator('#papers-count').fill(str(len(expected24)))
+    p.locator('#papers-generate').click()
+    expect(p.locator('#papers-cancel')).to_be_hidden(timeout=90000)
+    expect(p.locator('#papers-selected-count')).to_have_text(str(len(expected24)))
+    p.locator('#papers-order').select_option('paper')
+    assert p.locator('[data-remove]').evaluate_all('ns=>ns.map(n=>n.dataset.remove)') == expected24
     assert p.locator('input[name="papers-exam-content"]').evaluate_all('ns=>ns.map(n=>[n.value,n.checked])') == [['questions', True], ['scheme', False], ['both', False]]
     panel = p.locator('#papers-exam').inner_text()
     for gone in ('no solutions', 'is added automatically when any question comes from Mechanics', 'g = 9.8', 'Prints the paper above'):

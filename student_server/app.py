@@ -24,6 +24,13 @@ from .admin_view import ADMIN_PAGE
 
 
 _PH = PasswordHasher()
+# NAV-091: one last module and one latest selection per module for each signed-in account.
+PREFERENCE_PAGES = {'skill': '', 'textbook': 'textbook-view.html', 'resources': 'teaching-chapters.html', 'papers': 'papers.html'}
+PREFERENCE_MODULES = {'student': frozenset(PREFERENCE_PAGES), 'staff': frozenset(PREFERENCE_PAGES) | {'exam'}}
+PREFERENCE_STATE_LIMIT = 12000
+# Pupils in these classes default to Further Maths A level; every other pupil to Maths A level.
+FURTHER_MATHS_CLASSES = frozenset({'L6X', 'U6X', 'L6Y', 'U6Y'})
+_FRAGMENT = re.compile(r'#[A-Za-z0-9_.~%=&+:/-]{1,600}')
 _DUMMY_PASSWORD_HASH = _PH.hash(secrets.token_urlsafe(32))
 _SCHOOL_NUMBER = re.compile(r"[0-9]{5}\Z", re.ASCII)
 _SIGN_IN = re.compile(r"[0-9]{5}@marlboroughcollege\.org\Z", re.ASCII | re.IGNORECASE)
@@ -60,7 +67,7 @@ PDF_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewpo
 nav{display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;background:#183957}a{color:white}
 iframe{width:100%;border:0;flex:1}</style><nav><a href="{{ file }}?download=1" download>Download PDF</a>
 """ + SIGN_OUT_FORM + """</nav><iframe src="{{ file }}?inline=1{% if page_number %}#page={{ page_number }}{% endif %}" title="{{ title }}"></iframe></html>"""
-LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Luisa sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>School email or username<input name=email type=text autocomplete=username required maxlength=64></label><label>Luisa password<input name=password type=password autocomplete=current-password required maxlength=1024></label><button>Sign in</button></form><p><a href="{{ url_for('admin_login') }}">Admin login</a></p></html>"""
+LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa sign in</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Luisa sign in</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><input type=hidden name=fragment><script>document.currentScript.closest('form').elements.fragment.value=location.hash</script><label>School email or username<input name=email type=text autocomplete=username required maxlength=64></label><label>Luisa password<input name=password type=password autocomplete=current-password required maxlength=1024></label><button>Sign in</button></form><p><a href="{{ url_for('admin_login') }}">Admin login</a></p></html>"""
 ADMIN_LOGIN_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Luisa admin login</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><h1>Admin login</h1>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>Admin password<input name=password type=password autocomplete=current-password required maxlength=1024></label>{% if config.ADMIN_AUTH_MODE == "totp" %}<label>Authenticator code<input name=totp inputmode=numeric autocomplete=one-time-code required pattern='[0-9]{6}'></label>{% endif %}<button>Sign in</button></form></html>"""
 CHANGE_PAGE = """<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Change Luisa password</title><style>body{font:17px system-ui;max-width:32rem;margin:8vh auto;padding:1.5rem;color:#183957}label,input,button{display:block;width:100%;box-sizing:border-box;margin:.5rem 0 1rem}input,button{font:inherit;padding:.7rem}button{background:#183957;color:white;border:0;border-radius:.3rem}.error{color:#8b2020}</style><div style="text-align:right">""" + SIGN_OUT_FORM + """</div><h1>Choose a new Luisa password</h1><p>Change your temporary password before opening course content.</p>{% if error %}<p class=error role=alert>{{ error }}</p>{% endif %}<form method=post><input type=hidden name=_csrf value='{{ csrf }}'><label>New password<input name=password type=password autocomplete=new-password required minlength=8 maxlength=1024></label><label>Repeat new password<input name=confirm type=password autocomplete=new-password required minlength=8 maxlength=1024></label><button>Save password</button></form></html>"""
 TEACHER_PASSWORD_PAGE = """<!doctype html><html lang=en><meta charset=utf-8>
@@ -312,6 +319,13 @@ def create_app(overrides: dict | None = None) -> Flask:
             conn.execute('''CREATE TABLE IF NOT EXISTS teacher_recents (
                 username TEXT NOT NULL REFERENCES staff_accounts(username) ON DELETE CASCADE,
                 chapter_key TEXT NOT NULL, slide INTEGER NOT NULL, UNIQUE(username,chapter_key))''')
+            # NAV-091: current preferences only (no history, no timestamps), removed with the account.
+            conn.execute('''CREATE TABLE IF NOT EXISTS pupil_preferences (
+                school_number TEXT NOT NULL REFERENCES accounts(school_number) ON DELETE CASCADE,
+                module TEXT NOT NULL, state TEXT NOT NULL, PRIMARY KEY(school_number, module))''')
+            conn.execute('''CREATE TABLE IF NOT EXISTS staff_preferences (
+                username TEXT NOT NULL REFERENCES staff_accounts(username) ON DELETE CASCADE,
+                module TEXT NOT NULL, state TEXT NOT NULL, PRIMARY KEY(username, module))''')
             signin_summary.migrate(conn, app.config['SESSION_ABSOLUTE_SECONDS'])
             conn.execute('INSERT OR IGNORE INTO teacher_credential VALUES(1, ?)', (app.config['ADMIN_PASSWORD_HASH'],))
             conn.commit()
@@ -343,11 +357,74 @@ def create_app(overrides: dict | None = None) -> Flask:
                      (digest_session(token), identity if role == 'student' else None, role, int(must_change), csrf, utc_text(created), expiry, identity if role == 'staff' else None))
         return token
 
-    def establish(token: str):
-        response = redirect(url_for('change_password') if g.luisa_session['must_change'] else url_for('index'))
+    def establish(token: str, destination: str | None = None):
+        response = redirect(url_for('change_password') if g.luisa_session['must_change'] else destination or url_for('index'))
         response.set_cookie(app.config['SESSION_COOKIE'], token, max_age=app.config['SESSION_SECONDS'],
                             secure=True, httponly=True, samesite='Lax', path=app.config['SESSION_COOKIE_PATH'])
         return response
+
+    # ---- NAV-091: account preferences and destinations through sign-in ----
+    def preference_table(session=None):
+        session = session or g.luisa_session
+        if session['role'] == 'student':
+            return 'pupil_preferences', 'school_number', session['school_number']
+        if session['role'] == 'staff':
+            return 'staff_preferences', 'username', session['staff_username']
+        return None
+
+    def read_preferences(session=None):
+        target = preference_table(session)
+        if not target:
+            return {}
+        table, column, identity = target
+        role = (session or g.luisa_session)['role']
+        modules, last = {}, None
+        # Table and column names are internal constants chosen by role.
+        for row in db().execute(f'SELECT module,state FROM {table} WHERE {column}=?', (identity,)):
+            if row['module'] == '_last':
+                last = row['state'] if row['state'] in PREFERENCE_PAGES else None
+            elif row['module'] in PREFERENCE_MODULES[role]:
+                try:
+                    value = json.loads(row['state'])
+                except ValueError:
+                    continue
+                if isinstance(value, dict):
+                    modules[row['module']] = value
+        return {'last': last, 'modules': modules}
+
+    def default_course():
+        session = g.luisa_session
+        if session['role'] != 'student':
+            return ''
+        row = db().execute('SELECT class_code FROM accounts WHERE school_number=?', (session['school_number'],)).fetchone()
+        code = (row['class_code'] if row else '').strip().upper()
+        return 'further-maths-a-level' if code in FURTHER_MATHS_CLASSES else 'maths-a-level'
+
+    def tab_scope():
+        # Distinct for every sign-in, so tab data from another account or sign-in is never reused.
+        return sha256(b'Luisa:tab-scope:v1:' + g.luisa_session['session_hash'].encode()).hexdigest()[:32]
+
+    def safe_next(value):
+        # Only a Luisa course page under this deployment's prefix; never an account, sign-in or other route.
+        if not isinstance(value, str) or len(value) > 600 or '\\' in value or any(ord(c) < 33 for c in value):
+            return None
+        root = url_for('index')
+        if not value.startswith(root) or value.startswith('//') or '..' in value.split('?', 1)[0].split('/'):
+            return None
+        path = value[len(root):].split('?', 1)[0]
+        if path == '' or path == 'index.html':
+            return None if '?' in value else ''
+        return value if re.fullmatch(r'[a-z0-9][a-z0-9-]*\.html', path) else None
+
+    def signed_in_destination(session_row, next_value='', fragment=''):
+        # An explicit destination wins; an ordinary sign-in opens the account's last main page.
+        fragment = fragment if fragment and _FRAGMENT.fullmatch(fragment) else ''
+        target = safe_next(next_value)
+        if target or fragment:
+            return (target or url_for('index')) + fragment
+        last = read_preferences(session_row).get('last')
+        page = PREFERENCE_PAGES.get(last or '', '')
+        return url_for('private_asset', asset=page) if page else url_for('index')
 
     def csrf_ok() -> bool:
         session = getattr(g, 'luisa_session', None)
@@ -396,6 +473,11 @@ def create_app(overrides: dict | None = None) -> Flask:
         if endpoint not in public and g.luisa_session is None:
             if request.path.startswith('/admin'):
                 return redirect(url_for('admin_login'))
+            # A shared link to a course page survives sign-in (the browser keeps any #fragment).
+            wanted = request.full_path.rstrip('?') if request.method == 'GET' else ''
+            wanted = (request.script_root + wanted) if wanted else ''
+            if safe_next(wanted):
+                return redirect(url_for('login', next=wanted))
             return redirect(url_for('login'))
         if (app.config['TEACHER_SETUP'] and g.luisa_session and g.luisa_session['role'] == 'admin'
                 and endpoint not in {'teacher_password', 'logout'} and teacher_hash() == app.config['ADMIN_PASSWORD_HASH']):
@@ -536,7 +618,9 @@ def create_app(overrides: dict | None = None) -> Flask:
         signin_summary.record(db(), 'accounts', 'school_number', school_number, digest_session(token))
         db().execute('COMMIT')
         g.luisa_session = {'must_change': int(needs_change)}
-        response = redirect(url_for('change_password') if needs_change else url_for('index'))
+        destination = signed_in_destination({'role': 'student', 'school_number': school_number},
+                                            request.args.get('next', ''), request.form.get('fragment', ''))
+        response = redirect(url_for('change_password') if needs_change else destination)
         response.set_cookie(app.config['SESSION_COOKIE'], token, max_age=app.config['SESSION_SECONDS'], secure=True,
                             httponly=True, samesite='Lax', path=app.config['SESSION_COOKIE_PATH'])
         return response
@@ -561,7 +645,8 @@ def create_app(overrides: dict | None = None) -> Flask:
                 db().commit()
                 limiter.succeeded(key)
                 g.luisa_session = {'must_change': must_change}
-                return establish(token)
+                return establish(token, signed_in_destination({'role': 'staff', 'staff_username': username},
+                                                               request.args.get('next', ''), request.form.get('fragment', '')))
             db().rollback()
         limiter.failed(key)
         return render_login(LOGIN_PAGE, 'Sign-in failed. Check your details.'), 401
@@ -808,6 +893,35 @@ else document.getElementById('status').textContent='Open Offline downloads from 
         if name not in {'slide-controls.svg','geogebra-gold.png'}:
             abort(404)
         return send_from_directory(build_dir / 'assets/luisa', name, conditional=False, etag=False)
+
+    @app.post('/preferences')
+    def preferences():
+        session = g.luisa_session
+        if not session or session['role'] not in {'student', 'staff'} or session['must_change']:
+            abort(403)
+        require_csrf()
+        table, column, identity = preference_table()
+        if 'last' in request.form:
+            module, state = '_last', request.form.get('last', '')
+            if state not in PREFERENCE_PAGES:
+                abort(400)
+        else:
+            module = request.form.get('module', '')
+            if module not in PREFERENCE_MODULES[session['role']]:
+                abort(400)
+            text = request.form.get('state', '')
+            if len(text) > PREFERENCE_STATE_LIMIT:
+                abort(400)
+            try:
+                value = json.loads(text)
+            except ValueError:
+                abort(400)
+            if not isinstance(value, dict):
+                abort(400)
+            state = json.dumps(value, separators=(',', ':'), ensure_ascii=False)
+        db().execute(f'INSERT INTO {table}({column},module,state) VALUES(?,?,?) ON CONFLICT({column},module) DO UPDATE SET state=excluded.state',
+                     (identity, module, state))
+        return '', 204
 
     @app.route('/recent-chapters', methods=['GET','POST'])
     def teacher_recents():
@@ -1066,6 +1180,14 @@ else document.getElementById('status').textContent='Open Offline downloads from 
             page = page.replace('__LUISA_TEACHER_ACRONYM__', escape(identity.upper()))
             page = page.replace('__LUISA_OFFLINE_LOGOUT__', offline_logout_ticket())
         page = page.replace('<!--luisa-account-name-->', escape(identity))
+        if '__LUISA_PREFERENCES__' in page:
+            role = g.luisa_session['role']
+            # A JSON escape keeps saved text from matching a later page placeholder.
+            state = json.dumps(read_preferences(), separators=(',', ':')).replace('__LUISA', '\\u005f_LUISA')
+            page = (page.replace('__LUISA_TAB_SCOPE__', tab_scope())
+                    .replace('__LUISA_DEFAULT_COURSE__', default_course())
+                    .replace('__LUISA_PREFERENCE_MODULES__', ','.join(sorted(PREFERENCE_PAGES)))
+                    .replace('__LUISA_PREFERENCES__', escape(state)))
         return watch_pupil_session(page.replace('__LUISA_SESSION_CSRF__', escape(base_context())))
 
     @app.get('/<path:asset>')

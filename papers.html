@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#11263c">
 <title>Luisa · Papers</title>
+<meta name="luisa-preferences" content="local"><script src="luisa-resume.js" data-module="papers"></script>
 <link rel="icon" href="assets/luisa/logo.png"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="assets/luisa/icon-192.png">
 <link rel="stylesheet" href="vendor/katex.min.css"><link rel="stylesheet" href="papers.css"><link rel="stylesheet" href="luisa.css?v=048">
 <script defer src="offline-register.js"></script>
@@ -28,7 +29,7 @@
 <div class="builder-grid">
 <aside class="filter-panel panel" aria-labelledby="filter-title">
 <h2 id="filter-title" aria-live="polite">Loading questions…</h2>
-<fieldset class="source-fieldset"><legend>Question sources</legend>
+<fieldset class="source-fieldset"><legend>Question sources</legend><button id="papers-reset" type="button" class="quiet reset-filters" aria-label="Reset question filters" disabled>Reset</button>
 <label class="source-choice"><input id="papers-source-practice" type="checkbox" checked disabled> Practice questions</label>
 <label class="source-choice"><input id="papers-source-exam-style" type="checkbox" checked disabled> Exam style</label>
 <label class="source-choice"><input id="papers-source-madas" type="checkbox" disabled> Madas</label>
@@ -42,9 +43,24 @@
 </aside>
 <div class="builder-content">
 <section class="panel generate-panel" aria-labelledby="generate-title">
-<h2 id="generate-title">Generate a random paper</h2>
-<form id="papers-generate-form"><label class="field count-field" for="papers-count">Number of questions<input id="papers-count" type="number" min="1" step="1" value="10" required aria-describedby="filter-title" disabled></label><button id="papers-generate" class="primary" type="submit" disabled>Generate paper</button><button id="papers-regenerate" type="button" disabled>Regenerate</button><button id="papers-cancel" type="button" hidden>Cancel loading</button></form>
-<p class="help">Each question appears once. Regenerate replaces the current selection using this pool and count.</p>
+<h2 id="generate-title">Generate a paper</h2>
+<fieldset class="generate-mode"><legend class="visually-hidden">Generate</legend>
+<label class="mode-choice"><input type="radio" name="papers-generate-mode" value="count" checked disabled> By number of questions</label>
+<label class="mode-choice"><input type="radio" name="papers-generate-mode" value="time" disabled> By time</label>
+</fieldset>
+<form id="papers-generate-form" novalidate>
+<label id="papers-count-field" class="field count-field" for="papers-count">Number of questions<input id="papers-count" type="number" min="1" step="1" value="10" required aria-describedby="filter-title" disabled></label>
+<div id="papers-time-fields" class="time-fields" hidden>
+<div class="time-presets" role="group" aria-label="Working time presets"><button type="button" class="quiet" data-minutes="30" aria-pressed="false">30 min</button><button type="button" class="quiet" data-minutes="45" aria-pressed="false">45 min</button><button type="button" class="quiet" data-minutes="60" aria-pressed="false">60 min</button><button type="button" class="quiet" data-minutes="90" aria-pressed="false">90 min</button><button type="button" class="quiet" data-minutes="120" aria-pressed="false">120 min</button></div>
+<label class="field minutes-field" for="papers-minutes">Custom minutes<input id="papers-minutes" type="number" min="2" max="600" step="1" inputmode="numeric" value="30" aria-describedby="papers-time-help" disabled></label>
+</div>
+<div class="generate-actions"><button id="papers-generate" class="primary" type="submit" disabled>Generate paper</button><button id="papers-regenerate" type="button" disabled>Regenerate</button><button id="papers-cancel" type="button" hidden>Cancel loading</button></div>
+</form>
+<p id="papers-count-help" class="help">Each question appears once. Regenerate replaces the current selection using this pool and count.</p>
+<p id="papers-time-help" class="help" hidden>An estimate of working time: 6 minutes for every 5 marks, rounded down, within ±2 minutes of your target. Only whole questions with a known mark total are used.</p>
+<p id="papers-time-eligible" class="help" aria-live="polite" hidden></p>
+<p id="papers-time-report" class="help" aria-live="polite" hidden></p>
+<button id="papers-time-accept" type="button" hidden></button>
 </section>
 <section class="panel" aria-labelledby="selection-title"><div class="section-heading"><h2 id="selection-title">Your paper <span id="papers-selected-count" class="count-badge">0</span></h2><div class="button-row"><button id="papers-clear" type="button" disabled>Clear paper</button><button id="papers-print" class="primary" type="button" disabled>Preview &amp; print</button></div></div>
 <div class="print-options">
@@ -58,7 +74,7 @@
 <!--luisa-teacher-exam-->
 <details id="papers-exam" class="exam-panel">
 <summary>Exam paper <small>Teachers only</small></summary>
-<p class="help">While Exam paper is open, the question browser and generator offer only questions with a mark scheme.</p>
+<p class="help">Exam paper has its own draft, kept separately from your practice paper. While it is open, the question browser and generators offer only questions with a mark scheme.</p>
 <div class="exam-fields">
 <label class="field" for="papers-exam-year">Year group<input id="papers-exam-year" type="text" autocomplete="off" placeholder="e.g. L6"></label>
 <label class="field" for="papers-exam-title">Title<input id="papers-exam-title" type="text" autocomplete="off"></label>
@@ -94,6 +110,6 @@
 </section>
 </div></div>
 </main>
-<script src="vendor/katex.min.js"></script><script src="data.js"></script><script src="papers-print.js"></script><script src="papers.js"></script>
+<script src="vendor/katex.min.js"></script><script src="data.js"></script><script src="papers-print.js"></script><script src="papers-timing.js"></script><script src="papers.js"></script>
 </body>
 </html>

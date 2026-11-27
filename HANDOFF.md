@@ -1,15 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.90 -->
-**Release 0.90 · GitHub #170.**
+<!-- LUISA-REPORT-HANDOFF v0.91 -->
+**Release 0.91 · GitHub #172.**
 
-Student papers now group each question’s worked solution and marking material under Solution/Mark Scheme at the back. Current official past papers show the original mark scheme. When a worked solution is supplied, it prints first under the same question number.
+Students can generate a paper by time: presets of 30, 45, 60, 90 and 120 minutes or a custom target from 2 to 600 minutes, at 6 minutes per 5 marks within ±2 minutes. Any whole question with a known mark total is eligible, and a mark scheme is optional. Teacher exams still require a mark scheme.
 
-Selecting the named Old Spec group returns only its 244 graded exercises. Each displays its assessed difficulty and a question-specific reason. The reviewed collection has 33 easy, 129 medium and 82 difficult exercises.
+Luisa now reopens each user’s last main page and that page’s latest selection: By skill, By textbook, Resources, Papers and the teacher exam draft. On ADA these follow the account to any browser. Shared links, tabs, Home and Back are honoured, and retired items fall back safely.
 
-The checkbox reads “Include solutions/mark scheme at the back”. See issue #170 for production verification.
+Pupils in L6X, U6X, L6Y and U6Y default to Further Maths A level and other pupils to Maths A level until they choose a course. A Reset button beside Question sources restores the standard sources and filters while keeping the paper.
 
-The teacher exam browser, timed generator and print previews include only questions with marking material. In a mixed saved selection, worked-answer-only practice questions are excluded from the exam and its mark total.
+See issue #172 for production verification and the decisions applied.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives
