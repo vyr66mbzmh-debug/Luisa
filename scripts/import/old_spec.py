@@ -27,6 +27,21 @@ ADDITIONAL_MATCHES = {
 }
 
 
+# Reviewed against the retained subparts, including any trial functions or
+# substitutions supplied to the student. Other assessments come from the pack manifest.
+REVIEWED_DIFFICULTY = {
+    'REV01-05': ('easy', 'The linear factor is supplied. Comparing coefficients and solving the remaining quadratic gives all three roots directly.'),
+    'REV04-10': ('medium', 'Compare entries of the matrix identity, then use both possible signs of the determinant for the given area scale factor.'),
+    'REV10-08': ('medium', 'Complete the square in the first integral. The exponential identity and the suggested substitution guide the second integral.'),
+    'REV14-08': ('medium', 'The resonant trial function is supplied. Find its coefficient, combine it with the complementary solution and apply both initial conditions.'),
+    'REV14-27': ('medium', 'The particular integral is supplied up to one coefficient. Determine it by differentiation, then apply the initial conditions to the full solution.'),
+    'REV18-09': ('medium', 'Use the argument condition to fix the parameter, then equate real and imaginary parts in a separate conjugate equation.'),
+    'REV19-04': ('easy', 'In the retained part the first column makes the determinant immediate. The given exclusions ensure that the three planes meet at one point.'),
+    'REV14-29': ('medium', 'Factor the right-hand side to separate the variables, recognise the logarithmic integral and use the initial value to fix the constant.'),
+    'REV05-05': ('medium', 'The induction step requires rewriting the next difference of powers as a multiple of the previous difference plus a multiple of six.'),
+}
+
+
 def write_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
@@ -186,8 +201,9 @@ def convert(src):
             keys = ['further-maths-a-level/'+k for k in q['chapterKeys']]
             marks = sum(part['total'] for part in q['markingCriteriaParts'])
             assert marks == q['suggestedTotalMarks'] and marks > 0
+            difficulty, reason = REVIEWED_DIFFICULTY.get(q['id'], (q['difficulty'], q['difficultyReason']))
             descriptor = dict(id=uid, paperId='old-spec-revision', sourceLabel=q['sourceLabel'],
-                              questionNumber=number, marks=marks, difficulty=q['difficulty'], chapterKeys=keys,
+                              questionNumber=number, marks=marks, difficulty=difficulty, difficultyReason=reason, chapterKeys=keys,
                               edited=q['edited'], packs=[m['appearance'] for m in q['packMemberships']],
                               markScheme='source' if q['markSchemeSources'] else 'editorial', dataPath=data_path)
             original = ADDITIONAL_MATCHES.get(q['id'], q['existingLuisaId'])

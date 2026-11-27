@@ -1,3 +1,9 @@
+## Luisa v0.90
+
+- Student papers now group each question’s worked solution and marking material under Solution/Mark Scheme at the back. Current official past papers show the original mark scheme. When a worked solution is supplied, it prints first under the same question number.
+- Selecting the named Old Spec group returns only its 244 graded exercises. Each displays its assessed difficulty and a question-specific reason. The reviewed collection has 33 easy, 129 medium and 82 difficult exercises.
+- The teacher exam browser, timed generator and print previews include only questions with marking material. In a mixed saved selection, worked-answer-only practice questions are excluded from the exam and its mark total.
+
 ## Luisa v0.89
 
 - Select Old Spec beside Past Papers to include 244 revision questions across 17 Core Pure chapters. The paper dropdown groups the 22 packs under old spec revision questions.

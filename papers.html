@@ -35,7 +35,7 @@
 <div class="past-paper-source"><label class="source-choice"><input id="papers-source-past-papers" type="checkbox" checked disabled> Past Papers</label><label class="source-choice"><input id="papers-source-old-spec" type="checkbox" disabled> Old Spec</label><select id="papers-past-paper" aria-label="Past paper" disabled><option value="">All past papers</option></select></div>
 </fieldset>
 <label class="field" for="papers-difficulty">Difficulty<select id="papers-difficulty" disabled><option value="">All difficulties</option><option value="easy">Easy</option><option value="medium">Medium</option><option value="difficult">Difficult</option><option value="very-difficult">Very difficult</option><option value="unclassified">Unclassified</option></select></label>
-<p class="help">Difficulty is a guide. Bronze, Silver and Gold correspond to Easy, Medium and Difficult; past papers use their original question order.</p>
+<p class="help">Difficulty is a guide. Bronze, Silver and Gold correspond to Easy, Medium and Difficult; modern past papers use their original question order. For Old Spec, Easy means a direct application of a familiar method, Medium requires linked steps or a choice of method, and Difficult requires a substantial proof, a non-obvious construction or several techniques used together.</p>
 <label class="field" for="papers-course">Course<select id="papers-course" disabled><option value="">All courses</option></select></label>
 <label class="field" for="papers-book">Book<select id="papers-book" disabled><option value="">All books</option></select></label>
 <fieldset class="topic-fieldset"><legend>Topics</legend><p class="help">All listed topics are included until you tick specific topics.</p><button id="papers-all-topics" type="button" class="quiet" disabled>Use all listed topics</button><div id="papers-topics" class="topic-list"></div></fieldset>
@@ -50,7 +50,7 @@
 <div class="print-options">
 <label class="field" for="papers-order">Question order<select id="papers-order"><option value="topic">Group by topic</option><option value="selection">As selected</option></select></label>
 <div class="print-choices">
-<label class="source-choice"><input id="papers-answers" type="checkbox" checked> Include worked solutions at the back</label>
+<label class="source-choice"><input id="papers-answers" type="checkbox" checked> Include solutions/mark scheme at the back</label>
 <label class="source-choice"><input id="papers-condensed" type="checkbox"> Condensed</label>
 </div>
 </div>
@@ -58,6 +58,7 @@
 <!--luisa-teacher-exam-->
 <details id="papers-exam" class="exam-panel">
 <summary>Exam paper <small>Teachers only</small></summary>
+<p class="help">While Exam paper is open, the question browser and generator offer only questions with a mark scheme.</p>
 <div class="exam-fields">
 <label class="field" for="papers-exam-year">Year group<input id="papers-exam-year" type="text" autocomplete="off" placeholder="e.g. L6"></label>
 <label class="field" for="papers-exam-title">Title<input id="papers-exam-title" type="text" autocomplete="off"></label>

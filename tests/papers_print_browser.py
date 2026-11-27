@@ -83,6 +83,69 @@ class PapersPrintTests(unittest.TestCase):
         self.page.evaluate('window.resultPromise')
         return preview, self.page.evaluate('window.result')
 
+    def test_old_spec_student_pdf_has_working_and_question_grouped_mark_schemes(self):
+        import pymupdf
+        catalogue = json.loads((ROOT / 'old-spec-catalogue.json').read_text())['questions']
+        exercises = []
+        for uid in ['old-spec/rev01-01', 'old-spec/rev03-01']:
+            meta = next(q for q in catalogue if q['id'] == uid)
+            payload = next(q for q in json.loads((ROOT / meta['dataPath']).read_text()) if q['id'] == uid)
+            exercises.append(dict(meta, **{k:v for k,v in payload.items() if k != 'id'}, sourceKind='old-spec'))
+        mixed = [exercises[0], row('1.01', 1), exercises[1]]
+        for layout in ('one', 'condensed'):
+            for include in (True, False):
+                with self.subTest(layout=layout, include=include):
+                    preview, result = self.preview(mixed, layout=layout, includeAnswers=include)
+                    try:
+                        self.assertTrue(result['ready'], result)
+                        schemes = preview.locator('.solutions-page')
+                        if include:
+                            self.assertIn('Q1', schemes.locator('h2').all_text_contents())
+                            self.assertIn('Q3', schemes.locator('h2').all_text_contents())
+                            self.assertEqual(set(schemes.locator('article:has(.print-mark-scheme)').evaluate_all('xs=>xs.map(x=>x.dataset.questionId)')),
+                                             {q['id'] for q in exercises})
+                            self.assertGreater(schemes.locator('img').count(), 0)
+                            self.assertTrue(schemes.locator('img').evaluate_all('xs=>xs.every(x=>x.complete && x.naturalWidth)'))
+                            self.assertIn('Suggested marking guide', ' '.join(schemes.all_text_contents()))
+                        else:
+                            self.assertEqual(schemes.count(), 0)
+                        with pymupdf.open(stream=preview.pdf(prefer_css_page_size=True), filetype='pdf') as pdf:
+                            pages = [p.get_text() for p in pdf]
+                            self.assertIn('Difficulty: Easy', pages[0])
+                            self.assertEqual(any('Solution/Mark Scheme' in pg for pg in pages), include)
+                            if include:
+                                start = next(i for i,t in enumerate(pages) if 'Solution/Mark Scheme' in t)
+                                self.assertTrue(any('Suggested marking guide' in t for t in pages[start:]))
+                                self.assertTrue(any(pdf[i].get_images() for i in range(start,len(pdf))))
+                                order = schemes.locator('.answer-kind').evaluate_all('xs=>xs.map(x=>[x.closest("article").dataset.questionId,x.textContent])')
+                                ordered = [v for i,v in enumerate(order) if not i or v != order[i-1]]
+                                self.assertEqual(ordered, [[q['id'],label] for q in exercises for label in ('Worked solution','Mark scheme')])
+                    finally:
+                        preview.close()
+
+    def test_official_scheme_alone_and_later_supplied_working_stay_with_the_question(self):
+        rows = self.exam_rows('edexcel-9fm0-01-2019-june', [1, 2])
+        rows[1]['workedSolutionSteps'] = ['<p>Separately supplied worked solution for the second question.</p>']
+        for layout in ('one', 'condensed'):
+            view, result = self.preview(rows, layout=layout, includeAnswers=True)
+            try:
+                self.assertTrue(result['ready'], result)
+                headings = view.locator('.answer-kind').evaluate_all('xs=>xs.map(n=>[n.closest("article").dataset.questionId,n.textContent])')
+                order = [v for i,v in enumerate(headings) if not i or v != headings[i-1]]
+                self.assertEqual(order, [[rows[0]['id'],'Mark scheme'],[rows[1]['id'],'Worked solution'],[rows[1]['id'],'Mark scheme']])
+                self.assertEqual(view.get_by_text('Separately supplied worked solution for the second question.', exact=True).count(), 1)
+                for q in rows:
+                    scheme = view.locator(f'.print-solution[data-question-id="{q["id"]}"] .print-mark-scheme')
+                    self.assertEqual(scheme.locator('.solution-step').count(),len(q['steps']))
+            finally:
+                view.close()
+        exam, result = self.exam_paper(rows, content='scheme')
+        try:
+            self.assertTrue(result['ready'], result)
+            self.assertEqual(exam.get_by_text('Separately supplied worked solution for the second question.', exact=True).count(), 0)
+        finally:
+            exam.close()
+
     def test_mixed_paper_pdf_has_complete_matching_solutions_at_back(self):
         rows = [row('1.01', 1), row('2.65', 1), row('1.01', 2), row('smq-2.30', 9)]
         preview, result = self.preview(rows)
@@ -113,8 +176,8 @@ class PapersPrintTests(unittest.TestCase):
                 self.assertAlmostEqual(sheet.rect.width, 595.28, delta=1)
                 self.assertAlmostEqual(sheet.rect.height, 841.89, delta=1)
                 self.assertIn(f'Page {index + 1} of {len(pdf)}', sheet.get_text())
-            self.assertNotIn('Worked solutions', pdf[0].get_text())
-            self.assertIn('Worked solutions', pdf[4].get_text())
+            self.assertNotIn('Solution/Mark Scheme', pdf[0].get_text())
+            self.assertIn('Solution/Mark Scheme', pdf[4].get_text())
             pdf[1].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save('/tmp/luisa57-verified-diagram-page.png')
             pdf[0].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save('/tmp/luisa57-verified-question-page.png')
             pdf[4].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save('/tmp/luisa57-verified-solution-page.png')
@@ -159,7 +222,7 @@ class PapersPrintTests(unittest.TestCase):
                 const question=document.createElement('div');question.innerHTML=row.question;
                 const solution=document.createElement('div');solution.innerHTML=row.steps.join('');
                 const actualQuestion=identity(document.querySelectorAll('.print-question[data-question-id="'+row.id+'"]>.math-content'));
-                const actualSolution=identity(document.querySelectorAll('.print-solution[data-question-id="'+row.id+'"]>.solution-step'));
+                const actualSolution=identity(document.querySelectorAll('.print-solution[data-question-id="'+row.id+'"]>.worked-solution>.solution-step'));
                 return {id:row.id,question:JSON.stringify(identity([question]))===JSON.stringify(actualQuestion),solution:JSON.stringify(identity([solution]))===JSON.stringify(actualSolution),imagesLoaded:[...document.querySelectorAll('[data-question-id="'+row.id+'"] img')].every(n=>n.complete&&n.naturalWidth>0)};
               });
             }''', batch)
@@ -264,7 +327,7 @@ class PapersPrintTests(unittest.TestCase):
             self.assertNotIn('Original paper instructions', text)
             self.assertNotIn('You should show sufficient working', text)
             self.assertNotIn('Page total:', text)
-            self.assertIn('Worked solutions', text)
+            self.assertIn('Solution/Mark Scheme', text)
             pdf[0].get_pixmap(matrix=fitz.Matrix(1.2,1.2)).save('/tmp/luisa61-exam-question.png')
             pdf[len(rows)].get_pixmap(matrix=fitz.Matrix(1.2,1.2)).save('/tmp/luisa61-exam-solution.png')
 
@@ -419,7 +482,7 @@ class PapersPrintTests(unittest.TestCase):
                             preview.pdf(path=path, prefer_css_page_size=True)
                             with fitz.open(path) as pdf:
                                 self.assertEqual(len(pdf), result['pageCount'])
-                                self.assertEqual('Worked solutions' in ''.join(sheet.get_text() for sheet in pdf), answers)
+                                self.assertEqual('Solution/Mark Scheme' in ''.join(sheet.get_text() for sheet in pdf), answers)
                             preview.close()
 
     def test_pure_mathematics_2_complete_paper_and_mixed_overlap(self):
@@ -444,7 +507,7 @@ class PapersPrintTests(unittest.TestCase):
                         content = ''.join(sheet.get_text() for sheet in pdf)
                         self.assertNotIn('Original paper instructions', content)
                         self.assertNotIn('You should show sufficient working', content)
-                        self.assertEqual('Worked solutions' in content, answers)
+                        self.assertEqual('Solution/Mark Scheme' in content, answers)
                         for index, sheet in enumerate(pdf):
                             self.assertIn(f'Page {index + 1} of {len(pdf)}', sheet.get_text())
                             self.assertIn('21/11/26 6:30pm', sheet.get_text())
@@ -698,6 +761,7 @@ class PapersPrintTests(unittest.TestCase):
         import fitz, re
         # Layout fixture: a long question flagged as having a scheme, to exercise splitting across pages.
         long_row = dict(practice_row('pure-year-1', 1, '1.6/q9'), id='practice/test/long', marks=25, markScheme='source',
+                        markSchemeSteps=['<p>Award one method mark for each indicated step.</p>'],
                         question='<ol class="parts">' + ''.join(f'<li><p>{"Show that the long sequence term " * 6}{n}.</p><div class="equation" data-math="u_{{{n}}}=\\frac{{{n}}}{{{n}+1}}" data-display="true"></div><p>{"Explain each step clearly. " * 8}</p><span class="marks">(1)</span></li>' for n in range(1, 26)) + '</ol>')
         rows = (self.exam_rows('edexcel-9fm0-01-2024-june', [1, 2]) + self.exam_rows('edexcel-9ma0-31-2024-june', [1, 2, 3])
                 + self.exam_rows('edexcel-9ma0-32-2024-june', [5]) + [long_row])
@@ -920,6 +984,7 @@ class PapersPrintTests(unittest.TestCase):
         import fitz
         # Two papers and a non-past-paper source with its own marking scheme (fixture; PMT uses this shape in later releases).
         own = dict(practice_row('pure-year-2', 2, '2.1/q1'), id='practice/test/own-scheme', marks=3, markScheme='source',
+                        markSchemeSteps=['<p>Award one method mark for each indicated step.</p>'],
                    sourceKind='practice-booklet', chapterNumber=2, subchapterLabel='2.1 Fixture exercise', questionLabel='1')
         rows = self.exam_rows('edexcel-9fm0-01-2019-june', [2]) + [own] + self.exam_rows('edexcel-9ma0-32-2024-june', [1])
         self.page.add_script_tag(url='/papers-exam.js')
@@ -960,6 +1025,7 @@ class PapersPrintTests(unittest.TestCase):
         # its original question (the v0.74 review case). Question pages name no source; the scheme names each exactly,
         # including a PMT question's confirmed original exam (PAP-077-5); unconfirmed ones (ch9/q4) name none.
         labelled = dict(practice_row('pure-year-2', 2, '2.1/q1'), id='practice/test/labelled', marks=3, markScheme='source',
+                        markSchemeSteps=['<p>Award one method mark for each indicated step.</p>'],
                         sourceKind='practice-booklet', chapterNumber=2, subchapterLabel='2.1 Fixture exercise', questionLabel='1',
                         contextHtml='<aside class="practice-context"><p class="practice-context-label">Reference from 9.5 Q1</p><p>Use the diagram from the previous question.</p></aside>')
         rows = (self.exam_rows('edexcel-9fm0-01-2019-june', [2]) + self.exam_rows('edexcel-8fm0-01-2021-november', [5]) + self.pmt_rows(['pmt/pure-core-1/ch6/q2'])
@@ -1037,7 +1103,7 @@ class PapersPrintTests(unittest.TestCase):
         # PAP-074-2: a question with worked solutions only never enters an exam paper, in any print choice.
         for choice in ('questions', 'scheme', 'both'):
             error = self.page.evaluate('input => LUISA_PAPERS_EXAM.create(input.rows, {content: input.choice}).then(() => null, e => e.message)', dict(rows=mixed + [practice], choice=choice))
-            self.assertEqual(error, 'Every question in an exam paper needs an official mark scheme. Remove the 1 question marked "No mark scheme", then try again.')
+            self.assertEqual(error, 'Every question in an exam paper needs a mark scheme. Remove the 1 question marked "No mark scheme", then try again.')
         rows = mixed
         total = sum(r['marks'] for r in rows)
 
