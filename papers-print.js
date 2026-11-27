@@ -112,7 +112,8 @@
     const showChapter = row.sourceKind !== 'madas' && !(row.sourceKind === 'past-exam' && row.paperCode?.startsWith('8'));
     const place = !showChapter ? '' : [course, shortBooks[book] || book, chapterNumber && 'Ch' + chapterNumber, topic].filter(Boolean).join(' ');
     const difficulty = row.difficulty && (row.difficulty[0].toUpperCase() + row.difficulty.slice(1).replace('-', ' '));
-    const detail = element(doc, 'span', 'compact-provenance', '(' + [place, compactSource(row), difficulty].filter(Boolean).join(' - ') + ')');
+    const grade = row.sourceKind === 'old-spec' && difficulty ? 'Difficulty: ' + difficulty : difficulty;
+    const detail = element(doc, 'span', 'compact-provenance', '(' + [place, compactSource(row), grade].filter(Boolean).join(' - ') + ')');
     detail.title = [source(row), showChapter ? context(row) : ''].filter(Boolean).join(' · ');
     head.append(element(doc, 'h2', '', 'Q' + number + (continuation ? ' · continued' : '')), detail);
     if (validMarks(row) && !continuation) head.append(element(doc, 'strong', 'question-marks', '[' + row.marks + ' Marks]'));
@@ -163,9 +164,10 @@
   }
   function fitQuestionHeading(question) {
     const detail = question.querySelector('.compact-provenance');
+    const heading = detail.parentElement;
     for (const size of [9, 8.5, 8, 7.5]) {
       detail.style.fontSize = size + 'pt';
-      if (detail.scrollWidth <= detail.clientWidth + 1) return;
+      if (detail.scrollWidth <= detail.clientWidth && heading.scrollWidth <= heading.clientWidth) return;
     }
     detail.style.whiteSpace = 'normal';
   }
@@ -225,6 +227,11 @@
     const stamp = creationStamp(created);
     // A real same-origin document is controlled by the offline service worker;
     // an about:blank popup cannot retrieve its cached formatting and diagrams.
+    if (includeAnswers && rows.some(row => row.sourceKind === 'old-spec' &&
+        (!Array.isArray(row.markSchemeSteps) || !row.markSchemeSteps.length ||
+         row.markSchemeSteps.some(step => typeof step !== 'string' || !step.trim())))) {
+      throw Error('Every Old Spec question needs its complete mark scheme before printing with answers.');
+    }
     const previewURL = new URL('paper-preview.html', document.baseURI);
     const win = window.open(previewURL.href, '_blank');
     if (!win) throw Error('Allow pop-ups for Luisa to open the paper preview.');
@@ -251,33 +258,43 @@
     const print = element(doc, 'button', '', 'Print / Save PDF'); print.type = 'button'; print.disabled = true;
     const close = element(doc, 'button', 'secondary', 'Close preview'); close.type = 'button'; close.onclick = () => win.close();
     toolbar.append(title, status, print, close); doc.body.append(toolbar);
-    const pages = element(doc, 'main', 'print-pages marks-pending'); pages.classList.add(`layout-${layout}`); pages.setAttribute('aria-label', includeAnswers ? 'Question paper and worked solutions' : 'Question paper'); doc.body.append(pages);
+    const pages = element(doc, 'main', 'print-pages marks-pending'); pages.classList.add(`layout-${layout}`); pages.setAttribute('aria-label', includeAnswers ? 'Question paper and Solution/Mark Scheme' : 'Question paper'); doc.body.append(pages);
     let ready = false;
     win.addEventListener('beforeprint', () => doc.body.classList.toggle('not-ready', !ready));
     try {
       await whileOpen(win, Promise.all([asset(doc, 'link', 'papers-print.css'), asset(doc, 'link', 'vendor/katex.min.css'), asset(doc, 'script', 'vendor/katex.min.js')]));
+      const answers = steps => content(doc, steps.map(html => '<div class="solution-step">' + html + '</div>').join(''));
       const rendered = rows.map((row, index) => {
         const question = element(doc, 'article', 'print-question'); question.dataset.questionId = row.id;
         const contextHtml = row.sourceKind === 'past-exam' ? '' : row.contextHtml || '';
         question.append(questionHeading(doc, row, index + 1, false), normaliseMarks(content(doc, contextHtml + row.question)));
         const working = element(doc, 'div', 'working-space'); working.setAttribute('aria-label', 'Space for working'); working.append(element(doc, 'span', '', 'Working')); if (layout !== 'condensed') question.append(working);
-        const solution = includeAnswers ? content(doc, row.steps.map(html => `<div class="solution-step">${html}</div>`).join('')) : null;
-        if (solution && row.schemeNote) solution.prepend(element(doc, 'p', 'exam-scheme-note', row.schemeNote));
+        const official = row.sourceKind === 'past-exam';
+        const workedSteps = official ? row.workedSolutionSteps : row.steps;
+        const markingSteps = official ? row.steps : row.markSchemeSteps;
+        const solution = includeAnswers && workedSteps?.length ? answers(workedSteps) : null;
+        const markScheme = includeAnswers && markingSteps?.length ? answers(markingSteps) : null;
+        const noteTarget = markScheme || solution;
+        if (noteTarget && row.schemeNote) noteTarget.prepend(element(doc, 'p', 'exam-scheme-note', row.schemeNote));
         if (solution && row.sourceKind === 'madas') solution.querySelector('.madas-total').textContent = `Total mark for question ${index + 1} is ${row.marks} marks.`;
-        if (includeAnswers && row.hints?.length) {
+        if (solution && row.hints?.length) {
           const hints = element(doc, 'section', 'solution-hints');
           hints.append(element(doc, 'h3', '', 'Hints from the booklet'), content(doc, row.hints.map(html => `<div class="solution-step">${html}</div>`).join('')));
           solution.append(hints);
         }
-        return {row, question, solution};
+        return {row, question, solution, markScheme};
       });
       const staging = element(doc, 'div', 'print-staging marks-pending'); doc.body.append(staging);
-      rendered.forEach(item => { staging.append(item.question); if (item.solution) staging.append(item.solution); });
+      for (const item of rendered) {
+        staging.append(item.question);
+        if (item.solution) staging.append(item.solution);
+        if (item.markScheme) staging.append(item.markScheme);
+      }
       await whileOpen(win, prepare(win, staging, status), 120000);
       function page(kind) {
         const sheet = element(doc, 'section', `print-page ${kind}-page`);
         const banner = element(doc, 'header', 'page-banner');
-        banner.textContent = kind === 'questions' ? 'Question paper' : 'Worked solutions';
+        banner.textContent = kind === 'questions' ? 'Question paper' : 'Solution/Mark Scheme';
         const body = element(doc, 'div', 'page-content');
         const footer = element(doc, 'footer', 'page-footer');
         const time = element(doc, 'time', 'creation-time', stamp);
@@ -348,44 +365,68 @@
           hasContent = true;
         }
       }
-      // Solutions always begin on a fresh page, after every question.
-      let body;
+      let answerBody;
       for (let index = 0; includeAnswers && index < rendered.length; index++) {
-        const item = rendered[index];
+        const {row, solution, markScheme} = rendered[index];
         if (index % 10 === 0) {
           if (win.closed) throw Error('Paper preview was closed.');
-          status.textContent = `Laying out worked solutions: ${index + 1} of ${rows.length}…`;
+          status.textContent = 'Laying out answers: ' + (index + 1) + ' of ' + rows.length + '…';
           await new Promise(resolve => window.setTimeout(resolve, 0));
         }
-        if (!body) body = page('solutions');
-        let section;
-        function newSection(continuation) {
-          section = element(doc, 'article', 'print-solution'); section.dataset.questionId = item.row.id;
-          section.append(questionHeading(doc, item.row, index + 1, continuation));
-          if (!continuation && item.row.sourceKind === 'madas') section.append(element(doc, 'p', 'scheme-credit', 'Adapted MADAS mark scheme · editorial mark allocations'));
-          body.append(section);
+        if (!answerBody) answerBody = page('solutions');
+        let section, started = false, pageHasSteps = false;
+        function questionSection() {
+          section = element(doc, 'article', 'print-solution');
+          section.dataset.questionId = row.id;
+          section.append(questionHeading(doc, row, index + 1, started));
+          if (!started && row.sourceKind === 'madas') section.append(element(doc, 'p', 'scheme-credit', 'Adapted MADAS mark scheme · editorial mark allocations'));
+          answerBody.append(section);
           fitQuestionHeading(section);
         }
-        newSection(false);
-        const queue = [...item.solution.children].map(node => node.cloneNode(true));
-        let hasContent = false;
-        while (queue.length) {
-          const block = queue.shift(); section.append(block);
-          if (wideContent(block)) {
-            block.classList.add('compact');
-            if (wideContent(block)) warnings.push(`${source(item.row)} has a worked expression wider than the printable page.`);
+        questionSection();
+        // Finish both blocks of this question before advancing to the next question.
+        for (const [label, group, className] of [
+          ['Worked solution', solution, 'worked-solution'],
+          ['Mark scheme', markScheme, 'print-mark-scheme']
+        ]) {
+          if (!group) continue;
+          const queue = [...group.children].map(node => node.cloneNode(true));
+          let part, partHasSteps = false;
+          while (queue.length) {
+            if (!part) {
+              part = element(doc, 'div', className);
+              if (markScheme) part.append(element(doc, 'h3', 'answer-kind', label));
+              section.append(part);
+            }
+            const block = queue.shift();
+            part.append(block);
+            if (wideContent(block)) {
+              block.classList.add('compact');
+              if (wideContent(block)) warnings.push(source(row) + ' has an expression wider than the printable page.');
+            }
+            if (overflows(answerBody)) {
+              block.remove();
+              if (pageHasSteps || answerBody.children.length > 1) {
+                if (!partHasSteps) part.remove();
+                if (!pageHasSteps) section.remove();
+                answerBody = page('solutions');
+                pageHasSteps = false;
+                part = null;
+                partHasSteps = false;
+                questionSection();
+                queue.unshift(block);
+                continue;
+              }
+              const pieces = splitBlock(block);
+              if (pieces?.length > 1) { queue.unshift(...pieces); continue; }
+              block.classList.add('compact');
+              part.append(block);
+              if (overflows(answerBody)) warnings.push(source(row) + ' has a block too tall for one page; no content has been removed.');
+            }
+            partHasSteps = true;
+            started = true;
+            pageHasSteps = true;
           }
-          if (!overflows(body)) { hasContent = true; continue; }
-          block.remove();
-          if (hasContent || body.children.length > 1) {
-            if (!hasContent) section.remove();
-            body = page('solutions'); newSection(hasContent); hasContent = false; queue.unshift(block); continue;
-          }
-          const pieces = splitBlock(block);
-          if (pieces && pieces.length > 1) { queue.unshift(...pieces); continue; }
-          block.classList.add('compact'); section.append(block);
-          if (overflows(body)) warnings.push(`${source(item.row)} has a worked block too tall for one page; no content has been removed.`);
-          hasContent = true;
         }
       }
       staging.remove();
@@ -395,7 +436,7 @@
       const total = pages.children.length;
       [...pages.children].forEach((sheet, index) => {
         sheet.querySelector('.page-number').textContent = `Page ${index + 1} of ${total}`;
-        sheet.setAttribute('aria-label', `${sheet.classList.contains('questions-page') ? 'Questions' : 'Worked solutions'}, page ${index + 1} of ${total}`);
+        sheet.setAttribute('aria-label', `${sheet.querySelector('.page-banner').textContent}, page ${index + 1} of ${total}`);
       });
       if (warnings.length) {
         doc.body.classList.add('not-ready');
@@ -405,7 +446,7 @@
         return {window: win, pageCount: total, warnings: [...new Set(warnings)], extendedQuestions, ready: false};
       }
       ready = true;
-      status.textContent = `${rows.length} questions · ${total} A4 pages · ${includeAnswers ? 'worked solutions at the back' : 'questions only'}.${extendedQuestions.length ? ` ${extendedQuestions.length} longer questions use extra space or continuation pages.` : ''} Choose A4, 100% scale and turn off browser headers and footers in the print dialog. Select Save as PDF to download.`;
+      status.textContent = `${rows.length} questions · ${total} A4 pages · ${includeAnswers ? 'solutions/mark scheme at the back' : 'questions only'}.${extendedQuestions.length ? ` ${extendedQuestions.length} longer questions use extra space or continuation pages.` : ''} Choose A4, 100% scale and turn off browser headers and footers in the print dialog. Select Save as PDF to download.`;
       print.disabled = false; print.onclick = () => win.print();
       return {window: win, pageCount: total, warnings: [], extendedQuestions, ready: true};
     } catch (error) {

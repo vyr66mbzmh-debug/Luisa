@@ -2,6 +2,15 @@
 
 Release handoff blocks superseded by a newer release, newest first, followed by the historical notes that HANDOFF.md carried before v0.73. They are kept verbatim as provenance; HANDOFF.md is the current handoff. `scripts/release/docs.py` moves each superseded release block here.
 
+<!-- LUISA-REPORT-HANDOFF v0.89 -->
+**Release 0.89 · GitHub #168.**
+
+Select Old Spec beside Past Papers to include 244 revision questions across 17 Core Pure chapters. The paper dropdown groups the 22 packs under old spec revision questions.
+
+Each exercise has a worked solution and a separate mark scheme. The collection retains 15 edited labels and includes 33 easy, 124 medium and 87 difficult questions. The teacher exam builder uses the marking tables or the suggested marking guide for the 17 exercises with authored allocations.
+
+The 264 pack positions resolve to 244 exercises. The 30 existing catalogue matches keep their original sources and appear once in a combined selection. See issue #168 for production verification.
+
 <!-- LUISA-REPORT-HANDOFF v0.88 -->
 **Release 0.88 · GitHub #166.**
 

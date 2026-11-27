@@ -22,6 +22,9 @@ assert sorted(mod.Q) == list(range(1, P['nq'] + 1)), 'prompts must cover every q
 used = {r['asset'] for rs in lib.ASSETS['figures'].values() for r in rs}
 for a in used:
     assert any(a in q for q in mod.Q.values()), ('unused figure', a)
+worked = getattr(mod, 'WORKED_SOLUTIONS', {})
+if not isinstance(worked, dict) or not worked.keys() <= mod.Q.keys():
+    raise ValueError('WORKED_SOLUTIONS must map existing question numbers to their ordered worked steps.')
 questions = []
 for n in range(1, P['nq'] + 1):
     rows = lib.ASSETS['markScheme'][str(n)]
@@ -31,6 +34,11 @@ for n in range(1, P['nq'] + 1):
               'style="display:block;width:100%;height:auto;max-width:100%"></figure>') for r in rows]
     questions.append({'id': f'exam/{PID}/q{n}', 'question': mod.Q[n], 'steps': steps,
                       'contextHtml': mod.CONTEXT[n] if isinstance(mod.CONTEXT, dict) else mod.CONTEXT})
+    if n in worked:
+        blocks = worked[n]
+        if not isinstance(blocks, list) or not blocks or any(not isinstance(s, str) or not s.strip() for s in blocks):
+            raise ValueError(f'Question {n} needs a non-empty list of worked solution blocks.')
+        questions[-1]['workedSolutionSteps'] = blocks
     if note := P.get('schemeNotes', {}).get(str(n)):
         questions[-1]['schemeNote'] = note
 (SET.repo / 'content/exams' / f'{PID}.json').write_text(json.dumps({'schemaVersion': 1, 'questions': questions}, ensure_ascii=False, indent=2) + '\n')

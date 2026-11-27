@@ -38,6 +38,7 @@ body:has(.print-pages) {margin:0; background:#e9edf0; color:#102b43}
 .working-space {box-sizing:border-box; flex:1; min-height:25mm; margin-top:3mm; border-top:1px solid #e4e8ec; color:#647686; font:7.5pt system-ui,sans-serif}
 .working-space span {display:inline-block; padding-top:1.5mm}
 .print-solution {margin:0 0 5mm; font-size:11pt; line-height:1.35; display:flow-root}
+.print-solution .answer-kind {font:600 10pt/1.25 system-ui,sans-serif;margin:2mm 0 1mm;color:#102b43}
 .print-solution .solution-step {display:flow-root; margin:0 0 1.5mm}
 .print-page .compact {font-size:10pt; line-height:1.25}
 .print-question.compact .working-space {min-height:12mm}

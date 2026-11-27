@@ -94,19 +94,18 @@ def live_get(p, url, **options):
                 raise
 
 
-def old_spec(p, role):
+def old_spec(p, role, out):
     opt = p.locator('#papers-source-old-spec')
     expect(opt).to_be_enabled()
     expect(opt).not_to_be_checked()
     expect(p.locator('#papers-past-paper option[value="old-spec-revision"]')).to_have_count(0)
-    for bank in ('practice', 'exam-style', 'past-papers'):
-        p.locator('#papers-source-' + bank).uncheck()
+    # Keep the normal sources ticked. Naming this group must isolate its graded exercises.
     opt.check()
     select = p.locator('#papers-past-paper')
     expect(select.locator('option[value="old-spec-revision"]')).to_have_text('old spec revision questions')
     select.select_option('old-spec-revision')
     expect(p.locator('#filter-title')).to_have_text('244 questions in the selection')
-    for difficulty, count in [('easy', 33), ('medium', 124), ('difficult', 87)]:
+    for difficulty, count in [('easy', 33), ('medium', 129), ('difficult', 82)]:
         p.locator('#papers-difficulty').select_option(difficulty)
         expect(p.locator('#filter-title')).to_have_text(f'{count} questions in the selection')
     p.locator('#papers-difficulty').select_option('easy')
@@ -123,6 +122,26 @@ def old_spec(p, role):
     image.evaluate('img => img.decode()')
     card.locator('[data-add]').click()
     expect(p.locator('#papers-selected-count')).to_have_text('1')
+    expect(card).to_contain_text('Difficulty: Easy')
+    with p.expect_popup() as event:
+        p.locator('#papers-print').click()
+    preview = event.value
+    try:
+        expect(preview.get_by_role('button', name='Print / Save PDF')).to_be_enabled(timeout=120000)
+        expect(preview.locator('.solutions-page').first).to_contain_text('Think of')
+        scheme = preview.locator('.solutions-page [data-question-id="old-spec/rev01-01"]:has(.print-mark-scheme)')
+        expect(scheme.first).to_contain_text('Difficulty: Easy')
+        scheme.locator('.print-mark-scheme img').first.evaluate('img => img.decode()')
+        import pymupdf
+        pdf_path = out / f'old-spec-{role}-worked-paper.pdf'
+        preview.pdf(path=str(pdf_path), prefer_css_page_size=True, print_background=True)
+        with pymupdf.open(pdf_path) as pdf:
+            texts = [page.get_text() for page in pdf]
+            assert 'Difficulty: Easy' in texts[0]
+            assert any('Worked solution' in text for text in texts)
+            assert 'Solution/Mark Scheme' in texts[-1] and 'Mark scheme' in texts[-1] and pdf[-1].get_images()
+    finally:
+        preview.close()
     if role != 'student':
         expect(p.locator('#papers-exam-print')).to_be_enabled()
     p.reload(wait_until='domcontentloaded')
@@ -176,7 +195,7 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
         assert not p.locator('a[href$="offline.html"],a[href$="development-progress.html"],a[href*="classpad.net"]').count()
     if role != 'owner':
         expect(p.locator('.luisa-signout')).to_have_count(1)
-    old_spec(p, role)
+    old_spec(p, role, out)
     # PAP-068: the paper dropdown follows Course/Book; active and disabled styles.
     panel = p.locator('.filter-panel')
     shot = lambda name: panel.screenshot(path=str(out / f'shot-{role}-{name}.png'))
@@ -532,7 +551,18 @@ def exam_checks(p, role, out, expected24):
     past = p.evaluate("LUISA_PAPERS_BUILDER.pool().filter(r=>r.sourceKind==='past-exam').slice(0,1).map(r=>r.id)")
     assert len(pmt) == 3 and len(past) == 1, (pmt, past)
     p.evaluate("async ids => LUISA_PAPERS_BUILDER.arrange(await LUISA_PAPERS_BUILDER.load(LUISA_PAPERS_BUILDER.pool().filter(r=>ids.includes(r.id))))", past + pmt)
+    p.locator('#papers-source-practice').check()
+    ordinary = p.evaluate("""async () => {
+      const b = LUISA_PAPERS_BUILDER;
+      const [practice] = await b.load(b.pool().filter(r => r.bank === 'practice').slice(0, 1));
+      b.arrange([...b.snapshot(), practice]);
+      return practice.id;
+    }""")
+    expect(p.locator('#papers-exam-summary')).to_contain_text('1 practice-paper question excluded')
     ex = popup()
+    for section in ('.exam-page .exam-question', '.exam-scheme'):
+        ids = ex.locator(section).evaluate_all('ns => [...new Set(ns.map(n => n.dataset.questionId))]')
+        assert set(ids) == set(past + pmt) and ordinary not in ids, ids
     shown = ' '.join(ex.locator('.exam-front-page, .exam-page').all_inner_texts())
     for leak in ('Source', 'PMT', 'Physics', 'Core Pure', 'Edexcel', 'pmt/', 'exam/'):
         assert leak not in shown, leak
@@ -541,8 +571,13 @@ def exam_checks(p, role, out, expected24):
     assert ex.locator('.exam-scheme img').evaluate_all('ns=>ns.length>0&&ns.every(n=>n.complete&&n.naturalWidth>0)')
     ex.pdf(path=str(out / f'live-{role}-pmt.pdf'), prefer_css_page_size=True)
     ex.close()
+    practice_only = p.evaluate('async id => { const b = LUISA_PAPERS_BUILDER; b.arrange(b.snapshot().filter(r => r.id === id)); return b.snapshot().length; }', ordinary)
+    assert practice_only == 1
+    expect(p.locator('#papers-exam-print')).to_be_disabled()
     p.locator('#papers-source-exam-style').uncheck()
-    ok(f'{role} past paper and PMT exam paper passed')
+    p.locator('#papers-source-practice').uncheck()
+    p.locator('#papers-exam summary').click()
+    ok(f'{role} past paper and PMT exam passed, worked-only practice excluded from questions and scheme')
 
 
 def manifest_checks(p, url, role, rev, version):

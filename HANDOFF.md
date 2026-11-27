@@ -1,13 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.89 -->
-**Release 0.89 · GitHub #168.**
+<!-- LUISA-REPORT-HANDOFF v0.90 -->
+**Release 0.90 · GitHub #170.**
 
-Select Old Spec beside Past Papers to include 244 revision questions across 17 Core Pure chapters. The paper dropdown groups the 22 packs under old spec revision questions.
+Student papers now group each question’s worked solution and marking material under Solution/Mark Scheme at the back. Current official past papers show the original mark scheme. When a worked solution is supplied, it prints first under the same question number.
 
-Each exercise has a worked solution and a separate mark scheme. The collection retains 15 edited labels and includes 33 easy, 124 medium and 87 difficult questions. The teacher exam builder uses the marking tables or the suggested marking guide for the 17 exercises with authored allocations.
+Selecting the named Old Spec group returns only its 244 graded exercises. Each displays its assessed difficulty and a question-specific reason. The reviewed collection has 33 easy, 129 medium and 82 difficult exercises.
 
-The 264 pack positions resolve to 244 exercises. The 30 existing catalogue matches keep their original sources and appear once in a combined selection. See issue #168 for production verification.
+The checkbox reads “Include solutions/mark scheme at the back”. See issue #170 for production verification.
+
+The teacher exam browser, timed generator and print previews include only questions with marking material. In a mixed saved selection, worked-answer-only practice questions are excluded from the exam and its mark total.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

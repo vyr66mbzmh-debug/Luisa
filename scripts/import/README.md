@@ -39,3 +39,14 @@ python3 -I scripts/import/build_payload.py --set v072-sample <paperId>
 python3 -I scripts/import/integrate.py --set v072-sample <paperId>
 ```
 This was run with the public question-paper copies, which are byte-identical to the owner files. The public mark-scheme copies differ (each page has a watermark), so scheme crops can only be rebuilt from the owner's original mark schemes. The asset records from the original import are kept privately in `<state>/import/v072-sample/assets/`.
+
+### Official past-paper worked solutions
+
+For an official past-paper payload, keep the original mark-scheme blocks in the existing
+`steps` array. When a worked solution is supplied, add its ordered HTML blocks to the question’s entry
+in the prompt module’s optional `WORKED_SOLUTIONS` dictionary, keyed by printed question number.
+The importer writes these to `workedSolutionSteps` on the same question. The student paper prints those blocks first
+and the original scheme second under the same generated question number. With no supplied
+working, it prints only the mark scheme. Teacher exam mark-scheme exports still use the
+original marking material. Old Spec payloads retain `steps` for working and
+`markSchemeSteps` for the separate scheme.

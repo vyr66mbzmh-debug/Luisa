@@ -24,7 +24,7 @@ class OldSpecRevision(unittest.TestCase):
         self.assertEqual(len(positions), len(set(positions)))
         self.assertEqual(len(positions), 264)
         self.assertEqual(len({p.split('-')[0] for p in positions}), 22)
-        self.assertEqual(Counter(r['difficulty'] for r in rows), {'easy':33, 'medium':124, 'difficult':87})
+        self.assertEqual(Counter(r['difficulty'] for r in rows), {'easy':33, 'medium':129, 'difficult':82})
         self.assertEqual(Counter(r['markScheme'] for r in rows), {'source':227, 'editorial':17})
         existing = {q['id'] for name in ('exam','pmt') for q in read(name+'-catalogue.json')['questions']}
         aliases = [r['canonicalId'] for r in rows if 'canonicalId' in r]
@@ -34,6 +34,7 @@ class OldSpecRevision(unittest.TestCase):
         payloads = {name:{q['id']:q for q in read(name)} for name in {r['dataPath'] for r in rows}}
         for row in rows:
             with self.subTest(id=row['id']):
+                self.assertTrue(row['difficultyReason'].strip())
                 self.assertTrue(row['chapterKeys'] and set(row['chapterKeys']) <= keys)
                 self.assertEqual('edited' in row['sourceLabel'].lower(), row['edited'])
                 q = payloads[row['dataPath']][row['id']]

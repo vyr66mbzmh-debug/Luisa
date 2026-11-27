@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-26",
+  "asOf": "2026-11-27",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -6817,6 +6817,24 @@
       ],
       "evidence": [
         "GitHub issue #168"
+      ]
+    },
+    {
+      "id": "PAP-090",
+      "requirement": "Include the full Old Spec marking material with student worked answers and grade the questions by mathematical demand.",
+      "scope": "Student papers and teacher exam papers",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner correction and GitHub issue #170",
+      "acceptance": [
+        "In both student print layouts, every selected Old Spec question has its full worked solution and its own complete mark scheme at the back when answers are included.",
+        "Show an editorial Easy, Medium or Difficult grade based on the retained exercise. Selecting the named Old Spec group produces only graded Old Spec questions.",
+        "Use the title Solution/Mark Scheme and the checkbox Include solutions/mark scheme at the back. Group both materials by generated question number, with working first. Show only the existing scheme for official papers until a worked solution is supplied.",
+        "Only questions with a mark scheme can enter a teacher exam, whether selected manually, generated for a target time or sent to any print option. Worked-answer-only practice questions remain available for ordinary practice papers."
+      ],
+      "evidence": [
+        "GitHub issue #170"
       ]
     }
   ]

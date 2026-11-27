@@ -111,6 +111,7 @@ class PapersSelection(unittest.TestCase):
         self.page.locator('#papers-exam-madas').uncheck()
         self.assertTrue(self.page.locator('#papers-exam-generate').is_disabled())
         self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.withoutDuplicateCopies(LUISA_PAPERS_BUILDER.pool()).length'), 1018)
+        self.page.locator('#papers-exam > summary').click()  # Ordinary paper keeps its independent MADAS setting.
         for band, count in [('medium', 366), ('difficult', 363), ('very-difficult', 289)]:
             self.page.locator('#papers-difficulty').select_option(band)
             self.assertEqual(self.page.evaluate('LUISA_PAPERS_BUILDER.pool().length'), count)
@@ -118,6 +119,7 @@ class PapersSelection(unittest.TestCase):
         self.page.wait_for_selector('[data-add]')
         self.assertRegex(self.page.locator('.question-card').first.inner_text(), r'MADAS (?:A-level|AS) (?:Applied|Pure) Paper')
         self.assertEqual(self.page.locator('.question-card .question-context').count(), 0)
+        self.page.locator('#papers-exam > summary').click()
         self.page.locator('#papers-exam-madas').check()
         self.page.reload()
         self.page.wait_for_selector('#papers-source-madas:enabled')
@@ -289,7 +291,7 @@ class PapersSelection(unittest.TestCase):
 
     def test_default_and_migrated_two_per_page_use_one_question_per_page(self):
         self.assertFalse(self.page.get_by_role('checkbox', name='Condensed').is_checked())
-        self.assertTrue(self.page.get_by_role('checkbox', name='Include worked solutions at the back').is_checked())
+        self.assertTrue(self.page.get_by_role('checkbox', name='Include solutions/mark scheme at the back').is_checked())
         self.generate(1)
         ids = self.selection_ids()
         self.page.evaluate('''() => {
@@ -807,6 +809,9 @@ class PapersSelection(unittest.TestCase):
         self.assertTrue(self.page.locator('#papers-exam-generate').is_disabled())
         self.page.locator('#papers-source-practice').check()
         self.assertTrue(self.page.locator('#papers-exam-generate').is_disabled())
+        self.page.locator('#papers-browse').click()
+        self.assertEqual(self.page.locator('#papers-questions [data-add]').count(), 0)
+        self.assertTrue(self.page.locator('#papers-generate').is_disabled())
         # Mixed sources: the count is exact and timed generation draws only flagged (past-paper) questions.
         self.page.locator('#papers-source-past-papers').check()
         counts = self.page.evaluate("[LUISA_PAPERS_BUILDER.pool().length, LUISA_PAPERS_BUILDER.pool().filter(r => r.markScheme === 'official').length, LUISA_PAPERS_BUILDER.pool().filter(r => r.sourceKind === 'past-exam').length]")
@@ -818,12 +823,22 @@ class PapersSelection(unittest.TestCase):
                 self.assertIn('Target 32 minutes met', report)
                 kinds = self.page.evaluate('LUISA_PAPERS_BUILDER.snapshot().map(r => [r.sourceKind, r.markScheme, Number.isInteger(r.marks) && r.marks > 0])')
                 self.assertTrue(kinds and all(k == ['past-exam', 'official', True] for k in kinds), kinds)
-        # A manually added worked-solution question is labelled and blocks the exam paper until removed.
+        # A pre-existing practice question stays in the ordinary paper but is omitted from the teacher exam.
         self.page.evaluate("""async () => { const extra = await LUISA_PAPERS_BUILDER.load(LUISA_PAPERS_BUILDER.pool().filter(r => r.sourceKind === 'practice-booklet').slice(0, 1));
           LUISA_PAPERS_BUILDER.arrange([...LUISA_PAPERS_BUILDER.snapshot(), ...extra]); }""")
         self.assertEqual(self.page.locator('#papers-selected .exam-no-scheme').all_inner_texts(), ['No mark scheme'])
-        self.assertTrue(self.page.locator('#papers-exam-print').is_disabled())
-        self.assertIn('1 selected question without an official mark scheme cannot go in an exam paper.', self.page.locator('#papers-exam-summary').inner_text())
+        self.assertTrue(self.page.locator('#papers-exam-print').is_enabled())
+        self.assertIn('1 practice-paper question excluded from this exam because it has no mark scheme.', self.page.locator('#papers-exam-summary').inner_text())
+        selected = self.selection_ids()
+        self.page.locator('input[name="papers-exam-content"][value="both"]').check()
+        with self.page.expect_popup() as event:
+            self.page.locator('#papers-exam-print').click()
+        preview = event.value
+        preview.wait_for_function("document.querySelector('.print-status')?.textContent.includes('A4 pages')", timeout=60000)
+        for selector in ('.exam-page .exam-question', '.exam-scheme'):
+            self.assertEqual(preview.locator(selector).evaluate_all('ns=>[...new Set(ns.map(n=>n.dataset.questionId))]'), selected[:-1])
+        preview.close()
+        self.assertEqual(self.selection_ids(), selected)
         self.page.locator('[data-remove]').last.click()
         self.assertEqual(self.page.locator('#papers-selected .exam-no-scheme').count(), 0)
         self.assertTrue(self.page.locator('#papers-exam-print').is_enabled())

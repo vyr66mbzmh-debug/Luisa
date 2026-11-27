@@ -52,6 +52,7 @@
   function sourceMatches(row, includeMadas) {
     const difficulty = $('papers-difficulty').value;
     const paper = $('papers-past-paper').disabled ? '' : $('papers-past-paper').value;
+    if (paper === 'old-spec-revision' && row.bank !== 'old-spec') return false;
     return (row.bank === 'madas' && includeMadas !== undefined ? includeMadas : $('papers-source-' + row.bank).checked) &&
       (!difficulty || (row.difficulty || 'unclassified') === difficulty) &&
       (!['past-papers', 'old-spec'].includes(row.bank) || !paper || row.paperId === paper);
@@ -63,10 +64,12 @@
   function matchingChapters(row) {
     return row.chapterKeys.filter(key => inHierarchy(chapters.get(key)) && (!chosenTopics.size || chosenTopics.has(key)));
   }
-  function pool(includeMadas) {
-    const eligible = catalogue.filter(row => sourceMatches(row, includeMadas) && matchingChapters(row).length);
+  let examFilter = null, examMadas = false;
+  function pool(includeMadas, filter = null) {
+    const eligible = catalogue.filter(row => (!filter || filter(row)) && sourceMatches(row, includeMadas) && matchingChapters(row).length);
     return preferOldSpec(eligible);
   }
+  const visiblePool = () => pool(examFilter ? examMadas : undefined, examFilter);
   // Use the converted solution and marking table when both copies pass the filters.
   function preferOldSpec(eligible) {
     const aliases = new Set(eligible.filter(row => row.bank === 'old-spec' && row.canonicalId).map(row => row.canonicalId));
@@ -80,7 +83,7 @@
   function refreshFilters() {
     const topics = [...chapters.values()].filter(inHierarchy);
     const idsByChapter = new Map();
-    for (const row of catalogue) if (sourceMatches(row)) for (const key of row.chapterKeys) {
+    for (const row of catalogue) if ((!examFilter || examFilter(row)) && sourceMatches(row, examFilter ? examMadas : undefined)) for (const key of row.chapterKeys) {
       if (!idsByChapter.has(key)) idsByChapter.set(key, new Set());
       idsByChapter.get(key).add(row.canonicalId || row.id);
     }
@@ -165,7 +168,7 @@
   }
   function updatePool() {
     cancelLoading();
-    const count = pool().length;
+    const count = visiblePool().length;
     $('filter-title').textContent = `${count.toLocaleString()} questions in the selection`;
     $('papers-count').max = String(count);
     page = 0; updateControls(); persist();
@@ -187,6 +190,10 @@
     },
     // PAP-066: the timed exam generator draws from exactly the generator's pool.
     pool: includeMadas => pool(includeMadas),
+    setExamFilter(filter, includeMadas) {
+      examFilter = filter; examMadas = includeMadas;
+      refreshFilters();
+    },
     withoutDuplicateCopies,
     // Runs a task with the builder locked (generate, add/remove and print disabled), even
     // when nothing is selected yet. Returns undefined when the builder is already busy.
@@ -216,8 +223,8 @@
   });
   function updateControls() {
     const busy = Boolean(operation) || printing;
-    $('papers-generate').disabled = busy || !pool().length;
-    $('papers-regenerate').disabled = busy || !selected.length || !pool().length;
+    $('papers-generate').disabled = busy || !visiblePool().length;
+    $('papers-regenerate').disabled = busy || !selected.length || !visiblePool().length;
     $('papers-clear').disabled = busy || !selected.length;
     $('papers-print').disabled = busy || !selected.length || !window.LUISA_PAPERS_PRINT;
     $('papers-cancel').hidden = !operation;
@@ -285,18 +292,30 @@
     if (!question?.question || (question.contextHtml !== undefined && typeof question.contextHtml !== 'string') || !Array.isArray(question.steps) || !question.steps.length || question.steps.some(step => typeof step !== 'string' || !step.trim()) || (question.hints !== undefined && (!Array.isArray(question.hints) || question.hints.some(hint => typeof hint !== 'string')))) {
       throw new Error(`${sourceLabel(descriptor)} has incomplete content. Your previous paper has been kept.`);
     }
+    if (question.workedSolutionSteps !== undefined && (!Array.isArray(question.workedSolutionSteps) ||
+        question.workedSolutionSteps.some(step => typeof step !== 'string' || !step.trim()))) {
+      throw Error('This question has invalid worked solution steps.');
+    }
     const marks = descriptor.sourceKind === 'practice-booklet' ? practiceMarks(question.question) : descriptor.marks;
     if (descriptor.bank === 'old-spec' && (!Array.isArray(question.markSchemeSteps) || !question.markSchemeSteps.length)) throw Error('This Old Spec mark scheme is incomplete.');
-    const row = Object.freeze({...descriptor, marks, markSchemeSteps: question.markSchemeSteps, schemeNote: question.schemeNote || null, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: ['past-exam', 'pmt', 'madas', 'old-spec'].includes(descriptor.sourceKind) ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
+    const row = Object.freeze({...descriptor, marks, workedSolutionSteps: question.workedSolutionSteps, markSchemeSteps: question.markSchemeSteps, schemeNote: question.schemeNote || null, question: question.question, contextHtml: question.contextHtml || '', steps: Object.freeze([...question.steps]), hints: Object.freeze([...(question.hints || [])]), source: Object.freeze({kind: practice ? descriptor.sourceKind : 'skill-question', courseId: descriptor.courseId, bookId: descriptor.bookId, topicId: descriptor.topicId, skillId: descriptor.skillId || null, questionId: question.id || null, questionNumber: ['past-exam', 'pmt', 'madas', 'old-spec'].includes(descriptor.sourceKind) ? descriptor.questionNumber : practice ? descriptor.questionLabel : question.number, chapterId: descriptor.chapterId || null, subchapterId: descriptor.subchapterId || null, practiceBookletQuestionId: descriptor.sourceKind === 'practice-booklet' ? descriptor.id : null})});
     rows.set(row.id, row); return row;
   }
   function questionMetadata(row) {
+    if (row.bank === 'old-spec') {
+      const grade = row.difficulty[0].toUpperCase() + row.difficulty.slice(1);
+      return [row.marks + ' marks', 'Difficulty: ' + grade, row.difficultyReason].join(' · ');
+    }
     return [Number.isInteger(row.marks) && row.marks > 0 ? `${row.marks} marks` : '', row.difficulty ? `${(row.difficulty[0].toUpperCase() + row.difficulty.slice(1).replace('-', ' '))} · difficulty guide` : ''].filter(Boolean).join(' · ');
   }
   function fillPreview(container, row) {
     container.innerHTML = (row.contextHtml || '') + row.question;
-    if (row.bank === 'old-spec') {
-      for (const [label, steps] of [['Worked solution', row.steps], ['Mark scheme', row.markSchemeSteps]]) {
+    if (row.bank === 'old-spec' || row.sourceKind === 'past-exam') {
+      const official = row.sourceKind === 'past-exam';
+      const materials = [['Worked solution', official ? row.workedSolutionSteps : row.steps],
+        ['Mark scheme', official ? row.steps : row.markSchemeSteps]];
+      for (const [label, steps] of materials) {
+        if (!steps?.length) continue;
         const details = element('details'), body = element('div');
         details.append(element('summary', label), body);
         container.append(details);
@@ -385,7 +404,7 @@
   function generate() {
     if (operation || printing) return;
     // PAP-075-6: a PMT copy is never generated alongside its original (the original is kept).
-    const candidates = withoutDuplicateCopies(pool()), count = Number($('papers-count').value);
+    const candidates = withoutDuplicateCopies(visiblePool()), count = Number($('papers-count').value);
     if (!Number.isInteger(count) || count < 1 || count > candidates.length) {
       status(`Choose a whole number from 1 to ${candidates.length.toLocaleString()} for this question pool.`, true);
       $('papers-count').focus(); return;
@@ -402,7 +421,7 @@
   async function renderBrowse() {
     browseOperation?.abort();
     const controller = new AbortController(); browseOperation = controller;
-    const candidates = pool(), total = Math.ceil(candidates.length / pageSize);
+    const candidates = visiblePool(), total = Math.ceil(candidates.length / pageSize);
     page = Math.min(page, Math.max(0, total - 1));
     $('papers-browser').hidden = false;
     $('papers-previous').disabled = page === 0;
@@ -536,7 +555,7 @@
     for (const q of oldSpec.questions) {
       const chapter = chapters.get(q.chapterKeys?.[0]);
       if (!chapter || !q.id.startsWith('old-spec/') || !/^content\/old-spec\/rev\d\d\.json$/.test(q.dataPath) ||
-          (q.canonicalId && !ids.has(q.canonicalId)) || !['easy','medium','difficult'].includes(q.difficulty)) throw Error('Invalid Old Spec question: ' + q.id);
+          (q.canonicalId && !ids.has(q.canonicalId)) || !q.difficultyReason?.trim() || !['easy','medium','difficult'].includes(q.difficulty)) throw Error('Invalid Old Spec question: ' + q.id);
       add({...q, sourceLabel: q.sourceLabel + ' · ' + q.id.split('/')[1].toUpperCase(), sourceKind: 'old-spec', bank: 'old-spec', bookTitle: chapter.bookTitle,
         courseTitle: chapter.courseTitle, topicTitle: chapter.title, bookId: chapter.bookKey.split('/')[1],
         courseId: chapter.course, chapterId: chapter.id}, q.chapterKeys);
