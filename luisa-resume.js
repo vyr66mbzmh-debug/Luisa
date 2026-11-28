@@ -118,7 +118,8 @@
   const fromLuisa = referrer && referrer.origin === base.origin && referrer.pathname.startsWith(base.pathname) &&
     !/\/(?:login|change-password|logout)$/.test(referrer.pathname);
   const params = new URLSearchParams(location.search);
-  const explicit = Boolean(location.hash.length > 1 || [...params.keys()].some(key => key !== 'entry'));
+  const explicitSkill = !ada && /\/by-skill(?:\.html)?\/?$/.test(location.pathname);
+  const explicit = explicitSkill || Boolean(location.hash.length > 1 || [...params.keys()].some(key => key !== 'entry'));
   const entry = explicit ? 'explicit' : (intent === location.pathname || navigation === 'reload' || navigation === 'back_forward' || fromLuisa) ? 'internal' : 'ordinary';
   if (params.get('entry') === 'signin') { try { history.replaceState(history.state, '', location.pathname + location.hash); } catch { /* Keep the URL. */ } }
 

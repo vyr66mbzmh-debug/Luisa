@@ -194,7 +194,9 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
             route.abort('timedout')
         p.context.route(url + '**', serve_via_live_request)
     if role == 'owner':
-        for name in ('', 'textbook-view.html', 'teaching-chapters.html'):
+        p.goto(url, wait_until='domcontentloaded', timeout=90000)
+        expect(p.get_by_role('navigation', name='Choose a course').get_by_role('link')).to_have_count(4)
+        for name in ('by-skill.html', 'textbook-view.html', 'teaching-chapters.html'):
             p.goto(url + name, wait_until='domcontentloaded', timeout=90000)
             expect(p.locator('a[href$="papers.html"]')).to_have_count(1)
     p.goto(url + 'papers.html', wait_until='commit', timeout=90000)

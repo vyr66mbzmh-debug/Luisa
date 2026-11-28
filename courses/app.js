@@ -138,7 +138,12 @@ function bindBoard(){
 }
 function render(){
  releaseLogo();
- const hash=location.hash.slice(1)||'home';const match=/^year(9|10|11)$/.exec(hash);
+ const hash=location.hash.slice(1)||'home';
+ if (/^[^&=]+=/u.test(hash)) {
+   location.replace('by-skill.html'+location.search+location.hash);
+   return;
+ }
+ const match=/^year(9|10|11)$/.exec(hash);
  document.body.dataset.view=hash==='alevel'?'library':'course';
  if(match){const n=+match[1];main.innerHTML=yearView(n);bindYear(n);return}
  if(hash.startsWith('teach/')){const path=hash.slice(6);if(!LESSON.routes[path]){location.replace('#year9');return}if(state.path!==path)state=fresh(path);nav('#year9','Year 9 scheme of work','Year 9 / Graphs');main.innerHTML=state.practice?practice():board();bindBoard();return}
