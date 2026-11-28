@@ -17,5 +17,5 @@ def owner_page(name, content):
         content = re.sub(rb'(?:<a [^>]+>)?(<img class="luisa-logo"[^>]+>)(?:</a>)?',
                          rb'<a href="./" aria-label="Home">\1</a>', content, count=1)
     if name == 'teaching-chapters.html':
-        content = re.sub(rb"link\.setAttribute\('aria-describedby','resume-note'\);.*?link\.after\(note\);", b'', content)
+        content = content.replace(b'<html lang="en">', b'<html lang="en" data-course-entrance>', 1)
     return ('by-skill.html' if name == 'index.html' else name), content
