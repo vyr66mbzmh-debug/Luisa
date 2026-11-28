@@ -105,7 +105,16 @@ def closing_errors(version, entry):
 
 def report(intro):
     release, version, rev, work, entry = context()
-    for name in ('qa-owner.json', 'qa-offline.json', 'qa-ada.json'):
+    spec = json.loads((ROOT / 'docs/releases' / f'v{version}.json').read_text())
+    checks = ['qa-owner.json', 'qa-offline.json']
+    if retained := spec.get('retainAdaRevision'):
+        status = json.loads(subprocess.check_output([sys.executable, 'scripts/release/ada.py', 'status'], cwd=ROOT))
+        if not status['running'] or status['revision'] != retained:
+            raise SystemExit('ADA is not running the revision retained by this release.')
+        (work / 'ada-retained.json').write_text(json.dumps(status) + '\n')
+    else:
+        checks.append('qa-ada.json')
+    for name in checks:
         path = work / name
         if not path.exists() or json.loads(path.read_text())['revision'] != rev:
             raise SystemExit(f'{name} is missing or not for this revision; run the live verification first.')
