@@ -18,4 +18,6 @@ def owner_page(name, content):
                          rb'<a href="./" aria-label="Home">\1</a>', content, count=1)
     if name == 'teaching-chapters.html':
         content = content.replace(b'<html lang="en">', b'<html lang="en" data-course-entrance>', 1)
+        # Register PDF navigation before the catalogue makes its links clickable.
+        content = content.replace(b'<script src="teaching-catalogue.js', b'<script src="app-navigation.js"></script><script src="teaching-catalogue.js', 1)
     return ('by-skill.html' if name == 'index.html' else name), content
