@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#102b43"><title>Mathematics</title><link rel="icon" href="courses/assets/logo.png"><link rel="stylesheet" href="courses/style.css"></head>
+<body><header><a id="up" href="#home" aria-label="Courses"><img src="courses/assets/logo.png" alt="Luisa"></a><span id="location"></span><div class="tools"><a href="https://classpad.net/note/#/tools/math" title="Calculator" aria-label="Calculator" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8v3H8z M8.5 12.5h1m4 0h1m-6 3h1m4 0h1m-6 3h1m4 0h1"/></svg></a><a id="geo" href="https://www.geogebra.org/classic?lang=en" target="_blank" rel="noopener" aria-label="GeoGebra" title="GeoGebra"><img src="courses/assets/geogebra-gold.png" alt=""></a></div></header>
+<main id="main"></main><dialog id="dialog" aria-labelledby="dialog-title"></dialog><div id="status" role="status"></div>
+<template id="entrance-template">
+<section class="entrance" aria-label="Mathematics courses">
+<div class="banner-frame"><img class="entrance-banner" src="courses/assets/entrance-banner.png" alt="Luisa — Learning, Understanding, Intelligence, Strategy, Aesthetics"></div>
+<div id="course-plane"><div class="axes" aria-hidden="true"></div>
+<nav class="quadrants" aria-label="Choose a course">
+<a href="#year9"><strong>Shell</strong><span>Year 9</span></a>
+<a href="#year11"><strong>Hundred</strong><span>Year 11</span></a>
+<a href="#year10"><strong>Remove</strong><span>Year 10</span></a>
+<a href="teaching-chapters.html"><strong>A Level</strong></a>
+</nav></div>
+<div class="design-review"><label for="design-select">Design</label><select id="design-select"></select><button id="motion" hidden>Pause</button><button id="replay-logo" hidden>Replay</button></div>
+</section></template>
+<template id="formation-template">
+<svg class="formation-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1086 362" aria-hidden="true" focusable="false">
+  <defs>
+    <mask id="unprinted" maskUnits="userSpaceOnUse" x="235" y="30" width="615" height="280"></mask>
+    <radialGradient id="paper-edge"><stop offset=".88" stop-color="black"/><stop offset="1" stop-color="black" stop-opacity="0"/></radialGradient>
+    <clipPath id="current-letter"><rect/></clipPath>
+  </defs>
+  <image href="courses/assets/formation-paper.webp" x="235" y="30" width="615" height="280" mask="url(#unprinted)"/>
+  <image class="letter-ink" href="courses/assets/gold-letters.webp" x="337" y="180" width="423" height="89" clip-path="url(#current-letter)" opacity="0"/>
+  <image href="courses/assets/side-left.webp" class="side-paper" width="290" height="362"/>
+  <image href="courses/assets/side-right.webp" x="785" class="side-paper" width="301" height="362"/>
+</svg></template>
+<script src="courses/logo-formation.js"></script><script src="courses/entrance.js"></script><script src="courses/schemes.js"></script><script src="courses/board-data.js"></script><script src="courses/booklets.js"></script><script src="courses/app.js"></script></body></html>

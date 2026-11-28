@@ -169,6 +169,37 @@ def old_spec(p, role, out):
     ok(f'{role} Old Spec chapters, three difficulty bands, distinct worked solution and source mark scheme, selection and restore passed')
 
 
+def course_entrance(page, url):
+    page.goto(url)
+    courses = page.get_by_role('navigation', name='Choose a course')
+    expect(courses.get_by_role('link')).to_have_count(4)
+    for year in (9, 10, 11):
+        courses.locator(f'[href="#year{year}"]').click()
+        expect(page.locator('.off').first).to_be_visible()
+        page.locator('#up').click()
+    for pathway in ('Core', 'Higher', 'Advanced'):
+        page.goto(url + '#teach/' + pathway)
+        expect(page.get_by_role('heading', name='I DO')).to_be_visible()
+        reveal = page.get_by_role('button', name='Reveal WE DO')
+        expect(reveal).to_be_enabled()
+        for _ in range(30):
+            if not reveal.is_enabled():
+                break
+            reveal.click()
+        expect(reveal).to_be_disabled()
+        page.get_by_role('button', name='YOU DO').click()
+        worksheet = page.get_by_role('link', name='Open worksheet')
+        expect(worksheet).to_have_attribute('href', re.compile(r'courses/booklets/Graphs-' + pathway + r'\.pdf#page=\d+'))
+    page.goto(url)
+    courses.get_by_role('link', name='A Level').click()
+    expect(page.get_by_role('heading', name='Teaching Resources', exact=True)).to_be_visible()
+    page.get_by_role('link', name='Home', exact=True).click()
+    expect(courses).to_be_visible()
+    page.goto(url + '#course=maths-a-level&book=maths-pure-year-1&skill=smq-1.01&question=1')
+    expect(page.locator('#textbook-view-link')).to_be_visible()
+    ok('Owner course home, year schemes, three Shell Graphs routes, worksheets and A Level navigation passed')
+
+
 def paper(p, url, role, totals, qa_papers, out, rev, version):
     meta, cat = metadata()
     marks_of = {q['id']: q['marks'] for q in cat}
@@ -194,7 +225,8 @@ def paper(p, url, role, totals, qa_papers, out, rev, version):
             route.abort('timedout')
         p.context.route(url + '**', serve_via_live_request)
     if role == 'owner':
-        for name in ('', 'textbook-view.html', 'teaching-chapters.html'):
+        course_entrance(p, url)
+        for name in ('by-skill.html', 'textbook-view.html', 'teaching-chapters.html'):
             p.goto(url + name, wait_until='domcontentloaded', timeout=90000)
             expect(p.locator('a[href$="papers.html"]')).to_have_count(1)
     p.goto(url + 'papers.html', wait_until='commit', timeout=90000)

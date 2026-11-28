@@ -346,3 +346,4 @@ Historical assertions are not current verification. See README.md in this folder
 | <a name='req-pap-092'></a>PAP-092 | Add a Reset control beside Question sources that restores the standard sources and unrestricted content filters in one change. | Paper builder, all editions | implemented | agent_checked |
 | <a name='req-nav-091'></a>NAV-091 | Return every user to their last main Luisa page and that module’s latest selection. | ADA pupil and staff editions (private account storage) and the owner static edition (this browser profile and origin) | implemented | agent_checked |
 | <a name='req-nav-092'></a>NAV-092 | Default a pupil’s course by class when they have no saved course for a module. | By skill, By textbook and Papers on ADA | implemented | agent_checked |
+| <a name='req-nav-093'></a>NAV-093 | Publish the course entrance and Shell Graphs on the Cloudflare owner site. | Cloudflare owner edition | implemented | agent_checked |
