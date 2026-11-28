@@ -1,15 +1,15 @@
 # Current Luisa handoff
 
-<!-- LUISA-REPORT-HANDOFF v0.91 -->
-**Release 0.91 · GitHub #172.**
+<!-- LUISA-REPORT-HANDOFF v0.92 -->
+**Release 0.92 · GitHub #174.**
 
-Students can generate a paper by time: presets of 30, 45, 60, 90 and 120 minutes or a custom target from 2 to 600 minutes, at 6 minutes per 5 marks within ±2 minutes. Any whole question with a known mark total is eligible, and a mark scheme is optional. Teacher exams still require a mark scheme.
+The Cloudflare home page offers Shell, Remove, Hundred and A Level. Its three logo animations run at 1.5 times the previous preview speed.
 
-Luisa now reopens each user’s last main page and that page’s latest selection: By skill, By textbook, Resources, Papers and the teacher exam draft. On ADA these follow the account to any browser. Shared links, tabs, Home and Back are honoured, and retired items fall back safely.
+Each year shows its scheme of work. Shell Graphs includes Core, Higher and Advanced teaching boards, printable booklets and homework.
 
-Pupils in L6X, U6X, L6Y and U6Y default to Further Maths A level and other pupils to Maths A level until they choose a course. A Reset button beside Question sources restores the standard sources and filters while keeping the paper.
+The A Level logo returns from lessons and resource booklets to Teaching Resources, then home. The catalogue keeps its saved position and shading. Ada continues to serve v0.91.
 
-See issue #172 for production verification and the decisions applied.
+See issue #174 for production verification.
 <!-- END LUISA-RELEASE-BLOCK -->
 
 ## Tooling, access and where everything lives

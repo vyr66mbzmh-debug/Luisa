@@ -16,7 +16,7 @@ import tarfile
 import urllib.parse
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC_DIRS = {'assets', 'content', 'printouts', 'resources', 'vendor'}
+PUBLIC_DIRS = {'courses', 'assets', 'content', 'printouts', 'resources', 'vendor'}
 PUBLIC_SUFFIXES = {'.html', '.js', '.css', '.svg', '.webmanifest'}
 PUBLIC_JSON = {'exam-catalogue.json', 'pmt-catalogue.json', 'madas-catalogue.json', 'old-spec-catalogue.json', 'practice-catalogue.json', 'textbook-catalogue.json', 'version-history.json', 'release.json'}
 
@@ -415,6 +415,11 @@ def build(root=ROOT, output=None, profile='owner'):
                                      lambda match: match[1] + version.encode() + match[2] + version.encode(), content)
             if count != 1:
                 raise ValueError('Missing or ambiguous library version link: ' + name)
+        if profile == 'owner':
+            from course_entrance import owner_page
+            name, content = owner_page(name, content)
+        elif name.startswith('courses/'):
+            continue
         if profile != 'owner':
             path = Path(name)
             if name in restricted_urls or (path.suffix.lower() == '.pdf' and hashlib.sha256(content).hexdigest() in restricted_hashes):
@@ -451,17 +456,22 @@ def check_artifact(directory, profile, root=ROOT):
     if manifest.get('edition') != profile:
         raise ValueError(f'Expected {profile} artifact, got {manifest.get("edition")}')
     files = set(manifest.get('files', {}))
-    for name in LIBRARY_PAGES | TEACHING_VIEWERS:
+    skill_page = 'by-skill.html' if profile == 'owner' else 'index.html'
+    library_pages = (LIBRARY_PAGES - {'index.html'}) | {skill_page}
+    has_entrance = 'courses/logo-formation.js' in files and 'by-skill.html' in files
+    if (profile == 'owner') != has_entrance or (profile != 'owner' and any(n.startswith('courses/') for n in files)):
+        raise ValueError('Course entrance packaged for the wrong edition')
+    for name in library_pages | TEACHING_VIEWERS:
         page = (directory / name).read_text()
         if page.count('href="https://www.geogebra.org/classic?lang=en"') != 1:
             raise ValueError('Missing GeoGebra Classic navigation: ' + name)
-    for name in LIBRARY_PAGES:
+    for name in library_pages:
         page = (directory / name).read_text()
         navigation = re.search(r'<nav\b[^>]*aria-label="Library view"[^>]*>(.*?)</nav>', page, re.S)
         labels = re.findall(r'<a\b[^>]*>(.*?)</a>', navigation[1], re.S) if navigation else []
         if labels != ['By skill', 'By textbook', 'Resources', 'Papers']:
             raise ValueError('Incorrect library navigation order: ' + name)
-    modules = {'index.html': 'skill', 'textbook-view.html': 'textbook', 'teaching-chapters.html': 'resources', 'papers.html': 'papers'}
+    modules = {skill_page: 'skill', 'textbook-view.html': 'textbook', 'teaching-chapters.html': 'resources', 'papers.html': 'papers'}
     for name, module in modules.items():
         page = (directory / name).read_text()
         wanted = '<meta name="luisa-preferences" content="local">' if profile == 'owner' else PREFERENCES_META

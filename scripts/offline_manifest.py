@@ -39,6 +39,7 @@ def generate(root, entries, version):
         practice_files.setdefault(key, set()).add(question['dataPath'])
         practice_counts[key] = practice_counts.get(key, 0) + 1
     shared = {n for n in entries if (len(Path(n).parts)==1 and Path(n).suffix in {'.html','.js','.css','.webmanifest'}) or n in {'exam-catalogue.json','pmt-catalogue.json','madas-catalogue.json','old-spec-catalogue.json','textbook-catalogue.json','practice-catalogue.json','release.json','version-history.json'} or n.startswith('vendor/') or n.startswith('assets/luisa/') or (n.startswith('resources/') and (Path(n).suffix in {'.js','.css'} or Path(n).name=='index.json'))}
+    shared.update(n for n in entries if n.startswith('courses/'))
     shared.discard('sw.js')
     def local(url, bases=('',)):
         p = urlsplit(url)

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-11-27",
+  "asOf": "2026-11-28",
   "authority": "Current owner instructions override earlier conflicting requirements; retain superseded wording as history.",
   "requirements": [
     {
@@ -6916,6 +6916,25 @@
         "GitHub issue #172",
         "tests/test_student_auth.py",
         "tests/test_timed_papers.py"
+      ]
+    },
+    {
+      "id": "NAV-093",
+      "requirement": "Publish the course entrance and Shell Graphs on the Cloudflare owner site.",
+      "scope": "Cloudflare owner edition",
+      "priority": "P1",
+      "implementation": "implemented",
+      "verification": "agent_checked",
+      "origin": "Owner instructions, 28 November 2026, GitHub issue #174",
+      "acceptance": [
+        "Offer Shell, Remove, Hundred and A Level from the owner home page. Show schemes in teaching order with undeveloped topics greyed out and include the Further Maths strands.",
+        "Use the existing logo artwork and three animation choices. Run the opening in 7.6/1.5 seconds and the repeating side curves in 10 seconds. Honour reduced motion.",
+        "Use differentiated Core, Higher and Advanced routes over 40-minute periods. Model on the left from the neat notes, reveal the mini-whiteboard solution on the right in steps, then assign extended practice. Print notes, grids, exercises and homework in that order. Keep worksheet identifiers and anonymise staff names.",
+        "Return from A Level teaching slides and resource booklets to Teaching Resources and from the main library tabs to the course entrance. Preserve resource shading and saved position without a visible status label.",
+        "Publish only the Cloudflare owner edition. Keep the active Ada service on v0.91."
+      ],
+      "evidence": [
+        "GitHub issue #174"
       ]
     }
   ]

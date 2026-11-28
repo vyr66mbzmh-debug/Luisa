@@ -4,6 +4,10 @@ GitHub tracking: [roadmap issue #2](https://github.com/vyr66mbzmh-debug/Luisa/is
 
 Product chapter backlog is derived from current catalogue availability, not old chat claims. Authoring source/visual/interaction/print acceptance remains separate from availability. No unrequested chapter development is authorised by this setup task.
 
+## Cloudflare course entrance v0.92
+
+Each year shows its scheme of work. Shell Graphs includes Core, Higher and Advanced teaching boards, printable booklets and homework. [Issue #174](https://github.com/vyr66mbzmh-debug/Luisa/issues/174).
+
 ## Timed student papers and return to last page v0.91
 
 Generate student papers by working time, reopen the last page and selection for every account, default pupil courses by class and reset paper filters. [Issue #172](https://github.com/vyr66mbzmh-debug/Luisa/issues/172).
